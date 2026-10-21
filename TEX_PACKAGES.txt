@@ -1,0 +1,17 @@
+Engine: pdfLaTeX
+Document class: article (11pt)
+
+Directly requested LaTeX packages:
+    fontenc (T1)
+    inputenc (utf8)
+    amsmath
+    amssymb
+    amsthm
+    mathrsfs
+    geometry
+    enumitem
+    hyperref
+
+T1 Computer Modern fonts are supplied by cm-super in the tested build.
+Install these packages and their dependencies using TeX Live or MiKTeX.
+No custom packages or external bibliography files are required.
