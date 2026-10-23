@@ -32,6 +32,38 @@
 \newcommand{\id}{\mathbf 1}
 \newcommand{\Eh}{\mathbb E_{\mathrm h}}
 \newcommand{\Ph}{\mathbb P_{\mathrm h}}
+
+
+
+\makeatletter % Stolen from the internet to make a fat \cdot which isn't as fat as a \bullet
+\newcommand*{\bigcdot}{}% Check if undefined
+\DeclareRobustCommand*{\bigcdot}{%
+  \mathbin{\mathpalette\bigcdot@{}}%
+}
+\newcommand*{\bigcdot@scalefactor}{.7}
+\newcommand*{\bigcdot@widthfactor}{1.15}
+\newcommand*{\bigcdot@}[2]{%
+  % #1: math style
+  % #2: unused
+  \sbox0{$#1\vcenter{}$}% math axis
+  \sbox2{$#1\cdot\m@th$}%
+  \hbox to \bigcdot@widthfactor\wd2{%
+    \hfil
+    \raise\ht0\hbox{%
+      \scalebox{\bigcdot@scalefactor}{%
+        \lower\ht0\hbox{$#1\bullet\m@th$}%
+      }%
+    }%
+    \hfil
+  }%
+}
+\makeatother
+
+
+
+
+
+
 \newcommand{\chapterpage}[3]{\clearpage\phantomsection\label{summary:#1}\addcontentsline{toc}{section}{#1. #2}\noindent{\small\color{muted}#1\quad /\quad READING V4}\par\vspace{5pt}{\LARGE\bfseries\color{ink}#2\par}\vspace{5pt}{\footnotesize\color{muted}#3\par}\vspace{9pt}}
 \newcommand{\subhead}[1]{\par\vspace{4pt}\textbf{\color{ink}#1}\par}
 \newcommand{\idea}[1]{\begin{quote}\small\textbf{Key Idea.} #1\end{quote}}
@@ -151,13 +183,13 @@ The same letter can have different roles in different reference constructions. T
     \begin{tabularx}{\textwidth}{@{}p{0.24\textwidth}X@{}}
         \toprule
         $\rho_0$, $\mathcal Z_0$ & Bare density and its physical partition function.\\[3pt]
-        $\rho_1$, $N_1$, $W_1$ & Blocked vacuum measure, observable numerator and their Radon--Nikodym quotient.\\[3pt]
+        $\rho_1$, $N_1$, $W_1$ & Blocked vacuum measure, observable numerator and their Radon--Nikod\'{y}m quotient.\\[3pt]
         $\xi$, $\Eh$ & Branch data and its normalised physical history expectation.\\[3pt]
-        $K_{\xi;t}$, $\nu_{\xi;t}$ & Interpolated conditional kernel and its normalised law.\\[3pt]
+        $K_{\xi;t}$, $\nu_{\xi;t}$ & Interpolated conditional kernSSel and its normalised law.\\[3pt]
         $A_{\mathrm{cov}}$ & Event that the conditional carrier covers the loop's reconstruction inputs.\\[3pt]
         $S^\circ_{D,C,T}$ & Conditional flat reference scalar at carrier $D$.\\[3pt]
         $\kappa_v$, $\kappa_C$ & Straight-line logarithmic density and extracted square scalar; distinct uses of $\kappa$.\\[3pt]
-        $\delta m^\sigma$, $z^\sigma_{\mathrm c}$ & Perimeter coefficient and square corner factor in cutoff prescription $\sigma$.\\[3pt]
+        $\delta m$, $z_{\mathrm c}$ & Perimeter coefficient and square corner factor with the fixed cutoff convention.\\[3pt]
         $r$, $\tau$, $\rho$ & Fluctuation cutoff radius, forest-expansion parameter and signed-source gain.\\[3pt]
         $\varepsilon_1$, $\pi_*$ & Small-field tolerance and the scale governing rare-witness tails.\\[3pt]
         $E^\circ$, $E_{\mathrm{def}}$, $E_{\mathrm{bdry}}$ & Finite-geometry exponent, signed defect and boundary/uncovered error.\\
@@ -169,55 +201,54 @@ A \emph{carrier} is the set of variable labels on which an object lives. A \emph
 
 \chapterpage{1}{The Lattice, the Action and the Observable}{V4, Section 1; equations defining the Wilson insertion and the bare action.}
 
-The starting point is a four-dimensional periodic lattice with fine spacing $\varepsilon$. A positive oriented bond $b$ carries a group element $U(b)$ in a compact connected simple Lie group $G\subset U(N)$. The value on the reversed bond is $U(b^{-1})=U(b)^{-1}$. The finite torus makes every original integral finite-dimensional. Its size remains a parameter in the estimates.
+The starting point is a four-dimensional periodic lattice with fine spacing $\varepsilon$. A positive oriented bond $b$ carries a group element $U(b)$ in a compact connected simple Lie group $G\subset U(N)$. The value on the reversed bond is $U(b^{-1})=U(b)^{-1}$. The finite torus makes every original integral finite-dimensional. The size of the torus remains a parameter in the estimates.
 
 For an ordered closed contour $C=(b_1,\ldots,b_{n_C})$, V4 uses
 \begin{equation*}
     \Hol_U C=U(b_1)\cdots U(b_{n_C})\;,
     \qquad W_\chi(C;U)=\chi(\Hol_U C)\;.
 \end{equation*}
-Here $\chi$ is an irreducible character divided by the dimension of its representation, so $\chi(\id)=1$ and $|\chi(g)|\leq 1$. The order of the factors matters: generally, gauge-group elements do not commute.
+Here $\chi$ is an irreducible character divided by the dimension of its representation, so $\chi(\id)=1$ and $|\chi(g)|\leqslant  1$. The order of the factors matters: generally, gauge-group elements do not commute.
 
 A site gauge transformation acts on a bond by changing the frames at its two endpoints. Around a closed contour the intermediate frame changes cancel. The holonomy is conjugated at the base point, and the character is unchanged. Thus the Wilson loop insertion is a gauge-invariant function of the field. This invariance must survive the later localisation and expansion.
 
-With $\tr_N=N^{-1}\operatorname{Tr}$, the action and its density are
+With $\tr_N \coloneqq N^{-1}\operatorname{Tr}$, the action and its density are
 \begin{equation*}
-    S(U)=\sum_{p\in \mathcal P_T}
-        \bigl(1-\operatorname{Re}\tr_N U(\partial p)\bigr)\;,
-    \qquad \rho_0(U)=e^{-g_0^{-2}S(U)-E_\varepsilon}\;.
+    S(U) \coloneqq \sum_{p\in \mathcal P_T} \bigl(1-\operatorname{Re}\tr_N U(\partial p)\bigr)\;,
+    \qquad \rho_0(U) \coloneqq e^{-g_0^{-2}S(U)-E_\varepsilon}\;.
 \end{equation*}
-The sum is over unoriented plaquettes, each counted once. Product normalised Haar measure is denoted by $\dd U$. The vacuum scalar $E_\varepsilon$ is kept in numerator and denominator. The bare expectation is
+The sum is over unoriented plaquettes, each counted once and $E_\varepsilon$ is Ba{\l}aban's vacuum renormalisation. Product normalised Haar measure is denoted by $\dd U$. The bare expectation is
 \begin{equation*}
     \mathbb E_\varepsilon[W_\chi(C)]
     =\frac{\int W_\chi(C;U)\rho_0(U)\,\dd U}
         {\int\rho_0(U)\,\dd U}\;.
 \end{equation*}
 
-The contour of the main theorem is a square $C_n$ of side $nL$ fine bonds. It has $n_C=4nL$ fine traversals, $4n$ coarse segments, and physical perimeter $P(C_n)=4nL\varepsilon$. Each coarse segment contains $L$ fine traversals. These three ways of measuring size must be kept distinct when interpreting a perimeter rate.
+The contour of the main theorem is a square $C_n$ of with $nL$ find bonds along each side. It has $n_C=4nL$ fine bonds, $4n$ coarse segments, and physical perimeter $P(C_n)=4nL\varepsilon$. Each coarse segment contains $L$ fine bonds. These three ways of measuring size must be kept distinct when interpreting a perimeter rate.
 
 \idea{The observable is closed from the beginning. Its gauge invariance is a structural input to the proof, not an operation performed after estimating separate pieces of the contour.}
 
 \chapterpage{2}{Blocking as a Transformation of Measures}{V4, Section 1, ``Normalisation'', and Section 8, ``The Numerator Carried to the Next Transformation''.}
 
-Blocking assigns a coarse field $V$ to a fine field $U$ through a Borel map $M$. On a regular logarithm domain, $M$ is Ba{\l}aban's nonlinear group average. V4 extends it to all fine configurations by using the straight fine transport when that logarithmic formula is unavailable. This extension makes the unrestricted blocking operation a defined, gauge-covariant map on the entire configuration space.
+Blocking assigns a coarse field $V$ to a fine field $U$ through a Borel map $M$. On a regular logarithm domain, $M$ is Ba{\l}aban's nonlinear group average. V4 chooses a Borel, gauge-covariant extension to all fine configurations, using the straight fine transport wherever the logarithmic formula is unavailable. This extension makes the unrestricted blocking operation a defined, gauge-covariant map on the entire configuration space.
 
-In the notation of the manuscript, the blocking kernel is
+In the notation of the manuscript, the blocking kernel is defined to be
 \begin{equation*}
-    (T\rho)(V)=\int
+    (T\rho)(V) \coloneqq \int
         \prod_{c\in E_1}\delta_G\bigl(M(U,c)V(c)^{-1}\bigr)
         \rho(U)\,\dd U\;.
 \end{equation*}
-The group Dirac measure is normalised against Haar measure. The clean measure-theoretic interpretation is a pushforward under $M$. It remains meaningful even when a density with respect to coarse Haar measure has not been specified.
+The group Dirac measure is normalised against Haar measure. The clean measure-theoretic interpretation of $T$ is a pushforward of the measure $\rho(U) \, \dd  U$ under $M$. It remains meaningful even when a density with respect to coarse Haar measure has not been specified.
 
 Two measures are transformed together:
 \begin{equation*}
     \rho_1=M_*(\rho_0\,\dd U)\;,
-    \qquad N_1=M_*(W_\chi(C;\cdot)\rho_0\,\dd U)\;.
+    \qquad N_1=M_*(W_\chi(C;\,\bigcdot\,)\rho_0\,\dd U)\;.
 \end{equation*}
-The first is positive; the second can be complex. Positivity of the kernel and $|W_\chi|\leq 1$ give $|N_1|\leq \rho_1$, where $|N_1|$ means total variation. Hence the outgoing insertion exists as a Radon--Nikodym derivative. For $\rho_1$-almost every $V$,
+The first is positive; the second can be complex. Positivity of the kernel and $|W_\chi|\leqslant  1$ give $|N_1|\leqslant  \rho_1$, where $|N_1|$ denotes the total variation of $N_1$. Hence, the outgoing insertion exists as a Radon--Nikod\'{y}m derivative. For $\rho_1$-almost every $V$,
 \begin{equation*}
     W_1(C;V)=\frac{\dd N_1}{\dd\rho_1}(V)\;,
-    \qquad |W_1(C;V)|\leq 1\;.
+    \qquad |W_1(C;V)|\leqslant  1\;.
 \end{equation*}
 Equivalently, it is the conditional expectation of the original Wilson loop insertion given the coarse field. This is an exact description of the observable after blocking, before any perimeter extraction.
 
@@ -235,31 +266,31 @@ Later conditional fluctuation integrals have their own normalising factors. They
 
 \chapterpage{3}{The Main Result in Readable Form}{V4, Theorem 1, equation (9), and its regime remark; see also Appendix F.}
 
-The single-loop theorem separates the expectation into an extracted scalar, a retained history expectation and two errors. Under V4's hypotheses (H1)--(H4), it states
+The single-loop theorem extracts a scalar factor from the expectation of a leading coarse insertion, with two error terms. Under V4's hypotheses (H1)--(H4), it states
 \begin{equation*}
-    \begin{aligned}
-        \mathbb E_\varepsilon[W_\chi(C_n)]
-        &=\kappa_{C_n}\,
-            \Eh\!\left[\id_{A_{\mathrm{cov}}}
-                e^{E^\circ_\xi}W_\chi(C_n;U_1)\right]\\
-        &\quad+E_{\mathrm{def}}+E_{\mathrm{bdry}}\;,
-    \end{aligned}
+        \mathbb E_\varepsilon[W_\chi(C_n; \, \bigcdot \, )] =\kappa_{C_n}\, \int W^1_{\chi}(C_n;V) \, \dd \rho_1(V)/\mathcal Z_0  +E_{\mathrm{def}}+E_{\mathrm{bdry}}\;,
 \end{equation*}
-where
+where, for $\rho_1$-almost every $V$,
+\begin{equation*}
+    W^1_{\chi}(C;V)\coloneqq \Eh\!\left[\id_{A_{\mathrm{cov}}}
+        e^{E^\circ_\xi}W_\chi(C;U_1(V,V_0))
+        \,\middle|\,V\right]\;,
+\end{equation*}
+and
 \begin{equation*}
     \kappa_{C_n}
-        =e^{-\delta m^\sigma(g_0,\varepsilon)P(C_n)}
-            \bigl(z^\sigma_{\mathrm c}(g_0,\pi/2)\bigr)^4
+        =e^{-\delta m(g_0,\varepsilon)P(C_n)}
+            \bigl(z_{\mathrm c}(g_0,\pi/2)\bigr)^4
         \neq 0\;.
 \end{equation*}
-The superscript $\sigma$ records the fixed cutoff norm. It is part of the coefficient prescription, together with the group average, reconstruction, gauge fixing and cutoff radius.
+We fix a norm $|\cdot|$ on the Lie algebra $\mathfrak g$, invariant under the adjoint action of $G$. The coefficients can depend on this norm and the other fixed cutoff conventions; we leave that dependence implicit in the notation.
 
 \subhead{What the Factors Mean}
-The perimeter coefficient $\delta m^\sigma$ is obtained from the connected density of an infinitely extended straight reference contour. The corner factor $z^\sigma_{\mathrm c}$ is obtained by subtracting the two straight densities from a bent reference contour. Both use the same normalised first-step reference integral. They are defined by convergent connected sums, rather than by fitting a scalar to one finite square.
+The perimeter coefficient $\delta m$ is obtained from the connected density of an infinitely extended straight reference contour. The corner factor $z_{\mathrm c}$ is obtained by subtracting the two straight densities from a bent reference contour. Both use the same normalised first-step reference integral. They are defined by convergent connected sums, rather than by fitting a scalar to one finite square, as explained in Sections~\hyperref[summary:14]{14}--\hyperref[summary:15]{15}.
 
-The field $U_1$ is the constrained fine background reconstructed from the coarse field and exterior determining data. Thus $W_\chi(C_n;U_1)$ is still a fine-contour insertion. The event $A_{\mathrm{cov}}$ says that every contour link and every free input needed to reconstruct it are inside the conditional integration region. The exponent $E^\circ_\xi$ accounts for that region's boundary, the torus and interactions between distant corners.
+On the left, $U$ is the original fine-lattice field. On the right, $U_1=U_1(V,V_0)$ is also a fine-lattice field: it is the background selected by the constrained variational problem from the coarse field $V$ and the exterior fine field $V_0$. It satisfies $M(U_1)=V$ on the coarse bonds constrained in Ba{\l}aban's regular region. Both Wilson loops follow the same fine contour $C_n$. In the definition of $W^1_\chi$, the conditional expectation integrates the exterior fields and sums over region choices at fixed $V$. The event $A_{\mathrm{cov}}$ says that every contour link and every free input needed to reconstruct it are inside the conditional integration region. The exponent $E^\circ_\xi$ accounts for that region's boundary, the torus and interactions between distant corners.
 
-The expectation $\Eh$ is positive and normalised, but it includes the branch data and the corresponding physical weights. It is not a product average over independently chosen regions. The signed defect $E_{\mathrm{def}}$ measures the difference from the locally extracted flat scalar. The term $E_{\mathrm{bdry}}$ includes the exterior response on covered branches and the whole contribution of uncovered branches.
+The conditional expectation uses the joint weights from the first blocking step. The leading insertion $W^1_\chi(C;V)$ is distinct from the full outgoing insertion $W_1(C;V)=\dd N_1/\dd\rho_1(V)$ defined in Section~2. The signed defect $E_{\mathrm{def}}$ measures the difference from the locally extracted flat scalar. The term $E_{\mathrm{bdry}}$ includes the exterior response on covered branches and the whole contribution of uncovered branches.
 
 \subhead{How to Read the Conclusion}
 The theorem gives a first-step identity with quantitative error bounds. The scalar is independent of the branch and torus; the retained expectation still knows about both. The displayed errors are initially absolute errors in the physical expectation. A stronger, partly relative form is available for the far-history defect, but must be read with its scalar and exponential-moment factors intact.
@@ -285,7 +316,7 @@ The symbol $p_0$ serves as a fixed logarithmic exponent, while $p_0(g)$ denotes 
 
 For the distances $d_j$ and $\iota_T$ defined in Section 16 of this summary, V4 states on covered branches
 \begin{equation*}
-    |E^\circ_\xi|\leq C\tau^2
+    |E^\circ_\xi|\leqslant  C\tau^2
         \left[\sum_{j=0}^{4n-1}e^{-cd_j}
             +4ne^{-c\iota_T}+(n+1)e^{-cn}\right]\;.
 \end{equation*}
@@ -293,10 +324,10 @@ With $b=\lfloor LMR_1/16\rfloor$, the physical errors obey
 \begin{equation*}
     \begin{aligned}
         |E_{\mathrm{def}}|
-        &\leq C'_Ln_Ce^{-(c_*/2)\pi_*^2}
+        &\leqslant  C'_Ln_Ce^{-(c_*/2)\pi_*^2}
             +e^{C_\chi n_C\rho(\varepsilon_1+e^{-cb/(LM)})}-1\;,\\
         |E_{\mathrm{bdry}}|
-        &\leq C_{\mathrm{resp},\chi}n_C(1+g_0r)e^{-c_*\pi_*^2}\;.
+        &\leqslant  C_{\mathrm{resp},\chi}n_C(1+g_0r)e^{-c_*\pi_*^2}\;.
     \end{aligned}
 \end{equation*}
 The constants in these statements are independent of the loop size, admitted torus and history. The explicit factors $n_C$ and the exponential in $n_C$ remain. They are not hidden in those constants.
@@ -377,7 +408,7 @@ This formula applies on the branch's interior bond region; outside it, the field
 Let $H=H_{\xi,II}$ be the precision on $\mathfrak g^I$. The hard domain is the product of the chosen norm balls,
 \begin{equation*}
     \mathcal D_I=\prod_{b\in I}
-        \{X\in \mathfrak g\, | \,|X|_\sigma<r\}\;.
+        \{X\in \mathfrak g\, | \,|X|<r\}\;.
 \end{equation*}
 The exterior interpolation used by V4 is
 \begin{equation*}
@@ -390,7 +421,7 @@ The exterior interpolation used by V4 is
             =I_{\xi;t}^{-1}K_{\xi;t}(a)\,\dd a\;.
     \end{aligned}
 \end{equation*}
-The function $P_{\xi,t}$ is the sum of the near local primitives evaluated with exterior input $tA_{\mathrm e}$. The parameter satisfies $0\leq t\leq 1$. At $t=1$ one recovers the actual conditional law, with its branch constant $e^{c_\xi}$. At $t=0$ one obtains a centred law suited to the polymer representation.
+The function $P_{\xi,t}$ is the sum of the near local primitives evaluated with exterior input $tA_{\mathrm e}$. The parameter satisfies $0\leqslant  t\leqslant  1$. At $t=1$ one recovers the actual conditional law, with its branch constant $e^{c_\xi}$. At $t=0$ one obtains a centred law suited to the polymer representation.
 
 The Wilson function $f_\xi(a)=W_\chi(C;U_\xi(a))$ is held fixed during this interpolation. Define $F_\xi(t)=\int f_\xi\,\dd\nu_{\xi;t}$. The source's exterior response identity is
 \begin{equation*}
@@ -427,10 +458,10 @@ If $k^{\mathrm f}_\xi(Z)$ is the scalar vacuum activity of a connected final dom
 \end{equation*}
 Here $\mathfrak n_\xi=(2\pi)^{d_G|I|/2}\det (H)^{-1/2}$, and the empty family contributes one. Compatibility excludes both overlap and the specified adjacency of domains. The activity estimates give
 \begin{equation*}
-    |k^{\mathrm f}_\xi(Z)|\leq \varepsilon_*e^{-\lambda_*\ell_1(Z)}\;,
+    |k^{\mathrm f}_\xi(Z)|\leqslant  \varepsilon_*e^{-\lambda_*\ell_1(Z)}\;,
     \qquad
     \sum_{Z'\not\sim Z}|k^{\mathrm f}_\xi(Z')|
-        e^{(1+6\theta)N_1(Z')}\leq \frac{1}{8}N_1(Z)\;.
+        e^{(1+6\theta)N_1(Z')}\leqslant  \frac{1}{8}N_1(Z)\;.
 \end{equation*}
 The quantity $N_1$ counts coarse cubes, and $\ell_1$ is the prescribed tree-length weight with an additive constant. The second inequality is a quantitative cluster-expansion criterion: it pays the combinatorial cost of excluding polymers around an existing one.
 
@@ -519,10 +550,10 @@ The Gaussian law $\mu_{\mathsf K_B}$ is on free-bond variables. The reconstructe
 
 The nonlinear reference field is $U_{g_0}=e^{iq_{g_0}(B)}$, where $q_{g_0}(B)=g_0\mathsf CB-h\widetilde D(g_0\mathsf CB)$. The hard cutoff is
 \begin{equation*}
-    \vartheta_{g_0}^\sigma(B)
-        =\prod_{b\in E_*}\id_{\{|B(b)|_\sigma<r\}}\;.
+    \vartheta_{g_0}(B)
+        =\prod_{b\in E_*}\id_{\{|B(b)|<r\}}\;.
 \end{equation*}
-The two admitted norms are the operator norm and the normalised Hilbert--Schmidt norm. Each prescription is fixed separately and used in numerator and denominator.
+The same fixed norm and cutoff are used in numerator and denominator.
 
 Let $J_{g_0}$ be the exact constraint-substitution determinant multiplied by the normalised Haar densities of the reconstructed phases. With $\mathscr A$ denoting action plus gauge fixing, the residual exponent is defined by
 \begin{equation*}
@@ -532,12 +563,12 @@ Let $J_{g_0}$ be the exact constraint-substitution determinant multiplied by the
 \end{equation*}
 The final quadratic term compensates for the Gaussian density. Thus the ratio
 \begin{equation*}
-    \mathcal W_T^{\circ,\sigma}(C)
-        =\frac{\int\vartheta_{g_0}^\sigma(B)e^{\mathcal P_{g_0}(B)}
+    \mathcal W_T^\circ(C)
+        =\frac{\int\vartheta_{g_0}(B)e^{\mathcal P_{g_0}(B)}
                 W_\chi(C;U_{g_0})\,\dd\mu_{\mathsf K_B}(B)}
-            {\int\vartheta_{g_0}^\sigma(B)e^{\mathcal P_{g_0}(B)}
+            {\int\vartheta_{g_0}(B)e^{\mathcal P_{g_0}(B)}
                 \,\dd\mu_{\mathsf K_B}(B)}
-        =\frac{N^\sigma_{C,T}}{D^\sigma_T}\;,
+        =\frac{N_{C,T}}{D_T}\;,
 \end{equation*}
 retains the original reference interaction and cutoff. Only scalar prefactors common to this same numerator and denominator have cancelled.
 
@@ -547,8 +578,8 @@ retains the original reference interaction and cutoff. Only scalar prefactors co
 
 The flat expansion works with finite principal Gaussian marginals. Appendix A supplies uniform spectral and exponential-decay bounds for the free covariance $C_T=\mathsf K_B$:
 \begin{equation*}
-    \lambda\id\leq C_T\leq \Lambda\id\;,
-    \qquad \|C_T(b,c)\|\leq Ae^{-\mu d_T(b,c)}\;.
+    \lambda\id\leqslant  C_T\leqslant  \Lambda\id\;,
+    \qquad \|C_T(b,c)\|\leqslant  Ae^{-\mu d_T(b,c)}\;.
 \end{equation*}
 Here $d_T$ is the periodic bond metric. The constants are independent of the compatible torus. Principal marginal covariances inherit the spectral bounds, so the estimates can be applied on the finite set of inputs of a selected term.
 
@@ -584,7 +615,7 @@ Writing $\Phi_C(\Gamma)$ for a connected source-cluster weight and $J_\Gamma$ fo
 \begin{equation*}
     \sum_{\substack{\Gamma\\j\in J_\Gamma}}
         |\Phi_C(\Gamma)|e^{\eta\ell(\Gamma)}
-        \leq C\tau^2\;.
+        \leqslant  C\tau^2\;.
 \end{equation*}
 The extent $\ell(\Gamma)$ is the specified network weight of the expansion, including the geometric carrier and interval costs. A fixed positive fraction of its exponential weight survives the counting argument. Constants are independent of the square size and of admitted torus periods.
 
@@ -606,27 +637,27 @@ Fix one orientation $v$ among $e_1,e_2,-e_1,-e_2$. Consider the infinite referen
 
 For a line cluster $\Gamma$, let $J_\Gamma\subset\mathbb Z$ be the nonempty set of coarse segments containing source marks. V4 allocates its weight equally over those segments and defines
 \begin{equation*}
-    \kappa_v^\sigma(g_0)
+    \kappa_v(g_0)
         =\sum_{\substack{\Gamma\\0\in J_\Gamma}}
-            \frac{\Phi_v^\sigma(\Gamma)}{|J_\Gamma|}\;,
+            \frac{\Phi_v(\Gamma)}{|J_\Gamma|}\;,
     \qquad
-    \delta m_v^\sigma=-\frac{\kappa_v^\sigma}{L\varepsilon}\;.
+    \delta m_v=-\frac{\kappa_v}{L\varepsilon}\;.
 \end{equation*}
-The allocation prevents counting one translated connected contribution once for each of its marked segments. Absolute convergence and $|\kappa_v^\sigma|\leq C\tau^2$ follow from the rooted extent estimate.
+The allocation prevents counting one translated connected contribution once for each of its marked segments. Absolute convergence and $|\kappa_v|\leqslant  C\tau^2$ follow from the rooted extent estimate.
 
 If $F_v(m)$ is the connected logarithm of a finite straight relative word of $m$ coarse segments, V4 obtains
 \begin{equation*}
-    |F_v(m)-m\kappa_v^\sigma|\leq C\tau^2\;.
+    |F_v(m)-m\kappa_v|\leqslant  C\tau^2\;.
 \end{equation*}
 The bounded difference comes from clusters whose marked set would cross an endpoint of that interval. A cluster rooted far from either endpoint must be long to do so. Summing the resulting exponential tail leaves an endpoint-sized correction, rather than another length-sized term.
 
 For the square, all four orientations enter. The coefficient used in the theorem is
 \begin{equation*}
-    \delta m^\sigma(g_0,\varepsilon)
+    \delta m(g_0,\varepsilon)
         =-\frac{1}{4L\varepsilon}
-            \sum_{v\in \{e_1,e_2,-e_1,-e_2\}}\kappa_v^\sigma(g_0)\;.
+            \sum_{v\in \{e_1,e_2,-e_1,-e_2\}}\kappa_v(g_0)\;.
 \end{equation*}
-The logarithm of the square ratio, divided by $4nL\varepsilon$, tends to $-\delta m^\sigma$ on the prescribed buffered reference tori. The proof first fixes an extent cutoff, takes the geometric limit, and then removes the cutoff. The bounded corner terms disappear after division by perimeter.
+The logarithm of the square ratio, divided by $4nL\varepsilon$, tends to $-\delta m$ on the prescribed buffered reference tori. The proof first fixes an extent cutoff, takes the geometric limit, and then removes the cutoff. The bounded corner terms disappear after division by perimeter.
 
 The coefficient is real because reversing a reference line conjugates its character and its connected density: $\kappa_{-v}=\overline{\kappa_v}$. Equality of all four oriented densities is not presumed. Its sign is not determined in V4. The notation ``mass'' therefore identifies a perimeter counterterm; it is not a statement establishing a positive physical mass gap.
 
@@ -648,16 +679,16 @@ The cancellation is local in a precise sense. Clusters with source marks entirel
 
 The resulting bound is
 \begin{equation*}
-    |a_{v,w}(j)-k_{v,w}(j)|\leq C\tau^2e^{-c|j|}\;,
-    \qquad |\zeta_{v,w}|\leq C\tau^2\;.
+    |a_{v,w}(j)-k_{v,w}(j)|\leqslant  C\tau^2e^{-c|j|}\;,
+    \qquad |\zeta_{v,w}|\leqslant  C\tau^2\;.
 \end{equation*}
 The sum includes the deficits created by cutting the straight reference words, as well as interactions that join the two perpendicular rays. Keeping only the latter would miss part of the corner constant.
 
 The square has four oriented incoming/outgoing pairs, denoted by $\mathscr C_\square$. V4 defines
 \begin{equation*}
-    z^\sigma_{\mathrm c}(g_0,\pi/2)
+    z_{\mathrm c}(g_0,\pi/2)
         =\exp \left(\frac{1}{4}
-            \sum_{(v,w)\in \mathscr C_\square}\zeta^\sigma_{v,w}\right)\;.
+            \sum_{(v,w)\in \mathscr C_\square}\zeta_{v,w}\right)\;.
 \end{equation*}
 This fixes the fourth-root branch through the convergent logarithm. It is the geometric mean of the four oriented factors; equality of them is unnecessary. For real-valued characters these corner factors are positive. A general complex character requires no such positivity assertion.
 
@@ -686,7 +717,7 @@ V4 identifies the regional scalar as
 \end{equation*}
 where
 \begin{equation*}
-    |E^\circ_{D,C_n,T}|\leq C\tau^2
+    |E^\circ_{D,C_n,T}|\leqslant  C\tau^2
         \left[\sum_{j=0}^{4n-1}e^{-cd_j}
             +4ne^{-c\iota_T}+(n+1)e^{-cn}\right]\;.
 \end{equation*}
@@ -700,7 +731,7 @@ This is the bridge that makes the flat coefficients applicable to a physical bra
 
 The exterior response compares the actual conditional law with its centred version. Its operand is the covariance of the full Wilson character with the interpolation score, under the actual normalised conditional law. This retains the nonlinear residual interaction and the physical hard cutoff.
 
-The regular-background estimates give a positive lower bound $\gamma\id\leq H$ for the conditional precision. The local primitive bounds make the Hessian of the residual perturbation small compared with $\gamma$. Consequently the real conditional potential remains uniformly convex on the admitted domain. Locality also bounds its off-diagonal Hessian entries and their range.
+The regular-background estimates give a positive lower bound $\gamma\id\leqslant  H$ for the conditional precision. The local primitive bounds make the Hessian of the residual perturbation small compared with $\gamma$. Consequently the real conditional potential remains uniformly convex on the admitted domain. Locality also bounds its off-diagonal Hessian entries and their range.
 
 \subhead{Keeping the Hard Boundary}
 The integration domain is a product of convex norm balls. V4 extends the functions within a proved enlarged chart and approximates the hard domain by smooth convex barriers. Each barrier is a sum of single-bond functions, so its Hessian is diagonal in the bond labels. Its large diagonal contribution preserves convexity without worsening the off-diagonal decay constants.
@@ -711,14 +742,14 @@ For real test functions $u,v$ in the stated weighted $H^1$ space, the smooth bar
         =\langle\nabla u,\mathscr A_{n,t}^{-1}\nabla v\rangle\;,
     \qquad
     \|\Pi_b\mathscr A_{n,t}^{-1}\Pi_c\|
-        \leq \frac{4}{\gamma}e^{-\mu d(b,c)}\;.
+        \leqslant  \frac{4}{\gamma}e^{-\mu d(b,c)}\;.
 \end{equation*}
 Here $n$ is the barrier index, unrelated to the square size in this local argument. The inverse estimate follows from a spatial exponential weight and the off-diagonal Hessian bounds. The complex Wilson function is handled through its real and imaginary parts. Passing to the barrier limit returns the original normalised hard-box law.
 
 The Wilson gradient is supported on the contour's free-input set $I_C$. The score gradient is supported in a fixed shell next to the exterior carrier $J$. The covariance estimate therefore yields, on covered branches,
 \begin{equation*}
     |\mathcal B_\xi[f_\xi]|
-        \leq C_{\mathrm{resp},\chi}g_0rD_\xi\;,
+        \leqslant  C_{\mathrm{resp},\chi}g_0rD_\xi\;,
     \qquad D_\xi=\sum_{b\in I_C}e^{-\mu d(b,J)/2}\;.
 \end{equation*}
 If $J$ is empty, the score and this bound vanish. The constants do not depend on the branch, the volume, the interpolation parameter or the barrier index.
@@ -737,14 +768,14 @@ Reversing the exact changes of variables and the partitions of unity returns the
 
 For a positive bond $z$, write $p_z$ for the physical probability that it meets the filled bad region. The one-point estimate is
 \begin{equation*}
-    p_z\leq q\leq e^{-c_*\pi_*^2}\;.
+    p_z\leqslant  q\leqslant  e^{-c_*\pi_*^2}\;.
 \end{equation*}
 The plaquette part uses reflection positivity and a chessboard estimate on the admitted even tori. An action cost for a disseminated bad plaquette is compared with the physical partition function lower bound. The gauge-variable part uses its own normalised auxiliary measure. The final union bound includes the possible witness locations.
 
 This produces the history estimates needed for the original carrier:
 \begin{equation*}
-    \Ph(A_{\mathrm{cov}}^c)\leq C_Ln_Cq\;,
-    \qquad \Eh[\id_{A_{\mathrm{cov}}}D_\xi]\leq Cn_Cq\;.
+    \Ph(A_{\mathrm{cov}}^c)\leqslant  C_Ln_Cq\;,
+    \qquad \Eh[\id_{A_{\mathrm{cov}}}D_\xi]\leqslant  Cn_Cq\;.
 \end{equation*}
 The contour and its reconstruction stencils contain only a fixed multiple of $n_C$ bonds. Exponential distance weights have a volume-independent lattice sum, which explains the retained perimeter factor.
 
@@ -754,7 +785,7 @@ The boundary error is exactly the covered response plus the uncovered conditiona
         \id_{A_{\mathrm{cov}}}\mathcal B_\xi[f_\xi]
             +\id_{A_{\mathrm{cov}}^c}F_\xi(1)\right]\;.
 \end{equation*}
-Using $|F_\xi(1)|\leq 1$ and the response bound gives the main theorem's estimate $C_{\mathrm{resp},\chi}n_C(1+g_0r)e^{-c_*\pi_*^2}$.
+Using $|F_\xi(1)|\leqslant  1$ and the response bound gives the main theorem's estimate $C_{\mathrm{resp},\chi}n_C(1+g_0r)e^{-c_*\pi_*^2}$.
 
 \idea{The marks are correlated under the history law. One-point bounds suffice for these linear sums, but do not alone imply the joint estimates needed for an exponential moment.}
 
@@ -770,7 +801,7 @@ The defect operand is the signed family sum from scalar extraction, averaged wit
 \end{equation*}
 V4 splits histories according to whether the filled bad region lies within distance $b=\lfloor LMR_1/16\rfloor$ of the contour's input templates. This is a decomposition of an expectation under the same law.
 
-On near histories, the whole signed sum satisfies $|\mathscr R_\xi|\leq 2$. Indeed, it equals the difference between two normalised closed-character expressions of modulus at most one. This bound is used after summing the joint defects; it is not a uniform small bound on every individual group term. One-point witnesses then give the absolute near-history contribution $C'_Ln_Ce^{-(c_*/2)\pi_*^2}$.
+On near histories, the whole signed sum satisfies $|\mathscr R_\xi|\leqslant  2$. Indeed, it equals the difference between two normalised closed-character expressions of modulus at most one. This bound is used after summing the joint defects; it is not a uniform small bound on every individual group term. One-point witnesses then give the absolute near-history contribution $C'_Ln_Ce^{-(c_*/2)\pi_*^2}$.
 
 \subhead{The Additional Gain on Far Histories}
 For far histories, the proof returns to signed selected integrals. Zero-mass probes act as finite differences inside a closed character. Odd leading terms cancel against the even Gaussian/cutoff kernel. Ordinary interaction factors disturb that symmetry; an independent complex parameter on each root pays their contribution by a Cauchy estimate. The resulting gain per marked root is
@@ -782,11 +813,11 @@ Total-variation majorants enter only after these cancellations. A single backgro
 The positive group sum retains one joint reference exclusion ratio and yields, on covered far histories,
 \begin{equation*}
     |\mathscr R_\xi|
-        \leq |S^\circ_{\xi,C}|(e^x-1)\;,
+        \leqslant  |S^\circ_{\xi,C}|(e^x-1)\;,
     \qquad x=C_\chi n_C\rho
         \bigl(\varepsilon_1+e^{-cb/(LM)}\bigr)\;.
 \end{equation*}
-After physical averaging, this is stronger than discarding $|S^\circ_{\xi,C}|\leq 1$. Substituting $S^\circ_{\xi,C}=\kappa_Ce^{E^\circ_\xi}$ retains a factor $|\kappa_C|$, paid together with the exponential moment of $E^\circ_\xi$. The near-history part remains absolute.
+After physical averaging, this is stronger than discarding $|S^\circ_{\xi,C}|\leqslant  1$. Substituting $S^\circ_{\xi,C}=\kappa_Ce^{E^\circ_\xi}$ retains a factor $|\kappa_C|$, paid together with the exponential moment of $E^\circ_\xi$. The near-history part remains absolute.
 
 \idea{The far defect is relative to a regional reference scalar before averaging. The exponential $e^x-1$ is small only in a regime controlling $x$; its exponent cannot be silently replaced by a linear error for arbitrary contour length.}
 
@@ -799,7 +830,7 @@ The quadratic coupling to exterior free variables gives a conditional mean
 \end{equation*}
 where $A'_{\mathrm e}$ is the exterior input after the boundary change. Exponential decay of $H_{DD}^{-1}$ controls the shift away from the collar. Close to the boundary, a large exterior coordinate can still move the conditional Gaussian towards the edge of the hard integration box.
 
-V4 inserts a second cutoff test on the exterior collar: a collar bond is good when $|A_{\mathrm e}(e)|_\sigma<\vartheta r$, with a fixed sufficiently small $\vartheta$. The test is a partition of unity inside the original integrand. It introduces labels, rather than conditioning the whole law on every collar bond being good.
+V4 inserts a second cutoff test on the exterior collar: a collar bond is good when $|A_{\mathrm e}(e)|<\vartheta r$, with a fixed sufficiently small $\vartheta$. The test is a partition of unity inside the original integrand. It introduces labels, rather than conditioning the whole law on every collar bond being good.
 
 \subhead{The Retreat Procedure}
 The inner region is first filled according to the stated rectangular-hull rule. At each later round, a failed collar test removes the nearby macroscopic cubes; the region is filled again. In the source's notation, the update is
@@ -809,7 +840,7 @@ The inner region is first filled according to the stated rectangular-hull rule. 
             \Lambda_1^{(k)}\setminus
                 \bigcup_{e\in B^{(k)}}\mathcal Q(e)\right)\;.
 \end{equation*}
-The set $B^{(k)}$ lists the newly bad collar bonds, and $\mathcal Q(e)$ is the prescribed neighbourhood in macroscopic cubes. A nonterminal round removes at least one cube, so the finite-volume procedure terminates. The terminal collar is good, and its mean shift satisfies $\|m\|_{\infty,\sigma}\leq r/4$. This leaves the margin needed for translated-box estimates.
+The set $B^{(k)}$ lists the newly bad collar bonds, and $\mathcal Q(e)$ is the prescribed neighbourhood in macroscopic cubes. A nonterminal round removes at least one cube, so the finite-volume procedure terminates. The terminal collar is good, and its mean shift satisfies $\|m\|_\infty\leqslant  r/4$. This leaves the margin needed for translated-box estimates.
 
 The coordinates removed from the integrated carrier become exterior coordinates of that labelled term. Their old good-box factors remain in the integrand. The underlying fine field, its background, the boundary change, its Jacobian and the original interaction are unchanged. The procedure changes the order and split of the integrations, with the inherited conditional law retained.
 
@@ -828,7 +859,7 @@ The labelled weights form an exact positive partition of the original weight,
 \end{equation*}
 Integrations over removed inner coordinates are included in $\mathsf w^{\mathrm{lab}}_\xi$. Thus the labelled physical average has the same normaliser $\mathcal Z_0$.
 
-One-point accounting now sees two sources of bad bonds: the original filled bad region and the failures that cause retreat. The resulting cost is of the form $q+N_{\mathrm{ret}}q_\vartheta$, with $q_\vartheta\leq e^{-c_q\vartheta^2\pi_*^2}$. Coverage failures and weighted exterior sums are paid by this cost. Polynomial collar and cutoff factors can be absorbed into part of the witness exponent at small coupling.
+One-point accounting now sees two sources of bad bonds: the original filled bad region and the failures that cause retreat. The resulting cost is of the form $q+N_{\mathrm{ret}}q_\vartheta$, with $q_\vartheta\leqslant  e^{-c_q\vartheta^2\pi_*^2}$. Coverage failures and weighted exterior sums are paid by this cost. Polynomial collar and cutoff factors can be absorbed into part of the witness exponent at small coupling.
 
 \subhead{The Cost of Summing Undifferenced Groups}
 The source-containing boundary estimate sums families with a marked, differenced slot and other slots that remain undifferenced. A first estimate pays the latter at a first-order rate. V4's second-order refinement reuses the even-kernel and interaction-parameter mechanisms on those undifferenced closed contractions. The improved family factor is
@@ -854,14 +885,14 @@ At the original carrier, the exponent splits as
 \begin{equation*}
     E^\circ_\xi=E^\partial_\xi+E^\circ_{T,n}\;.
 \end{equation*}
-The carrier part $E^\partial_\xi=F_{I,C,T}-F_{C,T}$ is history-dependent. The remainder $E^\circ_{T,n}$ contains the torus-to-bulk and distant-corner terms and is deterministic at fixed reference parameters. Its exact scalar identification is $\kappa_Ce^{E^\circ_{T,n}}=\mathcal W_T^{\circ,\sigma}(C_n)$.
+The carrier part $E^\partial_\xi=F_{I,C,T}-F_{C,T}$ is history-dependent. The remainder $E^\circ_{T,n}$ contains the torus-to-bulk and distant-corner terms and is deterministic at fixed reference parameters. Its exact scalar identification is $\kappa_Ce^{E^\circ_{T,n}}=\mathcal W_T^\circ(C_n)$.
 
-Under the additional torus condition $4ne^{-c\iota_T}\leq 1$, V4 obtains
+Under the additional torus condition $4ne^{-c\iota_T}\leqslant  1$, V4 obtains
 \begin{equation*}
-    |E^\circ_{T,n}|\leq C\tau^2(2+1/c)\;,
+    |E^\circ_{T,n}|\leqslant  C\tau^2(2+1/c)\;,
     \qquad
     \Eh[\id_{A_{\mathrm{cov}}}e^{|E^\circ_\xi|}]
-        \leq e^{C\tau^2(2+1/c)+n_C\delta^\sharp_q}\;.
+        \leqslant  e^{C\tau^2(2+1/c)+n_C\delta^\sharp_q}\;.
 \end{equation*}
 The original-carrier rate in Corollary 1 is
 \begin{equation*}
@@ -877,9 +908,9 @@ Corollary 1 then writes the leading term exactly as
 \begin{equation*}
     \begin{aligned}
         \kappa_C\Eh[\id_{A_{\mathrm{cov}}}e^{E^\circ_\xi}W_\chi(C_n;U_1)]
-        &=\mathcal W_T^{\circ,\sigma}(C_n)
+        &=\mathcal W_T^\circ(C_n)
             \bigl(\Eh[\id_{A_{\mathrm{cov}}}W_\chi(C_n;U_1)]+R_n\bigr)\;,\\
-        |R_n|&\leq e^{n_C\delta^\sharp_q}-1\;.
+        |R_n|&\leqslant  e^{n_C\delta^\sharp_q}-1\;.
     \end{aligned}
 \end{equation*}
 Thus the deterministic reference geometry can be separated from the physical background loop. The remaining error is still a perimeter-rate error, despite its very small rate.
@@ -894,7 +925,7 @@ Let $\mathrm{Lip}_\chi$ be the stated Lipschitz constant of the representation, 
 \begin{equation*}
     \begin{aligned}
         \left|\Eh[\id_{A_{\mathrm{cov}}}W_\chi(C_n;U_1)]-1\right|
-        &\leq a_n\;,\\
+        &\leqslant  a_n\;,\\
         a_n&=2\mathrm{Lip}_\chi c_{\mathrm h}(nL)^2\varepsilon_1
             +\bigl(2(nL+1)^2+C_Ln_C\bigr)q\;.
     \end{aligned}
@@ -903,12 +934,12 @@ Combining this with the factorisation of Section 22 yields
 \begin{equation*}
     \begin{aligned}
         \kappa_C\Eh[\id_{A_{\mathrm{cov}}}e^{E^\circ_\xi}W_\chi(C_n;U_1)]
-            &=\mathcal W_T^{\circ,\sigma}(C_n)(1+R_n^\sharp)\;,\\
-        |R_n^\sharp|&\leq \eta_n
+            &=\mathcal W_T^\circ(C_n)(1+R_n^\sharp)\;,\\
+        |R_n^\sharp|&\leqslant  \eta_n
             :=a_n+e^{n_C\delta^\sharp_q}-1\;.
     \end{aligned}
 \end{equation*}
-When $\eta_n<1$, the leading term is nonzero. Its modulus lies between $(1-\eta_n)|\mathcal W_T^{\circ,\sigma}(C_n)|$ and $(1+\eta_n)|\mathcal W_T^{\circ,\sigma}(C_n)|$. The deterministic geometry bound also compares the reference factor with $|\kappa_C|$ up to $e^{\pm C\tau^2(2+1/c)}$.
+When $\eta_n<1$, the leading term is nonzero. Its modulus lies between $(1-\eta_n)|\mathcal W_T^\circ(C_n)|$ and $(1+\eta_n)|\mathcal W_T^\circ(C_n)|$. The deterministic geometry bound also compares the reference factor with $|\kappa_C|$ up to $e^{\pm C\tau^2(2+1/c)}$.
 
 For each fixed $n$, the source states $\eta_n\to0$ as $g_0\to0$, on tori satisfying the coupling-dependent hypotheses. The controlling background term has an area factor $(nL)^2\varepsilon_1$. The estimate is small for loops whose lattice side is at most a sufficiently small multiple of $\varepsilon_1^{-1/2}$; it is not uniform in $n$.
 
@@ -978,17 +1009,17 @@ For a traversal $a$, let $\delta_a$ be the periodic fine-lattice distance of its
 \begin{equation*}
     \Delta_\times=\sum_{a\in\mathcal I_{C_1}\sqcup\mathcal I_{C_2}}
         e^{-c_\times\delta_a/(LM)}\;,
-    \qquad |E^\times_\xi|\leq C_\times\rho\Delta_\times
-        \leq C_\times\rho n_Ce^{-c_\times d/(LM)}\;.
+    \qquad |E^\times_\xi|\leqslant  C_\times\rho\Delta_\times
+        \leqslant  C_\times\rho n_Ce^{-c_\times d/(LM)}\;.
 \end{equation*}
 A connected contribution joining the loops must span their separation. The existing extent decay pays that distance. This gain is of order $\rho$, with no additional curvature factor for a connecting group.
 
 To read the error bounds, set $x=C_\times\rho\Delta_\times$ and $X=C_\chi n_C\rho(\varepsilon_1+e^{-cb/(LM)})$. Then
 \begin{equation*}
     \begin{aligned}
-        |E_{\mathrm{def}}|&\leq e^x
+        |E_{\mathrm{def}}|&\leqslant  e^x
             \left[C'_Ln_Ce^{-(c_*/2)\pi_*^2}+e^{X+x}-1\right]\;,\\
-        |E_{\mathrm{bdry}}|&\leq C_{\mathrm{resp},\chi_1\chi_2}
+        |E_{\mathrm{bdry}}|&\leqslant  C_{\mathrm{resp},\chi_1\chi_2}
             n_C(1+g_0r)e^{-c_*\pi_*^2}\;.
     \end{aligned}
 \end{equation*}
@@ -999,16 +1030,12 @@ The theorem also bounds the joint history moment of the two regional exponents. 
 For $n=L^k$, the square becomes a single plaquette after $k+1$ blocking steps. V4 conjectures coefficients $\delta m_j$ and $z_j=e^{\zeta_j}$, with the first-step values fixed by the construction already described, such that
 \begin{equation*}
     \begin{gathered}
-        \mathbb E_\varepsilon[W_\chi(C_n)]
-            =\kappa^{(k+1)}_{C_n}(1+R)+R'\;,\\
-        \kappa^{(k+1)}_{C_n}
-            =\exp \left(-P(C_n)\sum_{j=1}^{k+1}\delta m_j\right)
-                \prod_{j=1}^{k+1}z_j^4\;,\\
-        |R|\leq C\bigl[(k+2)\tau^2+n_Ce^{-c\pi_*^2}\bigr]\;,
-        \qquad |R'|\leq Cn_Ce^{-c\pi_*^2}\;.
+        \mathbb E_\varepsilon[W_\chi(C_n)] = \kappa^{(k+1)}_{C_n}(1+R)+R'\;,\\
+        \kappa^{(k+1)}_{C_n} = \exp \left(-P(C_n)\sum_{j=1}^{k+1}\delta m_j\right) \prod_{j=1}^{k+1}z_j^4 \; , \\
+        |R|\leqslant C\bigl[(k+2)\tau^2+n_Ce^{-c\pi_*^2}\bigr] \; , \qquad |R'|\leqslant Cn_Ce^{-c\pi_*^2} \; .
     \end{gathered}
 \end{equation*}
-The conjecture uses the first-step scales $\tau$ and $\pi_*$ and allows a small-coupling threshold depending on $k$, with compatible sufficiently large tori. Those quantifiers are part of its scope. The coefficients for $j\geq 2$ are not defined by V4's first-step formulas alone.
+The conjecture uses the first-step scales $\tau$ and $\pi_*$ and allows a small-coupling threshold depending on $k$, with compatible sufficiently large tori. Those quantifiers are part of its scope. The coefficients for $j \geqslant 2$ are not defined by V4's first-step formulas alone.
 
 The source identifies several missing bridges:
 \begin{itemize}

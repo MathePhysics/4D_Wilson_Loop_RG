@@ -25,12 +25,12 @@
 \newcommand{\subhead}[1]{\par\vspace{5pt}{\large\bfseries\color{ink}#1\par}\vspace{3pt}}
 \begin{document}
 \thispagestyle{plain}
-{\LARGE\bfseries\color{ink}Renormalised Wilson Loops in\\[3pt]Four-Dimensional Yang--Mills Theory\par}
+{\LARGE\bfseries\color{ink}Renormalisation of Wilson Loops in\\[3pt]Four-Dimensional Yang--Mills Theory\par}
 \vspace{5pt}
 {\small\color{muted}Research Programme \hfill 22 October 2026\par}
 \vspace{10pt}
 
-Ba{\l}aban's renormalisation group construction gives a gauge-fixed lattice measure and an RG trajectory at every finite ultraviolet cutoff. However, the gauge transformations introduced at successive steps accumulate, and seem to hinder convergence of the resulting gauge-fixed fields as the cutoff is removed.\footnote{Lack of convergence neither contradicts Ba{\l}aban's UV stability result nor would disproves the existence of the physically relevant part of a gauge theory in four dimensions.} We therefore seek the continuum theory through gauge-invariant observables. The natural candidates -- Wilson loops and pointwise traces of powers of the field strength -- present a second difficulty: in dimensions greater than two they are ultraviolet singular and cannot simply be treated as ordinary continuum random variables. Our programme addresses this problem for correlation functions of Wilson loops in four-dimensional Yang--Mills theory. We aim to identify within the RG the scalar contributions corresponding to the perimeter and corner renormalisations known from the physics literature, and to prove ultraviolet convergence after their extraction.
+Ba{\l}aban's renormalisation group construction gives a gauge-fixed lattice measure and a corresponding RG trajectory for Yang--Mills at every finite ultraviolet cutoff. However, the gauge transformations introduced at successive steps accumulate, and seem to hinder convergence of the resulting gauge-fixed fields as the cutoff is removed.\footnote{Lack of convergence neither contradicts Ba{\l}aban's UV stability result nor would disproves the existence of the physically relevant part of a gauge theory in four dimensions.} We therefore seek the continuum theory through gauge-invariant observables. The natural candidates -- Wilson loops and pointwise traces of powers of the field strength -- present a second difficulty: in dimensions greater than two they are ultraviolet singular and cannot simply be treated as ordinary continuum random variables. Our programme addresses this problem for correlation functions of Wilson loops in four-dimensional Yang--Mills theory. We aim to identify within the RG the scalar contributions corresponding to the perimeter and corner renormalisations known from the physics literature, and to prove ultraviolet convergence after their extraction.
 
 \subhead{Idea of the Method}
 
@@ -51,9 +51,15 @@ Each coarse segment contributes a small amount to the perimeter exponent, but re
 
 Currently, our bound on the remainder is only (up to logarithmic corrections)
 \begin{equation*}
-    |\mathbb E[\Delta_C]| \lesssim \frac{g_\varepsilon^3}{\varepsilon}    
+    \left|\mathbb E[\Delta_C]\right| \lesssim \frac{g_\varepsilon^3}{\varepsilon}    
 \end{equation*}
 due to a crude per bond estimate. Although this is insufficient for concluding UV convergence, we are currently working on the correct $g_\varepsilon^3$ bound.
+
+One further important point is that $W_{\mathrm{coarse}}(C)$ is in fact $W^{\mathrm{dressed}}_{\mathrm{coarse}}(C)$ which retains parts of the large field history in the spirit of Ba{\l}aban's large field mechanism. It is important that the dressed Wilson loop is compared with a na{\"i}ve coarse loop only at the final step of the RG. For these we have the bound 
+\begin{equation*}
+    \left| W^{\mathrm{dressed}}_{\mathrm{coarse}}(C) - W^{\mathrm{naive}}_{\mathrm{coarse}}(C) \right| \lesssim \frac{g_0}{\varepsilon}  \; . 
+\end{equation*}
+However, the $\varepsilon^{-1}$ is only a side effect of replacing the dressed loop with the na{\"i}ve loop too early.
 
 We also obtain analogous first-step bounds for the correlation function of two square loops with no common vertices, with additional cross terms that decay exponentially with their separation.
 
@@ -68,7 +74,7 @@ The next task is to extend our estimates from the bare lattice measure to the ef
 
 \subhead{From an Induction to an Ultraviolet Limit}
 
-Once we have proved that our Wilson loop estimates can be iterated through arbitrarily many RG steps, we aim to compare theories with successive ultraviolet cutoffs, with their bare couplings tuned to the same renormalised coupling at a fixed reference scale. The required result is a summable bound on successive differences of the renormalised loop expectations. The drafts already sketch how a uniform $g_\varepsilon^3$ error bound would yield summability along the RG flow.
+Once we have proved that our Wilson loop estimates can be iterated through arbitrarily many RG steps, we aim to compare theories with successive ultraviolet cutoffs, with their bare couplings tuned to the same renormalised coupling at a fixed reference scale. The required result is a summable bound on successive differences of the renormalised loop expectations. The drafts already sketch how a uniform $g_\varepsilon^3$ error bound would yield summability along the RG flow and that the dressed to naive error at the final IR scale $K$ should be of order $g_K$ and thus finite.
 
 To compare successive cutoffs, we must also control how differences in the couplings, effective measures and Wilson loop insertions propagate through the RG flow. The existing drafts develop ingredients for this comparison in small-field settings; its extension to the full construction remains open.
 
