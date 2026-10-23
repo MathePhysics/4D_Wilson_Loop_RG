@@ -1,0 +1,2744 @@
+WILSON LOOP EXPECTATIONS: INDUCTIVE RG COMPARISON
+Canonical working record -- established 11 October 2026
+
+STATUS AND SCOPE
+
+This is the default mathematical working file for the project's current
+Wilson-loop route. The comparison estimate below is PROPOSED AND UNPROVED.
+No ultraviolet convergence theorem is certified. Creating this record does
+not authorize a mathematical calculation.
+
+The earlier source/NewRepairs/BALABAN_WILSON_OBSERVABLE_COMPARISON_2026_10_10.txt
+is an evidence archive, not a second active proof. Its checkpoints and broad
+verdicts do not govern this record. Reuse only a specific source passage or
+scoped calculation after checking its hypotheses against the present caller.
+
+THE PROBLEM
+
+Fix a disjoint pair Gamma=(Gamma_1,Gamma_2), representations R_1,R_2, and
+a fixed physical volume and renormalization prescription. The aim is
+ultraviolet convergence of their renormalized joint expectation.
+
+Balaban changes gauges between RG steps to obtain estimates. Complete closed
+gauge-invariant insertions must therefore remain the objects carried and
+estimated throughout the induction. Gauge invariance allows these gauge
+changes; it supplies no quantitative remainder estimate by itself. Retain
+the exact measure, gauge-fixing factors, Jacobians and physical denominator.
+
+ONE-STEP OPERANDS
+
+rho_h: the full physical density entering step h, with its actual retained
+older fields, exterior interactions, cutoffs and history data.
+
+T_h: the exact block integration of RG1 (0.13), applied to that density
+and its insertion. Its CRE/LFR representations must retain every printed
+operation and factor, including postponed integrations. Subsequent gauge
+changes and R-operations must preserve the physical integral being compared.
+
+V: all output and retained coordinates of the step. The notation integral dV
+below includes the remaining physical integrations and required history sums;
+it is not integration under a newly assigned law for inherited coordinates.
+The exact base measures and integrated/frozen labels must be instantiated
+from the particular physical RG formula before a calculation starts.
+
+W_hat_{h,Gamma}: the complete renormalized JOINT closed source entering the
+step. At the initial step its convention is
+
+  W_hat_{h,Gamma}(U)
+    = [Z_{1,h} Z_{2,h}]^{-1}
+      [d_{R_1}^{-1} tr R_1(U(Gamma_{1,h}))]
+      [d_{R_2}^{-1} tr R_2(U(Gamma_{2,h}))].                  (WC.0)
+
+Gamma_{i,h} are the prescribed lattice representatives of the fixed loops.
+Z_{i,h} have the bare-equals-Z-times-renormalized convention defined in
+WC-Z1 below; their scheme and contour prescription must be fixed. At subsequent steps
+the source includes every inherited complete closed-source contribution;
+it is not replaced by the product of two separately integrated insertions.
+
+W_hat^{ref}_{h+1,Gamma}: the prescribed next-scale representative in the
+inductive closed-source class, including its renormalization and inherited
+closed remainders. Constructing this class and representative is still open.
+The exact conditional image is a legitimate effective-observable definition.
+Using it as the reference makes this particular comparison zero, but proves
+no closure of an inductive source class or ultraviolet control. A useful
+comparison requires that quantitative control as well. Renormalization
+factors may not be fitted afterwards to the joint expectation.
+
+Both insertions already include their prescribed renormalization. No extra
+perimeter scalar is divided out outside the comparison below. Disjointness
+does not imply independence, separate RG images, or factorization of the
+joint source correction.
+
+THE MINIMAL PROPOSED ESTIMATE -- WO-P1 / WC.1
+
+Put
+
+  rho_{h+1}(V) = T_h[rho_h](V),
+  D_h = integral dV rho_{h+1}(V) > 0,
+  F_h(V) = T_h[rho_h W_hat_{h,Gamma}](V) / rho_{h+1}(V).    (WC.1a)
+
+The ratio is required only almost everywhere for the physical output law;
+the numerator formula below avoids division at zero-density outputs.
+rho_{h+1} is the exact effective density, not an assumed bare coarse action.
+
+The target is
+
+  | integral dV {
+        T_h[rho_h W_hat_{h,Gamma}](V)
+        - rho_{h+1}(V) W_hat^{ref}_{h+1,Gamma}(V)
+    } | <= epsilon_h D_h.                                  (WC.1)
+
+Equivalently, for dmu_{h+1}=rho_{h+1}(V)dV/D_h,
+
+  | E_{mu_{h+1}}[F_h-W_hat^{ref}_{h+1,Gamma}] |
+       <= epsilon_h.                                       (WC.1b)
+
+The absolute value is OUTSIDE the complete physical integral. Neither a
+pointwise bound nor a bound for the integral of the absolute value is being
+requested as the minimal target. Gauge changes act simultaneously on the
+closed source and every relevant background/inherited operand.
+
+FIRST DOWNSTREAM USE AND REQUIRED UNIFORMITY
+
+WC.1 bounds the signed one-step difference of the two normalized joint
+expectations under the exact physical RG pushforward. Compatible induction
+representatives and renormalization conventions are required for iteration.
+The errors must have a summable ultraviolet tail: the sum of epsilon_h over
+steps finer than ell_* must tend to zero as ell_* tends to zero, uniformly
+in the still finer ultraviolet cutoff. Constants may depend on the fixed
+loop geometry/separation, representations, volume and renormalized physical
+parameters. A fixed-cutoff estimate is insufficient.
+
+This does not silently compare two different vacuum trajectories. If the
+cutoff-convergence argument uses effective densities from different initial
+cutoffs, their required common-scale comparison is a separate dependency
+which must be exhibited and proved or supplied by an applicable source.
+
+FIRST UNRESOLVED BRIDGE
+
+Construct the prescribed inductive closed-source representative and prove
+WC.1 under the full physical law. In particular, preserve the quantitative
+perimeter cancellation through the interacting integration before taking
+absolute values. Gauge invariance solves the transport-of-observable issue
+between gauges; the source-relative analytic estimate is not yet available.
+
+The archive's WO-PF1, (w29)--(w31), records a substantive failed attempt:
+the absolute vacuum majorant loses the extracted flat scalar, and its
+proposed finer-edge loss cannot be paid by a fixed native large-field reserve.
+This rejects that majorant, not the physical expectation or WC.1.
+
+SOURCE INVESTIGATION: THE NEXT REPRESENTATIVE -- WC-R1
+
+Scope: source reading and audit of previous local constructions, not a new
+mathematical calculation. No source below discharges WC.1.
+
+1. DeGrand, A. Hasenfratz, P. Hasenfratz and Niedermayer (1995),
+   The classically perfect fixed point action for SU(3) gauge theory,
+   https://arxiv.org/pdf/hep-lat/9506030, section 8.1, (43)--(46).
+   Their blocking integral contains a traced Polyakov-loop pair. At fixed
+   coarse V and beta -> infinity, the representative in (45) is
+
+     L'(V;n_B) = L(U(V);n=2n_B),
+
+   where U(V) minimizes THEIR fine action plus blocking term. Their (46)
+   is the classical fixed-point operator equation. Thus the original closed
+   observable is evaluated on a reconstructed fine field. The pair product
+   in (44) is a saddle result, not finite-coupling factorization. Section 8.3
+   constructs the quadratic approximation; their companion paper,
+   https://arxiv.org/pdf/hep-lat/9506031, section 1, explicitly says the FP
+   Polyakov loop had not been constructed beyond that approximation.
+
+2. Bietenholz, Brower, Chandrasekharan and Wiese,
+   Perfect Lattice Actions for Staggered Fermions,
+   https://arxiv.org/pdf/hep-lat/9612007, section 5, printed pp.21--24.
+   The relevant passage concerns gauge observables: insert an observable
+   source in the fine action and include it perturbatively in blocking.
+   They distinguish this from the easier classical construction, which
+   substitutes reconstructed minimizing fields into the original observable.
+   Their explicit (5.1)--(5.2) use a FREE gauge field and THEIR blocking map;
+   they are not a nonabelian Wilson-loop or Balaban remainder theorem.
+   No Gross--Neveu_2 argument is used here.
+
+3. Balaban--Imbrie--Jaffe, Exact Renormalization Group for Gauge Theories
+   (Cargese 1983, published 1984), printed pp.98--99, immediately before
+   section 2.10. The effective observable has perturbative vertices from
+   the original fine-lattice observable, plus higher-order/nonperturbative
+   terms. Section 2.10 then changes gauges for already integrated fields;
+   the current fields transform with the background. Existing transcription:
+   D:/University/Oxford PostDoc/Balaban/sidecar/work/text/
+   Balaban_Imbrie_Jaffe_1984_Exact_renormalization_group_for_gauge_theories_Cargese1983.txt
+   lines 1055--1091. This is an abelian-Higgs construction discussion, not
+   the full four-dimensional renormalized Wilson-loop estimate. The local
+   FLC_PROOF.md already cites the effective-observable passage.
+
+Previous local work, checked by mathematical role (archive equation IDs):
+- (4.20c27f)--(h): exact conditional image and complete background loop
+  W(U_k(V)), already present. This is not a newly discovered representative.
+- (4.20c27l): its flat-subtracted closed remainder; the physical integrated
+  estimate is explicitly unproved. Flat subtraction is not prescribed
+  perimeter/corner renormalization without a quantitative matching result.
+- (4.20c27t)--(t9): complete closed-web activities and the pair of vacuum and
+  sourced densities; no established inherited-source bound results from
+  that proposed carrier alone.
+- (4.20c27w)--(w14), WO-F3: curvature decorations and the nonflat spectator
+  obstruction; the full physical application in (w15)--(w16) remains open.
+- (4.10)--(4.14), WO-PF1: proposed geometric counterterms and the failed
+  absolute majorant. Neither supplies the signed WC.1 estimate.
+- WO-CL1/GI1 and WO-AH1: withdrawn open-endpoint/Haar-factorization routes;
+  they cannot define the gauge-invariant inductive representative.
+The adjacent SRC2_DILUTION.md source audit also rejects replacing the physical
+post-integration gauge-change identity by a per-step sourced equality.
+FiniteVolumeYM4_v98_Balaban_TV.tex assumes a bounded-observable approximation;
+it does not construct the renormalized thin-loop representative.
+
+Recommendation supported by these readings: match the effective JOINT closed
+observable to the ACTUAL Balaban blocking. The complete loop evaluated on
+its nonlinear reconstructed background is the existing candidate classical
+term; retain matched observable vertices and inherited complete closed
+corrections. Identifying that background with the saddle appropriate to
+Balaban's physical formula still requires checking the actual construction.
+Do not import the physics papers' blocking kernels, saddle factorization or
+free-field bounds. Renormalization and the full denominator must be retained.
+The finite-coupling remainder estimate and ultraviolet uniformity are open.
+
+Focused independent xhigh source review: local_representative_referee,
+11 October 2026. The readings above were confirmed at these scopes. Separate
+attempt assessment: this investigation supplies an operator-construction
+prescription and identifies its prior local use; it is not a new calculation
+proving, falsifying or directly testing WC.1. WO-PF1 remains a substantive
+unsuccessful estimate attempt, rather than evidence of closure.
+
+BALABAN SMALL/LARGE-FIELD DESCRIPTION -- WC-R2
+
+At the user's request: source-backed architecture, not a new calculation.
+The user clarified that 'action' is informal terminology. Carry the effective
+closed loop source directly; no separate action, auxiliary-source generating
+functional or logarithmic representation is required by this route.
+
+The exact block map acts on vacuum and sourced densities together. The
+proposed ordered activity iteration is written but awaits recheck; it is
+not a certified all-history induction. CRE (2.18),
+(2.20)--(2.22) supplies the admissible histories and ordered integrations;
+componentwise factorization of operations does not factorize the loop source.
+RG2 (1.41)--(1.43) supplies the localized, simultaneously gauge-invariant
+fluctuation ACTION class. Its extension to complete closed source vertices
+is proposed, not supplied by that lemma. The existing background-loop term
+is retained; its small-field corrections are the observable vertices to match.
+LFR2 (1.72) is the full large-field caller: source-dependent activities must
+retain the outer operations, all histories and exterior/older interactions.
+Loops crossing small/large regions and clusters joining the two loops cannot
+be replaced by independent regional or single-loop source images.
+
+Only complete closed contractions may be separately propagated or estimated.
+Gauge changes transform all background/current/source operands together;
+reversed Faddeev--Popov removal must wait for its specified output integration.
+The physical denominator is retained. Source-uniform activity estimates,
+renormalization matching and a summable signed WC.1 remainder remain open.
+The source-backed description does not itself supply these estimates.
+
+Evidence: corrected TeX RG1 p254 (0.13), RG2 p011 (1.41)--(1.43),
+CRE pp257--258 (2.18)--(2.22), LFR2 p379 (1.72), plus the archived
+(4.20c27t6)--(t9) and (w15)--(w16). Focused xhigh source referee confirmed
+these scopes. Separate effort assessment: no new WC.1 estimate attempted.
+
+COMPLETION AUDIT OF THE FOUR STEPS -- WC-R3
+
+Read-only focused xhigh audit, 11 October 2026. Equation references below
+are to the earlier archive. No new calculation was authorized or performed.
+
+1. Small/large-field partition and paired transport: explicit formulas exist
+   in (f)--(h), (t6)--(t9), (w15)--(w16). The latest scoped status, archive
+   lines 4316--4322, leaves (t)--(t9) written awaiting recheck. Do not read
+   the earlier conditional iteration assertion as a proved source induction.
+2. Small-field contributions: the background loop and complete source marks
+   are already defined. Checked regular inputs include (r2)--(r5b), with
+   their thick-root/support qualifications, and the closed signed primitive
+   (w17)--(w21). In particular (w20) is an actual integrated regular-term
+   bound, but supplies no physical denominator or connected activity sum.
+   Complete matched joint-source vertices and their inherited propagation
+   are not established. Most archived local calculations concern one loop;
+   their joint extension is not supplied merely by defining WC.0.
+3. Large-field/mixed/boundary activities: explicit proposals exist in
+   (s)--(u1). The boundary majorants await recheck, root ownership is
+   conditional, and the scalar update/returned channel remain proposals.
+   WO-PF1 is a substantive failed absolute-majorant estimate, not closure.
+4. Physical reassembly/comparison: the full numerator and denominator are
+   identified. The curvature and radius bridges are checked conditional
+   implications; their application to the full sourced bracket, prescribed
+   renormalization matching and ultraviolet summability are not proved.
+
+Reuse the exact source/block definitions, identified full normalization and
+regular checked inputs at their scopes. Do not repeat them. The next analytic
+bridge is the source-relative inherited/mixed integration in the full (w16),
+with the prescribed scalar renormalization and physical denominator retained,
+aimed at WC.1. The regular primitive is an input, not an estimate for this
+caller. All-history control and the matched joint representative must be
+established in that extension; no independent 'loop action' is required.
+
+AUTHORIZED ATTEMPT AND CORRECTED SOURCE TRACE OF (w16) -- WC-D1
+
+User authorized this derivation and required stopping at an obstruction.
+Replaying LFR2 (1.72)'s finite Mayer decomposition reaches the existing
+(w15). Linearity gives the displayed (w16) only under its explicit condition:
+G=c_Gamma(s)W_Gamma^0 must be fixed under each operation across which it is
+pulled. This conditional algebra does not establish that condition.
+
+The initial inference of an inner pull-out obstruction from CRE (2.10) and
+the V_h integration in LFR2 (1.71) is WITHDRAWN: it conflated old and new
+backgrounds. The user then authorized only tracing that distinction in the
+sources, not another estimate. The actual trace is:
+
+- LFR1 (1.14)--(1.20): successive constrained integrations replace the old
+  determining sets by B_k^(n), ending at B_k'', with backgrounds U_k^(n).
+- LFR2 (1.33): NEW B_k retains Gamma_j'' only on Z^c for j<k and adds the
+  current-scale determining bonds Z^(k). Equations (1.34)--(1.35) define
+  NEW V=V'' on Z^c, V=V_k'V_Lambda on Z, and U_k=U_{B_k}(V).
+  LFR1 Proposition 1 at (1.77)--(1.78) defines V_Lambda using the fixed
+  exterior current-scale field V_k on Z intersect Lambda^c.
+- This is the NEW U_k in LFR2 (1.70)--(1.72). At fixed new determining set
+  and output data it is independent of the B,V_h integrations of T'_k(X)
+  inside the processed Z. A complete loop of this background can be pulled
+  through those inner integrations. Generic older-field dependence of the
+  OLD background does not refute this statement.
+- LFR2 (1.50)--(1.64) reconstructs/localizes terms through the old background,
+  split backgrounds and U_{k,Lambda}, ending at the NEW U_k. Gauge changes
+  and boundary factors are retained. The concluding paragraph on corrected
+  p374 identifies the final new-background dependence. Corrected p377 then
+  explicitly retains A,B,V'' in the interactions V(Y,U_k), along with R and
+  boundary terms. The background replacement is not a removal of those terms.
+- The outer T_k'' operations on the unprocessed domain are left unchanged
+  (LFR1 pp200--201). New U_k may still depend on older data outside Z.
+  Pulling the entire source through those outer operations or through their
+  history sum is a separate assertion, not required by the local pull-out.
+
+The archive's background-loop formula (g)--(h) has the appropriate structural
+form W(U_k(V)), but does not explicitly assign its determining set to LFR2
+(1.33). Thus it cannot certify the stage identification by notation alone.
+For the (w16) inner bracket, the relevant background is the NEW one defined
+above. This source identification supplies no Wilson-source version of the
+action localization bounds, no prescribed joint renormalization matching,
+and no full inherited-source WC.1 estimate. Keep the source inside outer
+operations that act on its retained data; do not invent a second matching
+estimate merely because the earlier local objection was overstated.
+
+Focused xhigh independent source referee confirmed this trace, the withdrawal
+of the local objection, and the remaining outer-operation/parameter scopes.
+Separate effort assessment: an actual source identification corrected the
+old/new conflation; this is not a new bound or a calculation closing WC.1.
+
+PERIMETER AND CORNER DEFINITIONS -- WC-Z1
+
+This is a source/definition result, not a WC.1 estimate. The archived target
+at section 1, lines 270--290, consists of simple rectilinear loops. For an
+isotropic axis-link prescription with the required lattice symmetries, use
+
+  W_R^ren(C;a,mu,S) = Z_R(C;a,mu,S)^(-1) W_R^bare(C;a),
+  Z_R(C;a,mu,S)
+    = exp[-m_R(a;S) P_a(C)]
+      product_{v in physical Corn(C)} z_R(theta_v;a,mu,S).       (WC.Z1)
+
+P_a is the actual physical length of the specified lattice contour.
+m_R is a real scalar of dimension inverse length; z_R is a nonzero
+dimensionless scalar, with a specified real-positive or analytic branch.
+Both also depend on the regulator/action, representation, coupling trajectory
+and complete fixed scheme S. Neither depends on retained fields or the
+target pair. theta is the angle between forward incoming and outgoing unit
+tangents: zero means a smooth join, which receives no factor (z_R(0)=1).
+Backtracking and intersections are outside this scalar simple-loop formula.
+Direction-dependent discretizations require corresponding line/corner types;
+one common m_R is not justified for arbitrary staircase paths.
+
+This sign convention is authoritative. Musch et al. use the multiplying
+factor exp[-delta_m P-4 nu(90 degrees)] for a rectangle, so m=-delta_m
+and z_90=exp[nu(90 degrees)]. Brandt--Neri--Sato and Korchemsky--Radyushkin
+use multiplying cusp factors, the inverses of our z_R. Representation
+dependence must be retained; no all-orders Casimir-scaling rule is assumed.
+
+Scheme data are essential: ultraviolet locality specifies the form, not the
+finite parts. A concrete FINITE-VOLUME right-angle scheme can be specified
+without an infinite line or an infinite-time limit. Fix a physical reference
+ensemble (its action, coupling trajectory, volume and boundary conditions),
+two closed axis-aligned reference rectangles Q_A,Q_B of different perimeters,
+and their literal cutoff-compatible link paths. They are chosen once,
+independently of the target loops and of retained-field values. For each R,
+
+  M_{R,i}(a) = [integral rho_a^ref(U) W_R^bare(Q_{i,a};U) dU]
+                /[integral rho_a^ref(U) dU],  i=A,B.            (WC.Z2)
+
+Here rho_a^ref is the complete physical density of that fixed reference
+ensemble; dU is its full base measure, with all its physical integrations.
+Admit only cutoffs with positive denominator and positive M_{R,A},M_{R,B}.
+Let P_i(a) be the actual physical perimeters, with P_A(a) != P_B(a).
+Define the real m_R and positive z_{R,90} by the two CONDITIONS
+
+  exp[m_R P_A(a)] z_{R,90}^(-4) M_{R,A}(a) = 1,
+  exp[m_R P_B(a)] z_{R,90}^(-4) M_{R,B}(a) = 1.               (WC.Z3)
+
+These are proposed finite-scheme definitions, not equations quoted verbatim
+from the sources. The system has not been calculated here. Positivity along
+the required cutoff sequence and universal subtraction for other loops are
+not certified. Reference geometry/volume are fixed finite-scheme data.
+This normalizes two calibration observables, not the target joint expectation.
+Exact choices of reference ensemble and rectangles must be supplied before
+using this particular scheme; WC.Z3 is not an already computed counterterm.
+
+A standard alternative fixes the line mass through the static potential of
+closed rectangles, with V_R^ren(r_0)=v_R at fixed physical r_0 and v_R.
+In our convention V_R^ren=V_R^bare-2m_R. This requires an ensemble with the
+appropriate long-time limit; it is not a limit inside the present finite box.
+For general physical cusp angles, a fixed closed single-cusp reference contour
+of size mu^(-1) defines the finite cusp normalization after line subtraction.
+The continuum MOM condition is explicitly present in Korchemsky--Radyushkin
+(9)--(10). A finite axis-link polygon cannot literally supply just one such
+cusp. Do not silently replace that contour by an untreated staircase.
+
+For a disjoint pair, the proposed local counterterm is Z_1 Z_2; complete
+closed correlations remain in the numerator. No separation-dependent scalar
+is introduced to cancel the pair expectation. Local multiplicative
+factorization is established by the cited literature in perturbation theory,
+not yet under the full nonperturbative Balaban law. In particular, the full
+conditional flat coefficient c_Gamma(s) is NOT defined to be Z_1 Z_2.
+
+Archive (4.11)--(4.14) are conditional attempts to CONSTRUCT shell coefficients
+from an unproved connected marked expansion. They are not prerequisites for
+specifying a finite renormalization scheme. Their signs agree with WC.Z1 only
+after actual scalar matching. Open straight/two-ray references may not be
+separately estimated or propagated; any constructive implementation must
+extract the coefficients from complete gauge-invariant closed sources.
+
+Smooth target loops require a separate contour prescription. Projection onto
+axis links generally creates microscopic turns; these are not a fixed family
+of isolated physical cusps. Green--Jansen--Steffens, section IV.B (51)--(52)
+and footnote 5, describe zigzag approximations with a different line mass and
+relate their accumulating cusps to a mass contribution. This supports
+absorbing microscopic turning effects into prescription-dependent line
+renormalization rather than assigning a surviving physical corner factor
+to every lattice turn. Extension to arbitrary curved projections, including
+uniform control of local pattern changes, is not supplied by that example.
+WC.Z1 must not be applied to all microscopic staircase vertices as though
+the finite-isolated-cusp theorem were uniform in their shrinking separations.
+The physical carrier remains the complete closed loop throughout. The human
+has asked about this geometry, not yet authorized a new comparison calculation.
+
+Primary evidence:
+- Brandt--Neri--Sato (1981), abstract: local factors, closed reference
+  normalization, and products of loops, all orders of perturbation theory.
+  https://journals.aps.org/prd/abstract/10.1103/PhysRevD.24.879
+- Korchemsky--Radyushkin (1987), section 2.2, (7), (9)--(10), pp345--346:
+  multiplicative cusp subtraction and fixed closed-contour MOM normalization.
+  https://virgilio.mib.infn.it/~oleari/public/scet/Korchemsky_Radyushkin.pdf
+- Musch et al. (2011), section IV.C.1, (32)--(34), printed p12:
+  closed rectangle, perimeter/corner factors, static-potential condition.
+  https://arxiv.org/pdf/1011.1213
+- Green--Jansen--Steffens (2020), section IV.B, p074509-8:
+  off-axis zigzags and distinct mass counterterms; footnote 5 cites
+  Craigie--Dorn, Nucl.Phys.B185 (1981) 204 for the smooth multicusp limit.
+  Craigie--Dorn's full original passage has NOT been inspected here.
+  https://inspirehep.net/files/fbe8390d230c0583df0210bc94a7e5a3
+
+Focused xhigh source referee checked the signs, finite-scheme qualifications,
+closed-reference conditions and limits of the polygonal source readings.
+An additional focused xhigh reading confirmed the Green--Jansen--Steffens
+zigzag passage and its stated scope; arbitrary smooth closed projections and
+the original Craigie--Dorn passage were not certified.
+Separate effort assessment: definitions/source audit; no WC.1 calculation.
+
+D1 -- CLOSED DETERMINANT RESUMMATION TEST (14 October 2026)
+
+The human approved this calculation and an xhigh referee. For the n
+oriented edge occurrences of an original fine contour, put
+(K_U f)_j=R(U(e_j))f_(j+1), cyclically, on the direct sum of n copies
+of the representation space. Gauge changes conjugate K_U by the block
+diagonal vertex action. Its determinant and complete coefficients are
+gauge invariant. No open segment is estimated or propagated.
+
+det(I-t K_U)=det(I-t^n R(Hol_U Gamma)); the coefficient of t^n is
+-Tr R(Hol_U Gamma). Proof: Tr K_U^m=0 unless n divides m, and
+Tr K_U^(nq)=n Tr R(Hol_U Gamma)^q. The convergent logarithmic series
+at t=0 gives the identity there; polynomial continuation gives it
+everywhere. This identity is preserved by the literal chronological
+source integrations, not by replacement with a coarse holonomy.
+
+Use z_i=t_i^(n_i), and let I_K(z_1,z_2) be the ORIGINAL physical
+integral of rho_(0,K) times product_i det(I-z_i R_i(Hol_U Gamma_i)).
+All histories, outer interactions and source normalisers enter when
+this original integral is represented by C8. The complete signed
+polynomial is Q_K=D_K I_(K+1)-r_K D_(K+1) I_K. Its z_1 z_2 coefficient
+is d_1 d_2 H_K. No norm of the whole polynomial is required by WC.1.
+
+Actual-law analytic test: for an SU(2) fundamental reference square,
+M_K=E_(mu_K) chi(Hol) satisfies 0<M_K<1. Strict positivity is the
+checked rectangle transfer result; the strict upper bound follows
+from positive physical Haar density and nonconstant holonomy.
+I_K(t)/D_K=1-2 M_K t^n+t^(2n). Its z=t^n zeros are
+M_K +/- i sqrt(1-M_K^2), so all t zeros have modulus one. Small M_K
+does not enlarge the logarithmic Taylor radius. For fixed 0<r<1,
+the continued log obeys |log(I_K(t)/D_K)|<=6 r^n on |t|<=r once
+3 r^n<=1/2. Thus the integrated unprojected determinant logarithm
+does not supply the sought contour-extensive Wilson pressure.
+Logarithm also does not commute with physical integration: their
+second z coefficients differ by 2 Var_(mu_K)(chi).
+
+Fundamental-source rescaling z/Z is valid coefficient bookkeeping,
+but also gives the singlet coefficient Z^(-2). A uniform bound of
+the full rescaled polynomial would control unwanted winding sectors.
+No ultraviolet decay of Z is inferred from finite-cutoff positivity.
+Reject the unprojected integrated-log/full-polynomial-bound mechanism;
+the single-winding connected resummation and WC.1 are NOT falsified.
+
+Direct full-H preparatory calculation: in each youngest regular RG2
+kernel freeze C=C_sigma, Gamma, X, reconstruction and older data;
+replace only the young Gaussian by mu_(sC) and its compensator by
+exp[-s <Gamma X,C Gamma X>/2], for delta<=s<=1. This is an auxiliary
+integral deformation, not a new physical RG law. Its literal density
+score is S_s=-m/(2s)+<B,C^(-1)B>/(2s^2)-<Gamma X,C Gamma X>/2,
+with m the actual free-carrier dimension and original bilinear forms.
+Deforming the fine copy only, with coarse copy and physical r_K fixed,
+H'_s is the full original signed product-copy integral with source
+(Phi_plus-r_K Phi_minus) and sum of young scores inserted. Source
+lifts and normalisers are rebuilt from that insertion; differentiating
+them again would double-count it. H_1=H_delta+integral_delta^1 H'_s ds.
+H_delta and the integrated derivative may cancel; neither is separately
+required to be small. The physical density mismatch remains in H_delta.
+
+With q=Gamma X and W the ENTIRE remaining literal weight, moving the
+heat derivatives gives exp[-s<q,Cq>/2] integral exp[-<B,q>]
+[(1/2) Delta_C(W F)-<Cq,grad(W F)>] d mu_(sC).
+This retains interactions, older-source derivatives and nonlinear
+source Hessians. Fixed characteristic functions require distributional
+derivatives/surface flux, not their deletion. The zeroth-order q^2
+term cancels the compensator exactly. A common scalar Casimir is not
+proved for the background-dependent covariance and reconstructed source.
+No new gauge-independent physical law is asserted for intermediate s.
+
+Focused referee: /root/determinant_signed_analytic_referee, xhigh.
+Local identities and actual-law zero test: calculation checked.
+Effort verdict: substantive falsification of the unprojected-log
+resummation premise; the full-H score calculation is preparatory, NOT
+a quantitative estimate of WC.1. No summable bound, physical pressure
+matching or actual inherited-source localisation estimate is proved.
+
+ACTIVE CHECKPOINT
+
+PAUSED at the human's latest request, 14 October 2026.
+Latest authorised target before this pause: FIRST-STEP marked-source
+closure only, not ultraviolet convergence or full physical expectation
+summation. The actual unchanged deferred operation is CRE (2.20)--(2.21)
+at k=1, T^(0), not the completed LFR2 T'_1 replacement operation.
+
+E5 -- boundary-source reserve attempt, incomplete. Xhigh review checked
+the real complete-character insertion bound, the switched free-bond
+phase identity, and the nonlinear constraint perturbation for
+q=g0 C(U1)Psi-h(U1)Dtilde_U1(g0 C(U1)Psi). On the original CRE cutoff
+carrier, |g0 Psi|<=C delta0 follows from CRE (1.12)--(1.13); the
+perturbation retains background dependence of C,h,Dtilde and has no
+inverse-g0 loss. Correcting the caller to unchanged T^(0) identifies
+the actual original U1 and localised comparison minimum in CRE (1.21).
+This checks a local analytic multiplier transfer, not the outgoing
+source-kernel reserve bound.
+
+Bare complete mark coefficients have |W_J|<=2^|J| and contact-mark sum
+<=3^n_X; both fine and coarse words must be charged on complex data.
+Young-eliminated source images remain their actual N/I kernels;
+I*b=N may be restored only with the SAME literal outgoing I and all
+its labels/normalisers. This supplies no bound for b by a bare character.
+
+First unresolved premise: a full-weight first-birth majorant for the
+actual unchanged T^(0)[exp A1], with exterior action, boundary B1,
+Schur completion and normalisers in their original locations, and its
+replay on the outgoing marked kernel with touching-cluster ratios.
+LFR2 (1.79)'s completed-operator bound was NOT transferred to it.
+The two clauses of eq:birthreserve may NOT both be imported: the
+permitted r=2,p0=10 does not satisfy p0(g)>=C R1^6. Smaller g cannot
+repair that exponent mismatch. First-step analysis must use the actual
+birth penalty and its actual vacuum debit, not later merger margins.
+An attempted direct first-birth coercivity route for all P0/P1/Q1/R1
+selectors was not completed or reviewed; no rare-event gain from it
+is established. Do not report it as a reserve estimate.
+
+On a future human resumption, work at that full-weight first-birth
+premise. Do not redo the checked local constraint calculation, trace
+completed replacement maps unnecessarily, or demand UV convergence at
+the first step. First-step closure and WC.1 remain OPEN.
+
+14 October 2026 -- E3: explicit bare first-RG estimate authorised by the
+human; it is the base case of the marked-polymer route, not a replacement
+for WC.1. Actual derivation: WILSON_RG_COMPARISON.tex sec:freshmark.
+Calculation checked at fixed centred regular external arguments:
+eq:freshremainder and eq:freshgain (quadratic source remainder and signed
+odd-linear cancellation when D is empty), eq:sourcerootcount and
+eq:sourceenvelopepayment (root-dependent weakening-label count).
+The gain is epsilon_f^2=g0^2 times cutoff logarithms in the bare case,
+not a cutoff-uniform constant times g0^2 and not a summable UV remainder.
+
+The adapted cover attempt retains the +5 joining costs of RG2 (2.27)
+at both scales, but does NOT prove eq:rawfreshactivity or
+eq:dressedfreshactivity. Their unconditional assertions were withdrawn.
+The xhigh referee checked the actual written derivation and found:
+exp(Cchi alpha1 l(I)) and root-size dependence were dropped without
+payment; full background/return-frame read-outs were not identified
+with the fixed local root; D-nonempty w20 uses alpha5+2 alpha_s, whereas
+the displayed entropy E pays only alpha5; and flat subtraction was not
+instantiated in the definition of h_c. These are substantive gaps.
+The proposed summed inequalities remain unproved in the manuscript.
+
+E4 -- connected marked-cover attempt, subsequent human authorisation.
+The actual all-mark derivation is in sec:markedcovercosts. The xhigh
+referee checked eq:markedforest, eq:markedcomponentcount and the direct
+fine/coarse join payments in eq:markedbadpayment. Source root cost is
+C_aux^m, not C_aux to the whole contour length. The common Gaussian
+volume cost now retains alphahat, including the selected-potential
+channel. eq:allmarkcount sums all m>=2 in a fixed connected domain;
+it is not another single-label calculation. Constants involving rho
+and actual root/hull geometry must remain explicit at the caller.
+
+The initial objection that every shared frozen contour read-out
+automatically creates conditional incompatibility was too broad.
+RG2 (2.10) factorises the complete localised B/X payload at fixed
+external background. The reviewer confirmed this changed premise.
+Eligible complete-flat single-loop component scalars can be completed
+conditionally with the actual contour hull rules, keeping the whole
+gas inside the original exterior/history integration. This statement
+does not establish a full sourced load or permit outer factorisation.
+
+The first literal unresolved physical payload is FIRST_RG_STEP.tex
+eq:conditional: the shifted source and Theta_Lambda(u+m_Lambda(d);d)
+exp(F(u+m_Lambda(d),d)) retain nonflat boundary colour d. Setting
+U0=1,J=0 does not make that germ flat. Regular Schur scalarisation
+therefore does not supply its perimeter factor or tested-operation
+bound. Full reference matching and the physical signed denominator
+estimate remain OPEN; no native scalar pressure is substituted for C_K.
+
+The full shifted boundary source, newly rough kernels, physical
+denominator and reference factors remain in the first-step caller.
+Next literal step is the signed integrated contribution of the complete
+shifted boundary insertion to that SAME marked sum, retaining the
+physical reference companions and denominator. Use the conditional
+support distinction verified in E4; do not revive the blanket shared-
+readout incompatibility objection or repeat the fixed-label parity count.
+FIRST_RG_STEP.tex remains an exposition of Balaban's vacuum construction.
+WC.1 and UV convergence are OPEN. D1's unprojected determinant-log route
+remains rejected; its exact score/heat identities supply no analytic rate.
+
+14 October 2026 -- auxiliary convention fixed at the user's request:
+p0>1 is chosen once, with the other Bałaban cutoff parameters compatible.
+It is not an extra physical assumption or an unresolved premise. The
+checked ultraviolet-birth summability calculation uses this fixed choice.
+The human has authorised continuation of the same COMPLETE H_K estimate;
+do not stop at a nonzero component or demand its separate smallness.
+
+14 October 2026 -- complete signed cutoff attempt, incomplete. Latest
+human instruction: estimate complete H_K with all companion terms,
+histories and denominators, without requiring individual components to
+cancel or be small. The sole numerical target is the full signed
+eq:referencesignedtarget. Earlier stops at an individual response/core
+do NOT establish an obstruction to that target.
+
+Actual quantitative attempt: retain the first-birth label in LFR2
+(1.79)--(1.88), rather than replace it by final-scale (1.89). For a
+vacuum-history MAJORANT component first born at j=1, the existing reserve
+kappa>=0 and the fixed-output tuning window give
+exp[-kappa-2p0(g_1^(K+1))] <= exp[-c(log K)^p0] <= K^(-2)
+eventually, for p0>1. Proof and exact source scope are in TeX
+sec:uvbirthpayment / eq:uvbirthpayment. This is a factor in the vacuum
+majorant after integrations were estimated, NOT a proved common factor
+of the physical H_K integrand. Focused xhigh complete_signed_cutoff_referee
+checked this rate and source scope.
+
+The attempted application to full H_K remains unproved. The full signed
+sum includes regular shell changes, persistent histories, density mismatch
+and the exact r_K=C_(K+1)/C_K from four reference amplitudes. No actual
+signed-family allocation transfers the birth payment through that complete
+sum, pays contour multiplicities and C_(K+1), or supplies the regular
+cutoff tail. None of the cited reserve/pressure identities supplies this
+combined inequality by itself. No separate source/activity/reference-ratio
+bound was imposed; no individual nonzero term was declared an obstruction.
+The desired global bound is not falsified. Referee effort verdict:
+substantive partial payment and applicability test, NOT a quantitative
+bound on the complete H_K under its caller. No UV convergence is proved.
+The authorised full-H_K calculation remains the active problem; no
+alternative carrier or route has been introduced.
+
+14 October 2026 -- reference prescription fixed; signed estimate stopped
+at its first quantitative source-bearing term. The human authorised the
+reference-loop prescription and the fully integrated signed estimate.
+Actual new result: compatible nonwinding reference squares of side ell
+and 2ell, ell=L^(m_tor-2), based at (1/2)^4 in the first-two-direction
+plane have strictly positive amplitudes for every finite positive bare
+coupling and every normalised irreducible character. Full proof:
+WILSON_RG_COMPARISON.tex, prop:referencepositive and eq:recttransfer.
+It retains the periodic temporal Haar projections. Positive Fourier
+coefficients follow from faithfulness and tensor-power completeness;
+the complete gauge-singlet trace proves strict positivity, with ordinary
+Hilbert--Schmidt measure on End(R). No uniform lower bound is asserted.
+The xhigh reference_signed_estimate_referee independently checked the
+proof, geometry, d_R factors and periodic trace identity.
+
+Counterterms are now actual finite-cutoff definitions, not assumed local
+extractions: eq:referencecounterterms solves WC.Z3; eq:pairreferencefactor
+gives C_K from the four reference amplitudes. They are independent of the
+target joint expectation. The exact signed numerator and complete physical
+denominators are eq:referencesignednumerator--eq:referenceincrement.
+Their summable numerical bound eq:referencesignedtarget remains OPEN.
+
+Actual signed calculation: varying one native real boundary weight gives
+the combined calibrated physical response eq:calibratedresponse. It keeps
+the target correlation, all four reference correlations and the essential
++J_K <W_X> vacuum-normaliser term. Older conditional lifts are updated,
+not frozen. The referee confirmed this finite-cutoff identity. This is
+not the full cross-cutoff H_K estimate. Disconnected terms cancel; the
+common inherited source/interaction component survives. Neither the
+geometric reference weights nor LFR2 (1.68)/(1.69)/(1.75) establish a
+bound on the resulting combined signed physical susceptibility. Separate
+reference-ratio bounds, source suprema, and RV convergence are NOT demanded.
+No cancellation or quantitative UV gain was assumed. Mathematical work
+has stopped at this analytic obstruction under the user's instruction.
+Progress is reference positivity and a concrete counterterm prescription;
+no signed ultraviolet bound or convergence theorem has been proved.
+
+14 October 2026 -- expectation-only continuation, stopped at first
+obstruction. The human authorised the signed fully integrated polymer
+estimate, with no source supremum or random-variable convergence bound.
+The target remains WC.1 with its cutoff-uniform summable tail; absolute
+values are not moved inside the full history sum and physical integral.
+The proposed grouping of source, next-scale representative and local
+counterterms requires their actual matching at full inherited histories.
+That matching is not constructed in the record: TeX eq:geometriccorner
+assumes germ-local scalar coefficients; eq:Z3 is only an unsolved scheme
+condition; C8 constructs the source but neither of those transfers. The
+checked C6 cancellation covers its one-old/one-fresh term, not the combined
+renormalised WC.1 defect. Thus the proposed R_(k,N) still uses the unproved
+next-scale representative already identified below WC.0. No such matching
+was assumed, no counterterm was fitted to the integrated expectation, and
+no stronger source norm was substituted. Work stopped at this construction
+obstruction before a new quantitative signed estimate was obtained. This
+is not evidence against expectation convergence and is not analytic
+progress. A future calculation must make this local signed subtraction
+concrete at the physical caller before estimating the complete defect.
+
+14 October 2026 -- stopped at the obstruction in the authorised activity
+estimate attempt. The proposed substitution into LFR2 (1.91)--(1.92)
+reaches the empty selected interaction family. For one inherited component
+Y its eligible scalar-subtracted seed is nu_Y[bbar(H)]-c chi(H), with c
+defined only at an admissible complete-flat reference. Applying (1.75)
+leaves exp(3 sup|sigma|) sup|bbar(H)-c chi(H)|: the required inherited
+source bound is still an input. LFR2 (1.65) transfers background domains;
+the decay payment on p376 starts from already controlled action terms.
+CRE (3.44)--(3.47) similarly uses the preceding bounds on its insertion.
+These passages do not discharge the source seed. This is the existing
+C10/C11 obstruction, not a new result, falsification, or analytic advance.
+The xhigh inherited_activity_attempt_referee confirmed this reading and
+separately classified the work as a source-scope audit and rejected
+substitution, not a new quantitative test of WC.1. No expansion algebra,
+raw-source bound or alternative route was undertaken. WC.1, the inherited
+marked-activity estimate and UV convergence remain open. Mathematical work
+is stopped under the user's explicit first-obstruction condition. A future
+proposal must specify a new signed estimate of this same seed under its
+actual inherited operation; repeating (1.75) or C11 is not that estimate.
+
+DOCUMENTATION RECONCILIATION, 13 October 2026: the existing Wilson results
+and scope-limited proofs are now transcribed in WILSON_RG_COMPARISON.tex,
+including C3--C11, E1/E2 and the earlier flat-web/proposed induction work.
+The current evidence/dependency index is
+logical_dependency_audit/WILSON_RG_DEPENDENCY_GRAPH.md (DOT beside it).
+Use the TeX status ledger and graph evidence pointers before declaring
+work absent. The v92 graph is historical. This update proves no new
+analytic estimate: the inherited marked-activity bound, scalar matching,
+WC.1 and UV convergence remain open. Historical statuses below retain
+their original scope and are not current authorisations or new routes.
+
+LATEST USER LOCK: "Do the polymer induction, never deviate from it!
+If there is even the chance of deviation ask for permission."
+Correction after the user's "haven't done this already" check: do NOT
+restart component/hull algebra. The archive already contains (4.20c27m)--
+(4.20c27o'), the flat-background whole-web factorisation, recorded as
+calculation checked, and the explicit proposed marked-component update,
+vacuum dressing and ordered histories (4.20c27t)--(4.20c27t9), recorded
+as written/awaiting recheck or conditional. Exact E2.3--.5 recurrence and
+C6's scoped component cancellation are also already present. These are
+not a proved nonflat inherited polymer induction, but they invalidate
+presenting the entire construction as new. Reuse their exact scope;
+do not infer the missing nonflat/source-majorant transfer. C8 alone
+treats a complete J-source as one hyperedge. Any genuinely new sewing,
+carrier or norm still requires explicit permission under the user lock.
+Archive evidence: source/NewRepairs/BALABAN_WILSON_OBSERVABLE_COMPARISON_
+2026_10_10.txt, lines 2703--2764, 3130--3257, and 4287--4329.
+
+13 October 2026 -- mathematical work resumed by the human's latest request.
+Recovery automation remains paused. WO-P1 / WC.1 is still open.
+
+Current authorised task: bound the surviving signed connected terms in
+WC-C6.2 towards ultraviolet convergence, with full histories, gauges and
+physical denominator. Quantitative continuation is recorded in WC-C7.
+WC-C7.3--.4 were withdrawn from the physical proof chain after the user's
+definition audit: they assumed the source operand. The subsequent explicit
+construction is WC-C8.1--.7. It includes the chronological conditional lifts
+of eliminated fields, postponed-variable ledger, multi-holonomy complete
+marker, older/current numerator and denominator decorations, and the
+actual contour hull needed for a single-holonomy local germ. Focused xhigh
+review checked this finite-cutoff construction, including its real gauge
+invariance on complete chart data and its full physical caller.
+The first unresolved estimate is now a bound for THIS constructed kernel,
+including the connected source--boundary contribution WC-C7.5 and its
+fixed-matching-scale gain. C8 does not supply the old assumed analytic
+bound, a perimeter matching estimate or a future tested-operator norm.
+Do not repeat the kernel construction or the covariance identity instead
+of addressing that estimate. The scalar joint-pressure inequality C7.2
+remains checked at its stated conditional scope.
+The physical inherited-source induction and WC.1 are not proved.
+The current authorised route is C10: additive local scalar extraction
+inside the marked RG expansion. C9's division by a sourced expectation
+is rejected as an unnecessary sufficient route. The C10 attempt did
+not bound the retained inside-Z joint source term; CRE's small increment
+factor applies only at its stated scope. Focused xhigh review confirmed
+the inside/outside-Z distinction and the missing pre-birth pressure
+identity in the unaccepted native-contour proposal. No analytic bound
+has been closed; do not repeat these identities as another attempt.
+
+Latest authorised background analysis is C11. It differentiates the
+ACTUAL C8 lifts and current marked integrals, with all older density
+and denominator responses. The source Ward identity includes the
+auxiliary holonomy and every retained adjoint datum. Curvature and
+independent-current response amplitudes survive scalar subtraction.
+The attempted whitening integration by parts lacks an inverse for
+the actual nonnegative collar quadratic form and would retain the
+nonlinear-action/cutoff/constraint terms. Three focused xhigh reviews
+confirmed these scopes. No uniform bound for the C11.1--.3 amplitudes
+was obtained; no analytic or ultraviolet estimate is certified.
+
+Earlier checked: the real interface contraction, signed response, exterior history allocation,
+and virtual gluing for current-background closed factors (WC-C4.1)--(WC-C4.8).
+The exact root set includes interior interpolation collars read by a source.
+The real reference-domain bridge is now checked: WC-C4.9--WC-C4.15 give the
+nonlinear force-envelope estimate and its literal all-p substitution into
+CRE (2.35), (2.37), including the joined regular boundary envelopes.
+WC-C5 now supplies exact finite-history localisation of the actual inherited
+closed source, including every older reconstruction and return gauge.
+WC-C6 now checks the finite-cutoff signed exchange for WC-C2's one-old/
+one-fresh coefficient on the exact selected expansion carrier. Unmarked
+components cancel with full weights and denominators. First unresolved:
+the quantitative sum of the surviving connected marked terms, with the
+prescribed renormalisation and finer-cutoff uniformity. WC.1 is unproved.
+Do not redo WC-C3, replace coherent averages by arbitrary sup-norm data,
+drop the derived projected force, trim the inherited domain, or take an
+absolute source majorant. The gluing/localisation/exchange calculation is
+complete at WC-C6's finite-cutoff scope. The next proposed calculation is
+the signed connected integral (WC-C6.2), not another carrier derivation.
+
+Earlier pressure-matching checkpoint (evidence, not the active next step).
+The chronological inherited-block pressure matching was attempted
+under the actual LFR1 (1.60) conditional law and full LFR2 (1.72) outer law.
+For an already integrated old regular correction supported wholly in a
+coarser native stratum, its existing curvature gain survives the mixed
+covariance and the final physical denominator. With D_h=O[J_1], the endpoint
+J_1 remains OUTSIDE the interpolation integral; the bound is the physical
+outer average of 2 sup|f_j| sup|V_Y|. The universal scalar times the fixed
+inner H_new cancels from this covariance. This is a checked scoped transfer,
+not a bound for every inherited source.
+
+Retained A_j lives on E_j=Omega_(j+1) intersect Lambda_(j+1)^c, hence in
+native stratum j+1 by CRE (2.1), (2.3). VAR (190), PRT2 (2.60)--(2.62),
+and CMP98 (106) control its LOCAL response to later native-m variation.
+The whole old coefficient can additionally contain a current-scale
+connecting transport P: the exact closed derivative contains
+tr[L_1 P [P^(-1) dot P,L_2] P^(-1)H]/d. Do not assign the near-E_j scale
+gain to that term without its actual source-support or current-scale norm.
+
+Pending-pressure payment was checked CONDITIONAL ON completed coefficients
+a_(j,X,c) satisfying an absolute rooted support bound epsilon_j. Extract
+only full supports X subset Lambda_(j+1); crossing supports contribute an
+exponentially weighted halo around Z_(j+1), even for roots inside Lambda.
+The halo count for the square pair is bounded by C epsilon_j M R_(j+1)
+sum_components(d'_(j+1)+1), paid by the SAME LFR2 (1.79)--(1.88) reserves.
+A root-only smooth partition omits the crossing-support term and is invalid.
+
+First unresolved analytic premise is now the PHYSICAL completed-coefficient
+bound needed by that payment. Candidate induction uses 0<sigma<1 and seeks
+epsilon_j <= C g_j p_0(g_j) + eta(gamma) D g_j^sigma, eta(gamma)->0.
+The old-source depth sum is checked arithmetically, but its Cauchy radius
+must be c min(alpha_(1,l),L^(-2)alpha_(0,l)), not alpha_(1,l) alone.
+Both q_0 and q_1 must exceed p_0 plus the actual localisation losses.
+RG2 (2.27)--(2.38) supplies the proposed numerical seed/tree summation;
+the extra source Gaussian allowance must meet its (LM)^4 alpha bound too.
+
+Not yet certified: allocating each OLD source hyperedge in the actual
+conditional expansion to an independent integration component with the
+required seed factor and support weight. At a flat straight/corner germ,
+overlapping contour-contact hulls must be merged before Schur scalarisation.
+Exact source--source hull incompatibility differs from source--vacuum
+compatibility: enlarged-support overlap is a MAJORANT only, not permission
+to delete allowed vacuum configurations. Also a local full kernel-log norm
+is not supplied by the scalar log bound: nonflat BCH commutators can have
+disconnected union supports. The proposed inductive inputs must be ordered
+local closed-source activities, with scalar pressure factored separately.
+
+Next literal step after human resumption: verify the OLD activity seed and
+component allocation in the real conditional integral, then replay the
+rooted connected scalar estimate and pending-pressure bound. Do not assume
+this activity norm, restart the frozen kernel algebra, or certify WC.1.
+Evidence: focused referee messages in this run; the native conditional
+source operand is CRE (3.25), and the source component sums are RG2
+(2.27)--(2.38), CRE (3.44)--(3.47). No new theorem was added to the TeX.
+
+Latest direct inherited-source test (human-authorised continuation): for two
+actual marked insertions the relevant tracial coefficient is the complete
+normalised conditional covariance tau(I[S_12]/I[1]-(I[S_1]/I[1]) star
+(I[S_2]/I[1])), not the raw two-mark trace. The latter has a long-connector
+SU(2) dependence but can cancel exactly when the conditional law factorises;
+it is NOT a counterexample to the completed coefficient bound. CRE (3.45)
+retains touching denominator clusters. In the full LFR2 (1.71) inherited
+block, the older T_h operation is inside T'_k(X). If z_h>0 denotes a proposed
+per-bond scalar pressure factor, substituting the normalised closed source
+into the printed positive vacuum estimate (1.89) yields only
+|T'_k(X)[z_h^(-N) chi]/T'_k(X)1| <= z_h^(-N): the rare-event
+mass cancels on normalisation and no support decay follows. Any depth-growth
+claim for this upper envelope depends on the still-unproved matched pressure.
+This is a failed direct sufficient bound, NOT a falsification of the physical
+coefficient. Focused xhigh referee confirmed validity and effort scope.
+First unresolved analytic step remains a connected estimate for the literal
+inherited source numerator and its denominator decorations through T'_k(X),
+with the prior perimeter pressure retained before absolute values. No rooted
+physical coefficient norm or localisation has been proved in this turn.
+
+WC-C1 -- subsequent authorised connected-cancellation attempt.
+Use ONE actual inherited coefficient A=C_P a_old and ONE fresh coefficient
+B(H)=chi(QH)-chi(H) from WC-E2.5, with all old renormalisation factors kept
+in A. The star norm is WC-E2.1; for real fields ||B||_star<=2. Let nu_V be
+the complete unexpanded real positive RG/R integration kernel weighted by
+rho_old, at fixed output V. Its mass is D(V)=rho_new(V), and the full
+partition function is D_h=integral D(V)dV. All older fields and physical
+history sums remain in nu_V; signed Mayer labels are not probabilities.
+At D(V)>0 put a=N_A/D and b=N_B/D. For a gauge-invariant measurable event E,
+
+ q_E(V)=D(V)^(-1) integral_E tau((A-a) star (B-b)) dnu_V,
+ |integral D(V)q_E(V)dV|/D_h
+       <= 4/D_h integral_E ||A-a(V)||_star dnu_V dV.       (WC-C1.1)
+
+Proof: WC-E2.5 identifies N_AB with the integral of A star B. Expansion
+of the centred integrand gives the exact connected coefficient when E is
+the whole integration space. Its E and complement pieces sum to that
+coefficient. Positivity gives ||b||_star<=2, hence ||B-b||_star<=4;
+submultiplicativity and |tau(f)|<=||f||_star give (WC-C1.1). Null outputs
+are omitted. Every estimated factor is a complete closed kernel in the
+shared output frame. A fixed-output additive kernel cancels from A-a;
+a multiplicative perimeter renormalisation factor does NOT cancel.
+
+Actual large-field cancellation test: LFR2 (1.103)--(1.104) normalises the
+full T'_k(Y_i), including older integrations, before expanding boundary
+interactions. At fixed complete outer data, zero boundary-interaction order
+factorises between the Y_i. Two marks depending on distinct component
+variables cancel; a shared component leaves its intrinsic conditional
+covariance. This is literal dependence, NOT a proved localisation of A.
+Across different full outer sectors an additional conditional-mean response
+survives. For an exhaustive positive two-sector grouping with masses D0,DE,
+means a_s,b_s and connected kernels c_s, put p=DE/(D0+DE). When both masses
+are nonzero the full coefficient is
+ tau((1-p)c0+p cE+p(1-p)(aE-a0) star (bE-b0)).             (WC-C1.2)
+Thus full physical normalisation retains the exceptional branch's weight;
+the local normalised T' estimate alone must not be used to discard it.
+This formula makes no claim that arbitrary gauge-fixed history labels are
+gauge-invariant events. Such labels need their exact physical grouping.
+
+Locality falsification of the proposed majorant: in the actual fixed-sector
+product operation at zero boundary-interaction order, take A depending on
+Y1 and B,E on a distinct Y2. Then q_E=0, but the right-hand side of WC-C1.1
+can be positive independently of their separation. Therefore WC-C1.1 is
+NOT a stand-alone locality estimate. Signed connected-component allocation
+must precede this absolute bound. LFR2 (1.99) uses d_(k,union Yi), which
+does not pay internal coverage of the retained Yi; p391 explicitly does
+not require tree decay for these fixed regions. No physical inherited-source
+support estimate has been proved. First unresolved step: source-specific
+component allocation with full histories, followed by a bound on the
+surviving same-component and history-response terms. Do not restart the
+raw-character/perimeter majorant or treat WC-C1.1 as closure of this step.
+Focused xhigh referee connected_large_field_referee: WC-C1.1 is calculation
+checked at its one-old/one-fresh coefficient scope; the locality falsification
+is checked. Effort assessment: substantive limited attempt at the actual gap,
+not closure. No smallness, support norm or ultraviolet-tail bound was proved.
+
+WC-C2 -- authorised signed component-allocation attempt; no absolute bound.
+Caller remains WC-C1's literal one-raw-inherited/one-fresh coefficient.
+In rho_k C_P a_(k,I), the old rho_k denominator cancels by WC-E2.5. Reopen
+the old numerator integrations in BOTH replicas, preserving all marks,
+fixed renormalisation factors and return/base transports. This does not
+turn products of old coefficients in WC-E2.6 into a single-history integral.
+The full current denominator D(V)^2 and outer normalisation D_h are retained.
+
+Select Mayer families D1,D2 in both copies as in LFR2 (1.91) BEFORE forming
+swap components. Each selected factor V(Y)exp(t_Y V(Y)) brings its complete
+history dependence, not just its geometric label. Join cross-copy domain
+incompatibilities and copy complete native histories and fields. An actual
+selected V(Y;xi_X1,xi_X2,U_k) changes to V(Y;eta_X1,xi_X2,U_k^swap) if only
+X1 is exchanged; its selected support therefore joins X1 and X2. There is
+NO step adding every unselected nonzero interaction to the graph.
+
+The next exact crossing factor is exp A'_k((g_k(.))^(-2),U_B(Vmixed)) in
+LFR2 (1.72). CRE (2.12), (2.23) defines U_B by the global determining data.
+Locality of an outside action term in U_B|X does not establish its locality
+in primitive history/field variables. For an outside Wilson plaquette p
+with unchanged coupling, set f_p=exp(-g(p)^(-2) A_p(U_B)). The putative
+component exchange leaves the signed factor f_p-f_p^swap, which is not
+shown zero. Both A_p operands are complete gauge-invariant plaquette actions.
+The corresponding source-free component cannot yet be cancelled.
+
+More explicitly, if an admissible involution S_C exchanges the fresh-mark
+component, leaves the inherited insertion unchanged, and preserves the actual
+base measure (including branch counts and constrained carriers), then
+F=tau((A1-A2) star (B1-B2)) changes sign. Pairing a term of
+weight w leaves one half of integral (w-w composed S_C)F. This is an exact
+SIGNED residual, not an estimate. No weight ratios are used: selected V
+factors may vanish. The geometric, source-dependence and carrier conditions
+for S_C have NOT been proved for the general inherited source.
+
+Actual exterior-data check: CRE (2.1)--(2.3) gives Z_j subset Z_k, and
+CRE (2.21) puts older integrated fields inside Z_k. Copying a whole donor
+component at every level preserves pointwise nesting; outside both copies'
+current large regions the determining inputs are the common current V_k.
+Shape/separation and collar closure remain to be checked. This makes a
+comparison with coincident exterior data possible; it does not make the
+two reconstructed backgrounds equal there.
+
+Next literal analytic construction: instantiate LFR2 (1.52)--(1.55) for
+these paired histories using a common exterior cut-background and separate
+interior minimisers. Retain the projected collar defect, fine boundary
+averages and gauge transformations; localise each response as an additional
+selected connecting term BEFORE the swap. CRE (2.14)--(2.16) defines the
+localising joins but does not identify their finer boundary inputs from
+equality of coarse V_k alone; LFR2 (1.61) retains these inputs explicitly.
+Direct VAR (172)--(190) assumes a fixed determining set and small relative
+data and cannot be substituted for this construction. Common admissible
+collar data and its response expansion remain unproved. No useful full
+signed component allocation or inherited localisation bound is established.
+Focused xhigh referee signed_allocation_referee checked this signed residual
+and exterior-data scope. In q(V) the covariance prefactor remains 1/(2D(V)^2),
+so the paired residual has prefactor 1/(4D(V)^2), then outer weight D(V)/D_h.
+Effort: substantive test of the actual swap; no allocation theorem certified.
+
+WC-C3 -- common real collar construction (calculation checked at this scope).
+The two inputs are the ACTUAL replica backgrounds U_r, r=1,2, with their
+original determining sets B_r, original variational supports, and prescribed
+raw/core complements. Rescale the current k-block side to 1 and put
+eta=L^(-k), a_j=L^j eta. No regular minimum on the rough raw core is assumed.
+
+Geometry: on a compatible current M1-cube grid cover both current Z_k and
+their required original collars by S. Use Chebyshev cube dilations. A cut
+is chosen along the boundary of a component of D_R S. Surround it by the
+annulus A=D_(R+W)S \ D_(R-W)S, with R>W plus the path margin. Choose W so
+the ENTIRE added CRE (2.14) collar and every averaging, axial and filling
+path lie in A^(~-2), not merely the cut boundary. In physical current units
+the annular half-width exceeds 4M1 plus the path envelope and a grid allowance.
+This strip is outside both original Z_k, hence is a common current-level
+small-field region. Use the CRE joined geometry, including its separation
+conditions. Components/collars may merge; no tree-cost bound for mergers is
+claimed. If the dilation fills the torus, retain that sector unsplit; do not
+assert a nonempty regular collar for it. By nesting all older changing data
+are inside the current Z_k. Copying entire components with these collars
+does not introduce a seam into the unchanged current determining data.
+
+Let delta_r bound eta^(-2)||1-U_r(partial p)|| on the whole path envelope.
+The following estimate is uniform in k, j and the number of collar blocks.
+For a j-bond c, CMP98 (53)--(54) bounds level-s plaquette curvature by
+2 delta_r a_s^2. RG1 (0.4), applied to its closed relative averaging loops,
+therefore bounds each s-to-(s+1) averaging correction by C delta_r a_(s+1)^2.
+Along the straight fine path underlying c, unitary product telescoping gives
+
+ ||M^j(U_r)(c) U_r([c])^(-1)-1||
+   <= C delta_r sum_(s=0)^(j-1) (a_j/a_(s+1)) a_(s+1)^2
+   <= C delta_r a_j^2.                                  (WC-C3.1)
+
+All loops and their fillings lie in the specified envelope; constants depend
+on the fixed L,d and averaging convention, not on k. RG1 after (0.10) states
+the applicability of previous averaging results to its averaging convention.
+
+Define Q=Q_k^(s*) V_k using the actual shared current field. For the aligned
+nested partitions M^j Q=Q_(k-j)^(s*) V_k EXACTLY: every relative averaging
+loop is the identity. Thus native/mixed plaquettes of these determining
+data are identities or coarse V_k plaquettes, up to conjugation/orientation.
+Raw Q need not be smooth at fine scale; it is used ONLY as determining input.
+Define the common annular minimum orbit and choose one shared representative
+
+ U_* = U(B_k(A), M^.(Q)).                                (WC-C3.2)
+
+CRE (2.13)--(2.16) allows this annular cube domain. VAR Theorem 1 applies to
+its native input: epsilon_(1,*) <= 2 max_r delta_r by CMP98 Proposition 2
+applied to the actual U_r, not to raw Q. On A^(~-2) subset A_k it gives
+||1-U_*(partial p)|| <= delta_* eta^2, delta_*=B3 epsilon_(1,*), and
+M^k U_*=V_k. The construction depends only on Vk and the common annulus.
+It does not change any physical integration or density.
+
+Choose the same coordinate-ordered block paths Gamma_(y,x) for U_r and U_*.
+Their block axial gauges are g_r(x)=U_r(Gamma_(y,x)), g_*(x)=U_*(Gamma_(y,x));
+both equal 1 at current block centres. Internal relative ribbon loops fill
+at most C eta^(-1) plaquettes, and cross-block relative loops at most
+C eta^(-2). Together with (WC-C3.1) and the shared M^k averages, these bound
+every newly added native collar bond by C(delta_r+delta_*). These are closed
+relative holonomy comparisons, not norms assigned to open source segments.
+Put h_r=g_*^(-1)g_r on the required common regular blocks, and extend it as
+the identity off those blocks. It fixes EVERY original determining vertex:
+there are only current k-level determining vertices in these blocks.
+
+For the actual joined set B_(r,Omega) of CRE (2.14), let C be its added
+collar labels and set, at a label c of native level j,
+
+ W_r(c)=M^j(U_r^(h_r))(c),    W_*(c)=M^j(U_*)(c),
+ beta_r(c)=-i log(W_r(c) W_*(c)^(-1)).                    (WC-C3.3)
+
+These retain the actual fine averages; they are NOT identified with each
+other. The principal logarithm exists for small delta_r+delta_* and
+||beta_r||_infinity <= C(delta_r+delta_*). At level k beta_r=0 exactly.
+Under a gauge transformation the framed transports have the same block-
+centre endpoint transformations; their relative holonomy is conjugated.
+The norm/log domain is gauge invariant. At flat pure gauge the discrepancy
+is exactly zero; flat coarse holonomies are retained by Q, not set to 1.
+
+Reference data Vbar_r keep every original interior datum and prescribed raw
+core; replace ONLY the added collar data W_r by W_*. The mixed-plaquette
+check uses a one-step fixed-L estimate: if changed native bonds differ by
+at most h, path telescoping and log/exponential Lipschitz bounds in RG1 (0.4)
+give ||M(X)M(Y)^(-1)-1|| <= C_(L,d) h. A VAR (7) mixed plaquette therefore
+changes by at most 4 max(1,C_(L,d))h. Actual joined data are native-regular:
+on the added strip they are coherent M^j averages of the same regular U_r,
+and elsewhere their original admissibility is unchanged. Choose
+epsilon_1=epsilon_native+4 max(1,C_(L,d))h <= a1 and a regularity parameter
+epsilon_0 containing the actual field with B3 epsilon_1<=epsilon_0<=a0.
+These are the literal VAR existence/uniqueness thresholds. For sufficiently
+small original coupling they are compatible with the uniform collar bound.
+This constructs a reference minimum Ubar_r on each replica's OWN joined
+variational support. Rough prescribed complements remain untouched.
+
+Extend beta_r by zero on unchanged input labels. The data identity is
+Vactual_r=exp(i beta_r)Vbar_r. VAR (172)--(190) is now used on a FIXED joined
+set, after the above smallness check. On the region of the CRE localisation
+identity the exact reconstruction has the form
+
+ U_r = [ (exp(i eta H_(r,Omega)(beta_r)) Ubar_r)
+                                      ^(u_r(beta_r)^(-1)) ]^(h_r^(-1)).
+                                                         (WC-C3.4)
+
+All boundary averages of this expression retain both endpoint factors from
+u_r and h_r. They cannot be dropped at representation interfaces; compare
+LFR2 (1.61). No new integration variables or Jacobians were introduced.
+The old physical histories, weights and denominator are unchanged.
+
+Focused xhigh referee common_collar_referee checked the real discrepancy,
+mixed native-data test and smooth annular refinement. Status: calculation
+checked for real collar data and separate local references. The two reference
+minimisers share the added collar DATA; they are not proved equal to U_*
+throughout the annulus. Not proved: global gluing with the required original
+regularity, the projected-force/complex source norms, primitive localisation
+of beta_r's retained history dependence, or a measure-preserving signed swap.
+Next literal step is to insert (WC-C3.4) with its boundary fields/gauges into
+the signed outside-factor response of WC-C2, and localise that response while
+retaining the actual dependence of beta_r. No absolute source majorant or
+WC.1 convergence conclusion follows from this collar calculation alone.
+
+WC-C4 -- overlapping reconstruction and retained-history localisation.
+This uses WC-C3 without repeating its collar proof. Geometry and current V_k
+are fixed, identically in the two replicas. Enclose ALL current large regions
+in cores C_i, merging collars when needed. Since Z_j subset Z_k, every older
+POSTPONED field is inside these cores; this statement does not relocate old
+regular integrations if those are subsequently reopened. Keep unsplittable
+whole-torus sectors uncut. No payment for mergers/uncut sectors is claimed.
+
+Choose an interior domain D_i^+ and an exterior domain D_0^-=T\union_i D_i^-
+with overlapping regular collars. The exterior hole boundary Sigma_i^- lies
+inside D_i^+, and the interior outer boundary Sigma_i^+ lies inside D_0^-.
+Their full joined determining strips, averaging/conversion paths and framing
+envelopes have separation w. Every read-out envelope is in the CURRENT
+stratum of the minimiser doing the reconstruction, although read-out labels
+themselves include finer levels. References and input charts are obtained
+from the same smooth U_* of WC-C3. Use a uniform sector radius, not one
+selected from an inactive individual history.
+
+Let I_+,I_- be the finite added native boundary-bond label sets at Sigma^+,
+Sigma^-, with orientation and Lie-algebra indices. X_+,X_- are their direct
+sums of real Lie-algebra values with the supremum operator norm. No extra
+probability is assigned to these boundary data. Define exact boundary maps
+
+ y_i=F_i^(xi_i)(z_i),        z=F_0(y).                    (WC-C4.1)
+
+Here z=(beta_i^+) in X_+, y=(beta_i^-) in X_-. F_i solves the actual local
+variational problem on D_i^+ with imposed outer collar data exp(i z_i)W_*^+,
+unchanged interior history xi_i and raw core, then reads inner data relative
+to W_*^-. F_0 solves on D_0^- with imposed inner collar data exp(i y_i)W_*^-
+and common current determining field V_k, then reads outer data. It contains
+no postponed interior history. These are background reconstruction maps,
+not the integration operations T'_k or new physical conditional laws.
+
+Read-out gauge: on TARGET current blocks only use F_*(U)=(U^(g_U))^(g_*^-1),
+where g_U is the fixed block-path transport. These blocks are disjoint from
+the imposed input collar, so this alignment changes no input datum. It is
+independent of the local minimiser representative: a gauge fixing current
+centres is compensated by g_U. Do not reframe the imposed input boundary.
+All return gauges are kept inside this map. Actual globally framed minima
+supply actual interfaces alpha^+,alpha^- satisfying (WC-C4.1), by the exact
+CRE localisation identity. No gluing assertion for arbitrary virtual fields
+has been used to obtain this fixed point.
+
+Transfer calculation. Input logarithms beta are converted to VAR's B data
+at mixed native bonds. This is not silently an identity. CMP98 (97) and the
+averaged-return constraint give the endpoint correction A_j^-1 at a lower
+endpoint, with A_j the one-block average in (105); VAR (154) is the explicit
+flat-background case. The general form uses the relative transports of
+CMP98 (55)--(58). Equal-native endpoints and reversed bonds complete the
+cases. The whole lower block lies in its native stratum by the separation
+geometry. Fixed-L path/log differentiation gives a bounded row sum C_(L,d)
+and a fixed native-block input envelope for this conversion.
+
+In VAR (190) the functional kernel has factor a_(j')^(-d). The native
+integration weight a_(j')^d, as in PRT2 (2.146), cancels it. At read-out
+points the source minimiser has a_target=1. Split off half the exponential
+for the envelope separation, and use PRT2 (2.61), with its (2.59) separation
+condition on the joined geometry. For an input perturbation f this gives
+
+ sup_(read-out envelope) |D H[f]| <= C exp(-c w)||f||_infinity.
+                                                         (WC-C4.2)
+
+The same argument retains the derivative regularity needed locally. Gauge
+restoration is not omitted: CMP98 (87) shows u at a current centre generally
+is NOT 1. Rescaled Proposition 4 / (131) gives |Q_j(U0,eta H)|<=2a_j||H||
+on a fixed small complex H ball in the current block. Local Cauchy estimates
+give ||DQ_j||<=C a_j. Equations (105)--(106), (97) then cost
+sum_(j=0)^(k-1) a_j <= (1-L^(-1))^(-1), not k. Exact block-frame telescoping
+retains the centre factors u(y_-)^-1 and u(y_+). Differentiating the remaining
+block paths costs their physical length, uniformly bounded. Final averages
+and the principal logarithm are Lipschitz on the WC-C3 chart. Thus
+
+ ||D F_i||_(infinity->infinity), ||D F_0||_(infinity->infinity)
+                      <= q(w)=C exp(-c' w).              (WC-C4.3)
+
+Constants are uniform in finer cutoff and number of boundary labels/cores,
+under the explicit source-current envelope and geometry hypotheses. Choose
+w so q<1/4. WC-C3 bounds the actual interfaces by a uniform r0. On an
+admissible ball of radius r, comparison with these actual interfaces gives
+||F_i(z_i)||,||F_0(y)|| <= r0+q(r+r0). Hence r>=r0(1+q)/(1-q)
+is a self-map radius; take a slightly larger radius below the analytic
+threshold. F_0 composed F_loc is a contraction with constant q^2. Its unique
+fixed point is the already-existing actual interface pair. This identifies
+actual restrictions; it is not an independent existence theorem for a
+global critical field obtained by gluing arbitrary virtual local minima.
+
+For one admissible change of xi_i at fixed geometry/V_k, denote differences
+by Delta. Integrate the ACTUAL Jacobians along the two interface segments,
+calling them L0 and Lloc (the latter block diagonal by core). Include native
+weights in their coordinate kernels. The difference f of the two local
+history maps, evaluated at the old input, is supported on i and ||f||<=2r.
+Then, before any source absolute value,
+
+ Delta z=L0 Delta y,       Delta y=Lloc Delta z+f,
+ Delta z=sum_(n>=0) (L0 Lloc)^n L0 f.                     (WC-C4.4)
+
+The signed series converges, with operator norms bounded by q^(2n+1).
+Use individual native labels, not a sum of component suprema. Exterior
+kernel entries retain their PRT2/VAR distance decay; inside entries remain
+in their own core. This is a quantitative history-sensitivity expansion.
+Evaluated Jacobians may still depend on other histories, so (WC-C4.4) alone
+does not establish compact activity support.
+
+An exact further localisation is available for EXTERIOR factors. Introduce
+auxiliary real weakenings theta_i in [0,1] solely in the reconstruction:
+y_i=theta_i F_i^(xi_i)(z_i), z=F_0(y). The same contraction defines a smooth
+fixed point. Its smoothness follows from invertibility of the feedback
+Jacobian, whose norm is <=q^2. This is not a physical-measure interpolation.
+Let f_p(theta) be an actual closed exterior plaquette factor evaluated on
+the exterior reconstructed field, including all its gauges. At theta=1 it
+is the original physical factor. Finite anchored FTC gives
+
+ f_p(1)=sum_(J subset {1,...,m}) f_(p,J),
+ f_(p,J)=integral_[0,1]^J partial_J f_p(theta_J,0_(J^c)) dtheta_J.
+                                                         (WC-C4.5)
+
+Inactive maps disappear exactly. Uniqueness implies that f_(p,J) depends
+on interior histories ONLY in J, together with the frozen common geometry
+and V_k. Thus exchanging an interior i not in J leaves this term unchanged;
+only J containing i survive in f_p-f_p^swap. This localises the actual
+outside-weight obstruction of WC-C2 at FIXED PAIR GEOMETRY. It preserves
+the gauge-invariant closed factor; theta scales covariant discrepancies.
+There is no claim that virtual local fields agree on overlaps at theta!=1.
+Such agreement is unnecessary for a closed exterior plaquette.
+
+Full histories remain in the original integrations and sums. All original
+vacuum and replacement normalisers, D(V)^2 and the final D_h, remain in their
+callers; the above substitutions introduce no extra integration Jacobian.
+Geometry remains a frozen parameter that may encode all histories. No tree
+norm for J, geometry-selector swap, merged/uncut-sector bound, or extension
+to an inherited source spanning domains has been proved. Such a source
+needs a separate exact reconstruction prescription before using (WC-C4.5).
+Focused xhigh referee overlap_gluing_referee: calculation checked for the
+real interface contraction, signed response and exterior-factor conditional
+history support; substantive progress, not full signed allocation or WC.1.
+
+Extension of WC-C4: a virtual connection for closed current-background
+factors crossing reconstruction domains. This is not yet an extension to
+the full inherited source. Choose disjoint transition bands inside the
+overlaps, with their complete joined determining/path envelopes strictly
+inside the CURRENT strata of both local minima and of a common joined
+collar set B_c. The geometry, B_c and reference U_* depend only on the
+shared data. Establish regularity of the virtual local minima on these
+envelopes by (WC-C4.2), compared with their respective actual anchors,
+before applying WC-C3 on B_c. The same-set VAR representation gives
+
+ U_a(theta)=(exp(i eta H_a(theta)) U_*)^(u_a(theta)^(-1)),
+ a=i,0.                                                   (WC-C4.6)
+
+Here i is the interior and 0 the exterior. The actual fine boundary
+averages determine H_a and u_a; no interface return factor is suppressed.
+On the middle strip, VAR (19), (190) bound H_a, its first covariant
+differences, D*D H_a, Delta H_a and the required gradient Holder seminorm
+by C delta. All scales here are in current-block units. Take a real scalar
+cutoff chi equal to 1 on the interior matching band and 0 on the exterior
+matching band, with uniformly bounded first, second and Holder differences.
+On the transition band set
+
+ H_chi=chi H_i+(1-chi)H_0,
+ g_chi=exp(chi log(u_i^(-1))+(1-chi)log(u_0^(-1))),
+ U_theta=(exp(i eta H_chi) U_*)^(g_chi).                    (WC-C4.7)
+
+The return gauges are in the common small chart, using CMP98 (106) and
+the bounded sum of native lengths in the transfer calculation. Outside
+the band use the respective local fields, in compatible gauge extensions.
+The constant-cutoff bands make the definitions agree exactly on overlaps.
+Product rules for D*D and Delta give cutoff commutators consisting of
+first cutoff differences times first H differences, and second cutoff
+differences times H. The corresponding Holder product rule also closes.
+Thus the virtual connection has curvature/force bounded by C_chi delta,
+uniformly in eta; there is no inverse-fine-spacing loss. It generally does
+NOT satisfy VAR (20)--(21), and is not asserted to be a minimiser or a
+physical RG interpolation. For a factor depending on a derived force, that
+force must be evaluated at U_theta, not silently fixed at its original
+value. This bound alone does not check an inherited analytic domain.
+
+At theta=1, the two actual restrictions have the same common-set data;
+uniqueness gives H_i=H_0 and u_i=u_0. Compatible extensions give one global
+gauge transformation of the actual background. Therefore every complete
+Wilson character or literal Wilson-action plaquette factor depending on
+this background alone has its actual value at theta=1. This statement does
+not identify factors with separately frozen native fields: those require
+simultaneous gauge transformation and their interface replay.
+
+For such a closed factor F, let R contain every interior piece AND every
+interior interpolation collar read by F. Even at theta_i=0 the interpolated
+collar generally retains xi_i, so it must not be omitted from R. Define
+
+ F_J=integral_[0,1]^J partial_J F(U_(theta_J,0_(J^c))) dtheta_J,
+ F(U_actual)=sum_(J subset {1,...,m}) F_J.                 (WC-C4.8)
+
+Each term depends only on xi_(R union J), shared V_k and fixed pair
+geometry. Use the exterior reconstruction directly for purely exterior
+factors, preserving R empty in (WC-C4.5). All factors remain complete
+gauge-invariant contractions, since reference fields and gauges transform
+simultaneously. No open source segment is estimated. The original history
+integrations, full weights and D(V)^2 and D_h remain unchanged.
+
+Focused xhigh review by overlap_gluing_referee checked this virtual real
+construction and the corrected root set. It supplies exact fixed-geometry
+support for current-background factors, not a bound for their summed
+activities. The actual inherited-source substitution into LFR2 (1.61)--
+(1.65), including reconstructed averages/currents at all older scales and
+simultaneous transformations of retained operands, is still unproved.
+Active test: use both-sided buffers to compare the virtual field with its
+actual anchor by O(r exp(-c w)), rather than pay a constant enlargement of
+the physical field bound; check every clause of the literal inherited
+domain. No absolute source majorant or new physical denominator is allowed.
+
+Direct inherited-domain test. CRE (2.34)--(2.39) requires bounds on every
+U_(p,Y)(M^.U_theta) and its derived current, not just on U_theta. A direct
+VAR (190) estimate from arbitrary bounded B data loses L^(-2(m-p)) when
+p<m in (2.35). This is a failure of that estimate, not a counterexample.
+RG1 (1.17) preserves this factor for coherent averaged data in a uniform
+region: averaging first preserves their small curvature, and reconstruction
+then retains the fine curvature scale. Its printed target is a trimmed
+domain; it cannot alone certify the whole joined boundary in CRE (2.35).
+The interior comparison would leave the normalised tail
+(epsilon_p/alpha_(0,m)) L^(2(m-p)) exp(-c L^(m-p)); its numerical decay is
+adequate by CRE (2.8), but it does not settle the boundary case.
+
+For that boundary case use the actual noncritical reference equations,
+not VAR (174)--(180) with a deleted force. On the literal p-level joined
+determining set take U0=U_theta and V=M^.U_theta, hence B=0. Let J(U0)
+be the derived current RG1 (1.8), and use the operators and nonlinear
+remainder of VAR (111)--(112) at this U0. Then
+
+ A1=-mathfrakG J(U0)-mathfrakG V'(A1),
+ U_min=(exp(i eta_p(A1-H D(A1)))U0)^u.                  (WC-C4.9)
+
+Here eta_p is the lattice mesh in that variational problem; u is its exact
+return gauge. VAR Proposition 5 and Proposition 7 identify the solution
+with the constrained minimum when the literal (14) and smallness hypotheses
+hold. In particular mathfrakG J(U0) must not be put equal to zero for the
+virtual field. All old fields remain in the original full integrals.
+
+Weighted nonlinear calculation. Let Delta(y) be the native blocks of that
+joined problem, a_y their physical side lengths, and d(y,z) its native
+distance. Put f_y=sup_(Delta(y))|J(U0)| and, for a positive decay rate a
+smaller than the source kernel rates, define
+
+ s_y=sum_z exp(-a d(y,z)) a_z^3 f_z,
+ ||A||_s=sup_y (a_y sup_(Delta(y))|A|
+                    +a_y^2 sup_(Delta(y))|nabla A|)/s_y.  (WC-C4.10)
+
+Use a positive regulator in s if needed and pass to zero; zero force gives
+the zero fixed point. PBG Theorem 3.13, (3.42) and PRT2 (2.60)--(2.61)
+give ||mathfrakG J||_s<=C, reserving exponential decay to pay native length
+ratios. For the nonlinear term use a SMOOTH native partition zeta_z, with
+support in enlarged Delta(z), |nabla zeta_z|<=C/a_z and bounded overlap.
+Sharp block indicators introduce uncontrolled fine-grid jumps and are not
+permitted. Neighbouring-scale comparison gives the local native norm of
+zeta_z delta A bounded by C s_z||delta A||_s. VAR (189), the triangle bound
+s_z<=exp(a d(y,z))s_y and the native row sum yield
+
+ sup_(Delta(y))|V''(A) delta A|
+             <= C epsilon_4 a_y^(-3) s_y ||delta A||_s,
+ ||mathfrakG V''(A) delta A||_s
+             <= C epsilon_4 ||delta A||_s.              (WC-C4.11)
+
+Choose the source's global small ball so C epsilon_4<1. Since V'(0)=0,
+the same fixed point has ||A1||_s<=C/(1-C epsilon_4). This is a nonlinear
+value/first-derivative estimate conditional on the literal reference and
+geometry hypotheses, not yet the inherited-domain theorem. Focused xhigh
+review confirmed this calculation and the need for the smooth partition.
+
+Second-order calculation at the SAME conditional scope. At B=0, A0=A1.
+VAR (133) expresses the action Laplacian of A1 through
+-P0*J + P0*Delta^(2)A1 - P0*V'(A1). P0* is the identity plus compositions
+of exponentially decaying native kernels (VAR (131)); their native measure
+weights and the inequality s_z<=exp(a d(y,z))s_y give the same weighted
+row bound. PBG (3.137) bounds Delta^(2) locally by C M alpha0 a_y^(-2)
+times A1 on neighbouring blocks. Equation (WC-C4.11) bounds V'(A1), by
+integration from zero. Thus every term has envelope C a_y^(-3)s_y.
+VAR (134)--(140) and PBG (3.49) convert the action Laplacian to the
+covariant Laplacian and D*D with that same bound. This does not use the
+Laplacian bound for mathfrakG EXCLUDED by PBG Theorem 3.13.
+
+For the exact averaging correction integrate VAR (73) from 0 to A1, using
+the printed fine measure eta_p^d and native input weights. Its kernel
+factor a_z^(-d+1) times the input a_z^(-1)s_z and block volume a_z^d
+leaves C epsilon_3 s_z. Exponential row summation therefore gives
+|D(A1)(c)|<=C epsilon_3 s_c. For H D(A1), use the actual component
+identities (137)--(140): Q*, (QGQ*)^(-1), local projections and the
+G'RD* term each have their native exponential kernels. Reserve decay for
+their scale powers and apply the same row sums before taking a global
+supremum. Their second-order output is bounded by C epsilon_3 a_y^(-3)s_y.
+Consequently the physical Lie-algebra correction A=A1-H D(A1) satisfies
+
+ a_y sup|A| + a_y^2 sup|nabla A|
+   +a_y^3 sup|D*D A| +a_y^3 sup|Delta_U0 A| <= C s_y.     (WC-C4.12)
+
+Suprema are on Delta(y), with the corresponding fixed enlarged envelopes
+for differences. Constants depend on the stated admissible geometry and
+source smallness parameters, not on the finer lattice cutoff. The derived
+current is computed by RG1 (3.11), J(exp(i eta_p A)U0)=J(U0)+D*D A+F(U0,A),
+where F is its literal local lower-order remainder. The real return gauge
+in (WC-C4.9) conjugates this current and preserves its norm. The xhigh
+referee checked (WC-C4.12) and this derived-current replay conditionally.
+
+Unverified application: prove the glued U0 has the required curvature,
+local gauge-potential and derived-force bounds on EVERY original history
+layer, on the complete support and boundary envelopes of each joined
+U_(p,Y4), retaining prescribed complements. Then prove
+s_y<=C epsilon_m(a_y/a_m)^3 there. The legitimate multiscale CRE join gives
+a_y<=C_L a_m on enlarged envelopes; a generic p-level collar across an
+older stratum does not. Actual cutoff bounds must pay the resulting
+constants against the literal alpha_(0,m) margins for the SAME fields.
+Membership in an open analytic domain alone supplies no uniform margin.
+At this stage these applications were pending. They are addressed next;
+the full inherited-source expansion remains open.
+
+Actual reference and all-p substitution. CRE's paragraph following (3.41)
+states that the actual vacuum background on Omega_m minus Omega_(m+1)
+has the regularity properties and bounds of a U_m-type configuration.
+Use this stated result with the ACTUAL characteristic restrictions and
+VAR (8)--(10), then exact localisation with the actual finer boundary
+averages. It supplies the same-history anchors' curvature, derived-force
+and local-potential bounds at epsilon_m, on the original regular envelopes.
+It does not assign these bounds to the rough complement as a whole.
+
+Compare a virtual interior minimum with its own actual anchor. Only its
+added outer determining data change, by at most C r with r<=C epsilon_k.
+Every path from original layer m to that input envelope crosses the
+unchanged current-level belt. Before that belt it crosses the intervening
+original scale layers. PRT2 (2.46) and the nesting separations therefore
+bound the distance below by c w+c RM max(k-m-C_L,0). This crossing argument
+is required even when the added input label itself has a fine native level.
+VAR (190), with the exact input conversion and native row sum of WC-C4,
+then bounds the relative field H and its first/special second derivatives by
+
+ a_m sup|H|+a_m^2 sup|nabla H|
+   +a_m^3 sup(|D*D H|+|Delta H|)
+       <= C epsilon_k exp(-c w-c RM max(k-m-C_L,0)).     (WC-C4.13)
+
+Here a_m=L^m eta in the current physical units. CRE (2.8) makes the right
+side <=C epsilon_m uniformly in depth. RG1 (3.11) transfers this to the
+derived force, with the actual anchor force retained. VAR (9) and the
+relative field bounds give the local gauge-potential bounds. In the
+transition bands m=k; the cutoff products in (WC-C4.7) preserve these same
+bounds with a fixed constant. The raw prescribed complement is unchanged.
+Thus U_theta has curvature <=C epsilon_m eta^2/a_m^2, derived free-bond
+force <=C epsilon_m/a_m^3, and local potentials bounded by C M epsilon_m
+in their native dimensionless norms, on the complete regular envelopes.
+All neighbouring plaquettes contributing to boundary forces are retained.
+
+For the literal joined p-problem, use smooth native blocks Delta(y) and
+the corresponding a_y. Let m_y be the smallest original layer meeting
+the enlarged block. CRE (2.14)'s multiscale join only refines the local
+original scale, so a_y<=C_L a_(m_y); neighbouring envelopes shift the
+original layer by only a bounded number. The envelope in (WC-C4.10) obeys
+
+ s_y <= C epsilon_(m_y) (a_y/a_(m_y))^3.                (WC-C4.14)
+
+To prove this, divide each summand by
+a_y^3 epsilon_(m_y)/a_(m_y)^3. The resulting factors are
+(a_z/a_y)^3, (a_(m_y)/a_(m_z))^3 and epsilon_(m_z)/epsilon_(m_y).
+Pay the first with PRT2 (2.60). For the second use (2.46) directly:
+crossing each full original shell costs >=c_L RM because the joined
+native length is at most C_L times its original scale. Discard only the
+bounded endpoint-envelope layers. This proves
+d(y,z)>=c_L RM max(|m_y-m_z|-C_L,0), without comparing infima over
+different contour classes. CRE (2.8) bounds the last factor polynomially.
+Reserve separate portions of exp(-a d) for these three factors; a fixed
+RM sufficiently large pays them and leaves the PRT2 (2.61) row sum.
+
+The force driving the solver is restricted only by the actual fixed-bond
+constraint: mathfrakG Q*=0 removes forces on prescribed fine bonds from
+that equation. It does NOT remove rough-boundary interactions from the
+force on free bonds, or set the final current of a fixed bond to zero.
+VAR (133) and the refined native envelopes in (WC-C4.12) control these
+boundary currents as well. The estimates are on the regular support and
+its required envelopes, never on the whole rough Gamma_0.
+
+For the p-reconstruction rescale x'=x/a_p, a_p=L^p eta. Its mesh is
+eta_p=eta/a_p=L^(-p). Plaquette matrices are unchanged; the derived
+current is multiplied by a_p^3, as in RG1 (3.12). Equations (WC-C4.12)--
+(WC-C4.14), including the local lower-order terms of RG1 (3.11), give
+
+ |partial U_(p,Y4)-1| <= C_* epsilon_m
+                              L^(-2p)(L^m L^(-p))^(-2),
+ |J_(p,Y4)| <= C_* epsilon_m (L^m L^(-p))^(-3)
+        <= C_* epsilon_m L^(m-min(p,m))(L^m L^(-p))^(-3).
+                                                          (WC-C4.15)
+
+These are the literal CRE (2.35), (2.37) scales, with epsilon_m in place
+of alpha_(0,m). All p and all original regular layers are included.
+Choose the auxiliary constants in their permitted order, with q0>=p0
+and C_* A0(log gamma^(-2))^(p0-q0)<(1-beta)C0/2. By CRE (2.4), (2.28)
+this pays the domain margins uniformly. The same payment covers local
+potentials. U_theta is real, so the complex perturbation is the identity
+and its alpha1 charge is zero. The current-layer factor c=3 in the later
+domains only weakens the required bound. Hence the REAL reference-domain
+bridge to LFR2 (1.65) is checked under the stated constructed geometry
+and parameter choices. Uncut sectors retain their actual references.
+
+Focused xhigh referee overlap_gluing_referee checked the anchor reading,
+collar response, envelope sum, boundary currents and literal rescaling.
+Effort assessment: substantive direct derivation, not deferral. The next
+substitution still has to localise the full inherited source's older
+reconstruction operators: a function reading one of those operators can
+depend on interiors outside its visible contour. Do not assign it the
+contour-only root set of a current-background Wilson character. The full
+histories, outer interactions, gauge factors and physical denominators
+remain in the original signed caller; no source norm or WC.1 is certified.
+
+WC-C5 -- exact localisation of the actual inherited closed source.
+This instantiates RG2 (1.5)--(1.10), the published localisation mechanism
+corresponding to LFR2's references to (6.9)--(6.10) [I]. It does not import
+the bound on an effective-action insertion as a Wilson-source bound.
+
+Fix a finite full history omega and ALL its older integration variables,
+including reopened regular integrations outside the present Z_k. The old
+raw coefficient is the literal ordered coefficient A_omega obtained from
+WC-E2.5 before those integrations. Its prescribed renormalisation scalars
+are retained. In a matrix realisation the one-old/one-fresh kernel is
+
+ S_omega(s;H)=d^(-1) tr[R(P_s)^(-1) A_(omega,s) R(P_s)
+                                      (R(Q_s)-I)R(H)].    (WC-C5.1)
+
+P,Q and the auxiliary complete based holonomy H have the conventions of
+WC-E2.1--WC-E2.5. For the pair use the corresponding tensor product of the
+two coefficient spaces. This formula is always treated as ONE complete
+closed contraction, with simultaneous transformation of all based data.
+
+Construct every operand, including P and Q, through the actual chronological
+field maps. In each nonlocal reconstruction operator replace each PBG
+random-walk term by the term times the product of the parameters s(Delta)
+for the cubes meeting its COMPLETE enlarged read-out support, as in RG2
+(1.6)--(1.8). Include conversion inputs and all return-gauge paths, not only
+the kernel's endpoints. Use the same parameters for repeated occurrences
+of a given operator localisation label. RG2 (1.3)--(1.5) defines the resulting
+nonlinear maps. Real parameters in [0,1] retain the random-walk norm bounds.
+
+The actual accepted maps have uniform field-domain closure (LFR1's statement
+following (1.65)--(1.69), and LFR2 (1.61)--(1.65)). Apply it chronologically
+to the nested maps with independently allowed operator parameters, then
+restrict to the shared-parameter diagonal. Off s=1 use the published
+EXTENDED current, including RG1 (3.13); do not identify it with the derived
+current of a weakened field. At s=1 the full literal physical reconstruction
+and its derived current are recovered. No physical measure is interpolated.
+
+For the stopped branch specify the auxiliary cutoff once throughout the RG
+representation. If vartheta_j is any smooth cutoff allowed by CRE (1.22),
+take, with normalised Haar measure,
+
+ vartheta_j^sharp(A)=integral_G vartheta_j(v A v^(-1)) dv. (WC-C5.2)
+
+The regions |A|<=4 delta_j/(3g_j) and |exp(i g_j A)-1|>=5 delta_j/3 are
+conjugation invariant. Thus their prescribed values 0 and 1 are unchanged.
+Compact averaging preserves the range, smoothness and all derivative
+bounds in invariant norms. The cutoff is now Ad-invariant, so the actual
+exp/log/BCH change of variables is equivariant under conjugation at the
+bond's base. Use this SAME auxiliary choice in the coordinate map, inverse,
+Jacobian CRE (1.24) and every weight/FP occurrence, including LFR1
+(1.56)--(1.59). No source or physical weight is averaged separately.
+This selects a permitted exact RG representation of the same physical
+integral; it is not an assertion that an unspecified old cutoff was already
+invariant. Frozen smooth cutoffs need no complex extension for the following
+endpoint construction. The stopped maps' local BCH factors and the retained
+Landau-plus-return-gauge reconstruction preserve the stated local domains.
+
+Let Sigma_omega be the finite union of the spatial operator-parameter labels
+used by these finite-history maps. At different native scales retain the
+scale in a label. The read-out root R includes every direct source path,
+base transport, local conversion input and gauge envelope. Enlarge operator
+supports by their complete local nonlinear/read-out footprints. For each
+sigma subset Sigma_omega define the integrated coefficient directly by
+
+ S_(omega,sigma)=sum_(tau subset sigma) (-1)^(|sigma|-|tau|)
+                   S_omega(1_tau,0_(Sigma_omega minus tau)),
+ S_omega(1)=sum_(sigma subset Sigma_omega) S_(omega,sigma).
+                                                          (WC-C5.3)
+
+This is the finite signed endpoint version of RG2 (1.9). The nonlinear
+equations separate when the other operator parameters vanish, as proved
+after that formula. Chronological substitution propagates this separation
+through all the nested maps. A selected operator component disconnected
+from the COMPLETE root R cannot affect (WC-C5.1); the corresponding signed
+endpoint difference vanishes. Each surviving coefficient is a complete
+closed gauge-invariant contraction. Its read-out union Y contains all
+operator, conversion and return-gauge footprints; no open segment has been
+estimated or made an inductive source activity.
+
+Now use the real common-collar reconstruction parameters theta of WC-C4.
+The history root set for a coefficient is every current interior/core or
+interpolation collar read by Y. At theta_i=0 the coefficient is independent
+of xi_i unless i is in that root set. Further finite signed theta-differences
+therefore depend only on the root histories and their selected theta labels.
+All older regular variables remain frozen in this assertion and subsequently
+receive their ORIGINAL integrations. Physical weights, replacement
+normalisers, gauge factors, D(V)^2 and D_h remain at the physical endpoint.
+
+Focused xhigh review: calculation checked for EXACT FINITE-HISTORY inherited
+source localisation, with the explicit cutoff choice and complete replay.
+No remaining branch obstruction was found at this scope. This supplies
+actual support information, not a source-support norm or ultraviolet-tail
+bound. In particular the admissible measure-preserving signed exchange is
+still to be checked on its full physical carrier. Effort assessment:
+substantive derivation for the actual source, not an action-bound substitution
+or deferral. WC.1 remains open.
+
+WC-C6 -- signed exchange for the actual one-old/one-fresh coefficient.
+Keep A and B as SEPARATE complete kernels, with their separate read-out
+roots and the original bilinear contraction tau(A star B). Apply WC-C5
+to each of those kernels, including its P and Q dependences. Do not infer
+factorisation of an arbitrary joint source from vacuum factorisation.
+
+The reopened old REGULAR integrations are handled by the literal inserted
+expansion CRE (3.44)--(3.47) and RG2 (2.1)--(2.10). Put a complete localised
+kernel coefficient inside F(Z0,B). Enlarge Y0 by its entire B-read support
+BEFORE the cutoff decomposition (2.3), so chi_(Y0) retains its real chart
+on all marker variables. Extend the bounded real marker outside that chart
+only where its original cutoff is zero. This changes no physical integrand.
+
+RG2 (2.5) retains the conditional denominator, its Schur exponential and
+the boundary linear exponential. The exact change B'=C^(1/2)X gives the
+product reference measure mu0(X); it does not assert independence of the
+original fields. Equation (2.7) gives the random-walk localisation of the
+square root, and (2.8) weakens C(Z0), C^(1/2), Delta together. Keep the
+marker inside the REAL B integral. These new covariance derivatives act
+on the density and operators, so the stopped smooth cutoff needs no
+holomorphic extension in B. The source paper's Gaussian domination permits
+the inserted finite-cutoff expansion. Its marked norm may be large: no
+ultraviolet-uniform activity bound is inferred here.
+
+RG2 (2.10) factors the actual selected unmarked integration components.
+Marked components retain their complete kernel. CRE (3.45)'s touching
+denominator clusters remain, and CRE (2.19)--(2.22) supplies the whole-core
+postponed operations. The complete support graph includes selected vacuum
+terms, source terms, covariance/read-out supports and normaliser decorations.
+It does not insert every unselected nonzero interaction as an edge. Any
+residual background dependence is allocated by the complete WC-C4/WC-C5
+read-out supports before this graph is used.
+
+Use unordered admissible families. For exponential decorations an equivalent
+jointly labelled two-colour expansion with total count N and weight 1/N!
+keeps the counting measure explicit; each object retains its internal
+symmetry factor. Do not silently swap between separate n1!,n2! conventions.
+At fixed shared output V and pair-union collar geometry, let C be a selected
+component meeting the B root and not the A root. Flip the replica colour of
+its entire payload: native coordinate tuples, whole-core histories, branch
+and gauge-tree labels, selected objects and their integration parameters.
+Conditional Gaussian densities, boundary and Schur exponentials and local
+normalisers are interchanged with that payload. Differing inside carrier
+slots move with their whole histories; outside slots match. No inherited
+coordinate is replaced by a new independent random variable.
+
+The uncoloured selected graph is unchanged, hence this map S_C is an
+involution. Product Haar/reference-Gaussian measures and counting weights
+are preserved; the paired component densities are simply interchanged.
+A is unchanged and B exchanges replicas in the shared output frame. Thus
+
+ F=tau((A1-A2) star (B1-B2)),       F composed S_C=-F,
+ integral w_family F dlambda_family=0                    (WC-C6.1)
+
+for the eligible paired terms. Variable transports joining the roots make
+the term ineligible, rather than being dropped. Auxiliary H and transports
+depending only on the shared fixed output remain parameters; they do not
+create an exchanged-variable edge. The global D(V)^2 and final D_h remain
+unchanged. This is a construction on the exact SELECTED expansion carrier,
+not a swap of the unexpanded correlated Gaussian law.
+
+For the covariance q(V) of WC-C1, let I_family(V) denote the full selected
+paired integral of F, including all of the above factors and family weights.
+Only families joining the distinct old and fresh roots remain. Therefore
+
+ integral q(V) D(V) dV / D_h
+     = (2D_h)^(-1) integral [sum_(family: A linked to B)
+                                      I_family(V)]/D(V) dV. (WC-C6.2)
+
+This retains the original covariance factor 1/2. The earlier factor 1/4
+in WC-C2 concerned averaging a nonzero weight response; it is not substituted
+into this exact surviving-family representation. No absolute value was taken
+before the disconnected cancellations.
+
+Focused xhigh referee overlap_gluing_referee: calculation checked for the
+finite-cutoff signed exchange at this one-old/one-fresh caller. The full
+source carrier and denominator were replayed; this is not the earlier failed
+naive Gaussian swap. Effort assessment: substantive construction at the actual
+caller. The proposed next calculation is a quantitative bound for (WC-C6.2)
+with a summable ultraviolet tail and the actual perimeter/corner factors.
+No such bound, higher marked-family closure, or WC.1 is certified here.
+
+WC-C7 -- quantitative continuation of WC-C6.2 (conditional results).
+
+The active calculation is an induction on the actual renormalised closed
+source, with old regular activities retained at their birth scale. It must
+derive, not assume, their rooted analytic bounds and the corresponding
+bound through postponed inherited T operations. The results below do not
+yet supply that induction or its ultraviolet tail.
+
+Scalar pressure calculation. For a finite family of completed source
+polymers, retain its actual source--source incompatibility relation.
+Only a genuinely complete-flat straight/corner germ can be split as
+f_X=c_X chi+r_X. Flat current fields alone do not suffice when older
+nonflat determining data remain frozen. For a compatible ordered family
+R of remainders, scalar summation gives the JOINT factor
+
+  Z_c(P \ I(R))/Z_c(P) times ordered star-product_(X in R) r_X. (WC-C7.1)
+
+Here P is the finite scalar-polymer label set and I(R) is the set of its
+labels incompatible with at least one member of R. This is not a product
+of one-remainder ratios. One scalar polymer with weight c incompatible
+with two compatible remainders gives (1+c)^(-1), not (1+c)^(-2).
+
+Choose positive weights b_X and put u_X=|c_X|exp(b_X). If u_X<=1/2 and
+sum_(Y incompatible with X)u_Y<=b_X/2, finite deletion proves
+
+  |Z_c(A \ F)/Z_c(A)|<=exp(2 sum_(X in F)u_X), F subset A.   (WC-C7.2)
+
+Indeed Z_c(A)=Z_c(A\{X})+c_X Z_c(A\({X} union N(X))). The
+inductive deletion bound makes the second-to-first term ratio at most
+u_X; |1+w|^(-1)<=exp(2|w|) then proves nonvanishing and the stated
+bound by deleting F one label at a time. A rooted scalar-load bound
+epsilon consequently charges the actual contact hulls by
+exp(C epsilon sum_(X in R)n(h(X))). For a straight or right-angle
+square germ n(h(X))<=CM(d_i(X)+1). Overlapping and nested hulls must
+be merged; clusters touching several remainders remain hyperedges.
+This estimate consumes tree-weight reserve. It does not change vacuum
+compatibility or permit deleting allowed physical configurations.
+Focused xhigh pressure_induction_referee checked this conditional proof.
+
+The marked version of RG2 (2.15), (2.27)--(2.38), followed by the JOINT
+vacuum denominator decoration CRE (3.45)--(3.47), can use primitive
+complete-marker bounds as seeds. This supplies a completed norm only
+AFTER these bounds are proved under its actual conditional law. No
+pointwise bound on a raw character times an inverse pressure is used.
+The earlier microscopic loss WC-E2.9 remains a rejected substitute.
+
+Analytic-domain correction. RG1 (1.17) supplies the trimmed regular
+domain clause (1.16) from smaller basic conditions (i)--(iii). Its
+independent current variable must be retained. RG1 (3.13) extends the
+current using Delta A-P_1 A plus local terms. It does not bound the
+derived current of an arbitrary complex background. RG2 (1.21) bounds
+the nonlinear fluctuation in its stated admissible norms. PBG (3.49)
+bounds DP with its native input measure; the paragraph after (3.67)
+extends that bound to the complex domain. These facts are being applied
+to the reconstructed OLD source argument, not substituted for that
+application. The real bridge WC-C4.15 is not a complex force bound.
+
+Scope correction after the user's definition audit: WC-C7.3--.4 are
+conditional calculations for a hypothesised kernel, not certified bounds
+for the inherited Wilson source. No construction of their operand had
+been supplied. They must not be used in the physical proof chain. WC-C8
+below constructs the actual carrier and does not reinstate those bounds.
+
+Conditional regular derivative. Let f_(i,X) be a LOCAL
+BASED complete kernel on the regular analytic domain, with analytic norm
+at most M_i exp(-kappa d_i(X)). It is not the entire transported source.
+Set r_i=c min(alpha_(1,i),L^(-2)alpha_(0,i)), n=h-i, and tau_X equal
+to the native diameter of its full read-out envelope. Use q_1=q_0>p_0
+with fixed comparable constants. Write Phi_i(t) for the coherent local
+reconstruction of RG1 (3.21)--(3.25) from
+
+  W_t=exp(i eta H_h(t B')) U_h(square_0,M^. Ubold_h),
+  B'=g_h C B-h Dtilde(g_h C B),
+
+including the reconstructed current and all return gauges in Phi_i.
+Here h multiplying Dtilde is RG1 (3.2)'s constraint-completion operator,
+not the scale index. The enlarged patch contains the full source envelope
+inside its trimmed interior. The explicit far-support tails of (3.21)
+are retained. RG2 (1.21), RG1 (1.17), and the local based-gauge chart
+give old-native size C(1+tau_X)^p L^(-2n)(S_h+|z|g_h|B|), where
+S_h=alpha_(0,h)+alpha_(1,h). Cauchy on a z-disc of radius
+c S_h/(g_h|B|) about the interpolation interval bounds its t derivative
+by C(1+tau_X)^p L^(-2n)g_h|B|. At B=0 the difference below is zero.
+The DP bound cited above supplies the current's P_1 contribution without
+discarding a native-scale power. Applying the source Cauchy estimate gives
+
+  ||f_(i,X)(Phi_i(1))-f_(i,X)(Phi_i(0))||_star
+    <= C(1+tau_X)^p exp(-kappa d_i(X))
+                    L^(-2n) g_h|B| M_i/r_i.                (WC-C7.3)
+
+The local gauge is based; bounded complex conjugations incur their actual
+norm factors. Near/far support splitting and the count L^n of old contour
+contacts give rooted load at most
+
+  C g_h|B| sum_(i<h) L^(-(h-i)) M_i/r_i,                    (WC-C7.4)
+
+after charging the support polynomial to tree-weight reserve. This is a
+conditional induction step with the displayed old analytic bound as its
+input, not proof that every physical inherited coefficient has that bound.
+The xhigh overlap_gluing_referee checked precisely this local based scope.
+In particular it excludes a long complex C_P connector and the inherited
+T' branch. Unitary conjugation bounds cannot be used for complex P.
+Effort assessment: a substantive reconstructed-derivative calculation,
+not closure of the full source estimate or of WC.1.
+
+The remaining induction must also handle the q=0 families touching
+inherited Y_i in LFR2 (1.95)--(1.97). They have c_1=alpha^(1/3),
+not a new birth penalty exp(-p_0(g_k)). A bound for regular coefficients
+after integration is not a bound for postponed source operators acting
+on later interacting factors. This distinction remains to be resolved
+at the full inherited caller before WC-C7 can close WC-C6.2.
+
+Literal test of the proposed transfer. Within a fixed persistent component
+Y, let L_Y be the full positive real integration operation obtained from
+T'_b(Y), with its older T_h, actions, Haar factors, cutoffs and gauges
+retained, and let nu_Y=L_Y/L_Y[1]. Put S equal to its actual inherited
+renormalised complete closed source and W=V(X)exp(t V(X)), the first
+selected touching boundary interaction in LFR2 (1.91). For a scalar c,
+
+  nu_Y[(S-c chi)W]
+    = Cov_(nu_Y)(S,W)+(nu_Y[S]-c chi)nu_Y[W].               (WC-C7.5)
+
+The covariance is complete and gauge invariant. It is a surviving
+same-component term of WC-C6, not a disconnected term cancelled there.
+The regular integrated source norm bounds neither this covariance nor
+the pointwise source inside L_Y. The direct proposed interchange
+L_Y[SW]=L_Y[S]L_Y[W]/L_Y[1] is false without that covariance.
+LFR2 p379 explicitly says the older operations/history sum act on the
+last exponential of (1.72), so W cannot be pulled outside those operations.
+
+An attempted repair inserts sW before the old integration and uses
+G(s)=L_Y[S exp(sW)]/L_Y[exp(sW)]. Then G'(0) is exactly this covariance.
+A bound for the old activity at s=0 does not bound G on a complex disc.
+No joint decorated-source estimate on such a disc has been proved here.
+Thus regarding a later boundary decoration as an already controlled old
+RG2 vacuum vertex does not establish the required bound. This is the
+failed transfer in the proposed induction, not a new estimate or a
+counterexample to ultraviolet convergence.
+
+The physical outer weight and final D_h have not been removed: nu_Y is
+only a notation for this test of the inner operation. The term must still
+be integrated through (1.72)/(1.103). LFR2 p391 allows no tree decay
+inside fixed Y_i; CRE (2.34)--(2.39) bounds remaining mixed-domain data
+at their OWN native scales. Neither gives a gain relative to a fixed
+later matching scale for a source still reading frozen old fields.
+Focused xhigh pressure_induction_referee checked the failed transfer.
+The next literal step is to bound this connected decorated-source
+operation with its scalar pressure matched inside the same integration.
+It is not to repeat WC-C7.5 or the already checked regular calculation.
+
+The phase convention in WC-E2.8 is conditional: CRE (2.32) and LFR2
+(1.100) give only partition-preserving covariance for R terms. Until
+matching is proved, retain oriented periodic bond/corner types rather
+than declaring a universal e_r at an arbitrary reference bond.
+
+WC-C8 -- explicit inherited closed-source kernel.
+
+Human authorisation: "Construct this kernel." The first caller is the
+source inserted in the retained boundary bracket LFR2 (1.103), hence
+WC-C7.5 and then the full physical comparison WC.1. This construction
+defines the operand; it asserts no ultraviolet-uniform activity bound.
+
+Fix a finite cutoff, a compatible scale k of one of the axis-aligned
+squares, and its oriented coarse edges c_1,...,c_N in cyclic order.
+Let gamma_a be the oriented fine arc of the ORIGINAL loop joining the
+endpoints of c_a. The gamma_a concatenate to the original loop. Put
+V_a=V(c_a) and F_a=U_0(gamma_a). Here U_0 is the original fine connection
+inside the chronological integral, not a minimiser substituted for it.
+Inverse field maps, raw complements and return gauges recover a fine
+field only when their original integration variables are still present.
+Eliminated variables require the inherited integration below; they cannot
+be recovered from the current background. For an R replacement retain
+the OLD input field in the source before integrating it, as in WC-E2.4.
+All endpoint frames are the common frames of the gauge-equivariant RG
+kernel; returned gauge factors are included when identifying them.
+
+Let R realise the chosen normalised irreducible character chi=tr(R)/d.
+For a fixed nonzero renormalisation scalar Z already multiplying this
+bare loop, introduce the polynomial
+
+  W(s)=1/(Z d) tr product_(a=1)^N
+                [R(V_a)+s_a(R(F_a)-R(V_a))].              (WC-C8.1)
+
+The bracketed open factors occur only in this exact complete-trace
+identity; they are not separately estimated or propagated. The coefficient
+of product_(a in J)s_a is denoted W_J. Summing W_J over all subsets J
+gives Z^(-1)chi(U_0(Gamma_0)); the empty coefficient is
+Z^(-1)chi(V(Gamma_k)). No scalar counterterm is fitted by this definition.
+For the pair use the product of the two polynomials with Z=Z_1,Z_2
+respectively, and the SAME joint physical integration throughout.
+
+For a nonempty J={a_1<...<a_m}, fix a deterministic connected coarse
+domain containing its marked arcs and choose a rooted spanning tree of
+that domain's coarse graph. Include the tree itself in the support.
+Let x be its root and T_a the V-transport along its tree path from x to
+the initial endpoint of c_a. Define the COMPLETE relative loops
+
+  Q_a=T_a F_a V_a^(-1) T_a^(-1).                           (WC-C8.2)
+
+Let O_r be the V-transport on the oriented coarse contour from the start
+of c_(a_r) to the start of c_(a_(r+1)), INCLUDING c_(a_r); use cyclic
+indices. Thus O_m includes the wrap around the contour. Define the
+physical closed holonomies H_r^phys=T_(a_r) O_r T_(a_(r+1))^(-1).
+For independent auxiliary COMPLETE based holonomies H_1,...,H_m in G,
+the scalar kernel is the following function on G^m:
+
+  b_J(U_0,V;H_1,...,H_m)
+    =1/(Z d) tr product_(r=1)^m [(R(Q_(a_r))-I)R(H_r)].    (WC-C8.3)
+
+This is the full object, not separate coefficients or endpoint tensors.
+For J empty use b_empty(H_0)=Z^(-1)chi(H_0), evaluated at
+H_0=V(Gamma_k). The empty product in (WC-C8.3) would be incorrect.
+Each loop of the pair has its own ordered auxiliary holonomy list;
+the joint marker is the product of its two COMPLETE traces.
+
+Verification. Under a simultaneous gauge transformation g, each Q_a
+and H_r is conjugated by g(x). Thus (WC-C8.3) is gauge invariant.
+Set E_a=F_a V_a^(-1)-1 only for the following algebraic verification.
+At the physical H_r, the rth factor before applying R expands as
+(Q_(a_r)-1)H_r^phys=T_(a_r) E_(a_r) O_r T_(a_(r+1))^(-1).
+The tree transports telescope in the whole trace. Since O_r starts
+with V_(a_r), E_(a_r)O_r replaces that marked V edge by F_a-V_a.
+Consequently b_J(H^phys)=W_J exactly. For m=1 the kernel is
+Z^(-1)(chi(Q_a H_1)-chi(H_1)), which vanishes for Q_a=1.
+For any nonempty J it vanishes when every marked relative loop is 1.
+Arbitrary auxiliary H_r do not change these assertions.
+
+The fixed tree uses only V, which is frozen in the current integration.
+The outside contour arcs occur in H^phys, not silently in the coefficient.
+Their full dependence must be restored in subsequent RG integrations.
+When m>1, replacing these variables by one H is not a notational change:
+one must either retain this multi-holonomy carrier or include all the
+intervening transports in the coefficient's support. WC-C7's single
+E_chi kernel is therefore not automatically the present operand.
+
+Inherited integration is part of the definition. Start with the actual
+bare density times (WC-C8.3), treating V and the auxiliary H's as external
+source arguments. Follow the actual vacuum RG/R integration tree in
+chronological order. At every already-performed elimination of variables
+z with remaining data y, write its literal vacuum integral as
+I(y)=sum_lambda integral w_lambda(z,y) dz. The inherited marker becomes
+
+  b_next(y;H)=[sum_lambda integral
+                    w_lambda(z,y)b_previous(z,y;H) dz]/I(y). (WC-C8.3a)
+
+The label lambda is the actual history/gauge/branch label of THAT
+operation; z comprises precisely its Haar and/or Lie-field integration
+variables, with its original cutoffs, constraints and measure. The
+integrand w_lambda is the same full integrand that defines I, not its
+Gaussian or absolute majorant. This rule is applied to RG1 (0.13) and
+the regular CRE integrations with their actual input density. In an
+R replacement the unnormalised sourced output is, literally,
+
+  sigma(v,y)/J(y) integral r(w,y)b_previous(w,y;H) dw,
+  J(y)=integral sigma(v,y) dv,                              (WC-C8.3b)
+
+with r,sigma and J the unchanged vacuum replacement operands of
+WC-E2.4 / LFR1 (1.100). Retain its history sums and outer factors.
+The corresponding vacuum output is the same expression with b=1;
+its quotient is used only where that output has nonzero mass. These
+rules define the inherited kernel from the explicit bare marker, not
+from a posited coefficient with a desired norm.
+
+Variables of POSTPONED operations are retained in y and in b_next.
+In particular none of the current nu_i integrations below is performed
+in (WC-C8.3a). A later boundary interaction reading those variables
+therefore multiplies this inherited marker BEFORE their integration.
+Let bbar_J denote the result on the actual retained tuple at (1.103).
+It is bbar_J, not raw U_0 or an already nu_i-averaged coefficient, that
+is inserted into the current operations. This definition retains all
+earlier scalar normalisers in their correct numerator/denominator roles.
+
+For locality, retain the numerator and touching-denominator labels at
+each earlier regular elimination, using CRE (3.44)--(3.47), and retain
+the actual component labels at each R integration. Apply WC-C5.3 to
+the reconstructed source operands BEFORE those integrations. Denote
+the resulting inherited labelled contributions by bbar_(J,sigma);
+sigma now records the earlier selected integration/denominator labels
+AS WELL AS the source's endpoint-localisation labels. Their sum is
+bbar_J. Source-map localisation alone does not localise this quotient.
+The explicit marked/denominator summation rule is (WC-C8.5)--(WC-C8.6)
+below, applied chronologically at each such elimination.
+
+Every support contains the marked arcs, fixed tree, all selected
+reconstruction/gauge footprints and the earlier denominator clusters.
+Whenever a factor reads a retained component Y_i, include the WHOLE
+Y_i in its integration support. Do this for every vacuum interaction
+as well as the source. Without the older labelled expansion one may
+use bbar_J as one global marker, but may not declare it local. No
+smaller support or decay is asserted by this construction.
+
+Completed coefficient at the current inherited bracket. Freeze the outer
+data in LFR2 (1.103) and write L_i=T'_k(Y_i), with its entire literal
+recursive integral (1.71), including all old T_h operations, cutoffs,
+actions, Jacobians and gauge factors. Put nu_i=L_i/(L_i 1). This is a
+normalised integration FUNCTIONAL, not a newly imposed probability law.
+Nonvanishing and finite variation on the source's stated domain are
+provided by LFR2 (1.73)--(1.75). The product composition of these
+component operations is the one printed in (1.103).
+
+Write beta_a for the INPUT boundary term with label a in that bracket
+and v_a=exp(beta_a)-1. These beta_a are not the OUTPUT boundary terms
+after its re-exponentiation; Bałaban reuses notation for those terms.
+Define
+
+  D_c=(product_i nu_i)[product_a(1+v_a)],
+  N_(J,sigma)(H)=(product_i nu_i)
+                       [bbar_(J,sigma)(H) product_a(1+v_a)]. (WC-C8.4)
+
+The marker and every boundary factor remain INSIDE the older operations.
+In particular this includes the covariance in WC-C7.5; it does not use
+an old integrated source coefficient in place of its integrand.
+
+Use the actual component compatibility of (1.103). Supports include
+every whole integration component they read and all field/gauge
+footprints. Thus different connected components of a selected family
+use disjoint normalised-functional slots. For each unmarked connected
+selected family D define its value by applying those nu_i to
+product_(a in D)v_a. Sum these values over families with full support
+Z to define z(Z). For H'_(J,sigma)(Z_0;H), include bbar_(J,sigma)(H) in
+the same integral and sum the families whose union WITH THIS MARKER
+is one component of support Z_0. The empty family is included when
+the marker alone has that support. This specifies actual integrands,
+summation indices and integration operations for both kinds of terms.
+
+Let Z_vac(A) be the hard-core polymer partition sum of the z(Z)'s
+restricted to labels in A, with the empty family contributing 1.
+Let Comp(Z_0) be its labels compatible with Z_0. The finite Mayer
+decomposition gives
+
+  N_(J,sigma)(H)=sum_(Z_0) H'_(J,sigma)(Z_0;H)
+                                      Z_vac(Comp(Z_0)),
+  D_c=Z_vac(all).                                          (WC-C8.5)
+
+Disconnected factors are the SAME vacuum factors in these expressions.
+This is the insertion construction CRE (3.44)--(3.45), applied inside
+the actual inherited bracket, not to a replacement Gaussian law.
+
+Here is an explicit denominator completion. For an ordered tuple
+C=(Z_1,...,Z_n), n>=1, define
+
+  phi(C)=1/n! [sum_(connected graphs G on {1,...,n})
+               product_({r,s} in edges G)(-1_(Z_r incompatible Z_s))]
+                                      product_(r=1)^n z(Z_r).
+
+Self-incompatibility is retained, so repeated labels are allowed in this
+log-cluster sum. The one-vertex graph has weight 1. Put supp(C)=union Z_r
+with all the footprints above, and C~Z_0 when at least one Z_r is
+incompatible with Z_0. The explicit completed kernel of support X is
+
+  f_(J,sigma,X)(H)=sum_(Z_0) H'_(J,sigma)(Z_0;H)
+    sum_(q>=0) (-1)^q/q!
+      sum_(C_1,...,C_q: C_r~Z_0,
+                       Z_0 union union_r supp(C_r)=X)
+                                      product_(r=1)^q phi(C_r). (WC-C8.6)
+
+The q=0 contribution is H'_(J,sigma)(X;H). Vacuum cluster convergence
+in (1.103) justifies the touching-cluster exponential, as in CRE
+(3.45)--(3.47), giving N_(J,sigma)/D_c=sum_X f_(J,sigma,X).
+At fixed cutoff the marker has finite integrals. No constant uniform
+in cutoff, history, support or inverse renormalisation is asserted.
+Individual field domains and analytic bounds have not been transferred
+from the vacuum activities to this kernel.
+
+Termwise real gauge invariance uses COMPLETE chart data. In each nu_i
+make the compensating change of older boundary fields and relative
+variables described after LFR1 (1.87), and retained in its (1.100) and
+LFR2 (1.71). Transform both a link and its background/return frame;
+only then does their relative link transform by conjugation. Haar and
+Lie measures, tree constraints, the fixed C5 cutoff, Jacobian/FP factors
+and return gauges remain in that change of variables. Any common
+source-independent slice factor cancels in nu_i. Each beta_a and the
+WHOLE marker are invariant, and the spatial labels are unchanged.
+Thus H', z, phi and (WC-C8.6) are termwise invariant under the induced
+domain-preserving real action. Changing the chart requires its actual
+gauge transition; one cannot change V while freezing its old boundary
+frames. No invariance of a norm under complex conjugation is inferred.
+
+Single-holonomy kernel for a genuine local straight/corner germ. Suppose
+all its marked contacts lie in the oriented contour interval I from the
+start of c_(a_1) through the END of c_(a_m), within that one germ. Enlarge
+the support to X_plus by ALL edges of I and the chosen tree, including
+its path to that last endpoint. Denote the latter transport by T_end.
+For r<m, H_r^phys then reads only X_plus. Set
+
+  L_loc=T_(a_m) V(c_(a_m)) T_end^(-1),
+  H_ext^phys=T_end V(Gamma_k outside I) T_(a_1)^(-1).
+
+Both are complete loops based at x, and H_m^phys=L_loc H_ext^phys.
+The explicitly constructed single-holonomy kernel is
+
+  k_(J,sigma,X_plus)(V;H)
+    = f_(J,sigma,X)(V;H_1^phys,...,H_(m-1)^phys,L_loc H).   (WC-C8.7)
+
+Regroup terms with the same enlarged support X_plus, retaining their
+labels and weights. Because the entire construction is linear in each
+R(H_r), (WC-C8.7) is in E_chi as a function of H. Its coefficient now
+contains only the explicit local contour/tree transports, not the
+outside contour. At H=H_ext^phys it equals the original completed
+marked contribution. This is the construction previously missing from
+the phrase "local based complete kernel". It still depends on every
+retained older datum in its decorated support; their analytic estimates
+do not follow from this identity. At a subsequent step V and the
+internal transports receive their actual integrations, not fresh laws.
+No small-support claim is made when X_plus is large. Terms spanning
+other sides, corners or both loops retain their full multi-holonomy
+form unless those paths are explicitly included; they are not silently
+placed in the single-germ scalar channel.
+
+D_c is only the conditional boundary-bracket denominator. All factors
+product_i(L_i1), outer sector weights and remaining integrals of LFR2
+(1.72)/(1.104) remain. In the sourced physical numerator replace the
+factor D_c by N_(J,sigma)(H^phys), sum the source coefficients and all
+original histories, and divide by the SAME physical D_h as WC.1.
+This is the exact first-caller substitution. It neither factorises the
+two loop laws nor discards a normaliser ratio.
+
+Status: finite-cutoff construction checked. The xhigh overlap_gluing_referee
+checked the primitive complete trace and the need for multiple auxiliary
+holonomies. The xhigh pressure_induction_referee checked the corrected
+chronological lift, all-support closure, current numerator/denominator
+expansion, induced real gauge invariance, and single-holonomy substitution
+(WC-C8.7). The raw-U_0 insertion into current nu_i was explicitly rejected
+and replaced by (WC-C8.3a)--(WC-C8.3b); eliminated variables are not
+reconstructed or integrated twice. The exact first caller retains all
+outer normalisers and the physical D_h. Effort assessment: construction
+of the actual operand, not a quantitative gap closure.
+WC-C7.3--.4 remain excluded from the physical proof chain. The analytic
+bound for (WC-C8.6)--(WC-C8.7), with its full inherited dependencies,
+flat-scalar matching and ultraviolet propagation, remains open.
+
+WC-C9 -- rejected sufficient route: division by a sourced flat scalar.
+
+This is NOT the active route and its extra source denominator is not
+required by WC.1. The human subsequently authorised additive local
+scalar extraction within the marked RG expansion. The diagnostic below
+does not establish an obstruction to that route; retain it only to
+prevent reintroducing the same unnecessary division.
+
+The user's request is the quantitative bound, not another construction.
+The following test retains the actual C8 inherited integrations. Write
+L_eta for their product of normalised component operations at complete
+external data eta, bbar for the constructed closed retained-state source,
+and W for ONE actual bounded boundary activity beta_a. Define
+
+  N_t(eta;H)=L_eta[bbar(H) exp(sum_a beta_a+tW)],
+  D_t(eta)=L_eta[exp(sum_a beta_a+tW)].
+
+At a permitted complete-flat reference 0, put
+c(t)=N_t(0;1)/D_t(0). Testing the scalar-matched remainder gives
+
+  N_t(eta;H)/(D_t(eta)c(t))-chi(H)
+    =[N_t(eta;H)D_t(0)-N_t(0;1)D_t(eta)chi(H)]
+                                      /[D_t(eta)N_t(0;1)]. (WC-C9.1)
+
+The common original inverse Z cancels exactly before absolute values.
+This test does NOT define a physical counterterm by fitting the full
+Wilson expectation. Matching c to the prescribed local perimeter/corner
+extraction has not been proved, and no renormalisation convention is
+changed here. Even this scalar-matched estimate remains unproved.
+
+Actual zero-free-disc test. Let nu be the full positive real reference
+law in the preceding bracket, including its existing boundary weight.
+For S=bbar(1), define A(t)=nu[S exp(tW)], B(t)=nu[exp(tW)],
+A_0=nu[S], and M=sup|W| on that operation's actual domain. If A_0 is
+nonzero and M>0, positivity gives
+
+  |A(t)-A_0|<=nu[|S|](exp(|t|M)-1),
+  |B(t)-1|<=exp(|t|M)-1.
+
+Consequently the radius
+
+  r=M^(-1)log(1+|A_0|/(2 nu[|S|]))                         (WC-C9.2)
+
+ensures |A(t)|>=|A_0|/2 and |B(t)|>=1/2 for |t|<=r.
+For M=0 both functions are constant. If A_0=0 this scalar division
+is unavailable. The original inverse Z also cancels from the ratio
+|nu[S]|/nu[|S|]. LFR2 (1.75) does not lower-bound this signed
+cancellation ratio, and (WC-C9.2) need not give the native uniform disc.
+No zeros or failure of the physical bound are inferred from this test.
+
+Verdict: the direct analytic attempt failed to prove the required
+source-relative bound or its ultraviolet uniformity. This is the same
+relative-source gap, not a newly closed lemma or an independent gap.
+The xhigh pressure_induction_referee checked the calculation and this
+scope; kernel_analytic_referee confirmed that the vacuum domain and
+operation estimates do not supply the missing source bound. Neither
+the older native-length calculation nor C7's hypothetical analytic norm
+was reused as a proof. No analytic bound for C8 is certified.
+
+WC-C10 -- additive extraction inside the actual marked expansion.
+
+Human authorisation: "FFS then do this", following the explicit proposal
+to adapt Bałaban's insertion induction instead of dividing by a sourced
+expectation. Use the actual completed kernels WC-C8.6--.7. For a genuine
+regular straight/corner germ whose COMPLETE flat retained-data value is
+in its domain, subtract k_X(flat;1)chi additively. Keep the scalar terms
+in the source expansion and their joint scalar decorations; do not
+replace the physical counterterm by a fitted full-loop expectation.
+For a normalised kernel N_eta/D_eta the additive difference is
+
+  N_eta(H)/D_eta - [N_0(1)/D_0]chi(H)
+     =[N_eta(H)D_0-N_0(1)D_eta chi(H)]/(D_eta D_0).
+
+Only VACUUM conditional denominators occur here. The sourced scalar
+N_0 is not a denominator. All outer weights and D_h remain unchanged.
+This records the correction to C9; the identity is not a new estimate.
+
+Actual attempted induction: retain old boundary interactions with their
+source under the original weight, and attach only newly generated
+boundary increments as new marked vacuum vertices. CRE (3.26) inserts
+B_k(U_k(...))-B_k(U_(k+1)) and V^(k), with the exact measure (3.27).
+CRE p276--277 gives the current-fluctuation small factor and extra native
+separation factors for its stated localised increments. Those are
+legitimate new vacuum seeds; they are not an inherited source bound.
+
+The literal R-operation prevents extending that conclusion to all
+retained terms: LFR2 p369, after (1.49), separates terms INTERSECTING Z
+from terms DISJOINT from Z. Only the latter are expanded from U_k'' to
+U_k. The former remain inside the operation (1.71), together with their
+older variables and the boundary interactions in (1.72). Consequently
+the q=0 source component of (1.103) is not wholly a new small increment.
+Putting parameters on those actual interactions defines their joint
+marked integrals, but vacuum convergence in those parameters does not
+bound the source-marked seed. Nor is flat subtraction admissible on a
+component with fixed rough data merely because the current field is flat.
+
+No analytic source norm or ultraviolet tail has been proved by this
+attempt. A native retained-contour proposal is not a repair unless it
+first gives the exact earlier pressure-extraction identity inside the
+birth operation. Its prospective contour-count payment alone is not
+that identity. No alternative carrier or norm is accepted on this basis.
+
+WC-C11 -- background dependence of the actual marked kernel.
+
+Human authorisation: "Carry out this analysis!" This concerns the
+actual C8 kernel with additive scalar subtraction, not C7's assumed
+analytic activity and not C9's sourced denominator. No source norm or
+ultraviolet bound is certified by the calculations below.
+
+First derivative in the literal integration. Take a differentiable
+admissible path eta(t) of COMPLETE background data, with the auxiliary
+closed holonomies fixed as independent source arguments. A dot denotes
+its derivative. At a fixed component Y, let v_a=exp(beta_a)-1 be an
+actual selected input boundary interaction. Its sourced integral is
+nu_Y[bbar(H)v_a], where nu_Y is exactly C8's normalised (1.71)
+operation, including all its older integrations. Its derivative is
+
+  nu_Y[dot(bbar)(H)v_a+bbar(H)exp(beta_a)dot(beta_a)
+                +bbar(H)v_a(Xi_Y-nu_Y[Xi_Y])].             (WC-C11.1)
+
+In the external extension specified after LFR2 (1.72), the current
+weight contribution is
+
+  Xi_Y=dot[-(1/2)<DH''_(1,k,Y)B,zeta DH''_(1,k,Y)B>
+                                                   +V(Y^~)]. (WC-C11.2)
+
+Other participating component operations and the vacuum denominator
+clusters in C8.6 are differentiated too. The empty selected family
+retains dot(bbar) and the centred density term. Nothing here replaces
+the full interacting law by its quadratic part.
+
+The term dot(bbar) has an explicit chronological definition. At every
+earlier lift b_next=(sum_lambda integral w_lambda b dz)/I, it is
+
+  dot(b_next)=(sum_lambda integral
+                [w_lambda dot(b)+dot(w_lambda)b] dz)/I
+                                      -b_next dot(I)/I.   (WC-C11.3)
+
+Thus it includes all older density and normaliser responses. At the
+primitive source level its derivative is a sum of COMPLETE trace
+insertions obtained by replacing one R(Q_r)-I with
+R(Q_r)dR(Q_r^(-1)dot(Q_r)). It also differentiates every internal
+physical H_r, the local closing loop L_loc and all tree/return paths
+in C8.7. No open matrix factor is separately estimated.
+
+The source Ward identity differs from the vacuum scalar identity.
+For g_t=exp(t phi) in the real compact gauge group, denote the induced
+variation of ALL background data by delta_phi eta. This includes the
+current, older adjoint data and return frames, not just the link
+logarithm. Complete gauge invariance gives
+
+  D_eta k(eta;H)[delta_phi eta]
+                  +D_H k(eta;H)[phi(x)H-Hphi(x)]=0.        (WC-C11.4)
+
+At a permitted COMPLETE-flat regular germ, k(0;H)=c chi(H).
+Consequently the first derivative annihilates pure-gauge background
+directions. It does NOT follow that this derivative vanishes: the
+auxiliary H transforms, unlike the vacuum scalar E in RG1 (4.14).
+A complete contraction with a curvature insertion and R(H) is allowed.
+The independent adjoint current also permits a tangent-current insertion
+tr(dR(J_mu)t^mu R(H))/d. CRE (2.36)--(2.37) does not identify that
+analytic-domain variable with the derived current of an arbitrary
+complex link configuration; no such identification is used here.
+The coefficient of that insertion is part of (WC-C11.1)--(WC-C11.3),
+not a vacuum derivative coefficient. No proportionality to a universal
+multiple of dR is assumed for arbitrary irreducible characters.
+
+Straight-germ spatial symmetries can be invoked only after the actual
+label/history/partition orbit has been matched. CRE (2.29) asserts full
+Euclidean covariance after unrestricted support summation; (2.32)
+retains the partition-preserving group for R terms. Transverse
+reflection cannot be used to set each inherited labelled derivative
+to zero at arbitrary fixed older data. Corner germs in particular
+allow an oriented curvature insertion. These observations identify
+the source terms that must be estimated; they do not estimate them.
+
+Attempted source--measure cancellation. Writing the literal quadratic
+part in (1.71) as (1/2)<B,K_eta B>, the candidate change of variables
+would use X=-(1/2)K_eta^(-1)dot(K_eta)B. This is NOT justified for the
+actual integral: LFR2 p360 defines zeta=zeta_0(1-zeta_1), and (1.21)
+on p361 provides nonnegativity, not an inverse or a localisation bound.
+The later (1.77)--(1.78) changes a transition cutoff for a particular
+large-field penalty; it is not an inverse theorem for the (1.71) form.
+No reference inverse may replace the missing actual inverse here.
+
+Even if this change were admissible, integration by parts would leave
+Cov_nu(S,X.grad(log u)) and the actual centred boundary/constraint flux,
+where u contains the Haar factor, cutoffs, FULL nonlinear inner action,
+V and inherited densities. In particular -Cov_nu(S,X.grad A_inner)
+remains. Independence of A_inner from the external parameter does not
+make its B derivative vanish. LFR2 (1.46)--(1.48) bounds a different,
+explicitly supported perturbation and cannot be transferred to X.
+
+The three focused xhigh reviews checked the source-Ward scope, the
+chronological marked derivative, and the failed integration-by-parts
+transfer respectively. The source-weighted curvature amplitude in
+(WC-C11.1)--(WC-C11.3) remains unbounded in the required uniform norm.
+This analysis supplies no proof of the analytic estimate or WC.1.
+
+13 October 2026 -- subsequent human-authorised extraction attempt, WC-E2.
+The human explicitly requested "Construct the perimeter corner extraction!"
+after the reset stop, then authorised irreducible characters and asked that
+assumption be written in the manuscript. WILSON_RG_COMPARISON.tex now states
+that chi_1, chi_2 are normalised irreducible characters. The older recovery
+automation remains PAUSED; its stopping condition is not a new active run.
+
+Target remains the actual perimeter/corner extraction from w15--w16 serving
+WC.1. WC-E2 constructs exact conditional closed-source coefficients and a
+formal extraction mechanism. It does NOT construct convergent physical
+counterterms. Formal/algebraic statements below passed focused xhigh review
+by colour_connected_construction and perimeter_extraction_referee. The
+physical extraction and its inherited remainder estimate remain open.
+
+For one irreducible normalised character chi=tr(R)/d, let E_chi be its
+Peter--Weyl coefficient space: f_A(H)=tr(A R(H))/d. H is an auxiliary COMPLETE
+based holonomy, transforming simultaneously with the physical fields.
+Only simultaneous gauge invariance is asserted; f_A at fixed A need not
+be a class function. With normalised Haar measure define
+
+  (f star g)(H) = d^2 integral_G f(K) g(H K^(-1)) dK.          (WC-E2.1)
+
+Orthogonality gives f_A star f_B=f_(AB), with unit chi, and the tracial
+functional tau(f)=f(1). Every kernel and product is a complete simultaneous
+closed contraction. This auxiliary Haar algebra is not a physical law or
+an independence assumption. The norm of left star multiplication on E_chi
+with its L^2(G) norm is ||A||_op, since ||f_A||_2^2=tr(AA*)/d^3. It is gauge
+invariant. An operator-norm bound still requires proof; its definition does
+not supply one. The regular primitive w20 transfers to this norm using
+||A||_op <= d^(3/2) sup_H|f_A(H)|, at w20's original scoped hypotheses.
+For two loops use the tensor product of these two spaces and two auxiliary
+Haar integrations; all coefficient functions retain the SAME physical law.
+
+Exact source recursion: define old and new loop holonomies in the original
+physical field variables before gauge-coordinate changes. If their bases
+differ, P is the old-field transport along the coordinate-ordered fine path
+inside the common block, from old base to new base; a shared vertex in the
+same physical frame permits P=1. Set
+
+  C_P f(H)=f(P H P^(-1)),
+  Q=P^(-1) Hol_U(Gamma_h) P Hol_V(Gamma_(h+1))^(-1),
+  b_h(s;H)=chi(H)+s(chi(QH)-chi(H)).                          (WC-E2.2)
+
+With T_h's vacuum construction frozen, N_0=rho_0 chi and
+
+  N_(h+1)=T_h[(C_P N_h) star b_h],
+  Psi_(h+1)=N_(h+1)/rho_(h+1).                              (WC-E2.3)
+
+The sources enter BEFORE the actual integrations in T_h. All transformations
+of P,Q,H are retained inside these integrands, with Jacobian/FP factors.
+At H=Hol_V(Gamma_(h+1)), the integrand equals the previous physical source:
+tr(R(P)^(-1) A R(P) R(Q) R(H))/d
+    =tr(A R(Hol_U(Gamma_h)))/d in a matrix realisation.
+This is the direct verification, not an inference from vacuum mass alone.
+The normalising factors Z of WC.0 have not been inserted into N_0 above:
+this recursion represents the bare source. Their exact inverse product must
+be retained when forming the renormalised source.
+
+For the R operation the construction is literal insertion before the old
+interior integration, keeping its vacuum-defined replacement density and
+denominator fixed. In the explanatory notation of LFR1 (0.3), write old
+interior w, new interior v, exterior y, and J_Z(y)=integral sigma_Z(v,y)dv.
+The sourced term is
+
+  sigma_Z(v,y)/J_Z(y) integral r_Z(w,y) S(w,y) dw.             (WC-E2.4)
+
+Integration over v cancels J_Z and preserves the sourced integral. The
+actual replacements in LFR1 (1.100), then LFR2 (1.71)--(1.72), retain their
+printed local normalisers, histories and factors. Formula (0.3) is the
+explanatory pattern, not a replacement for these actual weights.
+
+Finite inherited marks can be added recursively to (WC-E2.3), one for each
+relative-loop factor, with constant source chi. For disjoint old/new mark
+sets A,B, if b_h=sum_B b_(h,B) s_B, then
+
+  N_(h+1,A union B)=T_h[(C_P N_(h,A)) star b_(h,B)],
+  a_(h+1,A union B)=N_(h+1,A union B)/rho_(h+1).              (WC-E2.5)
+
+Thus old conditional denominators cancel before the next operation; the
+new denominator is the actual complete vacuum density. Whole-loop marks
+do not give edge locality. Subdivision into arc lassos must also retain
+Hol_(U_0)(Gamma_h) Hol_V(Gamma_(h+1))^(-1), with the same base transport:
+nonlinear block averaging does not identify these holonomies.
+
+For a finite marked kernel Psi=chi+sum_(A nonempty) a_A s_A, its ORDINARY
+formal logarithm has, for multi-index nu not zero,
+
+  L_nu=sum_(r=1)^|nu| (-1)^(r+1)/r
+       sum_(A_1,...,A_r nonempty; sum 1_(A_i)=nu)
+            a_(A_1) star ... star a_(A_r).                  (WC-E2.6)
+
+Each coefficient is a finite expression in exact conditional integrals.
+Repeated marks remain: L_(n e_i)=(-1)^(n+1)a_i^(star n)/n.
+For i different from j,
+
+  tau L_(e_i+e_j)=tau a_(ij)-tau(a_i star a_j).              (WC-E2.7)
+
+It is not the product-of-scalar-traces cumulant. Formal tracial additivity
+tau log_star(F star G)=tau log_star F+tau log_star G holds by cyclicity
+(equivalently the formal determinant identity). No numerical logarithm of
+a Wilson trace is taken. Evaluation at physical marks=1 is NOT justified
+by these finite-coefficient identities.
+
+The geometric extraction, on genuinely germ-local scalar coefficients q_X
+of this connected series, is explicit. X is the FULL decorated support,
+including vacuum clusters introduced by the denominator correction CRE
+(3.45)--(3.46). For finite localisation range r count oriented contour bond
+occurrences, n_X(C)=#(B(C) intersect X)>0, and set
+
+  u_C(b)=sum_(X containing b) q_X(C)/n_X(C),
+  e_r=u_straight(b_0),
+  c_r=sum_(b on the two incident right-angle rays)
+                         (u_corner(b)-e_r).                 (WC-E2.8)
+
+References are fixed independently of the target pair, using closed
+contours whose other corners lie outside the localisation neighbourhood.
+Germ locality makes the last sum finite. With disjoint corner neighbourhoods
+and no other side/loop contact in these supports, exchanging the finite sums
+gives exactly sum_X q_X(C)=N(C)e_r+4c_r. Both incident straight rays are
+subtracted. Long supports, other-side contacts, mixed-loop coefficients and
+field-dependent differences remain explicitly in the source. They need not
+vanish at flat retained fields. With Z_in/Z_out=exp(N e_r+4c_r), signs in
+WC.Z1 give m_in-m_out=-e_r/ell and log z_in-log z_out=c_r.
+This identity is checked on its stated coefficient carrier; germ-local
+physical coefficients with a convergent series have NOT been constructed.
+
+FIRST ANALYTIC FAILURE in the proposed full-history gas, not a new physical
+counterexample: an inherited interval polymer B excludes N finer regular
+singleton source polymers with activities z_c. The connected subseries with
+exactly one B has the exact formal coefficient
+
+  [b] log(product_(c in B)(1+z_c)+b w_B)
+       =w_B product_(c in B)(1+z_c)^(-1).                   (WC-E2.9)
+
+The log here denotes its formal power series, including repeated singleton
+clusters. Bounds |z_c|<=r_j<1 and |w_B|<=C B_vac(B) yield only
+C B_vac(B)(1-r_j)^(-N). With the available r_j=C g_j (even granting
+C g_j^nu), N comparable to M R_b ell_b/ell_j for a component born at fixed
+b, this reproduces the already checked inverse-perimeter loss eq:failedtail.
+The raw growth payment WC-E1.4--.5 does not pay this inverse pressure.
+
+A shellwise induction avoids displaying the old singleton factors only if
+its input is already a controlled renormalised source family. In that case
+the compact raw-character bound for w_B is no longer available. Thus the
+same missing estimate must be proved for the actual inherited block after
+the earlier scalar pressures are removed, before taking absolute values.
+No such bound was obtained in this attempt. Substituting an unproved
+renormalised-source norm as a new input would not close the construction.
+
+Verdict: exact closed-kernel recursion and formal logarithmic coefficients
+checked; finite geometric projector checked at explicit germ-local scope;
+physical perimeter/corner extraction and WC.1 remain unproved. The next
+gap-solving step must establish the inherited block bound in (WC-E2.9)'s
+actual caller, or an inductive source estimate providing its cancellation.
+Do not restart the algebra above or infer physical convergence from it.
+
+13 October 2026 -- STOPPED at the usage reset, 05:08:05 UTC.
+The Codex primary 10080-minute window changed from 40%, resetsAt 1792296677,
+to 5%, resetsAt 1792472326. Recovery automation is PAUSED and the reviewers
+have stopped. The human's exception to per-calculation approval ended with
+this run. Further mathematical work needs new human authorisation.
+WC.1 remains the target. No counterterm extraction or convergence is proved.
+WC-E1 status: the weighted history-payment calculation is checked at the
+conditional scope below; its transfer to every primitive source branch is
+open. Do not classify it as a checked repair of WO-P1.
+
+The present calculation tests the complete source inside the inherited
+T'_k(X) of LFR2 (1.71), including exp(V(X^~)), the nonlinear older action,
+all earlier integrations and all outer (1.72) operations. CRE (3.44)--(3.47)
+retains its excluded-polymer normaliser; it does not supply a Wilson bound.
+
+Attempted quantitative bridge: for a complete contour C and a target-domain
+field U^c(e)=exp(i eta A'(e))U(e), U(e) in G, expansion of the COMPLETE trace
+gives
+
+  |chi(Hol_(U^c) C)| <= exp(C_chi eta sum_(e in C) |A'(e)|).     (WC-E1.1)
+
+Edges are counted with traversal multiplicity. Each expansion coefficient is
+a closed contraction before it is bounded; no open transport is given a norm.
+For the pair, add the two exponents. With the actual layer bound
+|A'(e)| <= c_m alpha_(1,m)/(L^m eta), the exponent is
+
+  Theta_C = C_chi sum_m c_m alpha_(1,m) L^(-m) #C_m.             (WC-E1.2)
+
+C_m is the set of contour edges in that literal target-domain layer, not
+an independently selected event. The multipliers c_m are those of LFR1
+(1.64)--(1.68). LFR1 p192 bounds their L_0 powers by C_L R_k; it does not
+bound their exponent by the number N of preliminary integrations.
+
+The attempted stronger replacement Theta_C <= C a_0 eta #C was only
+established for the reconstruction in LFR2 (1.46), under w28's hypotheses.
+It must NOT be transferred to the full source by dropping internal return
+gauges. LFR2 (1.61) explicitly retains those gauges at representation
+interfaces. The full source also contains LFR1 (1.53), (1.60), the rejected
+branch map CRE (1.22), and the compositions LFR2 (1.61)--(1.65).
+
+The domain-preservation statement in LFR1 p191 and LFR2 (1.65) is being
+used to test (WC-E1.2) for the composed microscopic source. This requires
+the actual rejected branches and inherited source operands, not just the
+final minimiser. The proposed payment is to insert exp(Theta_C) into the
+SAME history estimate LFR2 (1.79). A square's scale-m contour charge in a
+covered component is at most C_chi M R_m^2(d'_m+1), using c_m <= C_L R_k,
+R_k <= L R_m, alpha_(1,m) <= 1 and the appropriate source-layer cover.
+The precise cover has a one-index shift: CRE (2.1), (2.3) and LFR1
+(1.10)--(1.12) give Z_j'' subset Z_j and
+
+  (Omega_m'' minus Omega_(m+1)'') intersect X
+       subset Z_(m+1)'' subset Z_(m+1).
+
+Charge layer m to n=min(m+1,k), including the factor L from the contour
+mesh change; the current core lies in X subset Z_k. For a fixed square,
+its contour length in a connected component is bounded by a constant times
+the component's linear span: each of its four straight sides intersects
+the component's bounding box in length at most that span. In scale-n
+units this gives C M R_n(d'_n+1). The finite torus and fixed pair only
+change the fixed geometric constant. Together with c_m <= C_L R_k,
+R_k <= L R_n, and alpha_* = sup_m alpha_(1,m), this gives
+
+  Theta_Gamma <= C_(chi,L) alpha_* M
+      sum_n R_n^2 sum_(C component of Z_n) (d'_n(C)+1).        (WC-E1.3)
+
+The actual history domains contain the added layers described on LFR1
+p177, so their +1 is controlled by d'_n. A singleton birth can instead
+use its own d'+1 reserve. For d=4, M,R_n >= 1, this yields
+
+  Theta_Gamma <= delta_chi(gamma)
+      sum_n M^d R_n^(d+1) d'_n(Z_n),
+  delta_chi(gamma) <= C_(chi,L) M^(1-d) alpha_* -> 0.          (WC-E1.4)
+
+Here alpha_(1,m)=C_1 g_m(log g_m^(-2))^q_1, CRE (2.28), with
+g_m <= gamma. This estimate concerns the local contour dependence of the
+complete insertion in the component; it does not allocate an arbitrary
+external loop to that component or change later integrations over H.
+
+This cost is paid in the literal history majorant LFR2 (1.79) by replacing
+its debit constant C_vac by C_tot=C_vac+delta_chi(gamma). In (1.81) the
+future no-new-field costs are bounded by
+C_tot C M^d L^(d+1) R_j^(d+2)(d'_j(Z)+1). Equation (1.82) pays this from
+the SAME birth's p_0(g_j)^2(d'_j+1) reserve. Equation (1.83) propagates
+the remaining reserve to S(Z). At mergers (1.87)--(1.88), the unused
+p_0(g_j) reserve pays the extra C_tot C(100M)^d R_j^(d+2) cost.
+The corresponding sufficient margins are
+
+  gamma_0 A_1^2 p_0(g_j)^2 >= C C_tot M^d R_j^(d+2),
+  p_0(g_j) >= C C_tot M^d R_j^(d+2).                          (WC-E1.5)
+
+Constants include fixed L and Bałaban's printed geometric factors. These
+are the same logarithmic powers as in the vacuum proof, with an enlarged
+constant and the same order of choosing parameters. Preparatory renewals
+use their actual exp(-p_0(g_j)) factor from (1.79). No fresh penalty is
+invented at a persistent scale. The factors exp(V(X^~)), nonlinear action,
+Jacobian/FP factors and old integrations remain inside the original
+operation. The residual -2p_0 birth contribution giving (1.89) remains.
+This payment passed focused xhigh review by wilson_extraction_referee.
+
+The source-map check established more than the final minimiser alone:
+accepted preliminary maps in LFR1 (1.53), (1.60) compose backwards from
+the n+1 domain into the n domain by the explicit statement on p191.
+Their complete character may be bounded once in the final target domain;
+there is no need to multiply a character bound once per accepted stage.
+The older raw variables retained by T_h remain real up to compensating
+gauges, but this does not remove the surrounding reconstructed variables.
+
+First unresolved branch: LFR1 (1.56)--(1.59) imports CRE (1.22) on stopped
+preliminary components. Write vartheta_j for that formula's smooth cutoff
+g, and H_Z^(j) for the phase in LFR1 (1.58). On free bonds the actual group
+element becomes
+
+  exp(i g_j B_new)
+      exp(i(1-vartheta_j(B_new)) H_Z^(j)(q)) V_Z^(j).         (WC-E1.6)
+
+Thus the apparent 1/g_j is absent from the group element. The phase is
+bounded by C exp(-R_j) epsilon_j on its printed support. Constraint bonds
+must still be completed using RG1 p267: the derivative in the distinguished
+bond is an invertible perturbation of the coefficient whose inverse is h(c).
+The resulting local phase-perturbation bound has a fixed C_L, independent
+of depth, and a one-pair-of-blocks support enlargement. This primitive
+calculation was checked by inherited_source_map; full history transfer was
+not completed before the reset.
+
+The attempted reserve estimate uses VAR (190), Proposition 9, and the
+PRT2 (2.61) row sum. For a scale-j determining perturbation of size b_j,
+supported in S_j^+, the proposed bound for layer m retains
+
+  ell_m^(r+1)|D^r delta A_m(y)|
+    <= C b_j exp(-delta_0 d(y,S_j^+)/24)
+       exp(-delta_0 R M max(|m-j|-1,0)/24).                  (WC-E1.7)
+
+For r=0,1 and the two second-order operators, the matching native kernels
+are printed in VAR (190). Here ell_m=L^m eta and b_j is the completed
+stopped-phase bound. The pending application must match all reconstructed
+average/current clauses of the inherited domain, not just A and grad A,
+and the exact support and scale restrictions of those kernels. This last
+transfer has NOT been independently accepted.
+
+A proposed shortcut summing the stopped phases without domain control is
+rejected as unproved: successive return gauges conjugate later phases by
+products t_(s-1), so the trace exponent contains
+eta sum_e sum_s |Ad(t_(s-1))H_s(e)|, not merely eta sum|H_s|.
+The existing return-gauge lemma does not cover arbitrary historical collars.
+Do not resume by discarding these internal gauges.
+
+Even after the source-map transfer, WC-E1 concerns RAW complete insertion
+growth. It does not absorb inverse perimeter/corner normalisation. A family
+of m independently marked coefficients also carries a crude 2^m factor;
+its full summation has not been bounded. No finite-shell colour-connected
+scalar extraction, renormalised marked-family estimate, or WC.1 follows yet.
+First next literal step, only after human resumption: complete the stopped
+branch's reconstructed-average/current domain transfer in (WC-E1.7), then
+replay the actual source insertion in (1.79). Referees stopped at reset.
+
+Latest human scope: return to the square-loop case. The smooth-projection
+question is secondary, not the active repair route. Work with the fixed
+disjoint pair of axis-aligned squares, each having four physical right-angle
+corners; retain the complete joint source and all inherited corrections.
+WC-Z1 supplies the convention, not a proved counterterm matching estimate.
+There is currently NO established extraction formula mapping the full
+Balaban sourced RG bracket to its perimeter/corner coefficients. WC.Z3
+specifies calibration conditions, not that extraction. Archive (4.11)--(4.13)
+presuppose unconstructed connected weights and cannot supply this bridge.
+The preceding proposed calculation must not treat such extraction as an
+available operation; its construction and source-relative control are open.
+Latest human design criterion: construct the extraction so that the remaining
+complete closed source has the required ultraviolet bound as a consequence
+of applicable RG localization/remainder estimates. Identify and subtract the
+local straight-edge and right-angle ultraviolet channels within the actual
+sourced RG operation. Retain nonlocal closed correlations in the remainder.
+Do not first assume a convergent full marked expansion to define coefficients
+and then pose the same ultraviolet estimate as an independent obligation.
+Closed-reference conditions fix finite scheme data; they are not the analytic
+mechanism producing the ultraviolet gain. The construction must prove that
+the remainder falls within the scope and norms of the invoked Balaban bounds,
+with the full inherited weight, outer operations and physical denominator.
+This is the specification of the unresolved construction, not an assertion
+that the vacuum bounds already apply to Wilson sources. The required gain is
+the summable ultraviolet tail of WC.1 at its actual matching scale, uniformly
+in the finer cutoff; formal flat vanishing or a fixed one-shell gain alone
+does not establish that conclusion. No new calculation is authorized here.
+Perturbative construction guide, at the human's latest direction: KR section
+2.3 (16) subtracts matched bulk-renormalized colour-connected contributions
+on a fixed cusp reference; (18) exponentiates their ultraviolet pole parts.
+Use this subtraction pattern to identify shell-local straight scalar channels
+and the corner excess after straight subtraction. The proposed constructive
+operation must extract their complete shell contributions from the actual
+closed source, retain inherited vertices/nonlocal closed correlations, and
+produce a remainder to which the required localization estimates apply.
+Do not substitute a finite perturbative coefficient for that shell scalar.
+Do not identify ordinary spatial Mayer connectivity with colour connectivity
+or take a numerical logarithm of a Wilson trace/conditional expectation.
+The sourced connected construction, its domain and scalar-channel matching
+are not yet established. The human subsequently authorized attempting this
+construction, stopping for guidance at an obstruction. That attempt has not
+produced a checked extraction or UV estimate: candidate constructions were
+considered, but no finite-shell colour-connected source coefficient was
+derived. This is not a new mathematical result or a falsification. Work is
+stopped for guidance at this first construction gap; do not claim that the
+vacuum Mayer coefficients supply the required source coefficients.
+LFR2 p369 (1.49)--(1.50) and p375 at (1.65) give
+the relevant reconstruction/domain mechanism for action terms, not its
+unproved extension to this source. Focused xhigh source review confirmed
+this reading and limitation; effort assessment: source investigation only.
+WC.Z3 can define a finite scheme already; calling it only a finite-part
+choice relative to constructed local counterterms requires actual matching.
+
+Gap: WO-P1. Current target/caller: WC.1 and its ultraviolet-tail iteration.
+LaTeX exposition: WILSON_RG_COMPARISON.tex writes out the scoped local
+proofs and citations. Its focused referee exposed a domain qualification
+in the archived arbitrary-radius implication (w22)--(w24): D_l<r_l/2
+does not alone ensure admissibility of the geometric tree logarithm.
+The TeX states chart compatibility explicitly; the unqualified assertion
+is not certified. Restricted radii require their actual inverse-radius
+sum. The fixed-radius proof also needs its original physical point in
+the analytic ball (or a separate physical bound). See the domain remark
+following the weighted inverse-radius proposition in the TeX. No WC.1
+estimate or new counterterm construction is supplied by this write-up.
+Last evidence: exact full-bracket normalization in archive (w15)--(w16);
+CRE (3.44)--(3.47) handles its stated local normalized insertion, not this
+renormalized joint loop source. No checked source closes WC.1.
+Open: the inductive representative, its source-relative integrated estimate,
+and the required cutoff uniformity. These are substantive gaps.
+Prohibited substitutes: repeated conditional algebra or local chart checks;
+raw-loop absolute majorants; separate open-segment norms; reference Gaussian
+moments; easier subcases; independence inferred from disjointness.
+Current checkpoint: corrected WC-D1. The NEW background supports the local
+pull-out at fixed determining/output data; the earlier blanket objection is
+withdrawn. The source trace is complete. WC-Z1 now fixes the renormalization
+convention and states explicit closed-reference scheme conditions; numerical
+scheme data, positivity/uniformity and nonperturbative matching remain open.
+The smooth-projection discussion is set aside. Full inherited/interacting
+square-source control remains open. Any next
+calculation requires human approval; keep the full source under outer
+operations that act on its data and work toward WC.1, without restarting
+the formal decomposition or regular-channel estimate.
+Approval of this record is not approval of a calculation. Any substantive
+new result requires the authorized focused xhigh referee, including a separate
+assessment of actual gap-solving effort versus deferral.

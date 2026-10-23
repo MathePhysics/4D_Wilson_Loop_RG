@@ -1,0 +1,73 @@
+% Draft insert for WILSON_FIRST_RG_STEP_V4.tex, written 23 Oct 2026 for the user to place.
+% Proposed position: after Corollary~\ref{cor:main-leading-size} (V4 L220--L230).
+% Inserted into V4 at 02:12, 23 Oct 2026 (V4 L239 on), with two layout changes in the proof; V4 is the current text. Labels new to V4: prop:coarse-loop-form, eq:coarse-loop-insertions,
+% eq:coarse-loop-difference, eq:coarse-loop-identity, rem:coarse-loop-form.
+
+\begin{proposition}[the leading term and the coarse loop]\label{prop:coarse-loop-form}
+Assume (H1)--(H4). Write the coarse bonds of $C_n$ in the order of traversal from the vertex $0$ as $c_0,\ldots,c_{4n-1}$, and for a coarse bond $c$ traversed in the negative direction put $V(c)= V(-c)^{-1}$ and $P_c(U)= P_{-c}(U)^{-1}$. Let
+\begin{equation*}
+    \Hol_VC_n= V(c_0)V(c_1)\cdots V(c_{4n-1})\;,\qquad W_{\chi}(C_n;V)=\chi(\Hol_VC_n)
+\end{equation*}
+be the holonomy and the Wilson function of the coarse field along $C_n$, so that $\Hol_{U_1}C_n= P_{c_0}(U_1)\cdots P_{c_{4n-1}}(U_1)$ in the convention of \eqref{eq:wilson-definition}. Put
+\begin{equation*}
+    s\coloneqq 6c_{\mathrm h}L^2\varepsilon_1\;,\qquad t\coloneqq e^{s}-1\;,
+\end{equation*}
+with $c_{\mathrm h}$ and $\varepsilon_1= g_1p_0(g_1)$ as in Lemma~\ref{lem:c2-plaquette-deviation}, and assume $s\leqslant 1/10$ and $1.06\sqrt N s<\varrho_G$ (conditions on $g_0$). Then on $A_{\mathrm{cov}}$, at every branch:
+\begin{enumerate}[label=(\roman*)]
+    \item for every $j$, with $c$ the positive coarse bond such that $c_j=\pm c$: $U_1\in\mathcal O_c$, $V(c)= e^{i\beta_c(U_1)}P_c(U_1)$, and
+    \begin{equation}\label{eq:coarse-loop-insertions}
+        \bigl\|V(c_j)P_{c_j}(U_1)^{-1}-\id\bigr\|_{\mathrm{op}}\leqslant t\;,\qquad \|\beta_c(U_1)\|_{\mathrm{op}}\leqslant 2\arcsin(t/2)\leqslant 1.06\,s\;;
+    \end{equation}
+    \item with $H_0=\id$, $H_j= P_{c_0}(U_1)\cdots P_{c_{j-1}}(U_1)$ and $\widetilde R_j= H_jV(c_j)P_{c_j}(U_1)^{-1}H_j^{-1}$,
+    \begin{equation}\label{eq:coarse-loop-identity}
+        \Hol_VC_n=\widetilde R_0\widetilde R_1\cdots\widetilde R_{4n-1}\,\Hol_{U_1}C_n\;,\qquad \bigl\|\widetilde R_0\cdots\widetilde R_{4n-1}-\id\bigr\|_{\mathrm{op}}\leqslant e^{4ns}-1\;,
+    \end{equation}
+    where $V(c_j)P_{c_j}(U_1)^{-1}$ depends on $U_1$ only through the bonds with both endpoints in the two blocks of $c_j$;
+    \item with $\pi_{\chi}$ and $\mathrm{Lip}_{\chi}$ as in Corollary~\ref{cor:main-leading-size} (a Lipschitz constant of $\pi_{\chi}$ on $G$ for $\|\bigcdot\|_{\mathrm{op}}$),
+    \begin{equation}\label{eq:coarse-loop-difference}
+        \bigl|W_{\chi}(C_n;V)-W_{\chi}(C_n;U_1)\bigr|\leqslant \mathrm{Lip}_{\chi}\bigl(e^{6c_{\mathrm h}Ln_C\varepsilon_1}-1\bigr)\;.
+    \end{equation}
+\end{enumerate}
+Consequently, under the additional hypotheses of (H2) and (H3) for Theorem~\ref{thm:main-theorem}(iii),
+\begin{equation*}
+    \begin{gathered}
+        \mathbb E_{\varepsilon}[W_{\chi}(C_n)]=\kappa_{C_n}\mathbb E_{\mathrm h}\bigl[\mathbf 1_{A_{\mathrm{cov}}}e^{E^{\circ}_{\xi}}W_{\chi}(C_n;V)\bigr]+E_{\mathrm{coarse}}+E_{\mathrm{def}}+E_{\mathrm{bdry}}\;,\\
+        | E_{\mathrm{coarse}}|\leqslant |\kappa_{C_n}|\,\mathrm{Lip}_{\chi}\bigl(e^{6c_{\mathrm h}Ln_C\varepsilon_1}-1\bigr)\exp\bigl[C\tau^2(2+1/c)+n_C\delta^I_q\bigr]\;,
+    \end{gathered}
+\end{equation*}
+with $E_{\mathrm{def}}$, $E_{\mathrm{bdry}}$ and the constants of Theorem~\ref{thm:main-theorem}.
+\end{proposition}
+
+\begin{proof}
+\emph{Location.} Fix $j$ and let $c$ be the positive coarse bond with $c_j=\pm c$, and $\mathcal E_c$ the set of bonds with both endpoints in the two blocks $\mathcal B_{c_-}$, $\mathcal B_{c_+}$ of $c$. Every loop in $\beta_c$, $U(\gamma)U([x,x'])U(\gamma')^{-1}P_c(U)^{-1}$ with $\gamma\in\mathcal G(c_-,x)$, $\gamma'\in\mathcal G(c_+,x')$, uses only bonds of $\mathcal E_c$: $\gamma$ and $\gamma'$ are monotone paths inside the boxes $\mathcal B_{c_-}$, $\mathcal B_{c_+}$, and $[x,x']$ and the straight path of $c$ run from $\mathcal B_{c_-}$ to $\mathcal B_{c_+}$. The plaquettes used below lie in the box $\mathcal B_{c_-}\cup\mathcal B_{c_+}$, of $\ell^{\infty}$ diameter $2L-1$. On $A_{\mathrm{cov}}$, $\Lambda_b\subseteq I=\Lambda_1^*$ for every fine contour bond $b$ of $c$ (Section~\ref{sec:c3-6}); $\Lambda_b$ is $\{b\}$ or the set of free bonds of $\mathcal E_c$, so $I$ contains a bond of $\mathcal E_c$, and $\Lambda_1$ a site of the box. By Lemma~\ref{lem:collar-coverage}(i), every site within $\ell^{\infty}$ distance $LMR_1-1>2L$ of $\Lambda_1$ lies in $\Omega_1^{\sim-1}$, so both blocks of $c$ lie in $\Omega_1$, and the constraint $\bar U_1= V$ of CRE (1.12) on $\Omega_1^{(1)}$ (Section~\ref{sec:c3-9-1}) gives $V(c)= M(U_1,c)$. Every plaquette of the box has a bond within distance $8L+1<3R_{\mathrm c}$ of $I$ ($R_{\mathrm c}\geqslant 2R_{\mathrm{loc}}+1= 4L+5$), so Lemma~\ref{lem:c2-plaquette-deviation} gives $\|U_1(\partial p)-\id\|_{\mathrm{op}}\leqslant 2c_{\mathrm h}\varepsilon_1$ for each of them.
+
+\emph{Area.} Let $\ell$ be one of the loops, with $x= c_-+\sum_{\nu}n_{\nu}e_{\nu}$, $|n_{\nu}|\leqslant(L-1)/2$ ($\mathcal B_{c_-}$ is the block of the odd $L$ of \eqref{eq:c-standing-conditions} centred at $c_-$), and let $\gamma_+$ be the translate of $\gamma$ by $Le_{\mu}$, $c=(c_-,c_-+Le_{\mu})$; $\gamma_+\in\mathcal G(c_+,x')$. Passing from the order of directions of $\gamma'$ to that of $\gamma_+$ by adjacent transpositions inverts each pair of directions at most once, and exchanging two consecutive straight segments of lengths $|n_{\alpha}|$, $|n_{\beta}|$ moves the path across $|n_{\alpha}||n_{\beta}|$ plaquettes. Moving $[x,x']$ back along $\gamma$ one bond at a time crosses $L$ plaquettes for a bond of direction $\pm e_{\nu}$, $\nu\neq\mu$, and none for a bond of direction $\pm e_{\mu}$, where the two paths coincide after cancellation of backtracks. So $\ell$ is reduced to the empty loop by at most
+\begin{equation*}
+    A_L= \sum_{\alpha<\beta}|n_{\alpha}||n_{\beta}|+L\sum_{\nu\neq\mu}|n_{\nu}|\leqslant \tfrac32(L-1)^2+\tfrac32L(L-1)\leqslant 3L^2
+\end{equation*}
+plaquette moves, by $\sum_{\alpha<\beta}a_{\alpha}a_{\beta}\leqslant\frac38(\sum_{\alpha}a_{\alpha})^2$ for four nonnegative numbers and $\sum_{\nu}|n_{\nu}|\leqslant 2(L-1)$.
+
+\emph{One loop.} A move across a plaquette $p$ multiplies the transport of the loop at its base point by $gU_1(\partial p)^{\pm1}g^{-1}$, with $g\in G$ a transport along the current loop. So $U_1(\ell)$ is a product of at most $A_L$ such conjugates. For unitary $W$ and $g$, $\| gWg^{-1}-\id\|_{\mathrm{op}}=\| W-\id\|_{\mathrm{op}}=\| W^{-1}-\id\|_{\mathrm{op}}$, and $\|\prod_m(\id+a_m)-\id\|_{\mathrm{op}}\leqslant\prod_m(1+\| a_m\|_{\mathrm{op}})-1$; hence
+\begin{equation*}
+    \| U_1(\ell)-\id\|_{\mathrm{op}}\leqslant(1+2c_{\mathrm h}\varepsilon_1)^{3L^2}-1\leqslant t\;.
+\end{equation*}
+The eigenvalues $e^{i\varphi}$ of $U_1(\ell)$, $\varphi\in(-\pi,\pi]$, satisfy $2|\sin(\varphi/2)|=| e^{i\varphi}-1|\leqslant t$, so the Hermitian matrix $A$ with $e^{iA}= U_1(\ell)$ whose eigenvalues are these $\varphi$ has $\| A\|_{\mathrm{op}}\leqslant 2\arcsin(t/2)$. The function $\phi(s)= 2\arcsin((e^{s}-1)/2)$ is convex on $[0,1/10]$, its derivative $e^{s}(1-(e^{s}-1)^2/4)^{-1/2}$ being increasing, so $\phi(s)\leqslant 10\phi(1/10)s\leqslant 1.06s$. Then $h(A)\leqslant\sqrt N\| A\|_{\mathrm{op}}\leqslant 1.06\sqrt Ns<\varrho_G$, so $A$ lies in the chart ball and, the chart being the inverse of $A\mapsto e^{iA}$ on that ball, $A$ is the chart value $\frac1i\log U_1(\ell)$. Hence $U_1\in\mathcal O_c$.
+
+\emph{One coarse bond.} $\beta_c(U_1)$ is a convex combination of the matrices $\frac1i\log U_1(\ell)$ (the weights of \eqref{eq:nonlinear-average} are nonnegative and sum to one, $|\mathcal B_{c_-}|= L^4$), so $\|\beta_c(U_1)\|_{\mathrm{op}}\leqslant 2\arcsin(t/2)$, and $V(c)P_c(U_1)^{-1}= e^{i\beta_c(U_1)}$ has $\| e^{i\beta_c(U_1)}-\id\|_{\mathrm{op}}\leqslant 2\sin(\arcsin(t/2))= t$. For $c_j=-c$, $V(c_j)P_{c_j}(U_1)^{-1}= P_c(U_1)^{-1}e^{-i\beta_c(U_1)}P_c(U_1)$, a conjugate of $e^{-i\beta_c(U_1)}$, with the same bound. This is (i), and the dependence stated in (ii) is Lemma~\ref{lem:global-average}(i).
+
+\emph{The loop.} By induction on $m$, $V(c_0)\cdots V(c_{m-1})=\widetilde R_0\cdots\widetilde R_{m-1}H_m$: the step is $\widetilde R_0\cdots\widetilde R_{m-1}H_mV(c_m)=\widetilde R_0\cdots\widetilde R_{m-1}(H_mV(c_m)P_{c_m}(U_1)^{-1}H_m^{-1})H_mP_{c_m}(U_1)$. At $m= 4n$ this is the identity in \eqref{eq:coarse-loop-identity}. Each $\widetilde R_j$ is a conjugate of $V(c_j)P_{c_j}(U_1)^{-1}$, so $\|\widetilde R_j-\id\|_{\mathrm{op}}\leqslant t$ and $\|\widetilde R_0\cdots\widetilde R_{4n-1}-\id\|_{\mathrm{op}}\leqslant(1+t)^{4n}-1= e^{4ns}-1$. For (iii), $\chi$ is $(\dim\pi_{\chi})^{-1}\operatorname{Tr}\pi_{\chi}$ and $|(\dim\pi_{\chi})^{-1}\operatorname{Tr}X|\leqslant\| X\|_{\mathrm{op}}$, so
+\begin{equation*}
+    | W_{\chi}(C_n;V)-W_{\chi}(C_n;U_1)|\leqslant\|\pi_{\chi}(\Hol_VC_n)-\pi_{\chi}(\Hol_{U_1}C_n)\|_{\mathrm{op}}\leqslant\mathrm{Lip}_{\chi}\|\Hol_VC_n-\Hol_{U_1}C_n\|_{\mathrm{op}}\;,
+\end{equation*}
+and $\|\Hol_VC_n-\Hol_{U_1}C_n\|_{\mathrm{op}}=\|(\widetilde R_0\cdots\widetilde R_{4n-1}-\id)\Hol_{U_1}C_n\|_{\mathrm{op}}\leqslant e^{4ns}-1$, with $4ns= 24c_{\mathrm h}nL^2\varepsilon_1= 6c_{\mathrm h}Ln_C\varepsilon_1$.
+
+\emph{The expectation.} On $A_{\mathrm{cov}}$, $W_{\chi}(C_n;U_1)= W_{\chi}(C_n;V)+(W_{\chi}(C_n;U_1)-W_{\chi}(C_n;V))$. Insert this into \eqref{eq:thm-main-identity} and put $E_{\mathrm{coarse}}=\kappa_{C_n}\mathbb E_{\mathrm h}[\mathbf 1_{A_{\mathrm{cov}}}e^{E^{\circ}_{\xi}}(W_{\chi}(C_n;U_1)-W_{\chi}(C_n;V))]$. Since $| e^{E^{\circ}_{\xi}}|\leqslant e^{| E^{\circ}_{\xi}|}$, \eqref{eq:coarse-loop-difference} and \eqref{eq:thm-main-moment} give the bound on $E_{\mathrm{coarse}}$.
+\end{proof}
+
+\begin{remark}[what the proposition does and does not compare]\label{rem:coarse-loop-form}
+(1) \eqref{eq:coarse-loop-identity} is exact: after the first step the fine loop at the background is the coarse holonomy with one insertion $\widetilde R_j^{-1}$ per coarse bond, each a conjugate of $e^{\mp i\beta_c(U_1)}$, a function of $U_1$ on the two blocks of $c_j$. The insertions are of first order in the plaquette deviations of $U_1$, of size $O(L^2\varepsilon_1)$ per coarse bond.
+
+(2) Per fine contour bond the exponent in \eqref{eq:coarse-loop-difference} is $6c_{\mathrm h}L\varepsilon_1$, of order $Lg_0(\log g_0^{-2})^{p_0}$, while that of $E_{\mathrm{def}}$ is $C_{\chi}\rho(\varepsilon_1+e^{-cb/(LM)})$, of order $g_0^3$ times a power of $\log g_0^{-2}$. For a square of fixed physical side $\ell_C$, $n_C$ is of order $\ell_C/\varepsilon$, and $E_{\mathrm{coarse}}$ is controlled by the proposition only while $n_C\varepsilon_1L$ is small.
+
+(3) Both $W_{\chi}(C_n;U_1)$ and $W_{\chi}(C_n;V)$ are functions of the coarse field and the branch data: the first step leaves no fluctuation integral over which their difference is averaged. Every average of the difference is taken in the coarse ensemble $\mathbb E_{\mathrm h}$, which Theorem~\ref{thm:main-theorem} leaves unevaluated. A bound on $E_{\mathrm{coarse}}$ that uses cancellations of the first-order part of the insertions is therefore a statement about the coarse measure, and it is not given here.
+\end{remark}

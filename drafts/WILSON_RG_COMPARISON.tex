@@ -1,0 +1,1801 @@
+% LaTeX exposition of WILSON_RG_COMPARISON.txt, reconciled 13 October 2026.
+% The .txt file remains the canonical research checkpoint.
+% This file writes out existing scoped results; it does not close WC.1.
+% Compile from the project root; the project's style files are in source/.
+% !TeX program = pdflatex
+\makeatletter
+\def\input@path{{source/}}
+\makeatother
+\documentclass[11pt]{preprint}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,mathrsfs,colonequals}
+\providecommand{\coloneqq}{\colonequals}
+\usepackage{mhenvs,mhequ,mhsymb}
+% Restore ordinary math spacing: mhsymb's comma lookahead fails at alignment ends.
+\makeatletter
+\let\;\@pvOld
+\makeatother
+\usepackage{times,microtype,booktabs,longtable,array}
+\usepackage{xcolor}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+\usepackage[hidelinks]{hyperref}
+\hfuzz=2pt
+\emergencystretch=1.5em
+\numberwithin{equation}{section}
+\newcommand{\dd }{\mathrm{d}}
+\providecommand{\tr }{\operatorname{tr}}
+\newcommand{\Hol}{\operatorname{Hol}}
+\newcommand{\EE}{\mathbb E}
+\providecommand{\supp}{\operatorname{supp}}
+\newcommand{\id}{\mathbf 1}
+\newcommand{\norm}[1]{\left\|#1\right\|}
+\newcommand{\abs}[1]{\left|#1\right|}
+\title{Closed Wilson Sources under Ba{\l}aban's Renormalisation Group\\
+\large Established Local Results and the Open Integrated Comparison}
+\author{}
+\institute{}
+\date{Working note, 13 October 2026}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We collect the existing work on the proposed comparison of a fixed disjoint pair of renormalised square Wilson loops. The record includes the exact source recursion, regular signed primitive, real collar and reconstruction estimates, finite-history localisation, one-old/one-fresh signed component cancellation, and the finite-cutoff inherited kernel construction. The earlier flat-background component construction and proposed polymer induction are recorded with their scope and open premises. Ba{\l}aban's action estimates are used at their stated scope. The quantitative inherited marked-activity bound, physical perimeter and corner matching, and ultraviolet convergence remain unproved. Section~\ref{sec:ledger} identifies the checked statements and the unresolved dependencies.
+\end{abstract}
+
+\section{The Exact Comparison}
+\label{sec:comparison}
+
+The gauge group $G$ is compact, simply connected and semisimple, with decomposition $G=\prod _{a=1}^{r}G_a$ into simple factors. Faithful unitary realisations $\iota_a \colon G_a \hookrightarrow U(N_a)$ give the block-diagonal realisation $\iota=\bigoplus _{a=1}^{r}\iota_a \colon G \hookrightarrow U(N)$, with $N=\sum _{a=1}^{r}N_a$. The normalised-trace Wilson action of \cite[eq.~(0.2)]{RG1} splits into factor actions with weights $N_a/N$, which we absorb into the independent couplings. Product Haar measure and factorwise RG integrations separate across the $G_a$.
+
+The two Wilson observables are specified by fixed normalised irreducible characters $\chi_1,\chi_2 \colon G \to \C$. Each is the character of a finite-dimensional irreducible unitary representation divided by its dimension, so $\chi_i(1)=1$. Their choice is independent of the realisation $\iota$ used for the action.
+
+The underlying space is the fixed torus $\T=(\R/2L^{m_{\mathrm{tor}}}\Z)^4$, where $L>11$ is a fixed odd RG blocking factor and $m_{\mathrm{tor}} \geqslant 1$ is a fixed integer. The ultraviolet lattice spacing is $\eps=L^{-K}$, with integer $K \geqslant 0$; $K$ changes when the cutoff is changed, whereas $L$ and $m_{\mathrm{tor}}$ do not. The initial lattice is 
+\begin{equ}
+        \T_\eps \eqdef \left( \eps \left( \Z + \frac{1}{2} \right) / \left( 2 L^{m_{\mathrm{tor}}} \Z \right) \right)^4
+\end{equ} 
+each coordinate is a half-integer multiple of $\eps$, identified periodically with period $2L^{m_{\mathrm{tor}}}$. After $h$ blocking steps its spacing is $\ell_h=L^h\eps$, $0 \leqslant h \leqslant K$; see \cite[eq.~(0.1)]{RG1}. Local rescaled coordinates introduced later are distinguished from these torus coordinates.
+
+The contours $\Gamma_1,\Gamma_2$ are two fixed oriented squares in $\T$. Each contour is the boundary of a square whose sides are parallel to coordinate axes, and $\Gamma_1 \cap \Gamma_2=\varnothing$ as subsets of $\T$. Their positions and side lengths in $\T$ remain fixed as $\eps$ decreases; it is these contours, rather than squares of a fixed number of lattice bonds, whose joint Wilson expectation is to be compared.
+
+On each lattice used in the comparison, $\Gamma_{i,h}$ denotes a closed sequence of oriented lattice bonds representing the physical contour $\Gamma_i$. The Wilson observable is evaluated along that bond sequence. One consistent prescription must determine these paths across cutoffs.
+
+\red{This note has not yet specified that prescription: it must state either the placement and lattice compatibility conditions under which the physical squares are represented exactly, or the rule by which they are approximated by lattice paths.}
+
+The perimeter and corner normalisation conditions in Section~\ref{sec:renormalization} are held fixed as the cutoff varies.
+Boundary conditions on subdomains created by localisation are those of the cited RG operations. The running-coupling equations \cite[eqs.~(0.18), (0.20)]{RG1} are applied independently to each simple factor. In the following statement, $g_h$ denotes the coupling of one factor.
+
+\begin{theorem}[Coupling Tuning]
+\label{thm:coupling_tuning}
+The following result holds under the hypotheses of the one-factor coupling-flow theorem.\footnote{The precise hypotheses and proof are recorded in \texttt{coupling\_flow\_of\_inputs} in the accompanying Lean formalisation.} There are constants $\gamma>0$, $C_{\mathrm{flow}} \geqslant 0$ and $0<\beta^- \leqslant \beta^+$, independent of $K$, such that for every choice of coupling $g>0$ with $g^{-2} \geqslant \gamma^{-2}+C_{\mathrm{flow}}$ and every $\eps = L^{-K}$ one can choose $g_0(\eps,g)$ so that
+\begin{equ}
+    0<g_h \leqslant \gamma\;,
+    \qquad g_{K}=g\;,
+    \qquad 0 \leqslant h \leqslant K\;.
+\end{equ}
+and, for $0 \leqslant h \leqslant K$,
+\begin{equ}
+    \frac{1}{g^2}+\beta^-\log \frac{1}{L^h\eps}-C_{\mathrm{flow}}
+    \leqslant \frac{1}{g_h^2}
+    \leqslant \frac{1}{g^2}+\beta^+\log \frac{1}{L^h\eps}+C_{\mathrm{flow}}\;.
+\end{equ}
+\end{theorem}
+
+Independent applications to the $G_a$ give the trajectory for $G$, with constants that may depend on each fixed factor. The normalised characters $\chi_1,\chi_2$ remain arbitrary.
+
+\begin{remark}
+    This extends the coupling-tuning statement for $SU(2)$ in \cite[Theorem~2, eq.~(0.31)]{RG1}. Ba{\l}aban announced a separate perturbative proof and later stated that it had not been published \cite[p.~355]{LFR2}. The coupling-flow argument and its supporting local estimates are formalised in Lean, with Ba{\l}aban's analytic estimates from \cite[eq.~(1.18) and after (1.63)]{PRT1} and \cite[eqs.~(122), (124)]{CMP98} used as inputs.
+\end{remark}
+
+For a matrix $A$, the norm is $|A| \eqdef (\tr _N A^*A)^{1/2}$, where $\tr _N \eqdef N^{-1}\operatorname{Tr}$ in the fixed realisation $G \subset U(N)$. We follow Ba{\l}aban's convention that $G \ni U=e^{iA}$, with $A \in \mathfrak g$ Hermitian; see \cite[eqs.~(16)--(17)]{CMP98}. The physical gauge fields are $G$-valued. The holomorphic extensions and Cauchy estimates used below extend the logarithmic fields to the complexified Lie algebra $\mathfrak g^{\C}=\mathfrak g \otimes_{\R}\C$; these complex fields are auxiliary arguments of the analytic estimates. Their norm is still the Hermitian matrix norm $|A|$, while analytic quadratic forms use the complex bilinear extensions of their real forms. 
+
+Constants may depend on the fixed group, characters, and matrix norm; the required uniformities are stated with each estimate.
+
+On $\T_\eps$, a gauge transformation $v \colon \T_\eps \to G$ acts on the field at an oriented bond $e=(x,y)$ by $U^v(e) \eqdef v(x)U(e)v(y)^{-1}$. The same convention applies at every blocking scale. Products along paths are ordered from their initial to their final vertex. A closed holonomy based at $x$ transforms by conjugation at $x$, so for a normalised character $\chi$ the bare Wilson observable
+\begin{equ}[eq:bare]
+    W_{\chi}^{\mathrm{bare}}(C;U)=\chi(\Hol_U C)\;.
+\end{equ}
+is gauge invariant because $\chi$ is a class function. This applies separately to each complete loop and hence to their product. Disjoint supports do not make the two characters independent.
+
+\subsection{The Physical Density and Its Source}
+
+The density $\rho_h$ assigns a statistical weight to each complete gauge-field configuration on the lattice of spacing $\ell_h=L^h\eps$. To specify its domain before gauge fixing, $E_h^+$ contains one chosen orientation of each unoriented bond of $\T_{\ell_h}$. A configuration $U \in G^{E_h^+}$ assigns a group element to every such bond; its value on a reverse bond is the inverse. The reference measure $\dd U$ is the product of normalised Haar measures on these copies of $G$. The unnormalised vacuum measure is $\rho_h(U)\,\dd U$. When its total mass is finite and positive, its normalised law is
+\begin{equ}[eq:vacuumlaw]
+    \frac{\rho_h(U)}{\displaystyle\int \rho_h(\widetilde U)\,\dd\widetilde U}\,\dd U\;.
+\end{equ}
+The integral of $\rho_h$ is therefore the partition function and is not assumed to equal one. A Wilson observable is inserted by multiplying this weight by the observable and integrating against the same reference measure. The subscript $h$ counts completed RG steps; $T_h$ denotes the chosen next step. The fully evaluated density on the current field is the one described in \cite[eq.~(2.18)]{CRE}.
+
+At the initial scale, the plaquettes are the elementary squares of $\T_\eps$, indexed once by
+\begin{equ}
+    \mathcal P_\eps
+    =\{(x,\mu,\nu) \, | \, x \in \T_\eps,\ 1 \leqslant \mu<\nu \leqslant 4\}\;,
+\end{equ}
+where $\mu$ denotes the $\mu^{\text{th}}$ coordinate direction. For $p=(x,\mu,\nu)$, its oriented boundary $\partial p$ is the closed path with successive vertices
+\begin{equ}
+    x,\quad x+\eps e_\mu,\quad x+\eps e_\mu+\eps e_\nu,\quad x+\eps e_\nu,\quad x\;,
+\end{equ}
+where addition is periodic on $\T$. Let, $\Hol_{U_a}(\partial p)$ is the ordered product of the four bond values along this path, with inverse values used on bonds traversed against their chosen orientation. The field $U_a$ is the $G_a$ component of $U$. The normalised character used in the action of this factor is
+\begin{equ}
+    \chi_a=\tr_{N_a}\circ\iota_a \colon G_a \to \C\;,\qquad
+    \tr_{N_a}=\frac{1}{N_a}\operatorname{Tr}\;.
+\end{equ}
+With bare coupling $g_{0,a}>0$ for each factor, the initial density is
+\begin{equ}[eq:rho0]
+    \rho_0(U)=\exp\left(
+        -E_\eps
+        -\sum _{a=1}^{r}\frac{1}{g_{0,a}^2}
+            \sum _{p \in \mathcal P_\eps}
+                (1-\operatorname{Re}\chi_a(\Hol_{U_a}(\partial p)))
+    \right)\;.
+\end{equ}
+The constant $E_\eps$ is the vacuum-energy counterterm fixed by Ba{\l}aban's full-lattice small-field reference convention \cite[p.~262]{CRE}.
+
+At scale $h \geqslant 1$, $V_h$ is the current bond field on $\T_{\ell_h}$, and $V_{h,a}$ is its $G_a$ component. A domain history records the regions selected at the preceding steps. At step $j$, $\Omega_j$ is the region treated as small-field, and $\Lambda_j \subset \Omega_j$ is the regular region where the fluctuation integration is performed. The layer $\Omega_j\setminus\Lambda_j$ contains boundary regions and regions with large fluctuations. The fields outside $\Omega_j$ remain in the large-field integrations. For each simple factor, these regions satisfy
+\begin{equ}
+    \Omega_1 \supset \Lambda_1 \supset \cdots
+        \supset \Omega_h \supset \Lambda_h\;.
+\end{equ}
+Thus a history specifies where the regular calculation was performed at each scale and which field integrations were deferred. The factor index on its domains is suppressed. The density is the sum over these possible histories \cite[eq.~(2.18)]{CRE}:
+\begin{equs}[eq:densityhistory]
+    \rho_h(V_h)&=\prod _{a=1}^{r}\rho_{h,a}(V_{h,a})\;,\\
+    \rho_{h,a}(V_{h,a})
+        &=\sum _{\{\Omega_j\},\{\Lambda_j\}}
+            \chi_{h,a}(\Omega_h)
+            \mathbf T_{h,a}(\{\Omega_j\},\{\Lambda_j\})
+                [e^{A_{h,a}}]\;.
+\end{equs}
+Here $\rho_{h,a}$ is the vacuum density for $G_a$. The cutoff $\chi_{h,a}(\Omega_h)$ equals one when the background reconstructed from $V_{h,a}$ satisfies the small-field plaquette bounds on $\Omega_h$, and zero otherwise; its precise definition is \cite[eq.~(2.17)]{CRE}. This cutoff is an indicator function. The characters $\chi_a$ and $\chi_i$ introduced above are functions on the gauge groups.
+
+The exponent $A_{h,a}$ contains the negative Wilson action with running couplings, the corrections from earlier integrations, boundary interactions and the remaining vacuum-energy term \cite[eq.~(2.23)]{CRE}. It depends on the reconstructed background and on older fluctuation fields still awaiting integration.
+
+The operation $\mathbf T_{h,a}$ performs those older-field integrations in their prescribed order, including the auxiliary domain sums, blocking constraints, cutoffs, quadratic weights and gauge-fixing factors \cite[eqs.~(2.18), (2.20)--(2.22)]{CRE}. The notation $\mathbf T_{h,a}[e^{A_{h,a}}]$ means that this operation acts on the whole exponential. Once the operation and history sums have been performed, the result depends only on $V_{h,a}$. The admissible domains and their geometric restrictions are specified in \cite[eqs.~(2.1)--(2.5)]{CRE}.
+
+The same distinction is necessary for discrete labels. A label belongs to the variables of a positive physical law only if a nonnegative joint law on the labelled space has been defined. Indices in a signed expansion instead remain inside the sums defining $T_h$: positivity of the summed density does not imply positivity of its individual terms. Ba{\l}aban gives the general form of the blocking operation as
+\begin{equ}[eq:block]
+    (T\rho)(V)=\int t(V,U)\rho(U)\,\dd U
+\end{equ}
+in \cite[eq.~(0.13)]{RG1}. Here $U$ is the input configuration, $V$ is the configuration on the once-blocked lattice, and $t(V,U)$ is the chosen gauge-invariant blocking kernel. The input measure $\dd U$ is the product of normalised Haar measures, with one group variable for each unoriented bond after choosing an orientation. The value on the reverse bond is $U(y,x)=U(x,y)^{-1}$.
+
+The kernel $t$ is not uniquely specified by \eref{eq:block}. The small-field action transformations are described in RG1 (0.17), (0.19), whereas the comparison in \eref{eq:WC1} also involves large-field regions and fields retained from earlier scales. Moreover, Ba{\l}aban's vacuum recursion applies an additional large-field operation $\mathbf R$ after blocking: \cite[eq.~(0.2)]{CRE} writes $\rho_h=(\mathbf R T)^h\rho_0$. Here $T_h$ denotes the entire chosen step in the comparison, with the distinction between blocking and any subsequent $\mathbf R$-operation retained. The complete large-field representation used below is LFR2 (1.71)--(1.72). In deriving it, Ba{\l}aban removes certain gauge-fixing delta functions on components treated as small-field regions. As stated on \cite[p.~378]{LFR2}, this gives an equivalent density after integration over those components, rather than a pointwise equal density. That integration is therefore part of the interpretation of the formula. Its operations act on all factors to their right that depend on the variables being integrated, including the residual interactions.
+
+The vacuum $\mathbf R$-operation is a transformation of the density; its preservation of the vacuum integral is described in \cite[eqs.~(0.3)--(0.4)]{LFR1}. The sourced replacement is specified in \eref{eq:sourceR}: the observable is evaluated on the old input and integrated before multiplication by the unchanged replacement density. Section~\ref{sec:inheritedkernel} constructs its finite-cutoff chronological image. This identifies the operand of \eref{eq:WC1}, but supplies no quantitative bound for that comparison.
+
+In this representation, gauge fixing introduces Lebesgue measures in the specified integration bases, Jacobians and gauge-fixing normalisation factors, while retained group variables still carry their Haar measures. The characteristic functions, interactions between a subdomain and its complement, and deferred integrations are also part of the operation. The Gaussian measures used for regular terms in Section~\ref{sec:regular} describe only that part of the representation; they do not replace the full measure or the conditional law of earlier-scale fields.
+
+At the initial step the complete joint source is
+\begin{equ}[eq:WC0]
+    \widehat W_{h,\Gamma}(U)
+    =\frac{\chi_1(\Hol_U\Gamma_{1,h})
+                \chi_2(\Hol_U\Gamma_{2,h})}
+            {Z_{1,h}Z_{2,h}} \;.
+    \tag{WC.0}
+\end{equ}
+The convention for $Z$ is specified in Section~\ref{sec:renormalization}. At later steps $\widehat W_{h,\Gamma}$ includes all inherited complete closed corrections; replacing it by two separately integrated sources changes the observable.
+
+For the full RG operation, $V$ denotes all output variables, including the new bond field and the fields retained from earlier scales. It also includes any discrete labels for which a nonnegative joint physical law has been defined. Integration with respect to $\dd V$ includes the corresponding physical-label sums and preserves the joint dependence of earlier and new fields. By contrast, the auxiliary index $\Sigma$ in \eref{eq:w15} labels signed expansion terms; its sum is part of $T_h[\rho_h]$ and of the corresponding sourced density. After these auxiliary sums have been performed, the output vacuum density and its partition function are
+\begin{equs}[eq:WC1a]
+    \rho_{h+1}(V)&=T_h[\rho_h](V)\;,\qquad
+    D_h=\int \rho_{h+1}(V)\,\dd V>0\;,\\
+    F_h(V)&=\frac{T_h[\rho_h\widehat W_{h,\Gamma}](V)}
+                        {\rho_{h+1}(V)} \;.
+    \tag{WC.1a}
+\end{equs}
+Here $0<D_h<\infty$ is required. The normalised output law is $\dd \mu_{h+1}=D_h^{-1}\rho_{h+1}\dd V$. The ratio $F_h$ is defined $\mu_{h+1}$-almost everywhere, provided the sourced pushforward is absolutely continuous with respect to this vacuum pushforward. At outputs where $\rho_{h+1}=0$, the numerator in \eref{eq:WC1} is used instead of dividing. Positivity refers to the complete real vacuum law after all required sums and integrations, not to one signed term of its expansion.
+
+To iterate the comparison, we need a gauge-invariant representative $\widehat W^{\mathrm{ref}}_{h+1,\Gamma}$ depending on the same output and retained variables as $F_h$. This representative must belong to a specified class of functions, with a domain and norm for which the next RG step can be controlled. The exact ratio $F_h$ alone does not provide this control. Both sources include the normalisation factors of Section~\ref{sec:renormalization}. The required one-step estimate, still unproved, is the following bound with $\varepsilon_h \geq 0$:
+\begin{equ}[eq:WC1]
+    \left|\int
+    (T_h[\rho_h\widehat W_{h,\Gamma}](V)
+        -\rho_{h+1}(V)\widehat W^{\mathrm{ref}}_{h+1,\Gamma}(V))\,\dd V
+    \right| \leqslant \varepsilon_hD_h \;.
+    \tag{WC.1}
+\end{equ}
+In particular, no perimeter factor is divided out a second time outside this integral.
+
+\begin{proof}[Normalisation identity]
+With $\dd \mu_{h+1}=D_h^{-1}\rho_{h+1}\dd V$, substitution of \eref{eq:WC1a} into the numerator, followed by cancellation of $\rho_{h+1}$, gives the following identity whenever the complete source is integrable:
+\begin{equ}[eq:WC1b]
+    D_h^{-1}\int
+    (T_h[\rho_h\widehat W_{h,\Gamma}]
+        -\rho_{h+1}\widehat W^{\mathrm{ref}}_{h+1,\Gamma})\,\dd V
+    =\EE_{\mu_{h+1}}[F_h-\widehat W^{\mathrm{ref}}_{h+1,\Gamma}] \;.
+    \tag{WC.1b}
+\end{equ}
+Thus \eref{eq:WC1} compares the expectations after the full physical integration, with the absolute value taken only after integration. The choice $\widehat W^{\mathrm{ref}}=F_h$ makes the difference vanish, but leaves the iterative problem unresolved: we still need a norm bound and a class of sources preserved by the RG operation, with uniform ultraviolet control.
+\end{proof}
+
+For iteration, ``a summable ultraviolet tail'' requires the sum of the errors from lattice spacings below a threshold $a_*$ to tend to zero as $a_*\downarrow0$, uniformly over initial spacings $\eps \leqslant a_*$. The summation is over the steps of each finite-cutoff trajectory, whose spacings are $\ell_h=L^h\eps$; both $\varepsilon_h$ and the retained data can depend on that trajectory. The representative produced by one step must be the source used by the next. Comparing trajectories with different initial spacings also requires a comparison of their vacuum densities and retained sources at a common lattice spacing. An identity along a single trajectory supplies no such comparison.
+
+\subsection{The Full Small/Large-Field Bracket}
+
+The relevant large-field operation is the complete expression in \cite[eq.~(1.72)]{LFR2}. Its inner bracket is
+\begin{equ}[eq:inner]
+    \mathcal B_k=
+    \sum _{n \geq 0}\ \sum _{\{X_1,\ldots,X_n\}}
+    \left(\prod _{a=1}^n\mathbf T'_k(X_a)\right)
+        \exp \sum _Y V(Y,U_k)\;.
+\end{equ}
+The families and allowed localisation domains are exactly those of that formula. In particular, the domains equal to components of $Z^{ \sim }$ are excluded from the last exponential because their terms are already included in $\mathbf T'_k$. Each $\mathbf T'_k(X)$ is the operation in \cite[eq.~(1.71)]{LFR2}, including its restricted history sum, $B$ and older $V_h$ integrations, axial gauge average, cutoffs, quadratic form, nonlinear older action and residual interactions. Composition of these operations does not factorise a loop crossing their domains.
+
+For a fixed outer history and outer large-field domains $Y_i$, the factors associated with one entire admissible family $\{X_a\}$, a finite subfamily $\mathcal D$ of the allowed $Y$, and $t_Y \in [0,1]$ are
+\begin{equs}[eq:w15]
+    E_{\mathcal D}(t)&=
+        \prod _{Y \in \mathcal D}V(Y,U_k)
+        \exp \left(\sum _{Y \in \mathcal D}t_YV(Y,U_k)\right)\;,\\
+    N^\Gamma_\Sigma&=
+        \left(\prod _a\mathbf T'_k(X_a)\right)
+                            [W^s_\Gamma E_{\mathcal D}(t)]\;,\\
+    D_\Sigma&=
+        \left(\prod _a\mathbf T'_k(X_a)\right)[E_{\mathcal D}(t)] \;.
+\end{equs}
+Here $\Sigma$ comprises the admissible family $\{X_a\}$, the subset $\mathcal D$ of allowed interaction domains, and the vector $(t_Y)_{Y \in \mathcal D} \in [0,1]^{\mathcal D}$; $\sum _\Sigma$ includes integration against $\prod _{Y \in \mathcal D}\dd t_Y$. The admissible domains and exclusion rules are those of LFR2 (1.72), not arbitrary connected subsets. Empty families and $\mathcal D=\varnothing$ are included. $W^s_\Gamma$ denotes the chosen complete closed insertion, with $s$ its retained source parameters. This identity holds for any such specified insertion; it does not define the unconstructed next representative or factor it into sources assigned to the $X_a$.
+
+\begin{proof}[Finite Mayer identity and conditional subtraction]
+At finite cutoff the allowed family of $Y$ is finite. For each $Y$,
+\begin{equ}
+    e^{V(Y)}=1+(e^{V(Y)}-1)\;,\qquad
+    e^{V(Y)}-1=\int _0^1V(Y)e^{tV(Y)}\,\dd t\;.
+\end{equ}
+Multiplication gives the sum over all finite $\mathcal D$ in \eref{eq:w15}. Linearity of every printed operation therefore makes the sourced bracket $\sum _\Sigma N^\Gamma_\Sigma$ and the vacuum bracket $\sum _\Sigma D_\Sigma$, without connected regrouping. The comparison uses a closed insertion $W^0_\Gamma$ and a scalar function $c_\Gamma(s)$ of the retained source parameters. If $\mathcal G=c_\Gamma(s)W^0_\Gamma$ is independent of every variable integrated, summed or differentiated by an operation through which it is pulled, their difference is
+\begin{equ}[eq:w16]
+    \sum _\Sigma(N^\Gamma_\Sigma-\mathcal G D_\Sigma) \;.
+\end{equ}
+To obtain the numerator for the full RG operation, the bracket in \eref{eq:w16} must still be acted on by $\mathbf T'_k(Y_i)$ and $\mathbf T''_k(Z_k)$ and multiplied by every characteristic function, gauge constraint and $\exp A'_k$ in LFR2 (1.72), with its outer sums over $Z_k$, $\{Y_i\}$ and $\{\Omega_j^c,Z_j\}$. If any such operation acts on an argument of $\mathcal G$, that factor remains inside it. No $D_\Sigma$ is a probability denominator; the denominator $D_h$ is formed only after the complete vacuum sums and integrations. Equation \eref{eq:w16} also asserts no termwise vanishing at a flat background.
+\end{proof}
+
+\subsection{Which Background Can Be Held Fixed?}
+
+The background in LFR2 (1.72) is the new background, not the old $U_k''$. Ba{\l}aban defines it in \cite[eqs.~(1.33)--(1.35)]{LFR2}:
+\begin{equs}[eq:newbackground]
+    \mathbf B_k&=\{\Gamma_j\}\;,\qquad
+    \Gamma_j=\Gamma_j'' \cap Z^c\quad(j<k)\;,\qquad
+    \Gamma_k=\Gamma_k'' \cup Z^{(k)}\;,\\
+    V|_{Z^c}&=V''|_{Z^c}\;,\qquad V|_Z=V'_kV_\Lambda|_Z\;,
+    \qquad U_k=U_{\mathbf B_k}(V)\;.
+\end{equs}
+In \eref{eq:newbackground} the symbols $\Gamma_j$ are Ba{\l}aban's determining-bond sets at scale $j$, not the two Wilson contours $\Gamma_1,\Gamma_2$. The region $Z$ and the primed and double-primed fields are those of LFR2 (1.33)--(1.35). The field $V_\Lambda$ is determined from the current-scale values outside the local region by \cite[Proposition~1, eqs.~(1.77)--(1.78)]{LFR1}. The previous determining sets and previous background are defined in \cite[eqs.~(1.14)--(1.20)]{LFR1}. Later occurrences of $\Gamma$ in the Gaussian kernel denote an operator and will be distinguished there from both these sets and the Wilson contours.
+
+\begin{proof}[Local fixed-background statement]
+On the processed region $Z$, the new determining set has only the current-scale bonds in \eref{eq:newbackground}; its determining values are fixed output data. Older determining values remain only on $Z^c$. Consequently, at fixed new determining and output data, $U_k$ has no dependence on the $B,V_h$ variables integrated by the inner $\mathbf T'_k(X_a)$ in $Z$. Its complete closed character can be pulled through those inner operations. This argument does not apply to outer operations integrating retained data on $Z^c$.
+
+Ba{\l}aban reconstructs the old terms into this new background in \cite[eqs.~(1.50)--(1.64)]{LFR2}. The interactions $V(Y,U_k)$ nevertheless retain $A,B,V''$, as stated on p.~377. Replacing the background therefore does not remove their integrations, boundary terms or inherited interactions. The local pull-out says nothing about pulling a flat conditional coefficient $c_\Gamma(s)$ through operations that act on its parameters.
+\end{proof}
+
+\section{Perimeter and Corner Conventions}
+\label{sec:renormalization}
+
+For a closed lattice polygon made of straight coordinate-axis runs on an isotropic lattice of spacing $a>0$, the proposed normalisation convention is
+\begin{equs}[eq:Z]
+    W_{\chi}^{\mathrm{ren}}(C;a,\mu,\mathcal S)
+    &=Z_{\chi}(C;a,\mu,\mathcal S)^{-1}W_{\chi}^{\mathrm{bare}}(C;a)\;,\\
+    Z_{\chi}(C;a,\mu,\mathcal S)
+    &=e^{-m_{\chi}(a;\mathcal S)P_a(C)}
+        \prod _{v \in \operatorname{Corn}(C)}
+            z_{\chi}(\theta_v;a,\mu,\mathcal S)\;.
+    \tag{WC.Z1}
+\end{equs}
+Here $P_a(C)=aN_a(C)$, where $N_a(C)$ counts the traversed bonds, with multiplicity. The set $\operatorname{Corn}(C)$ consists of vertices where the forward incoming and outgoing unit tangents differ; $\theta_v$ is the angle between those tangents. A join with the same forward tangent has angle zero and no factor, $z_{\chi}(0)=1$. An exact lattice square with four straight sides has four vertices of angle $\pi/2$. This statement does not assign only four corner factors to a staircase approximation containing additional turns. Backtracking and self-intersections are excluded from this scalar simple-loop convention. The parameter $\mu>0$ is an inverse-length renormalisation scale, and $\mathcal S$ denotes the chosen reference data and normalisation conditions. The coefficient $m_{\chi}$ is real and has dimension inverse length; $z_{\chi}$ is nonzero and dimensionless. If its definition uses a logarithm or a fourth root, the positive-real branch or the stated analytic continuation from it must be fixed.
+
+The counterterms depend on the character, action and regulator, coupling trajectory and fixed scheme. They do not depend on retained fields or on the target pair. Lattice symmetries are needed for a single mass and a single right-angle factor to apply to all four sides and corners. No all-orders Casimir-scaling assumption is made.
+
+The perturbative multiplicative structure for simple loops and products of loops is supplied by \cite{BNS}; the cusp normalisation on a fixed closed contour is described in \cite[Section~2.2, eqs.~(7), (9)--(10)]{KR}. These are perturbative source statements, not a theorem that \eref{eq:Z} subtracts the full Ba{\l}aban source. In \cite[Section~IV.C.1, eqs.~(32)--(34)]{Musch}, the multiplying rectangle factor is $e^{-\delta_mP-4\nu(90^\circ)}$. Hence the convention here is $m=-\delta_m$, $z_{90}=e^{\nu(90^\circ)}$.
+
+Fix $\ell=L^{m_{\mathrm{tor}}-2}$ and $x_*=(1/2,1/2,1/2,1/2)\in\T$. The reference squares $Q_A,Q_B$ are based at $x_*$ in the first two directions, with side lengths $\ell$ and $2\ell$. Their orientations follow $e_1,e_2,-e_1,-e_2$. At spacing $a=L^{-K}$ with $K+m_{\mathrm{tor}}\geqslant 2$, each side consists of an integer number of bonds. Oddness of $L$ places $x_*$ on every such lattice. The squares do not wind around the torus and have perimeters $P_A=4\ell$ and $P_B=8\ell$. Use the full physical Wilson density \eref{eq:rho0} with the same cutoff and coupling trajectory as the target, and the same product Haar measure; thus $\rho_a^{\mathrm{ref}}=\rho_0$. For $r\in\{A,B\}$ define
+\begin{equ}[eq:Z2]
+    M_{\chi,r}(a)=
+    \frac{\int \rho_a^{\mathrm{ref}}(U)
+            W_{\chi}^{\mathrm{bare}}(Q_{r,a};U)\,\dd U}
+        {\int \rho_a^{\mathrm{ref}}(U)\,\dd U}\;.
+    \tag{WC.Z2}
+\end{equ}
+The finite-cutoff positivity proved below allows the positive-real branch. The prescription imposes
+\begin{equs}[eq:Z3]
+    e^{m_{\chi}P_A(a)}z_{\chi,90}^{-4}M_{\chi,A}(a)&=1\;,\\
+    e^{m_{\chi}P_B(a)}z_{\chi,90}^{-4}M_{\chi,B}(a)&=1\;.
+    \tag{WC.Z3}
+\end{equs}
+They uniquely define the real mass and positive right-angle factor by
+\begin{equs}[eq:referencecounterterms]
+    m_\chi(a)&=\frac{\log M_{\chi,A}(a)-\log M_{\chi,B}(a)}{P_B-P_A}\;,\\
+    \log z_{\chi,90}(a)&=
+        \frac{P_B\log M_{\chi,A}(a)-P_A\log M_{\chi,B}(a)}{4(P_B-P_A)}\;.
+\end{equs}
+These are a finite-cutoff prescription, independent of the target pair. Their ultraviolet asymptotics and the signed comparison for that pair remain to be proved.
+
+\begin{proposition}[Positive Reference Amplitudes]\label{prop:referencepositive}
+For the action \eref{eq:rho0}, every normalised irreducible character has strictly positive expectation on $Q_A$ and $Q_B$ at every compatible finite cutoff and every finite positive bare coupling.
+\end{proposition}
+\begin{proof}
+Write $\beta_a=g_{0,a}^{-2}$. After removal of configuration-independent factors, the single-plaquette weight on $G$ is
+\begin{equ}
+    w(g)=\prod_a\exp\left(\frac{\beta_a}{N_a}
+                \operatorname{Re}\operatorname{Tr}\iota_a(g_a)\right)\;.
+\end{equ}
+For a factor $G_a$, put $\sigma_a=\iota_a\oplus\iota_a^*$, where $\iota_a^*$ is the dual representation, and $\alpha_a=\beta_a/(2N_a)>0$. Let $\lambda$ be an irreducible representation of dimension $d_\lambda$, and write $\operatorname{mult}(\lambda,\sigma_a^{\otimes q})$ for its multiplicity in that tensor power. The corresponding scalar eigenvalue of convolution by its factor weight is
+\begin{equ}
+    c_{a,\lambda}=\frac{1}{d_\lambda}
+        \sum_{q\geqslant 0}\frac{\alpha_a^q}{q!}
+            \operatorname{mult}(\lambda,\sigma_a^{\otimes q})>0\;.
+\end{equ}
+The series is uniformly convergent on the compact group. Faithfulness of $\sigma_a$, together with its closure under conjugation, makes its matrix-coefficient algebra dense by Stone--Weierstrass. Peter--Weyl orthogonality then implies that each irreducible representation occurs in some tensor power. This proves the strict inequality. The product over factors gives positive convolution eigenvalues in every irreducible sector of $G$.
+
+Take direction $e_2$ as time. Let $\mathscr U_a=G^{E^+_{\mathrm{sp},a}}$ be the spatial-link configuration space of one slice, with product Haar measure. Here $E^+_{\mathrm{sp},a}$ contains the links in directions $e_1,e_3,e_4$. On $\mathcal H=L^2(\mathscr U_a)$, let $\mathsf K$ be the product of the link convolution operators just described. Let $\mathsf V$ multiply by the positive square root of the product of the spatial-plaquette weights on that slice. Then
+\begin{equ}
+    \mathsf T=\mathsf V\mathsf K\mathsf V\;.
+\end{equ}
+The multiplication operator is bounded and invertible. Thus $\mathsf T$ is positive and injective, has a smooth trace-class kernel, and commutes with the spatial gauge action. Let $\mathcal H_0$ be its gauge-invariant subspace and $\mathsf T_0$ its restriction there.
+
+Realise the observable character by $\chi=\operatorname{Tr}R/d$. For spatial endpoints $x,y$, let $\mathcal H_R$ be the subspace of $L^2(\mathscr U_a;\operatorname{End}(R))$ satisfying
+\begin{equ}
+    \Psi(U^h)=R(h_x)\Psi(U)R(h_y)^{-1}\;.
+\end{equ}
+Its inner product uses the ordinary, unnormalised Hilbert--Schmidt trace on $\operatorname{End}(R)$. Equivalently it is the gauge-singlet space with the two endpoint charges included. The projection onto it retains the temporal Haar integrations:
+\begin{equ}
+    (\mathsf P_R\Psi)(U)=\int
+        R(h_x)^{-1}\Psi(U^h)R(h_y)\,\dd h\;.
+\end{equ}
+Here $\dd h$ is product normalised Haar measure over the sites of the spatial slice. The operator $\mathsf T_R$ is the restriction of $\mathsf T\otimes I_{\operatorname{End}(R)}$ to this subspace; it is positive and injective. For the spatial side $p$ of the rectangle, the map $\mathsf B_p\colon\mathcal H_0\to\mathcal H_R$ is
+\begin{equ}
+    (\mathsf B_pf)(U)=\frac{1}{\sqrt d}R(U(p))f(U)\;.
+\end{equ}
+Its complete unitary contraction makes it an isometry. These charged spaces are used only to establish the following closed-trace identity, not as an RG source carrier.
+
+Let $n=2L^{m_{\mathrm{tor}}}/a$ be the number of time slices and $0<t<n$ the rectangle height in lattice bonds. Write $M_\chi(Q)$ for its normalised bare expectation at this fixed cutoff. Integration of every temporal link, including those at the periodic join, gives
+\begin{equ}[eq:recttransfer]
+    M_\chi(Q)=
+    \frac{\operatorname{Tr}_{\mathcal H_0}
+        (\mathsf T_0^{n-t}\mathsf B_p^*\mathsf T_R^t\mathsf B_p)}
+        {\operatorname{Tr}_{\mathcal H_0}(\mathsf T_0^n)}\;.
+\end{equ}
+To check the source and its normalisation, write $h_s(z)$ for the temporal link at slice $s$ and site $z$, and $H_z=h_0(z)\cdots h_{t-1}(z)$. Composition of the charged projections and contraction with the two path maps gives exactly
+\begin{equ}
+    \frac{1}{d}\operatorname{Tr}
+        R(U_0(p)H_yU_t(p)^{-1}H_x^{-1})\;.
+\end{equ}
+This is the rectangle holonomy. Each spatial plaquette receives its weight once from adjacent half-action factors. The configuration-independent vacuum and action factors cancel in the quotient. This gives the periodic pure-gauge version of the transfer construction in \cite{LuscherTransfer}, with the group and action extension supplied by the convolution argument above.
+
+The numerator in \eref{eq:recttransfer} is
+\begin{equ}
+    \left\|\mathsf T_R^{t/2}\mathsf B_p
+                \mathsf T_0^{(n-t)/2}\right\|_{\mathrm{HS}}^2>0\;.
+\end{equ}
+Injectivity and the nonzero isometry imply strict positivity. The denominator is positive as well. For the chosen references, $t_A=\ell/a\geqslant 1$ and $t_B=2t_A=n/L^2<n$, so the trace argument applies even at the first compatible cutoff. No cutoff-uniform lower bound or bounded inverse is asserted.
+\end{proof}
+
+Alternatively, a static-potential scheme based on closed rectangles fixes a separation $r_0>0$ and a value $v_{\chi}$, and imposes $V_{\chi}^{\mathrm{ren}}(r_0)=v_{\chi}$. In this convention $V_{\chi}^{\mathrm{ren}}=V_{\chi}^{\mathrm{bare}}-2m_{\chi}$; see \cite[eqs.~(32)--(34)]{Musch}. This construction requires a reference ensemble allowing the temporal side length to tend to infinity; the fixed torus $\T$ does not supply that limit. A normalisation condition for another cusp angle likewise requires a specified closed reference contour realising that angle. No such additional reference contour is chosen here.
+
+For the disjoint pair the proposed local factor is $Z_1Z_2$; all correlations remain in the complete numerator. A separation-dependent factor chosen to cancel the joint expectation is not this prescription. In particular the complete conditional flat coefficient $c_\Gamma(s)$ has not been identified with $Z_1Z_2$.
+
+\subsection{The Signed Integrated Comparison in the Reference Scheme}
+\label{sec:referencecomparison}
+
+Use $K$ for the ultraviolet cutoff and $a_K=L^{-K}$. Let $P_{i,K}$ be the actual perimeter of the prescribed lattice square representing $\Gamma_i$. Define
+\begin{equs}[eq:referenceweights]
+    \lambda_{i,A,K}&=\frac{P_B-P_{i,K}}{P_B-P_A}\;,\\
+    \lambda_{i,B,K}&=\frac{P_{i,K}-P_A}{P_B-P_A}\;.
+\end{equs}
+The pair counterterm is the positive number
+\begin{equ}[eq:pairreferencefactor]
+    C_K=\prod_{i=1}^{2}\prod_{r\in\{A,B\}}
+                M_{\chi_i,r}(a_K)^{\lambda_{i,r,K}}\;.
+\end{equ}
+This follows from \eref{eq:referencecounterterms} and agrees with $Z_1Z_2$ in \eref{eq:Z}. The weights may be negative; no estimate follows from their definition.
+
+Let $\Phi_{\Gamma,K}$ be the product of the two bare complete characters on the prescribed cutoff-$K$ paths, and let $\rho_{0,K}$ be the full initial density \eref{eq:rho0} at that cutoff. Its normalised law is $\mu_K$. Define the actual unnormalised numerator and denominator by
+\begin{equs}[eq:referencephysicalnumerators]
+    \mathsf A_K&=\int\rho_{0,K}(U)\Phi_{\Gamma,K}(U)\,\dd U\;,\\
+    \mathsf D_K&=\int\rho_{0,K}(U)\,\dd U\;,\\
+    J_K&=\frac{\mathsf A_K}{\mathsf D_K}\;,\\
+    r_K&=\frac{C_{K+1}}{C_K}\;.
+\end{equs}
+Every Ba{\l}aban representation of these integrals retains its original chronological operations and full histories. A block image of $\rho_{0,K+1}$ is not replaced by $\rho_{0,K}$; their action and normaliser differences belong to the comparison. The signed numerator is
+\begin{equ}[eq:referencesignednumerator]
+    \mathsf H_K=\mathsf A_{K+1}\mathsf D_K
+                    -r_K\mathsf A_K\mathsf D_{K+1}\;.
+\end{equ}
+The exact difference of renormalised expectations is
+\begin{equ}[eq:referenceincrement]
+    \frac{J_{K+1}}{C_{K+1}}-\frac{J_K}{C_K}
+        =\frac{\mathsf H_K}
+            {\mathsf D_K\mathsf D_{K+1}C_{K+1}}\;.
+\end{equ}
+Thus a sufficient ultraviolet estimate is the following inequality with nonnegative $b_K$ whose tail is summable for the fixed torus, pair, characters, scheme and coupling trajectory:
+\begin{equ}[eq:referencesignedtarget]
+    |\mathsf H_K|\leqslant b_K\mathsf D_K\mathsf D_{K+1}C_{K+1}\;.
+\end{equ}
+The absolute value is outside the full physical integrals and history sums. This estimate does not require convergence of the Wilson loops as random variables, or uniform supremum or absolute-moment bounds on their renormalised insertions. Equation \eref{eq:referencesignedtarget} remains unproved.
+
+There is a concrete source-bearing term in the attempted estimate. Choose one labelled real input boundary interaction $\beta_a$ from \eref{eq:currentbracket}, let $X$ be its full support, and write $W_X=\beta_a$. Vary its native weight $e^{tW_X}$ and evaluate at the physical endpoint, with the original fine-field observables fixed before their chronological integrations. Write $\langle\cdot\rangle_K$ for the complete physical integration there, including the remaining older fields, exterior interactions and history sums. Covariance here is bilinear: $\operatorname{Cov}_K(F,G)=\langle FG\rangle_K-\langle F\rangle_K\langle G\rangle_K$. For the reference squares put $\Phi_{i,r,K}=W_{\chi_i}^{\mathrm{bare}}(Q_r)$ and $M_{i,r,K}=\langle\Phi_{i,r,K}\rangle_K$. The derivative of the reference-calibrated pair expectation contains the following combined signed term:
+\begin{equ}[eq:calibratedresponse]
+    \frac{\mathcal B_K(X)}{C_K}
+        =\frac{1}{C_K}\left(
+            \langle\Phi_{\Gamma,K}W_X\rangle_K
+            -J_K\sum_{i,r}\lambda_{i,r,K}
+                \frac{\langle\Phi_{i,r,K}W_X\rangle_K}{M_{i,r,K}}
+            +J_K\langle W_X\rangle_K\right)\;.
+\end{equ}
+Here the reference coefficients are recalibrated by the same prescription under the varying native weight. The brackets denote the common normalised integration functional on the literal chronological carrier; signed history labels remain inside its sums and are not assigned a positive probability law. At the physical endpoint the reference coefficients are those in \eref{eq:referencecounterterms}. Their nonzero amplitudes provide a finite-cutoff neighbourhood with a continued logarithm branch from that endpoint. The auxiliary perturbation need not preserve reflection positivity, and no uniform neighbourhood is asserted. If an older field has already been eliminated, its source lift and its normaliser receive their actual weight derivatives as in \eref{eq:olderderivative}; freezing such a lift would change the formula.
+
+Indeed, differentiation of a normalised expectation gives its covariance with $W_X$. Since $\sum_r\lambda_{i,r,K}=1$, differentiation of \eref{eq:pairreferencefactor} gives
+\begin{equ}
+    \partial_t\log C_K
+        =\sum_{i,r}\lambda_{i,r,K}
+            \frac{\operatorname{Cov}_K(\Phi_{i,r,K},W_X)}{M_{i,r,K}}\;.
+\end{equ}
+Combining this with $\partial_tJ_K=\operatorname{Cov}_K(\Phi_{\Gamma,K},W_X)$ gives \eref{eq:calibratedresponse}; the last vacuum-normalisation term uses $\sum_{i,r}\lambda_{i,r,K}=2$. All source insertions are complete gauge-invariant contractions before integration. No logarithm of the target joint expectation or division by it is used.
+
+The covariance form cancels source-independent contributions. A connected term with $W_X$ and a source in the same inherited component survives. The identities $\sum_r\lambda_{i,r,K}=1$ and $\sum_r\lambda_{i,r,K}P_r=P_{i,K}$ cancel universal constant and perimeter responses only after their actual applicability has been proved. They do not identify the response of the inherited source under differing exterior holonomies. The estimates \cite[eqs.~(1.68), (1.69), (1.75)]{LFR2} bound the interaction or a separately bounded insertion; they do not bound this combined signed physical correlation. The existing component exchange in Section~\ref{sec:signedexchange} likewise supplies no quantitative estimate for its surviving linked terms. Neither separate reference-response bounds nor a source supremum bound are asserted necessary: the missing estimate is for the combined integrated contribution itself. This is the stopping point of the present attempt. Equation \eref{eq:calibratedresponse} is not a bound on the full cutoff difference \eref{eq:referencesignednumerator}.
+
+\subsection{The Retained Ultraviolet Birth Payment}
+\label{sec:uvbirthpayment}
+
+The original birth label must be retained when testing whether the large-field reserve can pay the complete signed difference \eref{eq:referencesignednumerator}. In the vacuum-history majorant on the right-hand side of \cite[eq.~(1.79)]{LFR2}, a component $Z$ at step $k$ carries
+\begin{equ}
+    \exp(-\kappa_k(Z)-2p_0(g_{j(Z)}))\;.
+\end{equ}
+Here $j(Z)$ is its first large-field birth, and $\kappa_k(Z)$ is the reserve defined from that majorant in \cite[eqs.~(1.80), (1.85)]{LFR2}. Persistence and mergers preserve the stated reserve inequality \cite[eqs.~(1.83), (1.87)--(1.88)]{LFR2}. In particular $\kappa_k(Z)\geqslant 0$. This is a majorant obtained after vacuum estimates, not an exact factor already extracted from the physical signed integrand.
+
+For the cutoff-$K+1$ trajectory, suppose the retained first birth is $j(Z)=1$. Denote its coupling by $g_1^{(K+1)}$. The tuning bounds in Theorem~\ref{thm:coupling_tuning} give constants $c_-,c_+>0$, independent of sufficiently large $K$, such that
+\begin{equ}
+    c_-K\leqslant (g_1^{(K+1)})^{-2}\leqslant c_+K\;.
+\end{equ}
+Using $p_0(g)=A_0(\log g^{-2})^{p_0}$ from \cite[eq.~(2.4)]{CRE}, the retained factor satisfies
+\begin{equ}[eq:uvbirthpayment]
+    \exp(-\kappa_k(Z)-2p_0(g_1^{(K+1)}))
+        \leqslant \exp(-2A_0(\log(c_-K))^{p_0})
+        \leqslant \exp(-c(\log K)^{p_0})\;.
+\end{equ}
+The last inequality holds for sufficiently large $K$, with a fixed $c>0$. Fix the auxiliary cutoff exponent $p_0>1$, with the remaining cutoff parameters chosen compatibly in Ba{\l}aban's hierarchy. This is a choice of the RG construction, not an additional physical hypothesis. Then $c(\log K)^{p_0-1}\geqslant 2$ eventually, so this factor is eventually at most $K^{-2}$ and is summable. Replacing the birth coupling by the final matching-scale coupling, as in the weaker bound \cite[eq.~(1.89)]{LFR2}, would discard this ultraviolet dependence.
+
+This payment does not establish \eref{eq:referencesignedtarget}. The full $\mathsf H_K$ includes regular shell changes, density mismatches and the exact reference ratio $r_K$, as well as the histories carrying this birth. No signed allocation has been proved which transfers \eref{eq:uvbirthpayment} to their combined physical integral, pays its contour multiplicities, and matches the factor $C_{K+1}$. The alternative regular-shell tail is also unproved. These are requirements of the total estimate, not requirements that an individual component vanish or satisfy a separate source norm. The tested reserve mechanism therefore supplies a partial payment but no complete signed ultraviolet bound.
+
+\section{The Regular Signed Closed-Source Primitive}
+\label{sec:regular}
+
+The regular source is associated with a fixed normalised irreducible character $\chi$. Its matrix calculations use an auxiliary irreducible unitary representation $R$ with $\chi(g)=d_R^{-1}\tr R(g)$, where $d_R=\dim R$ and $\tr$ is the ordinary matrix trace. The matrices simplify the marked products and norm estimates; the observable and the resulting bounds are labelled by $\chi$.
+
+This section estimates one regular term before division by the partition function $D_h$ and before summation over source marks, localisation labels or LFR2 histories. Its external variables are the pair $(U_0,J)$ and the complete based holonomy $H$ defined below. The flat scalarisation does not include extra nonflat earlier-field or boundary colour variables held fixed in the integration. The operation contains the sign $(-1)^{|P|}$ and analytically continued Gaussian measures, so it is not a probability expectation.
+
+The oriented consecutive interval $I$ starts at $x$ and is partitioned into arcs $P_c$ in their traversal order. The same symbol $I$ indexes these arcs in the products below. Their lengths in unit current-scale coordinates are bounded by a fixed constant independent of the number of arcs; $l(I)$ is the sum of those lengths. The holonomy $H \in G$ of a closed contour based at $x$ is retained as an external parameter. The field $U_0=\mathbf U$ is the fine background of \cite[eqs.~(2.3), (2.8)]{RG1}; at the real configuration being represented it equals $U_{k+1}(W)$, where $W$ is the retained output configuration. It is not the coarse field integrated in this step. The pair $(U_0,J)$ belongs to the bounded representative slice of the complex regular domain in \cite[eq.~(2.15)]{RG2}, with
+\begin{equ}
+    U_0=e^{iL^{-1}\eta A'}U\;,\qquad
+    |A'|,|\nabla_U^{L^{-1}\eta}A'|<\alpha_1\;,
+    \qquad |J|<\alpha_0\;,
+\end{equ}
+where $U$ is compact and regular. For the physical pair the force is the derived force of \cite[eq.~(1.8)]{RG1}, not an independently frozen nonflat force.
+
+The weakened nonlinear reconstruction is literally
+\begin{equ}[eq:reconstruction]
+    \widehat U_e(u,B)=
+    \exp \bigl(i\eta\mathbf H_k(u,g_kCB-h\widetilde D(g_kCB))_e\bigr)\,U_{0,e}\;,
+\end{equ}
+using \cite[eqs.~(1.17)--(1.20)]{RG2}. Here $C$ is the local elimination map and $h,\widetilde D$ are the block-local constraint correction maps, not covariances. For $S \subset I$ with $m=|S| \geq 1$, the marks satisfy $s_c=0$ off $S$, and the marked closed source is
+\begin{equs}[eq:closedword]
+    G_I(s;u,B,U_0,J,H)&=\frac{1}{d_R}\tr
+    (\prod _{c \in I}^{ \longrightarrow }
+    [(1-s_c)R(U_0(P_c))+s_cR(\widehat U(u,B)(P_c))]\\
+    &\hspace{35mm} \cdot R(U_0(I))^{-1}R(H)) \;.
+\end{equs}
+The function $G_I$ is multi-affine in these marks, with coefficient $G_S=[\prod _{c \in S}s_c]G_I$. Every term in \eref{eq:closedword} has the same endpoints; after the inverse interval and $H$ are appended it is a complete closed contraction. Under simultaneous gauge transformation the whole word is conjugated at $x$, before any absolute value or norm. Also $G_I(0)=\chi(H)$ exactly.
+
+Localisation of the source reconstruction precedes RG2 conditioning. The weakening variables belong to the cubes used to localise the propagator random walks in \cite[eqs.~(1.6)--(1.10)]{RG2}. For the chosen source-root neighbourhoods, $\mathcal R_S$ is the union of their cubes, where the weakening variables remain equal to one; $\mathcal Q$ is the finite set of remaining weakening cubes at the given cutoff.
+
+These neighbourhoods must contain the enlarged localisation domains of the factors determining the marked arcs, so that RG2 component locality applies. Containing only the geometric arcs is insufficient. The regular-term estimate below retains its original current-stratum hypotheses. Section~\ref{sec:historylocalisation} subsequently gives the finite-history read-out construction for inherited sources, including their operator, conversion and return-gauge footprints; its uniform activity bound remains open. For $A \subset \mathcal Q$, $\partial_A$ denotes one derivative in each weakening variable indexed by $A$, and $\dd t_A=\prod _{a \in A}\dd t_a$. The fundamental theorem of calculus decomposes the complete coefficient as
+\begin{equ}[eq:sourceFTC]
+    G_S(1;B)=\sum _{A \subset \mathcal Q}\int _{[0,1]^A}
+    \partial_A G_S(1_{\mathcal R_S},t_A,0_{\mathcal Q\setminus A};B)\,\dd t_A\;.
+\end{equ}
+The component locality in \cite[eqs.~(1.9)--(1.10)]{RG2} eliminates components not meeting a source root. For a surviving term each component of $\mathcal R_S \cup A$ meets $\mathcal R_S$. With a selected potential family $\mathcal D$, the seed is
+\begin{equ}
+    Y_0=(\mathcal R_S \cup A) \cup \bigcup _{Y \in \mathcal D}Y\;.
+\end{equ}
+The family $\mathbf D_k$ consists of RG2's localisation domains. The bond set $P$ is a subset of $Y_0^{c*}=\{b \in T^{(k)} \, | \, b \subset Y_0^c\}\setminus\{b_0(c) \, | \, c \in T^{(k+1)}\}$; $b_0(c)$ are the eliminated constraint bonds of that construction. The domain $Z_0$ is its smallest admissible localisation domain containing $Y_0$ and $P$, with every bond of $P$ contained in its interior rather than intersecting $\partial Z_0$, as required by \cite[eqs.~(2.2)--(2.5)]{RG2}. This domain is fixed before conditioning on the complement. The localised source may then depend on the free bond values of $B$ in $Z_0$ but not on the exterior integration variable $X$ in \eref{eq:kernel}. An inherited factor depending on additional bond values of $B$ would require their whole support in $Y_0$; such a factor is not included in this regular-term statement. The inverse closing interval in \eref{eq:closedword} and the external background arguments remain part of the observable's dependence on $U_0$.
+
+The source contours implementing \eref{eq:sourceFTC} are
+\begin{equ}[eq:sourcecontour]
+    \mathcal C_A^u=
+    \prod _{a \in A}\int _0^1
+        \left[\frac{1}{2\pi i}\int _{|u_a|=R_*}
+                        \frac{1}{(u_a-t_a)^2}\,\dd u_a\right]\dd t_a\;,
+    \qquad R_*=e^{\kappa_1}>1\;.
+\end{equ}
+The source map uses $u$. The covariance weakening below uses $\sigma$; these are different localisation operations.
+
+For fixed labels $\lambda=(A,Z,Z_0,\mathcal D,P)$, the operation $\mathcal L_\lambda[F]$ is obtained by appending \eref{eq:sourcecontour} to Ba{\l}aban's literal signed term \cite[eq.~(2.14)]{RG2}, with $F(u,B)$ inserted into its $B$ integral:
+\begin{equs}[eq:kernel]
+        \mathcal L_\lambda[F] &=\mathcal C_A^u\mathcal C_{Z,\mathcal D}^{\sigma,\tau} \int
+        e^{-\frac{1}{2}\langle\Gamma X,C_\sigma\Gamma X\rangle}\\
+    &\quad \cdot \Bigl[\int
+    e^{-\langle B,\Gamma X\rangle}(-1)^{|P|}
+    \chi_{k,Y_0}(B)\chi_{k,P}^c(B)
+    e^{\sum _{Y \in \mathcal D}\tau_Y\mathbf V_k(Y,B)}F(u,B)\,\dd \mu_{C_\sigma}(B)\Bigr]\,\dd \mu_0(X)|_Z\;,
+\end{equs}
+where
+\begin{equs}
+    C_\sigma&=C^{(k)}(Z_0,\sigma(Z))\;,\\
+    \Gamma&=C^*\Delta_k(\sigma(Z))C Z_0^c
+                                    (C^{(k)})^{1/2}(\sigma(Z))\;,\\
+    \mathcal C_{Z,\mathcal D}^{\sigma,\tau}
+    &=\prod _{\Delta \subset Z\setminus Z_0'}\int _0^1
+    \left[\frac{1}{2\pi i}\int \frac{1}{(\sigma_\Delta-v_\Delta)^2}\,\dd \sigma_\Delta\right]\dd v_\Delta\\
+    &\quad \cdot \prod _{Y \in \mathcal D}\int _0^1
+    \left[\frac{1}{2\pi i}\int \frac{1}{(\tau_Y-t_Y)^2}\,\dd \tau_Y\right]\dd t_Y\;.
+\end{equs}
+Here $Z_0'$ is the union of the smallest family of $LM$-cubes containing the enlarged domain $\widetilde Z_0$, and $Z$ runs over the localisation domains whose connected components meet $Z_0'$, as in \cite[eq.~(2.8)]{RG2}. The variable $\sigma_\Delta$ lies on the covariance-weakening contour of that construction, and the radius of the $\tau_Y$ contour is fixed by RG2 (2.18); neither is the source variable $u_a$. The Gaussian coupling operator denoted by $\Gamma$ in \eref{eq:kernel} is $\Gamma_k(Z_0,\sigma(Z))$ of RG2 (2.14); it is unrelated to the Wilson contours or determining-bond sets. Multiplication by $Z_0$, $Z_0^c$ or $Z$ denotes projection onto the corresponding part of the field carrier.
+
+The finite $B$ carrier consists of the free real Lie-algebra-valued bond variables in $Z_0$ after eliminating the constraint bonds; its covariance is $C_\sigma$. The variable $X$ is the real auxiliary field retained in $Z$ after the change $B'=(C^{(k)})^{1/2}X$ in RG2 (2.5)--(2.6). Gaussian adjoints, determinants and Lebesgue measures use orthonormal bases for the inner product of the cited Gaussian construction. An equivalent norm used in a bound does not redefine that integration measure. In such a basis of dimension $n$, the normalised Gaussian with real positive covariance $C$ has density $(2\pi)^{-n/2}(\det C)^{-1/2}\exp (-\langle b,C^{-1}b\rangle/2)\dd b$. The notation $\mu_{C_\sigma}$ means the analytic continuation of this density, with its determinant branch continued from the real positive covariance; it is not a probability measure for complex $\sigma$. The measure $\mu_0|_Z$ is the product standard real Gaussian on the $X$ coordinates in $Z$. The negative $X$ quadratic factor in \eref{eq:kernel} is unchanged by the source contours.
+
+The cutoffs are those of \cite[eq.~(2.3)]{RG2}: $\chi_{k,Y_0}$ restricts its free bonds to $|B(b)|<\varepsilon_1/g_k$, and $\chi_{k,P}^c=\prod _{b \in P}\mathbf1_{\{|B(b)| \geqslant \varepsilon_1/g_k\}}$. The potentials $\mathbf V_k(Y,B)$ and their selected family $\mathcal D$ are those in RG2 (2.1), not new interactions fitted to the source. The contour operator is
+\begin{equ}[eq:Phi]
+    \Phi_\lambda(U_0,J;H)=\mathcal L_\lambda[G_S]\;.
+\end{equ}
+
+\subsection{The Nonlinear Frame and the Source Moment}
+
+The reconstruction estimate uses the multiscale geometry of \cite[p.~277]{VAR}. Its finest lattice spacing is $\eta$, and its nested domains are $\Omega_0 \supset \cdots \supset \Omega_k$, with $\Omega_{k+1}=\varnothing$. At level $j$, the spacing is $a_j=L^j\eta$. The notation $\Omega^{(j)}$ denotes the level-$j$ sites whose blocks of side $a_j$ lie in $\Omega$. Thus
+\begin{equ}
+    \Lambda_j=\Omega_j^{(j)}\setminus\Omega_{j+1}^{(j)}\;,
+    \qquad \mathfrak B_k=\bigcup _{j=0}^{k}\Lambda_j\;.
+\end{equ}
+The set $\mathfrak B_k$ supports the determining field: values on $\Lambda_j$ prescribe its level-$j$ averages. A site in $\Lambda_j$ represents a cell of volume $a_j^4$, so the discrete $L^2$ norm of a one-form $b$ is
+\begin{equ}
+    \norm{b}_{L^2(\mathfrak B_k)}^2
+    =\sum _{j=0}^{k}a_j^4\sum _{y \in \Lambda_j}
+        \sum _{\mu=1}^{4}|b_\mu(y)|^2\;.
+\end{equ}
+Absent direction components are set to zero. The volume weight is the scalar-product convention in \cite[eq.~(2.69)]{PRT2}, applied to each direction component. After a single scale is rescaled to unit spacing, its cell volume is one. This explains both the unweighted bond sum used below and the input cell measure in Ba{\l}aban's nonlinear derivative kernel:
+\begin{equ}[eq:VARkernel]
+    \left|\frac{\delta\mathscr H_\mu(B,x)}{\delta B_\nu(y')}\right|
+    \leqslant C a_j^{-1}a_{j'}^{-d}e^{-\mu_0d(y,y')}\;,
+    \qquad x \in \Delta(y)\;,\quad y \in \Lambda_j\;,\quad y' \in \Lambda_{j'}\;,
+\end{equ}
+with the input cell measure $a_{j'}^d$ when this kernel acts. This is \cite[Proposition~9, eq.~(190)]{VAR}, with $\mu_0=\delta_0/8$ available there. It is a bound for the nonlinear minimal configuration, not an inference from the linear propagator. In the present frame calculation all source arguments are in one current-scale stratum. In its unit coordinates the recorded local transfer gives
+\begin{equ}[eq:localderivative]
+    \left|\frac{\delta\mathcal A_k(B)(e)}{\delta B(b)}\right|
+        \leqslant C e^{-\mu d_k(e,b)}\;.
+\end{equ}
+Here $\mathcal A_k$ is the normalised Lie-algebra reconstruction $g_k^{-1}\mathscr H(g_kCB-h\widetilde D(g_kCB))$, conjugated by the background products along the part of $P_c$ preceding the link under consideration when required. The shorthand $d_k(e,b)$ is the distance $d(y(e),y(b))$ in \eref{eq:VARkernel}, with both arguments in the current-scale stratum and that stratum rescaled to unit spacing. The output block label $y(e)$ is the centre of the determining block $\Delta(y)$ containing the initial vertex of $e$; $y(b)$ is the block label of the input bond value $B(b)$. The distance $d$ is the weighted admissible-path distance of \cite[eq.~(2.46)]{PRT2}. Block assignment follows the fixed reconstruction partition, including its boundary convention, not a new nearest-point choice fitted to the source. The norm of a bond value is the fixed Lie-algebra matrix norm. The field norm below is $\norm{Z_0B}^2=\sum _{b \in E_B(Z_0)}|B(b)|^2$, where $E_B(Z_0)$ is the set of free bond labels of the Gaussian carrier just specified.
+
+For clarity, the weakened-contour transfer in \eref{eq:localderivative} is part of the checked local calculation, not an additional assertion printed in VAR Proposition~9. Its proof uses the following source inputs. The differentiated nonlinear equation and its inverse are \cite[eqs.~(183)--(188)]{VAR}; its small localised Hessian has \cite[eq.~(189)]{VAR}. The weakened propagators are uniformly bounded in the same admissible norms on $|u| \leqslant e^{\kappa_1}$ by \cite[eqs.~(1.6)--(1.11)]{RG2}. The fixed point \cite[eqs.~(1.14)--(1.18)]{RG2} retains the small nonlinear Hessian on these contours. Differentiating that equation and solving the resulting linear equation by the same Neumann inverse preserves exponential locality: convolutions of the localised kernels are bounded with a slightly smaller exponential rate, and the uniform small-Hessian condition makes the weighted Neumann series summable. All smallness restrictions here are those of that regular construction; the argument supplies no estimate for arbitrary inherited mixed strata.
+
+The chain rule at the actual RG2 input reads
+\begin{equ}[eq:chain]
+    D_B\mathcal A_k
+    =(D_{B'}\mathscr H)(B')
+        [C-h(D\widetilde D)(g_kCB)C]\;.
+\end{equ}
+The factor $g_k$ in $D_BB'$ cancels the normalisation $g_k^{-1}$. The elimination map $C$ acts within adjacent $L$-blocks \cite[p.~249]{CRE}, and is short ranged in \cite[eqs.~(2.156)--(2.157)]{PRT2}. The map $h$ and the quadratic block-local correction $\widetilde D$ are described in \cite[p.~267]{RG1}. Consequently the correction in \eref{eq:chain} has support within those blocks and operator norm at most $C\varepsilon_1$ on the cutoff. It preserves \eref{eq:localderivative} with constants depending on the fixed block parameters and regular-domain bounds, not on the number of source arcs.
+
+For each arc $P_c$, $L_c(B)$ denotes the sum, weighted by $\eta$, of the norms of the normalised relative link increments transported to the arc's base by the short background prefixes. This scalar majorant is invariant under compact simultaneous gauge transformations and vanishes at $B=0$. Its role is to bound the complete closed scalar \eref{eq:closedword}; the open paths inside that word are neither assigned separate activities nor propagated to another step. The fundamental theorem of calculus and \eref{eq:localderivative} give
+\begin{equ}[eq:K]
+    L_c(B) \leqslant \sum _b K_c(b)|Z_0B(b)|\;,\qquad
+    K_c(b)=\eta\sum _{e \in P_c}C e^{-\mu d_k(e,b)}\;.
+\end{equ}
+For the bounded-length consecutive arcs of the fixed simple polygon, their local overlap is bounded uniformly in the subdivision. Exponential decay and their bounded lengths give the two different sums
+\begin{equ}[eq:schurrows]
+    \sup _c\sum _b K_c(b) \leqslant C_\Gamma\;,\qquad
+    \sup _b\sum _c K_c(b) \leqslant C_\Gamma\;.
+\end{equ}
+The second sums the exponentially weighted line near $b$; it does not sum an independent row supremum once for each arc.
+
+\begin{proof}[Frame inequality]
+For a nonnegative matrix $K$, weighted Cauchy--Schwarz gives $(\sum _bK_c(b)|B_b|)^2 \leqslant (\sum _bK_c(b)) \sum _bK_c(b)|B_b|^2$. Sum first over $c$ and then over $b$, using both bounds in \eref{eq:schurrows}. Thus
+\begin{equ}[eq:frame]
+    \sum _{c \in S}L_c(B)^2 \leqslant C_\Gamma^2\norm{Z_0B}^2\;.
+\end{equ}
+This is a reconstruction norm input at its current-scale regular scope. It is not a pointwise estimate for the ultraviolet comparison.
+\end{proof}
+
+On the bounded external representative domain, the short background prefixes have uniformly bounded complex norms. The ordered product Duhamel formula, applied within the complete word \eref{eq:closedword}, bounds its marked factors without truncating their nonabelian ordering. At $|s_c|=r_*/g_k$ it gives
+\begin{equs}[eq:wordmoment]
+    |G_I|& \leqslant
+    \exp \bigl(C_{\chi}\alpha_1l(I)+C_{\chi}r_*\sum _{c \in S}L_c(B)\bigr)\\
+    & \leqslant \exp \bigl(C_{\chi}\alpha_1l(I)+C_{\chi}m
+                                +\alpha_s\norm{Z_0B}^2\bigr)\;.
+\end{equs}
+Indeed, the relative link increment has size bounded by $C_{\chi}g_kL_c e^{C_{\chi}g_kL_c}$ on the small-field chart. The cutoff keeps $g_kL_c$ uniformly small for these bounded-length arcs. Multiplying the full ordered word, including $U_0(I)^{-1}$ and $H$, gives the first bound in \eref{eq:wordmoment}. Short prefixes within $P_c$ are used for its fluctuation factors; replacing them by long prefixes along all earlier arcs would lose the frame bound. Finally $\sum _{c \in S}L_c \leqslant \sqrt m(\sum _cL_c^2)^{1/2}$ and Young's inequality with \eref{eq:frame} give the second bound, for any fixed sufficiently small $\alpha_s>0$, after adjusting $C_{\chi}$ and $r_*$. The estimate is first applied on the cutoff support. Only the positive quadratic majorant is subsequently extended to all $B$.
+
+\subsection{The Integrated Regular-Term Bound}
+
+The majorant $\mathcal B_\lambda(a)$ is the following expression from \cite[eq.~(2.26)]{RG2}, with $\alpha_5$ replaced by $a$:
+\begin{equs}[eq:Bmajorant]
+    \mathcal B_\lambda(a)
+    &=e^{-(\kappa_1-1)(LM)^{-4}|Z\setminus Z_0'|}
+    e^{-\frac{1}{2}\gamma_2\varepsilon_1^2g_k^{-2}|P|}
+    e^{C a|Z|}\\
+    &\quad \cdot \prod _{Y \in \mathcal D}
+    \left[2E_0\varepsilon_1C_1\alpha_4^{-1}M^q e^{C_2\kappa_1}
+            e^{-(1-3\delta)\kappa d_k(Y)}\right]\;.
+\end{equs}
+The parameters $M,\kappa_1,\alpha_0,\alpha_1,\alpha_4,\gamma_2,\varepsilon_1$ and the constants $E_0,C_1,C_2,q,\kappa,\delta$ in this formula are those of RG2 (2.15)--(2.26), chosen with the restrictions stated there. In particular $|P|$ is the number of selected bonds, and $|Z|$ and $|Z\setminus Z_0'|$ are the lattice volumes appearing in RG2 (2.26), not contour lengths. The potential decay $d_k(Y)$ is the domain-size function of RG2 (1.31)--(1.32), not the bond distance $d_k(e,b)$ in \eref{eq:localderivative}. The $q$ in $M^q$ is RG2's fixed exponent, not a background field. Source localisation enlarges $Y_0$ and consequently changes the admissible $Z_0,P,Z$; the resulting volume, potential and selected-bond factors are all retained.
+
+\begin{proposition}[Regular signed primitive]\label{prop:regular}
+Under the regular-domain, source-localisation and current-scale frame conditions above, the parameters $r_*,\alpha_s$ can be chosen after the frame constants so that $\widehat\alpha=\alpha_5+2\alpha_s$ satisfies both Gaussian positivity conditions in RG2 (2.24)--(2.25). For these choices and compact $H$,
+\begin{equ}[eq:w20]
+    |\Phi_\lambda(U_0,J;H)|
+    \leqslant e^{C_{\chi}\alpha_1l(I)}(C_{\chi}g_k)^m
+                (R_*-1)^{-|A|}\mathcal B_\lambda(\widehat\alpha)\;.
+\end{equ}
+The estimate controls a single term $\mathcal L_\lambda[G_S]$, with $\lambda$ fixed, after the two Gaussian integrations and the localisation contour integrations. It is uniform in the external fields on the representative slice specified before \eref{eq:reconstruction}, and in the weakening parameters on the contours of \eref{eq:sourcecontour}--\eref{eq:kernel}. To use it in the physical expectation, one would still have to sum the labels containing a given source root, perform the LFR2 history sums and outer operations, and divide by $D_h$.
+\end{proposition}
+
+\begin{proof}
+Multi-variable Cauchy for the coefficient $G_S$ on the circles $|s_c|=r_*/g_k$ contributes exactly $(g_k/r_*)^m$, with no factorial. The bound \eref{eq:wordmoment} applies to the complete closed scalar on the cutoff support. The absolute integral of a single source derivative contour is bounded by
+\begin{equ}[eq:contourcost]
+    \int _0^1\frac{R_*}{(R_*-t)^2}\,\dd t
+        =\frac{1}{R_*-1}\;.
+\end{equ}
+Thus its whole cost is $(R_*-1)^{-|A|}$.
+
+The comparison of the complex covariance and quadratic forms with their real counterparts follows RG2 (2.15)--(2.22). That comparison includes the determinant factor in RG2 (2.15), the potential factors and the cutoff rarity in \eref{eq:Bmajorant}. The remaining Gaussian integral, including the source moment, is bounded by RG2 (2.23) with both quadratic majorants increased from $\alpha_5$ to $a=\widehat\alpha$. Increasing the $X$ majorant as well is allowed because this comparison is now between positive integrands. At the real regular background, the covariance and operator are $C_0=C^{(k)}(Z_0,0)$ and $\Gamma_0=\Gamma_k(Z_0,0)$. The two integrations are
+\begin{equs}[eq:Gaussianpair]
+    &\int
+    e^{-\frac{1}{2}\langle\Gamma_0X,C_0\Gamma_0X\rangle
+                            +\frac{a}{2}\norm{ZX}^2}\\
+    &\qquad \cdot \Bigl[\int
+                e^{-\langle B,\Gamma_0X\rangle
+                            +\frac{a}{2}\norm{Z_0B}^2}\,\dd \mu_{C_0}(B)\Bigr]\,\dd \mu_0(X)|_Z\;.
+\end{equs}
+In finite-dimensional real field coordinates, the shifted covariance is $C_a=(C_0^{-1}-aI)^{-1}$. Completing the $B$ square gives
+\begin{equ}[eq:Bcompletion]
+    \left[\frac{\det C_0^{-1}}{\det (C_0^{-1}-aI)}\right]^{1/2}
+                e^{\frac{1}{2}\langle\Gamma_0X,C_a\Gamma_0X\rangle}\;.
+\end{equ}
+The first positivity condition is $a\norm{C_0}<1/2$. Under it the determinant is at most $e^{Ca|Z_0|}$. The zeroth-order term $C_0$ in $C_a$ cancels the unchanged negative $X$ compensator in \eref{eq:Gaussianpair}. The remaining quadratic form is
+\begin{equ}
+    \tfrac{1}{2}\langle X,
+        [aI+\Gamma_0^*(C_a-C_0)\Gamma_0]X\rangle\;.
+\end{equ}
+Ba{\l}aban's operator bounds in RG2 (2.24)--(2.25) bound this quadratic form in absolute value by $Ca\norm{ZX}^2$, in the standard Gaussian carrier inner product. The second positivity condition is that the operator $I-aI-\Gamma_0^*(C_a-C_0)\Gamma_0$ on that carrier be positive definite; the smallness restriction giving the displayed bound makes it so. The resulting $X$ integral has determinant factor at most $e^{Ca|Z|}$. This is the completion and compensator cancellation of RG2, with $a$ substituted. No cross term or normalisation factor has been removed.
+
+Combining these Gaussian bounds with the unchanged potential, rarity and covariance-contour factors gives $\mathcal B_\lambda(\widehat\alpha)$. The coefficient Cauchy factor and the $e^{C_{\chi}m}$ factor are absorbed into $(C_{\chi}g_k)^m$. The remaining factors are exactly those in \eref{eq:w20}.
+\end{proof}
+
+If a subsequent summation assigns a size $\tau_\lambda \geq 1$ to each label and proves $l(I) \leqslant C_I\tau_\lambda$, an available weight $e^{-\Delta\kappa\tau_\lambda}$ can then absorb $e^{C_{\chi}\alpha_1l(I)}$ only if $C_{\chi}C_I\alpha_1<\Delta\kappa$. Here $\tau_\lambda$ and the available decay $\Delta\kappa$ are additional inputs to that proposed summation, not objects constructed by Proposition~\ref{prop:regular}. Neither the geometric bound nor the summation of sources with the vacuum factors has been supplied for WC.1.
+
+\subsection{A Single Fresh Regular Mark}
+\label{sec:freshmark}
+
+The centred regular kernel admits a sharper estimate for one fresh mark. This estimate concerns the bare closed coefficient, before multiplication by a Wilson counterterm. It does not apply directly to the shifted conditional integral in the full first-step construction.
+
+Fix $S=\{c\}$, its localisation label $\lambda$, and the external arguments of \eref{eq:kernel}. Put $Y_s=\mathcal R_S\cup A$. The determining blocks of the source, including the block-local constraint correction, are included in this thick neighbourhood. Let $b_s(B)$ be the maximum of the matrix norms of the free input bond values on these blocks. Write $\varepsilon_{\mathrm f}$ for the literal fluctuation threshold, so that the source cutoff imposes $g_0 b_s(B)<\varepsilon_{\mathrm f}$. In the bare CRE construction its bond threshold is $\delta_0/g_0$, with $\delta_0=g_0A_1(\log g_0^{-2})^{p_0}$; the coarse-background parameter called $\varepsilon_1$ in the first-step note is a different quantity.
+
+Define $\mathfrak f_c(t;B)$ by replacing $g_0$ by the complex variable $t$ in the source reconstruction \eref{eq:reconstruction}, while keeping the vacuum integrand, background, force and all operators fixed at their actual values. It is the complete coefficient of $s_c$ in \eref{eq:closedword}. Component locality in \cite[eqs.~(1.9)--(1.10)]{RG2} implies that it reads only the source component. The analytic constraint correction starts at quadratic order \cite[p.~267]{RG1}; the remaining reconstruction has the linear part and quadratic corrections stated in \cite[eqs.~(1.14), (1.16)--(1.20)]{RG2}. Consequently $\mathfrak f_c(0;B)=0$, and $\partial_t\mathfrak f_c(0;B)$ is a complete closed trace linear in $B$.
+
+Choose a fixed $r_2>0$ inside this uniform analytic input domain, and impose $\varepsilon_{\mathrm f}\leq r_2/2$. For $b_s(B)>0$, use the coupling circle of radius $r_2/b_s(B)$. The bounded arc length and the short background prefixes give a bound $C_\chi e^{C_\chi\alpha_1l(I)}$ on that circle. Cauchy's coefficient estimate therefore gives
+\begin{equ}[eq:freshremainder]
+    |\mathfrak f_c(g_0;B)-g_0\partial_t\mathfrak f_c(0;B)|
+        \leqslant C_\chi e^{C_\chi\alpha_1l(I)}
+            g_0^2 b_s(B)^2
+        \leqslant C_\chi e^{C_\chi\alpha_1l(I)}
+            \varepsilon_{\mathrm f}^2\;.
+\end{equ}
+The zero-input case follows directly from the reconstruction. The constants depend on the fixed character, arc-length bound and auxiliary reconstruction parameters, and are uniform in the lattice size and localisation labels at this regular scope.
+
+Suppose now that $\mathcal D=\varnothing$. In \eref{eq:kernel}, simultaneous negation of $B$ and $X$ preserves the two Gaussian densities, their cross term, the negative $X$ compensator and the cutoff products. This remains true on the complex covariance contours. The linear source term is odd under this change, and its signed integral is zero before any absolute value is taken. Applying the original vacuum Gaussian comparison to \eref{eq:freshremainder} gives
+\begin{equ}[eq:freshgain]
+    |\Phi_\lambda(U_0,J;H)|
+        \leqslant C_\chi e^{C_\chi\alpha_1l(I)}
+            \varepsilon_{\mathrm f}^2
+            (R_*-1)^{-|A|}\mathcal B_\lambda(\alpha_5)\;.
+\end{equ}
+All bad-$P$ and covariance-localisation factors remain in the majorant. This version uses the cutoff to bound the quadratic remainder, so it needs no additional Gaussian moment reserve.
+
+For $\mathcal D\ne\varnothing$, the existing estimate \eref{eq:w20} remains available. Each selected potential retains its factor $2/|\tau_Y|$ from \cite[eq.~(2.18)]{RG2}. In particular one such factor contributes the original small potential amplitude in addition to the source factor $g_0$. The interaction on its Cauchy contour is not itself assumed to be $O(g_0)$. These are fixed-label estimates; summing source-containing seeds requires its own cover count.
+
+There is an explicit count for the source weakening labels. Let the fixed connected root neighbourhood contain $N_0$ cubes of the $M$-grid. Its face-adjacency graph has degree at most $8$. Put
+\begin{equ}
+    q_s=\frac{1}{e^{\kappa_1}-1}\;,\qquad
+    \theta=\frac{\kappa_1}{2}\;.
+\end{equ}
+Every surviving $A$ joins the root neighbourhood. A deterministic spanning-tree traversal encodes the connected union and gives at most $8^{2(N_0+n)}$ choices with $|A|=n$. For auxiliary parameters satisfying $64q_se^\theta<1$, it follows that
+\begin{equ}[eq:sourcerootcount]
+    \sum_A(q_se^\theta)^{|A|}
+        \leqslant \frac{8^{2N_0}}{1-64q_se^\theta}\;.
+\end{equ}
+Let $Y_s'$ be the smallest $LM$-cube envelope of the one-layer enlargement of $Y_s$. Since $L>11$, each enlarged $M$-cube meets at most $16$ coarse cubes. The coarse-domain size therefore satisfies $d_1(Y_s')\leqslant16(N_0+|A|)$, and
+\begin{equ}[eq:sourceenvelopepayment]
+    q_s^{|A|}
+        \leqslant e^{\theta N_0}
+            e^{-\frac{\theta}{16}d_1(Y_s')}
+            (q_se^\theta)^{|A|}\;.
+\end{equ}
+Thus the source weakening labels pay both their multiplicity and a coarse-envelope decay. This does not yet pay the combined potential and bad-$P$ covers, the positive volume factor in \eref{eq:Bmajorant}, or the touching vacuum clusters in \eref{eq:completedkernel}. Those supports and joining costs remain part of the marked summation.
+
+To sum the regular coefficients, the cover estimate must include the source seed without requiring the selected potentials to cover it. The following decay allocation is a proposed summation, whose uniformity in the source read-outs has not been established. Write $d_0$ for the fine $M$-cube size function and $N_0(Z)$ for the number of such cubes in $Z$. Let $\epsilon_V$ be the single-potential prefactor in \eref{eq:Bmajorant}:
+\begin{equ}
+    \epsilon_V=2E_0\varepsilon_{\mathrm f}C_1\alpha_4^{-1}M^q
+        e^{C_2\kappa_1}\;.
+\end{equ}
+Here the fluctuation parameter in that RG2 formula is denoted by $\varepsilon_{\mathrm f}$. Put $t=\gamma_2\varepsilon_{\mathrm f}^2/(2g_0^2)$. The following argument concerns one bare regular source mark. It keeps the potential and bad-$P$ labels distinct.
+
+Inside each connected component of $Y_0$, the cover consists of the source domain, if present, and its selected potential domains. Equation~(2.27) of \cite{RG2} supplies the size of their union with a $5$ for every cover object. Equation~(2.32) then applies to the connected components of $Y_0$, together with the additional cubes of $Z_0$. Thus each potential incurs a joining factor $e^{5\mu}$ when a decay rate $\mu$ is extracted. The source domain incurs this factor once. At the coarse scale the envelopes of different components of $Z_0$ may overlap or touch, and the same cover argument incurs $e^{5\nu}$ per envelope. Each unmarked native component retains the small potential or bad-$P$ factor of \cite[eqs.~(2.33)--(2.35)]{RG2} to pay it. An extracted distinguished potential gives at most one additional tagged component; its joining cost is fixed, and its remaining anchored sum is bounded by $CN_0(Z)$.
+
+Choose positive rates $\mu,\nu$ with
+\begin{equ}
+    \mu\leqslant\frac{1}{4}\min(\theta,(1-3\delta)\kappa)\;,
+    \qquad
+    \nu\leqslant\min\left(\frac{\mu L}{16},\frac{\kappa}{32},
+        \frac{\kappa_1-1}{16}\right)\;.
+\end{equ}
+Retain $e^{5(\mu+\nu)}$ in the potential weight and put $\widetilde\epsilon_V=e^{5(\mu+\nu)}\epsilon_V$. Split the bad-$P$ decay so that $t\geqslant64\mu+40\nu$. The fine cover payment, \cite[eq.~(2.36)]{RG2}, and the remaining covariance-localisation decay then supply a coarse decay $e^{-\nu d_1(Z)}$. The residual source labels are summed by \eref{eq:sourcerootcount}. Arbitrary residual potential subsets in $Z$ contribute at most $e^{C\widetilde\epsilon_V N_0(Z)}$ by the anchored domain bound \cite[eq.~(1.28)]{RG2}. Residual bad-$P$ subsets contribute at most $e^{CM^4e^{-t/2}N_0(Z)}$. Bounding optional $Z_0$ subsets by $2^{N_0(Z)}$ is sufficient; its coarse conversion must also be paid.
+
+In fact $N_0(Z)\leqslant L^4N_1(Z)$ and $N_1(Z)\leqslant24(d_1(Z)+1)$, by \cite[eq.~(2.30)]{RG2}. The total entropy and Gaussian volume cost is therefore bounded by $e^{E(d_1(Z)+1)}$, where
+\begin{equ}
+    E=24L^4\left(\log 2+C\widetilde\epsilon_V
+            +CM^4e^{-t/2}\right)
+        +24C\widehat\alpha(LM)^4\;.
+\end{equ}
+This allocation requires $E<\nu/8$, an explicit retained small factor for every unmarked component to pay $e^{5\nu}$, and a further decay margin for $CN_0(Z)$. The parameter hierarchy and component sums must satisfy these requirements simultaneously. In addition, \eref{eq:freshgain} retains $e^{C_\chi\alpha_1l(I)}$, and the root count retains its dependence on $N_0$. Neither factor may be absorbed into a constant uniform in the cutoff without a geometric payment. No physical field is given an independent probability law in these counts.
+
+Let $h_c(Z;U_0,J,H)$ be the sum of regular labels whose connected marked component has coarse support $Z$. Its unique source component is distinguished before the componentwise scalar majorant sums. The proposed bound, still requiring those payments and the full external-support identification, is
+\begin{equ}[eq:rawfreshactivity]
+    |h_c(Z;U_0,J,H)|
+        \leqslant C_\chi\eta_0 e^{-\kappa_s d_1(Z)}\;,
+    \qquad
+    \eta_0=\varepsilon_{\mathrm f}^2
+        +\varepsilon_{\mathrm f}\epsilon_V\;.
+\end{equ}
+All Gaussian determinants and normalisers are already present in \eref{eq:Bmajorant}. The required constant must be independent of the fine-lattice volume. This proposed estimate concerns the centred regular primitive; it is not established by the fixed-label bound alone.
+
+The regular vacuum denominator is completed as in \eref{eq:completedkernel}, using the actual vacuum activities of \cite[eqs.~(2.38)--(2.40)]{RG2}. Denote the completed bare coefficient by $K_c(X;U_0,J,H)$. A sufficient touching-cluster bound would be $\beta N_1(Z)$ in the weighted norm, including $e^{5\kappa'}$ for every constituent. The cluster coefficients retain their $1/n!$ and the denominator completion retains its $1/q!$. The proposed decay budget requires
+\begin{equ}
+    \kappa_s-\kappa'-24\beta>48\log 8\;,
+\end{equ}
+and the required completed estimate is
+\begin{equ}[eq:dressedfreshactivity]
+    \sum_{X\supset\Delta_c}e^{\kappa'd_1(X)}
+        |K_c(X;U_0,J,H)|\leqslant C_\chi\eta_0\;.
+\end{equ}
+Here $\Delta_c$ is one fixed coarse localisation cube in the source root. The support $X$ must include every touching vacuum cluster and the external read-outs required by the source. This completed estimate is unproved. A prescribed Wilson scalar $Z_\chi^{-1}$ multiplies its right-hand side by $|Z_\chi|^{-1}$; no physical renormalisation estimate follows by omitting that factor.
+
+In the full first-step conditional integral the source, cutoff and interaction are evaluated at $u+m_\Lambda(d)$. For fixed exterior $d$, they need not be even in $u$. The regular estimates above consequently do not supply a bound for that boundary contribution, newly rough source kernels, or the full reference-normalised physical expectation.
+
+\subsection{Costs in the Connected Marked Sum}
+\label{sec:markedcovercosts}
+
+The cover costs can be allocated before summing the number of marks. This calculation concerns the literal localisation labels of \eref{eq:kernel}; its transfer through the full denominator remains to be proved. For a nonempty $S\subset I$, put $m=|S|$, $\mathcal R_c=\mathcal R_{\{c\}}$ and $\rho=\max_{c\in I}|\mathcal R_c|$. Thus $|\mathcal R_S|\leqslant\rho m$. These are fluctuation-localisation roots. The complete source retains its background closing interval and return-frame read-outs.
+
+Every surviving component of $A\cup\mathcal R_S$ meets a root. Choose deterministic nearest-root parent edges, breaking ties in a fixed order. Cutting this forest at the root vertices assigns each added cube to one root. A root with $s$ added cubes has a spanning-tree walk of length $2s$, with at most $8^{2s}$ encodings. Since the assigned cube sets determine their union, summing the tuples of walks gives
+\begin{equ}[eq:markedforest]
+    \sum_A(q_s e^\theta)^{|A|}
+        \leqslant (1-64q_s e^\theta)^{-|\mathcal R_S|}
+        \leqslant (1-64q_s e^\theta)^{-\rho m}\;.
+\end{equ}
+The source-component tree sizes are at most the total number of their cubes. Extracting their decay therefore costs at most $e^{\theta\rho m}$. Together these factors are a constant to the power $m$, rather than a constant to the number of bonds in the whole contour.
+
+Let $j_0$ count the native connected components of the minimal $Z_0$. Every component contains a source root, a selected potential domain or a selected bad bond. With connected elementary roots and potential domains, and with each bad bond interior to its assigned component, this gives
+\begin{equ}[eq:markedcomponentcount]
+    j_0\leqslant m+|\mathcal D|+|P|\;.
+\end{equ}
+Hence the coarse joining cost $e^{5\nu j_0}$ is paid directly by the corresponding source, potential and bad-bond factors. No additional unmarked-component amplitude is assumed. Fine joining costs contribute $e^{5\mu(m+|\mathcal D|)}$. Equation~(2.32) of \cite{RG2} and its preceding bad-bond count give a connector cost of at most $e^{8\mu|P|}$. For $t\geqslant16\mu+10\nu$, the remaining bad-bond weight satisfies
+\begin{equ}[eq:markedbadpayment]
+    e^{-(t-8\mu-5\nu)|P|}
+        \leqslant e^{-\frac{t}{2}|P|}\;,
+\end{equ}
+The original potential amplitude becomes $\widetilde\epsilon_V=e^{5(\mu+\nu)}\epsilon_V$. These payments retain the Gaussian cost with $\widehat\alpha$, including the source moment reserve.
+
+For a fixed connected coarse domain $Z$, define $I_Z=\{c\in I\,|\,\mathcal R_c\subset Z\}$ and $n_Z=|I_Z|$. The arcs are consecutive nonoverlapping bond paths. Selecting their distinct initial oriented bonds gives $n_Z\leqslant8(LM)^4N_1(Z)\leqslant192(LM)^4(d_1(Z)+1)$. For any nonnegative amplitude $a$, summing all subsets with at least two marks gives
+\begin{equ}[eq:allmarkcount]
+    \sum_{m=2}^{n_Z}\binom{n_Z}{m}a^m
+        \leqslant \frac{1}{2}(a n_Z)^2 e^{a n_Z}\;.
+\end{equ}
+Indeed $\binom{n_Z}{m}\leqslant n_Z^m/m!$, and $\sum_{m\geqslant2}x^m/m!\leqslant x^2e^x/2$. In the regular majorant $a$ includes $C_\chi g_0$ and the per-mark forest and joining constants. Thus the all-mark entropy can be paid by spare domain decay when those constants are uniform and $g_0$ is sufficiently small. Single-mark terms retain the signed quadratic gain or a selected potential factor; neither is replaced by this binomial bound.
+
+At the young regular conditional integration, the background and compact closing data are fixed. Sharing such frozen read-outs does not itself couple disjoint fluctuation components. The complete $B/X$ payload factorises according to \cite[eq.~(2.10)]{RG2}, with its cross term and compensator retained. Complete flat single-loop component coefficients are scalar by \eref{eq:scalarization}. They can be multiplied when the contour-contact hulls permit the ordered contraction; interleaved, overlapping or nested hulls must first be retained together. The full background support remains part of the resulting function and of its later physical integration. This conditional factorisation supplies no independence for exterior fields.
+
+The first-step boundary kernel has a different payload: its source and its cutoff--interaction factor are evaluated at $u+m_\Lambda(d)$ with $d$ fixed. The factor is $\Theta_\Lambda(u+m_\Lambda(d);d)e^{F(u+m_\Lambda(d),d)}$ in the conditional construction. Its dependence on the boundary colour remains when $U_0=1$ and $J=0$. Thus its scalar part cannot be inferred from the regular Schur argument. The denominator completion and the scalar partition retain the actual support and incompatibility of this complete boundary insertion. The regular cover payments establish neither its integrated bound nor its matching to the reference-defined perimeter and corner factors under \eref{eq:referencephysicalnumerators}.
+
+\subsection{Flat Scalarisation without Division by the Flat Coefficient}
+
+For an irreducible $\chi$, the fully integrated regular operation applied to the marked closed source in \eref{eq:closedword} satisfies, at $(U_0,J)=(1,0)$,
+\begin{equs}[eq:scalarization]
+    \Phi_\lambda(1,0;H)&=c_\lambda\,\chi(H)\;,\qquad
+            c_\lambda=\Phi_\lambda(1,0;1)\;,\\
+    f_\lambda(U_0,J;H)&=\Phi_\lambda(U_0,J;H)
+                            -c_\lambda\chi(H)\;.
+\end{equs}
+
+\begin{proof}
+For the source in \eref{eq:closedword}, linearity and the integrated kernel produce a matrix $A_\lambda$ with $\Phi_\lambda(1,0;H)=d_R^{-1}\tr (A_\lambda R(H))$. Constant conjugation of both $X$ and $B$ leaves the Gaussian factors, cutoffs, interactions and all localisation contours at the flat pair unchanged. The covariance of the integrated RG2 term is verified in \cite[following eq.~(2.41)]{RG2}. Thus $A_\lambda$ commutes with $R(G)$. Schur's lemma gives $A_\lambda=c_\lambda I$, and setting $H=1$ identifies $c_\lambda$. It follows that $f_\lambda(1,0;H)=0$ for every compact $H$, even if the flat scalar coefficient $c_\lambda$ is zero. No division by that coefficient occurs, and no positivity or reality of it is assumed.
+
+For a compact pure-gauge background the simultaneous gauge covariance of the whole integrated scalar transfers this identity from the flat pair, transforming $U_0,J$ and the complete spectator together. A gauge equal to one at $x$ leaves $H$ fixed. If a nonflat inherited or boundary colour variable were frozen, the same change of variables would only give covariance with that variable transformed; it would not give the invariant flat functional used here.
+\end{proof}
+
+\section{Local Gauge Charts and the Conditional Curvature Estimate}
+\label{sec:curvature}
+
+We now consider complete closed scalar observables after their interacting integration has been performed. For such observables, analytic control near a flat background can be combined with a local gauge choice to obtain a curvature bound. The results below are conditional: the family associated with the full bracket \eref{eq:w16}, its analytic bounds and its physical normalisation still have to be constructed. The regular-term estimate alone does not supply them.
+
+\subsection{The Local RG1 Reconstruction}
+
+In this subsection $K$ is the local RG1 reconstruction index and $n \leqslant K$ is its output index, with rescaled spacings $\eta=L^{-K}$ and $\xi=L^{-n}$. These are the variables of the local RG1 argument, not a new choice of the torus side lengths. The input is $q=tB_{\mathrm{RG1}}+B'$, $t \in [0,1]$, where $B_{\mathrm{RG1}}=Q(\eta A)$ is defined in \cite[eq.~(3.30)]{RG1}; it is not the Gaussian $B$ in \eref{eq:kernel}. Lemma~4 requires $X \subset \widetilde\square^{\,2}$, $\square_0=\widetilde\square^{\,5}$ and $\mathbf U \in U_{K+1}^{\prime c}(\square_0,(1+2\beta)\alpha_0,(1+2\beta)\alpha_1)$. The sets $\widetilde\square^{\,r}$ are the enlarged localisation cubes in RG1 Section~3, not arbitrary neighbourhoods of the loop. The fluctuation $\mathbf A$ is defined on $\square_0$ and satisfies RG1 (3.31). The additional perturbation $B'$ is defined on every bond entering $U_n(\square_0, \cdot )$ and obeys $|B'|<\alpha_3$, with the parameter restrictions of (3.50)--(3.52). In the intermediate reduction of (3.48)--(3.50), the combined perturbation $tQ'+B'$ must meet the required smallness restriction; separate bounds on $Q'$ and $B'$ do not allocate two independent allowances.
+
+\cite[Lemma~4, eq.~(3.53)]{RG1} gives analyticity and regularity of the pair $(U_n(q),J_n(q))|_X$ on precisely this domain. In the bounded Landau representative supplied by its proof,
+\begin{equs}[eq:localcoordinate]
+    U_n(q)&=V_n(q)^{u_n(q)}\;,\qquad V_n(q)=e^{i\xi h_n(q)}\;,\\
+    |h_n|,\ |\nabla^\xi h_n|& \leqslant a\;,\qquad
+    a=B_3^2CM\alpha_0L^{n-1}\eta
+                +B_3(C\alpha_2L^n\eta+|B'|)<\alpha_1\;.
+\end{equs}
+The force $J_n$ is transformed with $U_n$. The fluctuation condition cited above is $|\mathbf A|,|\nabla^\eta\mathbf A|,\norm{\mathbf A}_{1,\beta}<\alpha_2$ on $\square_0$, with $0 \leqslant \beta \leqslant \beta_0<1$, as in RG1 (3.31); the last norm is the regularity norm used there. Analyticity is on that domain and the determining-bond perturbations of Lemma~4, not on an arbitrary product of independent fine-link disks.
+
+\begin{proof}[Return-gauge bound and scalar transfer]
+The return to axial gauge is analytic by \cite[p.~307]{VAR}. Its block product is \cite[eq.~(106)]{CMP98}, with reference field $1$. Equations (130)--(131) there, and their complex extension in Section~E, bound the level-$p$ averaged logarithm by $2aL^p\xi$. Each path contains at most $d(L-1)$ bonds and the averaging weights have total mass one. Consequently its representation factor costs at most $e^{C_{\chi}aL^{p+1}\xi}$ in either orientation. Every operand lies in the ancestral block of $x$, of side $L^n\xi=1$, by CMP98 (2), (105)--(106) and the locality following (91). RG1 p.~271 supplies an interior layer of width $M/(L^n\eta) \geqslant M \geq 1$; hence the base in $\widetilde\square^{\,2}$ puts that ancestral block inside $\widetilde\square^{\,3}$, where \eref{eq:localcoordinate} applies. Multiplication of the block factors gives
+\begin{equ}[eq:returngauge]
+    \norm{R(u_n(x))},\ \norm{R(u_n(x)^{-1})}
+    \leqslant e^{C_{\chi}a\sum _{p=0}^{n-1}L^{p+1}\xi}
+    \leqslant e^{C_{\chi}aL/(L-1)} \;.
+\end{equ}
+There is no depth factor: the displayed sum is geometric with $L^n\xi=1$.
+
+RG1 (1.10) fixes the gauge convention. Removing $u_n$ changes the complete based spectator to $H'=u_n(x)^{-1}Hu_n(x)$, leaving its character unchanged. The integrated compact-gauge identity extends to these small complex transformations by analyticity, as in \cite[pp.~21--22]{RG2}; no complex change of real cutoff integration variables is being made. The estimate for compact $H$ in Proposition~\ref{prop:regular} comes from a bound on the full word linear in $R(H)$. Applying that same bound to the conjugated complete word costs $K_{\chi}=e^{2C_{\chi}aL/(L-1)}$. Flat scalarisation is linear in the spectator matrix and remains valid on that word, while $\tr R(H')=\tr R(H)$. If $M_\lambda$ denotes the right-hand side of \eref{eq:w20}, we obtain
+\begin{equ}[eq:coordinatetransfer]
+    |f_\lambda(U_n(q),J_n(q);H)| \leqslant (K_{\chi}+1)M_\lambda\;.
+\end{equ}
+The inverse interval $U_0(I)^{-1}$, every external bond and force argument determining the source, and its basepoint must lie in $X$. In this application $n$ is an integer with $1 \leqslant n \leqslant K$: the RG2 step for external $U_n$ is $n-1 \geq 0$, with fine mesh $\xi$. A reconstruction statement at $n=0$ would not define such an RG2 step and is not used here. These containment and index requirements are application hypotheses, not consequences of enlarging the fluctuation seed. The statement does not cover arbitrary collars of the earlier-field histories in LFR2.
+\end{proof}
+
+\subsection{A Conditional Estimate for Integrated Closed Scalars}
+
+At a creation scale $j$ and a matching scale $k \geqslant j$, the conditional estimate concerns a finite or countable index set $\mathcal I_{j|k}$ and a family of complex-valued, already integrated functions $f_l(q;H)$, $l \in \mathcal I_{j|k}$. Each label is supplied with a finite lattice collar $Z_l$, a nonempty finite set $S_l$ of source-root labels, a size parameter $\tau_l \geq 1$, and bounds $M_l \geq 0$, $r_l>0$. The root set is $\mathcal R_{j|k}=\bigcup _{l \in \mathcal I_{j|k}}S_l$; every root supremum below is over $r \in \mathcal R_{j|k}$. The parameter $\tau_l$ is the value assigned by the proposed fluctuation-tree construction. Such a construction for the full bracket has not been given; the conditional implication uses the supplied value through the filling and weighted-sum hypotheses below, and does not define it to be a number of bonds or blocks.
+
+Each $f_l$ must already contain its stated interacting integration and the normalisation of the expectation to which it will contribute. The collar $Z_l$ identifies the integrated fluctuation region, not the full support of the observable. The holonomy $H \in G$ is that of the retained complementary closed contour, based at the root used for the tree gauge. The functions in this conditional family have not been identified with the full inherited numerator of \eref{eq:WC1}.
+
+The admissible earlier-field, history and exterior parameters, together with any complex source polydisc $|s_c| \leqslant \rho$, form part of the specified data. All bounds below are assumed to hold for every value of these parameters, every $l \in \mathcal I_{j|k}$ and every compact $H \in G$, with common constants $C,p,\kappa$. For the full inherited source, neither these parameter sets nor their uniform bounds have yet been supplied.
+
+The geometric hypothesis is that the collar graph has a spanning tree rooted at the basepoint of $H$, and that each fundamental cycle has an ordered filling by at most $C(1+\tau_l)^p$ plaquettes of that collar. Each filling plaquette therefore belongs to the set $\mathcal P_l$ used in the curvature maximum below. Contractibility alone does not give this quantitative filling bound. The gauge transformation setting the tree bonds to one is required to preserve the complete integrated scalar and every frozen argument of its conditional integration, and to equal one at the basepoint of $H$. A transformation changing frozen boundary data would not satisfy this requirement.
+
+The analytic hypotheses are
+\begin{equ}[eq:analyticinput]
+    f_l(0;H)=0\;,\qquad |f_l(q;H)| \leqslant M_l
+        \quad\hbox{on }\norm q_\infty<r_l\;,
+\end{equ}
+where the function is holomorphic on that ball of complex logarithmic fields. Also assume separately $|f_l(B;H)| \leqslant M_l$ at the original real logarithmic background $B$, whether or not $B$ belongs to the ball. The symbol $B$ in this subsection denotes this external logarithmic background, not an unintegrated Gaussian variable. In the notation $q_{\mathrm{phys}}$, the original logarithmic background is $q_{\mathrm{phys}}=B$. The logarithmic bond field obtained after imposing tree gauge is denoted $q_l$ and need not equal $B$.
+
+The set $E_l$ contains one chosen orientation of each bond in the full collar graph. The coordinate chart is $q=(q_b)_{b \in E_l} \in (\mathfrak g^c)^{E_l}$ with bond field $U_b=e^{iq_b}$, and $\norm q_\infty=\max _{b \in E_l}|q_b|$, using the matrix norm fixed in Section~\ref{sec:comparison}. Its admissible logarithm branch and its compatibility with tree-gauge coordinates are part of the hypotheses below. The set $\mathcal P_l$ consists of the plaquettes whose four boundary bonds lie in that graph. Here $\norm{M}_{\mathrm{op}}$ is the operator norm of an $N\times N$ matrix $M$ acting on $\C^N$ with its standard Hermitian norm. The curvature size of the real background $U_b=e^{iB_b}$ is
+\begin{equ}
+    \mathfrak f_l(B)=
+    \max _{p \in \mathcal P_l}\norm{\Hol_U(\partial p)-1}_{\mathrm{op}}\;.
+\end{equ}
+The maximum is defined to be zero when $\mathcal P_l$ is empty; the filling hypothesis then allows only fundamental cycles with empty fillings. This curvature size is invariant under compact gauge transformations. The exact nonabelian filling identity, with its ordered plaquettes and unitary conjugating transports, gives
+\begin{equ}[eq:treechart]
+    \norm{U_b^{\mathrm{tree}}-1}_{\mathrm{op}}
+        \leqslant C(1+\tau_l)^p\mathfrak f_l(B)\;.
+\end{equ}
+The bound on the logarithmic field after taking the principal logarithm is required explicitly in the chart-compatibility hypothesis of Proposition~\ref{prop:radius}; the bond bound alone does not place every allowed background in an arbitrary analytic chart. In the local RG1 logarithmic chart, the scale input from \cite[eqs.~(3.30)--(3.32), (3.49), (4.17)]{RG1}, written in unit matching-scale coordinates, is
+\begin{equs}[eq:scales]
+    \delta_{j|k}&=L^{j-k}=\ell_j/\ell_k\;,\qquad
+    \norm B_\infty \leqslant C\delta_{j|k}\;,\\
+    \norm{\partial B}_\infty& \leqslant C\delta_{j|k}^2\;,
+    \qquad \mathfrak f_l(B) \leqslant C\delta_{j|k}^2\;.
+\end{equs}
+The last bound follows from multiplying the four plaquette links, equivalently from the derivative and quadratic commutator terms. It is a bound on the logarithmic background used in an estimate on an integrated scalar, not a pointwise thin-loop ultraviolet bound.
+
+\begin{proposition}[Weighted inverse-radius implication]\label{prop:radius}
+In addition to the hypotheses above, the weighted inverse-radius sum is assumed finite:
+\begin{equ}[eq:Q]
+    Q^{(1)}_{j|k}=\sup _r\sum _{l:\ r \in S_l}
+                        e^{\kappa\tau_l}M_l/r_l<\infty \;.
+\end{equ}
+The estimate also requires the following chart compatibility: whenever $D_l=C(1+\tau_l)^p\delta_{j|k}^2<r_l/2$, the physical tree-gauge background is represented by a logarithmic bond field $q_l$ in the stated analytic chart with $\norm{q_l}_\infty \leqslant D_l$. For $0<\kappa'<\kappa$ the physical complete scalars obey
+\begin{equ}[eq:w23]
+    \sup _r\sum _{l:\ r \in S_l}e^{\kappa'\tau_l}
+                    |f_l(B;H)|
+        \leqslant C_{p,\kappa-\kappa'}Q^{(1)}_{j|k}\delta_{j|k}^2\;,
+\end{equ}
+with the tree-filling and scale constants also included in $C$. To apply this estimate to WC.1, the family and the bounds $M_l$ must include the complete outer operations and sums listed after \eref{eq:w16} and the partition-function division by $D_h$ in \eref{eq:WC1a}. Neither a bound on the inner regular term nor a flat scalar coefficient supplies those factors. Constructing such a normalised family and proving \eref{eq:Q} for it remain open premises.
+\end{proposition}
+
+\begin{proof}
+The proof separates the cases $D_l<r_l/2$ and $D_l \geqslant r_l/2$, where $D_l=C(1+\tau_l)^p\delta_{j|k}^2$. If $D_l<r_l/2$, the explicit chart-compatibility hypothesis supplies a logarithmic bond field $q_l$ in the analytic ball, of norm at most $D_l$. Radial Cauchy, the zero at the origin and \eref{eq:analyticinput} imply
+\begin{equ}
+    |f_l(q_l;H)| \leq 2M_lD_l/r_l\;.
+\end{equ}
+If $q_l=0$, the bound is the assumed flat vanishing. For $q_l\ne 0$, one-variable Cauchy applied to $z \mapsto f_l(zq_l/\norm{q_l}_\infty;H)$, after subtraction of its value at zero, gives the required bound; the geometric-series remainder is bounded by $M_l(\norm{q_l}_\infty/r_l)/(1-\norm{q_l}_\infty/r_l)$. The tree gauge preserves the complete scalar and the spectator, so this is the physical value. For $D_l \geqslant r_l/2$, the separate original physical bound gives $|f_l(B;H)| \leqslant M_l \leq 2M_lD_l/r_l$. Both cases therefore give the same inequality. Its weighted sum at a fixed root is controlled by
+\begin{equ}
+    \sup _{t \geq 1}(1+t)^p e^{-(\kappa-\kappa')t}<\infty
+\end{equ}
+to obtain \eref{eq:w23}. No exchange of a pointwise supremum with a physical integration occurs: $f_l$ is already integrated.
+\end{proof}
+
+\begin{remark}[Domain qualification of the archived statement]
+Compatibility with the chart is necessary because the tree-logarithm construction is justified only in a fixed small neighbourhood, whereas the analytic radii $r_l$ may be arbitrary positive numbers. The inequality $D_l<r_l/2$ alone does not put the tree-gauge field in that neighbourhood. Proposition~\ref{prop:radius} therefore includes this compatibility as an explicit hypothesis. A common upper bound on the radii by a suitable geometric chart radius is one possible sufficient restriction, but \eref{eq:Q} must then be checked with the restricted radii. Shrinking the radii increases their inverses and can invalidate the weighted-sum bound.
+\end{remark}
+
+For completeness, the earlier fixed-radius argument assumes the bound $|f_l(B;H)| \leqslant M_l$ on the full original collar ball of logarithmic bond fields $\norm B_\infty<r_B$, before imposing tree gauge, and
+\begin{equ}
+    \sup _r\sum _{l:\ r \in S_l}e^{\kappa\tau_l}M_l \leqslant Q_{j|k}\;.
+\end{equ}
+It obtains the bound $CQ_{j|k}\delta_{j|k}^2$, with $r_B^{-1}$ included in $C$, by a short/long-support split.
+
+\begin{proof}[The recorded fixed-radius argument]
+The argument separates the labels at $t_*=c\log (\delta^{-1})$, where $\delta=\delta_{j|k}$ and $c \geq 2/(\kappa-\kappa')$. For sufficiently small $\delta$, two domain requirements hold: the original logarithmic background lies in the ball because $C\delta<r_B$, and $C(1+t_*)^p\delta^2$ lies in both the fixed geometric logarithm neighbourhood and the ball of radius $r_B/2$. For $\tau_l \leqslant t_*$, the ordered filling and radial Cauchy therefore give
+\begin{equ}
+    |f_l(B;H)| \leqslant C M_l(1+\tau_l)^p\delta^2/r_B\;.
+\end{equ}
+After multiplication by $e^{\kappa'\tau_l}$, the polynomial is absorbed into $e^{-(\kappa-\kappa')\tau_l}$, giving the rooted bound $CQ_{j|k}\delta^2$. For $\tau_l>t_*$, the original logarithmic background remains inside the analytic ball and supplies the bound $M_l$, without requiring the possibly large logarithmic field in tree gauge to lie in that ball. The remaining weight gives
+\begin{equ}
+    e^{-(\kappa-\kappa')t_*} \leqslant \delta^2\;.
+\end{equ}
+The long-support rooted sum is thus at most $Q_{j|k}\delta^2$. This proves the fixed-radius implication with its stated ``sufficiently small $\delta$'' qualification. If the original physical point is outside the ball, a separate physical bound is needed; analyticity near the flat point alone does not give it.
+\end{proof}
+
+\subsection{The Ultraviolet Tail at a Fixed Matching Scale}
+
+The inverse-radius condition would suffice for the signed integrated comparison WC.1, but is stronger than that comparison. It remains unproved for the full sourced bracket; a proof of WC.1 could instead use a weaker estimate that controls the same integrated error.
+
+At a fixed matching lattice spacing $\ell_k$ measured in the torus coordinates, $|\Gamma|_{\mathrm{phys}}$ denotes the sum of the lengths of the two fixed contours $\Gamma_1,\Gamma_2$, not the number of lattice bonds. If the decomposition has at most $C|\Gamma|_{\mathrm{phys}}/\ell_j$ creation roots at spacing $\ell_j$ and propagation to $\ell_k$ introduces no cost beyond the bounds included in $M_l$, substitution of \eref{eq:w23} and summation over those roots give at most
+\begin{equ}[eq:rootpayment]
+    C|\Gamma|_{\mathrm{phys}}\ell_k^{-2}\ell_jQ^{(1)}_{j|k}\;.
+\end{equ}
+This implication applies only after a decomposition satisfying the stated root count and propagation bound has been constructed. No such decomposition for the numerator of WC.1 is constructed here.
+
+\begin{proof}[The recorded summability implication]
+The following tail estimate assumes $Q^{(1)}_{j|k} \leqslant C(1+|\log (\ell_j/\ell_k)|)^q$, $q \geq 0$, with $C$ independent of the initial cutoff. At each finite cutoff $\eps$, the creation spacings are the members of $\{L^j\eps \, | \, 0 \leqslant j \leqslant k\}$ not exceeding the fixed $\ell_k=L^k\eps$. Comparisons between cutoffs are restricted to trajectories having this same matching spacing. For $\eps \leqslant \ell_* \leqslant \ell_k$, the spacing $\ell_{j_*}$ is the largest member not exceeding $\ell_*$. The finite sum over $\ell_j \leqslant \ell_*$ is bounded by extending its nonnegative majorant to all $\ell_{j_*}L^{-n}$, $n \geq 0$. With $A=1+|\log (\ell_{j_*}/\ell_k)| \geq 1$, the resulting bound is explicit. The tail is bounded by
+\begin{equs}[eq:w24]
+    \sum _{\ell_j \leqslant \ell_*}\ell_jQ^{(1)}_{j|k}
+    & \leqslant C\ell_{j_*}\sum _{n \geq 0}L^{-n}(A+n\log L)^q\\
+    & \leqslant C'\ell_*\bigl(1+|\log (\ell_*/\ell_k)|\bigr)^q
+        \longrightarrow 0\;.
+\end{equs}
+For the second inequality, bound $(A+n\log L)^q$ by $A^q(1+n\log L)^q$ and use convergence of the resulting geometric series. Since $\ell_*/L<\ell_{j_*} \leqslant \ell_*$, the two logarithms differ by at most $\log L$. A finite-cutoff tail is a partial sum of the same nonnegative infinite majorant, so the constant is uniform in the finer cutoff. Finally the factor $\ell_*$ dominates its logarithmic power as $\ell_*\downarrow0$.
+\end{proof}
+
+The common matching scale matters: when $k=j+1$, $\delta_{j|k}=L^{-1}$ is fixed. The argument then gives no shrinking physical-mesh factor for a successive one-shell correction. The propagation to fixed $\ell_k$ is therefore part of this sufficient route. The premise \eref{eq:Q}, including its inverse radii and physical normalisation, cannot be hidden in a scale-independent constant or replaced by the undressed bound \eref{eq:w20}.
+
+\section{A Local Inherited Reconstruction Bound}
+\label{sec:weighted}
+
+The following estimate controls the derivative of the nonlinear reconstruction map $\mathscr H$, not the full Wilson insertion composed with all earlier RG maps. Its input is the determining-bond carrier $\mathfrak B_k=\bigcup _{j=0}^k\Lambda_j$ of \cite[eq.~(3), and Proposition~9]{VAR}, with $\ell_j=L^j\eta$. The index $y' \in \Lambda_{j'}$ specifies a determining site at scale $j'$; the field components are $b_{\mathrm{ext},\nu}(y')$ for the bond directions present in that determining set. Missing direction components are set to zero, and $|b_{\mathrm{ext}}(y')|^2=\sum _{\nu=1}^4|b_{\mathrm{ext},\nu}(y')|^2$. In the application to $\mathbf H_{h+2}''$ in LFR2 (1.46), use the determining sequence of $U_{k,Z_{h+2}''}''$ constructed in \cite[eqs.~(1.14)--(1.20)]{LFR1}; freeze its exterior field as in LFR2 (1.46), and extend the tangent input by zero outside its stated perturbation support. For that tangent input define
+\begin{equ}
+    a_{\mathrm{ext}}=
+    \sup _{\substack{0 \leqslant j' \leqslant k\\y' \in \Lambda_{j'}}}
+                    \ell_{j'}^{-1}|b_{\mathrm{ext}}(y')|\;.
+\end{equ}
+The multiscale distance is \cite[eqs.~(2.45)--(2.46)]{PRT2}: for $y,y' \in \mathfrak B=\bigcup _j\Lambda_j$, take the infimum over paths from $y$ to $y'$ whose portion in $B^j(\Lambda_j)$ follows the lattice $\Lambda_j$, weighting the length of that portion by $\ell_j^{-1}$. It differs from measuring the whole path at a single lattice spacing. Impose the geometric restrictions of PRT2 Lemma~2.1, (2.59), with $\alpha=1/16$, and the numerical condition $\delta_0RM/16 \geqslant \log L$. The $R$ in this condition is PRT2's geometric separation parameter, not a Wilson representation.
+
+\begin{proof}[Weighted derivative estimate]
+In the application of the nonlinear kernel \eref{eq:VARkernel}, the input cell measure $\ell_{j'}^d$ cancels its inverse volume factor, so the input magnitude gives
+\begin{equ}
+    |D\mathscr H(B)[b_{\mathrm{ext}}](x)|
+    \leqslant Ca_{\mathrm{ext}}\sum _{j',y'}
+            L^{j'-j}e^{-\delta_0d(y,y')/8}\;,
+    \qquad x \in \Delta(y)\;,\quad y \in \Lambda_j\;.
+\end{equ}
+Split the exponential into two equal factors. From \cite[eq.~(2.60)]{PRT2}, with $n=|j'-j|$,
+\begin{equ}
+    L^{j'-j}e^{-\delta_0d(y,y')/16}
+    \leqslant L^n e^{-\delta_0RM\max (n-1,0)/16} \leqslant L\;.
+\end{equ}
+The sum of the other factor is at most $c_1(1/16)$ by \cite[Lemma~2.1, eq.~(2.61)]{PRT2}. Hence
+\begin{equ}[eq:w28]
+    |D\mathscr H(B)[b_{\mathrm{ext}}](x)|
+        \leqslant CLc_1(1/16)a_{\mathrm{ext}}\;.
+\end{equ}
+Provided $t b_{\mathrm{ext}}$ lies in the stated analytic domain for every $t \in [0,1]$, $\mathscr H(0)=0$ and integration of the derivative along that path give the same bound for $\mathscr H(b_{\mathrm{ext}})$. The factor $L$ comes from adjacent scale strata in the displayed sum; the estimate is uniform in the number of strata and supplies no additional factor decreasing with that number.
+\end{proof}
+
+For LFR2 (1.46), the input is $b_{\mathrm{ext}}=R(e^{ig_kB})\widetilde Q_{ \cdot }(\eta A_0)$, supported in $\Omega_{h+1}^{\prime\prime \sim 2} \cap Z_{h+2}''$; the field $V''$ outside $\Omega_{h+1}^{\prime\prime \sim 2}$ is retained as an argument of the map. Here $R(e^{ig_kB})$ denotes Ba{\l}aban's adjoint transport on Lie-algebra-valued fields, not the representation used to realise either Wilson character. At real $B$ that transport is unitary in the invariant inner product. The averaging operation $\widetilde Q_{ \cdot }$ is the one in \cite[eqs.~(159)--(164)]{CMP98}. Its bound gives $|b_{\mathrm{ext}}(y')| \leqslant C\ell_{j'}a_0$ provided $|A_0| \leqslant a_0$ at every link entering its block averages and their paths. The bound on $A_0$ is \cite[eq.~(1.87)]{LFR1}, extended to complex fields on \cite[p.~367]{LFR2}. For the output domain $Z''_{h+2}$, the application assumes $k-h \geq 3$ and fixed $M$ large enough for the two averaging blocks, their paths and their ancestor block to lie in $Z''_k$, where that bound holds; the domain definitions are \cite[eqs.~(1.10)--(1.12)]{LFR1}. Under these conditions \eref{eq:w28} is uniform in the reconstruction depth. The return gauges are controlled by the geometric product estimate \eref{eq:returngauge} about their compact reference field.
+
+This does not identify all older $T_h$ source variables or the composed maps LFR2 (1.61)--(1.65) with this operand. In particular a source pulled back through \cite[eq.~(1.81)]{LFR1} can depend on the external complex parameter through $V''=e^{ig_kB}V_0(q)$. The weight comparison in LFR2 (1.73) does not remove that dependence. Gauge invariance alone also does not give a compact bound on a complex source: the normalised $SU(2)$ character of $e^{t\sigma_3}$ is $\cosh t>1$ for real $t \ne 0$. These are the recorded limits of the transfer, not counterexamples to Ba{\l}aban's full constrained operation.
+
+\section{The Exact Closed-Source Recursion}
+\label{sec:sourcealgebra}
+
+Fix one of the characters $\chi$, an auxiliary irreducible unitary representation $R \colon G \to U(d)$ realising it, and $d=\dim R$. The coefficient space $E_\chi$ consists of functions $f_A \colon G \to \C$ of the form
+\begin{equ}[eq:Ecoefficient]
+    f_A(H)=\frac{1}{d}\tr(A R(H))\;,
+\end{equ}
+where $A \in \operatorname{End}(\C^d)$ depends on the physical fields and $H$ is an auxiliary complete closed holonomy at the same base. This is a space of complete contractions: under a physical real gauge change at the base, $A$ and $R(H)$ are conjugated simultaneously. A function with $A$ held fixed need not be a class function of $H$. For $f,g \in E_\chi$, normalised Haar measure defines
+\begin{equ}[eq:closedstar]
+    (f\star g)(H)=d^2\int_G f(K)g(HK^{-1})\,\dd K\;.
+\end{equ}
+Its unit is $\chi$, and $\tau(f)=f(1)$ closes the auxiliary loop. The two-loop construction uses the tensor product of the two coefficient spaces, with the same physical integration for both factors.
+
+\begin{proof}[The coefficient algebra]
+Schur orthogonality gives $f_A\star f_B=f_{AB}$. It also gives $\norm{f_A}_{L^2(G)}^2=d^{-3}\tr(AA^*)$. Left $\star$-multiplication by $f_A$ therefore has operator norm $\norm{A}_{\mathrm{op}}$, and real unitary conjugation preserves that norm. These are algebraic identities on complete functions. They supply neither a physical product law nor invariance of this norm under arbitrary complex conjugation.
+\end{proof}
+
+Let $C_h=\Hol_U\Gamma_h$ and $C_{h+1}=\Hol_V\Gamma_{h+1}$. The transport $P$ follows the coordinate-ordered fine path inside the common block from the old base to the new base in the common physical frame; when bases and frames coincide it is the identity. Its path and return frames otherwise remain part of the source. Define
+\begin{equs}[eq:relativeclosed]
+    Q&=P^{-1}C_hP C_{h+1}^{-1}\;,\\
+    (C_Pf)(H)&=f(PHP^{-1})\;,\\
+    b_h(s;H)&=\chi(H)+s(\chi(QH)-\chi(H))\;.
+\end{equs}
+With every vacuum choice in $T_h$ fixed, the unnormalised sourced densities obey
+\begin{equs}[eq:sourcerecursion]
+    N_0&=\rho_0\chi\;,\\
+    N_{h+1}&=T_h[(C_PN_h)\star b_h]\;,\\
+    \Psi_{h+1}&=\frac{N_{h+1}}{\rho_{h+1}}\;.
+\end{equs}
+The quotient is used only on nonzero-density outputs. These formulas initially represent the bare source. The specified factors $Z_1,Z_2$ are retained when the renormalised source is inserted; they are not supplied by the recursion.
+
+\begin{proof}[The physical evaluation]
+Before any integration, write the old complete coefficient as $f_A$. At the physical mark $s=1$ and $H=C_{h+1}$ the new integrand is
+\begin{equ}
+    \frac{1}{d}\tr\left(R(P)^{-1}A R(P)R(Q)R(C_{h+1})\right)
+    =\frac{1}{d}\tr(A R(C_h))\;.
+\end{equ}
+The identity holds in the whole trace and retains the base transport. Inserting it before the original $T_h$ integrations establishes the recursion. It does not commute a source through an older integration or remove any Jacobian, cutoff or gauge factor.
+\end{proof}
+
+For an $\mathbf R$ replacement, write $w$ for its old interior variables, $v$ for the replacement variables, and $y$ for the retained exterior data. The literal vacuum factors are $r(w,y)$ and $\sigma(v,y)$, with $J(y)=\int\sigma(v,y)\,\dd v$. The sourced replacement is
+\begin{equ}[eq:sourceR]
+    \frac{\sigma(v,y)}{J(y)}
+    \int r(w,y)S(w,y)\,\dd w\;.
+\end{equ}
+This is the pattern of \cite[eq.~(0.3)]{LFR1}, instantiated with the actual factors, domain sums and operations in \cite[eq.~(1.100)]{LFR1} and \cite[eqs.~(1.71)--(1.72)]{LFR2}. Integrating $v$ restores the old sourced integral. The source is evaluated on $w$, not on $v$. Preservation of this integral does not give a sourced activity estimate.
+
+If $I,J$ are disjoint old and fresh mark sets, coefficient extraction in \eref{eq:sourcerecursion} gives
+\begin{equ}[eq:markedrecursion]
+    N_{h+1,I\cup J}
+        =T_h[(C_PN_{h,I})\star b_{h,J}]\;.
+\end{equ}
+The old density denominator cancels only because the old numerator is restored inside the same operation. Products of conditional coefficients do not acquire a single-history representation from this identity.
+
+For completeness, let $\Psi=\chi+\sum_{I\ne \varnothing}a_Is_I$ be a finite marked polynomial with constant term $\chi$, and put $s_I=\prod_{i\in I}s_i$. Its ordinary formal $\star$-logarithm has coefficient, for a nonzero multi-index $\nu$,
+\begin{equ}[eq:formallog]
+    L_\nu=
+    \sum_{n=1}^{|\nu|}\frac{(-1)^{n+1}}{n}
+        \sum_{\substack{I_1,\ldots,I_n\ne \varnothing\\
+                         \sum_{r=1}^{n}\mathbf 1_{I_r}=\nu}}
+            a_{I_1}\star\cdots\star a_{I_n}\;.
+\end{equ}
+This is a finite coefficient formula. Repeated marks are retained: $L_{n e_i}=(-1)^{n+1}a_i^{\star n}/n$. For distinct marks,
+\begin{equ}
+    \tau L_{e_i+e_j}=\tau a_{ij}-\tau(a_i\star a_j)\;.
+\end{equ}
+Cyclicity of the trace proves the formal tracial additivity of this logarithm. No numerical logarithm of a Wilson trace is taken, and convergence at physical marks equal to one remains unproved.
+
+\section{The Finite-Cutoff Inherited Kernel}
+\label{sec:inheritedkernel}
+
+Fix a compatible blocking scale $k$. Enumerate the coarse edges of one oriented square as $c_1,\ldots,c_N$, cyclically. The original fine contour is the concatenation of the fine arcs $\gamma_a$ joining the endpoints of these edges. Put $V_a=V(c_a)$ and $F_a=\Hol_{U_0}\gamma_a$, where $U_0$ is the original fine field in the chronological integral. Inverse changes of variables recover it only while their original variables remain present; eliminated variables are handled by the conditional integrations below. For its specified nonzero factor $Z$, define
+\begin{equ}[eq:sourcepolynomial]
+    W(s)=\frac{1}{Zd}\tr
+        \prod_{a=1}^{N}\left(R(V_a)+s_a(R(F_a)-R(V_a))\right)\;.
+\end{equ}
+The open factors in this formula occur solely inside an exact complete trace. Let $W_J$ be the coefficient of $\prod_{a\in J}s_a$. The sum over all $J$ gives $Z^{-1}\chi(\Hol_{U_0}\Gamma_0)$; the empty coefficient is $Z^{-1}\chi(\Hol_V\Gamma_k)$. For two loops use the product of these polynomials under their common physical law.
+
+For $J=\{a_1<\cdots<a_m\}\ne \varnothing$, choose a fixed rooted coarse tree whose domain contains all marked arcs, and retain that tree in the support. Its root is $x$, and $T_a$ is the $V$-transport from $x$ to the initial endpoint of $c_a$. The relative loops
+\begin{equ}[eq:primitiveQ]
+    Q_a=T_aF_aV_a^{-1}T_a^{-1}\;
+\end{equ}
+are complete loops in the common endpoint frames of the gauge-equivariant blocking kernel. Let $O_r$ follow the coarse contour from the start of $c_{a_r}$ to the start of $c_{a_{r+1}}$, including $c_{a_r}$, with cyclic indices. The physical auxiliary loops and the kernel on $G^m$ are
+\begin{equs}[eq:multikernel]
+    H_r^{\mathrm{phys}}&=T_{a_r}O_rT_{a_{r+1}}^{-1}\;,\\
+    b_J(H_1,\ldots,H_m)&=
+        \frac{1}{Zd}\tr\prod_{r=1}^{m}
+            \left((R(Q_{a_r})-I)R(H_r)\right)\;.
+\end{equs}
+All these loops transform by conjugation at $x$. Thus the whole kernel is gauge invariant under simultaneous transformation of its physical and auxiliary data. For the empty mark set use $b_\varnothing(H_0)=Z^{-1}\chi(H_0)$, rather than the empty product in \eref{eq:multikernel}.
+
+\begin{proof}[The complete trace and its physical value]
+For the algebraic verification, set $E_a=F_aV_a^{-1}-1$. Then
+\begin{equ}
+    (Q_{a_r}-1)H_r^{\mathrm{phys}}
+        =T_{a_r}E_{a_r}O_rT_{a_{r+1}}^{-1}\;.
+\end{equ}
+The tree transports telescope in the complete cyclic trace. Since $O_r$ starts with $V_{a_r}$, its first factor becomes $F_{a_r}-V_{a_r}$; every unmarked edge remains $V_a$. This gives exactly $W_J$. For one mark the kernel is $Z^{-1}(\chi(Q_aH)-\chi(H))$. Every nonempty marked kernel vanishes when all its marked relative loops are the identity. No intermediate open factor is estimated.
+\end{proof}
+
+To define the inherited image, follow the original integration tree chronologically. At an already performed elimination, $z$ denotes precisely the eliminated group or Lie-field variables, $y$ the remaining variables and boundary data, and $\lambda$ its actual history, gauge and branch labels. Let $\dd\zeta_\lambda$ be the original product base measure on that integration carrier, and let $w_\lambda(z,y)$ be its full literal vacuum integrand. With $I(y)=\sum_\lambda\int w_\lambda(z,y)\,\dd\zeta_\lambda$, the source update is
+\begin{equ}[eq:inheritedlift]
+    b_{\mathrm{next}}(y;\mathbf H)
+        =\frac{\displaystyle\sum_\lambda\int
+                    w_\lambda(z,y)b_{\mathrm{previous}}(z,y;\mathbf H)
+                    \,\dd\zeta_\lambda}{I(y)}\;.
+\end{equ}
+It is used on nonzero-marginal outputs. At a replacement use \eref{eq:sourceR}, including its original normalisers. Postponed variables remain in $y$ and are not integrated twice. Denote the resulting retained-state kernel by $\bar b_J$. Its locality requires the earlier marked numerator expansions and every touching older denominator cluster as well as the source-map localisation. Retain all those labels in $\sigma$ and write their contributions as $\bar b_{J,\sigma}$. Without that labelled decomposition, $\bar b_J$ is one possibly global marker.
+
+At the current boundary bracket \cite[eq.~(1.103)]{LFR2}, freeze its complete outer data and let $L_i=\mathbf T'_k(Y_i)$ be the literal operation (1.71) on the retained component $Y_i$. Set $\nu_i=L_i/(L_i1)$. These are normalised integration functionals, with nonvanishing and finite variation supplied by \cite[eqs.~(1.73)--(1.75)]{LFR2}; on a complex domain they are not probabilities. Their product denotes the componentwise composition printed in (1.103). Write $\beta_a$ for its input boundary terms, distinct from the terms obtained after re-exponentiation, and $v_a=e^{\beta_a}-1$. The denominator and sourced numerator are
+\begin{equs}[eq:currentbracket]
+    D_c&=(\prod_i\nu_i)\left[\prod_a(1+v_a)\right]\;,\\
+    N_{J,\sigma}(\mathbf H)&=(\prod_i\nu_i)
+        \left[\bar b_{J,\sigma}(\mathbf H)\prod_a(1+v_a)\right]\;.
+\end{equs}
+The source and every interaction remain inside the older operations.
+
+Every support contains the whole $Y_i$ of each integration slot it reads, together with all reconstructed-field, tree, conversion and return-gauge footprints. This closure is required for the vacuum interactions too: two geometric supports reading the same $\nu_i$ cannot be factorised. Expand the products in \eref{eq:currentbracket} into selected families. For an unmarked connected family, apply the participating functionals to its product of $v_a$ and sum over families of full support $Z$; call the result $z(Z)$. Including the complete marker gives $H'_{J,\sigma}(Z_0;\mathbf H)$, summed over families whose union with that marker is one component $Z_0$. Include the empty selected family when the marker alone has that support.
+
+Let $\mathcal P$ be the vacuum polymer label set. For $\mathcal A \subset \mathcal P$, let $\mathcal Z_{\mathrm{vac}}(\mathcal A)$ be the hard-core partition sum of the $z(Z)$ restricted to $\mathcal A$, with empty family equal to one. Write $\operatorname{Comp}(Z_0)$ for its labels compatible with $Z_0$. Component factorisation gives
+\begin{equs}[eq:markednumerator]
+    N_{J,\sigma}(\mathbf H)&=\sum_{Z_0}
+        H'_{J,\sigma}(Z_0;\mathbf H)
+        \mathcal Z_{\mathrm{vac}}(\operatorname{Comp}(Z_0))\;,\\
+    D_c&=\mathcal Z_{\mathrm{vac}}(\mathcal P)\;.
+\end{equs}
+This is the insertion construction of \cite[eqs.~(3.44)--(3.45)]{CRE} within the actual inherited bracket.
+
+For an ordered vacuum cluster $\mathcal C=(Z_1,\ldots,Z_n)$, let $\mathscr G_n$ be the connected graphs on $\{1,\ldots,n\}$. Define its coefficient and full support by
+\begin{equs}[eq:vacuumcluster]
+    \phi(\mathcal C)&=\frac{1}{n!}
+        \left(\sum_{g\in \mathscr G_n}
+            \prod_{\{r,s\}\in E(g)}
+                (-\mathbf 1_{Z_r\not\sim Z_s})\right)
+        \prod_{r=1}^{n}z(Z_r)\;,\\
+    \supp\mathcal C&=\bigcup_{r=1}^{n}Z_r\;.
+\end{equs}
+Here $Z_r\not\sim Z_s$ means actual vacuum incompatibility, including self-incompatibility for repeated labels. For $n=1$ the one-vertex graph has weight one. Write $\mathcal C\leftrightarrow Z_0$ when some constituent is incompatible with $Z_0$. The completed kernel is
+\begin{equ}[eq:completedkernel]
+    f_{J,\sigma,X}(\mathbf H)
+        =\sum_{Z_0}H'_{J,\sigma}(Z_0;\mathbf H)
+          \sum_{q\geqslant 0}\frac{(-1)^q}{q!}
+          \sum_{\substack{\mathcal C_r\leftrightarrow Z_0\\
+                Z_0\cup\bigcup_{r=1}^{q}\supp\mathcal C_r=X}}
+              \prod_{r=1}^{q}\phi(\mathcal C_r)\;.
+\end{equ}
+The $q=0$ term is $H'_{J,\sigma}(X;\mathbf H)$. Vacuum cluster convergence, with finite integrability of the complete marker at fixed cutoff, gives
+\begin{equ}[eq:completedidentity]
+    \frac{N_{J,\sigma}(\mathbf H)}{D_c}
+        =\sum_X f_{J,\sigma,X}(\mathbf H)\;.
+\end{equ}
+The constants may depend on the cutoff. This construction does not establish a uniform source norm or complex source domain.
+
+\begin{proof}[Denominator completion and gauge invariance]
+Divide \eref{eq:markednumerator} by the unchanged vacuum partition sum. The logarithm of its restricted-to-full ratio is the negative sum of vacuum clusters touching $Z_0$, as in \cite[eqs.~(3.45)--(3.47)]{CRE}. Expanding that exponential yields \eref{eq:completedkernel}; its internal cluster symmetry factors and repeated labels remain. A cluster touching several marked pieces is included jointly, not copied into separate ratios.
+
+For a real, domain-preserving gauge change, transform all physical fields, backgrounds, adjoint data, auxiliary holonomies and return frames together. Use the compensating changes of old boundary fields and relative variables described after \cite[eq.~(1.87)]{LFR1}, carried through its (1.100) into LFR2 (1.71). Haar and Lie measures, constraints, cutoffs and Jacobian/Faddeev--Popov factors undergo that same change. Any common source-independent slice factor cancels in $\nu_i$ and in the earlier quotients \eref{eq:inheritedlift}. The whole source and each boundary activity are invariant; their spatial labels do not change. The completed coefficients are therefore invariant on complete chart data. A change of admissible chart requires its actual transition, rather than holding old frames fixed.
+\end{proof}
+
+For a genuine single straight or corner germ, let $I$ be the contour interval from the start of the first marked edge to the end of the last. Enlarge the support to $X_+$ by every edge of $I$ and the tree path to its last endpoint, whose transport is $T_{\mathrm{end}}$. For $r<m$, $H_r^{\mathrm{phys}}$ now reads only $X_+$. Put
+\begin{equs}[eq:localclosure]
+    L_{\mathrm{loc}}&=T_{a_m}V(c_{a_m})T_{\mathrm{end}}^{-1}\;,\\
+    H_{\mathrm{ext}}^{\mathrm{phys}}&=
+        T_{\mathrm{end}}V(\Gamma_k\setminus I)T_{a_1}^{-1}\;.
+\end{equs}
+The outside arc has the inherited orientation; $H_m^{\mathrm{phys}}=L_{\mathrm{loc}}H_{\mathrm{ext}}^{\mathrm{phys}}$. A single-holonomy kernel is explicitly
+\begin{equ}[eq:singlegermkernel]
+    k_{J,\sigma,X_+}(V;H)=
+        f_{J,\sigma,X}(V;H_1^{\mathrm{phys}},\ldots,
+            H_{m-1}^{\mathrm{phys}},L_{\mathrm{loc}}H)\;.
+\end{equ}
+The construction is linear in each $R(H_r)$ because its physical weights do not contain the auxiliary variables. Hence \eref{eq:singlegermkernel} belongs to $E_\chi$. It retains every older decorated support and internal contour path. At $H=H_{\mathrm{ext}}^{\mathrm{phys}}$ it reproduces the marked contribution. Mixed-loop or nonlocal contacts keep their multi-holonomy carrier unless all their paths are included; no short-support estimate follows from this regrouping.
+
+Finally, $D_c$ is the conditional boundary denominator, not $D_h$. In the physical numerator replace its vacuum bracket by $N_{J,\sigma}(\mathbf H^{\mathrm{phys}})$ and sum the source mark sets $J$ and inherited labels $\sigma$, using the complete joint marker for the pair. Retain $\prod_i(L_i1)$ and every outer factor of \cite[eqs.~(1.72), (1.104)]{LFR2}, then perform the original history sums and remaining integrations. The final division is by the same $D_h$ as in \eref{eq:WC1}. This is an exact finite-cutoff construction. Its analytic bounds, physical scalar matching and higher marked-family induction remain open.
+
+\section{Real Collars and Overlapping Reconstructions}
+\label{sec:collars}
+
+The results here concern real fields at fixed shared current field $V_k$ and fixed pair geometry. Rescale the current block side to one, put $\eta=L^{-k}$ and $a_j=L^j\eta$, and retain both replicas' original determining sets and prescribed rough complements. Cover the current large-field regions and their required collars by compatible $M_1$-cubes. Around a component use the annulus between cube dilations of radii $R-W$ and $R+W$. Its trimmed interior must contain the whole added joined collar, every averaging and filling path and its frame envelope, outside both rough regions. The half-width exceeds $4M_1$ plus those envelopes and a grid allowance. Sectors filling the torus remain unsplit.
+
+If $\delta_r$ bounds $\eta^{-2}\norm{1-U_r(\partial p)}$ on that envelope, \cite[eqs.~(53)--(54)]{CMP98} and the closed relative averaging loops of \cite[eq.~(0.4)]{RG1} give, for a native $j$-bond $c$ with straight fine path $[c]$,
+\begin{equ}[eq:C3average]
+    \norm{M^j(U_r)(c)U_r([c])^{-1}-1}
+        \leqslant C\delta_r\sum_{s=0}^{j-1}
+                \frac{a_j}{a_{s+1}}a_{s+1}^2
+        \leqslant C\delta_r a_j^2\;.
+\end{equ}
+The matrix inside the norm is a closed relative holonomy.
+
+\begin{proof}[Common real collar data]
+For aligned nested partitions use $Q=Q_k^{s*}V_k$ as determining input. All relative averaging loops in the lift are identities, so $M^jQ=Q_{k-j}^{s*}V_k$. Its native and mixed determining plaquettes are identities or coarse $V_k$ plaquettes up to orientation and conjugation. CMP98 Proposition~2 applied to the actual replica backgrounds gives the native input bound $\varepsilon_{1,*}\leqslant 2\max_r\delta_r$. \cite[Theorem~1]{VAR}, on the annular joined domain of \cite[eqs.~(2.13)--(2.16)]{CRE}, supplies a common minimum $U_*$ with $M^kU_*=V_k$ and curvature at most $\delta_*\eta^2$, where $\delta_*=B_3\varepsilon_{1,*}$, on the trimmed annulus. The unsmoothed lift is not used as a fine regular field.
+
+Take the same block paths for $U_r,U_*$. Their axial frames $g_r,g_*$ equal one at current centres. Put $h_r=g_*^{-1}g_r$ on the required blocks and the identity elsewhere. Relative ribbon fillings and \eref{eq:C3average} bound the discrepancy of each added native collar datum by $C(\delta_r+\delta_*)$. For its level-$j$ label define
+\begin{equ}
+    \beta_r(c)=-i\log\left(M^j(U_r^{h_r})(c)M^j(U_*)(c)^{-1}\right)\;.
+\end{equ}
+The principal logarithm exists on the common small chart. At level $k$ it is zero; the finer averages remain their actual values. This frame change fixes the original determining vertices. Let $h_d$ bound the native datum discrepancy and $\varepsilon_{\mathrm{nat}}$ the original mixed-plaquette input bound. A one-step averaging Lipschitz estimate permits $\varepsilon_1=\varepsilon_{\mathrm{nat}}+4\max(1,C_{L,4})h_d$. Choose $\varepsilon_1\leqslant a_1$ and a regularity allowance $\varepsilon_0$ with $B_3\varepsilon_1\leqslant \varepsilon_0\leqslant a_0$, where $a_0,a_1$ are VAR's existence thresholds. These inequalities hold for sufficiently small original coupling on the stated collar envelopes.
+
+Replace only these added data by the common data, keeping the original interior and raw complement, and call the resulting replica-specific reference $\bar U_r$. The fixed-set expansion is
+\begin{equ}[eq:C3return]
+    U_r=\left((e^{i\eta\mathscr H_r(\beta_r)}\bar U_r)
+                ^{u_r(\beta_r)^{-1}}\right)^{h_r^{-1}}\;.
+\end{equ}
+Both return factors are retained. The reference minima share collar data; equality with $U_*$ throughout the annulus is not asserted. The original physical integrations are unchanged.
+\end{proof}
+
+Enclose the postponed regions in cores $C_i$ and choose overlapping interior and exterior variational domains. The complete determining, conversion and framing envelopes at their two interfaces have separation $w$ and lie in the current stratum of the minimum making each reading. Let $X_+,X_-$ be the finite direct sums of these native-boundary Lie-algebra data with supremum norm. The map $F_i^{\xi_i}$ solves the interior problem with its actual history $\xi_i$ and imposed outer collar data, then reads the inner data; $F_0$ solves the exterior problem with the common $V_k$ and imposed inner collar data, then reads the outer data. On target current blocks the exact reading frame is $\mathfrak F_*(U)=(U^{g_U})^{g_*^{-1}}$, using the fixed block paths. These blocks are disjoint from the imposed input collars, so alignment changes no input datum. All return frames are retained. Their interfaces satisfy
+\begin{equ}[eq:C4fixedpoint]
+    y_i=F_i^{\xi_i}(z_i)\;,
+    \qquad z=F_0(y)\;.
+\end{equ}
+
+\begin{proposition}[Real interface contraction]\label{prop:C4contraction}
+On these common admissible real charts, the derivative norms are bounded by $q(w)=Ce^{-cw}$. If $q<1/4$ and an admissible self-map ball contains the actual interfaces, the coupled fixed point is unique and equals the actual interface pair. The constants are uniform in finer cutoff, number of boundary labels and number of cores under the stated geometry hypotheses.
+\end{proposition}
+\begin{proof}
+Convert the input logarithms to the VAR determining data, including the one-block endpoint average and inverse in \cite[eqs.~(97), (105)--(106)]{CMP98}. The conversion has a fixed-$L$ bounded row sum. In \cite[eq.~(190)]{VAR}, the native integration measure cancels the inverse input-volume factor. Reserve half the exponential for separation $w$, and sum the remainder by \cite[eqs.~(2.59)--(2.61)]{PRT2}. Frame restoration costs the sum of native lengths, at most $(1-L^{-1})^{-1}$, rather than the number of scales. Final averages and logarithms are Lipschitz on the fixed chart, giving $\norm{DF_i},\norm{DF_0}\leqslant q$.
+
+If the actual interfaces have norm at most $r_0$, comparison with them bounds the maps on the radius-$r$ ball by $r_0+q(r+r_0)$. Take $r>r_0(1+q)/(1-q)$ below the chart threshold. The composite has contraction constant $q^2$. Exact CRE restrictions already supply an actual fixed point, which uniqueness identifies.
+
+For one admissible history change, integrate the actual interface Jacobians and call them $L_0,L_{\mathrm{loc}}$. Its direct local difference $f$ is supported on that core. The signed response is
+\begin{equ}[eq:C4response]
+    \Delta z=\sum_{n\geqslant 0}(L_0L_{\mathrm{loc}})^nL_0f\;.
+\end{equ}
+Its terms have norm at most $q^{2n+1}\norm f$. Evaluated Jacobians can still depend on other histories; the series alone is not a compact activity-support bound.
+\end{proof}
+
+Real reconstruction parameters $\theta_i\in[0,1]$, introduced by $y_i=\theta_iF_i^{\xi_i}(z_i)$, preserve contraction. Exterior factors lose $\xi_i$ at $\theta_i=0$. For factors crossing the domains, choose disjoint transition bands whose complete joined determining/path envelopes lie in the current regular strata of both minima and the common joined collar set. Write the two same-set local fields relative to $U_*$ as $U_a=(e^{i\eta H_a}U_*)^{u_a^{-1}}$. Take a fixed real cutoff $\omega$, constant on the matching bands, with uniformly bounded first, second and required H\"older differences. The virtual connection is
+\begin{equs}[eq:C4virtual]
+    H_\omega&=\omega H_i+(1-\omega)H_0\;,\\
+    g_\omega&=\exp\left(\omega\log u_i^{-1}+(1-\omega)\log u_0^{-1}\right)\;,\\
+    U_\theta&=(e^{i\eta H_\omega}U_*)^{g_\omega}\;.
+\end{equs}
+The constant bands ensure agreement with the local fields. First and special second difference product rules preserve real curvature and force bounds without inverse-fine-spacing losses. This connection generally is neither a minimum nor a physical-measure interpolation. At $\theta=1$ uniqueness gives the physical value for background-only closed factors up to the full gauge transformation. Separately frozen native operands require their simultaneous transformation and interface replay.
+
+For a complete closed current-background factor $F$, let $R_F$ include every interior piece and interpolation collar it reads; a collar may retain $\xi_i$ even at $\theta_i=0$. Anchored differentiation gives
+\begin{equ}[eq:C4historysupport]
+    F(U_{\mathrm{actual}})=\sum_J
+        \int_{[0,1]^J}\partial_JF(U_{\theta_J,0_{J^c}})
+            \,\prod_{i\in J}\dd\theta_i\;.
+\end{equ}
+Each summand depends only on $\xi_{R_F\cup J}$, common output and fixed pair geometry. Pure exterior factors have empty $R_F$. Geometry can encode histories, so this is fixed-geometry support information, not a merger or unsplit-sector estimate.
+
+\subsection{The Real Inherited-Domain Bridge}
+\label{sec:C4domain}
+
+For the literal joined $p$-problem put $U_0=U_\theta$ and take coherent determining data $M^\cdot U_0$. The noncritical equations \cite[eqs.~(111)--(112)]{VAR} retain the actual derived current:
+\begin{equ}[eq:C4forced]
+    A_1=-\mathfrak GJ(U_0)-\mathfrak G\mathcal V'(A_1)\;,
+    \qquad A=A_1-H D(A_1)\;.
+\end{equ}
+These operators and the remainder $\mathcal V'$ belong to that same variational problem, whose mesh is $\eta_p$. Its exact reconstructed connection is $U_{\min}=(e^{i\eta_p A}U_0)^u$, with the full return gauge $u$. The hypotheses include VAR's reference condition (14), smallness thresholds and joined geometry. For native blocks $\Delta(y)$ with side lengths $a_y$, use the distance $d(y,z)$ of \cite[eq.~(2.46)]{PRT2}, put $f_z=\sup_{\Delta(z)}|J(U_0)|$, and take a decay rate $b$ below the kernel rates. Define
+\begin{equ}[eq:C4envelope]
+    s_y=\sum_z e^{-b d(y,z)}a_z^3f_z\;,
+    \qquad\norm A_s=\sup_y
+        \frac{a_y\sup_{\Delta(y)}|A|+a_y^2\sup_{\Delta(y)}|\nabla A|}{s_y}\;.
+\end{equ}
+Add a positive regulator to a zero envelope and pass to zero after the uniform estimates; zero force gives the zero solution. Differences use the corresponding enlarged native envelopes.
+
+\begin{proof}[Weighted force and all-scale transfer]
+\cite[Theorem~3.13]{PBG} and the native row bounds give $\norm{\mathfrak GJ}_s\leqslant C$. Use a smooth bounded-overlap native partition with first differences bounded by $C/a_z$. The Hessian bound VAR (189), $s_z\leqslant e^{bd(y,z)}s_y$, and native row summation give
+\begin{equ}
+    \norm{\mathfrak G\mathcal V''(A)\delta A}_s
+        \leqslant C\varepsilon_4\norm{\delta A}_s\;.
+\end{equ}
+Choose $C\varepsilon_4<1$. Fixed-point iteration bounds $\norm{A_1}_s$ by $C/(1-C\varepsilon_4)$. For second-order estimates use VAR (133)--(140), PBG (3.137)'s local second-order remainder bound, and the actual averaging correction obtained from VAR (73) with its fine measure and native weights. This does not assume the Laplacian bound for $\mathfrak G$ excluded in PBG Theorem~3.13. The result is
+\begin{equ}[eq:C4second]
+    a_y\sup|A|+a_y^2\sup|\nabla A|
+        +a_y^3\sup|D^*DA|+a_y^3\sup|\Delta_{U_0}A|
+        \leqslant Cs_y\;.
+\end{equ}
+
+Actual same-history anchors on layer $m$ have the $U_m$ bounds by the paragraph following CRE (3.41) and the original cutoffs. For the relative variational field $H$ caused by the changed outer collar data, every path crosses the unchanged current belt and intervening layers. VAR (190), with its actual input conversion and native row sum, gives
+\begin{equs}[eq:C4anchor]
+    a_m\sup|H|+a_m^2\sup|\nabla H|
+        &{}+a_m^3\sup(|D^*DH|+|\Delta H|)\\
+        &\leqslant C\varepsilon_k e^{-cw-cRM\max(k-m-C_L,0)}\;.
+\end{equs}
+The suprema use the complete enlarged regular layer envelopes. CRE (2.8) makes this at most $C\varepsilon_m$ uniformly in depth. RG1 (3.11) transfers it to the derived force with the actual anchor force retained; VAR (9) supplies the local potential bound. Transition bands have $m=k$ and the cutoff product rules preserve these estimates. Prescribed rough complements are unchanged.
+
+Let $m_y$ be the smallest original layer meeting the enlarged block at $y$. The joined geometry refines its original scale, so $a_y\leqslant C_La_{m_y}$. Reserve separate portions of decay for the native-length, original-layer and polynomial coupling ratios. Every full original shell costs at least $c_LRM$ in the distance (2.46); the remaining row sum yields
+\begin{equ}
+    s_y\leqslant C\varepsilon_{m_y}(a_y/a_{m_y})^3\;.
+\end{equ}
+Rough-neighbour plaquettes contributing to a free boundary force are retained. The fixed-bond constraint removes only its excluded force component.
+
+Rescale the $p$-problem by $a_p=L^p\eta$. Plaquette matrices are unchanged and its derived current is multiplied by $a_p^3$. On every original regular layer $m$ and its required boundary envelope,
+\begin{equs}[eq:C4domain]
+    |\partial U_{p,Y_4}-1|&\leqslant
+        C_*\varepsilon_m L^{-2p}(L^mL^{-p})^{-2}\;,\\
+    |J_{p,Y_4}|&\leqslant C_*\varepsilon_m(L^mL^{-p})^{-3}\;.
+\end{equs}
+These match CRE (2.35), (2.37), with the latter's extra allowance $L^{m-\min(p,m)}\geqslant 1$. In the original logarithmic conventions choose $q_0\geqslant p_0$ and $C_*A_0(\log\gamma^{-2})^{p_0-q_0}<(1-\beta)C_0/2$. This pays the margins uniformly; local potentials obey the same native bounds and the real field has zero complex-perturbation charge.
+\end{proof}
+This checks the real reference-domain bridge on the constructed geometry, superseding the earlier pending real application after the weighted solver. It gives no complex inherited-source norm and assigns no regularity to an entire rough core.
+
+\subsection{Exact Finite-History Source Localisation}
+\label{sec:historylocalisation}
+
+Fix a finite complete history $\omega$ and all older integration variables, including reopened regular ones. Let $A_{\omega,s}$ be the matrix coefficient obtained by the literal raw coefficient extraction in \eref{eq:markedrecursion} before those older integrations, retaining its prescribed renormalisation scalars. The one-old/one-fresh operand is explicitly
+\begin{equ}[eq:C5source]
+    S_\omega(s;H)=\frac{1}{d}\tr\left(
+        R(P_s)^{-1}A_{\omega,s}R(P_s)(R(Q_s)-I)R(H)\right)\;.
+\end{equ}
+All its operands follow the actual chronological maps and common frames of \eref{eq:relativeclosed}. Multiply each reconstruction random-walk term by the real parameters $s\in[0,1]^\Sigma$ of all cubes in its enlarged read-out, including conversions and return paths; repeated occurrences share one parameter. Use RG2 (1.3)--(1.10). Domain closure is applied chronologically using the statement after LFR1 (1.65)--(1.69) and LFR2 (1.61)--(1.65), first with independently permitted parameters and then on the shared diagonal. Off the physical endpoint retain RG1 (3.13)'s extended current, not the derived current of the weakened field. For the pair use the tensor product of the two complete coefficient spaces under the same physical law.
+
+For the stopped branch take one permitted smooth cutoff $\vartheta_j$ from CRE (1.22) and use its conjugation average with normalised Haar measure throughout the map, inverse, Jacobian and weights:
+\begin{equ}[eq:C5cutoff]
+    \vartheta_j^\sharp(A)=\int_G\vartheta_j(vAv^{-1})\,\dd v\;.
+\end{equ}
+Its prescribed zero/one regions are conjugation invariant. Averaging preserves those values, range and derivative bounds and selects a permitted exact representation, without averaging source or physical weight separately. For the finite scale-labelled weakening set $\Sigma$ and the complete source \eref{eq:C5source}, suppress $\omega$ in the following endpoint identities:
+\begin{equs}[eq:C5endpoints]
+    S_\sigma(H)&=\sum_{\tau\subset \sigma}(-1)^{|\sigma|-|\tau|}
+        S(1_\tau,0_{\Sigma\setminus\tau};H)\;,\\
+    S(1;H)&=\sum_{\sigma\subset \Sigma}S_\sigma(H)\;.
+\end{equs}
+\begin{proof}[Endpoint localisation]
+The second identity is finite inclusion--exclusion. With other operator parameters zero, the nonlinear equations separate as established after RG2 (1.9). A component disconnected from the complete source root cannot change its value; its signed difference vanishes. Chronological substitution preserves this property through the accepted and stopped maps. Surviving read-outs retain every source path, base transport, conversion and return-gauge footprint, and each difference is a complete gauge-invariant contraction. The real collar decomposition \eref{eq:C4historysupport} assigns its root-history dependence. Every older variable then receives its original integration. This proves finite-history support information, not a rooted norm or ultraviolet summation bound.
+\end{proof}
+
+\section{Signed Cancellation on the Selected Expansion Carrier}
+\label{sec:signedexchange}
+
+Keep one old and one fresh complete kernel $A,B$ separate. At fixed output $V$, let $\nu_V$ be their full unexpanded positive inherited integration, with mass $D(V)$, and $D_h=\int D(V)\,\dd V$. On outputs with $D(V)>0$, their centred coefficient is
+\begin{equ}[eq:C1covariance]
+    q(V)=\tau\left(\frac{\nu_V[A\star B]}{D(V)}
+        -\frac{\nu_V[A]}{D(V)}\star\frac{\nu_V[B]}{D(V)}\right)\;.
+\end{equ}
+Its paired numerator uses $\tau((A_1-A_2)\star(B_1-B_2))$ and prefactor $1/(2D(V)^2)$.
+
+\begin{proof}[Selected-component exchange]
+Localise the two full read-outs by Section~\ref{sec:historylocalisation}. Insert them in the literal regular expansion RG2 (2.1)--(2.10), enlarging the seed by all marker variables before cutoff expansion. Keep the conditional denominator, Schur and boundary exponentials of (2.5); localise the covariance, square root and quadratic operator together in (2.7)--(2.8), with the marker in the real fluctuation integral. Retain CRE (3.45)'s touching normaliser clusters and its (2.19)--(2.22) whole-core postponed operations.
+
+The selected graph includes selected interactions, source read-outs, reconstruction/covariance footprints and normaliser decorations, without adding every unselected interaction as an edge. Use unordered families, or the equivalent joint two-colour expansion with total object count $N$ and weight $1/N!$, retaining each object's internal symmetry factor. In a component meeting the fresh root but not the old root, exchange its entire replica payload: native variables, complete histories, branch/tree labels, selected parameters, conditional densities and normalisers. The graph and counting weights are unchanged. Shared output and pair geometry are fixed. A variable transport joining the roots makes a component ineligible, rather than being dropped.
+
+This involution preserves the product reference/Haar carrier and paired weights. The old kernel is unchanged, the fresh kernels exchange, and the complete centred trace changes sign. Thus the corresponding integral is zero. The global $D(V)^2$ and $D_h$ remain.
+\end{proof}
+For the literal selected paired integrals $I_{\mathcal F}(V)$, including all weights and factors, only old/fresh-linked families remain:
+\begin{equ}[eq:C6linked]
+    \frac{1}{D_h}\int q(V)D(V)\,\dd V
+        =\frac{1}{2D_h}\int
+            \frac{\displaystyle\sum_{\substack{\mathcal F\\A\leftrightarrow B}}
+                         I_{\mathcal F}(V)}{D(V)}\,\dd V\;.
+\end{equ}
+The earlier $1/4$ weight-response identity belongs to a different residual. This is a checked finite-cutoff cancellation at the one-old/one-fresh caller. Higher marked-family closure and a quantitative bound on surviving families remain open.
+
+\section{Flat Components and the Proposed Polymer Induction}
+\label{sec:flatwebs}
+
+The earlier construction already groups interleaved contour contacts. At a complete-flat background with identity unmarked transports, the unrenormalised marked source is multi-affine and its coefficient for $S$ is
+\begin{equ}[eq:flatword]
+    J_\Gamma(S)=\frac{1}{d}\tr
+        \prod_{c\in S}^{\Gamma\text{-order}}(R(Q_c)-I)\;.
+\end{equ}
+Here $Q_c$ is the corresponding complete relative loop of \eref{eq:primitiveQ} in the flat common frame; identities on unmarked edges remain in the full cyclic word. Every coefficient is a complete gauge-invariant contraction. The prescribed inverse $Z$ remains in the physical construction \eref{eq:sourcepolynomial}; this bare archived coefficient is not silently identified with its renormalised counterpart.
+
+After the actual component localisation, let $Z_\alpha$ be its decoupled physical components. Give each component the shortest cyclic interval containing its source contacts, with ties resolved by the fixed orientation and base. Merge components whose intervals overlap or interlace. Call each resulting group a web. Distinct web intervals are consecutive and disjoint in the cyclic word.
+
+\begin{proposition}[Flat whole-web factorisation]\label{prop:flatwebs}
+Assume a complete-flat reference, no fixed nonflat colour datum, and the actual product component integration measure, invariant under residual global conjugation. Integrating every variable of each whole web gives exact scalar factorisation of the normalised trace across distinct web intervals.
+\end{proposition}
+\begin{proof}
+Keep each entire interval word inside the full trace while performing its integrations. In that algebraic identity write its integrated endomorphism as $M_W$. Residual conjugation gives $R(g)M_WR(g)^{-1}=M_W$. Irreducibility implies $M_W=m_WI$. Only then close the word:
+\begin{equ}[eq:webfactor]
+    \frac{1}{d}\tr\prod_W M_W=\prod_W m_W\;.
+\end{equ}
+No intermediate open word is assigned a norm or activity. The merger is essential: contacts at positions $1,3$ and $2,4$ cannot be integrated as two independent consecutive words. Fixed nonflat retained data or nontrivial exterior holonomies invalidate the stated scalarisation premise and remain in the complete kernel.
+\end{proof}
+
+For a web contained in one straight side or at one corner, its cyclic interval length is bounded by a fixed constant times the sum of its physical-component joining-tree lengths. On a straight side this is the interval span bound; across a right angle the two ray lengths are comparable to the joining tree. Overlap chains add those spans. The archived remote-span statement is for one fixed simple polygon in a finite volume: $d_\Gamma$ is its minimum separation of nonincident sides and from the finite-volume boundary. At mesh $a_k$ below that separation, a web meeting other features has total span at least $c_\Gamma d_\Gamma/a_k$. A torus/pair application must match its actual feature geometry separately. These are geometric statements, not marked-activity bounds, and supply no decay from artificial support enlargement.
+
+The archive's corrected source-supported classification is a proposal awaiting recheck. A fresh web whose whole enlarged domain lies in $\Lambda_{k+1}$ is regular; a fresh web meeting both $\Lambda_{k+1}$ and its complement is a fresh boundary web; a support contained in $\Omega_{k+1}\cap\Lambda_{k+1}^c$ is outer/inherited and is not produced by the fresh regular integration. This prevents applying the single-current-stratum bound to either nonregular channel and estimates neither channel by itself.
+
+The proposed induction following this construction is already recorded. It starts with scalar complete-web activities $K_a^\bullet(X_a,S_a)$, disjoint nonempty source-root sets $S_a$, and vacuum activities. For a connected compatibility component $C$, its root set is the disjoint union
+\begin{equ}[eq:rootunion]
+    S(C)=\bigsqcup_{a\in C\cap\mathcal A}S_a\;.
+\end{equ}
+The component with $S(C)=\varnothing$ is a vacuum component; otherwise all its factors are multiplied and integrated together as one marked activity. For a compatible family $\mathcal M$, the vacuum dressing is the joint ratio
+\begin{equ}[eq:webvacuumratio]
+    \frac{D_0(U(\mathcal M)^c)}{D_0}
+        =\exp(E_0(U(\mathcal M)^c)-E_0)\;,
+\end{equ}
+where $U(\mathcal M)$ is the union of their complete supports and $D_0$ is the conditional vacuum partition sum of that construction. Clusters touching several marked components merge them rather than dressing each separately.
+
+The proposed chronological iteration retains a pair of unnormalised vacuum and sourced densities. If $\omega$ is a history prefix and $e$ one permitted extension in the original CRE order, write
+\begin{equs}[eq:historypair]
+    w_{\omega e}&=T_e[w_\omega]\;,\\
+    n_{\omega e}&=T_e[n_\omega]\;,\\
+    \rho_{j+1}&=\sum_{\omega,e}w_{\omega e}\;,
+    \qquad\rho_{j+1}^{\mathrm{s}}=\sum_{\omega,e}n_{\omega e}\;.
+\end{equs}
+All integration masses, replacement factors and outer interactions stay in the pair. Its final normalisation uses the common physical denominator. The source identity \eref{eq:sourcerecursion} is checked; a normally convergent all-prefix polymer representation with the required marked norm is not. The archived component update, exactly-once root charging, reserve propagation, returned-channel and restriction-consistency estimates are proposals or conditional recurrences. Their existence in the record is not certification of those estimates.
+
+\subsection{A Checked Joint Scalar-Partition Bound}
+\label{sec:scalarpartition}
+
+For an already constructed finite completed source gas, split only eligible complete-flat straight/corner kernels as $a_X=c_X\chi+r_X$. Here eligibility requires flatness and conjugation invariance of the entire frozen/read-out germ, not merely the current background. Retain the actual source--source incompatibility. For a compatible ordered remainder family $\mathcal R$, the scalar factor is jointly
+\begin{equ}[eq:jointpressure]
+    \frac{Z_c(\mathcal P\setminus I(\mathcal R))}{Z_c(\mathcal P)}\;,
+\end{equ}
+where $I(\mathcal R)$ contains scalar polymers incompatible with at least one member of $\mathcal R$. This multiplies the complete ordered remainder contraction. It is not a product of one-remainder ratios: one scalar polymer of weight $c$ touching two compatible remainders gives $(1+c)^{-1}$, not $(1+c)^{-2}$.
+
+Choose positive weights $b_X$ and set $u_X=|c_X|e^{b_X}$. Suppose $u_X\leqslant 1/2$ and $\sum_{Y\not\sim X}u_Y\leqslant b_X/2$. For finite $F\subset A$ the scalar partition sum satisfies
+\begin{equ}[eq:scalardeletion]
+    \left|\frac{Z_c(A\setminus F)}{Z_c(A)}\right|
+        \leqslant \exp\left(2\sum_{X\in F}u_X\right)\;.
+\end{equ}
+\begin{proof}
+Induct on the number of labels using
+\begin{equ}
+    Z_c(A)=Z_c(A\setminus\{X\})
+        +c_XZ_c(A\setminus(\{X\}\cup N(X)))\;.
+\end{equ}
+The deletion estimate for the smaller set bounds the second-to-first term ratio by $|c_X|\exp(2\sum_{Y\in N(X)}u_Y)\leqslant u_X$. Thus the partition sum is nonzero. Since $|(1+z)^{-1}|\leqslant e^{2|z|}$ for $|z|\leqslant 1/2$, deleting the labels of $F$ successively proves \eref{eq:scalardeletion}.
+\end{proof}
+Given a proved rooted scalar load $\varepsilon$, let $h(X)$ be the actual contour-contact hull and $n$ its contact count. The joint ratio obeys
+\begin{equ}
+    \left|\frac{Z_c(\mathcal P\setminus I(\mathcal R))}{Z_c(\mathcal P)}\right|
+        \leqslant \exp\left(C\varepsilon\sum_{X\in \mathcal R}n(h(X))\right)\;.
+\end{equ}
+Straight/corner hull spans are paid by the constituent trees; overlapping or nested hulls are merged. This is a checked conditional partition estimate. It neither constructs the needed source gas nor bounds its inherited activities.
+
+\subsection{The Finite Geometric Extraction}
+\label{sec:geometricextraction}
+
+Suppose genuinely germ-local scalar coefficients $q_X(C)$ have been constructed with the full decorated support $X$, including denominator clusters. For their oriented contour-bond occurrences set $n_X(C)=|B(C)\cap X|>0$. Their allocation is
+\begin{equ}
+    u_C(b)=\sum_{X\ni b}\frac{q_X(C)}{n_X(C)}\;.
+\end{equ}
+Choose a straight reference and a two-ray corner reference with the same local contour and partition data. Let $B_{90}$ be the oriented bond occurrences on its two incident rays. If the admitted covariance identifies all relevant bond types, put $e=u_{\mathrm{straight}}(b_0)$ and
+\begin{equ}[eq:geometriccorner]
+    c=\sum_{b\in B_{90}}
+                (u_{\mathrm{corner}}(b)-e)\;.
+\end{equ}
+The sum is finite at finite localisation range. Reversing the finite sums proves $\sum_Xq_X(C)=N(C)e+4c$ for a square with disjoint corner neighbourhoods and no other-feature contacts. Both incident rays are subtracted. Long supports, mixed-loop terms and field-dependent differences remain remainders.
+
+For the $R$ terms, \cite[eq.~(2.32)]{CRE} and \cite[eq.~(1.100)]{LFR2} provide only partition-preserving covariance. Until the contour/partition matching is proved, retain the oriented periodic bond and corner types and sum their actual coefficients; a universal $e$ cannot be inferred at an arbitrary phase. The finite projector is checked on its stipulated coefficient carrier. Construction and convergence of the physical coefficients, their reference limits and matching to \eref{eq:Z} remain open.
+
+\subsection{Raw Source Growth and the Same-Birth Reserve}
+
+For a complex field $U^c(e)=e^{i\eta A'(e)}U(e)$, with $U(e)\in G$, the complete character has the recorded growth bound
+\begin{equ}[eq:rawgrowth]
+    |\chi(\Hol_{U^c}C)|
+        \leqslant \exp\left(C_\chi\eta\sum_{e\in C}|A'(e)|\right)\;.
+\end{equ}
+Its proof expands the full ordered product against its unitary reference; every return-frame factor is retained. In the literal source layer of side $a_m$, the bound is $a_m|A'|\leqslant c_m\alpha_{1,m}$, with the LFR1 (1.64)--(1.68) multipliers satisfying $c_m\leqslant C_LR_k$ as stated on its p.~192. Hence the charge includes $c_m$ times the actual native contour length. Charge layer $m$ to $n=\min(m+1,k)$, retaining the mesh factor $L$. The square incidence bound is $CMR_n(d_n'+1)$ in $MR_n$-cube span units. With $\alpha_* =\sup_m\alpha_{1,m}$, the resulting complete-source charge is bounded by $C_{\chi,L}\alpha_*M\sum_nR_n^2\sum_C(d_n'(C)+1)$ over covered components. The original added layers control the isolated support unit. Define $\delta_\chi(\gamma)\leqslant C_{\chi,L}M^{-3}\alpha_*$ as its additional debit relative to the vacuum history cost; it tends to zero with the allowed coupling bound $\gamma$. Set $C_{\mathrm{tot}}=C_{\mathrm{vac}}+\delta_\chi(\gamma)$ in the literal LFR2 (1.79)--(1.82) payment. Sufficient same-birth margins are
+\begin{equs}[eq:birthreserve]
+    \gamma_0A_1^2p_0(g_j)^2&\geqslant CC_{\mathrm{tot}}M^4R_j^6\;,\\
+    p_0(g_j)&\geqslant CC_{\mathrm{tot}}M^4R_j^6\;.
+\end{equs}
+The remaining birth reserve is propagated by LFR2 (1.79)--(1.88), with no fresh penalty invented at each persistent scale. This payment is checked conditional on transferring the actual microscopic source to the stated domains. It controls raw character growth, not inverse perimeter renormalisation or the all-mark sum.
+
+In a stopped branch CRE (1.22), the actual free-bond group element contains
+\begin{equ}
+    e^{ig_jB_{\mathrm{new}}}
+        e^{i(1-\vartheta_j(B_{\mathrm{new}}))H_Z^{(j)}}V_Z^{(j)}\;.
+\end{equ}
+The apparent inverse $g_j$ is absent from this phase, whose primitive size is $Ce^{-R_j}\varepsilon_j$. Constraint-bond completion has a fixed $C_L$ and the recorded one-pair-of-blocks enlargement. The full stopped-branch reconstructed-average/current domain transfer remains open; internal historical return gauges cannot be discarded.
+
+\subsection{Quadratic Reference Geometry}
+
+For a translation-invariant exponentially decaying line covariance $c(u)$, the quadratic sum on $m$ consecutive edges is exactly
+\begin{equ}
+    \sum_{r,s=1}^{m}c(r-s)
+        =m\sum_{u\in \Z}c(u)-\sum_{u\in \Z}|u|c(u)
+            +\sum_{|u|\geqslant m}(|u|-m)c(u)\;.
+\end{equ}
+Exponential decay bounds the last sum exponentially. Cross sums for two nonparallel rays converge absolutely; separated features have exponentially small tails in their distance divided by the mesh. This is a checked quadratic/Gaussian perimeter-corner decomposition. No transfer to the inherited interacting law is established.
+
+\section{The Actual Background Response and Its Unproved Bound}
+\label{sec:actualresponse}
+
+Differentiate only an admissible fixed-domain path of complete background data, using a dot for its tangent derivative. For one selected input interaction $v_a=e^{\beta_a}-1$, the actual current sourced operation gives
+\begin{equ}[eq:actualderivative]
+    \frac{\dd}{\dd t}\nu_Y[\bar b(H)v_a]
+        =\nu_Y\left[\dot{\bar b}(H)v_a
+            +\bar b(H)e^{\beta_a}\dot\beta_a
+            +\bar b(H)v_a(\Xi_Y-\nu_Y[\Xi_Y])\right]\;,
+\end{equ}
+where the explicit external extension after LFR2 (1.72) has the current weight contribution
+\begin{equ}
+    \Xi_Y=\frac{\dd}{\dd t}
+        \left(-\frac{1}{2}\langle DH''_{1,k,Y}B,\zeta DH''_{1,k,Y}B\rangle
+                +V(Y^\sim)\right)\;.
+\end{equ}
+Every other participating functional and touching denominator cluster is also differentiated. At an earlier lift \eref{eq:inheritedlift}, the source derivative is
+\begin{equ}[eq:olderderivative]
+    \dot b_{\mathrm{next}}=
+        \frac{\sum_\lambda\int
+            (w_\lambda\dot b+\dot w_\lambda b)\,\dd\zeta_\lambda}{I}
+        -b_{\mathrm{next}}\frac{\dot I}{I}\;.
+\end{equ}
+At the primitive level, differentiate the entire trace in \eref{eq:multikernel}, including its internal physical loops and closing transports in \eref{eq:singlegermkernel}. These formulas retain the source-weighted derivatives of the actual older laws. They are identities; their required response amplitudes remain unbounded in the desired uniform norm.
+
+Complete gauge invariance gives the source-dependent Ward identity. Use $g_t=e^{t\phi}$ with $\phi$ in the compact Lie algebra, and let $\delta_\phi\eta$ include the variation of all link, current, older adjoint and return-frame data. Then
+\begin{equ}[eq:sourceWard]
+    D_\eta k(\eta;H)[\delta_\phi\eta]
+        +D_Hk(\eta;H)[\phi(x)H-H\phi(x)]=0\;.
+\end{equ}
+At an admissible complete-flat regular reference, Schur's lemma gives $k(0;H)=c\chi(H)$, and the first response annihilates pure-gauge directions. RG1 (4.14)'s zero first derivative for a vacuum scalar does not follow here: the auxiliary holonomy transforms too. Curvature and independent-current insertions inside the complete trace are permitted. The current in CRE (2.36)--(2.37) is an independent analytic-domain variable. It is not replaced by the derived current of an arbitrary complex field. Straight-germ reflection arguments require the matching full support/history/partition orbit; they cannot set every fixed inherited coefficient to zero.
+
+An attempted whitening integration by parts would require an inverse of the actual collar quadratic form in LFR2 (1.71). The paper provides its nonnegativity in (1.21), not the requisite inverse and localisation bound. Even an admissible such change would retain the nonlinear interior action derivative, Haar/cutoff terms and constraint flux. The estimate for the specific supported perturbation in (1.46)--(1.48) does not bound that hypothetical whitening field. This failed route is not used in the polymer induction.
+
+\section{Two Checked Failures of Stronger Routes}
+\label{sec:failures}
+
+The two examples below explain why flat normalisation and the absolute vacuum majorant do not, by themselves, give the required source estimate. They concern those proposed arguments, rather than WC.1 or Ba{\l}aban's constrained integration.
+
+\subsection{Flat Normalisation Does Not Remove Colour Transmission}
+
+The test uses the defining representation of $SU(2)$ and the Pauli matrices $\sigma_i$. The matrix $A=\cos \theta\,I+i\sin \theta\,\boldsymbol n \cdot \boldsymbol\sigma$, with $\boldsymbol n$ uniform on $S^2$, has a normalised central law. With $a=\cos \theta$ and $\alpha=1-\tfrac{4}{3}\sin ^2\theta$, the complete scalar associated with compact based closed holonomies $P,Q$ is
+\begin{equ}
+    F(s;P,Q)=\tfrac{1}{2}\EE\tr
+    \bigl([(1-s_1)I+s_1A]P[(1-s_2)I+s_2A^{-1}]Q\bigr)\;.
+\end{equ}
+Every operand is conjugated at the same basepoint and the law is central, so this contraction is gauge invariant before estimation.
+
+\begin{proof}[The normalised test]
+Spherical averaging gives $\EE n_i=0$ and $\EE n_in_j=\delta_{ij}/3$. The Pauli identity $\sum _i\sigma_iP\sigma_i=2(\tr P)I-P$ therefore yields
+\begin{equ}
+    \EE A=aI\;,\qquad
+    \EE(APA^{-1})=\alpha P+(1-\alpha)(\tr P/2)I\;.
+\end{equ}
+Expansion of the two marked factors inside the single trace uses $\EE A=aI$ for the constant and single-mark terms, and the second identity for the double-mark term. At $P=Q=I$ this gives
+\begin{equ}
+    c(s)=F(s;I,I)=1+(a-1)(s_1+s_2-2s_1s_2)\;.
+\end{equ}
+Collecting the coefficient of $\tr (PQ)/2$ before division gives the exact difference
+\begin{equ}[eq:BG1]
+    \frac{F(s;P,Q)}{c(s)}-\frac{1}{2}\tr (PQ)
+    =\frac{(1-\alpha)s_1s_2}{c(s)}
+        (\frac{\tr P\tr Q}{4}-\frac{\tr (PQ)}{2})\;.
+\end{equ}
+When $|s_i| \leqslant \rho$ and $\theta$ satisfies $|a-1|(2\rho+2\rho^2)<1/2$, $|c(s)| \geq 1/2$ on that whole polydisc, so normalisation is legitimate there. With $P=e^{ip\sigma_3}$ and $Q=e^{iq\sigma_3}$ in \eref{eq:BG1}, the expression in parentheses is $\sin p\sin q$. Hence the mixed $p,q$ derivative at zero is $(1-\alpha)s_1s_2/c(s)$, which is nonzero for sufficiently small nonzero $\theta$ and $s_1s_2 \ne 0$. The total first background derivative does vanish. The normalised mixed term has no factor measuring distance to $Q$.
+\end{proof}
+
+This falsifies the general inference that flat normalisation, gauge invariance and local fluctuation decay force a fluctuation tree connecting a local source to every distant background mark. The test law has not been realised on Ba{\l}aban's constrained fibre. Keeping $Q$ as a complete closed compact spectator retains the local curvature structure, which is why the conditional estimate in Section~\ref{sec:curvature} has that form.
+
+\subsection{The Vacuum Majorant Loses the Perimeter Scalar}
+
+For one real term of \eref{eq:w15} and LFR2 (1.71)--(1.72), the localisation domains, selected potential family and Mayer parameters are fixed before source-localisation contours are introduced. Its composite integration operation $\mathcal L_{Z,\mathcal D}$ includes the outer $\mathbf T'_k(Y_i)$ and earlier $T_h$ integrations, Haar and Lebesgue measures, gauge constraints, Jacobians, characteristic functions, Wilson actions and remaining interactions. If this operation has a finite signed-measure representation $\dd \mathcal L_{Z,\mathcal D}$ on its integration coordinates, its total-variation mass is
+\begin{equ}
+    V_{Z,\mathcal D}=\int 1\,|\dd \mathcal L_{Z,\mathcal D}|\;.
+\end{equ}
+This includes the absolute values of all selected $V(Y)$ factors. It is not $\mathcal L_{Z,\mathcal D}[1]$ and neither quantity is the physical denominator.
+
+\begin{proof}[The recorded majorant test]
+Summing all fine marks at physical $s=1$ before taking an absolute value reconstructs the complete compact closed word $W_{j,I}(H)$. Its normalised character has modulus at most one, so
+\begin{equ}
+    |\mathcal L_{Z,\mathcal D}[W_{j,I}]| \leqslant V_{Z,\mathcal D}\;.
+\end{equ}
+Even granting the unproved cancellation of regular spectators against a common global flat coefficient, a nonzero flat interval factor $c_{j,I}$ would leave
+\begin{equ}[eq:majorantloss]
+    |c_{j,I}^{-1}\mathcal L_{Z,\mathcal D}[W_{j,I}]
+                -\mathcal L_{Z,\mathcal D}[1]|
+    \leqslant (|c_{j,I}|^{-1}+1)B_{\mathrm{vac}}(Z)\;,
+\end{equ}
+where $B_{\mathrm{vac}}$ is the unchanged absolute vacuum majorant of \cite[eqs.~(1.79), (1.92)]{LFR2}. Using this majorant for the older group and field integrations discards the flat perimeter scalar from the sourced integral. The proposed estimate therefore loses the cancellation needed for control; this loss is a defect of the estimate, not of the exact RG integration.
+
+The proposed factor $e^{C g_j^\nu N_j(I)}$, $\nu>0$, is tested against a single component first created at scale $b$, keeping its spacing $\ell_b$, localisation domain and scale-$b$ coupling fixed. Here $N_j(I)$ is the number of spacing-$\ell_j$ bonds traversed by the interval $I$, and $R_b$ is the scale-$b$ geometric parameter appearing in the LFR2 domain size, not an observable representation. For a straight interval crossing a cube of side $MR_b\ell_b$, $N_j(I) \geqslant cMR_b\ell_b/\ell_j-2$. Grant any available component suppression of the form $e^{-K_b}$ with $K_b$ independent of the finer spacing $\ell_j$; this is the fixed suppression being tested, not a symbol defined by Ba{\l}aban. LFR2 (1.81)--(1.82) gives the component bounds motivating that proposal. No particular value of $K_b$ is needed for the failure of a fixed suppression. For the $SU(2)$ trajectory satisfying \cite[Theorem~2, eq.~(0.31)]{RG1},
+\begin{equ}
+    g_j^{-2} \leqslant C_b+\beta' n\log L\;,\qquad
+            n=\log _L(\ell_b/\ell_j)\;.
+\end{equ}
+Consequently, for the proposed upper envelope $B_n=e^{C g_j^\nu N_j(I)-K_b}$ and some fixed $A>0$,
+\begin{equ}[eq:failedtail]
+    \log (\ell_jB_n)
+    \geqslant -n\log L+
+        \frac{AMR_bL^n}{(C_b+\beta'n\log L)^{\nu/2}}
+        -O_b(1) \longrightarrow +\infty\;.
+\end{equ}
+The exponential term dominates the polynomial denominator and the linear subtraction. The resulting upper envelope cannot supply the $\ell_j$-weighted tail in \eref{eq:w24}, even with the other payments granted for this test.
+\end{proof}
+
+The lower bound in \eref{eq:failedtail} concerns the proposed upper envelope $B_n$, not the sourced integral or $Q^{(1)}_{j|k}$. It shows that the factor growing with the number of finer lattice bonds cannot be absorbed by a suppression $e^{-K_b}$ fixed at scale $b$. It does not show divergence of the normalised Wilson expectation.
+
+\subsection{Inherited Transfers and Rejected Source Routes}
+
+An already integrated source cannot replace its integrand in a later interaction. For the actual normalised inherited operation $\nu_Y$, complete source $S$, scalar $c$ and touching boundary interaction $W$, the exact decomposition is
+\begin{equ}[eq:jointobstruction]
+    \nu_Y[(S-c\chi)W]
+        =\operatorname{Cov}_{\nu_Y}(S,W)
+            +(\nu_Y[S]-c\chi)\nu_Y[W]\;.
+\end{equ}
+The same-component covariance survives Section~\ref{sec:signedexchange}. LFR2 (1.72) explicitly keeps the old operations acting on the boundary exponential. An integrated source bound alone does not imply the required tested-operation bound.
+
+In a proposed scalar gas, an inherited polymer $B$ can exclude finer singleton activities $z_c$. For its formal weight $b$ and sourced coefficient $w_B$,
+\begin{equ}[eq:inversepressure]
+    [b]\log\left(\prod_{c\in B}(1+z_c)+b w_B\right)
+        =w_B\prod_{c\in B}(1+z_c)^{-1}\;.
+\end{equ}
+This is an ordinary formal scalar partition logarithm. Absolute bounds leave an inverse-pressure cost growing with the number of excluded fine contacts; \eref{eq:birthreserve} does not pay it. This is a failed majorant, not physical divergence.
+
+The conditional regular derivative argument C7.3--C7.4 assumed a local analytic kernel and its bound $M_i$ without constructing that operand. It was withdrawn from the physical proof chain. Section~\ref{sec:inheritedkernel} does not reinstate it. Division by a sourced flat coefficient was another sufficient route: it introduced $N_t(0;1)$ in a denominator and guaranteed only a neighbourhood depending on $|\nu[S]|/\nu[|S|]$. That extra denominator is not required by \eref{eq:WC1}. Additive subtraction keeps the sourced scalar in the numerator and only vacuum conditional denominators, but its inherited estimate remains open.
+
+After LFR2 (1.49), only terms disjoint from $Z$ are expanded from $U_k''$ to $U_k$; intersecting terms stay in the inherited integration. The small new-increment factor cannot be assigned to all retained source terms. The unsupported whitening route is recorded in Section~\ref{sec:actualresponse}. Earlier open-endpoint, independent-Haar-decoupling and pointwise subdivision estimates remain excluded; their surviving exact identities do not supply the rejected physical bounds.
+
+\section{The Open Marked-Polymer Estimate}
+\label{sec:open}
+
+To prove \eref{eq:WC1}, we still need to extract the perimeter and right-angle contributions from the full sourced RG operation and control the remainder. The reference conditions \eref{eq:Z3} specify a finite renormalisation scheme, but do not construct this extraction or bound its ultraviolet error.
+
+Ba{\l}aban's gauge changes explain why the observable must remain closed and gauge invariant. They do not by themselves create a source estimate. The effective-observable discussion in \cite[immediately before Section~2.10]{BIJ} distinguishes observable vertices from higher-order or nonperturbative terms; Section~2.10 transforms current fields with the background when changing the gauge of already integrated fields. That discussion is in an abelian-Higgs construction and does not provide the present four-dimensional thin-loop estimate.
+
+The cited physics papers describe evaluating the closed observable on a minimising reconstructed fine field, followed by corrections obtained by blocking that observable with the same kernel. In \cite[Section~8.1, eqs.~(43)--(46)]{Perfect}, the Polyakov-loop pair is blocked with the authors' kernel; their product expression is a saddle result as their inverse coupling $\beta \to \infty$. It is not a finite-coupling factorisation under the integration in \eref{eq:w16}. The source discussion in \cite[Section~5]{Staggered} distinguishes perturbative blocking from classical reconstruction, and its explicit gauge calculation concerns the free theory. Neither source supplies the inherited interacting estimate in WC.1.
+
+For renormalisation, \cite[Section~2.3, eqs.~(13)--(19)]{KR} locates the local subtraction within the colour-connected exponent after bulk renormalisation. In particular (16) subtracts matched connected contributions on a fixed cusp reference and (18) exponentiates their ultraviolet pole parts. This is perturbative construction guidance. Ordinary spatial Mayer connectivity in \eref{eq:w15} has not been identified with that Wilson colour connectivity. No numerical logarithm of a trace or conditional expectation has been used to assert such an identification.
+
+The counterterms are now fixed by \eref{eq:referencecounterterms}, independently of the target pair. The remaining task is to prove their cancellation within the full sourced operation \eref{eq:w16}, preserving correlations between sides and between loops and all inherited closed insertions. A uniform local activity bound would be a sufficient tool, but is not required by the expectation-only target \eref{eq:referencesignedtarget}. Its signed integral retains the full physical denominators and history sums.
+
+Sections~\ref{sec:sourcealgebra} and \ref{sec:inheritedkernel} construct the exact finite-cutoff source, its chronological image and completed kernels. Section~\ref{sec:flatwebs} records the earlier flat factorisation and proposed polymer update; it is not a second proved induction. What remains unproved is the quantitative inherited marked-activity bound, physical perimeter/corner matching and cutoff-uniform propagation. Ba{\l}aban's action-localisation formulas \cite[eqs.~(1.49)--(1.50), (1.65)]{LFR2} do not discharge those source estimates by themselves.
+
+The active task is the marked-polymer analysis of the signed numerical cutoff difference \eref{eq:referencesignednumerator}, using the reference-defined counterterms. The calculated interaction response \eref{eq:calibratedresponse} identifies a surviving combined signed term; its bound and the full cutoff comparison remain open. Section~\ref{sec:curvature} is an existing sufficient implication with unproved physical premises. The results of this note do not prove \eref{eq:WC1}, \eref{eq:referencesignedtarget} or ultraviolet convergence.
+
+\appendix
+\section{Proved Statements and Open Dependencies}
+\label{sec:ledger}
+
+Here \emph{calculation checked} means only the stated local scope. A checked conditional implication does not establish its physical premises. A written polymer update is not an accepted input merely because its structural identities resemble Ba{\l}aban's. No result below closes WC.1 or certifies ultraviolet convergence.
+
+The source record is \texttt{WILSON\_RG\_COMPARISON.txt}; its C3--C11 and E1--E2 identifiers locate the current derivations. The earlier archive is identified by its formula numbers. The current dependency graph is \nolinkurl{logical_dependency_audit/WILSON_RG_DEPENDENCY_GRAPH.md}. Solid edges describe checked constructions at their stated scope, and dashed edges describe required unproved transfers. The older v92 graph belongs to the preceding finite-volume construction and supplies no certification for this route.
+
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{.27\textwidth}
+    >{\raggedright\arraybackslash}p{.22\textwidth}
+    >{\raggedright\arraybackslash}p{.44\textwidth}@{}}
+\toprule
+Statement & Status & Scope and unresolved use \\
+\midrule
+\endhead
+Exact full bracket and fixed new background
+    & Calculation checked
+    & \eref{eq:w15}--\eref{eq:w16}; outer law, spectators and normalisers retained.\\
+Regular signed primitive
+    & Calculation checked
+    & Proposition~\ref{prop:regular}: one current-stratum signed term before normalisation and all-history summation.\\
+Single fresh regular mark
+    & Calculation checked
+    & Section~\ref{sec:freshmark}, \eref{eq:freshremainder}--\eref{eq:sourceenvelopepayment}; fixed external arguments and root. The quadratic cutoff gain is not a full first-step bound.\\
+Fresh marked cover and denominator completion
+    & Repair written, awaiting recheck
+    & \eref{eq:rawfreshactivity}--\eref{eq:dressedfreshactivity} are unproved targets. Loop-dependent read-outs, Gaussian volume costs, component sums and physical reference transfer remain unpaid.\\
+Connected marked-cover costs
+    & Calculation checked
+    & Section~\ref{sec:markedcovercosts}; multi-root forest, direct component joining costs and all-mark entropy. Conditional young-field factorisation retains shared frozen read-outs. Shifted boundary kernels and physical reference matching remain open.\\
+Conditional curvature and fixed-matching tail
+    & Conditional implication checked
+    & Proposition~\ref{prop:radius}; integrated majorant, domain and common-scale transfer remain premises.\\
+Local weighted reconstruction
+    & Calculation checked
+    & \eref{eq:w28}; nonlinear map estimate, not the entire inherited source.\\
+Closed algebra and source/R recursion
+    & Calculation checked
+    & \eref{eq:closedstar}--\eref{eq:markedrecursion}; finite identities retaining the physical inputs.\\
+Formal logarithmic coefficients
+    & Calculation checked
+    & \eref{eq:formallog}; repeated marks retained; convergence at physical marks open.\\
+Common real collar
+    & Calculation checked
+    & C3, \eref{eq:C3return}; common added data and separate references.\\
+Real contraction and history response
+    & Calculation checked
+    & C4.1--C4.8; fixed geometry, real virtual field, complete collar roots; no activity summation bound.\\
+Real inherited-domain bridge
+    & Calculation checked
+    & C4.9--C4.15, \eref{eq:C4domain}; constructed geometry and ordered parameter choices, all regular-layer envelopes and rough complements retained.\\
+Finite-history inherited localisation
+    & Calculation checked
+    & C5, \eref{eq:C5endpoints}; real endpoints, explicit auxiliary cutoff, full read-outs and original older integrations; no uniform norm.\\
+One-old/one-fresh cancellation
+    & Calculation checked
+    & C6, \eref{eq:C6linked}; finite selected carrier and physical denominator; higher marked-family closure open.\\
+Joint scalar partition bound
+    & Conditional calculation checked
+    & C7.1--C7.2, \eref{eq:scalardeletion}; source gas and rooted smallness hypotheses required.\\
+Assumed local analytic-kernel bound
+    & Withdrawn from physical chain
+    & C7.3--C7.4 assumed the operand and norm. C8 does not reinstate them.\\
+Actual inherited kernel
+    & Calculation checked
+    & C8, Section~\ref{sec:inheritedkernel}; finite cutoff, complete real chart data, chronological lifts and denominator decorations.\\
+Flat whole-web factorisation and geometry
+    & Calculation checked
+    & Archive (4.20c27m)--(o$'$); complete-flat integration, no fixed nonflat spectator.\\
+Regular, boundary and inherited classification
+    & Corrected proposal, awaiting recheck
+    & Archive (r5c); fresh regular, fresh cross-boundary and retained outer channels distinguished; nonregular estimates open.\\
+Marked-web update and vacuum dressing
+    & Repair written, awaiting recheck
+    & Archive (t)--(t5); source majorants and full inherited application unproved.\\
+Ordered all-prefix source gas
+    & Proposed / conditional
+    & Archive (t6)--(t9); exact density-pair order present, quantitative induction open.\\
+Boundary majorant and reserve ownership
+    & Proposed / conditional
+    & Archive (s)--(s9); exactly-once charging and literal persistence application open.\\
+Returned channel and restriction comparison
+    & Proposed / conditional
+    & Archive (u)--(v2); local analytic and all-history source bounds remain premises.\\
+Raw character growth and birth payment
+    & Conditional calculation checked
+    & E1, \eref{eq:rawgrowth}--\eref{eq:birthreserve}; stopped-source transfer open; inverse renormalisation not paid.\\
+Finite perimeter/corner projector
+    & Conditional calculation checked
+    & E2.8, Section~\ref{sec:geometricextraction}; physical coefficients, partition matching and convergent extraction open.\\
+Actual response and source Ward identity
+    & Calculation checked at stated scope
+    & C11, \eref{eq:actualderivative}--\eref{eq:sourceWard}; full responses retained, amplitudes not uniformly bounded.\\
+Gaussian line/corner geometry
+    & Reference calculation checked
+    & Quadratic translation-invariant covariance only; no interacting transfer.\\
+Reference amplitudes and counterterms
+    & Calculation checked at stated scope
+    & Proposition~\ref{prop:referencepositive}; \eref{eq:referencecounterterms}; finite positive couplings, no uniform lower bound.\\
+Reference-calibrated interaction response
+    & Exact finite-cutoff response
+    & \eref{eq:calibratedresponse}; all source and normaliser responses retained; combined amplitude unbounded.\\
+Signed numerical cutoff comparison
+    & Open
+    & \eref{eq:referencesignedtarget}; full physical denominators; no stronger random-variable bound required.\\
+Inherited marked-activity estimate
+    & Open
+    & Actual marked numerator $H'$, including retained inside-$Z$ terms and scalar subtraction.\\
+Physical scalar matching and ultraviolet propagation
+    & Open
+    & Local pressure consistency, higher marked-family induction and fixed-matching tail.\\
+WC.1 and joint Wilson convergence
+    & Open
+    & No dependency path with all quantitative premises discharged.\\
+\bottomrule
+\end{longtable}
+
+The checked finite constructions can feed the proposed activity-norm route. The reference prescription also defines the weaker signed numerical target \eref{eq:referencesignedtarget}; a bound on its combined physical contribution would suffice without first proving the stronger source norm. Neither route has a completed quantitative path to ultraviolet convergence. The rejected inverse-pressure majorant, source/test interchange, extra sourced denominator and whitening inverse supply no missing estimate. The earlier flat component update remains available only at its checked scope.
+
+\section{Source Locations and the Scope of the Proofs}
+
+The equation numbers in Ba{\l}aban citations are the original printed numbers, checked against the faithful corrected TeX in the local \texttt{Balaban/tex} sequence. Results stated by Ba{\l}aban are used as source inputs at their stated scope; the intervening local calculations are proved in the text. The following map records the provenance of those calculations in the working archive, without making that archive a second active proof.
+
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{.29\textwidth}
+    >{\raggedright\arraybackslash}p{.28\textwidth}
+    >{\raggedright\arraybackslash}p{.36\textwidth}@{}}
+\toprule
+Material here & Recorded calculation & Scope \\
+\midrule
+\endhead
+Exact bracket, \eref{eq:w15}--\eref{eq:w16}
+    & (4.20c27w15)--(w16)
+    & Finite identity; conditional pull-out; full outer law retained.\\
+New background, \eref{eq:newbackground}
+    & WC-D1
+    & Inner integrations at fixed new determining/output data.\\
+Frame and moment, \eref{eq:localderivative}--\eref{eq:wordmoment}
+    & (4.20c27r2)--(r5b), (w18)
+    & Regular current-scale stratum, localised before conditioning.\\
+Regular signed bound, \eref{eq:w20}
+    & (4.20c27w17)--(w20)
+    & One signed term; no division by $D_h$ or sum over marked terms.\\
+Flat scalarisation, \eref{eq:scalarization}
+    & (4.20c27w21)
+    & Irreducible character; no frozen nonflat colour data.\\
+Local RG1 reconstruction, \eref{eq:localcoordinate}--\eref{eq:coordinatetransfer}
+    & (4.20c27w25)--(w27)
+    & RG1 Lemma~4 domain, containment and derived force retained.\\
+Conditional curvature and tail, \eref{eq:Q}--\eref{eq:w24}
+    & (4.20c27w11)--(w14), (w22)--(w24)
+    & Integrated family and majorant assumed; chart compatibility explicit;
+    fixed matching scale.\\
+Weighted reconstruction, \eref{eq:w28}
+    & (4.20c27w28)
+    & Local nonlinear map, not the entire inherited source.\\
+Colour transmission, \eref{eq:BG1}
+    & WO-BG1.1--WO-BG1.2
+    & Counterexample to a general inference; not a constrained-fibre test.\\
+Vacuum-majorant failure, \eref{eq:majorantloss}--\eref{eq:failedtail}
+    & (4.20c27w29)--(w31)
+    & Failure of a proposed upper envelope, not physical divergence.\\
+\bottomrule
+\end{longtable}
+
+The calibration system on the fixed torus in \eref{eq:Z3} is solved by \eref{eq:referencecounterterms} for the specified positive reference amplitudes. The signed subtraction estimate for the target pair remains open. Approximation of a smooth continuum contour by coordinate-axis lattice paths is not addressed here. In such a path the distance between successive turns can be of order the lattice spacing, so its turns are not covered by a prescription for a fixed collection of separated continuum cusps. \cite[Section~IV.B, eqs.~(51)--(52), footnote~5]{Green} describes a zigzag prescription with a different line mass, not a convergence theorem for general smooth loops.
+
+\begin{thebibliography}{99}
+\bibitem{RG1} T.~Ba{\l}aban,
+\emph{Renormalization Group Approach to Lattice Gauge Field Theories. I. Generation of Effective Actions in a Small Field Approximation and a Coupling Constant Renormalization in Four Dimensions}, Commun. Math. Phys. \textbf{109} (1987), 249--301.
+\bibitem{RG2} T.~Ba{\l}aban,
+\emph{Renormalization Group Approach to Lattice Gauge Field Theories. II. Cluster Expansions}, Commun. Math. Phys. \textbf{116} (1988), 1--22.
+\bibitem{CRE} T.~Ba{\l}aban,
+\emph{Convergent Renormalization Expansions for Lattice Gauge Theories}, Commun. Math. Phys. \textbf{119} (1988), 243--285.
+\bibitem{LFR1} T.~Ba{\l}aban,
+\emph{Large Field Renormalization. I. The Basic Step of the $\R$ Operation}, Commun. Math. Phys. \textbf{122} (1989), 175--202.
+\bibitem{LFR2} T.~Ba{\l}aban,
+\emph{Large Field Renormalization. II. Localization, Exponentiation, and Bounds for the R Operation}, Commun. Math. Phys. \textbf{122} (1989), 355--392.
+\bibitem{VAR} T.~Ba{\l}aban,
+\emph{The Variational Problem and Background Fields in Renormalization Group Method for Lattice Gauge Theories}, Commun. Math. Phys. \textbf{102} (1985), 277--309.
+\bibitem{PBG} T.~Ba{\l}aban,
+\emph{Propagators for Lattice Gauge Theories in a Background Field}, Commun. Math. Phys. \textbf{99} (1985), 389--434.
+\bibitem{PRT1} T.~Ba{\l}aban,
+\emph{Propagators and Renormalization Transformations for Lattice Gauge Theories. I}, Commun. Math. Phys. \textbf{95} (1984), 17--40.
+\bibitem{PRT2} T.~Ba{\l}aban,
+\emph{Propagators and Renormalization Transformations for Lattice Gauge Theories. II}, Commun. Math. Phys. \textbf{96} (1984), 223--250.
+\bibitem{CMP98} T.~Ba{\l}aban,
+\emph{Averaging Operations for Lattice Gauge Theories}, Commun. Math. Phys. \textbf{98} (1985), 17--51.
+\bibitem{BIJ} T.~Ba{\l}aban, J.~Imbrie and A.~Jaffe,
+\emph{Exact Renormalization Group for Gauge Theories}, in \emph{Progress in Gauge Field Theory}, Carg\`ese 1983, NATO ASI Series B: Physics \textbf{115}, Plenum Press (1984). The effective-observable and gauge-change passages used here are on pp.~98--99.
+\bibitem{BNS} R.~A.~Brandt, F.~Neri and M.-A.~Sato,
+\emph{Renormalization of Loop Functions for All Loops}, Phys. Rev. D \textbf{24} (1981), 879. \href{https://doi.org/10.1103/PhysRevD.24.879}{doi:10.1103/PhysRevD.24.879}.
+\bibitem{LuscherTransfer} M.~L\"uscher,
+\emph{Construction of a Selfadjoint, Strictly Positive Transfer Matrix for Euclidean Lattice Gauge Theories}, Commun. Math. Phys. \textbf{54} (1977), 283--292.
+\bibitem{KR} G.~P.~Korchemsky and A.~V.~Radyushkin,
+\emph{Renormalization of the Wilson Loops beyond the Leading Order}, Nucl. Phys. B \textbf{283} (1987), 342--364.
+\bibitem{Musch} B.~U.~Musch, P.~H\"agler, J.~W.~Negele and A.~Sch\"afer,
+\emph{Exploring Quark Transverse Momentum Distributions with Lattice QCD}, Phys. Rev. D \textbf{83} (2011), 094507. \href{https://arxiv.org/abs/1011.1213}{arXiv:1011.1213}.
+\bibitem{Green} J.~R.~Green, K.~Jansen and F.~Steffens,
+\emph{Improvement, Generalization, and Scheme Conversion of Wilson-Line Operators on the Lattice in the Auxiliary Field Approach}, Phys. Rev. D \textbf{101} (2020), 074509.
+\bibitem{Perfect} T.~DeGrand, A.~Hasenfratz, P.~Hasenfratz and
+F.~Niedermayer, \emph{The Classically Perfect Fixed Point Action for SU(3) Gauge Theory}, Nucl. Phys. B \textbf{454} (1995), 587--614. \href{https://arxiv.org/abs/hep-lat/9506030}{arXiv:hep-lat/9506030}.
+\bibitem{Staggered} W.~Bietenholz, R.~Brower, S.~Chandrasekharan and
+U.-J.~Wiese, \emph{Perfect Lattice Actions for Staggered Fermions}, Nucl. Phys. B \textbf{495} (1997), 285--305. \href{https://arxiv.org/abs/hep-lat/9612007}{arXiv:hep-lat/9612007}.
+\end{thebibliography}
+\end{document}

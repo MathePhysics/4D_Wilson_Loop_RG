@@ -1,0 +1,2191 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,mathrsfs}
+\usepackage[a4paper,margin=28mm]{geometry}
+\usepackage[hidelinks]{hyperref}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\id}{\mathbf 1}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.6em}
+\emergencystretch=1.5em
+\title{Fourth-Order Tests for the Inherited C8 Wilson Insertion}
+\author{}
+\date{Working attempt, 22 October 2026}
+\begin{document}
+\maketitle
+
+\section{A Fourth-Order Test on the Inherited C8 Insertion}
+\label{sec:c8-fourth-test}
+
+This section records the calculation authorised on 22 October 2026:
+``Yes, attempt the fourth-order extension for the actual C8 Wilson
+insertion, retaining the full inherited law and physical denominator.
+Don't use Codex subagents.'' The target is a quantitative estimate for
+the source-containing kernels WC-C8.6, with first use in the boundary
+bracket LFR2 (1.103), the connected term WC-C7.5, and ultimately WC.1.
+The finite first-step signed defect in V3, equation
+\texttt{eq:c4-1-1}, is a related caller; it is not a replacement for
+the inherited C8 target. The calculation below tests the positive-square
+step of the fourth-order NLSM argument~\cite{OpenAIRotation}. It does not assume that the
+NLSM noncommuting-rotation identity already holds for these kernels.
+
+Whenever two loops are considered, the target loops are disjoint.
+A component meeting both loops means a connected integration
+component or interaction cluster reaching both disjoint source
+supports; it does not mean an intersection of the contours.
+Such connecting components are retained under their common
+Yang--Mills law. Cancellation of components not connecting the
+sources is a statement about the connected covariance, not
+about the uncentred joint expectation.
+
+\subsection{The Literal Operand and a Defined Four-Source Test}
+
+The authoritative definitions are WC-C8.1--WC-C8.7 in
+\texttt{WILSON\_RG\_COMPARISON.txt}. Fix a finite cutoff and complete
+outer data $\eta$ in LFR2 (1.103), on the stated domain where the
+component normalisers and the vacuum bracket denominator are nonzero.
+The character is $\chi=\operatorname{Tr}R/d$ for a nontrivial irreducible
+unitary representation $R$. The scalar $Z\neq 0$ is the already prescribed
+source renormalisation. For a nonempty marked set with $m$ entries,
+the bare scalar kernel is
+\begin{equation}\label{eq:c8-fourth-bare}
+    b_J(H)=\frac{1}{Zd}\operatorname{Tr}
+        \prod_{r=1}^{m}\left[(R(Q_{a_r})-\id)R(H_r)\right]\;.
+\end{equation}
+Here $H\in G^m$ are independent auxiliary closed holonomies,
+$Q_a=T_aF_aV_a^{-1}T_a^{-1}$ are the closed relative loops of WC-C8.2,
+and all products retain their cyclic order. These are scalar closed
+contractions. Every factor is conjugated at the same base under the
+induced gauge action, so the trace is invariant before any estimate.
+
+Let $b=\bar b_{J,\sigma}(\eta;H)$ be an actual inherited labelled
+marker, including its earlier numerator and touching-denominator labels.
+Its unlabelled sum is the chronological quotient WC-C8.3a, with the
+replacement rule WC-C8.3b where applicable. Earlier integrated variables
+are not reconstructed from $\eta$. Put
+\begin{equation}\label{eq:c8-fourth-bracket}
+    L_\eta=\prod_i\frac{T'_k(Y_i)}{T'_k(Y_i)1},\qquad
+    B_\eta=\sum_a\beta_a,\qquad
+    D_\eta=L_\eta[e^{B_\eta}],\qquad
+    \Lambda_\eta[F]=\frac{L_\eta[Fe^{B_\eta}]}{D_\eta}\;.
+\end{equation}
+The operations and their variables are precisely LFR2 (1.71),
+pp.~378--379, acting on the last exponential of (1.72), and then
+(1.103), p.~391. Each $\beta_a$ is an input boundary term. In
+particular $b$, $B_\eta$ and the tests below remain inside all component
+operations that read them. A normalised functional on the complex
+extension is not declared positive. LFR2 (1.73)--(1.75) supplies a
+positive real reference operation and a finite-variation comparison,
+not positivity of the complex extension or of selected activities.
+
+Choose finitely many actual bounded input boundary terms and let
+$p_i=\operatorname{Re}\beta_{\alpha_i}$ and
+$q_i=\operatorname{Re}\beta_{\gamma_i}$ on the real integration
+variables; $i$ ranges over a fixed finite set. These are real,
+gauge-invariant scalar functions independent of the auxiliary $H$.
+This is a diagnostic real source deformation; no holomorphic extension
+of a real-part operation in the background is asserted. For a pair
+$(i,j)$ set $x_1=p_i$, $x_2=q_i$, $x_3=p_j$, $x_4=q_j$ and define
+\begin{equation}\label{eq:c8-fourth-defined-test}
+    \begin{aligned}
+        N^{ij}(s;H)&=L_\eta\left[b(H)e^{B_\eta+\sum_{r=1}^{4}s_rx_r}\right],\\
+        D^{ij}(s)&=L_\eta\left[e^{B_\eta+\sum_{r=1}^{4}s_rx_r}\right],\qquad
+        F^{ij}(s;H)=\frac{N^{ij}(s;H)}{D^{ij}(s)}\;.
+    \end{aligned}
+\end{equation}
+The four real parameters are independent, also when some tests coincide.
+At zero this is the original C8 quotient. The deformation multiplies
+the actual boundary integrand before the old integrations; it does not
+replace those integrations. Boundedness of the tests and absolute
+integrability of the original sourced integrand justify its derivatives
+at fixed data by dominated convergence. Nonvanishing of $D_\eta$
+gives a neighbourhood of zero for the quotient, with no uniform radius
+claimed. No sourced expectation is used as a denominator.
+
+For the full physical version, let $\mathcal O_\eta$ denote exactly
+the remaining sums and integrations of LFR2 (1.72)/(1.104), and include
+$A_\eta=\prod_i(T'_k(Y_i)1)$ among its multiplicative factors. The
+notation suppresses no additional factor: the characteristic functions,
+older operations, actions, Haar factors, gauges and vacuum scalars in
+those formulas remain in $\mathcal O_\eta$. Define
+\begin{equation}\label{eq:c8-fourth-physical}
+    N_{\mathrm{phys}}(s)=\mathcal O_\eta[A_\eta N_\eta(s)],\qquad
+    D_{\mathrm{phys}}(s)=\mathcal O_\eta[A_\eta D_\eta(s)],\qquad
+    D_{\mathrm{phys}}(0)=D_h\;.
+\end{equation}
+All source and history sums required by the physical numerator are
+included when this formula is used. Auxiliary holonomies are evaluated
+at their physical values inside these operations. At the first step
+$D_h=\mathcal Z_0$, the original full physical partition function. Differentiation
+after the outer operations additionally requires integrable derivative
+majorants for those operations; the fixed-data calculation alone does
+not prove them. The quotient rule below applies to the physical pair
+whenever those derivatives exist. It never cancels $D_h$ against a
+conditional reference normaliser.
+
+\subsection{Four Derivatives and the Denominator Terms}
+
+For a subset $S$ of four labelled directions write $N_S$, $D_S$, and
+$F_S$ for their mixed derivatives at zero. Differentiating $N=DF$
+gives, for every nonempty $S$,
+\begin{equation}\label{eq:c8-fourth-quotient}
+    F_S=\frac{N_S-\sum_{\varnothing\neq A\subseteq S}
+        D_AF_{S\setminus A}}{D_\varnothing}\;.
+\end{equation}
+Each labelled subset occurs once. This formula also governs every
+earlier chronological quotient WC-C8.3a; it retains derivatives of
+older densities and their normalisers when those data vary. Thus a
+source derivative is not replaced by a derivative of the bare marker
+after its old variables have been eliminated.
+
+For comparison with a nonlinear rotation deformation, write its smooth
+relative exponent as $h(s)$, with $h(0)=0$, and write $b(s)$ for the
+actual differentiated insertion. This notation is used only when a
+common integration domain and dominated derivatives have been justified.
+Let $h_A=\partial_Ah(0)$, $b_A=\partial_Ab(0)$, and let $\Pi(S)$ be
+the set of partitions of $S$ into nonempty blocks. Set
+\begin{equation}\label{eq:c8-fourth-bell}
+    P_\varnothing=1,\qquad
+    P_S=\sum_{\pi\in\Pi(S)}\prod_{A\in\pi}h_A\;.
+\end{equation}
+The product rule and differentiation of the exponential give
+$D_S/D_\varnothing=\Lambda_\eta[P_S]$ and
+$N_S/D_\varnothing=\sum_{A\subseteq S}
+\Lambda_\eta[b_AP_{S\setminus A}]$. In particular,
+\begin{equation}\label{eq:c8-fourth-centred}
+    F_S=\Lambda_\eta[(b-F_\varnothing)P_S]
+        +\sum_{\varnothing\neq A\subseteq S}
+            \Lambda_\eta[b_AP_{S\setminus A}]
+        -\sum_{\varnothing\neq A\subsetneq S}
+            \Lambda_\eta[P_A]F_{S\setminus A}\;.
+\end{equation}
+For four directions $P_S$ has the fifteen set-partition terms: one
+$h_1h_2h_3h_4$, six $h_{ab}h_ch_d$, three $h_{ab}h_{cd}$, four
+$h_{abc}h_d$, and one $h_{1234}$. Formula
+\eqref{eq:c8-fourth-centred} also includes fifteen nonempty insertion
+derivative terms and fourteen proper-subset normaliser terms. Actual
+hard-cutoff or constraint variations must first be retained as moving
+domain or surface terms; they are not made smooth by writing $h$.
+No such variation occurs in \eqref{eq:c8-fourth-defined-test}.
+
+For the defined test, $h(s)=\sum_rs_rx_r$ and $b(s)=b$ exactly.
+Set $Y=\sum_ip_iq_i$ and define the retained denominator contribution
+\begin{equation}\label{eq:c8-fourth-denominator}
+    \mathcal D_b=\sum_{i,j}\sum_{\varnothing\neq A\subsetneq[4]}
+        \Lambda_\eta\left[\prod_{r\in A}x_r^{ij}\right]
+        F^{ij}_{[4]\setminus A}\;,
+    \qquad [4]=\{1,2,3,4\}\;.
+\end{equation}
+The unnormalised and normalised four-derivative contractions are,
+respectively,
+\begin{align}
+    \sum_{i,j}\frac{N^{ij}_{[4]}}{D_\eta}
+        &=\Lambda_\eta[bY^2]\;,
+        \label{eq:c8-fourth-square}\\
+    \sum_{i,j}F^{ij}_{[4]}+\mathcal D_b
+        &=\Lambda_\eta[(b-F_\varnothing)Y^2]\;.
+        \label{eq:c8-fourth-connected-square}
+\end{align}
+These are calculations under the actual inherited functional, not under
+a Gaussian law. At a positive real instance, the second right-hand side
+is the connected correlation of $b$ and $Y^2$. If its second moments
+are finite, Cauchy--Schwarz supplies only
+\begin{equation}\label{eq:c8-fourth-cs}
+    \left|\sum_{i,j}F^{ij}_{[4]}+\mathcal D_b\right|
+        \leq\Lambda_\eta[|b-F_\varnothing|^2]^{1/2}
+        \Lambda_\eta[(Y^2-\Lambda_\eta[Y^2])^2]^{1/2}\;.
+\end{equation}
+There is no small history, coupling or support factor in this inequality.
+For complex functionals even this probabilistic form is not asserted.
+
+The positive square in the NLSM proof arises more generally from the
+four terms grouped as
+$(h_1h_2+h_{12})(h_3h_4+h_{34})$. In the conjugate paired directions
+of that proof their sum is $|\mathcal S|^2$. Multiplying the original
+integrand by $b$ gives $b|\mathcal S|^2$, and normalising produces
+$(b-F_\varnothing)|\mathcal S|^2$, in addition to the insertion
+derivatives and proper-subset terms of \eqref{eq:c8-fourth-centred}.
+This is the precise term for which the NLSM lower-bound argument would
+need a new estimate.
+
+\subsection{An Obstruction in the Actual Holonomy Carrier}
+
+For a nontrivial irreducible $R$, Haar averaging gives
+$\int_G R(H)\,\dd H=0$: the average is the projection onto invariant
+vectors, and the representation has none. Applied inside the closed
+trace in \eqref{eq:c8-fourth-bare}, this proves, in any one auxiliary
+slot with the other slots fixed,
+\begin{equation}\label{eq:c8-fourth-haar-zero}
+    \int_G b_J(H_1,\ldots,H_r,\ldots,H_m)\,\dd H_r=0\;.
+\end{equation}
+No open factor is separately estimated. Chronological integration,
+division by the vacuum normalisers, selection, and denominator
+completion WC-C8.6 are linear in the insertion and independent of
+$H$. Thus the same equality holds for $\bar b_{J,\sigma}$, for each
+completed kernel on its finite-cutoff convergence domain, and for
+\begin{equation}\label{eq:c8-fourth-zero-square}
+    P(H)=\Lambda_\eta[b(H)|\mathcal S|^2],\qquad
+    P_{\mathrm c}(H)=\Lambda_\eta[(b(H)-\Lambda_\eta[b(H)])
+        |\mathcal S|^2]\;,
+\end{equation}
+whenever the integrals exist and $\mathcal S$ is independent of $H$.
+The first calculation above has $\mathcal S=Y$. Finite-dimensionality
+of the representation makes these functions continuous in $H$.
+Haar integration here tests a function on the existing auxiliary
+carrier; it is not an extra physical integration or a new probability
+law for retained fields.
+
+Consequently, for any fixed phase $\vartheta$, if
+$\operatorname{Re}(e^{-i\vartheta}P(H))$ is nonnegative for every
+auxiliary $H$, then it is identically zero. Indeed its integral in one
+slot is zero, and a continuous nonnegative function with zero integral
+against Haar measure is zero. The same conclusion holds for $P_{\mathrm c}$.
+If such a real part is nonzero, it takes both signs. This rules out
+discarding a nonzero Wilson-weighted square as uniformly nonnegative
+on this carrier. It does not assert that every particular family
+produces a nonzero $P$, or exclude a bound on its negative part.
+
+The one-mark test is particularly explicit. At $H_1=\id$,
+\begin{equation}\label{eq:c8-fourth-one-mark}
+    \operatorname{Re}(Zb_{\{a\}}(\id))
+        =\operatorname{Re}\chi(Q_a)-1\leq0\;.
+\end{equation}
+This holds pointwise for the actual relative loop, without changing its
+law. For the fundamental representation of $SU(2)$ and
+$Q_a=\operatorname{diag}(e^{i\theta},e^{-i\theta})$ it equals
+$\cos\theta-1$, strictly negative for $0<|\theta|<2\pi$.
+This is a test of the algebraic source carrier, not a claim that an
+arbitrary prescribed relative holonomy has been realised by a given
+conditioned history. At $Q_a=\id$ the marked expression is zero, as
+required by the pure-gauge test. A flat background does not imply
+that its integrated fluctuating relative loops are identity.
+
+For the single-germ carrier WC-C8.7, replacing the last argument by
+$L_{\mathrm{loc}}H$ preserves zero Haar average by translation
+invariance. The prescribed additive scalar $c\chi(H)$ also has zero
+Haar average. Subtracting it therefore does not make a nonzero residual
+nonnegative. A pair of Wilson insertions retains separate auxiliary
+lists, so averaging a slot of either nontrivial character has the same
+effect. No independent law for the two loops is used.
+
+\subsection{Caller Replay and Scope of the Failed Extension}
+
+The obstruction concerns a proposed uniform sign step on the C8
+carrier. After evaluating $H=H^{\mathrm{phys}}$, the auxiliary argument
+depends on the actual retained fields; the zero-Haar-average argument
+does not prove a negative physical correlation. Similarly, positivity
+of a fully resummed physical law does not imply positivity of an
+individual selected kernel. Summing the signed terms before estimating
+is still allowed, but requires control of that sum.
+
+Ba{\l}aban's corresponding calculation in CRE (3.44)--(3.47),
+pp.~277--278, puts the insertion in $H'(Z_0)$, cancels only the
+identical disconnected vacuum factors, and retains the exponential
+of clusters touching $Z_0$. Those clusters are precisely the
+denominator completion in WC-C8.6. They remain in
+\eqref{eq:c8-fourth-quotient}; differentiating a numerator alone would
+miss them. LFR2 p.~391 explicitly provides no tree decay inside the
+fixed inherited $Y_i$. Neither source supplies a bound for
+\eqref{eq:c8-fourth-connected-square} with the required marked gain.
+
+The authorised attempt therefore yields the exact fourth-order
+identities \eqref{eq:c8-fourth-square}--\eqref{eq:c8-fourth-connected-square}
+and the carrier obstruction \eqref{eq:c8-fourth-haar-zero}.
+The unchanged target WC.1 is not proved. No new small activity bound,
+ultraviolet uniformity, noncommuting YM rotation identity or all-scale
+correlation inequality is asserted. The bounded boundary-source test
+directly tests the positivity step of direct transplantation; it is not a full execution
+of the noncommuting field-rotation programme. The first unresolved
+estimate is the negative/connected part of the source-weighted square,
+together with the insertion and denominator terms in
+\eqref{eq:c8-fourth-centred}, in the actual marked norm. A subsequent
+attempt must bound these terms before claiming a fourth-order gain.
+
+\subsection{Testing Positive Combinations Without a New Denominator}
+
+The continuation authorised on 22 October remains in this separate file.
+Consider a genuinely positive real instance of the unexpanded physical
+law, normalised by its original $D_h$, or a positive real conditional
+operation with its own original vacuum normaliser. Denote its expectation
+by $\mathbb E$ in this subsection. No selected complex activity is
+declared positive. Let $a$ be a real component of the unlabelled C8
+insertion, and suppose $|a|\leq M$. At the primitive level one can take
+$a=\operatorname{Re}(e^{-i\vartheta}Zb_J)$ and $M=2^m$: expanding the
+$m$ differences gives $2^m$ normalised characters of closed unitary
+words, each of modulus at most one. A positive normalised chronological
+lift preserves this bound; an individual signed selection need not.
+
+For the nonnegative square $T=|\mathcal S|^2$, the two nonnegative
+numerator insertions $M\pm a$ give exactly
+\begin{equation}\label{eq:c8-fourth-positive-shifts}
+    \mathbb E[(M\pm a)T]=M\mathbb E[T]\pm\mathbb E[aT]\geq 0\;.
+\end{equation}
+They use the same denominator as the original expectation. Consequently,
+with $a_0=\mathbb E[a]$,
+\begin{equation}\label{eq:c8-fourth-shift-cost}
+    -(M+a_0)\mathbb E[T]\leq
+        \operatorname{Cov}(a,T)
+        \leq(M-a_0)\mathbb E[T]\;.
+\end{equation}
+Thus recovering the signed part from the two positive numerators
+retains the full vacuum square $\mathbb E[T]$. The NLSM argument
+discards that square in a lower bound; it supplies no upper estimate
+for its size. This calculation therefore does not recover the desired
+fourth-order gain. It does not change the physical normaliser or use
+the positive combinations as a new inductive carrier.
+
+\subsection{A Relative-Holonomy Bound for the Connected Square}
+\label{sec:c8-fourth-deficit}
+
+We now estimate the actual C8 marker inside the square term. For each
+marked relative loop define the nonnegative gauge-invariant scalar
+\begin{equation}\label{eq:c8-fourth-deficit}
+    q_r=1-\operatorname{Re}\chi(Q_{a_r})\;.
+\end{equation}
+The next inequality concerns complete closed contractions on the real
+compact-group domain, with the same nontrivial irreducible unitary
+representation as \eqref{eq:c8-fourth-bare}. For every $H\in G^m$ and
+every marked index $r$, it states
+\begin{equation}\label{eq:c8-fourth-pointwise-deficit}
+    |Zb_J(H)|^2\leq 2^{2m-1}q_r\;.
+\end{equation}
+To prove it, first let $A=R(Q)$ and let $U$ be any unitary product of
+the other based closed holonomies. The Hilbert--Schmidt
+Cauchy--Schwarz identity applied within the trace gives
+\begin{equation}\label{eq:c8-fourth-closed-cauchy}
+    \left|\frac{1}{d}\operatorname{Tr}[(A-\id)U]\right|^2
+        \leq\frac{1}{d}\operatorname{Tr}[(A-\id)(A^*-\id)]
+             \frac{1}{d}\operatorname{Tr}[U^*U]
+        =2(1-\operatorname{Re}\chi(Q))\;.
+\end{equation}
+Both sides are scalars invariant under simultaneous conjugation at the
+base. No open transport is assigned a separate estimate or activity.
+In \eqref{eq:c8-fourth-bare}, expand the other $m-1$ differences,
+without expanding the chosen $R(Q_{a_r})-\id$. There are $2^{m-1}$
+closed traces. Cyclicity places the chosen difference first in each;
+the remaining product is unitary. Each trace has magnitude at most
+$\sqrt{2q_r}$ by \eqref{eq:c8-fourth-closed-cauchy}. The triangle
+inequality for these scalar traces and then squaring prove
+\eqref{eq:c8-fourth-pointwise-deficit}. This explicitly pays the
+factor $2^{2m-1}$; no cancellation among marked contacts is credited.
+
+For the two-loop C8 insertion, use its product of two complete traces
+and set $m=m_1+m_2>0$ and $Z=Z_1Z_2$. Choose the marked index in
+either loop. Expanding every other difference gives the same factor
+$2^{m-1}$; any remaining unmarked trace has modulus at most one.
+Thus \eqref{eq:c8-fourth-pointwise-deficit} also holds for that joint
+marker. Its subsequent lift must be the joint chronological lift,
+not the product of two separately averaged sources. All covariance
+bounds below then use the same joint physical law.
+
+There is an exact inherited version on a positive real chronological
+branch. Start $q_{r,0}$ with \eqref{eq:c8-fourth-deficit}, and lift it
+through each already performed elimination by the same actual rule
+as the unlabelled source:
+\begin{equation}\label{eq:c8-fourth-deficit-lift}
+    q_{r,\mathrm{next}}(y)=
+        \frac{\sum_\lambda\int
+            w_\lambda(z,y)q_{r,\mathrm{previous}}(z,y)\,\dd z}
+             {I(y)}\;.
+\end{equation}
+The variables, history labels, base measures, cutoffs and factors are
+exactly WC-C8.3a. This formula is used here only when the unexpanded
+weights are nonnegative and $I(y)>0$. For an actual replacement
+WC-C8.3b with nonnegative $r$ and $\sigma$, its conditional quotient
+uses $r/\int r$ for both $b$ and $q_r$; the vacuum output
+$\sigma(\int r)/J$ remains in the outer physical weight. No such
+positivity statement is made for an individual signed selection or
+a complex background extension.
+
+Conditional Cauchy--Schwarz, applied to that same normalised integral,
+propagates \eqref{eq:c8-fourth-pointwise-deficit}. Consequently the
+unlabelled inherited marker and inherited deficit obey
+\begin{equation}\label{eq:c8-fourth-inherited-deficit}
+    |Z\bar b_J(\eta;H)|^2
+        \leq2^{2m-1}\bar q_r(\eta)\;.
+\end{equation}
+The proof is induction over the actual finite elimination chronology:
+$|\mathbb E_y[Zb]|^2\leq\mathbb E_y[|Zb|^2]
+\leq2^{2m-1}\mathbb E_y[q_r]$ at each operation. Postponed variables
+stay in $y$. The scalar $\bar q_r$ is only a certificate for this
+inequality; it is not substituted for the Wilson insertion or
+assigned a new activity norm. All supports and old dependence remain.
+
+Let $\nu$ now be the actual positive real current bracket, including
+its boundary exponential, with the unlabelled $\bar b_J$ inside it.
+Assume the displayed moments exist, and let $T$ be a real scalar
+function of its actual integration variables. Writing the covariance
+as $\nu[\bar b_J(T-\nu[T])]$, Cauchy--Schwarz and
+\eqref{eq:c8-fourth-inherited-deficit} prove
+\begin{equation}\label{eq:c8-fourth-deficit-covariance}
+    |\operatorname{Cov}_\nu(\bar b_J(H),T)|
+        \leq\frac{2^{m-1/2}}{|Z|}
+            \left(\nu[\bar q_r]\,
+                \nu[(T-\nu[T])^2]\right)^{1/2}\;.
+\end{equation}
+This holds uniformly over independent auxiliary $H$. Because
+\eqref{eq:c8-fourth-inherited-deficit} is pointwise and uniform in
+$H$, it also applies when $H$ is a function of retained variables,
+provided its substitution precedes every integration reading it,
+as required by C8. The same argument can be applied to the full
+unexpanded positive physical law, normalised by $D_h$, if the required
+source lift and moments have been justified there. It does not license
+a passage through the physical outer integrations without those checks.
+
+Taking $T=Y^2$ in the actual four-boundary-source test yields
+\begin{equation}\label{eq:c8-fourth-deficit-replay}
+    \left|\sum_{i,j}F^{ij}_{[4]}+\mathcal D_{\bar b_J}\right|
+        \leq\frac{2^{m-1/2}}{|Z|}
+            \left(\nu[\bar q_r]\,
+                \nu[(Y^2-\nu[Y^2])^2]\right)^{1/2}\;.
+\end{equation}
+The $F^{ij}$ on this line use the unlabelled $\bar b_J$, after summing
+its earlier labels, rather than a single $\bar b_{J,\sigma}$. This is
+a bound for the connected square together with the fourteen retained
+denominator terms, not for $\sum F^{ij}_{[4]}$ alone. No estimate for
+those fourteen terms is inferred from it. The second factor contains
+eighth-degree moments of the boundary scores, because $Y$ is quadratic
+in those scores. Their boundedness does give a finite-data estimate.
+Define, using the essential suprema under this actual real law,
+\begin{equation}\label{eq:c8-fourth-score-size}
+    \mathcal M=\sum_i\|p_i\|_{L^\infty(\nu)}
+                          \|q_i\|_{L^\infty(\nu)}\;.
+\end{equation}
+Then $0\leq Y^2\leq\mathcal M^2$ almost surely. Writing
+$t_0=\nu[Y^2]$, the pointwise inequality $Y^4\leq\mathcal M^2Y^2$
+implies
+\begin{equation}\label{eq:c8-fourth-score-variance}
+    \nu[(Y^2-t_0)^2]\leq
+        t_0(\mathcal M^2-t_0)\leq\frac{\mathcal M^4}{4}\;.
+\end{equation}
+Consequently the explicit finite-data bound is
+\begin{equation}\label{eq:c8-fourth-finite-bound}
+    \left|\sum_{i,j}F^{ij}_{[4]}+\mathcal D_{\bar b_J}\right|
+        \leq\frac{2^{m-3/2}}{|Z|}\mathcal M^2
+            \nu[\bar q_r]^{1/2}\;.
+\end{equation}
+No independence or replacement distribution enters this estimate.
+Since $0\leq\bar q_r\leq2$ on the positive chronology, the right-hand
+side is finite at the fixed data. However, $\mathcal M$ uses an
+absolute sum over the family. If there are $n$ tests and all the
+individual score bounds are $\delta$, its bound is $n\delta^2$,
+so \eqref{eq:c8-fourth-finite-bound} has an $n^2\delta^4$ cost.
+This bound supplies no favourable multiscale family cancellation.
+Nor does it supply uniform control of $\mathcal M(\eta)$ across the
+physical histories, or smallness of the actual inherited deficit.
+
+\subsection{The Square-Root Deficit Loss Is Sharp on This Carrier}
+
+The one-mark case tests whether scalar subtraction could improve
+\eqref{eq:c8-fourth-pointwise-deficit} to a bound linear in $q_r$ for
+the magnitude of the marker. In the fundamental $SU(2)$ representation,
+take the based closed holonomies
+\begin{equation}\label{eq:c8-fourth-sharp-holonomies}
+    Q_\theta=\operatorname{diag}(e^{i\theta},e^{-i\theta}),
+    \qquad H_*=\operatorname{diag}(i,-i)\;.
+\end{equation}
+Then $\chi(H_*)=0$, $Zb_{\{a\}}(H_*)=-\sin\theta$ and
+$q=1-\cos\theta$. For $0<|\theta|<\pi$, the ratio is
+\begin{equation}\label{eq:c8-fourth-sharp-ratio}
+    \frac{|Zb_{\{a\}}(H_*)|^2}{2q}
+        =\frac{1+\cos\theta}{2}\;.
+\end{equation}
+It tends to one as $\theta$ tends to zero.
+In particular $|Zb_{\{a\}}(H_*)|/q$ diverges as
+$\theta\longrightarrow0$. Since $\chi(H_*)=0$, subtracting any
+scalar multiple of $\chi(H)$ cannot remove this term at $H_*$.
+Thus a uniform-in-$H$ estimate $|Zb-c\chi(H)|\leq Cq$ is false on
+the algebraic C8 carrier, with a constant independent of $Q$ near
+identity. The weaker square-root bound is sharp there. This is not a
+claim that every such prescribed $Q_\theta$ is realised by each fixed
+RG history, nor a counterexample after physical integration. It tests
+the proposed pointwise mechanism on its stated carrier. At
+$\theta=0$ the marker vanishes, preserving the pure-gauge test.
+
+The continuation has therefore produced
+\eqref{eq:c8-fourth-deficit-covariance}, its exact fourth-order
+replay \eqref{eq:c8-fourth-deficit-replay}, and the finite-data bound
+\eqref{eq:c8-fourth-finite-bound}, conditional at the
+explicit positive-real and moment scopes stated there. It has not
+bounded the labelled completed C8.6 kernels in their required complex
+activity norm. In particular, the source contains the prescribed
+$|Z|^{-1}$, and the contact factor $2^{m-1/2}$ is retained. No
+uniform control of either factor, of the inherited deficit, or of
+the score-family cost follows from this calculation.
+
+\subsection{The Full Quotient Response and its Complex Source Neighbourhood}
+\label{sec:c8-fourth-full-response}
+
+We now bound the full fourth derivative in
+\eqref{eq:c8-fourth-defined-test}, including its denominator terms.
+Keep the actual positive real bracket $\nu$, unlabelled inherited
+insertion $b=\bar b_J(H)$, and a fixed marked contact $r$ from
+Section~\ref{sec:c8-fourth-deficit}. All inherited variables and
+operations are unchanged. Put
+\begin{equation}\label{eq:c8-fourth-source-size}
+    C_J=\frac{2^{m-1/2}}{|Z|}\nu[\bar q_r]^{1/2}\;.
+\end{equation}
+Equation \eqref{eq:c8-fourth-inherited-deficit} gives
+$\nu[|b|^2]^{1/2}\leq C_J$, uniformly in independent auxiliary
+holonomies. The joint two-loop statement uses the same joint lift,
+$m=m_1+m_2$ and $Z=Z_1Z_2$.
+
+Let $x_1,\ldots,x_4$ be four actual bounded real scalar tests, with
+$M_j=\|x_j\|_{L^\infty(\nu)}$. For $s\in\mathbb C^4$ define
+\begin{equation}\label{eq:c8-fourth-tilt}
+    d(s)=\nu[e^{s\cdot x}],\qquad
+    F(s;H)=\frac{\nu[b(H)e^{s\cdot x}]}{d(s)},\qquad
+    s\cdot x=\sum_{j=1}^{4}s_jx_j\;.
+\end{equation}
+Thus $D(s)=D_\eta d(s)$ is the actual deformed vacuum denominator;
+no sourced expectation is divided out. Only the four boundary-source
+coefficients vary. The background, old operations and auxiliary
+holonomies are fixed.
+
+Fix $0\leq\tau<\log2$ and suppose $\sum_j|s_j|M_j\leq\tau$.
+Since $|e^{s\cdot x}-1|\leq e^\tau-1$ pointwise,
+\begin{equation}\label{eq:c8-fourth-vacuum-lower}
+    |d(s)|\geq2-e^\tau>0,\qquad
+    |D(s)|\geq(2-e^\tau)D_\eta\;.
+\end{equation}
+Bounded tests and integrability of $b$ justify all parameter derivatives
+by dominated convergence on compact parameter sets. The numerator and
+denominator are entire, and their quotient is holomorphic on this
+neighbourhood. If $M_j=0$, that test is zero almost surely and the
+corresponding derivative vanishes. No division by $M_j$ is required.
+
+Set
+\begin{equation}\label{eq:c8-fourth-tilted-functional}
+    \nu_s[f]=\frac{\nu[fe^{s\cdot x}]}{d(s)},\qquad
+    K_\tau=\frac{e^\tau}{2-e^\tau}\;.
+\end{equation}
+The functional $\nu_s$ is generally complex. For every integrable $f$,
+the original positive law and \eqref{eq:c8-fourth-vacuum-lower} give
+\begin{equation}\label{eq:c8-fourth-tilt-domination}
+    |\nu_s[f]|\leq K_\tau\nu[|f|],\qquad
+    |F(s;H)|\leq K_\tau C_J\;.
+\end{equation}
+The latter uses $\nu[|b|]\leq\nu[|b|^2]^{1/2}$. No independence
+of the source and the boundary factors is assumed.
+
+Let $I_5=\{0,1,2,3,4\}$, $z_0=b$ and $z_j=x_j$ for $j>0$.
+For the set partitions $\Pi(I_5)$ the exact identity is
+\begin{equation}\label{eq:c8-fourth-cumulant}
+    \partial_1\partial_2\partial_3\partial_4F(s;H)
+        =\sum_{\pi\in\Pi(I_5)}(-1)^{|\pi|-1}(|\pi|-1)!
+            \prod_{A\in\pi}\nu_s\left[\prod_{j\in A}z_j\right]\;.
+\end{equation}
+To prove this finite cumulant formula without a sourced normaliser,
+write $F(s+u)=\nu_s[be^{u\cdot x}]/\nu_s[e^{u\cdot x}]$ and expand
+the reciprocal denominator as the geometric series in
+$\nu_s[e^{u\cdot x}]-1$ near zero. The derivative labels acting on
+the numerator join label $0$ in one block. The remaining labels form
+nonempty denominator blocks. For $k-1$ such blocks their order in the
+geometric series gives $(k-1)!$ copies with sign $(-1)^{k-1}$.
+These are exactly the partitions in \eqref{eq:c8-fourth-cumulant}.
+All terms of \eqref{eq:c8-fourth-quotient}, including the fourteen
+proper-subset denominator terms, are retained.
+
+There is exactly one source-containing block. By
+\eqref{eq:c8-fourth-tilt-domination}, its moment is bounded by
+$K_\tau C_J$ times its product of $M_j$; every other block costs
+$K_\tau$ times its product of $M_j$. The numbers of partitions of
+five labels into $k=1,\ldots,5$ blocks are $1,15,25,10,1$.
+Multiplying these numbers by $(k-1)!$ therefore proves
+\begin{equation}\label{eq:c8-fourth-complex-response-bound}
+    |\partial_1\partial_2\partial_3\partial_4F(s;H)|
+        \leq C_J\left(\prod_{j=1}^{4}M_j\right)
+            \left(K_\tau+15K_\tau^2+50K_\tau^3
+                +60K_\tau^4+24K_\tau^5\right)\;.
+\end{equation}
+At zero source, $K_0=1$ and this polynomial is $150$. With
+$x=(p_i,q_i,p_j,q_j)$, summing the scalar bounds gives
+\begin{equation}\label{eq:c8-fourth-full-family-bound}
+    \left|\sum_{i,j}F^{ij}_{[4]}(0;H)\right|
+        \leq150\,\frac{2^{m-1/2}}{|Z|}\mathcal M^2
+            \nu[\bar q_r]^{1/2}\;.
+\end{equation}
+This controls the full quotient derivative without adding an unestimated
+$\mathcal D_{\bar b_J}$ to it. The triangle inequality explicitly
+pays the absolute family cost $\mathcal M^2$; no covariance-matrix or
+tree-decay gain is inferred.
+
+The same proof applies directly to the full unexpanded positive physical
+law $\nu_{\mathrm{phys}}=\mathcal I_{\mathrm{phys}}/D_h$ if the
+source has its stated positive chronological lift and the four tests
+have finite essential suprema on that whole physical space. The literal
+physical numerator and denominator are then
+\begin{equation}\label{eq:c8-fourth-full-physical-tilt}
+    N_{\mathrm{phys}}(s)=\mathcal I_{\mathrm{phys}}[be^{s\cdot x}],\qquad
+    D_{\mathrm{phys}}(s)=\mathcal I_{\mathrm{phys}}[e^{s\cdot x}]\;,
+\end{equation}
+and $|D_{\mathrm{phys}}(s)|\geq(2-e^\tau)D_h$.
+Every history, Haar factor, cutoff, inherited action, replacement
+prefactor and postponed integration stays in $\mathcal I_{\mathrm{phys}}$.
+Physical holonomies are substituted before integrations reading them.
+Fixed-data score bounds do not imply uniform bounds on this physical
+space, so this is an explicit conditional application, not a proof of
+the missing history uniformities.
+
+For the first connected caller WC-C7.5, one bounded boundary test $W$
+gives $G(s)=\nu[be^{sW}]/\nu[e^{sW}]$ and
+$G'(0)=\operatorname{Cov}_\nu(b,W)$. The same argument gives a joint
+complex-source neighbourhood for $|s|\|W\|_\infty<\log2$, with the
+actual vacuum denominator and $|G(s)|\leq K_\tau C_J$ when
+$|s|\|W\|_\infty\leq\tau$. It uses a bound for the actual source
+integrand through $C_J$, not merely its integrated mean. Its size and
+localisation remain to be controlled at the required uniform scope.
+This application is coefficientwise. Applying it to the complete source
+$S$ in WC-C7.5 requires accounting for all of its marked and unmarked
+contributions in their actual joint integration. No summability estimate
+for that complete source is supplied by the bound for one $b_J$.
+
+Complex boundary-source parameters and complex background variables
+are distinct domains. This calculation does not bound the labelled
+complex-background activities of WC-C8.6, nonlinear field-rotation
+derivatives or cutoff-domain variations. It still pays $|Z|^{-1}$,
+$2^{m-1/2}$ and the absolute family cost, and supplies no new ultraviolet
+decay or noncommuting YM change-of-variables identity.
+
+\subsection{Four Boundary Marks in the Labelled C8 Expansion}
+\label{sec:c8-fourth-labelled}
+
+The remaining caller is the sum of the completed kernels WC-C8.6,
+with their inherited labels, rather than one unlabelled conditional
+expectation. The calculation in this subsection differentiates those
+very kernels. It identifies the cost of the four marks; it does not
+assume a uniform bound for their inherited source seeds.
+
+\paragraph{Comparison with the newer first-step records.}
+The records \path{WILSON_IT1_LINE_DEFECT_2026_10_21.md},
+Sections 3d--3e, and
+\path{WILSON_IT1_D2_STEP_MAP_2026_10_22.md},
+D2.0--D2.1, contain proposed upgrades of V3. The first extends the
+closed-contour first-step representation to uncovered branches and
+derives a complex-background extension with revised constants. Its
+Section 3e(3.8) retains exponential growth in the length of the
+undifferentiated contour words; only a group's own word cost is paid
+by its local reserve. The second still assigns the old-insertion map
+and the later R-operation to D2.2 and D2.7. Consequently these records
+do not supply the uniform bound for the inherited labelled
+$\bar b_{J,\sigma}$ required here. This is a comparison of operands
+and scopes, not a rejection of their first-step derivations. No open
+matrix insertion from those records is adopted as an inductive carrier.
+
+\paragraph{Actual factors and four independent marks.}
+Fix the outer data, $J$, $\sigma$ and $H$, and keep
+$b=\bar b_{J,\sigma}(H)$ inside the component operations. For each
+input boundary label $a$, write $u_a=\operatorname{Re}\beta_a$ on
+the real integration variables. Let $B_a$ be a finite uniform bound
+for $|\beta_a|$ on all the integration variables of that factor,
+at these fixed outer data. This paragraph assumes $0\leq B_a\leq1$.
+The small input boundary bounds used in LFR2 (1.103) are of this
+form. No such bound on the source itself is inferred from them.
+Choose four labels $a_1,\ldots,a_4$, with repetitions allowed, and set
+\begin{equation}\label{eq:c8-fourth-marked-edge}
+    v_a(s)=\exp\left(\beta_a+
+        \sum_{r=1}^{4}s_r\mathbf 1_{a=a_r}u_a\right)-1\;.
+\end{equation}
+Then $\prod_a(1+v_a(s))=\exp(B_\eta+\sum_rs_ru_{a_r})$.
+Thus the numerator and vacuum denominator are exactly those in
+\eqref{eq:c8-fourth-defined-test}. The source, the component
+functionals and all earlier denominator labels stay fixed during
+this current boundary-source differentiation. For a nonempty subset
+$A\subseteq\{1,2,3,4\}$, differentiation gives
+\begin{equation}\label{eq:c8-fourth-edge-derivative}
+    \partial_Av_a(0)=e^{\beta_a}u_a^{|A|}
+        \prod_{r\in A}\mathbf 1_{a=a_r}\;.
+\end{equation}
+Put $w_a=B_ae^{B_a}$. Since $|u_a|\leq B_a\leq1$, the
+undifferentiated factor and every nonzero mixed derivative through
+order four have modulus at most $w_a$. When $B_a=0$, both the factor
+and these derivatives vanish; no division by $B_a$ is used. This is
+analyticity in $s$ only. Taking a real part does not furnish a
+holomorphic extension in the background.
+
+\paragraph{Terms, multiplicities and their majorants.}
+Resolve WC-C8.6 into the following terms, without altering its labels.
+A term $\mathcal T$ specifies the source component $Z_0$ and its
+connected selected boundary family $D_0$, an ordered list of $q$
+vacuum clusters, the ordered polymer vertices in each cluster, and
+the connected selected boundary family $D_{rj}$ at each such vertex.
+The source family is allowed to be empty. The vacuum families are
+nonempty. Each vacuum cluster touches $Z_0$, and the union of all
+their supports with $Z_0$ is the assigned support $X$.
+All these supports contain every whole inherited $Y_i$ that their
+integrands read, as prescribed in WC-C8.6.
+
+For a cluster with ordered vertices $(Z_1,\ldots,Z_n)$, let $G$
+range over connected graphs on $\{1,\ldots,n\}$ and retain
+the graph sum
+\begin{equation}\label{eq:c8-fourth-ursell}
+    U(Z_1,\ldots,Z_n)=
+        \sum_G\prod_{\{j,l\}\in E(G)}
+            \left(-\mathbf 1_{Z_j\not\sim Z_l}\right)\;.
+\end{equation}
+It is this entire sum, including repeated labels and
+self-incompatibility, whose modulus is taken below. Taking the
+modulus of each graph before summing would give a different and
+potentially divergent majorant.
+
+Let $I(D)$ be the component slots read by a selected family $D$;
+let $I_0$ include also every slot read by $b$. Write $\nu_i$ for the
+literal normalised component measure of WC-C8.4, $|\nu_i|$ for its
+total variation, and $K_i=|\nu_i|(1)$. These are the original
+integral functionals, with the original normalising scalars.
+LFR2 (1.73)--(1.75) gives $K_i\leq e^3$ on its stated domain.
+Define nonnegative, possibly infinite, quantities
+\begin{equation}\label{eq:c8-fourth-selected-majorants}
+    \begin{aligned}
+        M_b(D_0)&=
+            \left(\prod_{i\in I_0}|\nu_i|\right)[|b|]
+                \prod_{a\in D_0}w_a,\\
+        M_0(D)&=\left(\prod_{i\in I(D)}K_i\right)
+                \prod_{a\in D}w_a\;.
+    \end{aligned}
+\end{equation}
+Every numerator, cutoff and earlier scalar denominator in $b$
+remains inside the first integral. In particular $M_b(D_0)$ is not
+replaced by the modulus of an already integrated source coefficient.
+Taking total variation defines a majorant, not a new physical law.
+
+If cluster $r$ has $n_r$ vertices, set
+\begin{equation}\label{eq:c8-fourth-term-majorant}
+    A_{\mathcal T}=
+        \frac{1}{q!}\prod_{r=1}^{q}
+            \frac{|U(Z_{r1},\ldots,Z_{rn_r})|}{n_r!}
+        M_b(D_0)\prod_{r=1}^{q}\prod_{j=1}^{n_r}M_0(D_{rj})\;.
+\end{equation}
+Incompatible pairs in $U$ have precisely the original compatibility
+rule. The sign $(-1)^q$ of denominator completion is retained in
+the actual term and removed only in $A_{\mathcal T}$.
+Repeated occurrences of a boundary label in different vertex
+integrals are distinct occurrences. Let $N_a(\mathcal T)$ count
+them, including the source vertex, and put
+$n(\mathcal T)=\sum_aN_a(\mathcal T)$.
+
+For each assignment of the four derivative labels to factor
+occurrences, apply \eqref{eq:c8-fourth-edge-derivative} inside
+the original integrals. The product rule sums over all such
+assignments, including several derivatives on one occurrence.
+It gives the termwise estimate
+\begin{equation}\label{eq:c8-fourth-term-derivative}
+    |\partial_1\partial_2\partial_3\partial_4
+        \mathcal T(0)|
+        \leq A_{\mathcal T}
+            \prod_{r=1}^{4}N_{a_r}(\mathcal T)\;.
+\end{equation}
+The integrations factor only across the component slots already
+disjoint in the C8 construction. No probabilistic independence
+inside an inherited component is introduced. Every differentiated
+integrand is a closed scalar contraction multiplied by invariant
+scalar boundary factors; invariance is preserved before the estimate.
+
+\paragraph{The test family and the occurrence reserve.}
+For the same finite family $(\alpha_i,\gamma_i)$ as above, define
+$h$ to be the largest multiplicity of an ordered pair $(a,c)$ in
+that list, and set $h=0$ for the empty family. Then
+\begin{equation}\label{eq:c8-fourth-family-count}
+    \begin{aligned}
+        \sum_{i,j}\prod_{a\in(\alpha_i,\gamma_i,\alpha_j,\gamma_j)}
+            N_a(\mathcal T)
+            &=\left(\sum_iN_{\alpha_i}(\mathcal T)
+                N_{\gamma_i}(\mathcal T)\right)^2\\
+            &\leq h^2 n(\mathcal T)^4\;.
+    \end{aligned}
+\end{equation}
+The product on the first line is a product over four positions,
+with repeated labels retained. The inequality follows by replacing
+each ordered-pair multiplicity by $h$ and summing all ordered pairs
+of boundary labels. It does not multiply by the total number of
+tests in the ambient volume.
+
+For $\delta>0$, let
+\begin{equation}\label{eq:c8-fourth-boosted-majorant}
+    \mathcal A^{\delta}_{J,\sigma,X}
+        =\sum_{\mathcal T:\,\operatorname{supp}\mathcal T=X}
+            A_{\mathcal T}e^{\delta n(\mathcal T)}\;.
+\end{equation}
+Equivalently this is the same absolute C8 majorant with $w_a$
+replaced by $e^\delta w_a$ at each occurrence. It does not change
+the measure, the source normalisation, the physical denominator or
+the support. Since $t^4e^{-\delta t}\leq(4/(e\delta))^4$ for
+$t\geq0$, \eqref{eq:c8-fourth-term-derivative} proves
+\begin{equation}\label{eq:c8-fourth-labelled-bound}
+    \sum_{i,j}\sum_{\mathcal T:\,\operatorname{supp}\mathcal T=X}
+        |\partial_{[4]}\mathcal T^{ij}(0)|
+        \leq h^2\left(\frac{4}{e\delta}\right)^4
+            \mathcal A^{\delta}_{J,\sigma,X}\;.
+\end{equation}
+This is an inequality of nonnegative sums, allowing infinity.
+Whenever its right-hand side is summable, it controls the full
+labelled derivative, including all touching-denominator terms.
+The empty source family with no vacuum clusters has zero derivative;
+it contributes no exception at $n=0$.
+
+Here is the convergence justification without a formal exchange of
+infinite sums. For $\max_r|s_r|\leq\delta/16$, each deformed factor
+satisfies
+\begin{equation}\label{eq:c8-fourth-source-polydisc}
+    |v_a(s)|\leq
+        \left(1+\frac{\delta}{4}\right)
+        e^{\delta/4}w_a\leq e^{\delta/2}w_a\;.
+\end{equation}
+Thus finiteness of the summed $\mathcal A^\delta$, with the vacuum
+cluster expansion valid for these enlarged activities, gives local
+uniform absolute convergence on this polydisc. The same occurrence
+estimate with the unused half of the reserve controls differentiated
+series on smaller closed polydiscs. Termwise differentiation is then
+valid. The vacuum cluster identity represents the original
+$D_\eta(s)$ there; its exponential is nonzero. No source-containing
+partition function is used for normalisation.
+
+The estimate remains valid after multiplication by any specified
+nonnegative support weight and summation over $X,J,\sigma$, with
+the same constant. Consequently the derivative cost alone can be
+paid by a small strengthening of the boundary activity parameter.
+In the LFR2 (1.103) estimate, the parameter $O(1)c_1$ must be chosen
+below its convergence threshold also after this strengthening.
+Neither $e^3$ per inherited component nor its size is raised to a
+new fourth-order power by this calculation. This uses an occurrence
+reserve, not a claimed tree decay inside $Y_i$: p.~391 explicitly
+excludes that decay from the vacuum argument because the $Y_i$ are
+fixed there.
+
+\paragraph{Literal caller and the remaining estimate.}
+Write
+$R_\eta=\sum_{J,\sigma,X,i,j}\partial_{[4]}
+f^{ij}_{J,\sigma,X}(0;H^{\rm phys})$ whenever that sum exists,
+with physical holonomies substituted before any integration that
+reads them. In this current bracket the transports defining
+$H^{\rm phys}$ use the frozen $V$, as stated after WC-C8.3;
+they are therefore legitimate fixed arguments of the current
+component integrals. Their dependence is restored before subsequent
+RG integrations. The following bound uses a source majorant at
+these same fixed arguments, not a supremum taken after integrating
+a variable holonomy. Its physical insertion is
+\begin{equation}\label{eq:c8-fourth-labelled-physical}
+    \frac{\mathcal O_\eta[A_\eta D_\eta R_\eta]}{D_h}\;.
+\end{equation}
+This is a conditional-response insertion in the physical integral.
+It is not asserted to equal the fourth derivative of the full
+physical quotient: derivatives of the outer vacuum weights would
+also be required for that statement.
+If $\mathcal O_\eta^{\rm abs}$ denotes total variation of the
+literal outer sums and integrations, the bound obtained by
+substitution is
+\begin{equation}\label{eq:c8-fourth-labelled-physical-bound}
+    \frac{|\mathcal O_\eta[A_\eta D_\eta R_\eta]|}{D_h}
+        \leq \frac{h^2}{D_h}
+            \left(\frac{4}{e\delta}\right)^4
+            \mathcal O_\eta^{\rm abs}\left[
+                |A_\eta D_\eta|
+                \sum_{J,\sigma,X}\mathcal A^\delta_{J,\sigma,X}
+            \right]\;.
+\end{equation}
+The source renormalisation $Z$ is still in every source seed. The
+right-hand side requires its own finite, uniform physical estimate;
+the factor $D_h$ has not disappeared. In particular the source-free
+LFR2 bounds do not estimate
+$(\prod_{i\in I_0}|\nu_i|)[|\bar b_{J,\sigma}|]$, its sum over
+earlier denominator labels, or its complex-background dependence.
+The new calculation pays the four current boundary marks locally
+once the actual source majorant is available. It neither supplies
+that missing majorant nor creates an ultraviolet small factor.
+
+The immediate falsification checks are algebraic. With no selected
+boundary occurrence, the derivative is zero. Four derivatives can
+hit a single occurrence, so four distinct boundary labels must not
+be required. Repeated labels in different denominator vertices
+must remain separate occurrences. If the closed source integrand
+vanishes pointwise, every differentiated term vanishes as well;
+flatness of the background alone is not identified with this
+pointwise condition after fluctuation integration.
+
+\subsection{A First-Step Source Block with the Coarse Comparison Retained}
+\label{sec:c8-fourth-first-seed}
+
+This calculation addresses the source factor left unevaluated in
+\eqref{eq:c8-fourth-selected-majorants}. Its scope is a first-step
+selected block, with the actual retained data, followed by multiplication
+by a later boundary test that reads those retained data. It is not
+an estimate for each separate C8 coefficient after absolute values.
+The finite sum over the marked choices in one interval is taken
+inside the closed source contraction. No measure is changed.
+
+\paragraph{First-step input and its scope.}
+Fix real retained data $y$ and a nonempty selected group $W$ in V3,
+Lemma \texttt{c5-5-3}, at $t=1$. Use the same selected integration
+operation, denoted here by $\mathscr Q_W$, that defines
+$c_W(h)=c_W^1(h)$ in Lemmas \texttt{c5-5-7} and
+\texttt{c5-5R-3}. In particular, if $\mathcal A(W)$ is its root
+family, $\ell_R$ are the selected labels of root $R$, and
+$\mathsf J_R\neq\varnothing$ their free-bond probe sets, this operation is
+\begin{equation}\label{eq:c8-fourth-seed-operation}
+    \mathscr Q_W[g]
+        =w_\Lambda^1(W)
+            \sum_{(\ell_R)_{R\in\mathcal A(W)}}
+                \int \Delta_{\mathsf J}g\,
+                    \dd\bigotimes_{R\in\mathcal A(W)}
+                        \Lambda_{\Lambda;\ell_R}^{f,1}\;,
+    \qquad
+    \mathsf J=\bigsqcup_{R\in\mathcal A(W)}\mathsf J_R\;.
+\end{equation}
+Here $\Delta_{\mathsf J}$ is the finite difference in the young
+free-bond variables about their real base point $m$. The measures,
+translated cutoffs, exterior shift, selected host factors and
+touching vacuum-cluster weight $w_\Lambda^1(W)$ are V3's original
+ones. This is a signed linear integration operation, not a
+probability. Its nonempty probe sets imply
+$\mathscr Q_W[1]=0$.
+
+Let $T_W(B)$ be the fine ordered transport along the contact interval
+$\mathcal H(W)$ and $P_W=T_W(0)$. The source input and estimates used
+below are, for every $h\in G$,
+\begin{equation}\label{eq:c8-fourth-seed-input}
+    \begin{aligned}
+        c_W(h)&=\mathscr Q_W[
+            \chi(T_W(B)P_W^{-1}h)],\\
+        |c_W(h)|&\leq M_W^{\rm ph},\qquad
+        |a_W|\leq M_W^{\rm ph},\qquad
+        d_W=\sup_{h\in G}|c_W(h)-a_W\chi(h)|\;.
+    \end{aligned}
+\end{equation}
+The first two bounds are precisely the real, pointwise-in-$y$
+input of V3 Lemma \texttt{c5-5R-3}; in particular
+$d_W\leq2M_W^{\rm ph}$. They require that lemma's actual hypotheses,
+constants, cutoffs and small-coupling conditions. Their proof uses
+signed source differences and parity before total variation, and
+cannot be replaced by a bound on the raw source's absolute integral.
+The newer IT-1 Section 3d proposes their extension to uncovered
+branches. The calculation below applies wherever the stated
+first-step input holds; it does not silently assume an all-history
+extension or use a failed-coverage probability to discard other
+branches. The corresponding stronger deviation estimate for $d_W$
+is a separate input in IT-1 Section 3a.
+
+\paragraph{The C8 polynomial inside the same selected operation.}
+Choose the smallest coarse-bond interval $I$ containing
+$\mathcal H(W)$, with at most $L-1$ added fine traversals at either
+end. Here the group is in a genuine straight or corner germ; other
+groups retain their original multi-holonomy form. Let $P_C$ be
+the transport of the frozen coarse $V$ along $I$, and let
+$F_a(B)$ be the fine transport along coarse edge $a$ in the
+reconstructed original fine field, with the selected young
+variables of $W$ active and all other young variables at $m$.
+Write $C_a=V(c_a)$ and $H\in G$ for a closed holonomy at the
+initial point of $I$. The closed C8 polynomial is
+\begin{equation}\label{eq:c8-fourth-local-polynomial}
+    \mathcal P_I(z,B;H)
+        =\frac{1}{Zd}\operatorname{Tr}\left[
+            \left(\prod_{a\in I}
+                (R(C_a)+z_a(R(F_a(B))-R(C_a)))\right)
+            R(P_C)^{-1}R(H)\right]\;.
+\end{equation}
+The product has the contour order. Its coefficient
+$\mathcal P_{I,J}$ is the C8 coefficient with marked set $J$
+inside $I$, after the internal coarse holonomies and tree
+transports are restored as in WC-C8.7. This equality follows by
+telescoping those tree transports inside the whole trace.
+All coefficients are closed invariant contractions; none of the
+open factors in this algebraic polynomial is assigned an activity
+norm.
+
+The empty coefficient is $Z^{-1}\chi(H)$ and is independent of
+the young variables. Let $T_I(B)=\prod_{a\in I}F_a(B)$ and
+$P_I=T_I(0)$. Finite summation and the linear operation give
+\begin{equation}\label{eq:c8-fourth-local-resum}
+    \sum_{\varnothing\neq J\subseteq I}
+        \mathscr Q_W[\mathcal P_{I,J}(\,\cdot\,;H)]
+        =\frac{1}{Z}\mathscr Q_W[
+            \chi(T_I(B)P_C^{-1}H)]\;.
+\end{equation}
+The field on the right is the reconstructed fine field inside
+the selected integral, not its minimiser. Any earlier finite
+endpoint decomposition used to represent this same first-step
+source is summed to its physical endpoint before this identity
+is used. This does not bound the sum of the absolute values of
+those endpoint coefficients.
+
+By the definition of the contact set, selected young variables of
+$W$ do not affect the added traversals. Thus
+$T_I(B)=P_L T_W(B)P_R$ and $P_I=P_LP_WP_R$, with $P_L,P_R$
+fixed during $\mathscr Q_W$. Put $K_I=P_IP_C^{-1}$, a closed
+relative holonomy. Cyclicity of the trace proves
+\begin{equation}\label{eq:c8-fourth-seed-identification}
+    \sum_{\varnothing\neq J\subseteq I}
+        \mathscr Q_W[\mathcal P_{I,J}(\,\cdot\,;H)]
+        =\frac{1}{Z}c_W(P_L^{-1}K_IHP_L)\;.
+\end{equation}
+The argument of $c_W$ is a closed loop based at the initial
+point of $\mathcal H(W)$. Under the induced gauge transformation
+it is conjugated there. This identity uses the unitary $P_L$
+only to change the base point of a complete closed contraction.
+
+\paragraph{The scalar part and a pointwise source estimate.}
+Retain the existing reference coefficient $a_W/Z$ and define
+the resummed subtracted source block by
+\begin{equation}\label{eq:c8-fourth-resummed-seed}
+    G_W(H)=
+        \sum_{\varnothing\neq J\subseteq I}
+            \mathscr Q_W[\mathcal P_{I,J}(\,\cdot\,;H)]
+        -\frac{a_W}{Z}\chi(H)\;.
+\end{equation}
+This scalar extraction is inside the selected marked expansion.
+It changes neither the prescribed $Z$ nor a perimeter or corner
+coefficient. There is only one global factor $Z^{-1}$ for the
+Wilson insertion. Formula \eqref{eq:c8-fourth-resummed-seed}
+describes a single-group contribution; multiplying several such
+scaled scalar kernels would insert spurious powers of $Z^{-1}$
+and would also lose their joint closed contraction. No such
+product or family reconstruction is asserted here.
+Character invariance under conjugation gives the
+exact decomposition
+\begin{equation}\label{eq:c8-fourth-seed-coarse-defect}
+    ZG_W(H)=
+        c_W(P_L^{-1}K_IHP_L)-a_W\chi(K_IH)
+        +a_W(\chi(K_IH)-\chi(H))\;.
+\end{equation}
+In particular the blocked coarse word cannot be replaced by $P_I$.
+For $q(K)=1-\operatorname{Re}\chi(K)$, the closed-trace
+Cauchy--Schwarz estimate gives
+$|\chi(KH)-\chi(H)|\leq\sqrt{2q(K)}\leq2$ for $K,H\in G$.
+Consequently, at each retained real datum,
+\begin{equation}\label{eq:c8-fourth-seed-pointwise}
+    \sup_{H\in G}|G_W(H)|
+        \leq\frac{d_W+|a_W|\sqrt{2q(K_I)}}{|Z|}
+        \leq\frac{4M_W^{\rm ph}}{|Z|}\;.
+\end{equation}
+There is no factor $2^{|I|}$: the local marked choices were
+summed exactly before estimation. At the consistent flat reference
+data, $K_I=1$ and $c_W(h)=a_W\chi(h)$, so the residual vanishes.
+A nonzero exterior shift is retained in $P_I$ and is not declared
+flat merely because the unshifted background is flat.
+
+\paragraph{A later score does not undo an integration already performed.}
+Let $\mathcal L$ be an actual later inherited integration on the
+remaining variables $y$, and let $T(y)$ be its boundary test.
+Let $\mathscr E$ be the measurable part of those data on which the
+first-step input \eqref{eq:c8-fourth-seed-input} holds, with the
+same constants. All its original indicators are retained.
+The young variables integrated by $\mathscr Q_W$ have already been
+eliminated; they are not given a fresh probability and do not become
+arguments of $T$. Inequality \eqref{eq:c8-fourth-seed-pointwise}
+is pointwise in $y$, uniformly in $H$. Whenever the displayed
+majorant is integrable, it implies
+\begin{equation}\label{eq:c8-fourth-seed-score}
+    |\mathcal L[\mathbf 1_{\mathscr E}G_W(H(y))T]|
+        \leq\frac{1}{|Z|}|\mathcal L|\left[
+            \mathbf 1_{\mathscr E}
+            (d_W+|a_W|\sqrt{2q(K_I)})|T|\right]\;.
+\end{equation}
+Here $|\mathcal L|$ is the total variation of the original
+integration operation, with all its original scalar normalisers.
+The possibly field-dependent $H(y)$ is evaluated before this later
+integration. The uniform bound is on the integrand at each $y$,
+so no supremum is moved through an integral. This is a quantitative
+source--score bound for these first-step resummed blocks. It uses
+the stronger pointwise statement of V3, rather than an integrated
+mean alone. It is not a proof that a current unintegrated source
+has the parity of an earlier eliminated young variable.
+For the unrestricted physical integral the exact complementary
+term $\mathcal L[\mathbf 1_{\mathscr E^c}G_W(H(y))T]$ remains.
+It is not bounded by a small probability or omitted. Using the
+newer uncovered-branch extension would require verifying its
+scope at these same retained data.
+
+For example, the source-root factor of
+\eqref{eq:c8-fourth-selected-majorants}, with $b$ replaced by this
+actual regrouped block, satisfies
+\begin{equation}\label{eq:c8-fourth-seed-in-majorant}
+    M_{\mathbf 1_{\mathscr E}G_W}(D_0)
+        \leq\frac{1}{|Z|}
+            \left(\prod_{i\in I_0}|\nu_i|\right)
+                [\mathbf 1_{\mathscr E}
+                    (d_W+|a_W|\sqrt{2q(K_I)})]
+            \prod_{a\in D_0}w_a\;.
+\end{equation}
+The boundary factors remain inside the same inherited operations
+until this pointwise majorisation is applied. Thus the four-mark
+estimate can be used for these regrouped seeds while retaining
+their first-step source gain and the physical denominator in
+\eqref{eq:c8-fourth-labelled-physical-bound}.
+
+\paragraph{Estimating the retained coarse-word defect on regular rows.}
+This paragraph uses the averaging formula RG1 (0.4), the choice
+made on its chart domain in V3. Let $U_*$ be the real fine field
+at the base point of the selected integral, so that
+$P_I=U_*(I)$. On the rows considered assume the actual constraint
+$M(U_*)(c_a)=V(c_a)$ and an injective coordinate box $Q_a$
+containing the two adjacent blocks and the paths in RG1 (0.4).
+For a negatively oriented traversal, use the inverse of the
+positive-bond constraint; its relative error is an inverse
+conjugate and has the same norm.
+Write $D=4$ for the lattice dimension, to distinguish it from
+the representation dimension $d$. Define
+$\delta_a=\max_{p\subset Q_a}\|U_*(\partial p)-1\|_{\rm op}$
+in the fixed faithful matrix realisation of $G$.
+Let $r_*>0$ be at most $1/2$ and small enough that the matrix
+ball of radius $r_*$ in $G$ lies in the stipulated logarithm
+chart. Suppose $D^2L^2\delta_a\leq r_*$.
+
+For a point $x$ in the initial block and paths $\Gamma,\Gamma'$
+of RG1 p.~252, put
+$L_{a,x,\Gamma,\Gamma'}=
+U_*(\Gamma\cup[x,x']\cup(-\Gamma')\cup(-c_a))$.
+These are complete loops based at the initial point of $c_a$.
+Each has a nonabelian plaquette filling using at most $D^2L^2$
+plaquettes, counted with multiplicity. To see the count, put each
+of the two shortest coordinate paths into one fixed coordinate
+order by interchanging adjacent coordinate runs. This requires
+at most $D(D-1)/2$ rectangular fillings per path, each of area at
+most $L^2$. The two equally ordered paths are then joined by
+at most $D-1$ rectangles swept along the coarse bond, also of
+area at most $L^2$. The total is at most
+$(D^2-1)L^2$. These rectangles lie in $Q_a$. The exact ordered
+plaquette product has unitary conjugating transports, hence
+\begin{equation}\label{eq:c8-fourth-average-loop-bound}
+    \|L_{a,x,\Gamma,\Gamma'}-1\|_{\rm op}
+        \leq D^2L^2\delta_a\;.
+\end{equation}
+This is a bound on complete loop holonomies, before an average
+or an absolute source estimate.
+
+Let $\omega_{x,\Gamma,\Gamma'}$ be the nonnegative weights
+$L^{-D}|\mathbf G(c_-,x)|^{-1}
+|\mathbf G(c_+,x')|^{-1}$ of RG1 (0.4); their sum is one.
+That formula and the actual constraint give
+\begin{equation}\label{eq:c8-fourth-average-relative}
+    E_a=\sum_{x,\Gamma,\Gamma'}\omega_{x,\Gamma,\Gamma'}
+            \log L_{a,x,\Gamma,\Gamma'},\qquad
+    V(c_a)=e^{E_a}U_*(c_a),\qquad
+    U_*(c_a)V(c_a)^{-1}=e^{-E_a}\;.
+\end{equation}
+Here $E_a$ is skew-Hermitian and transforms by conjugation at
+the row base. Let $C_R$ be the norm of the differential of $R$
+from the fixed Lie-algebra operator norm to the representation
+operator norm. The convergent logarithm series gives
+$\|\log L_{a,x,\Gamma,\Gamma'}\|_{\rm op}
+\leq2\|L_{a,x,\Gamma,\Gamma'}-1\|_{\rm op}$.
+Integrating the derivative of the unitary exponential gives
+$\|R(e^{-E_a})-1\|_{\rm op}\leq C_R\|E_a\|_{\rm op}$.
+The product over rows expresses $K_I$ as the ordered product
+of these closed relative holonomies, conjugated by coarse
+prefix transports. Telescoping that closed product yields
+\begin{equation}\label{eq:c8-fourth-coarse-curvature}
+    \sqrt{2q(K_I)}
+        \leq \|R(K_I)-1\|_{\rm op}
+        \leq \min\left(2,\,
+            2C_RD^2L^2\sum_{a\in I}\delta_a\right)\;.
+\end{equation}
+The first inequality follows from
+$2q(K_I)=d^{-1}\|R(K_I)-1\|_{\rm HS}^2$.
+In particular substitution into
+\eqref{eq:c8-fourth-seed-pointwise} gives a curvature estimate
+for the actual retained coarse-word term, with no replacement
+of $P_C$ by $P_I$. Rows not satisfying these regularity and
+geometry conditions retain the original $\sqrt{2q(K_I)}\leq2$
+bound; they are not discarded.
+
+This computation does not identify $U_*$ with the unshifted
+minimiser. Its curvature includes the retained exterior shift.
+Turning the displayed row-curvature sum into the uniform
+local deviation and attached-part bounds required by the
+induction still needs the corresponding mean-field and
+support estimates. It also does not extend the real logarithm
+argument to complex backgrounds.
+
+This substitution does not bound the earlier, stronger direct sum
+of absolute values over separate $J,\sigma$. It supplies a bound
+after the specified finite C8 regrouping. To obtain an induction
+one still needs the simultaneous family regrouping, the complete
+supports in coarse variables, the complex-background extension,
+and the next-step source estimate. The relative holonomy $K_I$
+also needs its curvature and exterior-response estimate at that
+scope. None of these requirements is removed by the bound
+$4M_W^{\rm ph}/|Z|$.
+
+\subsection{Simultaneous First-Step Families on the Coarse Contour}
+\label{sec:c8-fourth-coarse-families}
+
+The single-group bound cannot be multiplied to reconstruct the
+source. This subsection instead starts from V3's actual simultaneous
+family identity and keeps its joint reference exclusion factor.
+It is a further conditional first-step calculation on the real
+retained data for which those inputs hold. The physical contribution
+from other data is retained as in
+\eqref{eq:c8-fourth-seed-score}.
+
+\paragraph{Closed kernels and the actual family input.}
+Use the already defined algebra $E_\chi$, its product $\star$,
+and its norm $\|\cdot\|_\star$ from
+\path{WILSON_RG_COMPARISON.tex}, equations
+\texttt{eq:Ecoefficient} and \texttt{eq:closedstar}.
+The norm is the operator
+norm of left $\star$ multiplication on $E_\chi$ with its Haar
+$L^2$ norm. The unit is $\chi$, closure is $\tau(f)=f(1)$,
+the norm is submultiplicative, and conjugation by a real unitary
+transport is isometric. These are identities on complete closed
+functions. No open segment is made into an inductive activity.
+
+At the base point of each fine group $W$, put
+$r_W(h)=c_W(h)-a_W\chi(h)$. Let $U_*$ be the actual base fine
+field, with its retained exterior data. V3
+\texttt{eq:c5-5-5} and Lemma \texttt{c5-5-7}(b) give
+\begin{equation}\label{eq:c8-fourth-input-families}
+    F^\Lambda(1)=S^\circ_\Lambda\left[
+        \chi(U_*(C))+
+        \sum_{\mathfrak B\neq\varnothing}
+            q^\circ_\Lambda(\mathfrak B)
+            \mathcal R(\mathfrak B;U_*)\right]\;.
+\end{equation}
+Here $\mathfrak B$ ranges over the original compatible fine
+groups. $\mathcal R$ is their ordered, complete closed contraction
+with the fine base transports, not a product of characters.
+Let $\operatorname{Hit}(\mathfrak B)$ be the reference clusters
+incompatible with at least one original group in $\mathfrak B$.
+The reference factor is exactly
+\begin{equation}\label{eq:c8-fourth-joint-exclusion}
+    q^\circ_\Lambda(\mathfrak B)
+        =\exp\left(-\sum_{\Gamma\in\operatorname{Hit}(\mathfrak B)}
+            \Phi^\circ_\Lambda(\Gamma)\right),\qquad
+    |q^\circ_\Lambda(\mathfrak B)|
+        \leq\prod_{W\in\mathfrak B}e^{\theta^\circ(W)}\;.
+\end{equation}
+A reference cluster hits the family if it is incompatible with
+at least one original $W$. This definition is unchanged below.
+The factor $S^\circ_\Lambda$, with its existing perimeter, corner
+and carrier contributions, remains in the physical numerator.
+
+Write $\sigma(W)\geq1$ for V3's size, $\nu>0$ for its reserve,
+and let $\epsilon=\bar\varepsilon_{\rm ph}$. The specific
+pointwise pin input needed here is, for every fine traversal $n$,
+\begin{equation}\label{eq:c8-fourth-fine-pin-input}
+    \sum_{W:\,n\in\mathcal H(W)}
+        e^{2\nu\sigma(W)+\theta^\circ(W)}
+            \|r_W\|_\star\leq\epsilon\;.
+\end{equation}
+This follows at the scope of V3 Lemma
+\texttt{c5-5R-3} from
+$\|r_W\|_\star\leq K_\chi d_W\leq2K_\chi M_W^{\rm ph}$
+and its displayed pin bound. In particular
+$\epsilon=O(g_0^2(1+r)^4)$ there, with V3's constants and
+thresholds. This input is not asserted for a new RG scale.
+
+\paragraph{The merging rule.}
+All intervals in this paragraph are sets of traversal positions,
+so visits of the same geometric bond would remain distinguished.
+Let $I_W$ consist of the coarse traversal positions met by
+$\mathcal H(W)$. For a fixed original compatible family
+$\mathfrak B$, join $W$ and $W'$ precisely when
+$I_W\cap I_{W'}\neq\varnothing$. Let $\mathcal D$ denote a
+connected component of this overlap graph and put
+$I_{\mathcal D}=\bigcup_{W\in\mathcal D}I_W$ and
+$s(\mathcal D)=\sum_{W\in\mathcal D}\sigma(W)$.
+The distinct $I_{\mathcal D}$ are disjoint coarse intervals.
+If one is the entire contour, it is the only component.
+
+This is an exact regrouping, not a change of compatibility.
+A new family consists of overlap-connected sets $\mathcal D$
+whose union is an original compatible family and whose coarse
+intervals are disjoint. The union recovers $\mathfrak B$
+uniquely. In particular original spatial incompatibilities are
+retained even when two coarse intervals are disjoint.
+The reference factor of this family is
+$q^\circ_\Lambda(\bigcup_{\mathcal D}\mathcal D)$.
+A reference cluster is not deleted merely because it intersects
+an enlarged coarse interval; it is tested against the original
+fine groups as in \eqref{eq:c8-fourth-joint-exclusion}.
+
+\paragraph{The closed kernel of a proper merged interval.}
+Suppose $I_{\mathcal D}$ is a proper interval. At its initial
+coarse vertex $x_{\mathcal D}$, set
+$P_{\mathcal D}=U_*(I_{\mathcal D})$,
+$C_{\mathcal D}=V(I_{\mathcal D})$ and
+$K_{\mathcal D}=P_{\mathcal D}C_{\mathcal D}^{-1}$.
+For $W\in\mathcal D$, let $P_{\mathcal D,W}$ be the fine base
+transport from $x_{\mathcal D}$ to the initial point of
+$\mathcal H(W)$, inside $I_{\mathcal D}$, and set
+\begin{equation}\label{eq:c8-fourth-merged-kernel}
+    \begin{aligned}
+        r_W^{\mathcal D}(H)
+            &=r_W(P_{\mathcal D,W}^{-1}HP_{\mathcal D,W}),\\
+        k_K(H)&=\chi(KH),\\
+        g_{\mathcal D}
+            &=\left(\mathop{\star}_{W\in\mathcal D}^{\rm ordered}
+                    r_W^{\mathcal D}\right)\star k_{K_{\mathcal D}}\;.
+    \end{aligned}
+\end{equation}
+The order is the order of the disjoint fine contact intervals
+along $I_{\mathcal D}$. Each displayed kernel is a complete
+closed function at its stated base. Its support includes all
+original group footprints, the entire interval and every return
+path used here. No localisation in the coarse field variables
+is deduced just from the contour interval.
+
+In a matrix realisation used only to verify this algebraic
+identity, if $r_W=f_{A_W}$, the coefficient in
+$g_{\mathcal D}$ is
+\begin{equation}\label{eq:c8-fourth-merged-word}
+    \left(\prod_{W\in\mathcal D}^{\rm ordered}
+        R(P_{\mathcal D,W})A_WR(P_{\mathcal D,W})^{-1}\right)
+        R(P_{\mathcal D})R(C_{\mathcal D})^{-1}\;.
+\end{equation}
+Multiplying by the coarse transport $R(C_{\mathcal D})$ in the
+whole contour trace restores exactly the original fine base
+word with all the insertions in $\mathcal D$ in their original
+order. The product is not replaced by a product of its traces.
+The already fixed closed-kernel norm therefore gives
+\begin{equation}\label{eq:c8-fourth-merged-norm}
+    \|g_{\mathcal D}\|_\star
+        \leq\prod_{W\in\mathcal D}\|r_W\|_\star\;.
+\end{equation}
+The unitary factor $k_{K_{\mathcal D}}$ has norm one. If
+$I_{\mathcal D}$ is the whole contour, keep the original
+closed scalar $\mathcal R(\mathcal D;U_*)$ instead of cutting
+an insertion at a coarse base point. Its modulus has the same
+product bound. This case introduces no exterior holonomy.
+
+\paragraph{The coarse edges outside the merged intervals.}
+They cannot simply be replaced by coarse $V$ edges. For each
+such coarse traversal $a$, retain
+\begin{equation}\label{eq:c8-fourth-zero-root}
+    K_a=U_*(c_a)V(c_a)^{-1},\qquad
+    \ell_a(H)=\chi(K_aH)-\chi(H)\;.
+\end{equation}
+These are closed kernels and the exact difference identity is
+$R(U_*(c_a))=(1+[R(K_a)-1])R(V(c_a))$.
+Expanding this identity on the unused coarse edges sums over
+subsets of those edges. On a selected edge insert $\ell_a$;
+on the others keep the coarse transport. This is the sum over
+the inactive C8 marked choices at the young base point, not
+an additional integration or an approximation.
+On the regular rows of
+\eqref{eq:c8-fourth-coarse-curvature},
+\begin{equation}\label{eq:c8-fourth-zero-root-bound}
+    \|\ell_a\|_\star
+        =\|R(K_a)-1\|_{\rm op}
+        \leq\min(2,\,2C_RD^2L^2\delta_a)\;.
+\end{equation}
+Other rows retain the bound two. At consistent flat data these
+kernels vanish. They carry no additional power of $Z^{-1}$.
+
+For clarity, let $\mathcal C_V$ denote the ordered complete
+closed contraction of the kernels $g_{\mathcal D}$ and
+$\ell_a$ on their disjoint coarse intervals, with the
+remaining coarse $V$ transports. It is defined by
+\eqref{eq:c8-fourth-merged-word} and the edge difference above
+inside a single normalised trace. Equivalently it is the same
+contraction in the closed algebra $E_\chi$. Only this whole
+contraction is estimated. For real $V$, its modulus is bounded
+by the product of the closed-kernel norms, because closure has
+norm at most one and the intervening unitary transports act
+isometrically.
+
+Let $\mathfrak D$ range over the regrouped families just
+defined, including the empty family, and let
+$A$ range over subsets of the coarse edges outside their
+intervals. With the whole-contour scalar convention above,
+the exact reconstruction is
+\begin{equation}\label{eq:c8-fourth-coarse-family-identity}
+    \frac{F^\Lambda(1)}{Z}
+        =\frac{S^\circ_\Lambda}{Z}
+            \sum_{\mathfrak D}
+                q^\circ_\Lambda
+                    \left(\bigcup_{\mathcal D\in\mathfrak D}\mathcal D\right)
+                \sum_A
+                    \mathcal C_V
+                        ((g_{\mathcal D})_{\mathcal D\in\mathfrak D},
+                         (\ell_a)_{a\in A})\;.
+\end{equation}
+For an empty union the reference factor is one. For both
+families empty, the contraction is the coarse Wilson character.
+This identity has one global factor $Z^{-1}$, the original
+joint exclusion weight, and the original scalar factor.
+For a finite cutoff with $N_c$ coarse traversals, the pin
+input bounds $\sum_W b_W$ by $LN_c\epsilon$. Hence the
+positive fine-family majorant is at most $e^{LN_c\epsilon}$.
+Expanding the remaining coarse gaps costs at most
+$\prod_a(1+\|\ell_a\|_\star)\leq3^{N_c}$.
+These finite-volume majorants justify the regrouping at this
+scope. They are not used as uniform perimeter bounds.
+
+\paragraph{A quantitative pin bound for the merged source blocks.}
+Put $b_W=e^{\theta^\circ(W)}\|r_W\|_\star$ and
+$C_I=M+2$, where $LM$ is the unit used in
+$\sigma(W)=n(W)+|\mathcal H(W)|/(LM)$. Since each coarse
+traversal has $L$ fine traversals, the literal pin input gives,
+for every coarse traversal $c$,
+\begin{equation}\label{eq:c8-fourth-coarse-pin-input}
+    \sum_{W:\,c\in I_W}b_We^{2\nu\sigma(W)}
+        \leq L\epsilon,\qquad
+    |I_W|\leq M\sigma(W)+2\leq C_I\sigma(W)\;.
+\end{equation}
+The first inequality counts at most the $L$ fine positions
+in that coarse edge; every $W$ whose rounded interval contains
+it meets at least one of those positions.
+Thus, for every $W$,
+\begin{equation}\label{eq:c8-fourth-overlap-budget}
+    \sum_{W':\,I_{W'}\cap I_W\neq\varnothing}
+        b_{W'}e^{2\nu\sigma(W')}
+        \leq C_I L\epsilon\,\sigma(W)\;.
+\end{equation}
+Assume $C_I L\epsilon\leq\nu$. Apply the existing rooted
+connected-tree bound with node weight $b_We^{\nu\sigma(W)}$
+and node cost $\nu\sigma(W)$ to this actual overlap relation.
+Its required row sum is exactly
+\eqref{eq:c8-fourth-overlap-budget}. The bound for a fixed
+root is then $b_We^{2\nu\sigma(W)}$. More explicitly, the
+connected-set sum is bounded by the rooted-tree sum with the
+factor $1/(j-1)!$ for the ordered other $j-1$ vertices.
+Allowing repeated vertices only enlarges this positive bound;
+the physical families still have their original distinct
+group labels and compatibility restrictions.
+The corresponding positive rooted-tree recursion starts at
+$T_W^{(0)}=b_We^{\nu\sigma(W)}$ and updates by
+$T_W^{(j+1)}=b_We^{\nu\sigma(W)}
+\exp(\sum_{W':\,I_{W'}\cap I_W\neq\varnothing}T_{W'}^{(j)})$.
+Substitution of \eqref{eq:c8-fourth-overlap-budget} proves
+$T_W^{(j)}\leq b_We^{2\nu\sigma(W)}$ at every depth.
+This is the specific reserve payment used here.
+
+Every merged interval containing $c$ has at least one original
+$W$ with $c\in I_W$. Rooting there, using
+\eqref{eq:c8-fourth-merged-norm}, and applying the pin bound
+gives
+\begin{equation}\label{eq:c8-fourth-merged-pin}
+    \sum_{\mathcal D:\,c\in I_{\mathcal D}}
+        e^{\nu s(\mathcal D)+
+            \sum_{W\in\mathcal D}\theta^\circ(W)}
+        \|g_{\mathcal D}\|_\star
+        \leq L\epsilon\;.
+\end{equation}
+For a whole-contour component its scalar modulus replaces
+the norm. The sum is over overlap-connected original
+compatible sets. Overcounting a set by its possible roots
+is harmless for this upper bound.
+This is a bound on a sum, not a fixed-support exponential
+estimate. No independence of the retained physical fields
+has been used.
+
+The extra merging cost is therefore paid by the specified
+first-step reserve once $C_I L\epsilon\leq\nu$; it introduces
+no global perimeter multiplier. The separate zero-root
+species have the row-curvature cost
+\eqref{eq:c8-fourth-zero-root-bound}. Their local smallness,
+and the required strengthened deviation estimate for the
+merged blocks, have not been inferred from
+\eqref{eq:c8-fourth-merged-pin} alone.
+
+\paragraph{Physical use and what is still missing.}
+Substitute \eqref{eq:c8-fourth-coarse-family-identity} in the
+same first-step numerator containing $F^\Lambda(1)$, with
+all original labelled weights, Jacobians, cutoffs and pending
+integrations. Divide by the same physical $D_h$.
+The reference scalar $S^\circ_\Lambda$ is kept in that
+numerator; it is not a physical normaliser. The current
+boundary factors may then multiply the entire reconstructed
+closed source before any inherited integration that reads
+them. In particular neither the dependence on $y$ nor the
+joint factor $q^\circ_\Lambda$ is averaged separately.
+
+This completes the specified real, first-step family
+regrouping conditional on its exact V3 inputs. It does not
+make V3's theorem an all-scale input. Full read-out supports
+in coarse variables, the uncovered data outside the supplied
+scope, complex backgrounds, the next-step integration of
+these closed kernels, and the uniform physical estimate
+relative to $D_h$ still require their own bounds. The
+zero-root curvature kernels and the global factor
+$S^\circ_\Lambda/Z$ must remain in that continuation.
+This subsection treats one contour. For the joint insertion of
+two disjoint loops, selected components reaching both contours remain in
+the original joint expansion. They cannot be replaced by a
+product of the two one-loop conditional expectations or
+discarded when applying the pin estimate.
+
+\subsection{A Selected Integration Domain Reaching Both Disjoint Loops}
+\label{sec:c8-fourth-disjoint-root}
+
+The next operand is genuinely joint: one selected integration
+domain with probes reading both disjoint loops. This calculation
+does not multiply separately integrated one-loop images. It
+estimates that contribution to the original two-loop insertion
+and its touching vacuum-denominator completion. Chains of
+several selected domains, and the full connected covariance,
+are not identified with this one contribution.
+
+\paragraph{Sources and the common selected measure.}
+Fix the actual first-step retained data and carrier of V3.
+For $i=1,2$, let $f_i(B;H_i)$ be the normalised closed character
+of loop $C_i$ in the reconstructed original fine field at the
+young variable $m+B$, with a fixed auxiliary closed $H_i$ at
+its base, in the fixed unitary representation $R_i$ of dimension
+$d_i$. Thus
+\begin{equation}\label{eq:c8-fourth-two-loop-source}
+    f_i(B;H_i)=\frac{1}{d_i}\operatorname{Tr}\left[
+        R_i(\operatorname{Hol}_{U_\xi(m+B)}C_i)R_i(H_i)
+    \right]\;.
+\end{equation}
+The fine holonomy and $H_i$ are conjugated at the same base
+under the induced gauge action, so each source is invariant.
+The physical value has $H_i=1$. The contours $C_1$
+and $C_2$ are disjoint. Both sources use the same reconstructed
+field and the same retained data. Let $\mathsf S_i$ be their
+field-independent sets of young free-bond inputs, including
+every row input on which their reconstructed links depend.
+This paragraph assumes $\mathsf S_1\cap\mathsf S_2=\varnothing$.
+For the first-step local reconstruction this follows when
+the two full row-readout neighbourhoods are disjoint. It does
+not follow just from disjoint contours for an arbitrary
+inherited source.
+
+Use the actual split-selection measures
+$\Lambda^{f,1}_{\Lambda;\ell}$ and the same final domains
+$Z(\ell)$ of V3 Lemma \texttt{c5-5-2}. Each
+$\ell$ retains its selected ordinary hosts, probe set
+$\mathsf J$, bad cutoffs, enlarged seed, weakened integral
+and original scalar normalisation. The inputs used here are
+its dummy comparison and the closed-source finite-difference
+bound of Lemma \texttt{c5-5-7z}. For every connected final
+domain $Z$ and every nonempty probe set $J_i\subseteq\mathsf S_i$,
+they read
+\begin{equation}\label{eq:c8-fourth-joint-root-inputs}
+    \begin{aligned}
+        \sum_{\ell:\,Z(\ell)=Z}
+            u_*^{|\mathsf J(\ell)|}
+                \|\Lambda^{f,1}_{\Lambda;\ell}\|_{\rm TV}
+            &\leq m(Z)
+                =\varepsilon_*e^{-\lambda_*\ell_1(Z)},\\
+        \sup_{H_i,B}|\Delta_{J_i}f_i(B;H_i)|
+            &\leq u_i^{|J_i|},\qquad
+        u_i=c_{{\rm src},i} g_0(1+2r)\leq u_*\;.
+    \end{aligned}
+\end{equation}
+The supremum is on the real protected box containing the
+supports and all finite-difference evaluation points.
+$c_{{\rm src},i}$ is the fixed character and row-reconstruction constant
+for the square $C_i$, independent of its length. No Gaussian
+measure is substituted for the displayed selected measure.
+These first-step inputs retain their stated hypotheses;
+their extension through arbitrary inherited integrations
+is not assumed.
+
+For a selection with probes in $\mathsf S_1\cup\mathsf S_2$,
+put $\mathsf J_i=\mathsf J\cap\mathsf S_i$. The disjoint
+read-out sets imply the exact finite-difference identity
+\begin{equation}\label{eq:c8-fourth-two-source-difference}
+    \Delta_{\mathsf J}(f_1f_2)
+        =(\Delta_{\mathsf J_1}f_1)
+            (\Delta_{\mathsf J_2}f_2)\;.
+\end{equation}
+This is factorisation of a function under differences,
+not factorisation of its integral. A selected probe outside
+both read-out sets gives zero.
+For selections with both $\mathsf J_i$ nonempty define
+\begin{equation}\label{eq:c8-fourth-joint-root-integral}
+    A_\ell^{12}(H_1,H_2)
+        =\frac{1}{Z_1Z_2}
+            \int
+                (\Delta_{\mathsf J_1}f_1(B;H_1))
+                (\Delta_{\mathsf J_2}f_2(B;H_2))\,
+                    \dd\Lambda^{f,1}_{\Lambda;\ell}(B)\;.
+\end{equation}
+This is one product of two complete closed contractions
+inside the same integration. The scalars $Z_1,Z_2$ are the
+prescribed source factors, each occurring once.
+At $H_1=H_2=1$, the C8 Boolean identity expresses
+$f_i/Z_i$ as the sum of its actual geometric marked
+coefficients. The empty geometric coefficient is the
+coarse-loop character divided by $Z_i$, independent of
+the young variables. Since each $\mathsf J_i$ is nonempty,
+its finite difference kills that empty coefficient.
+Thus \eqref{eq:c8-fourth-joint-root-integral} is the same
+selected integral of the signed sum of C8 terms with
+nonempty geometric marked sets on both loops. The geometric
+marked sets and the free-bond probe sets $\mathsf J_i$
+are different labels. Both geometric sums occur inside the
+same integral, before any estimate.
+
+Put $\rho_i=u_i/u_*$. Since both $|\mathsf J_i|\geq1$ and
+$\rho_i\leq1$, the two source gains survive the joint
+integration and the full split-selection sum. Write
+$\mathscr L_{12}(Z)$ for the selections with final domain $Z$,
+$\mathsf J\subseteq\mathsf S_1\cup\mathsf S_2$, and both
+$\mathsf J_i$ nonempty. Then
+\begin{equation}\label{eq:c8-fourth-joint-root-bound}
+    \sum_{\ell\in\mathscr L_{12}(Z)}
+        \sup_{H_1,H_2}|A_\ell^{12}(H_1,H_2)|
+        \leq
+            \frac{\rho_1\rho_2}{|Z_1Z_2|}
+                \varepsilon_*e^{-\lambda_*\ell_1(Z)}\;.
+\end{equation}
+Indeed $u_1^{|\mathsf J_1|}u_2^{|\mathsf J_2|}
+\leq\rho_1\rho_2u_*^{|\mathsf J|}$, after which the first
+line of \eqref{eq:c8-fourth-joint-root-inputs} applies.
+No independence between the fields near the disjoint loops
+is used.
+
+\paragraph{The touching denominator labels.}
+For this single selected domain, the original conditional
+vacuum ratio is, with $\operatorname{Hit}(Z)$ denoting its
+touching vacuum clusters,
+$q_\Lambda^v(Z)=\exp(-\sum_{\mathfrak c\in\operatorname{Hit}(Z)}
+\Phi_\Lambda^{v,1}(\mathfrak c))$, as in V3
+Corollary \texttt{c5-4-3}. Denote a term of its exponential
+expansion by an ordered cluster list $\boldsymbol{\mathfrak c}$,
+with its factor $(-1)^j/j!$. Its source coefficient is
+$A_\ell^{12}$ times that term; call it
+$F_{\ell,\boldsymbol{\mathfrak c}}^{12}$.
+Repeated cluster labels and their internal connected Ursell
+sums remain exactly as in the vacuum expansion.
+The actual hitting bound is
+$\sum_{\mathfrak c\in\operatorname{Hit}(Z)}
+|\Phi_\Lambda^{v,1}(\mathfrak c)|\leq N_1(Z)/8$.
+Taking absolute values only after the connected graph sums
+therefore gives
+\begin{equation}\label{eq:c8-fourth-joint-root-completed}
+    \sum_{\ell\in\mathscr L_{12}(Z)}
+        \sum_{\boldsymbol{\mathfrak c}}
+        \sup_{H_1,H_2}
+            |F_{\ell,\boldsymbol{\mathfrak c}}^{12}|
+        \leq
+        \frac{\rho_1\rho_2\varepsilon_*}{|Z_1Z_2|}
+            e^{-(\lambda_*-C_{\rm g}/8)\ell_1(Z)}\;.
+\end{equation}
+The selection sum here has exactly the restrictions in
+\eqref{eq:c8-fourth-joint-root-bound}. The inequality uses
+$N_1(Z)\leq C_{\rm g}\ell_1(Z)$, with $C_{\rm g}=162$,
+and sums the complete touching-cluster series by its
+exponential majorant. Thus it is an absolute sum over these
+denominator labels, not only a bound for their signed sum.
+Their supports are not erased; no fixed-support bound on
+the full completed source is inferred.
+
+\paragraph{The separation payment.}
+Let $\mathcal P_i$ be the set of $LM$-cubes containing the
+initial vertices of bonds in $\mathsf S_i$, and let
+$n_i^{\rm pin}=|\mathcal P_i|$.
+If either set is empty, the contribution above vanishes.
+Otherwise define
+\begin{equation}\label{eq:c8-fourth-source-separation}
+    \Delta_{12}=
+        \frac{1}{LM}
+            \min_{\Delta_i\in\mathcal P_i}
+                \operatorname{dist}(\Delta_1,\Delta_2)\;,
+\end{equation}
+where distance is the periodic Euclidean distance between
+the closed cubes. A domain carrying a probe from each loop
+contains a cube from each $\mathcal P_i$. The connected tree
+in the definition of $d_1(Z)$ meets both cubes, so
+$\ell_1(Z)=d_1(Z)+5\geq\Delta_{12}$.
+Put $\lambda_c=\lambda_*-C_{\rm g}/8$ and $s=\lambda_c/2$.
+The native choice $\lambda_*\geq2C_{\rm g}\log128$ gives
+$s>C_{\rm g}\log64$. V3's domain-counting bound is therefore
+available with
+$B(s)=e^{-s/C_{\rm g}}/(1-64e^{-s/C_{\rm g}})$.
+Splitting the exponential between the span and the summation
+and pinning a cube on the smaller source set gives the following
+bound. Here $\mathscr Z_{12}$ is the set of final domains
+carrying a probe of each source, and the selection sum uses
+$\mathscr L_{12}(Z)$.
+\begin{equation}\label{eq:c8-fourth-disjoint-root-tail}
+    \sum_{Z\in\mathscr Z_{12}}
+        \sum_{\ell,\boldsymbol{\mathfrak c}}
+            \sup_{H_1,H_2}
+                |F_{\ell,\boldsymbol{\mathfrak c}}^{12}|
+        \leq
+        \frac{\rho_1\rho_2\varepsilon_*}{|Z_1Z_2|}
+            \min(n_1^{\rm pin},n_2^{\rm pin})B(s)e^{-s\Delta_{12}}\;.
+\end{equation}
+For the last summation, each admissible $Z$ contains at least
+one cube of either chosen $\mathcal P_i$. Sum
+$e^{-s\ell_1(Z)}$ over domains containing that cube and use
+the animal bound; overcounting domains is harmless.
+The remaining factor $e^{-s\ell_1(Z)}$ pays the separation.
+This is decay in the distance between the full young-variable
+read-out sets, not a claim that two disjoint contours alone
+give independent integrations.
+
+\paragraph{A uniform first-step bound and its positive inherited lift.}
+The scalar consequences in this paragraph and the following
+fourth-response paragraph are diagnostic only. They do not
+propagate a local labelled marked-source norm and are not
+used as an induction step of the active marked-polymer argument.
+For a bound uniform over the retained first-step labels, let
+$R_{{\rm src},i}$ bound the distance from a free input in a
+source link's stencil to that link, and let $m_{{\rm src},i}$
+bound the number of free inputs in such a stencil. These are
+the fixed row-stencil constants of the actual first-step
+reconstruction. Let $n_{C_i}$ be the number of fine traversals.
+Suppose the distance between the contours exceeds
+$R_{{\rm src},1}+R_{{\rm src},2}$, so the two read-out sets
+are disjoint on every retained label in the stated scope.
+This condition concerns the first-step readouts; it holds
+eventually along a refining lattice for fixed separated
+physical loops, not at every coarse scale.
+Set
+\begin{equation}\label{eq:c8-fourth-uniform-disjoint-constant}
+    \begin{aligned}
+        \Delta_*&=
+            \frac{(\operatorname{dist}(C_1,C_2)
+                -R_{{\rm src},1}-R_{{\rm src},2}-4LM)_+}{LM},\\
+        P_*&=\min(m_{{\rm src},1}n_{C_1},
+                    m_{{\rm src},2}n_{C_2}),\\
+        C_{12}^{\rm one}
+            &=\frac{\rho_1\rho_2\varepsilon_*}{|Z_1Z_2|}
+                P_*B(s)e^{-s\Delta_*}\;.
+    \end{aligned}
+\end{equation}
+Each $LM$-cube in four dimensions has diameter $2LM$.
+Consequently $\Delta_{12}\geq\Delta_*$, while the stencil
+count gives $n_i^{\rm pin}\leq m_{{\rm src},i}n_{C_i}$.
+These facts give the stated constant without an unquantified
+loop-length factor.
+
+Let $B_{12}^{\rm one}(y)$ be the sum in
+\eqref{eq:c8-fourth-disjoint-root-tail}, with its original
+signs, at $H_1=H_2=1$, multiplied by the original labelled
+data indicator $\mathbf 1_{\mathscr E}$ on which its inputs
+hold. Set this selected contribution equal to zero off that
+data set; the complementary contribution to the original
+source is retained separately. The source remains a sum
+of invariant closed contractions with the complete original
+gauge data. The estimate proves
+\begin{equation}\label{eq:c8-fourth-initial-connecting-source}
+    |B_{12}^{\rm one}(y)|\leq C_{12}^{\rm one}\;.
+\end{equation}
+This is the signed sum of the specified single-root
+contributions and their denominator labels, not the full
+joint Wilson source.
+
+Now propagate this same contribution by the actual real
+chronological lift WC-C8.3a--WC-C8.3b. At a step with
+nonnegative source-independent vacuum weight $w_\lambda$,
+write its original normaliser as $I(y)=\sum_\lambda
+\int w_\lambda(z,y)\,\dd z$. Before division, the bound is
+\begin{equation}\label{eq:c8-fourth-connecting-lift}
+    \left|\sum_\lambda\int
+        w_\lambda(z,y)B_{\rm previous}(z,y)\,\dd z\right|
+        \leq C_{12}^{\rm one}I(y)\;.
+\end{equation}
+Thus the same constant bounds the next quotient on its
+nonzero-mass outputs. In an R replacement the common factor
+$\sigma(v,y)/J(y)$ multiplies both
+$\int r(w,y)B_{\rm previous}(w,y)\,\dd w$ and
+$\int r(w,y)\,\dd w$; nonnegativity of the original real
+$r,\sigma$ gives the same conclusion. Null outputs carry
+zero physical mass. Postponed variables are kept in $y$.
+This is the positive-lift argument for the actual vacuum
+weights, including all old integrations and normalisers,
+not a replacement law. It keeps the same prescribed
+$Z_1,Z_2$ already present in
+$C_{12}^{\rm one}$.
+
+Accordingly the inherited, unlabelled contribution $B_h^{\rm one}$
+has the same bound through any sequence of these positive
+real lifts. It is kept as a whole contribution with its full
+read-out support. No bound on the absolute values of new
+labels created by a later localisation is inferred.
+If $\mathcal I_h$ denotes the full physical vacuum integration,
+with $\mathcal I_h[1]=D_h>0$, then
+\begin{equation}\label{eq:c8-fourth-connecting-physical}
+    \frac{|\mathcal I_h[B_h^{\rm one}]|}{D_h}
+        \leq C_{12}^{\rm one}\;.
+\end{equation}
+The numerator is bounded by $C_{12}^{\rm one}\mathcal I_h[1]$
+under the original positive physical law. This uses its
+actual normalisation; it does not replace $D_h$ by a
+conditional component normaliser.
+
+\paragraph{Fourth boundary response of this inherited contribution.}
+Use the same bounded boundary tests as in
+\eqref{eq:c8-fourth-defined-test}, now bounded on the whole
+physical space of $\mathcal I_h$. Define the diagnostic
+response by
+\begin{equation}\label{eq:c8-fourth-connecting-response}
+    F_{{\rm one},h}^{ij}(s)
+        =\frac{\mathcal I_h[
+            B_h^{\rm one}e^{s_1p_i+s_2q_i+s_3p_j+s_4q_j}]}
+            {\mathcal I_h[
+                e^{s_1p_i+s_2q_i+s_3p_j+s_4q_j}]}\;.
+\end{equation}
+The entire inherited contribution and the physical denominator
+are retained. The source is fixed during this current
+boundary deformation, exactly as in the earlier diagnostic.
+Apply the cumulant formula
+\eqref{eq:c8-fourth-cumulant} with
+the bound \eqref{eq:c8-fourth-initial-connecting-source}
+propagated by \eqref{eq:c8-fourth-connecting-lift}.
+Every source-containing block costs at most
+$C_{12}^{\rm one}$ times its test suprema. The sum of the
+five-label partition weights is $150$, so
+\begin{equation}\label{eq:c8-fourth-connecting-fourth-bound}
+    \left|\sum_{i,j}
+        \partial_{[4]}F_{{\rm one},h}^{ij}(0)\right|
+        \leq150\,C_{12}^{\rm one}
+            \left(\sum_i
+                \|p_i\|_\infty\|q_i\|_\infty\right)^2\;.
+\end{equation}
+Its complex boundary-source neighbourhood has the same
+physical denominator lower bound as
+\eqref{eq:c8-fourth-vacuum-lower}. The bound is for this
+specified inherited contribution. It does not bound the
+whole Wilson covariance, replace the inherited physical
+law, or establish a noncommuting field-rotation identity.
+
+\paragraph{Physical meaning and limits of this estimate.}
+The coefficient is a term in the joint source, not yet the
+full connected covariance. The latter additionally subtracts
+the product of the separate conditional images, and includes
+connections through several selected domains. Those terms
+have not been bounded here.
+The estimate may be inserted in the original physical
+numerator at its stated data set, with all outer weights and
+the same $D_h$. The prescribed $|Z_1Z_2|^{-1}$ remains in
+the bound. An estimate uniform in the ultraviolet cutoff for
+the full source still has to pay it and all other contributions;
+no ultraviolet conclusion
+is obtained just by writing the separation exponential.
+
+In particular a later inherited component $Y_i$ can read both
+loops even when their contours are disjoint. Its full support
+must then remain in the source. LFR2 (1.103) does not supply
+tree decay inside the fixed $Y_i$ through its normalised
+operation. The positive lift above preserves the already
+obtained global bound for the selected initial contribution;
+it does not give $e^{-\lambda_*\ell_1(Y_i)}$ for a new
+inherited component or an absolute bound on all its newly
+created localisation labels. Such an estimate still requires
+the inherited source analysis and the physical outer weight.
+Empty read-out sets give zero, and $\Delta_{12}=0$ gives no
+separation gain. With one probe on each loop, the product of
+their linear source increments is even under a common sign
+reversal, so parity alone does not force this joint term
+to vanish.
+
+\subsection{Keeping the Geometric Marks in the Native Source Estimate}
+\label{sec:c8-fourth-fixed-geometric}
+
+This estimate keeps the geometric sets $J_1,J_2$ fixed and
+takes absolute values separately in the native selection and
+denominator labels. It addresses the marked-source factor
+left unresolved by a bound on a global unlabelled sum.
+The setting is the actual native first-step integral on real
+retained data. A transfer of its hypotheses to later inherited
+kernels is not assumed.
+
+\paragraph{The raw input kernels and their norm.}
+For each disjoint loop, let its nonempty $J_i$ lie in a specified
+straight or corner interval $I_i$ to which WC-C8.7 applies.
+Include all the interval, tree and return paths in its support.
+Apply its local closing substitution to the raw WC-C8.3
+insertion, with its internal physical holonomies restored,
+and denote this raw input by $k_i(B;H_i)\in E_{\chi_i}$.
+This section's $k_i$ is not the completed WC-C8.7 kernel
+constructed from the inherited, integrated $f_{J,\sigma,X}$.
+The external
+$H_i$ remains a complete closed holonomy. All internal
+coarse transports are frozen during the young-variable
+integration. Define
+\begin{equation}\label{eq:c8-fourth-elementary-mark}
+    \kappa_{i,a}(B;H)=
+        \chi_i(Q_{i,a}(B)H)-\chi_i(H)\;.
+\end{equation}
+These are complete closed functions, with the induced
+simultaneous conjugation of $Q_{i,a}$ and $H$. In the
+already defined algebra $E_{\chi_i}$, this raw input
+kernel is
+\begin{equation}\label{eq:c8-fourth-marked-star-word}
+    k_i(B)=\frac{1}{Z_i}\,
+        \kappa_{i,a_1}(B)\star u_{i,1}\star\cdots
+        \star\kappa_{i,a_{m_i}}(B)\star u_{i,m_i}\;.
+\end{equation}
+Here the $u_{i,r}$ are the closed kernels of the actual
+internal physical holonomies and the final $L_{\rm loc}$.
+They have norm one at real data and are independent of $B$.
+This identity is just the original ordered complete trace;
+no product of its individual characters is substituted.
+For the pair use the fixed tensor-product closed-kernel
+space $E_{\chi_1}\otimes E_{\chi_2}$ and its left-multiplication
+operator norm, denoted $\|\cdot\|_{\star,12}$.
+For elementary tensors this norm is multiplicative.
+Its auxiliary Haar construction is an algebraic norm,
+not an independence assumption for the physical fields.
+
+\paragraph{Derivative and undifferentiated-factor inputs.}
+Let $\mathsf F_{i,a}$ be the young free-bond readout of the
+fine arc belonging to $a$, including all row inputs.
+At this first step each such arc has $L$ fine traversals.
+The increment variables lie in the real box
+$|B_b|_\sigma\leq5r/4$ on the native young carrier $D(\Lambda)$;
+the retained real shift satisfies $|m_b|_\sigma\leq r/4$.
+Zeroing or scaling any selected increment therefore keeps
+$m+B$ in V3's enlarged box $|m_b+B_b|_\sigma\leq2r$.
+The same rows, cutoffs and retained fields are used.
+The analytic row estimates imply
+the following bound for distinct free-bond labels in
+$\mathsf F_{i,a}$ and unit Lie-algebra directions:
+\begin{equation}\label{eq:c8-fourth-mark-derivative}
+    \sup_B
+        \|\partial_{e_1,b_1}\cdots\partial_{e_q,b_q}
+            \kappa_{i,a}(B)\|_{\star,i}
+        \leq(C_{\partial,i}g_0)^q\;.
+\end{equation}
+Here $1\leq q\leq|\mathsf F_{i,a}|$. A derivative in a label
+outside that readout is zero. The constant is independent
+of $J_i$, the loop length and the torus. To obtain it, apply
+the product rule inside the closed character of this
+$L$-bond arc and the analytic row derivative bounds on
+the enlarged phase chart. Only finitely many derivative
+orders occur on a row. The finite-dimensional inequality
+$\|f\|_{\star,i}\leq K_{\chi_i}\sup_{H\in G}|f(H)|$
+absorbs its constant into $C_{\partial,i}^q$ for $q\geq1$.
+The gauge data and the derivative directions transform
+together; only norms of complete closed kernels enter.
+No assertion with a constant independent of depth is made
+for an original fine arc of length $L^k$ at a later scale.
+
+Partition the geometric marks into good and remaining marks.
+For each good mark suppose
+$\sup_B\|\kappa_{i,a}(B)\|_{\star,i}\leq\varepsilon$,
+where $0<\varepsilon\leq1$ is common to the two loops.
+Every remaining mark retains the unconditional real bound
+$\sup_B\|\kappa_{i,a}(B)\|_{\star,i}\leq2$.
+One sufficient check for a good mark is explicit:
+if its base row satisfies the hypotheses of
+\eqref{eq:c8-fourth-coarse-curvature}, then
+\begin{equation}\label{eq:c8-fourth-good-mark-check}
+    \sup_B\|\kappa_{i,a}(B)\|_{\star,i}
+        \leq
+        2C_{R_i}D^2L^2\delta_a(U_\xi(m))
+        +\frac{5r}{4}|\mathsf F_{i,a}|C_{\partial,i}g_0\;.
+\end{equation}
+The first term bounds the actual base relative holonomy;
+the second follows by integrating
+\eqref{eq:c8-fourth-mark-derivative} along the straight
+line from the zero young increment to $B$.
+The mean shift and retained exterior data stay in the base
+field. A mark is not declared good without this or another
+bound on its actual kernel. Thus no large-field factor is
+hidden in $\varepsilon$.
+
+\paragraph{Paying both the marks and the probes.}
+Let $m_{\rm g}$ and $m_{\rm b}$ be the numbers of good and
+remaining geometric marks in the pair. Let $N_{\rm inc}$
+bound the number of marked-arc readouts containing any one
+young free label, counting both loops. The first-step row
+locality and square traversal multiplicity give such a
+constant independent of their lengths. Put
+\begin{equation}\label{eq:c8-fourth-grade-parameters}
+    \eta=\sqrt{\varepsilon},\qquad
+    v=N_{\rm inc}\max_i C_{\partial,i}g_0(1+2r),\qquad
+    \widetilde u=\frac{v}{\eta},\qquad
+    \widetilde\rho=\frac{\widetilde u}{u_*},\qquad
+    \mathfrak a_J=\frac{\eta^{m_{\rm g}}2^{m_{\rm b}}}{|Z_1Z_2|}\;.
+\end{equation}
+Require $\widetilde u\leq u_*$. For instance,
+$v\leq\varepsilon\leq1$ and $v\leq u_*^2$ imply this
+condition. Let $\mathsf J$ be a set of distinct young probes,
+and put $q=|\mathsf J|$. The finite-difference formula gives
+\begin{equation}\label{eq:c8-fourth-fixed-mark-difference}
+    \sup_B\|
+        \Delta_{\mathsf J}(k_1\otimes k_2)(B)
+    \|_{\star,12}
+        \leq\mathfrak a_J\,\widetilde u^q\;.
+\end{equation}
+Here $\Delta_{\mathsf J}$ acts on the actual joint kernel
+with the same young field in both factors. Disjoint
+physical contours do not have to have disjoint readouts
+for this bound.
+
+For the proof, apply the product rule inside the ordered
+closed-kernel products in
+\eqref{eq:c8-fourth-marked-star-word}.
+Assign each derivative label to a marked factor reading it;
+there are at most $N_{\rm inc}^q$ assignments.
+An undifferentiated good factor costs
+$\varepsilon=\eta^2\leq\eta$. If it receives $j\geq1$
+derivatives, its increment bound from
+\eqref{eq:c8-fourth-mark-derivative} is no larger than
+$\eta(C_{\partial,i}g_0(1+2r)/\eta)^j$,
+because $\eta^{1-j}\geq1$.
+An undifferentiated remaining factor costs two; its
+differentiated bound is also dominated by two times the
+same probe factor. Multiplying the factors, summing the
+assignments and integrating the unit-volume
+finite-difference interpolation cube proves the claim.
+There is no factorial in the total number of probes.
+In the dangerous case of one good mark and one derivative,
+the allocated factors give $\eta(v/\eta)=v$, not the false
+extra gain $\varepsilon v$.
+
+\paragraph{The labelled native caller.}
+Insert this same joint kernel into one actual selected
+measure and retain its geometric labels:
+\begin{equation}\label{eq:c8-fourth-fixed-mark-selected}
+    K_{\ell;J_1,J_2}
+        =\int
+            \Delta_{\mathsf J(\ell)}(k_1\otimes k_2)(B)\,
+                \dd\Lambda^{f,1}_{\Lambda;\ell}(B)\;.
+\end{equation}
+Both closed kernels remain inside the common integration;
+no product of separately integrated kernels is used.
+Fix a positive integer $q_0$ and consider exactly the native
+selections with at least $q_0$ actual probes. For every final
+domain $Z$, the dummy comparison gives
+\begin{equation}\label{eq:c8-fourth-fixed-mark-root}
+    \sum_{\substack{\ell:\,Z(\ell)=Z\\
+        |\mathsf J(\ell)|\geq q_0}}
+        \|K_{\ell;J_1,J_2}\|_{\star,12}
+        \leq
+        \mathfrak a_J\,\widetilde\rho^{q_0}
+            \varepsilon_*e^{-\lambda_*\ell_1(Z)}\;.
+\end{equation}
+The proof is
+$\widetilde u^{|\mathsf J|}
+\leq\widetilde\rho^{q_0}u_*^{|\mathsf J|}$
+followed by the original selection sum.
+For disjoint readouts and a probe from each loop one may
+take $q_0=2$. Mere disjointness of the contours does not
+justify that choice.
+The sector with no probes is retained separately; its
+base-value kernel has the direct bound
+$\varepsilon^{m_{\rm g}}2^{m_{\rm b}}/|Z_1Z_2|$.
+It is not removed by an estimate with $q_0\geq1$.
+
+Completing this source with its original touching
+vacuum-denominator cluster labels, as above, replaces the
+last exponential by
+$e^{-(\lambda_*-C_{\rm g}/8)\ell_1(Z)}$ in the corresponding
+absolute sum of these operator norms. The factor
+$\eta^{m_{\rm g}}2^{m_{\rm b}}$ and the original
+$|Z_1Z_2|^{-1}$ remain. In particular the geometric marks
+have not been summed with signs and then forgotten.
+The complete supports retain both germ intervals, all
+coarse and return transports, every reconstructed-field
+readout and all denominator clusters.
+
+This is a bound in the existing closed-kernel norm for
+specified labelled native contributions. It is not yet an
+estimate with a tree weight on their full enlarged supports.
+Paying the remaining-mark factor $2^{m_{\rm b}}$, summing
+the actual marked families and inherited histories, and
+proving the same hypotheses on the required complex
+domains are still necessary. Those estimates cannot be
+replaced by the global positive-lift diagnostic above.
+The full physical denominator and the prescribed scalar
+extractions remain unchanged at the downstream caller.
+
+\paragraph{Compact checkpoint: C8-FO-1.}
+The target is the actual C8 insertion for disjoint loops, under
+the full inherited law and physical denominator $D_h$.
+WC.1 and the NLSM-style noncommuting rotation inequality remain
+open. The calculation stays in this separate record; the
+original first-step file and V3 are untouched.
+
+The conditional fourth-response bound and its physical
+denominator neighbourhood were checked in
+\path{review-fo3/report.md}. The occurrence-reserve estimate
+\eqref{eq:c8-fourth-labelled-bound} was checked in
+\path{review-fo4/report.md}; that review correctly says it
+does not itself estimate the inherited source.
+
+The local C8 regrouping and real coarse-word curvature bound
+were checked as conditional first-step implications in
+\path{review-fo5/report.md}. The simultaneous first-step
+reconstruction \eqref{eq:c8-fourth-coarse-family-identity}
+and merged pin \eqref{eq:c8-fourth-merged-pin} were checked
+conditionally in \path{review-fo6/report.md}, with its
+\path{review-fo6/disclosure-supplement.md}. The V3 foundations
+were explicit inputs to these reviews, not independently
+certified. These one-loop preparatory results do not close
+the joint inherited caller.
+
+The current new joint calculation is
+\eqref{eq:c8-fourth-disjoint-root-tail}, for one selected domain
+carrying a probe from each disjoint loop, with all touching
+vacuum-denominator labels. Its pointwise bound is carried
+through the actual positive real lifts in
+\eqref{eq:c8-fourth-connecting-lift}, retaining the physical
+denominator in \eqref{eq:c8-fourth-connecting-physical} and
+giving the fourth response
+\eqref{eq:c8-fourth-connecting-fourth-bound}.
+Its conditional scalar conclusions were checked in
+\path{review-fo7/report.md}. Objection FO7-SCOPE remains
+open: \eqref{eq:c8-fourth-connecting-lift} preserves a global
+unlabelled bound, not the local labelled marked norm needed
+by WC-C8.6. That part is diagnostic only and is excluded
+from the active induction. It does not close the full
+connected covariance or labelled source estimate.
+The complementary data, connections through several selected
+domains, new inherited components meeting both loops,
+complex-background control and the prescribed inverse
+$Z_1Z_2$ still require estimates.
+
+The latest IT-1 and D2 records have been checked for relevant
+changes. D2.2 now contains the next-step substitution and
+gauge-covariance discussion; its coupled source expansion
+and integration are not treated here as established inputs.
+The current repair keeps the C8 geometric sets fixed.
+Equations \eqref{eq:c8-fourth-fixed-mark-difference} and
+\eqref{eq:c8-fourth-fixed-mark-root} estimate the native
+closed-kernel norm with an explicit mark/probe trade-off,
+retaining the factor for remaining marks and all denominator
+labels. The focused review is in \path{review-fo8/report.md}.
+It validates the calculation conditionally for the raw native
+input, not its application to the completed inherited kernel.
+Objection FO8-OPERAND remains open at
+\eqref{eq:c8-fourth-marked-star-word}: the reviewed revision
+\path{review-fo8/argument-snapshot.tex}, SHA-256
+\path{1930678b59cb1d0847b80cb7bb1c2a02a1dcdc9f3b7ec183b95dd89641e86c3b},
+identified the raw star word with the completed WC-C8.7
+kernel without proving that identification. The text now
+withdraws that identification. Closure requires the actual
+joint inherited source, its integrations and denominator
+labels to satisfy the stated marked norm estimate. A product
+of separately completed one-loop kernels does not supply
+that joint operand.
+The full-support weights, remaining-mark cost, inherited
+field maps and complex domains are not certified by it.
+The next calculation must address those actual marked
+contributions, not a replacement global unlabelled carrier.
+Frozen closed-kernel algebra,
+the source definition and the exact physical law are not
+to be rederived.
+
+The newer D2.2(5)(d) also requires a spectator-dependence
+check before its proposed self-energy can be used as a
+single-polymer activity: its cluster sum is restricted to
+clusters hitting exactly one member of the current family,
+so that family remains an argument. The familywise ratio
+identity is not challenged by this observation. The relevant
+source is \path{WILSON_IT1_D2_STEP_MAP_2026_10_22.md},
+lines 486--487, at SHA-256
+\path{f1972456c36262da815471a12e90397c507658a33d77c93ec9dbb5d26bb4b869}.
+The proposed factorisation repair was not carried out before
+the stopping condition below. The newer draft and V3 are
+unchanged by this record.
+
+The user authorised sustained work until an observed usage
+reset. Baseline on 22 October: 34 percent, primary
+10080-minute window, reset timestamp 1793098031.
+The preceding reading was 66 percent with that timestamp.
+On 22 October, immediately before 17:26:21 UTC, the account
+reported 2 percent and reset timestamp 1793293920 in the
+same 10080-minute window. This is the observed reset.
+Mathematical work is stopped and the continuation automation
+is paused. Only the review qualifications and this checkpoint
+were recorded after observing the reset. A new human
+instruction is required to resume.
+
+\begin{thebibliography}{99}
+    \bibitem{OpenAIRotation}
+    OpenAI, \emph{Exponential decay in two-dimensional classical
+    $O(n)$ models}, 23 September 2026, Section~2,
+    \texttt{sections/rotation.tex}, Git commit
+    \texttt{1581d4cbdd69a0faf34b2089614fe2a814316a6a},
+    \url{https://github.com/openai/math}.
+\end{thebibliography}
+\end{document}

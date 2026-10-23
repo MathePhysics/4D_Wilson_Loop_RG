@@ -1,0 +1,125 @@
+{
+  "snapshot_date": "2026-10-23",
+  "files": [
+    {
+      "source": "WILSON_IT1_LINE_DEFECT_2026_10_21.md",
+      "file": "WILSON_IT1_LINE_DEFECT_2026_10_21.md",
+      "bytes": 398884,
+      "sha256": "12daec5efdd49e25403c25a96c31231804c09abd7d9e1f0933e58d5679bbeee1"
+    },
+    {
+      "source": "WILSON_IT1_D2_STEP_MAP_2026_10_22.md",
+      "file": "WILSON_IT1_D2_STEP_MAP_2026_10_22.md",
+      "bytes": 382700,
+      "sha256": "0356b3c11506996a567615924b7567241b8eff4795297ad568c7b241e2f2666e"
+    },
+    {
+      "source": "WILSON_CAUCHY_ROUTE_DRAFT_2026_10_21.md",
+      "file": "WILSON_CAUCHY_ROUTE_DRAFT_2026_10_21.md",
+      "bytes": 119388,
+      "sha256": "cef2669e465f050b8032fc7f81ad0ad6005aa99a53d837162ba47a2efc7c0856"
+    },
+    {
+      "source": "WILSON_CAUCHY_LIPSCHITZ_2026_10_21.md",
+      "file": "WILSON_CAUCHY_LIPSCHITZ_2026_10_21.md",
+      "bytes": 19756,
+      "sha256": "deb1560b8e3be63e6b7f83c6a1dff9e634cc6f4a8c19d1266ea5f18991376838"
+    },
+    {
+      "source": "WILSON_CAUCHY_LIP1A_2026_10_21.md",
+      "file": "WILSON_CAUCHY_LIP1A_2026_10_21.md",
+      "bytes": 40181,
+      "sha256": "2b6dbadf2b7564a8467b8b066c5287860fc36947ac959e8ceee81cd6b963d8c0"
+    },
+    {
+      "source": "WILSON_V3_ITERATION_AUDIT_2026_10_21.md",
+      "file": "WILSON_V3_ITERATION_AUDIT_2026_10_21.md",
+      "bytes": 28156,
+      "sha256": "c42fe97a55ec8a739f7965fd9f1335e296c9c4339a596b3901a8030e505c2852"
+    },
+    {
+      "source": "V3_RG1_FIXED_CONSTANTS_CHECK_2026_10_21.md",
+      "file": "V3_RG1_FIXED_CONSTANTS_CHECK_2026_10_21.md",
+      "bytes": 12671,
+      "sha256": "a210e634ff51935e3956c09d24c90e01f297be7f02c5c28f7d09c3ebd5ab1caf"
+    },
+    {
+      "source": "V3_B4_CHART_UNIQUENESS_REPAIR_2026_10_21.md",
+      "file": "V3_B4_CHART_UNIQUENESS_REPAIR_2026_10_21.md",
+      "bytes": 26009,
+      "sha256": "7d5076e6d6390fd3b363ddef92e2e56c71f948fcd410222e9a750f3eb3de2e83"
+    },
+    {
+      "source": "ITERATED_WILSON_INSERTION_ESTIMATES_DRAFT_2026_10_18.md",
+      "file": "ITERATED_WILSON_INSERTION_ESTIMATES_DRAFT_2026_10_18.md",
+      "bytes": 12382,
+      "sha256": "c4687ba811c75265cb480ec30d2bade79749aebd247cf47db57e0e0afb70fb3e"
+    },
+    {
+      "source": "V2_STAGE1_CONSTRUCTION_DRAFT_2026_10_17.md",
+      "file": "V2_STAGE1_CONSTRUCTION_DRAFT_2026_10_17.md",
+      "bytes": 239654,
+      "sha256": "dfc7c4a3ad846173ff9f18d1b3e9435537ca6bdac39b6ea91fe2ebd689d63a4c"
+    },
+    {
+      "source": "V2_STAGE2_BACKGROUND_ESTIMATES_DRAFT_2026_10_17.md",
+      "file": "V2_STAGE2_BACKGROUND_ESTIMATES_DRAFT_2026_10_17.md",
+      "bytes": 148609,
+      "sha256": "1b9ca809a8e367227d1527047ebaed744af8de9546818f21cb5d365037a71b40"
+    },
+    {
+      "source": "V2_STAGE3_EXTERIOR_RESPONSE_DRAFT_2026_10_18.md",
+      "file": "V2_STAGE3_EXTERIOR_RESPONSE_DRAFT_2026_10_18.md",
+      "bytes": 114056,
+      "sha256": "319efa890dc0572c2a5a4250bbe5c0fc582bf5b4b5466e618bad7737d2884ade"
+    },
+    {
+      "source": "V2_STAGE4_SIGNED_DEFECT_DRAFT_2026_10_18.md",
+      "file": "V2_STAGE4_SIGNED_DEFECT_DRAFT_2026_10_18.md",
+      "bytes": 228920,
+      "sha256": "faac7736aed85e1bdcecff062f2d755e3ebb5c7c584ddf40096fd62f8c2418b2"
+    },
+    {
+      "source": "V2_STAGE4C_SCALAR_IDENTIFICATION_DRAFT_2026_10_18.md",
+      "file": "V2_STAGE4C_SCALAR_IDENTIFICATION_DRAFT_2026_10_18.md",
+      "bytes": 43341,
+      "sha256": "72f19e7819cf5f111aa9f3fcfb4184a7d096425e671af55a55808c21561cdfc9"
+    },
+    {
+      "source": "V2_STAGE5_COLLAR_RETREAT_DRAFT_2026_10_19.md",
+      "file": "V2_STAGE5_COLLAR_RETREAT_DRAFT_2026_10_19.md",
+      "bytes": 489633,
+      "sha256": "353158422d9b583a6020637566b9bf83d84773e68f581870176ae1619be6516d"
+    },
+    {
+      "source": "WILSON_V4_COARSE_LOOP_INSERT_DRAFT_2026_10_23.tex",
+      "file": "WILSON_V4_COARSE_LOOP_INSERT_DRAFT_2026_10_23.tex",
+      "bytes": 11287,
+      "sha256": "4faf7921c21fc8ece32373af79279b216c5803b7b15d7c7c0d78cd9fb121e1b2"
+    },
+    {
+      "source": "WILSON_V4_TWO_LOOPS_SECTION_DRAFT.tex",
+      "file": "WILSON_V4_TWO_LOOPS_SECTION_DRAFT.tex",
+      "bytes": 55563,
+      "sha256": "16a790886d631931bf9cc6108db225c627ad472cd56456f735589b7b7c909257"
+    },
+    {
+      "source": "WILSON_C8_FOURTH_ORDER_ATTEMPT/main.tex",
+      "file": "WILSON_C8_FOURTH_ORDER_ATTEMPT/main.tex",
+      "bytes": 109400,
+      "sha256": "42bc7574394d77aeed24f59437cffde9e425972a0fdca6d9968587291b53cde8"
+    },
+    {
+      "source": "WILSON_RG_COMPARISON.txt",
+      "file": "WILSON_RG_COMPARISON.txt",
+      "bytes": 162747,
+      "sha256": "3ff90d9641c9c840746bad6302f25dfc8c4dcb0e4fac27e5b44760d8d9f393f8"
+    },
+    {
+      "source": "WILSON_RG_COMPARISON.tex",
+      "file": "WILSON_RG_COMPARISON.tex",
+      "bytes": 190695,
+      "sha256": "5bd4c460702d0827d422abe5ee7aa1f2813975b2bf9a1e6039cacb7c56ff4b0f"
+    }
+  ]
+}
