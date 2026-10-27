@@ -1,6 +1,6 @@
 # Wilson Loops through the Renormalisation Group
 
-The latest saved manuscripts, research programme and continuation drafts, collected on 27 October 2026. The mathematical source files and notes are copied verbatim from the working files; the PDFs are rebuilt from the included sources.
+The latest saved manuscripts, research programme and continuation drafts, collected on 27 October 2026. The mathematical source files and notes are copied verbatim from the working files; the current PDFs are rebuilt from the included sources. Previous versions retain their saved PDFs.
 
 ## Current Manuscripts
 
@@ -41,7 +41,11 @@ The custom [preprint class](preprint.cls) and V5 bibliography are included. The 
 
 Compilation checks the document build; it does not establish mathematical correctness.
 
-## Earlier Versions
+## Previous Versions
 
-- [V3 manuscript](WILSON_FIRST_RG_STEP_V3.pdf) and [source](WILSON_FIRST_RG_STEP_V3.tex).
-- [V3 pedagogical summary](V3_Pedagogical_Summary_2026_10_22.pdf) and [source](V3_Pedagogical_Summary_2026_10_22.tex).
+The [Previous Versions folder](Previous%20Versions/) contains the earlier manuscripts and their saved PDFs.
+
+- **V1:** [PDF](Previous%20Versions/WILSON_FIRST_RG_STEP.pdf) and [LaTeX source](Previous%20Versions/WILSON_FIRST_RG_STEP.tex).
+- **V2:** [PDF](Previous%20Versions/WILSON_FIRST_RG_STEP_V2.pdf) and [LaTeX source](Previous%20Versions/WILSON_FIRST_RG_STEP_V2.tex).
+- **V3:** [PDF](Previous%20Versions/WILSON_FIRST_RG_STEP_V3.pdf) and [LaTeX source](Previous%20Versions/WILSON_FIRST_RG_STEP_V3.tex).
+- **V3 pedagogical summary:** [PDF](Previous%20Versions/V3_Pedagogical_Summary_2026_10_22.pdf) and [LaTeX source](Previous%20Versions/V3_Pedagogical_Summary_2026_10_22.tex).

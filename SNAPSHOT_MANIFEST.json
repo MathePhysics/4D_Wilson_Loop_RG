@@ -8,13 +8,13 @@
       "sha256": "11ea89b5bb2a1b9af57c9c82434a72d88545ebb153e0f206594af76ba5414de6"
     },
     {
-      "file": "WILSON_FIRST_RG_STEP_V3.pdf",
+      "file": "Previous Versions/WILSON_FIRST_RG_STEP_V3.pdf",
       "source": "WILSON_FIRST_RG_STEP_V3.pdf",
       "bytes": 2188269,
       "sha256": "4cdcf426f261c252293158e0658776b8f0a97c571fe87b6c7d0ab194ec7a86c3"
     },
     {
-      "file": "WILSON_FIRST_RG_STEP_V3.tex",
+      "file": "Previous Versions/WILSON_FIRST_RG_STEP_V3.tex",
       "source": "WILSON_FIRST_RG_STEP_V3.tex",
       "bytes": 1260593,
       "sha256": "a520a59f363ded6eae5694327dd27565233d339f5eee585e8e283cb8e468ebd0"
@@ -486,6 +486,42 @@
       "built_from": "Wilson_Loop_Research_Programme_2026_10_24.tex",
       "bytes": 229336,
       "sha256": "3eaaa7899572b85614c9a14e52af5864ac754fa7b6ad7c803eeff8058ee3a954"
+    },
+    {
+      "file": "Previous Versions/V3_Pedagogical_Summary_2026_10_22.tex",
+      "source": "output/pdf/V3_Pedagogical_Summary_2026_10_22.tex",
+      "bytes": 81810,
+      "sha256": "229c75f4839c6765618d86354273fe8e3e58fe36529f3d3268529ae8d4af3847"
+    },
+    {
+      "file": "Previous Versions/V3_Pedagogical_Summary_2026_10_22.pdf",
+      "source": "output/pdf/V3_Pedagogical_Summary_2026_10_22.pdf",
+      "bytes": 584613,
+      "sha256": "46e3353294f960ba2ef2dd102e1723f0228d04a63ae0e393931a53d615c1a8c6"
+    },
+    {
+      "file": "Previous Versions/WILSON_FIRST_RG_STEP.tex",
+      "source": "WILSON_FIRST_RG_STEP.tex",
+      "bytes": 106335,
+      "sha256": "7695ecf00c1bc632e473aaa01fb3a18d33298c2947a7350b9a69bef058c5986a"
+    },
+    {
+      "file": "Previous Versions/WILSON_FIRST_RG_STEP.pdf",
+      "source": "WILSON_FIRST_RG_STEP.pdf",
+      "bytes": 501067,
+      "sha256": "1e0fad7638be3257e90958fc5dd19f6150841ca02db2c105615c02dbb7c2867f"
+    },
+    {
+      "file": "Previous Versions/WILSON_FIRST_RG_STEP_V2.tex",
+      "source": "WILSON_FIRST_RG_STEP_V2.tex",
+      "bytes": 176101,
+      "sha256": "f8b0fdd4457d2c81ab5a21413c9dff549f84df415c373376221dc5fb27d75b3c"
+    },
+    {
+      "file": "Previous Versions/WILSON_FIRST_RG_STEP_V2.pdf",
+      "source": "WILSON_FIRST_RG_STEP_V2.pdf",
+      "bytes": 605004,
+      "sha256": "0f5231460ce9309e647c3dda3bdaedf7468acd2bc436b8965b6eb8f93fcf16d1"
     }
   ],
   "builds": [

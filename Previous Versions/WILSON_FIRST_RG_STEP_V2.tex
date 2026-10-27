@@ -1,0 +1,1648 @@
+% !TeX program = pdflatex
+% Mathematical working note.
+% This note records the finite-cutoff RG prescription and the regular reference
+% perimeter/corner extraction and outgoing closed insertions.
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{mathrsfs}
+\usepackage[a4paper,margin=28mm]{geometry}
+\usepackage[hidelinks]{hyperref}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\Hol}{\operatorname{Hol}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\id}{\mathbf 1}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.6em}
+\emergencystretch=1.5em
+\title{A Wilson Loop after the First Renormalisation Step}
+\author{}
+\date{17 October 2026}
+
+\newtheorem{proposition}{Proposition}
+\begin{document}
+\maketitle
+
+\section{The Insertion at a Fixed Cutoff}
+
+We write the first step for one compact connected simple gauge group $G$, with bare coupling $g_0$, and let $\chi \colon G \to \mathbb C$ be a normalised irreducible character, so that $\chi(\id)=1$. Let $\varepsilon>0$ be the fine lattice spacing and $L>1$ the blocking factor. The fine and coarse bond fields are $U$ and $V$, respectively. Choose an oriented square contour $C$ on the fine lattice and an oriented square $\bar C$ on the lattice of spacing $L\varepsilon$, with each side of $\bar C$ represented by the corresponding straight fine path in $C$. This assumption fixes the path correspondence; the two contours describe the same square in the underlying torus.
+
+For a field $U$ and an ordered contour $C=(b_1,\ldots,b_n)$, holonomy and the Wilson loop are
+\begin{equation}\label{eq:wilson-definition}
+    \Hol_U C=U(b_1)\cdots U(b_n),
+    \qquad W_\chi(C;U)=\chi(\Hol_U C)\;.
+\end{equation}
+The bond field satisfies $U(b^{-1})=U(b)^{-1}$ when a contour traverses a bond backwards. The character makes $W_\chi$ gauge invariant.
+
+Let $E$ and $E_1$ be the positive fine and coarse bonds of the four-dimensional periodic lattices, and let $\mathcal P_T$ be the unoriented fine plaquettes. Fix the action's unitary realisation $G\subset U(N)$ and $\tr_N=N^{-1}\operatorname{Tr}$. With $\partial p$ denoting the oriented boundary of $p$, the bare action and density are
+\begin{equation}\label{eq:bare-action}
+    S(U)=\sum_{p\in \mathcal P_T}
+        (1-\operatorname{Re}\tr_N U(\partial p)),
+    \qquad \rho_0(U)=\exp(-g_0^{-2}S(U)-E_\varepsilon)\;.
+\end{equation}
+Here $E_\varepsilon$ is a field-independent vacuum scalar, retained in both numerator and denominator. Product normalised Haar measures on $G^E$ and $G^{E_1}$ are denoted by $\dd U$ and $\dd V$. The full first-step operator, before the small-field/large-field decomposition, is CRE (0.1):
+\begin{equation}\label{eq:bare-blocking-operator}
+    (T\rho)(V)=\int
+        \left(\prod_{c\in E_1}\delta_G(M(U,c)V(c)^{-1})\right)
+        \rho(U)\,\dd U\;.
+\end{equation}
+The group Dirac measure $\delta_G$ is normalised against Haar measure, and $M$ is Ba{\l}aban's averaging operation, with the regular-chart formula \eqref{eq:nonlinear-average} below. The full blocking operator is taken as supplied in \cite[(0.1)]{BalabanCRE}; the displayed logarithmic formula is used on its regular chart. Ba{\l}aban's cutoffs, gauge insertions and changes of variables give alternative representations of this same integral; their full history sum is retained \cite{BalabanCRE}. The outgoing density and the numerator with the insertion are
+\begin{equation}\label{eq:first-step}
+    \rho_1(V)=T[\rho_0](V),
+    \qquad N_1(V)=T[\rho_0 W_\chi(C;\cdot)](V)\;.
+\end{equation}
+Choose Haar-measurable versions of these densities. For almost every $V$ with $0<\rho_1(V)<\infty$, define
+\begin{equation}\label{eq:outgoing-loop}
+    W_1(C;V)=\frac{N_1(V)}{\rho_1(V)}\;.
+\end{equation}
+This definition carries the bare insertion through the existing finite-cutoff transformation. It does not introduce a Wilson-loop counterterm.
+
+The intermediate integration over regular fluctuations does not yet produce a function of $V$ alone. It also retains the exterior fine field and the unintegrated fluctuations. Those variables are integrated by the outer operation in CRE (1.29); the denominator in \eqref{eq:outgoing-loop} is obtained from the same operation without the insertion. The vacuum construction is given in CRE (1.11)--(1.30) \cite{BalabanCRE}.
+
+\subsection{Normalisation}
+Positivity of the blocking kernel and $|W_\chi|\leq1$ give $|N_1(V)|\leq\rho_1(V)$ almost everywhere. Thus $N_1=0$ almost everywhere on $\{\rho_1=0\}$; set $W_1=0$ there and on the exceptional null set where a density is not finite.
+The physical partition function and the expectation after the transformation are
+\begin{equation}\label{eq:one-step-physical-partition}
+    \mathcal Z_0=\int\rho_0(U)\,\dd U
+        =\int\rho_1(V)\,\dd V>0\;,
+\end{equation}
+\begin{equation}
+    \mathbb E_{\varepsilon}[W_\chi(C)]
+        =\frac{1}{\mathcal Z_0}\int N_1(V)\,\dd V
+        =\frac{1}{\mathcal Z_0}\int W_1(C;V)\rho_1(V)\,\dd V\;.
+\end{equation}
+Both integrals retain the sum over small-field and large-field regions. Conditional fluctuation integrals used below have their own normalising factors; those factors remain inside the construction of $N_1$ and $\rho_1$.
+
+\section{Extraction from the Effective Interaction}
+\label{sec:extraction-procedure}
+
+Ba{\l}aban first constructs the effective interaction as a function of the remaining field. He then extracts its relevant coefficients at the identity and subtracts the corresponding local terms from that field-dependent interaction. We use the convention in \cite[(1.6)--(1.7)]{BalabanRG1} and following \cite[(1.30)]{BalabanCRE}, in which the Gaussian normalisation is included in the effective interaction. The intermediate definition in RG1 (2.13) keeps that contribution separate.
+
+In RG1's small-field construction, with no large-field regions, let $B$ be a small coarse Lie-algebra field, and let $U_1(e^{iB})$ be the constrained critical configuration with coarse field $e^{iB}$. Write $\mathbf E^{(1)}$ for the first-step effective interaction, including the Gaussian normalisation, and put
+\begin{equation}
+    \mathcal E_1(B)=\mathbf E^{(1)}(g_0,U_1(e^{iB}))\;.
+\end{equation}
+Choose an orthonormal basis of the Lie algebra for the action's invariant inner product. The index $a$ denotes a basis element, $\mu$ a bond direction and $x$ its initial coarse site. The second derivative is
+\begin{equation}
+    \Pi_{1,\mu\nu}^{ab}(x,y)
+        =\left.
+            \frac{\partial^2\mathcal E_1(B)}
+                {\partial B_\mu^a(x)\,\partial B_\nu^b(y)}
+          \right|_{B=0}\;.
+\end{equation}
+After the colour reduction and the translation-invariant infinite-lattice limit, let $\Pi_{1,\mu\nu}(x)$ denote the resulting scalar kernel with its second site fixed at the origin. In Ba{\l}aban's conventions the coupling counterterm is
+\begin{equation}
+    \beta_1(g_0)=\sum_{x\in\mathbb Z^4}x_1x_2\Pi_{1,12}(g_0,x)\;.
+\end{equation}
+The definition and the symmetry argument are given in \cite[(1.20)--(1.22), (5.37)--(5.43)]{BalabanRG1}.
+
+In a proper regular region $\Lambda_1$, the subtraction has the form
+\begin{equation}\label{eq:balaban-regular-subtraction}
+    \mathbf E^{(1)}(\Lambda_1,g_0,U_1)
+        -\mathbf E^{(1)}(\Lambda_1,g_0,\id)
+        -\beta_1(g_0)S_{\phi_1}(U_1)\;.
+\end{equation}
+Here $\phi_1$ is the localisation cutoff in \cite[(1.27)]{BalabanCRE}, supported in $\Lambda_1$ and equal to one on its specified interior. If $x(p)$ is the initial site of an oriented representative of the plaquette $p$, then
+\begin{equation}
+    S_{\phi_1}(U)=
+        \sum_p\phi_1(x(p))
+            \bigl(1-\operatorname{Re}\tr_N U(\partial p)\bigr)\;.
+\end{equation}
+The boundary interaction and the exterior integrations remain in \cite[(1.29)--(1.30)]{BalabanCRE}. Ba{\l}aban states after (1.30) that the regular interaction is the RG1 interaction restricted to $\Lambda_1$. Within RG1's cube-localised construction, the changes of reconstruction and summation domain are controlled in \cite[(4.35)--(4.37)]{BalabanRG1}.
+
+For the Wilson loop, the quantities to extract are the scalar density along a straight side and the scalar contribution of a corner. We denote them by $\delta m$ and $z_{\mathrm c}$. Their construction below uses connected terms of the normalised Wilson integral at the identity background. Section~\ref{sec:regional-identification} identifies the straight-side coefficient with the flat projection of the conditional Wilson kernel in the first RG step, and estimates the error caused by its integration boundary. Section~\ref{sec:remaining-physical-comparison} gives the outgoing insertion with the reconstructed closed flux factors and the remaining conditional source terms retained.
+\section{The Flat Regular-Region Calculation}
+\label{sec:flat}
+
+The flat evaluation sets the reconstructed background to the identity. On an all-regular periodic lattice it gives the integral specified in this section. Section~\ref{sec:regional-identification} treats the flat straight-side ratio in a proper conditional integration region. The covariance, constraint substitution, Haar density and cutoff are fixed together; the coefficient depends on this prescription.
+Use the fixed faithful unitary realisation $G\subset U(N)$. Identify its Lie algebra $\mathfrak g$ with Hermitian matrices, so its group exponential is $e^{iX}$. Write $\tr_N=N^{-1}\operatorname{Tr}$ and use $\langle X,Y\rangle=\tr_N(XY)$ as the real inner product. The observable is exactly \eqref{eq:wilson-definition}, with the normalised character $\chi(\id)=1$ specified in Section~1. Put $d=\dim\mathfrak g$. The first derivative of $\chi$ vanishes: the trace of its Lie algebra representation vanishes on commutators, and a semisimple Lie algebra is its own commutator algebra.
+
+\subsection{The Covariance and the Normalised Insertion}
+
+Use fine-lattice units in the operators in this section. Let $E$ be the positively oriented bonds of $T$, let $T^{(1)}$ be its coarse centres, and let $E_1$ be the positively oriented coarse bonds. Take the odd blocking factor $L\geq 3$ used by Ba{\l}aban. For the covariance bounds below, $T=\prod_{\mu=1}^4(\mathbb Z/N_\mu\mathbb Z)$ with $N_\mu=LK_\mu$ and $K_\mu\geq 3$. The block $\mathcal B_y$ consists of the fine sites at displacement $n$ from $y\in T^{(1)}$, with $n\in\mathbb Z^4$ and $|n_\mu|\leq (L-1)/2$ in each direction. For $x\in\mathcal B_y$, the path family $\mathcal G(y,x)$ traverses each nonzero coordinate displacement in one uninterrupted run, in every ordering of those runs; the path is empty for $x=y$. These are the centred blocks and path family of RG1, Section~0.
+
+Use CRE's full averaging prescription corresponding to RG1 (0.4); the formula below is its restriction to the principal logarithm domain. CRE explicitly permits this choice in the paragraph following (0.1); no identification with the different average RG1 (0.12) is made. For a positive coarse bond $c=(y,y+Le_\mu)$ and $x\in\mathcal B_y$, put $x'=x+Le_\mu$. The vectors $e_\mu$ are the fine-lattice unit vectors, $[x,x']$ is the straight fine path, and $P_c(U)$ is the transport along the straight fine path from $c_-$ to $c_+$. On the regular logarithm domain, RG1 (0.4) is
+\begin{equation}\label{eq:nonlinear-average}
+    \begin{aligned}
+        \beta_c(U)&=L^{-4}\sum_{x\in \mathcal B_{c_-}}
+            \frac{1}{|\mathcal G(c_-,x)|\,|\mathcal G(c_+,x')|}
+            \sum_{\substack{\gamma\in \mathcal G(c_-,x)\\
+                \gamma'\in \mathcal G(c_+,x')}}
+            \frac{1}{i}\log\left(
+                U(\gamma)U([x,x'])U(\gamma')^{-1}P_c(U)^{-1}
+                \right)\;,\\
+        M(U,c)&=e^{i\beta_c(U)}P_c(U)\;.
+    \end{aligned}
+\end{equation}
+Every logarithm is applied to a closed relative transport based at $c_-$. Define its logarithmic constraint map and derivative by
+\begin{equation}\label{eq:constraint-primitive}
+    \mathcal Q(q)=\frac{1}{i}\log M(e^{iq}),
+    \qquad Q=\frac{1}{L}D\mathcal Q(0),
+    \qquad \mathcal N(q)=\mathcal Q(q)-LQq\;.
+\end{equation}
+The maps $\mathcal Q$ and $\mathcal N$ take a neighbourhood of zero in $\mathfrak g^E$ to $\mathfrak g^{E_1}$. The designated bond $b_0(c)$ is the fine bond on the straight coarse bond $c$ crossing between its two blocks. Put $E_0=\{b_0(c)\, | \,c\in E_1\}$ and $E_*=E\setminus E_0$. Let $\iota_0$ and $\iota_*$ extend fields on these two label sets by zero to $E$, and put $Q_0=Q\iota_0$. The designated coefficient matrix $Q_0$ is invertible in this regular construction. The maps are
+\begin{equation}\label{eq:constraint-extension}
+    h=\frac{1}{L}\iota_0Q_0^{-1},
+    \qquad
+    \mathsf C=(I-\iota_0Q_0^{-1}Q)\iota_*\;.
+\end{equation}
+Thus $h \colon \mathfrak g^{E_1}\to\mathfrak g^E$, $\mathsf C \colon \mathfrak g^{E_*}\to\mathfrak g^E$, $LQh=I$ and $Q\mathsf C=0$. The free variable is $B\in\mathfrak g^{E_*}$, and $\mathsf C B$ agrees with $B$ on $E_*$. These are the designated-bond construction in RG1 following (2.10) and the elimination in CRE (1.14)--(1.15) \cite{BalabanCRE,BalabanRG1}.
+
+The gauge-fixing functional is the exponential one in CRE (1.7), not a delta-function axial gauge. For the transports along $\mathcal G(y,x)$, let $\mathcal U_U(y,x)$ be their local group mean: it is the unique solution near their diagonal value of
+\begin{equation}
+    \sum_{\gamma\in\mathcal G(y,x)}
+        \log\bigl(U(\gamma)\mathcal U_U(y,x)^{-1}\bigr)=0\;.
+\end{equation}
+This is RG1 (0.10)--(0.11). The gauge-fixing functional and the action used in the constrained reference integral are
+\begin{equation}\label{eq:action-primitive}
+    \begin{aligned}
+        \mathscr G(U)&=\sum_{y\in T^{(1)}}
+            \sum_{x\in\mathcal B_y\setminus\{y\}}
+                (1-\operatorname{Re}\tr_N\mathcal U_U(y,x))\;,\\
+        \mathscr A(U)&=S(U)+\mathscr G(U)\;.
+    \end{aligned}
+\end{equation}
+Here $\partial p$ is the oriented boundary of the plaquette $p$. All group means and logarithms are used in the regular chart containing the identity.
+
+For $a,b\in\mathfrak g^E$, the flat Hessian is defined by
+\begin{equation}
+    \langle a,\Delta_1b\rangle
+        =\left.\frac{\partial^2}{\partial s\,\partial t}
+            \mathscr A(e^{i(sa+tb)})\right|_{s=t=0}\;.
+\end{equation}
+The first derivative is zero at the identity. This is the $J_1=0$ specialisation of CRE (1.16). CRE (1.12) states strict positivity of the second differential at the regular constrained minimum. With the exponential gauge fixing and the constrained extension above, it makes the quadratic form on the finite free carrier strictly positive; no zero-mode subtraction is introduced. The quadratic form and its inverse on that carrier are
+\begin{equation}\label{eq:flat-covariance}
+    \mathsf H=\mathsf C^*\Delta_1\mathsf C,
+    \qquad \mathsf K_B=\mathsf H^{-1},
+    \qquad \mathsf K=\mathsf C\mathsf K_B\mathsf C^*\;.
+\end{equation}
+The adjoint and Lebesgue measure use the stated real inner products, summed over the respective bond labels. Thus $\mathsf K$ is the covariance of the linearised fine field $\mathsf C B$, rather than an unconditioned lattice propagator. The normalised Gaussian measure on the free carrier is denoted by $\mu_{\mathsf K_B}$. In an orthonormal basis of real dimension $D=d|E_*|$, it has density
+\begin{equation}
+    \dd\mu_{\mathsf K_B}(B)
+        =(2\pi)^{-D/2}(\det\mathsf K_B)^{-1/2}
+            e^{-\frac{1}{2}\langle B,\mathsf H B\rangle}\,\dd B\;.
+\end{equation}
+
+Ba{\l}aban's nonlinear constraint solution gives the fine phase
+\begin{equation}\label{eq:flat-phase}
+    q_{g_0}(B)=g_0\mathsf C B-h\widetilde D(g_0\mathsf C B),
+    \qquad U_{g_0}(b)=e^{iq_{g_0}(B)(b)}\;.
+\end{equation}
+The correction $\widetilde D \colon \mathfrak g^E\to\mathfrak g^{E_1}$ is defined near zero by the unique small analytic solution
+\begin{equation}
+    \widetilde D(A)=\mathcal N(A-h\widetilde D(A)),
+    \qquad \widetilde D(0)=0\;.
+\end{equation}
+Its construction is RG1 following (2.10). Since $\mathcal N(0)=D\mathcal N(0)=0$, its expansion starts at degree two. Equation~\eqref{eq:flat-phase} therefore solves the nonlinear averaging constraint and has $q_{g_0}(B)=g_0\mathsf C B+O(g_0^2)$ at fixed $B$.
+
+Fix $\sigma\in \{\mathrm{op},\mathrm{HS}\}$ and use the corresponding matrix norm for both group-matrix and Lie-algebra cutoff tests:
+\begin{equation}\label{eq:marginal-two-norms}
+    |X|_{\mathrm{op}}=\sup_{|v|_2=1}|Xv|_2,
+    \qquad |X|_{\mathrm{HS}}=
+        \left(\tr_N(X^*X)\right)^{\frac{1}{2}}\;.
+\end{equation}
+Here $|v|_2$ is the Euclidean vector norm. The dependence on the fixed $\sigma$ is suppressed in $\vartheta_{g_0}$ and $\mathcal W_{g_0}$ below.
+
+In the all-regular branch, $U_1=U_{1,\square'}=\id$. CRE (1.19) removes the approximate relative-field tests on the good fluctuation cubes. The other retained chart tests in CRE (1.25) have support in $S_1=\varnothing$. The guard statement following \cite[(1.10)]{BalabanCRE} removes the earlier plaquette and gauge cutoffs under its prescribed parameter hierarchy. With that hierarchy retained, \cite[(1.18)--(1.19), (1.25)--(1.26)]{BalabanCRE} gives the following bond product when its bond norm is read as $|\cdot|_\sigma$:
+\begin{equation}\label{eq:literal-cutoff}
+    \vartheta_{g_0}(B)=\prod_{b\in E_*}
+        \mathbf 1_{\{\,|B(b)|_\sigma<r(g_0)\,\}},
+    \qquad r(g_0)=A_1(\log g_0^{-2})^{p_0}\;.
+\end{equation}
+Here $A_1>0$ and $p_0>1$ are the first-step cutoff parameters, and $\delta_0=g_0r(g_0)$. We use the inductive normalisation following CRE (3.4), together with CRE (2.4), also at the first step:
+\begin{equation}\label{eq:cre-cutoff-normalisation}
+    \begin{aligned}
+        p_0(g_k)&=A_0(\log g_k^{-2})^{p_0}\;,\\
+        \varepsilon_k&=g_kp_0(g_k)\;,\\
+        \delta_k&=g_k\frac{A_1}{A_0}p_0(g_k)
+            =\frac{A_1}{A_0}\varepsilon_k\;.
+    \end{aligned}
+\end{equation}
+For the first step this gives $\delta_0/g_0=A_1(\log g_0^{-2})^{p_0}$.
+
+For the application to CRE, assume its compatible cube partitions and admissible first-step parameters: sufficiently large cutoff constants, sufficiently small $A_1/A_0$ and coupling, and $p_0\geq5r_{\mathrm{geom}}$, where $r_{\mathrm{geom}}\geq2$ is the logarithmic exponent defining the macro-cube sizes. Under these hypotheses the guard statement following \cite[(1.10)]{BalabanCRE} removes $\chi_0$ and $\chi_{Ax}$ in the regular region. The reference integral below is specified separately for each of the two matrix-norm prescriptions; its identification with a conditional kernel uses that same prescription.
+
+Let $\sigma_H(q)$ be the density of normalised Haar measure in exponential coordinates relative to the stated Lie-algebra Lebesgue measure, and put $j_H(q)=\sigma_H(q)/\sigma_H(0)$. Define the Jacobian and residual exponent directly by the measure and action pullback:
+\begin{equation}\label{eq:literal-residual}
+    \begin{aligned}
+        J_{g_0}(B)&=
+            \left|\det_{\mathfrak g^E}
+                \bigl(I-hD\widetilde D(g_0\mathsf C B)\bigr)\right|
+            \prod_{b\in E}j_H(q_{g_0}(B)(b))\;,\\
+        \mathcal P_{g_0}(B)&=\log J_{g_0}(B)
+            -\frac{1}{g_0^2}\mathscr A(U_{g_0})
+            +\frac{1}{2}\langle B,\mathsf H B\rangle\;.
+    \end{aligned}
+\end{equation}
+The determinant is on the real fine carrier. The nonlinear change of variables is made before the linear constraints are eliminated, as in CRE (1.14). The subsequent linear-constraint factor, Haar density at zero, coupling rescaling, gauge normaliser and vacuum scalar are common to the numerator and denominator in this branch. After the cutoff reductions above, \eqref{eq:literal-residual} retains the action, Haar and Jacobian factors of CRE (1.14)--(1.16), with the same exponential gauge fixing. Its constant coefficient at $g_0=0$ is zero.
+
+The regular sourced ratio is
+\begin{equation}\label{eq:flat-ratio}
+    \mathcal W_{g_0}(C)=
+        \frac{\displaystyle\int
+            \vartheta_{g_0}(B)e^{\mathcal P_{g_0}(B)}
+            W_\chi(C;U_{g_0})\,\dd\mu_{\mathsf K_B}(B)}
+        {\displaystyle\int
+            \vartheta_{g_0}(B)e^{\mathcal P_{g_0}(B)}
+            \,\dd\mu_{\mathsf K_B}(B)}\;.
+\end{equation}
+Only common scalar prefactors of this same regular integration cancel here. The denominator is not replaced by an independently chosen Gaussian normaliser.
+
+\section{The Straight-Edge Coefficient from Gaussian Marginals}
+\label{sec:marginal-perimeter}
+
+The normalised flat integral has a connected expansion. Its extensive contribution along a long straight side defines $\delta m$; the contributions remaining near the corners define $z_{\mathrm c}$. We construct these terms using Gaussian principal marginals and the local interaction \eqref{eq:perimeter-literal-local-sum}. Section~\ref{sec:regional-identification} then compares the straight-side coefficient with the conditional kernel in a proper regular region.
+
+For a square $C_n$ on the compatible finite torus $T$, the flat reference numerator and denominator are
+\begin{equation}\label{eq:perimeter-native-integrals}
+    \begin{aligned}
+        N_{n,T}&=\int\vartheta_{g_0}(B)e^{\mathcal P_{g_0}(B)}
+            W_\chi(C_n;U_{g_0})\,\dd\mu_{\mathsf K_B}(B)\;,\\
+        D_T&=\int\vartheta_{g_0}(B)e^{\mathcal P_{g_0}(B)}
+            \,\dd\mu_{\mathsf K_B}(B)\;.
+    \end{aligned}
+\end{equation}
+These are the identity-background regular integrals. In the two-norm construction below, read the cutoff as $\vartheta_{g_0}^{\sigma}$ and write $N_{n,T}=N_{C_n,T}^{\sigma}$, $D_T=D_T^{\sigma}$ for the chosen prescription $\sigma$. They are distinct from the full physical partition function $\mathcal Z_0$.
+\subsection{Connected Terms of the Normalised Integral}
+
+Let $E_*$ be the free-bond carrier and let $C_T=\mathsf K_B$ on a compatible finite torus $T$. The flat gap and exponential decay proved in Appendix~\ref{app:flat-covariance} give positive constants $\lambda,\Lambda,A,\mu$, independent of $T$, such that
+\begin{equation}\label{eq:marginal-covariance-input}
+    \lambda I\leq C_T\leq \Lambda I,
+    \qquad \|C_T(b,c)\|\leq A e^{-\mu d_T(b,c)}\;.
+\end{equation}
+For positive bonds $b=(x,i)$ and $c=(y,j)$, fix $d_T(b,c)=d_{\infty,T}(x,y)+\mathbf1_{\{i\ne j\}}$, where the first term is periodic maximum-norm site distance in fine-lattice units. The same bounds hold for every principal marginal. One may take $\lambda=h_L^{-1}$ and $\Lambda=\gamma_L^{-1}$ from \eqref{eq:covariance-uniform-gap} and \eqref{eq:bulk-uniform-gap}. The free-inverse Neumann series \eqref{eq:bulk-neumann-inverse} applies on the compatible tori as well, with the same gap and row-sum bound. Let $d_{\mathrm{block}}(b,c)$ be the periodic maximum-norm distance between the coarse indices of the blocks containing the initial sites of $b,c$. The block-distance decay converts to the fine distance using $d_T(b,c)\leq Ld_{\mathrm{block}}(b,c)+2L$; decreasing the decay exponent by the factor $L$ and enlarging $A$ suffices. The metric on each Lie algebra factor is the fixed invariant real metric. All constants below may depend on this metric, $G$, $L$, the fixed local reconstruction and $\chi$, but not on the square size or torus volume.
+
+Throughout this construction, $r_0(g_0)=r(g_0)=A_1(\log g_0^{-2})^{p_0}$ is exactly the threshold in \eqref{eq:literal-cutoff}. Restoring the fixed norm index gives the two cutoff prescriptions
+\begin{equation}\label{eq:marginal-two-cutoffs}
+    \vartheta_{g_0}^{\sigma}(B)
+        =\prod_{b\in E_*}
+            \mathbf1_{\{\,|B_b|_\sigma<r_0(g_0)\,\}}\;.
+\end{equation}
+The result holds separately for each prescription, with that cutoff retained in both numerator and denominator. With CRE's bond tests interpreted in the same norm, the regular-branch reduction above identifies its reference kernel. For the following estimates only the stated norm and its adjoint invariance are used. For unitary $u$, the required invariance follows from
+\begin{equation}\label{eq:marginal-cutoff-invariance}
+    \begin{aligned}
+        |uXu^{-1}|_{\mathrm{op}}
+            &=\sup_{|v|_2=1}|uXu^{-1}v|_2
+                =\sup_{|w|_2=1}|Xw|_2=|X|_{\mathrm{op}}\;,\\
+        |uXu^{-1}|_{\mathrm{HS}}^2
+            &=\tr_N\bigl(uX^*Xu^{-1}\bigr)
+                =\tr_N(X^*X)=|X|_{\mathrm{HS}}^2\;.
+    \end{aligned}
+\end{equation}
+Thus each good- or bad-bond test is invariant for the same fixed norm and threshold; a supremum over the bonds of a cube and products of such tests preserve this invariance. In the regular branch the starred carrier excludes the designated bonds, $A=\mathsf C B$ agrees with $B$ on that carrier, and $g_0^{-1}\delta_0=r_0$ by \eqref{eq:cre-cutoff-normalisation}. Repeated cube tests reduce to the bond product \eqref{eq:literal-cutoff} by idempotence, as in the stated regular-branch reduction. This dictionary does not rescale a cutoff ball. The norm-comparison constants used for Gaussian estimates likewise do not change the cutoff set. The Schur argument requires the invariant cutoff itself.
+
+The numerator and denominator under consideration are
+\begin{equation}\label{eq:marginal-literal-ratio}
+    \begin{aligned}
+        N_{C,T}^{\sigma}&=\int\vartheta_{g_0}^{\sigma}(B)e^{\mathcal P_{g_0}(B)}
+            W_\chi(C;U_{g_0})\,\dd\mu_{C_T}(B)\;,\\
+        D_T^{\sigma}&=\int\vartheta_{g_0}^{\sigma}(B)e^{\mathcal P_{g_0}(B)}
+            \,\dd\mu_{C_T}(B)\;,
+        \qquad \mathcal W_T^{\circ,\sigma}(C)=N_{C,T}^{\sigma}/D_T^{\sigma}\;.
+    \end{aligned}
+\end{equation}
+
+For the proof, fix $\sigma$ and suppress its index on the cutoffs, integrals and cluster weights. Write $r=r_0(g_0)$ and $\vartheta_b=\mathbf1_{\{|B_b|_\sigma<r\}}$. Let $\mathcal V_T$ index the local terms $v$ in \eqref{eq:perimeter-literal-local-sum}, with supports $\Lambda_v$. Define bounded measurable functions on the full real carrier by
+\begin{equation}\label{eq:marginal-local-vertices}
+    f_v(B)=\left(\prod_{b\in \Lambda_v}\vartheta_b(B)\right)
+        (e^{v(B)}-1),
+    \qquad h_b(B)=-(1-\vartheta_b(B))\;.
+\end{equation}
+The first function is zero where its cutoff vanishes, so the local analytic function is never evaluated outside its chart. On the original cutoff the exact identity is
+\begin{equation}\label{eq:marginal-original-weight}
+    \vartheta_{g_0}(B)e^{\mathcal P_{g_0}(B)}
+        =\prod_{b\in E_*}(1+h_b(B))
+            \prod_{v\in \mathcal V_T}(1+f_v(B))\;.
+\end{equation}
+For a square $C=(b_a)_{a\in\mathcal I_C}$, let $\mathcal I_C$ be its ordered finite traversal set and let $U_0=\id$. For $R\subseteq\mathcal I_C$, let $H_R(B)$ be the ordered transport around $C$ using $U_{g_0}(b_a)$ on $R$ and $U_0(b_a)$ elsewhere. The closed source differences are
+\begin{equation}\label{eq:finite-source-closed-differences}
+    G_S(B)=\sum_{R\subseteq S}(-1)^{|S|-|R|}
+        \chi\left(H_R(B)(\Hol_{U_0}C)^{-1}\right),
+    \qquad \sum_{S\subseteq\mathcal I_C}G_S(B)
+        =W_\chi(C;U_{g_0})\;.
+\end{equation}
+The last equality is Boolean inversion and uses $\Hol_{U_0}C=\id$. Every summand is a closed contraction, invariant under simultaneous gauge transformation of field and reference. The identity-gauge representative is used to evaluate its flat reference integral.
+A selected traversal $a$ has its fixed local free-input support $\Lambda_a$. Multiplying $G_S$ by $\prod_{a\in S}\prod_{b\in \Lambda_a}\vartheta_b$ leaves its contribution in the original cutoff integral unchanged. Define this product to be zero off that protected box, evaluating only the reconstruction rows selected by the mixed word.
+
+A label selection is $J=(D,P,S)$, with $D\subseteq \mathcal V_T$, $P\subseteq E_*$ and $S$ a subset of contour traversals. Its active carrier and scalar local factor are
+\begin{equation}\label{eq:marginal-selection}
+    \begin{aligned}
+        A_J&=\bigcup_{v\in D}\Lambda_v\cup P
+            \cup\bigcup_{a\in S}\Lambda_a\;,\\
+        F_J(B)&=\prod_{v\in D}f_v(B)\prod_{b\in P}h_b(B)
+            \prod_{a\in S}\prod_{b\in \Lambda_a}\vartheta_b(B)\;.
+    \end{aligned}
+\end{equation}
+The corresponding numerator term is exactly $\int F_JG_S\,\dd\mu_{(C_T)_{A_J}}$. This is a marginal of the original Gaussian: its coordinates in $E_*\setminus A_J$ have been integrated out, while every interaction and cutoff is still present in the sum over $J$. No retained exterior field is given a new law. There are fixed integers $s_*,q_*$ and a fixed range $R_*$ such that every label support has at most $s_*$ bonds and diameter at most $R_*$, and at most $q_*$ possible labels meet any bond. Enlarge $R_*$ so that every bond in $\Lambda_a$ is within $R_*$ of the source traversal $a$; for a reversed traversal use the free-input stencil of its positive representative. These are consequences of the bounded overlap of the primitive supports and the fact that a square has no repeated traversal. The source cutoff is inserted before expanding the full product of cutoff factors in \eqref{eq:marginal-original-weight}; an individual expanded term need not satisfy the full cutoff.
+
+For a finite carrier $A$, put $C_A=(C_T)_A$. Introduce one scalar variable $x_{bc}=x_{cb}$ for each pair of distinct bonds of $A$, and define $C_A(x)$ by keeping its diagonal blocks and multiplying its $bc$ block by $x_{bc}$. For a forest $F$ on $A$ and parameters $w\in [0,1]^F$, let $w^F_{bc}$ be the minimum of the parameters on the unique forest path from $b$ to $c$, or zero if there is no path; its diagonal is one. Put $\partial_F=\prod_{\{b,c\}\in F}\partial_{x_{bc}}$. The Taylor forest formula gives
+\begin{equation}\label{eq:marginal-forest-identity}
+    \int F_JG_S\,\dd\mu_{C_{A_J}}
+        =\sum_{F\ \mathrm{forest\ on}\ A_J}
+            \int_{[0,1]^F}\int F_J(B)G_S(B)
+                \left.\partial_F p_{C_{A_J}(x)}(B)\right|_{x=w^F}
+                    \,\dd B\,\dd w\;.
+\end{equation}
+For a covariance on $\mathfrak g^A$, the density used here is
+\begin{equation}\label{eq:marginal-density-definition}
+    p_M(B)=(2\pi)^{-d|A|/2}(\det M)^{-1/2}
+        \exp\left(-\frac{1}{2}B^{\mathsf T}M^{-1}B\right)\;.
+\end{equation}
+The determinant square root is positive for positive real $M$ and is continued analytically on the accretive covariance domain. Let $P_\pi$ be the matrix whose $bc$ entry is one when $b,c$ belong to the same block of a partition $\pi$ of $A$, and zero otherwise. Let $\mathcal K_A$ be the convex hull of these partition matrices. If $\pi_t$ is the partition into components of the forest edges with $w_e\geq t$, then $w^F=\int_0^1P_{\pi_t}\,\dd t\in \mathcal K_A$. Block restriction and convexity give $\lambda I\leq C_A(x)\leq\Lambda I$ throughout $\mathcal K_A$.
+
+For the fixed integrand $F_JG_S$, its Gaussian integral is smooth on the open set $\{x\, | \,C_A(x)>(\lambda/2)I\}$: the protected local factors are bounded, and derivatives of the density are polynomials times a uniformly integrable Gaussian on compact subsets. This set contains the compact set $\mathcal K_A$. A smooth multiplier with compact support inside this open set and equal to one near $\mathcal K_A$ gives a smooth extension by zero to the full interpolation space. The Taylor forest formula applies to this extension. At the all-one matrix and at every $w^F$, its value and all the required derivatives agree with those of the original Gaussian integral. The extension therefore gives exactly \eqref{eq:marginal-forest-identity}; its cutoff and derivatives enter none of the estimates. No hard cutoff or Wilson function is differentiated. This is the Taylor forest construction of Abdesselam--Rivasseau, Theorems III.1 and IV.5 and Section V.A \cite{AbdesselamRivasseau}.
+
+Join two bonds also when they belong to the same selected label support, and denote this finite-range graph by $Q_J$. A connected component of $F\cup Q_J$, together with its selected labels and forest edges, is a component label $\gamma$. Let $A_\gamma,D_\gamma,P_\gamma,S_\gamma,F_\gamma$ be these restrictions. Define its scalar integration functional by
+\begin{equation}\label{eq:marginal-component-functional}
+    \mathcal I_\gamma[H]
+        =\int_{[0,1]^{F_\gamma}}\int
+            F_{J_\gamma}(B)H(B)
+            \left.\partial_{F_\gamma}p_{C_{A_\gamma}(x)}(B)
+            \right|_{x=w^{F_\gamma}}
+                \,\dd B\,\dd w\;.
+\end{equation}
+No norm of an open Wilson object is assigned to this functional. The covariance and every differentiated edge in \eqref{eq:marginal-forest-identity} are block diagonal across distinct components of $F\cup Q_J$. Their normalised densities, including determinants, consequently factor exactly into \eqref{eq:marginal-component-functional}. Every component uses the principal marginal of the same $C_T$; it is independent of the labels outside its carrier.
+
+At the flat reference $C_T$ commutes with simultaneous constant conjugation. Principal restriction, scalar covariance interpolation, inversion and differentiation preserve this law. Every local scalar factor in $F_J$ is invariant as well. Thus each component integration is equivariant without any assertion about seed-adapted auxiliary inverses. For $S_\gamma\ne \varnothing$, let $h_\gamma$ be the shortest cyclic interval of traversal positions containing $S_\gamma$, resolving ties by the first initial position encountered from the fixed contour base in its orientation. A singleton has an interval of length one. On a line, use the ordinary interval from the first to the last selected traversal. Merge components whose intervals intersect into webs; the web interval is their union, possibly the whole circle. This union is an interval because its interval-intersection graph is connected. Distinct web intervals are disjoint. A web is integrated as the single closed source $G_{\cup_{\gamma\in W}S_\gamma}$ against the product of its component functionals. Its scalar activity is
+\begin{equation}\label{eq:marginal-web-activity}
+    z_W=\left(\bigotimes_{\gamma\in W}\mathcal I_\gamma\right)
+        \left[G_{\cup_{\gamma\in W}S_\gamma}\right]\;.
+\end{equation}
+The vacuum activity is $z_\gamma=\mathcal I_\gamma[1]$ when $S_\gamma=\varnothing$. Components inside a web have disjoint carriers. Distinct webs must also have disjoint contour intervals. Vacuum objects are incompatible only through intersection of their carriers with another object's carrier. Independent constant conjugation in the component integrals and irreducibility give the integrated Schur factorisation for distinct webs. It is applied inside the closed Wilson contraction. To specify the logarithm domain, attach a complex variable $t_a$ to each contour traversal and replace $G_S$ by $(\prod_{a\in S}t_a)G_S$. The source polydisc is $|t_a|\leq 2$. Its factor $2^{|S|}$ is included in the constants of the source bounds below. At zero source the numerator is $D_T$, and at $t_a=1$ it is $N_{C,T}$. The finite forest expansion and the unique component and web partitions consequently give
+\begin{equation}\label{eq:marginal-exact-gases}
+    N_{C,T}=\Xi_{C,T},\qquad D_T=\Xi_{0,T},\qquad
+    \mathcal W_T^\circ(C)=\frac{\Xi_{C,T}}{\Xi_{0,T}}\;.
+\end{equation}
+Both gases are sums over unordered compatible families of the activities just defined, with the empty family contributing one. There is no additional vacuum ratio to identify.
+
+For the converse in this identification, take a compatible family of vacuum components and webs. Their constituent carriers are disjoint, so their label selections and forests have unambiguous unions. Every support edge and forest edge remains within its specified component. The component decomposition of this union recovers the original components, and the interval-intersection decomposition recovers precisely the webs, since distinct web intervals are disjoint. Thus the reassembly is inverse to the decomposition. If a web interval crosses the contour base, cyclicity of the trace moves that base between two web intervals before the Schur factorisation; the resulting scalar is unchanged.
+
+\subsection{The Integrated Density Estimate}
+
+Fix a forest on $A$, let $n=|A|$, and let $d_b$ be its vertex degrees. For an edge $e=\{b,c\}$ with nonzero covariance block, use the complex Cauchy radius
+\begin{equation}\label{eq:marginal-edge-radius}
+    r_e=\frac{\lambda}{8d_bd_c\|C_T(b,c)\|}\;.
+\end{equation}
+A zero covariance block gives a zero differentiated term. Perturb only the forest variables about $w^F$. The sum of the norms of the perturbation blocks in row $b$ is at most $\lambda/8$, since $\sum_{c:\{b,c\}\in F}(d_bd_c)^{-1}\leq 1$. Thus the covariance perturbation has operator norm at most $\lambda/8$. If $M$ is any covariance on these Cauchy circles, then
+\begin{equation}\label{eq:marginal-complex-density}
+    \operatorname{Re}M\geq \frac{7\lambda}{8}I,
+    \qquad \|M\|\leq \Lambda+\frac{\lambda}{8},
+    \qquad
+    \operatorname{Re}M^{-1}\geq
+        \frac{7\lambda/8}{(\Lambda+\lambda/8)^2}I=\kappa_G I\;.
+\end{equation}
+The inverse bound follows from $\operatorname{Re}M^{-1}=M^{-*}(\operatorname{Re}M)M^{-1}$. The determinant branch is continued from the positive real covariance. Its modulus satisfies $|\det M|\geq (7\lambda/8)^{d n}$. Consequently
+\begin{equation}\label{eq:marginal-density-majorant}
+    |p_M(B)|\leq
+        (2\pi)^{-dn/2}(7\lambda/8)^{-dn/2}
+            e^{-\kappa_G\|B\|^2/2}\;.
+\end{equation}
+This keeps the normalising determinant and supplies a product Gaussian majorant. Norm equivalence and a Gaussian exponential moment give a factor $C e^{-c r^2}$ for each distinct selected bad bond. Each regular vertex is bounded on its own cutoff by $C g_0(1+r)^3$, using \eqref{eq:perimeter-literal-local-bound}. The closed source with $q$ selected traversals has bound $(C_\chi g_0r)^q$; for $q=1$ it has the improved bound $C_\chi g_0^2r^2$, since $\dd\chi_{\id}=0$. These bounds are applied to the closed source inside the density integral.
+
+Cauchy's formula and \eqref{eq:marginal-density-majorant} therefore bound the integrated term for a fixed component by
+\begin{equation}\label{eq:marginal-fixed-forest-bound}
+    K^{|A_\gamma|}
+        \prod_{\{b,c\}\in F_\gamma}
+            \left(\frac{8d_bd_c}{\lambda}\|C_T(b,c)\|\right)
+        \tau^{|D_\gamma|+|P_\gamma|+|S_\gamma|
+            +\mathbf1_{\{|S_\gamma|=1\}}},
+    \qquad
+    \tau=C\left[g_0(1+r)^3+e^{-cr^2}\right]\;.
+\end{equation}
+Here and below $g_0$ is small enough that $\tau<1$ and the original chart condition holds. The same majorants multiply for a web. To justify the extra power for a component with exactly one source mark inside a larger web, integrate that component first inside the closed contraction. Its matrix factor is a scalar by constant conjugation and irreducibility, and its scalar is the closed one-mark character difference. Components with two or more marks already supply two source powers. This uses an exact integrated identity; it assigns no activity norm to an open matrix.
+
+The degree factors in \eqref{eq:marginal-fixed-forest-bound} are paid by spatial decay. The free-bond lattice has uniformly bounded polynomial volume growth of degree four, including on its finite tori. For $d$ distinct neighbours of a fixed bond, their distances have sum at least $c_1d^{5/4}-c_2d$. Hence, for each $\zeta>0$, a constant $K_\zeta$ satisfies
+\begin{equation}\label{eq:marginal-degree-payment}
+    d^d\leq K_\zeta^d
+        \exp\left(\zeta\sum_{j=1}^d d_T(b,c_j)\right)\;.
+\end{equation}
+Indeed $d\log d$ is bounded by any fixed positive multiple of $d^{5/4}$ plus a linear function of $d$. Set $0^0=1$ here. Taking $\zeta$ smaller than $\mu/4$ absorbs $\prod_b d_b^{d_b}$ into part of the covariance decay. The remaining forest edge weights are bounded by $K e^{-\mu d_T(b,c)/2}$, with a further positive part of the decay available for support-length weights.
+
+Here is the connected summation. On a carrier of $n$ bonds there are at most $2^{q_*n}$ choices of elementary labels. A selection covering that carrier contains at least $\lceil n/s_*\rceil$ labels. The edges of $Q_J$ have bounded range and bounded degree. For fixed $J$ and a fixed graph $G=F\cup Q_J$, the edges of $F$ outside $Q_J$ are determined; its edges inside $Q_J$ have at most $2^{|Q_J|}$ choices. The support counts give $|Q_J|\leq q_*(s_*-1)n/2$. Retain this exponential multiplicity in $K_1$ below. Each forest edge weight is bounded by the following pair weight, and this weight is at least one on every edge of $Q_J$. Thus the forest sum is bounded, with that multiplicity, by a sum over connected graphs with pair weights
+\begin{equation}\label{eq:marginal-counting-weight}
+    v(b,c)=\mathbf1_{\{d_T(b,c)\leq R_*\}}
+        +K e^{-\mu d_T(b,c)/4},
+    \qquad \sup_b\sum_{c\ne b}v(b,c)=V_*<\infty\;.
+\end{equation}
+The unused graph edges cost at most $\prod_{b<c}(1+v(b,c))\leq e^{V_*n/2}$. Keeping one spanning tree gives the remaining tree sum. For $n\geq 2$ and a fixed root bond $b_0$, summing its possible distinct vertices gives
+\begin{equation}\label{eq:marginal-rooted-tree-count}
+    \sum_{\substack{A\ni b_0\\|A|=n}}
+        \sum_{T\ \mathrm{tree\ on}\ A}\prod_{\{b,c\}\in T}v(b,c)
+        \leq \frac{n^{n-2}}{(n-1)!}V_*^{n-1}\;.
+\end{equation}
+The factorial accounts for unordered nonroot vertices; the bound follows by summing their positions along a rooted labelled tree. The right-hand side is bounded exponentially in $n$. Combining these payments yields convergent series bounded by constants times
+\begin{equation}\label{eq:marginal-load-series}
+    \sum_{n\geq 1}K_1^n\tau^{\lceil n/s_*\rceil}=O(\tau),
+    \qquad
+    \sum_{n\geq 1}K_1^n\tau^{\max(2,\lceil n/s_*\rceil)}=O(\tau^2)\;.
+\end{equation}
+The first applies to vacuum components and the second to source components, rooted either at a spatial bond or at a specified source traversal. Choose the coupling after the constants so that $K_1^{s_*}\tau$ is sufficiently small. The argument leaves exponential weights in the carrier size and in the sum of covariance-edge lengths.
+
+\subsection{Extent Weights and the Square Geometry}
+
+Define the extent cost of a component, a web and a cluster respectively by
+\begin{equation}\label{eq:marginal-extent}
+    \ell(\gamma)=|A_\gamma|+
+        \sum_{\{b,c\}\in F_\gamma}d_T(b,c),
+    \qquad \ell(W)=\sum_{\gamma\in W}\ell(\gamma),
+    \qquad \ell(\Gamma)=\sum_{p\in \Gamma}\ell(p)\;.
+\end{equation}
+A vacuum object uses its component cost. Write $A_p$ for an object's carrier and $H_p$ for its contour interval length, with $H_p=0$ for vacuum objects. On a straight line, connectivity of $F_\gamma\cup Q_{J_\gamma}$ gives $H_\gamma\leq c_h\ell(\gamma)$, since the support edges have length at most $R_*$ and the source positions are within $R_*$ of their supports.
+
+Here the square $C_n$ has vertices $0,nLe_1,nL(e_1+e_2),nLe_2$ in a fixed lift, with all other coordinates zero. Its side length is $nL$ fine bonds, its physical perimeter is $4nL\varepsilon$, and its corners are coarse sites. The finite torus has fine periods $LK_i$, with $K_i\geq 3(n+2)$ and the native grid divisibilities. The limit is over such compatible integers $n$ and periods. Between points of this square the periodic coordinate distances equal their distances in the stated lift.
+
+Let $D$ be the maximum-norm diameter of a nonempty set of square contacts and put $s=nL$. If $D<s/2$, its contacts occupy one side or two adjacent sides near their common corner, and an arc of length at most $4D+1$ contains them. If $D\geq s/2$, the whole contour has length $4s\leq 8D$. A connected support network for the component has length at most $R_*|A_\gamma|+\sum_{F_\gamma}d_T(b,c)$, and each contact is within $R_*$ of that network. With the stated bond-distance convention, $c_h=32(1+R_*)$ therefore gives
+\begin{equation}\label{eq:marginal-hull-extent}
+    H_\gamma\leq c_h\ell(\gamma),
+    \qquad H_W\leq \sum_{\gamma\in W}H_\gamma
+        \leq c_h\ell(W)\;.
+\end{equation}
+Let $d_C$ count the shortest number of traversal steps between two positions, cyclically for a square. For $\theta>0$, a position $a$ in $h_\gamma$ satisfies
+\begin{equation}\label{eq:marginal-hull-root}
+    \mathbf1_{\{a\in h_\gamma\}}
+        \leq \sum_{b\in S_\gamma}
+            e^{-\theta d_C(a,b)}e^{\theta H_\gamma}\;.
+\end{equation}
+The sum of $e^{-\theta d_C(a,b)}$ over all traversal positions is bounded by $1+2/(e^\theta-1)$, uniformly in the contour length. The already proved traversal-root load, with the extra extent weight, therefore gives an interval-root load of order $\tau^2$.
+
+For a source component let $u_\gamma$ be the positive majorant on the right-hand side of \eqref{eq:marginal-fixed-forest-bound}, with the constants fixed there, and let $H_\gamma=|h_\gamma|$ be its contact-interval length. To sum webs, majorise the indicator that their interval graph is connected by its spanning-tree sum. The rooted-tree recursion is bounded by $u_\gamma e^{aH_\gamma}$ whenever the interval-root load, with this extra weight, is at most $a$. This follows by iterating $T_\gamma=u_\gamma\exp(\sum_{\gamma':h_{\gamma'}\cap h_\gamma\ne \varnothing}T_{\gamma'})$ from $T_\gamma=u_\gamma$, since the sum in the exponent is bounded by $aH_\gamma$. Spatial incompatibilities only reduce this majorant. The resulting whole-web loads are $O(\tau^2)$. Together with the vacuum load $O(\tau)$, they satisfy the hard-core polymer convergence criterion \cite{KoteckyPreiss}, with size equal to carrier size plus a small positive multiple of contour interval length. This proves absolute convergence of the connected logarithm of \eqref{eq:marginal-exact-gases} for sufficiently small fixed $g_0$. In particular the numerator has no zero on the source-scaling polydisc used by that expansion. Its logarithm is fixed by continuation from zero source, where numerator and denominator agree.
+
+More explicitly, choose $\beta=\mu/(1024(1+c_h))$ and $\eta=\mu/1024$, and put $a(p)=|A_p|+\beta H_p$. The density and graph payments above remain valid after multiplying the component majorants by $e^{4|A_\gamma|+8\beta H_\gamma+8\eta\ell(\gamma)}$: the added edge exponent is smaller than the unused covariance decay, and the added carrier exponent only changes $K_1$. Use $a=\beta$ in the web recursion, reserving the remaining weights for its interval-root conversion. It then gives a constant $C_*$ such that
+\begin{equation}\label{eq:marginal-weighted-loads}
+    \begin{aligned}
+        \sup_b\sum_{p\, | \,b\in A_p}
+            |z_p|e^{2a(p)+2\eta\ell(p)}&\leq C_*\tau\;,\\
+        \sup_a\sum_{W\, | \,a\in h_W}
+            |z_W|e^{2a(W)+2\eta\ell(W)}&\leq C_*\tau^2\;.
+    \end{aligned}
+\end{equation}
+The source-only version of the first sum is also bounded by $C_*\tau^2$. Choose $g_0$ after these constants so that $C_*\tau\leq 1/4$ and $C_*\tau^2\leq \beta/4$. Carrier intersection and interval intersection then give the criterion
+\begin{equation}\label{eq:marginal-KP-payment}
+    \sum_{q\not \sim p}|z_q|e^{a(q)+\eta\ell(q)}
+        \leq C_*\tau|A_p|+C_*\tau^2H_p
+        \leq \frac{1}{4}a(p)\;.
+\end{equation}
+A cluster $\Gamma=(p_1,\ldots,p_j)$, with $j\geq 1$, is an ordered tuple of vacuum components or source webs with connected incompatibility graph; repetitions are allowed and an object is incompatible with itself. Define its scalar weight by
+\begin{equation}\label{eq:marginal-cluster-weight}
+    \Phi_C(\Gamma)=\frac{1}{j!}
+        \left(\sum_{H\ \mathrm{connected\ on}\ \{1,\ldots,j\}}
+            \prod_{\{r,s\}\in H}(-\mathbf1_{\{p_r\not \sim p_s\}})\right)
+        \prod_{r=1}^j z_{p_r}\;.
+\end{equation}
+For precision, the pinned version used here retains an activity factor. Put $\widetilde z_p=z_pe^{\eta\ell(p)}$, and let $m_p(\Gamma)$ count the occurrences of $p$ in the ordered cluster tuple. Then
+\begin{equation}\label{eq:marginal-pinned-bound}
+    \sum_\Gamma m_p(\Gamma)|\Phi_C(\Gamma)|e^{\eta\ell(\Gamma)}
+        \leq |z_p|e^{\eta\ell(p)+a(p)}\;.
+\end{equation}
+Here is a direct justification. For a fixed incompatibility graph on labelled vertices, partition its connected subgraphs by their breadth-first spanning tree rooted at vertex one, choosing the least-labelled parent at the previous level. A tree's interval of subgraphs allows all edges within a level and the edges to the previous level whose other endpoint is no earlier than the chosen parent. These intervals partition the connected graphs. The alternating sum on each interval is zero or has modulus one. Therefore the absolute Ursell coefficient is bounded by the sum over its spanning trees. The positive generating sum of rooted trees with root species $p$ and vertex weights $|\widetilde z_q|$ is the monotone limit of
+\begin{equation}\label{eq:marginal-pinned-recursion}
+    T_p^{(0)}=|\widetilde z_p|,
+    \qquad
+    T_p^{(k+1)}=|\widetilde z_p|
+        \exp\left(\sum_{q\not \sim p}T_q^{(k)}\right)\;.
+\end{equation}
+Permutation symmetry of the ordered tuple gives $\sum_\Gamma m_p(\Gamma)F(\Gamma)=j\sum_{\Gamma\, | \,p_1=p}F(\Gamma)$ at each fixed length $j$ for its symmetric weight $F$. Hence the factor $1/j!$ becomes $1/(j-1)!$, including repeated species. The exponential in \eqref{eq:marginal-pinned-recursion} assembles an unordered family of child trees, with its factorial for repeated choices; $T_p^{(k)}$ enumerates rooted trees of height at most $k$. Equation~\eqref{eq:marginal-KP-payment} implies inductively $T_p^{(k)}\leq |\widetilde z_p|e^{a(p)}$, proving \eqref{eq:marginal-pinned-bound}. For a countable polymer family, first restrict the species to a finite subset. The same upper bound holds for every such restriction, and monotone convergence of the positive majorants proves the pinned bound for the countable family. No total infinite-volume vacuum partition function is asserted.
+
+Apply this bound to source objects meeting a fixed coarse contour segment $x$. Their weighted activity sum is bounded by the source-only loads in \eqref{eq:marginal-weighted-loads}. Thus
+\begin{equation}\label{eq:marginal-cluster-tail}
+    \sum_{\Gamma\, | \,x\in J_\Gamma}
+        |\Phi_C(\Gamma)|e^{\eta\ell(\Gamma)}
+        \leq C\tau^2\;.
+\end{equation}
+Here $J_\Gamma$ consists of the coarse segments containing its source marks. A coarse segment contains $L$ fine traversal positions, which changes only the constant. The same proof applies on the infinite lattice, using its finite principal covariance marginals.
+
+A spanning tree of $F_\gamma\cup Q_{J_\gamma}$ connects each component carrier. Its metric length is at most $R_*|A_\gamma|+\sum_{F_\gamma}d_T(b,c)$. Paths of length at most $R_*$ attach its source contacts; there are at most $q_*|A_\gamma|$ contacts. A web becomes connected after adjoining its contour intervals, whose total length is at most $c_h\ell(W)$ by \eqref{eq:marginal-hull-extent}. In a cluster, incompatible objects meet through carriers or contour intervals, so these networks form a connected union. The carrier bonds themselves add at most $|A_\gamma|$ per component, and conversion from maximum-norm distances to lattice path lengths costs at most four. Thus its length and diameter are bounded by $C_{\mathrm{net}}\ell(\Gamma)$ with $C_{\mathrm{net}}=8(1+R_*)(1+q_*+c_h)$. This remains an upper bound with repeated objects. Equation~\eqref{eq:marginal-cluster-tail} therefore controls spatial extent as well as contour span.
+
+\subsection{The Perimeter Coefficient}
+
+Use the infinite-lattice covariance constructed from the same periodic block grid. Its finite principal marginals satisfy the same spectral and decay bounds, so the density, counting and weighted KP estimates above apply with the same constants. For an orientation $v\in \mathscr V_\square=\{e_1,e_2,-e_1,-e_2\}$, use the straight line through the coarse origin in that orientation and divide it into half-open segments of $L$ fine traversals, indexed by $\mathbb Z$. Every side of $C_n$ is a coarse translation of the corresponding oriented segment of this line. Each square traversal belongs to exactly one side and one such segment. The lattice spacing $\varepsilon$ is the fixed physical length of a fine bond.
+
+Write $\Phi_v$ for the connected weight \eqref{eq:marginal-cluster-weight} on the straight line in orientation $v$.
+For a finite set $S$ of traversal positions on the line, take any finite oriented arc $I$ containing it. For $R\subseteq S$, let $u_a^R=U_{g_0}(b_a)$ on $R$ and $u_a^R=U_0(b_a)$ otherwise, with $U_0=\id$. The closed relative source on the line is explicitly
+\begin{equation}\label{eq:marginal-line-source}
+    G_S^v(B)=\sum_{R\subseteq S}(-1)^{|S|-|R|}
+        \chi\left(\left(\prod_{a\in I}^{\longrightarrow}u_a^R(B)\right)
+            P_{U_0}(I)^{-1}\right)\;.
+\end{equation}
+The arrow means order along the arc. The reference reverse transport closes the word, and extending the arc beyond its selected marks adds only identity factors in the reference gauge. This is the line version of the finite closed source definition used above. Let $J_\Gamma\subset \mathbb Z$ be the set of coarse line segments containing at least one source mark of the cluster. The vacuum subtraction in $\log\Xi_C-\log\Xi_0$ retains exactly the clusters with $J_\Gamma\ne \varnothing$. Translation by one coarse segment preserves the reference construction. Define the absolutely convergent line density and its coefficient by
+\begin{equation}\label{eq:marginal-full-perimeter}
+    \boxed{\displaystyle
+        \kappa_v(g_0)=\sum_{\Gamma\, | \,0\in J_\Gamma}
+                    \frac{\Phi_v(\Gamma)}{|J_\Gamma|},
+        \qquad \delta m_v(g_0,\varepsilon)
+            =-\frac{\kappa_v(g_0)}{L\varepsilon}}
+        \;.
+\end{equation}
+The factor $|J_\Gamma|^{-1}$ allocates each translated connected contribution once. The weights contain the full local exponentials and exact hard-cutoff factors. The weighted rooted estimate \eqref{eq:marginal-cluster-tail} proves absolute convergence and $|\kappa_v|\leq C\tau^2$.
+
+\paragraph{Length allocation and corners.}
+Put $I_m=\{0,\ldots,m-1\}$. The infinite-lattice logarithm for the finite straight relative word of length $mL$ is
+\begin{equation}\label{eq:marginal-finite-line-log}
+    F_v(m)=\sum_{\Gamma\, | \,\varnothing\ne J_\Gamma\subseteq I_m}
+        \Phi_v(\Gamma)\;.
+\end{equation}
+It is the bulk limit of the logarithm of the same finite-word numerator divided by $D_T$. For fixed $m$, this follows by truncating \eqref{eq:marginal-cluster-tail}, taking the limit of finitely many covariance-marginal integrals, and then removing the truncation. No infinite-volume probability measure is used. Translation invariance gives the exact difference
+\begin{equation}\label{eq:marginal-line-endpoints}
+    F_v(m)-m\kappa_v
+        =-\sum_{x\in I_m}
+            \sum_{\substack{\Gamma\, | \,x\in J_\Gamma\\
+                                      J_\Gamma\not \subseteq I_m}}
+                \frac{\Phi_v(\Gamma)}{|J_\Gamma|}\;.
+\end{equation}
+A cluster in the inner sum joins a source in segment $x$ to a source outside $I_m$. With $R_{\mathrm{end}}=2L+4R_*$, the network bound gives $C_{\mathrm{net}}\ell(\Gamma)\geq (L\min(x+1,m-x)-R_{\mathrm{end}})_+$, where $t_+=\max(t,0)$. Applying \eqref{eq:marginal-cluster-tail} and summing that geometric tail yields
+\begin{equation}\label{eq:marginal-line-density-limit}
+    |F_v(m)-m\kappa_v|\leq C\tau^2\;.
+\end{equation}
+
+For the square in the infinite-lattice reference, clusters whose source marks all lie on one side have exactly the corresponding line weights: their contact intervals stay on that side, their closed words have the same ordered nonidentity factors, and every local primitive is translated by a multiple of $L$. The Gaussian marginal is unchanged by this translation. All other source clusters touch at least two sides. Allocate each such cluster over its source segments using $|J_\Gamma|^{-1}$. A root segment at distance $j$ from its nearest corner can be joined to another side only by a cluster with $C_{\mathrm{net}}\ell(\Gamma)\geq (Lj-R_{\mathrm{end}})_+$. Thus the sum over mixed-side clusters is bounded by $C\tau^2\sum_{j\geq 0}e^{-c'j}$. With $\widehat F_\square(n)$ denoting its absolutely convergent infinite-lattice connected sum, this proves
+\begin{equation}\label{eq:marginal-square-corners}
+    \left|\widehat F_\square(n)
+        -\sum_{v\in \mathscr V_\square}F_v(n)\right|
+        \leq C\tau^2,
+    \qquad
+    \left|\widehat F_\square(n)
+        -n\sum_{v\in \mathscr V_\square}\kappa_v\right|
+        \leq C\tau^2\;.
+\end{equation}
+This retains the bounded corner contribution, whose extraction is carried out in Section~\ref{sec:marginal-corner}.
+
+\paragraph{The buffered finite-torus limit.}
+The perimeter coefficient also follows along the stated buffered tori, without a separate uniform norm on differences of all activities. Fix an integer extent cutoff $R$. A cluster rooted at a specified source segment with $\ell(\Gamma)\leq R$ has all its sites and marks in a neighbourhood of radius $C_{\mathrm{net}}R+L+2R_*$ in fine-lattice units around that segment. There are finitely many such cluster shapes, including multiplicities: each object has extent at least one, so a tuple has at most $R$ objects. Away from the square corners by more than $\left\lceil\frac{C_{\mathrm{net}}R+2L+2R_*}{L}\right\rceil$ coarse segments, these are the same shapes as on the corresponding straight line.
+
+Translate each such root to segment zero. Let $\epsilon_R(T)$ be the sum, over the four orientations and these finitely many shapes, of $|\Phi^T_v(\Gamma)-\Phi_v(\Gamma)|/|J_\Gamma|$. The finite-torus weight here is the same finite Gaussian-marginal integral on the translated sites. For large enough periods the shape embeds without wraparound. Periodisation gives entrywise convergence of all its covariance blocks, uniformly under the allowed coarse translations. The accretive density bound supplies a common integrable majorant for its Cauchy derivatives, so each integral and each finite product defining the cluster weight converges. Consequently $\epsilon_R(T)\to0$ as the shortest period tends to infinity, for every fixed $R$.
+
+Allocate the finite-square logarithm over its source segments. The clusters omitted by the extent truncation cost at most $C\tau^2e^{-\eta R}$ per root. There are at most $cR$ corner-near roots per side, and each has load at most $C\tau^2$. Thus
+\begin{equation}\label{eq:marginal-buffered-density}
+    \left|\frac{1}{4n}\log\frac{N_{C_n,T}}{D_T}
+        -\frac{1}{4}\sum_{v\in \mathscr V_\square}\kappa_v\right|
+        \leq C\tau^2\left(\frac{R}{n}+e^{-\eta R}\right)
+            +\epsilon_R(T)\;.
+\end{equation}
+First let $n$ and the compatible buffered periods tend to infinity with $R$ fixed, then let $R\to\infty$. Every logarithm in this limit is the analytic branch continued along $t_a=t$, $0\leq t\leq 1$, from the value zero of the logarithm of the ratio at $t=0$. Restore the cutoff index: $\kappa_v^{\sigma}$ is the absolutely convergent line sum \eqref{eq:marginal-full-perimeter} with the prescription \eqref{eq:marginal-two-cutoffs}. For each $\sigma\in \{\mathrm{op},\mathrm{HS}\}$, the flat square perimeter coefficient exists and is
+\begin{equation}\label{eq:marginal-square-mass}
+    \boxed{\displaystyle
+        \delta m^{\sigma}(g_0,\varepsilon)
+            =-\frac{1}{4L\varepsilon}
+                \sum_{v\in \mathscr V_\square}\kappa_v^{\sigma}(g_0)
+            =-\lim_{n\to\infty}
+                \frac{1}{4nL\varepsilon}
+                    \log\frac{N_{C_n,T_n}^{\sigma}}{D_{T_n}^{\sigma}}}
+        \;.
+\end{equation}
+No equality of the full coefficients in different orientations is presumed. Reversing a finite relative path conjugates its character, and translation by its coarse length identifies it with the oppositely oriented reference path. The density is real and the logarithm branches agree at zero source, so $\kappa_{-v}=\overline{\kappa_v}$. Hence the square coefficient is real.
+
+\section{The Corner Coefficient in the Same First Step}
+\label{sec:marginal-corner}
+
+Fix the lattice spacing, character, reconstruction and cutoff prescription $\sigma$ as in Section~\ref{sec:marginal-perimeter}. Choose the coupling below the common minimum of the straight, bent-path and regional smallness thresholds below, after fixing all chart radii and majorant constants. All limits in this section vary reference contours and enclosing tori at this one RG step; neither the coupling nor the RG scale is iterated. The coefficients below use exactly $N_{C,T}^{\sigma}$ and $D_T^{\sigma}$ in \eqref{eq:marginal-literal-ratio}. Suppress $\sigma$ until the conclusion. Write $C_\infty=\mathsf H_\infty^{-1}$ for the free-field covariance on $\ell^2(E_{*,\infty};\mathfrak g)$, constructed in \eqref{eq:bulk-neumann-inverse}; it is distinct from the reconstructed fine-field covariance $\mathsf K_\infty=\mathsf C_\infty C_\infty\mathsf C_\infty^*$. The countable primitive index family $\mathcal V_\infty$ consists of labels $(0,\alpha)$, $(1,b)$ and $(2,c)$ for the functions $v_\alpha,j_b,d_c$ in \eqref{eq:perimeter-literal-local-terms}. Here $b$ ranges over positive fine bonds, $c$ over positive coarse bonds, and $\alpha$ over positive plaquettes and the mean-transport pairs $(y,x)$ with $y\in L\mathbb Z^4$ and $x\in\mathcal B_y\setminus\{y\}$. These are exactly the infinite-lattice translates of the finitely many local templates modulo the coarse grid.
+
+\subsection{A Local Corner Subtraction}
+
+Let $v,w\in \mathscr V_\square$ be perpendicular incoming and outgoing orientations. For $a\in \mathbb Z$, the bent reference path has fine vertices and oriented bonds
+\begin{equation}\label{eq:corner-bent-path}
+    x_a^{v,w}=
+    \begin{cases}
+        av,&a<0,\\
+        aw,&a\geq 0,
+    \end{cases}
+    \qquad b_a^{v,w}=(x_a^{v,w},x_{a+1}^{v,w})\;.
+\end{equation}
+Its coarse segment $j\in \mathbb Z$ contains the fine traversal indices $jL,\ldots,(j+1)L-1$. Thus the bend is at a coarse site, between segments $-1$ and $0$.
+
+For every finite set of selected traversals, use the closed relative source \eqref{eq:marginal-line-source} on the corresponding finite arc of this bent path. Keep the same local vertices, protected cutoffs and Gaussian principal marginals. Define its components and webs by \eqref{eq:marginal-component-functional}--\eqref{eq:marginal-web-activity}, with ordinary intervals in the ordered traversal indices, and its connected weight $\Phi_{v,w}(\Gamma)$ by \eqref{eq:marginal-cluster-weight}. The set $J_\Gamma\subset \mathbb Z$ again records the coarse segments containing source marks. Vacuum-only clusters are excluded. These definitions involve finite closed contractions and finite-dimensional integrals only, even on the infinite reference path.
+
+The density, label-counting and KP estimates of Section~\ref{sec:marginal-perimeter} apply to this path with enlarged fixed constants. Indeed, it has no repeated traversal, and the path distance between two of its points is at most twice their maximum-norm spatial distance. Each ray is part of one of the two straight lines, so at most $2q_*$ primitive or source labels meet any bond; the support sizes $s_*$ and ranges $R_*$ are unchanged. Thus the original counting proof applies with $q_*'=2q_*$, and the interval/extent bound holds with $c_h'=2c_h$. The resulting rooted estimate is
+\begin{equation}\label{eq:corner-bent-tail}
+    \sum_{\Gamma\, | \,j\in J_\Gamma}
+        |\Phi_{v,w}(\Gamma)|e^{\eta'\ell(\Gamma)}
+        \leq C\tau^2\;.
+\end{equation}
+Take $\beta'=\mu/(2048(1+c_h'))$ and $\eta'=\eta/2$. The index-distance conversion \eqref{eq:marginal-hull-root} is unchanged, since the traversal indices still form $\mathbb Z$ and the sum of its geometric kernel is $1+2/(e^\theta-1)$. The carrier-root and interval-root loads therefore obey \eqref{eq:marginal-weighted-loads} with the bent path, size $a'(p)=|A_p|+\beta'H_p$, exponent $\eta'$ and a fixed enlarged constant $C_*'$ obtained from the same label and positive-tree sums with $q_*'$. Choose the coupling so that $C_*'\tau\leq 1/4$ and $C_*'\tau^2\leq\beta'/4$. The incompatibility sum is then at most $a'(p)/4$, and the pinned proof \eqref{eq:marginal-pinned-bound}--\eqref{eq:marginal-pinned-recursion} gives \eqref{eq:corner-bent-tail}. Both cutoff choices satisfy this argument. No open transport receives an activity norm: the relative word transforms by conjugation at its base when field and reference are transformed together, and its character, component-integrated closed contractions and scalar cluster weights are gauge invariant.
+
+Define the rooted density and its straight reference by
+\begin{equation}\label{eq:corner-rooted-density}
+    a_{v,w}(j)=\sum_{\Gamma\, | \,j\in J_\Gamma}
+        \frac{\Phi_{v,w}(\Gamma)}{|J_\Gamma|},
+    \qquad
+    k_{v,w}(j)=
+    \begin{cases}
+        \kappa_v,&j<0,\\
+        \kappa_w,&j\geq 0.
+    \end{cases}
+    \;.
+\end{equation}
+The straight densities are exactly \eqref{eq:marginal-full-perimeter}, not newly fitted constants. The proposed local corner coefficient is
+\begin{equation}\label{eq:corner-local-extraction}
+    \boxed{\displaystyle
+        \zeta_{v,w}=\sum_{j\in \mathbb Z}
+            \left(a_{v,w}(j)-k_{v,w}(j)\right),
+        \qquad z_{v,w}=\exp(\zeta_{v,w})}\;.
+\end{equation}
+
+Here is the cancellation and the quantitative payment for this subtraction. A cluster with all source marks at negative indices has exactly the weight of the same cluster on the incoming straight line: its ordered nonidentity factors, source stencils, ordinary intervals, local vacuum factors and Gaussian marginals agree. The same holds on the positive half-line with orientation $w$. Vacuum carriers may cross the bend; they are not cut or discarded in this comparison. Consequently only clusters with source marks on both sides of index zero survive the difference of the rooted sums. On the straight side of the subtraction these are the straight clusters straddling the same cut. A surviving cluster rooted in segment $j$ has extent at least $c|j|-C_0$, since its connected support/interval network reaches the other half-line. The rooted bound, with part of its extent weight retained, therefore gives
+\begin{equation}\label{eq:corner-localisation-bound}
+    |a_{v,w}(j)-k_{v,w}(j)|
+        \leq C\tau^2e^{-c|j|},
+    \qquad
+    |\zeta_{v,w}|\leq C\tau^2,
+    \qquad |z_{v,w}-1|\leq C\tau^2\;.
+\end{equation}
+This proves absolute convergence and localisation at the corner, rather than merely bounding a fixed square. As a direct check, for the trivial character every nonempty closed source difference is zero. The source cluster sums, straight densities and corner logarithms then vanish, giving $N_{C,T}=D_T$ and $z_{v,w}=1$, as required.
+
+An explicit cluster formula makes the endpoint allocations visible. Let $J_\Gamma^-=J_\Gamma\cap\mathbb Z_{<0}$ and $J_\Gamma^+=J_\Gamma\cap\mathbb Z_{\geq 0}$. In each of the following three sums, the cluster has both $J_\Gamma^-\ne \varnothing$ and $J_\Gamma^+\ne \varnothing$, and its weight is that of the indicated bent or straight path. Then
+\begin{equation}\label{eq:corner-mixed-cluster-formula}
+    \begin{aligned}
+        \zeta_{v,w}
+            &=\sum_{\Gamma}^{v,w}\Phi_{v,w}(\Gamma)
+                -\sum_{\Gamma}^{v}
+                    \frac{|J_\Gamma^-|}{|J_\Gamma|}\Phi_v(\Gamma)\\
+            &\quad-\sum_{\Gamma}^{w}
+                    \frac{|J_\Gamma^+|}{|J_\Gamma|}\Phi_w(\Gamma)\;.
+    \end{aligned}
+\end{equation}
+Indeed, summing the rooted allocations gives one for a mixed bent cluster and the displayed fractions for the two missing straight half-line contributions. Each sum is absolutely convergent by \eqref{eq:corner-bent-tail} and the distance-to-cut payment. In particular the corner factor includes the straight-edge endpoint deficits as well as interactions joining the two perpendicular rays.
+
+\subsection{Identification with the Square Constant}
+
+First make the fixed-square bulk limit explicit. For a fixed positive integer $n$, let $\widehat F_\square(n)$ be the infinite-lattice connected sum over clusters with source marks on $C_n$, using its fixed cyclic traversal order and base. Write $F_{\square,\infty}(n)$ for the bulk-limit logarithm whose existence will be proved below. Allocate the connected sum over the $4n$ coarse source segments by $|J_\Gamma|^{-1}$. Its absolute convergence follows from \eqref{eq:marginal-cluster-tail}. The same bound holds uniformly on all sufficiently large compatible tori: eventually $K_i\geq 3(n+2)$, so the square geometry and weighted KP payment used to prove that bound have their original constants, including at the corners.
+
+Truncate both connected sums to $\ell(\Gamma)\leq R$. Once the shortest fine period exceeds a fixed multiple of $nL+R+R_*$, each such rooted cluster has a unique lift through its source root to the fixed neighbourhood of the lifted square. Its connected support/interval network has length at most a fixed multiple of $R$, so a network winding around a torus cannot occur in this truncation. The primitive functions and supports agree after lifting. The cyclic interval rule and its tie-breaking base depend only on the fixed ordered list of square traversals, so they agree as well, including intervals crossing the base. There are finitely many lifted shapes, labels and multiplicities: the root belongs to a finite contour, the extent bounds all spatial displacements and the number of component and cluster occurrences, and each site has finitely many primitive labels. Covariance entries converge by the periodisation of $\mathsf H_\infty^{-1}$. For each shape, the differentiated Gaussian density majorant \eqref{eq:marginal-density-majorant} is integrable and uniform in the torus. Dominated convergence therefore gives convergence of every component integral, web activity and finite product in its cluster weight. Let $\mathscr G_{n,R}$ be this finite set of lifted ordered clusters with at least one source mark. Define
+\begin{equation}\label{eq:corner-finite-shape-difference}
+    \epsilon_{n,R}(T)=\sum_{\Gamma\in\mathscr G_{n,R}}
+        |\Phi_\square^T(\Gamma)-\Phi_\square^\infty(\Gamma)|\;.
+\end{equation}
+For the domination just used, every fixed shape has $r_e^{-1}\leq 8d_bd_cA/\lambda$ in \eqref{eq:marginal-edge-radius}, uniformly in $T$. Thus the Cauchy factors multiplying \eqref{eq:marginal-density-majorant} are uniformly bounded for that shape. The differentiated density is analytic, and hence continuous, in its covariance entries on a common accretive neighbourhood. This gives pointwise convergence as well as the stated integrable majorant, including when a covariance edge tends to zero. It follows that $\epsilon_{n,R}(T)\to 0$ at fixed $n,R$.
+
+The omitted clusters, including any winding clusters, have total allocated weight at most $Cn\tau^2e^{-\eta R}$ in each sum. Consequently
+\begin{equation}\label{eq:corner-fixed-square-limit-bound}
+    \left|\log\frac{N_{C_n,T}}{D_T}
+        -\widehat F_\square(n)\right|
+        \leq Cn\tau^2e^{-\eta R}+\epsilon_{n,R}(T)\;.
+\end{equation}
+Here the finite-torus logarithm is the connected expansion of the ratio, on its branch continued from zero source; the vacuum subtraction and original denominator are unchanged. First taking $T\to\infty$ at fixed $n,R$ and then $R\to\infty$ proves
+\begin{equation}\label{eq:corner-fixed-square-limit}
+    F_{\square,\infty}(n)
+        =\widehat F_\square(n)
+        =\lim_{T\to\infty}\log\frac{N_{C_n,T}}{D_T}\;.
+\end{equation}
+Thus the infinite connected sum and the bulk-limit logarithm used below are the same object. This argument needs no convergence of an infinite-volume vacuum partition function.
+
+List the four incoming/outgoing pairs of the counterclockwise square as
+\begin{equation}\label{eq:corner-square-pairs}
+    \mathscr C_\square=
+        \{(e_1,e_2),(e_2,-e_1),(-e_1,-e_2),(-e_2,e_1)\}\;.
+\end{equation}
+Use the branch of $F_{\square,\infty}(n)$ continued from zero source. The same closed-cluster allocation now gives positive constants $C,c$, independent of $n$, such that
+\begin{equation}\label{eq:corner-square-extraction-bound}
+    \left|F_{\square,\infty}(n)
+        -n\sum_{v\in \mathscr V_\square}\kappa_v
+        -\sum_{(v,w)\in \mathscr C_\square}\zeta_{v,w}\right|
+        \leq C\tau^2(n+1)e^{-cn}\;.
+\end{equation}
+To verify this estimate, allocate every square cluster over its source segments by $|J_\Gamma|^{-1}$. Divide each side into the segments nearest its initial corner and those nearest its terminal corner, breaking a midpoint tie consistently. A corner then receives the last $\lfloor n/2\rfloor$ incoming segments and the first $n-\lfloor n/2\rfloor$ outgoing segments. Translate that corner to the coarse origin. At the base corner $(-e_2,e_1)$, first use trace cyclicity to put the incoming factors before the outgoing factors, exactly as in the cyclic reassembly after \eqref{eq:marginal-exact-gases}. For a root in its assigned half-sides, every cluster of extent less than $c_1n-C_1$ is identical to the corresponding bent-path cluster: all marked traversals and their stencils stay away from the other three corners, cyclic intervals become the ordinary local intervals, and the same global Gaussian principal marginals and vacuum labels occur. Any failure of this identification costs extent at least $c_1n-C_1$ and hence at most $C\tau^2e^{-c_2n}$ per root by \eqref{eq:marginal-cluster-tail} and \eqref{eq:corner-bent-tail}. There are $4n$ roots. Extending the four truncated rooted differences to all $j\in\mathbb Z$ costs another $C\tau^2e^{-c_3n}$ by \eqref{eq:corner-localisation-bound}. This proves \eqref{eq:corner-square-extraction-bound}, after enlarging constants for the finitely many short squares.
+
+Restore the cutoff index and define the square corner matching factor by
+\begin{equation}\label{eq:corner-square-factor}
+    \boxed{\displaystyle
+        z_{\mathrm c}^{\sigma}\!\left(g_0,\frac{\pi}{2}\right)
+            =\exp\left(\frac{1}{4}
+                \sum_{(v,w)\in \mathscr C_\square}
+                    \zeta_{v,w}^{\sigma}(g_0)\right)}\;.
+\end{equation}
+This definition fixes the fourth-root branch by the exponential of the convergent corner logarithm. It is the geometric mean of the four oriented corner factors. Equality of those four factors is not needed or assumed; if the reference construction preserves the corresponding rotations, they agree and \eqref{eq:corner-square-factor} is their common value. For a real-valued character all the real Gaussian integrals, cluster weights and corner logarithms above are real, so these factors are positive. No reality symmetry for a general complex character is imposed.
+
+For each fixed $n$, the inner limit in the following expression is the limit over compatible tori with their shortest period tending to infinity. Then
+\begin{equation}\label{eq:corner-ratio-limit}
+    \boxed{\displaystyle
+        \log z_{\mathrm c}^{\sigma}\!\left(g_0,\frac{\pi}{2}\right)
+            =\frac{1}{4}\lim_{n\to\infty}
+                \left(\lim_{T\to\infty}
+                    \log\frac{N_{C_n,T}^{\sigma}}{D_T^{\sigma}}
+                    +4nL\varepsilon\delta m^{\sigma}\right)}\;.
+\end{equation}
+The denominator is the original vacuum integral throughout the inner limit, whose existence is \eqref{eq:corner-fixed-square-limit}. The outer limit follows from \eqref{eq:corner-square-extraction-bound} and \eqref{eq:marginal-square-mass}. The order of limits is part of this reference prescription; a constant-term limit on every diagonally growing finite torus is not asserted here.
+
+Equivalently, write $\mathcal W_\infty^{\circ,\sigma}(C_n)=\lim_{T\to\infty}N_{C_n,T}^{\sigma}/D_T^{\sigma}$. There is an error $E_n^{\sigma}$ such that
+\begin{equation}\label{eq:corner-reference-matching}
+    \begin{aligned}
+        \mathcal W_\infty^{\circ,\sigma}(C_n)
+            &=e^{-4nL\varepsilon\delta m^{\sigma}}
+                \left(z_{\mathrm c}^{\sigma}
+                    \!\left(g_0,\frac{\pi}{2}\right)\right)^4
+                e^{E_n^{\sigma}}\;,\\
+        |E_n^{\sigma}|&\leq C\tau^2(n+1)e^{-cn}\;.
+    \end{aligned}
+\end{equation}
+The corner coefficient uses the same flat integral and cutoff prescription as the perimeter coefficient. Its identification in a conditional regular region, with boundary and periodic errors, is Proposition~\ref{prop:regional-square-extraction}.
+
+
+\section{Identification in a Regular Integration Region}
+\label{sec:regional-identification}
+
+The coefficient in \eqref{eq:marginal-full-perimeter} was computed with the translation-invariant flat covariance. A conditional integration in the first RG step instead uses the inverse of a restricted Hessian. We compare the two connected expansions, retaining the action terms that cross the integration boundary. This provides a quantitative identification of their straight-side coefficients.
+
+\subsection{The Wilson source before the flat evaluation}
+
+Let $\mathcal I_C$ be the ordered set of traversals of $C$. For $R\subseteq\mathcal I_C$, the mixed field $U^R$ uses the integration link $U(b)=U'(b)U_1(b)$ on a traversal in $R$ and the background link $U_1(b)$ on every other traversal. Here $U_1=U_1(\Omega_1,V)$ is the reconstruction before the boundary split (with the exterior determining field retained). Reversed traversals use inverse links. Define
+\begin{equation}\label{eq:regional-wilson-polynomial}
+    \begin{aligned}
+        \mathcal G_S(U,U_1)
+            &=\sum_{R\subseteq S}(-1)^{|S|-|R|}
+                \chi(\Hol_{U^R}C)\;,\\
+        \mathcal W(t;U,U_1)
+            &=\sum_{S\subseteq\mathcal I_C}
+                \left(\prod_{a\in S}t_a\right)\mathcal G_S(U,U_1)\;.
+    \end{aligned}
+\end{equation}
+Here $t=(t_a)_{a\in\mathcal I_C}$ is a family of scalar parameters. Boolean inversion gives
+\begin{equation}
+    \mathcal W(1;U,U_1)=W_\chi(C;U),
+    \qquad \mathcal W(0;U,U_1)=W_\chi(C;U_1)\;.
+\end{equation}
+Every term is a closed contraction, invariant under simultaneous gauge transformations of $U$ and $U_1$.
+
+The Wilson insertion starts in \eqref{eq:bare-blocking-operator}. Its gauge invariance preserves it under the Faddeev--Popov insertion in \cite[(1.5)--(1.6)]{BalabanCRE}. It is then pulled back under $U=U'U_1$ and the constraint linearisation leading to (1.14). At that stage we introduce \eqref{eq:regional-wilson-polynomial}, whose value at $t=1$ is the pulled-back Wilson insertion. All subsequent changes of variables are applied to every fluctuating link in this polynomial, including the boundary change (1.22).
+
+Fix the domain labels, the coarse field, the exterior fine field and the exterior free fluctuation field in this construction. Denote this collection by $\xi$. Define $K_\xi(t)$ to be the conditional fluctuation integral in \cite[(1.26)]{BalabanCRE}, with the pulled-back polynomial inserted and the change-of-variables density from (1.22)--(1.24) retained once. The same integral with insertion $1$ is $K_{\xi,\mathrm{vac}}$. These definitions precede the separation of the effective interaction into its regular and boundary terms. The exterior integrations and their prefactors are those of (1.15), (1.25) and (1.29).
+
+The flat projection of this conditional kernel sets its coarse and exterior determining fields to the identity and its exterior free fluctuation field to zero. The domain labels are held fixed. This evaluation is applied to $K_\xi$, rather than to the exterior indicators or history weights. In particular, a large-field indicator is not evaluated at zero. At the projection point $\mathcal W(0)=1$, so the source logarithm is continued from $K_\xi(0)=K_{\xi,\mathrm{vac}}$. No logarithm of $W_\chi(C;U_1)$ at general background is required.
+
+\subsection{Regional integrals and their connected densities}
+
+Use fine-lattice units. Write $H=\mathsf H_\infty$ for \eqref{eq:bulk-operator-definition}, and $C_\infty=H^{-1}$. For a finite set $D\subset E_{*,\infty}$, let $i_D$ extend a free field by zero and put
+\begin{equation}\label{eq:regional-precision}
+    H_D=i_D^*Hi_D,
+    \qquad C_D=H_D^{-1}\;.
+\end{equation}
+The inverse exists by \eqref{eq:bulk-uniform-gap}. Let $\mathcal V_D$ consist of the primitive labels from \eqref{eq:perimeter-literal-local-terms} whose supports meet $D$. Retain their original labels and set $v_D(B)=v(i_DB)$. Every primitive missing $D$ vanishes at this field. The cutoff and interaction are
+\begin{equation}\label{eq:regional-weight}
+    \Theta_D^\sigma(B)=\prod_{b\in D}\mathbf1_{\{|B_b|_\sigma<r\}},
+    \qquad P_D(B)=\sum_{v\in\mathcal V_D}v(i_DB)\;.
+\end{equation}
+The threshold is the same $r=r_0(g_0)$ as in \eqref{eq:marginal-two-cutoffs}.
+
+Let $I$ be an interval of $m$ coarse segments on a coarse translate of the oriented line $v\in\mathscr V_\square$. Let $P_U(I)$ denote the ordered transport along its fine traversals. Its closed relative source uses the inverse reference transport, as in \eqref{eq:marginal-line-source}. The regional numerator and denominator are
+\begin{equation}\label{eq:regional-integrals}
+    \begin{aligned}
+        N_{D,I}^\sigma
+            &=\int\Theta_D^\sigma(B)e^{P_D(B)}
+                \chi\bigl(P_{U_{g_0}(i_DB)}(I)P_{U_0}(I)^{-1}\bigr)
+                    \,\dd\mu_{C_D}(B)\;,\\
+        D_D^\sigma
+            &=\int\Theta_D^\sigma(B)e^{P_D(B)}
+                    \,\dd\mu_{C_D}(B)\;.
+    \end{aligned}
+\end{equation}
+Here $U_0=\id$ in the chosen frame; retaining its reverse transport specifies the gauge-invariant closed contraction.
+
+Apply the protected-label forest expansion and the web construction of Section~\ref{sec:marginal-perimeter}, replacing every free-input support $\Lambda$ by $\Lambda\cap D$. A source mark with empty restricted stencil is zero. The other labels keep their original identities. Denote the connected weights by $\Phi_{D,I}(\Gamma)$ and their marked coarse-segment set by $J_\Gamma$. The density assigned to segment $j$ is
+\begin{equation}\label{eq:regional-density}
+    \kappa_{D,I}(j)=
+        \sum_{\Gamma\, | \,j\in J_\Gamma}
+            \frac{\Phi_{D,I}(\Gamma)}{|J_\Gamma|}\;.
+\end{equation}
+We suppress $\sigma$ in these weights and densities. It is fixed throughout each comparison.
+
+For positive bonds $b=(x,i)$ and $c=(y,k)$, use $d(b,c)=\|x-y\|_\infty+\mathbf1_{\{i\ne k\}}$. Let $R_*$ bound the label diameters and source-to-stencil distances, and let $R_H$ be the range of $H$ in this metric. With the interval constant $c_h$ of \eqref{eq:marginal-hull-extent}, set
+\begin{equation}
+    R_0=4(1+R_*+R_H+L),
+    \qquad c_*=16(1+R_*+c_h+L)\;.
+\end{equation}
+Number the coarse segments of $I$ by $0,\ldots,m-1$. Let $K_j$ be the union of their fine-traversal input stencils on segment $j$, and define
+\begin{equation}\label{eq:regional-distance}
+    d_j=\max\bigl(0,
+        \min\bigl(d(K_j,D^c),L\min(j,m-1-j)\bigr)-R_0\bigr)\;.
+\end{equation}
+
+\begin{proposition}\label{prop:regional-coefficient}
+For either fixed cutoff prescription $\sigma$, and for sufficiently small $g_0$ after the constants in the comparison have been chosen, there are constants $C,c>0$, independent of $D$, $I$ and $j$, such that
+\begin{equation}\label{eq:regional-coefficient-bound}
+    |\kappa_{D,I}(j)-\kappa_v|
+        \leq C\tau^2e^{-cd_j}\;.
+\end{equation}
+Here $\tau$ is defined in \eqref{eq:marginal-fixed-forest-bound} and $\kappa_v$ in \eqref{eq:marginal-full-perimeter}. If every $K_j$ is at distance at least $b$ from $D^c$, then
+\begin{equation}\label{eq:regional-summed-bound}
+    \left|\log\frac{N_{D,I}^\sigma}{D_D^\sigma}-m\kappa_v^\sigma\right|
+        \leq C\tau^2(1+me^{-cb})\;.
+\end{equation}
+The logarithm is continued from zero source.
+\end{proposition}
+
+\begin{proof}
+Principal restriction preserves $\gamma_L I\leq H_D\leq h_L I$. The finite-range Neumann series in \eqref{eq:bulk-neumann-inverse} therefore gives exponential decay for $C_D$, uniformly in the shape of $D$. Projecting $HC_\infty=I$ onto the $D$ rows gives
+\begin{equation}\label{eq:regional-resolvent}
+    C_D-(C_\infty)_{D,D}
+        =C_DH_{D,D^c}(C_\infty)_{D^c,D}\;.
+\end{equation}
+Let $\mu>0$ be a common inverse-decay exponent in the fine-bond metric. A term on the right joins $u\in D$ and $w\in D^c$ with $d(u,w)\leq R_H$. For $s=d(b,u)+d(w,c)$,
+\begin{equation}
+    d(b,D^c)+d(c,D^c)+d(b,c)\leq 2s+2R_H\;.
+\end{equation}
+Half of $e^{-\mu s}$ pays this distance with exponent $a=\mu/4$; the remaining half is summable over $u$ and its bounded number of neighbours $w$. Polynomial volume growth gives
+\begin{equation}\label{eq:regional-covariance-difference}
+    \|C_D(b,c)-C_\infty(b,c)\|
+        \leq C e^{-a(d(b,D^c)+d(c,D^c)+d(b,c))}\;.
+\end{equation}
+There is no factor proportional to the area of the boundary.
+
+On $D$, interpolate between $(C_\infty)_{D,D}$ and $C_D$, and denote their difference by $\mathcal D$. Every interpolated covariance and each of its principal marginals has spectrum in $[h_L^{-1},\gamma_L^{-1}]$, uniform exponential decay and scalar colour blocks. Thus the protected-source bounds and the Schur cancellation used in \eqref{eq:marginal-fixed-forest-bound} hold throughout the interpolation.
+
+Consider a forest term on carrier $A$. If $M_t=C_t\circ w^F$ is its interpolated covariance and $E_e(C_t)$ the off-diagonal direction associated with edge $e$, its density derivative has the product-rule decomposition
+\begin{equation}\label{eq:regional-density-derivative}
+    \begin{aligned}
+        \partial_t D^{|F|}p_{M_t}[(E_e(C_t))_{e\in F}]
+            &=D^{|F|+1}p_{M_t}
+                [\mathcal D_A\circ w^F,(E_e(C_t))_{e\in F}]\\
+            &\quad+\sum_{e\in F}D^{|F|}p_{M_t}
+                [E_e(\mathcal D),(E_f(C_t))_{f\in F\setminus\{e\}}]\;.
+    \end{aligned}
+\end{equation}
+Each tuple lists the directions of the symmetric multilinear derivative of the density with respect to its covariance.
+
+The two kinds of terms use separate Cauchy estimates. In the first, add the direction $s(\mathcal D_A\circ w^F)$ to the covariance centre while leaving every forest direction fixed. The positive Schur mask contracts operator norm. With $\lambda=h_L^{-1}$, the radius $\lambda/(32\|\mathcal D_A\|)$ uses at most $\lambda/32$ of the accretivity margin; a zero direction gives zero derivative. Reduce the forest radii by a fixed factor to keep the total below $\lambda/8$. In the second kind of term, replace one forest direction by $E_e(\mathcal D)$ and use \eqref{eq:regional-covariance-difference}. Choose its radius from the exponential entry majorant, without dividing by an entry of $C_t$. The normalised density, including its determinant, is bounded by \eqref{eq:marginal-density-majorant}.
+
+Since $\|\mathcal D_A\|\leq C|A|e^{-a d(A,D^c)}$, the integrated differentiated term is bounded by the positive forest majorant, with enlarged constants and reduced edge decay, times
+\begin{equation}
+    C|A|^2e^{-a d(A,D^c)}\;.
+\end{equation}
+The exponent of $\tau$ is unchanged. In particular the differentiated functional is still equivariant under constant conjugation, so a component with one source mark retains its quadratic character gain.
+
+For each component $\gamma$, let $u_\gamma$ be its positive fixed-forest bound with the uniform exponential entry majorants. This definition applies to vacuum and source components. For a web $W$, put $u_W=\prod_{\gamma\in W}u_\gamma$; summing these numbers over webs gives the web load. The positive majorants themselves satisfy the polymer loads. Restricting a support to $D$ preserves its size bound $s_*$, overlap bound $q_*$ and range $R_*$. On $n$ bonds, label choices cost at most $2^{q_*n}$, the forest-to-graph multiplicity costs at most $2^{q_*(s_*-1)n/2}$, unused graph edges at most $e^{V_1n/2}$, and the rooted spatial tree sum at most $n^{n-2}V_1^{n-1}/(n-1)!$, where $V_1$ is the finite row sum of the reduced-decay graph weights. Thus a constant $K_2\geq1$ bounds the vacuum and source root loads by
+\begin{equation}
+    \sum_{n\geq1}K_2^n\tau^{\lceil n/s_*\rceil},
+    \qquad
+    \sum_{n\geq1}K_2^n\tau^{\max(2,\lceil n/s_*\rceil)}\;.
+\end{equation}
+Grouping $n$ into intervals of $s_*$ gives bounds $C\tau/(1-K_2^{s_*}\tau)$ and $C\tau^2/(1-K_2^{s_*}\tau)$, respectively. These sums bound the positive forest majorants before any signed activity is used. The interval-tree recursion then bounds the web loads.
+
+Let $\mu_1>0$ be an exponent remaining after the degree payment, no greater than $\min(\mu,a)/8$. Choose
+\begin{equation}
+    \alpha_*=\frac{\mu_1}{1024(1+c_h)},
+    \qquad \eta_1=\frac{\mu_1}{1024}\;.
+\end{equation}
+The same sums allow the reserve $e^{4|A|+8\alpha_*H+8\eta_1\ell}$. Let $C_{\mathrm{load}}$ bound their weighted spatial and interval root loads after division by $\tau$ and $\tau^2$, respectively. Choose $g_0$ so that $C_{\mathrm{load}}\tau\leq1/4$ and $C_{\mathrm{load}}\tau^2\leq\alpha_*/4$. The incompatibility sum is then bounded by one quarter of $|A_p|+\alpha_*H_p$, so the pinned tree bound applies to the positive majorants $u_p$.
+
+For a cluster $\Gamma$, let $U(\Gamma)$ be its absolute Ursell coefficient, including its factorial, multiplied by the product of these majorants. The product rule, counting repeated activity occurrences, yields
+\begin{equation}
+    |\partial_t\Phi_t(\Gamma)|
+        \leq C\ell(\Gamma)^2
+            e^{-a d(A_\Gamma,D^c)}U(\Gamma),
+    \qquad
+    \sum_{\Gamma\, | \,j\in J_\Gamma}
+        U(\Gamma)e^{\eta_1\ell(\Gamma)}\leq C\tau^2\;.
+\end{equation}
+The union of carriers is $A_\Gamma$. The inequality follows from $\sum_p\ell(p)^2\leq\ell(\Gamma)^2$ and the positive-majorant KP bound. Half the extent weight absorbs the polynomial factor.
+
+For completeness, connect a component's carrier using its forest and at most $|A| -1$ stencil edges, each of length at most $R_*$. Attach its contour interval at one selected mark by a path of length at most $R_*$. The interval costs at most $c_h\ell$. Carrier or interval incompatibility joins these networks for a connected cluster. Their total length is at most $(1+2R_*+c_h)\ell(\Gamma)$; adding the root segment costs at most $L$. The chosen $c_*$ bounds the result.
+
+For $d_j\leq 2(R_0+R_*+c_*)$, the rooted bounds prove the comparison after enlarging $C$. For larger $d_j$, clusters with $\ell(\Gamma)\geq d_j/(2c_*)$ are bounded by the extent tail in each gas. Every shorter cluster rooted at $j$ lies away from both the integration boundary and the ends of $I$. Its original stencils lie inside $D$, so its labels, closed sources, local functions and incompatibilities coincide in the two expansions. Only its covariance changes, and every carrier is at distance at least $d_j/2-R_0$ from $D^c$. The fixed loss is absorbed in the comparison constant. Integrating the differentiated bound gives \eqref{eq:regional-coefficient-bound}. Division by $|J_\Gamma|$ cannot enlarge it. Finally, allocation and the endpoint geometric series give
+\begin{equation}
+    \log\frac{N_{D,I}^\sigma}{D_D^\sigma}
+        =\sum_{j=0}^{m-1}\kappa_{D,I}(j),
+    \qquad
+    \sum_{j=0}^{m-1}e^{-cd_j}\leq C(1+me^{-cb})\;,
+\end{equation}
+which proves \eqref{eq:regional-summed-bound}.
+\end{proof}
+
+\subsection{Periodic regions and the CRE kernel}
+
+Let $E_{*,T}$ be the periodic free carrier, $H_T$ the Hessian in \eqref{eq:flat-covariance}, and $i_{D,T}$ zero extension from $D\subseteq E_{*,T}$. The periodic primitives $v_T$ and reconstructed links $U_{g_0,T}$ are those of \eqref{eq:perimeter-literal-local-terms} and \eqref{eq:flat-phase} on $T$. Define
+\begin{equation}\label{eq:regional-periodic-weight}
+    H_{D,T}=i_{D,T}^*H_Ti_{D,T},
+    \qquad C_{D,T}=H_{D,T}^{-1},
+    \qquad P_{D,T}(B)=
+        \sum_{v_T\, | \,\operatorname{supp}v_T\cap D\ne\varnothing}
+            v_T(i_{D,T}B)\;.
+\end{equation}
+Define $N_{D,I,T}^\sigma$ and $D_{D,T}^\sigma$ by \eqref{eq:regional-integrals} with $C_D,P_D,i_D,U_{g_0}$ replaced by $C_{D,T},P_{D,T},i_{D,T},U_{g_0,T}$. Their cutoff is still the product over $D$. Apply the same forest, web and connected-weight definitions to these periodic integrals, obtaining weights $\Phi_{D,I,T}(\Gamma)$, and set
+\begin{equation}
+    \kappa_{D,I,T}(j)=
+        \sum_{\Gamma\, | \,j\in J_\Gamma}
+            \frac{\Phi_{D,I,T}(\Gamma)}{|J_\Gamma|}\;.
+\end{equation}
+Assume that $I$ has a lift with $mL<N_{\min}/3$, where $N_{\min}$ is the smallest fine period. For both periodic open-segment gases the positive cluster majorants obey a uniform rooted tail. Let $U_{D,I,T}(\Gamma)$ be the absolute Ursell coefficient, including its factorial, times the positive object majorants, and use $U_{I,T}$ for $D=E_{*,T}$. There is $\eta_0>0$, independent of the region and periods, such that for every marked segment $j$,
+\begin{equation}\label{eq:regional-periodic-line-tail}
+    \sum_{\Gamma\, | \,j\in J_\Gamma}
+        U_{D,I,T}(\Gamma)e^{\eta_0\ell(\Gamma)}
+        \leq C\tau^2\;.
+\end{equation}
+The majorants dominate the absolute connected weights. The proof is the positive-majorant argument of Proposition~\ref{prop:regional-coefficient}: restricting supports preserves the label overlap bounds, and the periodic shell sum is bounded by the infinite-lattice shell sum. Under this lift hypothesis, index separation along the segment is its periodic separation. Thus \eqref{eq:marginal-hull-extent} holds on the lifted segment. Its ordinary intervals have the straight-line interval tree sum. Hence the same load inequalities and extent reserve prove \eqref{eq:regional-periodic-line-tail} for the full and restricted periodic gases, including the covariance interpolations used below.
+
+On a compatible torus with fine periods $N_\mu$, put $N_{\min}=\min_\mu N_\mu$ and assume that $I$ has a lift with $mL<N_{\min}/3$. The set $D$ may wrap around the torus. Define $\kappa_{I,T}(j)$ by the same allocation with $D=E_{*,T}$. In this paragraph $d_j$ is \eqref{eq:regional-distance} with $d_T$ in place of $d$, including its endpoint term $L\min(j,m-1-j)$. For bounded $d_j\leq 2(R_0+R_*+c_*)$, \eqref{eq:regional-periodic-line-tail} and $|\kappa_v|\leq C\tau^2$ give \eqref{eq:regional-torus-bound} directly after enlarging $C$. For larger $d_j$, the periodic version of \eqref{eq:regional-resolvent} and its differentiated cluster estimate compare $\kappa_{D,I,T}(j)$ with $\kappa_{I,T}(j)$. Clusters of extent at least $d_j/(2c_*)$ have total rooted weight at most $C\tau^2e^{-cd_j}$. For smaller clusters the labels agree, and their carriers are at distance at least $d_j/2-R_0$ from $D^c$. The covariance derivative therefore has the same bound, after absorbing the fixed factor $e^{aR_0}$. This proves
+\begin{equation}
+    |\kappa_{D,I,T}(j)-\kappa_{I,T}(j)|
+        \leq C\tau^2e^{-cd_j}\;.
+\end{equation}
+
+To compare the second density with the infinite straight-line density, lift the root segment to the chosen copy of $I$. A cluster network of length $c_*\ell+R_0<N_{\min}/4$ lifts uniquely and preserves carrier intersections. The distinct translates of $I$ are separated by more than $2N_{\min}/3$ because $mL<N_{\min}/3$, so all its source marks lie on that copy. If also $c_*\ell+R_0<L\min(j,m-1-j)$, the network avoids the two ends and has the same labels and ordered source factors as the infinite straight-line expansion. Clusters failing either restriction are bounded by the rooted extent tail. For the remaining clusters only the covariance marginals change. Periodisation and lifted separation $d(b,c)\leq N_{\min}/4$ give
+\begin{equation}
+    \|C_T(b,c)-C_\infty(b,c)\|
+        \leq C e^{-\mu(N_{\min}-d(b,c))}
+        \leq C e^{-\mu N_{\min}/2}e^{-\mu d(b,c)}\;,
+\end{equation}
+after expressing the decay exponent in fine-bond units. The free-inverse periodisation follows by applying $H_T$ to the absolutely convergent periodised kernel of $H^{-1}$, as in the proof of \eqref{eq:bulk-periodisation}. The covariance interpolation and the density-direction estimates in the proof of Proposition~\ref{prop:regional-square-extraction} apply with $h_A=e^{-\mu N_{\min}/2}$. They retain edge decay and the quadratic source gain; their polynomial carrier factors are absorbed by the reserved extent weight. With $\iota_T=\max(0,N_{\min}/4-R_0)$, summing the short-cluster derivatives and the two tails gives
+\begin{equation}
+    |\kappa_{I,T}(j)-\kappa_v|
+        \leq C\tau^2\left[
+            e^{-c(L\min(j,m-1-j)-R_0)_+}+e^{-c\iota_T}\right]\;.
+\end{equation}
+Here $x_+=\max(x,0)$. Absolute convergence also gives $\log(N_{D,I,T}^\sigma/D_{D,T}^\sigma)=\sum_{j=0}^{m-1}\kappa_{D,I,T}(j)$, since summing the allocation weights $|J_\Gamma|^{-1}$ over the marked segments gives one for each source cluster. Adding the two comparisons proves
+\begin{equation}\label{eq:regional-torus-bound}
+    |\kappa_{D,I,T}(j)-\kappa_v|
+        \leq C\tau^2(e^{-cd_j}+e^{-c\iota_T})\;.
+\end{equation}
+
+For the identification with $K_\xi$, take the averaging prescription RG1 (0.4), the bond cutoff $|\cdot|_\sigma$, and the threshold $\delta_0=g_0r_0(g_0)$ on both sides. The comparison applies separately to either specified $\sigma$; it does not determine an otherwise unspecified norm convention. Let $I$ consist of consecutive traversals of one straight side of $C$. Let $E_{\Omega,*}$ be the free carrier after the designated-bond elimination in \cite[(1.14)--(1.15)]{BalabanCRE}. Let $D_-$ consist of these bonds with both endpoints in $\Lambda_1$, and $D_+$ of those with at least one endpoint there. The comparison holds for every $D_-\subseteq D\subseteq D_+$, assigning the complementary free variables to the exterior integral. It therefore covers either endpoint convention for the integration boundary.
+
+We make the geometric parameter choices in this identification explicit. In CRE's notation let $M_2,M,R_1$ be the cube-scale integers, so the test cubes have fine side $L^2M_2R_1$ and the macro cubes have fine side $LMR_1$; here $R_1$ denotes the scale integer, not the large-fluctuation region also denoted by $R_1$ in CRE. Take aligned nested partitions, with all periods divisible by $LMR_1$, and choose the powers of $L$ so that
+\begin{equation}\label{eq:regional-collar-sizes}
+    M\geq 8LM_2,
+    \qquad LMR_1>4R_0+4L^2M_2R_1+8\;.
+\end{equation}
+Here $R_0=4(1+R_*+R_H+L)$ is our fixed range constant, distinct from the scale integer in CRE. These are explicit choices within the compatible-partition and large-$M$ prescription of \cite[Section~1]{BalabanCRE}. The collar inequality is included among the common parameter conditions. One may enforce it by first choosing $M$ so that $LM-4L^2M_2>4R_0+8$; it then holds for every scale integer $R_1\geq1$. For macro regions we use the collar-distance statement following \cite[(1.10)]{BalabanCRE}; it supplies the metric separation, including near cube corners. For test-cube enlargements we need only a conservative reach bound: each added layer has width at most $L^2M_2R_1$. This bound also covers a layer of the $L$-fold finer cubes in the enlargement convention of CRE, Section~1; no equality between test and macro enlargements is used. The parallelepiped modification after (1.20) removes macro cubes from $\Lambda_1$; the remaining region is still a union of macro cubes and hence of test cubes.
+
+Using (1.20) and that collar-distance statement, a site within distance $LMR_1-1$ of $\Lambda_1$ lies in $\Omega_1^{\sim-1}\setminus R_1'$. Every stencil meeting $D\subseteq D_+$ therefore remains in the regular region. A bond with an endpoint in $\Lambda_1$ is tested by the test cube containing that endpoint, which is contained in $\Lambda_1$ and is good. A bad test or a test in $S_1$ uses only bonds within $2L^2M_2R_1+1$ of its cube. The collar and \eqref{eq:regional-collar-sizes} keep those bonds outside $D_+$, including the fixed stencil enlargement. At identity determining data the critical field is the identity: it satisfies the constraints, has zero action and gauge-fixing functional, and is unique in the regular chart by \cite[(1.12)]{BalabanCRE}. Its force is zero. The Hessian on $D$ is consequently $H_{D,T}$, including the diagonal contributions of plaquettes crossing its boundary.
+
+The nonlinear constraint in \cite[(2.4)]{BalabanRG1} becomes $M(e^{iB'})$ at identity background. Its principal logarithm is $\mathcal Q(B')$ from \eqref{eq:constraint-primitive}. The linearisation following (2.10) has linear part $L\widetilde Q B'$, hence $\widetilde Q=Q$ there. Its designated-row right inverse satisfies $LQh=I$. Uniqueness of the small solution for $\widetilde D$ gives exactly \eqref{eq:flat-phase}. Thus the action, Haar and Jacobian terms become $v_T(i_{D,T}B)$ with all primitive labels meeting $D$ retained.
+
+The split reconstruction in \cite[(1.21)]{BalabanCRE} also equals the identity at identity data, and $Q_1^{s*}\id=\id$ by (1.3). Its logarithmic argument is zero. Equation (1.21) then gives $e^{iL^{-1}\mathbf H_{1,Ax}(0)}=1$; the small principal chart implies $\mathbf H_{1,Ax}(0)=0$. Since the BCH remainder satisfies $\mathbf F(X,0)=0$, the boundary change (1.22) is the identity, its Jacobian is one and its additional exponent is zero at this projection.
+
+For the cutoff, every free bond in $D$ has an endpoint in a compatible good cube contained in $\Lambda_1$. The twice-enlarged starred test in \cite[(1.18)]{BalabanCRE} covers it. The designated-bond exclusion is the verbal convention following (1.8). A good cube outside $\Lambda_1$ can also test bonds in $D$: split its product of bond indicators into its $D$ and exterior factors. The $D$ factors are redundant with the covered interior cutoff by idempotence; all exterior factors stay in the outer integral. Bad tests and changed background tests are separated from $D$ by the collar. At zero exterior free field the conditional cutoff is therefore $\Theta_D^\sigma$.
+
+The same norm is used on both sides. The threshold is $r=\delta_0/g_0$ by the normalisation convention \eqref{eq:cre-cutoff-normalisation}. The exterior quadratic cross term and its completion-of-square compensator vanish at the projection. Gaussian and constraint normalisations cancel between the two conditional kernels. They are not removed from the exterior integration.
+
+Finally set $t_a=1$ on $I$ and $t_a=0$ elsewhere. At the flat projection, \eqref{eq:regional-wilson-polynomial} is precisely the closed relative source in \eqref{eq:regional-integrals}. Denoting the projected conditional kernels by $K_\xi^{\mathrm{flat}}$, we have
+\begin{equation}\label{eq:regional-kernel-identification}
+    \frac{K_\xi^{\mathrm{flat}}(1_I)}{K_{\xi,\mathrm{vac}}^{\mathrm{flat}}}
+        =\frac{N_{D,I,T}^\sigma}{D_{D,T}^\sigma}\;.
+\end{equation}
+If $d_T(K_j,D^c)\geq b$ for every source segment $j$, then \eqref{eq:regional-torus-bound} gives
+\begin{equation}\label{eq:regional-mass-identification}
+    \left|-\frac{1}{mL\varepsilon}
+        \log\frac{K_\xi^{\mathrm{flat}}(1_I)}
+                    {K_{\xi,\mathrm{vac}}^{\mathrm{flat}}}
+            -\delta m_v^\sigma\right|
+        \leq\frac{C\tau^2}{L\varepsilon}
+            \left(\frac{1}{m}+e^{-cb}+e^{-c\iota_T}\right)\;.
+\end{equation}
+Take a family of domain labels $\xi$ for which $m$, $b$ and $\iota_T$ tend to infinity, the buffer fits inside the torus, and $mL<N_{\min}/3$. Then \eqref{eq:regional-mass-identification} identifies the per-length scalar with \eqref{eq:marginal-full-perimeter}. The four oriented straight-side coefficients give the square coefficient by the average in \eqref{eq:marginal-square-mass}. This comparison is made inside the conditional kernels; the outer history weights and the physical denominator \eqref{eq:one-step-physical-partition} retain their definitions.
+
+\subsection{The Regional Square Scalar}
+
+Fix either cutoff prescription $\sigma$. Let $C_n$ be a coarse translate of the counterclockwise square with vertices $0,nLe_1,nL(e_1+e_2),nLe_2$ in fine-lattice units, and assume $K_\mu\geq 3(n+2)$ for every coarse period. Let $D$ be the free bonds integrated in a covered conditional kernel: every free-input stencil of the contour lies in $D$. Retain the original primitive labels, including those crossing the boundary of $D$, and define
+\begin{equation}\label{eq:regional-square-scalar}
+    S^\circ_{D,C_n,T}=
+    \frac{\displaystyle\int\Theta_D^\sigma(B)e^{P_{D,T}(B)}
+        \chi\bigl(\Hol_{U_{g_0,T}(i_{D,T}B)}C_n\bigr)\,\dd\mu_{C_{D,T}}(B)}
+    {\displaystyle\int\Theta_D^\sigma(B)e^{P_{D,T}(B)}\,\dd\mu_{C_{D,T}}(B)}\;,
+    \qquad C_{D,T}=(i_{D,T}^*H_Ti_{D,T})^{-1}\;.
+\end{equation}
+Here $H_T$ is the full flat free-field precision on the torus, and $P_{D,T}$ is \eqref{eq:regional-periodic-weight}; $\Theta_D^\sigma$ is the bond cutoff of \eqref{eq:regional-weight}. For a conditional history $\xi$, write $S^\circ_{\xi,C_n}=S^\circ_{D,C_n,T}$ with its young integration carrier $D$. This is a ratio of conditional reference integrals; the exterior indicators and the physical history weight are not evaluated at the identity.
+
+Index the square's $4n$ coarse segments cyclically by $j$. Let $K_j$ be the union of the free-input stencils of its fine traversals. With complements taken in the torus free carrier and with the periodic fine-bond metric of \eqref{eq:regional-distance}, put
+\begin{equation}\label{eq:regional-square-distances}
+    d_j=\max\bigl(0,d_T(K_j,D^c)-R_0\bigr),
+    \qquad \iota_T=\max\bigl(0,N_{\min}/4-R_0\bigr)\;.
+\end{equation}
+The fixed $R_0$ includes the label, reconstruction and precision ranges. Distance to the empty set is infinite, with $e^{-\infty}=0$. There is no distance to a side endpoint in $d_j$.
+
+\begin{proposition}\label{prop:regional-square-extraction}
+Under these hypotheses, the collar conditions of the conditional kernel, and the common small-coupling thresholds of the flat and regional expansions, the scalar \eqref{eq:regional-square-scalar} is nonzero. Its logarithm is continued from zero in the traversal-source polynomial \eqref{eq:regional-wilson-polynomial}. There are $C,c>0$, independent of $D,n$ and the compatible periods, and an error $E^\circ_{D,C_n,T}$ such that
+\begin{equation}\label{eq:regional-square-extraction}
+    S^\circ_{D,C_n,T}
+        =e^{-\delta m^\sigma P(C_n)}
+          \bigl(z_{\mathrm c}^\sigma(g_0,\pi/2)\bigr)^4
+          e^{E^\circ_{D,C_n,T}}\;,
+\end{equation}
+\begin{equation}\label{eq:regional-square-error}
+    |E^\circ_{D,C_n,T}|
+        \leq C\tau^2\left[
+            \sum_{j=0}^{4n-1}e^{-cd_j}
+            +4ne^{-c\iota_T}+(n+1)e^{-cn}\right]\;.
+\end{equation}
+The coefficients are exactly \eqref{eq:marginal-square-mass} and \eqref{eq:corner-square-factor}, with the same cutoff prescription. The parameter $\tau$ is \eqref{eq:marginal-fixed-forest-bound}; fixed enlargements of its majorant constants are absorbed in $C$ and the coupling threshold.
+The collar hypotheses identify this integral with the conditional CRE scalar. The estimates for the defined flat integral use its covered stencils, spectral bounds and small-coupling conditions; the collar enters at the identification, not in the subsequent cluster comparison.
+\end{proposition}
+
+\begin{proof}
+Write $F_{D,C,T}=\log S^\circ_{D,C,T}$, with its branch specified below, $F_{C,T}=\log(N_{C_n,T}^\sigma/D_T^\sigma)$, and $F_{C,\infty}(n)=F_{\square,\infty}(n)$. We compare the first two quantities, then the latter two, before applying the bulk corner extraction. This retains errors from changing the kernel and summation domain, as in \cite[(4.35)--(4.37)]{BalabanRG1}; the exterior integration of \cite[(1.29)--(1.30)]{BalabanCRE} is unchanged.
+
+At the conditional reference data the background and exterior determining fields are the identity and the retained free field is zero. The row precision entries are the flat torus entries on $D$, including the diagonal terms from crossing plaquettes. The collar contains every stencil touching $D$, so the precision is $i_{D,T}^*H_Ti_{D,T}$. The energy residual of a primitive $f$ agrees with \eqref{eq:perimeter-literal-local-terms}: $Df(0)=0$, and hence the quadratic chain rule contains no term involving $D^2q(0)$. The degree-two Taylor residual is linear in $f$, so grouping the gauge terms by their centre or by the pairs $(y,x)$ gives the same sum. The Haar and constraint-Jacobian primitives agree as well; the designated inverse at identity is $L^3$. Terms whose free support misses $D$ vanish at $i_{D,T}B$. The cutoff is the same product of bond tests. Thus the numerator and denominator in \eqref{eq:regional-square-scalar} are those of the conditional reference scalar, with their normalisers retained in the ratio.
+
+The local implicit solutions used in the two representations have the same analytic germ. To fix their common domain, let $C_{\mathsf C}$ bound the fixed row map from the maximum free-bond norm to the row Hilbert norm, let $\vartheta_*$ be its implicit-solution phase radius, and let $a_L$ be the flat chart radius in Appendix~\ref{sec:perimeter-attempt}. The row map is finite dimensional with finitely many translated types, so $C_{\mathsf C}<\infty$; the analytic implicit-function theorem gives a uniform positive phase radius. Reduce $a_L$ if necessary to lie within those row charts and their nonvanishing Jacobian domains. Choose the coupling so that
+\begin{equation}
+    g_0C_{\mathsf C}(2+4r)<\frac{\vartheta_*}{2},
+    \qquad g_0(2+4r)<a_L\;.
+\end{equation}
+The factor $2+4r$ specifies a larger free-variable polydisc containing the integration box $\|B\|_\infty\leq r$ with a positive margin. The convex intersection of this polydisc with the phase balls lies in the common analytic charts. The identity theorem therefore identifies the solutions throughout the integration box. The common chart radius is fixed before the coupling; reducing it preserves all previous estimates by restriction to a smaller domain. These small-coupling requirements and all polymer-load inequalities are imposed together, which is possible because $g_0(1+r)^3\to0$ and $\tau\to0$.
+
+Apply the protected-label expansion with supports intersected with $D$, keeping every original label. Zero extension commutes with constant conjugation, so the restricted primitives, cutoffs and closed source differences are invariant. The restricted support graph and forest partition the labels into components. Merge source components using the manuscript's shortest cyclic intervals, with its fixed tie-breaking base; a web interval is their union, possibly the whole circle. Compatible components and webs have disjoint carriers and disjoint web intervals, so their union reverses this decomposition without losing or duplicating labels. If a web crosses the base, cyclicity of the trace moves the base between web intervals before Schur factorisation. This proves the regional counterpart of \eqref{eq:marginal-exact-gases}. The alternative grouping of the conditional kernel need not agree term by term: both constructions give the same integral ratio.
+
+The required quantitative bounds hold uniformly for these restricted labels. Principal restriction and inversion preserve the spectral bounds, and the finite-range Neumann series gives uniform exponential covariance decay in the periodic metric. Let $\mu_1>0$ be a remaining edge-decay exponent after the degree payment, no larger than one eighth of the covariance and comparison exponents. Set
+\begin{equation}
+    \alpha'=\frac{\mu_1}{1024(1+c_h)},
+    \qquad \eta'=\frac{\mu_1}{1024},
+    \qquad a'(p)=|A_p|+\alpha'H_p\;.
+\end{equation}
+Restriction preserves the support-size, overlap and range bounds $s_*,q_*,R_*$. The same labelled-tree count as in \eqref{eq:marginal-load-series}, with a fixed enlarged $K_2$, bounds vacuum and source loads by
+\begin{equation}
+    \sum_{k\geq1}K_2^k\tau^{\lceil k/s_*\rceil},
+    \qquad
+    \sum_{k\geq1}K_2^k\tau^{\max(2,\lceil k/s_*\rceil)}\;.
+\end{equation}
+The bounds remain valid with the reserve $e^{4|A_\gamma|+8\alpha'H_\gamma+8\eta'\ell(\gamma)}$. Contacts remain within $R_*$ of the restricted support network, so \eqref{eq:marginal-hull-extent} applies to the square, including at its corners. The cyclic conversion \eqref{eq:marginal-hull-root} has the same uniform geometric sum $1+2/(e^{\alpha'}-1)$. The web-tree recursion therefore gives positive majorants $u_p$ with
+\begin{equation}
+    \begin{aligned}
+        \sup_b\sum_{p\, | \,b\in A_p}u_pe^{2a'(p)+2\eta'\ell(p)}&\leq C_*'\tau\;,\\
+        \sup_x\sum_{W\, | \,x\in h_W}u_We^{2a'(W)+2\eta'\ell(W)}&\leq C_*'\tau^2\;.
+    \end{aligned}
+\end{equation}
+The source-only spatial load is also $O(\tau^2)$. Choose $g_0$ last so that $K_2^{s_*}\tau\leq1/2$, $C_*'\tau\leq1/4$ and $C_*'\tau^2\leq\alpha'/4$. The incompatibility sum is then at most $a'(p)/4$. The pinned-tree proof of \eqref{eq:marginal-pinned-bound} yields
+\begin{equation}\label{eq:regional-square-rooted-majorant}
+    \sum_{\Gamma\, | \,j\in J_\Gamma}U(\Gamma)e^{\eta'\ell(\Gamma)}\leq C\tau^2\;,
+\end{equation}
+where $U$ is the absolute Ursell coefficient times the positive object majorants. The factor $2^{|S|}$ for source variables $|t_a|\leq2$ is included in $K_2$. Thus the regional source logarithm exists on that polydisc and vanishes at zero source. Its exponential is the ratio \eqref{eq:regional-square-scalar}, proving nonvanishing.
+
+For the boundary comparison, the periodic resolvent identity is
+\begin{equation}
+    C_{D,T}-(C_T)_{D,D}
+        =C_{D,T}(H_T)_{D,D^c}(C_T)_{D^c,D}\;.
+\end{equation}
+If $u\in D$, $w\in D^c$ and $d_T(u,w)\leq R_H$, put $s=d_T(b,u)+d_T(w,c)$. The periodic triangle inequalities give
+\begin{equation}
+    d_T(b,D^c)+d_T(c,D^c)+d_T(b,c)\leq2s+2R_H\;.
+\end{equation}
+Half the inverse-decay exponent pays these distances; the remaining convolution is bounded by a fixed neighbour count times $\sup_b\sum_u e^{-\mu d_T(b,u)/2}$. Periodic shells have at most the infinite-lattice shell counts, so this sum is uniform even for wrapping or disconnected $D$. Therefore
+\begin{equation}
+    \|C_{D,T}(b,c)-C_T(b,c)\|
+        \leq Ce^{-a(d_T(b,D^c)+d_T(c,D^c)+d_T(b,c))}\;.
+\end{equation}
+
+Interpolate the principal covariances as in \eqref{eq:regional-density-derivative}. Here is explicit control of the two derivative terms. On a carrier $A$ of size $k$, use a common positive edge majorant $B_{bc}=A_0e^{-\mu_0d_T(b,c)}$ and write $h_A=e^{-a d_T(A,D^c)}$. The covariance direction satisfies $\|\mathcal D_A\|\leq Ckh_A$ and $\|\mathcal D(b,c)\|\leq Ch_AB_{bc}$. For forest degrees $d_b$, use radii
+\begin{equation}
+    r_{\{b,c\}}=\frac{\lambda}{32d_bd_cB_{bc}},
+    \qquad r_0=\frac{\lambda}{32Ckh_A}\;.
+\end{equation}
+The forest perturbation has norm at most $\lambda/32$, and the extra centre direction $\mathcal D_A\circ w^F$ has the same bound on its circle, since a positive Schur mask with unit diagonal is contractive. The total is below $\lambda/8$, so the normalised density has the Gaussian majorant \eqref{eq:marginal-density-majorant}. Replacing one edge direction by $E_e(\mathcal D)$ instead uses radius $\lambda/(32d_bd_cCh_AB_{bc})$ and costs $Ch_A$ against the same forest majorant. Summing the centre and edge derivatives costs at most $C(k+|F|+1)^2h_A$. Zero directions give zero derivatives; no covariance entry is divided by. Constant-conjugation invariance survives differentiation. A single marked component therefore retains its quadratic character gain, also when it crosses a corner. The product rule over repeated object occurrences and \eqref{eq:regional-square-rooted-majorant} give the differentiated cluster bound used in the regional proposition, with the same $\tau^2$ gain.
+
+Allocate each source cluster to its marked coarse segments with weight $|J_\Gamma|^{-1}$. A network joins its carrier, stencil edges and contour intervals with length at most $C_{\rm net}\ell(\Gamma)+R_0$. The interval may turn a corner, but its fine-path length is still bounded by $c_h\ell$; anchor it at the source mark in segment $j$, hence within $R_0$ of $K_j$. For $d_j>2R_*+2R_0$, split at $\ell=d_j/(2C_{\rm net})$. Short clusters have their original stencils inside $D$, identical labels and cyclic intervals in both expansions, and carriers at distance at least $d_j/2-R_0$ from $D^c$, whose fixed loss is absorbed in the constant. Their covariance derivative is bounded by the preceding estimate. Long clusters are paid by \eqref{eq:regional-square-rooted-majorant}. Bounded $d_j$ are covered by the same rooted bound after enlarging $C$. This proves
+\begin{equation}\label{eq:regional-square-boundary-comparison}
+    |F_{D,C,T}-F_{C,T}|\leq C\tau^2\sum_{j=0}^{4n-1}e^{-cd_j}\;.
+\end{equation}
+No side-endpoint terms occur because both contours are the same closed square.
+
+For the periodic comparison, the Neumann estimate for the free inverse gives $\|C_\infty(e,f)\|\leq\gamma_L^{-1}e^{-\mu_L\|\ell(e)-\ell(f)\|_\infty}$. Since $d_T(e,f)\leq L\|\ell(e)-\ell(f)\|_\infty+2L$ for fixed lifts, it gives exponential decay in fine units with exponent $\nu=\mu_L/L$. Periodising this free inverse solves the torus inverse equation. For lifted separation $d\leq N_{\min}/4$, summing the image shells gives
+\begin{equation}
+    \|C_T(e,f)-C_\infty(e,f)\|
+        \leq Ce^{-\nu(N_{\min}-d)}
+        \leq Ce^{-\nu N_{\min}/2}e^{-\nu d}\;.
+\end{equation}
+The same density-direction radii apply, with $h_A=e^{-\nu N_{\min}/2}$ and a reduced common decay exponent. A rooted cluster with $C_{\rm net}\ell+R_0<N_{\min}/4$ lifts uniquely. Projection is injective on its network, preserves carrier intersections, and preserves the fixed ordered square traversal list and its cyclic intervals. Distinct square images are farther than $2N_{\min}/3$ under the stated period hypothesis, so all its source marks lift to the chosen square. Thus the short torus and bulk clusters correspond with identical combinatorics; only their covariance marginals differ. The other clusters, including winding ones, are paid by their extent tails. Summing over $4n$ roots gives
+\begin{equation}\label{eq:regional-square-periodic-comparison}
+    |F_{C,T}-F_{C,\infty}(n)|\leq C\tau^2(4n)e^{-c\iota_T}\;.
+\end{equation}
+
+Finally use \eqref{eq:corner-square-extraction-bound}. The straight sum equals $-\delta m^\sigma P(C_n)$ and the four oriented corner logarithms sum to $4\log z_{\mathrm c}^\sigma$, by their definitions. Define
+\begin{equation}
+    E^\circ_{D,C_n,T}=(F_{D,C,T}-F_{C,T})
+        +(F_{C,T}-F_{C,\infty}(n))+E_n^\sigma\;.
+\end{equation}
+Equations~\eqref{eq:regional-square-boundary-comparison}, \eqref{eq:regional-square-periodic-comparison} and \eqref{eq:corner-reference-matching} give the result. Every logarithm is the connected source branch, so the exponential identity has no branch ambiguity. The adjacent-side clusters and straight endpoint deficits remain in the existing corner coefficient.
+\end{proof}
+
+For fixed geometry, $E^\circ_{\xi,C_n}$ depends only on the regional labels and is therefore measurable under the original history sum. Its bound is finite at fixed cutoff. The scalar factorisation consequently leaves the exterior operation, its conditional normalisers and $\mathcal Z_0$ in place. The boundary sum in \eqref{eq:regional-square-error} can be of order $n$; the theorem does not assert that $e^{E^\circ}$ is close to one for a loop running near the integration boundary.
+
+\section{The Insertion Retained after One Step}
+\label{sec:remaining-physical-comparison}
+
+The first step produces a function of the coarse field through \eqref{eq:outgoing-loop}. Its representation below retains the closed flux insertions generated by the block average, together with the other source terms. The scalar factor extracted from the reference integral is
+\begin{equation}\label{eq:extracted-loop-scalar}
+    \kappa_C=e^{-\delta m^\sigma P(C)}
+        \bigl(z_{\mathrm c}^\sigma(g_0,\pi/2)\bigr)^4\;.
+\end{equation}
+We use the same cutoff prescription and the counterclockwise $(e_1,e_2)$ square and its coarse translates, with the period, collar and coupling hypotheses of Proposition~\ref{prop:regional-square-extraction}, throughout this section. The physical conditional cutoff and its flat projection use the same fixed $\sigma$ and threshold $r=\delta_0/g_0$. The scale parameters satisfy \eqref{eq:regional-collar-sizes}. Closeness to the integration boundary remains in $E^\circ_\xi$.
+
+The representation in this section is conditional on the following specification of the unrestricted first step. The global average $M$ must be Borel, agree with \eqref{eq:nonlinear-average} on its regular chart, and be invariant under fine gauges that are the identity at coarse centres. Its bare coarse marginal must have the Haar density represented by CRE (0.1), (1.11)--(1.15). The critical and split configurations must be specified measurably on their admitted determining data. The real changes in CRE (1.14), (1.22) must have specified, jointly Borel inverse branches mapping the principal fluctuation domains bijectively. The formulas below apply to such a realisation. Establishing these properties for one unrestricted realisation, including the split configuration's variational hypotheses, remains a requirement for their physical application.
+
+\subsection{The Conditional Integral}
+
+Within such a realisation, we use the unrestricted transformation of \cite{BalabanCRE} (0.1) and the first-step density identities (1.11)--(1.15), (1.25)--(1.29) as results of that construction, with the averaging choice permitted after (0.1). The outer data $\xi$ consist of the region labels, the coarse field $V$, the exterior fine field $V_0$ and the exterior free fluctuation $A_{\mathrm e}$ in those identities. For the integrations, partition positive fine bonds into $E_\Omega=\{b\in E\, | \,b_-\in\Omega_1\text{ or }b_+\in\Omega_1\}$ and $E\setminus E_\Omega$. This disjoint integration convention assigns crossing bonds to $E_\Omega$ and specifies $V_0$ only on bonds with both endpoints outside $\Omega_1$. Let $E_{\Omega,*}$ be the free bonds remaining after the designated-bond elimination on $\Omega_1$, and let $D\subseteq E_{\Omega,*}$ be the bonds integrated in $\Lambda_1$, with either endpoint convention specified in Section~\ref{sec:regional-identification}. Put $J=E_{\Omega,*}\setminus D$. The variable $a\in\mathfrak g^D$ is integrated and $A_{\mathrm e}\in\mathfrak g^J$ is held fixed. With $i_D$ and $i_J$ denoting extension by zero into $\mathfrak g^{E_{\Omega,*}}$, set $z_\xi(a)=i_Da+i_JA_{\mathrm e}$. Lebesgue measure $\dd a$ is the product measure from the fixed Lie-algebra inner product.
+
+Write $U_1(\xi)$ for the critical configuration of CRE (1.12), in its fixed gauge. Let $\mathsf C_\xi$ be the linear solution map from free fields to fields satisfying the linearised constraints in CRE (1.14)--(1.15), and set $\mathsf H_\xi=\mathsf C_\xi^*\Delta_{1,\xi}\mathsf C_\xi$, with $\Delta_{1,\xi}$ given by CRE (1.16). Let $h_\xi$ and $\widetilde D_\xi$ be its designated-bond right inverse and small analytic correction from CRE (1.14), equivalently the construction following RG1 (2.10). Their domains are the regular real charts specified there. The inverse boundary change $\Psi_\xi$ is CRE (1.22), acting on the free fields in $\mathfrak g^{E_{\Omega,*}}$ and equal to the identity off $S_1^*$. Define
+\begin{equation}\label{eq:retained-reconstruction}
+    \begin{aligned}
+        q_\xi(s)&=s-h_\xi\widetilde D_\xi(s)\;,\\
+        U_\xi(a,b)&=
+            \exp\bigl(iq_\xi(g_0\mathsf C_\xi\Psi_\xi(z_\xi(a)))(b)\bigr)
+                U_1(\xi,b)\;.
+    \end{aligned}
+\end{equation}
+The second formula applies on $E_\Omega$; on $E\setminus E_\Omega$, $U_\xi=V_0$. The map $\mathsf C_\xi$ takes $\mathfrak g^{E_{\Omega,*}}$ into $\mathfrak g^{E_\Omega}$. Its integration domain is specified by the principal fluctuation variables of CRE (1.13). With $\chi_0'(\Omega_1)$ denoting the product of the group tests (1.8) retained in (1.11), define
+\begin{equation}\label{eq:retained-source-domain}
+    \begin{aligned}
+        \mathcal U_\xi&=\bigl\{U\in G^E\, | \,
+            U|_{E\setminus E_\Omega}=V_0,
+            M(U)|_{\Omega_1^{(1)}}=V|_{\Omega_1^{(1)}},
+            \mathcal I_\xi(U)>0\bigr\}\;,\\
+        t_\xi(U)&=\frac{1}{i}\log(UU_1(\xi)^{-1})|_{E_\Omega}\;,\\
+        \mathcal B_\xi&=\bigl\{g_0^{-1}t_\xi(U)|_{E_{\Omega,*}}
+            \, | \,U\in\mathcal U_\xi\bigr\}\;.
+    \end{aligned}
+\end{equation}
+Here $\mathcal I_\xi(U)$ is the nonnegative factor multiplying the group Dirac factors in CRE (1.11), including $\chi_1$, $\zeta$, $\chi_0'$ and the gauge-fixing and action exponential. Thus $\mathcal U_\xi$ is the fibre of that full integration domain, rather than of the starred group tests alone. Admitted data mean the parameter domain of the specified critical and coordinate branches above; all other data have zero contribution. On the admitted principal branch, $t_\xi$ is the logarithm of CRE (1.13). The inverse small branch of the linearising change (1.14) is $z\mapsto q_\xi(g_0\mathsf C_\xi z)$ for $z\in\mathcal B_\xi$. Thus only $g_0\mathsf C_\xi\mathcal B_\xi$ is needed as the domain of $q_\xi$ in this integral.
+
+Let $\Phi_\xi$ be CRE's boundary change from old free variables to new free variables on this admitted branch; its inverse $\Psi_\xi$ is given by (1.22), including the second form specified after (1.23). The source's change-of-variables assertion is used on these branches. Its new-variable domain and the young fibre are
+\begin{equation}\label{eq:retained-change-domain}
+    \operatorname{Dom}\Psi_\xi=\Phi_\xi(\mathcal B_\xi),
+    \qquad \mathcal D_\xi=
+        \bigl\{a\in\mathfrak g^D\, | \,z_\xi(a)\in\Phi_\xi(\mathcal B_\xi)\bigr\}\;.
+\end{equation}
+The real coordinate changes and their inverses are restricted to these images of the principal fluctuation domain; no injectivity on the whole Lie algebra is required. Their transformed indicators are retained in $\Theta_D^\sigma$ and the exterior factors (1.25). Values outside the admitted domains contribute zero.
+
+Let $v_\xi,V_\xi$ be the functions in CRE (1.15)--(1.16): $v_\xi$ contains the Haar and constraint-Jacobian logarithms, and $V_\xi$ contains the remaining Taylor residual of the action and gauge fixing. These are the full functions, before the boundary change. For $z$ in their real domain put
+\begin{equation}\label{eq:retained-prechange-density}
+    p_\xi(z)=\exp\left[
+        -\frac{1}{2}\langle z,\mathsf H_\xi z\rangle
+        +v_\xi(g_0\mathsf C_\xi z)
+        -g_0^{-2}V_\xi(g_0\mathsf C_\xi z)\right]\;.
+\end{equation}
+With $\Theta_D^\sigma(a)=\prod_{b\in D}\mathbf1_{\{|a(b)|_\sigma<r\}}$, the conditional density and integral are
+\begin{equation}\label{eq:retained-positive-kernel}
+    \begin{aligned}
+        \mathcal K_\xi(a)&=
+            \mathbf1_{\mathcal D_\xi}(a)\Theta_D^\sigma(a)
+            p_\xi(\Psi_\xi(z_\xi(a)))
+            |\det D\Psi_\xi(z_\xi(a))|\;,\\
+        \mathcal J_\xi[f]&=\int
+            f(U_\xi(a))\mathcal K_\xi(a)\,\dd a\;.
+    \end{aligned}
+\end{equation}
+The determinant is on the whole free-field space $\mathfrak g^{E_{\Omega,*}}$. Every change of variables uses its absolute real Jacobian. On a real chart connected to the identity where CRE writes its logarithm, the Jacobian is positive, so its exponential agrees with that absolute Jacobian. In particular $\mathcal K_\xi\geq0$. The definition retains $p_\xi\circ\Psi_\xi$ without a truncation of the boundary terms described after CRE (1.24).
+
+CRE's exterior expression is the sum over region labels and integral over $(V_0,A_{\mathrm e})$, with the constraint $\delta(\bar V_0V^{-1})$, the retained region indicators, $\zeta(\Omega_1^c)$, Haar factors and the prefactors of (1.15), including $z^{(0)}$. Its exterior factors are evaluated at their transformed arguments. After splitting the good tests into their $D$ and exterior bond factors, the factors remaining from (1.25) are independent of $a$: the collar argument in \eqref{eq:regional-collar-sizes} separates the bad and changed tests from $D$, and factors of good tests on $D$ are redundant by idempotence. This is also the separation used in CRE (1.26), (1.29). Those exterior factors, including any dependence on $A_{\mathrm e}$, remain in $\mathcal O_V$. With \eqref{eq:retained-positive-kernel}, no boundary interaction or normaliser is discarded.
+
+The maps in these integrals are jointly Borel in their parameters and integration variables. At fixed region labels, the constrained critical equations of CRE (1.12) have a Borel graph in finite-dimensional group charts. CRE's uniqueness statement in its fixed gauge, and the theorem for Borel graphs with singleton sections, give a Borel $U_1$. Data outside its existence domain have zero source weight by the existence assertion following CRE (1.12). The split configuration in CRE (1.21) is the localised map of CRE (2.12)--(2.15), on its prescribed determining data. The notation $M^{\cdot}(W)$ is the level-wise collection $M^j(W)$ of CRE (2.11); at the first step these are $W$ and $M(W)$. Its admitted variational domain and measurable choice are included in the specification above. The value of $\mathbf H_{1,Ax}$ used in (1.22) is obtained from their relative configuration by the small principal logarithm in (1.21), and is Borel. The maps $Q_1^{s*}$ in CRE (1.3) and the averages on these regular data are Borel as well.
+
+The matrix coefficients of $\mathsf C_\xi,h_\xi$ are obtained by inversion of the invertible designated coefficient operators, so they are Borel in the background. The defining equation for $\widetilde D_\xi$ following RG1 (2.10), on each member of a countable regular chart cover, has jointly Borel coefficients and a unique small solution. Applying the same graph theorem to that equation proves joint Borel dependence on background and input. Uniqueness makes these solutions agree on chart overlaps. In CRE (1.22), the cutoff function is fixed and smooth, the BCH remainder is analytic on its stated domain, and the boundary data have just been shown Borel. Hence $\Psi_\xi(z)$ and its Jacobian are jointly Borel and smooth in $z$. The chart domains, and the images of their injective Borel coordinate changes in \eqref{eq:retained-change-domain}, are Borel. The Hessian coefficients, $v_\xi,V_\xi$ and the constraint factor $z^{(0)}$ are Borel by their source formulas and derivatives on these charts. The vacuum exponential and the finite sums defining $\zeta(\Omega_1^c)$ are Borel as well. Together with the indicators, these facts prove joint Borel measurability of $U_\xi(a)$, $\mathcal K_\xi(a)$ and the outer weights. For an empty carrier, its Lie-algebra space is a point with unit measure; empty sums equal zero, and empty products and zero-dimensional determinants equal one. If $\Omega_1$ is empty, set $U_1=U_\xi=V_0$ on every bond.
+
+The exterior group Dirac factors have a kernel interpretation as well. Let $\omega$ be the joint outer measure in CRE (1.15), (1.25), retaining $V$, the region labels, $V_0$ and $A_{\mathrm e}$. It contains exactly the exterior factors specified above. Read its group Dirac factors by first integrating them against the corresponding coarse bond variables, with Haar measure on the remaining coarse variables. This defines a positive, sigma-finite joint measure, rather than a pointwise density on a fibre. Its weighted measure $\bar\eta=\mathcal J_\xi[1]\omega$ is finite, and CRE's unrestricted density identities give its $V$ marginal as $\rho_1(V)\,\dd V$. More explicitly, the operations in CRE (1.1)--(1.25), with a bounded Borel test $h(V)$ retained and with insertion $1$ or $W_\chi$, give
+\begin{equation}\label{eq:retained-outer-measure-identities}
+    \begin{aligned}
+        \int h(V)\rho_1(V)\,\dd V
+            &=\int h(V)\mathcal J_\xi[1]\,\dd\omega(V,\xi)\;,\\
+        \int h(V)N_1(V)\,\dd V
+            &=\int h(V)\mathcal J_\xi[W_\chi(C;\cdot)]\,\dd\omega(V,\xi)\;.
+    \end{aligned}
+\end{equation}
+Taking $h=1$ in the first equality proves finiteness of $\bar\eta$ before defining its conditional kernel. Let $Q_V$ be its regular conditional probability on the outer data. For a nonnegative measurable outer function $F$, the exterior operator means
+\begin{equation}\label{eq:retained-outer-kernel}
+    \mathcal O_V[F]=\rho_1(V)
+        \int_{\{0<\mathcal J_\xi[1]<\infty\}}
+            \frac{F(\xi)}{\mathcal J_\xi[1]}\,\dd Q_V(\xi)\;.
+\end{equation}
+This defines its positive kernel for almost every $V$. It gives $\omega$ back on finite-positive-mass outer data: multiplying by $\mathcal J_\xi[1]$ recovers $\bar\eta$, so every exterior weight is retained. Equation~\eqref{eq:retained-outer-kernel} is the definition of $\mathcal O_V$ throughout this section; it agrees with the exterior expression on branch-supported integrands. Set $\mathcal O_V=0$ when $\rho_1=0$ and on the Haar-null set where $\rho_1=\infty$. Extend it linearly to complex $F$ whenever $\mathcal O_V[|F|]<\infty$. In particular $\mathcal O_V[\mathcal J_\xi[1]]=\rho_1(V)$ almost everywhere. The density interpretation and changes of variables are those of the unrestricted CRE construction.
+
+Only outer data with $0<\mathcal J_\xi[1]<\infty$ need a conditional quotient; call these branches. Zero-mass data contribute nothing. Data with infinite conditional mass are null for $\omega$, and hence for $\mathcal O_V$ at almost every $V$, since Tonelli and \eqref{eq:one-step-physical-partition} give total mass $\mathcal Z_0<\infty$. All branch contractions below are set to zero off these branches. This convention loses no physical mass and asserts no pointwise finiteness at exceptional outer data.
+
+Coverage uses the fixed geometric stencils $\Lambda_b$ of Appendix~\ref{sec:perimeter-attempt}: $\Lambda_b=\{b\}$ for a free bond, and $\Lambda_{b_0(c)}=\mathcal S_c\cap E_*$ for a designated bond, where $\mathcal S_c$ contains the bonds with both endpoints in the two endpoint blocks of $c$. Let $A_{\mathrm{cov}}$ consist of the branches on which every fine contour bond lies in $\Omega_1$ and $\Lambda_b\subseteq D$ for every such bond. The geometric condition depends only on region labels, and is precisely the coverage used in Proposition~\ref{prop:regional-square-extraction}. The period and coupling conditions are fixed throughout this section, and \eqref{eq:regional-collar-sizes} supplies the collar condition for every compatible set of region labels. Proposition~\ref{prop:regional-square-extraction} consequently defines $E^\circ_\xi$ on $A_{\mathrm{cov}}$.
+
+\subsection{The Closed Flux Insertions}
+
+Let $\bar C=(c_1,\ldots,c_m)$ be the oriented coarse square, with $m=4n$, and let $C$ be the concatenation of its straight fine paths. Fix a covered conditional history $\xi$ and write its constrained background as $U_1=U_1(\xi)$. For each positive coarse bond traversed by $\bar C$, the first and last fine bonds of its straight path lie inside its initial and final blocks, respectively, since $L\geq3$. Coverage puts these bonds in $\Omega_1$. As $\Omega_1$ is a union of blocks, both endpoint blocks lie there. In particular $c$ is a bond of the coarse region $\Omega_1^{(1)}$, so \cite[(1.12)]{BalabanCRE} imposes $M(U_1,c)=V(c)$. Here a bond of a region has at least one endpoint in that region, as in \cite[Introduction]{BalabanVAR}; both endpoints belong in this case. Reversed traversals use the constraint on the underlying positive bond. All relative logarithms are in the regular chart used in \eqref{eq:nonlinear-average}.
+
+For a positive coarse bond $c$, define $Y_c$ by the first formula below. The averaging constraint and \eqref{eq:nonlinear-average} then give the second:
+\begin{equation}\label{eq:retained-flux}
+    Y_c(\xi)=e^{-i\beta_c(U_1)},
+    \qquad P_c(U_1)=Y_c(\xi)V(c)\;.
+\end{equation}
+Thus $Y_c$ depends on the closed relative contours inside the two endpoint blocks of $c$. Set $V(c^{-1})=V(c)^{-1}$. For a reversed traversal use
+\begin{equation}\label{eq:retained-flux-reversal}
+    Y_{c^{-1}}(\xi)=V(c)^{-1}Y_c(\xi)^{-1}V(c),
+    \qquad P_{c^{-1}}(U_1)=Y_{c^{-1}}(\xi)V(c)^{-1}\;.
+\end{equation}
+The second identity follows by inverting $P_c=Y_cV(c)$. The factor is therefore based at the initial vertex of the reversed traversal as well.
+
+Define the closed contraction
+\begin{equation}\label{eq:retained-loop-insertion}
+    \mathcal L_\xi(C;V)
+        =\chi\left(Y_{c_1}(\xi)V(c_1)
+            \cdots Y_{c_m}(\xi)V(c_m)\right)
+        =W_\chi(C;U_1(\xi))\;.
+\end{equation}
+This equality follows by substituting \eqref{eq:retained-flux} and \eqref{eq:retained-flux-reversal} in the ordered fine holonomy. Under a site gauge $u$, the closed logarithms in \eqref{eq:nonlinear-average} and their exponentials are conjugated at $c_-$. Consequently
+\begin{equation}
+    Y_{c_i}\longmapsto u(c_{i,-})Y_{c_i}u(c_{i,-})^{-1},
+    \qquad V(c_i)\longmapsto
+        u(c_{i,-})V(c_i)u(c_{i,+})^{-1}\;.
+\end{equation}
+The intermediate gauge factors cancel in the ordered product and its character is invariant. All subsequent insertions in this section are closed contractions. No separate activity norm is assigned to a factor $Y_c$ or to an open transport. The dependence on $\xi$ is retained: different histories at the same $V$ can have different constrained backgrounds and different insertions.
+
+\subsection{The Numerator Carried to the Next Transformation}
+
+The outer operation and conditional integral just defined give
+\begin{equation}\label{eq:retained-conditional-law}
+    \rho_1(V)=\mathcal O_V[\mathcal J_\xi[1]],
+    \qquad N_1(V)=\mathcal O_V[\mathcal J_\xi[W_\chi(C;\cdot)]]\;.
+\end{equation}
+
+The identities in \eqref{eq:retained-conditional-law} are identities of Haar densities and hold almost everywhere in $V$. Let $\mathfrak M$ be the finite positive joint measure on $G^{E_1}\times G^E$ given by CRE's full blocking kernel (0.1) with bare weight $\rho_0(U)\,\dd U$. Its $V$ marginal is the source density $\rho_1(V)\,\dd V$. Disintegration on these standard Borel spaces supplies conditional probabilities $\nu_V$ on fine fields. For bounded Borel functions $f$ on $G^E$ and $h$ on $G^{E_1}$,
+\begin{equation}\label{eq:retained-disintegration}
+    \int h(V)f(U)\,\dd\mathfrak M(V,U)
+        =\int h(V)\rho_1(V)
+            \left(\int f(U)\,\dd\nu_V(U)\right)\,\dd V\;.
+\end{equation}
+The unrestricted blocking operator and its density representation are used here as inputs from CRE, including the measurability of its full averaging prescription and its invariance under fine gauges equal to the identity at coarse centres. In \eqref{eq:nonlinear-average} we use only its regular-chart formula.
+
+For $f=1$ or $W_\chi(C;\cdot)$, apply the operations giving \cite[(1.5)--(1.15), (1.18)--(1.25)]{BalabanCRE} with $h(V)$ retained. The partitions are pointwise decompositions of unity. The Faddeev--Popov step (1.5)--(1.6) is used for the same full operator as in CRE; the closed Wilson character is invariant under its fine gauges. The changes of variables pull that character back to $W_\chi(C;U_\xi(a))$, and $h(V)$ stays fixed. Cutoff factors are removed only where CRE states they equal one, and the boundary change is retained as \eqref{eq:retained-positive-kernel}. Thus the operations supply \eqref{eq:retained-conditional-law} against every bounded Borel $h$. Equality of these finite measures, together with \eqref{eq:retained-outer-kernel}, gives the displayed almost-everywhere density identities.
+
+Nonnegativity of \eqref{eq:retained-positive-kernel} gives $|\mathcal J_\xi[W_\chi]|\leq\mathcal J_\xi[1]$. With the positive outer factors this implies $|N_1|\leq\rho_1$ for the resulting finite density versions. The exceptional set where $\rho_1=\infty$ is Haar-null by \eqref{eq:one-step-physical-partition}; set both densities to zero there. Then $N_1=0$ wherever $\rho_1=0$, and the ratios below are extended by zero there. The density identities are asserted off that common null set.
+
+For the covered branches $A_{\mathrm{cov}}$ defined above, set
+\begin{equation}\label{eq:retained-leading-source}
+    \mathcal L_\xi^{(0)}(C;V)=
+    \begin{cases}
+        \kappa_C e^{E^\circ_\xi}\mathcal L_\xi(C;V),
+            &\xi\in A_{\mathrm{cov}},\\
+        0,&\xi\notin A_{\mathrm{cov}}.
+    \end{cases}
+\end{equation}
+The scalar theorem identifies its coefficient with $S^\circ_{\xi,C}$ on covered histories. Its period and coupling hypotheses are fixed for the square; its boundary-distance terms allow arbitrary covered regional labels. The error $E^\circ_\xi$ depends only on those discrete labels; the background and branch indicator are Borel by the preceding construction, so this leading term is measurable. The other source terms are retained as the following conditional integral, with the same denominator:
+\begin{equation}\label{eq:retained-source-correction}
+    \mathcal H_\xi(C;V)=
+        \frac{1}{\mathcal J_\xi[1]}
+        \int\left[W_\chi(C;U_\xi(a))-\mathcal L_\xi^{(0)}(C;V)\right]
+            \mathcal K_\xi(a)\,\dd a\;.
+\end{equation}
+This definition retains the difference between the conditional Wilson integral and $\mathcal L_\xi^{(0)}$, with the boundary dependence of \eqref{eq:retained-positive-kernel} unchanged. On an uncovered branch, $\mathcal L_\xi^{(0)}=0$ and it is the normalised conditional Wilson integral. No bound on $\mathcal H_\xi$ is asserted here.
+
+For this fixed square, \eqref{eq:regional-square-error} and $|\chi|\leq1$ give $|\mathcal L_\xi^{(0)}|\leq B_C$, where $B_C=|\kappa_C|\exp(C\tau^2(9n+1))<\infty$. Consequently $\mathcal J_\xi[1]|\mathcal H_\xi|\leq(1+B_C)\mathcal J_\xi[1]$. The numerator terms below are therefore integrable for the complex extension of \eqref{eq:retained-outer-kernel} at almost every $V$ with finite $\rho_1(V)$.
+
+Substitution in \eqref{eq:retained-conditional-law} gives the following first-step identity for almost every $V$:
+\begin{equation}\label{eq:retained-first-step-numerator}
+    N_1(V)=\mathcal O_V\left[
+        \mathcal J_\xi[1]
+        \bigl(\mathcal L_\xi^{(0)}(C;V)+\mathcal H_\xi(C;V)\bigr)\right]\;.
+\end{equation}
+More explicitly, let $\nu_\xi=(U_\xi)_*(\mathcal K_\xi(a)\,\dd a/\mathcal J_\xi[1])$ be the conditional probability on fine fields. Under a site gauge $u$, use its pushforward $(U\mapsto U^u)_*\nu_\xi$ together with $U_1^u$ and $V^u$. Both closed characters in \eqref{eq:retained-source-correction} are invariant, $E^\circ_\xi$ depends only on the unchanged region labels, and change of variables preserves the normalised conditional integral. This is the gauge-invariant meaning of each branch contraction; an axial-gauge representative and its conditional measure are transported together. The outer operation retains the corresponding history weights. The physical denominator is still $\mathcal Z_0=\int\rho_1(V)\,\dd V$.
+
+For almost every $V$ with $0<\rho_1(V)<\infty$, the scalar-extracted outgoing observable is
+\begin{equation}\label{eq:retained-outgoing-observable}
+    \widehat W_1(C;V)=\frac{N_1(V)}{\kappa_C\rho_1(V)}
+        =\frac{\mathcal O_V\left[\mathcal J_\xi[1]
+            \bigl(\kappa_C^{-1}\mathcal L_\xi^{(0)}(C;V)
+                +\kappa_C^{-1}\mathcal H_\xi(C;V)\bigr)\right]}
+            {\mathcal O_V[\mathcal J_\xi[1]]}\;.
+\end{equation}
+The factor $\kappa_C$ is nonzero: \eqref{eq:marginal-square-mass} defines its finite perimeter exponent and \eqref{eq:corner-square-factor} writes $z_{\mathrm c}$ as the exponential of the convergent corner sum. The pair of numerator $\kappa_C^{-1}N_1$ and density $\rho_1$ is the input to the next blocking transformation. Equation~\eqref{eq:retained-loop-insertion} displays its leading closed insertion; \eqref{eq:retained-source-correction} specifies the other source terms carried with it. Iterating this representation requires local estimates for their transformed activities, including correlations between attachments and their boundary dependence. The first step does not require replacing $\mathcal L_\xi(C;V)$ by $W_\chi(\bar C;V)$.
+
+\appendix
+\section{The Flat Covariance}\label{app:flat-covariance}
+
+The bulk coefficient uses the flat fluctuation operator on the infinite lattice with the same periodic block grid and constraint extension. We first obtain a uniform lower bound on compatible finite tori, then construct that operator and compare its inverse with the finite-torus inverses. This is a quadratic first-step calculation at the flat background.
+
+The spatial dimension is four throughout this comparison. For a site field $\lambda$, set $(D\lambda)(x,x')=\lambda(x')-\lambda(x)$. For an oriented plaquette $p$, set $(\operatorname{curl}a)(p)=a(\partial p)$, where $a(\gamma)$ is the signed sum along an oriented path $\gamma$. All squared norms in this comparison sum the Lie-algebra inner product over positive bonds, plaquettes or sites of the indicated carrier. Define the mean path sum by
+\begin{equation}\label{eq:covariance-mean-path}
+    (\Phi a)(y,x)=\frac{1}{|\mathcal G(y,x)|}
+        \sum_{\gamma\in\mathcal G(y,x)}a(\gamma)\;.
+\end{equation}
+RG1 (0.8) and (2.5) identify $G^{(2)}(a)=\|\Phi a\|^2$. Differentiating RG1 (0.4), with $x'=x+Le_\mu$ for $c=(y,y+Le_\mu)$, gives
+\begin{equation}\label{eq:covariance-two-averages}
+    \begin{aligned}
+        (Q_1a)(c)&=L^{-5}\sum_{x\in\mathcal B_y}a([x,x'])\;,\\
+        (Qa)(c)&=(Q_1a)(c)
+            +L^{-5}\sum_{x\in\mathcal B_y}
+                ((\Phi a)(y,x)-(\Phi a)(y+Le_\mu,x'))\;.
+    \end{aligned}
+\end{equation}
+The operator $Q_1$ is the straight-path average in PRT2 (2.125) \cite{BalabanPRT2}; it is not identified with $Q$. Telescoping these paths gives $Q(D\lambda)(c)=(\lambda(c_+)-\lambda(c_-))/L$.
+
+For each block choose its lower corner $o_y=y-\frac{L-1}{2}\sum_{\mu=1}^4 e_\mu$. Let $\kappa_{y,x}$ traverse the coordinate displacements from $o_y$ to $x$ in the order $1,\ldots,4$. The union of these paths is a spanning tree. Define
+\begin{equation}\label{eq:covariance-tree-gauge}
+    \lambda(x)=a(\kappa_{y,x})-a(\kappa_{y,y}),
+    \qquad b=a-D\lambda,
+    \qquad E(y,x)=(\Phi a)(y,x)-\lambda(x)\;.
+\end{equation}
+The block partition makes $\lambda$ a periodic site field, and $\lambda(y)=0$. Every tree bond of $b$ vanishes. Moreover $Qb=Qa$ and $\operatorname{curl}b=\operatorname{curl}a$.
+
+The Lie-algebra element $E(y,x)$ is a mean of the signed sums of $a$ around the closed walks obtained by adjoining a mean path from $y$ to $x$ to the reverse tree path. Each walk lies inside its block and has length at most $12(L-1)$. To fill it, commute adjacent steps in different directions and cancel opposite steps in each direction. Every commutation adds one unit plaquette. It remains inside the block, because exchanging two different directions preserves the intermediate coordinate ranges. Sorting the directions takes at most the square of the walk length commutations. Thus a filling has integer plaquette coefficients with total absolute sum at most $J_L=144(L-1)^2$. Cauchy--Schwarz and averaging give
+\begin{equation}\label{eq:covariance-filling-bound}
+    \|E\|^2\leq K_L\|\operatorname{curl}a\|^2,
+    \qquad K_L=L^4J_L^2\;.
+\end{equation}
+There are $L^4$ site tests per block and the interior plaquettes of different blocks are disjoint, so this constant is independent of their number. Also $\|\lambda\|^2\leq 2\|\Phi a\|^2+2\|E\|^2$ and $\|D\lambda\|^2\leq 16\|\lambda\|^2$.
+
+For $Qa=0$, equation \eqref{eq:covariance-two-averages} applied to $b$ has $\Phi b=E$. Jensen's inequality and the eight incidences of a block with coarse bonds imply
+\begin{equation}\label{eq:covariance-constraint-error}
+    \|Q_1b\|^2\leq 16L^{-6}\|E\|^2\;.
+\end{equation}
+For the block-tree gauge, the following periodic bound holds with $A_L=384L^5$:
+\begin{equation}\label{eq:covariance-hard-bound}
+    \|b\|^2\leq A_L
+        (\|\operatorname{curl}b\|^2+L^2\|Q_1b\|^2)\;.
+\end{equation}
+For the proof, the coordinate permutation $R(x_1,x_2,x_3,x_4)=(x_4,x_3,x_2,x_1)$ reverses the block-tree order. Its pushforward on positive bonds is $(R_*b)(Rx,Rx+e_{5-\mu})=b(x,x+e_\mu)$. It preserves the bond and curl norms, and \eqref{eq:covariance-two-averages} gives $(Q_1R_*b)(Rc)=(Q_1b)(c)$. Thus it suffices to prove the same bound for the reversed order $4,\ldots,1$, after translating a block corner to the origin. The inner product remains the fixed $\tr_N$ inner product throughout.
+
+\paragraph{Direct face estimates in the positive-bond norm.}
+The fine lattice has $N_\mu=LK_\mu$ sites in direction $\mu$, with odd $L\geq3$ and $K_\mu\geq3$. The preceding axis reversal permutes the periods to $(N_4,N_3,N_2,N_1)$ and reduces the proof to the tree order $4,\ldots,1$. Its inverse restores the original order at the end. A local calculation uses the translated block $B_0=\{0,\ldots,L-1\}^4$. All norms and sums below count positive bond or plaquette labels once, with the fixed $\mathfrak g$ inner product.
+
+For a block $B$, let $\mathcal E_B^+$ be its positive fine bonds with both endpoints in $B$, and let $\mathcal P_B^+$ be its positive plaquettes with all vertices in $B$. For a boundary face $\Sigma\subset B$, let $\mathcal E_\Sigma^+$ be its positive fine bonds with both endpoints in $\Sigma$. Define
+\begin{equation}\label{eq:direct-block-face-energies}
+    I_B=\sum_{r\in \mathcal E_B^+}\|b(r)\|_{\mathfrak g}^2,
+    \qquad
+    T_\Sigma=\sum_{r\in \mathcal E_\Sigma^+}\|b(r)\|_{\mathfrak g}^2,
+    \qquad
+    F_B=\sum_{p\in \mathcal P_B^+}
+        \|(\operatorname{curl}b)(p)\|_{\mathfrak g}^2\;.
+\end{equation}
+These are scalar quadratic forms in the existing tree-gauged field. For the flat comparison, a linear gauge change $a\mapsto a+D\omega$ preserving its coarse average has constant values $\omega(y)$ on the connected coarse lattice. Equation \eqref{eq:covariance-tree-gauge} then leaves $b$ unchanged. Constant colour conjugation sends $b$ to $\operatorname{Ad}_g b$ and preserves every inner product below. Only the flat reference covariance is estimated here.
+
+\paragraph{The block-face trace bound.}
+Write $b_\nu(x)=b(x,x+e_\nu)$ for an internal positive bond of $B_0$, so $x_\nu\leq L-2$. The source tree condition makes $b_\nu(x)=0$ whenever $x_1=\cdots=x_{\nu-1}=0$; in particular $b_1=0$. For $k<\nu$ and integers $0\leq t<x_k$, define
+\begin{equation}\label{eq:direct-telescoping-point}
+    u^{(k)}(x,t)=(0,\ldots,0,t,x_{k+1},\ldots,x_4)\;.
+\end{equation}
+Here the $t$ is the $k$th component. Let $F_{k\nu}(u)$ be the curl on the positive $(k,\nu)$ plaquette based at $u$. On the plane $u_1=\cdots=u_{k-1}=0$, both $k$-direction sides of that plaquette vanish by the tree condition. Successive telescoping therefore gives the identity used before PRT2 (2.123) \cite{BalabanPRT2}:
+\begin{equation}\label{eq:direct-tree-telescoping}
+    b_\nu(x)=
+        \sum_{k=1}^{\nu-1}\sum_{t=0}^{x_k-1}
+            F_{k\nu}(u^{(k)}(x,t))\;.
+\end{equation}
+Every displayed plaquette lies inside $B_0$. The number of terms is at most $3(L-1)$.
+
+Fix a face $x_\mu=\alpha$, where $\alpha\in \{0,L-1\}$, and a tangential component $\nu\ne \mu$. For a fixed $(k,\nu)$ plaquette in \eqref{eq:direct-tree-telescoping}, its multiplicity in the face sum is bounded by
+\begin{equation}\label{eq:direct-face-multiplicities}
+    \begin{array}{c|c}
+        \mu<k & L^{k-2}\,L\leq L^2\\
+        \mu=k & L^{k-1}\leq L^2\\
+        \mu>k,\ \mu\ne \nu & L^{k-1}\,L\leq L^2
+    \end{array}\;.
+\end{equation}
+In the first row, one of the $k-1$ otherwise free earlier components is fixed by the face. In the second row, $x_k$ is fixed, so a given $t$ occurs at most once. In the third row, the two distinct indices $\mu,\nu$ exceed $k$, hence $k\leq 2$. In all rows, later components are fixed by the plaquette label. Without the face restriction the multiplicity is at most $L^{k-1}L\leq L^3$. For different $\nu$, the plaquette pairs $(k,\nu)$ are disjoint. Cauchy--Schwarz in \eqref{eq:direct-tree-telescoping}, followed by these counts, proves
+\begin{equation}\label{eq:direct-block-face-bound}
+    I_B\leq 3(L-1)L^3F_B\leq 4L^4F_B,
+    \qquad
+    T_\Sigma\leq 3(L-1)L^2F_B\leq 4L^3F_B\;.
+\end{equation}
+The first estimate is the positive-label version of PRT2 (2.123). The second is the required face restriction of its telescoping calculation.
+
+\paragraph{The interface Poincare estimate.}
+Let $F=\{0,\ldots,L-1\}^3$ and let $\mathcal E_F^+$ be its positive nearest-neighbour edges. The Neumann graph Laplacian $\mathcal L_F \colon \mathfrak g^F \to \mathfrak g^F$ acts componentwise. For $s\in F$, it is given by
+\begin{equation}\label{eq:direct-face-laplacian}
+    (\mathcal L_Fv)(s)=
+        \sum_{\substack{s'\in F\\ |s'-s|_1=1}}
+            (v(s)-v(s'))\;.
+\end{equation}
+It has quadratic form $\sum_{(s,s')\in \mathcal E_F^+}\|v(s')-v(s)\|^2$. For $m\in \{0,\ldots,L-1\}^3$, its real scalar eigenbasis and eigenvalues are
+\begin{equation}\label{eq:direct-face-spectrum}
+    v_m(s)=\prod_{i=1}^3
+        \cos\left(\frac{\pi m_i(s_i+1/2)}{L}\right),
+    \qquad
+    \lambda_m=4\sum_{i=1}^3
+        \sin^2\left(\frac{\pi m_i}{2L}\right)\;.
+\end{equation}
+The one-dimensional cosine identity verifies the eigenvalue at interior and endpoint vertices; finite cosine orthogonality gives a basis. Only $m=0$ is constant. Since $\sin t\geq 2t/\pi$ for $0\leq t\leq \pi/2$, every nonzero eigenvalue is at least $4/L^2$. Apply this to each orthonormal colour component. For $\bar v=L^{-3}\sum_{s\in F}v(s)$, it follows that
+\begin{equation}\label{eq:direct-face-poincare}
+    \sum_{s\in F}\|v(s)-\bar v\|^2
+        \leq \frac{L^2}{4}
+            \sum_{(s,s')\in \mathcal E_F^+}
+                \|v(s')-v(s)\|^2\;.
+\end{equation}
+
+\paragraph{Crossing bonds and the exact average.}
+For a positive coarse bond $c$ in direction $\mu$, write its two endpoint blocks as $B_-=o+\{0,\ldots,L-1\}^4$ and $B_+=B_-+Le_\mu$. The transverse label set is $F_c=\{0,\ldots,L-1\}^{\{\nu\ne \mu\}}$, identified with $F$ by increasing transverse index. In that label set, $e_\nu$ denotes its transverse coordinate unit vector. For $s\in F_c$, put
+\begin{equation}\label{eq:direct-interface-data}
+    x_c(s)=o+(L-1)e_\mu+\sum_{\nu\ne \mu}s_\nu e_\nu,
+    \qquad
+    t_c(s)=b(x_c(s),x_c(s)+e_\mu),
+    \qquad
+    J_c=\sum_{s\in F_c}\|t_c(s)\|^2\;.
+\end{equation}
+Let $\Sigma_-$ and $\Sigma_+$ be the facing boundary faces in $B_-$ and $B_+$. For $\nu\ne \mu$ and $s,s+e_\nu\in F_c$, the plaquette based at $x_c(s)$ has curl
+\begin{equation}\label{eq:direct-interface-curl}
+    t_c(s)-t_c(s+e_\nu)
+        +b_\nu(x_c(s)+e_\mu)-b_\nu(x_c(s))\;.
+\end{equation}
+For $\nu<\mu$ its sign is opposite to the positive plaquette convention; its squared norm is unchanged. Let $F_c^{\mathrm{cr}}$ be the sum of these squared curls, each transverse edge once. The inequality $\|u+v+w\|^2\leq 3(\|u\|^2+\|v\|^2+\|w\|^2)$ gives
+\begin{equation}\label{eq:direct-interface-gradient}
+    \sum_{\nu\ne \mu}
+        \sum_{\substack{s\in F_c\\s+e_\nu\in F_c}}
+            \|t_c(s+e_\nu)-t_c(s)\|^2
+        \leq 3(F_c^{\mathrm{cr}}+T_{\Sigma_-}+T_{\Sigma_+})\;.
+\end{equation}
+
+Define $I_{B,\mu}$ as the part of $I_B$ in direction $\mu$, and set $\bar t_c=L^{-3}\sum_{s\in F_c}t_c(s)$. The straight-path formula \eqref{eq:covariance-two-averages} has the exact decomposition
+\begin{equation}\label{eq:direct-interface-average}
+    \begin{aligned}
+        (Q_1b)(c)&=L^{-1}\bar t_c+q_c\;,\\
+        q_c&=L^{-5}\sum_{s\in F_c}
+                \sum_{i=0}^{L-2}(i+1)
+                    b_\mu\left(o+ie_\mu+
+                        \sum_{\nu\ne \mu}s_\nu e_\nu\right)\\
+            &\quad+L^{-5}\sum_{s\in F_c}\sum_{j=0}^{L-2}(L-1-j)
+                    b_\mu\left(o+(L+j)e_\mu+
+                        \sum_{\nu\ne \mu}s_\nu e_\nu\right)
+            \;.
+    \end{aligned}
+\end{equation}
+Indeed, an internal lower-block bond at position $i$ belongs to $i+1$ starting paths, and an internal upper-block bond at position $j$ belongs to $L-1-j$ paths. Each crossing bond belongs to $L$ paths. This is the positive-label content of PRT2 (2.125). There are at most $2L^4$ internal bonds in this sum, and every coefficient is at most $L^{-4}$. Cauchy--Schwarz therefore yields
+\begin{equation}\label{eq:direct-interface-mean}
+    \|q_c\|^2\leq 2L^{-4}(I_{B_-,\mu}+I_{B_+,\mu}),
+    \qquad
+    L^3\|\bar t_c\|^2
+        \leq 2L^5\|(Q_1b)(c)\|^2
+            +4L(I_{B_-,\mu}+I_{B_+,\mu})\;.
+\end{equation}
+Combining the exact mean/variance decomposition of $J_c$ with \eqref{eq:direct-face-poincare}, \eqref{eq:direct-interface-gradient} and \eqref{eq:direct-interface-mean} gives
+\begin{equation}\label{eq:direct-interface-bound}
+    J_c\leq \frac{3L^2}{4}
+        (F_c^{\mathrm{cr}}+T_{\Sigma_-}+T_{\Sigma_+})
+        +2L^5\|(Q_1b)(c)\|^2
+        +4L(I_{B_-,\mu}+I_{B_+,\mu})\;.
+\end{equation}
+
+\paragraph{The periodic sum and its payments.}
+All sums over $c$ run over the positive coarse bonds $E_1$, and $\mu(c)$ is the direction of $c$. Let $\mathscr I=\sum_B I_B$, $\mathscr F=\|\operatorname{curl}b\|^2$ and $\mathscr Q=\|Q_1b\|^2$. Every positive fine bond is either internal to exactly one block or crosses exactly one positive coarse interface, so $\|b\|^2=\mathscr I+\sum_cJ_c$. Every plaquette counted by $F_c^{\mathrm{cr}}$ crosses only the $\mu$-interface: its transverse edge remains inside the face. It is therefore counted for at most one $c$. Plaquettes crossing two coarse interfaces are not needed. Each block has eight incident faces, and an internal $\mu$-bond enters the last term of \eqref{eq:direct-interface-bound} only for the incoming and outgoing $\mu$-interfaces. Consequently,
+\begin{equation}\label{eq:direct-interface-incidences}
+    \begin{aligned}
+        \mathscr I&\leq 4L^4\mathscr F\;,\\
+        \sum_cF_c^{\mathrm{cr}}&\leq \mathscr F\;,\\
+        \sum_c(T_{\Sigma_-}+T_{\Sigma_+})&\leq 32L^3\mathscr F\;,\\
+        \sum_{c \in E_1}
+            (I_{B_-,\mu(c)}+I_{B_+,\mu(c)})&=2\mathscr I\;.
+    \end{aligned}
+\end{equation}
+Thus summing \eqref{eq:direct-interface-bound} gives the explicit payment
+\begin{equation}\label{eq:direct-hard-bound-payment}
+    \begin{aligned}
+        \|b\|^2
+        &\leq (1+8L)\mathscr I
+            +\frac{3L^2}{4}\mathscr F
+            +24L^5\mathscr F+2L^5\mathscr Q\\
+        &\leq \left(4L^4+56L^5+\frac{3L^2}{4}\right)\mathscr F
+            +2L^5\mathscr Q\\
+        &\leq 384L^5(\mathscr F+L^2\mathscr Q)\;.
+    \end{aligned}
+\end{equation}
+The last inequality uses $L\geq 3$; its coefficients are bounded by $61L^5$ and $2L^5$, respectively. This proves \eqref{eq:covariance-hard-bound}.
+
+Combining the proved bound \eqref{eq:covariance-hard-bound} with the constraint-error bound gives $\|b\|^2\leq A_L(1+16L^{-4}K_L)\|\operatorname{curl}a\|^2$. Since $a=b+D\lambda$, the bound $\|a\|^2\leq 2\|b\|^2+2\|D\lambda\|^2$ proves, for $Qa=0$,
+\begin{equation}\label{eq:flat-coercivity}
+    \|a\|_2^2\leq C_L
+        \bigl(\|\operatorname{curl}a\|_2^2+G^{(2)}(a)\bigr)\;.
+\end{equation}
+An explicit admissible constant is
+\begin{equation}\label{eq:covariance-coercivity-constant}
+    C_L=\max(64,\,2A_L(1+16L^{-4}K_L)+64K_L)\;.
+\end{equation}
+At the flat background, differentiating the original action and exponential gauge functional in \eqref{eq:action-primitive} gives $\langle a,\Delta_1a\rangle=\|\operatorname{curl}a\|^2+\|\Phi a\|^2$. Substituting $a=\mathsf C B$ in \eqref{eq:flat-coercivity} uses $Q\mathsf C B=0$ and $\|\mathsf C B\|\geq\|B\|$, because the free bonds are unchanged. Consequently the free Hessian satisfies
+\begin{equation}\label{eq:covariance-uniform-gap}
+    \mathsf H\geq\gamma_L I,
+    \qquad \gamma_L=C_L^{-1}\;.
+\end{equation}
+\paragraph{Construction on the infinite lattice.}
+Let $E_\infty=\mathbb Z^4\times\{1,2,3,4\}$ denote positive fine bonds, with $(x,\mu)$ representing $(x,x+e_\mu)$. The coarse centres are $L\mathbb Z^4$, with the centred blocks and path families specified above. Remove the designated bonds to obtain $E_{*,\infty}$. The square-summable field spaces use the same real Lie-algebra inner product as the finite-torus calculation. Initially on finitely supported fields, define $\Phi_\infty$ and $Q_\infty$ by \eqref{eq:covariance-mean-path}--\eqref{eq:covariance-two-averages}, and $\mathsf C_\infty$ by \eqref{eq:constraint-extension}. The designated coefficient is $Q_{0,\infty}=L^{-4}I$, so the inverse in that definition is fibrewise. Put
+\begin{equation}\label{eq:bulk-operator-definition}
+    \Delta_\infty=\operatorname{curl}^*\operatorname{curl}
+        +\Phi_\infty^*\Phi_\infty,
+    \qquad
+    \mathsf H_\infty=\mathsf C_\infty^*\Delta_\infty\mathsf C_\infty\;.
+\end{equation}
+The coefficient $Q_{0,\infty}$ can be checked directly in \eqref{eq:covariance-two-averages}. The within-block paths entering $\Phi$ contain no designated bond. For $b_0(c)$, precisely $L$ of the translated straight paths in the sum for $Q_1(c)$ traverse that bond: their transverse coordinates equal those of the coarse centres, and their longitudinal initial positions range over the $L$ sites of the block. No translated path for another coarse bond contains it. Hence its coefficient is $L^{-5}L=L^{-4}$ and all off-diagonal coefficients vanish.
+
+The action normalisation also agrees with the finite-torus Hessian. At the identity, the first plaquette phase is $\operatorname{curl}a$ and the first mean-transport phase is $\Phi a$. The mixed second derivative of $1-\operatorname{Re}\tr_N e^{i(sX+tY)}$ at zero is $\tr_N(XY)$, the prescribed real inner product. The terms from second derivatives of the phases multiply the zero first derivative of this class function. Summing over the plaquettes and mean transports gives $\Delta_1=\operatorname{curl}^*\operatorname{curl}+\Phi^*\Phi$ with the same normalisation on every torus.
+
+Each map has finite range, bounded coefficients and finitely many entry types modulo $L\mathbb Z^4$. Its row and column absolute sums are bounded, so it extends uniquely to a bounded operator on its square-summable carrier. In particular $\mathsf H_\infty$ is bounded and self-adjoint on all of $\ell^2(E_{*,\infty};\mathfrak g)$.
+
+For every finitely supported $B$, the support of $\mathsf C_\infty B$ and all action terms meeting that latter support embed without wraparound in a sufficiently large compatible torus. Their quadratic form and norm are unchanged. Equation~\eqref{eq:covariance-uniform-gap} therefore applies to this same field. Density of finitely supported fields gives
+\begin{equation}\label{eq:bulk-uniform-gap}
+    \gamma_L I\leq \mathsf H_\infty\leq h_L I,
+    \qquad
+    h_L=\max_{e\in E_{*,\infty}/L\mathbb Z^4}
+        \sum_{f\in E_{*,\infty}}\|\mathsf H_\infty(e,f)\|\;.
+\end{equation}
+The maximum uses representatives of the finitely many free-bond types. Symmetry gives the same column bound. Thus $h_L$ is finite and independent of the torus and coupling, with $h_L\geq\gamma_L>0$. Set $b_L=h_L+\gamma_L$ and $\vartheta_L=1-\gamma_L/b_L$. Then $0<\vartheta_L<1$ and $\|I-\mathsf H_\infty/b_L\|\leq\vartheta_L$. The inverse is
+\begin{equation}\label{eq:bulk-neumann-inverse}
+    \mathsf H_\infty^{-1}
+        =\frac{1}{b_L}\sum_{j=0}^{\infty}
+            (I-\mathsf H_\infty/b_L)^j\;.
+\end{equation}
+The series converges in operator norm. The fine-field covariance is the bounded positive operator $\mathsf K_\infty=\mathsf C_\infty\mathsf H_\infty^{-1}\mathsf C_\infty^*$. At the flat background every colour component has the same scalar operator; denote its scalar bond kernel by $K_\infty(b,b')$.
+
+\paragraph{Decay with finite constants.}
+Let $\ell(b)\in\mathbb Z^4$ be the coarse index of the block containing the initial point of $b$, and put $d(b,b')=\|\ell(b)-\ell(b')\|_\infty$. Let $R_H$ be the maximum of $1$ and the distances $d(e,f)$ for nonzero entries of $\mathsf H_\infty$. Let $R_C$ be the maximum of $d(b,e)$ for nonzero entries of $\mathsf C_\infty$. These maxima can be taken over the finitely many entry types modulo coarse translation. Define
+\begin{equation}\label{eq:bulk-decay-constants}
+    c_L^{\mathsf C}=\max_{b\in E_\infty/L\mathbb Z^4}
+        \sum_{e\in E_{*,\infty}}\|\mathsf C_\infty(b,e)\|,
+    \qquad
+    \mu_L=\frac{-\log\vartheta_L}{R_H},
+    \qquad
+    A_L^{\mathrm{ker}}=\frac{(c_L^{\mathsf C})^2}{\gamma_L}e^{2\mu_LR_C}\;.
+\end{equation}
+The $j$th power in \eqref{eq:bulk-neumann-inverse} has zero $(e,f)$ entry if $jR_H<d(e,f)$, and its norm is at most $\vartheta_L^j$. Summing the remaining terms bounds the inverse entry by $\gamma_L^{-1}e^{-\mu_Ld(e,f)}$. Using the two finite rows of $\mathsf C_\infty$ and $d(e,f)\geq d(b,b')-2R_C$ yields
+\begin{equation}\label{eq:bulk-kernel-decay}
+    |K_\infty(b,b')|
+        \leq A_L^{\mathrm{ker}}e^{-\mu_Ld(b,b')}\;.
+\end{equation}
+This constructs the inverse and decay in the exponential-gauge free carrier.
+
+\paragraph{Comparison with the periodic covariance.}
+Take a compatible torus with fine periods $N_\alpha=LK_\alpha$ and $K_\alpha\geq3$. For $z\in\mathbb Z^4$, write $Nz=(N_1z_1,\ldots,N_4z_4)$. The local torus definitions of $Q,\Phi,\mathsf C,\Delta_1$ are the periodisations of their infinite-lattice definitions. Periodisation preserves their finite-range products. The absolutely convergent periodisation of the free inverse therefore solves the finite-torus inverse equation: applying $\mathsf H_T$ gives the periodised Kronecker delta. Uniqueness of the inverse and multiplication by the two constraint-extension maps give
+\begin{equation}\label{eq:bulk-periodisation}
+    K_T(b,b')=\sum_{z\in\mathbb Z^4}K_\infty(b,b'+Nz)\;.
+\end{equation}
+Bonds on the right have fixed lifts and unchanged orientations. Let $K_{\min}=\min_\alpha K_\alpha$ and define
+\begin{equation}\label{eq:bulk-image-constant}
+    B_L^{\mathrm{img}}
+        =\sum_{z\in\mathbb Z^4\setminus\{0\}}
+            e^{-\mu_L(\|z\|_\infty-1)}<\infty\;.
+\end{equation}
+The shell of maximum norm $j$ has $(2j+1)^4-(2j-1)^4$ points. Since $d(b,b'+Nz)\geq K_{\min}\|z\|_\infty-d(b,b')$, the image sum satisfies
+\begin{equation}\label{eq:bulk-image-error}
+    |K_T(b,b')-K_\infty(b,b')|
+        \leq A_L^{\mathrm{ker}}B_L^{\mathrm{img}}
+            e^{-\mu_L(K_{\min}-d(b,b'))}\;.
+\end{equation}
+Thus every fixed finite collection of covariance entries converges as all coarse periods tend to infinity. The limiting connected-cluster construction uses the infinite-lattice covariance, not a periodically repeated finite-volume covariance.
+
+\section{The Local Interaction at the Identity}
+\label{sec:perimeter-attempt}
+
+\paragraph{Locality of the first-step interaction.}
+The trace in the bare action is $\tr_N=N^{-1}\operatorname{Tr}$ in its fixed unitary embedding, so $\tr_N(\id)=1$. Choose a radius $a_{\mathrm{ph}}$ for the input $A$ of $\widetilde D$, measured in the maximum fine-bond Hilbert--Schmidt norm, on which the local implicit solutions, principal logarithms and composed action and Haar primitives are analytic, with nonzero Jacobian determinants and Haar densities. The radius $a_L$ is a free-input radius: take $a_L\leq a_{\mathrm{ph}}/\max(1,\|\mathsf C\|_{\infty\to\infty})$, where the operator norm maps the maximum free-bond Hilbert--Schmidt norm to the maximum fine-bond Hilbert--Schmidt norm. This norm is finite and depends on $L$ only, by the fixed row stencils. The Lie-algebra norm is the normalised Hilbert--Schmidt norm, and $|A|_{\mathrm{HS}}\leq|A|_{\mathrm{op}}$. Thus $c_G=1$ is a common norm-comparison constant for both cutoff prescriptions, and $g_0r(g_0)<a_L$ suffices. The cutoff sets themselves are unchanged. The componentwise implicit solutions assemble to a small solution in this maximum norm. Uniqueness of the analytic germ in RG1 identifies it with $\widetilde D$ on the smaller common chart.
+The following calculation concerns exactly the identity-background, all-regular integral below. It does not transfer that integral to a nonflat or inherited branch. Let $\mathcal S_c$ contain the positive fine bonds with both endpoints in $\mathcal B_{c_-}\cup\mathcal B_{c_+}$, and put $\Lambda_c=\mathcal S_c\cap E_*$. At the present torus sizes, the only designated bond in $\mathcal S_c$ is $b_0(c)$. Indeed, an internal path in either block crosses no block interface, and the translated length-$L$ path in RG1 (0.4) crosses only the interface between these two blocks. The reference coarse path crosses the same interface. Thus $\mathcal Q_c$ and $\mathcal N_c$ depend only on the fine bonds in $\mathcal S_c$. In the defining equation for $\widetilde D_c(A)$, the only unknown correction entering those bonds is $\widetilde D_c(A)$ itself. The analytic implicit-function theorem therefore gives a function of $A|_{\mathcal S_c}$ alone, with its radius and constants independent of the number of blocks. Here $h_c=L^3I$ at the identity, since $Q_0=L^{-4}I$.
+
+For a free fine bond $b$, set $\Lambda_b=\{b\}$. For a designated bond $b=b_0(c)$, set $\Lambda_b=\Lambda_c$. Both $(\mathsf CB)(b)$ and $q_{g_0}(B)(b)$ depend only on $B|_{\Lambda_b}$. The index $\alpha$ runs over the plaquettes and the pairs $(y,x)$ in \eqref{eq:action-primitive}. Define $f_\alpha(q)$ to be the corresponding summand of $\mathscr A(e^{iq})$, as a real analytic scalar function near zero in $\mathfrak g^E$; use its unique holomorphic extension for complex arguments. Let $\Lambda_\alpha$ be the union of the sets $\Lambda_b$ over the bonds in that summand's plaquette or path family. Each $\Lambda_\alpha$ lies in at most four adjacent blocks. Each free bond belongs to a bounded number of the sets $\Lambda_\alpha,\Lambda_b,\Lambda_c$, with a bound depending on $L$, not on the torus.
+
+Write $\psi(A)=A-h\widetilde D(A)$. Define the following local scalar functions by their real analytic branches at zero:
+\begin{equation}\label{eq:perimeter-literal-local-terms}
+    \begin{aligned}
+        v_\alpha(B)&=-\frac{1}{g_0^2}
+            \left(f_\alpha(\psi(g_0\mathsf CB))
+                -\frac{g_0^2}{2}
+                    D^2f_\alpha(0)[\mathsf CB,\mathsf CB]\right)\;,\\
+        j_b(B)&=\log j_H(q_{g_0}(B)(b))\;,\\
+        d_c(B)&=\log\det_{\mathfrak g}
+            \left(I-L^3\partial_{A(b_0(c))}
+                \widetilde D_c(g_0\mathsf CB)\right)\;.
+    \end{aligned}
+\end{equation}
+Their supports are respectively $\Lambda_\alpha,\Lambda_b,\Lambda_c$. The full fine Jacobian is block triangular: its nonidentity rows are designated rows, and its designated-to-designated block is diagonal in $c$. Its determinant is consequently the product of the determinants in $d_c$. Each real determinant is positive in the chart connected to zero, so this branch agrees with the absolute determinant in \eqref{eq:literal-residual}. Summing the action Hessians gives $\mathsf H$, and hence
+\begin{equation}\label{eq:perimeter-literal-local-sum}
+    \mathcal P_{g_0}(B)
+        =\sum_\alpha v_\alpha(B)+\sum_{b\in E}j_b(B)
+            +\sum_{c\in E_1}d_c(B)\;.
+\end{equation}
+
+
+There is no linear term in either $j_b$ or $d_c$. Haar density in exponential variables has zero derivative at zero. For $d_c$, the quadratic part of $\widetilde D_c$ is the quadratic part of $\mathcal N_c$. Expanding RG1 (0.4) to degree two gives a linear combination of Lie brackets of the bond variables. Differentiating with respect to the designated variable gives a linear combination of adjoint maps. Their traces vanish for a compact Lie algebra. Multiplication by the scalar $L^3$ does not change this conclusion. Each $f_\alpha$ and its first derivative vanish at zero, and $\psi(A)=A+O(A^2)$, so the subtracted action term begins at degree three.
+
+Use the positive Lie-algebra scalar-product norm for the following estimate. There are constants $a_L,C_L^{\mathrm{loc}}>0$, depending on $L,G$ and the fixed averaging prescription, such that, on the complex polydisc $g_0\max_b\|B(b)\|<a_L$, each term $v$ of \eqref{eq:perimeter-literal-local-sum}, with its indicated support $\Lambda$, satisfies
+\begin{equation}\label{eq:perimeter-literal-local-bound}
+    |v(B)|\leq C_L^{\mathrm{loc}}
+        \left(g_0\max_{b\in\Lambda}\|B(b)\|+g_0^2\right)
+        \sum_{b\in\Lambda}\|B(b)\|^2\;.
+\end{equation}
+To obtain the estimate, take a fixed smaller complex chart for the finitely many local templates. Their convergent Taylor series and the vanishing orders just proved give a cubic remainder divided by $g_0^2$ for $v_\alpha$ and quadratic remainders for $j_b,d_c$. Equivalence of the finite-dimensional local maximum and Euclidean norms gives the displayed inequality. The bounded overlap then yields a torus-independent quadratic majorant on the cutoff. If $c_G$ is the fixed norm-equivalence constant from the CRE bond norm to this norm, then
+\begin{equation}\label{eq:perimeter-literal-total-reserve}
+    \sum_\alpha|v_\alpha(B)|+\sum_b|j_b(B)|+\sum_c|d_c(B)|
+        \leq C_L^{\mathrm{ov}}
+            (c_Gg_0r(g_0)+g_0^2)\|B\|^2\;.
+\end{equation}
+The constant $C_L^{\mathrm{ov}}$ includes the bounded overlap and is independent of the torus. These estimates concern the flat reference integral and supply the bounded local potentials for its Gaussian-marginal expansion.
+
+The local scalars are evaluated in the identity-background frame and are invariant under simultaneous constant colour conjugation. This follows from equivariance of RG1's logarithm, averages and implicit correction, cyclicity of the action traces, and conjugation invariance of Haar density and determinants. Their extension to the gauge orbit of this background is unambiguous: if $U^u_0(b)=u(b_-)u(b_+)^{-1}$ and $A^u(b)=u(b_-)A(b)u(b_-)^{-1}$, define the transported scalar at $(U^u_0,A^u)$ to have its identity-frame value at $A$. Two choices of $u$ representing the same background differ by a constant right factor on the connected torus, and give the same scalar by the stated constant-conjugation invariance. This specifies gauge-invariant scalar contractions on this orbit only; it is not an extension to arbitrary nonflat backgrounds. No open Wilson segment is assigned a separate activity or propagated by this decomposition.
+
+\begin{thebibliography}{99}
+    \bibitem{KoteckyPreiss}
+    R.~Koteck\'y and D.~Preiss,
+    \emph{Cluster Expansion for Abstract Polymer Models},
+    Commun. Math. Phys. \textbf{103} (1986), 491--498.
+    \bibitem{AbdesselamRivasseau}
+    A.~Abdesselam and V.~Rivasseau,
+    \emph{Trees, Forests and Jungles: A Botanical Garden for Cluster Expansions},
+    in \emph{Constructive Physics}, Lecture Notes in Physics \textbf{446} (1995),
+    arXiv:hep-th/9409094.
+    \bibitem{BalabanCRE}
+    T.~Ba{\l}aban,
+    \emph{Convergent Renormalization Expansions for Lattice Gauge Theories},
+    Commun. Math. Phys. \textbf{119} (1988), 243--285.
+
+    \bibitem{BalabanRG1}
+    T.~Ba{\l}aban,
+    \emph{Renormalization Group Approach to Lattice Gauge Field Theories. I. Generation of Effective Actions in a Small Field Approximation and a Coupling Constant Renormalization in Four Dimensions},
+    Commun. Math. Phys. \textbf{109} (1987), 249--301.
+
+    \bibitem{BalabanPRT2}
+    T.~Ba{\l}aban,
+    \emph{Propagators and Renormalization Transformations for Lattice Gauge Theories. II},
+    Commun. Math. Phys. \textbf{96} (1984), 223--250.
+
+    \bibitem{BalabanVAR}
+    T.~Ba{\l}aban,
+    \emph{The Variational Problem and Background Fields in Renormalization Group Method for Lattice Gauge Theories},
+    Commun. Math. Phys. \textbf{102} (1985), 277--309.
+
+    \end{thebibliography}
+\end{document}
