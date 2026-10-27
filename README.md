@@ -4,17 +4,16 @@ The latest saved manuscripts, research programme and continuation drafts, collec
 
 ## Current Manuscripts
 
-- **V5:** [PDF](WILSON_FIRST_RG_STEP_V5.pdf), [LaTeX source](WILSON_FIRST_RG_STEP_V5.tex), and [bibliography](WILSON_FIRST_RG_STEP_V5.bib).
 - **Updated V4:** [PDF](WILSON_FIRST_RG_STEP_V4.pdf) and [LaTeX source](WILSON_FIRST_RG_STEP_V4.tex).
 
-V5 is the latest manuscript version. V4 is also updated to its latest saved revision. The [snapshot manifest](SNAPSHOT_MANIFEST.json) records the included source files and their hashes.
+## Manuscripts under Construction
 
-## Pedagogical Summary
+The [Manuscripts under Construction folder](Manuscripts%20under%20Construction/) contains:
 
-The latest V4 companion gives a notation guide and explanations of the construction, estimates and two-loop result.
+- **V5:** [PDF](Manuscripts%20under%20Construction/WILSON_FIRST_RG_STEP_V5.pdf), [LaTeX source](Manuscripts%20under%20Construction/WILSON_FIRST_RG_STEP_V5.tex), and [bibliography](Manuscripts%20under%20Construction/WILSON_FIRST_RG_STEP_V5.bib).
+- **Pedagogical summary (V4 companion):** [PDF](Manuscripts%20under%20Construction/V4_Pedagogical_Summary_2026_10_22.pdf) and [LaTeX source](Manuscripts%20under%20Construction/V4_Pedagogical_Summary_2026_10_22.tex).
 
-- [Summary PDF](V4_Pedagogical_Summary_2026_10_22.pdf)
-- [Summary LaTeX source](V4_Pedagogical_Summary_2026_10_22.tex)
+The summary gives a notation guide and explanations of the construction, estimates and two-loop result. V5 is the latest manuscript version under construction. The [snapshot manifest](SNAPSHOT_MANIFEST.json) records the included source files and their hashes.
 
 ## Research Programme
 
@@ -34,10 +33,11 @@ Start with the [26 October status report](drafts/WILSON_IT1_STATUS_REPORT_2026_1
 Use a recent TeX Live or MiKTeX installation with pdfLaTeX, BibTeX and latexmk. For V5:
 
 ```sh
+cd "Manuscripts under Construction"
 latexmk -pdf -interaction=nonstopmode -halt-on-error WILSON_FIRST_RG_STEP_V5.tex
 ```
 
-The custom [preprint class](preprint.cls) and V5 bibliography are included. The earlier manuscripts, summary and research programme use the standard `article` class. Build them with the same command and the appropriate `.tex` filename. Dependencies are listed in [TEX_PACKAGES.txt](TEX_PACKAGES.txt).
+The V5 folder includes the custom [preprint class](Manuscripts%20under%20Construction/preprint.cls) and V5 bibliography. The earlier manuscripts, summary and research programme use the standard `article` class. Build them with the same command and the appropriate `.tex` filename. Dependencies are listed in [TEX_PACKAGES.txt](TEX_PACKAGES.txt).
 
 Compilation checks the document build; it does not establish mathematical correctness.
 

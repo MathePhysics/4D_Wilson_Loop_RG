@@ -33,5 +33,5 @@ Additional packages used by the pedagogical summary and research programme:
 
 T1 Computer Modern fonts are supplied by cm-super in the tested build.
 Install these packages and their dependencies using TeX Live or MiKTeX.
-The V5 build requires the bundled preprint.cls and WILSON_FIRST_RG_STEP_V5.bib.
+Build V5 from the "Manuscripts under Construction" folder, which includes preprint.cls and WILSON_FIRST_RG_STEP_V5.bib.
 The other main documents require no external bibliography files or images.

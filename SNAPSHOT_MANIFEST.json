@@ -2,7 +2,7 @@
   "snapshot_date": "2026-10-27",
   "files": [
     {
-      "file": "V4_Pedagogical_Summary_2026_10_22.tex",
+      "file": "Manuscripts under Construction/V4_Pedagogical_Summary_2026_10_22.tex",
       "source": "output/pdf/V4_Pedagogical_Summary_2026_10_22.tex",
       "bytes": 103403,
       "sha256": "11ea89b5bb2a1b9af57c9c82434a72d88545ebb153e0f206594af76ba5414de6"
@@ -26,13 +26,13 @@
       "sha256": "563736a8dfb946b7018b2f5cf5648b9ae7a4bb2322bcac60e7aaeba0c3eaa96c"
     },
     {
-      "file": "WILSON_FIRST_RG_STEP_V5.bib",
+      "file": "Manuscripts under Construction/WILSON_FIRST_RG_STEP_V5.bib",
       "source": "WILSON_FIRST_RG_STEP_V5.bib",
       "bytes": 3930,
       "sha256": "573a92a0e0d204b8cd005a2f6747e0dc9e41640fa28164b0967207e46697d460"
     },
     {
-      "file": "WILSON_FIRST_RG_STEP_V5.tex",
+      "file": "Manuscripts under Construction/WILSON_FIRST_RG_STEP_V5.tex",
       "source": "WILSON_FIRST_RG_STEP_V5.tex",
       "bytes": 1029472,
       "sha256": "e89b5210d73b9aa85c72da43104d5fbe3b7ea0e8689868b466bd81f36dab0306"
@@ -458,7 +458,7 @@
       "sha256": "16a790886d631931bf9cc6108db225c627ad472cd56456f735589b7b7c909257"
     },
     {
-      "file": "preprint.cls",
+      "file": "Manuscripts under Construction/preprint.cls",
       "source": "preprint.cls",
       "bytes": 22637,
       "sha256": "37ec586c47f11442722488692cf1f4aa70c84c5a404c5614ca8981ffc5cf6e67"
@@ -470,14 +470,14 @@
       "sha256": "6820430d017dd7630188769afeca5511dbdaf0f64c358b3bf0a39177c444e937"
     },
     {
-      "file": "WILSON_FIRST_RG_STEP_V5.pdf",
-      "built_from": "WILSON_FIRST_RG_STEP_V5.tex",
+      "file": "Manuscripts under Construction/WILSON_FIRST_RG_STEP_V5.pdf",
+      "built_from": "Manuscripts under Construction/WILSON_FIRST_RG_STEP_V5.tex",
       "bytes": 1936103,
       "sha256": "a5ef61b5fe7a064f47fb171aa12101ce1c1db5b1d3218edf8502ea717be80913"
     },
     {
-      "file": "V4_Pedagogical_Summary_2026_10_22.pdf",
-      "built_from": "V4_Pedagogical_Summary_2026_10_22.tex",
+      "file": "Manuscripts under Construction/V4_Pedagogical_Summary_2026_10_22.pdf",
+      "built_from": "Manuscripts under Construction/V4_Pedagogical_Summary_2026_10_22.tex",
       "bytes": 658439,
       "sha256": "18abb7431fb63a03d6aefbab200062a5230f299f6d6a855637539c3417183766"
     },
@@ -538,13 +538,13 @@
       "overfull_boxes": 0
     },
     {
-      "document": "WILSON_FIRST_RG_STEP_V5",
+      "document": "Manuscripts under Construction/WILSON_FIRST_RG_STEP_V5",
       "pages": 225,
       "undefined_references_or_citations": [],
       "overfull_boxes": 0
     },
     {
-      "document": "V4_Pedagogical_Summary_2026_10_22",
+      "document": "Manuscripts under Construction/V4_Pedagogical_Summary_2026_10_22",
       "pages": 37,
       "undefined_references_or_citations": [
         "LaTeX Warning: Reference `summary:6' on page 2 undefined on input line 140."
