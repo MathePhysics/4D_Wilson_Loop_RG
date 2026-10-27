@@ -52,8 +52,8 @@
     {
       "file": "Wilson_Loop_Research_Programme_2026_10_24.tex",
       "source": "output/pdf/Wilson_Loop_Research_Programme_2026_10_24.tex",
-      "bytes": 8419,
-      "sha256": "3b6461ba43779839ed5601fda5f8f5cd08af069369cd9c407d378d787f0eb62f"
+      "bytes": 10426,
+      "sha256": "97d6c7337b2bea7ba346587d7fae6a8116dc4b70b552c29e0a685777f5c23b78"
     },
     {
       "file": "drafts/ITERATED_WILSON_INSERTION_ESTIMATES_DRAFT_2026_10_18.md",
@@ -496,8 +496,8 @@
     {
       "file": "Wilson_Loop_Research_Programme_2026_10_24.pdf",
       "built_from": "Wilson_Loop_Research_Programme_2026_10_24.tex",
-      "bytes": 203794,
-      "sha256": "bf5b5b402231c30c923262958e0244a0680e54139f6f987d2351d18a3174e490"
+      "bytes": 229336,
+      "sha256": "3eaaa7899572b85614c9a14e52af5864ac754fa7b6ad7c803eeff8058ee3a954"
     }
   ],
   "builds": [
@@ -523,7 +523,7 @@
     },
     {
       "document": "Wilson_Loop_Research_Programme_2026_10_24",
-      "pages": 4,
+      "pages": 5,
       "undefined_references_or_citations": [],
       "overfull_boxes": 0
     }
