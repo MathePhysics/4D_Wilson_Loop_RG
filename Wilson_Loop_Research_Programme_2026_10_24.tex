@@ -20,17 +20,21 @@
 \usepackage{microtype}
 \usepackage{amssymb}
 \usepackage{hyperref}
+\usepackage{titlesec}
+
+\titleformat{\section}
+  {\normalfont\large\bfseries}
+  {\thesection}{1em}{}
 
 \DeclareMathOperator{\tr}{tr}
 
-%\input{math_commands.tex}
+
 
 \pagestyle{fancy}
 \bibliographystyle{unsrt}
 \linespread{1.4}
 
-%\usepackage[a4paper,top=22mm,bottom=22mm,left=24mm,right=24mm,headheight=14pt]{geometry}
-%\usepackage[hidelinks]{hyperref}
+
 
 \title{Renormalisation of Wilson Loops in\\[3pt]Four-Dimensional Yang--Mills Theory}
 \author{\textbf{MathePhysics}}
@@ -41,7 +45,6 @@
 
 \maketitle
 
-% Your document content goes here.
 
 
 
@@ -53,7 +56,9 @@ We therefore seek the continuum theory through gauge-invariant observables. The 
 
 Our programme addresses this problem for correlation functions of Wilson loops in four-dimensional Yang--Mills theory. We aim to identify the scalar contributions within the RG corresponding to the perimeter and corner renormalisations known from the physics literature, and to prove ultraviolet convergence after their extraction.
 
-\subsection*{An Overview of the Ideas Involved in our Method}
+
+
+\section{Current Results}
 
 We work at fixed finite physical volume with a compact connected simple gauge group. We allow an arbitrary but positive fine lattice spacing $\varepsilon > 0$ and a sufficiently small coupling $g_\varepsilon$. We perform the first RG step starting from the bare action to a lattice with spacing $L \varepsilon$, for $L$ sufficiently large, independent of $\varepsilon$. 
 
@@ -65,13 +70,13 @@ Integrating the fine fluctuations of a Wilson loop gives the schematic expansion
 \restoregeometry
 
 
-For a square contour $C$, $P(C)$ is its perimeter, $\delta m$ the perimeter counterterm, and $z_c$ the geometric mean of its four corner factors. Extracting $\kappa_C$ separates the accumulating scalar contributions from the retained-field dependence. Renormalisation means dividing by this factor and controlling the remaining correction through further steps.
+For a square contour $C$, $P(C)$ is its perimeter, $\delta m$ the perimeter counterterm, and $z_c$ the geometric mean of its four corner factors. Extracting $\kappa_C$ separates the accumulating scalar contributions from the coarse field dependence. Renormalisation means dividing by this factor and controlling the remaining correction through further steps.
 
 We show that $\delta m$ and $z_c$ may be computed by integrating the fine fluctuations around the trivial coarse field, the identity, and that they satisfy the following bounds. Up to logarithmic factors in the bare coupling, we have
 \begin{equation*}
     |\delta m|\lesssim  \frac{g_\varepsilon^2}{\varepsilon}\;,\qquad\qquad\qquad |\log z_c| \lesssim g_\varepsilon^2\;.
 \end{equation*}
-Each coarse segment contributes a small amount to the perimeter exponent, but refining the lattice increases their number: the counterterm can grow at the rate $\varepsilon^{-1}$. The corner logarithm has no such length factor, although corner contributions can accumulate over RG steps. This is the expected ultraviolet scaling of the perimeter and corner contributions.
+Each coarse segment contributes a small amount to the perimeter exponent, but refining the lattice increases their number: the counterterm can grow at the rate $\varepsilon^{-1}$. The corner logarithm has no such length factor, although corner contributions can accumulate over RG steps as well. This is the expected ultraviolet scaling of the perimeter and corner contributions.
 
 
 Extending these estimates to successive RG steps, together with bounds on the remainder, will allow us to control their accumulation under the RG. Using Ba{\l}aban's large-field decomposition and forest expansions, we show that corrections to the identity-background calculation gain an additional factor of the coarse-field curvature in small-field regions, while large-field contributions are suppressed by their small probabilities. We also obtain analogous first-step bounds for the correlation function of two square loops with no common vertices, with additional cross terms that decay exponentially with their separation.
@@ -83,48 +88,60 @@ However, our current bound on the remainder, up to logarithmic corrections, is o
 \end{equation*}
 due to a crude per bond estimate. This is insufficient for concluding UV convergence and we are currently working on eliminating the $\varepsilon^{-1}$ term and obtaining the correct $g_\varepsilon^3$ bound.
 
-Further, $W_{\mathrm{coarse}}(C)$ is in fact a ``dressed'' Wilson loop which retains parts of the large field history in the spirit of Ba{\l}aban's large field mechanism. The available first-step comparison costs order $g_\varepsilon$ per coarse contour bond, up to logarithmic factors. Since the number of these bonds grows like $\varepsilon^{-1}$, we retain the dressed insertion through the RG and postpone comparison with an ordinary loop until the final IR scale.
+Further, $W_{\mathrm{coarse}}(C)$ is in fact a ``dressed'' Wilson loop which retains parts of the large field history in the spirit of Ba{\l}aban's large field mechanism. The available first-step comparison costs order $g_\varepsilon$ per coarse contour bond, up to logarithmic factors. Since the number of these bonds grows like $\varepsilon^{-1}$, we will retain the dressed insertion through the RG and postpone comparison with an ordinary loop until the final IR scale.
 
 
 
-\subsection*{The Programme for Iteration and the Ultraviolet Limit}
-
-The next task is to show that the insertion produced by the first RG step can be passed through further steps, while continuing to extract the perimeter and corner factors and control the remaining corrections. Parts of the loop may cross large-field regions or depend on fields outside the region being integrated. The continuation drafts develop a local representation that retains these contributions within the closed, gauge-invariant insertion, together with bounds on their dependence on the remaining fields. 
-
-This is needed to integrate those fields at the next RG step while preserving control of the corrections. The latest refinements still require checking and incorporation into the manuscript. Thus, our current goal is to extend our estimates from the bare lattice measure to the effective measures generated along the RG flow. 
-
-We must control the inherited interactions and previously generated Wilson loop corrections, so that perimeter and corner contributions can continue to be extracted and the remaining corrections satisfy the same type of bounds at every scale. The latest drafts already sketch substantial parts of this extension, but the induction is not yet complete.
-
-Once we have proved that our Wilson loop estimates can be iterated through arbitrarily many RG steps, we aim to compare theories with successive ultraviolet cutoffs, with their bare couplings tuned to the same renormalised coupling at a fixed reference scale. The required result is a summable bound on successive differences of the renormalised loop expectations. 
+\section{Iterating the RG and the Ultraviolet Limit}
 
 
-\subsection*{Draft Results and Further Milestones}
 
-The latest drafts give bounds uniform in the ultraviolet cutoff and convergence along subsequences at a fixed infrared scale, subject to the stated inputs for the large-field steps and the relative-weight comparison. They also derive an exact formula for the difference between successive cutoffs and a geometrically small bound on the contribution of old RG steps. 
+To go beyond the first-step estimates, we must extend them from the bare lattice measure to the effective measures generated along the RG flow. This requires bounds on the effective interactions and Wilson loop corrections produced at earlier steps, so that the perimeter and corner factors can be extracted at every scale, while the remaining corrections continue to satisfy uniform bounds.
 
-What remains is to control the recent-step outputs under refinement of the fine lattice, including the reconstructed backgrounds, fluctuation integrals, coupling counterterms and remainder differences. This would complete the summable comparison needed for convergence along the full sequence.
 
-The remaining milestones are:
+
+
+Once we have proved that our Wilson loop estimates can be iterated through arbitrarily many RG steps, we aim to compare theories with successive ultraviolet cutoffs, with their bare couplings tuned to the same renormalised coupling at a fixed infrared scale. The required result is a summable bound on successive differences of the renormalised loop expectations. 
+
+
+\section{Research Drafts still under Construction}
+
+Our least refined drafts give bounds uniform in the ultraviolet cutoff and convergence along subsequences at a fixed infrared scale, subject to the stated inputs for the large-field steps and the relative-weight comparison. More precisely, the remaining milestones (linked to our corresponding drafts) are:
+
+
+
+
+
 \begin{itemize}
-    \item Complete the verification of the written uniform iteration argument, including the large-field renormalisation steps and the required locality estimates. \emph{Drafts:} \href{https://github.com/MathePhysics/4D_Wilson_Loop_RG/blob/main/drafts/WILSON_IT1_D2_STEP_MAP_2026_10_22.md}{step map}, \href{https://github.com/MathePhysics/4D_Wilson_Loop_RG/blob/main/drafts/WILSON_IT1_D26_CLOSURE_2026_10_24.md}{D2.6}, \href{https://github.com/MathePhysics/4D_Wilson_Loop_RG/blob/main/drafts/WILSON_IT1_D27_CLOSURE_2026_10_26.md}{D2.7}.
-    \item Verify the draft's relative-weight bound for the surviving large-field regions at the stopping scale, and its consequences for uniform bounds and subsequential limits of the renormalised loop expectations. \emph{Draft:} \href{https://github.com/MathePhysics/4D_Wilson_Loop_RG/blob/main/drafts/WILSON_IT1_CONTINUUM_LIMIT_CLOSURE_2026_10_26.md#7-the-relative-weight-inequality-of-43-reduced-to-one-residual-quotient-not-derived}{continuum-limit note, Sections~7--8}.
-    \item Complete the recent-step stability estimate in the cutoff comparison. The draft already gives the exact difference formula and a geometrically small bound on the contribution of old RG steps. What remains is to control the recent-step outputs, reconstructed backgrounds, fluctuation integrals and coupling counterterms under refinement of the fine lattice at a fixed physical scale. \emph{Drafts:} \href{https://github.com/MathePhysics/4D_Wilson_Loop_RG/blob/main/drafts/WILSON_IT1_CONTINUUM_LIMIT_CLOSURE_2026_10_26.md#9-the-full-sequence-what-is-derived-and-what-remains}{continuum-limit note, Section~9}; \href{https://github.com/MathePhysics/4D_Wilson_Loop_RG/blob/main/drafts/WILSON_IT1_CONTINUUM_CUTOFF_COMPARISON_2026_10_27.md#4-checking-the-existing-difference-arguments-against-this-target}{cutoff comparison, Sections~4--5}.
-    \item Combine this estimate with the existing reduction to obtain a summable bound on successive differences of the full renormalised loop expectations, including the remainder differences, and hence uniqueness of the subsequential limit and convergence along the full sequence. \emph{Drafts:} \href{https://github.com/MathePhysics/4D_Wilson_Loop_RG/blob/main/drafts/WILSON_IT1_CONTINUUM_LIMIT_CLOSURE_2026_10_26.md#9-the-full-sequence-what-is-derived-and-what-remains}{continuum-limit note, Section~9}; \href{https://github.com/MathePhysics/4D_Wilson_Loop_RG/blob/main/drafts/WILSON_IT1_CONTINUUM_CUTOFF_COMPARISON_2026_10_27.md#6-what-is-still-required-for-full-sequence-convergence}{cutoff comparison, Section~6}.
+    \item Verify our \href{https://github.com/MathePhysics/4D_Wilson_Loop_RG/blob/main/drafts/WILSON_IT1_D2_STEP_MAP_2026_10_22.md}{RG induction} for the renormalised Wilson loop insertion, with bounds uniform in the number of RG steps, including the \href{https://github.com/MathePhysics/4D_Wilson_Loop_RG/blob/main/drafts/WILSON_IT1_D26_CLOSURE_2026_10_24.md}{large-field renormalisation} and \href{https://github.com/MathePhysics/4D_Wilson_Loop_RG/blob/main/drafts/WILSON_IT1_D27_CLOSURE_2026_10_26.md}{locality estimates}.
+    \item Verify our \href{https://github.com/MathePhysics/4D_Wilson_Loop_RG/blob/main/drafts/WILSON_IT1_CAUCHY_ESTIMATE_2026_10_27.md#11-the-relative-weight-of-the-large-field-terms-derived-replaces-q-unreviewed}{bound on the relative weights} of the large-field and small-field contributions to the partition function at the fixed infrared scale. From this we have deduced uniform bounds and subsequential convergence of the renormalised Wilson loop expectations.
+    \item Complete and verify the \href{https://github.com/MathePhysics/4D_Wilson_Loop_RG/blob/main/drafts/WILSON_IT1_CAUCHY_ESTIMATE_2026_10_27.md}{comparison of RG flows at successive ultraviolet cutoffs}, with the same renormalised coupling at a fixed reference scale. The latest draft develops a proposed \href{https://github.com/MathePhysics/4D_Wilson_Loop_RG/blob/main/drafts/WILSON_IT1_CAUCHY_ESTIMATE_2026_10_27.md#8-the-generated-difference-of-one-fluctuation-integral}{one-step stability estimate}, including coupling and large-field feedbacks, together with candidate lattice-refinement bounds for the \href{https://github.com/MathePhysics/4D_Wilson_Loop_RG/blob/main/drafts/WILSON_IT1_CAUCHY_ESTIMATE_2026_10_27.md#9-classical-depth-derived}{background fields} and \href{https://github.com/MathePhysics/4D_Wilson_Loop_RG/blob/main/drafts/WILSON_IT1_CAUCHY_ESTIMATE_2026_10_27.md#10-gaussian-depth-configuration-depth-covariance-half}{fluctuation covariances}.
+    \item Use these estimates to prove a \href{https://github.com/MathePhysics/4D_Wilson_Loop_RG/blob/main/drafts/WILSON_IT1_CAUCHY_ESTIMATE_2026_10_27.md#87-the-solution-of-the-recursion-derived}{summable bound on the differences} between renormalised Wilson loop expectations at successive ultraviolet cutoffs, including all remainder terms, and hence \href{https://github.com/MathePhysics/4D_Wilson_Loop_RG/blob/main/drafts/WILSON_IT1_CAUCHY_ESTIMATE_2026_10_27.md#7-what-remains-collected}{convergence along the full sequence}.
 \end{itemize}
-Given current progress, we believe that these should be finished within the next few days.
 
 
-Finally, we wish to mention that, if a method exists for proving the full mass gap that would be close to the existing literature, we believe that it likely lies in finding a correlation function inequality for the correlation functions of renormalised Wilson loops. 
 
-\subsection*{Contrast with other Efforts}
+Assuming structural soundness of our research programme, we expect these milestones should be completed within the next few days. Finally, we conjecture if a method for resolving the mass gap problem exists within or close to the existing literature, it likely lies in finding a correlation function inequality for the correlation functions of renormalised Wilson loops. 
 
-We want to contrast our approach with a similar effort recently advanced by Ethan Sussman (\url{https://github.com/ethanwsussman/Yang--Mills-LLM-experiment}). Similar to us he seems to have focused on constructing correlation functions of gauge invariant objects, specifically he focuses on renormalising $\tr F^2$, with a published work showing the existence of the correlation functions of this composite operators on non-coinciding points for three-dimensional Yang Mills. 
 
-However, upon completion we expect our result to fit within less than 400 pages. 
 
-We do not yet know what approach has been taken by the recently announced result by OpenAI. However, due to the structural limitations of gauge theories requiring one to apply gauge transformations at each step of the RG flow, we believe that it is likely similar to our approach. 
+\section{Concurrent Efforts}
+
+A related attempt via construction of correlation functions of gauge invariant objects is being led by Ethan Sussman\footnote{https://github.com/ethanwsussman/Yang--Mills-LLM-experiment} and Levent Alpoge. To the best of our limited assessment at the time of this announcement, their effort focuses on renormalising pointwise observables of the type $\tr F^2$, with a public note showing the existence of the correlation functions of this composite operator on non-coinciding points for three-dimensional Yang Mills. 
+
+
+We cannot yet comment on the approach taken in the recently announced OpenAI result, since OpenAI has not yet made their output publicly available. However, due to the structural limitations of gauge theories requiring one to apply gauge transformations at each step of the RG flow, it is possibly similar to our approach. The cost of their attempt is similarly inestimable currently.
+
+
+
+
+
+
 
 
 
 
 \end{document}
+
+
+
