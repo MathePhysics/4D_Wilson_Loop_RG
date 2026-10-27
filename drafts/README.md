@@ -23,6 +23,7 @@ The supporting triage records from rounds 20–49 and the [round-19 repairs](WIL
 
 ### Supporting Proof and Source Checks
 
+- [Bałaban paper labels and bibliography](BALABAN_PAPER_LABELS.md): internal labels, official citations, aliases and source cross-references.
 - [Source readings](READINGS_RECHECK_2026_10_23.md).
 - [RC proof pass](RC_PROOF_PASS_2026_10_23.md) and [RC payment pass](RC_PAYMENT_PASS_2026_10_24.md).
 - [RTR proof pass](RTR_PROOF_PASS_2026_10_23.md).
