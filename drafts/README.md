@@ -1,6 +1,6 @@
 # Continuation drafts and supporting notes
 
-Snapshot of the latest saved working files on 27 October 2026, including the developments through 26 October. The mathematical files are copied verbatim; [SNAPSHOT_MANIFEST.json](SNAPSHOT_MANIFEST.json) records their original relative paths, sizes and SHA-256 hashes. Their assumptions, qualifications and open dependencies remain in force.
+Snapshot of the latest saved working files on 27 October 2026, including the developments through 26 October. The mathematical files are copied verbatim. Their assumptions, qualifications and open dependencies remain in force.
 
 ## Iteration of the Wilson loop insertion
 

@@ -13,7 +13,7 @@ The [Manuscripts under Construction folder](Manuscripts%20under%20Construction/)
 - **V5:** [PDF](Manuscripts%20under%20Construction/WILSON_FIRST_RG_STEP_V5.pdf), [LaTeX source](Manuscripts%20under%20Construction/WILSON_FIRST_RG_STEP_V5.tex), and [bibliography](Manuscripts%20under%20Construction/WILSON_FIRST_RG_STEP_V5.bib).
 - **Pedagogical summary (V4 companion):** [PDF](Manuscripts%20under%20Construction/V4_Pedagogical_Summary_2026_10_22.pdf) and [LaTeX source](Manuscripts%20under%20Construction/V4_Pedagogical_Summary_2026_10_22.tex).
 
-The summary gives a notation guide and explanations of the construction, estimates and two-loop result. V5 is the latest manuscript version under construction. The [snapshot manifest](SNAPSHOT_MANIFEST.json) records the included source files and their hashes.
+The summary gives a notation guide and explanations of the construction, estimates and two-loop result. V5 is the latest manuscript version under construction.
 
 ## Research Programme
 
