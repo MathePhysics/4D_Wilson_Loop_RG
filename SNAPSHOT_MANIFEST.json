@@ -38,18 +38,6 @@
       "sha256": "e89b5210d73b9aa85c72da43104d5fbe3b7ea0e8689868b466bd81f36dab0306"
     },
     {
-      "file": "Wilson_Loop_Research_Programme_2026_10_22.pdf",
-      "source": "output/pdf/Wilson_Loop_Research_Programme_2026_10_22.pdf",
-      "bytes": 198631,
-      "sha256": "ef7a6730f67160ee6e326f1a81d56da0c4faeac4f1d1dbeabe04b17e4aa3c55c"
-    },
-    {
-      "file": "Wilson_Loop_Research_Programme_2026_10_22.tex",
-      "source": "output/pdf/Wilson_Loop_Research_Programme_2026_10_22.tex",
-      "bytes": 8456,
-      "sha256": "1fed0150b63b2732f6c4a77399778941cfe2805970193ae22d0677945f346dc8"
-    },
-    {
       "file": "Wilson_Loop_Research_Programme_2026_10_24.tex",
       "source": "output/pdf/Wilson_Loop_Research_Programme_2026_10_24.tex",
       "bytes": 10426,

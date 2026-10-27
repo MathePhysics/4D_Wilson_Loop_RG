@@ -45,4 +45,3 @@ Compilation checks the document build; it does not establish mathematical correc
 
 - [V3 manuscript](WILSON_FIRST_RG_STEP_V3.pdf) and [source](WILSON_FIRST_RG_STEP_V3.tex).
 - [V3 pedagogical summary](V3_Pedagogical_Summary_2026_10_22.pdf) and [source](V3_Pedagogical_Summary_2026_10_22.tex).
-- [Earlier research programme](Wilson_Loop_Research_Programme_2026_10_22.pdf) and [source](Wilson_Loop_Research_Programme_2026_10_22.tex).
