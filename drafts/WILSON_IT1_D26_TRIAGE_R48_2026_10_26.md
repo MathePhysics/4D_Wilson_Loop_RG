@@ -11,7 +11,7 @@ Reviews: it1-d27-20261026-r1 (WILSON_IT1_D27_CLOSURE_2026_10_26.md, first review
 - **S4 (serious, confirmed).** The carry recursion "d_{n+1} ≤ (λ + Cρ̂)d_n + Cρ̂m" is not at map l.150–160; l.1377's recursion is for the dev coefficient C_χ; D26 §5's bridge needs dist(Ω_{n+1}, Coll_j) ≥ 5R_{n+1}, which fails for a former component that is small-field. *Repair:* item 9's status line and Constants; 15.7 uses l.1377 in its scope (dev insertions) with the source C^R_k, and no bridge is needed for the R-produced dev terms.
 - **S5 (serious, confirmed).** The D(k) form of the post-R term (item 8) rested on items 4–6 and 5(e). *Repair:* 15.8 (the post-R loop of class D(k) from 15.3–15.6; D26's step lemmas' inputs are a CRE Sect. 2 density and a D(k) loop).
 - Minors of the review (item 5(a)'s sup‖w_X‖ ≤ 1 + ε_ins → exp(2ΣA); 5(b)'s e^{4+A}; item 13's misquote of (1.100)'s bound; p₀(g) = A₀(log g^{−2})^{p₀} with p₀ > rd at fixed A₀; the two cases of c₁): applied at 22:40–22:55 in the note's items 5, 13 and Constants.
-- Not re-reviewed: item 15 is under review in round 50 (it1-d27-20261026-r2, with the round-48 review as prior; the 23:20 launch was refused by the CLI's usage limit, relaunched for 23:52).
+- Item 15 was reviewed in round 50 (it1-d27-20261026-r2, with the round-48 review as prior; the 23:20 CLI launch was refused by the usage limit, and the review ran in a local app session on claude-opus-5-5 from 23:30, landing 23:42): NOT CLOSED, six serious findings S-A–S-F, recorded in WILSON_IT1_D26_TRIAGE_R51_2026_10_27.md.
 
 ## it1-coarse-20261026-r1 (the interfaces (iii-a), (iii-c)): no fatal, three serious, repaired
 

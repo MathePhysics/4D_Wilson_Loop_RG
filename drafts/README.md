@@ -1,10 +1,10 @@
 # Continuation drafts and supporting notes
 
-Snapshot of the latest saved working files on 27 October 2026, including the developments through 26 October. The mathematical files are copied verbatim. Their assumptions, qualifications and open dependencies remain in force.
+Snapshot of the saved working files updated on 27 October 2026, including the new Cauchy-estimate and status notes. The mathematical files are copied verbatim. Their assumptions, qualifications and open dependencies remain in force.
 
 ## Iteration of the Wilson loop insertion
 
-Start with the [26 October status report](WILSON_IT1_STATUS_REPORT_2026_10_26.md), which identifies the current arguments, source readings and open dependencies. Then read these two companion drafts:
+Start with the [27 October status report](WILSON_IT1_STATUS_REPORT_2026_10_27.md), which identifies the arguments, source readings and dependencies recorded there. The [26 October report](WILSON_IT1_STATUS_REPORT_2026_10_26.md) is retained as an earlier snapshot. Then read these two companion drafts:
 
 - [First-step insertion and the class for iteration](WILSON_IT1_LINE_DEFECT_2026_10_21.md).
 - [D2: the step map](WILSON_IT1_D2_STEP_MAP_2026_10_22.md), including D2.0-D2.4 and the subsequent coarse-loop comparison notes.
@@ -19,7 +19,7 @@ The [V3 iteration audit](WILSON_V3_ITERATION_AUDIT_2026_10_21.md) gives the earl
 - The [O2](WILSON_IT1_O2_CLOSURE_2026_10_26.md), [O2-prime](WILSON_IT1_O2PRIME_CLOSURE_2026_10_26.md), [O4](WILSON_IT1_O4_CLOSURE_2026_10_26.md), and [O6](WILSON_IT1_O6_CLOSURE_2026_10_26.md) notes.
 - [Continuum-limit note](WILSON_IT1_CONTINUUM_LIMIT_CLOSURE_2026_10_26.md).
 
-The supporting triage records from rounds 20–49 and the [round-19 repairs](WILSON_IT1_ROUND19_REPAIRS_2026_10_24.md) are included alongside these drafts.
+The supporting triage records from rounds 20–49, the [rounds 50–51 triage](WILSON_IT1_D26_TRIAGE_R51_2026_10_27.md), and the [round-19 repairs](WILSON_IT1_ROUND19_REPAIRS_2026_10_24.md) are included alongside these drafts.
 
 ### Supporting Proof and Source Checks
 
@@ -31,6 +31,7 @@ The supporting triage records from rounds 20–49 and the [round-19 repairs](WIL
 
 ## Comparison of ultraviolet cutoffs
 
+- [27 October Cauchy-estimate draft](WILSON_IT1_CAUCHY_ESTIMATE_2026_10_27.md): the matched-term comparison and its proposed one-step estimates.
 - [Cutoff comparison](WILSON_IT1_CONTINUUM_CUTOFF_COMPARISON_2026_10_27.md): the exact two-cutoff target, old-scale estimates and the remaining full-sequence comparison.
 - [Cauchy route](WILSON_CAUCHY_ROUTE_DRAFT_2026_10_21.md): comparison of theories with successive ultraviolet cutoffs.
 - [Lipschitz continuity of the RG step](WILSON_CAUCHY_LIPSCHITZ_2026_10_21.md): supporting difference estimates and their scope.
