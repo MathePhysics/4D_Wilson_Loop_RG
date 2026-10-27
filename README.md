@@ -56,4 +56,4 @@ The [Previous Versions folder](Previous%20Versions/) contains the earlier manusc
 
 ## Questions & Comments
 
-Correspondence: adogra [at] mit.edu, martin.peev [at] maths.ox.ac.uk
+adogra [at] mit.edu (Aksh), martin.peev [at] maths.ox.ac.uk (Martin)
