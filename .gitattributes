@@ -1,0 +1,5 @@
+*.tex -text
+*.bib -text
+*.cls -text
+*.sty -text
+*.pdf binary

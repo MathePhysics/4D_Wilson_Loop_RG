@@ -7,10 +7,13 @@
 \usepackage{amsmath,amssymb,mathtools,mathrsfs}
 \usepackage[a4paper,top=23mm,bottom=23mm,left=25mm,right=25mm,headheight=15pt]{geometry}
 \usepackage{xcolor,booktabs,array,tabularx,enumitem,fancyhdr}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
 \usepackage[hidelinks]{hyperref}
 \definecolor{ink}{HTML}{123E48}
 \definecolor{muted}{HTML}{52636B}
 \definecolor{pale}{HTML}{EDF3F4}
+\definecolor{markc}{HTML}{A33A2D}
 \hypersetup{pdftitle={Pedagogical Summary of V4: Wilson Loops after the First Renormalisation Step},pdfauthor={},pdfsubject={Expository account of the V4 manuscript snapshot of 22 October 2026}}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{5.5pt}
@@ -83,15 +86,15 @@ V4 studies what happens to a Wilson loop insertion when the first layer of fine 
 The organising formula says that the Wilson expectation is an extracted scalar times a retained expectation, plus a defect error and a boundary error.
 Understanding this formula requires more than recognising a perimeter exponential. One must know which field occurs in the retained loop, which probability law averages it, how the coefficients are defined, and how the errors depend on contour length. Those questions organise this companion.
 
-The intended reader knows basic Lie groups, Gaussian integration and conditional expectation, but need not know Ba{\l}aban's renormalisation construction. Definitions are introduced before their estimates. The detailed combinatorics are explained through the role they play in the argument; the manuscript remains the source for their full proofs.
+The intended reader knows basic Lie groups, Gaussian integration, and conditional expectation, but need not know Ba{\l}aban's renormalisation construction. Definitions are introduced before their estimates. The detailed combinatorics are explained through the role they play in the argument; the manuscript remains the source for their full proofs.
 
 \subhead{The Scope of This Summary}
-This account follows the current root manuscript \texttt{WILSON\_FIRST\_RG\_STEP\_V4.tex}, with its matching 265-page PDF, including the changes saved on 22 October 2026. Statements described as results are V4's stated results under its hypotheses, including its recorded readings of Ba{\l}aban. This companion adds no mathematical estimates and supplies no independent acceptance review. Later separate working notes are outside its scope.
+This account is based on the 22 October 2026 snapshot of \texttt{WILSON\_FIRST\_RG\_STEP\_V4.tex}. The discussion of dressed and ordinary coarse loops in Sections~3 and~24 includes the comparison added to V4 on 23 October; both source revisions are recorded in the source guide. Statements described as results are V4's stated results under its hypotheses, including its recorded readings of Ba{\l}aban. This companion adds no mathematical estimates and supplies no independent acceptance review. Separate continuation drafts are outside its scope.
 
 The distinction between a fixed first step and an estimate that can be iterated is maintained throughout. V4's final section formulates an iteration conjecture and records the additional work it needs. Neither that conjecture nor a continuum limit follows merely from the existence of the first-step coefficients.
 
 \vfill
-{\small\color{muted}Source revision: SHA-256 \texttt{D463C554B76F\ldots 73094E00}.\quad
+{\small\color{muted}Base source revision: SHA-256 \texttt{D463C554B76F\ldots 73094E00}.\quad
     A detailed source guide appears on the last page.\par}
 
 \clearpage
@@ -99,17 +102,17 @@ The distinction between a fixed first step and an estimate that can be iterated 
 \phantomsection\addcontentsline{toc}{section}{Reading Map}
 {\LARGE\bfseries\color{ink}Reading Map\par}
 \vspace{9pt}
-The notation guide is on the next page. Read Sections 1--5 for the problem, the main result and the physical law. Sections 6--16 explain the construction and scalar coefficients. Sections 17--24 explain the errors and retained insertion. Section 25 explains the two-loop extension. Sections 26--27 delimit iteration and locate the original arguments.
+The notation guide is on the next page. Read Sections 1--5 for the problem, the main result, and the physical law. Sections 6--16 explain the construction and scalar coefficients. Sections 17--24 explain the errors and retained insertion. Section 25 explains the two-loop extension. Sections 26--27 delimit iteration and locate the original arguments.
 
 \vspace{5pt}
 \begin{tabularx}{\textwidth}{@{}rXr@{}}
     \toprule
     & \textbf{Topic} & \textbf{Page}\\
     \midrule
-    1 & The lattice, the action and the observable & \pageref{summary:1}\\
+    1 & The lattice, the action, and the observable & \pageref{summary:1}\\
     2 & Blocking as a transformation of measures & \pageref{summary:2}\\
     3 & The main result in readable form & \pageref{summary:3}\\
-    4 & Hypotheses, scales and uniformity & \pageref{summary:4}\\
+    4 & Hypotheses, scales, and uniformity & \pageref{summary:4}\\
     5 & Branches and the inherited physical law & \pageref{summary:5}\\
     6 & Solving the nonlinear block constraint & \pageref{summary:6}\\
     7 & The conditional integral and its exterior & \pageref{summary:7}\\
@@ -142,11 +145,11 @@ The notation guide is on the next page. Read Sections 1--5 for the problem, the 
     \begin{tabular}{c}
         Exact blocking and the physical denominator\\
         $\downarrow$\\
-        Conditional integral, closed marked groups and scalar extraction\\
+        Conditional integral, closed marked groups, and scalar extraction\\
         $\downarrow$\\
         Flat line and corner coefficients, then regional identification\\
         $\downarrow$\\
-        Signed defects, exterior response and physical history averages
+        Signed defects, exterior response, and physical history averages
     \end{tabular}
 \end{center}
 The arrows indicate dependencies in the explanation. They do not mean that an estimate at a reference field automatically transfers to the interacting physical law.
@@ -157,7 +160,7 @@ The arrows indicate dependencies in the explanation. They do not mean that an es
 \vspace{8pt}
 The same letter can have different roles in different reference constructions. The following guide identifies the main objects; each is defined more fully when it enters the exposition.
 
-\subhead{Fields, Geometry and Operators}
+\subhead{Fields, Geometry, and Operators}
 \begin{small}
     \begin{tabularx}{\textwidth}{@{}p{0.24\textwidth}X@{}}
         \toprule
@@ -166,11 +169,11 @@ The same letter can have different roles in different reference constructions. T
         $G$, $\chi$ & Gauge group and normalised irreducible character.\\[3pt]
         $g_0$, $g_1$ & Bare coupling and first-step coupling.\\[3pt]
         $\varepsilon$, $L$ & Fine lattice spacing and blocking factor.\\[3pt]
-        $U$, $V$, $U_1$ & Fine field, coarse field and constrained fine background.\\[3pt]
+        $U$, $V$, $U_1$ & Fine field, coarse field, and constrained fine background.\\[3pt]
         $C_n$, $n_C$ & Square of side $nL$ fine bonds; $n_C=4nL$ traversals.\\[3pt]
         $P(C_n)$ & Physical perimeter, $4nL\varepsilon$.\\[3pt]
         $I$, $J$, $D$ & Inner free carrier, exterior free carrier, and a general conditional free carrier.\\[3pt]
-        $\mathsf C_U$, $h_U$ & Linear constrained extension and designated-bond right inverse.\\[3pt]
+        $\mathsf C_U$, $h_U$ & $\mathsf C_UB$ is the element of $\ker LQ_U$ equal to $B$ on the free bonds; $h_U$ is the right inverse of $LQ_U$ supported on the designated bonds.\\[3pt]
         $H$, $\mathsf H$ & Conditional precision and flat free precision, respectively.\\[3pt]
         $C_T$, $\mathsf K_B$ & Flat free covariance; the names belong to different sections of V4.\\[3pt]
         $\mathsf K$ & Covariance after reconstructing the linear fine field.\\
@@ -178,28 +181,28 @@ The same letter can have different roles in different reference constructions. T
     \end{tabularx}
 \end{small}
 
-\subhead{Laws, Extracted Scalars and Errors}
+\subhead{Laws, Extracted Scalars, and Errors}
 \begin{small}
     \begin{tabularx}{\textwidth}{@{}p{0.24\textwidth}X@{}}
         \toprule
         $\rho_0$, $\mathcal Z_0$ & Bare density and its physical partition function.\\[3pt]
-        $\rho_1$, $N_1$, $W_1$ & Blocked vacuum measure, observable numerator and their Radon--Nikod\'{y}m quotient.\\[3pt]
+        $\rho_1$, $N_1$, $W_1$ & Blocked vacuum measure, observable numerator, and their Radon--Nikod\'{y}m quotient.\\[3pt]
         $\xi$, $\Eh$ & Branch data and its normalised physical history expectation.\\[3pt]
         $K_{\xi;t}$, $\nu_{\xi;t}$ & Interpolated conditional kernSSel and its normalised law.\\[3pt]
         $A_{\mathrm{cov}}$ & Event that the conditional carrier covers the loop's reconstruction inputs.\\[3pt]
         $S^\circ_{D,C,T}$ & Conditional flat reference scalar at carrier $D$.\\[3pt]
         $\kappa_v$, $\kappa_C$ & Straight-line logarithmic density and extracted square scalar; distinct uses of $\kappa$.\\[3pt]
         $\delta m$, $z_{\mathrm c}$ & Perimeter coefficient and square corner factor with the fixed cutoff convention.\\[3pt]
-        $r$, $\tau$, $\rho$ & Fluctuation cutoff radius, forest-expansion parameter and signed-source gain.\\[3pt]
+        $r$, $\tau$, $\rho$ & Fluctuation cutoff radius, forest-expansion parameter, and signed-source gain.\\[3pt]
         $\varepsilon_1$, $\pi_*$ & Small-field tolerance and the scale governing rare-witness tails.\\[3pt]
-        $E^\circ$, $E_{\mathrm{def}}$, $E_{\mathrm{bdry}}$ & Finite-geometry exponent, signed defect and boundary/uncovered error.\\
+        $E^\circ$, $E_{\mathrm{def}}$, $E_{\mathrm{bdry}}$ & Finite-geometry exponent, signed defect, and boundary/uncovered error.\\
         \bottomrule
     \end{tabularx}
 \end{small}
 
 A \emph{carrier} is the set of variable labels on which an object lives. A \emph{mark} records a source contact or a specified bad event. A \emph{history} here includes the region choices and retained fields of this first step; it need not represent several RG scales.
 
-\chapterpage{1}{The Lattice, the Action and the Observable}{V4, Section 1; equations defining the Wilson insertion and the bare action.}
+\chapterpage{1}{The Lattice, the Action, and the Observable}{V4, Section 1; equations defining the Wilson insertion and the bare action.}
 
 The starting point is a four-dimensional periodic lattice with fine spacing $\varepsilon$. A positive oriented bond $b$ carries a group element $U(b)$ in a compact connected simple Lie group $G\subset U(N)$. The value on the reversed bond is $U(b^{-1})=U(b)^{-1}$. The finite torus makes every original integral finite-dimensional. The size of the torus remains a parameter in the estimates.
 
@@ -264,7 +267,7 @@ Later conditional fluctuation integrals have their own normalising factors. They
 
 \idea{A renormalisation step transports both the observable numerator and the vacuum measure. An estimate of the transported numerator becomes a physical expectation estimate only with the same denominator retained.}
 
-\chapterpage{3}{The Main Result in Readable Form}{V4, Theorem 1, equation (9), and its regime remark; see also Appendix F.}
+\chapterpage{3}{The Main Result in Readable Form}{V4, Theorem 1.2; the proposition ``the leading term and the coarse loop''; Appendix F.}
 
 The single-loop theorem extracts a scalar factor from the expectation of a leading coarse insertion, with two error terms. Under V4's hypotheses (H1)--(H4), it states
 \begin{equation*}
@@ -275,266 +278,375 @@ where, for $\rho_1$-almost every $V$,
     W^1_{\chi}(C;V)\coloneqq \Eh\!\left[\id_{A_{\mathrm{cov}}}
         e^{E^\circ_\xi}W_\chi(C;U_1(V,V_0))
         \,\middle|\,V\right]\;,
-\end{equation*}
-and
-\begin{equation*}
+    \quad
     \kappa_{C_n}
         =e^{-\delta m(g_0,\varepsilon)P(C_n)}
             \bigl(z_{\mathrm c}(g_0,\pi/2)\bigr)^4
         \neq 0\;.
 \end{equation*}
-We fix a norm $|\cdot|$ on the Lie algebra $\mathfrak g$, invariant under the adjoint action of $G$. The coefficients can depend on this norm and the other fixed cutoff conventions; we leave that dependence implicit in the notation.
+We fix an adjoint-invariant norm $|\cdot|$ on the Lie algebra $\mathfrak g$. Dependence on this norm and the fixed cutoff conventions is left implicit.
 
 \subhead{What the Factors Mean}
-The perimeter coefficient $\delta m$ is obtained from the connected density of an infinitely extended straight reference contour. The corner factor $z_{\mathrm c}$ is obtained by subtracting the two straight densities from a bent reference contour. Both use the same normalised first-step reference integral. They are defined by convergent connected sums, rather than by fitting a scalar to one finite square, as explained in Sections~\hyperref[summary:14]{14}--\hyperref[summary:15]{15}.
+The perimeter coefficient $\delta m$ comes from the connected density along an infinite straight reference contour. The corner factor $z_{\mathrm c}$ subtracts the two straight densities from a bent reference contour. Both are defined by convergent connected sums in the same normalised reference integral; see Sections~\hyperref[summary:14]{14}--\hyperref[summary:15]{15}.
 
-On the left, $U$ is the original fine-lattice field. On the right, $U_1=U_1(V,V_0)$ is also a fine-lattice field: it is the background selected by the constrained variational problem from the coarse field $V$ and the exterior fine field $V_0$. It satisfies $M(U_1)=V$ on the coarse bonds constrained in Ba{\l}aban's regular region. Both Wilson loops follow the same fine contour $C_n$. In the definition of $W^1_\chi$, the conditional expectation integrates the exterior fields and sums over region choices at fixed $V$. The event $A_{\mathrm{cov}}$ says that every contour link and every free input needed to reconstruct it are inside the conditional integration region. The exponent $E^\circ_\xi$ accounts for that region's boundary, the torus and interactions between distant corners.
+$U$ is the original fine field. The field $U_1(V,V_0)$ is also fine, it is the constrained background determined by the coarse field $V$ and exterior fine field $V_0$. It satisfies $M(U_1)=V$ on the constrained regular bonds. Both loops follow the fine contour $C_n$. The conditional expectation averages exterior fields and region choices at fixed $V$. The indicator $\id_{A_{\mathrm{cov}}}$ selects the terms in which fine fluctuations along the loop can be expanded to extract the perimeter and corner factors carrying the expected ultraviolet divergences. Section~\hyperref[summary:16]{16} explains the coverage condition that makes this extraction possible. Terms outside $A_{\mathrm{cov}}$ are included in $E_{\mathrm{bdry}}$ and controlled using large-field probabilities, as explained in Section~\hyperref[summary:18]{18}. The exponent $E^\circ_\xi$ records the boundary, torus, and distant-corner corrections, whose accumulated effect on the renormalised loop expectation is expected to remain bounded as the ultraviolet cutoff is removed.
 
-The conditional expectation uses the joint weights from the first blocking step. The leading insertion $W^1_\chi(C;V)$ is distinct from the full outgoing insertion $W_1(C;V)=\dd N_1/\dd\rho_1(V)$ defined in Section~2. The signed defect $E_{\mathrm{def}}$ measures the difference from the locally extracted flat scalar. The term $E_{\mathrm{bdry}}$ includes the exterior response on covered branches and the whole contribution of uncovered branches.
+The leading $W^1_\chi$ differs from the exact outgoing $W_1=\dd N_1/\dd\rho_1$ of Section~2. The absolute expectation errors $E_{\mathrm{def}}$ and $E_{\mathrm{bdry}}$ account for the signed defect in scalar extraction and the exterior response or uncovered configurations, respectively.
 
-\subhead{How to Read the Conclusion}
-The theorem gives a first-step identity with quantitative error bounds. The scalar is independent of the branch and torus; the retained expectation still knows about both. The displayed errors are initially absolute errors in the physical expectation. A stronger, partly relative form is available for the far-history defect, but must be read with its scalar and exponential-moment factors intact.
+\subhead{Dressed Versus Ordinary Coarse Loops}
+An ordinary (or na{\"i}ve) coarse loop multiplies $V(c)$ around the blocked contour. Nonlinear blocking need not make $V(c)$ equal to the straight fine transport in $U_1$. Rewriting the background loop in coarse links therefore leaves additional field-dependent factors inside the closed character. Together with the regional weights, these remain in $W^1_\chi$: it is a dressed Wilson loop.
 
-\idea{Extracting the scalar does not remove the background loop, the coverage event or the finite-geometry exponent. All three remain in the stated theorem.}
+V4's pointwise comparison of the background loop with the ordinary coarse loop, on covered configurations, costs schematically order $g_0$ per coarse contour bond, up to logarithms. At fixed physical perimeter the number of bonds grows like $\varepsilon^{-1}$. We therefore aim to retain the dressed insertion through further RG steps and postpone comparison with an ordinary loop until a fixed final coarse scale.
 
-\chapterpage{4}{Hypotheses, Scales and Uniformity}{V4, hypotheses (H1)--(H4), Theorem 1(ii)--(iii), Appendix B, ``The thresholds''.}
+\idea{The RG transforms the observable as well as the measure. Extracting scalar factors leaves a dressed insertion whose iteration still needs to be proved.}
 
-V4 fixes the group, character, block factor, charts and expansion constants before making the coupling small. Its standing block factor is odd and larger than eleven. Compatible cube partitions and the hierarchy of lengths are retained from the cited construction. The main theorem is on specified even periodic tori, large enough for both the loop and the coupling-dependent collars.
 
-The main small quantities are
+\chapterpage{4}{Hypotheses, Scales, and Uniformity}{V4, hypotheses (H1)--(H4), Theorem 1.2(ii)--(iii), Appendix B, ``The thresholds''.}
+
+\subhead{The Order of Choices}
+V4 fixes its parameters in a strict order, and every constant may depend only on the choices made before it:
 \begin{equation*}
-    \begin{gathered}
-        r=A_1(\log g_0^{-2})^{p_0}\;,
-        \qquad \tau=C\bigl[g_0(1+r)^3+e^{-cr^2}\bigr]\;,\\
-        p_0(g)=A_0(\log g^{-2})^{p_0}\;,
-        \qquad \pi_*=\min \bigl(p_0(g_0),p_0(g_1)\bigr)\;,\\
-        \varepsilon_1=g_1p_0(g_1)\;,
-        \qquad \rho=O\bigl(g_0^2(1+r)^4\bigr)\;.
-    \end{gathered}
+    \underbrace{G,\ \chi,\ L,\ \text{constants}}_{\text{(H1)},\ L>11\text{ odd}}
+    \;\longrightarrow\;
+    \underbrace{0<g_0<g_*}_{\text{(H2)}}
+    \;\longrightarrow\;
+    \underbrace{\text{torus, large}}_{\text{(H3)}}\;.
 \end{equation*}
-The symbol $p_0$ serves as a fixed logarithmic exponent, while $p_0(g)$ denotes the displayed cutoff function. The coupling $g_1$ is the first-step coupling. The symbol $\varepsilon_1$ is a small-field tolerance, distinct from the lattice spacing $\varepsilon$.
+In particular every constant below is independent of $g_0$, the loop size $n$, the torus, and the history.
 
-For the distances $d_j$ and $\iota_T$ defined in Section 16 of this summary, V4 states on covered branches
+\subhead{The Scales}
+As $g_0\to0$,
 \begin{equation*}
-    |E^\circ_\xi|\leqslant  C\tau^2
-        \left[\sum_{j=0}^{4n-1}e^{-cd_j}
-            +4ne^{-c\iota_T}+(n+1)e^{-cn}\right]\;.
+    \begin{aligned}
+        r&=A_1(\log g_0^{-2})^{p_0}\to\infty\;, &&\text{the cutoff radius of the rescaled fluctuation }A/g_0\;,\\
+        \tau&=C\bigl[g_0(1+r)^3+e^{-cr^2}\bigr]\to0\;, &&\text{the cluster-expansion parameter}\;,\\
+        \pi_*&\to\infty\;, &&\text{the large-field scale}\;,\\
+        \varepsilon_1&\to0\;, &&\text{the coarse small-field tolerance}\;.
+    \end{aligned}
 \end{equation*}
-With $b=\lfloor LMR_1/16\rfloor$, the physical errors obey
+Up to powers of $\log g_0^{-2}$, both $\tau$ and $\varepsilon_1$ are of order $g_0$, while $e^{-c\pi_*^2}$ vanishes faster than every power of $g_0$. The signed-source gain $\rho=O(g_0^2(1+r)^4)$ is explained in Section~\hyperref[summary:10]{10}.
+
+\subhead{The Bounds}
+Let $n_C=4nL$ be the number of contour bonds, and let $d_j$, $\iota_T$ be the distances of Section~\hyperref[summary:16]{16}. On covered branches V4 states
+\begin{equation*}
+    |E^\circ_\xi|\leqslant C\tau^2\Bigl[\sum_{j=0}^{4n-1}e^{-cd_j}+4ne^{-c\iota_T}+(n+1)e^{-cn}\Bigr]\leqslant C\tau^2(9n+1)\;,
+\end{equation*}
+and for the physical errors
 \begin{equation*}
     \begin{aligned}
         |E_{\mathrm{def}}|
-        &\leqslant  C'_Ln_Ce^{-(c_*/2)\pi_*^2}
-            +e^{C_\chi n_C\rho(\varepsilon_1+e^{-cb/(LM)})}-1\;,\\
+        &\leqslant C'_Ln_Ce^{-(c_*/2)\pi_*^2}+e^{C_\chi n_C\rho(\varepsilon_1+e^{-cb/(LM)})}-1\;,\\
         |E_{\mathrm{bdry}}|
-        &\leqslant  C_{\mathrm{resp},\chi}n_C(1+g_0r)e^{-c_*\pi_*^2}\;.
+        &\leqslant C_{\mathrm{resp},\chi}\,n_C(1+g_0r)\,e^{-c_*\pi_*^2}\;,
     \end{aligned}
 \end{equation*}
-The constants in these statements are independent of the loop size, admitted torus and history. The explicit factors $n_C$ and the exponential in $n_C$ remain. They are not hidden in those constants.
+where $e^{-cb/(LM)}$ vanishes faster than every power of $g_0$. At fixed $n$, every error therefore vanishes faster than every power of $g_0$ except the second term of $E_{\mathrm{def}}$, which is of order $n_C\rho\varepsilon_1$ when that is small. The factors $n_C$ are explicit; they are not absorbed into the constants.
 
-Hypothesis (H4) matters: it records both accepted results from Ba{\l}aban and V4's specific readings where the sources leave conventions implicit. Among them are domain, normalisation and uniformity readings. The summary uses those hypotheses at their stated scope; it does not replace them by an unrestricted assertion about every conceivable RG scheme.
+Hypothesis (H4) takes Ba{\l}aban's results as stated, together with V4's readings of conventions his papers leave implicit.
 
-\idea{Uniform constants and uniform smallness are different. A bound can have volume-independent constants while growing exponentially with the number of contour bonds.}
+\idea{Uniform constants and uniform smallness are different. A bound can have constants independent of $g_0$, $n$, and the torus while growing exponentially with the number $n_C$ of contour bonds.}
 
-\chapterpage{5}{Branches and the Inherited Physical Law}{V4, Section 3.1; Appendix D, ``The physical substitution''; Section 8.}
 
-The small-field/large-field decomposition partitions the original integral into branches. A branch records where a regular reconstruction is used and where exterior fields or large fluctuations must be retained. The branch data is
+
+
+\chapterpage{5}{Branches and the Inherited Physical Law}{V4, Section 3.1; Appendix D, ``The physical substitution''.}
+
+Theorem~1.2 states its leading term as an expectation $\Eh$ over branch data $\xi$, listed at the end of this section. The whole section explains one identity:
+\begin{equation*}
+    \mathbb E_\varepsilon[W_\chi(C)]=\Eh\Bigl[\int W_\chi(C;U_\xi(a))\,\dd\nu_{\xi;1}(a)\Bigr]\;.
+\end{equation*}
+It splits the bare expectation into two levels. Inside, the branch data $\xi$ is fixed and only a small fluctuation $a$ is integrated, against a normalised law $\nu_{\xi;1}$ (Section~\hyperref[summary:7]{7}); Sections~\hyperref[summary:6]{6}--\hyperref[summary:17]{17} work at this level, with bounds uniform in $\xi$. Outside, $\Eh$ averages over $\xi$; from Section~\hyperref[summary:18]{18} on, the fixed-$\xi$ results are averaged, and the branches with a bad region near the loop are paid for by their small $\Eh$-probabilities.
+
+\subhead{The Outer Law}
+At fixed $\xi$ the integral over $a$ has a density $\mathcal K_\xi$ with mass $\mathsf w_\xi=\int\mathcal K_\xi(a)\,\dd a$, so that $\nu_{\xi;1}=\mathsf w_\xi^{-1}\mathcal K_\xi\,\dd a$. Writing $\mathcal O$ for the remaining sums and integrals over the branch data, with Ba{\l}aban's large-field factors, constraints, Jacobians, and the background action $e^{-g_0^{-2}S(U_1)}$, the history expectation is
+\begin{equation*}
+    \Eh[X]=\frac{1}{\mathcal Z_0}\int\mathcal O[\mathsf w_\xi X](V)\,\dd V\;,\qquad \Eh[1]=1\;.
+\end{equation*}
+$\mathcal O$ is the outer part of Ba{\l}aban's formula for the blocked density \cite[eq.~(1.15)]{BalabanCRE}, everything except the integral over the small fluctuations, after his splitting (1.18) and change of variables (1.22). The law $\Eh$ is not a reference measure chosen for convenience. It is built from the same interacting integral and normalised by the physical partition function $\mathcal Z_0$.
+
+\subhead{The Branch Data}
+Ba{\l}aban's first step inserts partitions of unity into the fine integral, one factor per cube, each testing whether a field is small or large there \cite[pp.~245--251]{BalabanCRE}. Expanding the products rewrites the integral as a sum of terms, the \emph{branches}, each labelled by
 \begin{equation*}
     \xi=(\Omega_1,R_1,V,V_0,A_{\mathrm e})\;.
 \end{equation*}
-The region $\Omega_1$ is the small-field region. The large-fluctuation region $R_1$, together with $\Omega_1$, determines a filled inner region $\Lambda_1$. The coarse field is $V$, the exterior fine field is $V_0$, and $A_{\mathrm e}$ is an exterior free fluctuation. At the original carrier there are no additional retreat labels.
-
-The free bonds split into $I=\Lambda_1^*$ and its complement $J$ within the branch's free carrier. A starred carrier excludes designated bonds; the bonds of a region have at least one endpoint in that region. The variable $a\in \mathfrak g^I$ is integrated conditionally, while $A_{\mathrm e}\in \mathfrak g^J$ is frozen in that integral. Crossing bonds and outer coarse rows are assigned explicitly in V4, so no bond is given two integrations.
-
-Let $\mathcal O$ denote the remaining positive outer operation. It sums the region choices and integrates the exterior variables, retaining coarse constraints, large-field factors, Haar and gauge factors, Jacobians and vacuum prefactors. If $\mathcal J^{\mathrm a}_\xi$ is the conditional functional, its mass is
+Here
+\begin{itemize}
+    \item $\Omega_1$ is the small-field region \cite[eq.~(1.10)]{BalabanCRE};
+    \item $R_1\subset\Omega_1$ is the large-fluctuation region, the union of the cubes on which some fluctuation reaches the cutoff radius, $|A(b)|\geqslant r$ \cite[eq.~(1.18)]{BalabanCRE};
+    \item $V$ is the coarse field;
+    \item $V_0$ is the fine field on the bonds outside $\Omega_1$; and
+    \item $A_{\mathrm e}$ is the exterior fluctuation, on the free bonds of $\Omega_1$ outside $\Lambda_1$ (see below).
+\end{itemize}
+From $\Omega_1$ and $R_1$ Ba{\l}aban builds the final small-field domain \cite[eq.~(1.20)]{BalabanCRE}:
 \begin{equation*}
-    \mathsf w_\xi=\mathcal J^{\mathrm a}_\xi[1]
-        =e^{c_\xi}I_{\xi;1}\;.
+    \Lambda_1\subset\Omega_1\setminus R_1\;,
 \end{equation*}
-The history expectation is defined by
-\begin{equation*}
-    \Eh[X]=\mathcal Z_0^{-1}
-        \int\mathcal O[\mathsf w_\xi X](V)\,\dd V\;,
-    \qquad \Eh[1]=1\;.
-\end{equation*}
-It is the original physical law rewritten through the branch construction. In particular, the branch probabilities are not separately normalised reference probabilities.
+separated from the boundary of $\Omega_1$ and from $R_1$ by collars of cubes of side $LMR_1$. At fixed branch data only the fluctuation $a$ on the \emph{free} bonds $I$ of $\Lambda_1$ (see Section~\hyperref[summary:6]{6}) is integrated; $A_{\mathrm e}$ is the fluctuation on the remaining free bonds $J$ of $\Omega_1$. Together, $a$ and the branch data determine the fine field $U_\xi(a)$.
 
-An instructive detail is the large-field factor $\zeta_\xi$. It can depend on boundary fluctuations as well as $V$ and $V_0$. Its localisation statement concerns the source regions of its tests; it does not make it a function of exterior group fields alone. V4 keeps this dependence in the outer integrand.
+Ba{\l}aban fixes an axial gauge inside each block, which adds a term $\mathbf G(U)$ to the action \cite[eqs.~(1.5)--(1.7)]{BalabanCRE}; without it, gauge transformations trivial at the block centres would be zero modes of the Hessian. The background $U_1$ minimises the action plus $\mathbf G$ with block average $V$ and $U_1=V_0$ off $\Omega_1$ \cite[eq.~(1.12)]{BalabanCRE}.
 
 \idea{Conditioning freezes variables but does not make them independent or harmless. Their distribution and every remaining normaliser are inherited from the same interacting integral.}
 
-\chapterpage{6}{Solving the Nonlinear Block Constraint}{V4, Sections 3.2--3.3; Appendix B, especially Lemma 73, ``fibre smallness''.}
 
-A blocked field imposes a nonlinear constraint on fine links. The conditional integral therefore cannot be parametrised by arbitrary independent link fluctuations. V4 first solves the constraint, leaving a genuine set of free Lie-algebra variables.
+\chapterpage{6b}{Solving the Nonlinear Block Constraint}{V4, Sections 3.2--3.3; Appendix B.}
 
-For a background field $U$ in the admitted regular domain, the relative averaging map, its linear part and its nonlinear remainder are
+At fixed branch data the fluctuation integral is \cite[eq.~(1.11)]{BalabanCRE}
 \begin{equation*}
-    \begin{gathered}
-        \mathcal Q_U(q)=\frac{1}{i}
-            \log \bigl(\mathsf M(e^{iq}U)\mathsf M(U)^{-1}\bigr)\;,\\
-        Q_U=\frac{1}{L}D\mathcal Q_U(0)\;,
-        \qquad \mathcal N_U(q)=\mathcal Q_U(q)-LQ_Uq\;.
-    \end{gathered}
+    \int W_\chi(C;U)\,(\text{cutoff factors})\,\delta\bigl(\mathsf M(U)V^{-1}\bigr)\,e^{-g_0^{-2}(S+\mathbf G)(U)}\,\dd U\;,
 \end{equation*}
-Here $\mathsf M$ denotes the nonlinear average on the regular domain. The relative logarithm is taken in a fixed chart. The maps act from fine-bond phases to coarse-row Lie-algebra fields.
+an integral over the fine bonds of $\Omega_1$ with Haar measure and one $\delta$-function for each coarse bond $c$, which forces the block averages to equal $V$. The cluster expansion of Section~\hyperref[summary:8]{8} needs a Gaussian integral over a vector space with small local corrections instead. Four steps produce it.
 
-One designated fine bond $b_0(c)$ is chosen for each coarse row $c$. Its coefficient in $Q_U$ is an invertible map $\alpha_c(U)$; at the identity it is $L^{-4}\id$. Eliminating these designated variables gives a map $\mathsf C_U$ from free fields to the kernel of $Q_U$, and a supported right inverse $h_U$ with $LQ_Uh_U=\id$.
-
-For a free field $B$, put $A=g_0\mathsf C_UB$. The reconstructed phase is
+\subhead{Coordinates}
+We write a fine field near the minimising background $U_1$ as $U=e^{iq}U_1$, with $q$ a $\mathfrak g$-valued phase on the fine bonds of $\Omega_1$ \cite[eq.~(1.13)]{BalabanCRE}. The Haar measure becomes $\sigma(q)\,\dd q$, and the constraint enforced by the $\delta$-function becomes $\mathcal Q_{U_1}(q)=0$, one equation in $\mathfrak g$ for each $c$:
 \begin{equation*}
-    q_U(B)=A-h_U\widetilde D_U(A)\;,
-    \qquad
-    \widetilde D_{U,c}(A)
-        =\mathcal N_{U,c}\bigl(A-h_U\widetilde D_U(A)\bigr)\;.
+    \mathcal Q_{U_1}(q)=\frac{1}{i}\log\bigl(\mathsf M(e^{iq}U_1)V^{-1}\bigr)=LQ_{U_1}q+\mathcal N_{U_1}(q)\;,
 \end{equation*}
-The correction begins quadratically at zero. Crucially, the row for $c$ involves only the two endpoint blocks and only its own designated unknown. Thus a reconstructed designated link has a fixed finite free-input stencil. A free link simply has phase $g_0B(b)$.
+with $LQ_{U_1}$ linear, Lemmata 3.2 and B.8 of V4 show surjectivity, and $\mathcal N_{U_1}$ quadratic at $q=0$. The constraint is nonlinear, so the phases that satisfy it form a curved set.
 
-\subhead{Why the Chart Argument Is Load-Bearing}
-An implicit-function theorem at zero gives a local analytic germ. The physical integral needs more: its admitted configurations must lie in a common domain where the chosen solution is unique, analytic and has a nonvanishing Jacobian. V4's uniform-chart and fibre-smallness lemmas supply this bridge using the branch hypotheses and small-coupling thresholds. The source explicitly treats the whole admitted fibre, including rows far from the inner carrier.
+\subhead{Linearisation}
+For each $c$ one fine bond $b_0(c)$ is \emph{designated}; the other bonds are \emph{free} \cite[p.~249]{BalabanCRE}. Let $h_{U_1}$ be the right inverse of $LQ_{U_1}$ supported on the designated bonds, and let $\widetilde D_{U_1}(A)$ be the small solution of
+\begin{equation*}
+    \widetilde D_{U_1}(A)=\mathcal N_{U_1}\bigl(A-h_{U_1}\widetilde D_{U_1}(A)\bigr)\;.
+\end{equation*}
+Then $\mathcal Q_{U_1}\bigl(A-h_{U_1}\widetilde D_{U_1}(A)\bigr)=LQ_{U_1}A$ for every $A$. The substitution $q=A-h_{U_1}\widetilde D_{U_1}(A)$, which moves only the designated bonds, therefore turns the constraint into the linear constraint $LQ_{U_1}A=0$ \cite[eq.~(1.14)]{BalabanCRE}. Its Jacobian becomes a term of the exponent.
 
-This distinction explains the length of Appendix B. The cutoff radius grows logarithmically in $g_0^{-1}$, while the physical phase is multiplied by $g_0$. Uniform estimates are required on a larger box around the actual integration box, so later derivatives and comparisons are meaningful there.
+\subhead{Solution}
+The linear constraint fixes $A$ on the designated bonds as a linear function of $A$ on the free bonds. With the free variables scaled by $g_0$,
+\begin{equation*}
+    A=g_0\mathsf C_{U_1}B\;,\qquad q_{U_1}(B)\coloneqq A-h_{U_1}\widetilde D_{U_1}(A)\;,
+\end{equation*}
+where $\mathsf C_{U_1}B$ is the unique element of $\ker LQ_{U_1}$ that agrees with $B$ on the free bonds. Integrating the $\delta$-functions against the designated variables gives a constant, and the field $B$ on the free bonds is unconstrained.
 
-\idea{The reconstruction is local in its free inputs once the background is fixed. This does not by itself prove that the background is local as a function of all its coarse and exterior determining data.}
+\subhead{Expansion}
+The action at $e^{iq_{U_1}(B)}U_1$ has no linear term in $B$, since $U_1$ minimises it under the block constraint \cite[eq.~(1.12)]{BalabanCRE}. Up to constants, the result is \cite[eq.~(1.15)]{BalabanCRE}
+\begin{equation*}
+    \int W_\chi\bigl(C;e^{iq_{U_1}(B)}U_1\bigr)\,(\text{cutoff factors})\exp\Bigl(-\tfrac12\langle B,H_\xi B\rangle+\sum_{\mathfrak p}\mathfrak p(B)\Bigr)\,\dd B\;,
+\end{equation*}
+where $\tfrac12\langle B,H_\xi B\rangle$ is the quadratic part of the action plus gauge fixing, and the $\mathfrak p$ are local terms: the rest of the action and gauge fixing, the Haar density, and the Jacobian (Section~\hyperref[summary:8]{8}). They depend on $B$ only via $g_{0} \mathsf{C}_{U_1}B$.
+
+This is the integral that the rest of the summary expands. At the identity background $H_\xi$ is the form $\mathsf H$ of Section~\hyperref[summary:11]{11}. Two further properties are used later.
+\begin{itemize}
+    \item \emph{Locality.} The equation for $c$ involves only the two blocks at the ends of $c$ and only its own designated bond. Each designated phase therefore depends on a fixed finite set of free bonds, its \emph{stencil}, and the terms of the exponent are local (Sections~\hyperref[summary:8]{8}, \hyperref[summary:9]{9}, and \hyperref[summary:16]{16}).
+    \item \emph{The Quadratic Correction.} Since $\widetilde D_{U_1}(A)=O(|A|^2)$ and $|A|\lesssim g_0r$, the non-Gaussian part of $g_0^{-2}S$ starts at cubic order and is $O(g_0(1+r)^3)$. This is the first term of $\tau$ (Section~\hyperref[summary:4]{4}).
+\end{itemize}
+V4 proves that the substitution is unique and analytic, with a nonvanishing Jacobian, on the whole cutoff region and not only near $q=0$; this takes up most of Appendix~B.
+
+\idea{A change of variables on one designated bond per coarse bond makes the block constraint linear, and the linear constraint is then solved exactly. The result is a Gaussian integral over the free bonds with local corrections that start at cubic order.}
+
 
 \chapterpage{7}{The Conditional Integral and Its Exterior}{V4, Section 3.4, ``The boundary law, the exterior interpolation and the collar''.}
 
-After the exact changes of variables, the reconstructed fine field on the branch is
-\begin{equation*}
-    U_\xi(a)(b)
-        =e^{iq_{U_1}(\Psi_\xi(a+A_{\mathrm e}))(b)}U_1(b)\;.
-\end{equation*}
-This formula applies on the branch's interior bond region; outside it, the field is $V_0$. The map $\Psi_\xi$ is the boundary change of variables. It acts bond by bond in an exterior strip and is the identity on the inner free carrier. Its exact Jacobian and composed cutoffs are retained.
+In the integral of Section~\hyperref[summary:6]{6}, the cutoff factors on $R_1$ and near the boundary of $\Omega_1$ test the field $e^{iq}U_1$, and $U_1$ depends on the coarse field $V$ on all of $\Omega_1$, including $\Lambda_1$. The next renormalisation step needs these factors to depend on $V$ only outside $\Lambda_1$. Ba{\l}aban therefore replaces $U_1$ in them by a background determined by $V$ outside $\Lambda_1$ alone, which differs from $U_1$ there by an exponentially small amount, and absorbs the difference into a small shift $\Psi_\xi$ of the fluctuation variables on those bonds \cite[eqs.~(1.21)--(1.22)]{BalabanCRE}. 
 
-Let $H=H_{\xi,II}$ be the precision on $\mathfrak g^I$. The hard domain is the product of the chosen norm balls,
+The free field can therefore be written as $B=\Psi_\xi(a+A_{\mathrm e})$, where the fluctuation $a\in\mathfrak g^I$ is integrated and the exterior fluctuation $A_{\mathrm e}\in\mathfrak g^J$ is held fixed. The shift $\Psi_\xi$ acts bond by bond and only on a strip far from $I$, so near $I$ the phase is simply $q_{U_1}(a+A_{\mathrm e})$. The fine field is
 \begin{equation*}
-    \mathcal D_I=\prod_{b\in I}
-        \{X\in \mathfrak g\, | \,|X|<r\}\;.
+    U_\xi(a)=e^{iq_{U_1}(\Psi_\xi(a+A_{\mathrm e}))}U_1\quad\text{on }\Omega_1\;,\qquad U_\xi(a)=V_0\quad\text{off }\Omega_1\;,
 \end{equation*}
-The exterior interpolation used by V4 is
-\begin{equation*}
-    \begin{aligned}
-        j_\xi(a)&=\langle a,H_{\xi,IJ}A_{\mathrm e}\rangle\;,\\
-        K_{\xi;t}(a)&=\id_{\mathcal D_I}(a)
-            e^{-\frac{1}{2}\langle a,Ha\rangle-tj_\xi(a)+P_{\xi,t}(a)}\;,\\
-        I_{\xi;t}&=\int K_{\xi;t}(a)\,\dd a\;,
-        \qquad \dd\nu_{\xi;t}(a)
-            =I_{\xi;t}^{-1}K_{\xi;t}(a)\,\dd a\;.
-    \end{aligned}
-\end{equation*}
-The function $P_{\xi,t}$ is the sum of the near local primitives evaluated with exterior input $tA_{\mathrm e}$. The parameter satisfies $0\leqslant  t\leqslant  1$. At $t=1$ one recovers the actual conditional law, with its branch constant $e^{c_\xi}$. At $t=0$ one obtains a centred law suited to the polymer representation.
+and $\mathcal K_\xi$ is a density on $\mathfrak g^I$.
 
-The Wilson function $f_\xi(a)=W_\chi(C;U_\xi(a))$ is held fixed during this interpolation. Define $F_\xi(t)=\int f_\xi\,\dd\nu_{\xi;t}$. The source's exterior response identity is
+The exterior field enters the integrand in two ways: through the off-diagonal block of the quadratic form, and through the local terms of the exponent whose stencils meet both $I$ and $J$. V4 switches both off with a parameter $0\leqslant t\leqslant1$:
 \begin{equation*}
-    F_\xi(1)-F_\xi(0)
-        =\mathcal B_\xi[f_\xi]
-        =\int_0^1\operatorname{Cov}_{\nu_{\xi;t}}
-            \bigl(f_\xi,-j_\xi+\partial_tP_{\xi,t}\bigr)\,\dd t\;.
+    K_{\xi;t}(a)=\id_{\mathcal D_I}(a)\exp\Bigl(-\tfrac12\langle a,H_{\xi,II}a\rangle-t\langle a,H_{\xi,IJ}A_{\mathrm e}\rangle+P_{\xi,t}(a)\Bigr)\;,\quad \dd\nu_{\xi;t}(a)=\frac{K_{\xi;t}(a)\,\dd a}{\int K_{\xi;t}(a')\,\dd a'}\;.
 \end{equation*}
-The covariance centres the score because the normaliser $I_{\xi;t}$ is differentiated too. This is why replacing the denominator by a fixed Gaussian normaliser would change the operand being bounded.
+Here $H_\xi$ is the quadratic form of Section~\hyperref[summary:6]{6}, with blocks $H_{\xi,II}$ and $H_{\xi,IJ}$; $\mathcal D_I=\{a\,|\,|a(b)|<r\text{ for all }b\in I\}$ is the hard cutoff; and $P_{\xi,t}(a)$ is the sum of the local terms of the exponent near $I$, evaluated at $a+tA_{\mathrm e}$, defined in Section~\hyperref[summary:8]{8}.
+\begin{itemize}
+    \item At $t=1$ this is the actual conditional law: $\mathcal K_\xi=e^{c_\xi}K_{\xi;1}$, where the constant $c_\xi$ collects every term that does not depend on $a$. Hence $\nu_{\xi;1}$ is the law of Section~\hyperref[summary:5]{5}.
+    \item At $t=0$ the exterior field is switched off. The centred law $\nu_{\xi;0}$ has no linear term, and Sections~\hyperref[summary:8]{8}--\hyperref[summary:16]{16} expand it into polymers.
+\end{itemize}
 
-The hard box is unchanged throughout this interpolation. If the quadratic linear term is removed later by a shift, the box translates and creates boundary effects. V4 treats those effects explicitly rather than identifying the shifted law with the original centred law.
+The Wilson function is not interpolated: for every $t$ it is $W_\chi(C;U_\xi(a))$ at the actual $A_{\mathrm e}$. Let $F_\xi(t)=\int W_\chi(C;U_\xi(a))\,\dd\nu_{\xi;t}(a)$. Since the normaliser of $\nu_{\xi;t}$ also depends on $t$, differentiating gives a covariance:
+\begin{equation*}
+    F_\xi(1)=F_\xi(0)+\mathcal B_\xi\;,\qquad \mathcal B_\xi=\int_0^1\operatorname{Cov}_{\nu_{\xi;t}}\bigl(W_\chi(C;U_\xi(a)),\,\partial_t\log K_{\xi;t}(a)\bigr)\,\dd t\;.
+\end{equation*}
+The exterior response $\mathcal B_\xi$ is bounded in Section~\hyperref[summary:17]{17}. The hard cutoff $\mathcal D_I$ is the same for every $t$.
+
+\idea{The exterior enters the conditional law only through a linear coupling and the local terms at the edge of $I$. Switching them off gives a centred law for the expansion, and the difference is a covariance that is bounded separately.}
+
 
 \chapterpage{8}{How Local Interactions Become Polymers}{V4, Sections 3.3, 3.5--3.6; Appendix B, activity and vacuum-cluster bounds.}
 
-The centred kernel has a Gaussian quadratic part and a sum of local corrections. The corrections retain three kinds of data: action and gauge-fixing residuals, Haar-density logarithms, and the constraint-substitution determinant. Each primitive is assigned a connected geometric host containing all its free inputs. The original primitive labels are preserved, including labels whose stencils cross a conditional boundary.
-
-This locality gives a potential family $\mathbf V_\xi(Y,a)$ indexed by hosts $Y$. On the integration box, its sum is exactly $P_{\xi,0}(a)$. A potential is bounded by a constant times $g_0(1+r)^3$ on its protected enlarged chart. The small parameter is therefore compatible with the growing logarithmic cutoff.
-
-\subhead{Three Choices in a Selected Term}
-The expansion records which local potentials are selected, which bonds contribute failures of the hard cutoff, and which surrounding cubes are needed to localise the Gaussian kernel. The elementary identities are
+With $H=H_{\xi,II}$ and $\chi_b(a)=\id_{\{|a(b)|<r\}}$, the centred kernel of Section~\hyperref[summary:7]{7} is
 \begin{equation*}
-    e^{\mathbf V}=1+\int_0^1\mathbf V e^{t\mathbf V}\,\dd t\;,
-    \qquad \chi_b=1-(1-\chi_b)\;.
+    K_{\xi;0}(a)=\prod_{b\in I}\chi_b(a)\,e^{-\frac12\langle a,Ha\rangle+P_{\xi,0}(a)}\;,
 \end{equation*}
-Selecting a bad-bond factor retains its minus sign. The Gaussian localisation is organised with a fixed walk expansion and weakening parameters. Its connected final domains are the polymers. These domains record the actual support needed by the selected integrand, rather than a support chosen after taking a norm.
+a Gaussian times a local perturbation and a hard cutoff. To obtain bounds that do not depend on the volume, V4 writes its integral as a \emph{polymer gas}: a sum over families of disjoint connected regions, each carrying a small weight. This is Ba{\l}aban's cluster expansion \cite[Sect.~2]{BalabanRG2}.
 
-If $k^{\mathrm f}_\xi(Z)$ is the scalar vacuum activity of a connected final domain $Z$, the exact representation is
+\subhead{The Local Terms}
+As a function of the free field $B$, the exponent of the integral over the fluctuation $A$ on $\Omega_1$ in Ba{\l}aban's formula for the blocked density \cite[eq.~(1.15)]{BalabanCRE} is, up to a constant,
 \begin{equation*}
-    I_{\xi;0}=\mathfrak n_\xi\Xi^{\mathrm f}_\xi\;,
-    \qquad
-    \Xi^{\mathrm f}_\xi
-        =\sum_{\mathcal P\,\mathrm{compatible}}
-            \prod_{Z\in \mathcal P}k^{\mathrm f}_\xi(Z)\;.
+    -\tfrac12\langle B,H_\xi B\rangle+\sum_{\mathfrak p}\mathfrak p(B)\;.
 \end{equation*}
-Here $\mathfrak n_\xi=(2\pi)^{d_G|I|/2}\det (H)^{-1/2}$, and the empty family contributes one. Compatibility excludes both overlap and the specified adjacency of domains. The activity estimates give
+There is no linear term, because $U_1$ minimises the action plus gauge fixing under the block constraint \cite[eq.~(1.12)]{BalabanCRE}. The $\mathfrak p$ are local terms of three kinds, each vanishing at $B=0$:
+\begin{itemize}
+    \item for each plaquette $p$, the action term $-g_0^{-2}\bigl[s_p(q_{U_1}(B))-s_p(0)\bigr]$, with $s_p(q)=1-\operatorname{Re}\tr\bigl((e^{iq}U_1)(\partial p)\bigr)$, minus its Taylor polynomial of degree two at $B=0$, and likewise for the gauge-fixing term of each block;
+    \item for each bond $b$, the Haar term $\log\sigma(q_{U_1}(B)(b))-\log\sigma(0)$, where $\sigma(q)\,\dd q$ is the Haar measure in the coordinate $e^{iq}$;
+    \item for each coarse bond $c$, the Jacobian term $\log\bigl|\det\bigl(\id-h_{U_1}(c)\,\partial_{A(b_0(c))}\widetilde D_{U_1,c}(A)\bigr)\bigr|$ of the substitution of Section~\hyperref[summary:6]{6}, at $A=g_0\mathsf C_{U_1}B$.
+\end{itemize}
+Each $\mathfrak p$ depends on $B$ only through the free bonds of a stencil. It is \emph{near} if this stencil meets $I$. The other terms depend only on $A_{\mathrm e}$ and the branch data and are constants at fixed $\xi$. The correction sum of Section~\hyperref[summary:7]{7} is
 \begin{equation*}
-    |k^{\mathrm f}_\xi(Z)|\leqslant  \varepsilon_*e^{-\lambda_*\ell_1(Z)}\;,
-    \qquad
-    \sum_{Z'\not\sim Z}|k^{\mathrm f}_\xi(Z')|
-        e^{(1+6\theta)N_1(Z')}\leqslant  \frac{1}{8}N_1(Z)\;.
+    P_{\xi,t}(a) \coloneqq \sum_{\mathfrak p\ \mathrm{near}}\mathfrak p(a+tA_{\mathrm e})\;,\qquad 0\leqslant t\leqslant1\;.
 \end{equation*}
-The quantity $N_1$ counts coarse cubes, and $\ell_1$ is the prescribed tree-length weight with an additive constant. The second inequality is a quantitative cluster-expansion criterion: it pays the combinatorial cost of excluding polymers around an existing one.
 
-\idea{A polymer is a connected piece of an exact selected expansion. Its support, cutoffs, signs and normalisers are fixed before estimating its activity.}
+\subhead{The Local Potentials}
+Each near term $\mathfrak p$ is assigned a \emph{host} $Y$, a small connected union of $M$-cubes containing its stencil. The potential $\mathbf V_\xi(Y,a)$ is the sum of the values $\mathfrak p(a)$ of the near terms with host $Y$, so that
+\begin{equation*}
+    \sum_Y\mathbf V_\xi(Y,a)=P_{\xi,0}(a)\;,\qquad |\mathbf V_\xi(Y,a)|\leqslant Cg_0(1+r)^3\quad\text{on the cutoff box}\;.
+\end{equation*}
+
+\begin{figure}[ht]
+\centering
+\begin{tikzpicture}[x=5mm, y=5mm,
+    lat/.style={draw=muted!30, line width=0.3pt},
+    term/.style={draw=ink, line width=1.6pt},
+    lab/.style={font=\footnotesize, inner sep=1pt}]
+    \draw[muted!55, line width=0.7pt, dash pattern=on 1.5pt off 1pt] (8,0) grid (12,11);
+    \draw[ink!55, line width=0.7pt] (0,0) grid (8,11);
+    \node[lab] at (4,11.7) {$I$};
+    \node[lab] at (10,11.7) {$J$};
+    \draw[term] (3,5) rectangle (4,6);
+    \node[lab, fill=white] at (3.5,6.6) {$\mathfrak p_1$};
+    \draw[term] (8,4) rectangle (10,5) (9,4) -- (9,5);
+    \node[lab, fill=white] at (10.6,5.6) {$\mathfrak p_2$};
+    \draw[term, draw=muted!60] (10,8) rectangle (11,9);
+    \node[lab, fill=white] at (10.5,9.6) {$\mathfrak p_3$};
+    \node[font=\small] at (6,-1) {(a) Nearness};
+
+    \begin{scope}[shift={(14,0)}]
+        \fill[pale] (1,1) rectangle (13,10);
+        \fill[ink!20] (4,4) rectangle (10,7);
+        \draw[lat] (0,0) grid (14,11);
+        \foreach \x in {1,4,7,10,13} \draw[ink!50, line width=0.6pt] (\x,0) -- (\x,11);
+        \foreach \y in {1,4,7,10} \draw[ink!50, line width=0.6pt] (0,\y) -- (14,\y);
+        \draw[ink, dashed, line width=0.9pt] (1,1) rectangle (13,10);
+        \draw[term] (6,5) rectangle (8,6) (7,5) -- (7,6);
+        \node[lab, fill=ink!20] at (7,6.5) {$\mathfrak p$};
+        \node[lab, fill=pale] at (2.2,9.3) {$Y_{\mathfrak p}$};
+    \end{scope}
+    \node[font=\small] at (21,-1) {(b) Hosts};
+\end{tikzpicture}
+\caption{(a) The bonds of $I$ are solid, and the bonds of $J$ are dashed. A local term is near when its stencil (thick) meets $I$. The terms $\mathfrak p_1$ and $\mathfrak p_2$ are near, and $\mathfrak p_2$ also reads exterior bonds, which is how $A_{\mathrm e}$ enters. The term $\mathfrak p_3$ is not near and is a constant at fixed $\xi$. (b) The thicker lines bound the $M$-cubes. The stencil of a near term $\mathfrak p$ meets the dark $M$-cubes. Its host $Y_{\mathfrak p}$ (dashed) is the smallest rectangle of $M$-cubes containing them, enlarged by one layer of cubes. The stencil is shorter than $M$, so it meets at most two cubes in each direction, and the host is at most four cubes wide. Selected hosts, bad bonds, and differentiated cubes make up the polymers.}
+\end{figure}
+
+\subhead{Three Expansions}
+Each of the following steps is an exact identity.
+\begin{itemize}
+    \item \emph{Potentials.} Writing $e^{\mathbf V}=1+\int_0^1\mathbf Ve^{t\mathbf V}\,\dd t$ for every host selects a finite family of hosts \cite[eq.~(2.1)]{BalabanRG2}. Each selected host contributes a factor $\mathbf V$ of size $g_0(1+r)^3$.
+    \item \emph{Cutoff.} Writing $\chi_b=1-(1-\chi_b)$ for every bond outside the selected hosts selects a set $\mathsf P$ of bad bonds, with sign $(-1)^{|\mathsf P|}$ \cite[eq.~(2.3)]{BalabanRG2}. A bad bond has $|a(b)|\geqslant r$, which costs $e^{-cr^2}$ under the Gaussian.
+    \item \emph{Gaussian.} The covariance $H^{-1}$ couples all bonds. V4 writes $H^{-1/2}$ as a sum over walks with finite-range steps and attaches to every coarse cube $\Delta$ a parameter $s_\Delta\in[0,1]$ that switches off the walks entering $\Delta$. Writing the value at $s_\Delta=1$ as the value at $s_\Delta=0$ plus $\int_0^1\partial_{s_\Delta}\,\dd s_\Delta$ selects the cubes on which the coupling is kept \cite[eq.~(2.8)]{BalabanRG2}. Each such cube costs a decay factor of the walk series.
+\end{itemize}
+The selected hosts, the bad bonds, and the differentiated cubes form a \emph{final domain} $Z$, a union of coarse cubes. After the three expansions the integrand factorises over the connected components of $Z$, so
+\begin{equation*}
+    I_{\xi;0}=\mathfrak n_\xi\,\Xi^{\mathrm f}_\xi\;,\qquad \Xi^{\mathrm f}_\xi=\sum_{\mathcal P\,\mathrm{compatible}}\prod_{Z\in\mathcal P}k^{\mathrm f}_\xi(Z)\;,\qquad \mathfrak n_\xi=(2\pi)^{d_G|I|/2}\det(H)^{-1/2}\;.
+\end{equation*}
+The connected final domains $Z$ are the \emph{polymers}, and the activity $k^{\mathrm f}_\xi(Z)$ is the sum of all selected terms with final domain $Z$. A family is compatible when no two of its polymers share a cube or a wall \cite[eq.~(2.11)]{BalabanRG2}, and the empty family contributes one. The prefactor $\mathfrak n_\xi$ is the unperturbed Gaussian integral, so $\Xi^{\mathrm f}_\xi$ is the ratio to the free Gaussian.
+
+\subhead{The Activity Bounds}
+Let $N_1(Z)$ be the number of coarse cubes of $Z$ and $\ell_1(Z)$ its tree length plus five; the tree length is the length, in units of the cube side, of the shortest tree graph meeting all its cubes \cite[p.~257]{BalabanRG1}. There are constants $\varepsilon_*\leqslant\frac14$, $\lambda_*$, and $\theta>0$, fixed before $g_0$, such that
+\begin{equation*}
+    |k^{\mathrm f}_\xi(Z)|\leqslant\varepsilon_*e^{-\lambda_*\ell_1(Z)}\;,\qquad \sum_{Z'\not\sim Z}|k^{\mathrm f}_\xi(Z')|\,e^{(1+6\theta)N_1(Z')}\leqslant\frac18N_1(Z)\;,
+\end{equation*}
+where $Z'\not\sim Z$ means that $Z'$ and $Z$ are incompatible. The first bound makes large polymers exponentially rare. The second is a Koteck\'y--Preiss condition \cite{KoteckyPreiss}: the polymers that can collide with a given $Z$ have small total weight. Together they make $\log\Xi^{\mathrm f}_\xi=\log(I_{\xi;0}/\mathfrak n_\xi)$ a convergent sum of local terms, so $K_{\xi;0}$ is the Gaussian $e^{-\frac12\langle a,Ha\rangle}$ up to a weak local perturbation, uniformly in the volume.
+
+\idea{Every step of the expansion is an exact identity at fixed volume. A polymer is small because of what it contains: selected potentials, bad bonds, and decoupled cubes.}
+
 
 \chapterpage{9}{Marking a Closed Nonabelian Source}{V4, Sections 3.7--3.8; Section 5, closed source differences and contour intervals.}
 
-Vacuum polymers describe the conditional measure. To describe a Wilson loop insertion, the expansion must also record which variables the observable actually reads. V4 does this with probes and finite differences.
+This section expands the centred Wilson expectatio  n $F_\xi(0)=\int W_\chi(C;U_\xi(a))\,\dd\nu_{\xi;0}(a)$ and keeps only the polymers that the loop actually sees.
 
-For a connected domain $D$, the probe construction gives a finite complex measure $\nu^{\mathrm f}_{\xi,D}$ on its local free-variable box. Its total mass is the vacuum activity $k^{\mathrm f}_\xi(D)$. Subtracting that mass at zero produces
+The expansion of Section~\hyperref[summary:8]{8} holds for the measure $K_{\xi;0}(a)\,\dd a$ itself: each polymer $D$ carries a finite complex measure $\nu_D$ on its variables, of mass $k^{\mathrm f}_\xi(D)$, and $K_{\xi;0}\,\dd a=\mathfrak n_\xi\sum_{\mathcal P}\bigotimes_{D\in\mathcal P}\nu_D$. Removing the mass gives $\widehat\nu_D=\nu_D-k^{\mathrm f}_\xi(D)\delta_0$, of mass zero, and allows us to rewrite
 \begin{equation*}
-    \widehat\nu^{\mathrm f}_{\xi,D}
-        =\nu^{\mathrm f}_{\xi,D}
-            -k^{\mathrm f}_\xi(D)\delta_0\;,
-    \qquad \widehat\nu^{\mathrm f}_{\xi,D}[1]=0\;.
+    F_\xi(0)=W_\chi(C;U_\xi(0))+\sum_{\varnothing\ne\mathcal A\,\mathrm{compatible}}\frac{(\Xi^{\mathrm f}_\xi)^{[\mathcal A]}}{\Xi^{\mathrm f}_\xi}\int W_\chi(C;U_\xi(a))\,\dd\Bigl(\bigotimes_{D\in\mathcal A}\widehat\nu_D\Bigr)(a)\;,
 \end{equation*}
-Pairing a function with this measure tests its change from zero local input. For several disjoint root domains, these differences are taken jointly inside the original closed Wilson contraction.
+where $(\Xi^{\mathrm f}_\xi)^{[\mathcal A]}$ sums over the families compatible with $\mathcal A$. A polymer is \emph{marked} if its variables meet the stencil of a contour bond. If $\mathcal A$ contains an unmarked polymer, the loop does not read its variables, and its zero mass kills the term. Only families of marked polymers survive.
 
-The exact centred expectation has the form
+\begin{figure}[ht]
+\centering
+\begin{tikzpicture}[x=5mm, y=5mm,
+    lat/.style={draw=muted!30, line width=0.3pt},
+    term/.style={draw=ink, line width=1.6pt},
+    lab/.style={font=\footnotesize, inner sep=1pt}]
+
+    \fill[pale] (0,0) rectangle (14,11);
+    \fill[ink!20, even odd rule] (2,2) rectangle (10,8) (4,4) rectangle (8,6);
+    \draw[lat] (0,0) grid (14,11);
+    \draw[ink, dashed, line width=0.8pt] (4,6) rectangle (7,8);
+    \node[lab, fill=pale] at (5.5,8.6) {$\mathcal F_r$};
+    \draw[ink, line width=1.6pt] (3,3) rectangle (9,7);
+    \draw[ink, line width=1.6pt, -{Stealth[length=2.5mm]}] (5.5,3) -- (6.6,3);
+    \node[lab, fill=ink!20] at (5.5,6.5) {$r$};
+    \node[lab, fill=pale] at (6,5) {$C$};
+    \draw[markc, line width=2.4pt] (7,7) -- (9,7) -- (9,5);
+    \draw[markc, line width=1pt] (8,6) rectangle (12,10);
+    \node[lab, fill=pale, text=markc] at (11.2,9.4) {$Z_1$};
+    \draw[muted, line width=1pt] (11,1) rectangle (13,4);
+    \node[lab, fill=pale, text=muted] at (12,2.5) {$Z_2$};
+\end{tikzpicture}
+\caption{Marks and contacts. The free bonds $I$ are shaded. The dark band is the union of the link stencils of the loop $C$, and the dashed box is the stencil $\mathcal F_r$ of one contour bond $r$. The polymer $Z_1$ meets the band, so it is marked. Its contacts are the traversals in red, the ones whose stencils meet $Z_1$. The polymer $Z_2$ meets no stencil, so it is unmarked, and its zero-mass measure kills every family containing it.}
+\end{figure}
+
+\subhead{Contour Intervals}
+The loop is a product of matrices taken in order around $C$, so two polymers touching interlaced positions of the contour cannot be separated. The ratio $(\Xi^{\mathrm f}_\xi)^{[\mathcal A]}/\Xi^{\mathrm f}_\xi$ is expressed as $\exp\bigl(-\sum_{\mathfrak c\text{ hits }\mathcal A}\Phi^{\mathrm v}_\xi(\mathfrak c)\bigr)$, where $\Phi^{\mathrm v}_\xi(\mathfrak c)$ is the Ursell weight of a connected cluster $\mathfrak c$ of polymers. 
+
+Expanding the exponential gives terms that are lists of clusters, each attached to the marked polymers it hits. The \emph{contacts} of a marked polymer are the positions along $C$ whose links read its variables. In each term, V4 joins every cluster to the marked polymers it hits, gives each connected piece the shortest cyclic interval of the contour containing its contacts, and merges pieces whose intervals overlap.
+
+A \emph{group} $W$ is one merged piece: a set $\mathcal A(W)$ of marked polymers, a list of clusters $\mathfrak c_1,\dots,\mathfrak c_k$ each hitting one of them, and an interval $\mathcal H(W)$ that is either short or the whole contour. Its weight is
 \begin{equation*}
-    F_\xi(0)=f_\xi(0)
-        +\sum_{\varnothing\ne \mathcal A\,\mathrm{compatible}}
-            q_\xi(\mathcal A)\mathfrak Q_\xi(\mathcal A;f_\xi)\;.
+    w_\xi(W)=\frac{(-1)^k}{k!}\prod_{j=1}^k\Phi^{\mathrm v}_\xi(\mathfrak c_j)\;.
 \end{equation*}
-The pairing $\mathfrak Q_\xi$ integrates the closed source against the tensor product of the zero-mass local measures, with unselected inputs set to zero. The factor $q_\xi(\mathcal A)$ is a single vacuum exclusion ratio. It compares the gas avoiding the selected roots with the whole vacuum gas; it is not a product of independently normalised one-root ratios.
-
-A domain is marked when its local variable set meets a free-input stencil of a contour traversal. An unmarked zero-mass domain contributes zero to the Wilson pairing. Vacuum clusters can nevertheless connect marked roots and change their joint exclusion factor.
-
-\subhead{Why Contour Intervals Are Needed}
-Two disconnected spatial components can have source contacts interlaced along a nonabelian word. Their matrix factors cannot simply be reordered. V4 associates each contact set with a prescribed cyclic hull and merges overlapping hulls. The resulting groups have disjoint contour intervals, or one exceptional group occupies the whole contour. This makes exact cyclic reassembly possible before applying scalar identities.
-
-The same principle appears in the flat expansion. Its source differences are sums of characters of closed mixed words. For line or bent references, a reverse reference transport closes the finite arc. Gauge invariance is checked for the field and reference transformed together.
-
-\idea{Zero mass creates cancellation, and contour order controls how cancellations combine. Taking total variation first would generally discard the very source gain the marked expansion is designed to retain.}
-
-\chapterpage{10}{Extracting the Scalar inside the Expansion}{V4, Lemma 24, ``Schur identity'', and Proposition 2, ``joint extraction'', in Section 3.8.}
-
-At the reference data, the background is the identity and the retained free input is zero, while the branch geometry, hosts and cutoff prescription remain fixed. This reference data need not describe a physical branch. In particular, exterior large-field indicators are not evaluated at the identity.
-
-For each closed group $W$, V4 defines a scalar reference coefficient $a_W$. Constant conjugation preserves the reference Gaussian law, the adjoint-invariant cutoff, the primitive factors and the probe measures. Irreducibility then gives a Schur identity: integrating the group's reference factor inside a closed character multiplies the complementary closed character by $a_W$. This is an integrated algebraic identity. No activity norm is assigned to an open matrix factor.
-
-For the single square, the reference group gas is the normalised conditional reference loop,
+Two groups are compatible when their polymers are compatible and their intervals are disjoint, and a group covering the whole contour is compatible with no other group. Then
 \begin{equation*}
-    S^\circ_{\xi,C}
-        =\sum_{\mathfrak B\,\mathrm{compatible}}
-            \prod_{W\in \mathfrak B}a_W\;.
+    F_\xi(0)=\sum_{\mathfrak B\,\mathrm{compatible}}A_\xi(\mathfrak B)\;,\qquad A_\xi(\varnothing)=W_\chi(C;U_\xi(0))\;,
 \end{equation*}
-For a compatible family $\mathcal S$, let $A_\xi(\mathcal S)$ denote its actual closed source pairing, including its group weights. V4 defines the joint defect by Boolean subtraction:
-\begin{equation*}
-    R_\xi(\mathfrak B)
-        =\sum_{\mathcal S\subseteq \mathfrak B}
-            (-1)^{|\mathfrak B\setminus\mathcal S|}
-            \left(\prod_{W\in \mathfrak B\setminus\mathcal S}a_W\right)
-            A_\xi(\mathcal S)\;.
-\end{equation*}
-For the empty family this is $f_\xi(0)$. The exact extraction is
-\begin{equation*}
-    F_\xi(0)=S^\circ_{\xi,C}f_\xi(0)
-        +\sum_{\varnothing\ne \mathfrak B\,\mathrm{compatible}}
-            S^{\circ,[\mathfrak B]}_{\xi,C}R_\xi(\mathfrak B)\;.
-\end{equation*}
-The restricted reference sum $S^{\circ,[\mathfrak B]}$ contains families compatible with every member of $\mathfrak B$. The restriction retains the correlations created by exclusions. For a single square, every nonempty joint defect vanishes exactly at the reference data. Section 25 explains why a family connecting two loops needs a different treatment.
+where $A_\xi(\mathfrak B)$ is the term above for the marked polymers of the groups in $\mathfrak B$, times their weights $w_\xi(W)$. Each group acts on its own interval of the loop, which is the form Section~\hyperref[summary:10]{10} needs.
 
-Restoring the exterior response and the actual conditional mass gives
+\idea{Only polymers that touch the loop contribute, and their order along the loop is kept.}
+
+
+\chapterpage{10}{Extracting the Scalar inside the Expansion}{V4, Lemma 3.26, ``Schur identity'', and Proposition 3.27, ``joint extraction'', in Section 3.8.}
+
+This section factors a scalar out of $F_\xi(0)$: up to defects, it is a number $S^\circ_{\xi,C}$, which depends only on the loop and the geometry of the branch, times the loop at zero fluctuation, $W_\chi(C;U_\xi(0))$. This scalar is the factor that renormalises the loop, and Sections~\hyperref[summary:11]{11}--\hyperref[summary:16]{16} show $S^\circ_{\xi,C}=\kappa_Ce^{E^\circ_\xi}$, so it carries the perimeter and corner factors $\kappa_C$ of the main theorem.
+
+\subhead{The Reference Data}
+
+The reference data has the identity as its background and zero exterior fluctuations, with the same $\Omega_1$, $I$, hosts $Y$, and cutoffs. Its fine field is $e^{iq_{\id}(a)}$ on $\Omega_1$ and the identity off $\Omega_1$, where $q_{\id}$ is the phase $q_{U_1}$ of Section~\hyperref[summary:6]{6} at $U_1=\id$. Every object of Sections~\hyperref[summary:7]{7}--\hyperref[summary:9]{9} has a reference version, marked $\circ$; these pieces of data need not describe a branch. For a group $W$ let $P^\circ_W(a)$ be the ordered product of the reference links along its interval. Its reference coefficient is
 \begin{equation*}
-    \mathcal J^{\mathrm a}_\xi[f_\xi]
-        =\mathsf w_\xi\left[
-            S^\circ_{\xi,C}f_\xi(0)
-            +\sum_{\mathfrak B\ne \varnothing}
-                S^{\circ,[\mathfrak B]}_{\xi,C}R_\xi(\mathfrak B)
-            +\mathcal B_\xi[f_\xi]\right]\;.
+    a_W=w^\circ(W)\int\chi\bigl(P^\circ_W(a)\bigr)\,\dd\Bigl(\bigotimes_{D\in\mathcal A(W)}\widehat\nu^\circ_D\Bigr)(a)\;,
 \end{equation*}
-On covered branches, $f_\xi(0)=W_\chi(C;U_1)$. This is the local algebraic origin of all three pieces in the main theorem. The analytic work still has to identify $S^\circ_{\xi,C}$ and bound the signed family sum under the physical history law.
+where $\mathcal A(W)$ are the marked polymers of $W$ and $w^\circ(W)$ is the weight $w_\xi(W)$ of Section~\hyperref[summary:9]{9} at the reference data.
+
+\subhead{The Schur Identity}
+At the identity background, a constant gauge transformation $a\mapsto\operatorname{Ad}_ua$ preserves the reference measures and conjugates every link, so $P^\circ_W(\operatorname{Ad}_ua)=uP^\circ_W(a)u^{-1}$. Since $\chi$ is the normalised character of an irreducible representation, Schur's lemma gives for all $h \in G$
+\begin{equation*}
+    w^\circ(W)\int\chi\bigl(P^\circ_W(a)h\bigr)\,\dd\Bigl(\bigotimes_{D\in\mathcal A(W)}\widehat\nu^\circ_D\Bigr)(a)=a_W\,\chi(h)\;.
+\end{equation*}
+The scalar is the reference version of the centred Wilson expectation $F_\xi(0)$ of Section~\hyperref[summary:7]{7}:
+\begin{equation*}
+    S^\circ_{\xi,C}=\int W_\chi\bigl(C;e^{iq_{\id}(a)}\bigr)\,\dd\nu^\circ_{\xi;0}(a)\;.
+\end{equation*}
+
+The expansion of Section~\hyperref[summary:9]{9} writes it as a sum over compatible families $\mathfrak B$, and each term reduces to a product:
+\begin{itemize}
+    \item A link outside the intervals of $\mathfrak B$ reads none of the integrated variables, so it is $e^{iq_{\id}(0)}=\id$. The loop is therefore $\chi\bigl(P^\circ_{W_1}(a)\cdots P^\circ_{W_m}(a)\bigr)$, with the groups in order around the loop.
+    \item The groups have disjoint variables, so the Schur identity integrates them out one at a time. Each step leaves a factor $a_W$, and the last leaves $\chi(\id)=1$.
+\end{itemize}
+Hence
+\begin{equation*}
+    S^\circ_{\xi,C}=\sum_{\mathfrak B\,\mathrm{compatible}}\prod_{W\in\mathfrak B}a_W\;.
+\end{equation*}
+
+\subhead{The Extraction}
+The joint defect compares the actual group terms $A_\xi$ of Section~\hyperref[summary:9]{9} with the reference scalars:
+\begin{equation*}
+    R_\xi(\mathfrak B)=\sum_{\mathcal S\subseteq\mathfrak B}(-1)^{|\mathfrak B\setminus\mathcal S|}\Bigl(\prod_{W\in\mathfrak B\setminus\mathcal S}a_W\Bigr)A_\xi(\mathcal S)\;,\qquad R_\xi(\varnothing)=W_\chi(C;U_\xi(0))\;.
+\end{equation*}
+At the reference data every nonempty defect vanishes. Inverting this relation in $F_\xi(0)=\sum_{\mathfrak B}A_\xi(\mathfrak B)$, and adding the exterior response of Section~\hyperref[summary:7]{7}, gives exactly
+\begin{equation*}
+    \int W_\chi(C;U_\xi(a))\,\dd\nu_{\xi;1}(a)=S^\circ_{\xi,C}\,W_\chi(C;U_\xi(0))+\sum_{\mathfrak B\ne\varnothing}S^{\circ,[\mathfrak B]}_{\xi,C}R_\xi(\mathfrak B)+\mathcal B_\xi\;,
+\end{equation*}
+where $S^{\circ,[\mathfrak B]}_{\xi,C}$ sums over the families compatible with $\mathfrak B$. If the contour's stencils lie in $I$, then $W_\chi(C;U_\xi(0))=W_\chi(C;U_1)$. The three terms are the leading term, the defect, and the exterior response of the main theorem.
+
+\idea{Gauge invariance at the identity turns each group into a scalar. The leading term is that scalar times the loop at zero fluctuation.}
 
 \chapterpage{11}{The Exact Flat Reference Integral}{V4, Section 4; Appendix A, ``The Flat Covariance''; Appendix C, ``The Local Interaction at the Identity''.}
 
@@ -625,13 +737,13 @@ A vacuum component needs only one small label, whereas a source component has at
 The Koteck\'y--Preiss criterion pays incompatible objects with spatial and interval size budgets. The pinned-tree estimate then controls clusters attached to a specified contour segment. This is the quantitative reason that a long straight portion has a finite density per coarse segment.
 
 \subhead{How Geometry Uses the Estimate}
-If a cluster joins a root segment to another side of the square, it must have enough extent to bridge that distance. A root far from a corner therefore has an exponentially small contribution to mixed-side terms. Similarly, a cluster that detects a torus image must travel a distance comparable to a period. These observations lead to the separate perimeter, corner and finite-size terms.
+If a cluster joins a root segment to another side of the square, it must have enough extent to bridge that distance. A root far from a corner therefore has an exponentially small contribution to mixed-side terms. Similarly, a cluster that detects a torus image must travel a distance comparable to a period. These observations lead to the separate perimeter, corner, and finite-size terms.
 
 Existence of the reference coefficients uses truncation in extent, convergence of finitely many Gaussian marginal integrals, and removal of the truncation with this rooted tail bound. It does not require constructing an infinite-volume vacuum probability measure or taking a limit of its partition function.
 
 \idea{The connected logarithm turns a multiplicative loop factor into a sum of local source clusters. Exponential extent weights then distinguish a density along an edge from a contribution confined to a corner.}
 
-\chapterpage{14}{The Perimeter Coefficient}{V4, Section 5, ``The Perimeter Coefficient''; equation (173), p. 73.}
+\chapterpage{14}{The Perimeter Coefficient}{V4, Section 5, ``The Perimeter Coefficient''; equations (5.33) and (5.39).}
 
 Fix one orientation $v$ among $e_1,e_2,-e_1,-e_2$. Consider the infinite reference line in that orientation, divided into segments of $L$ fine traversals. Every finite selected source word is closed by the reverse reference transport. Only finite-dimensional marginal integrals occur in a cluster weight, even though the set of available reference positions is infinite.
 
@@ -663,11 +775,11 @@ The coefficient is real because reversing a reference line conjugates its charac
 
 \idea{The coefficient is a density per physical length, with the factor $L\varepsilon$ fixed by the coarse-segment convention. It contains the full reference interaction and cutoff dependence.}
 
-\chapterpage{15}{The Corner Coefficient}{V4, Section 6; equation (185), p. 77; local corner subtraction and square identification.}
+\chapterpage{15}{The Corner Coefficient}{V4, Section 6; equations (6.4) and (6.12); local corner subtraction and square identification.}
 
 A corner is the local excess remaining when the densities of its two straight rays have been subtracted. This subtraction must use the same line coefficients already extracted, or it would change the perimeter prescription.
 
-Take perpendicular incoming and outgoing orientations $v,w$. The reference path follows the $v$ ray into the origin and the $w$ ray away from it. Its bend lies between coarse segments $-1$ and $0$. Let $a_{v,w}(j)$ be the rooted connected density at segment $j$, using exactly the same primitives, cutoffs and Gaussian marginal prescription as for a line.
+Take perpendicular incoming and outgoing orientations $v,w$. The reference path follows the $v$ ray into the origin and the $w$ ray away from it. Its bend lies between coarse segments $-1$ and $0$. Let $a_{v,w}(j)$ be the rooted connected density at segment $j$, using exactly the same primitives, cutoffs, and Gaussian marginal prescription as for a line.
 
 Define $k_{v,w}(j)=\kappa_v$ on the negative half-line and $k_{v,w}(j)=\kappa_w$ on the nonnegative half-line. V4's local corner logarithm and factor are
 \begin{equation*}
@@ -694,7 +806,7 @@ This fixes the fourth-root branch through the convergent logarithm. It is the ge
 
 For the infinite-reference square, the remainder after subtracting perimeter and four corner logarithms is bounded by $C\tau^2(n+1)e^{-cn}$. The coefficient is therefore also characterised by taking the bulk torus limit at fixed square, and then taking the large-square constant term. That order of limits belongs to the definition.
 
-\chapterpage{16}{Returning to a Conditional Region}{V4, Section 7; Proposition 4, p. 87; Appendix F, regional scalar identification.}
+\chapterpage{16}{Returning to a Conditional Region}{V4, Section 7; Proposition 7.3; Appendix F, regional scalar identification.}
 
 The line and corner calculations use a translation-invariant reference. The scalar needed by the actual branch expansion is integrated only over a conditional carrier $D$. Its Gaussian covariance is the inverse of the restricted precision,
 \begin{equation*}
@@ -727,7 +839,7 @@ This is the bridge that makes the flat coefficients applicable to a physical bra
 
 \idea{The same scalar coefficients survive the regional comparison, but the change of kernel and integration region survives too, as the explicit exponent $E^\circ$.}
 
-\chapterpage{17}{Exterior Response as a Covariance}{V4, Appendix D, Sections D.2--D.5; Lemma 84, p. 211.}
+\chapterpage{17}{Exterior Response as a Covariance}{V4, Appendix D, Sections D.2--D.5; Lemma D.6.}
 
 The exterior response compares the actual conditional law with its centred version. Its operand is the covariance of the full Wilson character with the interpolation score, under the actual normalised conditional law. This retains the nonlinear residual interaction and the physical hard cutoff.
 
@@ -752,13 +864,13 @@ The Wilson gradient is supported on the contour's free-input set $I_C$. The scor
         \leqslant  C_{\mathrm{resp},\chi}g_0rD_\xi\;,
     \qquad D_\xi=\sum_{b\in I_C}e^{-\mu d(b,J)/2}\;.
 \end{equation*}
-If $J$ is empty, the score and this bound vanish. The constants do not depend on the branch, the volume, the interpolation parameter or the barrier index.
+If $J$ is empty, the score and this bound vanish. The constants do not depend on the branch, the volume, the interpolation parameter, or the barrier index.
 
 An integration-by-parts expression for the same response contains two hard-cutoff flux terms, including the flux from the normaliser. V4's covariance argument bounds the whole expression. It does not declare either surface term to be zero or discard it after shifting the Gaussian.
 
 \idea{The boundary is handled by convexity and a limit back to the same conditional law. A covariance estimate for an uncut Gaussian would not supply this result.}
 
-\chapterpage{18}{Paying Bad Regions with Physical Witnesses}{V4, Appendix D, especially one-point witnesses, the retained physical normaliser, and Proposition 10.}
+\chapterpage{18}{Paying Bad Regions with Physical Witnesses}{V4, Appendix D, especially one-point witnesses, the retained physical normaliser, and Proposition D.15.}
 
 The conditional response bound is useful only after averaging over histories. Some branches have a bad region near the contour, and some are not covered at all. Their rarity must be measured under the physical law, rather than under a fresh Gaussian law assigned to frozen exterior coordinates.
 
@@ -789,7 +901,7 @@ Using $|F_\xi(1)|\leqslant  1$ and the response bound gives the main theorem's e
 
 \idea{The marks are correlated under the history law. One-point bounds suffice for these linear sums, but do not alone imply the joint estimates needed for an exponential moment.}
 
-\chapterpage{19}{The Signed Integrated Defect}{V4, Appendix E; Proposition 12, equations (517)--(518), pp. 260--261.}
+\chapterpage{19}{The Signed Integrated Defect}{V4, Appendix E; Proposition E.22, equations (E.78)--(E.79).}
 
 The defect operand is the signed family sum from scalar extraction, averaged with the original branch weight:
 \begin{equation*}
@@ -842,15 +954,15 @@ The inner region is first filled according to the stated rectangular-hull rule. 
 \end{equation*}
 The set $B^{(k)}$ lists the newly bad collar bonds, and $\mathcal Q(e)$ is the prescribed neighbourhood in macroscopic cubes. A nonterminal round removes at least one cube, so the finite-volume procedure terminates. The terminal collar is good, and its mean shift satisfies $\|m\|_\infty\leqslant  r/4$. This leaves the margin needed for translated-box estimates.
 
-The coordinates removed from the integrated carrier become exterior coordinates of that labelled term. Their old good-box factors remain in the integrand. The underlying fine field, its background, the boundary change, its Jacobian and the original interaction are unchanged. The procedure changes the order and split of the integrations, with the inherited conditional law retained.
+The coordinates removed from the integrated carrier become exterior coordinates of that labelled term. Their old good-box factors remain in the integrand. The underlying fine field, its background, the boundary change, its Jacobian, and the original interaction are unchanged. The procedure changes the order and split of the integrations, with the inherited conditional law retained.
 
 With $\ell=LMR_1$, a bond removed after the initial filling is attributed to a bad collar bond within the source's fixed distance allowance. The multiplicity is bounded by $N_{\mathrm{ret}}=4(207\ell)^4$. Physical witness probabilities pay that multiplicity. The argument does not assume a convenient lower bound for an exterior Schur-complement density.
 
 \idea{Retreat creates a safe conditional integration region on each labelled term. It does not delete a bad physical event or replace the original distribution by a newly chosen exterior Gaussian.}
 
-\chapterpage{21}{Labelled Sums and the Second-Order Rate}{V4, Sections 9.5--9.9; Proposition 7, p. 139; boundary accounting and labelled defects.}
+\chapterpage{21}{Labelled Sums and the Second-Order Rate}{V4, Sections 9.5--9.9; Proposition 9.34; boundary accounting and labelled defects.}
 
-After retreat, the leading scalar must be identified at the terminal carrier $D(\Lambda)$ itself. It is not enough to remove the groups that visibly touch the deleted bonds: restricting the carrier changes the reference precision, eligible probe labels, selected marginal covariances and local activities. V4 applies the regional comparison again and obtains $S^\circ_\Lambda=\kappa_Ce^{E^\circ_\Lambda}$.
+After retreat, the leading scalar must be identified at the terminal carrier $D(\Lambda)$ itself. It is not enough to remove the groups that visibly touch the deleted bonds: restricting the carrier changes the reference precision, eligible probe labels, selected marginal covariances, and local activities. V4 applies the regional comparison again and obtains $S^\circ_\Lambda=\kappa_Ce^{E^\circ_\Lambda}$.
 
 The labelled weights form an exact positive partition of the original weight,
 \begin{equation*}
@@ -877,7 +989,7 @@ The second-order rate is quantitatively better, but its factor still grows with 
 
 \idea{Improving a per-bond rate from first to second order is useful. It does not make an exponential family sum independent of the number of bonds.}
 
-\chapterpage{22}{Averaging the Finite-Geometry Exponent}{V4, Corollary 1, pp. 8--9; Section 9, joint witnesses and exponential moments.}
+\chapterpage{22}{Averaging the Finite-Geometry Exponent}{V4, Corollary 1.4; Section 9, joint witnesses and exponential moments.}
 
 The pointwise bound on $E^\circ_\xi$ contains one possible boundary contribution per coarse segment. A small first moment of that sum would not, by itself, control its exponential. V4 therefore proves joint witness estimates and an exponential-moment bound under the physical history law.
 
@@ -894,7 +1006,7 @@ Under the additional torus condition $4ne^{-c\iota_T}\leqslant  1$, V4 obtains
     \Eh[\id_{A_{\mathrm{cov}}}e^{|E^\circ_\xi|}]
         \leqslant  e^{C\tau^2(2+1/c)+n_C\delta^\sharp_q}\;.
 \end{equation*}
-The original-carrier rate in Corollary 1 is
+The original-carrier rate in Corollary 1.4 is
 \begin{equation*}
     \delta^\sharp_q
         =C\tau^2N'_{\mathrm{lat}}(c)
@@ -904,7 +1016,7 @@ Here $N'_{\mathrm{lat}}(c)$ is a finite lattice shell sum and $\Phi_c$ bounds th
 
 The fixed fraction $1/16$ comes from dividing four-dimensional boxes into sixteen separated classes and applying the joint witness bound to separated representatives. It is not independence of all bad-region marks. The labelled, retreated construction has its own stated moment estimate; the strengthened rate displayed here belongs to the original carrier.
 
-Corollary 1 then writes the leading term exactly as
+Corollary 1.4 then writes the leading term exactly as
 \begin{equation*}
     \begin{aligned}
         \kappa_C\Eh[\id_{A_{\mathrm{cov}}}e^{E^\circ_\xi}W_\chi(C_n;U_1)]
@@ -915,7 +1027,7 @@ Corollary 1 then writes the leading term exactly as
 \end{equation*}
 Thus the deterministic reference geometry can be separated from the physical background loop. The remaining error is still a perimeter-rate error, despite its very small rate.
 
-\chapterpage{23}{The Size of the Leading Term at a Fixed Loop}{V4, Corollary 2, pp. 9--10; the regime remark following Theorem 1.}
+\chapterpage{23}{The Size of the Leading Term at a Fixed Loop}{V4, Corollary 1.5; Remark 1.3, on the regime, following Theorem 1.2.}
 
 A nonzero extracted scalar does not ensure a nonzero retained expectation: a complex character can cancel in an average. V4 supplies a separate small-coupling estimate for each fixed lattice square.
 
@@ -943,7 +1055,7 @@ When $\eta_n<1$, the leading term is nonzero. Its modulus lies between $(1-\eta_
 
 For each fixed $n$, the source states $\eta_n\to0$ as $g_0\to0$, on tori satisfying the coupling-dependent hypotheses. The controlling background term has an area factor $(nL)^2\varepsilon_1$. The estimate is small for loops whose lattice side is at most a sufficiently small multiple of $\varepsilon_1^{-1/2}$; it is not uniform in $n$.
 
-This matters even at the conjectured final plaquette. At $n=1$, the background estimate contains $L^2\varepsilon_1$, which is not of order $\tau^2$ in the stated small-coupling regime. V4 therefore does not deduce the endpoint precision required by its iteration conjecture from Corollary 2 alone.
+This matters even at the conjectured final plaquette. At $n=1$, the background estimate contains $L^2\varepsilon_1$, which is not of order $\tau^2$ in the stated small-coupling regime. V4 therefore does not deduce the endpoint precision required by its iteration conjecture from Corollary 1.5 alone.
 
 \idea{A fixed lattice loop becoming close to the identity at small coupling is a different regime from a fixed physical loop whose number of lattice bonds grows as the cutoff is removed.}
 
@@ -982,11 +1094,11 @@ After disintegrating the outer branch measure at fixed $V$, the exact $W_1(C;V)$
 \end{equation*}
 These measures can be pushed forward again. An iterative analytic theorem additionally needs a closed class of local gauge-invariant insertions and estimates for their transformed activities. A measure-theoretic next step alone does not establish that closure.
 
-\idea{V4 carries an exact dressed closed insertion with history dependence. Replacing it by the bare coarse Wilson loop would require an additional comparison that the first-step theorem does not make.}
+\idea{The dressed insertion retains the closed flux factors and the dependence on exterior fields and region choices. V4's comparison pays for every contour bond; the programme is to retain the dressing until the final coarse scale.}
 
-\chapterpage{25}{Two Disjoint Square Loops}{V4, Theorem 2, equations (15)--(17), pp. 11--12; Section 10, especially the cross-term estimate (310)--(311).}
+\chapterpage{25}{Two Disjoint Square Loops}{V4, Theorem 1.8, equations (1.18)--(1.20); Section 10, especially the cross-term estimates (10.1) and (10.5).}
 
-V4 extends the calculation to two squares $C_1,C_2$ in planes parallel to the same coordinate plane. They may have different sizes and characters $\chi_1,\chi_2$, but their vertex sets must be disjoint. The observable is the product $W_{12}(U):=W_{\chi_1}(C_1;U)W_{\chi_2}(C_2;U)$, and $n_C=n_{C_1}+n_{C_2}$ counts traversals on both loops. Both use the same background, conditional carrier and history law. Their geometric disjointness does not make their fluctuations independent.
+V4 extends the calculation to two squares $C_1,C_2$ in planes parallel to the same coordinate plane. They may have different sizes and characters $\chi_1,\chi_2$, but their vertex sets must be disjoint. The observable is the product $W_{12}(U):=W_{\chi_1}(C_1;U)W_{\chi_2}(C_2;U)$, and $n_C=n_{C_1}+n_{C_2}$ counts traversals on both loops. Both use the same background, conditional carrier, and history law. Their geometric disjointness does not make their fluctuations independent.
 
 \subhead{Keep Each Loop's Renormalisation and Isolate Connections}
 Under the two-loop theorem's hypotheses, the decomposition is
@@ -1025,7 +1137,7 @@ To read the error bounds, set $x=C_\times\rho\Delta_\times$ and $X=C_\chi n_C\rh
 \end{equation*}
 The theorem also bounds the joint history moment of the two regional exponents. Its constants are uniform in the loop sizes and positions, with their dependence retained through $n_C$ and $\Delta_\times$. No separation assumption beyond disjoint vertices is imposed; small cross corrections require $x$ small. This controls connections created in the first fluctuation integration. The retained background expectation is still joint, so the result does not assert factorisation of the full loop expectations or a mass gap.
 
-\chapterpage{26}{What Iteration Would Still Require}{V4, Section 11, Conjecture 1 and its accompanying remark, pp. 171--172.}
+\chapterpage{26}{What Iteration Would Still Require}{V4, Section 11, Conjecture 11.1 and Remark 11.2.}
 
 For $n=L^k$, the square becomes a single plaquette after $k+1$ blocking steps. V4 conjectures coefficients $\delta m_j$ and $z_j=e^{\zeta_j}$, with the first-step values fixed by the construction already described, such that
 \begin{equation*}
@@ -1039,7 +1151,7 @@ The conjecture uses the first-step scales $\tau$ and $\pi_*$ and allows a small-
 
 The source identifies several missing bridges:
 \begin{itemize}
-    \item \textbf{A local outgoing class.} The reconstructed-background loop, its carrier correction and remaining source terms must be represented in a form accepted by the next step, with their dependence on coarse fields and history labels controlled.
+    \item \textbf{A local outgoing class.} The reconstructed-background loop, its carrier correction, and remaining source terms must be represented in a form accepted by the next step, with their dependence on coarse fields and history labels controlled.
     \item \textbf{The inherited interaction.} Later steps act on the density already produced, including earlier interactions and the terms introduced by the $\mathbf R$-operations. First-step branch identities do not automatically supply their general-step counterparts.
     \item \textbf{Perimeter-local error extraction.} The far defect and the family factors must be organised as local corrections when a threshold independent of the number of steps is sought. Their present estimates contain exponentials of contour length.
     \item \textbf{An endpoint estimate.} The final retained plaquette expectation needs the conjectured $O(\tau^2)$ precision. The proved fixed-loop estimate still contains an $O(\varepsilon_1)$ area contribution at a plaquette.
@@ -1049,7 +1161,7 @@ The absolute boundary and near-history errors also need accounting with the scal
 
 The precision of the conjecture has a further limitation stated in V4: corner factors of size $1+O(\tau^2)$ can be absorbed into its allowed $O((k+2)\tau^2)$ remainder. Thus that remainder alone would not identify higher-step corner coefficients separately. Their definitions would have to come from a construction at each scale.
 
-\idea{V4 gives the first-step architecture and coefficients for one square, together with an extension to two disjoint squares. Its final section states the additional local, inherited-measure and endpoint work needed for iteration; it does not claim that work is already complete.}
+\idea{V4 gives the first-step architecture and coefficients for one square, together with an extension to two disjoint squares. Its final section states the additional local, inherited-measure, and endpoint work needed for iteration; it does not claim that work is already complete.}
 
 \chapterpage{27}{Source Guide and Essential Distinctions}{How to return from this companion to the current manuscript.}
 
@@ -1059,35 +1171,59 @@ The precision of the conjecture has a further limitation stated in V4: corner fa
     \toprule
     \textbf{Question} & \textbf{Location in V4}\\
     \midrule
-    Exact statements and scope & Section 1: Theorems 1--2, Corollaries 1--2 and the regime remarks.\\[3pt]
+    Exact statements and scope & Section 1: Theorems 1.2 and 1.8, Corollaries 1.4 and 1.5, and the regime remarks.\\[3pt]
     Why extract local scalars? & Section 2: comparison with effective-interaction extraction.\\[3pt]
     What is the conditional law? & Section 3: branches, reconstruction, the exact boundary change, polymer and probe measures, joint extraction.\\[3pt]
     Which reference integral? & Section 4; Appendix A for covariance; Appendix C for the local identity-background interaction.\\[3pt]
-    How are coefficients defined? & Sections 5--6: line density, local corner subtraction and the ordered reference limits.\\[3pt]
-    Why do they apply regionally? & Section 7, especially Proposition 4; Appendix F for the scalar in the physical branch identity.\\[3pt]
-    What survives the step? & Section 8: reconstructed loop, closed flux factors, conditional correction and outgoing measure pair.\\[3pt]
+    How are coefficients defined? & Sections 5--6: line density, local corner subtraction, and the ordered reference limits.\\[3pt]
+    Why do they apply regionally? & Section 7, especially Proposition 7.3; Appendix F for the scalar in the physical branch identity.\\[3pt]
+    What survives the step? & Section 8: reconstructed loop, closed flux factors, conditional correction, and outgoing measure pair.\\[3pt]
     How are errors controlled? & Appendix D: exterior response and physical witnesses. Appendix E: signed defects and their physical caller.\\[3pt]
-    Why add labels and retreat? & Section 9: collar tests, terminal carrier, translated estimates, second-order rate and history moments.\\[3pt]
-    What changes for two loops? & Theorem 2 and Section 10: joint extraction, connecting groups, separation decay and the pair at the retreated carrier.\\[3pt]
-    What remains for iteration? & Section 11: Conjecture 1 and its explicit list of missing inputs.\\
+    Why add labels and retreat? & Section 9: collar tests, terminal carrier, translated estimates, second-order rate, and history moments.\\[3pt]
+    What changes for two loops? & Theorem 1.8 and Section 10: joint extraction, connecting groups, separation decay, and the pair at the retreated carrier.\\[3pt]
+    What remains for iteration? & Section 11: Conjecture 11.1 and its explicit list of missing inputs.\\
     \bottomrule
 \end{tabularx}
 \end{small}
 
 \subhead{Five Distinctions to Keep}
 \begin{enumerate}
-    \item The free covariance, reconstructed fine covariance and inverse restricted precision live on different carriers and play different roles.
+    \item The free covariance, reconstructed fine covariance, and inverse restricted precision live on different carriers and play different roles.
     \item A reference scalar is extracted with physical history weights left intact; flat evaluation does not set a large-field indicator to its flat value.
     \item Source cancellation is used inside closed signed contractions before absolute majorants are introduced.
-    \item An absolute error, a relative error and a small rate per contour bond have different implications for a long loop.
+    \item An absolute error, a relative error, and a small rate per contour bond have different implications for a long loop.
     \item A fixed-cutoff first step, a fixed lattice loop at small coupling, and an all-scale limit of a fixed physical loop have different quantifiers.
 \end{enumerate}
 
 \subhead{Source Snapshot}
-The source is \texttt{WILSON\_FIRST\_RG\_STEP\_V4.tex}, entitled \emph{A Wilson Loop after the First Renormalisation Step}, dated 22 October 2026. Its matching PDF has 265 pages. The source hash is
+The base V4 snapshot is from 22 October 2026; Sections~3 and~24 also use the 23 October revision. Their SHA-256 hashes are:
 
-{\footnotesize\ttfamily
-    D463C554B76FB249EB9D65CD12BB105AF4CE5BC3A76299135EB4317C73094E00\par}
+\begin{footnotesize}
+\begin{tabular}{@{}ll@{}}
+    22 October & \texttt{D463C554B76FB249EB9D65CD12BB105AF4CE5BC3A76299135EB4317C73094E00}\\
+    23 October & \texttt{1EBF0AFE6A24FF420DAE26DDD78A31503BC7E28CD5AF652195F875EE60DE79BD}\\
+\end{tabular}
+\end{footnotesize}
 
-CRE, RG1, VAR and AVG denote Ba{\l}aban papers listed in V4. Their use here retains V4's hypotheses; separate later iteration drafts are excluded.
+\begin{thebibliography}{9}
+    \bibitem{BalabanRG1}
+    T.~Ba{\l}aban,
+    \emph{Renormalization Group Approach to Lattice Gauge Field Theories.~I. Generation of Effective Actions in a Small Field Approximation and a Coupling Constant Renormalization in Four Dimensions},
+    Commun. Math. Phys. \textbf{109} (1987), 249--301.
+
+    \bibitem{BalabanCRE}
+    T.~Ba{\l}aban,
+    \emph{Convergent Renormalization Expansions for Lattice Gauge Theories},
+    Commun. Math. Phys. \textbf{119} (1988), 243--285.
+
+    \bibitem{BalabanRG2}
+    T.~Ba{\l}aban,
+    \emph{Renormalization Group Approach to Lattice Gauge Field Theories.~II. Cluster Expansions},
+    Commun. Math. Phys. \textbf{116} (1988), 1--22.
+
+    \bibitem{KoteckyPreiss}
+    R.~Koteck\'y and D.~Preiss,
+    \emph{Cluster Expansion for Abstract Polymer Models},
+    Commun. Math. Phys. \textbf{103} (1986), 491--498.
+\end{thebibliography}
 \end{document}

@@ -1,15 +1,32 @@
 # Continuation drafts and supporting notes
 
-Snapshot of the working files on 23 October 2026. The mathematical files are copied verbatim; [SNAPSHOT_MANIFEST.json](SNAPSHOT_MANIFEST.json) records their original relative paths, sizes and SHA-256 hashes. Their assumptions, qualifications and open dependencies remain in force.
+Snapshot of the latest saved working files on 27 October 2026, including the developments through 26 October. The mathematical files are copied verbatim; [SNAPSHOT_MANIFEST.json](SNAPSHOT_MANIFEST.json) records their original relative paths, sizes and SHA-256 hashes. Their assumptions, qualifications and open dependencies remain in force.
 
 ## Iteration of the Wilson loop insertion
 
-Start with these two companion drafts:
+Start with the [26 October status report](WILSON_IT1_STATUS_REPORT_2026_10_26.md), which identifies the current arguments, source readings and open dependencies. Then read these two companion drafts:
 
 - [First-step insertion and the class for iteration](WILSON_IT1_LINE_DEFECT_2026_10_21.md).
 - [D2: the step map](WILSON_IT1_D2_STEP_MAP_2026_10_22.md), including D2.0-D2.4 and the subsequent coarse-loop comparison notes.
 
 The [V3 iteration audit](WILSON_V3_ITERATION_AUDIT_2026_10_21.md) gives the earlier organisation of the iteration problem. The [18 October proposal for repeated blocking](ITERATED_WILSON_INSERTION_ESTIMATES_DRAFT_2026_10_18.md) is an earlier outline; use the two companion drafts above for the later development.
+
+### Later Iteration Drafts
+
+- [D2.6](WILSON_IT1_D26_CLOSURE_2026_10_24.md) and [D2.7](WILSON_IT1_D27_CLOSURE_2026_10_26.md).
+- [Small-field weight inputs](WILSON_IT1_SW_CLOSURE_2026_10_24.md) and [D2 open items](WILSON_IT1_D2_OPEN_ITEMS_CLOSURE_2026_10_26.md).
+- [Class activities](WILSON_IT1_CLASS_ACTIVITIES_CLOSURE_2026_10_26.md), [background iteration](WILSON_IT1_BACKGROUND_ITERATION_CLOSURE_2026_10_26.md), and [coarse-chain interfaces](WILSON_IT1_COARSE_CHAIN_INTERFACES_CLOSURE_2026_10_26.md).
+- The [O2](WILSON_IT1_O2_CLOSURE_2026_10_26.md), [O2-prime](WILSON_IT1_O2PRIME_CLOSURE_2026_10_26.md), [O4](WILSON_IT1_O4_CLOSURE_2026_10_26.md), and [O6](WILSON_IT1_O6_CLOSURE_2026_10_26.md) notes.
+- [Continuum-limit note](WILSON_IT1_CONTINUUM_LIMIT_CLOSURE_2026_10_26.md).
+
+The supporting triage records from rounds 20–49 and the [round-19 repairs](WILSON_IT1_ROUND19_REPAIRS_2026_10_24.md) are included alongside these drafts.
+
+### Supporting Proof and Source Checks
+
+- [Source readings](READINGS_RECHECK_2026_10_23.md).
+- [RC proof pass](RC_PROOF_PASS_2026_10_23.md) and [RC payment pass](RC_PAYMENT_PASS_2026_10_24.md).
+- [RTR proof pass](RTR_PROOF_PASS_2026_10_23.md).
+- [V4 streamlining plan](V4_STREAMLINING_PLAN.md).
 
 ## Comparison of ultraviolet cutoffs
 
@@ -23,7 +40,7 @@ The [V3 iteration audit](WILSON_V3_ITERATION_AUDIT_2026_10_21.md) gives the earl
 - [Coarse-loop comparison](WILSON_V4_COARSE_LOOP_INSERT_DRAFT_2026_10_23.tex).
 - [Two-loop section](WILSON_V4_TWO_LOOPS_SECTION_DRAFT.tex).
 
-These inserts have been incorporated into the manuscript. The current [V4 source](../WILSON_FIRST_RG_STEP_V4.tex) is authoritative wherever it differs from these draft versions.
+These inserts have been incorporated into the manuscript. Use the current [V5 source](../WILSON_FIRST_RG_STEP_V5.tex) or the updated [V4 source](../WILSON_FIRST_RG_STEP_V4.tex) for the corresponding manuscript version.
 
 ## Earlier first-step drafts
 

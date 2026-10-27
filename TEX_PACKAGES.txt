@@ -1,5 +1,6 @@
 Engine: pdfLaTeX
-Document class: article (11pt)
+Document classes: preprint (V5; bundled preprint.cls), article (earlier versions)
+V5 bibliography: WILSON_FIRST_RG_STEP_V5.bib, compiled with BibTeX and amsplain.bst
 
 Directly requested LaTeX packages for the V4 manuscript:
     fontenc (T1)
@@ -22,7 +23,15 @@ Additional packages used by the pedagogical summary and research programme:
     array
     tabularx
     fancyhdr
+    tikz
+    lipsum
+    indentfirst
+    braket
+    ulem
+    url
+    cite
 
 T1 Computer Modern fonts are supplied by cm-super in the tested build.
 Install these packages and their dependencies using TeX Live or MiKTeX.
-No custom packages or external bibliography files are required.
+The V5 build requires the bundled preprint.cls and WILSON_FIRST_RG_STEP_V5.bib.
+The other main documents require no external bibliography files or images.

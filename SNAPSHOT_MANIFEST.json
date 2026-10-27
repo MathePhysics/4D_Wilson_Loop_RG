@@ -1,0 +1,531 @@
+{
+  "snapshot_date": "2026-10-27",
+  "files": [
+    {
+      "file": "V4_Pedagogical_Summary_2026_10_22.tex",
+      "source": "output/pdf/V4_Pedagogical_Summary_2026_10_22.tex",
+      "bytes": 103403,
+      "sha256": "11ea89b5bb2a1b9af57c9c82434a72d88545ebb153e0f206594af76ba5414de6"
+    },
+    {
+      "file": "WILSON_FIRST_RG_STEP_V3.pdf",
+      "source": "WILSON_FIRST_RG_STEP_V3.pdf",
+      "bytes": 2188269,
+      "sha256": "4cdcf426f261c252293158e0658776b8f0a97c571fe87b6c7d0ab194ec7a86c3"
+    },
+    {
+      "file": "WILSON_FIRST_RG_STEP_V3.tex",
+      "source": "WILSON_FIRST_RG_STEP_V3.tex",
+      "bytes": 1260593,
+      "sha256": "a520a59f363ded6eae5694327dd27565233d339f5eee585e8e283cb8e468ebd0"
+    },
+    {
+      "file": "WILSON_FIRST_RG_STEP_V4.tex",
+      "source": "WILSON_FIRST_RG_STEP_V4.tex",
+      "bytes": 1419895,
+      "sha256": "563736a8dfb946b7018b2f5cf5648b9ae7a4bb2322bcac60e7aaeba0c3eaa96c"
+    },
+    {
+      "file": "WILSON_FIRST_RG_STEP_V5.bib",
+      "source": "WILSON_FIRST_RG_STEP_V5.bib",
+      "bytes": 3930,
+      "sha256": "573a92a0e0d204b8cd005a2f6747e0dc9e41640fa28164b0967207e46697d460"
+    },
+    {
+      "file": "WILSON_FIRST_RG_STEP_V5.tex",
+      "source": "WILSON_FIRST_RG_STEP_V5.tex",
+      "bytes": 1029472,
+      "sha256": "e89b5210d73b9aa85c72da43104d5fbe3b7ea0e8689868b466bd81f36dab0306"
+    },
+    {
+      "file": "Wilson_Loop_Research_Programme_2026_10_22.pdf",
+      "source": "output/pdf/Wilson_Loop_Research_Programme_2026_10_22.pdf",
+      "bytes": 198631,
+      "sha256": "ef7a6730f67160ee6e326f1a81d56da0c4faeac4f1d1dbeabe04b17e4aa3c55c"
+    },
+    {
+      "file": "Wilson_Loop_Research_Programme_2026_10_22.tex",
+      "source": "output/pdf/Wilson_Loop_Research_Programme_2026_10_22.tex",
+      "bytes": 8456,
+      "sha256": "1fed0150b63b2732f6c4a77399778941cfe2805970193ae22d0677945f346dc8"
+    },
+    {
+      "file": "Wilson_Loop_Research_Programme_2026_10_24.tex",
+      "source": "output/pdf/Wilson_Loop_Research_Programme_2026_10_24.tex",
+      "bytes": 8419,
+      "sha256": "3b6461ba43779839ed5601fda5f8f5cd08af069369cd9c407d378d787f0eb62f"
+    },
+    {
+      "file": "drafts/ITERATED_WILSON_INSERTION_ESTIMATES_DRAFT_2026_10_18.md",
+      "source": "ITERATED_WILSON_INSERTION_ESTIMATES_DRAFT_2026_10_18.md",
+      "bytes": 12382,
+      "sha256": "c4687ba811c75265cb480ec30d2bade79749aebd247cf47db57e0e0afb70fb3e"
+    },
+    {
+      "file": "drafts/RC_PAYMENT_PASS_2026_10_24.md",
+      "source": "RC_PAYMENT_PASS_2026_10_24.md",
+      "bytes": 29646,
+      "sha256": "4757f8ef97df7644c4c0ff6df649c7e57f269b4f886cc6197a06c340ea7501b2"
+    },
+    {
+      "file": "drafts/RC_PROOF_PASS_2026_10_23.md",
+      "source": "RC_PROOF_PASS_2026_10_23.md",
+      "bytes": 95106,
+      "sha256": "bcdaeb4d05dfaf02594a01ad621ea5bd77686d03adf7288d53a29f96ae8963b9"
+    },
+    {
+      "file": "drafts/READINGS_RECHECK_2026_10_23.md",
+      "source": "READINGS_RECHECK_2026_10_23.md",
+      "bytes": 62031,
+      "sha256": "87894423d25ac5f6d996f763a8ac70e77e45bc9f96d87950a52c7e27975d9c76"
+    },
+    {
+      "file": "drafts/RTR_PROOF_PASS_2026_10_23.md",
+      "source": "RTR_PROOF_PASS_2026_10_23.md",
+      "bytes": 32470,
+      "sha256": "2d7c298f53ebb275a0e39ea3e1bdea586bad80b3dcdaf849df16df6e4b633521"
+    },
+    {
+      "file": "drafts/V2_STAGE1_CONSTRUCTION_DRAFT_2026_10_17.md",
+      "source": "V2_STAGE1_CONSTRUCTION_DRAFT_2026_10_17.md",
+      "bytes": 239654,
+      "sha256": "dfc7c4a3ad846173ff9f18d1b3e9435537ca6bdac39b6ea91fe2ebd689d63a4c"
+    },
+    {
+      "file": "drafts/V2_STAGE2_BACKGROUND_ESTIMATES_DRAFT_2026_10_17.md",
+      "source": "V2_STAGE2_BACKGROUND_ESTIMATES_DRAFT_2026_10_17.md",
+      "bytes": 148609,
+      "sha256": "1b9ca809a8e367227d1527047ebaed744af8de9546818f21cb5d365037a71b40"
+    },
+    {
+      "file": "drafts/V2_STAGE3_EXTERIOR_RESPONSE_DRAFT_2026_10_18.md",
+      "source": "V2_STAGE3_EXTERIOR_RESPONSE_DRAFT_2026_10_18.md",
+      "bytes": 114056,
+      "sha256": "319efa890dc0572c2a5a4250bbe5c0fc582bf5b4b5466e618bad7737d2884ade"
+    },
+    {
+      "file": "drafts/V2_STAGE4C_SCALAR_IDENTIFICATION_DRAFT_2026_10_18.md",
+      "source": "V2_STAGE4C_SCALAR_IDENTIFICATION_DRAFT_2026_10_18.md",
+      "bytes": 43341,
+      "sha256": "72f19e7819cf5f111aa9f3fcfb4184a7d096425e671af55a55808c21561cdfc9"
+    },
+    {
+      "file": "drafts/V2_STAGE4_SIGNED_DEFECT_DRAFT_2026_10_18.md",
+      "source": "V2_STAGE4_SIGNED_DEFECT_DRAFT_2026_10_18.md",
+      "bytes": 228920,
+      "sha256": "faac7736aed85e1bdcecff062f2d755e3ebb5c7c584ddf40096fd62f8c2418b2"
+    },
+    {
+      "file": "drafts/V2_STAGE5_COLLAR_RETREAT_DRAFT_2026_10_19.md",
+      "source": "V2_STAGE5_COLLAR_RETREAT_DRAFT_2026_10_19.md",
+      "bytes": 489633,
+      "sha256": "353158422d9b583a6020637566b9bf83d84773e68f581870176ae1619be6516d"
+    },
+    {
+      "file": "drafts/V3_B4_CHART_UNIQUENESS_REPAIR_2026_10_21.md",
+      "source": "V3_B4_CHART_UNIQUENESS_REPAIR_2026_10_21.md",
+      "bytes": 26009,
+      "sha256": "7d5076e6d6390fd3b363ddef92e2e56c71f948fcd410222e9a750f3eb3de2e83"
+    },
+    {
+      "file": "drafts/V3_RG1_FIXED_CONSTANTS_CHECK_2026_10_21.md",
+      "source": "V3_RG1_FIXED_CONSTANTS_CHECK_2026_10_21.md",
+      "bytes": 12671,
+      "sha256": "a210e634ff51935e3956c09d24c90e01f297be7f02c5c28f7d09c3ebd5ab1caf"
+    },
+    {
+      "file": "drafts/V4_STREAMLINING_PLAN.md",
+      "source": "V4_STREAMLINING_PLAN.md",
+      "bytes": 30323,
+      "sha256": "d86590c66f9e0a9cb2b544e8e2ec3fa71970a7874f3fe78ae47c907bb03b55e2"
+    },
+    {
+      "file": "drafts/WILSON_C8_FOURTH_ORDER_ATTEMPT/main.tex",
+      "source": "WILSON_C8_FOURTH_ORDER_ATTEMPT/main.tex",
+      "bytes": 109400,
+      "sha256": "42bc7574394d77aeed24f59437cffde9e425972a0fdca6d9968587291b53cde8"
+    },
+    {
+      "file": "drafts/WILSON_CAUCHY_LIP1A_2026_10_21.md",
+      "source": "WILSON_CAUCHY_LIP1A_2026_10_21.md",
+      "bytes": 40181,
+      "sha256": "2b6dbadf2b7564a8467b8b066c5287860fc36947ac959e8ceee81cd6b963d8c0"
+    },
+    {
+      "file": "drafts/WILSON_CAUCHY_LIPSCHITZ_2026_10_21.md",
+      "source": "WILSON_CAUCHY_LIPSCHITZ_2026_10_21.md",
+      "bytes": 19756,
+      "sha256": "deb1560b8e3be63e6b7f83c6a1dff9e634cc6f4a8c19d1266ea5f18991376838"
+    },
+    {
+      "file": "drafts/WILSON_CAUCHY_ROUTE_DRAFT_2026_10_21.md",
+      "source": "WILSON_CAUCHY_ROUTE_DRAFT_2026_10_21.md",
+      "bytes": 119388,
+      "sha256": "cef2669e465f050b8032fc7f81ad0ad6005aa99a53d837162ba47a2efc7c0856"
+    },
+    {
+      "file": "drafts/WILSON_IT1_BACKGROUND_ITERATION_CLOSURE_2026_10_26.md",
+      "source": "WILSON_IT1_BACKGROUND_ITERATION_CLOSURE_2026_10_26.md",
+      "bytes": 62457,
+      "sha256": "7ff24d1d111fe915311bca75bb47a6e49b6ea8b6296041d10772e90a78b4f855"
+    },
+    {
+      "file": "drafts/WILSON_IT1_CLASS_ACTIVITIES_CLOSURE_2026_10_26.md",
+      "source": "WILSON_IT1_CLASS_ACTIVITIES_CLOSURE_2026_10_26.md",
+      "bytes": 36634,
+      "sha256": "f397024fce5f370dc940072d6d21aa4a7807e61c60e6334e798443900623cb0d"
+    },
+    {
+      "file": "drafts/WILSON_IT1_COARSE_CHAIN_INTERFACES_CLOSURE_2026_10_26.md",
+      "source": "WILSON_IT1_COARSE_CHAIN_INTERFACES_CLOSURE_2026_10_26.md",
+      "bytes": 59328,
+      "sha256": "ed8f6ac0f0344a48c5f6283f547a7c53c732f2334e86c9153944223719080313"
+    },
+    {
+      "file": "drafts/WILSON_IT1_CONTINUUM_LIMIT_CLOSURE_2026_10_26.md",
+      "source": "WILSON_IT1_CONTINUUM_LIMIT_CLOSURE_2026_10_26.md",
+      "bytes": 51390,
+      "sha256": "5c919566a9195fae1d37d3f47e89408feb0c795e27d55a4958abec1eb42c0859"
+    },
+    {
+      "file": "drafts/WILSON_IT1_D26_CLOSURE_2026_10_24.md",
+      "source": "WILSON_IT1_D26_CLOSURE_2026_10_24.md",
+      "bytes": 263141,
+      "sha256": "0cc7010a64f8d24fc26952dbcfcd7d42f22e2330f2349b8ed1f585c759d977a5"
+    },
+    {
+      "file": "drafts/WILSON_IT1_D26_TRIAGE_R20_2026_10_25.md",
+      "source": "WILSON_IT1_D26_TRIAGE_R20_2026_10_25.md",
+      "bytes": 9824,
+      "sha256": "264ba487682c408dcb43b7f89dd86acb935d1de2a3391f9fe1b0db17675d2673"
+    },
+    {
+      "file": "drafts/WILSON_IT1_D26_TRIAGE_R21_2026_10_25.md",
+      "source": "WILSON_IT1_D26_TRIAGE_R21_2026_10_25.md",
+      "bytes": 8903,
+      "sha256": "6e8bbc88ea124bc0be5adfb55db088cbd3bba6e68d9e289d5df60067cb60a067"
+    },
+    {
+      "file": "drafts/WILSON_IT1_D26_TRIAGE_R22_2026_10_25.md",
+      "source": "WILSON_IT1_D26_TRIAGE_R22_2026_10_25.md",
+      "bytes": 10149,
+      "sha256": "a8bf0533d50c5c2b50a11df3752cecb626e40d725fb667f9a00e1881281c2ce8"
+    },
+    {
+      "file": "drafts/WILSON_IT1_D26_TRIAGE_R23_2026_10_25.md",
+      "source": "WILSON_IT1_D26_TRIAGE_R23_2026_10_25.md",
+      "bytes": 18655,
+      "sha256": "549ae64e0d306a3a4fb7482d7a2febf448d57702db6ba0919464a7d2f0a9dc70"
+    },
+    {
+      "file": "drafts/WILSON_IT1_D26_TRIAGE_R24_2026_10_25.md",
+      "source": "WILSON_IT1_D26_TRIAGE_R24_2026_10_25.md",
+      "bytes": 13250,
+      "sha256": "9361b3eefd04c728aee139773aa0341a881b0a2661e85c3fec9fba85674292b4"
+    },
+    {
+      "file": "drafts/WILSON_IT1_D26_TRIAGE_R25_2026_10_25.md",
+      "source": "WILSON_IT1_D26_TRIAGE_R25_2026_10_25.md",
+      "bytes": 13789,
+      "sha256": "3496aad5b2d01edcc615567a979a970957eb15be72ca18c36d3d2c2d28337271"
+    },
+    {
+      "file": "drafts/WILSON_IT1_D26_TRIAGE_R26_2026_10_25.md",
+      "source": "WILSON_IT1_D26_TRIAGE_R26_2026_10_25.md",
+      "bytes": 8955,
+      "sha256": "e4d7bbf6f9be2187777b4f0ae153cbc1253e0b690003954709506d1042e5a03f"
+    },
+    {
+      "file": "drafts/WILSON_IT1_D26_TRIAGE_R27_2026_10_25.md",
+      "source": "WILSON_IT1_D26_TRIAGE_R27_2026_10_25.md",
+      "bytes": 6125,
+      "sha256": "d63e25f2f8313384176d0c23f7a929a6a66d708da23bfbe18d04ffe38e1cacde"
+    },
+    {
+      "file": "drafts/WILSON_IT1_D26_TRIAGE_R28_2026_10_25.md",
+      "source": "WILSON_IT1_D26_TRIAGE_R28_2026_10_25.md",
+      "bytes": 13889,
+      "sha256": "a8c70b70e0a30b7eb804077550f7beb7ef7a297adaddc02cdc14c227ea4f05c1"
+    },
+    {
+      "file": "drafts/WILSON_IT1_D26_TRIAGE_R29_2026_10_25.md",
+      "source": "WILSON_IT1_D26_TRIAGE_R29_2026_10_25.md",
+      "bytes": 12236,
+      "sha256": "7dfe6ea0d4b9946310529dcba9baa016af018f83f8aa219acf8dc2d06e893e01"
+    },
+    {
+      "file": "drafts/WILSON_IT1_D26_TRIAGE_R30_2026_10_25.md",
+      "source": "WILSON_IT1_D26_TRIAGE_R30_2026_10_25.md",
+      "bytes": 6585,
+      "sha256": "0115c18875a8f0ed4bebc7c579dbe8218693fbac5df0598f2989fda6e24034a3"
+    },
+    {
+      "file": "drafts/WILSON_IT1_D26_TRIAGE_R31_2026_10_25.md",
+      "source": "WILSON_IT1_D26_TRIAGE_R31_2026_10_25.md",
+      "bytes": 3897,
+      "sha256": "44f7fcbe14b0ad871cffa45cb91ccf8d884238bf7a38f4b87dd2826ec84b509d"
+    },
+    {
+      "file": "drafts/WILSON_IT1_D26_TRIAGE_R32_2026_10_25.md",
+      "source": "WILSON_IT1_D26_TRIAGE_R32_2026_10_25.md",
+      "bytes": 4081,
+      "sha256": "f18d71568b9a7a9815be7b22831b74db0915583f3b2347da7c43df115d4d1721"
+    },
+    {
+      "file": "drafts/WILSON_IT1_D26_TRIAGE_R33_2026_10_25.md",
+      "source": "WILSON_IT1_D26_TRIAGE_R33_2026_10_25.md",
+      "bytes": 13915,
+      "sha256": "cdf66dfba3160b3f43cfbf08a3584cf9e1d6ab0a3ac1a8e954f5b74bce638fd8"
+    },
+    {
+      "file": "drafts/WILSON_IT1_D26_TRIAGE_R34_2026_10_26.md",
+      "source": "WILSON_IT1_D26_TRIAGE_R34_2026_10_26.md",
+      "bytes": 8010,
+      "sha256": "f7d8400f836f36d564aa65c0578b616be1883eb752a9cd0de078cd886d746de3"
+    },
+    {
+      "file": "drafts/WILSON_IT1_D26_TRIAGE_R35_2026_10_26.md",
+      "source": "WILSON_IT1_D26_TRIAGE_R35_2026_10_26.md",
+      "bytes": 6668,
+      "sha256": "51255fc19666f0067a6d5a4490da6be53a174799d77566a2ca5505b64b69f899"
+    },
+    {
+      "file": "drafts/WILSON_IT1_D26_TRIAGE_R36_2026_10_26.md",
+      "source": "WILSON_IT1_D26_TRIAGE_R36_2026_10_26.md",
+      "bytes": 8839,
+      "sha256": "c5e4e7cbeee9a2c40454bc282b69c000881add1c719363ad6381879a750cdbf1"
+    },
+    {
+      "file": "drafts/WILSON_IT1_D26_TRIAGE_R37_2026_10_26.md",
+      "source": "WILSON_IT1_D26_TRIAGE_R37_2026_10_26.md",
+      "bytes": 10223,
+      "sha256": "eb5a0ba953c4013a7a74dcf16ca2ee63c6b33d15ea1994f98ce84860ce008503"
+    },
+    {
+      "file": "drafts/WILSON_IT1_D26_TRIAGE_R38_2026_10_26.md",
+      "source": "WILSON_IT1_D26_TRIAGE_R38_2026_10_26.md",
+      "bytes": 9246,
+      "sha256": "812d3a3dbef70a4693685adb1c7b3d5e32be14ba0d0bed2bc49fbba739d0ec21"
+    },
+    {
+      "file": "drafts/WILSON_IT1_D26_TRIAGE_R39_2026_10_26.md",
+      "source": "WILSON_IT1_D26_TRIAGE_R39_2026_10_26.md",
+      "bytes": 5264,
+      "sha256": "a9443063141b1b4b32bc686dedcd2849d495109a7f8a5c4443bc2ce28127fe7c"
+    },
+    {
+      "file": "drafts/WILSON_IT1_D26_TRIAGE_R40_2026_10_26.md",
+      "source": "WILSON_IT1_D26_TRIAGE_R40_2026_10_26.md",
+      "bytes": 10417,
+      "sha256": "59e6dcde7e9c602543ceefb01bdb6eb7b787bb53937c9ee141bb9606138d4fad"
+    },
+    {
+      "file": "drafts/WILSON_IT1_D26_TRIAGE_R41_2026_10_26.md",
+      "source": "WILSON_IT1_D26_TRIAGE_R41_2026_10_26.md",
+      "bytes": 8604,
+      "sha256": "13f4551abcff95627f9aaf09ce54b3ae08d4d2866af8164e8fd70ff9b56afd5a"
+    },
+    {
+      "file": "drafts/WILSON_IT1_D26_TRIAGE_R42_2026_10_26.md",
+      "source": "WILSON_IT1_D26_TRIAGE_R42_2026_10_26.md",
+      "bytes": 5980,
+      "sha256": "9901a493d153ab69002e179e9c7a97782674998728d1c2c635f54ca90366c513"
+    },
+    {
+      "file": "drafts/WILSON_IT1_D26_TRIAGE_R43_2026_10_26.md",
+      "source": "WILSON_IT1_D26_TRIAGE_R43_2026_10_26.md",
+      "bytes": 7310,
+      "sha256": "7216185949ad2ad16ebb376d29d4ce02c6f771bf77c0f7ecb01fd3fa1e754085"
+    },
+    {
+      "file": "drafts/WILSON_IT1_D26_TRIAGE_R44_2026_10_26.md",
+      "source": "WILSON_IT1_D26_TRIAGE_R44_2026_10_26.md",
+      "bytes": 7822,
+      "sha256": "0d72a90ef23ddf7aba000cf2579317d412712fec02eb83aa94395e4aa4f64cdc"
+    },
+    {
+      "file": "drafts/WILSON_IT1_D26_TRIAGE_R45_2026_10_26.md",
+      "source": "WILSON_IT1_D26_TRIAGE_R45_2026_10_26.md",
+      "bytes": 3735,
+      "sha256": "e78291ec119fd97d5fbea48ed3b870f1a13fe7b167016b21907429958bbc57e5"
+    },
+    {
+      "file": "drafts/WILSON_IT1_D26_TRIAGE_R46_2026_10_26.md",
+      "source": "WILSON_IT1_D26_TRIAGE_R46_2026_10_26.md",
+      "bytes": 9045,
+      "sha256": "272c80e448f750d7247a28f9fbc163adc580509cd68b2c6147570adf558a029a"
+    },
+    {
+      "file": "drafts/WILSON_IT1_D26_TRIAGE_R47_2026_10_26.md",
+      "source": "WILSON_IT1_D26_TRIAGE_R47_2026_10_26.md",
+      "bytes": 8859,
+      "sha256": "94a363649bc162283ef04c6e7a741643f1e2ced977f4e1fca2fa904073472c16"
+    },
+    {
+      "file": "drafts/WILSON_IT1_D26_TRIAGE_R48_2026_10_26.md",
+      "source": "WILSON_IT1_D26_TRIAGE_R48_2026_10_26.md",
+      "bytes": 5327,
+      "sha256": "a17cb5a8d69d5d388bc9c16857bee230a82b587e0656958f8855a52998f798b9"
+    },
+    {
+      "file": "drafts/WILSON_IT1_D26_TRIAGE_R49_2026_10_26.md",
+      "source": "WILSON_IT1_D26_TRIAGE_R49_2026_10_26.md",
+      "bytes": 3767,
+      "sha256": "c2d7fbc949f7586319c8e185cc4db85e68a4cfb6b13070727d8bab49ade1ae02"
+    },
+    {
+      "file": "drafts/WILSON_IT1_D27_CLOSURE_2026_10_26.md",
+      "source": "WILSON_IT1_D27_CLOSURE_2026_10_26.md",
+      "bytes": 80182,
+      "sha256": "3eef337cb8fa97d5c87c0a823c58f7852e55d01d4af7d382060686396611a552"
+    },
+    {
+      "file": "drafts/WILSON_IT1_D2_OPEN_ITEMS_CLOSURE_2026_10_26.md",
+      "source": "WILSON_IT1_D2_OPEN_ITEMS_CLOSURE_2026_10_26.md",
+      "bytes": 27506,
+      "sha256": "d6ffe8fcf41c9efd0187a7a153b4ee6fe4224946a6898e6a1b88496fdf015d24"
+    },
+    {
+      "file": "drafts/WILSON_IT1_D2_STEP_MAP_2026_10_22.md",
+      "source": "WILSON_IT1_D2_STEP_MAP_2026_10_22.md",
+      "bytes": 772163,
+      "sha256": "c1de8544f8c689a241cf747361c862ec36e4e579035367495945bab742e4d813"
+    },
+    {
+      "file": "drafts/WILSON_IT1_LINE_DEFECT_2026_10_21.md",
+      "source": "WILSON_IT1_LINE_DEFECT_2026_10_21.md",
+      "bytes": 405803,
+      "sha256": "8f1e2d2ed4739994b383d7bb9a7967d868b73082e96bb6499d592481ab06ee72"
+    },
+    {
+      "file": "drafts/WILSON_IT1_O2PRIME_CLOSURE_2026_10_26.md",
+      "source": "WILSON_IT1_O2PRIME_CLOSURE_2026_10_26.md",
+      "bytes": 44421,
+      "sha256": "f9df69c5142ef210454817da6ed146028bbb1d1bfb23e5d56d7fdab61909b851"
+    },
+    {
+      "file": "drafts/WILSON_IT1_O2_CLOSURE_2026_10_26.md",
+      "source": "WILSON_IT1_O2_CLOSURE_2026_10_26.md",
+      "bytes": 42549,
+      "sha256": "09f4b2b7f2e2a002b21bb82cf11a961d02bc5b44f6fc3a32ca57623a6e5e3f8a"
+    },
+    {
+      "file": "drafts/WILSON_IT1_O4_CLOSURE_2026_10_26.md",
+      "source": "WILSON_IT1_O4_CLOSURE_2026_10_26.md",
+      "bytes": 43811,
+      "sha256": "dd095438f96f20dd4ad494aab810a32b24105ba3cbf30eca64188f0950018d30"
+    },
+    {
+      "file": "drafts/WILSON_IT1_O6_CLOSURE_2026_10_26.md",
+      "source": "WILSON_IT1_O6_CLOSURE_2026_10_26.md",
+      "bytes": 35982,
+      "sha256": "d2bfda0e039c74d22c0bde77df1e650fc3c9a142494e9ce3dafd6356e4715368"
+    },
+    {
+      "file": "drafts/WILSON_IT1_ROUND19_REPAIRS_2026_10_24.md",
+      "source": "WILSON_IT1_ROUND19_REPAIRS_2026_10_24.md",
+      "bytes": 6028,
+      "sha256": "a109156417e99fe11112f2b6b8f546ab74362700eba494b8331521f3c6a3bc9d"
+    },
+    {
+      "file": "drafts/WILSON_IT1_STATUS_REPORT_2026_10_26.md",
+      "source": "WILSON_IT1_STATUS_REPORT_2026_10_26.md",
+      "bytes": 17259,
+      "sha256": "290d6e899b473717db48699bd24132cd6bb7d92e2705bbfb1b14c8eaed962a8a"
+    },
+    {
+      "file": "drafts/WILSON_IT1_SW_CLOSURE_2026_10_24.md",
+      "source": "WILSON_IT1_SW_CLOSURE_2026_10_24.md",
+      "bytes": 39581,
+      "sha256": "e738075ffb897448251d47afca57f47b42db460204173d0f9f0e37d95ff3cec3"
+    },
+    {
+      "file": "drafts/WILSON_RG_COMPARISON.tex",
+      "source": "WILSON_RG_COMPARISON.tex",
+      "bytes": 190695,
+      "sha256": "5bd4c460702d0827d422abe5ee7aa1f2813975b2bf9a1e6039cacb7c56ff4b0f"
+    },
+    {
+      "file": "drafts/WILSON_RG_COMPARISON.txt",
+      "source": "WILSON_RG_COMPARISON.txt",
+      "bytes": 162747,
+      "sha256": "3ff90d9641c9c840746bad6302f25dfc8c4dcb0e4fac27e5b44760d8d9f393f8"
+    },
+    {
+      "file": "drafts/WILSON_V3_ITERATION_AUDIT_2026_10_21.md",
+      "source": "WILSON_V3_ITERATION_AUDIT_2026_10_21.md",
+      "bytes": 28156,
+      "sha256": "c42fe97a55ec8a739f7965fd9f1335e296c9c4339a596b3901a8030e505c2852"
+    },
+    {
+      "file": "drafts/WILSON_V4_COARSE_LOOP_INSERT_DRAFT_2026_10_23.tex",
+      "source": "WILSON_V4_COARSE_LOOP_INSERT_DRAFT_2026_10_23.tex",
+      "bytes": 11287,
+      "sha256": "4faf7921c21fc8ece32373af79279b216c5803b7b15d7c7c0d78cd9fb121e1b2"
+    },
+    {
+      "file": "drafts/WILSON_V4_TWO_LOOPS_SECTION_DRAFT.tex",
+      "source": "WILSON_V4_TWO_LOOPS_SECTION_DRAFT.tex",
+      "bytes": 55563,
+      "sha256": "16a790886d631931bf9cc6108db225c627ad472cd56456f735589b7b7c909257"
+    },
+    {
+      "file": "preprint.cls",
+      "source": "preprint.cls",
+      "bytes": 22637,
+      "sha256": "37ec586c47f11442722488692cf1f4aa70c84c5a404c5614ca8981ffc5cf6e67"
+    },
+    {
+      "file": "WILSON_FIRST_RG_STEP_V4.pdf",
+      "built_from": "WILSON_FIRST_RG_STEP_V4.tex",
+      "bytes": 2381292,
+      "sha256": "6820430d017dd7630188769afeca5511dbdaf0f64c358b3bf0a39177c444e937"
+    },
+    {
+      "file": "WILSON_FIRST_RG_STEP_V5.pdf",
+      "built_from": "WILSON_FIRST_RG_STEP_V5.tex",
+      "bytes": 1936103,
+      "sha256": "a5ef61b5fe7a064f47fb171aa12101ce1c1db5b1d3218edf8502ea717be80913"
+    },
+    {
+      "file": "V4_Pedagogical_Summary_2026_10_22.pdf",
+      "built_from": "V4_Pedagogical_Summary_2026_10_22.tex",
+      "bytes": 658439,
+      "sha256": "18abb7431fb63a03d6aefbab200062a5230f299f6d6a855637539c3417183766"
+    },
+    {
+      "file": "Wilson_Loop_Research_Programme_2026_10_24.pdf",
+      "built_from": "Wilson_Loop_Research_Programme_2026_10_24.tex",
+      "bytes": 203794,
+      "sha256": "bf5b5b402231c30c923262958e0244a0680e54139f6f987d2351d18a3174e490"
+    }
+  ],
+  "builds": [
+    {
+      "document": "WILSON_FIRST_RG_STEP_V4",
+      "pages": 278,
+      "undefined_references_or_citations": [],
+      "overfull_boxes": 0
+    },
+    {
+      "document": "WILSON_FIRST_RG_STEP_V5",
+      "pages": 225,
+      "undefined_references_or_citations": [],
+      "overfull_boxes": 0
+    },
+    {
+      "document": "V4_Pedagogical_Summary_2026_10_22",
+      "pages": 37,
+      "undefined_references_or_citations": [
+        "LaTeX Warning: Reference `summary:6' on page 2 undefined on input line 140."
+      ],
+      "overfull_boxes": 6
+    },
+    {
+      "document": "Wilson_Loop_Research_Programme_2026_10_24",
+      "pages": 4,
+      "undefined_references_or_citations": [],
+      "overfull_boxes": 0
+    }
+  ]
+}

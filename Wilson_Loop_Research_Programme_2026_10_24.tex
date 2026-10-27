@@ -1,0 +1,110 @@
+\documentclass[12pt]{article}
+
+\usepackage{lipsum}
+\usepackage{tikz}
+\usepackage[margin=1in,includefoot]{geometry}
+\usepackage{amsmath, amsfonts}
+\usepackage{indentfirst}
+\usepackage{braket}
+\usepackage[normalem]{ulem}
+\usepackage{tabularx}
+\usepackage{mathtools}
+\usepackage{mathrsfs}
+\usepackage{url}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{cite}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{amssymb}
+\usepackage{hyperref}
+
+%\input{math_commands.tex}
+
+\pagestyle{fancy}
+\bibliographystyle{unsrt}
+\linespread{1.4}
+
+%\usepackage[a4paper,top=22mm,bottom=22mm,left=24mm,right=24mm,headheight=14pt]{geometry}
+%\usepackage[hidelinks]{hyperref}
+
+\title{Renormalisation of Wilson Loops in\\[3pt]Four-Dimensional Yang--Mills Theory}
+\author{\textbf{MathePhysics}}
+
+\begin{document}
+
+\newgeometry{margin=1in,top=0in,includefoot}
+
+\maketitle
+
+% Your document content goes here.
+
+
+
+
+Ba{\l}aban's renormalisation group (RG) construction gives a gauge-fixed lattice measure and a corresponding RG trajectory for Yang--Mills at every finite ultraviolet cutoff. However, the gauge transformations introduced at successive steps accumulate, and seem to hinder convergence of the resulting gauge-fixed fields as the cutoff is removed.\footnote{Lack of convergence does not contradict Ba{\l}aban's UV stability result, nor would it disprove the existence of the physically relevant part of a gauge theory in four dimensions.}
+
+We therefore seek the continuum theory through gauge-invariant observables. The natural candidates are Wilson loops and pointwise traces of powers of the field strength, which present a second difficulty: in dimensions greater than two, they are ultraviolet singular and cannot be treated as ordinary continuum random variables. 
+
+
+Our programme addresses this problem for correlation functions of Wilson loops in four-dimensional Yang--Mills theory. We aim to identify the scalar contributions within the RG corresponding to the perimeter and corner renormalisations known from the physics literature, and to prove ultraviolet convergence after their extraction.
+
+\subsection*{An Overview of the Ideas Involved in our Method}
+
+We work at fixed finite physical volume with a compact connected simple gauge group. We allow an arbitrary but positive fine lattice spacing $\varepsilon > 0$ and a sufficiently small coupling $g_\varepsilon$. We perform the first RG step starting from the bare action to a lattice with spacing $L \varepsilon$, for $L$ sufficiently large, independent of $\varepsilon$. 
+
+Integrating the fine fluctuations of a Wilson loop gives the schematic expansion
+\begin{equation*}
+    W_{\mathrm{fine}}(C)\approx \kappa_C W_{\mathrm{coarse}}(C)+\Delta_C\;,\qquad
+    \kappa_C=e^{-\delta m\,P(C)}z_c^{\,4}\;.
+\end{equation*}
+\restoregeometry
+
+
+For a square contour $C$, $P(C)$ is its perimeter, $\delta m$ the perimeter counterterm, and $z_c$ the geometric mean of its four corner factors. Extracting $\kappa_C$ separates the accumulating scalar contributions from the retained-field dependence. Renormalisation means dividing by this factor and controlling the remaining correction through further steps.
+
+We show that $\delta m$ and $z_c$ may be computed by integrating the fine fluctuations around the trivial coarse field, the identity, and that they satisfy the following bounds. Up to logarithmic factors in the bare coupling, we have
+\begin{equation*}
+    |\delta m|\lesssim  \frac{g_\varepsilon^2}{\varepsilon}\;,\qquad\qquad\qquad |\log z_c| \lesssim g_\varepsilon^2\;.
+\end{equation*}
+Each coarse segment contributes a small amount to the perimeter exponent, but refining the lattice increases their number: the counterterm can grow at the rate $\varepsilon^{-1}$. The corner logarithm has no such length factor, although corner contributions can accumulate over RG steps. This is the expected ultraviolet scaling of the perimeter and corner contributions.
+
+
+Extending these estimates to successive RG steps, together with bounds on the remainder, will allow us to control their accumulation under the RG. Using Ba{\l}aban's large-field decomposition and forest expansions, we show that corrections to the identity-background calculation gain an additional factor of the coarse-field curvature in small-field regions, while large-field contributions are suppressed by their small probabilities. We also obtain analogous first-step bounds for the correlation function of two square loops with no common vertices, with additional cross terms that decay exponentially with their separation.
+
+
+However, our current bound on the remainder, up to logarithmic corrections, is only
+\begin{equation*}
+    \left|\mathbb E[\Delta_C]\right| \lesssim \frac{g_\varepsilon^3}{\varepsilon}    
+\end{equation*}
+due to a crude per bond estimate. This is insufficient for concluding UV convergence and we are currently working on eliminating the $\varepsilon^{-1}$ term and obtaining the correct $g_\varepsilon^3$ bound.
+
+Further, $W_{\mathrm{coarse}}(C)$ is in fact a ``dressed'' Wilson loop which retains parts of the large field history in the spirit of Ba{\l}aban's large field mechanism. The available first-step comparison costs order $g_\varepsilon$ per coarse contour bond, up to logarithmic factors. Since the number of these bonds grows like $\varepsilon^{-1}$, we retain the dressed insertion through the RG and postpone comparison with an ordinary loop until the final IR scale.
+
+
+
+\subsection*{The Programme for Iteration}
+
+The next task is to show that the insertion produced by the first RG step can be passed through further steps, while continuing to extract the perimeter and corner factors and control the remaining corrections. Parts of the loop may cross large-field regions or depend on fields outside the region being integrated. The continuation drafts develop a local representation that retains these contributions within the closed, gauge-invariant insertion, together with bounds on their dependence on the remaining fields. 
+
+This is needed to integrate those fields at the next RG step while preserving control of the corrections. The latest refinements still require checking and incorporation into the manuscript. Thus, our current goal is to extend our estimates from the bare lattice measure to the effective measures generated along the RG flow. 
+
+We must control the inherited interactions and previously generated Wilson loop corrections, so that perimeter and corner contributions can continue to be extracted and the remaining corrections satisfy the same type of bounds at every scale. The latest drafts already sketch substantial parts of this extension, but the induction is not yet complete.
+
+
+\subsection*{From an Induction to an Ultraviolet Limit}
+
+Once we have proved that our Wilson loop estimates can be iterated through arbitrarily many RG steps, we aim to compare theories with successive ultraviolet cutoffs, with their bare couplings tuned to the same renormalised coupling at a fixed reference scale. The required result is a summable bound on successive differences of the renormalised loop expectations. 
+
+The drafts already sketch how a uniform $g_\varepsilon^3$ error bound would yield summability along the RG flow and suggest that the dressed to na{\"i}ve error at the final IR scale $K$ should be of order $g_K$ and thus finite. To compare successive cutoffs, we must also control how differences in the couplings, effective measures, and Wilson loop insertions propagate through the RG flow. The existing drafts develop ingredients for this comparison in small-field settings; its extension to the full construction remains open.
+
+The remaining milestones are to complete and check the local representation of the Wilson loop corrections, establish uniform bounds through arbitrarily many RG steps, and obtain a summable comparison between successive ultraviolet cutoffs. Together these would establish convergence of the renormalised Wilson loop expectations.
+
+\subsection*{Contrast with other Efforts}
+
+We want to contrast our approach with a similar effort recently advanced by Ethan Sussman, add url???. Similar to our approach he seems to have focused on constructing correlation functions of gauge invariant objects, specifically 
+
+
+\end{document}
