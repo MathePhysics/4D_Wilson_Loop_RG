@@ -17,7 +17,7 @@ The summary gives a notation guide and explanations of the construction, estimat
 
 ## Research Programme
 
-The latest research programme describes the method, current limitations and proposed work towards iteration and an ultraviolet limit.
+The research programme, updated on 27 October 2026, describes the method, current limitations and proposed work towards iteration and an ultraviolet limit. Its milestones link directly to the current iteration, relative-weight and cutoff-comparison drafts.
 
 - [Research programme PDF](Wilson_Loop_Research_Programme_2026_10_24.pdf)
 - [Research programme LaTeX source](Wilson_Loop_Research_Programme_2026_10_24.tex)
@@ -26,7 +26,11 @@ The latest research programme describes the method, current limitations and prop
 
 The [drafts folder and reading guide](drafts/README.md) contains the latest iteration and cutoff-comparison drafts, the D2.6 and D2.7 developments, supporting estimates, manuscript insert drafts and earlier first-step drafts.
 
-Start with the [26 October status report](drafts/WILSON_IT1_STATUS_REPORT_2026_10_26.md), then the [IT-1 note](drafts/WILSON_IT1_LINE_DEFECT_2026_10_21.md) and [D2 step map](drafts/WILSON_IT1_D2_STEP_MAP_2026_10_22.md). Their stated assumptions, qualifications and open dependencies remain in force.
+Start with the [27 October status report](drafts/WILSON_IT1_STATUS_REPORT_2026_10_27.md), then the [IT-1 note](drafts/WILSON_IT1_LINE_DEFECT_2026_10_21.md) and [D2 step map](drafts/WILSON_IT1_D2_STEP_MAP_2026_10_22.md). Their stated assumptions, qualifications and open dependencies remain in force.
+
+The [27 October Cauchy-estimate draft](drafts/WILSON_IT1_CAUCHY_ESTIMATE_2026_10_27.md) develops the proposed one-step stability estimate, coupling and large-field feedbacks, lattice-refinement bounds for background fields and fluctuation covariances, and relative-weight comparison. Its review status is recorded in the draft; parts remain unreviewed. The [cutoff-comparison note](drafts/WILSON_IT1_CONTINUUM_CUTOFF_COMPARISON_2026_10_27.md) records the separate marked-polymer investigation and its unresolved estimates.
+
+The [Bałaban paper-label dictionary](drafts/BALABAN_PAPER_LABELS.md) gives official titles, citations and links for the internal labels used throughout these drafts.
 
 ## Build
 
