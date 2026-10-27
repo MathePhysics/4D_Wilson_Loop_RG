@@ -30,6 +30,7 @@ The supporting triage records from rounds 20–49 and the [round-19 repairs](WIL
 
 ## Comparison of ultraviolet cutoffs
 
+- [Cutoff comparison](WILSON_IT1_CONTINUUM_CUTOFF_COMPARISON_2026_10_27.md): the exact two-cutoff target, old-scale estimates and the remaining full-sequence comparison.
 - [Cauchy route](WILSON_CAUCHY_ROUTE_DRAFT_2026_10_21.md): comparison of theories with successive ultraviolet cutoffs.
 - [Lipschitz continuity of the RG step](WILSON_CAUCHY_LIPSCHITZ_2026_10_21.md): supporting difference estimates and their scope.
 - [LIP-1(a)](WILSON_CAUCHY_LIP1A_2026_10_21.md): the proposed use of fixed RG1 constants with the CRE fluctuation cutoff.

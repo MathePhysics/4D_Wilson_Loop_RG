@@ -40,8 +40,8 @@
     {
       "file": "Wilson_Loop_Research_Programme_2026_10_24.tex",
       "source": "output/pdf/Wilson_Loop_Research_Programme_2026_10_24.tex",
-      "bytes": 10426,
-      "sha256": "97d6c7337b2bea7ba346587d7fae6a8116dc4b70b552c29e0a685777f5c23b78"
+      "bytes": 11907,
+      "sha256": "4bee1332d0fc167a12b90b60248a214c6df5d6b18ff11efcdc961e76340a0449"
     },
     {
       "file": "drafts/ITERATED_WILSON_INSERTION_ESTIMATES_DRAFT_2026_10_18.md",
@@ -172,8 +172,8 @@
     {
       "file": "drafts/WILSON_IT1_CONTINUUM_LIMIT_CLOSURE_2026_10_26.md",
       "source": "WILSON_IT1_CONTINUUM_LIMIT_CLOSURE_2026_10_26.md",
-      "bytes": 51390,
-      "sha256": "5c919566a9195fae1d37d3f47e89408feb0c795e27d55a4958abec1eb42c0859"
+      "bytes": 87260,
+      "sha256": "263810a5e33a4f1c643ed53e6ed7ec69a4b9715f24ca6b434857bd7a796a0e4a"
     },
     {
       "file": "drafts/WILSON_IT1_D26_CLOSURE_2026_10_24.md",
@@ -484,8 +484,8 @@
     {
       "file": "Wilson_Loop_Research_Programme_2026_10_24.pdf",
       "built_from": "Wilson_Loop_Research_Programme_2026_10_24.tex",
-      "bytes": 229336,
-      "sha256": "3eaaa7899572b85614c9a14e52af5864ac754fa7b6ad7c803eeff8058ee3a954"
+      "bytes": 244720,
+      "sha256": "e0db6709e403347994132edf29f588ae1282595422b5342e167cbaa0032ed763"
     },
     {
       "file": "Previous Versions/V3_Pedagogical_Summary_2026_10_22.tex",
@@ -522,6 +522,12 @@
       "source": "WILSON_FIRST_RG_STEP_V2.pdf",
       "bytes": 605004,
       "sha256": "0f5231460ce9309e647c3dda3bdaedf7468acd2bc436b8965b6eb8f93fcf16d1"
+    },
+    {
+      "file": "drafts/WILSON_IT1_CONTINUUM_CUTOFF_COMPARISON_2026_10_27.md",
+      "source": "WILSON_IT1_CONTINUUM_CUTOFF_COMPARISON_2026_10_27.md",
+      "bytes": 45502,
+      "sha256": "9cc36593fe05ff16fe6fb44744d5d46e5abcacb77ef45f8aa62dc67b1a9e8056"
     }
   ],
   "builds": [
