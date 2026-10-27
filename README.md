@@ -19,8 +19,7 @@ The summary gives a notation guide and explanations of the construction, estimat
 
 The research programme, updated on 27 October 2026, describes the method, current limitations and proposed work towards iteration and an ultraviolet limit. Its milestones link directly to the current iteration, relative-weight and cutoff-comparison drafts.
 
-- [Research programme PDF](Wilson_Loop_Research_Programme_2026_10_24.pdf)
-- [Research programme LaTeX source](Wilson_Loop_Research_Programme_2026_10_24.tex)
+- [Research programme PDF](Research_Outline.pdf)
 
 ## Continuation Drafts
 
