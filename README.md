@@ -14,8 +14,6 @@ Nothing in this repository should be considered an academically rigorous, “pub
 
 The ongoing work contained in the drafts is of varying status and annotated within the drafts. In parallel, LEAN certificates of this work are also being generated (people who wish to join may find this the easiest and most fertile ground to start with).
 
-This repo contains the latest saved manuscripts, research programme and continuation drafts, collected on 28 October 2026.   
-
 
 ## Progress of the Construction
 
