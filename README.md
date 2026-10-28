@@ -1,17 +1,31 @@
 # Wilson Loops through the Renormalisation Group
 
-The latest saved manuscripts, research programme and continuation drafts, collected on 28 October 2026. The mathematical content of the sources and notes is copied unchanged from the working files, with repository links adjusted where needed; the current PDFs are rebuilt from the included sources. Previous versions retain their saved PDFs.
+Bałaban's renormalisation group construction gives a gauge-fixed lattice measure and a corresponding RG trajectory for Yang–Mills at every finite ultraviolet cutoff. However, the gauge transformations introduced at successive steps accumulate, and seem to hinder convergence of the resulting gauge-fixed fields as the cutoff is removed. 
+
+Therefore, we seek the continuum theory through gauge-invariant observables. The natural candidates – Wilson loops and pointwise traces of powers of the field strength – present a second difficulty: in dimensions greater than two they are ultraviolet singular and cannot simply be treated as ordinary continuum random variables. 
+
+Our programme addresses this problem for correlation functions of Wilson loops in four-dimensional Yang–Mills theory. We aim to identify within the RG the scalar contributions corresponding to the perimeter and corner renormalisations known from the physics literature, and to prove ultraviolet convergence after their extraction.
+
+The [research outline](Research_Outline.pdf) and the [project announcement](Yang_Mills_Announcement.pdf) were written in full by Martin Peev and Akshunna S. Dogra. All other documents, unless explicitly mentioned otherwise, were generated in **full** by Claude and/or ChatGPT. 
+
+First and foremost, this includes all potentially novel mathematical work. This work is public and open source (see licence) – not only are others “allowed” to comment/fork/contribute; it is encouraged. The only authority we have (in the project's infancy) is deciding who gets to be a maintainer while the Yang–Mills existence proof is being built. As more join, this will be diluted too.
+
+Nothing in this repository should be considered an academically rigorous, “publishable” mathematical paper, and we have yet to verify most of it directly.  Mathematical content that is “in the manuscript” has been most extensively checked with the help of LLMs, and it is **our judgment** that it is essentially correct. 
+
+The ongoing work contained in the drafts is of varying status and annotated within the drafts. In parallel, LEAN certificates of this work are also being generated (people who wish to join may find this the easiest and most fertile ground to start with).
+
+This repo contains the latest saved manuscripts, research programme and continuation drafts, collected on 28 October 2026.   
 
 
 ## Progress of the Construction
 
-Our work focuses solely on attempting to give a robust construction of the correlation functions of renormalised Wilson loops in **finite volume**. Because the Schwinger functions will have been obtained via a lattice based renormalisation group construction the hypercubic Osterwalder-Schrader axioms will constitute solely routine checks rather than needing new mathematics. We are currently not pursuing an infinite volume constructions, since (as per our personal judgment), the lack of a viable route for proving the existence of a mass gap makes it fundamentally less interesting (other people may disagree with us with good reason).
+Our work focuses solely on attempting to give a robust construction of the correlation functions of renormalised Wilson loops in **finite volume**. Because the Schwinger functions will have been obtained via a lattice-based renormalisation group construction, the hypercubic Osterwalder-Schrader axioms will constitute solely routine checks rather than needing new mathematics. We are currently not pursuing an infinite-volume construction, since (as per our personal judgment), the lack of a viable route for proving the existence of a mass gap makes it fundamentally less interesting (other people may disagree with us with good reason).
 
 Our current progress is as follows.
 
 | Main step | Completion | Main remaining work |
 |---|---|---|
-| [First RG step for one loop and two disjoint loops](Manuscripts%20under%20Construction/WILSON_FIRST_RG_STEP_V5.tex) | **In manuscript** | The stated finite-cutoff theorems and uniform bounds are written. |
+| [First RG step for one loop and two disjoint loops](Manuscripts%20under%20Construction/WILSON_FIRST_RG_STEP_V5.tex) | **Complete** | The stated finite-cutoff theorems and uniform bounds are written. |
 | [Small-field iteration and large-field insertions](drafts/WILSON_IT1_D26_CLOSURE_2026_10_24.md) | **Written; verification outstanding** | Verify the analytic-domain, locality and weight estimates used in the induction. |
 | [R-steps for single and two-loop insertions](drafts/WILSON_IT1_D27_CLOSURE_2026_10_26.md) | **Conditional** | Complex evaluation bounds, member counting and extent weights; merging of mixed groups for two loops. |
 | [Relative weights of large-field contributions](drafts/WILSON_IT1_CAUCHY_ESTIMATE_2026_10_27.md) | **Written; verification outstanding** | Verify the whole-integral comparison and history-cost estimates at fixed volume. |
