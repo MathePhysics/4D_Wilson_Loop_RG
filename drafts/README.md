@@ -1,6 +1,6 @@
 # Continuation drafts and supporting notes
 
-Snapshot of the saved working files updated on 27 October 2026, including the new Cauchy-estimate and status notes. The mathematical files are copied verbatim. Their assumptions, qualifications and open dependencies remain in force.
+Snapshot of the saved working files updated on 28 October 2026, including the Cauchy-estimate, large-field-depth, walk-factor and two-loop drafts. Mathematical content is copied unchanged; repository links are adjusted where needed. Their assumptions, qualifications and open dependencies remain in force.
 
 ## Iteration of the Wilson loop insertion
 
@@ -21,6 +21,11 @@ The [V3 iteration audit](WILSON_V3_ITERATION_AUDIT_2026_10_21.md) gives the earl
 
 The supporting triage records from rounds 20–49, the [rounds 50–51 triage](WILSON_IT1_D26_TRIAGE_R51_2026_10_27.md), and the [round-19 repairs](WILSON_IT1_ROUND19_REPAIRS_2026_10_24.md) are included alongside these drafts.
 
+### Two-Loop Correlation Functions
+
+- [Two-loop uniform-bound draft](WILSON_IT1_TWO_LOOPS_UNIFORM_BOUND_2026_10_27.md): the pair insertion class, mixed terms, R-steps and conditional cutoff-uniform bound.
+- [Two-loop review dispositions](WILSON_IT1_TWO_LOOPS_TRIAGE_R1_2026_10_27.md): the recorded objections, repairs and remaining qualifications.
+
 ### Supporting Proof and Source Checks
 
 - [Bałaban paper labels and bibliography](BALABAN_PAPER_LABELS.md): internal labels, official citations, aliases and source cross-references.
@@ -32,11 +37,20 @@ The supporting triage records from rounds 20–49, the [rounds 50–51 triage](W
 ## Comparison of ultraviolet cutoffs
 
 - [27 October Cauchy-estimate draft](WILSON_IT1_CAUCHY_ESTIMATE_2026_10_27.md): the matched-term comparison and its proposed one-step estimates.
+- [Large-field depth](WILSON_IT1_LARGE_FIELD_DEPTH_2026_10_27.md): comparison of large-field integrands and loop dressings under lattice refinement.
+- [Walk-factor differences](WILSON_IT1_WALK_FACTOR_DIFFERENCE_2026_10_28.md): local propagator comparisons and the open W-delta estimates.
+- [Large-field repair calculations](WILSON_IT1_LF_GAMMA_REPAIR_ATTEMPTS_2026_10_28.md): interface, multiplier and marked-component calculations with their stated remaining inputs.
 - [Cutoff comparison](WILSON_IT1_CONTINUUM_CUTOFF_COMPARISON_2026_10_27.md): the exact two-cutoff target, old-scale estimates and the remaining full-sequence comparison.
 - [Cauchy route](WILSON_CAUCHY_ROUTE_DRAFT_2026_10_21.md): comparison of theories with successive ultraviolet cutoffs.
 - [Lipschitz continuity of the RG step](WILSON_CAUCHY_LIPSCHITZ_2026_10_21.md): supporting difference estimates and their scope.
 - [LIP-1(a)](WILSON_CAUCHY_LIP1A_2026_10_21.md): the proposed use of fixed RG1 constants with the CRE fluctuation cutoff.
 - [Fixed-constants check](V3_RG1_FIXED_CONSTANTS_CHECK_2026_10_21.md) and [whole-chart uniqueness note](V3_B4_CHART_UNIQUENESS_REPAIR_2026_10_21.md): supporting investigations referred to by the continuation work.
+
+### Cutoff-Comparison Review Dispositions
+
+- [Cauchy round 6](WILSON_IT1_CAUCHY_TRIAGE_R6_2026_10_28.md).
+- Large-field rounds [2](WILSON_IT1_LF_TRIAGE_R2_2026_10_27.md), [3](WILSON_IT1_LF_TRIAGE_R3_2026_10_27.md), [4](WILSON_IT1_LF_TRIAGE_R4_2026_10_27.md), [5](WILSON_IT1_LF_TRIAGE_R5_2026_10_28.md), [6](WILSON_IT1_LF_TRIAGE_R6_2026_10_28.md) and [7](WILSON_IT1_LF_TRIAGE_R7_2026_10_28.md).
+- Combined rounds [8](WILSON_IT1_TRIAGE_R8_2026_10_28.md), [9](WILSON_IT1_TRIAGE_R9_2026_10_28.md), [10](WILSON_IT1_TRIAGE_R10_2026_10_28.md) and [11](WILSON_IT1_TRIAGE_R11_2026_10_28.md).
 
 ## Manuscript insert drafts
 
