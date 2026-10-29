@@ -153,7 +153,7 @@ The [Previous Versions folder](Previous%20Versions/) contains the earlier manusc
 
 ## Licence
 
-Original research material in this repository is licensed under [CC0 1.0](LICENSE). Third-party material retains its existing copyright and licence notices.
+Original research material in this repository is licensed under [CC0-1.0](LICENSE). Third-party material retains its existing copyright and licence notices.
 
 ## Questions & Comments
 
