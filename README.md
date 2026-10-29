@@ -151,10 +151,10 @@ The [Previous Versions folder](Previous%20Versions/) contains the earlier manusc
 - **V3:** [PDF](Previous%20Versions/WILSON_FIRST_RG_STEP_V3.pdf) and [LaTeX source](Previous%20Versions/WILSON_FIRST_RG_STEP_V3.tex).
 - **V3 pedagogical summary:** [PDF](Previous%20Versions/V3_Pedagogical_Summary_2026_10_22.pdf) and [LaTeX source](Previous%20Versions/V3_Pedagogical_Summary_2026_10_22.tex).
 
+## Licence
+
+Original research material in this repository is licensed under [CC0 1.0 Universal](LICENSE). Third-party material retains its existing copyright and licence notices.
+
 ## Questions & Comments
 
 adogra [at] mit.edu (Akshunna S. Dogra), martin.peev [at] maths.ox.ac.uk (Martin Peev)
-
-## Licence
-
-Original research material in this repository is dedicated to the public domain under [CC0 1.0 Universal](LICENSE). Third-party material retains its existing copyright and licence notices.
