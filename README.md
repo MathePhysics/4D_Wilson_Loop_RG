@@ -27,7 +27,7 @@ Our current progress is as follows.
 
 | Main step | Completion | Main remaining work |
 |---|---|---|
-| [First RG step for one loop and two disjoint loops](Manuscripts%20under%20Construction/WILSON_FIRST_RG_STEP_V5.tex) | **Complete** | The stated finite-cutoff theorems and uniform bounds are written. |
+| [First RG step for one loop and two disjoint loops](WILSON_FIRST_RG_STEP_V4.tex) | **Complete** | The stated finite-cutoff theorems and uniform bounds are written. |
 | [Small-field iteration and large-field insertions](drafts/WILSON_IT1_D26_CLOSURE_2026_10_24.md) | **Written; verification outstanding** | Verify the complex gauge-covariance, averaged-current, analytic-domain and weight arguments used in the induction, with their stated source readings. |
 | [R-steps for single and two-loop insertions](drafts/WILSON_IT1_D27_CLOSURE_2026_10_26.md) | **Conditional** | Verify the written evaluation, rounding and extent estimates; close the three single-loop post-R gaps and the pair’s member-merging and cross-insertion weight gaps. |
 | [Relative weights of large-field contributions](drafts/WILSON_IT1_CAUCHY_ESTIMATE_2026_10_27.md) | **Written; verification outstanding** | Verify the whole-integral comparison and history-cost estimates at fixed volume. |
@@ -52,7 +52,7 @@ The [Manuscripts under Construction folder](Manuscripts%20under%20Construction/)
 - **V5:** [PDF](Manuscripts%20under%20Construction/WILSON_FIRST_RG_STEP_V5.pdf), [LaTeX source](Manuscripts%20under%20Construction/WILSON_FIRST_RG_STEP_V5.tex), and [bibliography](Manuscripts%20under%20Construction/WILSON_FIRST_RG_STEP_V5.bib).
 - **Pedagogical summary (V4 companion):** [PDF](Manuscripts%20under%20Construction/V4_Pedagogical_Summary_2026_10_22.pdf) and [LaTeX source](Manuscripts%20under%20Construction/V4_Pedagogical_Summary_2026_10_22.tex).
 
-The summary gives a notation guide and explanations of the construction, estimates and two-loop result. V5 is the latest manuscript version under construction.
+The summary gives a notation guide and explanations of the construction, estimates and two-loop result. V4 is the current reference manuscript; V5 remains under construction.
 
 ## Research Programme
 
@@ -82,7 +82,7 @@ Assessment of the working drafts as of 2 November 2026. The linked drafts are in
 
 | Claim | Completion | Outstanding work |
 |---|---|---|
-| First RG step for a square Wilson loop | **In manuscript** | Exact normalised decomposition, perimeter and corner extraction, and defect and boundary bounds are supplied. See [V5's main theorem](Manuscripts%20under%20Construction/WILSON_FIRST_RG_STEP_V5.tex). |
+| First RG step for a square Wilson loop | **In manuscript** | Exact normalised decomposition, perimeter and corner extraction, and defect and boundary bounds are supplied. See [V4's main theorem](WILSON_FIRST_RG_STEP_V4.tex). |
 | First-step leading-term bounds and exponential moment | **In manuscript** | The stated estimates retain contour-length dependence; they do not alone give cutoff-uniform control at fixed physical loop size. |
 | Inductive class of Wilson loop insertions | **Written** | Full preservation requires the fluctuation-step and R-step estimates. |
 | Small-field RG transformation and contraction of deviation insertions | **Written; verification outstanding** | Verify the complex carry and averaged-current estimates, their analytic domains and the inherited source readings. See the [step map](drafts/WILSON_IT1_D2_STEP_MAP_2026_10_22.md), [complex covariance](drafts/WILSON_IT1_COMPLEX_COVARIANCE_2026_10_29.md) and [averaged current](drafts/WILSON_IT1_RMJ_CLOSURE_2026_10_30.md). |
@@ -119,7 +119,7 @@ The pair results concern two vertex-disjoint squares. The extension to any finit
 
 | Claim | Completion | Outstanding work |
 |---|---|---|
-| First RG step for the pair expectation | **In manuscript** | Product of the individual perimeter/corner normalisations, mixed contributions and remainder bounds are supplied. See [V5's two-loop theorem](Manuscripts%20under%20Construction/WILSON_FIRST_RG_STEP_V5.tex). |
+| First RG step for the pair expectation | **In manuscript** | Product of the individual perimeter/corner normalisations, mixed contributions and remainder bounds are supplied. See [V4's two-loop theorem](WILSON_FIRST_RG_STEP_V4.tex). |
 | Separation decay of first-step mixed contributions | **In manuscript** | Exponential separation bounds hold for the stated mixed activities and scalar correction. |
 | [Inductive pair class and propagation of mixed insertions through fluctuation steps](drafts/WILSON_IT1_TWO_LOOPS_UNIFORM_BOUND_2026_10_27.md) | **Substantial derivation written** | Production and carry estimates require verification together with the inherited single-loop inputs. |
 | [R-steps for the pair](drafts/WILSON_IT1_TWO_LOOPS_UNIFORM_BOUND_2026_10_27.md) | **Conditional** | R-eval, R-round and R-att-ext are derived, awaiting review. R-member and R-eval-cr remain open, together with the inherited single-loop post-R gaps. |
