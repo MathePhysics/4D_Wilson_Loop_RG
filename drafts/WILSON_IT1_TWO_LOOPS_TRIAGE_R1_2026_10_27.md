@@ -599,3 +599,278 @@ The user asked: "Why do we need information about the gauge transformations? Isn
 - Hash: note 311de6c9eefc… (783 lines). D2.7 is unchanged, since its wording, "a gauge bound for the deformations on Z's older layers", still holds. No review dispatched.
 
 **Not closed.** (R-eval): the gradient and 𝐉 conditions, and (iii)'s gauge bound. (R-round), (R-member), (R-att-ext).
+
+## (R-eval) (iii): The Gauge Bound Derived (28 October, 16:58)
+
+The user asked: "Derive the gauge bound: read REG Section C and the propagator bounds it uses, bound the derivative of the Landau gauge fixing with respect to the complex part, and run the induction over the steps."
+
+**Sources read.**
+- REG pp.79–81 ((1.27), (1.29), (1.30)) and pp.89–94 ((1.77), (1.90)–(1.109), Proposition 5).
+- PBG pp.393–400 and 413–416 ((3.25), (3.35)–(3.37), (3.41), (3.44), (3.47)–(3.49), Theorem 3.4).
+- VAR p.279 (Theorem 1, (9)–(10)), p.305, and its applications of PBG at pp.285, 295–297.
+- CMP98 p.50 ((209)–(214)), PRT2 p.234 (Lemma 2.1), LFR I p.186 ((1.45)) and p.191 l.36–48.
+
+**Correction.** The 15:14 section's "the steps compose in one frame … with the same block data" is wrong. By REG (1.30) a Landau representative's block variables are the configuration's conjugated by u at the block points, so a representative does not keep the block data. The u-free chain's sources and data reach the Landau gauge rotated by G and u, and the derivation tracks these shifts (term (b) of *One step's deviation*). The sub-bullet *The steps compose in one frame* is removed from the note.
+
+**Route.**
+- The induction runs on the stage deviation ε_n from the real chain, in Φ's frame, with each step compared in the Landau gauge at its own real base U₀.
+- G, from Φ's frame to the Landau gauge, is a fixed point with a sup-norm source: |λ̂|_{(1)} ≤ 2B_Gε through G′RD*, which is first order. |Dλ̂|_{(0)} comes from Dλ̂ = A_L − N(λ̂), with A_L controlled by VAR (190), and continuity along 𝐔_t excludes the large branch.
+- u, from the stage-n configuration to its Landau representative, is REG Proposition 5's fixed point one weight up. Its source Θℍ′ + R₀D*₀B₂ is in the (−1)-norm by LFR I (1.45)'s gradient entry and (190), and ∇G′ then gives |Dμ|_{(0)}.
+- A first attempt at u, with the fixed point at the complex base 𝕎 and only (1.45)'s sup entry, failed: the remainder η|X||Dμ| needed |Dμ|_{(0)}, which that scheme could not bound. (1.45)'s gradient entry, which the note had quoted only for its sup entry, closes it.
+- An earlier version of the G lemma bounded |DG′RD*A|_{(0)} by |A|_{(0)} through ∇G′∇*. PBG bounds that only in a Hölder norm ((3.44)), and the lemma was rewritten without it.
+- Each step adds dev_n ≤ C_*S_L²δ′_jε_{n+1}. The product over the N + 1 steps is at most 2, and the sum is O(N^{1+β₀}δ′_k)S_L²λα_{1,k}L^{−k} < ⅛(1−β)α_{1,k}L^{−k} for g small.
+
+**Weak points named for a reviewer.**
+- R's (γ)-norm bound for γ ∈ [−2, 0], and the weighted bounds of K, Q′, and C, are derived from (3.47)–(3.49) with PRT2's layer sums, not printed; REG (1.98) prints only γ = −2.
+- The one-weight gain of δG′, δC, and δR in the base change Θ is derived here, from the zeroth-order differences and Q′'s averaging (PBG p.393).
+- CMP98 (212)'s error terms are read in the weighted norms, with |λ̂| ≤ |λ̂|_{(1)}L^lη at scale l.
+- The identification of 𝕎 and 𝕎_n with VAR's 𝓗 at complex 𝐔 is by analytic continuation from real points, with VAR Theorem 1's uniqueness there.
+- ε_Φ's bound along the segment 𝐔_t uses only the phase of A′; the 𝐉 coordinate at the evaluation points is still unspecified.
+
+**Note edits.**
+- The OPEN header and *What is missing* name only the gradient and 𝐉 conditions; the gauge sub-bullet is removed.
+- The "(iii)'s gauge bound" qualifiers are removed from the derived list, *What would close it*, the remaining parts' (i), *A_k*'s evaluation points, the closing line of *The remaining parts*, and *What it does not give*; the derived list names the new inputs.
+- (iii): the heading, the header of *On Z's layers m ≤ k₀*, and the (1.45) quote, now with its gradient entry, are updated. *One step* and *The Schwarz bound* are restated relative to the step's Landau representative and ε_{n+1}. *The gauge representatives (derived)* has seven sub-bullets: *The base*, *The Landau representatives*, *The bound on G*, *The base change*, *The bound on u*, *One step's deviation*, and *The induction*. *The sum* is restated with S_L² and ε_Φ ≤ 2λα_{1,k}. *What would close the gauge bound* and *Evaluating at the Landau representative instead* are removed.
+- D2.7 l.7 and l.61 name only the gradient and 𝐉 conditions as open.
+- Hashes: note 0d212101123b… (788 lines), D2.7 9223ab65f631…. No review dispatched.
+
+**Not closed.** (R-eval): the gradient and 𝐉 conditions. (R-round), (R-member), (R-att-ext).
+
+## (R-eval): The Gradient and 𝐉 Conditions, and a Scope Problem (28 October, 17:54)
+
+The user asked to skip the review for now and work on the gradient and 𝐉 conditions.
+
+**Sources read.** SW closure (b1)–(b4), (6b), (6c), and §2 (q₀ = q₁; C₀, C₁ "sufficiently large", no ratio). Map l.317–318 (j*, r_J), (6)(e) *Older layers* (l.929), l.1344, l.1372. RG1 pp.262–263 ((1.8), (1.10), (1.15)–(1.17), (1.19)). CRE p.261 ((2.34)–(2.39), G-invariance only, l.43). VAR pp.308–309 ((190), Proposition 9). LFR I pp.190–191 and 197–200 ((1.64)–(1.69), (1.98)). LFR II pp.374–375 ((1.65)). PBG p.397 l.37, p.423 l.39, p.432 l.39 (δ₀, B₀ depend on d and L only).
+
+**Derived.**
+- The layer-weighted gradient and 𝐉 conditions: CRE (2.39) and (2.36) with α_{i,n} replaced by λ^{(k)}_nα_{i,k}L^{n−k}. In PBG's norms these are |∇A′|_{(−1)} < λα_{1,k} and |𝐉 − J|_{(−2)} < λα_{0,k}, which are (190)'s weights. The family stays inside 𝒟_k, for α₀ through (6)(e)'s form of CRE (2.6)–(2.7).
+- The consumers re-checked: (b2)'s j* with the weighted r_J, (6b)'s and (6c)'s Schwarz radii (Bałaban's layer radii suffice), (b3)'s transfer (ratio ½(1−β) for the gradient, ½(1−β)(1+β₀) ≤ ¾(1−β) for the current), (b3)'s 𝐇-part (top-layer weights imply the layer weights), and (b4).
+- The reduced frame: the representative 𝕎_n^G = (𝕌^{(n)})^{ũ^{−1}}, ũ = GuG^{−1}, has step factor Ad_{G₋}e^{iηX} exactly. Term (d) and the μ-part of E drop out.
+- The deformations' gradient and current on every layer, through (190)'s gradient and D*D entries, with no factor L^{k−i}. This is the factor that made the gradient look open.
+- The 𝐉 coordinate at the evaluation points (quoted): the holomorphic current of the evaluation configuration, from RG1 (1.15)–(1.17).
+
+**Corrections.**
+- (a) The note's sentence that f_n = 1 − β(1 − 2^{−(k−n)}) is no smaller before R is wrong: f_n is no larger. The conclusion holds, since the transported bound carries no f_n and f_n ≥ 1 − β.
+- (b) The scope problem. (ii)'s gluing and *The Landau representatives*' continuation used the real points as a uniqueness set. The identities Φ(U) = U_k^0(M(U)) and 𝕎 = e^{iηA_L}U₀ hold only at real post-R minimisers. Those form a totally real submanifold of maximal dimension of 𝓜^c, not of the T-step's open set. The T-step's points include real non-minimisers (a″ real ≠ 0, or s ∈ (0, 1)). So every bound of (i)–(iii) holds on 𝓜^c only. The analyticity of (ii) is unaffected, since it is taken at Bałaban's configuration.
+- (c) The repair, and its cost. The old insertions' function depends on 𝐔 only through M(𝐔), so the bound at 𝐔 is the bound at P(𝐔) = U^{post}(M(𝐔)) ∈ 𝓜^c. P(𝐔)'s complex part is the minimiser's response to 𝐔's data, at most K = O(C_dS_L) times 𝐔's room by (190). Landing needs L ≥ 2K(1+β₀)/(1−β), and the current also needs C₀ ≥ O(K)C₁ on the newest layers. K depends on L through δ₀(d, L), B₀(d, L), and (190)'s O(1).
+
+**Weak points named for a reviewer.**
+- The transported part's gradient needs E(U) to be a smooth field off Λ, i.e. U_k^0(M(U)) and U in one gauge. Its current needs D*D of the data's complex part, which the family does not bound.
+- (1.98)'s response term bounds the response's curl, not its full gradient.
+- The complex curvature conditions (2.34), (2.35), and (2.37) at the evaluation points are not checked.
+- The real conditions at P(U) for real non-minimisers U are not checked.
+- The candidate single evaluation at P(𝐔) needs the chain's final stage to be one VAR minimiser of all its data, which is not checked against LFR I (1.30), (1.34), and (1.44).
+
+**Note edits.**
+- The OPEN header, *What is missing*, a new *What would close it*, the derived list, and the lead of *The derivation* (formerly *What would close it*) are rewritten.
+- *The dilated sub-domains* gets the layer-weighted conditions, the inclusion for α₀, the transfer of all three conditions, j*'s radius, and *The consumers of the gradient and current conditions*.
+- The f_n sentence is corrected, and the phase conclusion is restricted to 𝓜^c. The remaining parts' (i) and the (iii) headings are updated. (ii)'s gluing sentence is replaced. *The Landau representatives*' continuation is restricted to 𝓜^c.
+- *The gradient and 𝐉 conditions (OPEN)* and *What would close the gradient and 𝐉 conditions* are replaced by *The scope*, *The reduced frame*, *The gradient and the current of the deformations*, *The 𝐉 coordinate*, and *The transported part and the response*.
+- The closing line of *The remaining parts* and *What it does not give* are updated.
+- D2.7 l.7 and l.61 name the new open part.
+- Hashes: note 3f79c0a70e0f… (823 lines), D2.7 eaff567b94d1…. No review dispatched.
+
+**Not closed.** (R-eval): the factor K off 𝓜^c, the gradient and current at the start of the chain, the curvature conditions, and the real conditions at P(U). (R-round), (R-member), (R-att-ext).
+
+## (R-eval): Four Reviews Triaged, and the Factor K Against L (28 October, 18:44)
+
+Reviews: `two-loops-reval-weighted-20261028-r1` (the dilated sub-domains, l.33–44), `two-loops-reval-gradcur-20261028-r1` (the reduced frame, the deformations' gradient and current, and the 𝐉 coordinate, l.89–100), `two-loops-reval-scope-20261028-r1` (the OPEN line and the scope, l.5–11, 59, 84–88, and 101–104), and `two-loops-reval-gauge-20261028-r1` (Z's older layers, l.63–83). All four were read in full. None reports a fatal finding.
+
+**Weighted review.**
+- Serious 1 (D2.6's att bounds on 𝒟^{sub} not re-checked): accepted in part. D2.6 §5.4 uses only the phase condition. With λ^{(k+1)}_n ≤ c′^m, its transport factor ((1+β₀)/L)^m gives ((1−β)/2)^m ≤ 1, and its condition becomes 4c_πMλα_{1,k+1} ≤ 1 (g small). §5.1 uses 𝒟^{sub} as the clause's domain and the chain condition, which the transfer gives. Repaired: a new sub-bullet under *The consumers*, and "only" removed.
+- Serious 2 ((2.36) is centred at 0, the family's current at J_k): accepted. At the T-step's points map (6)(e) gives it (l.928–929, via R-m). At the R-step's evaluation points it is added to the OPEN line.
+- Minors: the clause is now asserted on 𝒟^λ_k (minor 4); the i = 1 factor is cited to map l.696's one-step bound (minor 6); "only" is fixed (minor 7); the two c′ are separated (minor 9, see the gauge review's m1). Not edited: j*'s ϱ as the family's top-layer-normalised radius (minor 1), the 𝐇-part's current in the ¼(1−β) leftover (minor 2), λ in 2ρ_k and 𝔞_{k+1} (minor 3), the factor λ^{(k)}_n in "weaker by" (minor 5), J_k against J_{k+1} (minor 8), and f^{(k+1)}_n and R(u)J_{k+1} (minor 10).
+
+**Gradient-and-current review.**
+- Serious 1 (D*D of (c′) needs ∇∇λ̂): accepted. (190) prints ∇, D*D, and Δ, not ∇∇. The deformations' current is now OPEN, with the covariant route (J^h at the reduced representative, which needs only |λ̂|) named.
+- Serious 2 (the data's own 𝐉 enters): accepted, and confirmed in the print. RG1 p.275 l.3–4: "The variable 𝐉 replaces the function J_{k+1} as usual"; LFR II p.375 l.11–12 introduces (𝐔, 𝐉) into the other expressions "in the usual way". The bullet is relabelled a reading, and the data's 𝐉 is added to the OPEN line.
+- Minors: (e^{2|λ̂|} − 1)|X| for 2|λ̂||X| (minor 7, first item), the term O(γ₀ε₀) (minor 5), and the RG1 citation, now p.262 l.59–p.263 l.2 under (1.16), with (1.8)–(1.9) checked on p.261 (minor 6), are fixed. Not edited: G → G^c continuation's domain (minor 3), γ_Φ in κ (minor 4), "ηℍ", O(1) in place of O(B₃), and the Hessian bound η|∇∇f| ≤ 2|∇f| (minor 7).
+
+**Scope review.**
+- Serious 1 (the 𝐇-part against K off 𝓜^c): accepted and added to the OPEN line. The reviewer's β ≤ 1/(2K − 7) is not re-derived; the note states only that it bounds β in terms of K, or needs T_Y reduced by K.
+- Serious 2 ((1.65) is the wrong citation for the factoring through M): accepted. The factoring is Bałaban's own: "We replace M·(U_k), V″ by the corresponding M·(𝐔), and V_Λ^{(A)} by the function V_Λ^{(A)}(M^k(𝐔))" (LFR II p.374 l.39–40). Its regularity off Λ^∼ is "almost the same as for the configuration U(𝐁_k″(Y₁), M·(𝐔))" (p.375 l.12–13), and (1.50)'s data off Λ are the new configuration's (p.370 l.4–8). l.87 now cites these.
+- Serious 3 (Bałaban's devices against C₀ ≥ O(K)C₁): resolved below.
+- Minors: "on every uncapped layer" (minor 1) is fixed. Not edited: the scope's room qualifier (minor 2), the relative error in l.85 (minor 3), the layer leakage in K (minor 4), "up to gauge" (minor 5), and the response's K (minor 6).
+
+**Gauge review.**
+- S1 (the identities of *The Landau representatives*): accepted. A representative keeps its block data only in REG (1.31)'s double-bar averages, 𝓗's argument is the axial-gauge minimiser's data, and VAR Theorem 1's uniqueness is of orbits. Marked OPEN in place, in the heading of *On Z's layers m ≤ k₀*, in the derived list, and in the OPEN line. The expected route is Schwarz in s, since X vanishes at s = 0. Not derived.
+- m1 (three c′): fixed. l.6's c′ is removed, and l.134's constant is renamed c_χ at l.68, l.78, l.81, l.91, l.97, l.134, and l.136 (old numbering). Not edited: m2–m11, and (130)'s page.
+
+**The factor K against L.**
+- In print K's constants depend on d and L. B₃ "depend[s] on d and L only" (VAR Theorem 1, p.279 l.28), and Bałaban's "absolute constant" includes L (VAR p.299 l.26). δ₀ is (d, L) (PBG p.397 l.37). The multi-layer free constants depend on L through γ₀′ = π²/L² (PRT II p.242 l.42–43; Proposition 2.5, p.246). Only the free single-scale kernel's constants depend on d alone (PRT I Proposition 1.2, p.35).
+- Bałaban never needs L against B₃. His spaces bound the data-minimisers only through curvature and current at the level α₀ (CRE (2.35), (2.37), p.261; RG1 (1.16), p.262 l.52; LFR I (1.68)). He absorbs B₃ by an inner constant: "for α₀′ sufficiently small the above estimates imply the condition (iv)" (RG1 p.263 l.18). α₀ and α₁ are fixed after M (RG1 p.264 l.38–41). In his re-minimisations, LFR I (1.44)–(1.48), B₃ multiplies the small increment δ′_j, and the products are made at most αβ by γ or A₁/A₀ (p.186 l.35–42). The phase of a data-minimiser at the level α₁ is asked only by the note's class.
+- The current part closes by a choice. C₀ ≥ C_KC₁, with C_K = O(K)/(1−β), is fixed after L and M. CRE (2.28) asks only "sufficiently large" (p.259 l.50), SW (c2) leaves the ratio free, the map's l.1372 needs only α₀/α₁ bounded, and K does not depend on C₀ or C₁. For review, as SW (c2) is.
+- The phase and gradient part stays OPEN: L ≥ 2K(1+β₀)/(1−β). RG1 p.275 l.9–10's "approximately the same regularity properties as 𝐔" and LFR I (1.68)'s c = 3 on the top layer carry no constant for K. The route is K ≤ K₀(d) + o(1) as M → ∞ and g → 0. K₀ comes from PRT I's single-scale kernel, the interfaces are paid by the crossing cost M/M₁, and the background corrections are O(α₀). Not derived: the newest layer's kernel within a few blocks of its interface with the older layers.
+
+**Weak points named for a reviewer.**
+- The current part's choice C₀ ≥ C_KC₁ rests on nothing in the chain needing C₀/C₁ bounded independently of L. That was checked against SW (c2)–(c3), the map's l.1372, and the note's j*, but not against D2.3–D2.6 line by line.
+- The route for the phase part assumes that PRT I's single-scale bound transfers to the layered, background-dependent kernel away from the interfaces. That is not checked.
+
+**Note edits.**
+- The OPEN line: *What is missing* gains the printed (d, L) sources, five new items (the deformations' current, the Landau-representative identities, the data's 𝐉, (2.36) about 0, and the 𝐇-part against K), and "every uncapped layer". *What would close it* is split into the current part (closed by the choice), the phase and gradient part with Bałaban's devices, the route, and the single evaluation.
+- The derived list: the older layers' phase is conditional on the identities, the deformations' current is OPEN, the 𝐉 item is the configuration's part, and the current part of K is added.
+- *The dilated sub-domains*: 𝒟^λ_k as the clause's domain, map l.696's citation, "only" removed, and the D2.6 sub-bullet.
+- *On Z's layers m ≤ k₀*: the heading, and an OPEN sub-bullet under *The Landau representatives*.
+- *The scope*: l.87's citation. *The reduced frame*: (e^{2|λ̂|} − 1)|X|. *The gradient and the current of the deformations*: the heading, the OPEN sentence, and the γ₀ε₀ term. *The 𝐉 coordinate*: relabelled, the citation, and the data's 𝐉.
+- c_χ for l.134's constant. The closing line of *The remaining parts* lists the OPEN line's items.
+- D2.7 l.7 and l.61 name the new open items.
+- Hashes: note 172addfcfb5f… (835 lines), D2.7 2a91e8079a51…. No review dispatched.
+
+**Not closed.** (R-eval): the phase and gradient part of K, the gradient and current at the start of the chain, the deformations' current, the Landau-representative identities, the data's 𝐉 and (2.36) about 0 at the evaluation points, (b3)'s 𝐇-part against K, the curvature conditions, and the real conditions at P(U). (R-round), (R-member), (R-att-ext).
+
+## (R-eval): Why Bałaban Needs No K (28 October, 18:54)
+
+**Correction.** The previous section's "The phase of a data-minimiser at the level α₁ is asked only by the note's class" is wrong. Bałaban's old activities are evaluated at data-minimisers too: RG1 (3.24)–(3.25) (p.275) evaluate 𝐄^{(j)} at U_j(□₀, M·(…U_{k+1}(□₀, M·(𝐔)))), on a space with phase room (1+2β)α₁.
+
+**His device.** He splits the data before minimising. M·(𝐔) = V^v in a generalized axial gauge, with |V(b) − 1| < O(1)Mα₀ and |v − 1| < O(1)Mα₁ ((3.26)). U_{k+1}(□₀, V) = (exp iL^{−1}η𝐇_{k+1}(□₀, (1/i)log V))^{u_{k+1}}, with 𝐇_{k+1} and u_{k+1} − 1 bounded by B₃O(1)Mα₀ ((3.27)). v and u_{k+1} are removed by the invariance under G^c gauge transformations near G, applied to 𝐉 and B as well ((3.28)–(3.29), p.276). So the minimiser's response constant B₃ multiplies only the curvature-sized contour data V; the phase sits in v and is never amplified.
+
+**Why the note has K.** *The scope* bounds P(𝐔)'s complex part as 𝓗^{post}(Δd), with Δd the whole complex data in the Landau gauge relative to the real minimiser. That feeds the pure-gauge part of the phase to the minimiser, and K multiplies the full phase room. The scale gain per step is only (1+β₀)/L, hence L ≥ 2K(1+β₀)/(1−β).
+
+**Route (not derived).** The same splitting for the class, whose words are G^c-invariant. It needs a complex-curvature condition on 𝒟^λ_k smaller than the phase room by O(B₃M), with that ratio fixed after L and M, as (3.26)–(3.27) need B₃O(1)Mα₀ inside the phase room. K's current part is then to be re-derived by covariance against the curvature condition. That may reverse the choice C₀ ≥ C_KC₁ of the previous section, since the splitting asks curvature small against phase. K ≤ K₀(d) + o(1) stays as a fallback.
+
+**Note edits.** *What would close it*: the phase and gradient bullet and the route bullet are rewritten with (3.24)–(3.29). Hash: note 33ecab48122c… (835 lines). No review dispatched.
+
+## (R-eval): The M-Factored Domain Removes K From L (28 October, 19:09)
+
+**Why the splitting was not used.** On 𝒟^λ_k the gradient room equals the phase room in scaled units, so the curl of A′ is as large as the phase room. The axial splitting would put a curvature of phase size into V, where B₃ multiplies it. The splitting alone does not remove K for this class.
+
+**The derivation.** Bałaban's T-step is M-factored (RG1 p.275 l.1–6). The class's domain is taken the same way: 𝒟^{λ,M}_k := {𝐔: M(𝐔) within VAR's radius, P(𝐔)'s Landau representative in 𝒟^λ_k}. The old functions depend on 𝐔 only through M(𝐔), so the sup bounds there are those on 𝓜^c ∩ 𝒟^λ_k. At step k+1 the background is P_{k+1}(𝐔).
+- At s = 1 the consumer's point e^{iη𝐇(1,tB′)}P_{k+1}(𝐔) is a step-k minimiser (RG2's U_k(e^{iB′}V) = e^{iη𝐇}U_{k+1}, map l.108 (ii), extended to 𝓜^c by analyticity). P is the identity there, and SW (b3) lands it under L ≥ 2(1+β₀)/(1−β) alone.
+- At s ≠ 1 the data differ by 𝐇(s,tB′) − 𝐇(1,tB′), so the response is at most 2K sup|𝐇|.
+- T_Y reduced by 4K: 1/T_Y := max(|B′|_Y/ε_H, 64KB₀e^{16κ_s}|B′|_Y/(min(β,1)α_{1,k})). Then (1+2K)h_k^{(K)} ≤ min(β,1)α_{1,k}/4 for g_K small under q₁ > p₀, below map (6)(e)'s h_k, so SW (b3) and map l.707 cover it on every layer, real points included.
+- D2.4: C_T ≤ 4K·C_T enters only θ_k's (β) term, which is ≤ 1/4 for g_K small under (R-m′) (map l.1581–1582). g_K is fixed after L and M.
+
+**Weak points, checked.** K is fixed after L and M (printed constants (d, L) plus M), so absorbing it by g_K small is legitimate. The response bound uses Proposition 9 with a complex base point (the s = 1 minimiser), at relative error O(sup|𝐇|/r_B), as in *The scope*. The current's response is K times the phase room, so C₀ ≥ C_KC₁ stays, for review. The identification of RG2's U_k with the post-R minimiser U^{post} at the T-step's s = 1 points is not derived: map l.108 (ii) states U₁(e^{iB′}V) = e^{iη𝐇}U₂ for the small-field minimiser only, and the post-R determining set 𝐁_k(Y₁) has not been checked against RG2. It is added to the note's OPEN line.
+
+**Note edits.** OPEN line: the K paragraph replaced by the M-factored statement; the items "(b3)'s 𝐇-part against K" and "the real conditions at P(U)" removed (derived). *What would close it*: the two K bullets replaced by one. Derived list: the phase and gradient part of K added. (iii): *The scope*'s last sub-bullet carries K's printed constants; new bullet *The M-factored domain (derived)*. Closing line updated. D2.7 closure l.7 and l.61 updated. Hashes: note 0af123485777… (840 lines), D2.7 closure 521570fa3327…. No review dispatched.
+
+**Not closed.** The starting gradient and current; the deformations' current; the Landau representatives' identities; the data's 𝐉; (2.36) about 0; the complex curvature conditions (2.34), (2.35), (2.37); the choice C₀ ≥ C_KC₁ (for review).
+
+## (R-eval): The s = 1 Points Lie in 𝓜^c (28 October, 19:29)
+
+**The question.** The M-factored landing at s = 1 needs the T-step's point e^{iη𝐇(1,tB′)}P_{k+1}(𝐔) to lie in 𝓜^c, the complexified image of the old insertion's post-R map. The map's l.108 (ii) gives the minimiser identity only in the small-field form.
+
+**Correction to the note.** The note wrote U^{post} with 𝐁_k(Y₁). Bałaban's old function is built on U(𝐁_k″(Y₁), M·(𝐔)) (LFR II p.375 l.14), with 𝐁_k″(Y₁) = 𝐁(Y₁) ∪ 𝐁_k″ (p.373 l.16–18, joined by CRE (2.14)). The ″-set is finer than the post-R 𝐁_k on Z, and the old function depends on the finer averages, so U^{post} is now defined with 𝐁_k″(Y₁).
+
+**Derived.**
+- The T-step's U_k is LFR II (1.35)'s new background field U_{𝐁_k}(V), with 𝐁_k from (1.33) (p.365; the effective action is rebuilt in it, p.369 l.26). RG1 (2.6) and CRE p.266 l.7 expand it as e^{iη𝐇_k(B′)}U_{k+1}.
+- Nesting: a coarse minimiser is a fine minimiser of its own averages, by admissibility and VAR Theorem 1's orbit uniqueness. Bałaban prints the instances RG1 (3.3), p.270, and LFR II (1.36) at zero 𝐇-argument.
+- Localization: LFR II (1.61)'s first equality, U_k^0 = U(𝐁_k″(Y₁), M·(U_k^0)), applied to the nested configuration.
+- So every real post-R background field lies in 𝓜. The Landau representatives are analytic in the data and agree at real data, so the complex s = 1 point lies in 𝓜^c. Older insertions (step j < k) follow because determining sets only coarsen.
+
+**Weak points, checked.** (1.61)'s equality is printed for U_k^0, a 𝐁_k″-configuration; it applies to U_{𝐁_k}(V) only through the nesting, which holds up to a gauge transformation. That suffices, since the words are gauge invariant and *The M-factored domain* asks only the Landau representative. "Coarser averages are iterated averages of the finer ones" is what RG1 (3.3) uses for M^j. The bounds of (iii) go through Proposition 9 for U^{post}'s own determining set, and the chain's U_k^0(M(𝐔)) already takes the ″-averages, so the change from 𝐁_k(Y₁) to 𝐁_k″(Y₁) should leave them unchanged. (iii) has not been re-read line by line for a use of the coarser data on Z.
+
+**Note edits.** The OPEN item and the closing-line item removed. *The transport form*: U^{post} uses 𝐁_k″(Y₁). *The M-factored domain*, *At s = 1*: the derivation in five sub-bullets. Hash: note fc29afde465e… (844 lines). No review dispatched.
+
+**Not closed.** As in the previous section.
+
+## (R-eval): (iii) Re-Read, and the Starting Values Derived (28 October, 19:40)
+
+**(iii) against 𝐁_k″(Y₁).** Every bound in (iii) is per fine bond or uniform in the block scale j′, and S_L already counts Z″'s layers. No step uses the coarser post-R set on Z. The change also makes U_k^0 ∘ M well defined, since (1.50) takes data on Z at the scales of 𝐁_k″; the note says so at *The transport form*.
+
+**The single evaluation, as first stated, does not work.** Proposition 9 applied to the chain's whole complex data costs K against the room near the newest layers, which is the problem the M-factored domain removed. It is now stated as a route for the remaining items, applied only to differences from 𝐔's own part.
+
+**The starting values (derived).** On 𝒟^{λ,M}_k take 𝐔 = P(𝐔) ∈ 𝓜^c. Then Φ(𝐔) = U_k^0(M(𝐔)), a VAR minimiser, and its complex part is 𝓗(Δd) + T₁ + T₂ relative to the real base.
+- 𝓗(Δd) is 𝐔's own complex part, so its gradient and current are given by the domain's definition. This removes the old D*D-of-A′ problem and the factor K on A′.
+- T₁ is the response to the complex data difference on Λ ∩ Ω″^{∼2}_{h+1}, which is O(1)B₃B₅M⁵s_Z by (1.41) and (1.45). (190)'s entries give its gradient and D*D with decay from Λ, so it is absorbed by λ := 4max(C_Λ, C_Λ′)M⁵/(1−β) on Z's layers. On the newer layers the decay gives e^{−δ₀M/(16M₁)} per layer, against M⁵, for M large.
+- T₂ is the kernel shift caused by the real data difference δ^{re} on Λ. The real data differ through V_k′ = exp ig_kB′ alone, with |g_kB′| < M₀ε_k (LFR II (1.1), p.356, and the display below it), via U_0^{(AL)} of p.366 l.24 and (1.34). The Cauchy estimate in the Λ-localized direction wδ^{re} keeps (190)'s pointwise decay, so T₂ ≤ O(K²B₃M₀ε_k/r_B) times 𝐔's room, which tends to 0 with g.
+- The real base U_k^0(M(U)) is taken as its Landau representative relative to U. The words are gauge invariant, so u_k″ plays no part, and the base change has coefficients O(KB₃M₀ε_k).
+
+**Weak points, checked.**
+- The bound |g_kB′| < M₀ε_k is printed for the denominator's integration variable V′ of (1.1). The numerator's V_k′ carries the same χ in (1.1), so it is read as the same restriction; χ's definition in LFR I has not been re-read.
+- U_0^{(AL)} is localized to Z (U_{k,Z}^{(L)}), while the post-R configuration is global. The difference sits in Z's boundary layer, where (1.36)'s argument is at most 44d²ε_k (p.365), also g-small.
+- K is uniform in M once *S_L is finite* holds, since a larger M only increases the distances, so M⁵e^{−δ₀M/(16M₁)}C_Λ′ → 0.
+- λ now depends on K through C_Λ′; it is fixed after L, M, C₀, and C₁, and before g. Its consumers, D2.6's 4c_πMλα_{1,k+1} ≤ 1 and (b2)'s O(λρ_k), use only g small.
+
+**Note edits.** OPEN heading: the deformations' current, the curvature conditions, and the data's 𝐉. The starting-values item removed from the OPEN list and the closing line, and added to the derived list. *What would close it*: the single-evaluation bullet restated as the route for the remaining items. (i): λ := 4max(C_Λ, C_Λ′)M⁵/(1−β). (iii): *The transported part and the response (OPEN)* replaced by *The starting values γ_Φ and κ_Φ (derived on 𝒟^{λ,M}_k)*. D2.7 closure l.7 and l.61 updated. Hashes: note e6ecd1b00ca5… (848 lines), D2.7 closure 6ada5ad7a21e…. No review dispatched.
+
+**Not closed.** The deformations' current (Hessian of λ̂); the Landau representatives' identities; the data's 𝐉; (2.36) about 0; the complex curvature conditions (2.34), (2.35), (2.37); the choice C₀ ≥ C_KC₁ (for review).
+
+## (R-eval): The Five Points Closed (28 October, 20:25)
+
+**Status.** (R-eval) derived, not reviewed. The choice C₀ ≥ C_KC₁ stays for review. (R-round), (R-member), and (R-att-ext) stay OPEN.
+
+**The five points.**
+- The Landau representatives. REG's representative depends on the element it is normalised from (p.80 l.29–31), and REG generates it from the axial-gauge element (p.81–82, (1.28)–(1.31)). VAR's representatives 𝕎 := e^{iη𝓗(B)}U₀ take 𝓗's argument from the configuration's own plain data. 𝕌 = 𝕎^G with G = u_L followed by w: u_L by CMP98 (106) (REG p.88 l.29–30), w the data-preserving axial fixing, with w = 1 at the block points (REG (1.14)). The identity holds at real minimisers by VAR Theorem 1 and extends to 𝓜^c. The base change Θ and REG's fixed point μ are no longer used.
+- The bound on G. At the block points, |λ̂(y)| ≤ 16dL^iη|A_L|_{(0)} by REG (1.70)–(1.71). D₀λ̂ = A_L − N(λ̂) gives |D₀λ̂|_{(0)} ≤ 2(|A_L| + |A_Φ|), and a path of at most dL^i bonds inside the block gives |λ̂|_{(1)} ≤ B_Gε.
+- The current. J^h(V^G) = Ad_GJ^h(V) (RG1 (1.10)), so C_n − C_{n+1} = (Ad_G − 1)ΔJ + (ΔJ − ΔJ^{re}). The first term needs only |λ̂|, and the second is (190)'s D*D entry plus 𝒬's mixed difference, which is first order. No Hessian enters.
+- The data's 𝐉. 𝒟^{λ,M}_k is a set of pairs (𝐔, 𝐉), and P acts on 𝐔 alone, so the pair's 𝐉 obeys 𝒟^λ_k's current condition and (2.36) by definition. The new terms take it where J_k appeared (RG1 p.275 l.3–4).
+- (2.36) about 0 and (2.34), (2.35), (2.37). Quoted from LFR II (1.65) (p.375) and LFR I p.191 l.25–31 with (1.68), since 𝒟^λ_k ⊂ 𝒟_k = Ũ_k^c (SW closure (b1)).
+
+**Weak points.**
+- The reduced frame's sources are conjugated by the accumulated ũ, whose complex part grows by O(B_G)L^jηε per step. This gives a term (b) with a sum over the earlier stages, so the sum's factor is N^{2+β₀}δ′_k, not N^{1+β₀}δ′_k. It is still g_k times a power of log g_k^{−2}.
+- G_n's complex part is bounded by *The bound on G* after the real gauge transformation G_n(U). The note states this in one sentence.
+- 𝒬's first-order structure is my derivation: D* of a local analytic function on plaquettes is bounded by its values on the neighbouring plaquettes.
+- (1.65) and LFR I's chain statement are Bałaban's claims, with the proofs omitted as "almost identical". They are applied at a G^c transform of his chain, with membership read as a condition on some representative (CRE p.261 l.60–61), as on the note's l.17.
+- The path of at most dL^i bonds stays inside one layer-i block of Ω_i∖Ω_{i+1}.
+
+**Note edits.**
+- The top: (R-eval) is derived and not reviewed, and the five parts are listed with their bullets. *What would close it* is renamed *The constants*, and the single-evaluation bullet is removed. The derived list is updated.
+- (iii): *One step* takes 𝕌's own data, with C_G = O(1). *The Schwarz bound* is at s̃. *The base* is trimmed, and *The Landau representatives* and *The bound on G* are rewritten. *The base change* and *The bound on u* are deleted. *The reduced frame* is moved before *One step's deviation*, which now has the terms (a), (b), and (c′). *The induction* and *The sum* are updated.
+- *The gradient of the deformations* and *The current of the deformations* are separated, and the 𝐉 coordinate is marked derived. A quoted bullet on the curvature conditions is added. The M-factored domain is defined as a set of pairs. The downstream "OPEN (R-eval)" mentions now read "derived and not reviewed".
+- D2.7 closure: l.5, l.7, and the status lines of items 5 and 15 and of the summary are updated.
+
+## (R-round) and (R-att-ext): Closed (28 October, 20:52)
+
+Both are derived and not reviewed. (R-member) is the one R-step input still OPEN.
+
+**(R-round).** The bound of 8(105MR_k + 1) on the members in a component's slots was wrong: members made at a step j < k can have L^{k−j} disjoint intervals in one step-k bond (D2.6 closure 5.2 (T0)). The rounding is now counted per cube.
+- A member is big if j = k or σ(D) ≥ 22. Then #_k(X_D) + n_k(D)/M ≤ (21/20)σ(D) and diam_∞(T_D) ≤ M(21/20)σ(D), with no 17, since 17 + σ/4 ≤ (21/20)σ and 16.1 + 0.23σ ≤ (21/20)σ once σ ≥ 22.
+- A member is small if j < k and σ(D) < 22. Then #_k(X_D) < 22, so T_D lies in X^{(22)}, the set X⁺ widened by 22 layers of π_k-cubes.
+- B_P uses X^{(22)} in place of X⁺⁺, and D_P uses 4R_k + 48 in place of 4R_k + 4. #π_k(X^{(22)}) ≤ (105R_k)^d for R_k ≥ 44, and the margin of (1.89) pays it.
+- Every term 17#𝔅(P), every e^{2ν_r}, and every e^{85MC_jnε_k²} per member is removed from (6B) and (6C): *The count*, σ̄(g), *Cubes*, *Traversals*, *Together*, *Diameter*, *The payment*, *Spans*, *Joins*, *Join count*, *First case*, *The weights*, σ̃(D_g), *Units*, *The extent*, and the re-run of D2.7 15.7.
+- (R-eval)(i) also used the member count. *The masses and weights* now counts per component: the single-loop masses e^{2ΣA} grow to at most e^{2λΣA}, and the cross carry product grows by at most exp((λ−1)Σx_D) ≤ e^{2(λ−1)A^×} (*The carried cross total*). So P := 2ΣA + 2A^×, independent of the number of insertions.
+
+**(R-att-ext).**
+- ext^{coll} is the distance from the collar Coll_k, one set for all components (D2.6 closure 5.0). D_g is counted in the species of its first att member (D2.6 closure 5.5). The distance runs through a cube y₀ of a polymer in the component, or of Y_{W₁} on span(g). This gives ext^{coll}(D_g) ≤ polymer part + max over dev members of ext(W) + max over att members of ext^{coll}(W). Each maximum is paid by its member's own extent weight.
+- The att members' e^{17ν_r} enters D2.6 closure 5.0's species normalisation, as e^{c_W} does, once per insertion. It replaces A_j(Z) by e^{17ν_r}A_j(Z) ≤ 2A_j(Z), since 17ν_r ≤ log 2 under 5·2^{d+2}ν_r ≤ 1. 15.3's amplitude bound then reads c₁e^{3+4ΣA+2a_k} ≤ e^{−p₀(g_k)/2} for small g_k.
+
+**Weak points for review.**
+- The per-insertion growth factor λ in (R-eval)(i) is taken from SW closure (b2)'s linear form b_W(Dev_W + a*_W + j*_W). That an insertion meeting several components' neighbourhoods grows by λ only once rests on the growth being pointwise per bond.
+- A^× is uniform in K, but it is a constant fixed by the loops (linear in 𝔞̄(ℓ₁+ℓ₂)), not a polylog. Each component's margin pays e^{2(λ−1)A^×} in full, which needs p₀(g_k) large against A^× (small g_k for fixed loops).
+- In the re-run of D2.7 15.7, the small members add 44M per localisation domain to the diameter and 176M to |span(g)|. They are paid at 3ν_r/80 per unit of D_P, under R_k² ≥ 440/ν_r.
+- R_k ≥ 44 is needed for (104R_k + 44)^d ≤ (105R_k)^d.
+- The normalisation e^{c_W+17ν_r} is applied to every att insertion, not only to those that become members, so that the species totals are fixed before the groups are formed.
+
+**Note edits.**
+- (6B): *Lengths*, *The free decay*, *The volume*, *The count*, *Big and small members* (new), *The rounding*, σ̄(g), *Cubes*, *Traversals*, *Together*, *Diameter*, *The payment*, *Spans*, *Joins*, *Join count*, *First case*, and *The weights*.
+- (6C): σ̃(D_g), *Units*, *The extent*, *The attached extent* (new), *The members' weights* (att bullet), *The payment*, the re-run of D2.7 15.7, and *The weights*' collar line.
+- The top: l.3, l.15, (R-eval)(i) l.59 and *The masses and weights*, the (R-round) and (R-att-ext) blocks, and the summary line after them.
+- D2.7 closure l.10.
+
+## Reviews of (R-round) and (R-att-ext): Triage and Repairs (28 October, 21:20)
+
+Three headless reviews (Opus 5.5, effort high, note SHA256 ec7b3e991ae2…): `two-loops-rround-units-20261028-r1`, `two-loops-rround-uses-20261028-r1`, and `two-loops-rattext-20261028-r1`. None found anything fatal.
+
+**Outcome.** (R-round) is repaired, (R-att-ext) is reworked, and one new OPEN item, (R-eval-cr), replaces the unsupported per-component argument in (R-eval)(i). All of this is derived and not reviewed.
+
+**Serious findings and repairs.**
+- U-S1, uses-S2 (stale "+17" at l.456 and l.504, (H2) of R-made D_g^×). The segment count "4.2σ(W) + 73 ≤ 5(σ(W) + 17)" used a per-member constant that σ_g no longer has. Repair: a big cross member's segment meets ≤ 4.2σ(W) + 5 ≤ 9.2σ(W) cubes. A small cross member uses its T_W ⊆ X^{(22)} ⊆ B_P as the connector, counted once as a set. So E_D gains ≤ 10.2σ_g ≤ 29σ_g, and 419σ_g + 160 is unchanged.
+- U-S2 (claim (e) overbroad). The 𝒲_g span members keep 17 each. The claim is now restricted to the slot members 𝔅(g), at l.202 and *The rounding*. The 𝒲_g constant is paid through masses: dev members in x_g, and non-dev members in the species normalisation.
+- uses-S1 ((R-eval)(i): growth λ derived only for dev insertions). Accepted. The per-component argument (P := 2ΣA + 2A^×) is withdrawn.
+  - The dev clause is asserted on 𝒟^λ_k (l.45).
+  - D2.6's att bounds hold on the family (l.52).
+  - The cross insertions' weights are OPEN (R-eval-cr): (ii^cr), (6)'s production, and the cross carry lemma are stated on 𝒟^{sub}, and composite cross bounds are products with no bound on their number of factors. The closing route is written in the block: (ii^cr) on 𝒟^λ_k through (S-w)'s vertex sups and transports.
+- att-S1 (collar across steps). Accepted: 5.0 measures from Coll_{j(W)}, and an R-step can remove the collar cubes around a first-class component. Repair: the members enter through their domains (ext(W) for dev, diam T_W for non-dev), not through their collars.
+  - Case (a): D_g's Y-set meets the post-R Coll_k, and ext^{coll}_k(D_g) ≤ Δ_g.
+  - Case (b): otherwise D_g continues the lineage of its first non-dev member W₁ from Coll_{j₁}, with growth ≤ e^{−p₀/4} ≤ δ_k at the R-step.
+- att-S2 (cases missing: att by box with all members dev; wrap and lw members). Case (a) covers the box alternatives. lw members are treated as att, by 5.0's "the same for … lw(Z)". A D_g with a wrap member is wrap(k) by map l.285's rule, and its mass is in (ii)'s wrap sums.
+- att-S3 (species assignment). Fixed by case (a) (att(k, ·), charged as 15.6(e)) and case (b) (W₁'s lineage).
+
+**Minor findings and repairs.**
+- The (5/2)ν_r rate on X^{(22)} is computed (5p₀/64), and the margin bullet now says X^{(22)} in place of X⁺.
+- p.389 l.27–28 is cited for the per-X′_r payment, and *The free decay*'s reference now points to *Cubes*.
+- "Descendants" now reads "untouched continuations", and T-step products of every species, lw and wrap included, have u = 1.
+- The multiplicity in X_{D_g} applies to the 𝒲_g domains only. ∪dom P is counted as a set.
+- Attached insertions (15.5(i)) are not members of 𝔅(P). Their constant 3 is paid through their masses in a_k(X).
+- The linear factor of 15.7 has base ≥ 4MR_k, so it needs R_k² ≥ 880/ν_r for small g_k.
+- The doubling of A_j(Z) is replayed through D2.6 7.1–7.3: ε_A at most doubles, and the comparisons hold for small g_*. ΣA now denotes the A′_j totals.
+- σ̃ takes ½σ(W) + 17 per member, so that the other half pays the non-dev extent term. u = 21/10 when no slot holds a carried insertion.
+- The packet's line citation for *The carried cross total* was off by eight lines. No change to the note is needed.
+
+**Weak points for the next review.**
+- Case (b)'s growth bound: D_g adds ≤ e^{−p₀(g_k)/4}w(W₁), which rests on B(g)'s polymer amplitude and the other members being paid in their own registers.
+- Wrap members: B(g) times the other members' factors ≤ 1 for small g_k, so w̄ at most doubles.
+- The non-dev member's dependence set is taken as its Cov domain, inside T_W.
+
+**Note edits.** l.3, l.5, l.59, *The masses and weights* and *The payment* in (R-eval)(i), the new (R-eval-cr) block, the (R-round) and (R-att-ext) blocks, l.222, (6A)(i)'s (H2) for R-made insertions and *The share of D*'s segment count, *The free decay*, *The volume*, the margin bullet, the 𝔅(P) definition, the factor list, *The rounding*, X_{D_g}, σ̃(D_g), *Units*, *The extent*, *The attached extent*, *The members' weights*, and the 15.7 linear factor. D2.7 closure l.5.

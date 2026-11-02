@@ -5,7 +5,7 @@ Written 21 Oct 2026, from 14:27. Companion to `WILSON_CAUCHY_ROUTE_DRAFT_2026_10
 ## OPEN MATHEMATICAL GAPS
 
 - **LIP-1 (analyticity domains; the main gap found here).**
-  - *What is proved where.* The constants of the difference results are proved on RG1's fixed domains: RG1 Theorem 3 (p.264) has fixed constants $\varepsilon_0,\varepsilon_1,\alpha_0,\alpha_1$. These constants are the polarisation constant $C_\Lambda$ of ONE_LOOP_PROOFS Lemma 2.5, $B$ of D2, and $b$ of D9.
+  - *What is proved where.* The constants of the difference results are proved on RG1's fixed domains: RG1 Theorem 3 (p.264) has fixed constants $\varepsilon_0,\varepsilon_1,\alpha_0,\alpha_1$. These constants are the polarisation constant $C_\Lambda$ of BETA_FUNCTION_WILSON_LOOPS.md Lemma 2.5, $B$ of D2, and $b$ of D9.
   - *The route's domains.* The route uses CRE's thresholds and domains, with $\alpha_{0,j}=g_jC_0(\log g_j^{-2})^{q_0}$ (CRE (2.28), p.259).
   - *What fails there.* A Cauchy bound on the polarisation then carries $\alpha_{0,j}^{-2}\propto g_j^{-2}$. So $b_j$ grows like $x_j=g_j^{-2}$, and D9 does not close (§5).
   - *Closes by* either:
@@ -30,7 +30,7 @@ Written 21 Oct 2026, from 14:27. Companion to `WILSON_CAUCHY_ROUTE_DRAFT_2026_10
 
 | Item | Where | Content |
 |---|---|---|
-| RG1_Thm2_REP | ONE_LOOP_PROOFS.md §2 (Lemma 2.1, Rem. 2.3, Props 2.4, 2.6, Lemma 2.5), §8 (Thm 8.1, Cor. 8.2) | RG1 Theorem 2 for simple $G$: bare coupling, flow in $]0,\gamma]$, window bounds |
+| RG1_Thm2_REP | BETA_FUNCTION_WILSON_LOOPS.md §2 (Lemma 2.1, Rem. 2.3, Props 2.4, 2.6, Lemma 2.5), §8 (Thm 8.1, Cor. 8.2) | RG1 Theorem 2 for simple $G$: bare coupling, flow in $]0,\gamma]$, window bounds |
 | D1 | DIFFERENCES_PLAN.md §1 | holomorphic and bounded by $M$ on $B(0,\rho)$ implies $4M/\rho$-Lipschitz on $B(0,\rho/2)$ |
 | D2 | DIFFERENCES_PLAN.md §1 | small-field step Lipschitz in the history, with age weights |
 | D6a, D6b, D6 | DIFFERENCES_PROOFS.md §2 | sensitivity to the coupling; uniqueness of the tuned bare coupling |
@@ -43,7 +43,7 @@ Written 21 Oct 2026, from 14:27. Companion to `WILSON_CAUCHY_ROUTE_DRAFT_2026_10
   - RG2 (2.14)–(2.41) (pp.9–21), with (2.22);
   - RG1 Theorem 3;
   - VAR Prop. 9 and (189)–(190); (189) is stated without proof (VAR p.308);
-  - PRT1 and PBG, as listed in ONE_LOOP_PROOFS §9.
+  - PRT1 and PBG, as listed in BETA_FUNCTION_WILSON_LOOPS.md §9.
 
 ## 2. Coupling matching and the tolerance (replaces the shooting argument)
 
@@ -179,11 +179,11 @@ with $C$ independent of $n$ and linear in $C_s$.
 - *CRE.* The E-terms are analytic on $U^c_j(X,\alpha_{0,j},\alpha_{1,j})$, with $\alpha_{0,j}=g_jC_0(\log g_j^{-2})^{q_0}$ (CRE p.259, (2.28)). The bounds (2.34)–(2.37) of p.261 also use $\alpha_{0,n}$.
 
 **What changes on CRE's domains.**
-- *The polarisation constant.* ONE_LOOP_PROOFS Lemma 2.5, step 2, uses a Cauchy radius $r$ "depending on $\alpha_0,\alpha_1$ only". On CRE's domains $r\propto\alpha_{0,j}$, so $C_\Lambda\propto\alpha_{0,j}^{-2}\propto x_j(\log x_j)^{-2q_0}$.
+- *The polarisation constant.* BETA_FUNCTION_WILSON_LOOPS.md Lemma 2.5, step 2, uses a Cauchy radius $r$ "depending on $\alpha_0,\alpha_1$ only". On CRE's domains $r\propto\alpha_{0,j}$, so $C_\Lambda\propto\alpha_{0,j}^{-2}\propto x_j(\log x_j)^{-2q_0}$.
 - *(P2) and D9.*
   - (P2) becomes $|\beta-b|\lesssim x_j(\log x_j)^{-2q_0}\,M$, which is not small.
   - In D9, $b_j\propto x_j$. Then $\delta_l\lesssim\sum_{j\geq l}x_j\varepsilon\sim(n-l+1)^2\varepsilon$, and the term $\eta\omega_l\delta_l$ of (E) is of order $(n-l+1)\varepsilon$, against $P^e_l=r_0^l+\varepsilon$. The system does not close with D9's weights.
-- *The CRE remark in ONE_LOOP_PROOFS.* The remark after Proposition 2.6 (lines 226–230) moves Proposition 2.4 to CRE's threshold $\varepsilon_j=g_jp_0(g_j)$, but it does not account for (2.28). Not edited; it is a file of the Bałaban project.
+- *The CRE remark in BETA_FUNCTION_WILSON_LOOPS.md.* The remark after Proposition 2.6 moves Proposition 2.4 to CRE's fluctuation cutoff $\delta_j=g_j(A_1/A_0)p_0(g_j)$ (CRE p.265, (3.16) p.268) on RG1's fixed domains; it does not cover the domains of (2.28). That file derives the parts of RG1 Theorem 3 its bounds use (the bound (1.18) and analyticity in $(U,J)$ on RG1's fixed domains) with CRE's cutoffs (its §0, *Condition 3*); (2.28) is not needed for them. CRE's $\beta_j$ equal these up to the contribution $\beta_j^R$ of the $R'$-terms, which CRE folds into $E_k$ (CRE p.271). CRE's step $k$ uses $g_{k+1}$, and its parameters ($R_j$, $k_1$, $N_0$, the depth $N$, the thresholds, and the domain radii) jump or move with the couplings. That file's tube construction evaluates all of them at couplings fixed by the target $(K,g)$ (its Lemma 2.10). For it, its Proposition 2.11 bounds $|\beta_{k+1}^R|\le C_Rg_k^{\kappa_0-4}$ on the histories of the tube (the step with complex multiples of the R-terms is checked against CRE pp.260, 264, 271, 276–279 and RG2 pp.15–18), $\beta_j$ is continuous on the tube (its Proposition 2.12), and matching holds (its Proposition 2.13). These are statements for the tube construction, not for CRE's printed construction. The matching does not use a Lipschitz bound.
 - *What survives.* $\eta=C_\Lambda E_0\eta_E$, the sensitivity of $\beta$ to the coupling, stays polylogarithmically small, because the $g^2$ of $\eta_E$ cancels $\alpha_0^{-2}$. Only $b$, the sensitivity of $\beta$ to the activities, fails.
 
 **Repair (a): the fixed-constant setting (recommended).** Take the compared small-field model in RG1's setting: fixed thresholds and domains, made gauge invariant as in N4.

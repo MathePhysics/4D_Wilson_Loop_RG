@@ -21,6 +21,13 @@ The [V3 iteration audit](WILSON_V3_ITERATION_AUDIT_2026_10_21.md) gives the earl
 
 The supporting triage records from rounds 20–49, the [rounds 50–51 triage](WILSON_IT1_D26_TRIAGE_R51_2026_10_27.md), and the [round-19 repairs](WILSON_IT1_ROUND19_REPAIRS_2026_10_24.md) are included alongside these drafts.
 
+### Further Iteration and Coupling Estimates
+
+- [Beta function for the Wilson-loop analysis](BETA_FUNCTION_WILSON_LOOPS.md): one-loop coefficient, remainder and coupling-flow derivations, with the distinction between RG1, CRE and the tube construction.
+- [Complex gauge covariance](WILSON_IT1_COMPLEX_COVARIANCE_2026_10_29.md) and [averaged current](WILSON_IT1_RMJ_CLOSURE_2026_10_30.md): complex carry and evaluation estimates, derived with their stated inputs and awaiting review.
+- [Step-1 branch-weight comparison](WILSON_IT1_RW1_CLOSURE_2026_10_30.md): the real and complex representations and their stated review qualifications.
+- [Round-53 dispositions](WILSON_IT1_TRIAGE_R53_2026_10_29.md): iteration and R-step findings and repairs.
+
 ### Two-Loop Correlation Functions
 
 - [Two-loop uniform-bound draft](WILSON_IT1_TWO_LOOPS_UNIFORM_BOUND_2026_10_27.md): the pair insertion class, mixed terms, R-steps and conditional cutoff-uniform bound.
@@ -51,6 +58,13 @@ The supporting triage records from rounds 20–49, the [rounds 50–51 triage](W
 - [Cauchy round 6](WILSON_IT1_CAUCHY_TRIAGE_R6_2026_10_28.md).
 - Large-field rounds [2](WILSON_IT1_LF_TRIAGE_R2_2026_10_27.md), [3](WILSON_IT1_LF_TRIAGE_R3_2026_10_27.md), [4](WILSON_IT1_LF_TRIAGE_R4_2026_10_27.md), [5](WILSON_IT1_LF_TRIAGE_R5_2026_10_28.md), [6](WILSON_IT1_LF_TRIAGE_R6_2026_10_28.md) and [7](WILSON_IT1_LF_TRIAGE_R7_2026_10_28.md).
 - Combined rounds [8](WILSON_IT1_TRIAGE_R8_2026_10_28.md), [9](WILSON_IT1_TRIAGE_R9_2026_10_28.md), [10](WILSON_IT1_TRIAGE_R10_2026_10_28.md) and [11](WILSON_IT1_TRIAGE_R11_2026_10_28.md).
+
+### Further Large-Field and Walk-Factor Work
+
+- [Constants and conventions](CONSTANTS_AND_CONVENTIONS_WDELTA.md): the order of choices, parameter meanings and conditions used by the walk-factor, large-field and Cauchy notes.
+- [Large-field dependency analysis](WILSON_IT1_LF_DEPENDENCY_ANALYSIS_2026_10_30.md): dependencies at the revision it analyses; read it alongside the current large-field and walk-factor drafts.
+- [Large-field review dispositions](WILSON_IT1_TRIAGE_LF_GAMMA_2026_10_29.md): reviews, objections and subsequent repairs through the latest working revision.
+- [Archived repair sections](WILSON_IT1_LF_GAMMA_ARCHIVE_2026_10_30.md): sections removed from the active repair note.
 
 ## Manuscript insert drafts
 

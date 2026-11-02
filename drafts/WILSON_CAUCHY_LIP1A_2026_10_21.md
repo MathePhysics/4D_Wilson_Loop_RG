@@ -19,7 +19,7 @@ Written 21 Oct 2026, from 18:37 (user: "Continue with Lip 1(a)"). Companion to `
 - **Unchanged:** LIP-2 (N4 transfer), LIP-3 (class-wide readings), the loop system R-S1, R-S2, (P-Y).
 - **Closed here:**
   - H-1(i): the coupling dependence (§2);
-  - H-1(ii): the imports RG1_Thm2_REP, D1, D2, D5, D6a, D6b, D6 with δ_k (§3);
+  - H-1(ii): the imports RG1_Thm2_REP (`BETA_FUNCTION_WILSON_LOOPS.md`), D1, D2, D5, D6a, D6b, D6 with δ_k (§3);
   - the order of the constants for V3's items 5 and 6 at a fixed ε₀ (§4.1);
   - H-2a, (B3)(i) at the hybrid thresholds (§4.3, Lemma H-2a). The designated bonds satisfy |W(b₀) − 1| ≤ C_*L^dδ₀ on the support of the retained tests, so χ₀ and χ_Ax localized in Ω₁^∼ equal 1. Conditions: ε₀ ≤ cL^{2−2d} (fixed, after L) and g₀ small. Readings: R1 in weak form (the determining set of (1.2) contains the coarse bonds whose blocks lie near the cube □' of R3), R2 (U_{1,□'}(y,x) = 1 for the mean of (0.11), from CRE p.247 line 37 and p.248 line 37; load-bearing), R3 (the geometry of CRE p.248 lines 9–11, derived from (1.10)), and V3's definedness convention for δ(ŪV⁻¹) on rows of Ω₁ (on rows of Ω₁^c it is derived). The path families G(y,x) are from RG1 p.252, lines 29–33. The same proof gives CRE's own p.248 claim with A₀/A₁ ≥ C′L^d.
 
@@ -53,7 +53,7 @@ Each theory uses its own couplings g_k in δ_k.
 **What RG1 states.**
 - RG1 p.263 (lines 25–27): E^{(j)} "is a C^∞-function of g_{j−1} ∈ [0,γ], (or analytic)".
 - RG1 p.264 (line 33): β_{j+1} "is a smooth function defined on the interval [0,γ], (or analytic), uniformly bounded on this interval together with all derivatives".
-- Both are inductive assumptions. Theorem 3 asserts them, but no proof is given for them (`ONE_LOOP_PROOFS.md` line 131; `P2C_WORK.md` A).
+- Both are inductive assumptions. Theorem 3 asserts them, but no proof is given for them (`BETA_FUNCTION_WILSON_LOOPS.md`, the paragraph "Neither (P2) nor (C) …" before §2.1; `P2C_WORK.md` A).
 
 **What RG1 and RG2 use.** Text check of every page:
 - RG1 pp.249–301 and RG2 pp.1–22: the transcriptions are complete (53 and 22 pages).
@@ -73,7 +73,7 @@ Each theory uses its own couplings g_k in δ_k.
 
 ## 3. H-1(ii): the Bałaban-project imports with δ_k
 
-Each item was read for every use of the fluctuation cutoff (`ONE_LOOP_PROOFS.md` §§2, 8; `DIFFERENCES_PLAN.md` §1; `DIFFERENCES_PROOFS.md` §§1–3; `P2C_WORK.md` B′, C, D).
+Each item was read for every use of the fluctuation cutoff (`BETA_FUNCTION_WILSON_LOOPS.md` §0 *Condition 3* and §§2, 8; `DIFFERENCES_PLAN.md` §1; `DIFFERENCES_PROOFS.md` §§1–3; `P2C_WORK.md` B′, C, D).
 
 | Import | Use of the cutoff | With δ_k |
 |---|---|---|
