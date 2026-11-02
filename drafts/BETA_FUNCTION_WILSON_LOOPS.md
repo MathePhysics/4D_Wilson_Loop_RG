@@ -5,8 +5,9 @@ proofs. It is extracted from `D:\University\Oxford PostDoc\Balaban\ONE_LOOP_PROO
 cited by printed page and equation and pinned in `D:\University\Oxford PostDoc\Balaban\sidecar\QUOTES.md` or in a sidecar
 contract (`D:\University\Oxford PostDoc\Balaban\sidecar\BalabanSidecar\`), and arguments given here. READINGS.md is
 `D:\University\Oxford PostDoc\Balaban\READINGS.md`.
-- RG1 = CMP 109; RG2 = CMP 116; CRE = CMP 119; LFR2 = CMP 122 355–392;
-- PRT1 = CMP 95; PBG = CMP 99 389–434; VAR = CMP 102 277–309.
+- RG1 = CMP 109; RG2 = CMP 116; CRE = CMP 119; LFR1 = CMP 122 175–202; LFR2 = CMP 122 355–392;
+- PRT1 = CMP 95; PRT2 = CMP 96 223–250; CMP98 (also AVG) = CMP 98 17–51; REG = CMP 99 75–102; PBG = CMP 99 389–434;
+  UV3 = CMP 102 255–275; VAR = CMP 102 277–309.
 
 G is a compact simple group, d = 4, and L is odd. The semisimple case is the open future direction of §10.
 
@@ -23,9 +24,10 @@ K = κ·tr (Lemma 1.1), and put c := (11/48π²)κ. Notation: the letters δ, K,
 by its context, as in the sources. δ without an index is the window constant of item 3 in §§0 and 2, and a decay or
 smallness constant of RG2, CRE, or UV3 where those are quoted (RG2 (1.36), Proposition 2.4, step 2, Lemma 2.8, CRE
 p.251); δ_k = g_k(A₁/A₀)p₀(g_k) is CRE's cutoff (δ_0 at step 0, δ^T_k in the tube construction), and δ₀ is the decay
-rate of VAR and UV3. K is the Killing form in Lemma 1.1 and Lemma 6.5, ker Q or Hess A − h where §§3 and 6 say so,
-and otherwise the number of steps of a target (K, g); K_R (Proposition 2.11) is a constant. κ is the Killing ratio in
-c and in Lemma 6.5, and otherwise the decay constant of RG2 and CRE (as in exp(−κd_j(X))).
+rate of VAR and of the random walks of RG2 (1.7). K is the Killing form in Lemma 1.1 and Lemma 6.5, ker Q or
+Hess A − h where §§3, 6, and 7 say so, and otherwise the number of steps of a target (K, g); K_R (Proposition 2.11) is a
+constant. κ is the Killing ratio in c, in §6 from Lemma 6.5 on, and in §§7–8 (Theorem 8.1), and otherwise the decay
+constant of RG1, RG2, and CRE (as in exp(−κd_j(X))). p₀ is CRE's exponent in p₀(g) = A₀(log g^{−2})^{p₀}, except in §§7–8, where p₀ ≠ 0 is the external momentum. γ₀ and γ₁ are PRT1's bounds of (1.66)–(1.67) and p.28 in §§5 and 7–9; γ₀ is the coupling of "(0.33) [I]" in §0 and LFR2's constant of the large-field factor exp(−γ₀(1/g²)…) in §2. In §7, a is PBG's constant in aQ*Q (3.122), not a lattice spacing; R and N(Q′) are PBG's projection and kernel (3.21), N(p) is Lemma 5.2's normaliser, and 𝒩 := 𝐇D. The full list, with the clashes against the Wilson-loop notes, is §10 of CONSTANTS_AND_CONVENTIONS_WDELTA.md.
 
 **Theorem 0.1 (Coupling Flow).** There are constants γ > 0, C and δ ∈ (0, 2c ln L), independent of k, of the history
 and of the torus, with the following properties (RG1 (0.31), LFR2 (1.86), CRE (2.4); proofs below).
@@ -54,9 +56,10 @@ Conditions:
    in (U, J) on RG1's fixed domains), run with CRE's fluctuation cutoffs δ_j = g_j(A₁/A₀)p₀(g_j), enter items 2–5:
    through (P2) and (C) (the remark after Proposition 2.6) and through Proposition 2.9. RG1 Theorem 3 is Bałaban's;
    the transfer of these parts to the cutoffs δ_j is derived below (*Condition 3*).
-4. PBG's analyticity and decay away from U = 1, for the averaging of RG1 (0.4), enter Proposition 7.1 as Bałaban states
-   them.
-5. VAR Theorem 1 rests on the sketched Theorem 8 of CMP 99 389–434 and enters §§5 and 7 through the analyticity of U_k(V).
+4. PBG's analyticity and decay away from U = 1, for the averaging of RG1 (0.4), enter Propositions 4.2 (and through
+   it 5.3) and 7.1 as Bałaban applies them to the chain of RG1, RG2, and CRE, whose averaging is RG1 (0.4) or (0.12) (CRE p.243); the passages
+   are listed in §9 (READINGS.md R50).
+5. VAR Theorem 1 rests on the sketched Theorem 8 of REG (p.101) and enters §§5 and 7 through the analyticity of U_k(V).
 
 *Scope.* CRE Theorem 1 (CRE p.262) takes the coupling inequalities "(I.0.33)" as its hypothesis: if the sequence {g_k}
 of the renormalisation group equations satisfies them, the densities ρ_k satisfy CRE's inductive assumptions. RG1 has
@@ -71,8 +74,9 @@ R-terms* below). CRE's coefficient β_{k+1}(g_k) is built from the whole-lattice
 p.278), and g_{k+1} enters step k only through the localisation of the new density. CRE's printed construction is not a
 continuous function of the history because its parameters (the integers R_j, k₁, N₀, and the depth N, the thresholds,
 and the domain radii) jump or move with the couplings (*CRE's Construction as a Function of the History*, §2.2). The
-*tube construction* for a target (K, g) evaluates all of these parameters at couplings fixed by the target
-(Lemma 2.10). For it:
+*tube construction* for a target (K, g) evaluates all of these parameters at couplings fixed by the target, and it
+places the threshold of the function χ′^{(j)} of LFR1 (1.55) on the unscaled field, |g_jB_j(b)| < δ′_j, where LFR1
+prints the scaled variable (*LFR1 (1.55)*, before Lemma 2.10; Lemma 2.10). For it:
 - the R-terms shift β_j by at most C_Rg_k^{κ₀−4} relative to RG1's construction run with the tube cutoffs δ_j^T
   (Proposition 2.11), on the histories of the tube H_k; Propositions 2.4 and 2.9 hold for the latter on H_k
   (Lemma 2.10, step 7). So on H_k the per-step bounds of hypothesis (W) hold with δ′ = δ + C_Rγ^{κ₀−4} in place of
@@ -83,12 +87,13 @@ and the domain radii) jump or move with the couplings (*CRE's Construction as a 
   definition (I.1.22) (CRE p.282), that is, by the limit of the polarisation as T^{(j)} ↗ ℤ^d (RG1 (1.21), p.264),
   computed from (2.26) for Λ_j = L^{−j}ℤ^d (CRE (3.63), p.282). The limit exists, and is approached uniformly in the
   history, by the localisation through the random-walk expansions (Proposition 2.12, step 5).
-These statements are for the tube construction, at every depth k ≤ K of each target. They are not statements about CRE's
+These statements are for the tube construction, at every depth k < K of each target. They are not statements about CRE's
 printed construction (*What Is Proved for β_j*, after Proposition 2.13). They rest on the inputs that §9 lists for the
 tube construction (CRE's inductive estimates, LFR1, LFR2, UV3, CMP98, REG, and VAR as CRE uses them), on Conditions
 1–3 through Propositions 2.4 and 2.9 with δ_j^T, and on the arguments of this file that §9 lists separately: the
 identification of the regular part of β^T with RG1's construction run with δ_j^T, the tube construction with its
-convention for histories that are not flows, the parameter choices p₀ > (d+5)r + ⌈r⌉ + 2 and q₀, q₁ > p₀,
+convention for histories that are not flows, the decomposition χ′^{(j)} with the threshold on the unscaled field and
+the four steps that use it, the parameter choices p₀ > (d+5)r + ⌈r⌉ + 2 and q₀, q₁ > p₀,
 Lemma 2.10, Lemma 2.5 on the (2.28) domains, the step with complex multiples of the R-terms, Theorem 8.1 with
 Remark 2.3, and Propositions 2.12 and 2.13.
 
@@ -190,8 +195,9 @@ C_Rg_k^{κ₀−4} is needed, which the factor g_k^{κ₀} supplies (Proposition
 - Propositions 2.4 and 2.6 give the history bound (P2) and the continuity (C) of β. Remark 2.3 turns item 1 into
   hypothesis (W) of the flow lemma, and Lemma 2.1 gives items 2–4 (Corollary 8.2).
 - Proposition 2.9 gives item 5.
-- Lemma 2.10 defines the tube construction, CRE's construction with its parameters fixed by the target (K, g), and
-  shows that the estimates of CRE, LFR1, and LFR2 hold for it.
+- Lemma 2.10 defines the tube construction, CRE's construction with its parameters fixed by the target (K, g) and the
+  threshold of χ′^{(j)} of LFR1 (1.55) placed on the unscaled field, and shows that the estimates of CRE, LFR1, and
+  LFR2 hold for it.
 - Proposition 2.11 bounds the R-part of the β_j of the tube construction; with Propositions 2.4 and 2.9 for the tube
   cutoffs it gives item 5 and the per-step bounds of (W) on the histories of the tube.
 - Propositions 2.12 and 2.13 give its continuity, item 2, and items 3 and 4 along the matched flow.
@@ -548,14 +554,15 @@ function depends on the history, and the couplings enter only through the densit
 
 *The Class of Tubes.* A tube is given by constants 0 < b ≤ b′ and C ≥ 0 and a target (K, g), with
   c ln L ≤ b ≤ b′ ≤ min((3/2)b, 3c ln L),  C ≤ C₀,  t := g^{−2} ≥ max(γ^{−2} + C, 8C),
-with C₀ the constant of Theorem 8.1. Put ρ_γ := max(b′/b, (t + C)/(t − 2C)); on the class ρ_γ ≤ 3/2.
+with C₀ the constant of Theorem 8.1. Put ρ_γ := max(b′/b, (t + C)/(t − 2C)); on the class ρ_γ ≤ 3/2. Put ρ̄ := 15/8,
+the factor of the action comparison on the class (*Histories that are not flows*).
 For 0 ≤ k ≤ K put
   ℓ_k := t + b(K−k) − C,  u_k := t + b′(K−k) + C,  T_k := [ℓ_k, u_k],  ĝ_k := u_k^{−1/2},
 and let H_k be the set of (x_0, …, x_k) with x_j ∈ T_j for j ≤ k and b(n−m) − C ≤ x_m − x_n ≤ b′(n−m) + C for
 0 ≤ m < n ≤ k. H_k is closed and convex. It contains x_j := t + ½(b + b′)(K−j), and the sequence (u_j) lies in H_K.
 The constants of Lemma 2.10 and of Propositions 2.4, 2.9, and 2.11 below (C_Λ, C₃, C_rem, C′, C_Σ, K_R, and C_R) are uniform
 over the class, and so is the smallness of γ required in Lemma 2.10, because they depend on the tube only through
-the bounds c ln L ≤ b ≤ b′ ≤ 3c ln L, C ≤ C₀, and ρ_γ ≤ 3/2 (for instance, Lemma 2.10, step 2, needs
+the bounds c ln L ≤ b ≤ b′ ≤ 3c ln L, C ≤ C₀, ρ_γ ≤ 3/2, and the action comparison with ρ̄ (for instance, Lemma 2.10, step 2, needs
 γ²(b′ + C) ≤ (1+β₀)² − 1, and step 3 needs (1 + log(1 + b′)/log γ^{−2})^r ≤ 1 + 1/L).
 
 *The Tube of a Target.* Put δ′ := δ + C_Rγ^{κ₀−4}, with δ = C_ΛC₃γp₀(γ) the bound of Proposition 2.4 and C_R that of
@@ -579,12 +586,49 @@ a coupling g_j is defined from ĝ_j instead:
 The factors g_j^{±1} that convert between scaled and unscaled fields stay the couplings of the history. So the
 thresholds act on unscaled fields (the plaquette variables U(∂p) and the fluctuation fields g_kA_k) with values fixed
 by the target.
-- *LFR1 (1.55).* LFR1 (1.55), p.188, prints χ′^{(j)} = χ({|B_j(b)| < δ′_j}) for the scaled variable B_j. The threshold
-  acts on the unscaled field g_jB_j. LFR1 p.187 establishes |B′_j| < 6δ′_j and then scales B′_j = g_jB_j. The
-  complementary function (1.59), p.188, is χ({|exp ig_jB_j(b) − 1| < 2δ′_j})(1 − χ′^{(j)}). LFR2 p.381 uses
-  "|B′(b)| ≥ δ′_j", and LFR2 p.383 takes "|B(b)| ≥ g_j^{−1}δ′_j = A₁p₁(g_j)". The print of (1.55) itself has the
-  scaled variable; reading the threshold on g_jB_j is what these four passages require, and it is the reading used
-  here. In the tube construction χ′^{(j)} is χ({|g_jB_j(b)| < δ′^T_j}).
+- *LFR1 (1.55).* LFR1 (1.55), p.188, prints χ′^{(j)} = χ({|B_j(b)| < δ′_j}) for the scaled variable B_j, with
+  δ′_j = g_jA₁p₁(g_j) (LFR1 p.183). LFR2 prints no large-field factor for the components that LFR1 p.188 excludes
+  from Z with 1 − χ′^{(j)}: the factors of the preparatory steps on LFR2 pp.380–383 are those of 1 − χ_j^{(n)}, of
+  1 − χ′_m of LFR1 (1.27), of the second function of the decomposition LFR1 (1.28) ("yields the same final factor",
+  p.381), of 1 − χ_{j,Λ}, and of 1 − χ′ of LFR1 (1.82). The construction here takes
+  χ′^{(j)} := χ({|g_jB_j(b)| < δ′_j}), with the threshold on the unscaled field; the identity
+  1 = χ′^{(j)} + (1 − χ′^{(j)}) holds for every threshold. The same choice is made for CRE's fluctuation threshold:
+  CRE (3.16), p.268, prints χ({sup|A_k(b)| < δ_k}) after the scaling A′_k = g_kA_k (CRE p.267), and its threshold is
+  read at field scale (READINGS.md R43), the value that LFR2 p.380's factor exp(−γ₀(1/g_j²)δ_j²(LM₂R_j)^{−d}|R_j|)
+  for it carries. LFR1 (1.9), p.178, prints the fluctuation threshold as |A_j(b)| < g_j^{−1}δ_j, and LFR1 (1.82),
+  p.196, prints δ′_k on the unscaled field B′, V′ = exp iB′. Four steps use the threshold.
+  - *The expansion.* Since δ_j = g_j(A₁/A₀)p₀(g_j) (CRE p.265), δ′_j/δ_j = A₀p₁(g_j)/p₀(g_j) < 1 for g small, as
+    p₁ < p₀. The bound |B′_j| < 6δ′_j, B′_j = g_jB_j, holds on the whole integration domain by (1.54), p.187, and LFR1
+    p.187 expands the action on it, so the expansion holds on both kinds of components. The small-field components,
+    |g_jB_j| < δ′_j, lie in the small-field domain |g_jA| < δ_j of CRE (3.25), p.270, read as in R43.
+  - *The removal of χ′_j.* The small-field integral of LFR1 p.188 carries χ′^{(j)} but not χ′_j of (1.27),
+    |V_j(V^{(j)}_Z)^{−1} − 1| < 2δ′_j. On the small-field components χ′_j = 1: V_j(V^{(j)}_Z)^{−1} =
+    V′_jV^{(j)}(V^{(j)}_Z)^{−1} with V′_j = exp ig_jB_j by (1.53), and V^{(j)}(V^{(j)}_Z)^{−1} = exp i𝐇^{(j)}_Z by (1.58),
+    with 𝐇^{(j)}_Z bounded by O(1)exp(−R_j)ε_j, "smaller than any positive power of g_j" (p.188). So
+    |V_j(V^{(j)}_Z)^{−1} − 1| ≤ |g_jB_j| + O(1)exp(−R_j)ε_j < δ′_j + O(1)exp(−R_j)ε_j < 2δ′_j for g small.
+  - *The Gaussian tails.* LFR1 p.189 treats the small-field integral (1.60) as "of the same type as the integral
+    studied in Sect. 3 [III]", and that analysis needs the lower bounds on the unit-scale cutoff of §0, *Condition 3*.
+    Here the unit-scale cutoff is δ′_j/g_j = A₁(log g_j^{−2})^{p₁}. The condition of RG2 p.19 becomes
+    exp(−γ₂A₁²(log g_j^{−2})^{2p₁}/20) ≤ c_εδ′_j, which holds for g_j ≤ γ small because 2p₁ > 1: LFR2 p.383 assumes
+    2p₁ − (d+5)r₀ > p₀, and p₀ > 2 (Lemma 2.10, step 4), so 2p₁ > p₀ > 2. The condition of RG2 p.18 holds once
+    γ₂A₁²(log γ^{−2})^{2p₁} ≥ 80κ, and the other lower bounds of *Condition 3* hold because δ′_j/g_j ≥ A₁(log γ^{−2})^{p₁}
+    tends to ∞ as γ → 0.
+  - *The large-field factor.* On the large-field components some bond b has |g_jB_j(b)| ≥ δ′_j, that is
+    |B_j(b)| ≥ g_j^{−1}δ′_j = A₁p₁(g_j). The B_j-integral of LFR1 p.188 has the quadratic form ⟨B_j, C^*Δ^{(j)}CB_j⟩ of
+    CRE's fluctuation integrals. For the threshold of CRE (3.16), LFR2 p.380 obtains the factor above "by the same
+    positivity bound for the quadratic form", a lower bound of the kind of PRT2 (2.157), p.250,
+    ⟨B′, C^*Δ_kCB′⟩ ≥ γ′₀‖B′‖² with γ′₀ = (γ₀/12d²)L^{−d−1}. The same bound, with δ′_j in place of δ_j and the single
+    bond b in place of the cubes of R_j, gives the factor exp(−c(1/g_j²)δ′_j²) = exp(−cA₁²p₁²(g_j)) for each such
+    component, with c > 0 depending on d and L only. The normalisation of the Gaussian integral on the component gives
+    a constant e^{O(1)} per variable, of the kind that LFR2 p.380 charges to the volume ("every large field domain Z_j
+    contributes the constant O(1)log g_j^{−2}|Z_j|"). LFR2 p.383 assumes 2p₁ − (d+5)r₀ > p₀, so 2p₁ > p₀, and the
+    factor is at most exp(−p₀(g_j)) for g small, the bound to which LFR2 p.383 reduces the factors of the preparatory
+    steps.
+
+  In the tube construction χ′^{(j)} is χ({|g_jB_j(b)| < δ′^T_j}). The four steps hold there with δ′^T_j: the
+  comparison δ′^T_j < δ^T_j and the removal of χ′_j are relations at ĝ_j, the unit-scale cutoff is
+  δ′^T_j/g_j ≥ ρ̄^{−1/2}A₁(log ĝ_j^{−2})^{p₁} by Lemma 2.10 (a), and the large-field factor enters Lemma 2.10, step 6,
+  with the other lower bounds from the action.
 - *Histories that are not flows.* CRE (2.24), p.259, defines the position-dependent couplings by
   1/g²_{j−1}(x) = 1/g_j²(x) + β_j(g_{j−1})φ_j(x), with g_j²(x) = g_j² on the last domain; this holds along a flow. For an
   arbitrary history h = (g_0, …, g_k) the tube construction uses the same relation counted from the top:
@@ -602,13 +646,18 @@ by the target.
   pp.245, 256, which are no larger than those of scale m, since L^jR^T_j ≤ L^mR^T_m for j ≤ m by (c)) and
   φ_j(x) = 1 for j ≤ m (φ_j ∈ C_0^∞(Λ_j), φ_j = 1 on Λ_j^{∼−1}, CRE p.259). On the
   boundary layers the formula is CRE's own expression Σ_jβ_j(1 − φ_j(x)) with β^T_j in place of the flow's β_j, so
-  CRE's treatment of the layers applies with the same bounds. The top-down value and x_m = 1/g_m² both lie in
-  [x_k + b(k−m) − C, x_k + b′(k−m) + C], by the windows of H_k and by Remark 2.3 for the β^T_j. Since x_k ≥ t − C, they
-  agree within the factor max(b′/b, t/(t − 2C)) ≤ ρ_γ. The coefficient y of the Wilson action at such x, whether
-  1/g_m² or the top-down value, is compared with the tube coupling of scale m by
-    u_m/y ≤ (t + b′(K−m) + C)/(t + b(K−m) − 2C) ≤ ρ_γ,
-  since y ≥ x_k + b(k−m) − C ≥ t + b(K−m) − 2C. This is the comparison that the lower bounds from the action use
-  (Lemma 2.10, step 6). The same coefficient enters the Gaussian densities of the fluctuation fields at scale m.
+  CRE's treatment of the layers applies with the same bounds. The coefficient y of the Wilson action at such x,
+  whether 1/g_m² or the top-down value, is compared with the tube coupling u_m = ĝ_m^{−2} of scale m. For y = x_m,
+  u_m/x_m ≤ ρ_γ by Lemma 2.10, step 1. For the top-down value y = x_k + Σ_{j=m+1}^{k}β^T_j, Proposition 2.11 with the
+  class constants gives |β^T_j − b_j| ≤ δ′ ≤ (2/5)c ln L at the depths below k (as in its *Consequence*), and (W)
+  for the b_j (Remark 2.3) gives Σ_{j=m+1}^{k}b_j ≥ 2c ln L(k−m) − C₀. With x_k ≥ t + b(K−k) − C₀,
+    y ≥ t − 2C₀ + b(K−k) + (8/5)c ln L(k−m),  u_m ≤ t + C₀ + b′(K−k) + b′(k−m),
+  and b′ ≤ (3/2)b, b′ ≤ 3c ln L, and t ≥ γ^{−2} give, by the mediant inequality,
+    u_m/y ≤ max(3/2, 15/8, (t + C₀)/(t − 2C₀)) = ρ̄ for γ small.
+  For the tube of a target the windows of H_k contain those of Remark 2.3, so the top-down value lies in
+  [x_k + b(k−m) − C, x_k + b′(k−m) + C], and u_m/y ≤ (t + b′(K−m) + C)/(t + b(K−m) − 2C) ≤ ρ_γ. These are the
+  comparisons that the lower bounds from the action use (Lemma 2.10, step 6). The same coefficient enters the
+  Gaussian densities of the fluctuation fields at scale m.
   The order of the argument is a joint induction on k: the convention at depth k uses the bounds on β^T_j for j ≤ k
   (Proposition 2.11, *Consequence*, at depths below k), and those use Lemma 2.10 at depths below k.
 - *Where the history enters.* The couplings g_j of the history enter only through the densities: the Wilson action
@@ -668,15 +717,23 @@ and Propositions 2.4, 2.6, and 2.9 hold for RG1's construction run with the cuto
      ε₁ = g_0p(g_0) and R = R₁r(g_0) (p.257) and their scale-k versions (pp.266–267), the distance conditions (p.266),
      the factors exp(−R₁r(g_0)) (p.264), the normalisations d(𝔤) log g_k|·| (pp.261, 265, 269, 271), and the
      chain ≥ (1/(2g_j²))|V_j(∂p′) − 1|² − O(1)g_jp³(g_j) ≥ ½p²(g_j) − O(1)g_jp³(g_j) ≥ ¼p²(g_j) of p.273, for
-     |V_j(∂p′) − 1| ≥ g_jp(g_j). This is a lower bound from the action; with the tube threshold ĝ_jp(ĝ_j) it gives
-     ½ρ_γ^{−1}p²(ĝ_j) − O(1)g_jp³ ≥ ¼ρ_γ^{−1}p²(ĝ_j).
+     |V_j(∂p′) − 1| ≥ g_jp(g_j). This is a lower bound from the action; with the action coefficient y ≥ ĝ_j^{−2}/ρ̄ in
+     place of 1/g_j² and the tube threshold ĝ_jp(ĝ_j) it gives ½ρ̄^{−1}p²(ĝ_j) − O(1)g_jp³ ≥ ¼ρ̄^{−1}p²(ĝ_j).
    - CMP98 ([12]), REG ([14]), and VAR ([15]) are statements about lattice gauge fields, averaging operators, and
      variational problems under a smallness condition on the field (a threshold ε with ε small). They contain no
      coupling, so they apply to the tube thresholds, which are smaller than CRE's (by (e)).
-   - RG1 §§3–4 are run by CRE on its own cover, with the (2.28) domains and the regularity thresholds ε_n (CRE
-     p.276). Their parameters enter there as smallness conditions on the thresholds, as the cutoff δ_j relative to
-     the radii α_{0,j}, α_{1,j}, or as relations among the parameters, so they fall under the kinds below, read on
-     CRE's pages; RG1's fixed domains are covered by step 7 and by §0, *Condition 3*.
+   - The other imported results contain no coupling either: PBG ([13]; Theorems 3.7–3.10, CRE p.276, and LFR2
+     pp.357, 361, 362, and 370) and PRT1 and PRT2 ([10], [11]; LFR2 pp.358 and 376) are propagator and random-walk
+     estimates, CRE's [6] supplies the combinatorics of its Sect. 3 (CRE p.264), and CRE's [18] the definition (4.5.3)
+     of Q^{s*}_1 (CRE p.246); LFR2's [26] (Cammarota) is cited for "a standard proof of the convergence of the
+     expansion" (LFR2 p.391). The parameters at these citations appear on the citing pages of CRE and LFR2, which
+     were read.
+   - Sects. 3–7 of [I], that is RG1 §§3–5 and, as Sects. 6–7 [I], RG2 §§1–2 (*The Step with Complex Multiples of the R-Terms*), are run by
+     CRE on its own cover, with the (2.28) domains and the regularity thresholds ε_n ("Sects. 3–5 [I]", "Sect. 6
+     [I]", and "Lemmas 5, 6 [I]", CRE p.276; "Sect. 7 [I]", CRE p.277), and by LFR2 on its large-field localisations
+     (LFR2 pp.372, 376, and 390). Their parameters enter there as smallness conditions on the thresholds, as the
+     cutoff δ_j relative to the radii α_{0,j}, α_{1,j}, or as relations among the parameters, so they fall under the
+     kinds below, read on CRE's and LFR2's pages; RG1's fixed domains are covered by step 7 and by §0, *Condition 3*.
    Every occurrence is of one of four kinds.
    - *Relations among the parameters alone*, of one index or of several. Examples: the cube sizes and the
      compatibility of the partitions (CRE pp.245–270, LFR1 p.177, LFR2 pp.384–387); the definitions of k₁ (CRE
@@ -691,35 +748,37 @@ and Propositions 2.4, 2.6, and 2.9 hold for RG1's construction run with the cuto
      R^T satisfies (2.9) by (c). So these relations hold as printed.
    - *Lower bounds from the action.* A threshold τ_j forces a suppression exp(−c yτ_j²), with y the coefficient of the
      action at scale j: 1/g_j², or the top-down value of *Histories that are not flows*, which satisfies
-     y ≥ u_j/ρ_γ = ĝ_j^{−2}/ρ_γ there. Examples: exp[−(1/g_0²)[1 − Re tr U(∂p)]] ≤ exp(−p₀(g_0)) (LFR1 p.175) and ≤ exp(−½p₀²(g_0))
+     y ≥ u_j/ρ̄ = ĝ_j^{−2}/ρ̄ there on every tube of the class. Examples: exp[−(1/g_0²)[1 − Re tr U(∂p)]] ≤ exp(−p₀(g_0)) (LFR1 p.175) and ≤ exp(−½p₀²(g_0))
      (CRE p.244), for |U(∂p) − 1| ≥ g_0p₀(g_0); the large-field factors of
      LFR2 pp.380–383, including exp(−γ₀(1/g_m²)(2δ′_m)²) ≤ exp(−γ₀A₁²p₁²) (p.381) and the factor
-     exp(−¼g_j^{−2}(24R_j⁴)^{−2}δ′_j²) (p.382); and the Gaussian tails of RG2 (§0, *Condition 3*). Since
-     y ≥ ĝ_j^{−2}/ρ_γ (by (a) when y = 1/g_j²), yτ_j(ĝ_j)² ≥ ρ_γ^{−1}τ_j(ĝ_j)²/ĝ_j², so each such factor holds with c
-     replaced by c/ρ_γ ≥ 2c/3, that is, with γ₀ replaced by 2γ₀/3. The conditions on the constants that compare such
-     factors at the same order are then imposed with a factor 2 ≥ ρ_γ on the side of the action:
+     exp(−¼g_j^{−2}(24R_j⁴)^{−2}δ′_j²) (p.382); the factor exp(−c(1/g_j²)δ′_j²) of the components excluded by
+     1 − χ′^{(j)} (*LFR1 (1.55)*); and the Gaussian tails of RG2 (§0, *Condition 3*). Since
+     y ≥ ĝ_j^{−2}/ρ̄ (by (a) when y = 1/g_j², as ρ_γ ≤ ρ̄), yτ_j(ĝ_j)² ≥ ρ̄^{−1}τ_j(ĝ_j)²/ĝ_j², so each such factor
+     holds with c replaced by c/ρ̄ = 8c/15, that is, with γ₀ replaced by 8γ₀/15. The conditions on the constants that
+     compare such factors at the same order are then imposed with the factor ρ̄ on the side of the action:
      - the creation factor exp(−γ₀min{½B₃^{−2}A₀², 2A₁², A₁²}p₀²(d′ + 1)) ≤ exp(−½γ₀A₁²p₀²(d′ + 1) − 2p₀) (LFR2
-       p.381), whose margin is a factor 2 in the leading term: with ρ_γ ≤ 3/2 the left side is at most
-       exp(−⅔γ₀A₁²p₀²(d′ + 1)), and ⅙γ₀A₁²p₀² ≥ 2p₀ for g small;
+       p.381), whose margin is a factor 2 in the leading term: with ρ̄ = 15/8 the left side is at most
+       exp(−(8/15)γ₀A₁²p₀²(d′ + 1)), and (1/30)γ₀A₁²p₀² ≥ 2p₀ for g small;
      - A₀ ≫ A₁ in exp(−⅛B₃^{−2}(1+β₀)^{−2}A₀²p₀²) ≤ exp(−A₁²p₀²) (LFR2 p.381, CRE p.247);
-     - 4(1+β₀)^{−2} ≥ ρ_γ in exp(−γ₀(1/g_m²)(2δ′_m)²) ≤ exp(−γ₀4(1+β₀)^{−2}A₁²p₁²) ≤ exp(−γ₀A₁²p₁²) (LFR2 p.381),
-       which holds for β₀ ≤ √2 − 1;
-     - A₀² ≥ 4ρ_γO(1)B₃M²A₁² in exp(−¼(1/g_j²)(O(1)B₃M²)^{−1}ε_j²) ≤ exp(−A₁²p₀²) (LFR2 p.381);
-     - A₁ ≥ 48√ρ_γ in exp(−¼(1/g_j²)(24R_j⁴)^{−2}δ′_j²) = exp(−A₁²48^{−2}R_j^{−8}p₁²) ≤ exp(−R_j^{−8}p₁²)
+     - 4(1+β₀)^{−2} ≥ ρ̄ in exp(−γ₀(1/g_m²)(2δ′_m)²) ≤ exp(−γ₀4(1+β₀)^{−2}A₁²p₁²) ≤ exp(−γ₀A₁²p₁²) (LFR2 p.381),
+       which holds for β₀ ≤ √2 − 1, since then 4(1+β₀)^{−2} ≥ 2;
+     - A₀² ≥ 4ρ̄O(1)B₃M²A₁² in exp(−¼(1/g_j²)(O(1)B₃M²)^{−1}ε_j²) ≤ exp(−A₁²p₀²) (LFR2 p.381);
+     - A₁ ≥ 48√ρ̄ in exp(−¼(1/g_j²)(24R_j⁴)^{−2}δ′_j²) = exp(−A₁²48^{−2}R_j^{−8}p₁²) ≤ exp(−R_j^{−8}p₁²)
        (LFR2 p.382);
      - ¼γ₀14^{−d}A₁²p₀²(g₁) ≥ O(1)2·64^dM^dL^{d+1}R₁^{d+2} (LFR2 p.385), which has in addition the margin
        p₀² ≫ R₁^{d+2} of a power of log g_1^{−2}.
      Every other such comparison has a margin of a positive power of log g_j^{−2}.
    - *Upper bounds relative to the action.* Fluctuations bounded by a threshold enter the expansion of the action in
-     g_jB, giving terms such as (1/g_k²)δ′_k³ ≤ g_kO(1)A₁³p₁³(g_k) (LFR2 p.361), (1/g_k²)(α_{0,k} + α_{1,k})ε_k
+     g_jB, giving terms such as (1/g_k²)O(1)|𝐁₀|δ′_k³ ≤ g_kO(1)M^dR_k^{d+2}A₁³p₁³(g_k) (LFR2 p.361), (1/g_k²)(α_{0,k} + α_{1,k})ε_k
      (LFR2 p.368), and p₁²(g_k)(α_{0,k} + α_{1,k}) (LFR2 p.379). By (e) these ratios change by at most the factor
      1 + o(1), and ε^T_j ≤ ε_j.
    - *Conversions between scaled and unscaled fields*, such as |A(b)| < g_0^{−1}δ_0 (CRE p.250), |A_j(b)| < g_j^{−1}δ_j
      (LFR1 (1.9), p.178), |B′| < M₀g_k^{−1}ε_k (LFR2 p.356), and |B(b)| ≥ g_j^{−1}δ′_j (LFR2 p.383). The factor g_j^{±1}
      is the coupling of the history, and the threshold is the tube parameter, so in the unscaled field the threshold
      is δ^T_0, δ^T_j, M₀ε^T_k, or δ′^T_j. The analyticity domain (3.43) of CRE p.276 bounds the scaled fluctuation
-     field by C₁p₁(ĝ_k); it is a domain on which analyticity and bounds are asserted, not a threshold under an
-     integral, and it enters as the other domains of analyticity do (Proposition 2.12, step 4).
+     field by C^α_1p₁(ĝ_k); it is a domain on which analyticity and bounds are asserted, not a threshold under an
+     integral, and it enters as the other domains of analyticity do (Proposition 2.12, the real points of the
+     boundary terms).
    Two further uses are not comparisons of a threshold with the action, and they hold for the same reasons.
    - Quantities of the history bounded by a parameter, such as the bound on 1/(g″_k(·))² − 1/g_k² by O(N) (LFR2
      p.366), the bounds on the background fields by thresholds (LFR2 pp.357, 378), and the terms "bounded by any
@@ -732,9 +791,10 @@ and Propositions 2.4, 2.6, and 2.9 hold for RG1's construction run with the cuto
    log g_j^{−2} ≤ R_j (LFR2 p.380), hold by (c). The threshold 2ε_kη² of (1.75) enters LFR1 p.193 (the definition
    and the large-field side), pp.195 and 200 (the bounds |U_0(∂p) − 1|, |U″_{k,Z}(∂p) − 1| < (2ε_kη² + …)), and
    p.199 (the comparison ε_kη² ≤ (1+β₀)(k−j)^{1/2}L^{−2(k−j)}ε_j(L^{k−j}η)², a relation among parameters), and
-   LFR2 p.359 (extensions satisfying (1.75)), p.363, p.378 ("This is clear for χ_{k,Λ}", from |∂V_k − 1| < 2ε_k), and
-   p.381. The function χ_{k,Λ} itself enters further LFR1 pp.194, 196, 198, 200, and 201 and the densities of LFR2
-   pp.356, 369, 377, and 390. All of these are statements about unscaled plaquette variables, with ε_k^T in each,
+   LFR2 p.359 (extensions satisfying (1.75)), p.363, p.378 ("This is clear for χ_{k,Λ}"; the bound |∂V_k − 1| < 2ε_k
+   there comes from χ_k), and p.381. The function χ_{k,Λ} itself enters further LFR1 pp.194, 196, 198, and 200 and
+   the densities of LFR2 pp.356, 369, 377, and 390, and, as χ_{k,Λ_i}, LFR1 p.201, LFR2 (1.72), p.379, and the formula
+   for 𝐑ρ_k on p.391. All of these are statements about unscaled plaquette variables, with ε_k^T in each,
    so they hold as printed. The R-terms come out of LFR2 with |R′^{(k)}(X)| ≤ exp(−p₀(ĝ_k))exp(−κd_k(X)) (LFR2 p.390), and
    exp(−p₀(ĝ_k)) = ĝ_k^{2A₀(log ĝ_k^{−2})^{p₀−1}} ≤ ĝ_k^{κ₀} ≤ g_k^{κ₀} for γ small, so CRE (2.31) holds with the
    couplings of the history for the new R-terms. The R-terms of earlier steps, in R′_k and in R″_k alike, keep their
@@ -754,7 +814,7 @@ h = (g_0, …, g_k) with g_j = x_j^{−1/2}. Let β^T_{k+1}(h) be the coefficien
 pp.282–283) and β^{δ,T}_{k+1}(h) the coefficient of RG1's construction run with the cutoffs δ_j^T on the same history.
 Then
   |β^T_{k+1}(h) − β^{δ,T}_{k+1}(h)| ≤ C_R g_k^{κ₀−4},
-with C_R independent of k, K, g, and the history, and κ₀ ≥ 7 the exponent of CRE (2.31).
+with C_R independent of k, K, g, the history, and the tube of the class, and κ₀ ≥ 7 the exponent of CRE (2.31).
 
 *Proof.*
 1. *The R-terms.* CRE (2.30)–(2.31), p.260: R_k = Σ_j[R^{(j)}(Λ_j, U_k) − R^{(j)}(Λ_j, 1)], with the properties
@@ -851,10 +911,10 @@ with C_R independent of k, K, g, and the history, and κ₀ ≥ 7 the exponent o
   on the R′-part of E_k enters the same way as τ, and it preserves the properties (i)–(iii) of CRE p.259 and the
   covariance (2.29).
 
-*Consequence (the Bounds of (W) and Item 5 for the Tube Construction).* For every history of H_k, Proposition 2.11 with
-Propositions 2.4 and 2.9 for the cutoffs δ_j^T (Lemma 2.10, step 7) gives
+*Consequence (the Bounds of (W) and Item 5 for the Tube Construction).* For every tube of the class and every history of
+its H_k, Proposition 2.11 with Propositions 2.4 and 2.9 for the cutoffs δ_j^T (Lemma 2.10, step 7) gives
   |β^T_{k+1} − b_{k+1}| ≤ δ + C_Rγ^{κ₀−4} = δ′  and  |β^T_{k+1} − b_{k+1}| ≤ (C_rem + C_Rγ^{κ₀−6})g_k².
-So (W) holds for β^T on the histories of H_K, with b = 2c ln L − δ′, b′ = 2c ln L + δ′, and C = C₀ (Remark 2.3), and
+For the tube of the target (K, g), (W) holds for β^T on the histories of H_K, with b = 2c ln L − δ′, b′ = 2c ln L + δ′, and C = C₀ (Remark 2.3), and
 δ′ < 2c ln L for γ small. Item 1 concerns b_j only. Item 5 holds on H_k with C_rem + C_Rγ^{κ₀−6}. Items 3 and 4 hold
 along the matched flow of Proposition 2.13, which lies in H_K.
 
@@ -862,80 +922,291 @@ along the matched flow of Proposition 2.13, which lies in H_K.
 β^T_{k+1}(h) of the tube construction for (K, g) is continuous on the histories h = (x_0^{−1/2}, …, x_k^{−1/2}) with
 (x_0, …, x_k) ∈ H_k.
 
-*Proof.* Induction on j. The claim S_j is: the coefficients β_i for i ≤ j+1, and every term of the density ρ_{j+1}
-produced by the steps 0, …, j (the regular part E_{j+1} with the R′-part, the R-terms R^{(i)}, the terms B_{j+1}, and
-the operations T_{j+1} of CRE (2.18)–(2.23)), are continuous in h at every h⁰ of H_j. For the terms this means: on
-real unscaled fields, and, for each term F(X) and each real field B⁰, as the analytic function B ↦ F(X, u(B)) on the
-polydisc |B − B⁰| < r about B⁰, with r ≥ c·min(α^T_{0,j+1}, α^T_{1,j+1}) the radius of Lemma 2.5 and
-u(B) = U_{j+1}(e^{iB}), uniformly on compact subsets of the polydisc. This is the form in which Lemma 2.5, and so Λ,
-uses the terms (Lemma 2.5, steps 1–2; RG1 (1.15)). Within the stage j, steps 1–4 below give the continuity of the step
-terms E^{(j+1)}, R, and B produced by step j, step 5 gives that of β_{j+1}, and then E_{j+1}, which contains
-−β_{j+1}A(φ_{j+1}, ·) (CRE (2.25)), is continuous too.
+*Proof.* Induction on j. The terms of the density ρ_{j+1} produced by the steps 0, …, j are the regular terms (the
+part E_{j+1} with the R′-part), the R-terms R^{(i)}, the boundary terms B_{j+1}, and the operations T_{j+1} of CRE
+(2.18)–(2.23). A term F(X) produced at the step i is an analytic function of the configurations (𝐔, 𝐉) of scale i + 1
+on its own domain D_F, with the radii of its own generation: U^c_{i+1}(X, α^T_{0,i+1}, α^T_{1,i+1}) for the regular
+terms (CRE (2.26)–(2.27)(ii), p.259), the same space with the bound CRE (2.31), p.260, for the R-terms, and the spaces
+of CRE (3.43), p.276, with the fluctuation field A on Y ∩ Λ^{(i)*}_{i+1}, for the boundary terms. A real point of D_F
+is a point (U, J) with U G-valued and J real (and A real for the boundary terms). The domain (3.43) bounds the
+unscaled field by g_iC^α_1p₁(ĝ_i), continuous in h, so for the boundary terms the real points at h⁰ are those whose
+unscaled field is below g⁰_iC^α_1p₁(ĝ_i), g⁰_i the coupling of h⁰; they are real points of D_F for all h near h⁰. The
+claim S_j is that the coefficients β_i, i ≤ j + 1, are continuous at every h⁰ ∈ H_j, and that at every h⁰ ∈ H_j:
+- (a) *Real points.* Every such term F satisfies F(X, U, J; h) → F(X, U, J; h⁰) as h → h⁰, at every real point
+  (U, J) of D_F.
+- (b) *Polydiscs.* Every regular term and every R-term F satisfies the following. Let u_i(B) := (U_{i+1}(e^{iB}), J_{i+1}(e^{iB})),
+  call a real field B⁰ admissible for F when
+  u_i(B⁰) lies in the real part of U^c_{i+1}(X, ½α^T_{0,i+1}, ½α^T_{1,i+1}) (B⁰ = 0 is admissible), and let
+  P_i(B⁰) := {|B − B⁰| < r_i}, r_i := c·min(α^T_{0,i+1}, α^T_{1,i+1}), with c so small that u_i maps every P_i(B⁰) into
+  D_F. Such a c exists by RG1 (1.15) and Lemma 2.5, step 1, whose derivative bound comes from VAR Prop. 9 and VAR (190),
+  stated for every external configuration satisfying "the regularity conditions (3.35)–(3.38) [5], or (1.7)–(1.9) [6]"
+  (VAR p.309 l.8–13). Then F(X, u_i(B); h) → F(X, u_i(B); h⁰) uniformly on compact subsets of P_i(B⁰), for every
+  admissible B⁰.
+
+Lemma 2.5, and so Λ, uses (b) for the regular terms of step k at B⁰ = 0; the localisations of the later steps use (a). A term
+depends on h only through the entries of the history up to the step that produces it (*Where the history enters*),
+and the later steps read it without changing it, so (a) and (b), once proved at that step, hold at every later
+stage. At the stage j, steps 2–3 below prove (a) for the terms produced by step j and step 4 proves (b) for its
+regular terms and R-terms (the R-terms 𝐑^{(i)}, i ≤ k₁, form the R′-part that CRE p.271 includes into E_k, and the others are read through
+the s-integral of CRE (3.26)), and step 5 proves the continuity of β_{j+1}; then E_{j+1}, which contains −β_{j+1}A(φ_{j+1}, ·) (CRE (2.25)), satisfies (a) and
+(b) too. With the terms of the earlier steps, this is S_j. We write u := u_j, r := r_j, and P(B⁰) := P_j(B⁰).
 0. *Base case.* The density ρ_0 is the Wilson density exp(−(1/g_0²)A(U)) with no earlier terms and no β; it is
    continuous in g_0 at fixed U, so S_{−1} holds.
 1. *What depends on h.* In the tube construction every threshold, scale, depth, and partition, and every domain
    radius α^T_{i,j}, is fixed by (K, g) (Lemma 2.10); the one radius that moves with h is that of the domain (3.43) in
-   the unscaled field (step 4). In unscaled fields the characteristic functions do not depend on h:
+   the unscaled field (the real points of the boundary terms above). In unscaled fields the characteristic functions do not depend on h:
    - the background-field functions χ_k(Ω_k) of CRE (2.17), with threshold ε^T_kη² on the plaquettes of the background
      fields U_{k,□}(V_k) of CRE (2.16), which are defined from the fields alone;
    - the inf–sup function χ_{k,Λ} of LFR1 (1.75), with threshold 2ε^T_kη²;
    - the fluctuation-field functions, whose thresholds act on g_jA_j and on exp(ig_jB_j(b)) (for example
-     |exp ig_jB_j(b) − 1| < 2δ′_j in LFR1 (1.59), p.188), with δ^T_j and δ′^T_j.
-   The changes of variables of CRE (1.22)–(1.23), pp.251–252, and of LFR1 p.188 read, in unscaled fields,
-   exp(iB) = exp(iB′)exp(−iφ(B′)H), where φ is the C^∞ bump of CRE p.252 with supports fixed by δ^T_0 at step 0, and by δ′^T_j in the change of
-   variables of LFR1 p.188, and H is an
-   analytic function of the background fields (H_{1,Ax} of CRE (1.21), and ℍ_Z^{(j)} of LFR1 (1.58)). These maps and
+     |exp ig_jB_j(b) − 1| < 2δ′_j in LFR1 (1.59), p.188, and |g_jB_j(b)| < δ′_j for χ′^{(j)}, whose print in LFR1 (1.55)
+     has the scaled variable and which the construction places on the unscaled field, *LFR1 (1.55)* before Lemma
+     2.10), with δ^T_j and δ′^T_j.
+   The changes of variables of CRE (1.22)–(1.23), pp.251–252, of CRE p.269 at the step k ("the change of variables
+   given by the formula (1.22), with 𝐇^{(k)}(b) instead of 𝐇_{1,Ax}(b)", for the bonds of (R^{∼2}_{k+1} ∩ S_{k+1})^{(k)*},
+   and the simpler change with g(A′_k(b)) replaced by 1 on the remaining bonds of S^{(k)*}_{k+1}), and of LFR1 p.188
+   read, in unscaled fields, exp(iB) = exp(iB′)exp(−iφ(B′)H), where φ is the C^∞ bump of CRE p.252 with supports fixed
+   by δ^T_0 at step 0, by δ^T_k at the step k, and by δ′^T_j in the change of variables of LFR1 p.188, and H is an
+   analytic function of the background fields (H_{1,Ax} of CRE (1.21), 𝐇^{(k)} of CRE (3.22), p.269, and ℍ_Z^{(j)} of
+   LFR1 (1.58)). These maps and
    their Jacobians (CRE (1.24)) do not depend on h. The block-averaging constraints and the Haar measures do not depend
    on h either. The couplings of the history therefore enter only through the densities: the Wilson action with the
    couplings g_j(x) (the top-down formula), the Gaussian densities of the unscaled fluctuation fields with covariance
    ∝ g_j², the axial gauge-fixing weight exp[−(1/g_k²)G] and its normaliser z(g_k, ε^T_k), the scaling Jacobians,
    the R-operation densities and normalisers of LFR1 (1.100), the counterterms β_i, and the terms of the effective
    action of the earlier steps (the list of *Where the history enters*).
-2. *Pointwise continuity.* At fixed unscaled fields these densities are continuous in h, by S_{j−1}, by the continuity
-   of β_i (i ≤ j), and because g_j(x) depends continuously on g_j and the β_i through the top-down formula (the bullet
-   *Histories that are not flows* above). The characteristic
-   functions are fixed. The integrands are bounded uniformly for h near h⁰ in H_k: the estimates of CRE, LFR1, and LFR2
-   hold on H_k with constants independent of the history (Lemma 2.10). Dominated convergence gives continuity of each
-   integral at fixed external fields.
-3. *Quotients and sums.* The R-operation produces the quotients of LFR1 (0.3) and (0.5), p.176, with the densities
-   and normalisers of LFR1 (1.100), p.201. At real configurations the denominators are integrals of positive
-   densities over nonempty domains ("the densities are positive, and the integration domains … are nonempty, hence
-   the denominators are positive", LFR1 p.176), and they are continuous in h by step 2. So at real fields each
-   quotient, and each term R(X, V) of its exponentiated polymer expansion (0.5), is continuous at h⁰. The complex
-   values are used only through f_h(B) := R(X, u(B); h) on a polydisc P = {|B − B⁰| < r} about a real field B⁰
-   (the form of S_j). For real B ∈ P, u(B) is a real configuration, so f_h(B) is the value of the quotient there,
-   continuous in h. On P, f_h is analytic and bounded uniformly for h near h⁰: u(P) lies in the analyticity domain of
-   the R-terms (Lemma 2.5, step 1, with RG1 (1.15)), where they satisfy CRE (2.31), p.260, and the bounds of LFR2
-   (1.99)–(1.100), p.390, with constants independent of the history (Lemma 2.10). By Montel's theorem every sequence
-   h_n → h⁰ has a subsequence along which f_{h_n} converges locally uniformly on P. Every limit agrees with f_{h⁰} on
-   the real points of P, which form an open subset of the real space ℝ^N of B, and P is connected. An analytic
-   function on a connected open set of ℂ^N that vanishes on a nonempty open subset of its real points vanishes
-   identically, so every limit is f_{h⁰}, and f_h → f_{h⁰} locally uniformly on P. The polymer expansions and the
-   sums over large-field regions converge uniformly for h near h⁰, with the activity bounds of LFR2 pp.388–389 on
-   real fields and the bounds (1.99)–(1.100) and CRE (2.31) on P as majorants.
-4. *Uniformity in the external fields.* The domains of analyticity have the radii α^T_{i,j}, which do not depend on h.
-   The domain (3.43) of CRE p.276 bounds the scaled fluctuation field A by C₁p₁(ĝ_k); in the unscaled field its radius
-   g_kC₁p₁(ĝ_k) is continuous in h, so a compact subset of it at h⁰ lies inside it for h near h⁰, and S_j is stated
-   there as joint continuity in h and the fields.
-   On a compact subset 𝒦 of a domain 𝒟, the Cauchy estimates on polydiscs of radius ½dist(𝒦, ∂𝒟) > 0 about the
-   points of 𝒦 bound the derivatives in the external fields uniformly in h near h⁰. So the functions are equicontinuous there, and pointwise continuity in h
-   is uniform on the compact subset. This is S_j.
+2. *Where step j reads the earlier terms.* The terms of step j are defined by Bałaban's formulas as functions of the
+   variables (𝐔, 𝐉), which replace U_{k+1} and J_{k+1} in the operators (RG1 p.272). The formulas read the earlier
+   terms at three kinds of arguments:
+   - (i) in RG1 (3.13), for the expressions (3.7) and their extensions (3.15), at exp iξ𝐀𝐔 and
+     (L^{j−1}η)³𝐉 + Δ^ξ_𝐔𝐀 − P₁𝐀 + 𝐅₁(𝐔, 𝐀), on U_j^c(X, ½α₀, ½α₁, α₀) for 𝐀 in (3.14) (RG1 p.272), with
+     𝐀 = 𝐇_j(B(t)) + t_□δ𝐇_j, where 𝐇_j and δ𝐇_j are the localised functions of RG1 p.273 ("Later we will change
+     these functions by a localization procedure", after (3.17)) with the s-variables of RG2 p.8;
+   - (ii) in RG1 (3.33)–(3.36) and Lemma 4, (3.53), p.280, at (U_j(□₀, exp iw), J_j(□₀, exp iw)) ∈ U_j^c(X, α₀, α₁),
+     w = τB + B′, τ ∈ [0, 1], |B′| < α₃, with B = Q(ηA) and A of (3.30) built from 𝐀 = (tζ̃_□ + t_□ζ_□)𝐇_k(s, B′)
+     (RG2 (1.8) and (1.23)); CRE p.276 applies the same formulas to the boundary terms;
+   - (iii) in the large-field steps, in the first localisation of LFR2 (1.59)–(1.60), p.372, and its repetitions
+     with the representations (1.54), (1.57), and (1.58) (pp.372–373), at the configurations U of the passes (U^0_k,
+     U_{1,2}, U_{k,Λ}, and U_k), and, for τ ∈ [0, 1], at exp iτη𝐇 U and at U_j(𝐁_j(□₀), exp iτQ_·(η𝐇)M^·(U)) (the
+     points of the Taylor remainder of RG1 (3.34), which lie in the domain of the term by RG1 (3.36), p.277, through
+     "all the transformations and estimates of Sects. 3–5 [I]", LFR2 p.372), 𝐇 being the localised
+     function of the pass (𝐇″_k(g_kB) of (1.51), 𝐇″_k of (1.54), 𝐇_{𝐁₁} of (1.57), and 𝐇_k of (1.58)); and in the terms V(Y) and V(X^∼) of
+     LFR2 (1.70)–(1.72), at the configurations LFR2 (1.61)–(1.63), pp.373–374, which contain the gauge transformations u^0_k, u_{1,±}, and (u_{k,Λ})_± "given by
+     the explicit formula (106) [12]" (LFR2 p.373), [12] being CMP98.
+
+   At real (𝐔, 𝐉) and real values of the auxiliary variables (t, t_□, s, τ, B′) every one of these arguments is a
+   real point of the domain of the earlier term. The localised operators are walk sums whose terms are multiplied by
+   the numbers s(Δ) (RG2 p.3), so 𝐇_j, δ𝐇_j, and 𝐇_k(s, B′) are real, and so are LFR2's localised functions 𝐇″_k,
+   𝐇_{𝐁₁}, and 𝐇_k at real s and real B, which are built in the same way from the operators of PBG and VAR (LFR2
+   (1.54) and (1.57)–(1.58)). The gauge transformations v and u_{k+1} of
+   RG1 (3.26)–(3.27), p.275, which bring M^·(𝐔) into the generalised axial gauge and U_{k+1}(□₀, V) into the Landau
+   gauge, are "explicitly given analytic functions of 𝐔" (RG1 p.276); at real 𝐔 they are the gauge transformations
+   of these G-valued configurations, so they are G-valued, and 𝐇_{k+1}(□₀, (1/i)log V) is real. Hence the variables
+   R(u_{k+1}^{−1})R(v^{−1})𝐉 and R(u_{k+1}^{−1})R(v^{−1})B that replace 𝐉 and B in 𝐇_k(B′) (RG1 p.276) are real,
+   and so are A and B of (3.30). The operators Δ^ξ_𝐔 and P₁ are real at real 𝐔, and 𝐅₁ collects 𝐅 of (3.11), an
+   identity between real quantities "for any regular configuration U", and the local lower-order operator from the
+   replacement of D*D (RG1 p.272). U_j(□₀, ·) and J_j(□₀, ·) are the background field and current of a real field.
+   In CMP98 (106), p.33, u(x) is the product over j of the operators R(U₀(Γ^{(j+1)}_{x_{j+1},x}))^{−1} applied to
+   brackets of two factors: the inverse of the average (105), the exponential of a real average of logarithms of
+   contour products, and the contour product (R̄^j_{0,x_{j+1}}Ū̄^j_1)(Γ_{x_{j+1},x_j}). Here R is conjugation,
+   "R(X)Y=XYX^{-1}" (CMP98 (56), p.27), and R(U₀(Γ^{(j+1)}_{x_{j+1},x})) is the composite of the operations R_{0,y},
+   "(R_{0,y}v)(x)=R(V_0(Γ_{y,x}))v(x)" (p.27), and of their analogues R̄^i_{0,·} defined by the averages Ū^i_0 of U₀
+   (p.29, the identity after (76)). At G-valued configurations the averages, exponentials of real averages of
+   logarithms, are G-valued, the brackets are G-valued, and conjugation by G-valued contour products keeps them in G,
+   so u^0_k, u_{1,±}, and (u_{k,Λ})_± are G-valued. Every term read at these arguments is continuous in h there: a
+   term of an earlier step by (a) of S_{j−1}, and a term produced earlier in step j by (a) for that term, which step 3
+   proves in the order in which step j produces its terms.
+
+   *Derivatives at real points.* Let F be a term read in (i)–(iii) that satisfies (a), and let p be a real point of
+   D_F at h⁰. There is a complex polydisc P around p in D_F for all h near h⁰: D_F does not depend on h, except for
+   the boundary terms, whose radius in the unscaled field is continuous in h and is not attained at p. On P, F is
+   bounded uniformly for h near h⁰ by the bound of its class: RG1 (1.18) for the regular terms, CRE (2.31), p.260,
+   for the R-terms, CRE (2.42), p.261, for the boundary terms, LFR1 (1.70), p.192, for the boundary terms 𝐁″_k of the
+   N preliminary integrations (LFR2 p.369), LFR2 (1.11), p.358, and (1.47)–(1.48), p.368, for 𝐂_k, and the bound
+   (2.42) [III] in d_k(Y₀) of LFR2 p.372 for the terms with localisation domains Y₀ of the first localisation; the
+   constants are independent of the history (Lemma 2.10) or continuous in the couplings. The real points of P are
+   real points of D_F for h near h⁰ (the paragraph before (a)), where F converges by (a). By Montel's theorem and the
+   identity theorem, as in step 4, F_h → F_{h⁰} uniformly on compact subsets of P, with all derivatives in the
+   configuration variables. Finitely many such polydiscs cover a compact set of real points of D_F at h⁰, so the field
+   derivatives of F converge uniformly on it.
+
+   The localisations also integrate over circles in the auxiliary variables: t_□ with
+   r max{|δ𝐇_j|_X, …} = ⅓α₂ in RG1 (3.15), p.273, t_□ with |t_□|4B₀C₁e^{16κ₁}g_k|B| = ½α₂ in RG2 (1.22)–(1.23),
+   p.7, and σ(Δ) with |σ(Δ)| = e^{κ₁} (RG2 p.7, and RG2 p.8 for (3.15)). These integrals are the derivatives at
+   t_□ = 0 and at s ∈ [0, 1]^{Y₀} of φ_h(t_□, s), the integrand read as a function of (t_□, s) (RG2 (1.9)–(1.10), p.4;
+   "We differentiate it with respect to t_□, at t_□ = 0, and we represent all derivatives by the Cauchy formula",
+   p.7). Let D be the open polydisc |t_□|4B₀C₁e^{16κ₁}g_k|B| < ½α₂ (|t_□|max{|δ𝐇_j|_X, …} < ⅓α₂ for (3.15)),
+   |s(Δ)| < e^{κ₁}. On D the field 𝐀 stays in the class (3.31) strictly below α₂ (½α₂ from tζ̃_□ and less than ½α₂
+   from t_□ζ_□, RG2 p.7), or in (3.14) (⅓α₂ from 𝐇_j(B(t)) and less than ⅓α₂ from t_□δ𝐇_j, bounds that the localised
+   functions keep, RG1 p.273), so φ_h is analytic on D and bounded there by RG1 (3.54) and (3.17), with constants
+   independent of the history (Lemma 2.10). In case (ii), φ_h is the last term of RG1
+   (3.34), an integral over
+   τ ∈ [0, 1] of fifth B-derivatives, or a term obtained from the Taylor terms of (3.34). The function
+   w ↦ 𝐄^{(j)}(X, U_j(□₀, exp iw)) is analytic on the connected open set N of the w above, bounded by E₀exp(−κd_j(X))
+   (RG1 (3.53)–(3.54)), and converges at the real points of N by the paragraph above. By Vitali's theorem it converges
+   uniformly on {τB + B′ : τ ∈ [0, 1], |B′| ≤ ½α₃}, with all its derivatives. Hence the τ-integral of (3.34) and its
+   Taylor terms converge at every real A. The transformations of RG1 §4 act only on the Taylor terms at B = 0 ("such
+   expressions only appear in the sum (4.6)", RG1 p.284). By (4.2)–(4.3), p.281, and the Ward–Takahashi identities
+   (4.9)–(4.15), pp.283–284, they are sums of the derivatives δ^n𝐄^{(j)}(X, U_j(□₀, 1))/δB^n, n ≤ 4, at w = 0,
+   contracted with B, its differences, and the cutoffs ζ̃_□, which do not depend on h. So in cases (i) and (ii) φ_h converges at
+   the real points of D, which form an open subset of the real points of the connected set D. By Vitali's theorem
+   φ_h → φ_{h⁰} uniformly on compact subsets of D, with all its derivatives. The points t_□ = 0, s ∈ [0, 1]^{Y₀} form a
+   compact subset of D, since e^{κ₁} > 1, so the derivatives converge uniformly in s, the integrals ∫_0^1 ds(Δ) of RG2
+   (1.10) converge, and the sums over Y₀ converge uniformly in h with the bounds (1.24)–(1.25), p.7, as majorants.
+
+   Case (iii) is treated at real s only. LFR2 localises twice.
+   - *The first localisation* (LFR2 pp.372–373) applies to a term the identity (1.59) or (1.60), "all the
+     transformations and estimates of Sects. 3–5 [I]" to the bracket, and "the expansion (6·9) [I]" with σ₀ the cubes
+     Δ disjoint with □₀ (or X) and Λ^∼, written "in the form (6.10) [I]" and "estimated as in (6.24)–(6.29) [I]". It
+     treats first the terms of the second part of (1.49), then, with the representations (1.54), (1.57), and (1.58),
+     their first terms, and then the remaining terms of the first part of (1.49) and the new terms with localisation
+     domains Y₀. The localised function 𝐇(s) is 𝐇″_k(s, g_kB) of (1.51) in the first pass, around U^0_k, and 𝐇″_k
+     of (1.54), 𝐇_{𝐁₁} of (1.57), and 𝐇_k of (1.58) in the repetitions, around U_{1,2}, U_{k,Λ}, and U_k.
+   - *The second localisation* (LFR2 pp.373–379) constructs "the localization expansion" of 𝐇″_k, 𝐇_{𝐁₁}, and 𝐇_k
+     with the cubes Δ of σ̃₀ disjoint with Λ, "in the form of the expansion (6.10) [I]" (LFR2 pp.373–374), in a term
+     𝐄(X, U^0_k), which "may be any term in the sum" (p.373), at the extended function U^0_k(s) of LFR2 (1.61)–(1.65)
+     with the localised functions 𝐇″_k, 𝐇_{𝐁₁}, and 𝐇_k(s(Y′₄)).
+
+   (6.9)–(6.10) [I] are RG2 (1.9)–(1.10), p.4, obtained by "the fundamental theorem of calculus" in each variable
+   s(Δ): a term is Π_{Δ∈σ} ∫_0^1 ds(Δ) ∂/∂s(Δ) of the expression at s(σ^c) = 0, and each factor ∫_0^1 ds(Δ) ∂/∂s(Δ)
+   is, by that theorem, the difference of the values at s(Δ) = 1 and at s(Δ) = 0. So a term is the finite alternating
+   sum Σ_{Z⊂σ} (−1)^{|σ∖Z|} of the expression at s = 1_Z, the indicator function of Z, a point at which the printed
+   expansion evaluates it. No derivative in s and no complex s is used.
+   - The localised functions at s = 1_Z do not depend on the history. U^0_k is "the configuration in (1.50) with
+     B = 0" (LFR2 p.370), a function of the gauge field variables V″ and U^{(AL)}_0 through the background-field map
+     U_{𝐁″_k}; U_{1,2}, U_{k,Λ}, and U_k are the background-field maps of (1.53), (1.56), and LFR2 p.365 applied to V″,
+     V′_k, M^k(U^{(AL)}_0), V^{(A)}_Λ, and 1 (LFR2 (1.34)–(1.35)), which contain no coupling and are G-valued at G-valued arguments; the localised
+     functions come from the results of Sects. D, E of VAR with operators of PBG (LFR2 (1.51),
+     (1.54), p.370, and (1.57)–(1.58), p.371), which contain no coupling, and 𝐇″_k(s, g_kB) is read at the unscaled
+     field g_kB; and Λ, σ₀, σ̃₀, Ũ^c_k, and Ũ″^c_k carry the parameters of the tube, fixed by the target. At real
+     (𝐔, 𝐉), real B, and s = 1_Z, the configurations of (iii) are real, by the paragraph after the list (i)–(iii).
+   - In the second localisation the expression at s = 1_Z is 𝐄(X, U^0_k(1_Z)), a term read at a real point of its
+     domain, and it converges by (a) for that term.
+   - In the first localisation the expression at s = 1_Z is the bracket of (1.59) or (1.60) with 𝐇(1_Z),
+     transformed as in RG1 §§3–5. As in RG1 (3.34), p.277, these transformations give the Taylor terms of order n ≤ 4
+     of the term at the real configuration of the second member of the bracket, contracted with a real field built
+     from 𝐇(1_Z), and the integral over τ ∈ [0, 1] of its fifth derivatives at the real configurations between the
+     two members, with the weight (1 − τ)⁴/4!; RG1 §4 acts on the Taylor terms as in case (ii). The term of RG2 (1.10)
+     is differentiated in t_□ at t_□ = 0 (RG2 p.7), and this derivative is, by the chain rule, a finite sum of further
+     field derivatives at the same real points, contracted with real fields built from 𝐇(1_Z). These real points form
+     a compact set, so each of these expressions converges, by *Derivatives at real points*.
+
+   The sums over Y₀ and the resummations of the first localisation converge with the bounds as in RG2 (1.24)–(1.29),
+   pp.7–8, uniform in h by Lemma 2.10, as majorants, the resummation being "controlled by the renormalization procedure
+   for 𝐄-terms, the renormalization and the bounds (2.31) [III] for 𝐑-terms, and the bounds (2.42) [III] for
+   𝐁-terms" (LFR2 p.372). The sums over Y′₂, Y′₃, and Y′₄ and the resummations into the terms V(Y) of the second
+   localisation converge with the factors (1.66), LFR2 p.376, which are uniform in h by Lemma 2.10, as majorants, and
+   so does the resummed V(X^∼), "in the way discussed in connection with the other terms V(Y)" (LFR2 p.379).
+3. *The terms of step j at real points.* At a real point (𝐔, 𝐉) the terms of step j are given as follows.
+   - *Fluctuation integrals.* The integrands are the densities of step 1 at real unscaled fields, restricted by the
+     characteristic functions to the small fields, whose plaquettes are below ε^T_jη² and whose fluctuation fields obey
+     |exp ig_jB_j(b) − 1| < 2δ′^T_j. These fields lie in the real part of the domains, since ε^T_j/α^T_{i,j} and
+     δ^T_j/α^T_{i,j} are of order (log ĝ_j^{−2})^{p₀−q_i} and q₀, q₁ > p₀. The densities are continuous in h by the
+     continuity of β_i, i ≤ j, through the top-down formula for g_j(x) (*Histories that are not flows*), by step 2 for
+     the localised terms, and by S_{j−1}; the characteristic functions are fixed. The integrands are bounded uniformly
+     for h near h⁰, since the estimates of CRE, LFR1, and LFR2 hold on H_j with constants independent of the history
+     (Lemma 2.10), and dominated convergence gives the continuity of each integral.
+   - *Small-field terms.* E^{(j+1)}(X) is the exponentiated cluster expansion RG2 (2.13), p.14, in the activities H(Z)
+     of RG2 (2.14), p.15: integrals over s(Δ), t(Y) ∈ [0, 1] of Cauchy integrals over circles in σ(Δ) and τ(Y), of
+     Gaussian integrals over X and B in which "the operators in it are not symmetric, and the second measure is
+     complex" (RG2 p.15). In unscaled fields, at a real point (𝐔, 𝐉) and fixed (σ, τ) on the circles, h enters the
+     integrand only through the coupling g_k in the Gaussian densities exp(−Q_σ/(2g_k²)) and their normalisations,
+     where the quadratic form Q_σ of (X, B) does not depend on h (step 1), and through the potentials 𝐕_k(Y, B), read
+     at real B and continuous in h by step 2 and S_{j−1}; the characteristic functions χ_{k,Y₀} and χ^c_{k,P} are
+     fixed. So the integrand converges pointwise. RG2 (2.15)–(2.23), pp.15–17, bound its modulus pointwise by e^C
+     times the integrand of (2.23): the forms are compared with those at σ(Z) = 0, 𝐔 = U, 𝐉 = 0, and the differences
+     and the potentials are bounded by α₅(‖ZX‖² + ‖Z₀B‖²) plus constants ((2.16)–(2.21)), with α₅ so small that the
+     form of (2.23) stays positive (RG2 p.17, (2.24)–(2.25)). In unscaled fields this majorant is a positive Gaussian
+     density in which the coupling enters as g_k^{−2} in front of a nonnegative form, so for ½g⁰_k ≤ g_k ≤ 2g⁰_k it is
+     at most 4^n times its value at 2g⁰_k, n the number of integration variables. Dominated convergence over (X, B),
+     (σ, τ), and (s, t) gives the continuity of H(Z). By RG2 Lemma 3, (2.38), p.20,
+     |H(Z)| ≤ C₃ε₁exp(−(1 − 8δ)½Lκd_{k+1}(Z)), uniformly in h, and the series (2.13) is "estimated in the standard
+     way" with it (RG2 p.20), so it converges uniformly in h.
+   - *R-operation.* The quotients of LFR1 (0.3) and (0.5), p.176, with the densities and normalisers of LFR1 (1.100),
+     p.201, are taken at real gauge fields V. Their denominators are integrals of positive densities over nonempty
+     domains ("the densities are positive, and the integration domains … are nonempty, hence the denominators are
+     positive", LFR1 p.176), continuous in h by the first item, so each quotient and each term R(X, V) of (0.5) is
+     continuous. The new R-terms and boundary terms, LFR2's 𝐑′^{(k)}(X) of (1.98)–(1.100) split by their localisation
+     domains (LFR2 p.390), as functions of (𝐔, 𝐉), are the series (1.98) "given by the
+     convergent series (7.13) [I]" (LFR2 p.390), that is RG2 (2.13), in the activities F(X′) of LFR2 (1.91), p.388,
+     sums over q, the families {X_{j_h}}, and 𝐃 of ∫_0^1 dt(Y) ∏_h T′_k(X_{j_h}) ∏_Y V(Y) exp Σ_Y t(Y)V(Y).
+     T′_k(X) is the operation LFR2 (1.71), pp.378–379: an integral over the field B on X with the weight
+     σ(g_kB)δ_{rT}(B)χ′(X), and over the gauge field V_h with χ_{h,1/2}, of T_h(Z_h ∩ X) applied to the exponential of
+     −½⟨DH″_{1,k,X}B, ζDH″_{1,k,X}B⟩ − A((g″_k(·))^{−2}ζ₁⌈_X, U″_{h+2}(exp ig_kB, V″)) + V(X^∼, U_k) + E_k(X) and the
+     normalisation constants. T_h(Z_h ∩ X) is the ordered product CRE (2.20) of the operations (2.21) of the earlier
+     steps, integrals over gauge fields V_j with the Haar measure and over fluctuation fields A_j with Gaussian
+     densities. Of these expressions only the quadratic form in B and V(X^∼) depend on (𝐔, 𝐉) ("only the quadratic
+     form in B and the term V(X^∼) depend on (𝐔,𝐉)", LFR2 p.379). At a real point the integration variables are real,
+     and the modulus of the integrand is the exponential of the real part of its exponent. That real part is bounded
+     above uniformly for h near h⁰: the quadratic
+     form in B and the Wilson action are nonnegative (ζ, ζ₁ ≥ 0), V(X^∼) is read at the real arguments (iii) of step 2
+     and bounded by LFR2 (1.69), and the counterterms and normalisation constants are bounded as on LFR2 p.380, by
+     O(log g_j^{−2}) per site of Z_j. The gauge fields range over compact groups, and the A_j-integrals are the
+     Gaussian integrals of LFR2 p.380, whose densities in unscaled fields are exp(−⟨A_j, M_jA_j⟩/(2g_j²)) with M_j
+     independent of h (step 1), dominated for g_j ≤ 2g⁰_j by their value at 2g⁰_j. This gives an integrable majorant,
+     uniform for h near h⁰, and dominated convergence gives the continuity of T′_k(X). The V(Y) are continuous by
+     step 2 and bounded by (1.68), so each F(X′) is continuous, and the series converge uniformly in h with
+     (1.92)–(1.97) and (1.99)–(1.100) as majorants.
+   - *The terms 𝐂_k.* 𝐂_k is "the sum of all these terms, including the term I(U_0) from the denominator" (LFR2
+     p.369), the terms "obtained by expanding some Wilson actions" (LFR2 p.369; the expansions are on pp.359–368). A Wilson action A(c, U) is
+     linear in its coupling function c, here (g″_k(·))^{−2} or g_k^{−2}, and the expanded configurations are built
+     from the 𝐇-functions of VAR and PBG and the unscaled field g_kB, which contain no coupling (step 1). So at a real
+     point these terms are finite sums of plaquette functions at G-valued configurations with coefficients
+     (g″_k(x))^{−2} or g_k^{−2}, continuous in h by the top-down formula (*Histories that are not flows*). By LFR2
+     (1.10), p.358, I(U_0) = E_k(Λ) − (1/g_k²)A(ζ₀, U_0) − log I_Λ, where I_Λ is the integral over V′ on Λ of
+     δ_{G₀}(V′)χ exp[−(1/g_k²)A(ζ₀, U_{k,Z}(V′V_Λ))]; δ_{G₀} fixes V′ on the bonds of the graph G₀ (the
+     remaining bonds are counted by |Λ^{(k)}∖G₀|, LFR2 p.356), and the remaining variables
+     range over a product of copies of G with the Haar measure, on which the integrand is nonnegative, continuous in
+     g_k, and bounded by 1. By LFR2 p.356, I_Λ is exp[−(1/g_k²)A(ζ₀, U_0) + E_k(Λ)] times an integral over B′ that
+     LFR2 p.358 bounds below by exp(−O(1)|Λ|), so I_Λ > 0. Hence I_Λ is continuous in h by dominated convergence, and
+     so is I(U_0).
+   - *The order of production.* Step j produces its terms in the following order.
+     - The N preliminary integrations n = 1, …, N of LFR1: each is a fluctuation integral, "of the same type as the
+       integral studied in Sect. 3 [III]", whose result ℂ^{(n)}_k is written "as a sum of localized terms" by the
+       results of that section (LFR1 p.189; cases (i)–(ii) of step 2), reading the terms of the earlier steps and
+       ℂ^{(i)}_k, i < n; their sum is 𝐁″_k (LFR1 (1.61), p.189).
+     - 𝐂_k.
+     - The first localisation and its repetitions, of the second part of (1.49), then of the remaining terms of the
+       first part and of the new terms with domains Y₀ (step 2, case (iii)).
+     - The second localisation, which gives V(Y) and V(X^∼) (step 2, case (iii)).
+     - The R-operation, which acts on ρ_j (LFR2 p.391).
+     - The renormalisation transformation j → j + 1 of CRE §3 (the fluctuation integrals and small-field terms above,
+       cases (i)–(ii) of step 2), which reads the R-terms of that R-operation: they are among the terms
+       𝐑^{(i)}, k₁ < i ≤ j, of R″_j, which CRE p.271 "treated separately", through the s-integral of CRE (3.26),
+       p.271, while only R′_j = Σ_{i≤k₁}𝐑^{(i)} is included into E_j.
+
+     Each operation reads only terms of the earlier steps and terms produced before it, so (a) holds for each term by
+     the item that treats it, taken in this order.
+   So every term produced by step j satisfies (a).
+4. *Polydiscs.* Let F be a regular term or an R-term produced by step j, B⁰ admissible, and f_h(B) := F(X, u(B); h)
+   on P = P(B⁰). For real B ∈ P, u(B) is a real point of D_F, so f_h(B) → f_{h⁰}(B) by step 3. On P, f_h is analytic
+   and bounded uniformly for h near h⁰, since u(P) ⊂ D_F, where F satisfies RG1 (1.18), or CRE (2.31), p.260, for
+   the R-terms, with constants independent of the history (Lemma 2.10). By Montel's theorem every sequence h_n → h⁰ has a subsequence along which f_{h_n} converges locally
+   uniformly on P. Every limit agrees with f_{h⁰} on the real points of P, which form a nonempty open subset of the
+   real space ℝ^N of B, and P is connected; an analytic function on a connected open set of ℂ^N that vanishes on a
+   nonempty open subset of its real points vanishes identically. So every limit is f_{h⁰}, and f_h → f_{h⁰} locally
+   uniformly on P. This is (b).
 5. *The coefficient.* β^T_{k+1} is computed by CRE (3.57) and (3.61), pp.281–282, from the whole-lattice E^{(k+1)},
    through the infinite-volume limit of Λ, as the torus T^{(k+1)} ↗ ℤ^d ("This limit exists by the localized
    representation (1.7)", RG1 (1.21), p.264). The limit is taken of Π_{k+1}(x, x′) at fixed x, x′, and β is
    Σ_x Π_{k+1}(x)x_μx_ν (RG1 (1.22)). Bałaban states the existence of the limit for each history and prints no rate.
-   A rate uniform in h comes from the mechanism the sentence names. The localised terms are built from the
-   generalized random-walk expansions of the propagators and of the background maps: each term is a sum over graphs
-   with vertices localised in cubes and lines replaced by walks ω = ((α_0, X_0), …, (α_n, X_n)) of connected unions of
-   big blocks, and the term of a walk is bounded by O(1)O(M₁^{−1/2})^{|ω|}M₁^{−|ω|/2}exp(−½δ₀d(ω, □_i, □_j)) (UV3
-   (23), p.262; RG2 localises "using the generalized random walk expansions for propagators", p.1, and pp.13, 21).
-   The operators attached to a single X_m are local inverses on X_m, which do not depend on the torus once its side
-   exceeds diam X_m. So within one step, for a fixed polymer X ∋ 0, the torus enters only through graphs whose walks
-   have total length at least a fixed multiple of the side, and these are bounded by the same bounds times e^{−c·side}.
+   A rate uniform in h comes from the mechanism the sentence names. RG2 localises the fluctuation-field effective
+   action "using the generalized random walk expansions for propagators" (p.1): each propagator is the sum (1.6) over
+   walks ω = ((0, X_0), (α_1, X_1), …, (α_n, X_n)) of products R_0(X_0)R_{α_1}(X_1)⋯R_{α_n}(X_n) of local operators on
+   simple localisation domains, the term of a walk is bounded by O(1)O(M₁^{−1/2})^{|ω|}M₁^{−|ω|/2}exp(−δ₀d(ω, y, y′))
+   (RG2 (1.7), p.3, from PBG (3.107)–(3.108)), the term of ω is multiplied by the decoupling variables s(Δ) of the cubes
+   it meets (RG2 p.3), and the localised terms are the s-derivatives and the exponentiated cluster expansion of RG2 §2
+   built from these (RG2 pp.13, 21). Each factor depends on the external configurations restricted to its domain X̃^5_m
+   and is built from local inverses: G = G₀(I − R)^{−1} = Σ_n G₀R^n (PBG (3.106), p.414), with R of PBG (3.105) a sum
+   over cubes □ of operators formed from the cube-local inverses G_□, the cutoffs h_□ and ζ_□̃, and the projection P,
+   which PBG p.415 replaces by its own random walk expansion with local inverses G′ on enlarged cubes and boundary
+   conditions outside them. Each such factor does not depend on the torus once its side exceeds diam X̃^5_m. So
+   within one step, for a fixed polymer X, the torus enters only through walks of total length at least a fixed
+   multiple of the side, and these are bounded by the same bounds times e^{−c·side}.
    The inputs of the step also come from the torus: the effective action of the earlier steps, with the R-terms
    R^{(i)} summed over X "in T_ξ" (CRE (2.33), p.260), which the R-operation of LFR1 (0.3)–(0.6) produced. This is
-   handled by induction over the steps, with the claim W_j: every localised term F(X) produced by the steps 0, …, j
-   (regular, R-, and B-terms) with diam X at most a third of the side differs from the term of the same construction
+   handled by induction over the steps, with the claim W_j: every localised regular term and R-term F(X) produced by
+   the steps 0, …, j with diam X at most a third of the side differs from the term of the same construction
    on L^{−j}ℤ^d, to which CRE extends the sums ("to all domains X ∈ D_j for the space L^{−j}Z^d", CRE p.281), by at
    most C_We^{−c·side} times its bound, uniformly in h on H_j. W_{−1} is empty. In step j+1 the new terms are
    analytic functions of the inputs on the domains of CRE p.259, bounded by the inductive bounds, so by Cauchy
@@ -945,11 +1216,30 @@ terms E^{(j+1)}, R, and B produced by step j, step 5 gives that of β_{j+1}, and
    torus are bounded by exp(−κd_j(X)) with d_j(X) at least a fixed multiple of the side. The constants are those of
    the steps, uniform in h on H_k (Lemma 2.10). C_W may grow with j, but only k + 1 steps enter at depth k, and only
    uniformity in h at fixed k is needed here.
-   So Π_{k+1}(x; h) on the torus converges to its limit at fixed x uniformly in h, and with the domination
-   Σ_x|Π_{k+1}(x; h)||x|² ≤ C_ΛE₀, uniform in h and in the torus (Lemma 2.5 on the tube domains, Proposition 2.11,
-   step 5), the finite-volume values of β converge uniformly in h near h⁰. Each is continuous in h by steps 1–4. So
-   β^T_{k+1} is
-   continuous. ∎
+   So each term of Π_{k+1}(x; h) = Σ_X Π_X(x; h), the sum over all polymers X (also those not containing 0, which enter
+   through the derivatives of the background map, Lemma 2.5, step 3), converges on the torus to its limit at fixed X
+   and x uniformly in h. The proof of Lemma 2.5, steps 3–4, on the tube domains gives the pointwise majorant
+   |Π_X(x; h)||x|² ≤ m(X, x) := CE₀r^{−2}e^{−κd_{k+1}(X)}e^{−δ₀(dist(0,X) + dist(x,X))/2}|x|², uniform in h and in
+   the torus (with torus distances there), with Σ_{X,x}m(X, x) ≤ C_ΛE₀ < ∞ on ℤ^d. On the torus of side s, x is
+   represented in the fundamental domain (−s/2, s/2]^d, which defines x_μx_ν. For ε > 0 let F be a finite set of pairs
+   (X, x) of ℤ^d, all within distance R of 0, with Σ_{(X,x)∉F}m(X, x) < ε on ℤ^d. For s > 8R the pairs of F are
+   identified with torus pairs, and their X have diam X ≤ 2R < s/3, as W_k requires. Take the torus pairs with
+   diam X, dist(0, X), and |x| all at most s/8. Lift x into the fundamental domain, and X along its paths from a lift of a
+   point nearest to 0, at distance ≤ s/8 from 0; then the lifts of x and X lie in the ball of radius s/4 about 0. So any
+   two of their points differ by at most s/2 in each coordinate, and then no translate by sℤ^d brings them closer in
+   any coordinate. Hence the torus distances dist(0, X), dist(x, X), and diam X equal the ℤ^d distances of the lifts, and so
+   does d_{k+1}(X) when its tree graphs have length below s/4 in lattice units (the other pairs go to the remainder
+   below): a tree graph is simply connected, so it lifts to ℤ^d with the same length from a point of the lift of X;
+   the lifted tree stays within distance s/4 + s/4 = s/2 of 0, while the other translates of X lie beyond s − s/4, so
+   it meets the cubes of the lift of X, and the ℤ^d value is at most the torus value; the converse inequality is the
+   projection. The lift
+   is injective with the same x_μx_ν, so these pairs not in F contribute less than ε. Every other torus pair has
+   diam X, dist(0, X), or |x| greater than s/8, or only tree graphs of length at least s/4; since d_{k+1}(X) is at
+   least c times the diameter and the tree length at fixed k, its majorant carries a factor e^{−cs}, and the
+   sum of the majorants over them is at most C·poly(s)e^{−cs}, with the polymer count absorbed by part of the factor
+   e^{−κd_{k+1}(X)} as in Lemma 2.5. On F the torus terms converge to the ℤ^d terms uniformly in h by W_k (the B-terms
+   do not enter Π_{k+1}, which is computed from E^{(k+1)}). So Σ_xΠ_{k+1}(x; h)x_μx_ν on the torus converges to its
+   limit uniformly in h near h⁰. Each finite-volume value is continuous in h by steps 1–4. So β^T_{k+1} is continuous. ∎
 
 **Proposition 2.13 (Matching for the Tube Construction).** Let γ be small, and γ′ := (γ^{−2} + C)^{−1/2}. For every K
 and every g ∈ (0, γ′] there is a bare coupling g_0 such that the flow of the tube construction for (K, g) has g_K = g
@@ -970,11 +1260,14 @@ and (x_0, …, x_k) ∈ H_k for all k ≤ K. Along this flow (i) and (ii) of Lem
    its couplings lie in (0, γ]. Then (i) is the bound x_k ∈ T_k, and (ii) is the window bound on [k, l). ∎
 
 *What Is Proved for β_j.* For every target (K, g) with g ≤ γ′, the tube construction for (K, g) is CRE's construction
-with its parameters evaluated at the couplings ĝ_j of the tube (Lemma 2.10), and at every depth k ≤ K:
+with its parameters evaluated at the couplings ĝ_j of the tube (Lemma 2.10), with the threshold of χ′^{(j)} of LFR1
+(1.55) on the unscaled field (*LFR1 (1.55)*, before Lemma 2.10), and with the position-dependent couplings of a
+history that is not a flow given by the top-down formula of *Histories that are not flows*. For it:
 - item 1 concerns the zero-coupling coefficients b_j only, and holds as stated (Theorem 8.1);
-- its β^T_j satisfies the per-step bounds of (W) with δ′ and item 5 with C_rem + C_Rγ^{κ₀−6} on the histories of H_k
-  (*Consequence*);
-- β^T_{k+1} is continuous on H_k (Proposition 2.12);
+- at every depth k < K, its β^T_{k+1} satisfies the per-step bounds of (W) with δ′ and item 5 with
+  C_rem + C_Rγ^{κ₀−6} on the histories of H_k (*Consequence*);
+- at every depth k < K, β^T_{k+1} is continuous on H_k (Proposition 2.12); the tube is not defined at K + 1, and no
+  β^T_{K+1} is used;
 - item 2 holds: a bare coupling g_0 gives the flow with g_K = g inside H_K (Proposition 2.13);
 - items 3 (with δ′ in place of δ) and 4 hold along that matched flow.
 This is not a statement about CRE's printed construction, whose parameters jump or move with the couplings, so that
@@ -1191,18 +1484,50 @@ with C independent of k.
    most C(1 − L^{−α})^{−1}.
 4. At zero coupling β_j = b_j, and the polarisation of A(U_k(e^{iB})) is Δ_k. ∎
 
-**Lemma 5.2 (Alias Summability; Bałaban).** At U = 1, for every k and every coarse momentum p (top units),
+**Lemma 5.2 (Alias Summability).** At U = 1, for every k and every coarse momentum p (top units),
   Σ_{l} |(dH_k)^∧(p + l)| · |p + l|^α ≤ C,
 where the sum runs over the aliases p + l of p in the fine Brillouin zone, (dH_k)^∧ is the symbol of B ↦ d(H_kB), α ∈
-(0,1) is fixed once, and C depends only on d and α. This is the statement in PRT1 p.28–29 following PRT1 (1.63).
+(0,1) is fixed once, and C depends only on d and α. PRT1 pp.28–29 states a bound of this kind after PRT1 (1.63), with
+the exponent α not defined on that page; the proof below derives it from PRT1 (1.63) for every α ∈ (0, 1).
 
-*Source of the range of α.* PRT1 p.29 states the bound for each pair μ, ν, for the expression PRT1 (1.63) multiplied by
-|∂_ν(p + l)||p + l|^α, as the input of the Hölder bounds on ∂_ν(H_kB)_μ; the curvature component is a difference of two
-such terms. PRT1's Hölder exponents range over 0 ≤ α < 1, with constants depending on d and α that blow up as α → 1
-(PRT1 (1.109)–(1.112), pp.35–36). The proof that PRT1 p.29 points to is that of Lemma 2.4 in Bałaban, Commun. Math. Phys.
-89 (1983). On its pp.585–586 it bounds the same alias sum for the scalar kernel ∂G_jQ_j^* through the factors
-|u_j(p + l)| ≤ O(1)∏_μ(1 + |l_μ|)^{−1} and |∂(p + l)|/|p + l|² ≤ O(1)|p + l|^{−1}. These leave
-Σ_{l≠0}|p + l|^{α−1}∏_μ(1 + |l_μ|)^{−1}, which is finite for α < 1, and the page says "the constant depends on α<1".
+*Proof.* We use PRT1's units: the coarse lattice has spacing 1, the fine lattice spacing η = L^{−k}, p ∈ [−π, π)^d, and
+l_μ = 2πm_μ with |m_μ| ≤ (L^k − 1)/2 (PRT1 p.23). Write q := p + l, Δ(q) = Σ_μ|∂_μ(q)|² with ∂_μ(q) = (e^{iηq_μ} − 1)/η,
+Δ₀(p) = Σ_μ|∂¹_μ(p)|² with ∂¹_μ(p) = e^{ip_μ} − 1, u(q) = ∏_μ ∂¹_μ(p)/∂_μ(q), and v_μ(q) = ∂¹_μ(p)/∂_μ(q) (PRT1 (1.31),
+(1.61), and p.24).
+1. *Elementary bounds.* Since |e^{ix} − 1| = 2|sin(x/2)| lies between (2/π)|x| and |x| for |x| ≤ π, and |ηq_μ| ≤ π,
+   - (2/π)|q_μ| ≤ |∂_μ(q)| ≤ |q_μ|, so (4/π²)|q|² ≤ Δ(q) ≤ |q|², and (4/π²)|p|² ≤ Δ₀(p) ≤ |p|²;
+   - |∂¹_μ(p)| ≤ |p_μ| ≤ |q_μ|, since |p_μ| ≤ π ≤ |p_μ + l_μ| when l_μ ≠ 0; so |v_μ(q)| ≤ π/2, |u(q)| ≤ (π/2)^d, and
+     |∂_μ(q)||v_μ(q)| = |∂¹_μ(p)| ≤ 2;
+   - |q_μ| ≥ |l_μ|/2, so |q| ≥ |l|/2;
+   - if l_μ ≠ 0, then |l_μ| ≥ 2π and |v_μ(q)| ≤ (π/2)|p_μ|/|q_μ| ≤ π²/|l_μ| ≤ c_v(1 + |l_μ|)^{−1}, with
+     c_v := π² + π/2; with |v_μ(q)| ≤ π/2 when l_μ = 0, this gives |v_μ(q)| ≤ c_v(1 + |l_μ|)^{−1} for all l, and
+     |u(q)| ≤ c_v^d∏_μ(1 + |l_μ|)^{−1}. This is PRT1 (1.36), p.24, with a constant depending only on d;
+   - at q = p, |v_μ(p)| ≥ 2/π and |u(p)| ≥ (2/π)^d (extended by continuity where p_μ = 0).
+   PRT1 p.28 prints 0 < γ₀ ≤ Δ₀(p)φ_μ(p) ≤ γ₁ for all p, with φ_μ(p) = Σ_{l′}|u(p + l′)|²|v_μ(p + l′)|²/Δ(p + l′)
+   (PRT1 (1.62)), and does not state how γ₀ and γ₁ depend on k. The bullets above give such bounds with constants
+   c₀, c₁ depending only on d. The term l′ = 0 of Δ₀(p)φ_μ(p) is Δ₀(p)|u(p)|²|v_μ(p)|²/Δ(p); it is at least
+   (4/π²)(2/π)^{2d}(2/π)² = (2/π)^{2d+4} =: c₀ and at most (π²/4)(π/2)^{2d+2}. For l′ ≠ 0, Δ(p + l′) ≥ (4/π²)|l′|²/4 and
+   Δ₀(p) ≤ dπ², so Δ₀(p)/Δ(p + l′) ≤ dπ⁴/|l′|² ≤ dπ²/4, and the term is at most (dπ²/4)c_v^{2d+2}∏_ν(1 + |l′_ν|)^{−2}.
+   So c₀ ≤ Δ₀(p)φ_μ(p) ≤ c₁ := (π²/4)(π/2)^{2d+2} + (dπ²/4)c_v^{2d+2}(Σ_{m∈ℤ}(1 + 2π|m|)^{−2})^d.
+   Put N(p) := Σ_{l″}|u(p + l″)|²Δ₀(p)²/Δ(p + l″)². Its term l″ = 0 gives N(p) ≥ (2/π)^{2d}(4/π²)² =: c_N.
+2. *The symbol of H_k.* PRT1 (1.63) writes (H_kB)^∧_μ(q) as T₁ + T₂, both linear in B̂(p).
+   - T₁ = (Δ₀(p)/Δ(q))ū(q)v̄_μ(q)(Δ₀(p)φ_μ(p))^{−1}B̂_μ(p), so |T₁| ≤ (π/(2c₀))Δ₀(p)|u(q)|Δ(q)^{−1}|B̂(p)|.
+   - T₂ is ∂_μ(q)ū(q)Δ(q)^{−1} times Σ_{l′≠l}|u(p + l′)|²Δ₀(p)²Δ(p + l′)^{−1}[|v_μ(p + l′)|²Δ(q)^{−1} −
+     |v_μ(q)|²Δ(p + l′)^{−1}], times N(p)^{−1}(Δ₀(p)φ_μ(p))^{−1}, times b(p) := (Σ_ν|∂¹_ν(p)|²/(Δ₀(p)²φ_ν(p)))^{−1}
+     Σ_λ ∂̄¹_λ(p)(Δ₀(p)φ_λ(p))^{−1}B̂_λ(p). The first sum of the bracket, extended to all l′, is Δ₀(p)²φ_μ(p)Δ(q)^{−1} ≤
+     c₁Δ₀(p)Δ(q)^{−1}; the second, extended to all l′, is |v_μ(q)|²N(p). Since Σ_ν|∂¹_ν(p)|²/(Δ₀(p)²φ_ν(p)) ≥
+     Δ₀(p)/(c₁Δ₀(p)) = 1/c₁ and Σ_λ|∂¹_λ(p)|(Δ₀(p)φ_λ(p))^{−1} ≤ √d|∂¹(p)|/c₀, |b(p)| ≤ (c₁√d/c₀)|∂¹(p)||B̂(p)|. So
+       |T₂| ≤ (c₁√d/c₀²)|∂_μ(q)||u(q)|Δ(q)^{−1}[c₁Δ₀(p)/(c_NΔ(q)) + |v_μ(q)|²]|∂¹(p)||B̂(p)|.
+3. *The term l = 0.* Here q = p, and by step 1 the factors Δ₀(p)/Δ(p), |∂_μ(p)||∂¹(p)|/Δ(p), and |v_μ(p)| are bounded
+   by constants depending on d. So |(H_kB)^∧(p)| ≤ C₁|B̂(p)|, and |(dH_k)^∧(p)||p|^α ≤ 2|∂(p)|C₁|p|^α ≤ C₂, with
+   |p| ≤ π√d.
+4. *The terms l ≠ 0.* Here |q| ≥ π. By step 1, |T₁| ≤ C|u(q)||q|^{−2}; in T₂, |∂_μ(q)|Δ(q)^{−2} ≤ C|q|^{−3} and
+   |∂_μ(q)||v_μ(q)|² ≤ π, so |T₂| ≤ C|u(q)||q|^{−2}, all times |B̂(p)|. The curvature (d_ηA)_{μν} has the symbol
+   ∂_μ(q)Â_ν(q) − ∂_ν(q)Â_μ(q), so |(dH_k)^∧(q)| ≤ 2|q|max_μ|(H_kB)^∧_μ(q)|/|B̂(p)| ≤ C|u(q)||q|^{−1}, and
+     Σ_{l≠0}|(dH_k)^∧(q)||q|^α ≤ C Σ_{l≠0}|q|^{α−1}|u(q)| ≤ C′ Σ_{l≠0}|l|^{α−1}∏_μ(1 + |l_μ|)^{−1}.
+   Since ∏_μ(1 + |l_μ|) ≤ (1 + |l|)^d ≤ (2|l|)^d and α − 1 < 0, |l|^{α−1} ≤ 2^{1−α}∏_μ(1 + |l_μ|)^{(α−1)/d}, and the sum
+   is at most 2^{1−α}(Σ_{m∈ℤ}(1 + 2π|m|)^{−1−(1−α)/d})^d, which is finite and depends only on d and α.
+With step 3 this gives C = C(d, α), independent of k and p. ∎
 
 **Proposition 5.3 (J-Terms, Total).** Let 𝒥_k(B) := Σ_{j=0}^{k−1} J^{(j)}(U_k(e^{iB})), with J^{(j)} as in §3.3. Then
 sup_p ‖Π_{𝒥_k}(p)‖ ≤ C, uniformly in k (from PRT1 (1.63) and Lemma 5.2; proof below). The summation of steps 2–5 is the
@@ -1300,14 +1625,13 @@ type-checked Lean core `BalabanFormal.jterm_assembly`.
    from each component of p_a a multiple of 2π/(Mη) to land in (−π/(Mη), π/(Mη)]; call the result q(a). On the level-m
    lattice p_a and q(a) have the same character, and |q(a)| ≤ |p_a| in the Euclidean norm. Distinct representatives give
    distinct characters, so the Fourier coefficient of (d̄V_1)_{μν} at q is Σ_{a: q(a)=q} σ_m(p_a)ĉ_{μν}(a). Hence, with
-   the last step from Lemma 5.2 (PRT1 p.29),
+   the last step from Lemma 5.2,
      Σ_q |q|^{2α}‖(d̄V_1)^∧_{μν}(q)‖² ≤ Σ_q (Σ_{a: q(a)=q} |p_a|^α‖ĉ_{μν}(a)‖)² ≤ (Σ_a |p_a|^α‖ĉ_{μν}(a)‖)² ≤ C_H²‖B̂(p)‖².
 
-   Here C_H ≤ C, with C from Lemma 5.2. PRT1 p.29 bounds Σ_l |∂_ν(p + l)||(H_kB)^∧_μ(p + l)||p + l|^α for each pair μ, ν
-   by a constant depending on d and on the fixed α (Lemma 5.2), so in that form C_H is at most twice PRT1's constant. The
+   Here C_H ≤ C, with C = C(d, α) from Lemma 5.2, which bounds the curvature symbol (dH_k)^∧ itself. The
    norms are the invariant norms on the Lie algebra: at U = 1, H_k acts on every Lie-algebra component in the same way.
 
-   Summing over the six planes μ < ν gives, by Lemma 5.2 (PRT1 p.29),
+   Summing over the six planes μ < ν gives, by Lemma 5.2,
      Σ_q |q|^{2α}‖(d̄V_1)^∧(q)‖² ≤ 6C_H²‖B̂(p)‖²,
    uniformly in k and m, which is the bound step 3 needs.
 5. *Sum.* Σ_{m≤k} L^{−2α(k−m)} ≤ (1 − L^{−2α})^{−1} (`BalabanFormal.jterm_assembly`). ∎
@@ -1505,39 +1829,185 @@ in k, where η_k = L^{−k}. The type-checked Lean core of the summation is `Bal
 2. *Insert Proposition 6.3.* This gives c ln(1/η_k²)Σ_l|(dH_kB)^∧(q)|² + cΣ_l ln(1/|q|²)|(dH_kB)^∧(q)|² + R-terms.
 3. *First term.* Σ_l |(dH_kB)^∧(q)|² = ‖dH_kB‖² = ⟨B, Δ_k B⟩ by PRT1 (1.65).
 4. *Second term.* For l ≠ 0, |q| ≥ π. Hence |ln(1/|q|²)| ≤ ln(1/|p_0|²) + C_α|q|^{2α}, and the term is at most
-   C(p_0)(Σ_l|q|^α|(dH_k)^∧(q)|)²|B̂|², which is O_{p_0}(1)|B̂|² by Lemma 5.2 (PRT1 p.29).
+   C(p_0)(Σ_l|q|^α|(dH_k)^∧(q)|)²|B̂|², which is O_{p_0}(1)|B̂|² by Lemma 5.2.
 5. *R-terms.* They are at most sup‖R_0‖·‖dH_kB‖², which is bounded by PRT1 (1.67). ∎
 
 ## 7. The Top-Level Part Is Bounded at a Fixed Momentum
 
 **Proposition 7.1.** For fixed p_0 ≠ 0, sup_k ‖Π_{F_k}(p_0)‖ < ∞.
 
-*Proof.* By Lemma 3.3, F_k = ½ log det 𝒟_k − log det(D̄_VᵀD̄_V), with 𝒟_k(U) = Δ_k(U) + D̄_VD̄_Vᵀ and
-⟨z, Δ_k(U)z⟩ = min{h_U(A) : Q_k(U)A = z}. (This minimum is already gauge-invariant: z ↦ z + D̄ω̄ corresponds to
-A ↦ A + Dω, and hD = 0.)
+**Setting.** The background is U = U_k(e^{iB}), B ∈ 𝔅_r (§5), in top units, and V = e^{iB}. The loop momentum is p, a
+coarse momentum with |p_μ| ≤ π; q = p + l are its aliases, and |p̂| := |v(p)|, so (2/π)|p| ≤ |p̂| ≤ |p|.
+- *PBG's objects.* We use PBG's coordinates e^{iηA}U; passing from §3's U e^{iX} is the bondwise linear map
+  X = η Ad(U)^{−1}A, which carries Hessians to Hessians. On the chain all PBG domains Ω_j are the whole torus, so only
+  level k occurs, and L^kη = 1. Then 𝐇 := Hess A(U) is PBG's Δ (3.10), J := ∇A(U) is PBG's J (3.11), and h = Π_⊥𝐇Π_⊥
+  (§3.3). D = D_U, and Q = Q(U) is the linearised k-fold average. Q′, N(Q′) = {λ : Q′λ = 0}, R (the orthogonal
+  projection onto ΔN(Q′)), and G′ are as in PBG (3.21)–(3.24), and QD = D̄Q′ (PBG (3.115)).
+- *The defect of the Hessian.* 𝒩 := 𝐇D. Comparing first-order terms in λ in PBG (3.117) gives
+  ⟨A, 𝒩λ⟩ = ½⟨i[λ(b₋), A(b)] − i[A(b), R_bλ(b₊)], J⟩ =: T(J, λ, A). This is linear in J, local, and contains no
+  derivative: |T(J, λ, A)| ≤ c Σ_b η⁴|J(b)||A(b)|(|λ(b₋)| + |λ(b₊)|), with c absolute.
+- *K.* K := 𝐇 − h = Π_D𝐇 + 𝐇Π_D − Π_D𝐇Π_D, with Π_D := D(DᵀD)^{−1}Dᵀ. Put φ_A := (DᵀD)^{−1}DᵀA. Since 𝐇D = 𝒩,
 
-*(a) Representation.* Let G_a(U) := (h_U + D_URD_Uᵀ + aQᵀQ)^{−1}, with Bałaban's gauge term R as in PRT1 (1.68)–(1.70).
-Set H_k(U) := G_aQᵀ(QG_aQᵀ)^{−1}, the minimiser of h_U + (gauge term) on {QA = z}. Its minimum equals the minimum of h_U,
-because the minimiser lies on the slice RD*A = 0 (PRT1 p.29). So Δ_k(U) = H_k(U)* h_U H_k(U).
+    ⟨A′, KA⟩ = T(J, φ_{A′}, A) + T(J, φ_A, A′) − T(J, φ_A, Dφ_{A′}).  (7.1)
 
-*(b) Analyticity and decay, uniform in k.*
-- PBG Thms 3.3–3.4 give analyticity in complex backgrounds U′U, under PBG (3.37), with exponential decay uniform in the
-  sequence {Ω_j} and in k, for G(U) = (D_U*D_U + D_URD_U* + aQ*Q)^{−1}.
-- The Wilson Hessian is h_U = D_U*D_U + K_U, where K_U is local, analytic, and O(r) for U = U_k(e^{iB}), B ∈ 𝔅_r (its
-  curvature terms). The Neumann series G_a = (1 + GK_U)^{−1}G converges for r small and keeps the exponential decay.
-- QG_aQᵀ lies between (C + a)^{−1} and a^{−1}, because its inverse is (min of h + gauge term on QA = z) + a. So its
-  inverse is analytic and exponentially decaying (PBG (3.132)).
-- H_k(U) is exponentially decaying (PBG Thm 3.12).
-- Hence B ↦ 𝒟_k(U_k(e^{iB})) is analytic on 𝔅_r, with kernel bounded by Ce^{−δ|y−y′|}, and C, δ, r independent of k.
+  So K is linear in J, and it is nonlocal through φ.
+- *PBG's propagators.* Δ_π is PBG's gauge-invariant extension (3.119), and Δ′_π := 𝐇 − Δ_π is given by PBG (3.120).
+  Δ_π is invariant only under λ ∈ N(Q′). Every term of (3.120) contains λ_A := G′RD*A. G := (Δ_π + DRD* + aQ*Q)^{−1}
+  (PBG (3.122)), H := GQ*(QGQ*)^{−1} (PBG (3.126)), and C := G − GQ*(QGQ*)^{−1}QG. By PBG (3.124), RD*H = 0, so
+  λ_{Hz} = 0.
+- *Bloch norms.* A field X is a Bloch wave of quasi-momentum p if X(x + y) = e^{ip·y}X(x) for coarse translations y.
+  Matrix elements between Bloch waves are taken per top unit cell. Put ‖X‖_∞ := sup|X| and
+  ‖X‖_2 := (Σ_{x∈cell} η⁴|X(x)|²)^{1/2}, so ‖X‖_2 ≤ ‖X‖_∞ and ‖X‖_∞ ≤ Σ_l|X̂(p + l)|. If three Bloch waves have
+  quasi-momenta adding to 0, then Σ_{cell} η⁴|fgh| ≤ ‖f‖_∞‖g‖_∞‖h‖_2. At U = 1, on quasi-momentum p, the
+  symbols satisfy Δ(q) ≥ (4/π²)|q|² and |q| ≥ |p|. So ‖(DᵀD)^{−1}‖ ≤ (π²/4)|p|^{−2}, ‖(DᵀD)^{−1}Dᵀ‖ ≤ (π/2)|p|^{−1},
+  and ‖Π_D‖ ≤ 1.
 
-*(c) At U = 1.* 𝒟_k(1) acts by multiplication with c|p̂|²·1 ≤ 𝒟_k(1)(p) ≤ C|p̂|²·1. On transverse modes this is
-PRT1 (1.67) for Δ_k; on longitudinal modes Δ_k(1) = 0 and D̄D̄ᵀ = |p̂|². Also D̄ᵀD̄(1) = |p̂|².
+*Proof.*
 
-*(d) Second-order coefficient.* Expand 𝒟 = 𝒟_0 + 𝒟^{(1)}[B] + 𝒟^{(2)}[B, B] + …. The second-order coefficient of
-log det 𝒟 is tr(𝒟_0^{−1}𝒟^{(2)}) − ½ tr(𝒟_0^{−1}𝒟^{(1)}𝒟_0^{−1}𝒟^{(1)}). By (b) and the Cauchy estimate, the vertex
-symbols 𝒟^{(1)}(k, k+p_0) and 𝒟^{(2)} are bounded uniformly. With (c), which rests on PRT1 (1.67),
-  ‖Π_{log det 𝒟_k}(p_0)‖ ≤ C ∫_{T⁴} (|k̂|^{−2} + |k̂|^{−2}|(k+p_0)^|^{−2}) d⁴k < ∞  (d = 4, p_0 ≠ 0).
-The ghost term log det(D̄_VᵀD̄_V) is explicit and bounded in the same way. ∎
+*(a) A fixed transverse space.* Let T₀ := (ran D̄_0)^⊥, with D̄_0 the coarse gauge action at V = 1, and orthogonal projection P_T, and let Π_V be the orthogonal
+projection onto (ran D̄_V)^⊥.
+- For small real B on a torus, Π_V maps T₀ isomorphically onto (ran D̄_V)^⊥.
+- By Lemma 3.3, Δ_k = Π_VΔ_kΠ_V, so det_{T₀}(P_TΔ_kP_T) = det_⊥(Δ_k) · det_{T₀}(P_TΠ_VP_T).
+- Hence
+
+    F_k = ½ log det_{T₀}(P_TΔ_kP_T) − ½ log det_{T₀}(P_TΠ_VP_T) − ½ log det(D̄_VᵀD̄_V).
+
+  The last two terms depend on B and not on k (step (e)). As in Remark 3.4, the second-order coefficients are computed
+  in infinite volume, at m = 0, as momentum integrals at p₀ ≠ 0 (step (f)).
+
+*(b) Representation.* For every coarse z,
+
+    ⟨z, Δ_kz⟩ = min{⟨A, (h + DRD* + aQ*Q)A⟩ : QA = z} − a|z|².
+
+- Every A with QA ∈ z + ran D̄ is moved by a gauge direction Dω to QA = z, because QD = D̄Q′ and Q′ is onto. h is
+  gauge-invariant.
+- Some λ ∈ N(Q′) with Δλ = RD*A exists, because RD*A ∈ ΔN(Q′). The move A ↦ A − Dλ leaves QA and h unchanged and
+  gives RD*A = 0 (PBG p.419). There DRD* vanishes, and DRD* ≥ 0 everywhere.
+
+Since 𝐇 = Δ_π + Δ′_π and h = 𝐇 − K, we have h + DRD* + aQ*Q = G^{−1} − K′ with K′ := K − Δ′_π. Here K′ is linear in J
+and invariant under N(Q′). For t ∈ ℂ let
+
+    m_t(z) := min{⟨A, (G^{−1} − tK′)A⟩ : QA = z} − a|z|².
+
+Then Δ_k = m_1. The constrained Gaussian (Schur complement) gives the t^n term of m_t as −t^n H*K′(CK′)^{n−1}H for
+n ≥ 1, with t⁰ term (QGQ*)^{−1} − a. On a torus, K′ = O(B), so for small B the map t ↦ m_t is analytic on |t| ≤ 2,
+and the t^n term is of order n in B. Moreover H*Δ′_πH = 0: polarising (3.120), every term contains λ_{Hz} = 0 or
+λ_{Hz′} = 0. So, up to terms of order three in B,
+
+    Δ_k = [(QGQ*)^{−1} − a] − H*KH − H*K′CK′H.  (7.2)
+
+*(c) Inputs on 𝔅_r.*
+- (QGQ*)^{−1}(U) has kernel ≤ Ce^{−δ₁|y−y′|} (PBG (3.132) with Theorem 3.12), and H(U) has the bounds (3.133). These
+  hold for complex B ∈ 𝔅_r by Condition 4 and READINGS.md R50, through the conventions of §5. So sup|H(U)z| ≤ C|ẑ| for
+  a coarse plane wave z.
+- U_k(e^{iB}) lies in U_k^c (conventions of §5), so |J| < α₀ on 𝔅_r, with RG1's α₀ (RG1 (1.16), p.262, with n = k and L^kξ = 1; γ₀ = α₀ by p.263 l.3).
+- (7.2) is invariant under fine gauge transformations that leave V fixed. We take VAR's Landau gauge, in which
+  U = exp(iη𝓗(B)) with |𝓗| < B₅ε₁, VAR's ε₂ (VAR Proposition 9 with (19) and (173), pp.281, 305, 309).
+- Cauchy estimates in the plane-wave directions b, b̄ (𝔅-norm ≤ (1 + π)|b|) bound the first- and second-order parts.
+  - j₁ and j₂ of J have ‖j₁‖_∞ ≤ C|b| and ‖j₂‖_∞ ≤ C|b|².
+  - H₁z, the first-order part of H(U)z, has ‖H₁z‖_∞ ≤ C|b||ẑ|.
+  - A₁, the first-order part of 𝓗, has ‖A₁‖_∞ ≤ C|b|.
+  - The first- and second-order parts of (QGQ*)^{−1}(U) have kernels ≤ C|b|e^{−δ₁|y−y′|} and ≤ C|b|²e^{−δ₁|y−y′|}.
+- At U = 1, ‖G‖ ≤ C and ‖G′‖ ≤ C, by the kernel bounds of PBG Theorems 3.1 and 3.3 (B₀e^{−δ₀d(y,y′)} in top units) and
+  the Schur test.
+
+All these C depend on d, L, r, RG1's α₀, and PBG's constants, and not on k.
+
+*(d) Vertices.* On T₀ write P_TΔ_kP_T = Δ⁰ + V¹[B] + V²[B, B] + …. Δ⁰ is PRT1's Δ_k on transverse modes, so
+γ₀|p̂|² ≤ Δ⁰(p) ≤ γ₁|p̂|² (PRT1 (1.66)–(1.67)). Let z = ẑe^{ip·y} and z′ be transverse plane waves, and B = be^{ip₀·y} + c.c.
+Each term of (7.2) is bounded as follows. Step (c) gives ‖Hz‖_∞ ≤ C|ẑ|, and Lemma 7.2 gives ‖φ_{Hz}‖_∞,
+‖Dφ_{Hz}‖_∞ ≤ C|ẑ|. We claim
+|⟨z′, V¹z⟩| ≤ C|b||ẑ||ẑ′| (z′ of momentum p + p₀) and
+
+    |⟨z′, V²[b, b̄]z⟩| ≤ C(1 + |(p + p₀)^|^{−2} + |(p − p₀)^|^{−2})|b|²|ẑ||ẑ′|  (z′ of momentum p).
+- *T0, the analytic term.* (QGQ*)^{−1} − a contributes to V¹ and V² at most C|b||ẑ||ẑ′| and C|b|²|ẑ||ẑ′| (step (c)).
+- *T1, first order in J at U = 1.* −⟨Hz′, K(1, j₁)Hz⟩ is the J-part of V¹. By (7.1) it is at most
+  c‖j₁‖_∞(‖φ_{Hz′}‖_∞‖Hz‖_2 + ‖φ_{Hz}‖_∞‖Hz′‖_2 + ‖φ_{Hz}‖_∞‖Dφ_{Hz′}‖_2) ≤ C|b||ẑ||ẑ′|.
+- *T2, the second-order part of J.* −⟨Hz′, K(1, j₂)Hz⟩ ≤ C|b|²|ẑ||ẑ′| in the same way.
+- *T3, the term H*K′CK′H at U = 1.*
+  - Let X := K′(1, j)Hz with j ∈ {j₁[b], j₁[b̄]}; its quasi-momentum is p′ = p ± p₀.
+  - C ≥ 0, and on ker Q it is the inverse of G^{−1}. So ⟨X, CX⟩ = sup{2Re⟨X, Y⟩ − ⟨Y, G^{−1}Y⟩ : Y ∈ ker Q},
+    with Y a Bloch wave of quasi-momentum p′.
+  - ⟨X, Y⟩ = ⟨Hz, KY⟩ − ⟨Hz, Δ′_πY⟩. By (7.1), |⟨Hz, KY⟩| ≤ c‖j‖_∞(‖φ_{Hz}‖_∞‖Y‖_2 + (‖Hz‖_∞ +
+    ‖Dφ_{Hz}‖_∞)‖φ_Y‖_2) ≤ C(1 + |p̂′|^{−1})|b||ẑ|‖Y‖_2.
+  - Polarising (3.120) with λ_{Hz} = 0 gives ⟨Hz, Δ′_πY⟩ = ½⟨i[λ_Y(b₋), Hz(b)] − i[Hz(b), R_bλ_Y(b₊)], j⟩. So
+    |⟨Hz, Δ′_πY⟩| ≤ c‖j‖_∞‖Hz‖_∞‖λ_Y‖_2.
+  - At U = 1, Δ_π = ∂*∂ ≥ 0, so ⟨Y, G^{−1}Y⟩ ≥ ‖RD*Y‖² and ⟨Y, G^{−1}Y⟩ ≥ ‖G‖^{−1}‖Y‖². Also
+    ‖λ_Y‖ ≤ ‖G′‖‖RD*Y‖.
+  - Hence ⟨X, CX⟩ ≤ C(1 + |p̂′|^{−1})²|b|²|ẑ|², and by Cauchy–Schwarz for C ≥ 0 the T3 terms are at most
+    C(1 + |(p + p₀)^|^{−2} + |(p − p₀)^|^{−2})|b|²|ẑ||ẑ′|.
+- *T4, first order in J and in U.* This is the first-order part in U of −⟨H(U)z′, K(U, j₁)H(U)z⟩; the Δ′_π part
+  vanishes at every U by (3.124).
+  - When the derivative falls on H, (7.1) gives terms such as T(j₁, φ_{H₁z′}, Hz), T(j₁, φ_{Hz}, H₁z′), and
+    T(j₁, φ_{Hz}, Dφ_{H₁z′}), and the same with z and z′ exchanged. Here ‖φ_{H₁z′}‖_2 ≤ (π/2)|p′|^{−1}‖H₁z′‖_2 at the
+    quasi-momentum p′ = p ± p₀ of H₁z′, and ‖Dφ_{H₁z′}‖_2 ≤ ‖H₁z′‖_2. These terms are at most
+    C(1 + |p̂′|^{−1})|b|²|ẑ||ẑ′|.
+  - When the derivative falls on D_U, D₁λ(b) = −i[A₁(b), λ(b₊)] has no derivative, and the derivative of 𝒩 carries a
+    factor η. At fixed A, the derivative of φ_A is (DᵀD)^{−1}[D₁ᵀΠ_⊥A − DᵀD₁φ_A]. On quasi-momentum p′, its norm is at
+    most C‖A₁‖_∞(|p′|^{−2}‖A‖_2 + |p′|^{−1}‖φ_A‖_∞). With A = Hz, Hz′, (7.1) and Lemma 7.2 bound these terms by
+    C(1 + |p̂′|^{−2})|b|²|ẑ||ẑ′|.
+
+The four kinds of term give the two claimed bounds. All constants are independent of k.
+
+*(e) The top-level terms.* They are explicit functions of B on the unit lattice.
+- P_TD̄_V = P_TD̄_1[B] + O(B²), where D̄_1[B]ω(c) = −i[B(c), ω(c₊)] has no derivative. So
+  log det_{T₀}(P_TΠ_VP_T) = −tr(P_TD̄_1(D̄_0ᵀD̄_0)^{−1}D̄_1ᵀP_T) + O(B³), and its symbol at p₀ is at most
+  C∫|p̂|^{−2}d⁴p.
+- For log det(D̄_VᵀD̄_V), the first- and second-order vertices of D̄_VᵀD̄_V are at most C(|p̂| + |(p + p₀)^|) and
+  C(1 + |p̂|). So its symbol at p₀ is at most C∫(|p̂|^{−2} + |p̂|^{−2}|(p + p₀)^|^{−2}(|p̂| + |(p + p₀)^|)²)d⁴p.
+
+*(f) Integration.* The second-order coefficient of ½ log det_{T₀}(Δ⁰ + V¹ + V²) is
+½tr(Δ⁰^{−1}V²) − ¼tr(Δ⁰^{−1}V¹Δ⁰^{−1}V¹). By (d) and γ₀|p̂|² ≤ Δ⁰,
+
+    ‖Π_{F_k}(p₀)‖ ≤ C ∫_{[−π,π]⁴} [|p̂|^{−2}(1 + |(p + p₀)^|^{−2} + |(p − p₀)^|^{−2}) + |p̂|^{−2}|(p + p₀)^|^{−2}] d⁴p
+      + (the terms of (e)) < ∞.
+
+The integrals converge because d = 4 and p₀ ≠ 0, which separates the singular points 0 and ∓p₀. C does not depend on
+k. ∎
+
+**Lemma 7.2 (The Gauge Parameter of H at U = 1).** Let z = ẑe^{ip·y} be a coarse plane wave with p ≠ 0 and |p_μ| ≤ π,
+and let H = H(1). If z is transverse (Σ_μ \overline{v_μ(p)}ẑ_μ = 0), then φ := (∂*∂)^{−1}∂*Hz satisfies ‖φ‖_∞ + ‖∂φ‖_∞ ≤ C|ẑ|. Here C depends only on d and L.
+
+*Proof.* We use the notation of Lemma 5.2: q = p + l, Δ(q), Δ₀(p), u, v_μ, φ_μ, c₀, c₁, c_N.
+1. *H minimises the curvature.*
+   - Hz minimises ⟨A, G^{−1}A⟩ on {Q̃A = z} (PBG p.420), where Q̃ := Q(1) is the first-order average of the chain
+     (Proposition 5.3, step 1). It lies on the slice R∂*A = 0 (PBG (3.124)), where ⟨A, G^{−1}A⟩ = ‖∂A‖² + a|z|².
+   - By step (b) of Proposition 7.1, every A with Q̃A = z can be moved into the slice by some λ ∈ N(Q′) without
+     changing ‖∂A‖² or Q̃A. So Hz minimises ‖∂A‖² on {Q̃A = z}.
+   - By Proposition 5.3, step 1, this minimum is attained exactly at the curvature ∂H_kz, with PRT1's H_k. (The
+     centred blocks change Fourier coefficients by unit phases only.) For quasi-momentum p ≠ 0, a curl-free Bloch wave
+     is a gradient. So Hz = A_⊥ + ∂φ with A_⊥ := Π_⊥H_kz.
+2. *PRT1's gauge parameter.* Put S(p) := Σ_ν|∂¹_ν(p)|²/(Δ₀(p)²φ_ν(p)), N(p) := Σ_{l″}|u(p + l″)|²Δ₀(p)²/Δ(p + l″)², and
+   β(p) := Σ_λ \overline{∂¹_λ(p)}(Δ₀(p)φ_λ(p))^{−1}ẑ_λ.
+   - Apply ∂* to the first form of PRT1 (1.63). Use \overline{∂_μ(q)}\overline{v_μ(q)} = \overline{∂¹_μ(p)} and
+     Σ_μ|∂_μ(q)|² = Δ(q). The B̂_μ term and the ∂¹_μ term then cancel, and
+
+       (∂*H_kz)^(q) = \overline{u(q)}Δ₀(p)N(p)^{−1}S(p)^{−1}β(p)/Δ(q).
+
+   - So φ_k := (∂*∂)^{−1}∂*H_kz has φ̂_k(q) = \overline{u(q)}Δ₀(p)N(p)^{−1}S(p)^{−1}β(p)/Δ(q)².
+   - With N ≥ c_N, S ≥ 1/c₁, and the bounds of Lemma 5.2, step 1, this gives
+     Σ_l(1 + |∂(q)|)|φ̂_k(q)| ≤ C|β(p)||p|^{−2}.
+   - Next, |Δ₀(p)φ_λ(p) − 1| ≤ C|p|².
+     - Write s(x) := sin x/x. Then |∂¹_μ(p)|² = p_μ²s(p_μ/2)² and |∂_μ(p)|² = p_μ²s(ηp_μ/2)². Since s ∈ [2/π, 1] and
+       |s(x)² − 1| ≤ x²/3 for |x| ≤ π/2, the term l′ = 0 is a product of factors 1 + O(|p|²).
+     - For l′ ≠ 0, some l′_ν ≠ 0 gives |v_ν(p + l′)|² ≤ C|p|²(1 + |l′_ν|)^{−2}, and Δ₀(p)/Δ(p + l′) ≤ π²|p|²/|l′|². So
+       these terms add up to at most C|p|⁴.
+   - For transverse z, β = Σ_λ \overline{∂¹_λ}((Δ₀φ_λ)^{−1} − 1)ẑ_λ, so |β| ≤ C|p|³|ẑ|. Hence ‖φ_k‖_∞ + ‖∂φ_k‖_∞ ≤
+     C|p||ẑ|.
+   - By Lemma 5.2, steps 3–4, Σ_l|(H_kz)^(q)| ≤ C|ẑ|. So ‖H_kz‖_∞ ≤ C|ẑ|.
+3. *The slice gauge parameter.*
+   - By Proposition 5.3, steps 1 and 4, Q̃A = Q_kA + ∂̄ω(A) at U = 1, and Q̃∂λ = ∂̄Q′λ, with Q′ the restriction to the
+     coarse sites (RG1 (0.6)).
+   - ω(A) is the sum over the k steps of the endpoint terms of step 4 of Proposition 5.3, each applied to the straight
+     level-(j − 1) average of A and restricted to the coarse sites. The contours of 𝐆(y, x) are shortest paths with
+     |n_μ| ≤ (L − 1)/2 (RG1 p.252), so the j-th term is at most (d/2)L^{j−k}sup|A|. Gradients pass to gradients by
+     the covariance RG1 (0.6). Hence |ω(A)| ≤ (dL/(2(L − 1)))sup|A|.
+   - Hz = H_kz + ∂(φ − φ_k), and Q_kH_kz = z (PRT1 p.29). So Q̃Hz = z gives
+     z + ∂̄ω(H_kz) + ∂̄Q′(φ − φ_k) = z, that is, ∂̄Q′φ = ∂̄(Q′φ_k − ω(H_kz)). Q′φ is fixed by this up to a constant, and
+     |(Q′φ)^| ≤ ‖φ_k‖_∞ + C‖H_kz‖_∞ ≤ C|ẑ|.
+   - The slice condition R∂*∂φ = 0 says that Δ²φ ⊥ N(Q′), that is, Δ²φ ∈ ran Q′ᵀ. So
+     φ̂(q) = (Q′φ)^Δ(q)^{−2}/Σ_{l′}Δ(p + l′)^{−2}.
+   - Hence ‖φ‖_∞ ≤ Σ_l|φ̂(q)| = |(Q′φ)^| ≤ C|ẑ|, and ‖∂φ‖_∞ ≤ Σ_l|∂(q)||φ̂(q)| ≤ C|p||ẑ|. ∎
 
 ## 8. The Window Theorem
 
@@ -1567,15 +2037,32 @@ With CRE's cutoff δ_k, Proposition 2.9 also gives (P2) with δ = C_remγ² (RG1
 ## 9. Inputs
 
 **Inputs taken from Bałaban without re-proof, with their caveats.**
-- PRT1 (1.63), (1.65)–(1.67) and the alias-summability statement on PRT1 p.29; PBG Thms 3.3, 3.4, 3.12, 3.15 and
-  PBG (3.132); RG1 (0.28)–(0.30), RG1 (1.8)–(1.9), RG1 p.263 (analyticity domains); VAR Thm 1 and §G.
+- PRT1 (1.31), (1.61)–(1.63), and the alias decomposition of PRT1 p.23 (for Lemma 5.2, whose bounds (1.36) and
+  γ₀ ≤ Δ₀φ_μ ≤ γ₁ of PRT1 p.28 are derived there with constants depending only on d), and PRT1 (1.65)–(1.67); PBG Thms
+  3.3, 3.4, 3.12, 3.15; PBG (3.132), which PBG p.422 gives without proof ("We will not repeat these considerations
+  here, let us write only bounds"); RG1 (0.28)–(0.30), RG1 (1.8)–(1.9), RG1 p.263 (analyticity domains); VAR Thm 1
+  and §G.
+- For Proposition 5.3, steps 1 and 4, and Proposition 7.1(a): PRT1's corner blocks (p.18), its averages (1.8) and
+  (1.11), p.19, and (1.16)–(1.18), p.20; the gauge covariance (1.20), p.20; the projection R onto ΔN(Q′_k) (pp.24–25);
+  the properties of H_kB on p.29 (Q_kH_kB = B, R∂*H_kB = 0, and H_kB a minimum of ½⟨∂A, ∂A⟩ on
+  {A : Q_kA = B, R∂*A = 0}); the gauge term of PRT1 (1.68)–(1.70); the Wilson action RG1 (0.2) and the centred blocks
+  RG1 (0.3), p.252; RG1 (0.17) and (0.19), p.255; and RG1 (0.21)–(0.22), p.256 (the unique critical orbit of minima,
+  proved in VAR).
 - PRT1 and PBG were written for the averaging of AVG (CMP 98); RG1 uses the Euclidean-symmetric average RG1 (0.4). At
   U = 1 the first-order part of RG1 (0.4) is PRT1's straight average up to a gradient and a fine translation
-  (Proposition 5.3, steps 1 and 4), so Lemma 5.2 and PRT1 (1.65)–(1.67) apply to the chain at U = 1. The sentence on
-  RG1 p.253 that the earlier results hold for any average with the listed properties concerns group averages M
-  (READINGS.md R47, scope) and is not used. PBG's results away from U = 1 (§7) are not covered by this argument; their
-  use for RG1 (0.4) is an input taken as Bałaban states it.
-- VAR Thm 1 inherits the sketched Theorem 8 of CMP 99 389–434
+  (Proposition 5.3, steps 1 and 4), so Lemma 5.2 and PRT1 (1.65)–(1.67) apply to the chain at U = 1. This argument
+  uses R47 only for the statement that the chain averages with RG1 (0.4); the sentence on RG1 p.253 that the earlier
+  results hold for any average with the listed properties concerns group averages M (R47, scope) and is not used.
+- PBG's results away from U = 1 (Propositions 4.2, 5.3, and 7.1; Condition 4) are not covered by this argument. They enter as
+  Bałaban applies them to the chain of RG1, RG2, and CRE, whose averaging CRE p.243 states as RG1 (0.4) or (0.12):
+  RG1 p.261 (the operators H_{1,j}, Δ₁ of PBG Sect. D, and the analyticity "from results of that paper" under PBG
+  (3.35)–(3.38)); RG1 pp.266–267 (PBG (3.127)–(3.128) and (3.156)); RG2 p.3 (the expansion PBG (3.107)–(3.108),
+  whose bound "holds for all operator norms in formulations of theorems in [13]"); RG2 p.5 ("in all norms of Theorems
+  3.1.-3.10 [13]"); RG2 p.13 (random walk expansions "discussed in [13] for all operators determining Δ_k, and for
+  C^{(k)}(Z_0)", with PBG (3.185)); and CRE p.276 ("we apply Theorems 3.7–3.10 [13] in their full generality").
+  Reading these applications as Bałaban's statement that PBG's results hold for the operators of that chain is
+  READINGS.md R50.
+- VAR Thm 1 inherits the sketched Theorem 8 of REG (p.101: "Inspecting the proofs … almost without any changes")
   (`D:\University\Oxford PostDoc\Balaban\BALABAN_DEPENDENCE_TREE.md`, D3). It enters §§5 and 7
   through the analyticity of U_k(V).
 - VAR (189), stated without proof, enters Lemma 2.5 through VAR (190) (sidecar node VAR_189).
@@ -1585,6 +2072,17 @@ With CRE's cutoff δ_k, Proposition 2.9 also gives (P2) with δ = C_remγ² (RG1
   (2.46), p.263, and the statement that the step output satisfies the inductive assumption (CRE p.279), and the
   estimates of LFR1 and LFR2, including LFR2 (1.79)–(1.80), pp.383–384, and of UV3, CMP98, REG, and VAR as CRE uses
   them.
+- Readings of these inputs, as READINGS.md records them, each checked against the print:
+  - R40: the B-set of RG2 (1.34) is a complex polydisc, and RG2 Lemmas 1–2 hold on it, as "defined and analytic on
+    the space (1.34)" states (RG2 pp.9–11; Lemma 2.7, step 1);
+  - R43: CRE (3.16)'s threshold applies to the field-scale fluctuation g_kA_k (CRE pp.267–268; §0, *Condition 3*);
+  - R4: LFR1 p.198 and LFR2 p.363 use two different exponents ν, and with N = R_j both conditions hold for small g
+    (*CRE's Construction as a Function of the History*; Lemma 2.10, step 4);
+  - R47: the RG1 and CRE results used here hold for the chain built with the averaging RG1 (0.4), which CRE p.243
+    names as its averaging (Proposition 5.3, step 4, and the bullets above on the averaging);
+  - R50: PBG's results hold for the operators of the chain of RG1, RG2, and CRE, as Bałaban applies them there
+    (Propositions 4.2, 5.3, and 7.1; Condition 4); PBG states Thms 3.12, 3.15, and (3.132) for real U, and their
+    complex form rests on RG1 p.261 and RG2 pp.3, 5 (R50).
 - RG2's sketch on p.11 for the terms of P^{(k)} other than V, for Lemma 2.7 and so for Proposition 2.9.
 
 **Arguments of This File That Extend Bałaban's Statements.** These are not printed by Bałaban; their proofs are in §§0
@@ -1593,6 +2091,9 @@ and 2, and, for Theorem 8.1 and Corollary 8.2, in §§3–8.
   pp.267, 271, 272, 274, 278–283; §0, *CRE's Step Terms and β_j*). It identifies the regular part of the tube
   construction's β^T with RG1's construction run with the tube cutoffs δ_j^T, whose bounds come from Propositions 2.4
   and 2.9 (Lemma 2.10, step 7).
+- The alias summability (Lemma 5.2) for every α ∈ (0, 1), derived from PRT1 (1.63) with the bounds (1.36) and
+  γ₀ ≤ Δ₀φ_μ ≤ γ₁ proved there with constants depending only on d; PRT1 pp.28–29 states a bound of this kind without
+  defining its exponent.
 - The window theorem for the zero-coupling coefficients (Theorem 8.1, from §§3–7), the flow lemma (Lemma 2.1),
   Remark 2.3, and the matching for simple G (Corollary 8.2). RG1 Theorem 2 (RG1 p.259) is stated for SU(2), and its
   proof is deferred to "a separate paper"; Corollary 8.2 proves it for simple G.
@@ -1608,6 +2109,10 @@ and 2, and, for Theorem 8.1 and Corollary 8.2, in §§3–8.
   (Proposition 2.11, steps 3–4, and *The Step with Complex Multiples of the R-Terms*).
 - Lemma 2.5 on the (2.28) domains with the tube radii, with Cauchy radius r ≥ c·min(α^T_{0,k+1}, α^T_{1,k+1})
   (Proposition 2.11, step 5).
+- The decomposition χ′^{(j)} = χ({|g_jB_j(b)| < δ′_j}) with the threshold on the unscaled field, in place of LFR1
+  (1.55), whose print has the scaled variable, with the four steps that use it, among them the large-field factor
+  exp(−cA₁²p₁²(g_j)) of the components it
+  excludes, which LFR2 does not print (*LFR1 (1.55)*, before Lemma 2.10).
 - The tube construction, its convention for histories that are not flows, and its admissibility (Lemma 2.10). Step 6
   of its proof rests on a reading of every line of CRE, LFR1, LFR2, and UV3 that contains one of the parameters,
   sorted into four kinds and two further uses.
