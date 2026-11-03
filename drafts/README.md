@@ -23,10 +23,11 @@ The supporting triage records from rounds 20–49, the [rounds 50–51 triage](W
 
 ### Further Iteration and Coupling Estimates
 
-- [Beta function for the Wilson-loop analysis](BETA_FUNCTION_WILSON_LOOPS.md): one-loop coefficient, remainder and coupling-flow derivations, with the distinction between RG1, CRE and the tube construction.
+- [Beta function for the Wilson-loop analysis](BETA_FUNCTION_WILSON_LOOPS.md): one-loop coefficient, remainder and coupling-flow derivations, with the distinction between RG1, CRE and the tube construction; the semisimple extension covers additive actions through a product construction with independently tuned couplings.
 - [Complex gauge covariance](WILSON_IT1_COMPLEX_COVARIANCE_2026_10_29.md) and [averaged current](WILSON_IT1_RMJ_CLOSURE_2026_10_30.md): complex carry and evaluation estimates, derived with their stated inputs and awaiting review.
 - [Step-1 branch-weight comparison](WILSON_IT1_RW1_CLOSURE_2026_10_30.md): the real and complex representations and their stated review qualifications.
 - [Round-53 dispositions](WILSON_IT1_TRIAGE_R53_2026_10_29.md): iteration and R-step findings and repairs.
+- [Real base-current draft](WILSON_IT1_JBASE_DRAFT_2026_11_03.md) and [old-layer response draft](WILSON_IT1_REVAL_OLD_DRAFT_2026_11_03.md): supporting R-step calculations with their recorded scopes and review qualifications.
 
 ### Two-Loop Correlation Functions
 
@@ -65,6 +66,7 @@ The supporting triage records from rounds 20–49, the [rounds 50–51 triage](W
 - [Large-field dependency analysis](WILSON_IT1_LF_DEPENDENCY_ANALYSIS_2026_10_30.md): dependencies at the revision it analyses; read it alongside the current large-field and walk-factor drafts.
 - [Large-field review dispositions](WILSON_IT1_TRIAGE_LF_GAMMA_2026_10_29.md): reviews, objections and subsequent repairs through the latest working revision.
 - [Archived repair sections](WILSON_IT1_LF_GAMMA_ARCHIVE_2026_10_30.md): sections removed from the active repair note.
+- Large-field weighted-response reviews: rounds [38](WILSON_IT1_LF_TRIAGE_R38_2026_11_03.md), [39](WILSON_IT1_LF_TRIAGE_R39_2026_11_03.md), [40](WILSON_IT1_LF_TRIAGE_R40_2026_11_03.md), [41](WILSON_IT1_LF_TRIAGE_R41_2026_11_03.md), [42](WILSON_IT1_LF_TRIAGE_R42_2026_11_03.md) and [43](WILSON_IT1_LF_TRIAGE_R43_2026_11_03.md). The latest repairs retain the review qualifications recorded there.
 
 ## Manuscript insert drafts
 

@@ -9,7 +9,8 @@ contract (`D:\University\Oxford PostDoc\Balaban\sidecar\BalabanSidecar\`), and a
 - PRT1 = CMP 95; PRT2 = CMP 96 223–250; CMP98 (also AVG) = CMP 98 17–51; REG = CMP 99 75–102; PBG = CMP 99 389–434;
   UV3 = CMP 102 255–275; VAR = CMP 102 277–309.
 
-G is a compact simple group, d = 4, and L is odd. The semisimple case is the open future direction of §10.
+G is a compact simple group, d = 4, and L is odd. §10 treats semisimple G: Proposition 10.2 reduces additive actions to
+the simple factors.
 
 ## 0. The Result
 
@@ -25,7 +26,7 @@ by its context, as in the sources. δ without an index is the window constant of
 smallness constant of RG2, CRE, or UV3 where those are quoted (RG2 (1.36), Proposition 2.4, step 2, Lemma 2.8, CRE
 p.251); δ_k = g_k(A₁/A₀)p₀(g_k) is CRE's cutoff (δ_0 at step 0, δ^T_k in the tube construction), and δ₀ is the decay
 rate of VAR and of the random walks of RG2 (1.7). K is the Killing form in Lemma 1.1 and Lemma 6.5, ker Q or
-Hess A − h where §§3, 6, and 7 say so, and otherwise the number of steps of a target (K, g); K_R (Proposition 2.11) is a
+Hess A − h where §§3, 4, 6, and 7 say so, and otherwise the number of steps of a target (K, g); K_R (Proposition 2.11) is a
 constant. κ is the Killing ratio in c, in §6 from Lemma 6.5 on, and in §§7–8 (Theorem 8.1), and otherwise the decay
 constant of RG1, RG2, and CRE (as in exp(−κd_j(X))). p₀ is CRE's exponent in p₀(g) = A₀(log g^{−2})^{p₀}, except in §§7–8, where p₀ ≠ 0 is the external momentum. γ₀ and γ₁ are PRT1's bounds of (1.66)–(1.67) and p.28 in §§5 and 7–9; γ₀ is the coupling of "(0.33) [I]" in §0 and LFR2's constant of the large-field factor exp(−γ₀(1/g²)…) in §2. In §7, a is PBG's constant in aQ*Q (3.122), not a lattice spacing; R and N(Q′) are PBG's projection and kernel (3.21), N(p) is Lemma 5.2's normaliser, and 𝒩 := 𝐇D. The full list, with the clashes against the Wilson-loop notes, is §10 of CONSTANTS_AND_CONVENTIONS_WDELTA.md.
 
@@ -56,17 +57,21 @@ Conditions:
    in (U, J) on RG1's fixed domains), run with CRE's fluctuation cutoffs δ_j = g_j(A₁/A₀)p₀(g_j), enter items 2–5:
    through (P2) and (C) (the remark after Proposition 2.6) and through Proposition 2.9. RG1 Theorem 3 is Bałaban's;
    the transfer of these parts to the cutoffs δ_j is derived below (*Condition 3*).
-4. PBG's analyticity and decay away from U = 1, for the averaging of RG1 (0.4), enter Propositions 4.2 (and through
-   it 5.3) and 7.1 as Bałaban applies them to the chain of RG1, RG2, and CRE, whose averaging is RG1 (0.4) or (0.12) (CRE p.243); the passages
-   are listed in §9 (READINGS.md R50).
+4. PBG's analyticity and decay away from U = 1, and for C^{(k)}(1), whose gauge-fixing term is exponential, for the
+   averaging of RG1 (0.4), enter Propositions 4.2 (and through it 5.3), 7.1, and 2.12 (step 5) as Bałaban applies them
+   to the chain of RG1, RG2, and CRE, whose averaging is RG1 (0.4) or (0.12) (CRE p.243); the passages are listed in
+   §9 (READINGS.md R50).
 5. VAR Theorem 1 rests on the sketched Theorem 8 of REG (p.101) and enters §§5 and 7 through the analyticity of U_k(V).
+   RG1 states VAR's results for its own chain; their use for the averaging RG1 (0.4) is listed in §9 (READINGS.md R47).
 
 *Scope.* CRE Theorem 1 (CRE p.262) takes the coupling inequalities "(I.0.33)" as its hypothesis: if the sequence {g_k}
 of the renormalisation group equations satisfies them, the densities ρ_k satisfy CRE's inductive assumptions. RG1 has
 no (0.33); its introduction ends at (0.32), and CRE p.246 cites "(0.33) [I]" for γ₀^{−2} = γ^{−2} + β log ε^{−1}, which
 is RG1's printed (0.31), p.259. Item 3 has the form of (0.31). Item 1 is the input from which Lemma 2.1 derives items 2,
 3, and 4; item 2 provides the flow on which items 3 and 4 hold; and item 4 is the comparison of LFR2 (1.86). Theorem 0.1
-is stated for the coefficients β_j of the construction named before it.
+is stated for the coefficients β_j of the construction named before it. For semisimple G with an additive action,
+Proposition 10.2 gives the tube-construction form of it (the statements after Condition 5) for each simple factor of
+the product construction on ∏_iρ_i(G), with one bare coupling per factor; RG1's one-coupling construction on G is not covered (§10, *What is OPEN*).
 
 CRE's flow equation (2.24), p.259, uses its own coefficients β_j(g_{j−1}), which CRE (2.25), p.259, subtracts from its
 step terms (and p.279 for j = k+1). They differ from ours by the contribution of the R-terms (*Identification* and *The
@@ -191,7 +196,8 @@ C_Rg_k^{κ₀−4} is needed, which the factor g_k^{κ₀} supplies (Proposition
   - the total (Proposition 5.1);
   - the top-level part (Proposition 7.1);
   - the bare part (Proposition 6.4, with Proposition 6.3 and the value of c from Lemma 6.5);
-  - the J-terms (Proposition 5.3, with Proposition 4.2 and Lemma 5.2).
+  - the J-terms (Proposition 5.3, with Proposition 4.2, Lemmas 4.1, 4.3, 5.2, and 7.2, and Bałaban's step form
+    RG1 (1.4)–(1.5), pp.266–268).
 - Propositions 2.4 and 2.6 give the history bound (P2) and the continuity (C) of β. Remark 2.3 turns item 1 into
   hypothesis (W) of the flow lemma, and Lemma 2.1 gives items 2–4 (Corollary 8.2).
 - Proposition 2.9 gives item 5.
@@ -1200,7 +1206,8 @@ the s-integral of CRE (3.26)), and step 5 proves the continuity of β_{j+1}; the
    and is built from local inverses: G = G₀(I − R)^{−1} = Σ_n G₀R^n (PBG (3.106), p.414), with R of PBG (3.105) a sum
    over cubes □ of operators formed from the cube-local inverses G_□, the cutoffs h_□ and ζ_□̃, and the projection P,
    which PBG p.415 replaces by its own random walk expansion with local inverses G′ on enlarged cubes and boundary
-   conditions outside them. Each such factor does not depend on the torus once its side exceeds diam X̃^5_m. So
+   conditions outside them (RG2's application of PBG's construction to the chain's propagators, READINGS.md R50).
+   Each such factor does not depend on the torus once its side exceeds diam X̃^5_m. So
    within one step, for a fixed polymer X, the torus enters only through walks of total length at least a fixed
    multiple of the side, and these are bounded by the same bounds times e^{−c·side}.
    The inputs of the step also come from the torus: the effective action of the earlier steps, with the R-terms
@@ -1281,15 +1288,18 @@ physical scale, use only these uniform bounds and the properties of each target'
 
 ### 3.1 Linear-Algebra Setting
 
-All spaces are finite-dimensional real inner-product spaces (a finite torus); infinite volume is handled in
-Remark 3.4.
+All spaces are finite-dimensional real inner-product spaces. In the applications they are the fields on one momentum
+coset 𝒪 ≠ ℤp of a finite torus, and infinite volume is handled in Remark 3.4.
 - X: fine Lie-algebra-valued 1-forms. Y: fine 0-forms, taken orthogonal to ker D.
 - D: Y → X, injective; this is D_U, the linearised gauge action at the background U.
 - h: X → X symmetric, with h ≥ 0, hD = 0, and h positive definite on (ran D)^⊥.
 - Q: X → Z onto, the linearised k-fold average (Z: level-k coarse 1-forms).
 - P: Y → Ȳ, restriction to level-k sites (L odd, so these are fine sites). PPᵀ = 1.
 - D̄: Ȳ → Z, injective (orthogonal to coarse constants).
-- **Covariance:** QD = D̄P. (This is the linearisation of M(uUv) = uM(U)v, RG1 (0.6).)
+- **Covariance:** QD = D̄P. (The chain's average is RG1 (0.4) or (0.12) (CRE p.243). In both, the averaged loops are
+  based at c₋: Γ ∪ [x, x′] ∪ (−Γ′) ∪ (−c) in (0.4), and the loop of the contour variables of RG1 (0.11) in (0.12),
+  which transform as U(y, x) ↦ u(y)U(y, x)u(x)^{−1} by (0.6). So Ū^u(c) = u(c₋)Ū(c)u(c₊)^{−1}; QD = D̄P is its
+  linearisation, iterated over the k steps.)
 - Y_0 := ker P, the residual gauge algebra (gauge transformations trivial at level-k sites); D_0 := D|_{Y_0}.
 
 **One-loop factor.** In Bałaban's normalisation (axial gauge in blocks, Faddeev–Popov determinant 1, group δ-function
@@ -1359,15 +1369,57 @@ log det_⊥ Δ_k = log det(Δ_k + D̄D̄ᵀ) − log det(D̄ᵀD̄), and
 
   **F_k = ½ log det(𝒟_k) − log det(D̄ᵀD̄),  𝒟_k := Δ_k + D̄D̄ᵀ.**
 
-**Remark 3.4 (Regulator and Infinite Volume).** Replace h by h_m := h + m²Π_⊥, where Π_⊥ is the orthogonal projection
-onto (ran D_U)^⊥. This is gauge-covariant, h_mD = 0, and h_m is positive on (ran D)^⊥ with no harmonic zero modes, so
-Proposition 3.1 holds exactly on every finite torus for every m > 0.
-- The true one-loop factors Z^{(k)} are already massive: fluctuations with vanishing block averages satisfy a Poincaré
-  inequality (PRT2 Lemma 2.4). So they are continuous at m = 0.
-- All second-order Taylor coefficients used below are taken at a fixed external momentum p ≠ 0, where they are
-  absolutely convergent momentum integrals, and they converge as the torus grows and then m → 0.
-- So Corollary 3.2 holds for the infinite-volume polarisation symbols at every p ≠ 0, and, by continuity of the massive
-  step symbols, at p = 0.
+**Remark 3.4 (Finite Tori and Infinite Volume).** The symbols of §§4–8 are infinite-volume momentum integrals. A
+finite torus serves only to prove identities between them, and it is used one momentum coset at a time.
+- *The defect at U = 1.* Let T be the coarsest lattice of the quantity at hand (T^{(k+1)} in §4, the top lattice in
+  §§5–8), a torus of side N. Let B = t(a e^{ip·y} + c.c.) be a plane wave with p ∈ (2π/N)ℤ⁴, p ≢ 0 mod 2π, and
+  a ∈ g_ℂ ⊗ ℂ⁴. At U = 1, ker D consists of the constant 0-forms, and the constant 1-forms lie in (ran D)^⊥ ∩ ker h.
+  For t ≠ 0, ker D_U consists of the parallel sections. For a = e₁w with w ∈ g and p₂ ≢ 0, some plaquette holonomies
+  are exp(sw) with small s ≠ 0, so these sections take values in the centraliser z(w), a proper subspace of g. So on
+  the whole torus Y, Π_⊥, and h jump at t = 0. D_UᵀD_U has dim g − dim z(w) nonzero eigenvalues of order at most t²
+  (from the constants orthogonal to z(w)), so log det(D_UᵀD_U) is unbounded as t → 0, and §3.1's hypotheses fail.
+- *Cosets.* B is invariant under the translations in T_p := {y ∈ T : e^{ip·y} = 1}. Every operator of §§3–7 (D_U, Q(U),
+  P, D̄_V, Hess A(U), Π_⊥, h, Bałaban's Δ^{(k)}(U), 𝒫, 𝐆^{(2)}, their inverses, and the minimiser maps) is a
+  translation-covariant function of the background, so it commutes with T_p; so does J(U). Decompose the fields of
+  every level into Bloch fibres of quasi-momentum p′ ∈ (2π/N)ℤ⁴ mod 2π under the translations of T. Each fibre is
+  finite-dimensional. The characters of T that are trivial on T_p are the multiples of p, so every such operator is
+  block-diagonal in the cosets 𝒪 := p′ + ℤp. Write X_𝒪, Y_𝒪, … for the real fields with quasi-momenta in 𝒪 ∪ (−𝒪).
+- *Away from the zero coset.* Let 𝒪 ≠ ℤp. Then no fibre in 𝒪 ∪ (−𝒪) is 0 mod 2π. On a nonzero fibre at U = 1, D and D̄
+  are injective, and h is positive on (ran D)^⊥, since its kernel there consists of harmonic 1-forms, which are
+  constant. The space X_𝒪 is finite-dimensional. Every T_p-invariant background U leaves X_𝒪 invariant, and the
+  operators are real-analytic functions of the link variables, with inverses taken where invertible. So for
+  T_p-invariant U in a neighbourhood of 1 (depending on N and p), these properties persist, and the restrictions to
+  X_𝒪 of all the operators are real-analytic in U, hence in t, and in j for T_p-invariant fine 1-forms j. So §3.1's
+  hypotheses hold on 𝒪, with Y = Y_𝒪 (QD = D̄P holds for all 0-forms, and PPᵀ = 1 fibrewise). Proposition 3.1,
+  Corollary 3.2, and Lemma 3.3 hold on 𝒪, with constants independent of U.
+- *Coset sums.* On 𝒪 ≠ ℤp, the second-order Taylor coefficient in t of each quantity of §§3–7, restricted to X_𝒪, is
+  Σ_{p′∈𝒪∪(−𝒪)} M(p′, p). Here M is the one-loop integrand of its Bloch form, with internal lines at p′ and p′ + p:
+  Proposition 4.2(d) for J^{(k)}, Proposition 7.1(f) for F_k with k ≥ 1, and, for F_0, the form below. For N larger than the ranges of the local operators, the fibre of each operator at
+  U = 1 is its infinite-volume symbol, since inverses, projections, and Schur complements are taken fibrewise. Put
+  Π^N(p) := N^{−4} Σ_{p′∉ℤp} M(p′, p). The sets 𝒪 ∪ (−𝒪) with 𝒪 ≠ ℤp partition the p′ ∉ ℤp, so the identities of
+  Proposition 3.1, Corollary 3.2, and Lemma 3.3, which hold on each of them, hold exactly for Π^N.
+- *The form of F_0.* At level 0 (Q = 1, D̄ = D), Proposition 7.1(a) reads, on each 𝒪 ≠ ℤp, with T₀ := (ran D(1))^⊥
+  and P_T its projection, F_0 = ½ log det_{T₀}(P_ThP_T) − ½ log det_{T₀}(P_TΠ_UP_T) − ½ log det(D_UᵀD_U). At U = 1,
+  P_TD = 0, DᵀP_T = 0, and Hess A(1)D = 0.
+  - Write h = Hess A − Π_DHess A − Hess AΠ_D + Π_DHess AΠ_D with Π_D = D(DᵀD)^{−1}Dᵀ, and expand P_ThP_T to second
+    order. A D next to P_T, a Dᵀ next to P_T, and a Dᵀ Hess A or Hess A D at U = 1 vanish. So the first-order vertex is
+    P_T(Hess A)₁P_T, which is regular, and every second-order term contains at most one (DᵀD)^{−1}, between two factors
+    that each carry an external leg. The propagator (P_ThP_T)^{−1} on T₀ is the inverse of the coexact Laplacian.
+  - The second-order part of log det_{T₀}(P_TΠ_UP_T) is −tr(P_TD₁(DᵀD)^{−1}D₁ᵀP_T), as in Proposition 7.1(e), and
+    log det(D_UᵀD_U) has propagators (DᵀD)^{−1} with vertices (DᵀD)₁ and (DᵀD)₂.
+  - So in this form every factor of degree 2 sits on one internal line, and the integrand has degree at most 2 at
+    each of p′ = 0 and p′ = −p.
+- *Infinite volume.* M(·, p) is continuous away from p′ ∈ {0, ∓p} mod 2π, and has singularities of degree at most 2
+  there (Proposition 4.2(d), degree count; Proposition 7.1(f); for F_0, the form above).
+  - Since d = 4, the grid points within distance r of a singular point contribute at most Cr² to Π^N, uniformly in N.
+  - p is fixed along the sequence of N, so p ∈ 2πℚ⁴ has a fixed order m₀ in ℝ⁴/2πℤ⁴, and ℤp consists of m₀ points
+    independent of N. Apart from 0 and ∓p they are not singular, so |M| ≤ C_p there, and ℤp would contribute at most
+    C_pm₀N^{−4}.
+  - Hence Π^N(p) → ∫_{[−π,π]⁴} M(p′, p) d⁴p′/(2π)⁴ as N → ∞ through the N with p ∈ (2π/N)ℤ⁴. These integrals are the
+    symbols of §§4–8. In §7 the external momentum is p₀ and the internal one p.
+  - The integrals are continuous in p ≢ 0: for p in a compact set avoiding 2πℤ⁴, the integrals of the bounds over
+    r-neighbourhoods of the singular points are O(r²) uniformly in p. So the identities extend from the dense set
+    ⋃_N (2π/N)ℤ⁴ to every p ≢ 0. The symbol of J^{(k)} (Proposition 4.2) extends continuously to p = 0 (Lemma 4.3).
 
 ### 3.3 Which h Is Meant: J-Terms
 
@@ -1391,69 +1443,265 @@ function of the coarse field B has the symbol Π(p) (the polarisation). The marg
 O(|p|²) part of Π(p) (RG1 (1.22)). Write v_ν(p) := e^{ip_ν} − 1, so that pure-gauge coarse fields are
 B = v(p)ω̂ e^{ipy}.
 
-**Lemma 4.1 (Second-Order Vanishing).** Let T(p) (4×4 in the vector index, ⊗ 1 on g) be C² near p = 0 with
-‖∂^αT‖ ≤ C for |α| ≤ 2. Suppose:
-- (i) T(p)v(p) = 0;
-- (ii) T is covariant under the hyperoctahedral group (signed permutations R): T(Rp) = ρ(R)T(p)ρ(R)^{−1}.
-Then ‖T(p)‖ ≤ (C/2)|p|². It is applied to the symbol of PRT1 (1.65) and to the J-coefficient of Proposition 4.2. The
-type-checked Lean core is `symbol_quadratic_bound`, used in `BalabanFormal.jterm_quartic`.
+**Lemma 4.1 (Second-Order Vanishing).** Let T(p) (4×4 in the vector index, ⊗ 1 on g) satisfy T(p)v(p) = 0 for all p.
+- (a) If T is C² on a ball around p = 0, with the derivatives of order at most 2 bounded by C there, and T is covariant
+  under the hyperoctahedral group (signed permutations R), T(Rp) = ρ(R, p)T(p)ρ(R, p)^{−1}, with ρ(R, ·) unitary and
+  differentiable and ρ(R, 0) the signed permutation matrix of R, then ‖T(p)‖ ≤ (C/2)|p|² on that ball. (For bond variables at the
+  initial site, ρ(R, p) carries phases e^{±ip_λ}; with pure signs ρ(R, p) = ρ(R, 0) for all p, covariance and
+  T(p)v(p) = 0 together force T ≡ 0.)
+- (b) If ‖T(p) − T(0)‖ ≤ M|p|^γ for all p, with γ > 0, then T(0) = 0 and ‖T(p)‖ ≤ M|p|^γ.
+Part (a) is used in §6 (the affine part of Ψ_tb), and part (b) for the J-coefficient τ of Proposition 4.2. The
+type-checked Lean core of (b) is `symbol_holder_bound`, used in `BalabanFormal.jterm_holder`.
 
-*Proof.* (Lean core `BalabanFormal.jterm_quartic`, through `symbol_quadratic_bound`.)
-1. At p = 0, (ii) says T(0) commutes with every signed permutation matrix. Commuting with the sign changes forces
+*Proof of (a).*
+1. At p = 0, covariance says T(0) commutes with every signed permutation matrix. Commuting with the sign changes forces
    T(0) to be diagonal, and commuting with the permutations forces T(0) = t·1.
-2. Differentiate (i) at 0 in the direction e_μ. Since v(0) = 0 and ∂_μv(0) = i e_μ, this gives i t e_μ = 0, so t = 0.
-3. Let a_ρ := ∂_ρT(0). Covariance under the reflection R_λ (p_λ ↦ −p_λ) gives
+2. Differentiate T(p)v(p) = 0 at 0 in the direction e_μ. Since v(0) = 0 and ∂_μv(0) = i e_μ, this gives i t e_μ = 0,
+   so t = 0.
+3. Let a_ρ := ∂_ρT(0). Differentiate the covariance under the reflection R_λ (p_λ ↦ −p_λ) at p = 0. Since T(0) = 0,
+   the derivatives of ρ(R_λ, ·) drop out, and ρ(R_λ, 0) is the sign change of the λ-th component. This gives
    (a_ρ)_{μν} = (−1)^{[ρ=λ]+[μ=λ]+[ν=λ]} (a_ρ)_{μν} for every λ.
 4. Sum the exponents over λ = 1, …, 4: the total is 3, which is odd. So for at least one λ the exponent is odd, and that
    entry vanishes. Hence ∇T(0) = 0.
-5. Taylor's theorem then gives ‖T(p)‖ ≤ (C/2)|p|². ∎
+5. Taylor's theorem on the ball then gives ‖T(p)‖ ≤ (C/2)|p|² there. ∎
 
-**Proposition 4.2 (J-Terms).** Let J^{(k)} be the step J-term of §3.3, evaluated on the background U_{k+1}(e^{iB}), that
-is, the contribution of the term −2⟨H hC̃^{(2)}, J⟩ of RG1 (1.5). The symbol Π_J^{(k)}(p) of its second-order Taylor
-coefficient in B satisfies ‖Π_J^{(k)}(p)‖ ≤ C|p|⁴ for |p| ≤ π, with C independent of k. In particular J^{(k)}
-contributes nothing to b_{k+1}.
+*Proof of (b).* (Lean core `symbol_holder_bound`.) For 0 < s < 1, v(se_μ) = (e^{is} − 1)e_μ with e^{is} ≠ 1, so
+T(se_μ)e_μ = 0. Hence |T(0)e_μ| = |(T(0) − T(se_μ))e_μ| ≤ Ms^γ, and s → 0 gives T(0)e_μ = 0 for every μ. So T(0) = 0,
+and ‖T(p)‖ = ‖T(p) − T(0)‖ ≤ M|p|^γ. ∎
+
+**Lemma 4.3 (A One-Loop Lipschitz Bound).** For q ∈ ℝ⁴ let d(q) be the distance from q to 2πℤ⁴. Let a, b ≥ 0 with
+a + b ≤ 2, and let f(q, p) be defined where d(q) > 0 and d(q + p) > 0, 2π-periodic in q, and continuously
+differentiable in p, with
+
+  |f(q, p)| ≤ M d(q)^{−a}d(q + p)^{−b},  |∂_pf(q, p)| ≤ M d(q)^{−a}d(q + p)^{−b}(1 + d(q + p)^{−1}).
+
+Then I(p) := ∫_{[−π,π]⁴} f(q, p) d⁴q satisfies |I(p)| ≤ C_IM for all p and |I(p) − I(0)| ≤ C_IM|p| for |p| ≤ π,
+with C_I absolute. The same holds for finite sums of such f, with the pairs (a, b) varying from term to term.
+
+*Proof.* On [−π, π]⁴, d(q) = |q| ≤ 2π, and ∫_{|q|<ρ}|q|^{−s}d⁴q = 2π²ρ^{4−s}/(4 − s) for s < 4. Since d is
+2πℤ⁴-periodic, ∫_E d(q + p)^{−s}d⁴q ≤ ∫_{d(q′)<ρ}d(q′)^{−s} over one period when E ⊂ {d(q + p) < ρ}.
+1. *The bound on I.* Where d(q + p) ≥ |q|, the integrand is at most M|q|^{−a−b}; where d(q + p) < |q|, it is at most
+   Md(q + p)^{−a−b}. Since a + b ≤ 2 < 4, both parts integrate to at most CM.
+2. *Region A: |q| ≥ 2|p|.* For t ∈ [0, 1], d(q + tp) ≥ |q| − |p| ≥ |q|/2. By the mean value theorem,
+   |f(q, p) − f(q, 0)| ≤ |p| sup_t|∂_pf(q, tp)| ≤ 2^bM|p||q|^{−a−b}(1 + 2|q|^{−1}) ≤ 2^b(2π + 2)M|p||q|^{−a−b−1}.
+   Since a + b + 1 ≤ 3 < 4, the integral over A is at most CM|p|.
+3. *Region B: |q| < 2|p|.* There |f(q, 0)| ≤ M|q|^{−a−b}, with integral at most CM|p|^{4−a−b}. For f(q, p), split as in
+   step 1: where d(q + p) ≥ |q| the bound is the same; where d(q + p) < |q| < 2|p|, the integrand is at most
+   Md(q + p)^{−a−b} on a set where d(q + p) < 2|p|, with integral at most CM|p|^{4−a−b} by periodicity. Since
+   4 − a − b ≥ 2 and |p| ≤ π, the integral over B is at most CM|p|.
+Steps 2–3 give |I(p) − I(0)| ≤ C_IM|p|. ∎
+
+**Proposition 4.2 (J-Terms).** Let J^{(k)} be the step J-term of §3.3, evaluated on the background U = U_{k+1}(e^{iB}).
+The symbol Π_J^{(k)}(p) of its second-order Taylor coefficient in B satisfies ‖Π_J^{(k)}(p)‖ ≤ C|p|³ for |p| ≤ π and
+‖Π_J^{(k)}(p)‖ ≤ C for all p, with C independent of k. Hence, for every α ∈ (0, ½), ‖Π_J^{(k)}(p)‖ ≤ C_α|p|^{2+2α} on
+[−π, π]⁴ with C_α := C max(π^{1−2α}, π^{−2−2α}), and J^{(k)} contributes nothing to b_{k+1}.
+
+**Setting.** Units are those of T^{(k+1)}, so p ∈ [−π, π]⁴ is the coarse momentum of §4's Notation. The fine objects
+𝐇, J, h, K, φ_A, Π_D, D, Q, Q′, R, G′, Δ′_π, G, and H are those of §7's Setting at the chain level k, and C_G denotes
+§7's C := G − GQ*(QGQ*)^{−1}QG. The step variable B′ is a g-valued function on the bonds of T^{(k)}, h_B is RG1's
+operator h of p.267 l.18–23 (written h_B to distinguish it from §3's h), C̃^{(2)} is the second-order part of the
+nonlinear Q̃(B′) of RG1 (2.4), whose linear part is LQ̃ (RG1 p.261 l.10–11; p.267 l.26 and, D̃^{(2)} = C̃^{(2)}, l.29;
+(d), *The step objects*), C^{(2)} is the second-order part of the dressed average Q
+(Lemma 7.3), which enters Δ^{(2)}_π through PBG (3.134), 𝐆^{(2)} is twice the quadratic part of the axial gauge-fixing
+term, 𝐆 = ½𝐆^{(2)} + 𝐆₃ (RG1 (2.5), p.266), and 𝒫 is Bałaban's parametrisation of {Q̃B′ = 0} (p.268 l.2–3; RG1
+writes it C). By constant-gauge covariance at U = 1 (step (b)), every symbol at U = 1 below commutes with Ad(G) on
+g_ℂ ⊗ ℂ⁴. Since g is simple, Ad is irreducible on g_ℂ, so by Schur's lemma these symbols have the form T₀(p) ⊗ 1, as
+Lemma 4.1 takes them.
 
 *Proof.*
 
-*(a) The J-coefficient Θ.* Let Ĵ(U, j) be the step Gaussian built from h + δh(U, j), minus (F_{k+1} − F_k)(U). Here j is
-an independent fine adjoint 1-form, δh is the part of h_L − h that is linear in (∇A, λ), and ∇A is replaced by j and λ
-by (QQᵀ)^{−1}Qj. These are the independent variables (U, J) of RG1 (1.8)–(1.9). Then J^{(k)}(U) = Ĵ(U, ∇A(U)) and
-Ĵ(U, 0) = 0.
-- The step Gaussian is massive: its covariance C^{(k+1)}(U) decays exponentially and is analytic in U, uniformly in k
-  (PBG Thm 3.15 with Thm 3.4). The operator δh(U, j) is local and linear in j.
-- Hence log det(1 + C δh) is analytic in (U, j) near (1, 0), with exponentially decaying derivative kernels and
-  uniform constants.
-- So Ĵ(U, j) = ⟨j, Θ(U)⟩ + 𝓡(U, j), where |𝓡| is quadratic in j, and Θ(U) is a fine adjoint 1-form depending
-  analytically on U.
-- Θ(1) = 0: at U = 1 the construction is invariant under constant gauge transformations, so each Θ(1)(b) is an
-  Ad-invariant vector of g, hence zero.
+*(a) Bałaban's step form.* By RG1 (1.4)–(1.5) with j = k, and (2.11) with p.267 l.38–39,
+Z^{(k)}(U) = ∫dB′ δ(Q̃B′) exp[−½⟨B′, Δ^{(k)}(U)B′⟩] with
 
-*(b) Second order in B.* Write U = U_{k+1}(e^{iB}) and expand ∇A(U) = j_1(B) + j_2(B) + …. The second-order part of
-J^{(k)} is ⟨j_1(B), Θ_1(B)⟩ + ⟨j_2(B), Θ(1)⟩ + 𝓡_2(j_1(B)), where Θ_1 is the linearisation of B ↦ Θ(U_{k+1}(e^{iB})).
-The middle term is 0.
+  ⟨B′, Δ^{(k)}B′⟩ = ⟨H₁B′, Δ₁H₁B′⟩ − 2⟨H₁h_BC̃^{(2)}(B′), J⟩ + 𝐆^{(2)}(B′),
 
-*(c) The gradient term.* j_1 = Hess A(1)·H_{k+1}B = dᵀdH_{k+1}B. Since H_{k+1}B minimises ‖dA‖² subject to
-Q_{k+1}A = B (PRT1 (1.60)–(1.65)), dᵀdH_{k+1}B = Q_{k+1}ᵀλ_B. Then ⟨B, Δ_{k+1}B⟩ = ‖dH_{k+1}B‖² = ⟨B, λ_B⟩, so
-λ_B = Δ_{k+1}B. Hence j_1 = Q_{k+1}ᵀΔ_{k+1}B.
-- The symbol Δ_{k+1}(p) is analytic and bounded with its derivatives, uniformly in k (PRT1 (1.63)–(1.67)).
-- It annihilates pure gauge fields: a pure-gauge B has a pure-gauge minimiser, with zero energy.
-- It is hypercubic-covariant.
-- By Lemma 4.1, ‖Δ_{k+1}(p)‖ ≤ C|p|² (PRT1 (1.65)). Therefore 𝓡_2(j_1) = O(|p|⁴).
+where 𝐆^{(2)} replaces the δ-function gauge fixing of PBG (3.156). Eliminating the variables B′(b₀(c)) by δ(Q̃B′) gives
+B′ = 𝒫B″, Z^{(k)}(U) = c(U)·det(𝒫*Δ^{(k)}(U)𝒫)^{−1/2}, and C^{(k)} = (𝒫*Δ^{(k)}𝒫)^{−1} (p.268 l.2–3). Here c(U) is
+the Jacobian of the elimination, the product over c ∈ T^{(k+1)} of |det|^{−1} of the coefficient of B′(b₀(c)) in
+(Q̃B′)(c) (p.267 l.21–23). It depends on V^{(k)} only through Q̃, not on the quadratic form.
+- H₁ and Δ₁ are PBG's (3.127)–(3.129) (RG1 p.266 l.39: "see the definitions (3.127), (3.128) [13]"). So
+  ⟨H₁B′, Δ₁H₁B′⟩ = ⟨B′, (QG₁Q*)^{−1}B′⟩ − a|B′|² = min{⟨A, G₁^{−1}A⟩ : QA = B′} − a|B′|², with H₁ = G₁Q*(QG₁Q*)^{−1}
+  the minimiser (PBG (3.122), (3.129)).
+- By (3.128), (3.120), and (3.134)–(3.135), with PBG's Δ = 𝐇 = h + K,
 
-*(d) The Θ term.* ⟨j_1, Θ_1(B)⟩ = ⟨Δ_{k+1}B, τB⟩ with τ := Q_{k+1}Θ_1, a coarse translation-covariant map.
-- *Regularity.* τ is C² with uniform bounds: Θ_1 is the derivative at 0 of an analytic, exponentially decaying family
-  (Cauchy estimates); B ↦ U_{k+1}(e^{iB}) is analytic (VAR §G, Prop. 9); Q_{k+1} is local.
-- *Pure gauge.* For B = ∂̄ω, the minimiser U_{k+1}(e^{i∂̄ω}) is 1^u with u constant on the blocks, at linear order. It is
-  in axial gauge in the blocks, has action 0, and has the right averages by the covariance RG1 (0.6). By uniqueness of
-  the minimal orbit (VAR Thm 1) it is the minimiser. Gauge transformations constant on the blocks preserve the axial
-  gauge and commute with the averaging, so Θ(1^u) = Ad(u)Θ(1) = 0. Hence τ(p)v(p) = 0.
-- *Covariance.* τ is hypercubic-covariant. Bałaban's averaging RG1 (0.4), p.253, with contour families generated by all
-  permutations, and his axial gauge, defined through the averaged contour variables RG1 (0.11), are lattice-Euclidean
-  covariant (RG1 pp.252–253).
-- So by Lemma 4.1, ‖τ(p)‖ ≤ C|p|².
+    G₁^{−1} = h + DRD* + aQ*Q + X(U, J),  X(U, j) := K(U, j) − Δ′_π(U, j) − Δ^{(2)}_π(U, j).  (4.1)
 
-*(e) Conclusion.* Π_J^{(k)}(p) = Δ_{k+1}(p)*τ(p) + τ(p)*Δ_{k+1}(p) + O(|p|⁴) = O(|p|⁴), with uniform constants
-(`BalabanFormal.jterm_quartic`). The marginal coefficient is determined by the O(|p|²) part (RG1 (1.22)). ∎
+  Here K(U, j), Δ′_π(U, j), and Δ^{(2)}_π(U, j) are (7.1), (3.120), and (3.134)–(3.135) with an independent fine adjoint
+  1-form j in place of J. Each is linear in j, with coefficients that are functions of U.
+
+*(b) The J-term as a determinant.* For a fine adjoint 1-form j put
+
+  ⟨B′, Δ^{(k)}(U, j)B′⟩ := min{⟨A, (h + DRD* + aQ*Q + X(U, j))A⟩ : QA = B′} − a|B′|² + Y(U, j)(B′) + 𝐆^{(2)}(B′),
+
+with Y(U, j)(B′) := −2⟨H₁(U, j)h_BC̃^{(2)}(B′), j⟩ and H₁(U, j) the minimiser map of the minimum, and
+
+  F(U, j) := −½ log det(𝒫*Δ^{(k)}(U, j)𝒫) + ½ log det(𝒫*Δ^{(k)}(U, 0)𝒫).
+
+By (a), Δ^{(k)}(U, J(U)) = Δ^{(k)}(U), so
+log Z^{(k)}(U) = F(U, J(U)) + log c(U) − ½ log det(𝒫*Δ^{(k)}(U, 0)𝒫) + const.
+- At j = 0, X = 0 and Y = 0, and the argument of Proposition 7.1(b) gives ⟨B′, Δ^{(k)}(U, 0)B′⟩ = ⟨B′, Δ_kB′⟩ +
+  𝐆^{(2)}(B′), with §3's Δ_k on the level-k field B′.
+- On {Q̃B′ = 0}, the gauge directions of Δ_k are the ω vanishing at the sites of T^{(k+1)} (QD = D̄P, §3.1). They shift
+  B̃′(y, x) by −Ad(V(y, x))ω(x), which is orthogonal at real V. So the Gaussian integral over these directions against
+  e^{−½𝐆^{(2)}} is a constant, and the axial slice has Faddeev–Popov determinant 1 (§3.1). The integral
+  ∫dB′ δ(Q̃B′) exp[−½⟨B′, Δ^{(k)}(U, 0)B′⟩] carries the same Jacobian c(U), so
+  log c(U) − ½ log det(𝒫*Δ^{(k)}(U, 0)𝒫) = log Z^{(k)}[h] + const = (F_{k+1} − F_k)(U) + const on each coset
+  𝒪 ≠ ℤp, by Corollary 3.2 and Remark 3.4.
+- So J^{(k)}(U) = F(U, J(U)) + const, and F(U, 0) = 0.
+- *Gauge covariance.* F(U^g, Ad(g)j) = F(U, j) for every fine gauge transformation g. All operators in (4.1) and in
+  Y are gauge-covariant. The averages are covariant: the chain's average by the form of RG1 (0.4) or (0.12) with
+  (0.6) (Q̃D = D̄P, §3.1; Proposition 5.3, step 1), and the dressed average also through its dressing factors in PBG
+  (3.113), since (R_yU′)(y, x) ↦ Ad(g(y))(R_yU′)(y, x) under U ↦ U^g by (0.6) on (0.11) (QD = D̄Q′, §7's Setting).
+  The step variables transform by Ad(g) at the sites of T^{(k)}, which is orthogonal, and 𝐆^{(2)} is Ad-invariant. Also J(U^g) = Ad(g)J(U).
+
+*(c) Second order in B.* Let B be a plane wave of momentum p ≢ 0 on a torus, and 𝒪 ≠ ℤp a coset (Remark 3.4). Below,
+F, Θ, and F_jj are restricted to X_𝒪, j ranges over T_p-invariant fine 1-forms, and the symbols are the limits of
+the coset sums. On X_𝒪, F is real-analytic in (t, j) near (0, 0), with U = U_{k+1}(e^{iB}) analytic in t (§5,
+analyticity of the background). Every operator in (b), restricted to X_𝒪, depends analytically on (t, j) there
+(Remark 3.4). The minimum in (b) is a Schur complement of a form positive on ker Q at (1, 0), where it is G(1)^{−1}, and
+𝒫*Δ^{(k)}(1, 0)𝒫 = C^{(k)}(1)^{−1} is invertible. Only the Taylor coefficients at (1, 0) are used, and (d) computes
+them explicitly. The constant gauge transformations and the gauge transformations e^{itω′} with T_p-invariant ω′ used
+below preserve each coset. Write
+∂_jF(U, 0)[j] =: ⟨j, Θ(U)⟩ and F_jj := ∂²_jF(1, 0). By gauge covariance,
+Θ(U^g) = Ad(g)Θ(U). Expand J(U_{k+1}(e^{iB})) = j₁(B) + j₂(B) + …. Since F(U, 0) = 0 and J(1) = 0, the second-order part
+of J^{(k)} is ⟨j₂, Θ(1)⟩ + ⟨j₁, Θ₁B⟩ + ½F_jj[j₁, j₁], where Θ₁ is the linearisation of B ↦ Θ(U_{k+1}(e^{iB})).
+- Θ(1) = 0: Θ(1) = Ad(u)Θ(1) for every constant u, so each Θ(1)(b) is an Ad-invariant vector of the simple Lie
+  algebra g, hence zero. So the first term vanishes.
+- *The leg A₁.* The linearisation A₁ of U_{k+1}(e^{iB}) minimises ‖∂A‖² on {Q̃_{k+1}A = B}, with Q̃_{k+1} the
+  first-order average of the chain (Proposition 5.3, step 1). So A₁ has the curvature of H_{k+1}B, which is H(1)B with
+  H at the chain level k + 1 (Lemma 7.2, step 1, at level k + 1). On quasi-momentum p ≢ 0 a curl-free Bloch wave is a
+  gradient, so A₁ = H(1)B + ∂ω′. By covariance, Θ₁ annihilates gradients:
+  the derivative of Θ(1^{e^{itω′}}) = Ad(e^{itω′})Θ(1) = 0 at t = 0. So Θ₁B is the derivative of Θ at 1 in the
+  direction A₁ := H(1)B, whose kernel decays exponentially (PBG (3.133)).
+- *The gradient j₁.* j₁ = 𝐇(1)A₁ = ∂ᵀ∂H_{k+1}B, with PRT1's H_{k+1}, because A₁ and H_{k+1}B have the same
+  curvature (Proposition 5.3, step 1, with k + 1 in place of k). Since H_{k+1}B minimises ‖∂A‖² subject to
+  Q_{k+1}A = B (Proposition 5.3, step 1, third fact), ∂ᵀ∂H_{k+1}B = Q_{k+1}ᵀλ_B. Then
+  ⟨B, Δ_{k+1}B⟩ = ‖∂H_{k+1}B‖² = ⟨B, λ_B⟩ (PRT1 p.29), and polarisation gives λ_B = Δ_{k+1}B, so
+  j₁ = Q_{k+1}ᵀΔ_{k+1}B. Since 0 ≤ ⟨B, Δ_{k+1}B⟩ ≤ γ₁⟨∂₁B, ∂₁B⟩ (PRT1 (1.67)) and |∂¹_μ(p)| ≤ |p_μ|,
+  ‖Δ_{k+1}(p)‖ ≤ Cγ₁|p|², with C absolute and γ₁ depending on d only.
+- Hence the second-order part is ⟨Δ_{k+1}B, τB⟩ + ½⟨Δ_{k+1}B, R̃Δ_{k+1}B⟩ with τ := Q_{k+1}Θ₁ and
+  R̃ := Q_{k+1}F_jjQ_{k+1}ᵀ, and ‖Π_J^{(k)}(p)‖ ≤ ‖Δ_{k+1}(p)‖‖τ(p)‖ + ½‖Δ_{k+1}(p)‖²‖R̃(p)‖.
+
+*(d) Loop integrals at U = 1.* Let 𝒞(U) := (𝒫*Δ^{(k)}(U, 0)𝒫)^{−1} and H_h(U) := H₁(U, 0). At U = 1, J = 0, so
+𝒞(1) = C^{(k)}(1), H_h(1) = H(1), and K(1, ·), Δ′_π(1, ·) are given by (7.1) and (3.120) at U = 1.
+- *Θ.* The minimum in (b) is stationary at its minimiser, so the j-linear part of Δ^{(k)}(U, j) is
+  V(U, j)(B′) := ⟨H_h(U)B′, X(U, j)H_h(U)B′⟩ − 2⟨H_h(U)h_BC̃^{(2)}(B′), j⟩. Hence
+  ⟨j, Θ(U)⟩ = −½tr(𝒞(U)𝒫*V(U, j)𝒫). In the direction A₁, the U-derivative falls on 𝒞, 𝒫, H_h, X, h_B, or C̃^{(2)}.
+  By §3.3, h(U) = 𝐇(U) − K(U, J(U)) with ∂J(1)[A₁] = 𝐇(1)A₁, so ∂_Uh(1)[A₁] = ∂𝐇(1)[A₁] − K(1, 𝐇(1)A₁). In K, the
+  derivative of φ_A at fixed A is (∂ᵀ∂)^{−1}[D₁ᵀΠ_⊥A − ∂ᵀD₁φ_A], as in Proposition 7.1(d), T4.
+- *F_jj.* ½F_jj[j, j] = −½tr(𝒞𝒫*V₂(j)𝒫) + ¼tr(𝒞𝒫*V(1, j)𝒫𝒞𝒫*V(1, j)𝒫) at U = 1, with V₂(j) the j-quadratic part
+  of Δ^{(k)}(1, j). The constrained Gaussian gives the j-quadratic part of the minimum as
+  −⟨H(1)B′, X(1, j)C_GX(1, j)H(1)B′⟩ (as in Proposition 7.1(b)). The j-quadratic part of Y is
+  −2⟨∂_jH₁[j]h_BC̃^{(2)}(B′), j⟩, with ∂_jH₁[j] = −C_GX(1, j)H(1) by differentiating H₁ = G₁Q*(QG₁Q*)^{−1}.
+- *Bloch form.* At U = 1 every operator commutes with the translations of T^{(k+1)}. For B of momentum p, each trace
+  is ∫_{[−π,π]⁴} tr_q M(q, p) d⁴q/(2π)⁴, the limit of the coset sums (Remark 3.4), with q the quasi-momentum of the internal line on which no external leg has
+  acted, and q + p that of the other line. tr_q runs over the step variables of one cell of T^{(k+1)}, which number
+  dL^d dim g, so |tr_q M| ≤ dL^d dim g ‖M(q, p)‖, and ‖M‖ is at most the product of the fibre norms of its factors
+  (§7's Bloch norms). The integrands are 2πℤ⁴-periodic in q.
+- *Regular factors (L).* Their Bloch symbols are bounded with bounded q-derivative, uniformly in k, by exponential
+  decay of their kernels and the Schur test: 𝒞(1) = C^{(k)}(1), 𝒫, H, G, G′, C_G, R, Q, Qᵀ, A₁, D₁, Δ′_π (through
+  λ_A = G′RD*A), Δ^{(2)}_π, h_B, C̃^{(2)}, 𝐆^{(2)}, ∂𝐇(1)[A₁], the local factors of T in (7.1), and the U-derivatives
+  at 1 in the direction A₁ of 𝒫, R, Q, Qᵀ, D, the transports R(U_b), h_B, C̃^{(2)}, C^{(2)}, and 𝐆^{(2)}. Sources: PBG Thms 3.1, 3.2
+  (for R, p.399 l.4), 3.3, 3.12, and 3.15 and (3.131)–(3.133) at U = 1, where H, G, G′, C_G, R, Q, and (QGQ*)^{−1} are PBG's own operators by
+  §7's Setting. For Δ^{(2)}_π, PBG (3.134)–(3.135) with Lemma 7.3: |⟨A′, Δ^{(2)}(1, j)A⟩| ≤
+  2‖C^{(2)}(1; A′, A)‖_1‖H(1)*j‖_∞ ≤ C‖j‖_∞‖A‖_2‖A′‖_2 by (3.133), and its finite range bounds the q-derivative.
+  Lemma 7.3 also gives the U-derivatives at 1 of Q, Qᵀ, and C^{(2)}.
+  - *Explicit local factors.* With D_Uλ(b) = η^{−1}(R(U_b)λ(b₊) − λ(b₋)) (PBG (3.50), p.400, and p.418) and
+    U(t) = exp(itηA₁ + O(t²)), the U-derivative of D is D₁λ(b) = i[A₁(b), λ(b₊)], of range 1, with sup norm
+    ≤ 2‖A₁‖_∞‖λ‖_∞ and ℓ² norm ≤ 2√d‖A₁‖_∞‖λ‖_2 (each site is b₊ of d positively oriented bonds). The transports
+    R(U_b) in T of (7.1) and in PBG (3.120) have U-derivative iη ad_{A₁(b)}, of range 0 and norm ≤ 2η‖A₁‖_∞.
+    𝐇(U) is the Hessian of the Wilson action W in the chart A ↦ e^{iηA}U. Since e^{isηA}e^{itηA₁} =
+    exp iη(sA + tA₁ + (i/2)ηst[A, A₁] + …) and 1 is a critical point of W,
+    ⟨A, ∂𝐇(1)[A₁]A⟩ = W‴(1)[A₁, A, A] + iη⟨[A, A₁], 𝐇(1)A⟩, with W‴ the third derivative of X ↦ W(e^{iηX}) at 0.
+    - With U = e^{iηX} the plaquette logarithm is iη²(d_ηX + q(X)) + O(η³), q(X) a sum of commutators [X(b), X(b′)]
+      of bonds of the plaquette, and 1 − Re tr e^{iY} has no cubic term (tr Y³ is real). So the cubic part of the
+      action is, up to constants and orientation signs, η^d Σ_p tr(d_ηX·q(X)): each term of W‴(1)[A₁, ·, ·] has one
+      fine difference quotient d_η, on A₁ or on one of the two other arguments, and a commutator with the remaining
+      two, and it has finite range.
+    - The chart term. As an operator, the chart part of ∂𝐇(1)[A₁] is the symmetric (iη/2)[ad_{A₁}, 𝐇(1)], with
+      polarised form (iη/2)(⟨[A′, A₁], 𝐇(1)A⟩ + ⟨[A, A₁], 𝐇(1)A′⟩) (the srt coefficient of
+      W(e^{iη(sA+rA′)}e^{itηA₁})). Here ⟨[A′, A₁], 𝐇(1)A⟩ = ⟨d_η[A′, A₁], d_ηA⟩ up to a constant, since 𝐇(1) is a
+      multiple of d_η*d_η. On a plaquette in the μν-plane, (d_η[A′, A₁])(p) is η^{−1} times the signed sum of
+      [A′(b), A₁(b)] over its four bonds. Grouping the two μ-bonds and the two ν-bonds (the discrete Leibniz rule), it is
+      a sum of terms (difference quotient of A′_ν or A′_μ)×(A₁ at a bond of p) and A′(b)×(difference quotient of A₁_ν
+      or A₁_μ). The other half is the same with A and A′ exchanged. So the chart term is η times a range-1 form of two
+      kinds: one difference quotient on each of A′ and A, with coefficient ≤ C(d)‖A₁‖_∞; or one on A or on A′ only,
+      with coefficient ≤ C(d)‖∇A₁‖_∞.
+    Here A₁ = H_{k+1}(1)B, with (c)'s operator H at chain level k + 1 (Proposition 4.2(c), the leg A₁: Θ₁ annihilates
+    gradients), so a quotient on A₁ and the factor ‖∇A₁‖_∞ are bounded by ‖∇H_{k+1}(1)B‖_∞ ≤ C‖B‖_∞: PBG (3.133),
+    p.422, at U = 1 with L^{k+1}η = 1 gives |∇H_{k+1}(x, y′)| ≤ O(1)e^{−δ₁d(y,y′)/2}. A quotient on another argument is moved onto the adjacent factor (last sub-bullet).
+  - *The step objects.* h_B, C̃^{(2)}, 𝒫, and 𝐆^{(2)} are RG1's explicit one-step objects, functions of
+    V^{(k)} = M^k(U) (RG1 (2.3), p.265). Write f(B′) := (1/i)log[M(V′V^{(k)})M(V^{(k)})^{−1}] = Q̃(B′) of RG1 (2.4),
+    p.266. RG1 p.267 l.26 writes it as LQ̃B′ + C̃(B′), so the linear operator Q̃ is L^{−1} times the linear part of f,
+    and C̃^{(2)} is the quadratic part of f (p.261 l.10–11; D̃^{(2)} = C̃^{(2)}, p.267 l.29). h_B(c) is L^{−1} times
+    the inverse of the coefficient of B′(b₀(c)) in (Q̃B′)(c), so that LQ̃h_B = I, and 𝒫 solves Q̃B′ = 0 for the
+    variables B′(b₀(c)) (p.267 l.18–23, p.268 l.2–3). 𝐆^{(2)} is the sum over y and x ∈ B(y) of |B̃′(y, x)|², with B̃′(y, x) the linear part of
+    (V′V^{(k)})(y, x)(V^{(k)}(y, x))^{−1} (RG1 (2.5), p.266). So each coefficient of these maps at a coarse bond c (at a
+    coarse site y for 𝐆^{(2)}) is a fixed analytic function Φ of the level-k bond variables of V^{(k)} on the blocks
+    B(c₋) ∪ B(c₊) (on B(y)). These variables
+    are a fixed number n(d, L) of bonds, and Φ is defined on a complex polydisc of radius r₀(d, L, G) around 1,
+    since the averages are defined on G^c (RG1 p.252 l.37, p.253 l.16). At V^{(k)} = 1 the coefficient of B′(b₀(c))
+    in f(B′)(c) is L^{1−d}·1, and so in (Q̃B′)(c) it is L^{−d}·1, with h_B(c) = L^{d−1}. Indeed b₀(c) is the bond of c
+    that crosses from B(c₋) to B(c₊). In RG1 (0.4) it lies on the L lines [x, x′] with x = c₋ + mL^{−1}e_μ,
+    |m| ≤ (L − 1)/2, each of weight L^{−d}; on no contour of 𝐆(c₋, x) or 𝐆(c₊, x′), which stay in B(c₋) and B(c₊);
+    and on c itself, which enters each loop as −c (total weight −1) and the factor 𝐔(c) (weight +1), which cancel.
+    For RG1 (0.12), whose linear part at 1 is the same (READINGS.md R47, run 105), the coefficient is the same. So
+    the coefficient is invertible on a smaller polydisc, of radius r₁(d, L, G) ≤ r₀, where h_B and 𝒫 are analytic
+    too. The units are those of T^{(k+1)}, so the level-k spacing is L^{−1} for every k. Along
+    U(t) = exp(itηA₁ + O(t²)), the level-k bond logarithms of V^{(k)}(t) are tL^{−1}a₁ + O(t²) with
+    ‖a₁‖_∞ ≤ (1 + d)‖A₁‖_∞ (Lemma 7.3, step 5, at chain level k + 1). Cauchy estimates bound every coefficient of the
+    U-derivatives at 1 by n·sup|Φ|·r^{−1}·L^{−1}(1 + d)‖A₁‖_∞, with the sup over the polydisc of radius r, where r = r₀
+    for C̃^{(2)} and 𝐆^{(2)} and r = r₁ for h_B and 𝒫. The maps have
+    finite range, so their Bloch symbols are bounded with bounded q-derivative, uniformly in k. None of this uses R50.
+  - The U-derivative of X(U, j) also needs those of H and G′: Δ′_π contains λ_A = G′RD*A, and Δ^{(2)}_π contains H
+    through (3.134) and G′ through (3.135). R50 covers 𝒞(1) = C^{(k)}(1), whose gauge-fixing term is exponential,
+    and the U-derivatives at 1 of PBG's operators H, G′, and R (the projection onto ΔN(Q′), not the transports).
+  - The fine derivatives in ∂𝐇(1), Δ′_π, and D, D* are moved onto the adjacent factors H, G, G′, or C_G.
+    - A derivative next to G′ is taken by G′: ∇G′ and G′∇* by PBG Thm 3.1, (3.42), p.397. This covers the D* in
+      DRG′D*.
+    - Where R stands between G′ and the derivative, the derivative is moved onto the outer factor on its side: the D*
+      in λ_A = G′RD*A and in the DG′RD* terms of (3.135) onto the factor on its right, the D of DRG′D* and the D* of
+      λ_{A′} (the left argument of the polarised Δ′_π) onto the factor on its left, H(1)* or C_G.
+    - These outer factors are bounded with their derivatives: H by (3.133); G by PBG Thm 3.3, which gives G the
+      bounds (3.42)–(3.47) of G′, among them ∇G∇* in (3.46), p.398 (and (3.131) for its Δ′_π part); and
+      C_G = G − GQ*(QGQ*)^{−1}QG through G and (3.132). C_G may carry one derivative on each side, as in
+      −⟨H(1)B′, XC_GXH(1)B′⟩ and in ⟨∂H_hB′, XHB′⟩: ∇C_G∇* = ∇G∇* − (∇GQ*)(QGQ*)^{−1}(QG∇*), by (3.46), (3.42),
+      and (3.132).
+    - The external factors Q_{k+1}(p) and A₁(p) are of this kind in p.
+- *The U-derivatives of 𝒞 and H_h.* These are not PBG objects away from U = 1, since h(U) = 𝐇(U) − K(U, J(U)). They
+  are written out. Put M := h + DRD* + aQ*Q, G_M := M^{−1} = G₁(U, 0), and S := QG_MQ* at j = 0, so the minimum in
+  (b) is ⟨B′, S^{−1}B′⟩ and H_h = G_MQ*S^{−1}. G_M is not §7's G away from U = 1, but G_M(1) = G(1), since K and Δ′_π
+  are linear in J and J(1) = 0. Since Q = Q(U), the constraint QA = B′ moves with U. All derivatives below are at
+  U = 1 in the direction A₁, ∂G_M = −G_M∂M G_M, and ∂M contains a(∂Q*Q + Q*∂Q).
+  - ∂𝒞 = −𝒞(∂(𝒫*Δ^{(k)}(·, 0)𝒫))𝒞.
+  - ∂⟨B′, Δ^{(k)}(·, 0)B′⟩ = ⟨H(1)B′, ∂M H(1)B′⟩ − 2⟨S^{−1}B′, ∂Q H(1)B′⟩ + ∂𝐆^{(2)}(B′), from
+    ∂S^{−1} = −S^{−1}(∂Q G_MQ* + QG_M∂Q* − QG_M∂MG_MQ*)S^{−1}.
+  - ∂H_h = −C_G∂M H(1) + C_G∂Q*S^{−1} − H(1)∂Q H(1), using C_G = G_M − G_MQ*S^{−1}QG_M at U = 1.
+  - Here ∂_Uh(1)[A₁] = ∂𝐇(1)[A₁] − K(1, 𝐇(1)A₁), whose K-part has singular degree ≤ 1 and is counted below. The other
+    parts, including the ∂Q terms (S^{−1} = (QGQ*)^{−1} decays exponentially, PBG (3.132)), are regular.
+- *Singular factors (N).* These are diagonal in the aliases: Π_D of degree 0, φ = (∂ᵀ∂)^{−1}∂ᵀ and ∂(∂ᵀ∂)^{−1} of
+  degree 1, and (∂ᵀ∂)^{−1} of degree 2. A factor of degree s at quasi-momentum q has fibre norm ≤ Cd(q)^{−s} and
+  q-derivative ≤ Cd(q)^{−s}(1 + d(q)^{−1}), by Δ(q) ≥ (4/π²)|q|² (§7's Bloch norms), uniformly in η.
+- *Degree count.* Each insertion of X(1, j) has degree ≤ 1: in (7.1) each term contains one φ, the third also Dφ of
+  degree 0, and Δ′_π and Δ^{(2)}_π are regular. The U-derivative raises the degree by at most 1: K(1, 𝐇(1)A₁) has
+  degree ≤ 1, and replacing φ_A by its derivative, or Dφ_A by D₁φ_A + ∂(∂ᵀ∂)^{−1}[D₁ᵀΠ_⊥A − ∂ᵀD₁φ_A], raises the
+  degree of that term by at most 1. Θ₁ has one j and one U-derivative, and F_jj two j's and none. So every integrand
+  has degrees (a, b) at (q, q + p) with a + b ≤ 2, and its p-derivative raises b by at most 1 or falls on a regular
+  factor.
+- By Lemma 4.3, with M depending only on d, L, and PBG's constants: ‖τ(p) − τ(0)‖ ≤ C|p| for |p| ≤ π, and
+  ‖τ(p)‖, ‖R̃(p)‖ ≤ C for all p.
+
+*(e) Pure gauge.* For B = D̄ω, the minimum of ‖∂A‖² on {Q̃_{k+1}A = D̄ω} is 0, attained at a gradient (QD = D̄P,
+§3.1). So A₁ has zero curvature, hence is a gradient for p ≠ 0, Θ₁B = 0 by (c), and τ(p)v(p) = 0 for p ≠ 0; at p = 0,
+v(0) = 0.
+
+*(f) Conclusion.* τ is 2πℤ⁴-periodic and bounded, so ‖τ(p) − τ(0)‖ ≤ C|p| holds for all p. By (e) and Lemma 4.1(b)
+with γ = 1, ‖τ(p)‖ ≤ C|p|. By (c), ‖Π_J^{(k)}(p)‖ ≤ C|p|·C|p|² + C|p|⁴ ≤ C|p|³ for |p| ≤ π, and
+‖Π_J^{(k)}(p)‖ ≤ C for all p. Since |p|³ ≤ π^{1−2α}|p|^{2+2α} for |p| ≤ π and 1 ≤ π^{−2−2α}|p|^{2+2α} for |p| ≥ π, the
+bound by C_α|p|^{2+2α} follows. The Lean core is `BalabanFormal.jterm_holder` with γ = 2α. Its hypothesis
+‖Δ(p)‖ ≤ MΔ|p|² is the bound of (c), its hypothesis ‖τ(p) − τ(0)‖ ≤ Mτ|p|^{2α} follows from the Lipschitz bound and
+the boundedness of τ, and its hypothesis on Π_J is the last bullet of (c). The marginal coefficient is
+determined by the O(|p|²) part (RG1 (1.22)). ∎
 
 ## 5. The k-Step Total, and the J-Terms Seen from the Top
 
@@ -1534,31 +1782,37 @@ sup_p ‖Π_{𝒥_k}(p)‖ ≤ C, uniformly in k (from PRT1 (1.63) and Lemma 5.2
 type-checked Lean core `BalabanFormal.jterm_assembly`.
 
 *Proof.* Fix j and set m := j+1 ≤ k.
-1. *Reduction to level m.* U_k(e^{iB}) = U_m(V*(B)) by nesting, where V*(B) = (U_k(e^{iB}))^{(m)} =
-   exp(iQ_mH_kB + O(B²)). Indeed, M^k is M^{k−m} after M^m, so a minimiser on {U : M^k(U) = e^{iB}} also minimises on
-   the subset {U : M^m(U) = V*(B)}, and the minimal orbit is unique (RG1 (0.21)–(0.22), p.256). J^{(j)} ∘ U_m has zero first-order coefficient at the trivial
-   background (§4(a)–(b)). So the top polarisation of J^{(j)}(U_k(e^{iB})) is ⟨V_1, Π_J^{(j)} V_1⟩ with
-   V_1 := Q_m H_k B. Here Π_J^{(j)} is the level-m symbol of Proposition 4.2, for the J-term of RG1 (1.5):
-   ‖Π_J^{(j)}(p′)‖ ≤ C|p′|⁴ on the whole level-m zone, and it is transverse.
+1. *Reduction to level m.* Let V*(B) := (U_k(e^{iB}))^{(m)}. For B small, V*(B) is near 1, so U_m(V*(B)) is defined.
+   U_k(e^{iB}) and U_m(V*(B)) agree up to a gauge transformation equal to 1 on T^{(m)}. Indeed, M^k is M^{k−m} after
+   M^m, so a minimiser on {U : M^k(U) = e^{iB}} also minimises on the subset {U : M^m(U) = V*(B)}, and the minimal orbit
+   there is unique under the gauge transformations equal to 1 on T^{(m)} (RG1 (0.21)–(0.22), p.256). J^{(j)} is
+   invariant under every fine gauge transformation g, since J^{(j)}(U) = F(U, J(U)) + const with F(U^g, Ad(g)j) =
+   F(U, j) and J(U^g) = Ad(g)J(U) (Proposition 4.2(b)). So J^{(j)}(U_k(e^{iB})) = J^{(j)}(U_m(V*(B))). The first-order
+   part of V*(B) is Q_mH_kB up to a level-m field of zero curvature (*Zero-curvature terms* below). J^{(j)} ∘ U_m has
+   zero first-order coefficient at the trivial background (Proposition 4.2(c)). So the top polarisation of
+   J^{(j)}(U_k(e^{iB})) is ⟨V_1, Π_J^{(j)} V_1⟩ with V_1 := Q_m H_k B. Here Π_J^{(j)} is the level-m symbol of
+   Proposition 4.2, for the step J-term J^{(j)} of §3.3: for a fixed
+   α ∈ (0, ½), ‖Π_J^{(j)}(p′)‖ ≤ C_α|p′|^{2+2α} on the whole level-m zone, and it is transverse
+   (Π_J^{(j)}(p′)v(p′) = 0, since Δ_{m}(p′)v(p′) = 0 and τ(p′)v(p′) = 0 in Proposition 4.2(c), (e)).
 
    *Zero-curvature terms.* In step 4's normalisation the level-m bond logarithm carries the factor Mη = L^{m−k}, which
    step 2 accounts for, so the first-order part of V*(B) reads i(Mη)Q_mH_kB. It equals this only up to a level-m field
    of zero curvature (next paragraph and step 4). Such a field is a gradient plus a constant. Π_J^{(j)} annihilates it:
-   transversality kills the gradient, and the factor |p′|⁴ of Proposition 4.2 kills the constant. So it does not change
+   transversality kills the gradient, and the factor |p′|^{2+2α} of Proposition 4.2 kills the constant. So it does not change
    ⟨V_1, Π_J^{(j)} V_1⟩.
 
    *The first-order background.* By RG1 (0.21)–(0.22), p.256 (contract RG1_021_orbit), U_k(V) lies in the unique regular
    orbit of minimisers of the Wilson action on {U : M^k(U) = V}, under the gauge transformations equal to 1 on T^{(k)},
    which leave M^k unchanged. At V = 1 the configuration 1 is such a minimiser (its action is zero), so the representative
-   can be chosen with U_k(1) = 1. Then U(t) := U_k(e^{itB}) = exp(itA_1 + O(t²)) bondwise, analytic in t (VAR §G). Let Q̃_k
+   can be chosen with U_k(1) = 1. Then U(t) := U_k(e^{itB}) = exp(itηA_1 + O(t²)) bondwise, analytic in t (VAR §G). Let Q̃_k
    be the first-order part of M^k at U = 1, in the normalisation of step 4. Step 4's computation with m = k gives
    Q̃_kA = Q_kA + ∂ω_k(A), with ω_k linear and ∂ the gradient on T^{(k)}. The constraint gives Q̃_kA_1 = B, so Q̃_k is
    onto.
 
    Three facts give d_ηA_1 = d_ηH_kB.
    - A_1 minimises ‖d_ηA‖² over {A : Q̃_kA = B}. Since Q̃_k is onto and M^k is analytic near 1, the implicit function
-     theorem gives, for each such A, regular U_t = exp(itA + O(t²)) with M^k(U_t) = e^{itB}. At U = 1 the quadratic part
-     of the Wilson action (RG1 p.252) is a positive multiple c of ‖d_ηX‖², with U = e^{iX}. Minimality gives
+     theorem gives, for each such A, regular U_t = exp(itηA + O(t²)) with M^k(U_t) = e^{itB}. At U = 1 the quadratic part
+     of the Wilson action (RG1 p.252) is a positive multiple c of ‖d_ηX‖², with U = e^{iηX}. Minimality gives
      ct²‖d_ηA_1‖² + O(t³) ≤ ct²‖d_ηA‖² + O(t³); divide by t² and let t → 0.
    - The sets {d_ηA : Q̃_kA = B} and {d_ηA : Q_kA = B} coincide. A gauge transformation A ↦ A − ∂^ηλ changes Q_kA by
      −∂Q′_kλ (PRT1 (1.20), p.20). By the gauge covariance of RG1 (0.4), it changes Q̃_kA by the gradient of −λ on
@@ -1575,12 +1829,12 @@ type-checked Lean core `BalabanFormal.jterm_assembly`.
    three facts give the expansion A(U_k(e^{iB})) = ½⟨B, Δ_kB⟩ + O(B³) of the conventions, since PRT1 p.29 defines
    ⟨B, Δ_kB⟩ as ⟨∂H_kB, ∂H_kB⟩.
 2. *Change of units.* Write V_1 in top units: modes q with |q_μ| ≤ π L^{k−m}, and level-m momentum p′ = L^{−(k−m)}q.
-   A level-m bond carries L^{−(k−m)} times the top amplitude, and there are L^{4(k−m)} level-m sites per top site. So
-     |⟨V_1, Π_J^{(j)} V_1⟩| ≤ C L^{−2(k−m)} Σ_q |q|² |(d̄V_1)^∧(q)|²
-   (hypothesis `hunits` of `BalabanFormal.jterm_assembly`). Transversality is used here: on transverse modes
-   |q|²|V̂_1|² ≤ C|(d̄V_1)^∧|².
-3. *Fractional power.* On the level-m zone |q| ≤ 2π L^{k−m}, so |q|² ≤ (2πL^{k−m})^{2−2α}|q|^{2α}. Therefore the bound
-   is at most C L^{−2α(k−m)} Σ_q |q|^{2α} |(d̄V_1)^∧(q)|² (`BalabanFormal.jterm_assembly`).
+   A level-m bond carries L^{−(k−m)} times the top amplitude, and there are L^{4(k−m)} level-m sites per top site. So,
+   with |p′|^{2+2α} = L^{−(2+2α)(k−m)}|q|^{2+2α},
+     |⟨V_1, Π_J^{(j)} V_1⟩| ≤ C_α L^{2(k−m)} Σ_q |p′|^{2+2α} |V̂_1(q)|² = C_α L^{−2α(k−m)} Σ_q |q|^{2α} |q|² |V̂_1(q)|².
+3. *Transversality.* On transverse modes |q|²|V̂_1|² ≤ C|(d̄V_1)^∧|², and only transverse modes contribute (step 1). So
+     |⟨V_1, Π_J^{(j)} V_1⟩| ≤ C L^{−2α(k−m)} Σ_q |q|^{2α} |(d̄V_1)^∧(q)|²
+   (hypothesis `hunits` of `BalabanFormal.jterm_assembly`).
 4. *Alias summability.* Set M := L^m = 2h + 1 and η := L^{−k}. In top units the fine lattice has spacing η and the
    level-m lattice has spacing Mη = L^{m−k}. Fields are in physical normalisation: a bond of length ε carries the
    logarithm εA_μ. The lattice curl at spacing ε is (d_εA)_{μν}(x) := ε^{−1}(A_ν(x + εe_μ) − A_ν(x) − A_μ(x + εe_ν) +
@@ -1804,17 +2058,66 @@ Its polarisation symbol is Ψ_0 = d̂*Ψ̃_0 d̂, with d̂ the lattice curl and 
   Ψ̃_0(ξ) = c ln(1/|ξ|²)·1 + R_0(ξ),  sup_{ξ ∈ T⁴∖0} ‖R_0(ξ)‖ < ∞.
 
 *Proof.*
-1. *From −F_0 to B_tb.* −F_0 − B_tb = −½[log det(h + DDᵀ) − log det(Hess A + DDᵀ)]. The difference
-   K := Hess A − h = Π_D Hess A + Hess A Π_D − Π_D Hess A Π_D, with Π_D := D(DᵀD)^{−1}Dᵀ, is linear in ∇A(U): by
-   ⟨∇A, Dω⟩ ≡ 0, Hess A(X, Dω) = −⟨∇A, [X, ω]⟩.
-2. *Size of the difference.* At second order in b the difference has three kinds of term:
-   - ⟨∇A_1, θ_1(b)⟩, with ∇A_1 = dᵀdb = O(|ξ|²)b and θ_1 a one-loop integral with two massless propagators, one vertex
-     of degree 1 and the degree-0 symbols of Π_D. Its integrand has degree −3, so θ_1 is bounded and continuous.
-   - ⟨∇A_2, θ_0⟩ = 0, since θ_0 is Ad-invariant.
-   - O(|∇A_1|²·∫1/(s(k)s(k+ξ))) = O(|ξ|⁴ ln(1/|ξ|)).
+Write H := Hess A(U), D := D_U, Π_D := D(DᵀD)^{−1}Dᵀ, Π := 1 − Π_D, h_⊥ for h on (ran D)^⊥, S := (DᵀD)^{−2}, and
+J := ∇A(U). Differentiating ⟨∇A(U), D_Uω⟩ ≡ 0 along U ↦ Ue^{iX} gives HD = 𝒩_U(J). Here 𝒩_U(j) is linear in j, local,
+contains no lattice difference, depends on U only through the bond transports, and is gauge-covariant; in PBG's
+coordinates it is the T of §7. All operators are restricted to a coset 𝒪 ≠ ℤξ (Remark 3.4). The loop momentum k is that
+of the 0-form line, a := |k|, and a′ := |k + ξ|, both taken mod 2π. Factors |b̂| are not written.
 
-   So Ψ_0 − Ψ_tb = O(|ξ|²) with a bounded coefficient.
-3. *Conclusion.* By §6.2, Ψ_tb(ξ) = c ln(1/|ξ|²)(|ξ|²δ − ξξ) + O(|ξ|²) near 0. Also d̂*d̂(ξ) = |ξ|²δ − ξξ + O(|ξ|⁴),
+1. *One log-determinant.* −F_0 − B_tb = −½[log det(h + DDᵀ) − log det(H + DDᵀ)].
+   - In (ran D)^⊥ ⊕ ran D, h + DDᵀ = h_⊥ ⊕ DDᵀ, and H + DDᵀ has the diagonal blocks h_⊥ and Π_DHΠ_D + DDᵀ. The Schur
+     complement of h_⊥ is DDᵀ + Π_DH_SΠ_D, with H_S := H − HΠh_⊥^{−1}ΠH.
+   - On ran D, (DDᵀ)^{−1} = DSDᵀ. By Sylvester's identity det(1 + AB) = det(1 + BA),
+
+       −F_0 − B_tb = ½ log det_Y(1 + S𝒲),  𝒲 := DᵀH_SD = Dᵀ𝒩_U(J) − 𝒩_U(J)ᵀΠh_⊥^{−1}Π𝒩_U(J).
+
+     The second form follows from HD = 𝒩_U(J). The two forms are one expression, so they have the same integrand.
+2. *The integrand.* 𝒲₀ = 0, so the second-order term is ½tr(S𝒲₂) + ½tr(S₁𝒲₁) − ¼tr(S𝒲₁S𝒲₁), with integrand I(k, ξ).
+   - *Schur form.* H_S vanishes at U = 1, since H₀ = ΠH₀Π. Its first-order part is Π_DH₁Π_D: the projection
+     derivatives drop out because Π(Π)₁Π = 0 and H₀(Π)₁Π = 0, and the derivative of h_⊥^{−1} gives +ΠH₁Π. Hence
+     𝒲₁ = D₀ᵀH₁D₀ and 𝒲₂ = D₀ᵀ(H₂ − H₁Πh_⊥^{−1}ΠH₁)D₀ + D₁ᵀΠ_DH₁Π_DD₀ + D₀ᵀΠ_DH₁Π_DD₁, since H₀D₀ = 0.
+   - *Symbol bounds.* |D₀| ≤ a, s ≥ (4/π²)a², and h₀ = s on coclosed 1-forms. D₁ contains no difference, |H₂| ≤ C,
+     and |(DᵀD)₁| ≤ C(a + a′). H₁ is a trigonometric polynomial that vanishes at zero momenta, since A is quartic in
+     constant fields, so |H₁| ≤ C(a + a′).
+   - *Degrees.* The five terms are bounded by Ca^{−2}, C(a + a′)²a^{−2}a′^{−2}, C(a + a′)a^{−3},
+     C(a + a′)²(a^{−1}a′^{−3} + a^{−3}a′^{−1}), and C(a + a′)²a^{−2}a′^{−2}. The degree is at most 3 at k = 0 and at k = −ξ. So, as in Remark 3.4 (grid
+     points within r of a singular point now contribute at most Cr), Ψ_0 − Ψ_tb = ∫_{T⁴} I(k, ξ) d⁴k/(2π)⁴.
+   - *J-form.* With J₀ = 0, I = ½tr(SD₀ᵀ𝒩₀(J₂)) + I_lin + I_quad, where
+     - I_lin := θ₁(k, ξ)[b̂, Ĵ₁], θ₁ being the first-order part in b at fixed j of the integrand of ½tr(SD_Uᵀ𝒩_U(j));
+     - I_quad := −½tr(S𝒩₀(J₁)ᵀΠh_⊥^{−1}Π𝒩₀(J₁)) − ¼tr(SD₀ᵀ𝒩₀(J₁)SD₀ᵀ𝒩₀(J₁)).
+
+     Only the zero-momentum part of J₂ reaches the trace. For constant j, 𝒩₀(j) = Σ_ν A_ν(j) ⊗ n_ν(k), with A_ν(j) a
+     multiple of ad j_ν, and every other factor is scalar on g. Since tr_g ad = 0, the J₂ term vanishes for every k.
+     J₁ = H₀b has symbol O(|ξ|²), so |Ĵ₁| ≤ C|ξ|² and |𝒩₀(J₁)| ≤ C|ξ|².
+3. *Size of the difference.* Let |ξ| ≤ ξ₀, with ξ₀ small.
+   - *Inner region |k| < 2|ξ|.* Here a + a′ ≤ 5|ξ|, and the bounds of the Schur form apply. ∫a^{−2} ≤ C|ξ|² and
+     |ξ|∫a^{−3} ≤ C|ξ|². For p, q ≤ 3 with p + q = 4, the substitution k = |ξ|ℓ gives
+     |ξ|²∫a^{−p}a′^{−q} = |ξ|²∫_{|ℓ|<2}|ℓ|^{−p}|ℓ + ξ/|ξ||^{−q} d⁴ℓ, which is C|ξ|² with C independent of the direction.
+   - *Outer region, quadratic part.* Here a′ ≥ a/2, so |I_quad| ≤ C|ξ|⁴a^{−6}, whose integral is at most C|ξ|².
+   - *Outer region, linear part.* |θ₁(k, tξ)| ≤ Ca^{−4} and |∂_ξθ₁(k, tξ)| ≤ Ca^{−5} for t ∈ [0, 1]. The three pieces
+     S D₁ᵀ𝒩₀, S D₀ᵀ𝒩₁, and S₁D₀ᵀ𝒩₀ are bounded by Ca^{−4}, Ca^{−3}, and C(a + a′)a^{−6}a′, and a derivative in ξ costs
+     at most one factor a^{−1}. So θ₁(k, ξ) − θ₁(k, 0) contributes at most C|ξ|³∫_{a≥2|ξ|}a^{−5} ≤ C|ξ|².
+   - *The constant-background integrand.* θ₁(k, 0)[β, j] is the integrand for constant β and constant j. To first order
+     in β, U_β := (e^{iβ_μ}) is the gauge transform of 1 by g(x) := e^{−iβ·x} on ℤ⁴. By covariance,
+     D_{U_β} = gD₀g^{−1} and 𝒩_{U_β}(j) = g𝒩₀(Ad(g)^{−1}j)g^{−1}. Conjugation by g and the x-dependence of Ad(g)^{−1}j
+     enter through commutators with the coordinates x_μ, and [x_μ, P] has symbol i∂_{k_μ}P for translation-invariant
+     P. The terms multiplied by x_μ cancel, since U_β is translation invariant.
+     - What remains is a sum of two kinds of term. In the first, one factor P of the U = 1 product is replaced by a
+       fixed multiple of ad β_μ ∂_{k_μ}P. In the second, the only factor that is not scalar on g is ad[β_μ, j].
+     - After tr_g the second kind vanish. By Leibniz, the first give θ₁(k, 0)[β, j] = Σ_{μν} C_{μν}∂_{k_μ}Φ_ν(k),
+       with C_{μν} a fixed multiple of tr_g(ad β_μ A_ν(j)) and Φ_ν(k) := tr[S(k)D₀(k)*n_ν(k)].
+     - Φ_ν is smooth on T⁴∖0, and |Φ_ν| ≤ Ca^{−3}. The faces of [−π, π]⁴ cancel by periodicity, so
+       |∫_{a≥2|ξ|}∂_{k_μ}Φ_ν| = |∫_{a=2|ξ|}Φ_ν ω_μ dσ| ≤ C. With |Ĵ₁| ≤ C|ξ|², this part is O(|ξ|²).
+
+   So Ψ_0 − Ψ_tb = O(|ξ|²) for |ξ| ≤ ξ₀. For |ξ| ≥ ξ₀ the singularities of I(·, ξ) have degree at most 3, locally
+   uniformly in ξ, so Ψ_0 − Ψ_tb is continuous and bounded there.
+4. *Transversality.* On each 𝒪 ≠ ℤξ, F_0 is invariant under the gauge transformations that commute with T_ξ, since
+   these preserve the cosets and every operator of F_0 is gauge-covariant. Its first-order coefficient at U = 1 vanishes
+   on T_ξ-invariant backgrounds: a mode of momentum ξ′ ∈ ℤξ, ξ′ ≢ 0, couples different fibres and has zero trace, and a
+   constant mode gives an Ad-invariant element of g, which is 0 since g is simple. Differentiating
+   ⟨∇F_0(U), D_Uλ⟩ ≡ 0 at U = 1 therefore gives Ψ_0(ξ)v = 0 for every pure-gauge mode v = d̂λ, on each coset and hence
+   in the limit. So Ψ_0 = d̂*Ψ̃_0d̂.
+5. *Conclusion.* By §6.2, Ψ_tb(ξ) = c ln(1/|ξ|²)(|ξ|²δ − ξξ) + O(|ξ|²) near 0. Also d̂*d̂(ξ) = |ξ|²δ − ξξ + O(|ξ|³) (O(|ξ|⁴) for 1-forms at bond midpoints), and c ln(1/|ξ|²)·O(|ξ|³) = O(|ξ|²),
    and on coexact forms d̂*d̂ is bounded below by a positive multiple of |ξ|², since 4 sin²(ξ_μ/2) is at least 4ξ_μ²/π²
    for |ξ_μ| up to π. Away from 0, Ψ_0 is continuous and bounded. ∎
 
@@ -1837,12 +2140,34 @@ in k, where η_k = L^{−k}. The type-checked Lean core of the summation is `Bal
 **Proposition 7.1.** For fixed p_0 ≠ 0, sup_k ‖Π_{F_k}(p_0)‖ < ∞.
 
 **Setting.** The background is U = U_k(e^{iB}), B ∈ 𝔅_r (§5), in top units, and V = e^{iB}. The loop momentum is p, a
-coarse momentum with |p_μ| ≤ π; q = p + l are its aliases, and |p̂| := |v(p)|, so (2/π)|p| ≤ |p̂| ≤ |p|.
+coarse momentum with |p_μ| ≤ π; q = p + l are its aliases, and |p̂| := |∂¹(p)|, with ∂¹_μ(p) = e^{ip_μ} − 1 (the v(p) of §4, not Lemma 5.2's v_μ(q)), so
+(2/π)|p| ≤ |p̂| ≤ |p|.
 - *PBG's objects.* We use PBG's coordinates e^{iηA}U; passing from §3's U e^{iX} is the bondwise linear map
   X = η Ad(U)^{−1}A, which carries Hessians to Hessians. On the chain all PBG domains Ω_j are the whole torus, so only
   level k occurs, and L^kη = 1. Then 𝐇 := Hess A(U) is PBG's Δ (3.10), J := ∇A(U) is PBG's J (3.11), and h = Π_⊥𝐇Π_⊥
-  (§3.3). D = D_U, and Q = Q(U) is the linearised k-fold average. Q′, N(Q′) = {λ : Q′λ = 0}, R (the orthogonal
-  projection onto ΔN(Q′)), and G′ are as in PBG (3.21)–(3.24), and QD = D̄Q′ (PBG (3.115)).
+  (§3.3). D = D_U. N(Q′) = {λ : Q′λ = 0}, R (the orthogonal projection onto ΔN(Q′)), and G′ are as in PBG
+  (3.21)–(3.24), with Q and Q′ as follows.
+- *The average.* Write Q̃ for §3.1's Q, the linearised k-fold average of the chain (RG1 (0.4) or (0.12)), with
+  Q̃D = D̄P. PBG works with a dressed average instead (PBG p.392 l.45–46: CMP98 (89)–(92)), and §7 does the same for the
+  chain. Q := Q(U) is the linear part of PBG's one-step formula (3.113), with Ū the chain's average and the contour
+  variables U(y, x) of RG1 (0.11) in place of U(Γ_{y,x}), composed over the k steps as in PBG (3.15). Q′ is PBG (3.19)
+  with the same replacement: Q′λ(y) = Σ_{x∈B(y)}L^{−d}R(U(y, x))λ(x), composed over the k steps.
+  - *QD = D̄Q′.* PBG's derivation (3.113)–(3.115), p.418, uses only the point covariance of Ū (§3.1) and the
+    covariance U(y, x) ↦ u(y)U(y, x)u(x)^{−1} of the contour variables (RG1 (0.6) for (0.11)).
+  - *Q − Q̃ ∈ ran D̄.* The dressing factors (R̄_{c₋}U′)^{−1} and R̄_{c₊}U′ of (3.113) equal 1 at U′ = 1. So the
+    one-step linear part is Q̃^{(1)}A + D̄ω_d(A), with ω_d(A)(y) the linear part of (1/i)log R̄_yU′. Over the steps,
+    Q_j − Q̃_j = Q^{(j)}(Q_{j−1} − Q̃_{j−1}) + (Q^{(j)} − Q̃^{(j)})Q̃_{j−1}, and Q^{(j)}D̄ = D̄Q′^{(j)}, so the difference
+    stays in ran D̄ at every level. Hence {QA ∈ z + ran D̄} = {Q̃A ∈ z + ran D̄}, and §3's Δ_k and F_k are the same
+    for Q and Q̃.
+  - *At U = 1, Q = Q_k,* the composite of the straight one-step averages (PRT1 (1.16)–(1.18)), with centred blocks.
+    Indeed, at U = 1 let A(Γ) and A(y, x) be the linear parts in A of (1/i)log U′(Γ) and (1/i)log U′(y, x); by RG1
+    (0.8), A(y, x) is the mean of A(Γ) over Γ ∈ 𝐆(y, x). Then ω_d(A)(y) = Σ_{x∈B(y)}L^{−d}A(y, x), since R_y is the
+    identity at U = 1. The contour factors contribute +ω_d(A)(c₋) − ω_d(A)(c₊) to Q̃^{(1)}A(c): in (0.4) directly, and
+    in (0.12) because reversing the contours of 𝐆(c₊, x′) gives 𝐆(x′, c₊) (RG1 p.252), so A(x′, c₊) = −A(c₊, x′). The
+    dressing contributes −ω_d(A)(c₋) + ω_d(A)(c₊). Also Q′(1) is the centred block average Q′_k (PRT1 (1.20)).
+  - So at U = 1, G, G′, R, H, C, and (QGQ*)^{−1} below are PBG's own operators at U = 1, conjugated by the fixed fine
+    translation from CMP98's corner blocks (CMP98 (2)) to RG1's centred ones: PBG's average also has Q(1) = Q_k
+    (CMP98 (124)) and the block average as Q′(1) (PBG (3.19)). PBG's bounds at U = 1 apply without R50.
 - *The defect of the Hessian.* 𝒩 := 𝐇D. Comparing first-order terms in λ in PBG (3.117) gives
   ⟨A, 𝒩λ⟩ = ½⟨i[λ(b₋), A(b)] − i[A(b), R_bλ(b₊)], J⟩ =: T(J, λ, A). This is linear in J, local, and contains no
   derivative: |T(J, λ, A)| ≤ c Σ_b η⁴|J(b)||A(b)|(|λ(b₋)| + |λ(b₊)|), with c absolute.
@@ -1866,19 +2191,22 @@ coarse momentum with |p_μ| ≤ π; q = p + l are its aliases, and |p̂| := |v(p
 
 *(a) A fixed transverse space.* Let T₀ := (ran D̄_0)^⊥, with D̄_0 the coarse gauge action at V = 1, and orthogonal projection P_T, and let Π_V be the orthogonal
 projection onto (ran D̄_V)^⊥.
-- For small real B on a torus, Π_V maps T₀ isomorphically onto (ran D̄_V)^⊥.
+- Let B be a plane wave of momentum p₀ ≢ 0 on a torus, and 𝒪 ≠ ℤp₀ a coset (Remark 3.4). Steps (a) and (b) are
+  restricted to the fields on 𝒪 ∪ (−𝒪). There D̄_V is injective for small real B, so (ran D̄_V)^⊥ has constant
+  dimension, and Π_V → P_T as B → 0. Hence Π_V maps T₀ isomorphically onto (ran D̄_V)^⊥.
 - By Lemma 3.3, Δ_k = Π_VΔ_kΠ_V, so det_{T₀}(P_TΔ_kP_T) = det_⊥(Δ_k) · det_{T₀}(P_TΠ_VP_T).
 - Hence
 
     F_k = ½ log det_{T₀}(P_TΔ_kP_T) − ½ log det_{T₀}(P_TΠ_VP_T) − ½ log det(D̄_VᵀD̄_V).
 
-  The last two terms depend on B and not on k (step (e)). As in Remark 3.4, the second-order coefficients are computed
-  in infinite volume, at m = 0, as momentum integrals at p₀ ≠ 0 (step (f)).
+  The last two terms depend on B and not on k (step (e)). By Remark 3.4, the limits of the coset sums of the
+  second-order coefficients are the momentum integrals at p₀ ≠ 0 of steps (e) and (f).
 
 *(b) Representation.* For every coarse z,
 
     ⟨z, Δ_kz⟩ = min{⟨A, (h + DRD* + aQ*Q)A⟩ : QA = z} − a|z|².
 
+- §3's ⟨z, Δ_kz⟩ is the minimum of ⟨A, hA⟩ over {Q̃A ∈ z + ran D̄}, which is {QA ∈ z + ran D̄} (Setting).
 - Every A with QA ∈ z + ran D̄ is moved by a gauge direction Dω to QA = z, because QD = D̄Q′ and Q′ is onto. h is
   gauge-invariant.
 - Some λ ∈ N(Q′) with Δλ = RD*A exists, because RD*A ∈ ΔN(Q′). The move A ↦ A − Dλ leaves QA and h unchanged and
@@ -1890,7 +2218,7 @@ and invariant under N(Q′). For t ∈ ℂ let
     m_t(z) := min{⟨A, (G^{−1} − tK′)A⟩ : QA = z} − a|z|².
 
 Then Δ_k = m_1. The constrained Gaussian (Schur complement) gives the t^n term of m_t as −t^n H*K′(CK′)^{n−1}H for
-n ≥ 1, with t⁰ term (QGQ*)^{−1} − a. On a torus, K′ = O(B), so for small B the map t ↦ m_t is analytic on |t| ≤ 2,
+n ≥ 1, with t⁰ term (QGQ*)^{−1} − a. On the fields of a coset 𝒪 ≠ ℤp₀ (step (a)), K′ = O(B), so for small B the map t ↦ m_t is analytic on |t| ≤ 2,
 and the t^n term is of order n in B. Moreover H*Δ′_πH = 0: polarising (3.120), every term contains λ_{Hz} = 0 or
 λ_{Hz′} = 0. So, up to terms of order three in B,
 
@@ -1900,7 +2228,7 @@ and the t^n term is of order n in B. Moreover H*Δ′_πH = 0: polarising (3.120
 - (QGQ*)^{−1}(U) has kernel ≤ Ce^{−δ₁|y−y′|} (PBG (3.132) with Theorem 3.12), and H(U) has the bounds (3.133). These
   hold for complex B ∈ 𝔅_r by Condition 4 and READINGS.md R50, through the conventions of §5. So sup|H(U)z| ≤ C|ẑ| for
   a coarse plane wave z.
-- U_k(e^{iB}) lies in U_k^c (conventions of §5), so |J| < α₀ on 𝔅_r, with RG1's α₀ (RG1 (1.16), p.262, with n = k and L^kξ = 1; γ₀ = α₀ by p.263 l.3).
+- U_k(e^{iB}) lies in U_k^c (conventions of §5), so |J| < α₀ on 𝔅_r, with RG1's α₀ (RG1 (1.16), p.262, with n = k and L^kξ = 1; RG1's γ₀, which is not PRT1's γ₀ of (d) and (f), equals α₀ by p.263 l.3).
 - (7.2) is invariant under fine gauge transformations that leave V fixed. We take VAR's Landau gauge, in which
   U = exp(iη𝓗(B)) with |𝓗| < B₅ε₁, VAR's ε₂ (VAR Proposition 9 with (19) and (173), pp.281, 305, 309).
 - Cauchy estimates in the plane-wave directions b, b̄ (𝔅-norm ≤ (1 + π)|b|) bound the first- and second-order parts.
@@ -1908,8 +2236,8 @@ and the t^n term is of order n in B. Moreover H*Δ′_πH = 0: polarising (3.120
   - H₁z, the first-order part of H(U)z, has ‖H₁z‖_∞ ≤ C|b||ẑ|.
   - A₁, the first-order part of 𝓗, has ‖A₁‖_∞ ≤ C|b|.
   - The first- and second-order parts of (QGQ*)^{−1}(U) have kernels ≤ C|b|e^{−δ₁|y−y′|} and ≤ C|b|²e^{−δ₁|y−y′|}.
-- At U = 1, ‖G‖ ≤ C and ‖G′‖ ≤ C, by the kernel bounds of PBG Theorems 3.1 and 3.3 (B₀e^{−δ₀d(y,y′)} in top units) and
-  the Schur test.
+- At U = 1, ‖G‖ ≤ C and ‖G′‖ ≤ C. These are PBG's operators at U = 1 (Setting), so the kernel bounds of PBG Theorems
+  3.1 and 3.3 (B₀e^{−δ₀d(y,y′)} in top units) and the Schur test apply.
 
 All these C depend on d, L, r, RG1's α₀, and PBG's constants, and not on k.
 
@@ -1942,7 +2270,7 @@ Each term of (7.2) is bounded as follows. Step (c) gives ‖Hz‖_∞ ≤ C|ẑ|
     T(j₁, φ_{Hz}, Dφ_{H₁z′}), and the same with z and z′ exchanged. Here ‖φ_{H₁z′}‖_2 ≤ (π/2)|p′|^{−1}‖H₁z′‖_2 at the
     quasi-momentum p′ = p ± p₀ of H₁z′, and ‖Dφ_{H₁z′}‖_2 ≤ ‖H₁z′‖_2. These terms are at most
     C(1 + |p̂′|^{−1})|b|²|ẑ||ẑ′|.
-  - When the derivative falls on D_U, D₁λ(b) = −i[A₁(b), λ(b₊)] has no derivative, and the derivative of 𝒩 carries a
+  - When the derivative falls on D_U, D₁λ(b) = i[A₁(b), λ(b₊)] has no derivative, and the derivative of 𝒩 carries a
     factor η. At fixed A, the derivative of φ_A is (DᵀD)^{−1}[D₁ᵀΠ_⊥A − DᵀD₁φ_A]. On quasi-momentum p′, its norm is at
     most C‖A₁‖_∞(|p′|^{−2}‖A‖_2 + |p′|^{−1}‖φ_A‖_∞). With A = Hz, Hz′, (7.1) and Lemma 7.2 bound these terms by
     C(1 + |p̂′|^{−2})|b|²|ẑ||ẑ′|.
@@ -1966,17 +2294,17 @@ The integrals converge because d = 4 and p₀ ≠ 0, which separates the singula
 k. ∎
 
 **Lemma 7.2 (The Gauge Parameter of H at U = 1).** Let z = ẑe^{ip·y} be a coarse plane wave with p ≠ 0 and |p_μ| ≤ π,
-and let H = H(1). If z is transverse (Σ_μ \overline{v_μ(p)}ẑ_μ = 0), then φ := (∂*∂)^{−1}∂*Hz satisfies ‖φ‖_∞ + ‖∂φ‖_∞ ≤ C|ẑ|. Here C depends only on d and L.
+and let H = H(1). If z is transverse (Σ_μ \overline{∂¹_μ(p)}ẑ_μ = 0, with ∂¹_μ(p) = e^{ip_μ} − 1 the v_μ(p) of §4, that
+is, z ∈ T₀), then φ := (∂*∂)^{−1}∂*Hz satisfies ‖φ‖_∞ + ‖∂φ‖_∞ ≤ C|ẑ|. Here C depends only on d and L.
 
 *Proof.* We use the notation of Lemma 5.2: q = p + l, Δ(q), Δ₀(p), u, v_μ, φ_μ, c₀, c₁, c_N.
-1. *H minimises the curvature.*
-   - Hz minimises ⟨A, G^{−1}A⟩ on {Q̃A = z} (PBG p.420), where Q̃ := Q(1) is the first-order average of the chain
-     (Proposition 5.3, step 1). It lies on the slice R∂*A = 0 (PBG (3.124)), where ⟨A, G^{−1}A⟩ = ‖∂A‖² + a|z|².
-   - By step (b) of Proposition 7.1, every A with Q̃A = z can be moved into the slice by some λ ∈ N(Q′) without
-     changing ‖∂A‖² or Q̃A. So Hz minimises ‖∂A‖² on {Q̃A = z}.
-   - By Proposition 5.3, step 1, this minimum is attained exactly at the curvature ∂H_kz, with PRT1's H_k. (The
-     centred blocks change Fourier coefficients by unit phases only.) For quasi-momentum p ≠ 0, a curl-free Bloch wave
-     is a gradient. So Hz = A_⊥ + ∂φ with A_⊥ := Π_⊥H_kz.
+1. *H is PRT1's H_k.* At U = 1, Q = Q_k with centred blocks (§7's Setting), J = 0, and Δ_π = 𝐇(1) by PBG (3.119),
+   since 𝐇(1)∂ = 0; ⟨A, 𝐇(1)A⟩ = ‖∂A‖². G^{−1} = 𝐇(1) + ∂R∂* + aQ_k*Q_k is positive definite (G is bounded, PBG
+   Theorem 3.3), so Hz is the unique minimiser of ⟨A, G^{−1}A⟩ on {Q_kA = z} (PBG p.420).
+   - On that set ⟨A, G^{−1}A⟩ = ‖∂A‖² + ‖R∂*A‖² + a|z|² ≥ ‖∂A‖² + a|z|².
+   - H_kz minimises ‖∂A‖² on {Q_kA = z} (Proposition 5.3, step 1, third fact), and R∂*H_kz = 0 (PRT1 p.29). So H_kz
+     attains the lower bound, and Hz = H_kz. (The centred blocks change Fourier coefficients by unit phases only.)
+   - Hence φ = φ_k := (∂*∂)^{−1}∂*H_kz.
 2. *PRT1's gauge parameter.* Put S(p) := Σ_ν|∂¹_ν(p)|²/(Δ₀(p)²φ_ν(p)), N(p) := Σ_{l″}|u(p + l″)|²Δ₀(p)²/Δ(p + l″)², and
    β(p) := Σ_λ \overline{∂¹_λ(p)}(Δ₀(p)φ_λ(p))^{−1}ẑ_λ.
    - Apply ∂* to the first form of PRT1 (1.63). Use \overline{∂_μ(q)}\overline{v_μ(q)} = \overline{∂¹_μ(p)} and
@@ -1984,7 +2312,7 @@ and let H = H(1). If z is transverse (Σ_μ \overline{v_μ(p)}ẑ_μ = 0), then 
 
        (∂*H_kz)^(q) = \overline{u(q)}Δ₀(p)N(p)^{−1}S(p)^{−1}β(p)/Δ(q).
 
-   - So φ_k := (∂*∂)^{−1}∂*H_kz has φ̂_k(q) = \overline{u(q)}Δ₀(p)N(p)^{−1}S(p)^{−1}β(p)/Δ(q)².
+   - So φ_k has φ̂_k(q) = \overline{u(q)}Δ₀(p)N(p)^{−1}S(p)^{−1}β(p)/Δ(q)².
    - With N ≥ c_N, S ≥ 1/c₁, and the bounds of Lemma 5.2, step 1, this gives
      Σ_l(1 + |∂(q)|)|φ̂_k(q)| ≤ C|β(p)||p|^{−2}.
    - Next, |Δ₀(p)φ_λ(p) − 1| ≤ C|p|².
@@ -1993,21 +2321,56 @@ and let H = H(1). If z is transverse (Σ_μ \overline{v_μ(p)}ẑ_μ = 0), then 
      - For l′ ≠ 0, some l′_ν ≠ 0 gives |v_ν(p + l′)|² ≤ C|p|²(1 + |l′_ν|)^{−2}, and Δ₀(p)/Δ(p + l′) ≤ π²|p|²/|l′|². So
        these terms add up to at most C|p|⁴.
    - For transverse z, β = Σ_λ \overline{∂¹_λ}((Δ₀φ_λ)^{−1} − 1)ẑ_λ, so |β| ≤ C|p|³|ẑ|. Hence ‖φ_k‖_∞ + ‖∂φ_k‖_∞ ≤
-     C|p||ẑ|.
-   - By Lemma 5.2, steps 3–4, Σ_l|(H_kz)^(q)| ≤ C|ẑ|. So ‖H_kz‖_∞ ≤ C|ẑ|.
-3. *The slice gauge parameter.*
-   - By Proposition 5.3, steps 1 and 4, Q̃A = Q_kA + ∂̄ω(A) at U = 1, and Q̃∂λ = ∂̄Q′λ, with Q′ the restriction to the
-     coarse sites (RG1 (0.6)).
-   - ω(A) is the sum over the k steps of the endpoint terms of step 4 of Proposition 5.3, each applied to the straight
-     level-(j − 1) average of A and restricted to the coarse sites. The contours of 𝐆(y, x) are shortest paths with
-     |n_μ| ≤ (L − 1)/2 (RG1 p.252), so the j-th term is at most (d/2)L^{j−k}sup|A|. Gradients pass to gradients by
-     the covariance RG1 (0.6). Hence |ω(A)| ≤ (dL/(2(L − 1)))sup|A|.
-   - Hz = H_kz + ∂(φ − φ_k), and Q_kH_kz = z (PRT1 p.29). So Q̃Hz = z gives
-     z + ∂̄ω(H_kz) + ∂̄Q′(φ − φ_k) = z, that is, ∂̄Q′φ = ∂̄(Q′φ_k − ω(H_kz)). Q′φ is fixed by this up to a constant, and
-     |(Q′φ)^| ≤ ‖φ_k‖_∞ + C‖H_kz‖_∞ ≤ C|ẑ|.
-   - The slice condition R∂*∂φ = 0 says that Δ²φ ⊥ N(Q′), that is, Δ²φ ∈ ran Q′ᵀ. So
-     φ̂(q) = (Q′φ)^Δ(q)^{−2}/Σ_{l′}Δ(p + l′)^{−2}.
-   - Hence ‖φ‖_∞ ≤ Σ_l|φ̂(q)| = |(Q′φ)^| ≤ C|ẑ|, and ‖∂φ‖_∞ ≤ Σ_l|∂(q)||φ̂(q)| ≤ C|p||ẑ|. ∎
+     C|p||ẑ| ≤ 2πC|ẑ|, and φ = φ_k by step 1. ∎
+
+**Lemma 7.3 (The Second-Order Part of the Dressed Average).** Let C^{(2)}(U; A, A′) be the symmetric bilinear
+second-order part in A of the dressed k-fold average of §7's Setting, normalised as in PBG (3.13)–(3.14), with the
+one-step formulas (3.113) composed as in CMP98 (91). Let U(t) = exp(itηA₁ + O(t²)) bondwise, for a fine 1-form A₁.
+For a field X at spacing s put ‖X‖_p^p := Σ_b s^d|X(b)|^p over the bonds of one top cell. Then for Bloch waves A, A′
+  ‖C^{(2)}(1; A, A′)‖_1 ≤ C‖A‖_2‖A′‖_2,  ‖∂_tC^{(2)}(U(t); A, A′)|_{t=0}‖_1 ≤ C‖A₁‖_∞‖A‖_2‖A′‖_2,
+and ‖∂_tQ(U(t))|_{t=0}A‖_p ≤ C‖A₁‖_∞‖A‖_p for p = 1, 2. Here C depends only on d, L, and G. At a top bond c these
+depend only on the fields on B^k(c₋) ∪ B^k(c₊).
+
+*Proof.* Step j (1 ≤ j ≤ k) maps level-(j − 1) fields, of spacing s_j := L^{j−1−k}, to level-j fields, of spacing
+ε_j := Ls_j. The computation is in `work_K2_second_order_average.md`.
+1. *One step.* Ū̄′_c is built from the level-(j − 1) bond variables of the fluctuation and of the background on the
+   bonds R_c of B(c₋) ∪ B(c₊) and of the lines [x, x′], by products, inverses, conjugations, the group average M of
+   RG1 (0.10), and averages exp(iΣ w log). These are defined and analytic near 1 on the complexified group G^c (RG1
+   p.252 l.37, p.253 l.16), and no length enters them. So there is one analytic Ψ: g_ℂ^n × g_ℂ^n → g_ℂ on a complex
+   polydisc of radius r₀(d, L, G), with n = |R_c| depending on d and L, such
+   that (1/i)log Ū̄′_c = Ψ(s_ja, s_jB) for every j, k, and c, where a and B are the background and fluctuation
+   logarithms on R_c. Ψ(a, 0) = 0, since every factor of (3.113) is 1 at U′ = 1. The normalised step is
+   ε_j^{−1}Ψ(s_ja, s_jB).
+2. *Kernels.* By Cauchy estimates, the Taylor coefficients of Ψ of order N are at most K_N := sup|Ψ|r₀^{−N}, with
+   the sup over the complex polydisc. So, at
+   a = ta₁ + O(t²), the second-order part c_j^{(2)} of the normalised step has kernel entries at most K₂s_j²/ε_j =
+   K₂s_j/L on R_c × R_c. Its t-derivative has entries at most K₃ns_j³ε_j^{−1}‖a₁‖_∞, and the t-derivative of the
+   linear part has entries at most K₂ns_j‖a₁‖_∞/L on R_c.
+3. *Norms.* Let each bond lie in at most m(d, L) of the sets R_c. For a bilinear kernel with entries at most K on
+   R_c × R_c, 2|X||Y| ≤ τ|X|² + τ^{−1}|Y|² and the count give an L¹-norm at most L^dKnm(τ‖B‖_2² + τ^{−1}‖B′‖_2²), so
+   at most 2L^dKnm‖B‖_2‖B′‖_2. A linear kernel with entries at most K has L²-norm at most L^{d/2}K(nm)^{1/2} and
+   L¹-norm at most L^dKm.
+4. *Composition at U = 1.* At U = 1 every background is 1, and the linear part of each step is the straight average
+   Q^{(j)} (§7's Setting). It is an L¹-, L²-, and L^∞-contraction: each level-(j − 1) bond lies on exactly L lines
+   [x, x′], each with weight s_j^dL^{−1}, and (Q^{(j)}B)(c) is a mean of L^{d+1} values. Expanding the composite to
+   second order gives
+     C^{(2)}(1; A, A′) = Σ_{j=1}^k Q^{(k)}⋯Q^{(j+1)} c_j^{(2)}(Q_{j−1}A, Q_{j−1}A′).
+   By steps 2–3, the j-th term is at most 2L^{d−1}K₂nm s_j‖A‖_2‖A′‖_2. Also Σ_{j=1}^k s_j ≤ 1/(L − 1).
+5. *The background of step j* is the raw average Ū^{j−1}(U(t)) (PBG (3.15)), with logarithms tQ̃_{j−1}(1)A₁ + O(t²).
+   - At U = 1, Q̃^{(i)}B = Q^{(i)}B − D̄ω^{(i)}(B), with ω^{(i)}(B) the contour mean ω_d of §7's Setting for the
+     field B, and
+     the contours of 𝐆(y, x) have at most d(L − 1)/2 bonds. (B(y) consists of the points of spacing s_i in the cube of
+     side ε_i centred at y (RG1 (0.3)), so with L odd x − y = Σ_μ s_in_μe_μ has |n_μ| ≤ (L − 1)/2; RG1 p.252 l.29
+     prints "L − 1/2".) So |ω^{(i)}(B)| ≤ s_id(L − 1)sup|B|/2.
+   - By Q̃^{(i)}D̄ = D̄P, Q̃_iA = Q_iA − D̄ω_i(A) with ω_i := Pω_{i−1} + ω^{(i)}(Q_{i−1}A). Since
+     Σ_{i<j}s_i ≤ ε_{j−1}/(L − 1), we get sup|ω_{j−1}| ≤ (d/2)ε_{j−1}sup|A|. So the normalised level-(j − 1) gradient is
+     at most d·sup|A|, and ‖Q̃_{j−1}(1)A₁‖_∞ ≤ (1 + d)‖A₁‖_∞.
+6. *The derivative.* The t-derivative of the composite falls on one Q^{(i)}, on c_j^{(2)}, or on Q_{j−1}. By steps 2,
+   3, and 5 these contribute at most C‖A₁‖_∞ times Σ_j s_jΣ_i s_i, Σ_j s_j², and Σ_j s_jΣ_{i<j}s_i respectively. Each
+   of these is bounded independently of k. The derivative of Q(U(t)) is the sum over i of the middle factors, with
+   the same bound.
+7. *Locality.* The contours of 𝐆(y, x) lie in B(y), and the lines [x, x′] join B(c₋) to B(c₊), so each step at c
+   uses only the fields on B^k(c₋) ∪ B^k(c₊). ∎
 
 ## 8. The Window Theorem
 
@@ -2017,8 +2380,27 @@ and therefore, for all 0 ≤ m ≤ n,
   **| Σ_{j=m+1}^{n} b_j − (11/24π²) κ (n−m) ln L | ≤ 2C.**
 
 *Proof.*
-1. *Identity.* By Corollary 3.2 and Remark 3.4, ℒ_k = F_k − F_0 + 𝒥_k as functionals of B. So at p_0 ≠ 0:
+1. *Identity.* By Corollary 3.2 on each coset 𝒪 ≠ ℤp₀ (Remark 3.4), summed over the steps, ℒ_k = F_k − F_0 + 𝒥_k
+   holds for the restrictions to the fields on 𝒪 ∪ (−𝒪), hence for the coset sums and their limits. So at p_0 ≠ 0:
    Π_{ℒ_k}(p_0) = Π_{F_k}(p_0) + Π_{−F_0}^{top}(p_0) + Π_{𝒥_k}(p_0).
+   These limits are the symbols that step 2 inserts, for the following reasons.
+   - Π_{F_k} is computed on the same cosets (Proposition 7.1(a)).
+   - Π_{ℒ_k} (Proposition 5.1) is the polarisation of Bałaban's step factors on the whole torus. Their quadratic forms
+     are built from PBG's G₁, H₁, Δ₁, G′, R, h_B, C̃^{(2)}, and 𝐆^{(2)} (PBG (3.128)–(3.129); Proposition 4.2(a)), and
+     contain no (DᵀD)^{−1}; C^{(j)}(1), j < k, is invertible on the whole torus, and the Jacobian c(U) is site-local. So
+     the block ℤp₀ is regular, its fibres are
+     the m₀ points of ℤp₀ (Remark 3.4), and it adds O(N^{−4}) to the full-torus coefficient.
+   - Π_{𝒥_k} (Proposition 5.3) and Π_{−F_0}^{top} (Proposition 6.4) are alias sums of level-m symbols, m = j + 1 or
+     m = 0, composed with the first-order lift V₁ of B. The fields of level m decompose under the top translations, so
+     each top coset is a union of level-m fibres. The level-m first-order coefficient vanishes at U = 1 (Ad-invariance,
+     as for Θ(1) in Proposition 4.2(c)), so on a top coset the top second-order coefficient is the level-m
+     second-order form evaluated on V₁, whose quasi-momenta q = p₀ + l all lie in the top fibre of p₀. At U = 1 every
+     level-m operator conserves level-m quasi-momentum, so terms pairing different aliases vanish fibre by fibre. So
+     the top coset sum is Σ_l of the level-m coset sums at external momentum q, over the level-m quasi-momenta above
+     top fibres outside ℤp₀.
+   - Those level-m quasi-momenta exclude ℤq and, besides, at most m₀L^{4(k−m)} further points, a number independent of
+     N. The level-m integrands are bounded there, since their singular points 0 and −q lie in ℤq. So, at fixed k, the
+     limits are the alias sums of the level-m symbols of Propositions 4.2 and 6.3, of which there are L^{4(k−m)}.
 2. *Insert the estimates.* Take p_0 = (π/2, 0, 0, 0) and a unit vector e ⊥ v(p_0). Propositions 5.1, 7.1, 6.4 and 5.3
    give Φ_k⟨e, Δ_k(p_0)e⟩ = c ln(1/η_k²)⟨e, Δ_k(p_0)e⟩ + O(1).
 3. *Divide.* By PRT1 (1.67), ⟨e, Δ_k(p_0)e⟩ ∈ [γ_0|p̂_0|², γ_1|p̂_0|²], with γ_0 > 0 independent of k. Since
@@ -2039,32 +2421,54 @@ With CRE's cutoff δ_k, Proposition 2.9 also gives (P2) with δ = C_remγ² (RG1
 **Inputs taken from Bałaban without re-proof, with their caveats.**
 - PRT1 (1.31), (1.61)–(1.63), and the alias decomposition of PRT1 p.23 (for Lemma 5.2, whose bounds (1.36) and
   γ₀ ≤ Δ₀φ_μ ≤ γ₁ of PRT1 p.28 are derived there with constants depending only on d), and PRT1 (1.65)–(1.67); PBG Thms
-  3.3, 3.4, 3.12, 3.15; PBG (3.132), which PBG p.422 gives without proof ("We will not repeat these considerations
-  here, let us write only bounds"); RG1 (0.28)–(0.30), RG1 (1.8)–(1.9), RG1 p.263 (analyticity domains); VAR Thm 1
-  and §G.
+  3.1, 3.3, 3.4, 3.12, 3.15; PBG (3.117)–(3.137) and (3.156), of which (3.132) PBG p.422 gives without proof ("We will
+  not repeat these considerations here, let us write only bounds"); RG1 (0.28)–(0.30), RG1 (1.8)–(1.9), RG1 p.263
+  (analyticity domains); VAR Thm 1 and §G.
+- For Proposition 4.2: Bałaban's step form RG1 (1.4)–(1.5), with (2.5), p.266, (2.10)–(2.11), p.267, the replacement
+  of the δ-function gauge fixing of PBG (3.156) by the exponential term 𝐆^{(2)} (p.267 l.38–39), and the elimination
+  B′ = 𝒫B″ with C^{(k)} = (𝒫*Δ^{(k)}𝒫)^{−1} (p.268 l.2–3).
 - For Proposition 5.3, steps 1 and 4, and Proposition 7.1(a): PRT1's corner blocks (p.18), its averages (1.8) and
   (1.11), p.19, and (1.16)–(1.18), p.20; the gauge covariance (1.20), p.20; the projection R onto ΔN(Q′_k) (pp.24–25);
   the properties of H_kB on p.29 (Q_kH_kB = B, R∂*H_kB = 0, and H_kB a minimum of ½⟨∂A, ∂A⟩ on
   {A : Q_kA = B, R∂*A = 0}); the gauge term of PRT1 (1.68)–(1.70); the Wilson action RG1 (0.2) and the centred blocks
   RG1 (0.3), p.252; RG1 (0.17) and (0.19), p.255; and RG1 (0.21)–(0.22), p.256 (the unique critical orbit of minima,
   proved in VAR).
-- PRT1 and PBG were written for the averaging of AVG (CMP 98); RG1 uses the Euclidean-symmetric average RG1 (0.4). At
-  U = 1 the first-order part of RG1 (0.4) is PRT1's straight average up to a gradient and a fine translation
-  (Proposition 5.3, steps 1 and 4), so Lemma 5.2 and PRT1 (1.65)–(1.67) apply to the chain at U = 1. This argument
-  uses R47 only for the statement that the chain averages with RG1 (0.4); the sentence on RG1 p.253 that the earlier
-  results hold for any average with the listed properties concerns group averages M (R47, scope) and is not used.
-- PBG's results away from U = 1 (Propositions 4.2, 5.3, and 7.1; Condition 4) are not covered by this argument. They enter as
+- PBG was written for the averaging of AVG (CMP 98), and PRT1 for the Abelian straight averages PRT1 (1.8) and (1.11),
+  p.19, which are the main term of AVG's linear form at V₀ = 1 (CMP98 (124)–(125), p.36: it "resembles the definition
+  of the averaging operation Q in [2]", [2] = PRT1). RG1 uses the Euclidean-symmetric average RG1 (0.4). At U = 1 the
+  first-order part of RG1 (0.4) is PRT1's straight average up to a gradient and a fine translation (Proposition 5.3,
+  steps 1 and 4), so Lemma 5.2 and PRT1 (1.65)–(1.67) apply to the chain at U = 1. This argument uses R47 for the
+  statement that the chain averages with RG1 (0.4), and, through Proposition 5.3, step 1, for the unique minimal orbit
+  and the analyticity in t (the bullet on VAR below); the sentence on RG1 p.253 that the earlier results hold for any
+  average with the listed properties concerns group averages M (R47, scope) and is not used.
+- At U = 1, the linear parts of the dressed average of the chain and of PBG's dressed average agree up to a fine
+  translation, and both are Q_k (§7's Setting; CMP98 (124)); their second-order parts differ. So PBG's bounds at
+  U = 1 on G, G′, H, C_G, R, and (QGQ*)^{−1} (Propositions 4.2(d) and 7.1(c)) hold for the chain as printed. The
+  second-order part of the chain's dressed average at U = 1 and its U-derivative, and the U-derivative at 1 of its linear
+  part Q, are bounded directly (Lemma 7.3), and so are the U-derivatives at 1 of D and of RG1's step objects h_B,
+  C̃^{(2)}, 𝒫, and 𝐆^{(2)} (Proposition 4.2(d)). PBG's results for the operators of the chain away from U = 1
+  (Propositions 4.2, 5.3, 7.1, and 2.12, step 5; Condition 4), and for C^{(k)}(1), whose gauge-fixing term is
+  exponential (Proposition 4.2(d)), are not covered by these arguments. They enter as
   Bałaban applies them to the chain of RG1, RG2, and CRE, whose averaging CRE p.243 states as RG1 (0.4) or (0.12):
   RG1 p.261 (the operators H_{1,j}, Δ₁ of PBG Sect. D, and the analyticity "from results of that paper" under PBG
   (3.35)–(3.38)); RG1 pp.266–267 (PBG (3.127)–(3.128) and (3.156)); RG2 p.3 (the expansion PBG (3.107)–(3.108),
   whose bound "holds for all operator norms in formulations of theorems in [13]"); RG2 p.5 ("in all norms of Theorems
   3.1.-3.10 [13]"); RG2 p.13 (random walk expansions "discussed in [13] for all operators determining Δ_k, and for
   C^{(k)}(Z_0)", with PBG (3.185)); and CRE p.276 ("we apply Theorems 3.7–3.10 [13] in their full generality").
-  Reading these applications as Bałaban's statement that PBG's results hold for the operators of that chain is
+  Reading these applications as Bałaban's statement that PBG's results hold for the operators of that chain, with
+  those operators built from the dressed average of §7's Setting (Bałaban prints no dressing for his chain), is
   READINGS.md R50.
 - VAR Thm 1 inherits the sketched Theorem 8 of REG (p.101: "Inspecting the proofs … almost without any changes")
   (`D:\University\Oxford PostDoc\Balaban\BALABAN_DEPENDENCE_TREE.md`, D3). It enters §§5 and 7
   through the analyticity of U_k(V).
+- VAR was written for the averaging of CMP98. RG1 states VAR Thm 1's unique regular minimal orbit for its own M^k
+  (RG1 (1.1), p.260, "see Theorem 1 there"; RG1 (0.21), p.256), and it applies VAR Prop. 9 (p.309: U_k(V) analytic
+  in B = (1/i)log V′) to U_n(M^·(𝐔)) on complex configurations (RG1 (1.17), p.263), and VAR Prop. 9 with (190) to
+  the derivative δ𝐇_j/δB (RG1 p.271 l.33). Apart from LFR2's functions built from VAR's results, which enter with
+  LFR2 (the tube-construction bullet below), the file uses VAR for the chain averaging with RG1 (0.4) only through
+  these statements: Proposition 5.3, step 1 (the orbit and analyticity in t), the analyticity of the background in
+  §5, Proposition 7.1(c) (the Landau gauge of VAR Prop. 9), Lemma 2.5, step 1 (VAR (190)), and Proposition 2.12(b)
+  (VAR Prop. 9 and (190) at every admissible real B⁰). That they hold for this chain is READINGS.md R47.
 - VAR (189), stated without proof, enters Lemma 2.5 through VAR (190) (sidecar node VAR_189).
 - From RG1 Theorem 3 with RG2 Lemmas 1–3 and RG2 (2.41): the bound RG1 (1.18) and the analyticity of the step terms in
   (U, J) on RG1's fixed domains, for §§2.1–2.2, as printed for RG1's cutoff.
@@ -2079,9 +2483,11 @@ With CRE's cutoff δ_k, Proposition 2.9 also gives (P2) with δ = C_remγ² (RG1
   - R4: LFR1 p.198 and LFR2 p.363 use two different exponents ν, and with N = R_j both conditions hold for small g
     (*CRE's Construction as a Function of the History*; Lemma 2.10, step 4);
   - R47: the RG1 and CRE results used here hold for the chain built with the averaging RG1 (0.4), which CRE p.243
-    names as its averaging (Proposition 5.3, step 4, and the bullets above on the averaging);
+    names as its averaging (Proposition 5.3, steps 1 and 4, the analyticity of the background in §5, Proposition
+    7.1(c), Lemma 2.5, Proposition 2.12(b), and the bullets above on the averaging and on VAR);
   - R50: PBG's results hold for the operators of the chain of RG1, RG2, and CRE, as Bałaban applies them there
-    (Propositions 4.2, 5.3, and 7.1; Condition 4); PBG states Thms 3.12, 3.15, and (3.132) for real U, and their
+    (Propositions 4.2, 5.3, 7.1, and 2.12, step 5, away from U = 1, and C^{(k)}(1) in Proposition 4.2(d); Condition
+    4), with the chain's operators read as built from the dressed average of §7's Setting; PBG states Thms 3.12, 3.15, and (3.132) for real U, and their
     complex form rests on RG1 p.261 and RG2 pp.3, 5 (R50).
 - RG2's sketch on p.11 for the terms of P^{(k)} other than V, for Lemma 2.7 and so for Proposition 2.9.
 
@@ -2094,6 +2500,10 @@ and 2, and, for Theorem 8.1 and Corollary 8.2, in §§3–8.
 - The alias summability (Lemma 5.2) for every α ∈ (0, 1), derived from PRT1 (1.63) with the bounds (1.36) and
   γ₀ ≤ Δ₀φ_μ ≤ γ₁ proved there with constants depending only on d; PRT1 pp.28–29 states a bound of this kind without
   defining its exponent.
+- The dressed average of the chain: PBG (3.113) applied to RG1 (0.4) or (0.12), with the contour variables of RG1
+  (0.11). It differs from the chain's average by a coarse gauge direction, so Δ_k and F_k are unchanged, and its
+  linear part at U = 1 is Q_k (§7's Setting). Lemma 7.3 bounds its second-order part at U = 1, and the U-derivatives at 1 of
+  that part and of its linear part, uniformly in k.
 - The window theorem for the zero-coupling coefficients (Theorem 8.1, from §§3–7), the flow lemma (Lemma 2.1),
   Remark 2.3, and the matching for simple G (Corollary 8.2). RG1 Theorem 2 (RG1 p.259) is stated for SU(2), and its
   proof is deferred to "a separate paper"; Corollary 8.2 proves it for simple G.
@@ -2119,42 +2529,132 @@ and 2, and, for Theorem 8.1 and Corollary 8.2, in §§3–8.
 - The continuity of the tube construction in the history (Proposition 2.12) and the matching (Proposition 2.13).
 
 **Lean cores.** The type-checked Lean cores named above (`BalabanFormal.flow_lemma`,
-`BalabanFormal.coupling_flow_of_stepBound`, `BalabanFormal.jterm_quartic`, `BalabanFormal.jterm_assembly`,
-`BalabanFormal.bare_assembly`, `SmoothNum.lemma61` and `BalabanFormal.angular_coefficient`) are abstract statements
-whose hypotheses are listed in `D:\University\Oxford PostDoc\Balaban\sidecar\BalabanSidecar\Instantiation.lean`. They check the finite algebra and analysis of
-the steps that cite them. Each of those steps also has its proof written out here.
+`BalabanFormal.coupling_flow_of_stepBound`, `BalabanFormal.symbol_holder_bound`,
+`BalabanFormal.jterm_holder`, `BalabanFormal.jterm_assembly`, `BalabanFormal.bare_assembly`, `SmoothNum.lemma61`, and
+`BalabanFormal.angular_coefficient`) are abstract statements. The hypotheses of `jterm_holder` and `jterm_assembly` are
+those stated in Propositions 4.2 and 5.3; those of the others are listed in
+`D:\University\Oxford PostDoc\Balaban\sidecar\BalabanSidecar\Instantiation.lean`. They check the finite algebra and
+analysis of the steps that cite them. Each of those steps also has its proof written out here.
 
 The Lean modules of these cores are in the standalone project
 `C:\Users\marti\Documents\Scientia\Mathematics\Lean\Projects\ym_beta_function` (28 modules of namespace `BalabanFormal`,
 importing only each other and Mathlib; `lake build` there, and `#print axioms` of each name above gives propext,
-Classical.choice and Quot.sound only). They are verbatim copies of the modules of the same names in
-`C:\Users\marti\Documents\Scientia\Mathematics\Lean\Projects\balaban`, which the Bałaban sidecar's gates check.
+Classical.choice and Quot.sound only). The modules SecondOrder, L3, Assembly, Inputs, and Examples carry the Hölder
+forms of Lemma 4.1(b) and Propositions 4.2 and 5.3. The other modules are verbatim copies of the modules of the same
+names in `C:\Users\marti\Documents\Scientia\Mathematics\Lean\Projects\balaban`, which the Bałaban sidecar's gates check.
 
-## 10. Semisimple G: Open Future Direction
+## 10. Semisimple G
 
-Let G ⊂ U(N) be compact semisimple, with Lie algebra g = g_1 ⊕ ⋯ ⊕ g_r (simple ideals).
+Let G ⊂ U(N) be compact, connected, and semisimple, with Lie algebra g = g_1 ⊕ ⋯ ⊕ g_r (simple ideals). RG1 states its
+construction and Theorem 1 for this case (p.251 l.30–p.252 l.2, p.259 l.23–24), with one coupling; a step that needs
+r = 1 is the statement "proportional to δ^{ab}" on p.264 l.11–12 (Lemma 10.1).
 
-**Lemma 10.1.** Every Ad(G)-invariant symmetric bilinear form on g has the form Σ_i c_i K_i, where K_i is the Killing form
-of g_i. In particular the trace form is Σ_i κ_i^{−1} K_i, with κ_i > 0 defined by K_i = κ_i·tr on g_i.
+**Lemma 10.1.** Every Ad(G)-invariant symmetric bilinear form on g has the form Σ_i ϑ_i K_i (ϑ_i real), where K_i is the Killing form
+of g_i. In particular the trace form of G ⊂ U(N) is Σ_i (κ_i^N)^{−1} K_i, with κ_i^N > 0 defined by K_i = κ_i^N·tr on
+g_i.
 
-*Proof.* Let β be invariant and i ≠ j. For fixed Y ∈ g_j, the functional X ↦ β(X, Y) on g_i is invariant under Ad(G_i)
-(G_i acts trivially on g_j), hence zero, since a simple g_i has no nonzero invariant vectors. On each g_i, Lemma 1.1
-gives β|_{g_i} = c_i K_i. ∎
+*Proof.* Let β be invariant and i ≠ j, and let G_i be the connected subgroup of G with Lie algebra g_i. For fixed
+Y ∈ g_j, the functional X ↦ β(X, Y) on g_i is invariant under Ad(G_i) (G_i acts trivially on g_j), hence zero, since a simple g_i has no nonzero invariant vectors. On each g_i, Lemma 1.1
+gives β|_{g_i} = ϑ_i K_i. ∎
+
+**Proposition 10.2 (Additive Actions Reduce to Simple Factors).** Let ρ_i: G → U(N_i), i = 1, …, r, be unitary
+representations with dρ_i injective on g_i and zero on g_j for j ≠ i, and let the bare action be
+S(U) = Σ_i g_{0,i}^{−2}A_i(ρ_i(U)), where A_i is the Wilson action RG1 (0.2) of U(N_i). Put H_i := ρ_i(G),
+H := H_1 × ⋯ × H_r, and Φ := (ρ_1, …, ρ_r): G → H. Then:
+- (a) Φ is onto, with finite central kernel Z, each H_i ⊂ U(N_i) is compact with simple Lie algebra dρ_i(g_i), and
+  Φ_*μ_G = ⊗_iμ_{H_i} (μ the normalised Haar measures).
+- (b) For bounded measurable F on H^E (E the bonds of the torus), ∫ F(Φ(U))e^{−S(U)}dμ_G^E(U) = ∫ F(V)∏_ie^{−g_{0,i}^{−2}A_i(V_i)}dμ_H^E(V), and for F = ∏_iF_i(V_i)
+  the right side is the product of the factors' integrals. For bounded measurable F on G^E, let PF(U) be the average
+  of F(zU) over z ∈ Z^E ((zU)_b := z_bU_b), with the uniform measure. Then PF = F̃∘Φ^E for a bounded measurable F̃ on
+  H^E, and ⟨F⟩_G = ⟨F̃⟩_H, the expectation of the product theory on H.
+- (c) Let σ be an irreducible representation of G and C a loop. If σ is trivial on Z, then σ = (σ_1 ⊗ ⋯ ⊗ σ_r)∘Φ with
+  σ_i irreducible on H_i, and ⟨tr σ(U(C))⟩_G = ∏_i⟨tr σ_i(V_i(C))⟩_{H_i}. If σ(z) ≠ 1 for some z ∈ Z and C traverses
+  some bond exactly once, then ⟨tr σ(U(C))⟩_G = 0.
+- (d) For a target (K, g^{(1)}, …, g^{(r)}) with g^{(i)} ∈ (0, γ_i′], run on each H_i ⊂ U(N_i) the tube construction of
+  §0 for the target (K, g^{(i)}), and take the product. Then for each i there is a bare coupling g_{0,i}(ε, g^{(i)}),
+  independent of the torus and of the other targets, with g_{K,i} = g^{(i)} and g_{k,i} ∈ (0, γ_i] for 0 ≤ k ≤ K, whose
+  flow satisfies what §0 (after Condition 5) states for the tube construction of H_i: item 1, items 3 and 4 along the
+  matched flow with δ′_i = δ_i + C_Rγ_i^{κ₀−4} in place of δ_i, and item 5 with C_rem,i + C_Rγ_i^{κ₀−6} in place of
+  C_rem,i. Here γ_i, γ_i′, C_i, δ_i, C_rem,i, and c_i = (11/48π²)κ_i are the constants of Theorem 0.1 for H_i, with
+  K_i = κ_i·tr on dρ_i(g_i) ⊂ u(N_i) (tr the normalised trace of U(N_i)); for the Wilson action of a defining representation (*Which actions are
+  additive*), κ_i^N = (N/N_i)κ_i.
+
+*Proof.*
+1. *Covering.* dΦ = ⊕_idρ_i is injective, because on g_j only the component dρ_j is nonzero and it is injective there;
+   and Lie(H_i) = dρ_i(g) = dρ_i(g_i), so dΦ is onto ⊕_iLie(H_i). Hence Φ(G) contains a neighbourhood of 1 in H, so it
+   is an open, hence closed, subgroup of the connected group H, and equals H. Z = ker Φ is closed with Lie algebra
+   ker dΦ = 0, so discrete and, being compact, finite; it is central, because for z ∈ Z the map g ↦ gzg^{−1} is a
+   continuous map from the connected G into the discrete Z.
+2. *Haar measure.* Φ_*μ_G is a probability measure on H, invariant under left translation by every Φ(g), that is, by
+   every element of H; by uniqueness, Φ_*μ_G = μ_H = ⊗_iμ_{H_i}.
+3. *Action.* Φ is a homomorphism, so ρ_i(U)(∂p) = ρ_i(U(∂p)) and S(U) = Σ_ig_{0,i}^{−2}A_i(Φ(U)_i). This and 2 give the
+   integral identity of (b); the product form is Fubini. For the average: Φ is a surjective homomorphism of Lie groups
+   with finite kernel, so Φ^E: G^E → H^E is a finite covering map, whose fibres are the cosets Z^EU (Φ(U′_b) = Φ(U_b)
+   if and only if U′_bU_b^{−1} ∈ Z). PF is constant on them, so PF = F̃∘Φ^E, with F̃ Borel because Φ^E has local
+   continuous sections. For each z ∈ Z^E the substitution U ↦ zU preserves μ_G^E (a translation) and S (Φ(zU) = Φ(U)),
+   so ⟨F⟩_G = ⟨F(z·)⟩_G; averaging over z gives ⟨F⟩_G = ⟨PF⟩_G, and the integral identity, with F̃ and with 1, gives
+   ⟨PF⟩_G = ⟨F̃⟩_H.
+4. *Representations.* σ(z) is a scalar ω(z) for z ∈ Z (Schur). If ω ≡ 1, σ factors through G/Z ≅ H. An irreducible
+   representation of H_1 × H′ is τ_1 ⊗ M: H′ commutes with H_1, so it preserves the H_1-isotypic components, and
+   irreducibility leaves one, τ_1 ⊗ M with M = Hom_{H_1}(τ_1, σ), on which H′ acts irreducibly (an invariant M′ ⊂ M
+   gives the invariant τ_1 ⊗ M′). By induction σ ≅ σ_1 ⊗ ⋯ ⊗ σ_r, normalised traces multiply, and (b) gives the
+   product of expectations, since numerator and normaliser both factor. If ω(z) ≠ 1 and C traverses b exactly once,
+   the substitution U_b ↦ zU_b preserves μ_G and S (Φ(z) = 1) and multiplies tr σ(U(C)) by ω(z)^{±1}, the sign being
+   the direction in which C traverses b, z being central; since ω(z)^{±1} ≠ 1, the expectation vanishes.
+5. *Flow.* By (b) with F = 1, the partition function of G is that of H, whose action is a sum over factors with
+   independent integration variables. The product construction is therefore the tube construction of §0 run
+   separately on each H_i: the RG kernels multiply, the effective action at each step is the sum of the factors'
+   effective actions, and the flow of factor i involves only factor i's couplings and target. Each H_i ⊂ U(N_i) is
+   a closed subgroup of U(N_i) (the setting of RG1 p.252 l.2), compact and connected (the image of G), with a simple Lie algebra and the Wilson action of its defining representation, so Theorem 0.1 applies to
+   it, in the form §0 gives for the tube construction. ∎
+
+The construction in (d) is defined on H. It is not RG1's construction on G with one coupling. The effective couplings
+are not observables, and by (b) every expectation of the G theory is an expectation of the product theory on H.
+
+*Which actions are additive.* Let G ⊂ U(N) carry the Wilson action of its defining representation ρ. If every
+irreducible summand of ρ is nontrivial on at most one factor, the action is additive with ρ_i the sum of the summands
+nontrivial on factor i, and g_{0,i}^{−2} = (N_i/N)g_0^{−2}: with N_0 the dimension of the trivial summands,
+1 − Re tr ρ(V) = Σ_i(N_i/N)[1 − Re tr ρ_i(V)], because Σ_iN_i + N_0 = N. dρ_i is injective on g_i, because
+dρ|_{g_i} is dρ_i|_{g_i} plus zero blocks and dρ is injective. If some summand is nontrivial on two factors, the action is not additive, because irreducible
+characters of the simply connected cover ∏_iG̃_i (G̃_i the simply connected group with Lie algebra g_i) are linearly
+independent. Examples: SU(2) × SU(3) ⊂ U(5) acting
+block-diagonally is additive. SO(4) ⊂ U(4) is not additive, because its vector representation is the tensor product
+of the spin-½ representations of the two SU(2) factors. The adjoint Wilson actions ρ_i = Ad|_{g_i} give an additive
+action on every G. One bare coupling with fixed weights w_i does not match all factors when the ratios c_i/w_i differ,
+with c_i as in (d), because the factors run at the rates 2c_i ln L (item 1); for a defining representation,
+c_i/w_i = (11/48π²)κ_i^N, so the condition is that the κ_i^N differ (for SU(2) × SU(3) ⊂ U(5), κ_i^N = 20 and 30). Proposition 10.2(d) therefore takes one bare coupling per
+factor.
+
+The rest of this section concerns RG1's construction run directly on G, as needed for non-additive actions.
 
 **What carries over.**
 - The vacuum polarisation of RG1 (1.20) is block-diagonal: on g_i ⊗ g_i it is a multiple of the trace form, and the
   blocks g_i ⊗ g_j (i ≠ j) vanish. The statement "proportional to δ^{ab}" of RG1 p.264 holds only for r = 1.
-- The marginal terms are Σ_i c_i A_i(U), with A_i a Wilson action of factor i, and there is no invariant marginal cross
+- The marginal terms are Σ_i ϑ_i A_i(U), with A_i a Wilson action of factor i, and there is no invariant marginal cross
   term. So there is one coupling and one β per simple factor, and the flow RG1 (0.20) becomes
   1/g_{k,i}² = 1/g_{k+1,i}² + β_{k+1,i}(g_0, …, g_k), i = 1, …, r, where g_j = (g_{j,1}, …, g_{j,r}) and the β's depend
   on the whole vector history. The bare action gives g_{0,i}^{−2} = λ_i′/g², with weights λ_i′ fixed by the embedding.
-- §§3–8 hold per factor, with c_i = (11/48π²)κ_i, because every polarisation is block-diagonal.
+- §§3–8 hold per factor, with c_i^N = (11/48π²)κ_i^N (Lemma 10.1's normalisation), because every polarisation is
+  block-diagonal.
 - The flow lemma holds for the coupling vector (RG1 (0.31) per factor; `BalabanFormal.flow_lemma`). Clamp each component
   as in Lemma 2.1, and take the box Π_i [t_i + b_iK − C, t_i + b_i′K + C]. (W) gives F_i ≤ t_i on the face
   x_{0,i} = t_i + b_iK − C and F_i ≥ t_i on the face x_{0,i} = t_i + b_i′K + C, whatever the other components are. The
   Poincaré–Miranda theorem then gives a solution in the box, and step 4 of Lemma 2.1 applies componentwise.
 
-**What is OPEN.** Bałaban's thresholds use a single coupling g_k: ε_k = g_kp₀(g_k) in CRE (2.4), δ_k on CRE p.265, and p₀(g_k) in
-LFR2 (1.86). For several factors they are to be read with g_k := max_i g_{k,i}. RG1, RG2, CRE and LFR1–LFR2 have not
-been re-verified with this substitution. The changes are notational, but they run through all the papers. Until that
-check is done, Theorem 0.1 is stated for simple G only.
+**What is OPEN.** For additive actions, Proposition 10.2 gives the tube-construction form of Theorem 0.1 for each factor
+of the product construction on H, with r bare couplings tuned independently. Not covered:
+- RG1's one-coupling construction on G, the model for which RG1 states Theorem 1 (p.259 l.23–24), even for additive
+  actions: its step terms have a marginal part Σ_iϑ_iA_i (Lemma 10.1), which one coupling does not absorb unless the
+  ϑ_i are in the ratio of the bare weights; at zero coupling this needs the c_i^N to be equal.
+- RG1's construction on G for non-additive actions, such as SO(4) ⊂ U(4), with a coupling vector.
+
+In both, the coupling-dependent thresholds of CRE and LFR2, which the construction of Theorem 0.1 uses in place of
+RG1's fixed ε₀ and ε₁ (§0, *Condition 3*), use a single coupling g_k: ε_k = g_kp₀(g_k) in CRE (2.4), δ_k on CRE p.265,
+and p₀(g_k) in LFR2 (1.86); for several factors they would be read with g_k := max_i g_{k,i}. RG1, RG2, CRE, and LFR1–LFR2 have not
+been re-verified with this substitution. For a non-additive action more than notation changes: A differs from every sum Σ_iϑ_iA_i of
+per-factor Wilson actions (for SO(4) by 2 at the plaquette value −1 ∈ SO(4), where every per-factor action vanishes), so RG1's form g_k^{−2}A(U_k) of the effective action,
+the background field as the minimiser of one action, and the large-field bounds would have to be restated. A unitary W with WGW* = G that permutes the factors transitively
+(for SO(4), W = diag(−1, 1, 1, 1)) would make one coupling suffice, if the construction were equivariant under
+U ↦ WUW*; that equivariance has not been checked against the sources. Until then, Theorem 0.1 is stated for simple G;
+for semisimple G with an additive action, Proposition 10.2 gives its tube-construction form per factor for the product
+construction on H.
