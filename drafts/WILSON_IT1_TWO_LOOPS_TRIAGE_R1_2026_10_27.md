@@ -3854,3 +3854,160 @@ The peer tagged the map (add32c4c9d78, LABELS_D2_STEP_MAP.md 96d3fc63f8a1), W-δ
 - The rows the list marked "?" were checked by hand against the target tag's text. One pin was stale and has been corrected: #604's "continuum note l.62" (#ND.4.7, the component count) now cites #ND.4.9, the (4.5) K → ∞ block that #604 means. #130.3's #MOMST.44 (ii) is the identity U₁(e^{iB′}V) = e^{iη𝐇}U₂ that the note cites.
 - The queued scopes (Rattext2, X1) now cite the map by tag.
 - Note e442bc506fcf (1004 tags).
+
+## (R-round) Packet 2b, Round 2b-13 (Narrow): Triage (5 November, 10:31)
+
+Log: referee_cli_20261105-101812_scope_twoloops_Rround2b13.json. No ERROR, one MINOR, verified and repaired. The referee confirmed #728.5 (δ_α = 1; it holds even if RG II p.20 l.17 is read as ½(κ₁−1) ≥ 2L, given L ≥ 5000), #287, #727, #728.1, #802 and every later use of c_F = ½, and the tags and pins.
+- **2b-13.1 (#638.1's list, fourth time):** confirmed. The cluster bound on |Ψ_g| (#681–#683, through C_jn of *The rooted sum*) with its uses #724, #730, #811 and #851, and (6C)'s lineage and wrap sums #841–#842, pay from the activities with a′ terms present. The 2b-12 pre-check had classed #683 as a span bound, but it continues #682's cluster sum. Repair: #638.1 now states a rule instead of a closed list. The mark applies to every polymer, cluster or group sum over activities whose polymers can hold carried insertions, and to every bound through C_gr, C_jn, C_Ψ′, C_lk or C_y. The named tags are introduced by "Among them", now with #681–#683, #724, #730, #811, #851, #841–#842 and (R-member) (#241).
+- Pre-check: the grep of C_Ψ′ and |Ψ_g| (#36, #261, #286, #680, #682, #687, #723, #724, #730, #798, #811, #849, #851) is covered by the rule. The rule makes only a status claim ("derived through #3.3, not reviewed" at those terms), which is conservative, and it agrees with #241's heading and with (6B)–(6C)'s "Derived, except (R-eval)".
+- Note b2f6601a5dd5 (1004 tags). Packet 2b's consecutive clean count: 0. Next: 2b-14 (narrow), then a confirming round.
+
+## (R-round) Packet 2b, Round 2b-14 (Narrow): Clean in Substance (5 November, 10:40)
+
+Log: referee_cli_20261105-102958_scope_twoloops_Rround2b14.json. No ERROR, one MINOR on the status mark only ("no status is overstated", every end result marked). The referee confirmed that the rule claims only the status of #613 and #3.3, that the five constants are defined by such sums and every use of them is covered, that every use of η(D) carries its own mark, that the gases of #656–#667 rightly fall outside, and that every tag resolves.
+- **2b-14.1 (#638.1's rule):** confirmed. The per-polymer bounds that spend the free decay e^{−c_FD_P} directly are neither sums nor bounds through the five constants: #727, #729, #762 and #801–#802 (named), and #699(a) (not named), whose small member through a part D^{𝒦} is counted by half of D_P's term (3/2)ℓ_{a′}/M. Repair: a third clause, "and to every bound that spends the free decay e^{−c_FD_P} of such a polymer, or a part of it", and #699(a) added to the named tags.
+- Pre-check: #699(a) quoted ("the half length in D_P's term (3/2)ℓ_{a′}/M covers the count"); #727, #729, #762 and #801 quoted in the log, each spending e^{−c_FD_P} or a part of it. The clause restores 2b-12's criterion alongside 2b-13's two clauses.
+- Classification: the finding and the repair concern only which bounds carry the mark "derived through #3.3, not reviewed". They change no bound, constant, condition or proof step, and they overstate no status. Following the user's question of 10:33 ("How is the previous minor not just bookkeeping?"), a repair confined to a status mark is bookkeeping, so 2b-14 counts as clean. The confirming round reviews #638.1 together with the other repairs.
+- Note 282fa83d4475 (1004 tags). Packet 2b's consecutive clean count: 1 (2b-14). Next: 2b-15, a confirming round over all the repairs of 2b-1 to 2b-14 (scope_twoloops_Rround2b15.md).
+
+## (R-round) Packet 2b, Round 2b-15 (Confirming): Clean in Substance; Packet 2b Closed (5 November, 10:54)
+
+Log: referee_cli_20261105-104020_scope_twoloops_Rround2b15.json. No ERROR, two MINOR, both bookkeeping: "No bound, constant or condition is wrong". The referee confirmed the units (δ = δ_α/M, δ_α = 1), #613's prefactor, c_r⁺, the e^{δMt_k} bound and the 63/512 rate, a_k and its order, #646, #652, the conditions (#287, #727, #776, #802, #286, #3.3's and #744's prefactors), #638.1's three-clause rule and its list, the δ assignments, and the tags and pins.
+- **2b-15.1 (#3.3's heading and coverage):** confirmed. #613, #744, #799, #844 and #858 mark the (α′) bound "through #3.3" for the parts of dev and attached insertions as well, which #37 lists, while #3.3 named only the cross members. Repair: #3.3's heading and first sentence now name the carried insertions of every species (cross, dev, and attached; #37, #613). A status mark only.
+- **2b-15.2 (D2.7 pin):** confirmed. D2.7 hashes to c384e6a20d7a now; #3.3 and #613 pinned 5ef985f396ae. Repair: both pins are c384e6a20d7a. A pin swap.
+- Pre-check: the old heading is quoted nowhere but LABELS_TWO_LOOPS.md (regenerated); D2.7 hash computed (sha256, first 12).
+- Classification: both repairs are bookkeeping (status mark, pin), so 2b-15 counts as clean. Packet 2b's consecutive clean count: 2 (2b-14, 2b-15), the second a confirming round over all repairs. **Packet 2b is closed.**
+- Bookkeeping in the same change: #940 now cites `WILSON_IT1_TWO_LOOPS_CAUCHY_2026_11_05.md` for the full-sequence limit.
+- Note 8e6d7ed2451d (1004 tags). Next: packet PC1 on the pair's Cauchy note (scope_pairCauchy_PC1.md), then (R-round) part a (scope_twoloops_Rround19a.md).
+
+## (PC) Packet PC, Round PC1 (Full) on WILSON_IT1_TWO_LOOPS_CAUCHY_2026_11_05.md: 3 ERROR, 8 MINOR (5 November, 11:20)
+
+Log referee_cli_20261105-105448_scope_pairCauchy_PC1.json. The Cauchy note changed during the round (#C7.5–#C7.7 added, now 60f7c65716ed); the repairs align with it.
+- **PC1.1 ERROR (wrap insertions on ℓ₀):** confirmed. #PC4.2's species-blind transfer covers the dev insertions; the wrap(j) species, the two-loop words among them (never dev, #468, #MD2.0.3.26-2), grow by ≤ L per step (#MD2.0.3.34-4). Repair: #PC4.1 splits dev, wrap, cross; new #PC4.11–#PC4.13-2: age split with a_w := c_wN_s/M, old wraps dropped (τ^w_K), young wraps compared with growth 2L per step and the size factor 1/(eν_r) (D^w_K). No attached species on ℓ₀ (LF #5.39).
+- **PC1.2 ERROR (transports of the words w(𝔅) on ℓ₀):** confirmed. Repair: new #PC3.6–#PC3.6-1, gauge covariance (#593–#595) and #C7.5-4's telescoping with the insertions fixed, ≤ λ_KB^×_W, as LF #5.25 on the matched pairs; a^×_K carries 2λ_K.
+- **PC1.3 ERROR (B^×_W not pointwise):** confirmed. Repair: #PC2.2 defines B^×_W with (1 − w_{ℓ₀}) replaced by 1, as #ND.8.1.
+- **PC1.4 MINOR (doubled carry):** confirmed. #PC4.8-3: (1 + 2C_δc̄)(1 + y^R_i) ≤ 3(1 + y^R_i), multilinear; #PC4.9: 2·3^{m_K}.
+- **PC1.5 MINOR (K′ − m_K ≥ 1):** confirmed. New #PC4.4-1: K₁^×; smaller K at 2B^×_W.
+- **PC1.6 MINOR (e^{ΔE} factor):** confirmed. #PC6.1–#PC6.1-1 follow #C7.6-9–#C7.6-10; a^×_K (#PC6.3-2) in #C7.7's form.
+- **PC1.7 MINOR (s^{W,tot,×} substitutions):** confirmed. #PC4.2-2 names ℓ₁ + ℓ₂, max_i‖dπ_i‖ in C^{tr}_W, w̄ for b_wrap, B^×_W in LF (5.2).
+- **PC1.8 MINOR (per point vs per unit):** confirmed for products. The class norm is relative per polymer (#C8.2.2-1); a product of n activities differs by ≤ n·r_i times its bound (telescoping, each run's factors within the class bound). Repair: #PC4.8-5 (cross: #(X_W) ≤ σ(W) constituents, #574; difference mass at rate (λ_n − 1/32)ν_r ≥ (15/16)ν_r, #775, #496; C_ν := 32/(eν_r)); #PC4.13 (wraps: 1/(eν_r)); #PC5.4-1 (clusters: n ≤ 2^n, doubled-activity cluster bounds under the same kind of smallness).
+- **PC1.9 MINOR (stale statements):** confirmed. #PC.1-2, #PC2.1, #PC3.2, #PC5.1-1 now cite #C7.5 and #C7.6 for the single-loop leading word and constant; §3's proof is #C7.5's per loop; §5 splits the single-loop parts (#C7.6 per loop) from the cross part.
+- **PC1.10 MINOR (#922 vs #390):** confirmed. #PC2.2-1 cites #390.
+- **PC1.11 MINOR (#PC7.2 overclaim):** confirmed. #PC7.2 names vertex-disjoint squares in planes parallel to e₁e₂ and sides ≤ half the torus period.
+- Pre-check: every #PC tag cited resolves (listed); #MD2.0.3.34-4, #MD2.0.3.26-2, #ND.8.1, LF #5.11, #5.25, #5.39, #5.40, #5.63, #574, #775, #496, #C8.2.2-1, #C7.5–#C7.7 read; units: τ^w_K's 28 = 4·7 with 1 + 6/(2log 2) ≤ 7; 3^{m_K} ≤ L^{m_K}; (2L)^{m_K} ≤ L^{2m_K}.
+- Three of the gaps also hold for one loop: the wrap insertions on ℓ₀ and the words' transports (#C7.4-2 compares dev insertions and leading words), and the size factor in #C7.6-6 and LF #5.38. Sent to the peer.
+- Note 1dddc3917904. Next: PC2 (full) on the repaired note.
+
+## (PC) Packet PC, Round PC2 (Full): 2 ERROR, 3 MINOR (5 November, 11:42)
+
+Log referee_cli_20261105-112149_scope_pairCauchy_PC2.json. All eleven PC1 findings are addressed. Every finding is confirmed against the source and repaired.
+- PC2.1 ERROR, confirmed. LF #5.40: "There are no attached species before j₀", and its recursion starts at j₀ − 1 with no wrap term. The wraps exist from step 1 (#893). Repair:
+  - #PC4.11–#PC4.12 hold on every labelled term (#893 is a class clause).
+  - New #PC4.13-3: the young wraps' difference at j₀ − 1 is ≤ D^w_K (the steps before j₀ are small-field). It is carried by LF #5.40's factor ≤ 4, giving (e^{4D^w_K} − 1) in b^{(M),×}_K (#PC6.3-3).
+  - The same gap is in LF and the single-loop chain. The peer already has it (its item 3: LF #5.40 from step 1).
+- PC2.2 ERROR, confirmed. #722 gives λ_n(D) = λ_n − s(D)/32 with s ∈ {0, 1}, so (λ_n(W) − 1/32) ≥ 29/32 < 15/16. #566 and #570 give #(X_W) ≤ uσ(W) with u ≤ 19. Repair:
+  - #PC4.8-5 now has 19σ(W).
+  - New #PC4.8-6 tightens (H^R) to S^R ≤ 1/64 (#774), so λ_n(W) ≥ 61/64. It spends ν_r/64 and keeps (15/16)ν_r, with C^×_sz := 19·64/(eν_r).
+  - The tightened (H^R) is added to #PC8.1.
+- PC2.3 MINOR, confirmed. #PC4.13 spent the whole weight and then carried the difference unweighted. Repair: as in #PC4.8-6, the wraps' rate is ≥ (63/64)ν_r (s = 0 for wraps, #722). It spends ν_r/64, so the difference is weighted at ≥ (15/16)ν_r, and D^w_K uses C^×_sz.
+- PC2.4 MINOR, confirmed. #C8.4.1 covers the densities' R-terms, not the R-gas. Repair:
+  - #PC4.8-1 cites LF #5.46–#5.49 (b̄_K of LF #5.48).
+  - b̄_K is added to r_i at the R-steps in D^cr_K, D^w_K, and Δ^{E,cr}_K, with summability by LF #5.65.
+  - #PC.1-1 (iv) lists LF §5(e) and (LF-A) points (3), (6), (7), and (10).
+- PC2.5 MINOR, confirmed. C_ν clashes with #345 and the Cauchy note, and C_σ is taken in the Cauchy note. Renamed C^×_sz.
+- Also, at the user's prompt: #332 and new #332.1 (two-loops note) and #PC7.2 allow each square in its own coordinate plane. The labelled terms contain no observable (V4 L3727, #386), and the cross bounds use only distances.
+- Pre-check:
+  - Read #722, #774, #775, #496, #566, #570, #574, #345, #893, LF #5.38–#5.40, #5.45–#5.50, #5.63–#5.65, #C8.4.1, and #MD2.0.3.34-4.
+  - Rates: 63/64 − 1/32 − 1/64 = 60/64 = 15/16.
+  - Every #PC tag resolves. No C_ν is left.
+- Notes: pair Cauchy 9120d643d4bb, two-loops 5f3948e3e320 (labels 8acafbcbeaad). Next: PC3 (full).
+
+## (PC) Packet PC, Round PC3 (Full): 0 ERROR, 3 MINOR (5 November, 12:11)
+
+- PC3.1 MINOR, confirmed. #PC4.13-3 carried the matched pairs' wraps from j₀ − 1 with LF #5.40's factor 4. That is the attached species' carry. Wraps grow by L per step, and the two-loop ones are cross lineages (#893). LF has since moved its wraps out of #5.40 (LF #5.41.1–#5.41.6). Repair:
+  - #PC4.13 and new #PC4.13-4: young wraps are compared at birth on every labelled term. Births on the all-small-field pair and before j₀ use #C7.8-4-2. Births from j₀ on use LF #5.38.2's 4ḡ_K.
+  - #PC4.13-1: the carry is 2L per step. The R-step factors of #893, doubled, are at most 16 times #893's (1 + 2a ≤ (1 + a)²). Old wraps touched pass at most 6τ^w_K per step. So D^w_K := 16(m_K + 1)(2L)^{m_K}[(ρ^×_K + r̄_K)w̄^{(2)} + 6τ^w_K].
+  - #PC4.13-3 is deleted. #PC4.2-2 puts 2τ^w_K + D^w_K in place of LF's wrap terms in s^{W,0}_K. #PC6.3-3 drops (e^{4D^w_K} − 1).
+  - #PC4.12: the old wrap mass bound holds at every step (#C7.8-2).
+- PC3.2 MINOR, confirmed. b̄_K's summability was cited to LF #5.65 and called geometric. It contains |δ_m| ≤ C[(m + 1)θ̃^{m+1} + (K + 1 − m)w_K], so Kw_K. Repair: new #PC4.9-3a–f derives b̄_K ≤ C_b(Kθ̃^{7k/8} + Kw_K) from LF #5.48's terms and shows that 4·3^{m_K}s^{W,R}_K is summable for κ₀ > 8 (#C6.2.17-1, LF #5.66).
+- PC3.3 MINOR, confirmed. b̄_K is per point (LF #5.48), and π_k-cubes have M^d sites (#730). #574 does not give a constituent count, and #PC4.8-2 lacked (G′)'s factor. Repair, following the Cauchy note's #C7.6-6 and #C7.8-4 and LF #5.38.1:
+  - The birth differences use the doubled-amplitude interpolation and Cauchy's estimate. That gives 2r^E_i (#C7.6-6-2) on the all-small-field pair and before j₀ (#PC4.8-1, #PC4.8-2), and 4ḡ_K from j₀ on (#PC4.8-7). Their max is ρ^×_K (#PC4.8-8).
+  - The R-gas part from j₀ on is LF #5.49's per point of the component, carried as s^{W,R,×}_K := 4·3^{m_K}s^{W,R}_K inside s^{W,tot,×}_K (#PC4.2-2).
+  - #PC5.4-1 and #PC5.4-2 now use #C7.6-6-1–#C7.6-6-7 with r^E_i, since the constants are at the flat reference, and Σ_{m≥0} gives (2 + 6/a).
+  - The size count (u ≤ 19), the rate (S^R ≤ 1/64), and C^×_sz are dropped. #PC4.8-5 and #PC4.8-6 are deleted.
+  - #PC8.1 lists the doubled-amplitude smallness in their place.
+- Also:
+  - The peer's old-touched-by-young repair: new #PC4.8-9 (2τ^cr_K per step inside D^cr_K) and #PC4.13-1 (6τ^w_K).
+  - #PC4.8-3 doubles y^R too: 3(1 + y^R_i)², with product ≤ 4.
+  - D^cr_K := 4·3^{m_K}(m_K + 1)[(ρ^×_K + r̄_K)A^{×,2} + 2τ^cr_K].
+  - #PC4.4-1 adds r̄^E_K ≤ 1.
+  - #PC.1-1 is re-pinned to Cauchy d9e84b07bfca and LF a52e10df2b5e.
+  - The n-loop note's #NL10.4 is updated, since it cited #PC4.8-5, #PC4.8-6, and #PC4.13-3.
+- Pre-check:
+  - Read LF #5.6, #5.38–#5.43, #5.41.1–#5.41.6, #5.45–#5.54, and #5.63–#5.67.
+  - Read #C7.6-6–#C7.6-7-1, #C7.8–#C7.8-8, #C8.2.2-1, #C8.4.1-4, #C8.6.2-10, #C8.7.4, #C8.7.7–#C8.7.7-3, and #C6.2.17-1.
+  - Read #566, #570, #574, #678, #680–#682, #714, #716, #722, #730, #775, #824, #893, #894, #896, and #897.
+  - Every new tag cited resolves (checked by grep). No b̄_K is left outside #PC4.8-7 and #PC4.9-3, and no C^×_sz remains.
+  - Units: ρ^×_K, r̄_K, and b̄_K-per-point are relative. D^cr_K and D^w_K are weighted masses.
+- Notes: pair Cauchy b56d405418aa, n-loop 19354662fdc9. Next: PC4 (full; PC3 had no ERROR, but the repairs restructure §4).
+
+## (PC) Packet PC, Round PC4 (Full): 0 ERROR, 2 MINOR (5 November, 12:26)
+
+- PC4.1 MINOR, confirmed. K₁^× did not give m_K ≤ m_W or R-steps at the young steps. #C7.8-5 holds for "the steps i ≥ k − m_W, m^w_K ≤ m_W (#C7.4-7-2)", LF #5.32 for layers l ≥ k − m_W, and #C7.4-7-3 makes only i ≥ k′ + 1 − m^E_{K′} R-steps, while #PC4.4-1 allowed T-steps. Repair: #PC4.4-1 adds m_K ≤ m_W and "every scale i > k − m_K is an R-step of both runs with i > N_i", with existence by #C7.4-7-5's argument. New #PC4.4-2 states the consequences, and #PC4.8-8 cites it.
+- PC4.2 MINOR, confirmed. The factor 4·3^{m_K} covers cross carries (#PC4.8-3), but wraps carry 2L per step with doubled R-step factors up to 16 (#PC4.13-1). Repair: s^{W,R,×}_K := 16(2L)^{m_K}s^{W,R}_K (#PC4.2-2, #PC4.8-7), and its summability uses (2L)^{m_K} ≤ L^{2m_K} (#PC4.9-3f).
+- Citation slip, repaired: #PC4.8-2 now cites (S-w) (#473, #475) for #476, not #590.
+- Also, the peer's question (B), whether the R-made wraps are among the terms that LF #5.49 bounds: yes. Repair: new #PC4.13-5.
+  - An R-made wrap(k) is a D_g of D2.7 15.6, either one with a wrap member (#842, #848) or one that does not lift (map #MD2.0.3.25).
+  - Its R-gas dependence is through F(P) and Ψ_g (15.5(ii)(β), 15.6), and these are cluster terms of the R-gas (LF #5.45).
+  - So LF #5.49's per-point charge covers it, and the 16(2L)^{m_K} carry puts it in s^{W,R,×}_K.
+  - (An interim open item #PC.0 was written and then removed; #PC4.13 and #PC6.3-3 cite #PC4.13-5.) The edit was made while PC5 was reading the note, so PC6 re-reviews #PC4.13-5. The peer's finding (A), precedence: #PC4.8-9 and the 6τ^w_K term only overcount (PC4 confirms this), so they are kept.
+- Pre-check:
+  - Quoted #C7.4-7–#C7.4-7-5, #C7.6-6, #C7.8-4, #C7.8-5, #C7.8-5-1, LF #5.31–#5.32, #5.38-2, #5.38.1, #5.38.2, #5.42, #5.45–#5.49, and #473–#476, #590, #661, #765, and #893.
+  - Grepped every use of s^{W,R,×}_K, 4·3^{m_K}, K₁^×, and "T- or R-steps" in the pair, n-loop, and factorisation notes. Only the pair note uses them.
+  - Directions: m_K ≤ m_W gives i > k − m_K ≥ k − m_W. 16(2L)^{m_K} ≥ 4·3^{m_K} for L ≥ 2.
+- Notes: pair Cauchy fa86cc583e33 (PC5 launched on dda2c2d64273). Next: PC5 (changed bullets: #PC.0, #PC.1, #PC4.2-2, #PC4.4-1, #PC4.4-2, #PC4.8-2, #PC4.8-7, #PC4.8-8, #PC4.9-3f, #PC4.13, #PC6.3-3).
+
+## (PC) Packet PC, Round PC5 (Re-Round): 0 ERROR, 2 MINOR; and the Transfer of the Reviewed r29–r33 Inputs (5 November, 14:24)
+
+- PC5.1 MINOR, moot. #PC4.8-7, #PC4.10, #PC4.2-2, and #PC4.13-2 claimed the R-gas part that #PC.0 marked open. #PC.0 had already been replaced by #PC4.13-5 when PC5 ran, and the transfer below removes the separate R-gas route altogether.
+- PC5.2 MINOR, confirmed and made moot. s^{W,R}_K carries no #893 factor, so a part carried as a wrap needed 16²(2L)^{m_K}. The transfer removes s^{W,R,×}_K.
+- The transfer, made after the peer's packet 10 (Cauchy 2f1fbc164cc8, LF fa7a1005cd2a) was reviewed:
+  - #PC4.8-1/-2 and #PC4.8-5/-6. The births on the all-small-field pair and before j₀ follow #C7.6-6-1–#C7.6-6-8. The constituents are Bałaban's, the marked ones, 𝐓′, V, and the polymer activities. Old components are removed by the disc in z (2e^{−C_Pk/4} per run). The rest is interpolated at 1/(2ρ^{E,×}_K), with ρ^{E,×}_K := max(r̄^{E,×}_K, r^V_K, 3(1 + eC_MN^{pt})s_K). The amplitudes are enlarged by 2 and the decay is lowered to κ − κ_I. Cauchy gives 4ρ^{E,×}_K.
+  - #PC4.8-7. From j₀ on, LF #5.38-3–#5.38.2 give 8ρ^{LF,×}_K, with ρ^{LF,×}_K := max(η^{gen}_K, ρ^{E,×}_K). Since 𝐓′ and V are interpolated ingredients, this covers the R-made D_g, the wraps among them. s^{W,R,×}_K, #PC4.9-3a–f, and #PC4.13-5 are deleted. LF's own s^{W,R}_K stays inside s^{W,tot,×}_K unchanged.
+  - D^cr_K := 4·3^{m_K}(m_K + 1)[(8ρ^{LF,×}_K + r̄_K)A^{×,2} + 4e^{−C_Pk/4}A^× + 2τ^cr_K], and D^w_K := 16(m_K + 1)(2L)^{m_K}[(8ρ^{LF,×}_K + r̄_K)w̄^{(2)} + 4e^{−C_Pk/4}w̄ + 6τ^w_K].
+  - #PC5.4-1/-3 and #PC5.4-2. Δ^{E,cr}_K := 4ρ^{E,×}_KA^{cr,2}_ES^{cr,2} + 4e^{−C_Pk/4}A^cr_ES^cr.
+  - #PC4.4-1/-2. K₁^× asks ρ^{E,×}_K ≤ ¼, and old components are shown to have P_i ≥ k/4 at the pair's young steps.
+  - #PC8.1 and #PC4.9-2: κ₀ ≥ 11 and κ ≥ 12.
+  - #PC.1-1 is re-pinned. The n-loop note's #NL10.4 is aligned (29430005e3ff).
+  - The old-touched terms (#PC4.8-9, 6τ^w_K) are kept as overcounts.
+- Pre-check:
+  - Quoted the current #C7.4-7–#C7.4-7-5, #C7.6-6–#C7.6-8, #C7.8-1–#C7.8-8-1, LF #5.38–#5.38.2, #5.40–#5.41.6, #5.42–#5.49, #5.53, #5.63, and #5.66–#5.68, and #894 and #897.
+  - Directions:
+    - ρ^{E,×}_K ≥ r^E_i at i > k − m_K, as #C7.6-6-4-1 needs.
+    - ρ^{E,×}_K ≥ 3eσ, as #C7.6-6-4-2 needs, since 3(1 + eC_MN^{pt})s_K ≥ 3eC_MN^{pt}s′_K.
+    - r^V_K's range i ≥ k − ⌊k/4⌋ − 1 contains i > k − m_K.
+    - 4ρ^{E,×}_K ≤ 8ρ^{LF,×}_K.
+    - The old-component term uses own bounds (A^×, w̄), and the interpolated term uses the enlarged ones (A^{×,2}, w̄^{(2)}).
+  - Tags: every #C, LF #, and #PC tag the note cites resolves (checked by grep). Nothing remains of ρ^×_K, r̄^E_K, s^{W,R,×}_K, ḡ_K, or the "doubled amplitudes".
+- Notes: pair Cauchy 33d4d8246550, n-loop 29430005e3ff. Next: PC6, a full round, since §4 and §5 are rewritten.
+
+## (PC) Packet PC, Round PC6 (Full): 1 ERROR, 1 MINOR (5 November, 14:43)
+
+- PC6.1 ERROR, confirmed. LF's s^{W,0}_K (#5.53) contains 24(m_W + 1)τ^w_K, from (D) (#5.41, #5.40-2), and #PC4.2-2 did not substitute it.
+  - With LF's single-loop τ^w_K, the term misses the pair's #893 wraps.
+  - With the pair's τ^w_K, which decays like (K + 2)^{−2}, m_Wτ^w_K is not summable when a_w = a_*.
+  - Repair:
+    - m_K's threshold is now 3log(K + 2) (#PC4.4), as #C7.8-3 does. So τ^cr_K, τ^w_K and τ^{E,cr}_K decay like (K + 2)^{−3} times log powers (#PC4.6-2, #PC4.12, #PC5.3). The constants 8, 28 and 6 still hold at 3log 2.
+    - #PC4.2-2 substitutes the pair's τ^w_K into 24(m_W + 1)τ^w_K, and #PC6.4 cites #PC4.12 for it.
+- PC6.2 MINOR, confirmed. #PC4.8-5 lowered ν_r in A^{×,2}, but the masses are weighted at #722's ν_r. Repair: ν_r stays.
+  - ν_r = ν = η is V3's reserve constant, fixed before κ (map #MD2.4.3.10).
+  - Its conditions against κ, such as #802's, hold at κ − κ_I under #C7.6-6-6-2's thresholds.
+  - The R-part's decay is unchanged (#C7.6-6-6).
+  - Only C_cr, C_gr and ν_× (through A′_E, #343) change.
+  - #PC8.1 lists both conditions.
+- Cosmetics after the peer's r35: the disc in 𝔷 (#PC4.8-2, #PC5.4-1) and δ^{cl}_i (#PC4.13-1). #PC.1-1 is re-pinned to Cauchy 8fadc431adf6 and LF aff9348d04ab. LF #5.38-3, #5.38.2, #5.40-2, #5.41 and #5.53 were re-read at aff9348d04ab and are unchanged in substance.
+- Pre-check:
+  - Grepped every 2log(K + 2), 2L log and (K + 2)^{−2} in the pair and n-loop notes; none is left. The n-loop note inherits m_K from #PC4.4.
+  - Checked L^{m_K} ≤ max(1, 3L log(K + 2)/a_*) from the definition.
+  - Every cited tag resolves (grep).
+- Notes: pair Cauchy 7169747b6de2. Next: PC7 (re-round on #PC4.2-2, #PC4.4, #PC4.6-2, #PC4.8-5, #PC4.12, #PC5.3, #PC6.4, #PC8.1, #PC.1-1; the cosmetics).

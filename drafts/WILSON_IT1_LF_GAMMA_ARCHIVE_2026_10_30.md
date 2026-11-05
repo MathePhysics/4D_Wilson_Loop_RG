@@ -1,5 +1,7 @@
 # The LF Working Note: Archived Sections
 
+> **Deprecated (5 November 2026).** This file is no longer live. It belongs to the γ stream of 28–30 October, whose route the large-field note `WILSON_IT1_LARGE_FIELD_DEPTH_2026_10_27.md` replaces. No live note uses it. The current status of (LF) is that note's Open Gaps (#S0) and the review plan `WILSON_IT1_LF_PACKET_PLAN_2026_11_04.md`.
+
 Sections of `WILSON_IT1_LF_GAMMA_REPAIR_ATTEMPTS_2026_10_28.md` that the main proof does not use. 64.5 shows that the glued member's membership in 𝒮_z and the current condition of 57.2 are not inputs of 44.6, and the facts of 48.1 that other sections cite are now in 57.1. The text is kept as it stood, with its internal references to the working note.
 
 ## 48. The Near Domains at the Boundaries of Minimisation Domains

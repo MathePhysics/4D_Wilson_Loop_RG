@@ -1,5 +1,7 @@
 # Draft updates for repeated blocking of the retained Wilson insertion
 
+> **Deprecated (5 November 2026).** This file is no longer live. It records work on an earlier version of the first-step paper (`WILSON_FIRST_RG_STEP.tex`, `_V2`, or `_V3`), which `WILSON_FIRST_RG_STEP_V4.tex` supersedes. No live note uses it.
+
 This is a proposal for strengthening the first-step output so it can serve as input to an induction. The active task is the first-step construction and its estimates, not a second RG integration. It starts from the first-step quantities in WILSON_FIRST_RG_STEP_V2.tex: rho_1, N_1, kappa_C, the closed flux word L_xi, and the conditional source correction H_xi. It does not replace the current manuscript estimates or assume that their hypotheses hold at later steps.
 
 ## 1. The object that must be retained

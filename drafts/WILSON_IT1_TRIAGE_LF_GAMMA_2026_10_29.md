@@ -1,5 +1,7 @@
 # Triage: LF γ Creation-Integral Reviews (29 October 2026)
 
+> **Deprecated (5 November 2026).** This file is no longer live. It triages reviews of the γ working note `WILSON_IT1_LF_GAMMA_REPAIR_ATTEMPTS_2026_10_28.md`, whose route the large-field note `WILSON_IT1_LARGE_FIELD_DEPTH_2026_10_27.md` replaces. No live note uses it. The current triages are the `WILSON_IT1_LF_TRIAGE_P<n>_R<m>` files.
+
 User: "I want you to start working on the LF \gamma gap. Work has happened since the handover so check out the file".
 
 The note under review is WILSON_IT1_LF_GAMMA_REPAIR_ATTEMPTS_2026_10_28.md. The packet builder is verification\isolated_reviewer\build_lf_gamma_creation_packet_20261029.py. The referee is claude-opus-5-5 at effort high, run through run_app_review_cli.ps1.

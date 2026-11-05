@@ -1,5 +1,7 @@
 # The Input (LF): Dependency Graph and What the Main Proof Needs
 
+> **Deprecated (5 November 2026).** This file is no longer live. It analyses the γ working note `WILSON_IT1_LF_GAMMA_REPAIR_ATTEMPTS_2026_10_28.md`, whose route the large-field note `WILSON_IT1_LARGE_FIELD_DEPTH_2026_10_27.md` replaces. No live note uses it. The current status of (LF) is that note's Open Gaps (#S0) and the review plan `WILSON_IT1_LF_PACKET_PLAN_2026_11_04.md`.
+
 Own working note. It analyses the large-field input (LF) of `WILSON_IT1_CAUCHY_ESTIMATE_2026_10_27.md` as the LF note (`WILSON_IT1_LARGE_FIELD_DEPTH_2026_10_27.md`) states it, and the repair sections §§40–72 of `WILSON_IT1_LF_GAMMA_REPAIR_ATTEMPTS_2026_10_28.md`. "Needed" means that the main proof uses the content, traced from the consumer down; it is not decided by label searches. Bałaban is cited by printed page and line on the transcriptions in `Balaban\tex\LFR2\parts`.
 
 ## Open Gaps That Gate Everything Below

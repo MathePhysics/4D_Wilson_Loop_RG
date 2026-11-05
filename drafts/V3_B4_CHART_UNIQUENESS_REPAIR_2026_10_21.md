@@ -1,5 +1,7 @@
 # V3 (B4)(i): whole-chart uniqueness — check and repair (21 Oct 2026)
 
+> **Deprecated (5 November 2026).** This file is no longer live. It records work on an earlier version of the first-step paper (`WILSON_FIRST_RG_STEP.tex`, `_V2`, or `_V3`), which `WILSON_FIRST_RG_STEP_V4.tex` supersedes. No live note uses it.
+
 V3 = `WILSON_FIRST_RG_STEP_V3.tex`. Checked at SHA256 `4B505E79E73B6F06D0C774E7D4C06D65CD790E63D5AA0605F9D7B7359CD12433` (15:35). Note reviewed by two isolated CLI reviewers (r1, 17:15–17:26; §6), then revised. The edits of §5 are applied to V3 (§7), reviewed again (r2, 17:45–17:58) and corrected (§8). The corrections were reviewed a third time (r3, 18:33–18:45) and the r3 minor points fixed (§9). The status line is the last line of this note.
 
 ## OPEN MATHEMATICAL GAPS

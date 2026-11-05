@@ -1,5 +1,7 @@
 # Stage 1 draft: the sourced effective interaction, in proof form (17 October 2026)
 
+> **Deprecated (5 November 2026).** This file is no longer live. It records work on an earlier version of the first-step paper (`WILSON_FIRST_RG_STEP.tex`, `_V2`, or `_V3`), which `WILSON_FIRST_RG_STEP_V4.tex` supersedes. No live note uses it.
+
 For approval before any TeX edit. This is the body section that would follow V2's Section 2 ("Extraction from the Effective Interaction") and precede the flat coefficients. It contains definitions and exact identities only; every estimate it uses is stated as a lemma whose proof is deferred to the appendices of stages 2 and 3. Source lines "Lnnnn" are in `WILSON_FIRST_RG_STEP.before.txt` (SHA256 8EB8A743…7F11). A source map with the archive lines behind each statement is at the end.
 
 What was dropped relative to the archive, and why:

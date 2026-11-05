@@ -1,0 +1,140 @@
+# Several Disjoint Loops: The K-Uniform Bound and the Full-Sequence Limit (5 November 2026)
+
+{#NL.1} **Derived, not reviewed: the K-uniform bound (§8) and the Cauchy bound with the limit along the full sequence (§10) for the product of the Wilson functions of N_C ≥ 2 vertex-disjoint squares, given the two-loops note and the pair's Cauchy note, read with N_C loops section by section.** No new analytic input enters. Each change is a count that grows with N_C, a constant fixed before the coupling, or the bound ν ≤ 1/(500N_C) on the map's rate (#NL6A.7).
+
+{#NL.2} Own working note. It edits no other note. The two-loops note `WILSON_IT1_TWO_LOOPS_UNIFORM_BOUND_2026_10_27.md` is cited by its tags #N, the pair's Cauchy note `WILSON_IT1_TWO_LOOPS_CAUCHY_2026_11_05.md` by #PC…, the Cauchy note by #C…, the large-field note as LF #N, the continuum note by #ND…, the map by #MD…, and V4 (`WILSON_FIRST_RG_STEP_V4.tex`) by label. The loop count is N_C, not n_C: the map's n_C (#MD2.4.13.19) counts a polymer's blocks, and V4's n_C counts fine traversals.
+
+{#NL.3} *The rule for counts.* A count that the two-loops note takes per loop met, per position, or per window end is affine in the number of loops with nonnegative coefficients, a + bn with n = 2 for the pair. With N_C loops it is a + bN_C ≤ (N_C/2)(a + 2b), at most N_C/2 times the pair's value. "At most N_C/2 times" below refers to this rule.
+
+## 1. Setting (Definition and Derived Bounds) {#NLS1}
+
+{#NL1.1} C₁, …, C_{N_C} are coarse translates of counterclockwise squares, each in a plane parallel to a coordinate plane of its own (the planes may differ), with V(C_i) ∩ V(C_j) = ∅ for i ≠ j, and χ_i, π_i as in #332. C := ⊔_iC_i and ℓ_Σ := Σ_iℓ_i. The step-k traversals of C are the 4ℓ_ΣL^{K′−k} traversals of the C_i, ordered C₁, …, C_{N_C}, each loop cyclically from its own base point.
+{#NL1.1-1} *The planes.* The labelled terms, their carriers, and their weights contain no observable (V4 sec:two-loops-retreated, its first paragraph; #386), so every loop shares them whatever its plane. A loop enters only through its own bonds: slots, contact sets, hulls, and V4's square/torus geometry. These are the same for a square with sides along e_μ, e_ν as for one along e₁, e₂, since V4's conditions on the periods hold for every period (V4 L1565). V4's choice of e₁, e₂, made through the axis permutation, therefore costs nothing loop by loop, and the cross arguments use only distances between the sets V(C_i). Where §9 cites V4's pair lemmas, read "the square geometry of C_i" in C_i's own plane.
+{#NL1.1-2} *The cross inputs, for any planes.* The stopping rule's q_{ii′} is the least q with the displacement between the corners of C_i and C_{i′} in L^{−q}uℤ⁴ (#MD2.3.4.15-11), for any orientations. #334's D ≥ 1 needs only that the loops are unions of step-K′ lattice bonds without a common site. #749's torus distances hold per loop. Every cross bound uses δ_n^{(k)} ≥ DL^{K′−k} for all traversals (#NL1.3), the worst case. That case is attained by congruent squares in parallel planes, stacked at distance D. For two squares in planes with no common direction (e₁e₂ and e₃e₄), the coordinates of C_i that vary along C_{i′} are fixed along C_i, so δ_n ≥ max(DL^{K′−k}, r_n), with r_n the ℓ^∞ distance of n's (e₁, e₂)-coordinates from the fixed (e₁, e₂)-coordinates of C_{i′}. A square's boundary has O(r) traversals with r_n ≤ r, so Δ_× ≤ O(DL^{K′−k} + M/ν_×)e^{−ν_×DL^{K′−k}/M}, with D in place of ℓ_Σ in the prefactor. The bounds hold as stated.
+{#NL1.2} *Stopping.* K′ = K − j, with j the least j ≥ max(q_i, q_{ii′} : i ≠ i′) + q̄(j), the rule of #307 with the q₁₂ clause for every pair of loops (the finite-family rule of #ND.6.7-3).
+{#NL1.3} *The cross distance.* For a step-k traversal n of C_i, δ_n^{(k)} is the step-k ℓ^∞ torus distance from n to ∪_{i′≠i}C_{i′}. D := min_{i≠i′}dist(C_i, C_{i′}) in step-K′ units. #334 for each pair gives D ≥ 1 and δ_n^{(k)} ≥ DL^{K′−k}; D ≤ N_s/2.
+{#NL1.4} Δ_×^{(k)} := Σ_ne^{−ν_×δ_n^{(k)}/M} over the step-k traversals of C, as in #335. So Δ_×^{(k)} ≤ 4ℓ_ΣL^{K′−k}e^{−ν_×DL^{K′−k}/M}.
+{#NL1.5} *Constants.* Those of #337–#351, with C_χ := max_iC_{χ_i}, and with ν_× := min(ν_e, 2η/A′_E) and A′_E := (8N_C + 1)(2R_e + 1)⁴ of #NL9.6 (17(2R_e + 1)⁴ at N_C = 2).
+{#NL1.6} *Norms.* #352–#354 with the normalised trace on ⊗_iV_{π_i}: tr(⊗_iA_i) = Π_itr A_i, so |dim^{−1}tr(M₁⋯M_r)| ≤ Π_s‖M_s‖ for operators on ⊗_iV_{π_i}, as for two factors (V4 lem:two-loop-source, first sentence of the proof).
+
+## 2. The Class (Definition) {#NLS2}
+
+{#NL2.1} For k ≥ 0, the dressed word of step k on a labelled term is 𝒲^{(N)}_k := Π_iκ^{(k)}_{C_i}·e^{𝓔_k}[Π_if^{(i)}_k + Σ_{𝔅≠∅}Q_k(𝔅)w(𝔅)], with f^{(i)}_k of #362, κ^{(k)}_{C_i} of #366, and Q_k(𝔅) of #365 over the clusters of §5's reference gas.
+{#NL2.2} An insertion W has arcs on a nonempty set S(W) of loops. If |S(W)| = 1 it is a C_i-insertion. If |S(W)| ≥ 2 it is a cross insertion, of species cross(j) or, by (6)'s rules (#467–#468), of a single-loop species.
+{#NL2.3} w(𝔅) is the normalised trace on ⊗_iV_{π_i} of the N_C-contour word with the insertions of 𝔅. Without cross insertions it is Π_iw_i(𝔅_i), and w(∅) = Π_if^{(i)}_k.
+{#NL2.4} The constant of 𝓔_k is E^{(N)}_const,k := Σ_iE_const,k(C_i, χ_i) + Σ_{j≤k}E^×_j + Σ_{N_B<j≤k}E^{R×}_j, with E^×_j of #NL5.1 and E^{R×}_j of #NL6B.2.
+{#NL2.5} The other clauses (#368), the species (#369–#372), and (ii^cr) (#373–#375) are the pair's with C := ⊔_iC_i. The base is N^{(N)}_0 := Π_iW_{χ_i}(C_i)ρ₀. D^{(N)}(1) is built on §9's step-1 objects as D^×(1) is on V4's (#377–#381).
+{#NL2.6} The identity Z·E_ε[Π_iW_{χ_i}(C_i)] = ∫N^{(N)}_k dV_k for every k ≤ K′ is #382's, derived as in (6) (#465).
+
+## 3. The Step Map, Ingredient by Ingredient (Derived) {#NLS3}
+
+{#NL3.1} D2.0(1)'s contour bullet holds for ⊔_iC_i by #NL1.2. The rest does not involve the contour (#386).
+{#NL3.2} *D2.1.* Π_if^{(i)}_k = Π_i(f^{(i)}_{k+1} + s^{(i)}), with s^{(i)} the slot expansion of C_i (#388). Expanded, every term is a product of N_C single-loop words, one per loop. So the slots are C_i-insertions, the words keep the N_C-trace form, and at real fields the leading words have modulus ≤ 1.
+{#NL3.3} *D2.2.* The observable enters only through the slots and contact sets of C (#391). Verbatim.
+{#NL3.4} *Groups.* The merging rules act per loop (#393–#395). ℐ(𝒢) = ⊔_iℐ_i(𝒢), each hull taken in C_i's cyclic set, and joined pieces on different loops add no gap arc. A C_i-group has ℐ_{i′}(𝒢) = ∅ for every i′ ≠ i. A cross group has at least two nonempty parts. A group with a cross member is a cross group, since its arc set contains the member's.
+{#NL3.5} *Flat value.* Schur's lemma for π_i on a C_i-group, and c_𝒢 := 0 for a cross group (#397–#399).
+{#NL3.6} *D2.3.* Periodicity: the corners of every loop are period points under #NL1.2 (#403). D2.3(5) gives one pair δm^{χ_i}, ζ^{χ_i} for each loop (#404). D2.3(3), (6)–(8): §5 and §7.
+{#NL3.7} *D2.4.* The counts are per position (#406–#408). A position meets the traversals of at most N_C loops, so each per-position count is at most N_C/2 times the pair's (#NL.3). The dev contraction is used for C_i-groups only.
+
+## 4. Locality (Derived by the Induction of D2.3(4), for Short Arcs) {#NLS4}
+
+{#NL4.1} (L×) is #413–#431 with "within r₀ of ∪_{i′≠i}C_{i′}" in place of "within r₀ of C_{3−i}". At step 1 it uses §9's grouping lemma, part (c), in place of V4 lem:two-loop-grouping(c).
+{#NL4.2} An old occurrence with arcs on two or more loops puts arcs on all of them into the group it merges into (#429), which is then a cross group. The other steps are per object and do not count loops. Groups long on C_i are paid by (T′) in §5, as in #431.
+
+## 5. The Factorisation of the Reference Gas (Derived) {#NLS5}
+
+{#NL5.1} On ℓ₀ at the map k → k+1, k ≥ 1, S°(ℓ₀) is the reference group gas of C, with the C_i-groups of every loop and cross activity 0, and E^×_{k+1} := log S°(ℓ₀) − Σ_ilog S°_{C_i}(ℓ₀).
+{#NL5.2} *Allocation* (#441–#443): E^×_{k+1} = Σ_iΣ_{b∈C_i}(a(b) − a_{C_i}(b)), absolutely convergent by #NL6A.8.
+{#NL5.3} *Cancellation* (#444–#448): a cluster through b ∈ C_i of network diameter < δ_b^{(k)} − r₀, with no group long on C_i, has no point within r₀ of any other loop, so by (L×) it is a cluster of both gases with the same weight and J_Γ. The remaining clusters have network diameter ≥ δ_b^{(k)} − r₀ or a group long on C_i (#448, for C_i).
+{#NL5.4} *Bound* (#449–#450): |E^×_{k+1}| ≤ 8C_S′e^{c_dr₀}𝔞_{k+1}ℓ_ΣL^{K′−k}e^{−c_dDL^{K′−k}} + 8C_S′𝔞_{k+1}Σ_iℓ_iL^{K′−k}e^{−c_dℓ_iL^{K′−k}}, over the 4ℓ_iL^{K′−k} traversals of each loop.
+{#NL5.5} *The first step* (#452): E^×_1 is §9's cross exponent at the retreated carrier, |E^×_1| ≤ C_×ρ_VΔ_× ≤ 4C_×ρ_Vℓ_ΣL^{K′}e^{−c_×DL^{K′−1}/M}, with C_V depending on χ₁, …, χ_{N_C}.
+{#NL5.6} *Assembly* (#453–#457): κ_{k+1} := Π_iκ_{C_i,k+1} and E°_{k+1} := Σ_iE°_{k+1}(C_i) + E^×_{k+1}.
+
+## 6. The Cross Groups: Production and Carry (Derived Given the Inherited Inputs) {#NLS6}
+
+{#NL6.1} The step, the species of a new cross group, and the R-step rules are #461–#471 with C := ⊔_iC_i.
+{#NL6.2} *Production* (#472–#484). A cross(k+1) group 𝒢 has a traversal n ∈ ℐ_i(𝒢) and a traversal of some C_{i′}, i′ ≠ i, in ℐ(𝒢) ⊆ X(𝒢). So ext_{k+1}(𝒢) ≥ δ_n^{(k+1)}/M by #NL1.3, and A^cr_{k+1} ≤ 4C_cr𝔞̄ℓ_ΣL^me^{−ν_×DL^m/M}, m := K′ − k − 1. At the first step the distance is #NL9.8's.
+{#NL6.3} The cross carry lemma (#485–#499), (H^cr) (#500), and the large-field remark (#501) are per insertion. Verbatim.
+
+## 6A. The Several-Component Reading of the Map (Derived Given the Inherited Inputs) {#NLS6A}
+
+{#NL6A.1} Each item of (6A) with C := ⊔_iC_i, checked where several components change it.
+{#NL6A.2} *Connectedness* (#507–#517). A class can have several intervals on one loop, joined only through pieces on other loops. (H2) reads E_D := X_D ∪ (the π_k-cubes meeting ∪_iH_i(D)). The linked hulls are connected by overlaps on one loop or another (#515). The rest is per insertion. Verbatim.
+{#NL6A.3} *R-made insertions* (#518–#525). #522 holds on every loop the member meets. #524 for N_C loops: the π_k-cubes meeting a dom P form a closed-connected set containing P's slot bonds and its members' intervals (#522). Each H_i(g) is an arc containing ℐ_i(g), so it meets each such set with a bond or interval on C_i. A link between two polymers of g is a slot bond of one in the span of the other, whose ends are slots of the other (#718), so both have slot bonds on the loop of that span. Since g is linked, these sets and arcs form a connected union, and E_D is closed-connected.
+{#NL6A.4} *Base* (#526–#532). Connectivity is §9's pins lemma, part (a). ℐ(W) has at most |W| ≤ n(W) intervals on each of at most N_C loops, each with at most two partial step-1 bonds, so n_1(W) ≤ |ℋ(W)|/L + 2N_Cn(W) and #_1(X_W) + n_1(W)/M ≤ (1 + 2N_C/M)𝔰(W). S_W is the union of the 8M-neighbourhoods of at most n(W) cubes and N_Cn(W) intervals, so diam_ℓ∞(S_W) ≤ Mn(W) + n_1(W) + 16(M/L)(N_C + 1)n(W) ≤ u₁^{(N)}M𝔰(W), with u₁^{(N)} := 1 + 2N_C/M + 16(N_C + 1)/L, which is #532's u₁ at N_C = 2.
+{#NL6A.5} *Vertices on several loops* (#533–#582). diam_v is taken over the loops on which v has an interval. A vertex has at most 2N_C window ends, so C_win^× := 2N_CΣ_{d≥0}e^{−c_w(d/24−1)₊} ≤ 98N_C/c_w, and ≤ 98N_Cu/c_w with the factor u (#557, #558, #568). (T0)'s conditions (#559, #572) keep their form with these constants, a smallness of g under (R-m′). The M-vertex counts (#575–#578) are per loop and add over N_C loops, so the coefficients of #578 are at most N_C/2 times the pair's.
+{#NL6A.6} *Factors.* The factors u of #570 are per insertion: u ≤ u₁^{(N)} at step 1, 1 at the T-steps after it, 21/10 or 16 for the single-loop R-made ones ((6C), #830), 6 for the R-made cross ones (#716, #720), and 19 for the merged insertions of (R-member) (#254). Each is a sum over a group's polymers and members, or over one insertion's pieces, and none counts loops.
+{#NL6A.7} *The threshold on ν.* A cube of M∖D′ costs log 64 + log 2 + 2 + 1/8 + 24c + (N_C/2)(283ν_f + 441ν_e) by #580 and #NL6A.5. With ν_f = 17ν/16 and ν_e ≤ ν/8 (#MD2.4.12.21), c ≤ 1/100, and ν ≤ 1/(500N_C), this is at most 7.218 + 0.356 ≤ 7.6, so the bracket stays within κ_s^{(12)}'s constant 9. #581's constant part is at most (N_C/2)(22ν_f + 164ν_e) ≤ 0.044 ≤ 0.045. At N_C = 2 the bound is the map's ν ≤ 1/1000. The map's other conditions on ν (#MD2.4.13.19 to #MD2.4.13.19-6), and #287, #290, and #727, are upper bounds on ν or smallness of g after ν, so they hold for the smaller ν.
+{#NL6A.8} *The reference gas, long groups, linked hull, base points* (#586–#592). Long-ness and the covering lemma act per loop. The traversals are ordered C₁, …, C_{N_C}. The Kotecký–Preiss condition's per-position counts (#591) are at most N_C/2 times the pair's, fixed before g. r₀ := 2.
+{#NL6A.9} *Shares* (#571, #572, #599, #859). The share coefficients come from the per-loop counts of #NL6A.5, so they are at most N_C/2 times the pair's, and the shares hold for L ≥ L₀^{(N)} := (N_C/2)·10⁶. #598's charge is unchanged: each H_i(D″) lies within 2diam(S_{D″}) of S_{D″}, so the reach is at most 5diam(S_{D″}) for any number of loops.
+{#NL6A.10} *D2.5 and D2.6.* Cov is read with one factor π_{i(I)}(u(x_I)) per interval I (#594), which needs no change. D2.6 is per component and per position (#596–#601), and the contour-density constant c_C of §7.1–7.2 is at most N_C times the single loop's.
+{#NL6A.11} *B^{(N)}_LF.* #602 with C := ⊔_iC_i, the words' bound divided by Π_iκ^{(K′)}_{C_i}, and the 4ℓ_Σ traversals in #603.
+
+## 6B. The R-Steps (Derived, except (R-eval)) {#NLS6B}
+
+{#NL6B.1} (6B) and (6C) act per polymer, group, and insertion, with C := ⊔_iC_i. Their counts are #NL6A.6's, and #524 is #NL6A.3. The R-made production #765 is pinned per traversal at the distance to the other loops, so A^R_k carries ℓ_Σ in place of ℓ₁ + ℓ₂.
+{#NL6B.2} *The cross constant of an R-step.* Let Ξ^c_A be 15.4's group gas of ⊔_{i∈A}C_i on the all-small-field term, for A ⊆ {1, …, N_C}, so that Ξ^c_∅ = Ξ. Put E^{R×}_k := log Ξ^c_{[N_C]} − Σ_ilog Ξ^c_{{i}} + (N_C − 1)log Ξ.
+- {#NL6B.2-1} For a cluster c, let S(c) be the set of loops met by its polymers. By #659(a), removing from A a loop that c does not meet leaves its polymers, activities, c_g, and compatibility unchanged. So c has the same value v_B(c) in every gas Ξ^c_A with A ∩ S(c) = B.
+- {#NL6B.2-2} c contributes v_{S}(c) − Σ_{i∈S}v_{{i}}(c) − (N_C − |S|)v_∅(c) + (N_C − 1)v_∅(c) = v_S(c) − Σ_{i∈S}v_{{i}}(c) + (|S| − 1)v_∅(c), S := S(c). This is 0 for |S| ≤ 1.
+- {#NL6B.2-3} A cluster with |S(c)| ≥ 2 contains polymers meeting two loops C_i, C_{i′}, joined by a chain of overlapping domains (#660), so Σ_PD_P ≥ DL^m/M.
+- {#NL6B.2-4} Pin each term at a loop of S(c): v_S at one of them, v_{{i}} at C_i, and (|S| − 1)|v_∅| ≤ Σ_{i∈S}|v_∅|. So |E^{R×}_k| is at most three gas sums per loop, each over the clusters through the at most 2^d·4ℓ_iL^m π_k-cubes meeting C_i, bounded by #661. Hence |E^{R×}_k| ≤ C^Rℓ_ΣL^me^{−p₀(g_k)/2}e^{−c_FDL^m/(2M)} with #662's C^R = 2^{d+4}C_KP, since 3 ≤ 4.
+{#NL6B.3} The rest of 15.4 holds per loop (#663): E_k^R(C;ℓ₀) = Σ_i(P_{k−1}(C_i)μ^R_k(χ_i) + 4ζ^R_k(χ_i) + E°^R_k(C_i)) + E^{R×}_k. #666 holds with ℓ_Σ: C^{R×}_E := C^Rℓ_Σe^{−p₀(ḡ_R)/2}e^{−c_FD/(2M)}(1 + 12M/(c_FD)).
+
+## 7. The Count Check over the Steps (Derived) {#NLS7}
+
+{#NL7.1} The sum lemma (#876) is unchanged. #880–#905 hold with ℓ_Σ for ℓ₁ + ℓ₂ and the sums over i ≤ N_C:
+- {#NL7.1-1} C^×_E := 4LC_V(1+β₀)⁶C_×𝔞̄ℓ_Σe^{−c_×D/M}(1 + M/(c_×D)) + 8C_S′e^{c_dr₀}𝔞̄ℓ_Σe^{−c_dD}(1 + 6/(c_dD)) + 8C_S′𝔞̄Σ_iℓ_ie^{−c_dℓ_i}(1 + 6/(c_dℓ_i));
+- {#NL7.1-2} C^{R°}_E := Ce^{−p₀(ḡ_R)/2}Σ_i[3/c + e^{−c}(1 + 6/c) + ℓ_ie^{−cN_s}(1 + 6/(cN_s))];
+- {#NL7.1-3} E* := Σ_iC_Σ(χ_i)𝔞̄ + C^{R°}_E + C^×_E + C^{R×}_E;
+- {#NL7.1-4} w̄ := 4C_wℓ_Σ𝔟̄e^{−c_wN_s/M}(1 + 6M/(c_wN_s)), the factor 16 of #893 being per lineage;
+- {#NL7.1-5} A^× := 2(A^cr + A^{cr,R}), with A^cr := 4C_cr𝔞̄ℓ_Σe^{−ν_×D/M}(1 + 12M²/(ν_×D)²) and A^{cr,R} of #NL6B.1.
+{#NL7.2} Each is uniform in K and at most linear in 𝔞̄ℓ_Σ, 𝔟̄ℓ_Σ, or e^{−p₀(ḡ_R)/2}ℓ_Σ (#902–#905).
+
+## 8. The Identity at the Stopping Scale and the K-Uniform Bound {#NLS8}
+
+{#NL8.1} *The identity* (#909–#915). On ℓ₀ at K′, f^{(i)}_{K′} = W_{χ_i}(C_i^{(K′)};V_{K′}) + β^{(i)} (#910). Every factor has modulus ≤ 1, so telescoping gives Π_if^{(i)} = Π_iW_{χ_i}(C_i^{(K′)}) + β^{(N)} with |β^{(N)}| ≤ Σ_i|β^{(i)}|. #913–#915 hold with Π_i in place of the two factors.
+{#NL8.2} *The K-uniform bound (derived given D^{(N)}(K′) on every labelled term and the inputs of #917).* Assume #917's hypotheses with N_s ≥ 2max_iℓ_i, L ≥ L₀^{(N)} (#NL6A.9), ν ≤ 1/(500N_C) (#NL6A.7), and §9's step-1 thresholds. Then
+{#NL8.3} |W^{(N)}_ren(ε)| ≤ e^{E*}[1 + Σ_i8.48a_dc_hB₃ℓ_iε_{K′}Lip_{χ_i} + (e^{4ℓ_ΣO(C_χρ_{K′}) + w̄ + A^×} − 1)] + (1 − w_{ℓ₀})e^{A^×}B^{(N)}_LF,
+{#NL8.4} with §7's constants, and the right side is bounded independently of K, as in #919. The proof is #921–#925 over the 4ℓ_Σ step-K′ traversals.
+{#NL8.5} *Subsequences* (#934–#936). μ^{[K]}_{ℓ₀}, E^{(N)}_const,K′, and the remainder are bounded uniformly in K, so every sequence of spacings has a convergent subsequence.
+
+## 9. The First Step: V4 Section 10 for N_C Squares (Derived) {#NLS9}
+
+{#NL9.1} *Setting* (V4 sec:two-loops-setting). The squares are those of #NL1.1, each with V4's square/torus geometry. f = Π_iχ_i(Hol_UC_i), ℐ_C = ⊔_iℐ_{C_i}, and V4's traversal count is n_C = Σ_in_{C_i}. For a ∈ ℐ_{C_i}, δ_a is the periodic fine distance from a's initial site to ∪_{i′≠i}V(C_{i′}), and Δ_× := Σ_{a∈ℐ_C}e^{−c_×δ_a/(LM)}. Covered means covered for every square, the intersection of the single-square events, and far means far for every square.
+{#NL9.2} *Groups* (def:two-loop-groups, lem:two-loop-grouping). H^i_γ is defined for every i ≤ N_C. Two components overlap when H^i_γ ∩ H^i_{γ′} ≠ ∅ for some i, and (A2) is imposed for each square. A C_i-group has ℋ_{i′}(W) = ∅ for i′ ≠ i, and a cross group has at least two nonempty ℋ_i(W). Compatibility asks disjoint intervals on every square. The proof of lem:two-loop-grouping(a)–(d) is per square, with "every other square" in place of "C_{3−i}". In (c), a C_i-group of the N_C squares is a single-square group of C_i none of whose roots has a contact on another square.
+{#NL9.3} *Schur identity and joint extraction* (lem:two-loop-schur). Parts (a) and (b) are per group and per square. In (c) the reference Wilson function at e_{𝒜(𝒮)}a is Π_iχ_i(Π_{W C_i-group}P°_W(a)), and each group is integrated by Fubini with the characters of the other squares as constant factors. So A°_ξ(𝒮) = Π_{W∈𝒮}a_W and R°_ξ(𝔅) = 0 for every nonempty family without cross groups.
+{#NL9.4} *Sources* (lem:two-loop-source). f = Π_idim(π_i)^{−1}tr Y_i is the normalised trace of ⊗_iY_i, so #NL1.6 gives the inequality the proof uses. The bond sets of the squares are pairwise disjoint, so each bond carries at most one traversal of C and the row count is unchanged. The constant becomes C^src_{χ₁⋯χ_{N_C}}.
+{#NL9.5} *Defects* (lem:two-loop-defect). The proof forms one word Y_i per square and uses the product of the N_C normalised traces; each X_W enters exactly one of them. So (two-loop-defect) holds, with K_χ := max_iK_{χ_i}.
+{#NL9.6} *Pins* (lem:two-loop-pins).
+- {#NL9.6-1} (a), count: ℋ(W) has at most |W| ≤ n(W) cyclic intervals on each square, each in at most 8 + t/(LM) cubes for t traversals. So |π₁(ℋ(W))| ≤ 8N_Cn(W) + |ℋ(W)|/(LM), |X(W) ∪ π₁(ℋ(W))| ≤ (8N_C + 1)𝔰(W), and A′_E := (8N_C + 1)(2R_e + 1)⁴.
+- {#NL9.6-2} (a), connectivity of a group W long on the squares of a set T ≠ ∅. Each overlap class in W has a contact on a square of T: otherwise splitting the class off W is admissible, as in V4's proof (the remainder keeps every component with a contact on a square of T and the same union of hulls there; the class is long on no square). Let Γ be the graph on T joining i and i′ when a class of W has contacts on both. If Γ were disconnected, with a component T₁, the classes with a contact on a square of T₁ and the others would form an admissible splitting of W: neither part has a contact on a square of the other's part of T, each contains every component with a contact on its own squares of T, and neither is long on a square outside T. So Γ is connected. Each class is connected to π₁(ℐ_{C_i}) ⊆ π₁(ℋ(W)) for a square C_i of T on which it has a contact, so X(W) ∪ π₁(ℋ(W)) is connected. Groups long on no square are overlap classes, as in V4.
+- {#NL9.6-3} (a), cross groups: π₁(ℋ(W)) contains a cube containing a site of V(C_i) for each square C_i with ℋ_i(W) ≠ ∅, at least two of them.
+- {#NL9.6-4} (b): the hull pins are per square, and in the footprint pin at most CLM traversals of each square have stencils meeting a given cube, so at most N_CCLM in all.
+- {#NL9.6-4a} (b), part (c) of lem:c4-8-2: 𝔰(γ) = n_γ + Σ_i|H^i_γ|/(LM) sums the hulls over the squares, so 𝔰(γ) ≤ (1 + N_CA_h)n_γ ≤ N_CA_sn_γ (#NL.3, from V4's 1 + 2A_h ≤ 2A_s). Then 100η𝔰(γ) < ϖn_γ/40 needs 1000ηA_s < ϖ/(4N_C), which is V4's 1000ηA_s < ϖ/8 at N_C = 2. η is chosen under this condition, before the coupling, and the rest of (b) is unchanged.
+- {#NL9.6-5} (c): let W be long on exactly the squares of T, with a class K₀ long on C_{i₀}, i₀ ∈ T. Since Σ_{γ∈W}Σ_{i∈T∖{i₀}}|H^i_γ| ≥ Σ_{i∈T∖{i₀}}n_{C_i}/2 and Σ_i|H^i_γ| ≤ LM𝔰(γ), one factor 1 ≤ e^{−15ηΣ_{i∈T∖{i₀}}n_{C_i}/(LM)}Π_{γ∈W}e^{30η𝔰(γ)} covers all of T∖{i₀}. V4's computation for a group long on both squares then gives at most Cρn_{C_{i₀}}e^{−10ηn_{C_{i₀}}/(LM)}. There are at most N_C2^{N_C−1} pairs (T, i₀), so the long groups have total weighted mass at most 2^{N_C−1}Σ_iCρn_{C_i}e^{−10ηn_{C_i}/(LM)} ≤ C′ρ, C′ := N_C2^{N_C−1}CLM/(10eη), which is V4's 2CLM/(5eη) at N_C = 2.
+- {#NL9.6-6} (d): the proof applies with these constants, fixed with η before the coupling.
+{#NL9.7} *Cross terms* (lem:two-loop-cross).
+- {#NL9.7-1} (a): for a cross group W and a ∈ ℋ_i(W), 𝔈(W) contains a cube containing a site of some V(C_{i′}), i′ ≠ i (#NL9.6-3), so 𝔰(W) > δ_a/(A′_ELM), and the sum over cross groups is ≤ C_×ρΔ_× as in V4.
+- {#NL9.7-2} (b): E^×_ξ := 𝓛 − Σ_i𝓛_i. A tuple of the N_C-square gas whose members are C_i-groups for one i is a tuple of the gas of C_i none of whose members touches another square, with the same Ψ, and conversely. So E^×_ξ is the sum over the tuples 𝒳₀ of the N_C-square gas with members on two or more squares, minus the sums over the tuples 𝒳_i of the gas of C_i with a member touching another square.
+- {#NL9.7-3} The extent argument of V4's proof applies with V(C_{i′}), i′ ≠ i, for V(C_{3−i}). Pinning 𝒳₀ over ℐ_C and each 𝒳_i over ℐ_{C_i} gives |E^×_ξ| ≤ 2CρΔ_×, as for the pair, and |S°_{ξ,C}| ≤ Π_i|S°_{ξ,C_i}|e^{|E^×_ξ|} ≤ e^{C_×ρΔ_×}.
+- {#NL9.7-4} (c): the single-square sums add to at most Σ_iC_{χ_i}n_{C_i}ρ(ε₁ + e^{−cb/(LM)}) ≤ C_χn_Cρ(ε₁ + e^{−cb/(LM)}). The corollary cor:two-loop-scalar reads S°_{ξ,C} = Π_iκ_{C_i}e^{Σ_iE°_{ξ,i} + E^×_ξ}.
+{#NL9.8} *The retreated carrier* (lem:two-loop-retreated). Its proof, (i)–(vi), uses the lemmas above at D(Λ) and the single-square inputs for each square. Verbatim with N_C squares.
+{#NL9.9} *Inputs and the theorem* (lem:two-loop-inputs, thm:two-loop-theorem). By the product rule and |χ_{i′}(Y_{i′})| ≤ 1, h(∇_bf) ≤ Σ_iC_{resp,χ_i}g₀1_{I_{C_i}}(b), so (a) holds with Σ_iC_{resp,χ_i}. Parts (b)–(e) hold with I_C = ∪_iI_{C_i}, Γ_C = ∪_iΓ_{C_i}, and n_C = Σ_in_{C_i}. In the proof of the theorem, part (iii), e^{Σ_i|E°_{ξ,i}|} ≤ e^{N_CCτ²(2 + 1/c)}exp(Cτ²Σ_{j∈J_C}e^{−cd_j}) replaces the factor e^{2Cτ²(2 + 1/c)}.
+
+## 10. The Cauchy Bound and the Limit (Derived Given the Pair's Cauchy Note) {#NLS10}
+
+{#NL10.1} F^{(N)}_K := W^{(N)}_ren(ε_K) = E_{ε_K}[Π_iW_{χ_i}(C_i)]/Π_iκ^{(K′)}_{C_i}, with K′ of #NL1.2. The pair's Cauchy note (#PC1.1–#PC7.3) applies with the following changes.
+{#NL10.2} *§2.* The Cauchy note uses the observable in the ways of #PC2.1. B^{(N)}_W, the right side of #NL8.3 with (1 − w_{ℓ₀}) replaced by 1 (#PC2.2), bounds the normalised N_C-loop numerator pointwise on every labelled term of either run and |F^{(N)}_K| for every K. The torus and side conditions are N_s ≥ 2max_iℓ_i and ℓ_i ≥ MR_k for each loop (#PC2.3).
+{#NL10.3} *§3.* #PC3.2 holds for each loop. Every factor has modulus ≤ 1, so |Π_if^{(i),B} − Π_if^{(i),A}| ≤ λ^{(N)}_K := Σ_iλ^{(i)}_K, geometric in K. The transports of the words with insertions change the dressed word by at most λ^{(N)}_KB^{(N)}_W (#PC3.6, over the bonds of all N_C loops). On the young matched large-field pairs LF #5.24–#5.26's count runs over the bonds of all N_C loops (#PC3.5).
+{#NL10.4} *§4.* The dev insertions are compared by the species-blind recursion with C := ⊔_iC_i (#PC4.2), and the young matched pairs by LF §5(d)–(e) inside s^{W,tot,(N)}_K, #PC4.2-2's s^{W,tot,×}_K with ℓ_Σ, max_i‖dπ_i‖, and B^{(N)}_W. a_×, a_w, m_K, and K₁^× are #PC4.4–#PC4.4-1's with §6–§7's constants. τ^cr_K, D^cr_K, τ^w_K, and D^w_K are #PC4.6, #PC4.9, #PC4.12, and #PC4.13-1 with ℓ_Σ for ℓ₁ + ℓ₂ and §7's A^× and w̄, at the enlarged amplitudes and the lowered decay where #PC4.8-5 and #PC4.13-4 take them, on every labelled term. The birth differences (#PC4.8-1–#PC4.8-8) are per insertion, from its step's constituents, and the carry factors of #PC4.8-3 and #PC4.13-1 are per lineage, so neither depends on N_C.
+{#NL10.5} *§5.* The single-loop parts E_const,K′(C_i, χ_i) are compared by #C7.6 for each loop (#PC5.1-1). The cross part's per-step terms are E^×_j (#NL5.4–#NL5.5) and E^{R×}_j (#NL6B.2-4), so #PC5.2-5 holds with A^cr_E := Lℓ_Σ(4LC_V(1+β₀)⁶C_×𝔞̄ + 16C_S′e^{c_dr₀}𝔞̄ + C^R), and #PC5.3–#PC5.5 follow with ΔE^{(N)}_K := min(Σ_iΔE^{(i)}_K + 2τ^{E,cr}_K + Δ^{E,cr}_K, 2E*).
+{#NL10.6} *§6.* a^{(N)}_K is #PC6.3-2 with B^{(N)}_W, λ^{(N)}_K, ΔE^{(N)}_K, and the §4 quantities above. Each term is summable in K as in #PC6.4, and B^{(N)}_W is uniform in K (#NL8.4). So Σ_K|F^{(N)}_{K+1} − F^{(N)}_K| < ∞.
+{#NL10.7} *§7.* F^{(N)}_K converges along the full sequence K → ∞, for every N_C-tuple of pairwise vertex-disjoint squares, each in a plane parallel to a coordinate plane (#NL1.1–#NL1.1-1), of physical sides pL^{−q}u at pairwise ℓ^∞ distance ≥ 1 in step-K′ units, in the countable admissible family (#ND.8.5), with sides at most half the torus period (N_s ≥ 2max_iℓ_i), as in #PC7.2.
+
+## 11. What the Bound Does Not Give {#NLS11}
+
+{#NL11.1} The pair note's (9) holds with N_C loops: factorisation W^{(N)}_ren − Π_iW_ren(C_i) small for large D is not derived (#941–#943), and the cross terms are small at fixed coupling only in the limit of #944–#948.
+
+## Conditions {#NLSK}
+
+{#NL12.1} Those of the two-loops note's (8.2) (#917, #932) and of the pair's Cauchy note (#PC8.1), with N_s ≥ 2max_iℓ_i, L ≥ L₀^{(N)} = (N_C/2)·10⁶, ν ≤ 1/(500N_C), the stopping rule #NL1.2, and the step-1 thresholds of §9 for the characters χ₁, …, χ_{N_C}, among them 1000ηA_s < ϖ/(4N_C) (#NL9.6-4a). All constants depend on N_C and are fixed before the coupling.
