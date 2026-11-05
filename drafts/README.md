@@ -33,6 +33,9 @@ The supporting triage records from rounds 20–49, the [rounds 50–51 triage](W
 
 - [Two-loop uniform-bound draft](WILSON_IT1_TWO_LOOPS_UNIFORM_BOUND_2026_10_27.md): the pair insertion class, mixed terms, R-steps and conditional cutoff-uniform bound.
 - [Two-loop review dispositions](WILSON_IT1_TWO_LOOPS_TRIAGE_R1_2026_10_27.md): the recorded objections, repairs and remaining qualifications.
+- [Multiloop outline](WILSON_IT1_N_LOOPS_PLAN_2026_11_04.md): proposed extension to any finite family of disjoint loops. The class, subset-labelled mixed groups, member merges, counting and first-step theorem are work items.
+- [Layered passage](WILSON_IT1_PASSAGE_LAYERED_DRAFT_2026_11_04.md) and [contact weights](WILSON_IT1_CONTACTS_FREE_BOND_WEIGHT_DRAFT_2026_11_04.md): supporting response estimates with their recorded premises and review scopes.
+- [Cube-condition repair](WILSON_IT1_CVCUBE_REPAIR_STAGED_2026_11_04.md) and [real-base uniformity repair](WILSON_IT1_IIUNIF_REPAIR_STAGED_2026_11_04.md): staged drafts with their own qualifications.
 
 ### Supporting Proof and Source Checks
 
@@ -63,6 +66,9 @@ The supporting triage records from rounds 20–49, the [rounds 50–51 triage](W
 ### Further Large-Field and Walk-Factor Work
 
 - [Constants and conventions](CONSTANTS_AND_CONVENTIONS_WDELTA.md): the order of choices, parameter meanings and conditions used by the walk-factor, large-field and Cauchy notes.
+- Tag locations for the current drafts are indexed for [LF and the constants](LABELS_LF_AND_TABLE.md), [two loops](LABELS_TWO_LOOPS.md), [Cauchy](LABELS_CAUCHY.md), the [beta function](LABELS_BFWL.md), the [step map](LABELS_D2_STEP_MAP.md), the [continuum note](LABELS_CONTINUUM.md) and the [walk-factor note](LABELS_WDELTA.md).
+- [LF packet plan](WILSON_IT1_LF_PACKET_PLAN_2026_11_04.md), [LF dependency audit](WILSON_IT1_LF_PACKET_DEPENDENCY_AUDIT_2026_11_04.md) and [Cauchy dependency audit](WILSON_IT1_CAUCHY_PACKET_DEPENDENCY_AUDIT_2026_11_04.md): the review scopes and their premises. The accompanying packet dispositions are included in this folder, including the latest [packet 9](WILSON_IT1_LF_TRIAGE_P9_R21_2026_11_05.md) and [packet 10](WILSON_IT1_LF_TRIAGE_P10_R26_2026_11_05.md) records.
+- [Source-reading inventory](WILSON_IT1_READINGS_INVENTORY_2026_11_04.md): the source statements and derivations used in the current notes.
 - [Large-field dependency analysis](WILSON_IT1_LF_DEPENDENCY_ANALYSIS_2026_10_30.md): dependencies at the revision it analyses; read it alongside the current large-field and walk-factor drafts.
 - [Large-field review dispositions](WILSON_IT1_TRIAGE_LF_GAMMA_2026_10_29.md): reviews, objections and subsequent repairs through the latest working revision.
 - [Archived repair sections](WILSON_IT1_LF_GAMMA_ARCHIVE_2026_10_30.md): sections removed from the active repair note.

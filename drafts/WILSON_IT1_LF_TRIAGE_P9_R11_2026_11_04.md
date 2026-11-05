@@ -1,0 +1,13 @@
+# Triage of LF Packet 9, Eleventh Review (lf-p9-20261104-r11)
+
+The review is verification\isolated_reviewer\reviews\lf-p9-20261104-r11\review.md. Its verdict is that the claim is established for the rates, the additive term and its covering by δ_U, the clause on c(L), the Hölder clause, the citations, and #4.22.3. It finds no fatal or serious issue, two minors, and five trivial items. Since the minors are findings, r11 is not clean. Both minors are accepted. M1 was checked against #A.9.1–#A.9.2, #0.1.30, and #A.11.1.4 before it was accepted, and M2 against RG I p.252 l.28–36, p.253 l.12–13 and l.42–43, and p.254 l.9–10. The repairs are in the LF, now a87f3edd10f5 (labels 6408fdce7617, CR 0, 102 multiply defined). The table is unchanged at 185590aaefb5. The next round, r12, reviews the repaired sentences only.
+
+| Finding | Verdict | Repair |
+|---|---|---|
+| M1: #A.11.1.4.3.1 with #A.11.1.6, the M′-dependence of the factor C(L, M′) in the (P2) constants of A_N(U) and 𝒫_U is not stated | Accepted (inputs checked) | New sub-tag #A.11.1.4.3.2: at a real base the factor is a C(L) in (P2). The sup bounds are #A.9.1–#A.9.2 with ω_g = 0, with #0.1.30's Poincaré constants of d only at a real background and #A.9.2's constant C(d, L). The source bounds are C(L). PBG (3.42)–(3.44) have constants of d and L, uniform in M ≥ M₁ (p.397 l.38). The threshold, the bumps, and the count are C(L). So the (P2) constants are C(L)K. The (P3) constants are C(L, M′), and #A.11.1.2 uses them only in its term 4Kα_□/a, which ε₁ pays. |
+| M2: #A.11.1.4.4.1, "not load-bearing" rests on a pairing that #A.8's wording does not make | Accepted (RG I checked) | The chain chooses RG I's pairing: the averages (0.4) or (0.12), with (1.19) posed on the averaged contour variables (0.11). This is justified by RG I p.252 l.36, p.253 l.12, p.253 l.42–43, and p.254 l.9–10, which also carry VAR's results to this pairing. #A.9's and #A.11.1.4.4's single contours are read as 𝐆-means over shortest contours of the same length, so the bounds are unchanged. |
+| T1: c′ = min(c(d)δ, c)/8 with δ = c(d)min(1, δ₀) | Checked, no change | Equal up to the generic c(d). |
+| T2: citation granularity | Accepted | #A.11.1.4.3.1, #A.11.1.6, and #4.22.3 now cite #A.11.1.4.2.1 for f_ξ's rate, and #A.11.1.6 cites #A.11.1.4.3.1–#A.11.1.4.3.2 for each map's c and K. |
+| T3: C(L, M′)K_s presumes K_s ≥ 1 | Checked, no change | It holds here, as the review states. |
+| T4: #A.11.1.4's weighted count is a further K ≥ C(L) condition | Checked, no change | It is paid as in (s2), and the list does not claim to be exhaustive. |
+| T5: the attribution at RG I p.265 l.37 | Checked, no change | The review calls it a fair reading. |

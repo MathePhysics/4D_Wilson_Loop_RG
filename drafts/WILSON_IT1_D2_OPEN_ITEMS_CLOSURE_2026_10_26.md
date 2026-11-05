@@ -32,7 +32,7 @@ Status after round 44 (19:12, 26 Oct, date; WILSON_IT1_D26_TRIAGE_R44_2026_10_26
 - **(A) for k ≥ 2:** by reading R-bg (Bałaban's, accepted; CRE p.276 l.10–12, p.277 l.3–8); its quantitative decay-and-margin form is not written (sketch in WILSON_IT1_D26_TRIAGE_R41_2026_10_26.md §(A)).
 - Route (i) is not needed: D(k)'s frame is the hierarchical mean axial gauge, not Ax_k(𝔅_k, U_{k+1}), so v₁ ≠ 1 and route (ii) carries it.
 
-## Open after round 40
+## Open after round 40 (both closed after round 42, l.9; the current state is the map's l.174, l.194–196, l.976, and l.982)
 
 - **OPEN, D2.2(4)(d) for k ≥ 2:** the representative item. The derivation of (B) below put U₁ = e^{iη𝐇_k(B′)} into CMP 98 (77), which computes the Landau-to-axial map ũ, not v₁; v₁(x) = U_{k+1}(Γ^{(k)}_{y,x})^{−1}ρ̄_k(V_k)(Γ^{(k)}_{y,x}), and its B′-variation is that of D(k)'s hierarchical transports, unbounded by the sources read for k ≥ 2 (VAR p.280's reference U₀ = U_{k−1}(V₀(V)) depends on V_k). At k = 1 derived, not reviewed: |log v₁| ≤ 4d(1+o(1))sup_{B(y)}|𝐇₁| from RG1 (0.10)'s mean condition.
 - **(A) derived at the root k = 1 only:** the k-uniform ε^V of (A) below reversed R-cpl₀ (CRE (2.8): ε_n ≤ (1+β₀)(n−m)^{1/2}ε_m for m < n); for k ≥ 2 the layer n = 1 is covered by R-m's inheritance (CRE p.277). The repaired derivation is map l.976 (ε^V = 2(1+β₀)²ε₁; S1, S2, M1–M8 of the review applied).

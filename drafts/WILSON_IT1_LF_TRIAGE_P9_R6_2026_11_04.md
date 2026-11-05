@@ -1,0 +1,10 @@
+# Triage of LF Packet 9, Sixth Review (lf-p9-20261104-r6)
+
+The review is verification\isolated_reviewer\reviews\lf-p9-20261104-r6\review.md. Its verdict is "The claim is established as stated", apart from one minor finding, a false supporting sentence in #A.11.1.2 whose conclusion is recoverable without changing any constant. It finds no fatal or serious issue, one minor issue, and three trivial items. Each finding is accepted. The repairs are in the LF, now 7824069ae9dc (labels a0cd5fbc5ca5, 102 multiply defined, CR 0). The table is now ccca88d7496e (#T2.10's last cell only; the fork was told before and after the edit).
+
+| Finding | Verdict | Repair |
+|---|---|---|
+| m1: in #A.11.1.2, 𝐁₂'s Ω₀ = (Ω″^∼_{h+1})^c is not the whole lattice, so "Ω₀^c = ∅" is false | Accepted, repair (a) of the review | At j = 0 the first case suffices. On the data bonds of Λ₀ the maps of the comparison return the datum independently of U: Q(U) is the identity there, so H₁(U)B = B; ω_H and ω_♮ lie in N(Q′) and vanish on Λ₀, where Q′ = P; and f_ξ = 0, so 𝒫_Uξ = 0. The other bonds of Λ₀ touch Ω₁, at distance ≥ RMη ≥ (M_□ + C(d)R₁M₁)η from Ω₀^c, where the first case applies. LFR II p.370 l.23 and #4.261 are cited for 𝐁₂'s support. |
+| t1: X̃⁵ can reach the layer j − 1, so its reach is C(d)LM and K = C(L)e^{¼δ₀C(d)LM′} | Accepted | #A.11.1.3 has C(d)LM, with the reason. K's exponent is C(d)LM′ in #A.11.1.1, #A.11.1.3, and #A.11.1.6 (twice), and in table #T2.10. M_□ ≥ C(L)(M′ + 1) absorbs it, so the order of constants is unchanged. |
+| t2: in #A.11.1.4.3, the data fixing U′_ax in (1.19) are B = (1/i)log V′, not B₁, and the layer factor of (3.133) is not paid | Accepted | The sentence names B, giving θ_{ξ_ω} ≤ C(L)(θ_B + θ_{B₁}) ≤ C(L)θ_B. The layer factor L^{abs(j_x − j′)} is paid under δ₁RM ≥ 8 log L, and the sum over y′ by PRT2 (2.58)–(2.59), as in #A.11.26. |
+| t3: the definition of δ_U in #A.11.1.5 lists C(L)δ twice | Accepted | δ_U bounds the sum of the additive terms and the C(L)δ of #A.11.1.4.3, and also (1 + C(L))δ, which is ≥ δ of #A.11.1.2. |

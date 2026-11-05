@@ -1,0 +1,14 @@
+# Triage of LF Packet 9, Ninth Review (lf-p9-20261104-r9)
+
+The review is verification\isolated_reviewer\reviews\lf-p9-20261104-r9\review.md. Its verdict is that the claim is established, except for one sentence of #A.11.1.4.2, whose conclusion survives. It finds no fatal or serious issue, one minor, and four trivial items. Since the minor is a finding, r9 is not clean. Each item is accepted, and the minor was checked against PBG p.418 before it was accepted. The repairs are in the LF, now 1b72929a855d (labels f54bff7efc46, CR 0, 102 multiply defined). The table is unchanged at 185590aaefb5. Two over-long lines are split into sub-tags with their wording unchanged: #A.11.1.4.4 into #A.11.1.4.4.1–#A.11.1.4.4.3, and #A.11.1.5 into #A.11.1.5.1–#A.11.1.5.3. The next round, r10, reviews the repaired blocks only.
+
+| Finding | Verdict | Repair |
+|---|---|---|
+| Minor: #A.11.1.4.2, the second term of f_ξ(U) − f_ξ(U′) is not 0, since PBG (3.115)'s D̄ = D_{Ū^j} depends on U | Accepted (PBG p.418 (3.114)–(3.115) checked) | The second term is H₁(U′)(D̄_U − D̄_{U′})ξ. It vanishes on the coarse bonds whose blocks lie in □′ and is ≤ 2abs(ξ(c₊)) on the others, within C(d)L of □′^c. By (3.133) for H₁(U′), with the layer factor and the sum paid as in #A.11.26, it is ≤ C(L)e^{−(δ₁/8)d(x,□′^c)}θ_ξ. This is the source of the rate min(c, δ₁/8) stated there. |
+| t1: #A.11.1.4.4, RG I p.254 l.26 concerns the soft gauge fixing, and l.7 concerns the average | Accepted | #A.11.1.4.4.1 cites p.253 l.50–p.254 l.2 and p.265 l.27 (𝐆(V) = 0, with 𝐆(V) the exponent of p.265 l.10 in place of the sum of (0.19), p.255). It also states VAR's pairing: the gauge of REG (1.19) (VAR p.280 l.44–45) with the averages of CMP 98 (VAR p.309 [4]), both on single contours. The vanishing holds for either pairing. |
+| t1: "(0.4), equivalently (0.12)" | Accepted | "(0.4), or (0.12), which agrees with it at first order". |
+| t1: the recursion for the composites is not written | Accepted | #A.11.1.4.4.2: Q̃_{n+1}Q̃^{(n)} = Q_{n+1}Q^{(n)} − D̄(Q′K^{(n)} + K_{n+1}Q̃^{(n)}) by PBG (3.114)–(3.115), and the vanishing by induction on n. |
+| t2: #A.11.1.4.3, which δ | Accepted | δ is the larger of the δ of #A.11.1.2 for A_N(U) and that for 𝒫_U (constants C(L)K and min(c, δ₁/8)). #A.11.1.5.3 takes c(L) ≤ the rates of the covariant maps, so that δ_U covers both. |
+| t3: #A.11.1.5, the decomposition where Σψ_α < 1 | Accepted | #A.11.1.5.2: the identity is not used at those points, where A_♮(U)B = A_N(U)B = B = A_♮(1)B on the data bonds, and the bound holds by the definition of K_♭. |
+| t3: #A.11.1.5, "distance > 0 from Ω₁" | Accepted | "at distance ≥ (RM − M_□ − C(d)R₁M₁)η ≥ 2η from Ω₁", so the bonds at y are data bonds. |
+| t4: #0.1.14, the two-loops section could not be checked under the brief | Checked, no change | The two-loops note's section {#6} is titled "The G^c transformations (derived, not reviewed)". |

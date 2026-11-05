@@ -1,0 +1,14 @@
+# Triage of Packet 10, Fourth Review (lf-p10-20261105-r4)
+
+The review is verification/isolated_reviewer/reviews/lf-p10-20261105-r4/review.md (Cauchy note f585f76cc3c4, LF 7418eb785983, table 6f5bedf70431). It found no fatal or serious finding, three minor findings, and three cosmetic ones, and it resolves every r3 finding. All six are repaired in the Cauchy note f9e2491dc8df (970 lines, CR 0) and the table e9c80cdb0760 (labels b847212473d2).
+
+| Finding | Kind | Verdict | Repair |
+|---|---|---|---|
+| 1. l.516 and l.508: VAR (44)'s C₂ is the constant of CMP 98's double-bar functions, not of the plain averaging | minor | correct | l.516: MU₀′ = e^{i(εA′* + B^{pl})}Ũ exactly, with the plain remainder B^{pl} bounded by C₂^{pl}ε²abs(X)², C₂^{pl} a constant of d, L, and G by Cauchy's estimate; l.508's condition is 16C₂^{pl}C_ℒ²ρ² < 3C₁C₀ε₁; table {#T4.33} records C₂^{pl} |
+| 2. l.434: the support for M_P as a power of L (CRE's M₂ = L²M₁ is an example; VAR's and REG's R₁ are not printed as powers of L) | minor | correct | l.434: R₁, M₁ of VAR and REG and R₀, M₀ of PBG are fixed only as numbers for which the propagator theorems hold (VAR p.277 l.17, REG p.098 l.8, PBG p.408 l.26–27), the theorems need only lower bounds on them (LF #4.23–#4.24), and PBG takes R and M as powers of L, so all four are taken as powers of L by choice |
+| 3. l.580 with l.504 and l.665–670: the coarse-side conditions at scales j < k₀(ε₀) are not listed | minor | correct | l.669 adds ρ_j ≤ 1, 54C₂B₀ρ_j ≤ 1, 6ρ_j ≤ c₄, and 4ρ_j ≤ a₃ to the list after (10.3), which l.895 invokes for all j |
+| 4. l.516: "≤ abs(B)(1 + O(ρ)) ≤ 2abs(B)" needs an unlisted condition; C₁ of the one-step problem is not named | cosmetic | correct | l.516: abs(MU₀′ − U^A) ≤ abs(B^{pl}) exactly, by ‖e^{i(Y+Z)} − e^{iY}‖ ≤ ‖Z‖; VAR's datum B satisfies e^{iB} = U^A(MU₀′)^{−1} by REG (1.31) (p.082 l.7), so abs(B) ≤ (π/2)abs(e^{iB} − 1) ≤ 2abs(B^{pl}) with no further condition; C₁ = 2C₀/B₃ (l.440) is named |
+| 5. Table {#T4.33}: N_s > 24M_P is called a restriction on the torus side; the new k₀ condition is not recorded | cosmetic | correct | {#T4.33}: N_s > 24M_P and M_P dividing N_s are consequences for γ small; the condition 16C₂^{pl}C_ℒ²ρ² < 3C₁C₀ε₁ and the l.669 conditions are recorded |
+| 6. l.504: Δ (the second variation) reuses the symbol Δ of l.434 and (9.1) | cosmetic | correct | l.504: "(PBG's Δ, not the Δ of (9.1))" |
+
+The same revision makes one further change, found during r4 and not raised by the review: the Cauchy note's M_P duplicated the LF's M′ (#4.22, table {#T2.5}). l.526 now identifies M_P with the LF note's M′ and distinguishes it from the local M′ := O(1)LM/2 of l.193. Table {#T2.5} records the identification, {#T2.7} sources R₁ = 1 to LF #4.23, and {#T4.33} states M_P = {#T2.5}'s M′. Since this changes the text under review, r4 does not count toward the clean pair; r5 reviews these repairs.

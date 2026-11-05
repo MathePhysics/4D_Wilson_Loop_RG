@@ -1,6 +1,6 @@
 # R-mJ: The Averaged Current at the Evaluation Points of (4)(f)
 
-**Status: derived, not reviewed.** This note derives the step map's premise R-mJ (map l.214, l.928). Its inputs are those of l.928's derivation of (2.35): the reading R-p, the provisional q₀ = q₁ and q₀ > p₀, the accepted readings R-dec, R-cpl₀ and R-adm, and the T_Y condition of (4)(f) with C′ enlarged by a factor depending on d and L only (§6). (2.35) and (2.37) at the evaluation points are proved together by one continuity argument (§3), so l.928's (2.35) no longer takes R-mJ as an input. The loss L^{n−p} that the sup-norm route through VAR (190) incurs (l.928) does not arise: an exact identity (§4) turns the change of the current into a block-level expression in which only the first derivative of the deformation enters.
+**Status: derived, not reviewed.** This note derives the step map's premise R-mJ (map l.214, l.928). Its inputs are those of l.928's derivation of (2.35): R-p (forced, map l.928), the provisional q₀ = q₁ and q₀ > p₀, the accepted readings R-dec, R-cpl₀ and R-adm, and the T_Y condition of (4)(f) with C′ enlarged by a factor depending on d and L only (§6). (2.35) and (2.37) at the evaluation points are proved together by one continuity argument (§3), so l.928's (2.35) no longer takes R-mJ as an input. The loss L^{n−p} that the sup-norm route through VAR (190) incurs (l.928) does not arise: an exact identity (§4) turns the change of the current into a block-level expression in which only the first derivative of the deformation enters.
 
 ## 1. The Statement
 
@@ -120,7 +120,7 @@ So (4)(f)'s T_Y condition with C′ enlarged by C_{(2.37)}/C := O(1)C_J(1+β₀)
 - **Layer 0 of X.** Layer 0 contains ∂X, where CRE poses no condition. There the current bound is VAR Theorem 1 (p.279, (9)–(10)) for the minimiser U_t on X, at the layer-0 scale, and the Dirichlet jump of H_t at ∂X is at that scale too, so §5's term bounds hold on layer 0 with n = 0.
 - **The domains Z.** For each factor domain X, including the domains Z of RG2 p.15's covariance operators, the derivation uses only what l.928's (2.35) derivation uses for that X:
   - VAR Theorem 1 and Proposition 9 for U_t;
-  - PBG Theorems 3.1–3.4 and 3.12 on X's truncated sequence {Ω_0, …, Ω_p} (reading R-p: REG (1.3)–(1.6) supply PBG's (2.1)–(2.2));
+  - PBG Theorems 3.1–3.4 and 3.12 on X's truncated sequence {Ω_0, …, Ω_p} (R-p, forced, map l.928: RG1 (iv) builds the U_n on REG (1.3)–(1.6)'s sequence, p.262 l.41–43, and REG p.77 l.3 places that sequence in PBG's setting, "see also [2.II, 4]", Bałaban's, accepted);
   - the base conditions posed on X's own domain (map l.919).
 - **Gauge group.** No property of SU(N) is used. The group enters through Ad, π and the Lie-algebra norms only.
 

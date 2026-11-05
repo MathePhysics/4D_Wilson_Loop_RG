@@ -2219,3 +2219,1638 @@ Round 18a ran 23:19–23:22 (`referee_cli_20261103-231947_scope_twoloops_Rround1
 **(R-round) part a is done.** Two clean rounds (16a, 17a) cleared it, and one check round (18a) cleared the pins.
 
 Note → 67431b261a98 (948 lines). Next in the queue: R-eval A7 (`scope_twoloops_RevalA7.md`).
+
+## (R-eval) Packet A (the Landing), Round A7: Triage (3 November, 23:48–23:51)
+
+Round A7 ran 23:32–23:48 (`referee_cli_20261103-233211_scope_twoloops_RevalA7.json`). It found no ERROR and three MINORs.
+
+It confirmed the following:
+- **A6 repairs:** A6-1 to A6-5 are closed.
+- **Derivations:** the transport form, the four response steps, the mixed term, the landing, the consumers, and the order of the constants all hold against the sources.
+- **l.5:** it states Open (R-eval-old) correctly; the LF quotes are verbatim, and no bound in the packet uses C_H.
+- **Open-gap marks:** T₂^{old} and (R-eval-curv) are marked wherever a bound needs them.
+- **Admissibility:** the packet uses it only for the pre-R {Ω″_j} (LFR I p.179 l.40).
+
+- **A7-1 (MINOR), repaired.** l.39 said "the base point of Φ(𝐔) is U_k^0(U)". That holds only for a real base U ∈ 𝓜. It now reads "the base point of Φ(𝐔) is Φ(U) = E(U)U, which is U_k^0(M(U)) for a real base U ∈ 𝓜, as at Φ ∘ P (l.159)". No bound changes, since the bounds are taken at Φ ∘ P. The claim was false as stated, so it counts as a real minor.
+- **A7-2 (MINOR, pin), repaired.** S5 is at LF triage R38 l.47, not l.46. Fixed at l.5 and in scope A7.
+- **A7-3 (MINOR, pin), repaired.** "table row 226" is {#T11.11}, which says nothing about C_H. The pin is dropped; l.5 already cites table l.232.
+- **REG pins (the referee had no transcription in its list), checked against tex\REG\parts.** These are raw files: line N is convention line N − 1 because of the pagemark. All hold:
+  - p.86 l.52–53 is the B₀ bound;
+  - p.87 l.16 reads "depend on d and L only";
+  - (1.62) has 5dLB₀;
+  - (1.75)–(1.76) carry B₁.
+- **Outside the packet, covariance note l.37, repaired.** "X_W ⊂ Ω_{k+1} ⊂ Ω_j" used Ω_{k+1} ⊂ Ω_j against the production-time Ω_j, and that inclusion fails across an R-step (Ω′_j = Ω_j ∪ Z). The sentence now uses X_W in the top layer Ω_j at production (its l.15), and notes that the inclusion is not used. Covariance note → d0b64d4c31c5 (184 lines).
+
+A7-1 is a real minor, so the packet needs another round: `scope_twoloops_RevalA8.md`.
+
+Note → 81dd91ec3603 (948 lines).
+
+### Bookkeeping: LF and Table Cites by Tag (4 Nov, 00:17)
+
+The peer now cites the LF by tag only, and its lines may move. The note's l.5 cited LF lines that no longer hold the quoted text. These swaps change no content, so they get no review round (user, 4 Nov: "These bookkeeping changes don't make a new review necessary"):
+
+- the sup-bound cite "…DEPTH_2026_10_27.md l.6" → #0.1.10;
+- the C_H definition and the bulk constant "(its l.6, l.1008)" → "(its #0.1.10, #KW)", and "(K0) (l.1009)" → "(K0) (#K0)";
+- the C_H^{reg} bound "(its l.6, {#0.1}; l.1009, {#K0.f}; …)" → "(its #0.1.27; #K0.f; …)";
+- "(its l.1009, {#K0.g6} (vi))" → "(its #K0.g6 (vi))", and "Λ₀/Λ₁ (its l.6)" → "(its #0.1.30)";
+- the representative v "(its l.6)" → "(its #0.1.25)";
+- "table l.232" → "table #T11.17".
+
+Note 81dd91ec3603 → 7e6f58f2bea8 (948 lines). WILSON_IT1_REVAL_OLD_DRAFT_2026_11_03.md l.87 "l.6" → "#0.1": e2157f4c6165 → 7e567d3c8201 (203 lines). D2.7 cites no LF line, so it is unchanged. The A8 scope stays as the record of what A8 was given; scope A9 onward cites the LF by tag.
+
+### Bookkeeping: The Note Is Tagged (4 Nov, 00:28–00:33)
+
+User, 4 Nov: full tagging, so that repairs can add lines instead of lengthening old ones. No review round (bookkeeping).
+
+- **Frozen version.** `WILSON_IT1_TWO_LOOPS_UNIFORM_BOUND_PRETAG_7e6f58f2bea8.md` is the note as A8 reviewed it plus the LF tag swaps above. Every "l.N" of the note in this file, the scopes, and the referee logs is a line of that version.
+- **Tags.** Each content line N of the frozen version carries {#N} at its start, after the list marker or heading marks; the title carries none. "l.N" of the note is therefore #N.
+- **Self-references.** The note cited 339 "l.N" outside the Bałaban pins. 145 were its own lines, and these are now #N (ranges #A–#B). The other 194 name other files and stay as they are: the map, SW, D2.6, D2.7, the covariance note, the continuum note, the O4 note, and the pages of LFR, VAR, CRE, and REG. The 16 ambiguous cases were decided against the cited text. "(l.36)" at #94, "(l.37)" at #160, "(l.20–22)" at #200, "(l.37–39)" at #640, "((1.14), l.59–62)" at #130, and "at l.40" at #39 are page pins. The rest are the note's own lines, with each target checked: #39, #75, #102–103, #103, #131, #156, #6, and #14.
+- **Splits.** Four lines were split at sentence boundaries into pieces {#N.j} on their own lines, at the paragraph's content column: #5 into 11 pieces, #6 into 9, #130 into 20, and #173 into 8. A script check confirms that rejoining the pieces with single spaces reproduces the tagged lines exactly, and that the tagging diff consists of the tags and the "l." → "#" replacements only.
+- **Convention line.** {#3.1}, after #3, states the convention.
+- **Labels.** `LABELS_TWO_LOOPS.md` (941 tags) is generated by `labels_two_loops.py`, which also checks that every tag is unique and that every #N in the note names a tag.
+
+Note 7e6f58f2bea8 → d8dd5b48a47f (993 lines). Outside citations of the note by line remain valid as #N: table "l.5", "l.267"; LF and LF triage γ "l.130"; SESSION_HANDOVER.md "l.5".
+
+## (R-eval) Packet A (the Landing), Round A8: Triage (4 November, 00:15–00:50)
+
+Referee run `referee_cli_20261103-235116_scope_twoloops_RevalA8.json` (23:51–00:14), on note #38–#76 with #5 and covariance note l.37. One ERROR and one MINOR. A7-1, A7-2, and A7-3 are confirmed closed, and so is covariance note l.37 as the packet uses it. Not clean.
+
+- **A8-1 (ERROR), #5: accepted.** The referee's quotes are checked against the LF (d46e290cc196).
+  - #0.1.10 bounds abs(Q_{i′}HB) ≤ C_HL^{−(i−i′)}‖B‖ "in a norm that every step of the chain preserves", and says "The supremum does not serve: at the contacts of codimension ≥ 3 between components of Λ^c the response is L times the datum". Leaving the weighted norm "at the domain conditions and at the evaluation points, costs C(d)(1 + log L)^pL once".
+  - #0.1.18 defines W(x) := (1 + log L)^p(L/t)^κ(L/t₃)^{1−κ}, with κ < 1 and ρ₀ ≤ t ≤ t₃ ≤ L. #0.1.19 and #KW put the contacts of VAR's problem at codimension ≥ 2.
+  - #0.1.25 takes v locally, so #5.10's "global Landau representative" is wrong. #0.1.27 bounds the whole response, gradient part included, in ‖·‖_W at A_N, from sup data. So #5.10's "The bound for v does not control Dλ" is also wrong.
+  - #0.1.28 says the weight L/t₃ is not removable by a gauge.
+  - Consequence (derived): at the evaluation points with t₃ ≥ L^{1/2}, W ≤ (1 + log L)^pL^{(1+κ)/2}, so C_{resp,∞} = o(L) there. At the contacts the response is of order L times the datum, so the third input in its sup form fails there and the third route does not close the gap. No packet bound uses C_H, so #38–#76 are unaffected.
+  - Repair: rewrite #5.4 and #5.7–#5.10 to quote #0.1.10, #0.1.18, #0.1.19, #0.1.25–#0.1.28 as they stand and to state this consequence. #5.5 and #5.6 are kept. It is applied after D1 lands, because every running scope reads #5.
+- **A8-2 (MINOR), #41: accepted, a real gap.** #40 and #160 define U_0(𝐔) := U_0^{(AL)}, but #41 writes it as (1.43)'s minimiser "in the axial gauge" (LFR II p.367 l.27, l.30).
+  - LFR I (1.85)–(1.87) (p.197 l.1–35): U_0^{(AL)} = U_0^{u_0} = exp iη𝔸₀ inside Λ, with 𝔸₀ = ℍ_{k,Λ}((1/i)log M^·(U_0)) a function of U_0's averages on 𝔹_k(Λ), and |𝔸₀| < O(1)B₃²B₅M⁶ε_k.
+  - VAR (190) bounds the Landau representative ℋ of U_k(V′V₀)U_k(V₀)^{−1} relative to U₀ (Proposition 9, p.309 l.10–11; p.305 l.36–39).
+  - The repair needs three things: the identity U_0^{(AL)}(𝐔) = U^{(L)}_{k,Z}(M^k(𝐔), V_Λ(M^k(𝐔))), with (1.43) supplying only the data B̃′ and B′_Λ; the step from VAR's frame to the AL frame; and the effect of ū₀(𝐔), complex at complex 𝐔, on the averages that #43 uses. It is derived before A9.
+- **Next:** packet A comes sixth in the reappraised order (handover, "ORDER"). D1 runs first.
+
+## (R-eval) Packet D (the Constants and the List), Round D1: Triage (4 November, 00:55–01:05)
+
+Referee: launched 00:41, finished 00:55 (referee_cli_20261104-004105_scope_twoloops_RevalD1.json). Two ERRORs and four MINORs. The constants, the arithmetic, the pins of #14, and #6's reduction were checked and hold. Note before: d8dd5b48a47f; after the repairs below and the A8-1 rewrite: 05a690da01f0 (994 lines, 942 tags). Every finding was checked against the body before its repair.
+
+- **D1-1 (ERROR), #31: accepted.** #31 listed (2.34), (2.35), (2.37), and (2.36) about 0 as "quoted … at the evaluation points" with no mark. The body quotes them at the u-free representatives only given (1.65)'s application at (P(𝐔), J^h(P(𝐔))), which is Open (R-eval-curv) with CRE (2.39) at P(𝐔) (#156, #158), and has them open at 𝕌̃. #12 carried the second mark but not the first.
+  - Repair: #31 and #12 now state both marks, citing #156 and #158.
+- **D1-2 (ERROR), the list: accepted.** Only #21 carried a mark. The body marks the items at #58, #76, #78, #90, #92, #113, #116, #130.15, #130.17, #137, #153, #154, #159, #166, #167, and #172 (each checked).
+  - Repair: #17's lead now states that each item holds up to the opens it marks, and #18, #19, #22, #23, #25–#30, #32, and #33 carry the body's marks with their tags.
+- **D1-3 (MINOR, a real gap), #6.4: accepted.** "The T-step's points use at most an eighth" did not follow: the map fits the deformations into the whole margin with its enlarged C′ (l.704, l.928, l.1614), and C_K′ = max(C′, C_K) equals C′ when C′ ≥ C_K. At s ≠ 1, P of the point also carries 2K sup|𝐇| (#137).
+  - Repair: C_K′ := max(8C′, C_K) at #14 and #138. #139's bound becomes C_K′ ≤ max(8C′, 128K(1−β)^{−2}) ≤ 8K(1−β)^{−2}max(C′, 16) with K ≥ 1, so C_T^{(K)} ≤ 8K(1−β)^{−2}C_T still holds. #6.4 now says the deformations use at most an eighth for g small (the curvature change is linear in 𝐇 up to a quadratic term), and that the response's share on the older layers, which is not shown to decay with the layer, is part of the open.
+- **D1-4 (MINOR), #14: accepted.** The reclassified dev insertions are in D2.6 closure §3 (l.70–73), not §2.1; §3 l.73's factor 1 + 6S₃₀C₁/C₀ was missing; (6b)'s entry was quoted at its 𝒟^{sub} value.
+  - Repair: the pin is §3, l.70–73; the factor 1 + 6S₃₀λ_R is listed, λ times that on the family (#55); (6b)'s entry is ≤ 3λλ_RC_χ(Σ_tw_t)ρ_{k+1} on the family (#57–#58).
+- **D1-5 (MINOR, attribution), #7, #18, #32: accepted.** TB's and JB's review status was missing.
+  - Repair: #7 now names both reviewed parts (#130–#136, packet TB; #173.1–#173.7, packet JB); #18 and #32 carry their status.
+- **D1-6 (MINOR, attribution), #16: accepted.** "((1.49)–(1.51))" had no paper key.
+  - Repair: "LFR II (1.51), p.370 l.11, with U_k^0 from (1.50)" (checked against p370_corrected.tex l.4–14).
+- **Also applied: A8-1's rewrite of #5.** #5.4 now quotes the large-field note as it stands: its #0.1.10 (the weighted norm; "the supremum does not serve"; leaving the norm costs C(d)(1 + log L)^pL), #0.1.18 (W, κ, t, t₃, ρ₀), #0.1.29 (in VAR's problem t₃ is the distance to the contacts of codimension ≥ 2), #0.1.27 ((KW), gradient part included), and #0.1.4 (A_N). The new #5.11 derives C_{resp,∞} ≤ (1 + log L)^pL^{(1+κ)/2}C_H = o(L) where t₃ ≥ L^{1/2}, and states that at the contacts the response is L times the datum and not removable by a gauge (#0.1.10, #0.1.28), so the third input fails at the sites with t₃ < L^{1/2}. #5.7 restricts the conclusion to t₃ ≥ L^{1/2} and has λ absorb (1 + log L)^pLC_HM⁵ (sup W ≤ (1 + log L)^pL). #5.8 states the two remaining inputs. #5.10 replaces the former claim about the global Landau v (wrong: the LF's bound covers the gradient part at A_N, #0.1.25–#0.1.27) with the passage from A_N to V̂, through u_R = A_N + ∂ω with abs(Im ηω) ≤ C(L, M)ε₁ (#0.1.3, #0.1.4, #0.1.14), as part of the input. labels_two_loops.py was run.
+- **Next:** D2, with scope_twoloops_RevalD2.md. Every later scope declares #5 with #5.1–#5.11.
+
+## (R-eval) Packet D, Round D2: Triage (4 November, 01:14–01:20)
+
+Referee: launched 01:01:55, finished 01:14 (referee_cli_20261104-010155_scope_twoloops_RevalD2.json). One ERROR and one MINOR. D1-1 and D1-3 to D1-6 were confirmed closed; D1-2 was closed except at #19 and #30. Not clean, so D needs D3 and D4. Note: ba6220526a7d after the D2 repairs, 81ccfd23e258 after the #20 mark (994 lines, 942 tags). D3 launched 01:15.
+
+- **D2-1 (ERROR), #19 and #30: accepted.** Checked against #172 and #152.
+  - #19 named only P of the point. #172 also marks the transport-form points, where the words' equality at 𝕌̃ needs (2.34)–(2.37) (#113), and U^R, where the B-terms reach their bounds only through #153's transfer.
+  - #30 omitted #152's marks for the derived configurations' currents J_n(M·(𝐔)).
+  - Repair: #19 now names all three places; #30 carries #152's marks, citing #152, #156, and #158.
+- **D2-2 (MINOR, a real gap in the statuses), #14: accepted.** (6b)'s family bound was quoted without #58's mark.
+  - Repair: #14 now says that (6b) runs on the family up to (2.34)–(2.37) in its radius R′ (Open (R-eval-curv), #58).
+- **Pre-launch sweep:** the list items without an (R-eval-curv) mark (#20, #21, #24, #27, #34) were checked against their body paragraphs. #20 (the transport form) was missing #45–#46's Open (R-eval-old) mark, which is now added. #21, #24, #27, and #34 match their body paragraphs.
+- **Also:** #5.11 is now headed "*Away from the contacts (derived, not reviewed).*". It is reviewed in packet A.
+- **Next:** D3, with scope_twoloops_RevalD3.md.
+
+## (R-eval) Packet D, Round D3: Triage, and the A8-2 Repair (4 November, 01:34–01:40)
+
+Referee: launched 01:15:28, finished 01:33 (referee_cli_20261104-011528_scope_twoloops_RevalD3.json). One ERROR and three MINORs. D1-1 to D1-6, D2-1, D2-2, and the #20 mark were confirmed closed. Not clean. Note after the repairs and the A8-2 edits: d7f60604d26a (996 lines, 944 tags).
+
+- **D3-1 (ERROR), #17 and #24: accepted.** (ii) derives the analyticity at Bałaban's (𝐔, 𝐉)-extension (#85, #89). The members Y∘P are built on the note's extension, which agrees with Bałaban's only as far as (P(𝐔), J^h(P(𝐔))) lies in Ũ_k^c(Y₄) (#127, #156).
+  - Repair: #17 now says "the analyticity of Bałaban's extension", and #24 adds the members' analyticity, marked Open (R-eval-curv) (#127, #156).
+- **D3-2 (MINOR, a real gap in the statuses): accepted.** At the Schwarz step's scaled points (#92) and along P(𝐔_t) (#113), the open covers (1.65)'s application at the axial form, CRE (2.39) included, and not only (2.34)–(2.37).
+  - Repair: #92 and #113 now name it, citing #6.6, #127, and #156. #6.5 adds both places to its list. #19, #22, and #23 carry it, and #29 inherits it through #23.
+- **D3-3 (MINOR), #17: accepted.** #206 reads "combine[s]" as a product, and the base points use that reading (#202–#203, #212).
+  - Repair: the reading *R-combined* is added to #17's list, and #206 names it.
+- **D3-4 (MINOR, wording), #32: accepted.** It now reads "at P of the T-step's points at s ≠ 1 (#137) and, in part (a), at s = 1 at a localized background".
+- **A8-2 repair (derived, not reviewed; for A9).**
+  - #41 now writes U_0(𝐔) = U_0^{(AL)}(𝐔) as LFR II p.366 l.23–25 defines it, with (1.43)'s axial U_0^{ax}(𝐔) and U_0 = (U_0^{ax})^{u_0} (LFR I (1.86), p.197 l.18–29).
+  - New #41.1, the frame: U_0(𝐔) = (e^{iηℋ′}U_0(U))^g, with ℋ′ = Ad(u_0(U))ℋ and g = u_0(𝐔)w^{−1}u_0(U)^{−1}, where w is VAR's transformation, and g = 1 at 𝐔 = U. The data on Λ ∩ Ω″^{∼2}_{h+1} are those of e^{iηℋ′}U_0(U) transformed by ḡ.
+  - New #41.2, the bound on g: the Schwarz lemma in the data's scale t on the disc |t| ≤ cα_{1,k}/|B̃′|, where (1.38)–(1.45) hold, with #107's device and (1.84), (1.44)–(1.45), and (1.87). It gives η|Dλ| ≤ O(1)(1 + (C⁰_{rsp} + B₃²B₅)M⁵ + o(1))s_Z. The ε-part enters as ε_k/α_{1,k} → 0 (q₁ > p₀), so no additive term appears.
+  - #42 defines C⁰_{rsp} := O(1)4d·100⁵γ₀^{−1}B₃² and C_{rsp} := O(d)(C⁰_{rsp} + B₃²B₅). #43 and #164 use C_{rsp}. Every other use of C_{rsp} is an upper bound, so it stands with the larger constant.
+  - A remark that the route does not need: REG's representative is covariant under G-valued background gauges. This follows from CMP98 (78)–(81) (p.30), covariant under V₀ → V₀^w, v → wvw^{−1}, and from R(U₀), the orthogonal projection onto Δ_{U₀}N(Q′(U₀)) (REG p.80 l.12–13), covariant under the orthogonal Ad_w.
+- **Next:** D4. A9 reviews #5 (with #5.11) and #41–#43 (with #41.1–#41.2).
+
+## (R-eval) Packet D, Round D4: Triage, and the Response's Share (4 November, 01:48–01:50)
+
+Referee: launched 01:36:23, finished 01:47:51 (referee_cli_20261104-013623_scope_twoloops_RevalD4.json). No ERROR and two MINORs. D3-1 to D3-4 are closed; D2-1, D2-2, the #20 mark, and D1-1 to D1-6 stay closed. List items #20–#21 still match #41–#43 with #41.1–#41.2. Not clean, since D4-1 is a missing open mark. Note after the repairs and #6.9: 1926357abfa8 (997 lines, 945 tags).
+
+- **D4-1 (MINOR, a real gap in the statuses), #26 with #78, #80, #130.1, and #172: accepted.** The class's other bounds reach the members' values through the words' equality at 𝕌̃ (#111), which is #113's identity theorem. That theorem holds only as far as (P(𝐔_t), J^h(P(𝐔_t))) ∈ Ũ_k^c(Y₄), so the open also covers (1.65)'s application along P(𝐔_t), CRE (2.39) included.
+  - Repair: #26, #78, #80, and #130.1 add "(1.65)'s application along P(𝐔_t), CRE (2.39) included (#113)". #172 states #113's condition in full.
+- **D4-2 (MINOR), #17: accepted.** The map's and SW's readings (R-cpl₀, R-dec, R-av, R-m, R-adm, R-p, R-mJ) are used at #53, #54, #68, #70, #137, and #138 and come in through #293–#294.
+  - Repair: #17 adds a sentence naming them and pointing to the inherited inputs (#293–#294).
+- **The response's share (new #6.9, derived, not reviewed; for A9).** This closes the part of #6.4 that was open about the s ≠ 1 response 2K sup|𝐇|.
+  - T_Y's α₀-entry gives 2K sup|𝐇| ≤ β(1−β)²α_{0,k}/16 + O(Kε_k) (#138).
+  - The response's gradient in 𝒟^λ_k's layer weight converts to a curvature change of at most 2ξ²|∇δ|.
+  - On layer n = k − m it takes at most (1 + o(1))(1−β)²(1+β₀)²max(1, √m)(2/L)^m/4 + o(1) of the next step's margin β2^{−(m+1)}. That is below ¼ for L ≥ 8 and g_K small.
+  - With the deformations' eighth, more than half of the margin remains, as #6.3 needs. #6.4 now says so, and its open is the margin at the s = 1 point itself.
+- **Next:** D5, which also checks #6.4's changed sentence as a statement of what is open. A9 reviews #5 (with #5.11), #41–#43 (with #41.1–#41.2), and #6.9.
+
+## (R-eval) Packet D, Round D5: Triage, and the Curvature Conditions by the Members' Slack (4 November, 02:07–02:17)
+
+Referee: launched 01:50:21, finished 02:06:35 (referee_cli_20261104-015021_scope_twoloops_RevalD5.json). No ERROR and two MINORs. D4-1 and D4-2 are closed, and D1–D3's repairs stay closed. The constants, the arithmetic, #6's reduction, the covariance note's μ, and every pin hold. Not clean, since D5-1 is a missing open mark. Note after the repairs and the closure: 756f4b8b4dd2 (1007 lines, 951 tags). D6 launched 02:17.
+
+- **D5-1 (MINOR, a real gap in the statuses), #25 with #167: accepted.** The extension-domain points' bounds also reach the members through #113's identity theorem, which needs the condition along the whole path.
+  - Repair: #25 and #167 now mark 𝒟_k itself at V̂ and along the segments V̂_t (#113). This is the form the condition takes after the closure below.
+- **D5-2 (MINOR), #6.4 with #6.9: accepted.** At a localized background, P of the point differs from 𝐕 at every s, s = 1 included, by 𝓗 with |𝓗| ≤ (1 + O(α_{1,k}))K sup|𝐇| (#130.3–#130.4).
+  - Repair: #6.4 and #6.9 state that 𝓗 replaces both the deformation and the response, and that its share is below an eighth.
+- **The closure of most of (R-eval-curv) (new #6.10–#6.15, derived, not reviewed; for review as packet CV below).**
+  - #6.10, the Landau frame. The post-R words W(M) are invariant under G^c block transformations near the G-valued ones (identity theorem; G is totally real of maximal dimension in G^c). So the extension is taken at (V̂, J^h(V̂)), and neither (1.65) at (P(𝐔), J^h(P(𝐔))) nor CRE (2.39) at the axial form is used (#6.6 now says this).
+  - #6.11, the conjugation to V̂. The T-step's points are built on the datum's step-(k+1) Landau representative. The change of frame costs a factor 1 + O(B_Gλα_{1,k})L^{−(k−n)}, which is below a quarter of the margin.
+  - #6.12, the members' slack. 𝒟♮_k has the coefficients f♮_n = f_n(1 + ¼β2^{−(k+1−n)}), and Bałaban's members are analytic and bounded on it:
+    - the old B-terms through the step margin of CRE (2.42) and CRE p.277 l.2–7;
+    - the newest through CRE (3.43)'s (1+β);
+    - the E- and R-terms through RG I's orbit-union spaces and RG2 (1.34);
+    - the transports through A_k.
+  - #6.13. The R-step lands in 𝒟♮_k with no margin at 𝕌^{(0)}, so #48's 𝒟^λ_k is now a subset of 𝒟♮_k.
+  - #6.14. The T-step's points lie in 𝒟_k itself at V̂. The data leave at least ⅞ of the margin; the deformations take ⅛, the response under ¼ (𝓗 under ⅛ at a localized background), and the conjugation under ¼.
+  - #6.15. SW (6b)'s radius R′ is covered by the map's own c₀ (l.1328), so #58 needs no margin.
+  - The marks were updated at #6, #6.4–#6.7, #8, #12, #14, #19, #22–#26, #28, #30–#33, #38, #48, #53, #58, #78, #80, #92, #113, #127, #130.1–#130.6, #130.15, #130.17, #137, #152–#156, #158–#159, #166–#167, #172, #213, #222, and #785.
+- **Open (R-eval-curv) now:**
+  - 𝒟_k itself at the Landau form of the Schwarz step's scaled points (#92, #6.7). The doubling gives LFR I (1.68)'s c = 3.
+  - The same at the extension-domain points (#167). The real datum has no margin, and near Λ the response multiplies its phase by C_ΛM⁵.
+  - The conjugation factors of the covariant members at part (b)'s pairs, and the B-terms at U^R (#6.8, #153).
+- **Next:** D6 checks D5-1, D5-2, and the restated open. Packet CV reviews #6.10–#6.15 after D6, before A9.
+
+## (R-eval) Packet D, Round D6: Triage, the Scaled Points, and the Extension-Domain Points (4 November, 02:32–02:40)
+
+Referee: launched 02:17:50, finished 02:31:54 (referee_cli_20261104-021750_scope_twoloops_RevalD6.json). No ERROR and five MINORs. D5-1 and D5-2 are closed, and D1–D4's repairs stay closed. The constants, the arithmetic, #6's reduction, μ, and every pin hold. Not clean, since D6-1 and D6-2 are missing marks and D6-3 is a missing statement of the open. Note after the repairs and the closures: 1ffcf84a5c4f (1010 lines, 952 tags). D2.7 after the (R-eval) line's update: bd0d789ac055.
+
+- **D6-1 (MINOR, a real gap in the statuses), #19 with #172: accepted.** A_k's sup at the extension-domain points is taken at 𝕌̃ through #113's words' equality along V̂_t, which D5 marked open at #167 but #19 and #172 did not.
+  - Repair: the condition is now derived (#6.16 below), and #19, #172, and #167 mark it derived, not reviewed, at the extension-domain points.
+- **D6-2 (MINOR, a real gap in the statuses), #30: accepted.** #30's J_n quotation through (1.65) at V̂ lacked #156's mark.
+  - Repair: #30 now says the quotation is derived, not reviewed, at the T-step's points and at the extension-domain points (#6.14, #6.16), as #31, #12, and #156 do.
+- **D6-3 (MINOR), #6 and #6.8: accepted.** The B-terms at U^R (#153) were cited as part of the open but not stated in #6.
+  - Repair: #6's heading cites #153, and #6.8 now opens with the transfer itself: a G-covariant member's bound at a point does not follow from its bound at a G^c transform of the point without a factor from the conjugation at its endpoints, which is needed for the B-terms at (P(𝐔), 𝐉) through u_L (#153) and for the covariant members at part (b)'s pairs.
+- **D6-4 (MINOR), #14: accepted.** Three λ_R places were missing from #14's list: 3C_fdλλ_RB_J/(1−β) (#130.11, #154), O(λ_Rh_k) (#136), and T₂'s D*D, O(λ_RK²(…)ε_k/r_B) (#165).
+  - Repair: #14 lists them in a separate sentence, since they are fractions of a room, not source terms of order ρ. Each is absorbed by g small, since B_J, h_k, and ε_k tend to 0 uniformly in k and K, with λ_R fixed after L and M.
+- **D6-5 (MINOR), #8: accepted.** Repair: C_K → C_K′, in #8 and in D2.7's (R-eval) line.
+- **Two more closures in (R-eval-curv) (derived, not reviewed; for packet CV):**
+  - #6.7, no scaled points. #92's bound on |Im ηℍ^{(n)}| is (1.45)'s bound on |ηℍ^{(n)}| at the point's own stages (*R-chain-cx*), since |Im X| ≤ |X|. The stages lie in Bałaban's spaces at the T-step's points (#6.14) and at the extension-domain points (#6.16). #92 now reads so.
+  - #6.16, the extension-domain points lie in 𝒟_k itself.
+    - The real base U_k(V_k⁰) is ε-regular at each layer's scale on the R-step's support. Off Z this is LFR I p.193 l.21–23. On Z it is LFR I p.193 l.27, (1.78) at p.194 l.38–44, and the χ of LFR II p.378 l.12–14, l.21–22.
+    - By VAR Theorem 1 its curvatures and current are at most O(1)B₃B₅M⁶L³(A₀/C₀)(log g_n^{−2})^{r+p₀−q₀} of the room, which tends to 0 since q₀ > p₀ + 3r.
+    - The complex deviation, at most 2Kr^{ext}_k, takes at most 2(1+β₀)³max(1, √m)L^{−m−1}/f_n of the room, which is below ½ for L ≥ 8.
+    - So V̂ ∈ 𝒟_k, the segment V̂_t stays in 𝒟_k, (1.65) applies at V̂, and 𝕌̃ lies in 𝒟♮_k.
+  - The marks were updated at #6, #6.5, #6.7, #6.8, #12, #14, #19, #22, #24, #25, #30, #31, #38, #92, #156, #167, #172, and #213.
+- **Open (R-eval-curv) now:** only the conjugation factors (#6.8, #153). The factor is 1 + O(α_{1,k}) per step at top-layer endpoints, and Σ_kα_{1,k} ~ √K polylog. A frame weight in the clause does not stop it (each step's (s, t) polydisc adds O(α_{1,k})). Route A, common-frame slots with no conjugation back, needs a restatement of Cov(k+1) (map (6)(b)) and ĥ(data^g) = gĥ(data)g^{−1}, which is not derived.
+- **Next:** D7 checks D6-1 to D6-5. Packet CV then reviews #6.7 and #6.10–#6.16, before A9.
+
+## (R-eval) Packet D, Round D7: Triage, and the B-Terms as Invariant Scalars (4 November, 02:51–02:56)
+
+Referee: launched 02:37:28, finished 02:51:23 (referee_cli_20261104-023728_scope_twoloops_RevalD7.json). No ERROR and five MINORs. D6-2 to D6-5 are closed, and D6-1 is closed at #19 and #167 but not at #172. The constants, the arithmetic, #6's reduction, μ, and every pin hold. Not clean, since D7-1, D7-2, and D7-5 are missing marks. Note after the repairs: 41601263eb8e (1010 lines, 952 tags). D2.7: 55e897989a26.
+
+- **D7-1 (MINOR, still open in part from D6-1), #19 against #172, #113, and #127: accepted.** The D6 edit of #172 had not applied.
+  - Repair: #172, #113, and #127 now say the words' equality and Ũ_k^c(Y₄) hold at the extension-domain points too (#6.16), derived, not reviewed.
+- **D7-2 (MINOR, a missing open mark), #25 against #167: accepted.**
+  - Repair: #25 carries the (R-eval-curv) mark for the slots' B-terms in 15.6(c)'s B(g) and 15.6(f)'s members, in the form restated below.
+- **D7-3 (MINOR), D2.7 l.7: accepted.** Repair: D2.7 l.7 says the transfer is derived and reviewed (packet TB), with the curvature conditions at the T-step's points derived, not reviewed (#6.14).
+- **D7-4 (MINOR), #8 and D2.7 l.7 (a): accepted.** Repair: both now say that at a localized background the re-projection costs 𝓗 at every s, s = 1 included, with its share below an eighth (#130.3–#130.4, #6.4).
+- **D7-5 (MINOR), #32, #19, #33, and body #136, #159, #166, #172: accepted.** Since 𝒟^λ_k ⊂ 𝒟♮_k (#48), #136's landing at s = 1 at a global background includes (2.34)–(2.37) at V̂, which is #6.14's.
+  - Repair: #136 marks it derived, not reviewed (#6.14), and #19, #32, #33, #159, #166, and #172 now say "at every s and at both kinds of background".
+- **Correction found while working on #6.8: the B-terms are invariant scalars.** CRE (2.41)(iii) (p.261 l.60–62) makes the localized B-terms invariant under G-valued gauge transformations of (𝐔, 𝐉, A), with 𝐉 and A in the adjoint. #6.8 and #130.15 had called them adjoint-valued, with a factor e^{4a_c}.
+  - So, as for the words (#6.10), their extension is taken at (V̂, R(u_L)𝐉, R(u_L)A), with (2.42) there and no conjugation factor. What stays open for them is only their outer-field argument R(u_L)A, which needs the outer fields' domain enlarged by e^{2|Im λ_{u_L}|}.
+  - Restated at #6's heading, #6.8, #130.15, #153, #172, #19, #25, #30, #38, #213, and D2.7 l.5 and l.7.
+- **Open (R-eval-curv) now:** the covariant members' conjugation factors at part (b)'s pairs (transports and Cov(k)'s endpoint factors), and the outer fields' domain under the G^c transformations, the B-terms' argument R(u_L)A included (#6.8, #153).
+- **Next:** D8 checks D7-1 to D7-5 and the B-term restatement.
+
+## (R-eval) Packet D, Round D8: Triage, and the Outer Fields' Domain (4 November, 03:15–03:18)
+
+Referee: launched 02:56:05, finished 03:15:04 (referee_cli_20261104-025605_scope_twoloops_RevalD8.json). No ERROR and four MINORs. D7-1, D7-3, and D7-4 are closed, D7-2 at #25, and D7-5 at the paragraphs it named. The B-term restatement matches CRE p.261 l.58–62 and #6.10. The constants, #6's reduction, μ, and every pin hold. Not clean, since D8-1 and D8-2 are missing or stale marks. Note after the repairs and #6.17: 44d21c93ad42 (1013 lines, 953 tags). D2.7: cf7573beb733.
+
+- **D8-1 (MINOR), #30 and #154: accepted.** Repair: both now say "at every s and at both kinds of background" (#6.14; #136, #137).
+- **D8-2 (MINOR), #167: accepted.** The extension-domain points are not part (b)'s pairs, so #6.8's conjugation factors do not arise there.
+  - Repair: #167 now states the B-terms' form (2.42) at the Landau form, with no conjugation factor, and their argument R(u_L)A by #6.17.
+- **D8-3 (MINOR), D2.7 l.7: accepted.** Repair: l.7 names T₂^{old} also for the deformations' gradient and current and for the starting values (#23, #29, #33, #90, #166).
+- **D8-4 (MINOR), #7: accepted.** Repair: #7 adds that the curvature conditions at the T-step's points are derived, not reviewed (#6.14).
+- **New #6.17, the outer fields' domain (derived, not reviewed; for packet CV).**
+  - The ω_j live on Ω_{j+1} ∩ Λ_{j+1}ᶜ ⊆ Ω_{j+1}∖Ω_{j+2} (map l.580). So ĥ and u_L are at most C_odλα_{1,k}L^{1−m} there, with m = k − j, by REG (1.70)–(1.71).
+  - The map's radii g_j^{1/2}(1/2 + 2^{−m}) (l.321, l.954) leave each step a slack 2^{−m−1}. The enlargement fits it for g small, uniformly, since α_{1,k}g_j^{−1/2} → 0 and m^{1/4}(2/L)^m is bounded. Nothing compounds.
+  - The B-terms' argument R(u_L)A lies in R-m's domain with room, since ε_j/α_{1,j} → 0 (l.956).
+  - The marks were updated at #6, #6.8, #8, #19, #25, #30, #32, #38, #130.2, #130.6, #130.15, #153, #159, #167, #172, #213, and D2.7 l.5 and l.7.
+- **Open (R-eval-curv) now:** only the covariant members' conjugation factors at part (b)'s pairs (#6.8). They are 1 + O(α_{1,k}) per step at top-layer endpoints, and they compound over the steps through the per-step sup bounds.
+- **Route F (proposed for #6.8; it amends D(k)(iii) and needs the user's acceptance).**
+  - Let t_j(𝐐) be the G^c transformation from 𝐐 to the step-j axial form of its orbit. Then t_j(𝐐^u) = t_j(𝐐)u^{−1}.
+  - D(k)(iii) would bound each covariant member's frame value Y^c := π(t_{j_x}(x))Yπ(t_{j_y}(y))^{−1}, with j_x and j_y the production steps of its end pieces. Y^c is G^c-invariant.
+  - At an evaluation point of step m, |Y| ≤ e^{c_π(|Im λ_{t_{j_x}}(x)| + |Im λ_{t_{j_y}}(y)|)}sup|Y^c|. Here t_j is a product of two normalisations of one configuration, so it is O(α_{1,m}) at a top-layer point, independently of the history.
+  - Carried members pay nothing, since untouched insertions are evaluated at (U_{k+1}, ω) (map l.1542) and Y^c is invariant. A creation pays its junction and polydisc factors once, inside the new vertex's share (map l.1549's c_πα_{1,k+1}|win(v)|).
+  - Not yet in the note.
+- **Next:** D9 checks D8-1 to D8-4 and #6.17's marks. #6.17 itself goes to packet CV.
+
+## (R-eval) Packet D, Round D9: Triage (4 November, 03:37–03:39)
+
+Referee: launched 03:19:09, finished about 03:37 (referee_cli_20261104-031909_scope_twoloops_RevalD9.json). No ERROR and five MINORs, all of them marks. D8-1 to D8-4 are closed, and #6.17's restatement is consistent everywhere. The constants, μ, #6's reduction, and the pins hold. Not clean, since D9-1 is an unmarked use of Open (R-eval-old). Note after the repairs: 51cb4e36a927 (953 tags). D2.7: 6200c4195ff0.
+
+- **D9-1 (MINOR): accepted.** 𝕌̃ ∈ 𝒟♮_k rests on #6.2, which holds up to T₂^{old}.
+  - Repair: "up to T₂^{old} (Open (R-eval-old), #6.2)" added at #6.13, #12, #30, #31, #152, #158, and D2.7 l.7, and, from the pre-check of D10, at #6's heading and #6.16.2. Note after these: d9040b66b14d.
+- **D9-2 (MINOR): accepted.**
+  - Repair: #7 now excepts #130.15's outer fields' domain and B-terms (#6.17, #153) with #6.14. #32 adds the B-terms' form (#130.15, #153) to its derived, not reviewed parts.
+- **D9-3 (MINOR, from C2a2-3): accepted.**
+  - Repair: #8 now says the members agree with Bałaban's extension as far as (V̂, J^h(V̂)) lies in Ũ_k^c(Y₄), as #24 does (#6.10, #127; #6.14, #6.16, #156).
+- **D9-4 (MINOR): accepted.** The landing's curvature conditions use #6.9's L ≥ 8.
+  - Repair: #8, #136, and D2.7 l.7 (b) now say "no condition on L involving K", with SW (b3)'s and #6.9's L ≥ 8 (table row 12).
+- **D9-5 (MINOR): accepted.**
+  - Repair: D2.7 l.3, l.5, and l.7 now say "given that note's readings (#17)". l.7 names R-far″(β), R-chain-start, and p.375's inclusion among them.
+- **Outside the packet (logged by D9).**
+  - Repaired: #3 now names (R-eval)'s two opens. #6.9's "which is what #6.3 needs" now reads "which #6.14 uses".
+  - For packet CV: whether #6.17's placement of ω_j survives R-operations that enlarge the Ω's.
+    - Source: LFR I (1.10)–(1.12), p.179. Inside Z the R-operation replaces Ω_j, h+1 ≤ j ≤ k, by Ω″_j = (Ω_j^{∼5} ∩ Z) ∪ (Ω_j ∩ Z^c), and the sequence {Ω″_j} is again admissible. The same paragraph sets up the integration over V_j restricted to Γ_j there (p.179 l.2–4).
+    - So #6.17's inclusions hold for the current admissible sequence, provided the outer fields on Z's layers are those of the new sequence after the R-operation. If they keep their old bonds, a bond can move to a newer layer. The REG bound there is L^{n−k}, not L^{1−m}, and the slack condition then holds only if the shift in n is bounded uniformly.
+    - To settle before CV: read LFR I pp.179–181 for what happens to the ω_j on Γ_j ∩ Z, and add the result to #6.17.
+    - Read (03:5x). The R-operation integrates out the variables localized in Z_{j+1}∖Z″_{j+1}, j = h, …, k−1, successively from j = h (LFR I p.178 l.55–57; p.179 l.53–55; (1.15)–(1.16), p.180). The result is the generating set 𝔹″_k = {Γ″_j}, Γ″_j = (Ω″_j∖Ω″_{j+1})^{(j)} ((1.13), p.179), and every later step's variables sit on the layers of {Ω″_j}. So the old bonds do not persist: #6.17's inclusions are those of the current admissible sequence, and ω_j's layer is that sequence's Ω_{j+1}∖Ω_{j+2}.
+    - To add to #6.17 after D10, since D10 reads #6.17 as context: one sentence with these pins, derived, not reviewed, for CV.
+  - READINGS.md has no entries for the six readings of #17. READINGS.md is obsolete for YM4 (memory), so #17 is their record.
+- **Next:** D10 checks D9-1 to D9-5. If it is clean, D11 is the second clean round.
+
+## (R-eval) Packet D, Round D10: Triage (4 November, 03:50–03:52)
+
+Referee: launched 03:40:24, finished about 03:50 (referee_cli_20261104-034024_scope_twoloops_RevalD10.json). No ERROR and four MINORs. D9-1 to D9-5 and the two repairs outside the packet are closed. The constants, μ, #6's reduction, the conditions on L, and the pins hold. Not clean, since D10-1 and D10-2 are unmarked uses of derived, not reviewed steps. Note after the repairs: a5e76a858be5 (953 tags). D2.7: 73600d47762b.
+
+- **D10-1 (MINOR): accepted.** #130.17's radius R′ rests on #6.15, which was written after packet TB.
+  - Repair: #7, #32, and D2.7 l.7 now except #6.15 together with #6.14, #6.17, and #153.
+- **D10-2 (MINOR): accepted.** The inclusion 𝒟_j ⊃ 𝒟^λ_j is false, since 𝒟^λ_k ⊂ 𝒟♮_k (#48).
+  - Repair: #61 and #224 now read "bounded on 𝒟♮_j ⊃ 𝒟^λ_j (#6.12, derived, not reviewed)". #28 carries the #6.12 mark, with #61.
+- **D10-3 (MINOR): accepted.**
+  - Repair: #7 and #3 now say "given the readings of #17". #12 names *R-coincides* and p.375's inclusion.
+- **D10-4 (MINOR): accepted.**
+  - Repair: #17's list of places where the map's readings are used adds #6.4, #6.14, #6.15, #6.16.1, and #6.17.2.
+- **#6.17, the R-operation (derived, not reviewed; for CV).** A sentence now places ω_j's layer in the current admissible sequence, with the pins read at 03:5x (LFR I p.178 l.55–57, p.179 l.53–55, (1.12)–(1.16)).
+- **Next:** D11 checks D10-1 to D10-4. If it is clean, D12 is the second clean round.
+
+### (R-eval-old) Work While D11 Runs (03:55–04:0x)
+
+- **#5.10, the passage from A_N to V̂: the relation is now identified.**
+  - VAR's representative u_R is the unique u with ū^j = 1 on Λ′_j and R∂^{η*}A = 0 (VAR (152)–(153), p.301 l.50–61). This is "Theorem 2 of the paper [6]", and [6] is REG (VAR p.309 l.26). REG's Theorem 4 (p.88) implies Theorem 2 (p.88 l.8, raw file line 9), and #102 takes V̂ from Theorem 4. So V̂ = u_R.
+  - By LF #0.1.4 and #A.9, u_R = A_N + ∂ω, with ω := ζ^R − ζ^N block-anchored, ω = 0 on Λ₀, and Q′ω = KU′_ax.
+  - What #5.10 still needs is a sup bound |∂ω| = o(L) times the datum's phase per fine bond.
+  - LF #A.9 bounds |ηω(x)| ≤ C(d)L^jη sup_block(|U′_ax| + |A_N| + |u_R|). It controls u_R's complex part only through VAR (190), whose constant is C(d, L, M), so it does not give o(L).
+  - Route: the bump decomposition of #A.9 (ω = ω_g + ω₀, |∂b_y| ≤ C(d)ℓ_y^{−1}) gives |∂ω_g| ≤ C(d)sup_block|U′_ax|. The remaining inputs are sup|U′_ax| through A_N's weighted bound, and ω₀'s sup gradient. Not yet derived.
+  - The equation for ω, from REG (04:2x). R(U₀) is the orthogonal projection onto Δ_{U₀}N(Q′(U₀)) (REG p.80 l.12–13, raw file lines 13–14). So the Landau condition (1.27) says D*A ⟂ ΔN(Q′), while A_N has ∂*A_N ⟂ N(Q′). A_N is therefore not in the Landau gauge.
+    - ω solves ⟨∂*A_N + ∂*∂ω, Δλ⟩ = 0 for all λ ∈ N(Q′), with Q′ω = KU′_ax and ω = 0 on Λ₀. So u_R drops out.
+    - The sources are σ = ∂*A_N, block-constant with |σ| ≤ C(d)(1 + log L)^pθ/L (LF (K1), #0.1.27), and ω_g's block data KU′_ax.
+    - What remains is sup|U′_ax|. The axial gauge bounds it only with a factor L relative to the curvature (REG p.80 l.7–8, raw file lines 8–9: "for L large it is too weak"). REG's Landau bound has constants that depend on L (#5.9). So this route needs ω's block data KU′_ax controlled without the axial bound, and it is not closed.
+  - To apply after D11: #5.10's "The relation of V̂ to A_N and u_R is not derived here" becomes the identification above, and what remains is the bound on ∂ω. Applied at 04:13, with #5.8 restated to match.
+
+## (R-eval) Packet D, Round D11: Triage (4 November, 04:12–04:15)
+
+Referee: launched 03:51:54, finished about 04:12 (referee_cli_20261104-035154_scope_twoloops_RevalD11.json). No ERROR and four MINORs. D10-1, D10-2, and D10-4 are closed, and D10-3 is closed as specified. #6.17's statuses match. The constants, μ, #6's reduction, the conditions on L, and the pins hold. Not clean, since D11-1 is an unmarked use of Open (R-eval-curv) and D11-3 states a bound too broadly.
+
+- **D11-1 (MINOR): accepted.** The carry (#63, #68) bounds D2.6 §5.4's transports on the family, but the T-step evaluates them at part (b)'s pairs, where #6.8's factors must not compound.
+  - Repair: #68 now says this and marks **Open (R-eval-curv)** (#130.15). #63 and #28 carry the mark.
+- **D11-2 (MINOR): accepted.** Repair: #12 names *R-chain-start* (#86) with *R-coincides* and p.375's inclusion.
+- **D11-3 (MINOR): accepted.** #6.12.4 (d) bounds the transports and the T-step-made members on 𝒟^λ_k only (#78, #171; #6.14 is derived for data in 𝒟^λ). #6.13 needs only 𝕌̃ ∈ 𝒟^λ_k.
+  - Repair: #6.12.4 is restricted to 𝒟^λ_k and says that this is where #6.13 uses them. #12, #31, and D2.7 l.7 now say "Bałaban's terms on 𝒟♮_k, the transports and the T-step-made members on 𝒟^λ_k".
+- **D11-4 (MINOR): accepted.** Repair: #20, #21, and #33 mark the frame's bound in C_Λ as derived, not reviewed (#41.1–#41.2).
+- **Also changed (outside the packet's tested text, in the declared open):** #5.10 and #5.8 now state V̂ = u_R and reduce the passage to the sup bound on ∂ω (above).
+- Note after the repairs: 95db877e2133 (953 tags). D2.7: 10919e42eb21. The pre-check of D12 found the same unmarked carry claim at #228's 5.4 step, now marked: babc401d7a52.
+- **Next:** D12 checks D11-1 to D11-4, and the restated #5.8 and #5.10 as statements of the open.
+
+## (R-eval) Packet D, Round D12: Triage, and a Sweep of the Marks (4 November, 04:28–04:31)
+
+Referee: launched 04:15:13, finished about 04:28 (referee_cli_20261104-041513_scope_twoloops_RevalD12.json). No ERROR and five MINORs. D11-1 to D11-4 are closed as specified. The constants, μ, #6's reduction, the L conditions, and the pins hold. Not clean, since D12-1 is a further unmarked use of Open (R-eval-curv). The referee ran one read-only `wc -l`, which the log records.
+
+- **D12-1 (MINOR): accepted.** The carry of the att bounds and the cross weights (#82, #83, under #78 and #26), and the T-step-made members' bound on 𝒟^λ_k (#12, #31), use Open (R-eval-curv) unmarked.
+  - Repair: #78, #82, #83, #26, #12, and #31 carry the mark.
+- **D12-2 (MINOR): accepted, second form.** Repair: #159 now says that γ_Φ and κ_Φ are bounds on configurations, with no member evaluated, so #6.8 and #6.17 do not enter them.
+- **D12-3 (MINOR): accepted.** VAR (152)–(153) is the flat-base case.
+  - Repair: #5.10 now identifies V̂ and u_R as REG Theorem 2's U₁ = U′^{u^{−1}} for the pair (U′U₀, U₀) (p.83; (1.29); (1.36)–(1.39), the Landau condition being (1.38), p.82), with VAR (152)–(153) as the case U₀ = 1.
+- **D12-4 (MINOR): accepted.** Repair: #6's heading paragraph names *R-chain-start* (#86) and p.375's inclusion (#156) with *R-coincides*.
+- **D12-5 (MINOR): accepted.** Repair: the mark is placed at C_Λ's definition (#46), which says that every use of C_Λ below carries it. #23 and #26 also carry it.
+- **Sweep (to stop the round-by-round pattern).** I searched (R-eval)'s paragraphs (#38–#218) for transports, att bounds, carries, and Cov(k) with no (R-eval-curv) mark, and for C_Λ with no #41 mark.
+  - Marked as well: #60 and #61 (the att bounds and transports on the family), and #130.17's carry clause.
+  - The other hits are definitions, or bounds at the point itself (#168, #170, #79, #84), where no pair is re-chosen.
+- Note after the repairs: 47ba164608d2 (953 tags). D2.7: 10919e42eb21 (unchanged, since D12 found l.7 covered).
+- **Next:** D13 checks D12-1 to D12-5 and the sweep.
+
+## (R-eval) Packet D, Round D13: Triage (4 November, 04:47–04:49)
+
+Referee: launched 04:30:35, finished about 04:46 (referee_cli_20261104-043035_scope_twoloops_RevalD13.json). No ERROR and two MINORs. D12-1 to D12-5 and the sweep are closed. D12-2's statement holds for all of #159–#166. The two opens are marked everywhere they are used, and no status is overstated. Not clean, since both MINORs are missing marks of derived, not reviewed steps.
+
+- **D13-1 (MINOR): accepted.** #25 and #27 rest on #72–#76 and #164 through C_Λ and C_Λ′. The sweep searched for "C_Λ" and so missed them.
+  - Repair: #25, #27, and #19 carry the #41.1–#41.2 mark.
+- **D13-2 (MINOR): accepted.** Repair: #14 marks #6.15 as derived, not reviewed.
+- **Pre-check of D14:** a script listed the list items (#18–#34) that cite #72–#76 or #159–#167 without #41, and the citations of #6.12, #6.14–#6.17, and #153 with no "not reviewed" nearby. The only hits are in #31, which ends "all derived, not reviewed".
+- Note after the repairs: fecfa2721409 (953 tags). D2.7: 10919e42eb21.
+- **Next:** D14 checks D13-1 and D13-2. If it is clean, D15 is the second clean round.
+
+## (R-eval) Packet D, Round D14: Triage (4 November, 05:04–05:07)
+
+Referee: launched 04:47:51, finished about 05:03 (referee_cli_20261104-044751_scope_twoloops_RevalD14.json). No ERROR and three MINORs, all missing or narrow marks. D13-1 and D13-2 are closed. The constants, μ, #6's reduction, the conditions on L, and the pins hold. Not clean.
+
+- **D14-1 (MINOR): accepted.** The extension-domain points (#25, #167) use carried bounds that hold on the family only up to Open (R-eval-curv) (#78, #82, #83).
+  - Repair: #167 now restricts "no conjugation factor" to the evaluation at these points and marks the carried bounds. #25 carries the mark.
+- **D14-2 (MINOR): accepted.** Repair: #28's mark now covers D2.6's att bounds (#60), the att groups' production transports (#61), and the carried transports (#63, #68).
+- **D14-3 (MINOR): accepted.**
+  - Repair: D2.7 l.7 marks C_Λ's frame bound and #6.7 at the phase, and C_Λ′'s frame bound at the starting values (#41.1–#41.2, #6.7, #164). Its (R-eval-curv) sentence now names the carried bounds (#68, #82, #83).
+- **Pre-check of D15:** a script compared each list item (#18–#34) with the bodies it cites, for (R-eval-curv), (R-eval-old), #41, and "not reviewed" marks. The only hits are in #29, which inherits "the marks of #23" explicitly.
+- Note after the repairs: 46484bc073f0 (953 tags). D2.7: 9fff0c6a04c8.
+- **Next:** D15 checks D14-1 to D14-3. If it is clean, D16 is the second clean round.
+
+## (R-eval) Packet D, Round D15: Triage (4 November, 05:17–05:19)
+
+Referee: launched 05:05:11, finished about 05:16 (referee_cli_20261104-050511_scope_twoloops_RevalD15.json). No ERROR and two MINORs, both the same missing mark. D14-1 and D14-2 are closed, and D14-3 is closed for its two sentences. Every list item #18–#34 matches its body's marks. Not clean.
+
+- **D15-1 (MINOR): accepted.** #6.2's bound on ũ needs ε ≤ 2ε_Φ (#116), and ε_Φ uses C_Λ (#123), whose frame bound is derived, not reviewed (#41.1–#41.2).
+  - Repair: #6.2, #6.1's label, and #6's heading carry the mark. Every "up to T₂^{old} (Open (R-eval-old), #6.2)" now adds it: 7 places in the note (#6.13, #6.16.2, #12, #30, #31, #152, #158), and D2.7 l.7's matching clause. #6.11, which bounds "as at #6.2", names #6.2's marks.
+- **D15-2 (MINOR): accepted.** Repair: D2.7 l.7's sentence on the deformations' gradient and current marks C_Λ's frame bound through ε_Φ (#41.1–#41.2, #123).
+- Note after the repairs: 005a5edfda44 (953 tags). D2.7: 330898738b0f.
+- **Next:** D16 checks D15-1 and D15-2. If it is clean, D17 is the second clean round.
+
+## (R-eval) Packet D, Round D16: Triage (4 November, 05:30–05:32)
+
+Referee: launched 05:18:23, finished about 05:29 (referee_cli_20261104-051823_scope_twoloops_RevalD16.json). No ERROR and two MINORs. D15-1 and D15-2 are closed. Not clean.
+
+- **D16-1 (MINOR): accepted, first form.** The marks that the D15-1 repair put at #6.11 were spurious. #6.11's factors are the Landau transformations of the datum and of the T-step's point, bounded by those configurations' own phase (#6.10; #106, #108). No ε_Φ enters.
+  - Repair: #6.11 now says this, and the marks are removed. So #6.14 and its summaries rightly carry neither mark.
+- **D16-2 (MINOR): accepted.** T₂^{old} reaches every bond through ε_Φ (#123) and the response (#73, #74, #76), not only the old part of Λ.
+  - Repair: D2.7 l.7 now reads "Wherever they use ε_Φ or the Λ-response, which reach every bond, …, need T₂^{old}, the mixed term sourced on the old part of Λ". Its ε_Φ clause adds "up to T₂^{old}".
+  - The note's own statements locate the source on Λ^{old} (#5, #160–#164) and mark the uses elsewhere, so they stand.
+- Note after the repairs: 75d58a93181b (953 tags). D2.7: 0888311425a6.
+- **Next:** D17 checks D16-1 and D16-2. If it is clean, D18 is the second clean round.
+
+## (R-eval) Packet D, Round D17: Triage (4 November, 05:48–05:52)
+
+Referee: launched 05:32:13, finished about 05:48 (referee_cli_20261104-053213_scope_twoloops_RevalD17.json). No ERROR and one MINOR. D16-1 and D16-2 are closed. Not clean.
+
+- **D17-1 (MINOR): accepted.** D2.7 l.7's sentence on the real base points counted LFR II p.378 among Bałaban's printed implications. #206 uses p.378 l.15–16 under the reading R-combined (#17), and p.378 does not print the product.
+  - Repair: D2.7 l.7 now reads "Bałaban's printed implications (1.22)–(1.23), (1.29), and (1.89), LFR II p.378 l.15–16 under that note's reading R-combined (#17, #206), and a derived extension …".
+  - The other p.378 citations do not use R-combined: D2.7 l.3 and l.46 (l.17–20), and the note's #5, #6.16, #40, #41, and #23 (l.12–14, l.21–22, l.27, l.31).
+- **Outside packet D (for CV): accepted.** #6.16.1 bounded both changes by 4(8/7)³/(3L), which holds for the current only. At m = 0 the curvature's change is 2(8/7)³/(Lf_n) ≤ 8(8/7)³/(3L).
+  - Repair: #6.16.1 now states the two bounds separately. Both are < ½ for L ≥ 8 (0.4976 and 0.2488), so #6.16.2 stands.
+- Note after the repairs: 976ec15d08ba (953 tags). D2.7: c5735473795d.
+- **Next:** D18 checks D17-1. If it is clean, D19 is the second clean round.
+
+## (R-eval) Packet D, Round D18: Triage (4 November, 06:04–06:08)
+
+Referee: launched 05:50:21, finished about 06:04 (referee_cli_20261104-055021_scope_twoloops_RevalD18.json). No ERROR and one MINOR. D17-1 is closed. Not clean.
+
+- **D18-1 (MINOR): accepted.** Part (b)'s base-current frame term is taken at U_{k+1}, where #173's bound on B_J rests on D2.7 item 15.8's post-R base-point clause, which is derived, not reviewed (#130.12, #173.1, #173.5). #18 names this input; #8, #30, and #32 did not.
+  - Repair: the clause "at U_{k+1} given D2.7 item 15.8's post-R base-point clause, derived, not reviewed, #130.12" now follows every "packet JB": #7, #8, #30 (through #154), #32 (at packet TB's part (b)), #38, #154, #213, and #785.
+  - D2.7 l.7's part (b) now adds: "for the base current's frame term through that note's bound on B_J (#173, reviewed, packet JB), at U_{k+1} given item 15.8's post-R base-point clause (derived, not reviewed; that note's #130.12)".
+- **Outside the packet: accepted.** D2.7 l.3 imported L₀^× = 6·10⁵; the note's #288 has 10⁶. D2.7 l.3 now reads "L ≥ L₀^× = 10⁶, from the two-loop note's (6C) (its #288)". Map l.193 still has 6·10⁵, and is left to the map's owner.
+- **Remark: accepted.** #6's heading now lists #6.4 and #6.9 among the derived, not reviewed parts: "(#6.4, #6.7, #6.9–#6.17, #153)".
+- Note after the repairs: 6b76658a7089 (953 tags). D2.7: 1a22b2d589b3.
+- **Next:** D19 checks D18-1. If it is clean, D20 is the second clean round.
+
+## (R-eval) Packet D, Round D19: Triage (4 November, 06:19–06:22)
+
+Referee: launched 06:06:32, finished about 06:18 (referee_cli_20261104-060632_scope_twoloops_RevalD19.json). No ERROR and one MINOR. The D18 repairs are closed at every place named. Not clean.
+
+- **D19-1 (MINOR): accepted.** #14 cited "B_J (#173)" → 0 for part (b)'s frame term at U_{k+1} with no mark. The D18 sweep searched "packet JB" only.
+  - Repair: #14 now reads "since B_J (#173; at U_{k+1} given D2.7 item 15.8's post-R base-point clause, derived, not reviewed, #130.12), h_k, and ε_k tend to 0 …".
+  - Sweep of every B_J and #173 in the note and D2.7 without the 15.8 clause within 300 characters: the rest are #173's own derivation (#173.2–#173.7), #130.11's definition followed by #130.12's mark, and #6.16's "as at #173", a method reference.
+- **Remark 1: accepted.** #14's list of the places where C₁/C₀ enters now adds map l.928 (VAR (172)'s complex part, α_{1,n}/α_{0,n} = λ_R bounded) and map l.971 (S_H = C_H(1 + λ_R)α_{0,j+1}e^{−R_j}).
+  - A sweep of the map for C₁/C₀ found one more: l.1343, the dev term's complex-data size Cρ_kα_{1,k}/ᾱ_k = Cρ_kλ_R under q₀ = q₁. The map's factor 1 + (log g_k^{−2})^{(q₁−q₀)₊} there assumes C₁ ≤ C₀.
+  - #14 now lists it: "the dev term's complex-data size Cρ_kα_{1,k}/ᾱ_k = Cρ_kλ_R (map l.1343, whose factor 1 + (log g_k^{−2})^{(q₁−q₀)₊} would need C₁ ≤ C₀)". It is a source term, absorbed by g small as the others. The map's text is left to the map's owner.
+- **Remark 2: accepted.** #785 now reads "not reviewed apart from the transfer to step k+1 (packet TB) and the real base current (packet JB; …)".
+- Note after the repairs: c5e56f9b1e31 (953 tags). D2.7 unchanged: 1a22b2d589b3.
+- **Next:** D20 checks D19-1 and the two remarks' repairs. If it is clean, D21 is the second clean round.
+
+## (R-eval) Packet D, Round D20: Triage (4 November, 06:36–06:40)
+
+Referee: launched 06:20:31, finished about 06:35 (referee_cli_20261104-062031_scope_twoloops_RevalD20.json). No ERROR and two MINORs, both in #14. D19-1 and the remarks' repairs are closed; no other C₁/C₀ use in the map is missing. Not clean.
+
+- **D20-1 (MINOR): accepted.** Map l.928 (VAR (172)'s complex part) and l.971 (S_H) are smallness conditions on g, not source terms of order ρ.
+  - Repair: #14's source-term list now ends with the dev term (map l.1343, l.1498). A new sentence after the room fractions reads "Two more take λ_R in smallness conditions on g: … ε₁ ≥ 3λ_Rα_{0,n}/C₁^{VAR} must be ≤ a₁ (map l.928, l.972), and the slot-value move |Δσ_j| ≤ 4S_H/g_j ≤ r_{ω,j}/4 with S_H = C_H(1 + λ_R)α_{0,j+1}e^{−R_j} (map l.971, l.978–979)".
+  - The referee's figures 10S_H and 40C_H are not the map's; map l.978–979 have 4S_H/g_j and 16C_H.
+- **D20-2 (MINOR): accepted.** #14's "M large" for T₁'s current needs C_Λ′ independent of M, whose frame bound is #41.1–#41.2.
+  - Repair: #14 now adds "with C_Λ′'s frame bound derived, not reviewed (#41.1–#41.2, #164)".
+  - Sweep of every C_Λ and C_rsp in #1–#37 and D2.7 l.3, l.5, l.7 without a #41 mark nearby: #5.7's "as it absorbs C_ΛM⁵" now carries the mark; #6.11's mention says it does not enter.
+- **Remarks: accepted.**
+  - Map l.1498 repeated l.1343's factor. With the user's approval both map lines now carry λ_R: l.1343 "max(1, λ_R(log g_k^{−2})^{q₁−q₀}) ≤ λ_R(1 + (log g_k^{−2})^{(q₁−q₀)₊}), with λ_R = C₁/C₀ = K_RLM + 1 ≥ 1 fixed after L and M", and l.1498 "O(ρ_kλ_R(1 + …))". So #14 no longer says "would need C₁ ≤ C₀".
+  - Map l.193 now has L₀^× = 10⁶ (#288), also approved by the user.
+- Note after the repairs: 6d50688db331 (953 tags). Map: f8a6f8d2e057. D2.7 unchanged: 1a22b2d589b3.
+- **Next:** D21 checks D20-1 and D20-2. Route F for #6.8 is worked out first (below), outside the packet's text.
+
+## Route F: Check of the Invariance (4 November, 06:45)
+
+The user's standing instruction is to use gauge-invariant quantities where possible, so Route F is the route for #6.8. The D8 section's claim "t_j(𝐐^u) = t_j(𝐐)u^{−1}, so Y^c is G^c-invariant" is too strong:
+- REG's axial form (1.15)/(1.19) is unique in each orbit of the subgroup (1.14), u = 1 at the points of 𝔅_k (REG p.78, (1.14)–(1.15); p.79, after (1.20)). The block-point values are not fixed.
+- The axial frame at a site x is the transport from x's block-point root y along the axial contours, so t(𝐐^u)(x) = u(y)t(𝐐)(x)u(x)^{−1}. Y^c is invariant under (1.14)'s subgroup, and under a general u it is conjugated by u at the roots of its endpoints.
+- REG's normalisation (1.29) fixes block averages, not values. Its transformations do not form a group, and "the notion of orbit is not well defined" (REG p.80, after (1.27)). So adding (1.29) does not fix the block-point values either.
+- Part (b)'s ĥ has block-point values of size O(α_{1,k}) (REG (1.70)–(1.72)). Carrying Y^c through part (b) would therefore still compound, at the roots.
+
+What Route F needs instead (work in progress, not in the note):
+- Never compose the re-choices. Evaluate the frame afresh at the current point: at an evaluation point 𝐔_m of step m, a member produced at step j is read as π(t_j(𝐔_m)(x))Y_W(𝐔_m)π(t_j(𝐔_m)(x′))^{−1}. Here t_j(𝐔_m) is the step-j normalisation of the current configuration relative to the step-j real base. Its imaginary part at x is ≤ C(L, M) times the current complex part (VAR (190); a single factor, admissible as at LF #0.1.14), so there is no product over steps.
+- In the closed word tr ∏(Y_{W_i}U_{(i)}), choose the frame at each junction to be the adjacent member's production frame. The members are then read in their own frames, and each transport U_{(i)} pays e^{c(|Im λ_{t_{j_i}}(x′_i)| + |Im λ_{t_{j_{i+1}}}(x_{i+1})|)} once per junction, inside the vertex shares (map l.1549).
+- Missing: the production bound has to be a sup of the frame value over a domain that contains the later evaluation points (through the M-factored domain and part (a)), without passing through part (b)'s re-chosen pairs. That is the step to derive next.
+- **The contact sites (t₃ < L^{1/2}).** Route C, a contact weight in 𝒟^λ_k's old-layer radii, needs (KW) with θ_B replaced by a cube-averaged norm of the data. That is an LF-side input. The draft is in the job's scratch (Reval_old_contacts.md). With θ_B the supremum, the L-exponents cancel identically, so Route C fails.
+
+## (R-eval) Packet D, Round D21: Triage (4 November, 06:42–06:52)
+
+Referee output: job scratch D21.md; log referee_cli_20261104-064128_scope_twoloops_RevalD21.json. No ERROR, one MINOR, not clean. D20-1 and D20-2 are closed, and the map's l.193, l.1343, and l.1498 corrections are in place.
+- **D21-1 (MINOR, #14): accepted.** #14 quoted the map's fixed-frame slot move 4S_H/g_j. Map l.979 says the form used is the cross-frame one (l.982): |Δσ_j| ≤ 10S_H/g_j, with 40C_H(α_{0,j+1} + α_{1,j+1})g_j^{−3/2}e^{−R_j} ≤ 1. Checked at l.979 and l.982. The D20 triage's remark that 10S_H and 40C_H are not the map's was wrong. Repair: #14 now quotes the cross-frame form (map l.971, l.979, l.982).
+- **Remark (READINGS.md):** the referee notes that #17's readings have no READINGS.md entries. READINGS.md is a Bałaban-hook file, obsolete for YM4 (memory: Bałaban hooks not for YM4), so this is not a finding.
+
+## Closure of (R-eval-curv): the Direct Transfer (4 November, 07:06)
+
+The direct transfer replaces Route F. The frame value Y^c is not needed.
+- **Why the factor compounded.** Part (b) bounds a covariant member at the T-step's point by e^{2c_πa_c} times its bound at the pair (𝐔″, R(ĥ)𝐉), which lies in 𝒟^{λ,M}_k. If the family bound at step k+1 is taken from that, it is e^{2c_πa_c} times the step-k bound, and the factors multiply over the carry.
+- **What part (b) already does.** It normalises to the member's own determining set S at every step (#130.6: v_k is REG's transformation for the member's set), and the member's P is its own at every step (#130). So the member's 𝒟^{λ,M}_k differs from its 𝒟^{λ,M}_j only through 𝒟^λ_k against 𝒟^λ_j.
+- **The nesting (#130.15.2).** For k ≥ j, 𝒟^λ_k ⊆ 𝒟^λ_j, with the layer index for S at most the step-k index (S is finer, #130.7, #135):
+  - phase: ratio ((1−β)/2)^m;
+  - gradient: ratio L^{−(n−n′)}((1−β)/2)^m;
+  - current: ((1−β)/(2(1+β₀)))^m(1+β₀)²√m ≤ ¾(1−β);
+  - 𝒟♮'s coefficients decrease with k (#6.14 iterated), and at coarsened points the bounds are ≤ 0.32 of step j's;
+  - the real base: (2.34)'s real part nests, (2.38) by restriction, and the indicators as at #130.5.
+  This is #68's carry comparison for the transports, extended to the whole family.
+- **The consequence (#130.15.1).**
+  - (1) On the family, the member's sup at every k ≥ j is ≤ B_Y, its production bound, with no factor. So the weights (#264, #296) and the carry (#63) are unchanged.
+  - (2) At the T-step's points the value is ≤ e^{2c_πa_c}B_Y. That factor arises once per member and step, never enters a family bound, and so never compounds.
+  - (3) In the step-(k+1) expansion the factor multiplies the member's activity once. With a_c ≤ C_aα_{1,k} ≤ C_a(1+β₀)α_{1,k+1} and |win| ≥ 40 (map l.1545), it fits the share's transport term with c_π replaced by (1 + C_a)c_π (map l.1549). That term's conditions (map l.1496, l.1498; #61) are smallness conditions on g.
+- **Edits.**
+  - New tags #130.15.1–#130.15.2. #6.8 is now "derived, not reviewed".
+  - Every (R-eval-curv) mark is replaced by "derived, not reviewed" with a pointer to #130.15.1–#130.15.2: #3, #6, #7, #8, #12, #25, #26, #28, #31, #32, #38, #60, #61, #63, #68, #78, #82, #83, #130.2, #130.6, #130.15, #130.17, #167, #213, #228, and #785. D2.7 l.3, l.5, l.7, and l.187 are synced, and so is map l.342 (status bookkeeping).
+  - Table row 232 (the peer's) still names (R-eval-curv). The peer is to be told.
+  - labels_two_loops.py now registers three-level tags {#N.M.P}. Before this change, #6.12.1–#6.12.4, #6.16.1–#6.16.2, and #6.17.1–#6.17.2 were not in the index, and references to them resolved to their parents. The script also encodes before opening its output. It now reports 963 tags and no dangling reference.
+- **Review.** #6.8 and #130.15.1–#130.15.2 join packet CV, the G^c transformations (#6.7, #6.10–#6.17). D21-1 is an attribution minor (the map's other form of a condition that holds either way), so D21 is packet D's first clean round. Its second round is a status check inside CV1's scope (part (B)): D21-1's repair and the statuses after this closure. Packet D does not get another round of its own.
+- **Open (R-eval-old)** is now the only open of (R-eval).
+
+## (R-eval-old): the Passage from A_N to V̂ (4 November, 07:15–07:30)
+
+- **New tags #5.10.1–#5.10.6, derived, not reviewed.** These cover one block scale and the flat base.
+  - #5.10.1: the closed form ω = H′μ − (I − P)τ, P := H′Q′, τ := Δ^{−1}Eh. It comes from REG's projection R (p.80) and PRT2 (2.101)–(2.102).
+  - #5.10.2: the operators.
+    - H′ is bounded with its derivatives, with decay of d only (PRT2 p.241 l.14–15; p.246 l.28–29).
+    - P reproduces the polynomials of degree ≤ 4, by the symbol (2.132).
+    - The Green's function bounds come from Lawler–Limic Theorem 4.3.1, Corollary 4.3.3 (p.84), and Theorem 6.3.8 (p.131).
+  - #5.10.3: |K(b; y)| ≤ C(d)n(1 + r)^{−1−d}, by a Taylor expansion of degree 2 and the bump bound n|h_y| ≤ C(d)avg_{B(y)}|A_N|.
+  - #5.10.4: μ = KA_N − K∂ζ^N. Gauge covariance and REG's axial conditions (1.19) make it a contour average of A_N, with |μ| ≤ C(d)n𝒜_y. It is an average of loop integrals, so it is gauge invariant.
+  - #5.10.5: |∂ω| ≤ C(d)[sup 𝒜_y + sup of the block averages of |A_N|].
+  - #5.10.6: the contacts enter only through these averages. The coordinate lines and slabs through block centres stay L/2 away from the faces and the contacts (the large-field note's #0.1.29 and #A.11.42), so the averages are ≤ C(d, κ)(1 + log L)^p‖A_N‖_W.
+- **Still open in the passage:** (i) the layered geometry (interfaces Λ_j/Λ_{j+1}, ω = 0 on Λ₀); (ii) a real base U₀ ≠ 1.
+- A numerical probe of (i) (2D, two scales) showed growth like log L at the interface, not L. It is not evidence for the note, and the user asked for proofs, not numerics.
+
+## (R-eval) Packet CV, Round CV1: Triage (4 November, 07:32–07:37)
+
+Log: referee_cli_20261104-070833_scope_twoloops_RevalCV1.json. Part (A) has 1 ERROR and 3 MINORs. Part (B), packet D's status check, is CLEAN, so **packet D is closed** (D21 and CV1 (B) are its two clean rounds).
+
+- **CV1-1 (ERROR): accepted and repaired.**
+  - #130 now fixes a function-of-𝐔 member's P_Ω := U(𝐁_j″(Ω), M·(·)) at production (step j). It keeps it, with S's block points, (1.19), and (1.29), at every later step, as #135 does for old insertions.
+  - *The identity on minimisers* covers the later sets, which are coarser.
+  - #130.1, #130.6 (v_k is for S), #8, and #130.15.1's premise follow. #130.15.2 now uses step j's index n_j, with n′ ≤ n_j ≤ n.
+- **CV1-2: accepted and repaired.** #130.15.2 (4) now states the following:
+  - U_{p,X} and 𝐉_{p,X} use the step's {Γ_i}_{i<p} (CRE p.261 l.10).
+  - The T-steps leave them, and an R-step changes them only on Z (LFR II (1.33)).
+  - Members meeting Z are integrated by that R-operation (LFR II p.369 l.28–31), so they are touched.
+  - #6.12.1: the current gain is L^{−2(n−j)} for (2.37).
+- **CV1-3: accepted and repaired.**
+  - The containing cube is argued from the least step-k index: C ≤ 2, L ≥ 8, separating layers, compatible partitions, and parallelepipeds.
+  - The indicator clause now reads: δ^{re} at U_{k+1} from the current T-step (#130.5).
+- **CV1-4: accepted.** Fixes:
+  - #6.12.3 l.29 → l.28;
+  - #6.16: q₀ > p₀ + r from the project's q₀ > p₀ + 3r (LF #0.10); p.193's print is used at step n for older layers;
+  - #130.15.1: l.1541, with l.1542 carrying no factor.
+- The READINGS.md remark is not a finding: READINGS.md is obsolete for YM4.
+- **Next:** CV2 = packet CV, round 2 (the repairs), plus packet PV (#5.10.1–#5.10.6), round 1.
+
+## (R-eval) Packet CV, Round CV2, with Packet PV, Round PV1: Triage (4 November, finished 08:18)
+
+Log: referee_cli_20261104-073811_scope_twoloops_RevalCV2.json. Part (A) has 2 MINORs, and part (B) has 5 MINORs. There are no ERRORs. The Lawler–Limic pins are unchecked, because the harness refused pdftotext.
+
+- **CV2-1: accepted and repaired.** At n = n_j the side is CML^nξ with C ≤ 2. #130.15.2 (5) now reads ≤ 2ML^nξ (LFR I p.191 l.23–24), which is less than ML^{n+1}ξ.
+- **CV2-2: accepted and repaired.** #130.15.2 (4) now uses the Γ_i with i < j. The T-step after step i changes only Γ_i (LFR I (1.13), p.179 l.44).
+- **PV1-1: accepted and repaired.** The new {#5.10.2.1} derives the bounds of #5.10.2 (a) from (2.132), with C(d) and δ(d) free of n and L:
+  - the aliased terms k ≠ 0 are ≤ C(d)abs(k)^{−4}Π abs(k_μ)^{−1};
+  - Δ²S₂ stays ≥ ½(2/π)^{2d} on a strip of width δ(d);
+  - three differences cost (1 + abs(k))³/n³, and the sum over k converges.
+- **PV1-2: accepted and repaired.** #5.10.4 now uses Bałaban's full averages (REG (1.20)) in the chain form.
+  - Linearised, the one-step average maps ∂ζ to ζ(c_+) − ζ(c_−) (RG I (0.4)), with REG (1.30), p.81 l.27, for REG's averages.
+  - So the level term is ζ^N(x_{n′}) − ζ^N(x_{n′+1}), the terms telescope, and (1.19) (p.79 l.4–8) acts on the (1.20) averages.
+- **PV1-3: accepted and repaired.** #5.10.6 now bounds the swept measure by C(d) times the uniform measure on the slab. It averages W on the block sections of coordinate planes through centres by the Hölder argument of the LF note's #0.1.19. The false bound W ≤ (1 + log L)^pL/s is gone.
+- **PV1-4: accepted and repaired.** #5.10.1 now states d = 4 and calls the ℤ^d computation formal. H′ is defined by its symbol (2.132), and Th := Σ_yh_yK(·; y), as on PRT2's torus with μ ⊥ constants (p.241 l.2–7).
+- **PV1-5: accepted and repaired.** #5.8 and #5.10 now cite #5.10.1–#5.10.6. They state that #5.10.6 reads W's faces and contacts on ∂Λ, so it depends on the open part (i).
+- **Next:** CV3 = packet CV, round 3, plus packet PV, round 2 (the repairs and every line of #5.10.1–#5.10.6, with #5.10.2.1).
+
+## (R-eval) Packet CV, Round CV3, with Packet PV, Round PV2: Triage (4 November, finished 08:42)
+
+Log: referee_cli_20261104-081928_scope_twoloops_RevalCV3.json. Part (A) has 1 MINOR, a citation only, and part (B) has 2 MINORs. There are no ERRORs. The CV2 repairs and the PV1-1 to PV1-4 repairs hold, and the referee re-derived #5.10.2.1. The Lawler–Limic pins are still unchecked, because pdftotext was refused again.
+
+- **CV3-1: accepted and repaired.** #130.15.2 (4) now cites CRE (2.2), p.255 l.15–16, for the T-step's Γ_i, and CRE p.256 l.21–22 for the Ω_m being "determined by the m-th renormalization transformation". It no longer cites LFR I (1.13), which is the R-operation's sequence.
+- **PV2-1: accepted and repaired.** #5.10.4 now bounds the masses of the functionals, not the lengths of the fine contours.
+  - Q̃_{n′} = Q_{n′} − D̄K_{n′} (LF #A.8), and K_{n′+1} = Q′K_{n′} + K^{(1)}Q̃_{n′}.
+  - Since K^{(1)}D̄f = Q′f − f, K_{n′+1} = K_{n′} + K^{(1)}Q_{n′}.
+  - Hence mass(K_{n′}) ≤ (d/2)L^{n′} and mass(Q̃_{n′}) ≤ (1 + d)L^{n′}.
+  - 𝒜_y is now defined on the cancelled form.
+- **PV2-2: accepted and repaired.** #5.8 and #5.10 now say that the o(L) bound rests on #5.10.6 near the contacts of W, at the sites of #5.7 included.
+- **Next:** CV4 = packet CV, round 4, plus packet PV, round 3.
+
+## (R-eval) Packet CV, Round CV4, with Packet PV, Round PV3: Triage (4 November, finished 08:56)
+
+Log: referee_cli_20261104-084335_scope_twoloops_RevalCV4.json. Part (A) is CLEAN, the first clean round of packet CV. Part (B) has 1 MINOR. There are no ERRORs. The CV3-1, PV2-1, and PV2-2 repairs hold. The Lawler–Limic pins now check against the extract.
+
+- **CV4, remark (not a finding): repaired.** #6.17.1 left out the factor (1+β₀)m^{β₀} of CRE (2.7). It now reads O(1)(1+β₀)m^{1/4+β₀} (p.255 l.53–59), and m^{1/4+β₀}(2/L)^m is bounded for L ≥ 4. The conclusion is unchanged.
+- **PV3-1: accepted and repaired.** #5.10.6 now follows #5.10.4's cancelled form.
+  - 𝒜_y is a convex combination, weighted by mass, of W's averages over three kinds of pieces:
+    - the K^{(1)} legs from y carrying Q_m;
+    - Γ's level-n′ bonds carrying Q_{n′};
+    - the K^{(1)} legs from the level-n′ end points carrying Q_m, for the D̄K_{n′} parts.
+  - Each piece is a slab through a block centre. For m ≥ 1, Q_m thickens the slab into a union of level-m blocks. For m = 0, the Hölder argument on block sections applies, as before.
+  - The normalisation is by mass, not by length.
+- **Next:** CV5 = packet CV, round 5 (the second clean round needed; #6.17.1's factor), plus packet PV, round 4 (#5.10.6 and every line of #5.10.1–#5.10.6, with #5.10.2.1).
+
+## (R-eval) Packet CV, Round CV5, with Packet PV, Round PV4: Triage (4 November, finished 09:25)
+
+Log: referee_cli_20261104-085922_scope_twoloops_RevalCV5.json. Part (A) has 2 MINORs, both in #6.17.1, and no ERROR. Part (B) is CLEAN, the first clean round of packet PV. The PV3-1 repair holds, and #5.10.1–#5.10.5 with #5.10.2.1 re-derive with their pins.
+
+- **CV5-1: accepted and repaired.** #6.17.1's left side is now α_{1,k}p₀(g_j)g_j^{−1/2}.
+  - p₀(g) = A₀(log g^{−2})^{p₀} (CRE (2.4), p.255 l.33), so the double A₀ is gone.
+  - CRE (2.6) (p.255 l.44–45) gives g_j^{−1/2} ≤ (1+β₀)^{1/2}m^{1/4}g_k^{−1/2}.
+  - CRE (2.7) (p.255 l.56–57) gives (log g_j^{−2})^{p₀} ≤ (1+β₀)m^{β₀}(log g_k^{−2})^{p₀}.
+  - m^{1/4+β₀}(2/L)^m ≤ m^{3/4}2^{−m} < 1 for L ≥ 4 and β₀ ≤ ½.
+- **CV5-2: accepted and repaired.** #6.17.1 is now restricted to j ≥ 1. The new {#6.17.3} treats j = 0:
+  - the radius r^{(k)}_{ω,0} = 1/2 + 2^{−k} in B-units, with |B(b)| ≤ 2r on the support (map l.321);
+  - the sub-polydisc ρ_ω: the rotations by ĥ and u_L are #71's c₀-charge with C_{c₀} replaced by C_odL;
+  - so ρ_ω is taken with 4C_{c₀} + 8C_odL, and the O4 note's C_ω with C_w + 3d + 4C_{c₀} + 8C_odL.
+- **Also changed (open parts now derived):** #5.10.5 (i) and (ii) are derived, not reviewed, in WILSON_IT1_PASSAGE_LAYERED_DRAFT_2026_11_04.md.
+  - (i): ≤ C(d)(1 + log L)^qL^{1−α/2} times the averages, for RM ≥ L².
+  - (ii): the same bound for α₀ ≤ ε(d)L^{−2}.
+  - #5.8, #5.10, and #5.10.6 now point to (i) as derived, not reviewed.
+- **Next:** CV6 = packet CV, round 6 (#6.17.1, #6.17.3, and every line of (A)), plus packet PV, round 5 (the changed sentences of #5.8, #5.10, #5.10.5, and #5.10.6), plus the new packet PL, round 1 (the draft, §§1–9).
+
+## (R-eval) Packet CV, Round CV6, with Packet PV, Round PV5, and Packet PL, Round PL1: Triage (4 November, finished 09:45)
+
+Log: referee_cli_20261104-092043_scope_twoloops_RevalCV6.json. Part (A) has 1 MINOR, part (B) has 1 MINOR, and part (C), the draft's §§1–6, has 1 ERROR and 5 MINORs. The repairs of CV5-1 and CV5-2 hold.
+
+- **CV6-1: accepted and repaired.** In #130.15 and #130.15.1:
+  - the radii are r_{ω,i}(1/2 + 2^{−(k−i)}), with r_{ω,0} = 1;
+  - on the layer 0 the bounds hold on the fixed sub-polydisc ρ_ω, whose budget the rotations are charged to, summed over the steps (#6.17.3 (2)).
+- **PV5-1: accepted and repaired.**
+  - #5.8 and #5.10.5 now say that (i) is derived, not reviewed, and that (ii) is derived in outline, not reviewed.
+  - (i)'s conditions now include M ≥ L.
+  - The draft's §2 is now derived in full (PL1-5 below).
+- **PL1-1 (ERROR): accepted and repaired.** ã = A/Δ₀² is not analytic at q = 0 for n > 1, so the draft no longer uses ã.
+  - §2 writes A = M*M with M := n^{2−d/2}ΔH′_j (PRT2 (2.107)).
+    - By #5.10.2.1, M has an exponentially decaying kernel, and it annihilates affine functions.
+    - The new Lemma M bounds |Mg(x)| by the second differences of g with exponential weights.
+  - Lemma A's step (3) is redone through M and the commutators [M, w^s]. The claim is now ‖wΔ₀c‖ ≤ C(d)‖w∇²E‖.
+  - Lemma B's step (2) is redone through M and the commutators [M, η^s].
+  - §6's bump test now uses M.
+  - In §7, the multipliers of G_S use M. The Wiener–Hopf factor is b_ξ := a_ξ/(2cosh σ_ξ − 2cos θ)², with σ_ξ := 2n·arcsinh(m_ξ/(2n)) and m_ξ the fine Laplacian at the scale-j momentum. b_ξ is analytic and bounded above and below, uniformly in n.
+- **PL1-2: accepted and repaired.** Lemma A now assumes |∇²ρ| ≤ C(d)/L and a bounded ρ, with a smooth cap and monotone convergence.
+- **PL1-3: accepted and repaired.** Lemma B now reads Φ(r) ≤ C(d)(r/R)^α[Φ(R) + R^{d+4}S + L^{−1}log L·E_w], with E_w := w(z)^{−2}‖w∇²u‖² for any weight e^{κρ/L}.
+  - The iteration sums the sources with θK^{d+4} > 1, and the tails with mθ^m.
+- **PL1-4: accepted and repaired.** The oscillation is restated:
+  - it assumes the decay at every centre of B_{R/2}(z);
+  - it keeps g_R, which carries the affine part;
+  - its lattice step is ℓ^∞ ≤ ℓ² at the scale ρ₀ = C(d)log L, which costs (log L)²;
+  - with a fat zero set, |∇u| ≤ C(d)ρ₀²R^{−α/2}𝓔^{1/2};
+  - a = 2 is allowed, with a logarithm.
+  - §3 (c), §6, and §7's Lemma D now use it. In Lemma D the exponent is γ_c := min(2 − c/2, 1), and β₂ = 1 up to logarithms. The count is unchanged.
+- **PL1-5: accepted and repaired.**
+  - The comparison's weight is e^{+κρ(·,∂U)}.
+  - The data energy 𝓔 ≤ C(d, κ)L^{c(d)}(RM)^{d/2}n^{d/2−1}𝒜 is derived over all layers.
+  - The new Lemma R (block-scale sup bound) is proved with Lawler–Limic Theorem 4.3.1, Corollary 4.3.3, and the harmonic-measure bound on p.131. It gives |∇f(b)| ≤ C(d)[n′^{−d/2}‖∇f‖ + L³n^{1−d/2}‖Δf‖].
+  - So |∂d(b)| ≤ C(d, κ)e^{−κRM/(7L)}𝒜, free of n.
+- **PL1-6: accepted and repaired.** §6 uses s′ := min(s, L/4).
+- **Next:** CV7 = packet CV, round 7 (#130.15, #130.15.1, and every line of (A)), plus PV6 (the changed sentences of #5.8 and #5.10.5, and every line of (B)), plus PL2 (the draft's repairs in §§2–6, and §§7–9 for the first time).
+
+## (R-eval) Packet CV, Round CV7, with Packet PV, Round PV6, and Packet PL, Round PL2: Triage (4 November, finished 10:39)
+
+Log: referee_cli_20261104-100958_scope_twoloops_RevalCV7.json. Part (A) has 2 MINORs, part (B) has 1 ERROR, and part (C), the draft's §§1–9, has 1 ERROR and 7 MINORs. The repairs of CV6-1, PV5-1, and PL1-1 to PL1-6 hold.
+
+- **CV7-1: accepted and repaired.** #130.15.2 (5) no longer cites LFR I p.179, whose lines concern the Z_j″ sequence. The cube is placed by an argument from the general properties of CRE's admissible sequences: the domains are unions of MR_m-cubes with R_m ≥ L, the boundaries of Ω_m and Λ_m are ≥ 2MR_m apart, and Ω_{m+1} ⊂ Λ_m.
+- **CV7-2: accepted and repaired.** #6.12.1 and #130.15.2 (4) carry the mark of the reading R-p, and #17 lists both tags.
+- **PV6-1 (ERROR): accepted and repaired (Route C′).**
+  - The new contacts draft (WILSON_IT1_CONTACTS_FREE_BOND_WEIGHT_DRAFT_2026_11_04.md) puts the weight w := max(w_c, w_S) on the free bonds of Λ's VAR problem. Here w_c := max_j max(1, (L^{1/2}/t₃^{(j)})^{1−κ}), and w_S := max(1, (L^{a_S}/s̄)^{r_S}), with s̄ the distance to the codimension ≥ 3 strata of ∂Λ, cut at ρ₀.
+  - w ≤ L, and w = 1 at the data bonds and the block points. Its block and plane averages are ≤ 1 + C(d)L^{−c₁}, with c₁ := min((1−κ)/2, κ(1−a_S)). The consumers take λ_w := λL.
+  - The passage draft's §3 adds (b₀), the τ-part at Λ₀/Λ₁, where the blocks are single sites. It is bounded through a W-weighted count with the gain c₂, and it lands in the room ⅛(1−β)λw.
+  - The note's #52.1 (new), #5.3, #5.7, #5.8, #5.10.5 (i), #5.10.6, #5.11, and #166 now say so.
+- **PL2-1 (ERROR): accepted and repaired.** σ_ξ, D_ξ, and b_ξ are not 2π-periodic in ξ for n > 1.
+  - §7 splits g_ξ(1, P) with a cutoff χ₀ near ξ = 0.
+  - Away from it, a_ξ is bounded below on a complex strip, its Wiener–Hopf factors are analytic, abs(∂_ξ^mg_ξ(1, P)) ≤ C(d, m)e^{−δ′P} uniformly in n, and integration by parts on the torus is free.
+  - Lemma K is restated with χ₀h and proved inside the cell.
+- **PL2-2: accepted and repaired.** The ρ-volume claims are replaced by the count of fine sites. The condition on 𝓔 reads e^{−2κRM/(3L)}L^{2d} ≤ ½.
+- **PL2-3: accepted and repaired.** Lemma R's radii are r ∈ [n′/(4√d), n′/(2√d)], and on the coarse side n′ := Ln.
+- **PL2-4: accepted and repaired.** The d-only constants of (2.109) are derived from #5.10.2.1 with n²Δ(q/n) ≍ Δ₀(q).
+- **PL2-5: accepted and repaired.**
+  - (a) §7 derives the unit differences in x by interior regularity at the scale min(s_x, L/4, D/2). Since γ_x ≤ 1, they are ≤ C(d)(log L)³D^{−β_c−γ_x}.
+  - (b) Lemma C now holds at the normal heights P′ ≤ C log L. The derivation uses g_ξ(P′, P) = Σ_m(a_+^{−1})_{P′−m}(a_+^{−1})_{P−m} and gives abs(∇_p^jG_half) ≤ C(d)P′²t^{−2−j}.
+- **PL2-6: accepted and repaired.**
+  - (a) Lemma D uses W^{2,2} ⊂ L^∞ in dimension d − c ≤ 3, for Hilbert-valued functions.
+  - (b) Lemma B has the new (2′), the pure Caccioppoli form, obtained by the iteration over radii. For t < (log L)^{5/3} Lemma D's claim is trivial.
+- **PL2-7: accepted and repaired.** §9's assumption now states (1.9) (REG p.77 l.38–39) and the regularity condition (3.35) of REG's [4] (p.82 l.40). Only the plaquette bound is used.
+- **PL2-8: accepted and repaired; §9 is derived.**
+  - The local axial gauge is taken on cubes of side ℓ := C₀(d)L^{j+1}log L, with α₀ ≤ ε(d)L^{−2}(log L)^{−2}.
+  - The objects with exponential decay are localised at ℓ/4, with tails ≤ L^{−10d}.
+  - Operator differences are kept in the composition form X₁cX₂, so the differences of A₀ are never used. Translation invariance uses the covariant shifts, whose commutators are plaquette terms.
+  - The third differences come from (2′) and W^{3,2} ⊂ L^∞. G_S's size comes from the localised variational bound, and the constant 2C(d) is derived.
+  - τ_y's polynomial cancellation is replaced by Γ := (I − P)Δ^{−2}, the Green function of Δ² on N(Q′). The weighted energy with Lemma R gives abs(K(b; y)) ≤ C(d)n e^{−δr_y/2}, uniformly in n and covariantly at U₀.
+  - Lemma R at U₀ is proved in one local gauge, with the composition form, Kato's inequality, and the iteration over radii.
+- **Status in the note:** (R-eval-old) is now derived, not reviewed. Its first input (the contacts, #5.8 (1)) and its second (the passage, #5.8 (2), #5.10.5 (i)–(ii)) are derived, not reviewed. The note has no item marked open.
+- **Next:** CV8 + PV7 + PL3, plus the contacts draft as a new packet CT1. Nothing is declared open.
+
+## (R-eval) Packet CV, Round CV8, with PV7, PL3, and CT1: Triage (4 November, finished 11:44)
+
+Log: referee_cli_20261104-112613_scope_twoloops_RevalCV8.json. (A) has 2 MINORs, (B) 1 ERROR and 2 MINORs, (C) 2 ERRORs and 5 MINORs, and (D) 1 ERROR and 3 MINORs. CV7-2's repair holds, and PL2-1 to PL2-7 hold. The status "derived" for (R-eval-old) was premature: it is **Open** again, with the open parts named at #5.8 (a)–(c).
+
+- **CV8-1: accepted, open.** #130.15.2 (5) uses MR_n-cubes, which CRE prints only for the domains of the renormalization transformations, not for those of the R-operation. For C = 2 the cube is not shown on R-operation layers. Marked **Open (CV-cube)** in #130.15.2 (5).
+- **CV8-2 = CT1-2: accepted and repaired.** 1 ≤ w ≤ L^{c_w}, with c_w := max((1−κ)/2, a_Sr_S) < 1, so the nesting across steps keeps half of the room for L ≥ L₀(d) (the contacts draft §1 and §4, note #52.1).
+- **PV7-1 (ERROR): accepted and repaired, derived, not reviewed.** T₂^{old}'s current is ∝ λ through α_{1,k} = λ_Rα_{0,k}, so against the unweighted current room it carries λ_R = K_RLM + 1. Repair: the current weight μ^{(k)}_n on the layers n ≤ k₀ (the contacts draft §4a), with T₂^{old}'s current bounded through VAR (190)'s D*D entry (tex\VAR\parts\p308_corrected.tex l.37–47); #5.8, #52.1, and #166 updated. VAR\parts goes into the CV10 scope's sources (CV8's and CV9's scopes omitted it).
+- **PV7-2: accepted and repaired.** #78 and #162 say "open" again, consistently. #171 reads λ_w.
+- **PV7-3: accepted.** The status of #5, #5.8, and #5.10.5 (ii) is open again.
+- **PL3-1 and PL3-2 (ERRORs): accepted, open.** §9 is not uniform in n. Marked **Open (ii-unif)** in the passage draft §9, with the routes: the axial gauge centred at each evaluation point (abs(c(y)) ≤ Cα₀L^{−2j}abs(y − x) removes the log n′), and covariant differences in the weak form, with plaquette commutators (each costs ε₀). The covariant Sobolev step is not derived.
+- **PL3-3 and PL3-4: accepted, folded into Open (ii-unif)** (points (3) and (4)).
+- **PL3-5: accepted and repaired.** §2's count is taken by the coarsest layer that a ρ-geodesic visits, and the sum over that layer is ≤ 2.
+- **PL3-6: accepted and repaired.** Lemma B (1) cites PRT2 (2.2), p.224 l.10.
+- **PL3-7: accepted and repaired.** Normal differences: ≤ C(d)PD^{−4} at j = 1 (the variant with s = 1, and Lemma K itself for the second term), and ≤ C(d)(PD^{−3−j} + D^{−2−j}) for j ≥ 2.
+- **CT1-1 (ERROR): accepted and repaired.** The gradient room carries w̃(b), the largest w at b and at the bonds that share a site with b, the data bonds included. The lattice gradient is then bounded by 4 times the largest response, with u = 0 at the data bonds, and no slow variation is needed. The averages of w̃ are ≤ 1 + 4dC(d)L^{−c₁}.
+- **CT1-3: accepted, open.** LF #A.11.42's block averages exclude the blocks within L of the next layer, which the chain reads in supremum only. Marked **Open (CT-sup)** in the contacts draft §2, and as #5.8 (b).
+- **CT1-4: accepted and repaired.** Each of the three parts is ≤ (1/128)(1−β)λw, so the phase is ≤ (3/128)(1−β)λw and the gradient ≤ (3/32)(1−β)λw̃.
+- **Open:** (R-eval-old) with #5.8 (a) Open (ii-unif), (b) Open (CT-sup), (c) the current of T₂^{old}; and Open (CV-cube).
+- **Next:** CV9 + PV8 + PL4 + CT2 on the repairs, with these opens declared.
+
+## (R-eval) Packet CV, Round CV9, with PV8, PL4, and CT2: Triage
+
+Log: reviews\work\referee_cli_20261104-115222_scope_twoloops_RevalCV9.json (launched 11:52, landed 12:06). 3 ERRORs, 7 MINORs; no part clean. The referee's scope omitted VAR\parts, so it reported VAR (190) as untranscribed; it is transcribed (tex\VAR\parts\p308_corrected.tex l.37–47). The referee read the note while PV7-1's repair was being written (#52.1 without the current weight, #5.8 (c) still open), which is PV8-1's first two points.
+
+- **CV9-1 (MINOR): accepted and repaired.** #130.15.2 (1) now carries the weighted case: where w^{(k)} > 1, λ^{(k)}_nw^{(k)} ≤ λ_w ≤ c′^{k−n}; capped at step j the ratio is ((1−β)/2)^m, uncapped it is ≤ (1+β₀)L^{c_w−1} ≤ (1−β)/2. (2) likewise with w̃. The contacts draft §4's nesting bullet is rewritten in the same two cases.
+- **CV9-2 (MINOR): accepted and repaired.** Open (CV-cube) is marked at #3, #130.15.2's heading, #130.15.1, and at every citation of #130.15.1–#130.15.2 and #130.15–#130.15.2. In (5), the MR_m-cube clause is restricted to the domains made by a renormalization transformation, and the conclusion to the cases where □ exists.
+- **PV7-3, PL3-5, PL3-6, PL3-7, CT1-4: hold.** PL3-5's residue (the false ball sentence in §2) is deleted; the count is the coarsest-layer one.
+- **PV8-1 (ERROR): accepted in part.** #52.1's current weight and #5.8's text were written after the referee read them (see above). The remaining point is real: #166's current total omitted T₂^{old}. Repaired: on Λ^{old} the room is μλ; the data land in (4/7)(1−β)μλ, the other terms ≤ 0.35(1−β)λ ≤ 0.175(1−β)μλ (μ ≥ 2), and T₂^{old} adds ⅛(1−β)μλ: total < 0.88(1−β)μλ (#166, the contacts draft §4a *The budget on Λ^{old}*).
+- **PV8-2 = CT2-1 (ERROR): accepted and repaired.** Bałaban's ∇^ξ_U (CRE (2.39), p.261 l.37) compares b with its parallel translates. w̃(b) is now the largest w on N(b) := b, the bonds sharing a site with b, and b ± e_ν (≤ 6d − 3 bonds); each gradient component is a difference of the values at b and one bond of N(b), so it is ≤ 2 max_{N(b)}|u| ≤ (1/64)(1−β)λw̃(b), and the full response's gradient ≤ 2·(3/128) ≤ ⅛. The referee's counterexample (data bond b₀, free translate b₀ + e₂ at a contact) now has w̃(b₀) ≥ w(b₀ + e₂). Averages of w̃ ≤ 1 + (6d − 3)C(d)L^{−c₁}. #52.1 updated.
+- **PV8-3 (MINOR): accepted and repaired.** #171's conclusion and #78 read A_k(S) ≤ c_πλ_wα_{1,k}ℓ_k(S).
+- **PV8-4 (MINOR): accepted and repaired.** #5.3 and #5.11 carry Open (CT-sup) and Open (ii-unif) with **Open (R-eval-old)**. #5.8 (a) names Open (ii-unif)'s points (1)–(4); #5.10.5 (ii) names Lemma R, the localisation of H′(U₀) and P(U₀), and the partition.
+- **PL4-1 (MINOR): accepted and repaired.** §9: *Localisation* is marked Open (ii-unif) (3); *Lemma R at U₀* Open (ii-unif) (1)–(2), with its conclusion conditional; the partition at ℓ/8 Open (ii-unif) (4); *Result of (ii)* open; T(U₀)'s pointwise step marked. §3 (b₀) and §8 carry Open (CT-sup).
+- **CT2-2 (MINOR): accepted and repaired.** (a) The data run from step k+1 to step k: where μ^{(k+1)}_n > μ^{(k)}_n, k + 1 − n > ⌈N₀/2⌉, so λ is uncapped and the ratio is 2(1+β₀)²/L ≤ ½(1−β)(1+β₀) for L ≥ 8, β ≤ 3/7; elsewhere #54's ratio. (b) The nesting: the weight multiplies #130.15.2 (3)'s ratio (λ^{(k)}_n/λ^{(j)}_{n_j})L^{−m}(1+β₀)²√m by μ^{(k)}_n/μ^{(j)}_{n_j} ≤ 2^m only where μ^{(k)}_n > 1, i.e. k − n > ⌈N₀/2⌉, so λ^{(k)}_n = λ; uncapped at step j this gives (2/L)^m(1+β₀)²√m within (3)'s bounds; capped at step j it forces m > N₀/3 and the ratio ((1−β)/(1+β₀))^m(1+β₀)²√m → 0. (c) The size now uses the crude θ_B ≤ L^{c_w}λ(1+β₀)L^{−1}, which needs no averages and so not Open (CT-sup); μ := max(2, 16KC(d)(1+β₀)λ_RL^{c_w−1}/(1−β)). (d) VAR (190) is transcribed; it goes into CV10's sources.
+- **CT2-3 (MINOR): accepted and repaired.** §§2–3's headings and §3's θ_B and "every site of Λ" carry Open (CT-sup).
+- **Open:** (R-eval-old) with #5.8 (a) Open (ii-unif), (b) Open (CT-sup); and Open (CV-cube). T₂^{old}'s current (old (c)) is derived, not reviewed.
+- **Hashes:** note ae64bd58abeb (972 tags), contacts 01968540b87e, passage 173909bf0e8c, LF e4e1964fcc07.
+- **Next:** CV10 + PV9 + PL5 + CT3 (scope_twoloops_RevalCV10.md, VAR\parts in the sources).
+
+## (R-eval) Packet CV, Round CV10, with PV9, PL5, and CT3: Triage
+
+Log: reviews\work\referee_cli_20261104-121320_scope_twoloops_RevalCV10.json (launched 12:13, landed 12:31). 3 ERRORs from two defects, 7 MINORs; no part clean. CV9-1, CV9-2, PV8-2, PV8-3, PV8-4, PL4-1, CT2-1, and CT2-3 are repaired; PL3-5's residue is gone.
+
+- **CT3-1 = PV9-1 = CV10-1 (ERROR): accepted and repaired.** The current weight sat only on n ≤ k₀, where it is μ, so the room jumped from λ to μλ at k − n = N₀. The weight is now μ^{(k)}_n := min(μ, 2^{max(0, k−n−⌈N_*/2⌉)}) on the gradient and current rooms of every layer: 1 for k − n ≤ ⌈N_*/2⌉, μ on Λ^{old}, and at most doubling per step. The data transfer and the nesting are redone in the contacts draft §4a (*The data*, *The nesting*, four cases), and #52.1, #5.8, #130.15.2 (2)–(3), and #166 cite it.
+- **CT3-2 (ERROR): accepted and repaired.** The gradient landing through fine differences of the sup bound holds only on the layer 0 (CRE (2.39), L^{−n}). w̃ is dropped. The response's gradient is no longer bounded through the sup bound (contacts §3); T₂^{old}'s gradient is bounded through VAR (190)'s gradient entry (p.308 l.37–47), ≤ 4KC(d)Lλ times the unit against θ_B ≤ 2λ, and lands in μλ (§4a *Their size*, *The budgets*: ≤ (13/16)(1−β)μλ + (β/4)μλ, β ≤ 3/7). #52.1 and #166 updated.
+- **CT3-3 (MINOR): accepted and repaired.** Off the layers with μ^{(k)}_n = μ, at least N_*/3 layers separate T₂^{old}'s sources, so its gradient and current there are ≤ (1−β)λ/64 for g small; the unweighted budgets stay below (1−β) (the gradient for β ≤ 7/39). θ_B ≤ 2λ now includes the 𝐇-part (≤ ½).
+- **CT3-4 (MINOR): accepted and repaired.** The ramp uses N_*, the least N₀ over the steps, so μ^{(k+1)}_n ≤ 2μ^{(k)}_n holds.
+- **CV10-2 (MINOR): accepted and repaired.** #6.2, #6.10, #6.11, #6.17, #6.17.1, #130.11, and their citations at #14 and #154 read λ_w (B_Gλ_wα_{1,k}, C_odλ_wα_{1,k}, O(λ_wα_{1,k}L^{−k}), C_fdλ_wα_{1,k}, 3C_fdλ_wλ_RB_J); #6.2 names λ_w := λL of #52.1. The conclusions hold, since λ_w is fixed after L and M.
+- **PV9-2 (MINOR): accepted and repaired.** #5.8 (2), #5.10.5 (i), and #5.10.6's last sentence carry Open (CT-sup).
+- **PV9-3 (MINOR): accepted and repaired.** #5.8 (a)'s point (2) reads "the control of u's flat differences of order ≥ 2 by a covariant Sobolev bound not yet derived".
+- **PL5-1 (MINOR): accepted and repaired.** Passage §9: *Translation invariance* and *Third differences* carry Open (ii-unif) (2), *G_S's size* Open (ii-unif) (3), and the next bullet is conditional on the third differences.
+- **Pre-check additions (contacts §4a):** *The data* states that the data land in the pre-R room of the older layering (note #75), where μ^{(k)}_n, monotone in k − n, is no smaller; *The budgets* concludes < (1−β) for the current off the μ-layers. In *The nesting*, the case λ^{(j)}_{n_j} < λ with μ^{(k)}_n > μ^{(j)}_{n_j} gives (1−β)^m for the gradient, not #130.15.2 (2)'s ((1−β)/2)^m; since m > N_*/3 it is ≤ (1−β)/2 for g small, which is what #130.15.1 uses, and #130.15.2 (2) now says so. The draft reads LF at d298d5285ba5 (tags #A.11.42, #0.1.27, #0.1.29, #A.8, #A.10 checked).
+- **Open:** (R-eval-old) with #5.8 (a) Open (ii-unif), (b) Open (CT-sup); and Open (CV-cube).
+- **Hashes:** note f069220021f6 (972 tags), contacts bb8804289bbc, passage 0fc5ae0d7200, LF d298d5285ba5.
+- **Next:** CV11 + PV10 + PL6 + CT4 (scope_twoloops_RevalCV11.md).
+
+## (R-eval) Packet CV, Round CV11, with PV10, PL6, and CT4: Triage
+
+Log: reviews\work\referee_cli_20261104-124118_scope_twoloops_RevalCV11.json (launched 12:41, landed 12:58). 2 ERRORs from one defect, 2 MINORs. **PL6 is clean** (PL's first clean round). CV10-1, CT3-2, CT3-4, CV10-2 outside #6.17's pieces, PV9-2, PV9-3, and PL5-1 are repaired.
+
+- **CT4-1 = PV10-1 (ERROR): accepted; declared open.** T₂^{old}'s source is Δd on every layer, and Λ^{old} enters only through the change of VAR's kernel under the O(1) real data difference there (#45, #162), so (190)'s decay from the sources does not make it small off Λ^{old}. Its gradient and current where μ^{(k)}_n < μ, and its phase on k₀ < n ≤ k, need a bound on that kernel change decaying away from Λ^{old} with a constant fixed before g, the input #5.1 names. This is **Open (old-decay)**, now #5.8 (c), marked at #5.3, #5.8, #166, and the contacts draft §4a and §5. Given it, ≥ N_*/3 layers of M/M₁ each make T₂^{old} ≤ (1−β)/64 times the units there.
+- **CT4-2 (MINOR): accepted and repaired.** The off-μ budgets are now stated in units of λ^{(k)}_n times the unit: T₂^{old} ≤ (1−β)λ^{(k)}_n/64 given (old-decay), the deformations and the 𝐇-part are absolute and so ≤ that times λ^{(k)}_n; the totals are < 1 − β (current) and ≤ 1 − β for β ≤ 7/39 (gradient), within f_nμ^{(k)}_nλ^{(k)}_n.
+- **CV11-1 (MINOR): accepted and repaired.** #6.17.1 reads 8C_odλ_wL(2/L)^m. #6.17.3 uses λ̄^{(k)} := min(λ_w, c′^k) ≥ λ^{(k)}_nw: (1) with λ_w, (2) with λ̄^{(k)} ≤ c′^k. #6.16 reads ε_n = g_np₀(g_n), p₀(g) = A₀(log g^{−2})^{p₀} (CRE (2.4)).
+- **Open (CT-sup): closed, derived, not reviewed** (staged during CV11, applied after it). The contacts draft §1 adds (avg): on the layers 1 ≤ n ≤ k₀ of the layering in which the next T-step reads the data, each block variable's complex part is < C_Qf_nλ^{(k)}_nL^nα_{1,k}L^{−k} (C_Q of #45), which #49 gives where w = 1. 𝒟^{λ,a}_k ⊂ 𝒟^λ_k carries it; T-step data and evaluation points lie there, the gauge representatives need only 𝒟^λ_k. §2: the block data are bounded by (avg), so θ_B ≤ 2λ(1+β₀)/L at every block, the sup-read ones included; the averages of w are no longer used. (avg) lands by VAR (3) (p.278 l.11–14): the minimiser's block variables are its data, and the post-R layering is 𝐁″_k outside Z and the layer k > k₀ on Z (LFR II (1.33)); with the 𝐇-part and the deformations the total is ((5/8)(1−β)λ^{(k)}_n + β/2) of the unit, within f_nλ^{(k)}_n for β ≤ 3/7. (avg) nests through the step-k phase condition and §4's ratio. #52.1 states (avg); #5.8 (b), #5.10.5 (i), #5.10.6, #5.11, and the passage draft (header, §3 (b₀), §8) cite it.
+- **Open (CV-cube): still open.** C = 2 with B = B₃ is VAR's pairing (VAR Theorem 1, p.279 l.2–4, l.17–21: cubes of size 2ML^j, bound B₃M), so C is not changed. LFR I p.179 l.19–24 gives the R-made layers as unions of M-cubes with consecutive domains one coarser M-cube apart, which leaves room for □ near Ω_{n+1} but not further from it.
+- **Open:** (R-eval-old) with #5.8 (a) Open (ii-unif) and (c) Open (old-decay); Open (CV-cube).
+- **Pre-check:** the note's sentence on the step-(n+1) evaluation points (its line 568, citing *The dilated sub-domains*) now reads 𝒟^{λ,a}_{n+1} → 𝒟^{λ,a}_n ⊂ 𝒟^λ_n.
+- **Hashes:** note 903f099ee3ce (972 tags), contacts bdb9f8cad3a5, passage fa5a15305301, LF 95da671dfe23 (peer's; the cited sentences of #0.1.27, #A.11.42 checked).
+- **Next:** CV12 + PV11 + PL7 + CT5 (scope_twoloops_RevalCV12.md).
+
+## (R-eval) Packet CV, Round CV12, with PV11, PL7, and CT5: Triage
+
+Log: reviews\work\referee_cli_20261104-130515_scope_twoloops_RevalCV12.json (launched 13:05). 1 ERROR, 3 MINORs. **PL7 is clean** (PL's second clean round; PL is cleared, apart from the two citation sentences changed below). CV11-1, PV10-1 (naming), and CT4-2 are repaired; CT4-1 is declared.
+
+- **CT5-1 (ERROR): accepted and repaired.** The data of a T-step are the post-R point's, and their layering is the post-R 𝐁_k, which puts Z on the layer k (LFR II (1.33), p.365 l.2–7). Λ ⊂ Z, so every datum of Λ, fine or block, reads only bonds of the layer k > k₀, where w = 1, and #47 bounds it; θ_B ≤ 2λ(1+β₀)/L follows from C_Q ≤ λ/L, now in #72's λ := max(8max(C_Λ, C_Λ′λ_R)M⁵/(1−β), C_QL). The condition (avg) and 𝒟^{λ,a} are removed: contacts §1–§2, §4; note #52.1, #5.8 (1) and (b), #5.11, #5.10.5 (i), #5.10.6, #492; passage §3 (b₀).
+- **CT5-2 (MINOR): accepted and repaired.** The Open (ii-unif) mark is added at #5.3 (every site, the contacts included), #5.8 (1), #5.11, contacts §3 (last bullet), §5, and the header.
+- **CT5-3 (MINOR): accepted; superseded by the derivation of Open (old-decay).** **Open (old-decay): closed, derived, not reviewed** (contacts §4a, *The decay away from Λ^{old}*; note #5.8 (c), #5.3, #166). The Cauchy estimate in t reduces T₂^{old} to [H₁(U¹) − Ad_vH₁(U²)]Δd up to 8|Δd|/r_B = o(1). H₁'s random walk expansion (PBG p.427 l.14–21; Corollary 3.8, p.410 l.33–34; p.411 l.2; p.413 l.10; analyticity on (3.37), Section B, p.400, p.403 l.39; bound (3.94)) has terms that read the base only on ∪X̃_i⁵. Both bases obey VAR (7) with ε₁ = O(sup ε_j) → 0, so by VAR Theorem 1 (p.279 l.17–27, M′ ≤ R₁M₁a₁/ε₁) they are within B₃M′ε₁ of pure gauges on every cube; on a walk avoiding Λ^{old} their data agree up to δ^{re} = O(ε_k), the pure gauges match up to a constant and a block-trivial v, and the terms differ by O(ρ_ω/α₁). Walks meeting Λ^{old} carry e^{−δ₀dist(x,Λ^{old})/4}, with dist ≥ (n − k₀)M/M₁. The phase where λ^{(k)}_n = λ needs e^{−δ₀M/(4M₁)} ≤ (1−β)/(512K′C(d)L), M large given d, L, M₁ (K′ = O(K) uniform in M, #164); elsewhere n − k₀ ≥ 5N_*/6 or N_*/3, g small given λ. The pre-R phase budget with T₂^{old} totals ((7/8 + 1/64)(1−β)λ^{(k)}_n + β/2), within f_nλ^{(k)}_n for β ≤ 7/39.
+- **CV12-1 (MINOR): accepted and repaired.** #6.16 reads R_n ≤ L(log g_n^{−2})^r (CRE (2.5), p.255 l.36–38).
+- **Open:** (R-eval-old) with #5.8 (a) Open (ii-unif); Open (CV-cube).
+- **Derived, awaiting review:** the old-decay derivation; the data bound through #47 without (avg); the CT5-2 marks; #72's λ.
+- **Hashes:** note 7f519c571b0d, contacts f74f008a25ff, passage 655db85a9c1a, LF 1ce1241e341b (peer's; #A.10 and #A.11.42 checked).
+- **Next:** CV13 + PV12 + PL citation check + CT6 (scope_twoloops_RevalCV13.md).
+
+## (R-eval) Packet CV, Round CV13, with PV12, the PL Citation Check, and CT6: Triage
+
+Log: reviews\work\referee_cli_20261104-134027_scope_twoloops_RevalCV13.json (launched 13:40). 3 MINORs, all in CT6. **CV13 is clean** (CV's first clean round after CV12-1). **PV12 is clean** (PV's first clean round). **The PL citation check is clean.** CV12-1, CT5-1, and CT5-2 are repaired; CT5-3 is superseded by contacts §4a.
+
+- **CT6-1 (MINOR): accepted and repaired.** The gauge is built from e = ε′ẽ, with v := (f²c)ε′(f²c)^{−1}, so U¹ and (U²)^v differ by 1 + O(ρ_ωL^{−j}) per fine bond. A walk meeting Λ^{old} pays e^{C(d)δ₀M₁}e^{−δ₀dist/4} for the enlargement X̃⁵ (PBG p.408 l.23–24); PBG's cube size M₁ (CRE p.245 l.37; LF #4.21) is fixed before M, and M large given d, L, and M₁ absorbs it (contacts §4a).
+- **CT6-2 (MINOR): accepted and repaired.** VAR's ε₁ of (172) and (190), which sets r_B (note #45), stays fixed. The bases' regularity is a separate ε₁′ := O(sup_nα_{0,n} + B₅M⁶L²R_kε_k) → 0 (VAR p.278 l.46; note #6.16), and VAR Theorem 1 at ε₁′ describes the same minimiser (p.279 l.15). Contacts §4a and passage §9 use ε₁′.
+- **CT6-3 (MINOR): accepted and repaired.** Contacts §2 cites #75 for h_k, §4a cites #72 for the order of the constants, and *Where it lands* was marked (now derived; below).
+- **Open (CV-cube): closed, derived, not reviewed** (note #130.15.2 (5)). Post-R, Ω_m ∪ Z with Z a union of components of Λ_i^c, hence of MR_m-cubes (LFR I p.177 l.17, l.33, p.179 l.35–36; CRE p.257 l.28, l.42–43); dist(Ω_{n+1}^c, Ω_{n+2}) ≥ La from CRE (3.5) (p.265 l.43, l.18–19, p.264 l.52–53) and a monotone path for the additions of Z.
+- **Open (ii-unif): closed, derived, not reviewed** (passage §9, rewritten). VAR Theorem 1's regular gauge (p.279 l.17–27) on cubes of VAR's classes (p.279 l.1–4): local cubes at the scale ℓ(x) = C₀ñ(x)log L (class j′, or j′ − 1 near the layer j′ − 1), with abs(∇ñ) ≤ (2C₀log L)^{−1}; cubes of the localisation of side ℓ_j = C₀L^{j+1}log L about the points of U (class j or j + 1). ε₀ := C(d)(B₃ + B₄(1))M″⁴ε₁′ → 0. (1) Lemma R at U₀ splits c at a point: no Calderón–Zygmund logarithm. (2) Flat shifts: [A(U₀), τ_e] has a difference of c in the middle. (3) H′(U₀)μ = ψ − Γ(U₀)Δ_{U₀}²ψ and P(U₀) decay through Γ(U₀)'s weighted energy. (4) The partition at ℓ(x)/8. □ is a union of big blocks M₁L^{j_c} (p.277 l.12, p.279 l.2), rounded outward. Needs g small given L, M, and R and RM ≥ C(d)(C₀L³log L + R₁M₁L²).
+- **So (R-eval-old) is derived, not reviewed:** every **Open (R-eval-old)** mark in the note is now "(R-eval-old), derived, not reviewed"; #3, #5, #5.3, #5.8, #5.10.5, #5.11, #7, #45, #78, #160, #161, #166, #167 reworded; contacts header, §3, §4a, §5 reworded.
+- **LF moved** 1ce1241e341b → f06d4cbef4a8 (peer, 13:56; LF triage P8 R1) → d9e10bc45f12 (14:15). #A.11.42's t₃ now counts only the contacts in ∂Λ_{j+1}; contacts §1 follows it. #0.1.27, #4.21, #A.10 are unchanged in what we cite.
+- **Open:** none.
+- **Derived, awaiting review:** contacts §4a with the CT6 repairs; #130.15.2 (5) (CV-cube); passage §9 (ii-unif); the mark changes for (R-eval-old).
+- **Hashes:** note 5835ed456eb1, contacts 859311ef5d98, passage 56a37a533e22, LF f06d4cbef4a8 (peer's).
+- **Next:** CV14 + PV13 + PL8 (§9 in full) + CT7 (scope_twoloops_RevalCV14.md).
+
+## (R-eval) Packet CV, Round CV14, with PV13, PL8, and CT7: Triage
+
+Log: reviews\work\referee_cli_20261104-141629_scope_twoloops_RevalCV14.json (launched 14:16, landed about 14:38). No ERROR; 8 MINORs: CV14-1, PV13-1, PL8-1 to PL8-3, CT7-1, and CT7-2 (three items). No part is clean. The CT6 repairs hold.
+
+- **CV14-1 (MINOR, pins): accepted and repaired** (#130.15.2 (5)). The R-operation-free unions are pinned to CRE p.256 l.21–23 (not p.257 l.28, l.42–43, which are about χ_k's partition); compatibility to p.264 l.53–55; Λ_m^c ⊇ Ω_m^c to CRE (2.1), p.254 l.50. The side ratio is now derived: R_m < L(log g_m^{−2})^r ≤ L(1+β₀)(i−m)^{β₀}R_i < L^{i−m+1}R_i (CRE (2.5), p.255 l.36–38; (2.7), p.255 l.56–57), and R_m/R_i is a power of L.
+- **PV13-1 (MINOR): accepted and repaired** (#5.7). The Λ-data's M⁵ part is T₁'s data, whose response is ≤ C_ΛM⁵e^{−δ dist}s_Z by (190) (#46, #164), and λ absorbs C_ΛM⁵ by #72's choice (#73). It does not pass through C_{resp,∞}, so no C_H term is needed in #72. Contacts §3's "as in note #5.7" stays valid.
+- **PL8-1 (MINOR, but a real gap): accepted and repaired by a new route** (passage §9). The flat composition form of A(U₀) − A was asserted, and H′_j(U₀) is a nonlocal constrained inverse, so the old route (localisation at ℓ_j, the partition at C₀ñ log L, flat shifts, G_S's size, Lemma C at U₀, and Γ(U₀)/τ_y at U₀) is deleted. The new route never compares nonlocal operators.
+  - Near each site z there is a cut-off base Ũ₀ := e^{iχa₀}, built in the regular gauge of a class-j or class-(j + 1) cube Q_z of side s_z = RML^j/4 about z. It equals U₀ on the cube of side s_z/2, and it is regular in one global gauge, with abs(ã₀) ≤ C(d)ε_Q/s_z.
+  - *The comparison near z*: §2's comparison between U₀ (all layers) and the two-layer problem at Ũ₀, on the ρ-ball of radius RM/(32L). It uses Lemma A′ at U₀ and at Ũ₀ and Lemma R at U₀. Its error is C(d, κ)e^{−κRM/(33L)} times the data.
+  - *The two-layer problem at Ũ₀*: the fine minimiser at Ũ₀ against the flat one with the same D and h, through an admissible transport-corrected field, an energy estimate (Δr₃ block-constant, Σ_B(1 − T)φ, Poincaré on N(Q̃)), and Lemma R at Ũ₀ with the added sources σ and s₂. Its error is C(d, L, M, R)ε_Q𝒟, which g small given L, M, and R absorbs into doubling C(d).
+  - Only Δ_{Ũ₀}, Q̃, E(Ũ₀), and the bumps enter. The conditions are now RM ≥ C(d)R₁M₁L (in place of C(d)(C₀L³log L + R₁M₁L²)), M ≥ L, RM ≥ L², and g small given L, M, and R. #5.8 (a) and #5.10.5 (ii) are rewritten to match.
+- **PL8-2 (MINOR): accepted and repaired.** Lemma R at a regular base absorbs through the weighted supremum Ŝ := sup((2n′ − r)/n′)^{C}S(r), r′ := (r + 2n′)/2, so Ŝ ≤ 2A once C(d)ε₀4^{C(d)} ≤ ½.
+- **PL8-3 (MINOR): accepted and repaired.** REG's α₀ restrictions hold for g small given L and M.
+- **CT7-1 (MINOR): accepted and repaired.** Contacts §4a runs PBG and VAR at LF's block size (M_b, LF's M′; LF #4.22–#4.24), with M₁ = KM_b, K ≥ 12d + 1, and a reach of at most 10dM_b < M₁. #5.8 (c) now reads "M large given d, L, LF's block size M′, and M₁".
+- **CT7-2 (MINOR, three misquotations): accepted and repaired.** Contacts §1 l.7 gives LF #A.11.42's t and t₃ in full. §1 l.13 credits 1-Lipschitz to LF #A.11.42, with ρ₀ ≥ 2 for L ≥ L₀(d). β ≤ 7/39 is recorded as a constraint on the choice of β: the project's 1/8 (note #75) meets it, and CRE's example 1/4 (p.261 l.42) does not. The peer was messaged for the table (15:1x).
+- **Pre-check of the new §9 (mine):** two repairs. D and h are set to 0 outside the layers j and j + 1 (the continuation), and the two-layer problems' 𝓔 has no far layers. The other items were checked: the geometry of the case split j = m or m − 1, ñ ≤ L^{j+1} on V, U's blocks inside the cube of side s_z/2, the separations 15/32 ≥ 7/16, the scaling of every source in n, and Q*λ₃ − Q̃*λ₃ = (1 − T^{−1})Δr₃.
+- **Open:** none.
+- **Derived, awaiting review:** passage §9 (new route); contacts §§1, 4a with the CT7 repairs; #130.15.2 (5) with the CV14-1 pins; #5.7 (PV13-1); #5.8 (a), (c) and #5.10.5 (ii) (rewording).
+- **Hashes (15:13, at the CV15 launch):** note e29745d0748a, contacts 3e27794f074d, passage 7084b3a22d1d (with the pre-check repairs), LF fb9b8af212b4 (peer's).
+- **Counts:** CV 1 clean (CV13); PV 1 clean (PV12); PL §§1–8 cleared, §9 new again; CT 0 clean.
+- **Next:** CV15 + PV14 + PL9 (§9 in full) + CT8 (scope_twoloops_RevalCV15.md).
+
+## (R-eval) Packet CV, Round CV15, with PV14, PL9, and CT8: Triage
+
+Log: reviews\work\referee_cli_20261104-151324_scope_twoloops_RevalCV15.json (launched 15:13, landed about 15:30). (A) CV15 is CLEAN. One ERROR (PL9-1) and eight MINORs: PV14-1, PV14-2, PL9-2, PL9-3, CT8-1 to CT8-4. The repairs of CV14-1, PV13-1, PL8-1, PL8-3, and CT7-1 hold. The repair of PL8-2 does not (PL9-1). CT7-2 was partly repaired (PV14-2, CT8-1).
+
+- **PL9-1 (ERROR): accepted and repaired** (passage §9, *Lemma R at a regular base*).
+  - The fault: the weighted-supremum step dropped a factor x^{−C}. The coefficient of S(r′) blew up as r′ − r shrank, so no fixed absorption held.
+  - The new proof has three parts.
+    - *Zero order.* Kato's inequality Δabs(u) ≤ abs(Δ_Uu) is exact and gauge-invariant. With the mean value bound for subsolutions at every radius, it bounds sup abs(v) and sup abs(f) with no W term and no iteration.
+    - *First order.* On a ball B(x, 4ρ) of any radius 1 ≤ ρ ≤ δ(x)/8, the flat representation with c split at x gives s₁(x) ≤ C(d)(n′/ρ)Z + C(d)ε₀ sup s₁. The blow-up (n′/ρ) multiplies only the zero-order quantity Z, and the coefficient of s₁ is fixed.
+    - *The absorption.* The weight δ(x)/n′, with δ the distance to the boundary of B_{n′}(b), absorbs the s₁ term for 4C(d)ε₀ ≤ ½. Near the boundary the lattice bound abs(∇u) ≤ 2 sup abs(u) applies.
+  - The lemma now takes added sources s and σ, so step (d) cites it directly.
+  - Its first term is n′^{−1−d/2}‖f‖, and Poincaré turns it into n′^{−d/2}‖∇_Uf‖_{B_{c(d)n′}}, since f has zero covariant block means in both uses.
+- **PL9-2 (MINOR): accepted and repaired** (*The cube Q_z*).
+  - The rule now tests the cube of side s_z′ = s_z + 16R₁M₁L^{j+1}.
+    - If that cube meets the layer j, Q_z has class j.
+    - Otherwise Q_z has class j + 1 and contains the cube of side s_z. Its enlargement then lies within s_z/2 + 6R₁M₁L^{j+1} < s_z′/2 of z, so in the layer j + 1 alone.
+  - *The class* now states the reach s/2 + 6R₁M₁L^{j_c}. The total reach is ≤ RML^j/8 + 14R₁M₁L^{j+1} + √dL^{j+1} ≤ 3RML^j/8.
+- **PL9-3 (MINOR): accepted and repaired** (step (a)).
+  - On B_{2c(d)Ln}(z), abs(Δr₃) ≤ C n^{−3}𝒟. Then abs(∇r₃) ≤ C(d)(n^{−1}sup abs(r₃) + n sup abs(Δr₃)) ≤ C n^{−2}𝒟, by Lawler–Limic Theorems 6.3.8 and 4.3.1 and Corollary 4.3.3.
+  - Step (d) then bounds abs(σ) ≤ C ε_Q n^{−3}𝒟 pointwise, with abs(c)abs(∇r₃) included, and n′ sup abs(s₂) + n′³ sup abs(σ) ≤ C ε_Q𝒟.
+- **PV14-1 (MINOR): accepted and repaired.**
+  - On the problem's layering, R and M are LF #4.24's R′ = LK_{CRE} − 1 and M′ = M_b, and VAR's product is M_b (LF #4.23). So RM ≥ C(d)R₁M₁L reads K_{CRE} ≥ C(d) + 1, and §2's M ≥ L reads M′ ≥ L. Both are lower bounds, which LF #4.24 allows.
+  - "g small given L, M, and R" is g small given L, K_{CRE}, and M′.
+  - Recorded in: passage §9 *Result of (ii)*; note #5.8 (a), #5.10.5 (i) and (ii); contacts §4a *Where it lands*.
+  - The note writes K_{CRE} as #99 does (its K is VAR's factor). The contacts draft writes K_{CRE} in §4a too.
+  - The peer was asked to record both bounds in the table and LF (15:4x).
+- **PV14-2 and CT8-1 (MINOR): accepted and repaired.** #75 and contacts §4a now say "the project's β = 1/8", and #75 adds that CRE's example is β = 1/4 (p.261 l.42).
+- **CT8-2 (MINOR): accepted and repaired.** The walk factor is O(M_b^{−1/2})^{|ω|} at the block size M_b (PBG's M₁^{−1/2}, p.410 l.37–42).
+- **CT8-3 (MINOR): accepted and repaired.** The reach is 10dM_bL^jη in the ℓ¹ distance, less than the layer width K_{CRE}M_bL^jη (LF #4.25).
+- **CT8-4 (MINOR): accepted and repaired.** Contacts §4 cites the normalised transformations at #6.17 and C_cr^λ at #226, #231, and #484.
+- **Bookkeeping:** the staged table-tag conversions are applied in the note (#T2.24, #T1.3, #T2.5 and #T2.15, #T4.30, #T1.2). labels_two_loops.py now skips citations of the form "LF #N" (another note's tags) and passes: 972 tags.
+- **Pre-check of the repairs (mine):**
+  - The first-order sups were moved to B(x, 4ρ + 1), the neighbours that W reads, with δ ≥ δ(x)/4 there.
+  - Checked:
+    - the Kato sign (positive Δ, Δ(G*φ) = φ);
+    - the subsolution's mean value bound;
+    - every term of P and ∇P against ε₀(ρ/n′) or ε₀n′^{−1};
+    - the units of Z and of s₁;
+    - the crude bound for δ < 8;
+    - Poincaré's ball B_{(4+√d)n′} ⊂ B_{c(d)n′}.
+- **Open:** none.
+- **Derived, awaiting review:**
+  - passage §9: Lemma R at a regular base (new proof), *The cube Q_z*, *The class*'s reach, steps (a) and (d), and *Result of (ii)*'s layering bullet;
+  - contacts §§1–5 with the CT8 repairs;
+  - note #5.8 (a), #5.10.5 (i) and (ii), and #75's β sentence.
+- **Counts:**
+  - CV 2 clean (CV13, CV15), so CV is cleared;
+  - PV 1 clean (PV12);
+  - PL §§1–8 cleared, §9 0 clean;
+  - CT 0 clean.
+- **Next:** PV15 + PL10 (§9 in full) + CT9 (scope_twoloops_RevalPV15.md).
+
+## (R-eval-old) Packet PV, Round PV15, with PL10 and CT9: Triage
+
+Log: reviews\work\referee_cli_20261104-154722_scope_twoloops_RevalPV15.json (launched 15:47, landed about 15:59). There is no ERROR and no clean part. Five MINORs: PV15-1, PL10-1, PL10-2, CT9-1, and CT9-2. The PL9-1 to PL9-3 and PV14 repairs hold; the new Lemma R checks line by line, the Kato sign, the absorption, and Z's units included. CT8-2's factor holds, but its source label was misquoted (CT9-1).
+
+- **PV15-1, PL10-1, and CT9-2 (MINOR, one defect): accepted and repaired.**
+  - The defect: "g small given L, K_{CRE}, and M′" left out the note's M, which enters ε₁′ through B₅M⁶ (LFR II p.378 l.14; #6.16). That M is chosen after M′ and M₁.
+  - Passage §9 now names it M_{CRE}, as distinct from §2's layer parameter M:
+    - in *Assumption* and *The regular gauge*;
+    - in the M′ bullet and in *Result of (ii)*, where g is small given L, M, R, and M_{CRE}, that is, given L, K, M_b, and M_{CRE}.
+  - The layering bullet says "LF's block size M_b (LF's M′)", apart from VAR's cube parameter M′.
+  - Note #5.8 (a) and #5.10.5 (ii) now add "this note's M (through ε₁′'s B₅M⁶)". So do contacts §3 l.35 and §4a's *Where it lands*.
+  - No consumer is affected, since each takes g small after M (#72, #166).
+- **PL10-2 (MINOR): accepted and repaired.**
+  - The transported bumps need n_B³abs(∂²a₀): the holonomies' differences carry ∂²a₀.
+  - ε_B := C(d)(B₃ + B₄(1))R₁M₁L⁴ε₁ now bounds abs(∂²a₀)L^{3j′} too, from (9)'s ‖A₀‖_{1,1} (p.279 l.22).
+  - Lemma A′ at U₀ states the bump bound's terms. Lemma R (1) and ε₀'s list include ∂²a₀ (ε_Q already covered it).
+- **CT9-1 (MINOR): accepted and repaired.** Contacts §4a cites PBG (3.94)'s O(M^{−1/2})^{|ω|}, with M its big-block size (p.410 l.37–42). PBG's M₁ is the threshold of "for M ≥ M₁" (p.397 l.37–38).
+- **Bookkeeping:** LF #4.22.1, the peer's record of K ≥ C(d) + 1 and M′ ≥ L, is cited in passage §9, note #5.8 (a) and #5.10.5 (i)–(ii), and contacts §4a. labels_two_loops.py passes (972 tags).
+- **Open:** none.
+- **Derived, awaiting review:**
+  - passage §9 with the PL10 repairs;
+  - contacts §§1–5 with the CT9 repairs;
+  - note #5.8 (a), #5.10.5 (i)–(ii), and #75.
+- **Hashes (16:01):** note b423fc8a820e, passage 9566e6811aa2, contacts bd3e20ee5133, LF 25e5bdf7a157 (peer's).
+- **Counts:** CV cleared; PV 1 clean (PV12); PL §§1–8 cleared, §9 0 clean; CT 0 clean.
+- **Next:** PV16 + PL11 + CT10 (scope_twoloops_RevalPV16.md).
+
+## (R-eval-old) Packet PV, Round PV16, with PL11 and CT10: Triage
+
+Log: reviews\work\referee_cli_20261104-160158_scope_twoloops_RevalPV16.json (launched 16:02, landed about 16:12). No ERROR. (B) PL11 is CLEAN. (A) has two MINORs and (C) one; none affects a bound. The repairs of PV15-1, PL10-1, PL10-2, CT9-1, and CT9-2 hold, apart from PV16-1 and CT10-1.
+
+- **PV16-1 (MINOR): accepted and repaired.** #5.8 (a) and #5.10.5 (ii) quoted the passage's condition as "g small given L, M, and R". They now quote "g small given L, M, R, and M_{CRE} (this note's M)", which matches *Result of (ii)* and the final lists.
+- **PV16-2 (MINOR, status): accepted and repaired.** #167's heading said "(derived, up to the opens marked at its end)", a remnant of the old (R-eval-curv) opens. It now reads "(derived; the parts marked at its end derived, not reviewed)".
+- **CT10-1 (MINOR): accepted and repaired.** In contacts §4a *Where it lands*, the passage's layer parameter is now called that, "equal to M_b", so M in the sentence is only the note's M.
+- **Referee's remarks (no finding):**
+  - *VAR p.279 l.22's β₀ = 1.* The raw and corrected transcriptions both print "0 ≤ β ≤ β₀ = 1". It is accepted as printed, since Bałaban's claims are accepted unless refuted. ε_B's B₄(1) needs β = 1: a β₀ < 1 would leave a factor L^{(1−β)j′}, which is not uniform in j′. The local PDF is password-protected, so the page image was not checked.
+  - *LF #4.22.1's g-dependence.* It omits the note's M. The peer was told at 16:1x. The three files cite #4.22.1 only for the lower bounds.
+- **Open:** none.
+- **Derived, awaiting review:**
+  - passage §9 (1 clean round, PL11);
+  - contacts §§1–5 with the CT10 repair;
+  - note #5.8 (a), #5.10.5 (i)–(ii), #75, and #167's heading.
+- **Hashes (16:13):** note 50e8029bfc7f, passage 9566e6811aa2 (unchanged since PL11), contacts 41616a7889a2, LF 25e5bdf7a157 (peer's).
+- **Counts:**
+  - CV: cleared.
+  - PV: 1 clean (PV12).
+  - PL: §§1–8 cleared; §9 1 clean (PL11).
+  - CT: 0 clean.
+- **Next:** PV17 + PL12 + CT11 (scope_twoloops_RevalPV17.md).
+
+## (R-eval-old) Packet PV, Round PV17, with PL12 and CT11: Triage
+
+Log: reviews\work\referee_cli_20261104-161350_scope_twoloops_RevalPV17.json (launched 16:14, landed about 16:35). All three parts are CLEAN. The PV16-1, PV16-2, and CT10-1 repairs hold, and every consumer of (ii) takes g small after L, K_{CRE}, M′, and the note's M. The peer's LF #4.22.1 and #4.22.2 now name the large-field M.
+
+- **Remarks (no finding; no change):**
+  - Passage l.253's "g small given L and M_{CRE}" for REG's α₀ also involves M_b. It holds as written, since M_b = M′(d, L) (LF #4.26), and l.292 lists REG's α₀ under the full conditions.
+  - β₀ in the passage means CRE's 1/7 in §1 and VAR's Hölder exponent in §9; the context separates them.
+  - #5.2 says Bałaban's extended U_k^0 "has" the properties of U_k″, while LFR II p.375 l.13–14 prints "similar". #5.6 uses only "similar".
+- **Open:** none.
+- **Derived, awaiting review:** contacts §§1–5 (1 clean round, CT11).
+- **Cleared:** packet PV (PV12, PV17); passage §9 (PL11, PL12), so the passage draft is cleared in full; packet CV (CV13, CV15). The (R-eval-old) passage at U₀ ≠ 1 (#5.8 (a), #5.10.5 (ii)) is reviewed with them.
+- **Hashes (16:36):** note 50e8029bfc7f, passage 9566e6811aa2, contacts 41616a7889a2.
+- **Next:** CT12 alone (scope_twoloops_RevalCT12.md). Then the queue: E2a, E2b, C1-2, C2a4, C2b8, A9, B2, E1e, P2, P1, 2b, 2.
+
+## Packet CT, Round CT12: Triage
+
+Log: reviews\work\referee_cli_20261104-163625_scope_twoloops_RevalCT12.json (launched 16:36, landed about 16:50). No ERROR, two MINORs; neither changes a bound.
+
+- **CT12-1 (MINOR): accepted and repaired.** §4a *The walk expansion* took H₁'s walk terms as analytic on PBG's domain (3.37), citing Section B. Section B covers G′, (Q′G′²Q′*)^{−1}, R, G, and P only (p.400 l.8–9, p.403 l.39); H₁ needs (3.36) (p.422 l.50; Theorem 3.12, p.423 l.34–36), whose complex class is (3.38) (p.396 l.45–48), the class of VAR Proposition 9 (p.309 l.11–12; l.2–4). Checked against the corrected files. Now: the terms are analytic on the class (3.38); *A walk that avoids Λ^{old}* measures ρ_ω in the norms of (3.38), D*D by VAR (10) (p.279 l.25), and takes ẽ := exp φ with φ a smooth interpolation at the scale L^j, its differences O(ρ_ωL^{−2j}) and O(ρ_ωL^{−3j}); the Cauchy estimate and α₁ refer to (3.38). No bound changes.
+- **CT12-2 (MINOR, status): accepted and repaired.** §3's (KW) (LF #0.1.27, #A.10–#A.11) and §4a's block size M_b (LF #4.21–#4.26) are derived, not reviewed in LF (checked in LF at 1bbb59aef5be). §3, §4a, and the header now say so. The header also drops the stale "through the passage draft's §9" status (the passage is cleared) and records LF read at 1bbb59aef5be.
+- **Consequence for the note's (R-eval-old) markers.** Once CT clears, (R-eval-old)'s own steps are reviewed, but it rests on LF's (KW) and block size, derived, not reviewed in LF (#5.4 records (KW)'s status). The note's "(R-eval-old), derived, not reviewed" markers stay until CT clears; then they will name that LF dependence instead.
+- **Open:** none.
+- **Derived, awaiting review:** contacts §§1–5 with the CT12 repairs (1 clean round, CT11).
+- **Hashes (16:53):** note 50e8029bfc7f, passage 9566e6811aa2, contacts efd2e023eef6 (after the repairs; *The bases are near pure gauges* now also quotes VAR (10)), LF 1bbb59aef5be (peer's).
+- **Next:** CT13 alone (scope_twoloops_RevalCT13.md). Then the queue: E2a, E2b, C1-2, C2a4, C2b8, A9, B2, E1e, P2, P1, 2b, 2.
+
+## Packet CT, Round CT13: Triage
+
+Log: reviews\work\referee_cli_20261104-165355_scope_twoloops_RevalCT13.json (launched 16:54, landed about 17:04). No ERROR, one MINOR. The CT12 repairs hold; the pins check against the corrected files.
+
+- **CT13-1 (MINOR): accepted and repaired.** §4a *A walk that avoids Λ^{old}* claimed e = 1 + O(ρ_ω) at the block points, but data nearness gives only h(x)h(y)^{−1} = 1 + O(ρ) per block bond, so e drifts by O(M_b|ω|ρ) along the walk; and chaining the cube gauges along the walk does not fix one gauge where non-consecutive domains overlap (walks may revisit). Repair:
+  - *The bases are near pure gauges*: M′ = O(LM_b), so each X̃_i⁵ lies in one cube of VAR's class (its diameter C(d)M_bL^jη is below the layer width LK_{CRE}M_bL^jη, LF #4.24, for L ≥ L₀(d), so it meets at most two adjacent layers).
+  - The term is a composition of localised operators, so it is a function of the backgrounds on the copies X̃_i⁵ glued along consecutive overlaps (a chain or tree T_ω; revisits are separate copies). One gauge function per base on T_ω, by extending the overlap transition's logarithm over each new copy.
+  - Long walks |ω| > n_* := ⌊(M_bρ̄)^{−1/3}⌋, ρ̄ := M_b(B₃M′ε₁′ + |δ^{re}|), take the trivial bound and carry O(M_b^{−1/2})^{n_*} → 0. Short walks: |e − 1| ≤ ρ_ω := C(d)M_b(|ω| + 1)ρ̄ ≤ C(d)(M_bρ̄)^{2/3} → 0, so log e exists; ẽ and v live on T_ω; the Cauchy estimate copy by copy gives O((|ω| + 1)ρ̄/α₁), summable against O(M_b^{−1/2})^{|ω|}.
+  - *The bound*: ε_od := O(ρ̄)/α₁ + O(M_b^{−1/2})^{n_*} + …, all vanishing with g. No bound changes.
+- **Remark (repaired, not a finding):** the analyticity of each walk term on (3.38) is the author's step from Bałaban's operator statements; *The walk expansion* now says it follows because each term is a composition of the localised operators, each analytic there with its bound.
+- **Open:** none.
+- **Derived, awaiting review:** contacts §§1–5 with the CT12 and CT13 repairs (1 clean round, CT11).
+- **Hashes (17:08):** note 50e8029bfc7f, passage 9566e6811aa2, contacts 9743c93d6d3c, LF 1bbb59aef5be (peer's).
+- **Next:** CT14 alone (scope_twoloops_RevalCT14.md). Then the queue: E2a, E2b, C1-2, C2a4, C2b8, A9, B2, E1e, P2, P1, 2b, 2.
+
+## Packet CT, Round CT14: Triage
+
+Log: reviews\work\referee_cli_20261104-170852_scope_twoloops_RevalCT14.json (launched 17:09, landed about 17:24). No ERROR, two MINORs, both in §4a; neither changes a bound. The CT13-1 repair holds in substance.
+
+- **CT14-1 (MINOR): accepted and repaired.** The copy-by-copy gauge extension did not justify "U^i within O(ρ̄) of 1^{f^i} on every copy": the transition must be taken against the parent's corrected function, so the deviations compound along T_ω. Repair (*The gauges along T_ω*): F_b := f_bk exp(χψ), t = f_b^{−1}F_a = k exp ψ on X̃_a⁵ ∩ X̃_b⁵, χ = 1 on X_a ∩ X_b (where the composition sums, PBG p.413 l.9–10, p.416 l.4–8) and supported in its M_b-block neighbourhood; so d_b ≤ C₂(d_a + ρ̄/M_b) and d ≤ C₃^{m+1}ρ̄/M_b at depth m. n_* := ⌊log(1/(M_bρ̄))/(2 log C₃)⌋, so C₃^{n_*} ≤ (M_bρ̄)^{−1/2}; short walks have d ≤ ρ̂ := C₃²(ρ̄/M_b)(M_bρ̄)^{−1/2} → 0, and |e − 1| ≤ C(d, L)(n_* + 1)(M_bρ̄)^{1/2} → 0; long walks carry O(M_b^{−1/2})^{n_*} → 0. ε_od's first term is O(ρ̂)/α₁. The referee's remark on v(x) is also repaired: |v(x) − 1| = O(ρ̂), absorbed.
+- **CT14-2 (MINOR): accepted and repaired.** VAR's class (p.279 l.2–4) sizes □ as 2ML^jη in the finer layer's units, and the containment test is on □̃. *The bases are near pure gauges* now says so: X̃_i⁵ meets at most two adjacent layers (LF #4.25), □̃ is at most C(d)M_b in the coarser units, below the layer widths for K_{CRE} ≥ C(d) + 1 (LF #4.22.1, #4.24); on the coarser part the bounds cost at most L³, absorbed in C₂ = C₂(d, L).
+- **Open:** none.
+- **Derived, awaiting review:** contacts §§1–5 with the CT12–CT14 repairs (1 clean round, CT11).
+- **Hashes (17:27):** note 50e8029bfc7f, passage 9566e6811aa2, contacts 2ba31b36899b, LF 1bbb59aef5be (peer's).
+- **Next:** CT15 alone (scope_twoloops_RevalCT15.md). Then the queue: E2a, E2b, C1-2, C2a4, C2b8, A9, B2, E1e, P2, P1, 2b, 2.
+
+## Packet CT, Round CT15: Triage
+
+Log: reviews\work\referee_cli_20261104-172755_scope_twoloops_RevalCT15.json (launched 17:28, landed about 17:43). No ERROR, two MINORs, both in §4a; neither changes a bound. The CT14 repairs hold, apart from the v(x) part (CT15-1); the order of constants and ε_od check.
+
+- **CT15-1 (MINOR): accepted and repaired.** "|v(x) − 1| = O(ρ̂)" needs v slowly varying per fine bond, which the data do not force (a VAR (4) gauge on U² at one fine site changes v(x) by g₀^{−1}). Repair (the referee's first option): the comparison at x uses one element V := v_{ω₀}(x) for all walks, T₂^{old}(x) := 𝓗₁(Δd)(x) − V𝓗₂(Δd)(x). For another walk, w := v_{ω₀}^{−1}v_ω almost stabilises W := (U²)^{v_{ω₀}} on x's block, per fine bond to O(ρ̂L^{−j}), and w = 1 at the block point, so |v_ω(x) − V| = O(ρ̂), a cost of O(ρ̂) times the walk's bound.
+- **CT15-2 (MINOR, citation): accepted and repaired.** On Λ^{old}, U¹'s data are V_h (note #160), whose regularity is note #5.6's (χ_{h,1/2} with P = ∅, LFR I (1.88), p.197 l.44–51), not #6.16's. *The bases are near pure gauges* now cites it; ε₁′ is unchanged (O(ε_h) ≤ α_{0,h}).
+- **Open:** none.
+- **Derived, awaiting review:** contacts §§1–5 with the CT12–CT15 repairs (1 clean round, CT11).
+- **Hashes (17:44):** note 50e8029bfc7f, passage 9566e6811aa2, contacts f8fbc6b21d5f, LF 1bbb59aef5be (peer's).
+- **Next:** CT16 alone (scope_twoloops_RevalCT16.md). Then the queue: E2a, E2b, C1-2, C2a4, C2b8, A9, B2, E1e, P2, P1, 2b, 2.
+
+## Packet CT, Round CT16: Triage
+
+Log: reviews\work\referee_cli_20261104-174451_scope_twoloops_RevalCT16.json (launched 17:45, landed about 17:58). No ERROR, one MINOR; no bound changes. The CT15 repairs hold apart from CT16-1; one element V at x serves all walks and all three rooms (∇_{U^v}(Ad_vT)(x) = Ad_{v(x)}∇_UT(x)).
+
+- **CT16-1 (MINOR): accepted and repaired.** Under the left action, W^w for w := v_{ω₀}^{−1}v_ω and W := (U²)^{v_{ω₀}} is (U²)^{v_{ω₀}^{−1}v_ωv_{ω₀}}, not (U²)^{v_ω}. Now w := v_ωv_{ω₀}^{−1}, so W^w = (U²)^{v_ω}, and |v_ω(x) − V| = |w(x) − 1| in a bi-invariant norm.
+- **Remark (repaired):** ω₀ is now a short walk that avoids Λ^{old}; if none exists, V := 1 and every walk is bounded as in *A walk that meets Λ^{old}* or *Long walks*.
+- **Open:** none.
+- **Derived, awaiting review:** contacts §§1–5 with the CT12–CT16 repairs (1 clean round, CT11).
+- **Hashes (17:58):** note 50e8029bfc7f, passage 9566e6811aa2, contacts 5e860e1dece6, LF 1bbb59aef5be (peer's).
+- **Next:** CT17 alone (scope_twoloops_RevalCT17.md). Then the queue: E2a, E2b, C1-2, C2a4, C2b8, A9, B2, E1e, P2, P1, 2b, 2.
+
+## Packet CT, Round CT17: Triage
+
+Log: reviews\work\referee_cli_20261104-175909_scope_twoloops_RevalCT17.json (launched 17:59, landed about 18:16). Full packet, afresh. No ERROR, two MINORs; no bound changes. The CT16-1 repair holds, and so does the V := 1 fallback. Every other part of §§1–5 re-checks: the pins, the arithmetic, the order of constants, and the LF statuses.
+
+- **CT17-1 (MINOR): accepted and repaired.** §1's stratum weight measured s to the strata of ∂Λ, with Λ the large-field region that contains Λ₀. §3 lands the passage's s̄, which is measured at the interface Λ₀/Λ₁ (the passage's ∂C, §3 (b₀)). §1 and note #52.1 now measure s at the interface Λ₀/Λ₁.
+- **CT17-2 (MINOR): accepted and repaired.** §4a *Their size* said that "T₂^{old} is linear in Δd". It now writes T₂^{old} = ∫₀¹[κ₁(tΔd) − Vκ₂(tΔd)]Δd dt, which (190) bounds linearly in Δd, uniformly on the ball (note #45).
+- **Pin slack (repaired):** PBG Theorem 3.4 is now cited as p.400 l.7–10.
+- **Status bookkeeping (the referee's remark; no review needed):**
+  - The passage draft's header, §8, and *Result of (ii)* now say reviewed and cleared.
+  - The note's #5.3, #5.8, and #5.10.5 now give the passage (packets PV and PL) as reviewed, and (1), (b), and (c) of #5.8 as derived, not reviewed (packet CT).
+  - The #5 heading now names what is not reviewed: the contacts draft, and LF's (KW) and block size.
+  - #175 gives both clauses' statuses: map l.174 is reviewed, and D2.7 item 15.8 is derived, not reviewed.
+  - labels_two_loops.py passes (972 tags).
+  - LF is now at 844525635d69, and every LF tag the draft cites is present. The header records it.
+- **Open:** none.
+- **Derived, awaiting review:** contacts §§1–5 (1 clean round, CT11).
+- **Clearance plan:** CT17 was a full pass, and it found only the two MINORs above. CT18 is narrow (the per-round scope rule). It covers the repaired bullets and their consumers, and the status edits. If CT18 is clean, CT is cleared with CT11 (full) and CT17 plus CT18 (a full pass whose only findings were repaired and then checked clean).
+- **Hashes (18:18):** note 1d9e0194ff1d, passage 3cc58ebfc584, contacts ddbdb9e27aac, LF 844525635d69 (peer's).
+- **Next:** CT18, narrow (scope_twoloops_RevalCT18.md). Then the queue: E2a, E2b, C1-2, C2a4, C2b8, A9, B2, E1e, P2, P1, 2b, 2.
+
+## Packet CT, Round CT18 (narrow): Triage
+
+Log: reviews\work\referee_cli_20261104-181835_scope_twoloops_RevalCT18.json (launched 18:19, landed about 18:30). No ERROR. Part (A), the contacts draft, is CLEAN: the CT17 repairs hold. The referee re-derived §3's case split, c₂ > 0, and the 3/128 total, and checked *Their size*'s integral form, the pins, and the LF statuses in the header. Part (B), the note's status statements, has two MINORs (status only).
+
+- **CT18-1 (MINOR, status): accepted and repaired.** #5's heading limited the LF dependence to #5.8 (1), (b), and (c), but #5.8 (2) (through #5.10.5 and #5.11's C_H) uses (KW), and #5.8 (a) uses LF's block size (passage §9, LF #4.23). The fixes:
+  - #5's heading now names every use of LF's (KW) and block size.
+  - #5.8 (a), (c), and #5.10.5 (i)–(ii) mark LF #4.22–#4.24 as derived, not reviewed in LF (LF #4.21).
+  - #5.10.5 marks (KW) at its use.
+- **CT18-2 (MINOR, status): accepted and repaired.** #5.11's heading said "derived, not reviewed", against #5's "reviewed". PV17 reviewed #5.1–#5.11 with #5.10.1–#5.10.6 (scope_twoloops_RevalPV17.md l.14), and PV is cleared, so A9 no longer needs to cover #5.11, and the labels of #5.10.1, #5.10.2, #5.10.2.1, #5.10.3, #5.10.4, #5.10.6, and #5.11 now say "derived and reviewed, packet PV". #5.11's last sentence now gives (a) and (1) as reviewed (PL, CT).
+- **Remark (repaired):** #175's pin is now "D2.7 15.8 (e), its base-point clause O3". D2.7's three OPEN items in 15.8 (the link comparison, Pol ≥ (K/2)(d′+1), and O2 at k > N) are outside what #175 uses.
+- **CT cleared.** The clean rounds are CT11 (full) and CT17 (full), whose two MINORs were repaired and checked clean in CT18. Status bookkeeping (no review needed):
+  - The contacts draft's header, §4a, and §5 now say reviewed.
+  - In the note, #5.3, #5.8, #52.1, and #166 now say "packet CT".
+  - All 37 "(R-eval-old), derived, not reviewed" markers in the note, with #3, #6, #7, #45, #72, #166, #167, #229, and #785, now read "derived and reviewed, given LF (#5)".
+  - D2.7 l.3 now gives the note's (R-eval-old) as reviewed, given LF's (KW) and block size.
+  - labels_two_loops.py passes (972 tags).
+- **Open:** none in the note. Elsewhere, D2.7 15.8's three OPEN items (D2.7's own, unchanged; #175 uses only 15.8 (e)'s O3).
+- **Derived, awaiting review:** LF's (KW) and block size (the peer's, in LF); D2.7 15.8 apart from its OPEN items; and the queued packets.
+- **Cleared:** packets CV, PV, PL (the passage draft in full), and CT (the contacts draft). So (R-eval-old) is reviewed in full, given LF.
+- **Hashes (18:34):** note 808564d0ef4c, passage 3cc58ebfc584, contacts 70898124fa5e, D2.7 cf2f9617d229, LF 844525635d69 (peer's, as read).
+- **Next:** the queue, E2a first (scope_twoloops_RevalE2a.md, refreshed), then E2b, C1-2, C2a4, C2b8, A9, B2, E1e, P2, P1, 2b, 2.
+
+## Packet E2a, Round E2a1 (full): Triage
+
+Log: reviews\work\referee_cli_20261104-183537_scope_twoloops_RevalE2a.json (launched 18:36, landed about 18:49). No ERROR, four MINORs. The referee found that the pre-R support, the six kinds of operation, and #191's conclusion up to G-valued gauge transformations hold, and that every pin checks. Each finding was checked against the cited lines before repair. Table edit by the peer during the round (6c8c973e67d1): #T2.5 and #T2.15 keep the bounds #99 uses; E2a does not read the table.
+
+- **E2a1-1 (MINOR, status): accepted and repaired.** Map l.174 covers only terms of the form (2.21) with the printed characteristic functions, and it leaves "any other 𝐑-modified term" to D2.7. CRE p.258 l.34–36 says an R-changed T^{(j)} keeps (2.21) "but the characteristic functions are changed". So after an earlier R-step the pre-R clause is D2.7 15.8 (e)'s O3, which is derived, not reviewed. The fixes:
+  - #175 now says this, with the rest of the old text in a new line #175.1, and gives O3's status.
+  - #173's heading gives the status of both clauses.
+  - #18 (in "The constants") now marks O3's status too.
+  - #212 and #222 cite "the pre-R clause" without restating its status; #175 states it.
+- **E2a1-2 (MINOR): accepted and repaired.** Two changes of variables were missing from #179's list:
+  - #184.1, the preliminary steps' δ-removal by C (LFR I p.187 l.53–54, p.188 l.53);
+  - #184.2, LFR II's V′ = exp ig_kB (LFR II p.360 l.41–42).
+  - Both keep the support, so #191 is unchanged.
+- **E2a1-3 (MINOR): accepted and repaired.** #186 now says that the integration variables are V_h on Z_h (unchanged, p.194 l.13–15) and V″ = V_j on Γ_j″, j = 0, …, k (p.194 l.12). Through the changes of variables and #184, they parametrise V_k↾Λ together with (1.72)'s V_j on the δ-constraint surface.
+- **E2a1-4 (MINOR): accepted and repaired.**
+  - #189 now separates the integrand from its (A_j, B_j)-integral.
+  - #189 also gives the normalisation as the iterated integral of the integrands (1.60), one per preliminary step, each carrying the earlier ℂ_k^{(i)} through 𝔹_k^{(n)} ((1.61)–(1.62), p.189).
+  - Also repaired at #187, against p.189 l.27: ℂ_k^{(n+1)} is the logarithm of (1.60)'s integral plus the renormalisation term of the Wilson action.
+- **Not raised by the referee:** whether map l.313's "support of the term's indicators" includes the T-operations' δ-constraints. #176 follows map l.313, and #184 and #184.1 parametrise those constraint surfaces.
+- #184.2 pins the Haar density σ(g_kB) at LFR II p.369 l.12, which I checked; p.360 does not print it.
+- labels_two_loops.py: 975 tags, check passes. **Hash (18:51):** note d5d2d28569ce.
+- **Next:** E2a2, narrow (scope_twoloops_RevalE2a2.md): #18, #173's heading, #175, #175.1, #179–#184.2, #186, #187, #189, and the consumers #191, #212, and #222 for the pre-R clause.
+
+## Packet E2a, Round E2a2 (narrow): Triage
+
+Log: reviews\work\referee_cli_20261104-185203_scope_twoloops_RevalE2a2.json (launched 18:52, landed about 19:02). No ERROR. The four E2a1 repairs hold, and every pin in the repaired lines checks. The referee grepped LFR I and LFR II for further changes of variables and found none missing (LFR II p.357 l.47–49 is of #185's kind). #191, #212, and #222 claim no review of the pre-R clause.
+
+- **E2a2-1 (MINOR, status): accepted and repaired.** #18 named the post-R clause of D2.7 15.8 without its status. It now reads "(derived, not reviewed, #130.12; …)", matching #130.12, which I checked.
+- **Remark for 15.8's own review (not this note's).** 15.8 (e) covers O3 and the OPEN O2 in the one phrase "as at k ≤ N". Map l.174 hands 𝐑-modified terms to D2.7, so O3 at k > N rests on LFR II Theorem 1, which 15.8 (e) does not name. The note's #175.1 and #130.12 name it. Recorded here for whoever reviews D2.7 15.8. The note's own statuses are unaffected.
+- **E2a cleared** under the 2 Nov clearance rule: E2a1 (full) found the substance correct, and E2a2's only finding was a status attribution, now repaired.
+- labels_two_loops.py: 975 tags, check passes. **Hash (19:03):** note d37f38b534b1.
+- **Pre-check for E2b (bookkeeping):** #212 now gives the pre-R clause's status, "(map l.174's; after an earlier R-step, D2.7 item 15.8 (e)'s O3, derived, not reviewed; #175, #175.1)". Note 1f808d5fa9e8 (19:03).
+- **Next:** E2b (scope_twoloops_RevalE2b.md, status lines refreshed; launched 19:04), then C1-2, C2a4, C2b8, A9, B2, E1e, P2, P1, 2b, 2.
+
+## Packet E2b, Round E2b1 (full): Triage
+
+Log: reviews\work\referee_cli_20261104-190356_scope_twoloops_RevalE2b.json (launched 19:04, landed about 19:17). No ERROR, five MINORs. The referee found that the removals, the L₀-weighted layers, and #212's conclusion with its status check against LFR I p.181–200 and LFR II p.378–379. The reading R-combined is consistent with LFR II p.379 l.15 (no READINGS entry; a standing item, not raised). Each finding was checked against the cited lines before repair.
+
+- **E2b1-1 (MINOR): accepted and repaired.** χ′_j (1.27, p.182 l.53) and χ′^{(j)} (1.55, p.188 l.7) are both taken on the * bonds, which omit b_0(c) (CRE (1.9), p.247 l.51–57). There CB_j = B_j (CRE p.249 l.21–24; RG I p.268 l.2–3) and hD̃ = 0 (RG I p.267 l.19). So V_j(V^{(j)})^{−1} = exp ig_jB_j, and with (1.57)–(1.58), |V_j(V_Z^{(j)})^{−1} − 1| < 2δ′_j. So χ′_j's drop is an implication.
+  - #196 now states this. The rerun with c_χ in Bałaban's proof is gone.
+  - #197 keeps c_χ for (iii) (#91, #144), on all bonds, b_0(c) included. c_C is now defined as the sup of C's norm over the small-field configurations, with a finiteness argument (C acts on the bonds of B(c_±), its coefficients are continuous in V^{(j)} on a compact set, and h(c) is defined there, RG I p.267 l.21).
+- **E2b1-2 (MINOR): accepted and repaired.** #198 now lists (1.3), (1.4), (1.5), (1.7), (1.8), and χ_k^{(n)} as equal to 1, with the densities (1.6) extending (p.178 l.31–34). The old #197, which put (1.54) inside (1.29)'s proof, is replaced (the proof ends at p.187 l.32–33).
+- **E2b1-3 (MINOR): accepted and repaired.** #210 now gives (1.89)'s own conditions: β ≤ 1/4, (1.94)'s two conditions on N, M large, α ≤ 1/8 (p.200 l.20–21), and p.200 l.30. It says that L₀² ≤ L/3 (p.191 l.34–35) makes the spaces descending and is not a condition of (1.89). #199 now also lists M large and α ≤ 1/8. The referee's "L₀ ≥ 2" is not in p.198–200's text (grep), so it is not added.
+- **E2b1-4 (MINOR, pin): accepted and repaired.** #193: p.181 l.33–34.
+- **E2b1-5 (MINOR): accepted and repaired.** #201 now separates components excluded before any (1.29) step, where the old functions stay, from those excluded after one, for example by 1 − χ′^{(j)} (p.188 l.10). On the latter that step's functions were already removed (p.187 l.35–37), by an implication from the factors kept on them: χ_k^{(n+1)}, χ^{(j)}, and χ′^{(j)} or (1.59).
+- labels_two_loops.py: 975 tags, check passes. **Hash (19:20):** note 674b2d33554f.
+- **Next:** E2b2, narrow (scope_twoloops_RevalE2b2.md): #193, #196–#198, #199, #201, #210, and the consumers #91 and #144 for c_χ.
+
+## Packet E2b, Round E2b2 (narrow): Triage
+
+Log: reviews\work\referee_cli_20261104-192032_scope_twoloops_RevalE2b2.json (launched 19:20, landed about 19:31). No ERROR, four MINORs. The E2b1 repairs hold in substance: #196's implication, #197's all-bonds bound (its consumers #91, #92, #98, #116, #117, #121, #144, and #148 use c_χ consistently), #198, #193's pins, and L₀² ≤ L/3's role. Each finding was checked against the cited lines before repair.
+
+- **E2b2-1 (MINOR): accepted and repaired.** #91 now gives < 2δ′_j on the * bonds by χ′_j and ≤ c_χδ′_j on all bonds, the b_0(c) included (#197).
+- **E2b2-2 (MINOR, a gap in uniformity): accepted and repaired.** #197's sup was over the step-j small-field set, which depends on g_j. The fix:
+  - c_C is now the sup over one fixed closed set S_{θ₀}, the configurations on B(c_−) ∪ B(c_+) with |∂V − 1| ≤ θ₀(d, L).
+  - C's norm is gauge invariant.
+  - In an axial gauge, |V − 1| ≤ C(d, L)θ.
+  - The coefficient of B′(b_0(c)) is invertible at V = 1 and continuous in V (RG I p.266 l.2), so it stays invertible on S_{θ₀}.
+  - Compactness then gives c_C = c_C(d, L, G), uniformly in g and j. The configurations on the support lie in S_{θ₀} for g small.
+  - The quote of h(c) now includes "multiplied by L^{−1}" (RG I p.267 l.23), and the coefficients depend on the whole linear part of Q̃ ((2.4), p.266 l.6).
+- **E2b2-3 (MINOR): accepted and repaired.** #199 and #210 now list L₀² ≥ 3 at p.200 l.22–23, from L₀ ≥ 2 (p.182 l.18), which I checked.
+- **E2b2-4 (MINOR): accepted and repaired.** #201 now says that the functions not yet removed stay, and those already removed were removed by implications from factors that stay. Two new lines give the cases:
+  - #201.1 covers step 0 (p.181 l.20–23 and l.33–34; the exclusions by 1 − χ′_h, p.183 l.3–4, and by (1.28), p.183 l.11–14).
+  - #201.2 covers a (1.29) step, with the chain running to the last χ_k^{(m)} still present (p.183 l.23).
+- labels_two_loops.py: 977 tags, check passes. **Hash (19:33):** note 6e882926ad1b.
+- **Next:** E2b3, narrow (scope_twoloops_RevalE2b3.md): #91's first sentence, #197's c_C argument, #199, #201–#201.2, and #210.
+
+## Packet E2b, Round E2b3 (narrow): Triage
+
+Log: reviews\work\referee_cli_20261104-193353_scope_twoloops_RevalE2b3.json (launched 19:34, landed about 19:43). No ERROR. The four E2b2 repairs hold: in #197, c_C is a sup of a gauge-invariant norm over the fixed set S_{θ₀}(d, L), compact after gauge fixing, so it is finite and independent of g and j. There are two MINORs, both in #197, and neither changes a bound.
+
+- **E2b3-1 (MINOR, source): accepted and repaired.** RG I p.266 l.2 concerns u_k's analyticity, not M's. The continuity now rests on CMP98 (121)–(124) (p.36): Q̃'s linear part is CMP98's linear form Q(V_0), written out through R_{0,c_±}, Y, and Y_x. RG I's averages are CMP98's: RG I's [12] is CMP98 (p.299 l.12), and RG I p.265 l.17 applies its Proposition 2. I checked both.
+- **E2b3-2 (MINOR, a missing step): accepted and repaired.** #197 now passes from χ_k^{(n+1)} to V_Z^{(j)} = M^j(U_{k,Z}^{(n+1)}) ((1.26), p.182) by CMP98 Proposition 2. It then passes to V^{(j)} by (1.58), with |ℍ_Z^{(j)}| ≤ O(1)e^{−R_j}ε_j (p.188 l.29–34), which I checked. The mention of (1.3)–(1.4) is dropped. Also in #196: "(1.58) and (1.57)" becomes "(1.58) and its bound (p.188 l.29–34)", since (1.57) bounds ℍ_{k,Z}^{(n+1)}, not ℍ_Z^{(j)}.
+- labels_two_loops.py: 977 tags, check passes. **Hash (19:44):** note 6eb4959e69a0.
+- **Next:** E2b4, very narrow (scope_twoloops_RevalE2b4.md): the three repaired sentences of #196–#197 only. E2b3-1 brings in a new source, so it gets one check before clearing. If E2b4 is clean, E2b is cleared (E2b1 full, then E2b2–E2b4 on the repairs).
+
+## Packet E2b, Round E2b4 (very narrow): Triage
+
+Log: reviews\work\referee_cli_20261104-194459_scope_twoloops_RevalE2b4.json (launched 19:45, landed about 19:55). Passages (b) and (c) are clean. The referee also closed E2b3's open check on R_j: CMP98 Proposition 2 applies with α₀ = O(L₀^{2N₀}L^{−2}ε_{j+1}) = O(g·polylog), uniformly in j and k. One ERROR, in (a): the source is wrong, but the conclusion survives and no bound changes.
+
+- **E2b4-1 (ERROR, source): accepted and repaired.** CMP98's Q(V_0) of (121)–(124) linearises the gauge-changed average V̄̄_1. RG I's Q̃ ((2.4), p.266 l.6) linearises the plain ratio Ṽ_1 = (V_1V_0)‾(V̄_0)^{−1} of CMP98 (113) (p.34 l.32), whose linear part is Q′(V_0) of (118)–(119) (p.35). I checked p.34–35. I had taken (121)–(124) from E2b3's suggestion without checking it against (2.4); that was my error. The fix in #197:
+  - the citation is now to (113) and (118)–(119), with V_1 = V′, V_0 = V^{(j)}, and "up to RG I's constant normalisation";
+  - Q′(V_0) is continuous through R_{0,c_±}, R̄_{0,c}, Y, and Y_x (p.35 l.50–52);
+  - a parenthesis records that, by (120), Q(V_0) differs from Q′(V_0) only on bonds inside B(c_±), so the coefficient of b_0(c) is the same.
+  - c_C's finiteness and uniformity are unchanged.
+- labels_two_loops.py: 977 tags, check passes. **Hash (19:56):** note 8e741cefd39f.
+- **Next:** E2b5, very narrow (scope_twoloops_RevalE2b5.md): #197's re-pinned sentences only. If clean, E2b is cleared.
+
+## Packet E2b, Round E2b5 (very narrow): Triage
+
+Log: reviews\work\referee_cli_20261104-195625_scope_twoloops_RevalE2b5.json (launched 19:56, landed about 20:01). No ERROR. The E2b4-1 repair holds:
+- (2.4)'s ratio is CMP98's Ṽ_1 of (113), and (113)–(118) use neither the block gauge nor the gauge change.
+- So Q̃ = L^{−1}Q′(V^{(j)}) (RG I p.267 l.26).
+- Q′ is continuous in V_0, and at V_0 = 1 the b_0(c) coefficient is a positive multiple of I.
+- Every pin checks.
+
+- **E2b5-1 (MINOR, normalisation): accepted and repaired.** By (122) (p.36 l.11), which I checked, CMP98 writes the linear part of (1/i)log V̄̄_1 as L·Q(V_0). So L·Q(V_0), not Q(V_0), differs from Q′(V_0) by in-block terms. The parenthesis in #197 now says this, and that the b_0(c) coefficient is the same in Q(V_0) and in L^{−1}Q′(V_0). Invertibility and continuity are unaffected.
+- **E2b cleared** under the 2 Nov rule. E2b1 reviewed the packet in full. E2b2–E2b4 found gaps in the repairs, each repaired. E2b5's only finding is a normalisation slip in a parenthesis, now repaired.
+- labels_two_loops.py: 977 tags, check passes. **Hash (20:01):** note f31c41764024.
+- **Next:** C1-2 (refresh its scope's status lines first), then C2a4, C2b8, A9 (without #5.11, PV17 covered it), B2, E1e, P2, P1, 2b, 2.
+
+## (R-eval) Packet C1, Round C1-2: Pre-Check Before Launch
+
+- The scope's stale "Declared open" (Open (R-eval-old), Open (R-eval-curv)) is replaced: (R-eval-old) is derived and reviewed, given LF; #6 is derived, not reviewed. The scope also notes #91's E2b edit and skips STEP 1.
+- Status marks added in the packet (bookkeeping): #92's #6.14 and #6.16, and #113's #6.10, #6.12, and #6.13, now say "derived, not reviewed", matching #6's heading.
+- labels_two_loops.py: 977 tags, check passes. **Hash (20:02):** note ebb14b64557a. C1-2 launched 20:03 (full round: the packet was edited by later repairs).
+
+## (R-eval) Packet C1, Round C1-2 (full): Triage
+
+Log: reviews\work\referee_cli_20261104-200238_scope_twoloops_RevalC12.json (launched 20:03, landed about 20:20). No ERROR, four MINORs. The C1-1 repairs each close their finding. Everything else checks against the pages: VAR's inputs, PRT2 (2.46)'s distance (#99's M/M₁ is conservative), S_L, the bound on G, the reduced frame, and (a), (b), (c′). Each finding was checked against the note and the cited lines before repair.
+
+- **C1-2.1 (MINOR): accepted and repaired.** C and h depend on V^{(j)} (RG I p.267 l.22–23, p.268 l.2–3), and V^{(j)} is complex at complex 𝐔, so on the bonds b_0(c) the source moves with 𝐔. The fixes:
+  - #95 now says where the complex part enters. On the * bonds s_n = g_jB_j is real (#196).
+  - #197's S_θ now contains complex configurations e^{iX}V_r with |X| ≤ θ. C is analytic in V on a neighbourhood of S_{θ₀} (Q′ is built from polynomials, logarithms near 1, and g, g^{−1}, e^{iz}; the inverse of an invertible analytic coefficient is analytic). c′_C, the sup of C's derivative over S_{θ₀}, is finite and depends only on d, L, and G.
+  - V^{(j)}(𝐔) = e^{iX}V^{(j)}(U) with |X| ≤ C_GL^jηε_{n+1} (#97).
+  - #116 adds |s_n(𝐔) − s_n(U)| ≤ O(c′_CC_G)L^jηε_{n+1}δ′_j to |s̃ − s^{re}| and keeps |s̃| ≤ 3c_χδ′_j.
+  - #119 (b) gains O(c′_CC_G). C_* now also depends on c′_C, at #121 and #144.
+- **C1-2.2 (MINOR): accepted and repaired.** 𝕌^{(n)} is VAR's Landau representative, which does not keep the plain data (REG p.81 l.23–24, raw l.24, which I checked). #104 now says that d_n is the step's data, and that 𝕌^{(n)}'s plain data are d_n conjugated at the block points by u_n, with w_n(y) = u_n(y)^{−1} there. #116 bounds the factor u_n(𝐔)u_n(U)^{−1} by #106–#109 applied to 𝕌^{(n)} (deviation ε_n): O(B_G)L^jηε_n, inside the existing O(B_G)L^jη(ε_n + ε_{n+1}).
+- **C1-2.3 (MINOR, status): accepted and repaired.** #90 and #116 now also give C_Λ's frame bound (#41.1–#41.2, derived, not reviewed), which I checked at #41.1–#41.2.
+- **C1-2.4 (MINOR, pin): accepted and repaired.** #109 now reads "u_L is analytic in the configuration, VAR p.307 l.2–4, and w is by its construction, #104".
+- **Standing (not raised):** READINGS.md has no entry for R-chain-cx (#17's readings).
+- labels_two_loops.py: 977 tags, check passes. **Hash (20:23):** note 736b265666ae.
+- **Next:** C1-3, narrow (scope_twoloops_RevalC13.md): #90, #95, #104, #109, #116, #119, #121, #144's C_*, and #197's S_θ, analyticity, and c′_C sentences.
+
+## (R-eval) Packet C1, Round C1-3 (narrow): Triage
+
+Log: reviews\work\referee_cli_20261104-202400_scope_twoloops_RevalC13.json (launched 20:24, landed about 20:37). No ERROR, four MINORs, none changing a conclusion. C1-2.3 and C1-2.4 are closed. Each finding was checked against the note and the cited lines (RG I p.265 l.32–35, p.267 l.18–32; CMP98 p.35 l.40–46) before repair.
+
+- **C1-3.1 (MINOR): accepted and repaired.** (i) #197 bounded X for an average, but s̃ used the u-free source, whose average is not in that frame. (ii) D̃ depends on V through Q̃ and C̃ (RG I p.267 l.24–26), and its V-dependence was not bounded. The fixes:
+  - #116 now writes s̃ by covariance (p.265 l.34–35) as g_jC(V_{red})Ad_ũB_j − hD̃(·), at the reduced stage's average. The identity holds at real minimisers, where ũ is G-valued (#112), and on 𝓜^c by the identity theorem (#113–#114). s̃ − s^{re} splits into a conjugation part and an average part. The average part uses |X| ≤ C_GL^jηε_{n+1} for V_{red} (#115, #97).
+  - #197 defines c_D. hD̃ is jointly analytic in (V, B) by the analytic implicit function theorem (unique solution, p.267 l.28–29). It vanishes to second order at B = 0. c_D bounds |∂_V(hD̃(B))|/|B|².
+  - c′_C is now at least 1, so c_Dc_C²δ′_j is absorbed for g small. #95 names D̃. C_* depends on c_D at #121 and #144.
+- **C1-3.2 (MINOR): accepted and repaired.** #106–#109 concern transformations equal to 1 at U at a fixed base, so they did not bound u_n(𝐔)u_n(U)^{−1}. The new #116.1 bounds ũ_m factor by factor:
+  - u_L: by *The bound on G*.
+  - u_{L,m}: analytic in 𝓗(d_m) at the fixed U₀ (REG (1.70)–(1.71)), with Lipschitz constant O(d)L^jη.
+  - u_m: equal to 1 at zero step field for every base, so its change carries a factor O(δ′_j).
+  - Step m's field change is (a)+(b) of step m, which involve only m′ ≥ m + 1. So the induction runs from m = N down, with no circularity. The O(δ′_j) shares sum to O((N+1)δ′_j) times the main sum.
+- **C1-3.3 (MINOR): accepted and repaired.** #104's d_n is now (Δd_L, s̃ ⊕ B*).
+- **C1-3.4 (MINOR): accepted and repaired.** #197: R̄_{0,c} = R((V̄_0)_c) (CMP98 p.35 l.43–44) is analytic, not polynomial, through (113)'s average.
+- **Bookkeeping:** #175.1 now says "15.8 has no OPEN items" (D2.7 dbef60405e55).
+- labels_two_loops.py: 979 tags, check passes. **Hash (20:42):** note 3608fe7fa7dc.
+- **Next:** C1-4, narrow (scope_twoloops_RevalC14.md): #95's last sentences, #104's d_n, #116 with #116.1–#116.2, #119, #121's and #144's C_*, and #197's R̄_{0,c}, c′_C, c_D, and last-paragraph sentences.
+
+## (R-eval) Packet C1, Round C1-4 (narrow): Triage
+
+Log: reviews\work\referee_cli_20261104-204347_scope_twoloops_RevalC14.json (launched 20:43, landed about 20:56). One ERROR, three MINORs. C1-3.1, C1-3.3, and C1-3.4 are closed; #119 (b) and C_* check. Each finding was checked against the note and the cited lines (REG p.88–89 raw, VAR p.305 l.31–37 and p.307 l.1–14) before repair.
+
+- **C1-4.1 (ERROR): accepted and repaired.** #116.1 built u_m from F at a moving base 𝕌, mislabelled e^{iηA_L}U₀. u_m's field is ηℍ^{(m)}(s̃) at 𝕌, and a base derivative needs analyticity in a complex base, which REG (one fixed U₀, p.89 l.25) does not give. The repair takes u_m as a function ψ(d, s) := log u_m of step m's inputs at the fixed real U₀: the plain data d = d_{m+1} (#97) and the source s = s̃.
+  - ψ is analytic on VAR's ball (VAR p.307 l.2–4; #104). It is bounded there by M_u = O(d), by REG's bound on u′u₁ (p.89 l.35) at complex fields, as at #106.
+  - ψ(d, 0) = 0, since at s = 0 the step is trivial and G_m = G.
+  - The Schwarz lemma in s and Cauchy's estimates give |Δψ| ≤ O(M_u/r_B)(|Δs| + |s||Δd|/r_B), with |d| ≤ C_GL^jηε_{m+1} and |Δs| from #116 at step m. So u_m's change is O(δ′_j)L^jηΣ_{m′≥m+1}(ε_{m′} + ε_{m′+1}).
+  - No base other than U₀ enters. The induction from m = N down stands, since #116 at step m uses only m′ ≥ m + 1.
+- **C1-4.2 (MINOR, pin): accepted and repaired.** u_{L,m}'s analyticity is now pinned to VAR p.307 l.2–4, and its Lipschitz constant comes from REG's bound on u = u′u₁ (p.89 l.35), not from (1.70)–(1.71), which bound u₁ only.
+- **C1-4.3 (MINOR, pin): accepted and repaired.** #116: |g_jB_j| < δ′_j (#196), not 2δ′_j (#91).
+- **C1-4.4 (MINOR): accepted and repaired.** #121's last sentence now reads "G enters through |λ̂|, and the accumulated ũ_m with m ≥ n + 1 enter through (b), by #116.1."
+- labels_two_loops.py: 979 tags, check passes. **Hash (20:59):** note ec175dfb949b.
+- **Next:** C1-5, narrow (scope_twoloops_RevalC15.md): #116.1's u_{L,m} and u_m sentences, #116's |g_jB_j|, and #121's last sentence.
+
+## (R-eval) Packet C1, Round C1-5 (narrow): Triage
+
+Log: reviews\work\referee_cli_20261104-205958_scope_twoloops_RevalC15.json (launched 20:59, landed about 21:10). Two ERRORs, one MINOR. C1-4.2, C1-4.3, and C1-4.4 are closed. Each finding was checked against the note and the cited lines (VAR p.305 l.31–37, p.307 l.1–14, p.309 l.1–12; REG p.88–89 raw; LFR I p.183 l.36–44, p.184 l.36–47, p.186 l.1–13, p.188 l.24–56, p.191 l.30–44) before repair.
+
+- **C1-5.1 (ERROR): accepted; repaired at the source of the problem.** The finding is correct: nothing cited gives u_m's analyticity or bound at the complex base 𝕌. The root cause is in #104 and #110. The note's u-free step exp iηℍ^{(n)}(s̃)𝕌 omitted LFR I's normalisation. LFR I's stage is (exp iηℍ 𝕌)^{u^{−1}} ((1.44), p.186 l.5; (1.34), p.184 l.39–41), and it satisfies M^j(U_k^{(n)}) = V_j exactly (p.183 l.38–39). Its sources are relative to the data-exact averages (V_Z^{(j)} of (1.26), V^{(j)} of (1.58)), and its densities (1.6) are written in the data variables V_j.
+  - #104 and #110 now define the u-free step with that normalisation. Its plain data are d_n exactly, so w_n(y) = 1 at the block points, as for 𝕌 (#103, VAR's orbit group (4)).
+  - At a block point, ũ_m = u_{L,m}^{−1}u_L. u_m does not occur, and nothing needs a complex base: u_L and u_{L,m} are REG's transformations at the fixed real U₀ with complex fields, as at #106.
+  - #95 now says the step is followed by the inverse of its normalisation; p.191 l.39–41 is cited for the landing of the step.
+- **Considered and dropped:** taking the integration variables in the reduced frame, so that no ũ enters the sources. The substitution B_j ↦ Ad_ũB_j preserves Haar measure, but the axial densities (1.6), in V_j(y, x), are not invariant under it. At complex 𝐔 they would be evaluated at complex arguments, with a factor exp(O(μδ′_j/g_j²)).
+- **C1-5.2 (ERROR): moot after C1-5.1's repair.** It concerned the sup-norm Cauchy estimate for u_m, which is gone. u_{L,m}'s Lipschitz bound keeps its factor L^jη at y, because #106's bound |log u(y)| ≤ 16dL^jη|A|_{(0)} is pointwise at the layer-j block point y.
+- **C1-5.3 (MINOR): accepted and repaired.** #116.1 now takes u_{L,m}'s ball in the two norms of REG's (1.69) (p.88 l.29–31), |·|_{(0)} and |∇·|_{(−1)}, and measures the change in the larger of them. The change has two parts: ‖A_L‖ ≤ O(C_GS_L)ε_{m+1} (#105), and ΔF with its gradient bounded by (a)–(b) and (190)'s gradient bound (#94).
+- labels_two_loops.py: 979 tags, check passes. **Hash (21:22):** note d414c5451c0d.
+- **Next:** C1-6, narrow (scope_twoloops_RevalC16.md): #95's step sentence, #104's last part, #110's step, and #116.1.
+
+## (R-eval) Packet C1, Round C1-6 (narrow): Triage
+
+Log: reviews\work\referee_cli_20261104-212325_scope_twoloops_RevalC16.json (launched 21:23). Two ERRORs and two MINORs. Each finding was checked against the note and the cited lines (LFR I p.182–p.191; VAR p.278, p.280, p.307, p.309; REG p.78–p.80, p.88–p.89 raw; CRE p.256–p.257, p.266) before repair.
+
+- **C1-6.1 (ERROR): accepted; open, #3.2.** The finding is correct. ũ_m is used at the layer-j block points of step n's collar, where stage m has blocks of layer j + (m − n). There w_m ≠ 1, and the G-bounds give L^{j+(m−n)}ηε in place of L^jηε. The conjugated source then moves the field at a layer-i point by about εδ′_j(L^iη)^{−1}. The reduced frame (#110–#116.2) is marked open, and #3.2 states what is missing and what closes it.
+  - Dead route: Landau representatives of each stage in its own determining set, at one fixed real base. REG's Landau gauge depends on the set through R(U₀) (REG p.80 l.11–14), so #97's identity F(·, 0) = 0 does not pass between sets, and each change of set costs O(ε).
+  - Dead route: LFR's own frame, pinned to the start's averaged tree transports. Its step fields on bonds crossing coarse block boundaries exceed the Landau ones by powers of L (REG Lemma 1, (1.25), p.79).
+- **C1-6.2 (ERROR): accepted; the pin and the norms are corrected, and the Lipschitz step is part of #3.2.** REG (1.69) (p.88 l.28–29) bounds |A|_{(−1)} and |∇A|_{(−2)}. #116.1 now says so. A Cauchy estimate on that ball gives the constant O(d) for changes in those norms, which are suprema over all layers. The factor L^jη at a layer-j block point needs the locality of u in the field, which REG does not print.
+- **C1-6.3 (MINOR): accepted and repaired.** #91's last sentence now keeps the u of (1.44) (#95, #104). The new #88.1 says that Bałaban's inclusion (p.191 l.39–42) is for the step before its normalisation and is used only for the domain of his extension. The normalised stage is a G^c transform of that step, and its words agree with the step's by the identity theorem, since u is G-valued at the real minimisers.
+- **C1-6.4 (MINOR): accepted and repaired** with C1-6.2's edit: the pin is p.88 l.28–29.
+- labels_two_loops.py: 981 tags, check passes. **Hash (22:37):** note bbbc77ddc821.
+- **Next:** no C1-7 launch until #3.2 is closed; a referee round on a partial repair would review the open frame again.
+
+## (R-eval-cr) Packet P2: Triage (5 November, 00:48)
+
+Referee log: `Balaban\reviews\work\referee_cli_20261105-002825_scope_twoloops_P2_Revalcr.json`, REVIEW_LOG.md "WILSON_IT1_TWO_LOOPS (R-eval-cr), second round (packet P2)". P1-2, P1-5, P1-6, and P1-7 are closed. Each finding was checked against the note.
+
+- **P2-1 (ERROR): accepted and repaired.** #492 still had the pre-repair 5.1 step. It now reads as #228 does. #485 states the lemma on 𝒟^{ev}_{n+1} after an R-step. The new #496.1 adds P1-3's condition c_πλα_{1,n+1}·41M/L ≤ ν_r/16. #83 and #484 now name 𝒟^{ev}.
+- **P2-2 (ERROR): accepted and repaired.** 𝒟^λ_1 ⊂ 𝒟♮_1, not 𝒟_1 (#48, #6.12). #227 now poses the step-1 clause on 𝒟^λ_1 ∩ 𝒟_1. Its consumers (the T-step into 2 and the carry's 5.1 at n = 1) evaluate at points of 𝒟_1, by #6.14. No R-step acts at step 1 (k > N_B > N₀ ≥ 1).
+- **P2-3 (MINOR): accepted and repaired.** The new #222.1 lists the further points of 𝒟^{ev}_k:
+  - the s ≠ 1 points, which lie within 2K sup|𝐇| of the s = 1 point (#137);
+  - the re-projected points at a localized background (#130.3);
+  - part (b)'s pairs (#136, #130.13).
+  #222 and #228 now say that 𝒟^{ev} ⊆ 𝒟^λ holds in the M-factored sense.
+- **P2-4 (MINOR): accepted and repaired.** #222.1 defines 𝒟^{ev}_{K′} as the real points of (8.2)'s final integration (#923–#924). There the landing holds given D(k)(iii)'s pre-R base-point clause.
+- **P2-5 (MINOR): accepted and repaired.** #3, #220, and #917 now mark #3.2, and #3 and #917 also mark #3.3.
+- **Pre-check edits before P2's launch:** #222, #229, and #785 now mark #3.2. **After P2:** #264, #722, and #844 now mark #3.3.
+- labels_two_loops.py: 990 tags. **Hash (00:48):** note cd47df059ced.
+- **Next:** narrow round P3 on these repairs (#83, #222–#222.1, #227–#229, #484–#496.1, #3, #220, #917).
+
+## #3.2: Routes Tried and the Current Route (5 November)
+
+Dead routes, one line each:
+- The collar's separation from the deep layers.
+- Per-set Landau representatives at a fixed base.
+- LFR's pinned or axial frame.
+- The shortcut r < 1 (r ≥ 2).
+- A real-base reduction with α₁-sized gradients.
+- The inherited frame, or unconjugated sources: the positive measure sits at U.
+- The finest set's Landau frame: its start costs a constant factor, and the landing has no constant slack.
+- A second-difference bound on ũ: it is still L^{m−n}δ′².
+- A contour shift in B: the χ cutoffs are sharp.
+- Moving the constant mode ū_m into the frame: this is the unconjugated route again.
+- Conjugating along C: what remains is a commutator with the real holonomy, which is O(1) for large loops.
+
+The current route is #3.2.1–#3.2.3.2:
+- The loss is the constant mode of ũ_m on the source's support.
+- It is δ′_j-small in Bałaban's layer weights.
+- What remains is the landing, through an extra deep-layer room paid by half of Bałaban's large-field weights (p.385 l.35–37).
+- Dead: landing through Z's post-R k-block averages. The R-step evaluates pre-R members, and their averages are taken on the fine old blocks.
+
+## (R-eval-cr) Packet P3 (Narrow): Triage (5 November, 01:06)
+
+Log: referee_cli_20261105-004951_scope_twoloops_P3_Revalcr.json. P2-1, P2-4 and P2-5 closed; P2-2 closed in #227; no ERROR.
+- P3-F1 (MINOR), accepted. #130.6 evaluates each member at its part (b) pair (𝐔″, R(ĥ)𝐉), and #130.13 lands only the pairs. Repaired: #222 defines 𝒟^{ev}_k as the pairs and says each member is evaluated at its own pair (#130.6), landing by #130.13. #222.1 lists the further pairs (s ≠ 1, re-projected), which enter only through their pairs. #229 now reads "through their part (b) pairs (#222, #222.1)".
+- P3-F2 (MINOR), accepted. Repaired: #484, #492 and #228 add the step-1 domain 𝒟^λ_1 ∩ 𝒟_1 = 𝒟_1 (#227), with the points in 𝒟_1 by #6.14. #222 adds the same at k = 1. #227 states 𝒟^λ_1 ∩ 𝒟_1 = 𝒟_1 by #53.
+- Outside scope, accepted. #7, #23 and #29 now mark #3.2.
+- Next: P4, narrow, on these repairs.
+
+## (R-eval-cr) Packet P4 (Narrow): Triage (5 November, 01:25)
+
+Log: referee_cli_20261105-010648_scope_twoloops_P4_Revalcr.json. P3-F1 is closed. P3-F2 is closed in #227, #222, #228, #484 and #492. The marks in #7, #23 and #29 are closed. There is no ERROR.
+- P4-F1 (MINOR), accepted. Repaired: #374 and #83 now carry the step-1 domain 𝒟^λ_1 ∩ 𝒟_1 = 𝒟_1 (#227). The pre-check found no other step-1 sup statement on 𝒟^λ; #16 and #619 are R-step statements.
+- Outside the scope, accepted. #19, #26 and #30 now mark #6.13 as given the bound open at #3.2.
+- Next: P5, narrow.
+
+## (R-eval-cr) Packet P5 (Narrow): Triage (5 November, 01:40)
+
+Log: referee_cli_20261105-011651_scope_twoloops_P5_Revalcr.json. P4-F1 is closed in #374 and #83, and the #3.2 marks in #19, #26 and #30 are closed. There is no ERROR.
+- P5-F1 (MINOR), accepted. Repaired: #25, #27 and #31 now mark their use of #6.13 "with #3.2's bound".
+- Next: P6, narrow, on #25, #27 and #31, after the #3.2 round.
+
+## #3.2 Closed: Triage (5 November, 01:40)
+
+#3.2 is derived, not reviewed. The note's hash is 83e3adf910e1.
+- Why Bałaban does not meet it: his chain is bounded per block in his layer-weighted norms, with a per-block gauge (LFR I (1.93)–(1.94)), and it feeds only gauge-invariant conditions. Our phase room (#49) is uniform across layers, so the stage blocks' coarser layers show up as L^{J−n}.
+- The repair: #3.2.1 gives J − n ≤ N from LFR I (1.15)–(1.16), and takes N := N_k = O(log log g_k^{−2}) within LFR I and LFR II's conditions on N. #3.2.2 gives the locality of u = u′u₁: u₁ by REG (1.70)–(1.71), and u′ by (1.90) with PBG Theorem 3.1's kernels in x's own units. #3.2.3 carries the factor L^N into #116, #116.1, #116.2, #119, #121–#123, #144, #150, #6.2 and #6.13. L^NN^{2+β₀}δ′_k is g_k times a power of log g_k^{−2}.
+- Dead: paying the deep layers with κ/Pol and an extra deep room paid by half of Bałaban's large-field weights. The choice of N makes it unnecessary.
+- #3.3 is now derived through #3.2, not reviewed. D2.7 l.7 is updated (575757897497).
+- Pre-check, accepted. In #116.1 and #3.2.2, the ũ_m bound's second part carries L^Nδ′_j, which is (b)'s factor. It does not compound, since its sum carries only ε's.
+- Next: Q1 (scope_twoloops_Q1_R32.md) on the #3.2 closure, then P6.
+
+## #97's Identity Repaired (5 November, 01:40)
+
+#97 said 𝓗(Δd_L, B*) = 𝓗_{n+1}(d_{n+1}). That is false as fields: REG's Landau gauge depends on the set through R(U₀) (p.80 l.11–14), so the two representatives differ by a gauge transformation. Repaired:
+- #97 now defines A_L := 𝓗(Δd_L, B*), 𝕌's representative in stage n's Landau gauge, which #104 already uses. F(·, 0) = 0 holds by definition.
+- New #97.1: 𝔹_k^{(n)} refines 𝔹_k^{(n+1)} (LFR I p.180 l.4–6, l.18–22, (1.15)–(1.16)), so 𝕌 is the minimiser with its own stage-n data, and VAR Theorem 1 puts it on 𝕎's orbit.
+- Note 58108d52fc5d. Review goes with C1-7 (scope_twoloops_RevalC17.md).
+- Pins (01:41): #3.2.1, #3.2.2 and #97.1 now use the convention: corrected-file lines for LFR I p.180 and PBG p.397–398, and raw minus one for REG p.89, p.91 and p.102. Note 36f84f80effa.
+- Pre-check (01:43), accepted. LFR II p.361 l.12–14 also assumes N ≤ R_k. #3.2.1.1 now lists it as (iv), with Bałaban's R_k (CRE (2.5), checked at p.255 l.36–39) kept apart from (R-member)'s R_k. N_k = O(log log g_k^{−2}) meets it for g small. Note 9a2488b9da05.
+
+## #3.2 Closure, Packet Q1: Triage (5 November, 02:07)
+
+Log: referee_cli_20261105-013703_scope_twoloops_Q1_R32.json. Two ERRORs, one carried-over item, and two MINORs. (a), the quotes of (b), the single factor L^N of (d), and (e) all check. Each finding was checked against the sources before repair.
+- **Q1-1 (ERROR), accepted.** LFR II takes N = R_j in (1.80) (p.384 l.14–17), with N = R_j uses at p.385 l.4, p.386 l.3 and p.387 l.15, and LFR I p.177's (ii) is the same N. Repaired: #3.2.1 now says LFR II takes N = R_j. The new #3.2.1.2 derives that N_k meets every use of N in LFR II:
+  - (a) upper bounds, which N_k ≤ R_j meets as printed;
+  - (b) step counts K, on which (1.80)'s right side increases;
+  - (c) lower bounds through L^{−N}, including p.382 l.21–23, which adds ν_L > r(1+β₀) + p₀ − p₁ (CRE (2.4)–(2.5); LFR I p.183 l.2).
+  #3.2.1.1's ν_L and #93 are updated.
+- **Q1-2 (ERROR), accepted.** REG's A is U₁'s field, so differentiating (1.90) in A does not bound the change in 𝓗(d_m). Repaired by the direct route, as #106 does for u_L: REG's (1.70)–(1.72) reasoning applied to u′u₁ itself (p.89 l.35) gives u_{L,m}(x) through 𝕎_m's own averaged transports inside the stage block (#3.2.2 (2), #116.1). The (1.90)/PBG text is removed.
+- **Carried over: C1-6.1(i)–(ii), accepted and repaired.** The u-free stage is LFR I's axial-gauge stage U(𝔅_k^{(m)}, d_m) ((1.18), (1.20), (1.44); #103). So w_m ≡ 1, and ũ_m = u_{L,m}^{−1}G holds at every point. G is bounded at every point by #108. This is #3.2.2 (1), (3), (4), with #104 and #116.1 to match.
+- **Q1-3 (MINOR), accepted.** u_L and G now carry L^J, the layer of the stage block (#3.2.2 (3), #116.1).
+- **Q1-4 (MINOR), accepted.** The citation is gone with the (1.90) text.
+- Note 1f6686cf0680. Next: Q2, narrow, on these repairs.
+- Peer check of B̄_G (02:08), accepted. B̄_G is correct, with C_u = O(d) (including the factor 2 of ΔA_L). The O(L^Nδ′_j) in #3.2.2 (4) hides a constant 4dL·O(c_χB̄_G + c′_CC_G)S_L, so g is taken small after it. That is now stated in #3.2.2 (4). Note 1b2190bd5b7f. This edit was made while Q2 was running, so it goes to Q3.
+
+## #3.2 Closure, Packet Q2: Triage (5 November, 02:42)
+
+Log: referee_cli_20261105-020803_scope_twoloops_Q2_R32.json. One ERROR and two MINORs. The repairs of Q1-1 and Q1-2 check, Q1-3 and Q1-4 are closed, and #108 bounds G at every point. Each finding was checked against the sources before repair.
+- **Q2-1 (ERROR), accepted.** VAR's U_k(V′V₀) is axial relative to its base (VAR p.280 l.44). VAR p.307 l.2–4 is the transformation "back to the axial gauge". So LFR I's (1.44) is VAR Proposition 9 at the base 𝕌, the previous stage, and LFR I bounds its u through [12] (106)–(108) (p.184 l.55). [12] is CMP98, and CMP98 (106) (p.33 l.44) is that transformation. The stage is axial relative to 𝕌, not U₀, so w_m ≡ 1 was false. Repaired by the new #3.2.2.1 (derived):
+  - REG (1.19)–(1.20) telescope: a configuration is axial relative to a base exactly when its averaged transports along the axial contours equal the base's.
+  - The averages are covariant (CMP98 (11), (70), also at G^c).
+  - So w_m is fixed by the two bases' averaged transports, with w_m(y) = 1. This gives |log w_m(x)| ≤ 4dC_GL^Jηε_{m+1}, and w_m(U) = 1 because 𝕌(U) = U₀.
+  - #3.2.2 (1), (4), #104 and #116.1 now carry the three factors w_m, u_{L,m} and G, and C_u covers 4dC_G.
+  - #103 now states that #115's U₀ is a real minimiser with its own data, and that U₀ = U_k(V₀), since U′ = 1 satisfies (1.19). This removes the inconsistency with #115.
+  - C1-6.1(i)–(ii) is closed by this repair, pending Q3.
+- **Q2-2 (MINOR), accepted.** I checked p.362 l.5, p.362 l.35, p.366 l.5 and l.9, p.382 l.40, p.363 l.9, p.369 l.22 and p.375 l.24 against the print. The new #3.2.1.2.1 lists them. The step count now uses N_{j+K} ≤ R_j, derived from CRE (2.7) (p.255 l.53–59), and #3.2.1.2 points to it.
+- **Q2-3 (MINOR), accepted.** In #116.1, the VAR p.307 pin now goes with u_{L,m}'s analyticity, and the 𝓗(d_m) identity cites #97's definition of F.
+- Note 7eb1f981e033, labels regenerated (992 tags). D2.7 l.7 still holds unchanged.
+- Peer (02:30): table ff7d58652e3b with {#T4.32} (B̄_G, B_G, C_G, S_L) added after {#T4.31}; LF c60169974ab9. Recorded.
+- Pre-check (02:50), accepted. LFR I p.184 l.55 bounds the u_j of (1.34), which is written "in the standard way, as in (1.30)" (l.36). This is the same representation as (1.44), and #3.2.2.1 now says so. The other steps check: the telescoping of (1.19), the covariance at layer-n lattice points, the recursion along x_n ∈ B(x_{n+1}), |τ_n| through #97's C_G, and 𝕌(U) = U₀. Note cc01cac1c22c.
+- Peer (02:48): {#T4.32} will add w_m's 4dC_G to C_u after LF r17. Done: table 310cb2e6096c (labels 9bebc6b90da8). {#T4.32} cites #3.2.2.1 at cc01cac1c22c.
+
+## #3.2 Closure, Packet Q3: Triage (5 November, 02:55)
+
+Log: referee_cli_20261105-024338_scope_twoloops_Q3_R32.json. No ERROR, one MINOR. Q2-1's repair checks in full: the axial gauge relative to the own base (VAR p.305 l.36, p.280 l.44, p.307 l.2–4), the telescoping, the covariance, w_m's recursion, its bound and w_m(U) = 1, C_u's coverage, and #103 with #115. Q2-2, Q2-3, the 02:08 constant, and every tag and pin check.
+- **Q3-1 (MINOR), accepted.** #3.2.2 (4) and #116.1 listed the constant hidden in O(L^Nδ′_j) differently. Both omitted r_B, which enters through #98's Schwarz bound, and #116.1 also omitted L. Both now read "d, L, r_B, S_L, c_χ, c′_C, c_C, c_D, C_G, and B̄_G".
+- Remark, applied: #3.2.2.1 now cites VAR p.305 l.36 for U₀ = U_k(V₀).
+- Note 28374a2bc8dc. Next: Q4, narrow, on Q3-1 and the remark. #3.2 closes after two clean rounds.
+- Q4 (referee_cli_20261105-025623_scope_twoloops_Q4_R32.json): CLEAN, the first clean round. Both lists agree, each constant enters, none is missing, and VAR p.305 l.36 is the right line. Next: Q5, a confirming round over the whole #3.2 block as it stands.
+- Peer: table dc709ff60261, where {#T4.32}'s source cell cites 28374a2bc8dc; LF 2b482b58579b (labels 828ff3bc285b).
+
+## #3.2 Closure, Packet Q5 (Confirming): Triage (5 November, 03:17)
+
+Log: referee_cli_20261105-030041_scope_twoloops_Q5_R32.json. No ERROR, one MINOR. The whole chain checks: the stage blocks, N := N_k with step counts uniform in K, the bound on ũ_m at every point (G, u_{L,m}, w_m), a single factor L^N, the closures for g small, and every quote and pin.
+- **Q5-1 (MINOR), accepted.** I checked LFR I p.199 l.30–31: the proof of (1.89) also uses N, through L^{−2N}N^{1/2}O(1)B₃B₅M⁵(1+β₀) ≤ 1 and N^{1/2}p₁/p₀ small. N_k meets both for g small. #3.2.1.2.1 now states this.
+- Remark, not adopted: LFR I (1.10)–(1.12) would give the sharper J − n ≤ N₀ + 1, so Bałaban's own N = R_j would also close. The note keeps J − n ≤ N with N_k, which Q5 confirms is correct.
+- Note df9a304cafcc. Q4 was clean. Next: Q6, narrow, on Q5-1. If Q6 is clean, Q4 and Q6 are the two clean rounds and #3.2 closes.
+
+## #3.2 Closure, Packet Q6: Triage (5 November, 03:24)
+
+Log: referee_cli_20261105-031752_scope_twoloops_Q6_R32.json. No ERROR, two MINORs. The quote of p.199 l.30–31, its two conditions, and N_k's meeting them check, and so do the tags and pins.
+- **Q6-1 (MINOR), accepted.** l.31's condition is at g_h, with h = k − N, but N_k is controlled in g_k. The comparison now follows from the first line of CRE (2.7) with n = k > m = j and p = p₀ − p₁ > 0.
+- **Q6-2 (MINOR), accepted.** I checked p.199 l.47–50: (1+(k−j)^{1/2})p₁(g_j)/p₀(g_j) must be small for h ≤ j ≤ k, and k − j ≤ N. This is now listed and met the same way. #3.2.1.2.1 now states that, with p.179 l.10 and (1.94), the list of LFR I's conditions on N is complete, as Q6's search confirms.
+- Note f66b126b4b1d. Next: Q7, narrow, on these two clauses. Q4 was clean; if Q7 is clean, #3.2 closes.
+
+## #3.2 Closed and Reviewed (5 November, 03:30)
+
+Q7 (referee_cli_20261105-032448_scope_twoloops_Q7_R32.json): CLEAN. The comparison by CRE (2.7), the condition at p.199 l.47–50, and the completeness of LFR I's conditions on N check. Q4 and Q7 are the two clean rounds, and Q5 confirmed the whole block. #3.2 is derived and reviewed.
+- The marks are updated in #3.2, #110, #116.1, l.77, l.83, and every "the deep-layer bound of #3.2" (#25, #31, #220, and the later lines). Note c3e6431a27a5.
+- #3.3 remains derived through #3.2, not reviewed. Its own content, the cross insertions, has had no round.
+- D2.7 l.7 (my (R-eval) line) now marks #3.2 as derived and reviewed.
+- Peer: table 72d1793479e7, where {#T4.32} cites f66b126b4b1d.
+- Next, one at a time: P6, C1-7, P1 (R-member), 2b (R-round), 2 (R-att-ext), and a round for #3.3.
+
+## (R-eval-cr) Packet P6 (Narrow): Triage (5 November, 03:36)
+
+Log: referee_cli_20261105-033123_scope_twoloops_P6_Revalcr.json. P5-F1 is closed: the marks in #25, #27 and #31 check, and so do all tags. No ERROR, one MINOR.
+- **P6-F1 (MINOR), accepted.** #16 still said that VAR Proposition 9 removes the factor L^{k−m} "with k − m up to N = R_j", which contradicts #3.2 and #3.2.1.2. Q1-1's fix had reached #93 but not #16. #16 now reads "k − m up to N (LFR II's N = R_j, replaced by N_k, #3.2.1.2)", and the factor is removed "up to one factor L^N from the stages' frame ((iii) below; #3.2, derived and reviewed)". A search for "N = R_j" finds no other line that is not already marked.
+- Note 15c30791ebce. Next: P7, narrow, on #16.
+
+## (R-eval-cr) Packet P7 (Narrow): Triage (5 November, 03:45)
+
+Log: referee_cli_20261105-033716_scope_twoloops_P7_Revalcr.json. #16 now agrees with #3.2, #3.2.1.2, #93, #123, #144 and #150. No other line of #3–#31 still says N = R_j, and every tag resolves. No ERROR, one MINOR.
+- **P7-F1 (MINOR), accepted.** P6's wording, "remove that factor up to one factor L^N", states no gain, since L^N ≥ L^{k−m}. #16 now says what (iii) actually gains: VAR's data derivatives bound the complex parts in proportion to the data's complex part, with coefficient O(L^NN^{2+β₀}δ′_k), which is g_k times a power of log g_k^{−2} (#123).
+- **Out of scope, raised by P7, repaired.** #609 used "N_B, Bałaban's N" as a fixed threshold. D2.7 item 1(b) (l.35) reads N as N_k and gives R = identity for k ≤ N_k. #609 now says so, together with N_B > N₀ ≥ 1, since N_k ≥ N₀ + 1. #173.6 now carries "N read as N_k, #609".
+- Note b19a89a9b5ff. Next: P8, narrow, on #16, #609 and #173.6.
+- Peer confirmed (03:48): D2.7 (7d4d4947ceaa) item 1(b) at l.35 is the intended reading. N is read as N_k at step k. R is the identity for k ≤ N_k and may act for k > N_k. No table change is needed.
+- P8 (referee_cli_20261105-034441_scope_twoloops_P8_Revalcr.json): CLEAN, the first clean round. #16's coefficient agrees with #123. #609's reading agrees with D2.7 l.35, and so do all 14 other uses of N_B. #722's λ_n needs the steps with k ≤ N_k to form an initial segment, and they do, since N_k does not grow with k (g_k^{−2} grows with K − k). #173.6 checks. Next: P9, confirming, over P5–P8's lines.
+- Next: Q3, narrow, on Q2's repairs plus the 02:08 B̄_G sentence.
+
+## (R-eval-cr) Packet P9 (Confirming): Triage (5 November, 04:00)
+
+Log: referee_cli_20261105-035007_scope_twoloops_P9_Revalcr.json. #16's sentence on VAR Proposition 9, the "#3.2's bound" marks in #19 and #25–#31, #609, and #173.6 check, and so do all tags. No ERROR, two MINORs, so P9 is not clean and P8 stays the only clean round.
+- **P9-F1 (MINOR), accepted.** #23 and #29 marked the whole bound on Z's layers m ≤ k₀ as derived and reviewed. #3.2's header reviews only the frame: the N-step chain's factor L^N. The rest of the deep-layer chain is marked derived, not reviewed (#90, #93, #140, #145). Both lines now say that the stages' frame factor L^N is derived and reviewed (#3.2) and that the rest of the chain there is derived, not reviewed (#90, #93, #140, #145).
+- **P9-F2 (MINOR), accepted.** #16 put 𝒟^λ_k's room on the older layers at λα_{1,k}L^{−k} per fine bond. With #52.1's weight 1 ≤ w ≤ L^{c_w}, the room is λ_wα_{1,k}L^{−k}, as #171 has it. #16 now says so (#52.1, #171). The argument is unchanged, since L^{c_w} < L is fixed.
+- Note 54067f7c2c05. Next: P10, narrow, on #16, #23 and #29.
+
+## (R-eval-cr) Closed and Reviewed (5 November, 04:06)
+
+P10 (referee_cli_20261105-040145_scope_twoloops_P10_Revalcr.json): CLEAN. #23 and #29 mark only the frame factor L^N as reviewed, which agrees with #3.2, #90, #93, #140 and #145, and no line of #3–#31 marks the chain itself as reviewed. #16's room λ_wα_{1,k}L^{−k} follows from #49 and #52.1 and agrees with #171. P8 and P10 are the two clean rounds. (R-eval-cr) is derived and reviewed, given (R-eval) where it uses (R-eval)'s points.
+- The marks are updated in #3, #220, #281, #619, #745, #785 and #917.
+- #3.3's header now reads "Derived, not reviewed". Its last sentence gives #3.2's frame as reviewed and the rest of the chain as derived, not reviewed. Its first round is X1 (scope_twoloops_X1_R33.md).
+- Note ea7d0b02d444. Next, one at a time: C1-7, P1 (R-member), 2b (R-round), 2 (R-att-ext), X1 (#3.3).
+
+## (R-eval) Packet C1, Round C1-7 (Narrow): Triage (5 November, 04:31)
+
+Log: referee_cli_20261105-040713_scope_twoloops_RevalC17.json. Closed: (a) A_L and #97.1's refinement, (b) #91 and #88.1 as citations, (c) C1-6.2 and C1-6.4 (REG (1.69)'s two norms, p.88 l.28–29), (d) no 𝓗_{n+1} identity is left, (e) every pin. One ERROR, two MINORs.
+- **C1-7.1 (ERROR), accepted.** The "u-free chain" now keeps u (#91, #110), but #88, #92, #113 (and #6.7, #158, #870) still placed it in Bałaban's spaces through the inclusion, which is printed for the un-normalised step. Checked against LFR I p.186 l.2–5: (1.44) represents the stage U_{k,Z}^{(n)}, the minimiser with its data, as the normalised step. Bałaban's integrand is therefore the normalised chain, pointwise in the integration variables. The un-normalised chain agrees with it only after the later variables are rotated by R(u), and R(u) is complex at complex data. Repair:
+  - The bounds no longer use the spaces at all. #92 now bounds the newer layers by *The sum* (#123) at VAR's representatives, as on the older layers, since no step of #93–#123 restricts the layer. This removes (1.45) on complex spaces, so the reading *R-chain-cx* is dropped (#17, #91, #6.7, #22, #6.5, #93's first sentence).
+  - The analyticity on the whole post-R 𝒟_k ((ii)) rests on Bałaban's stages, read through the new reading *R-chain-norm*. p.191 l.37–44 gives the inclusion "for example" for the step, with a proof "almost identical" to (1.44)–(1.52), which carry u, so the reading takes it for his normalised stages. #88.1 states this. #88, #113, #158 and #870 cite it.
+- **C1-7.2 (MINOR), accepted.** #97.1 now says why the minimisation passes to stage n. Stage n's constraint set (VAR (3)) is a submanifold, through 𝕌, of stage (n+1)'s, so 𝕌 is critical on it. 𝕌 lies in stage n's space (VAR (2)), since there the collar's bounds ε₀L^{−2j} are weaker. Uniqueness then follows from VAR Theorem 1 (p.279 l.15).
+- **C1-7.3 (MINOR), accepted.** #97 now has "𝓗_{n+1} at 𝕌's stage-(n+1) data on 𝔹_k^{(n+1)}", with d_{n+1} on 𝔹_k^{(n)} and the collar's blocks of layer j.
+- Note 77aa8fbe48ae. #97's statement changed, so the peer's {#T4.32} cell needs checking. Next: C1-8, narrow, on these repairs.
+
+## (R-eval) Packet C1, Round C1-8 (Narrow): Triage (5 November, 04:47)
+
+Log: referee_cli_20261105-043212_scope_twoloops_RevalC18.json. Closed: (a) no step of #93–#123 restricts the layer, and *R-chain-cx* is gone; (b) #88.1's account of (1.44), p.188 l.53 and p.191 l.37–44; (c) C1-7.2; (d) C1-7.3; (e) every pin. Peer: the table is at d90a35e9e1c9, and {#T4.32} now cites 77aa8fbe48ae. One ERROR (the dependency record), two MINORs.
+- **C1-8.1 (ERROR), accepted.** #88.1 said that no bound uses *R-chain-norm*. But (2.34)–(2.37) at 𝕌^{(0)}, and with them 𝕌̃ ∈ 𝒟♮_k, come from Bałaban's chain at the normalised stage (#6, #6.1–#6.2, #6.13, #158). #88.1 now says so. #6, #6.13, #12, #113's landing clause and #17's entry cite the reading.
+- **C1-8.2 (MINOR), accepted.** #6.7 now says "no Schwarz step in the background (#16)". The Schwarz lemma in s (#98) is still used.
+- **C1-8.3 (MINOR), accepted.** #93's header now credits #92 with the phase on the newer layers only, and #140–#150 with the gradient and the current there.
+- **Out of scope, raised by C1-8, repaired.** The chain started at (1.60)'s un-normalised point exp iη𝐇_k″(g_kB)U_k^0. The first preliminary step reads its source at the stage's averages, so by #88.1's argument the chain must start at (1.51)'s U_k″, which carries the normalisation u_k″. (1.60)'s old terms take the same value at both points, since they are gauge invariant and analytic on RG I's G^c-invariant U^c_j (#87). #86, #88, #127 and #870 now start at U_k″, and *R-chain-start* (#17, #86) is read for U_k″.
+- Note 666b94237c7f. Next: C1-9, narrow.
+
+## (R-eval) Packet C1, Round C1-9 (Narrow): Triage (5 November, 04:59)
+
+Log: referee_cli_20261105-044746_scope_twoloops_RevalC19.json. Closed:
+- (a) every *R-chain-norm* citation;
+- (b) #6.7 and #12;
+- (c) #93's header;
+- (d) the start at U_k″, which agrees with #16, #123 and #39;
+- (e) every pin.
+
+No ERROR, three MINORs.
+- **C1-9.1 (MINOR), accepted.** The gauge-invariance argument for (1.60) covers the 𝐄- and 𝐑-terms only. CRE's 𝐁-terms are invariant only when A is transformed too (CRE p.261 l.60–62). #86 and #865 now take the 𝐁-terms at U_k″, as (1.49) evaluates them (p.369 l.14).
+- **C1-9.2 (MINOR), accepted.** *R-chain-start* is now cited:
+  - in #17's entry, for the curvature conditions at 𝕌^{(0)};
+  - in #6.13, together with p.375's inclusion;
+  - in #158 and in #113's landing clause.
+
+  The new #156.1 inserts the (1.51) step between #156 and #157.
+- **C1-9.3 (MINOR), accepted.** #870 now says that U_k^{(0)} is Bałaban's chain of (1.44) stages applied to U_k″, which is the u-free chain. The removal sentences are gone.
+- **Outside the scope, repaired.** #86's quote is now pinned to p.372 l.34–35.
+- Note 07e3fa606ba6 (993 tags). Next: C1-10, narrow.
+
+## (R-eval) Packet C1, Round C1-10 (Narrow): Triage (5 November, 05:07)
+
+Log: referee_cli_20261105-050016_scope_twoloops_RevalC110.json. C1-9.1–C1-9.3 are repaired and every pin checks. No ERROR, two MINORs, both citation gaps.
+- **C1-10.1 and C1-10.2 (MINOR), accepted.** (ii) rests on *R-chain-start* (#86) and, for 𝒟_k's radii at n = 0, on *R-coincides* (#157), as well as on *R-chain-norm*. Every use of (ii) now cites the same set: #88 names all three with p.375's inclusion (#87), and #113's two clauses and #870 name all three. #17's *R-coincides* entry now lists (ii). A search shows that every line naming one of the chain readings names all three, apart from #88.1, which defines *R-chain-norm*, and #156.1, the chain's first step.
+- Note 32a214916d53. Next: C1-11, narrow.
+
+## (R-eval) Packet C1, Round C1-11 (Narrow): Triage (5 November, 05:14)
+
+Log: referee_cli_20261105-050805_scope_twoloops_RevalC111.json. C1-10.1 and C1-10.2 are repaired, and every tag checks. No ERROR, one MINOR.
+- **C1-11.1 (MINOR), accepted.** #871 cited (ii) "given R-far″(β)" only. It now adds *R-chain-start*, *R-chain-norm*, *R-coincides*, and p.375's inclusion (#870).
+- A search for "R-far″(β)", "(ii)" and "(R-eval), (ii)" finds no other line that concludes the chain's membership without these. #24 sits in #17's item list. #87 defines p.375's inclusion. #868 concerns U_k^0, not the chain.
+- D2.7 l.7, my line, now names the three chain readings, the VAR route on every layer, and (R-eval-old) as reviewed (D2.7 a6b061dbf0e2, then the peer's l.74 and l.191 edits: 232015be880e).
+- Note 2a6801f1d226. Next: C1-12, narrow.
+
+## (R-eval) Packet C1, Round C1-12 (Narrow): Triage (5 November, 05:21)
+
+Log: referee_cli_20261105-051422_scope_twoloops_RevalC112.json. C1-11.1 is repaired, and the tags in #871 check. No ERROR, one MINOR.
+- **C1-12.1 (MINOR), accepted.** #158 concluded the curvature conditions and 𝕌̃ ∈ 𝒟♮_k under the three chain readings only. It now adds p.375's inclusion read as an inclusion of spaces (#156). #113's landing clause gets the same addition.
+- Pre-check: every line that cites *R-chain-norm* or *R-coincides* (#6, #6.13, #12, #17, #88, #113, #158, #870, #871) now names p.375's inclusion. #88.1, #156.1 and #157 state the readings themselves.
+- Outside the scope: #819 cites the peer's derivation of *R-Yi-branch* (D2.7 l.191), as derived, not reviewed, in the new line #819.1.
+- Note 8067453bea32. Next: C1-13, narrow.
+
+## (R-eval) Packet C1, Round C1-13 (Narrow): Triage (5 November, 05:28)
+
+Log: referee_cli_20261105-052120_scope_twoloops_RevalC113.json. C1-12.1 is repaired, and the tags in #158 and #113 check. No ERROR, one MINOR.
+- **C1-13.1 (MINOR), accepted.** #6.10 ("It is analytic in 𝐔, since u_L is") and #127 ("Both are analytic") concluded (ii)'s analyticity without naming the readings. #6.10 now reads "(1.65) applies, read as an inclusion of spaces, … (#156)" and cites (ii) under the three chain readings and p.375's inclusion (#88, #156). #127 cites (ii) the same way (#88).
+- Pre-check: every line of the note that contains "analytic" was read. Only #6.10 and #127 conclude the analyticity of Bałaban's extension or of the chain's words without (ii). The rest concern other objects, are conditional (#39), or lie in the (ii) block (#89). #6.14's "(1.65) applies" cites #6.10.
+- Note 0133c1bd8e4b. Next: C1-14, narrow.
+
+## (R-eval) Packet C1, Round C1-14 (Narrow): Clean (5 November, 05:36)
+
+Log: referee_cli_20261105-052903_scope_twoloops_RevalC114.json. CLEAN: no ERROR, no MINOR. C1-13.1 is repaired, and the sweep for "(ii)", "analytic", "𝒟_k", "𝒟♮", "(2.34)", "u-free", "inclusion", "R-far" and "Ũ^{(n)c}" finds no line that concludes the chain's analyticity, membership or curvature conditions without the four readings or one of #88, #870, #156, #6.13 and #17's list. This is C1's first clean round. Next: C1-15, a confirming round on the mathematics of the C1-7 to C1-9 repairs (#86–#88.1, #92, #93, #97–#97.1, #156–#158, #865, #870–#871). Note 0133c1bd8e4b.
+
+## (R-eval) Packet C1, Round C1-15 (Confirming): Triage (5 November, 05:52)
+
+Log: referee_cli_20261105-053607_scope_twoloops_RevalC115.json. The C1-7 to C1-9 repairs hold: the start at U_k″ is derived, the 𝐁-terms are taken at U_k″, each reading is stated as one, #92 has no layer restriction, #97.1's passage follows from LFR I (1.15)–(1.16) and VAR (2), (3) and Theorem 1, and all pins check. No ERROR, two MINORs.
+- **C1-15.1 (MINOR), accepted.** #88 and #870 concluded 𝒟_k membership without R-far″(β), which #87 uses for that step. Both now add "given R-far″(β)", and #870 cites #87.
+- **C1-15.2 (MINOR), accepted.** #97 took ε_{n+1}'s sup over the straight segment e^{itηA′}U, which leaves 𝓜^c, where #97.1's identity holds; #125 takes the segment as U^{post}(e^{itB}V₀). #97 now uses #125's segment, from U to P(𝐔) in 𝓜^c, with the bounds at 𝐔 those at P(𝐔) (#127). No other line uses the straight segment; #6.14's V̂_t is a different path.
+- Note 50525770b0fb. C1-15's findings reset the clean count: C1 closes after two consecutive clean rounds. Next: C1-16, narrow, then C1-17 if C1-16 is clean.
+
+## (R-eval) Packet C1, Round C1-16 (Narrow): Triage (5 November, 06:01)
+
+Log: referee_cli_20261105-055311_scope_twoloops_RevalC116.json. C1-15.1 is repaired in #88 and #870, and #97's segment is used consistently in #97.1–#125. No ERROR, three MINORs, none changing a bound.
+- **C1-16.1 (MINOR), accepted.** #97's segment "ran from U", but U^{post}(M(U)) = P(U) is U only for U ∈ 𝓜, and V, V₀ were undefined (#103's V₀ is another object). #97 and #125 now write U^{post}(e^{itB}M(U)) with B := (1/i)log M(𝐔)M(U)^{−1}, from P(U) to P(𝐔). #97 adds that the chain depends on 𝐔 only through M(𝐔), so its stage-(n+1) configuration at t = 0 is U₀.
+- **C1-16.2 (MINOR), accepted.** C1-15.1's omission persisted. Every line that lists the chain readings now carries R-far″(β): #6, #6.10, #6.13, #12, #113 (both clauses), #127 and #158, citing #87 where they cite tags. #113's first clause also adds p.375's inclusion. A sweep shows each of #6, #6.10, #6.13, #12, #17, #88, #113, #127, #158, #870 and #871 names R-far″(β). #88.1, #156.1 and #157 state the readings themselves.
+- **C1-16.3 (MINOR), accepted.** #6.16.2 claimed the exact "t times" property of the straight segment for #113's segment. It now adds "up to a relative error O(|B|/r_B) (#125)", which "more than a third of each room" absorbs. C1-15's triage was wrong to say "#6.14's V̂_t is a different path": #6.14 and #6.16.2 both use #113's segment, and #6.14 already states its quadratic error. A sweep for "t times" finds only #6.16.2, #123 and #125 on the segment, all with the error term.
+- Note 7cdf457740cf. C1's consecutive clean count: 0. Next: C1-17, narrow.
+
+## (R-eval) Packet C1, Round C1-17 (Narrow): Triage (5 November, 06:10)
+
+Log: referee_cli_20261105-060133_scope_twoloops_RevalC117.json. C1-16.1 to C1-16.3 are repaired: the segment runs from P(U) to P(𝐔) with stage U₀ at t = 0, every conclusion that names the chain readings names R-far″(β) and p.375's inclusion, and no line claims the exact "t times" property. No ERROR, one MINOR.
+- **C1-17.1 (MINOR), accepted.** #6.14 gave the error along #113's segment as "quadratic … O(λ²α_{1,k}²) relative", while #125, #123 and #6.16.2 give O(|B|/r_B). #6.14 now gives #125's relative error O(|B|/r_B), with |B| ≤ C_dλα_{1,k} (#96), which tends to 0 with g and is absorbed by the quarter of the margin left for g small. A sweep of "along" the segment, V̂_t and 𝐔_t finds no other order claimed for this error.
+- Note 7298de4150d6. C1's consecutive clean count: 0. Next: C1-18, narrow.
+
+## (R-eval) Packet C1, Round C1-18 (Narrow): Triage (5 November, 06:21)
+
+Log: referee_cli_20261105-061107_scope_twoloops_RevalC118.json. C1-17.1's error order is repaired; |B| ≤ C_dλα_{1,k} agrees with #96, and r_B does not depend on g. No ERROR, one MINOR.
+- **C1-18.1 (MINOR), accepted.** #6.14 absorbed the O(λα_{1,k}) error "since it tends to 0 with g", but the quarter left on layer n is β2^{−(k+3−n)}, which is not bounded below in k − n. The new line #6.14.1 gives the uniform argument, as at #6.9:
+  - the complex part's gradient and current are at most 2μλα_{1,k}L^{−m} (#50–#51, λ^{(k)}_n ≤ λ, #52.1's μ, #6.11's conjugation);
+  - α_{1,k} = λ_Rα_{0,k} (#6), and α_{0,k} ≤ (1+β₀)²max(1, √m)α_{0,n} (#53);
+  - so δ takes O(|B|/r_B)μλλ_R(1+β₀)²max(1, √m)L^{−m} of the layer-n rooms, which is below β2^{−(m+3)} on every layer for L ≥ 8 and g small.
+  #6.14 now cites #6.14.1.
+- Note 70ef12e6b956, 995 tags. C1's consecutive clean count: 0. Next: C1-19, narrow.
+
+## (R-eval) Packet C1, Round C1-19 (Narrow): Triage (5 November, 06:29)
+
+Log: referee_cli_20261105-062105_scope_twoloops_RevalC119.json. #6.14.1's factors (λ^{(k)}_n, μ, λ_R, #53's ratio) and its final comparison with β2^{−(m+3)} check. No ERROR, one MINOR.
+- **C1-19.1 (MINOR), accepted.** #6.14.1 took the gradient bound with "the factor 2 for #6.11's conjugation". #6.11 is multiplicative only for the covariant quantities (2.34)–(2.37); the gradient changes additively (#6.6).
+  - The gradient part of δ is now bounded at the Landau representative itself. Along the segment, δ = 𝓗^{post}(tB) − t𝓗^{post}(B), with B = Δd. (190)'s entries hold uniformly on the ball of radius r_B, at most K times 𝐔's rooms (#94, #128). So the Cauchy estimate in t gives (L^nξ)²|∇δ| ≤ O(K|B|/r_B)μλα_{1,k}L^{−m}.
+  - The current keeps #6.11's factor 2, since it is covariant.
+  - The share becomes O(K|B|/r_B)μλλ_R(1+β₀)²max(1, √m)L^{−m}, with K, μ and λ_R fixed before g. The conclusion is unchanged.
+- Note eb5b090e6f92. C1's consecutive clean count: 0. Next: C1-20, narrow.
+
+## (R-eval) Packet C1, Round C1-20 (Narrow): Triage (5 November, 06:38)
+
+Log: referee_cli_20261105-062944_scope_twoloops_RevalC120.json. C1-19.1 is resolved: the gradient bound through (190) on the ball and the Cauchy estimate in t are correct, and the final share is below β2^{−(m+3)} on every layer. No ERROR, one MINOR.
+- **C1-20.1 (MINOR), accepted.** #6.14.1 bounded the current's segment error by O(|B|/r_B) times its bound at V̂ (#51, #6.11). A Cauchy estimate in t needs bounds on the complex t-disc, where #51 and #6.11 do not apply.
+  - The current is now bounded the same way as the gradient. (190)'s D*D entry holds on the ball and is at most K times the phase room (#128).
+  - So the error is at most O(K|B|/r_B)λλ_Rα_{0,k}L^{−m} in the weight (L^nξ)³, with λ_w := λL where #52.1's weight applies.
+  - This lies within O(|B|/r_B)μλα_{0,k}L^{−m}, since μ ≥ 32KC(d)Lλ_R/(1−β).
+- Note 367579d9b4d4. C1's consecutive clean count: 0. Next: C1-21, narrow.
+
+## (R-eval) Packet C1, Round C1-21 (Narrow): Triage (5 November, 06:48)
+
+Log: referee_cli_20261105-063857_scope_twoloops_RevalC121.json. The D*D part of the current's error is correct, within #52.1's μ, and inside #6.14.1's share. No ERROR, two MINORs.
+- **C1-21.1 (MINOR), accepted.** The current's segment error omitted #147's nonlinear part 𝒬, which has no factor |B|/r_B.
+  - The new line #6.14.2 writes J^h(V̂_t) − J(P(U)) = D*Da_t + 𝒬(a_t). It bounds the D*D part by the Cauchy estimate on the ball, within O(|B|/r_B)μλα_{0,k}L^{−m}.
+  - It bounds the 𝒬 part by O(K²λ_w²α_{1,k}²)L^{−m}, which is O(K²λ_w²λ_Rα_{1,k})(1+β₀)²max(1, √m)L^{−m} of (2.36)'s room.
+  - #6.14.1's share now carries this second term, with α_{1,k} → 0 with g.
+  - Pre-check: the curvature's nonlinear part has the same structure, so #6.14.1 now bounds it in the same way and puts it into the same second term.
+- **C1-21.2 (MINOR), accepted.** No tag stated (190)'s D*D entry on the ball. #94's list now quotes it: D^{η*}_{U_k}D^η_{U_k} and Δ^η_{U_k} of δ𝓗/δB by (L^iη)^{−3}, VAR p.308 l.39–42, checked against the corrected file. #6.14.2 cites #94.
+- Note 32bd70325282, 996 tags. C1's consecutive clean count: 0. Next: C1-22, narrow.
+
+## (R-eval) Packet C1, Round C1-22 (Narrow): Triage (5 November, 06:57)
+
+Log: referee_cli_20261105-064848_scope_twoloops_RevalC122.json. C1-21.1 and C1-21.2 are resolved. The split by #147, the D*D Cauchy bound, the 𝒬 bound, the curvature's nonlinear part, the two-term share below β2^{−(m+3)} on every layer, and #94's added (190) entry (VAR p.308 l.40–42, l.47) all check. No ERROR, one MINOR.
+- **C1-22.1 (MINOR), accepted.** #6.14.1 and #6.14.2 said "a_t's phase and gradient at most Kλ_wα_{1,k} times their rooms". The note's rooms already contain λα_{1,k}, so this counted the factor twice. Both now read "at most K times 𝐔's phase and gradient rooms (#128), that is, Kλ_wα_{1,k}L^{−k} per fine bond and Kλ_wα_{1,k}L^{n−k} in the weight (L^nξ)²".
+- The referee also noted, without counting it as a finding, that 𝒬's terms with the real curvature as a coefficient are linear in a_t to leading order. #6.14.2 now says so: they carry O(|B|/r_B) and lie within the D*D part's bound.
+- Note eadf2fe02d40. C1's consecutive clean count: 0. Next: C1-23, narrow.
+
+## (R-eval) Packet C1, Round C1-23 (Narrow): Triage (5 November, 07:05)
+
+Log: referee_cli_20261105-065736_scope_twoloops_RevalC123.json. C1-22.1's double count is gone. The stated values and the quadratic bounds check, and #6.14.2's sentence on 𝒬's real-curvature terms is correct. No ERROR, one MINOR.
+- **C1-23.1 (MINOR), accepted.** "K times 𝐔's phase and gradient rooms" did not equal the stated values, since 𝐔's gradient room carries #52.1's μ. Both tags now say that (190) is applied to Δd, which is bounded by the phase alone (#96, #128), so a_t's phase and gradient are at most K times 𝐔's phase room in both weights.
+- The referee also remarked, as a non-finding, on the higher-order part of the real-curvature terms. #6.14.2 now bounds it, ξ²[a_t,[a_t,F_{P(U)}]] ≤ α_{0,n}K²λ_w²α_{1,k}²L^{−m−k}, inside the second term.
+- Note fad0ed481b9a. C1's consecutive clean count: 0. Next: C1-24, narrow.
+
+## (R-eval) Packet C1, Round C1-24 (Narrow): Clean (5 November, 07:14)
+
+Log: referee_cli_20261105-070502_scope_twoloops_RevalC124.json. CLEAN: no ERROR, no MINOR. C1-23.1 is resolved, and #6.14.2's bound on the higher-order real-curvature terms checks. The referee's remark on the example term's normalisation (ξ² or ξ, depending on whether F is dimensionless) is not a finding, since the stated bound holds in both; the text is unchanged. C1's consecutive clean count: 1 (C1-24). Next: C1-25, a confirming round over the C1-15 to C1-23 repairs (#6.14–#6.14.2, #94, #97, #125, and the lines carrying the chain readings with R-far″(β)). Note fad0ed481b9a, unchanged.
+
+## (R-eval) Packet C1: Closed and Reviewed (5 November, 07:26)
+
+Log: referee_cli_20261105-071359_scope_twoloops_RevalC125.json. C1-25 (confirming) is CLEAN: no ERROR, no MINOR. With C1-24, C1 has two consecutive clean rounds and is closed.
+- **What C1-25 confirmed:**
+  - #6.14–#6.14.2: the margin arithmetic, the Cauchy estimate in t, the gradient, D*D, 𝒬 and real-curvature bounds, and the two-term share below β2^{−(m+3)} on every layer.
+  - #94's quotation of (190), against VAR p.308 l.37–47.
+  - #97 and #125: the segment from P(U) to P(𝐔), with stage U₀ at t = 0.
+  - Every conclusion that draws on the chain readings names all five inputs, or cites #6.13, #158 or #88.
+- **Remarks (not findings), left unchanged:**
+  - #6.14.1's share also covers (2.39) and the derived configurations, by the same argument (#136, #138, #53, #6.16.1).
+  - #6.14.2's local λ_w never exceeds #52.1's λL.
+- **Bookkeeping (no review needed):**
+  - #17 now records that R-chain-start, R-chain-norm and R-coincides, checked against the print, and their uses in the chain account (#85–#128, #156–#158, #870–#871) are reviewed (packet C1).
+  - #3.3, #23 and #29 now mark the chain on Z's layers m ≤ k₀ as reviewed in packet C1 (#90–#128). The exception is the gradient and the current on the newer layers (#140, #145), which stay derived, not reviewed.
+  - (R-eval) as a whole stays derived, not reviewed: packets A, B and D are still open.
+- Note e1ac5f20c875. Next: P1 (R-member), scope_twoloops_P1_Rmember.md, pre-checked at 05:24.
+
+## (R-member) Packet P1, Round 1: Triage (5 November, 07:47)
+
+Log: referee_cli_20261105-072653_scope_twoloops_P1_Rmember.json. No ERROR, five MINOR, all verified against the note and D2.7 15.6, and all repaired. The referee checked the identity, the bound, u = 19, the count 1685σ + 160, the share 0.233, (T0)'s 3230 + 70756/c_w, the payment split and C_y.
+- **P1.1 (slot bonds; #620, #670, #245–#246):** confirmed. #617 counts a slot's carried insertions' intervals outside every X⁺ among the slot's bonds of ℐ(g), and #620 groups by slot bonds, so such an interval in span(P′) puts P′ in the slot's group. #670's last sentence and #246's second sharing contradicted this. Repair:
+  - new #620.1: #620 uses the slot bonds of ℐ(g) (#617);
+  - new #245.1: a slot member's intervals are bonds of its slot, so a slot member of a cross group lies in no other group's span;
+  - #246: the only sharing is W ∈ 𝒲_g ∩ 𝒲_{g′} of a cross insertion in no slot, and a component holding a cross group h is h with its cross slot members, with D_G = D_h^×;
+  - #670's last sentence: the outside intervals are slot bonds, so a polymer whose span holds one is in g;
+  - #242: the slot case dropped from the issue;
+  - #771: the lineage growth with G = {g} (#246).
+  #622, #779, #786–#787 and D2.7 15.6's premise hold under this reading.
+- **P1.2 (C_lk at bonds; #266–#267, #771):** confirmed. At a bond the linked group is rooted through *Joins*, and its B(g) brings C_B, which C_jn does not carry (#755; C_gr = 2^dC_KPC_B, #742). Repair: #266 adds C_B; C_lk := 2max(C_gr, C_BC_jn) at #267 and #771. With C_lk ≥ 4C_jn (C_B ≥ 2) the links and joins need 81.3MC_lkε_k ≤ ν_r, inside 100MC_lkε_k ≤ ν_r. C_y and (H^R) change by the constant only.
+- **P1.3 (#3.3 marks):** confirmed. #281 now names (R-eval) with its points #3.3. #742, #744, #769, #772, #799 and #858 mark η's bound as derived through #3.3, not reviewed (#264 and #844 already did).
+- **P1.4 (u = 19 downstream):** confirmed. #538, #583, #598 and #599 now say u ≤ 19; #584's product is 96·19·64 ≤ 4096L; #598's range is L ≥ 456 (12·19/8 ≤ L/16). #583's L ≥ 8832·19 = 167808 and #542's L ≥ 5081·19 = 96539 lie within L₀^× = 10⁶.
+- **P1.5 (#249's citations):** confirmed against D2.7 15.6(c) and (f). 15.6(c)'s sup is A_k's only; 15.6(f) gives ‖D_g‖ ≤ B(g)Π‖W‖ on (d)'s domain with no Cauchy step. Repair: #249 cites 15.6(f) on (d)'s domain and (6B)'s ‖D_h^×‖ ≤ B(h) (#680), and the contraction bound is ‖AB‖ ≤ ‖A‖‖B‖ on elementary tensors, with map l.911 for the unitary transports.
+- Note 871535aeb98f (998 tags). P1's consecutive clean count: 0. Next: P1-2, narrow.
+
+## (R-member) Packet P1, Round P1-2 (Narrow): Triage (5 November, 07:59)
+
+Log: referee_cli_20261105-074837_scope_twoloops_P1_Rmember2.json. No ERROR, two MINOR, both verified and repaired. The referee confirmed P1.1–P1.5's repairs (the slot bonds of #620.1, the sharing list, C_lk with 81.25MC_lkε_k ≤ ν_r inside the condition with 100, the #3.3 marks, u ≤ 19 at L₀^× = 10⁶, and #249 against 15.6(f)).
+- **P1-2.1 (#624's first sentence):** confirmed. Under #620.1 and #245.1 a span link can join a single-loop polymer to the polymer of a cross slot member, which has slots on both loops. Repair: #624 now says that a span link puts a slot bond of one polymer in the other's span, on that span's loop, so two polymers whose slots lie on one loop are linked only on that loop. The conclusion (a group with slots on both loops contains a polymer with slots on both loops) follows by connectedness, as before.
+- **P1-2.2 (#249 and #680):** confirmed. #680's B(h) carries the cross members' norms in its slots' bounds, so #249's quotation with the product Π‖W‖ counted them twice. Repair: #249 now quotes ‖D_h^×‖ ≤ B(h)·Π_{W∈𝔅^×(h)}‖W‖, #680's bound with the norms taken out as the product, B(h) being 15.6(c)'s bound. #264 counts each norm once, unchanged.
+- Note 279f265e782d (998 tags). P1's consecutive clean count: 0. Next: P1-3, narrow.
+
+## (R-member) Packet P1, Round P1-3 (Narrow): Clean (5 November, 08:02)
+
+Log: referee_cli_20261105-075841_scope_twoloops_P1_Rmember3.json. CLEAN: no ERROR, no MINOR. #624's first sentence and its conclusion check, and #249's quotation of #680 counts each cross insertion's norm once. The referee's remark that #624's second alternative (a cross slot member) is implied by the first (the domain meets both loops, since slot bonds lie in dom P, #629) is not a finding; the text is unchanged. P1's consecutive clean count: 1 (P1-3). Next: P1-4, a confirming round over the P1 and P1-2 repairs (scope_twoloops_P1_Rmember4.md). Note 279f265e782d, unchanged.
+
+## (R-member) Packet P1: Closed and Reviewed (5 November, 08:13)
+
+Log: referee_cli_20261105-080252_scope_twoloops_P1_Rmember4.json. P1-4 (confirming) is CLEAN: no ERROR, no MINOR. With P1-3, P1 has two consecutive clean rounds and is closed.
+- **What P1-4 confirmed:** the slot bonds (#620.1 = #617's list), the sharing list (#245.1, #246) and its consistency with #242, #622, #624, #670, #771 and #779–#787; #249 against 15.6(c), (d), (f) and #680; C_lk covering both rooted sums, with 81.25MC_lkε_k ≤ ν_r inside the condition with 100 and C_y ≥ 76MC_lk/(eν_r); the #3.3 marks at every use of 1 + η; u ≤ 19 at #542, #583, #584, #598 and #599 at L₀^× = 10⁶.
+- **Remark (not a finding):** the referee inferred ν_f ≤ 17ν/16 for #583 from the factor 17/16. It is stated at map l.1549 (ν_f := ν/16 + ν_r = 17ν/16, ν_e ≤ ν/8), so #583's 414 = 96(3·17/16 + 9/8) holds. Text unchanged.
+- **Bookkeeping (no review needed):** #3, #241, #281 and #917 now mark (R-member) as derived and reviewed given (R-eval) with its points #3.3 (rounds P1 to P1-4). (R-eval), (R-round) and (R-att-ext) stay derived, not reviewed.
+- Note 41ca5196c207. Next: packet 2b ((R-round), second round, part b), scope_twoloops_Rround2b.md, pre-checked at 07:50 (η ≤ (ϑ_k/4)ν_rσ under 4c_r⁺ϑ_k ≤ ν_r; #776's δM log u ≥ 1024/31; #724's 32.5 + 276M ≤ 64 + 1280M; #859's 0.1446 and 2720, 59584; the scope now names #620.1's slot bonds), launched at 08:13.
+
+## (R-round) Packet 2b, Round 1: Triage (5 November, 08:30)
+
+Log: referee_cli_20261105-081353_scope_twoloops_Rround2b.json. No ERROR, four MINOR, all verified. The referee checked the packet's arithmetic (the payment, (1+20M)2^{d+2}, δM ≥ 2^{d+5}ν_r, the c_F split, the members species by species, c_j, C_jn, 160M, 21/4, 20/168 ≥ 1/9, A^R_k, ϑ_k² ≥ e^{−63δMR_k/512}, λ_n(D) ≥ 15/16, S^R, δM log u ≥ 1024/31, (6C)'s factors, the re-run of 15.7, D's budget 0.8896, and the u = 16 conditions), and found no per-member constant of the slot members in the packet.
+- **2b.1 (#3.3 marks through D_P's a′ terms):** confirmed. The a′ terms of D_P (#627) are paid by (α′)'s e^{−(3δ/4)ℓ} (#638, #613), derived through #3.3. Repair: new #638.1 marks this and names the uses: #727, #729, #755, #758, #762, and A^R_k at #764–#765. (8.2) already carries *15.5*'s status (#917).
+- **2b.2 (δ's three definitions):** confirmed. #728 calls δ the 𝐇-rate, D2.7 15.5(ii)(α) has min(1, (κ₁−1)/(4√d)) (D2.7 l.175), and #613 uses δ₀/32 (#46). Repair: new #728.1 takes δ in (6B) and (6C) as the least of the three. Bounds at a larger rate hold at δ, the prefactor C_αe^{δt_k} only decreases, and each rate is fixed before M. #728 now reads "at most the decay rate". #613's "δ = δ₀/32" is now "δ ≤ δ₀/32 (#728.1)"; its step δt_k ≤ δ + (2log α_{1,k}^{−1} + log(L⁴R_k²))/M holds for δ ≤ δ₀/32, since t_k ≤ 1 + (32/(δ₀M))(…).
+- **2b.3 (D2.7 l.175 stale rate):** confirmed. D2.7 15.5(i) still has ϑ_k := e^{−δMR_k/16} and η(D) ≤ e^{δ}c_rσ(D)e^{−63δMR_k/512} without C_α. The note's #722 (ϑ_k := e^{−31δMR_k/512}) and #613 (c_r⁺ := C_αe^{δ}c_r) are right. D2.7 l.175 is the peer's; the correction was sent to the peer.
+- **2b.4 (#776's citation):** confirmed against CRE p.255 l.35–39 ((2.5): R_j ≥ (log g_j^{−2})^r for every j) and p.245 l.33–34 (r ≥ 2). p.246 l.24–25 states R₁ only. Repair: #776 cites CRE (2.5), p.255 l.35–39, with r ≥ 2 from p.245 l.33–34.
+- Note 31d2205224c6 (1000 tags). Packet 2b's consecutive clean count: 0. Next: 2b-2, narrow.
+- 2b.3 resolved by the peer: D2.7 4bfc77d4ad39's 15.5(i) has ϑ_k := e^{−31δMR_k/512} and η(D) ≤ c_r⁺σ(D)e^{−63δMR_k/512}, c_r⁺ := c_{α′}e^{δ}c_r, with c_{α′} the note's C_α of #613.
+
+## (R-round) Packet 2b, Round 2b-2 (Narrow): Triage (5 November, 08:39)
+
+Log: referee_cli_20261105-083100_scope_twoloops_Rround2b2.json. No ERROR, three MINOR, all verified and repaired. The referee confirmed 2b.1, 2b.2 and 2b.4 in substance: #638's payment and #638.1's mark, every use of δ at the least rate (#613's δt_k step, #722, #727, c_F, a_k, #776), and #776's pins (p.255 l.36–39, p.245 l.34).
+- **2b-2.1 (#638.1's list):** confirmed. (6C)'s cross groups use *The free decay* with a′ terms present at #801, #802 and #806. Repair: #638.1 names #801–#802 and #806 in (6C). #754 feeds #755 (named), and E^{R×}_k (#661–#666) has no carried insertions (#658).
+- **2b-2.2 (#728.1's justification):** confirmed. (α′)'s prefactor e^{δt_kn} falls with δ, which strengthens the bound, so the transfer to a lower rate needs ℓ ≥ t_kn. Repair: #728.1 now points to a new #728.2. There, (α) (τ_iO(1)^{|𝒦|}e^{−δℓ}, D2.7 l.175) and 𝐇's B₃e^{−δ·} only weaken. (α′) is ‖D‖C_α^ne^{−δ(ℓ − t_kn)}: for 𝒦 = ∅ it is ‖D‖C_αe^{δt_k}, and for 𝒦 ≠ ∅ #613's count gives n ≤ 2^{d+3}ℓ/(MR_k), so t_kn ≤ ℓ once 2^{d+3}t_k ≤ MR_k, a smallness of g_k. #728.1 now cites κ₁ as fixed before M by map l.949 (δ₁M ≥ 2κ₁, a condition on M).
+- **2b-2.3 (#287, #298):** confirmed. Repair: #287's δ is "fixed before M (#728.1)"; #298 says the 𝐇-rate is fixed before M, with #728.1.
+- **Bookkeeping:** #613's C_α now names D2.7's c_{α′}, not D2.7 (β)'s C_α (peer's renaming at D2.7 4bfc77d4ad39).
+- Note dcd393beb6be (1001 tags). Packet 2b's consecutive clean count: 0. Next: 2b-3, narrow.
+
+## (R-round) Packet 2b, Round 2b-3 (Narrow): Triage (5 November, 08:54)
+
+Log: referee_cli_20261105-083934_scope_twoloops_Rround2b3.json. One ERROR and two MINOR, all verified against D2.7 l.175 and repaired.
+- **2b-3.1 (ERROR, units of δ):** confirmed. D2.7 15.5(ii) measures (α)'s and (α′)'s lengths in M-units: ℓ(i,𝒦) := M^{−1}(the tree's length), ℓ(D,𝒦) ≥ R_k, and "one segment of length ≤ t_k per set" gives e^{δt_k(|𝒦|+1)}, with δ = δ_α := min(1, (κ₁−1)/(4√d)); its a_k counts "scaled distance s, in M-units". The note measures lengths in step-k units (ℓ ≥ MR_k, c_F = min(1, δM/2), "3δM/4 per M-unit", ϑ_k = e^{−31δMR_k/512}). So the note's δ is δ_α/M, not fixed before M, and #613's prefactor e^{δt_k} understated D2.7's e^{δ_αt_k} = e^{δMt_k}. Every other formula of (6B) and (6C) is already written in δM and stays. Repair:
+  - #728.1 rewritten (*Units*): δ := δ_α/M, so δM = δ_α is fixed before M (κ₁ by map l.949); δ ≤ δ₀/32 and δ ≤ δ_𝐇 once M ≥ δ_α·max(32/δ₀, 1/δ_𝐇); the 𝐇-bounds weaken to δ; the conditions on δM (#287, #727, #776, #802) are conditions on ν_r and g.
+  - #728.2 rewritten: (α) and (α′) translated to step-k units, (α′) as ‖D‖(C_αe^{δMt_k})^ne^{−δℓ}; no transfer between rates is needed.
+  - #613: e^{δMt_k} throughout; t_k in M-units; C_α ≥ 1; c_r⁺ := C_αe^{δM}c_r; the power bound e^{δMt_k} ≤ e^{δM}L⁴R_k²α_{1,k}^{−2} (from δMt_k ≤ δM + (32δ/δ₀)X and 32δ/δ₀ ≤ 1); δMt_k ≤ δM + δMR_k/512 for g small; a_k(X) ≤ 16C_a(100MR_k + 2Mw_k + 8M(δM)^{−1})(δM)^{−1}e^{−δMw_k/4} with D2.7's (α) factor C_a := 2O(1)e^{(κ₁−1)/4}(100R_k)^d (also closes 2b-2's out-of-scope remark on the missing constant).
+  - #3.3, #286 and #744: e^{δMt_k}.
+  - #287: δM ≥ 5·2^{d+3}ν_r is ν_r ≤ δ_α/(5·2^{d+3}), an upper bound on the map's ν (ν_r = ν, map l.1549), like ν ≤ 1/1000; M ≥ δ_α·max(32/δ₀, 1/δ_𝐇) added to the lower bounds on M. #727's second condition is ν_r ≤ δ_α/2^{d+5}, implied by #287's.
+  - D2.7 l.175 (peer's) writes ϑ_k and η with δMR_k in its own M-unit δ; in its units these read e^{−31δR_k/512} and e^{−63δR_k/512}. Sent to the peer.
+- **2b-3.2 (#728.2, 𝒦 = ∅):** confirmed. Repair: #728.2 gives |D^∅| ≤ ‖D‖ (#613), within ‖D‖C_αe^{δMt_k} since C_α ≥ 1 (#613 now states C_α ≥ 1).
+- **2b-3.3 (#638.1's list):** confirmed. (6C)'s single-loop R-made groups hold carried insertions (#825, #853) and use the free decay at #849–#850 and #854–#857. Repair: #638.1 names them.
+- Note dc361a3e6d52 (1001 tags). Packet 2b's consecutive clean count: 0. Next: 2b-4, narrow.
+- The peer applied D2.7 l.175 in its units (D2.7 c384e6a20d7a: ϑ_k := e^{−31δR_k/512}, η ≤ c_r⁺σe^{−63δR_k/512}) and #T4.30 (table d5a8107565d9).
+
+## (R-round) Packet 2b, Round 2b-4 (Narrow): Triage (5 November, 09:03)
+
+Log: referee_cli_20261105-085510_scope_twoloops_Rround2b4.json. No ERROR, two MINOR, both verified and repaired. The referee confirmed the units repair: D2.7's (α) and (α′) translate exactly with δ := δ_α/M, #613's chain to η(D) ≤ c_r⁺σ(D)e^{−63δMR_k/512} holds, #287 and #727 are conditions on ν_r (map l.1549, l.1614), #638.1's list and #728.2's 𝒦 = ∅ case are right.
+- **2b-4.1 (#613's a_k):** confirmed against D2.7 l.175 (a_k(X) := 4C_α(…)δ^{−1}e^{−δw_k} + 1200c_πα_{1,k}MR_k + log 2, "a polylog of order ≤ r(d+1) … below p₀ (p₀ > r′(d+2), D26 l.136)"). Repair: #613 adds the arc part + 1200c_πα_{1,k}MR_k + log 2 and states order ≤ r(d+1) < p₀ (D2.7 l.175; D26 l.136); #646 and #652 now say order ≤ r(d+1) < p₀.
+- **2b-4.2 (δ's two definitions):** confirmed. #46's δ := δ₀/32 serves (R-eval) (#74), and #728.1's δ := δ_α/M serves (6B)–(6C). Repair: new #728.3 separates them (in #3.3, #286, #287 and (6B)–(6C), δ is #728.1's; #46's rate appears there as δ₀/32, #613), and #3.3 marks "δ := δ_α/M, #728.1, not #46's δ".
+- Note ba492afd1e8c (1002 tags). Packet 2b's consecutive clean count: 0. Next: 2b-5, narrow.
+
+## (R-round) Packet 2b, Round 2b-5 (Narrow): Triage (5 November, 09:08)
+
+Log: referee_cli_20261105-090339_scope_twoloops_Rround2b5.json. No ERROR, three MINOR, all verified and repaired. The referee confirmed #613's a_k (D2.7 l.175 at the rate δM/4 plus the arc part, order r(d+1) < p₀ by D26 l.136 with r ≤ r′), 15.3's amplitude bound and the margin (#646, #652), and the separation of #46's δ from #728.1's.
+- **2b-5.1 (#728.3 too broad):** confirmed. #750's δ is a diameter, and #728's and #613's quotations of LFR II and CRE use the 𝐇-rate. Repair: #728.3 names the note's decay rate, the quoted 𝐇-rate δ_𝐇 (#728, #613's p.376 quotation), and #750's diameter separately.
+- **2b-5.2 ((8)'s hypotheses):** confirmed. #917 and #932 assume δM ≥ 5·2^{d+3}ν_r. Repair: #728.3 lists (8)'s hypotheses (#917, #932) among the uses of #728.1's δ. No other δ occurs in (8) (#896–#897 have the constant C_δ).
+- **2b-5.3 (#646's wording):** confirmed. Repair: the attachment sum is the first term of a_k(X) (#613), so the factor e^{3c_F} replaces a_k(X) by at most e³a_k(X), since c_F ≤ 1 and the arc part is ≥ 0.
+- Note bcee3f6892ca (1002 tags). Packet 2b's consecutive clean count: 0. Next: 2b-6, narrow.
+
+## (R-round) Packet 2b, Round 2b-6 (Narrow): Triage (5 November, 09:20)
+
+Log: referee_cli_20261105-090916_scope_twoloops_Rround2b6.json. No ERROR, one MINOR, verified and repaired. The referee confirmed #646 against #613's a_k(X) and #636's c_F, and #728.3's assignments as far as they went.
+- **2b-6.1 (#728.3 leaves uses of δ out):** confirmed. LFR I's printed δ (#47, #91, #93, #99, #209), #298's δ_𝐇 and the local δ's had no assignment. The pre-check also found #5.7 and #78 (#46's δ, missing from #728.3's list), #728's first sentence (the note's δ, which #728.1 bounds by δ_𝐇), #728's quotation of CRE's δ₀, and δm. Repair: #728.3 lists #5.7, #46, #74, #78 for #46's δ, puts #728's first sentence with the note's rate, and puts #298 and the rest of #728 with δ_𝐇. New #728.4 assigns LFR I's δ, δ₀, and every other δ as local notation, listed by tag.
+- Pre-check (rule precheck-own-repairs): grep of every line of the note containing δ (124 lines, by tag), each form classified. Read #5.7, #46, #47, #74, #78, #91, #93, #99, #209, #298, #613, #728, #728.1 and #5.10.2.1 at their δ's. #728.4 states assignments only, with no inequalities. Its "every other δ" was checked against the full grep list. Ranges are exact tag lists except #159–#162, where each tag has δ^{re}.
+- Note b177c6eb4df2 (1003 tags). Packet 2b's consecutive clean count: 0. Next: 2b-7, narrow.
+
+## (R-round) Packet 2b, Round 2b-7 (Narrow): Triage (5 November, 09:29)
+
+Log: referee_cli_20261105-092057_scope_twoloops_Rround2b7.json. No ERROR, four MINOR, all in #728.4's wording, all verified and repaired. The referee confirmed that #728.3 and #728.4 assign all 124 δ lines and that every assignment in #728.3 is right.
+- **2b-7.1 (CRE's δ₀):** confirmed. CRE p.247 l.50 (corrected file): "δ₀ = g₀(A₁/A₀)p₀(g₀) = (A₁/A₀)ε₀", a small-field threshold, and p.251 l.39–40 is "much smaller than δ₀". Repair: #728.4 says δ₀ is VAR's rate except in #728's quotation of CRE p.251, where it is CRE's threshold (A₁/A₀)ε₀.
+- **2b-7.2 (#6.9, #6.14.1, #6.16.1):** confirmed. #6.9 has "the difference δ of the complex parts", and #6.14.1 has δ = 𝓗^{post}(tB) − t𝓗^{post}(B). Repair: #728.4 lists them as the change of the minimiser's complex part.
+- **2b-7.3 ("local to its line"):** confirmed. δ′_j = g_jA₁p₁(g_j) (#91, LFR I p.183 l.2; #195, LFR II p.383), C_δ := 2 (#346), and δm, δ_n^{(k)} and δ(d) all run over many lines. Repair: #728.4 calls them symbols of their own, none of them a decay rate. It attributes δ′_j to Bałaban and names C_δ's definition.
+- **2b-7.4 (#93's locator):** confirmed. #93 pins only LFR II p.384 l.17. Repair: #93's δ is LFR I (1.45)'s (p.186, quoted at #91), not LFR II's (1.45) (#46).
+- Pre-check: quoted CRE p.247 l.50 and p.251 l.39–40 in the corrected files. Read #6.9, #6.14.1, #6.16.1, #91, #93, #123, #195, #315, #333, #346 and the subscripted δ's (#200, #203, #345, #444, #452, #844, #845); δ_{rT} and δ_{G_i} are Bałaban's indicators and the rest are distances or factors, none of them a rate. "δ₀ is VAR's rate except ..." was checked against every δ₀ line (#42–#45, #94, #98, #99, #128, #164, #166, #287, #613, #728, #728.1, #728.3). The repair changes only #728.4.
+- Note f2a5b50db415 (1003 tags). Packet 2b's consecutive clean count: 0. Next: 2b-8, narrow.
+
+## (R-round) Packet 2b, Round 2b-8 (Narrow): Triage (5 November, 09:34)
+
+Log: referee_cli_20261105-093012_scope_twoloops_Rround2b8.json. No ERROR, one MINOR, verified and repaired. The referee confirmed all four 2b-7 repairs and every tag and pin in #728.4.
+- **2b-8.1 (δ(d) is a rate):** confirmed. #5.10.2: "with δ = δ(d), abs(P(x, z)) ≤ C(d)n^{−d}e^{−δ|x−z|/n}". Repair: #728.4 gives δ(d) its own sentence: the decay rate of the kernels of H′ and P, a rate of d only, distinct from the rates above. "None of them a decay rate" now covers only the rest.
+- Pre-check: the rest of the list was re-read for rates. The point mass, the changes and differences, the derivatives, the δ-functions, δm, the diameters, δ′_j, the subscripted symbols and C_δ: none of them appears in an exponent as a rate (the referee checked the subscripted ones, 2b-8 (a)). The repair changes only #728.4.
+- Note 72f003da9c76 (1003 tags). Packet 2b's consecutive clean count: 0. Next: 2b-9, narrow.
+
+## (R-round) Packet 2b, Round 2b-9 (Narrow): Clean (5 November, 09:41)
+
+Log: referee_cli_20261105-093429_scope_twoloops_Rround2b9.json. CLEAN: no ERROR, no MINOR. #728.4's sentence on δ(d) matches #5.10.2, #5.10.2.1, #5.10.3 and #5.10.5, and "none of them a decay rate" is true of every symbol after it. The referee's remark that the list writes δ_{k′} for the family δ_{k′−1}, δ_{k−1} is not a finding; the text is unchanged. Packet 2b's consecutive clean count: 1 (2b-9). Next: 2b-10, a confirming round over all the repairs of rounds 2b-1 to 2b-8 (scope_twoloops_Rround2b10.md). Note 72f003da9c76, unchanged.
+
+## (R-round) Packet 2b, Round 2b-10 (Confirming): Triage (5 November, 09:50)
+
+Log: referee_cli_20261105-093838_scope_twoloops_Rround2b10.json. No ERROR, one MINOR, verified and repaired. The referee confirmed the units (#728.1, #728.2), #613's prefactor, rates and a_k, #646 and #652, the conditions (#286, #287, #727, #776, #802), #638.1's marks and the δ's (#728, #728.3, #728.4).
+- **2b-10.1 (ℓ(i,𝒦)'s units):** confirmed. D2.7 l.175 (α) defines ℓ(i,𝒦) := M^{−1}(the tree's length), and #728.2 translated only ℓ(D,𝒦) explicitly. #613's e^{−(3δ/4)ℓ(i,𝒦)} and #626's ℓ_a := ℓ(i,𝒦) then read in M-units, while #627, #631 and #638 use ℓ_a as a step-k length (ℓ_a/M, "3δM/4 per M-unit of ℓ"). The bounds hold in the step-k reading. Repair: #728.2's last sentence says the note's ℓ(i,𝒦) (#613, #626) is the tree's length in step-k units, M times D2.7's. #626 defines ℓ_a as the trees' lengths in step-k units (#728.2).
+- Pre-check: every ℓ(i,𝒦) line (#613, #626, #728.1's quotation of D2.7, #728.2) and every ℓ_a line (#626, #627, #631, #638) was read. With ℓ_a in step-k units, ℓ_a/M is in M-units and #638's payment c_F per unit of ℓ_a/M stands.
+- For X1 (the referee's note, not a finding): D2.7's (α′) measures ℓ(D,𝒦) from "Y₁ the domain of Dep(D)", while #613 measures it from Dep(D). This was added to X1's scope.
+- (8.2)'s hypotheses (#917, #932) do not name the new lower bound M ≥ δ_α·max(32/δ₀, 1/δ_𝐇) (#287). The referee found it implied by inherited conditions (D2.7's M ≥ 2^{12}/δ₀ and map l.980's δM ≥ L+1), so it is not a finding.
+- Note c067e51c98bb (1003 tags). Packet 2b's consecutive clean count: 0. Next: 2b-11, narrow, then a confirming round.
+
+## (R-round) Packet 2b, Round 2b-11 (Narrow): Clean (5 November, 09:58)
+
+Log: referee_cli_20261105-095131_scope_twoloops_Rround2b11.json. CLEAN: no ERROR, no MINOR. #728.2's last sentence and #626's ℓ_a match D2.7 l.175 (α) (step-k length M·ℓ_{D2.7}(i,𝒦)), and #613, #627, #631, #638 and #646 are consistent with it. Packet 2b's consecutive clean count: 1 (2b-11). Next: 2b-12, a confirming round over all the repairs of 2b-1 to 2b-10 (scope_twoloops_Rround2b12.md). Note c067e51c98bb, unchanged.
+
+## (R-round) Packet 2b, Round 2b-12 (Confirming): Triage (5 November, 10:09)
+
+Log: referee_cli_20261105-095418_scope_twoloops_Rround2b12.json. No ERROR, two MINOR, both verified and repaired. The referee confirmed the rest of 2b-1 to 2b-10's repairs: the units, #613, #646, #652, the conditions, the marks as far as listed, the δ's and the pins.
+- **2b-12.1 (δ_α's order against ν):** confirmed. #287 read ν_r ≤ δ_α/(5·2^{d+3}) as an upper bound on ν, but δ_α = min(1, (κ₁−1)/(4√d)) depends on κ₁, and the map chooses κ after ν (map l.200, l.1562). Map l.949's κ₁ is RG II's (1.11) κ₁, and #642 has RG II's ½(κ₁−1) ≥ 2Lκ (p.20 l.17), so (κ₁−1)/(4√d) ≥ Lκ/√d ≥ 1 by κ > 6·2^d ≥ √d (#644). Hence δ_α = 1. Repair: new #728.5 states δ_α = 1 with this derivation. #287's and #727's conditions are then ν_r ≤ 1/640 and ν_r ≤ 1/512 at d = 4, implied by ν ≤ 1/1000 (map l.1614), with no order between ν and κ needed. #287 now cites #728.5 and says "implied by".
+- **2b-12.2 (#638.1's list):** confirmed. *The rooted sum* (#742) and the second case's y^R_k (#769–#770) pay from the activities' e^{(c_F/4)D_P} with a′ terms present. Repair: #638.1 adds #742, #769–#770, and #772 (a non-first member, also through the rooted sum).
+- Pre-check: all δ_α lines (#3.3, #287, #613, #727, #728.1–#728.5) are consistent with δ_α = 1, and #727's "implied by #287's" still holds. Every free-decay line (grep of c_FD_P, (c_F/4)D_P, *The rooted sum*, *The free decay*: #37, #266, #613, #616, #628, #636, #647, #652, #655, #661, #683, #685, #692, #699, #704, #719, #727, #729, #732, #742, #755, #758, #762, #764, #772, #801, #806, #817) was read. The others either derive the free decay (#636–#647), use κ or the margin only (#652, #655, #704, #817), have no carried insertions (#661, #658), or are budgets and spans, not activity sums (#683, #692, #699, #719, #732).
+- Note bc5f2c806dd8 (1004 tags). Packet 2b's consecutive clean count: 0. Next: 2b-13 (narrow), launched after the peer's tagging of the map, W-δ, the continuum note and BFWL has landed and this note's l.N pointers are converted (bookkeeping), then a confirming round.
+
+## Bookkeeping: Pointers into the Map and the Continuum Note Converted to Tags (5 November, 10:17)
+
+The peer tagged the map (add32c4c9d78, LABELS_D2_STEP_MAP.md 96d3fc63f8a1), W-δ, the continuum note (839f0fde0564) and BFWL. Every pointer of this note into the map or the continuum note is now a tag, taken from the peer's conversion list (conv_TWO_LOOPS.md, 210 rows), which was read off the LABELS files. There were none into W-δ or BFWL. This is bookkeeping, so no round.
+- Explicit "map l.N" and "Map l.N" were replaced first (ranges and longer numbers before their prefixes). Then the bare l.N following a map citation in the same parenthesis or sentence were replaced, as were the new #728.5's map pins. No "map l." is left.
+- Not converted, since they are not map pointers: #56's "SW l.93", and #61's and #62's "covariance note" l.131, l.141 and l.149–157 (the list had them as map).
+- The rows the list marked "?" were checked by hand against the target tag's text. One pin was stale and has been corrected: #604's "continuum note l.62" (#ND.4.7, the component count) now cites #ND.4.9, the (4.5) K → ∞ block that #604 means. #130.3's #MOMST.44 (ii) is the identity U₁(e^{iB′}V) = e^{iη𝐇}U₂ that the note cites.
+- The queued scopes (Rattext2, X1) now cite the map by tag.
+- Note e442bc506fcf (1004 tags).
