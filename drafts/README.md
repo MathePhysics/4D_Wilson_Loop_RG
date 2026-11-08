@@ -21,10 +21,23 @@ The [V3 iteration audit](WILSON_V3_ITERATION_AUDIT_2026_10_21.md) gives the earl
 
 The supporting triage records from rounds 20–49, the [rounds 50–51 triage](WILSON_IT1_D26_TRIAGE_R51_2026_10_27.md), and the [round-19 repairs](WILSON_IT1_ROUND19_REPAIRS_2026_10_24.md) are included alongside these drafts.
 
+### Further Iteration and Coupling Estimates
+
+- [Beta function for the Wilson-loop analysis](BETA_FUNCTION_WILSON_LOOPS.md): one-loop coefficient, remainder and coupling-flow derivations, with the distinction between RG1, CRE and the tube construction; the semisimple extension covers additive actions through a product construction with independently tuned couplings.
+- [Complex gauge covariance](WILSON_IT1_COMPLEX_COVARIANCE_2026_10_29.md) and [averaged current](WILSON_IT1_RMJ_CLOSURE_2026_10_30.md): complex carry and evaluation estimates, derived with their stated inputs and awaiting review.
+- [Step-1 branch-weight comparison](WILSON_IT1_RW1_CLOSURE_2026_10_30.md): the real and complex representations and their stated review qualifications.
+- [Round-53 dispositions](WILSON_IT1_TRIAGE_R53_2026_10_29.md): iteration and R-step findings and repairs.
+- [Real base-current draft](WILSON_IT1_JBASE_DRAFT_2026_11_03.md) and [old-layer response draft](WILSON_IT1_REVAL_OLD_DRAFT_2026_11_03.md): supporting R-step calculations with their recorded scopes and review qualifications.
+
 ### Two-Loop Correlation Functions
 
 - [Two-loop uniform-bound draft](WILSON_IT1_TWO_LOOPS_UNIFORM_BOUND_2026_10_27.md): the pair insertion class, mixed terms, R-steps and conditional cutoff-uniform bound.
 - [Two-loop review dispositions](WILSON_IT1_TWO_LOOPS_TRIAGE_R1_2026_10_27.md): the recorded objections, repairs and remaining qualifications.
+- [Pair Cauchy comparison and full-sequence convergence](WILSON_IT1_TWO_LOOPS_CAUCHY_2026_11_05.md): the cross and wrap insertion differences, scalar constants, summable cutoff estimate and limit, derived with their stated transfers and awaiting review.
+- [Multiloop construction and limit](WILSON_IT1_N_LOOPS_UNIFORM_BOUND_2026_11_05.md): the class, counts, first-step extension, cutoff-uniform bound and Cauchy argument for each fixed finite family of vertex-disjoint squares, derived and awaiting review. The [work outline](WILSON_IT1_N_LOOPS_PLAN_2026_11_04.md) records its organisation and adversarial pass.
+- [Pair factorisation and separation decay](WILSON_IT1_PAIR_FACTORISATION_2026_11_05.md): the connected-function decomposition and target at small size-to-distance ratio. Long-group locality, the near/far reduction and an assembled comparison bound are derived. The far-component cluster-tail check and stopping-scale covariance estimates remain open.
+- [Layered passage](WILSON_IT1_PASSAGE_LAYERED_DRAFT_2026_11_04.md) and [contact weights](WILSON_IT1_CONTACTS_FREE_BOND_WEIGHT_DRAFT_2026_11_04.md): supporting response estimates with their recorded premises and review scopes.
+- [Cube-condition repair](WILSON_IT1_CVCUBE_REPAIR_STAGED_2026_11_04.md) and [real-base uniformity repair](WILSON_IT1_IIUNIF_REPAIR_STAGED_2026_11_04.md): staged drafts with their own qualifications.
 
 ### Supporting Proof and Source Checks
 
@@ -52,16 +65,27 @@ The supporting triage records from rounds 20–49, the [rounds 50–51 triage](W
 - Large-field rounds [2](WILSON_IT1_LF_TRIAGE_R2_2026_10_27.md), [3](WILSON_IT1_LF_TRIAGE_R3_2026_10_27.md), [4](WILSON_IT1_LF_TRIAGE_R4_2026_10_27.md), [5](WILSON_IT1_LF_TRIAGE_R5_2026_10_28.md), [6](WILSON_IT1_LF_TRIAGE_R6_2026_10_28.md) and [7](WILSON_IT1_LF_TRIAGE_R7_2026_10_28.md).
 - Combined rounds [8](WILSON_IT1_TRIAGE_R8_2026_10_28.md), [9](WILSON_IT1_TRIAGE_R9_2026_10_28.md), [10](WILSON_IT1_TRIAGE_R10_2026_10_28.md) and [11](WILSON_IT1_TRIAGE_R11_2026_10_28.md).
 
+### Further Large-Field and Walk-Factor Work
+
+- [Constants and conventions](CONSTANTS_AND_CONVENTIONS_WDELTA.md): the order of choices, parameter meanings and conditions used by the walk-factor, large-field and Cauchy notes.
+- Tag locations for the current drafts are indexed for [LF and the constants](LABELS_LF_AND_TABLE.md), [two loops](LABELS_TWO_LOOPS.md), [Cauchy](LABELS_CAUCHY.md), the [beta function](LABELS_BFWL.md), the [step map](LABELS_D2_STEP_MAP.md), the [continuum note](LABELS_CONTINUUM.md) and the [walk-factor note](LABELS_WDELTA.md).
+- [LF packet plan](WILSON_IT1_LF_PACKET_PLAN_2026_11_04.md), [LF dependency audit](WILSON_IT1_LF_PACKET_DEPENDENCY_AUDIT_2026_11_04.md) and [Cauchy dependency audit](WILSON_IT1_CAUCHY_PACKET_DEPENDENCY_AUDIT_2026_11_04.md): the review scopes and their premises. The accompanying packet dispositions are included in this folder, including the latest [packet 9](WILSON_IT1_LF_TRIAGE_P9_R21_2026_11_05.md) and [packet 10](WILSON_IT1_LF_TRIAGE_P10_R35_2026_11_05.md) records. Packet 10 is closed at the scope recorded there.
+- [Source-reading inventory](WILSON_IT1_READINGS_INVENTORY_2026_11_04.md): the source statements and derivations used in the current notes.
+- [Large-field dependency analysis](WILSON_IT1_LF_DEPENDENCY_ANALYSIS_2026_10_30.md): dependencies at the revision it analyses; read it alongside the current large-field and walk-factor drafts.
+- [Large-field review dispositions](WILSON_IT1_TRIAGE_LF_GAMMA_2026_10_29.md): reviews, objections and subsequent repairs through the latest working revision.
+- [Archived repair sections](WILSON_IT1_LF_GAMMA_ARCHIVE_2026_10_30.md): sections removed from the active repair note.
+- Large-field weighted-response reviews: rounds [38](WILSON_IT1_LF_TRIAGE_R38_2026_11_03.md), [39](WILSON_IT1_LF_TRIAGE_R39_2026_11_03.md), [40](WILSON_IT1_LF_TRIAGE_R40_2026_11_03.md), [41](WILSON_IT1_LF_TRIAGE_R41_2026_11_03.md), [42](WILSON_IT1_LF_TRIAGE_R42_2026_11_03.md) and [43](WILSON_IT1_LF_TRIAGE_R43_2026_11_03.md). The latest repairs retain the review qualifications recorded there.
+
 ## Manuscript insert drafts
 
 - [Coarse-loop comparison](WILSON_V4_COARSE_LOOP_INSERT_DRAFT_2026_10_23.tex).
 - [Two-loop section](WILSON_V4_TWO_LOOPS_SECTION_DRAFT.tex).
 
-These inserts have been incorporated into the manuscript. Use the current [V5 source](../Manuscripts%20under%20Construction/WILSON_FIRST_RG_STEP_V5.tex) or the updated [V4 source](../WILSON_FIRST_RG_STEP_V4.tex) for the corresponding manuscript version.
+These inserts have been incorporated into the current [V4 manuscript](../WILSON_FIRST_RG_STEP_V4.tex). [V5](../Manuscripts%20under%20Construction/WILSON_FIRST_RG_STEP_V5.tex) remains under construction.
 
 ## Earlier first-step drafts
 
-These retain the development underlying the first-step construction. They use earlier manuscript versions and line numbers.
+These deprecated drafts record the development underlying the first-step construction and use earlier manuscript versions and line numbers. V4 is the current reference for the first-step results.
 
 - [Stage 1: construction](V2_STAGE1_CONSTRUCTION_DRAFT_2026_10_17.md).
 - [Stage 2: background estimates](V2_STAGE2_BACKGROUND_ESTIMATES_DRAFT_2026_10_17.md).

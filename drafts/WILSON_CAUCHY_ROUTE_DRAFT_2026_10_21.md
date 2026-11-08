@@ -61,7 +61,7 @@ Started 21 Oct 2026, 11:15. Status: draft for CLI review; revised after the r1, 
     - The earlier $(\log K)^{O(1)}K^{-\kappa_0/2}$ omitted that feedback and is withdrawn.
     - (R) is (P-R) in corrected form; it still has to be checked against CRE (3.26) and the R-operation.
 - **W5 (gauge group).** S0 is printed for $SU(2)$ only.
-  - *Imported in the Lipschitz push:* for simple $G$ the matching is `RG1_Thm2_REP` (Bałaban project, `ONE_LOOP_PROOFS.md` Corollary 8.2), with uniqueness from D6. This is proved in RG1's model.
+  - *Imported in the Lipschitz push:* for simple $G$ the matching is `RG1_Thm2_REP` (Bałaban project, `BETA_FUNCTION_WILSON_LOOPS.md` Corollary 8.2), with uniqueness from D6. This is proved in RG1's model.
   - *Still open:* in the N4 model it reduces to LIP-2; in CRE's setting (P2) meets LIP-1.
 - **Outside this route: the large-field stage (LF).**
   - *Why it is needed.* The expectation-level Cauchy estimate needs Bałaban's $\mathbf R$- and $\mathbf B$-terms. Configurations with no large fields have probability tending to 0 (§3(g), Markov lower bound), so LF is not a correction to be added at the end.
@@ -107,7 +107,7 @@ Started 21 Oct 2026, 11:15. Status: draft for CLI review; revised after the r1, 
 - Scope of the matching:
   - Theorem 2 is printed for $G=SU(2)$; V3 (H1) has $G$ compact, connected and simple.
   - Its proof was never published (LFR II p.355).
-  - A repair for simple $G$ is proved in the Bałaban project (registry `RG1_Thm2_REP`; `ONE_LOOP_PROOFS.md` Lemma 2.1, Propositions 2.4 and 2.6, Theorem 8.1, Corollary 8.2), for RG1's model. Since the Lipschitz push it is imported, with uniqueness from D6 and the window form $|x^{(K)}_\ell-\bar x_\ell|\leq\delta\ell+C$, $\bar x_\ell=g^{-2}+\tfrac{11}{24\pi^2}\kappa_G\ell\ln L$ (Lipschitz note §2). The limits on its use are LIP-1 and LIP-2.
+  - A repair for simple $G$ is proved in the Bałaban project (registry `RG1_Thm2_REP`; `BETA_FUNCTION_WILSON_LOOPS.md` Lemma 2.1, Propositions 2.4 and 2.6, Theorem 8.1, Corollary 8.2), for RG1's model. Since the Lipschitz push it is imported, with uniqueness from D6 and the window form $|x^{(K)}_\ell-\bar x_\ell|\leq\delta\ell+C$, $\bar x_\ell=g^{-2}+\tfrac{11}{24\pi^2}\kappa_G\ell\ln L$ (Lipschitz note §2). The limits on its use are LIP-1 and LIP-2.
 
 ### 1.2 The compared objects
 
@@ -824,7 +824,7 @@ Ranked as in the r1 review (`cr-c`, C6), with the items N1–N10 it added. Where
   - RG1 p.283 ((4.10)–(4.11)) and p.284 ((4.13)–(4.15), "semisimple").
 - **Lipschitz push (21 Oct, from 14:27; `WILSON_CAUCHY_LIPSCHITZ_2026_10_21.md`).** The Bałaban project's coupling-flow and difference results were imported, with their scope.
   - *Imported:*
-    - `RG1_Thm2_REP` (`ONE_LOOP_PROOFS.md` §§2, 8);
+    - `RG1_Thm2_REP` (`BETA_FUNCTION_WILSON_LOOPS.md` §§2, 8);
     - D1, D2 (`DIFFERENCES_PLAN.md` §1);
     - D6a, D6b, D6, D_HOLO, D7, (E), (R), (C), D9 (`DIFFERENCES_PROOFS.md` §§2–3).
   - *Derived here:*

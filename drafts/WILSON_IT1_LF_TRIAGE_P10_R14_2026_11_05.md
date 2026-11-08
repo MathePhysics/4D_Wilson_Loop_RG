@@ -1,0 +1,11 @@
+# Triage of Packet 10, Fourteenth Review (lf-p10-20261105-r14)
+
+The review is verification/isolated_reviewer/reviews/lf-p10-20261105-r14/review.md (Cauchy note 95efd2b496ce, LF fc2901265e71, table 737c1fc935af). It found no fatal or serious finding and five minor ones, and it resolves every r13 finding. All five are repaired in the Cauchy note 22bc27488f04 (970 lines, CR 0) and the table ae9768c68f5d (labels 20ccb7da993b); the LF is unchanged.
+
+| Finding | Kind | Verdict | Repair |
+|---|---|---|---|
+| 1. The table reads R₁M₁ = M′ (#T2.7, #T4.4, #T2.5's layer widths), while #T2.5 and §9 read R₁M₁ as VAR's product with M′ a multiple of it | minor | correct | #T2.7: R₁M₁ is VAR's and REG's product, the one in C₀ and M(ε₁); VAR's constructions on the LF note's chain and in the lift are run at the cube parameter M′ = M_P, a multiple of R₁M₁, which LF #4.23 writes as R₁ = 1; #T4.4: C₀ "grows with R₁M₁ (≤ M′, #T2.7)"; #T2.5: layers "more than M′ wide by REG (1.4) at the cube parameter M′ (#T2.7)" |
+| 2. l.544: ℓ^∞ ≤ the distance of VAR's decay holds up to the block-point rounding of PRT2 (2.46), less than ε | minor | correct (PRT2 p.231 l.14–15 extends d to points through block points) | l.544: "dist(·, Ω₁^c) + ε ≥ dist_∞(·, Ω₁^c) ≥ …, … up to the block-point rounding of PRT2 (2.46) (p.231 l.14–15), less than ε, …, the exponent δ₀(RM₁/L + M₁ + 3) being ≤ δ₀(R/L + 2)M₁ as M₁ ≥ 3"; the constant is unchanged |
+| 3. l.530: the lift's VAR thresholds are those at the cube parameter M_P | minor | correct; the class condition M_P ≤ M(ε₁) = R₁M₁(a₁/ε₁) (VAR p.279 l.28) was not listed | (9.0): ε₁ ≤ min(1, a₁, a₁′(2C₀/B₃), R₁M₁a₁/M_P); l.440 explains it and adds that VAR's thresholds containing R₁M₁ are "taken also at the lift's cube parameter M_P"; l.530: "VAR's thresholds at this cube parameter are among those of (9.0), l.440" |
+| 4. l.530: the paraphrase of REG p.098 omits "for example" | minor | correct | l.530: "assumes RM bigger than R₁M₁, "for example L^{−1}RM > 2dR₁M₁", to this end" |
+| 5. l.966: the glossary's C₀, C_b, and C_r are stale | minor | correct | l.966: "C₀ := c₁₁C₀^{VAR}, C₀^{VAR} := 4R₁M₁(B₃ + B₄(1)), c₁₁ := 3(1 + 4c_9) …, C_b := 48c_9²C₀², C_r := 8c_9C₀(1 + C₀) (§9's, (9.4) and (9.5) …)" |

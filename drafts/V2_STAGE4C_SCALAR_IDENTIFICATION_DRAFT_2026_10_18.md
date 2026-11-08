@@ -1,5 +1,7 @@
 # Stage 4c: regional square scalar and the perimeter/corner extraction
 
+> **Deprecated (5 November 2026).** This file is no longer live. It records work on an earlier version of the first-step paper (`WILSON_FIRST_RG_STEP.tex`, `_V2`, or `_V3`), which `WILSON_FIRST_RG_STEP_V4.tex` supersedes. No live note uses it.
+
 Status (19 October 2026): Sections 1, 2, 5 and 8 are in WILSON_FIRST_RG_STEP_V3.tex in TeX form as the last appendix `app:regional-scalar` (identification `lem:c4c-2-1`, scalar `prop:c4c-5-1`, physical identity `cor:c4c-5-2`; the TeX block is §9 below). The translation was reviewed on 19 October 2026 as one isolated referee packet (`verification/isolated_reviewer/reviews/tr-c4c-20261019-r1/review.txt`) and the TeX repaired from the report (V3 SHA256 abf0d60cc65a5836, 23:36); the TeX in V3 is authoritative where it differs from the TeX block in §9, which is not re-mirrored. Sections 3, 3.1, 4, 6 and 7 are already the proof of `prop:regional-square-extraction` in the manuscript and were not inserted again. The stage 5 section's `\draftref{stage 4C, ...}` citation form is removed; it cites the appendix.
 
 ## 1. Claim and conventions

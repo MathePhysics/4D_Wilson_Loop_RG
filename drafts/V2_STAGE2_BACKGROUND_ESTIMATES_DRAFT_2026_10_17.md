@@ -1,5 +1,7 @@
 # Stage 2 draft: the background-estimates appendix, in proof form (17 October 2026)
 
+> **Deprecated (5 November 2026).** This file is no longer live. It records work on an earlier version of the first-step paper (`WILSON_FIRST_RG_STEP.tex`, `_V2`, or `_V3`), which `WILSON_FIRST_RG_STEP_V4.tex` supersedes. No live note uses it.
+
 For approval before any TeX edit. This is Appendix `app:background-estimates`, to follow V2's flat-covariance appendix. It proves the four estimate lemmas that the stage-1 section states without proof (Lemmas `lem:regular-bounds`, `lem:gaussian-payment`, `lem:activity-bounds`, `lem:vacuum-clusters`), supplies the uniform charts and primitive bounds used by them and by the exterior-response appendix of stage 3, fixes every constant named in the stage-1 section, and checks that the reference data of `sec:joint-extraction` satisfy the hypotheses. Source lines "Lnnnn" refer to `WILSON_FIRST_RG_STEP.before.txt`; Bałaban pages are the transcriptions in `Balaban\tex\{CRE,RG1,RG2}\parts`.
 
 What differs from the archive, and why:

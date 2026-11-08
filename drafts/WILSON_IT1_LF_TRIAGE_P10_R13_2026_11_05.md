@@ -1,0 +1,9 @@
+# Triage of Packet 10, Thirteenth Review (lf-p10-20261105-r13)
+
+The review is verification/isolated_reviewer/reviews/lf-p10-20261105-r13/review.md (Cauchy note 68e659b288d2, LF fc2901265e71, table ced4ab3550cd). It found no fatal or serious finding and three minor ones, and it resolves r12's serious finding. All three are repaired in the Cauchy note 95efd2b496ce (970 lines, CR 0); the table 737c1fc935af (labels c42168981ba0) updates {#T4.33}'s source SHA; the LF is unchanged.
+
+| Finding | Kind | Verdict | Repair |
+|---|---|---|---|
+| 1. l.530, l.434: read in l.530's units, where M₁ is CRE's M₁, "R₁ = 1" makes the lift's product R₁M₁ equal to CRE's M₁, while l.434, l.452, and l.526 use VAR's product R₁M₁ ≤ M_P | minor | correct | l.530: "VAR's Sect. F cubes being run at the cube parameter M_P, a multiple of VAR's R₁M₁ (l.434), which is what #T2.22's R₁ = 1 means (the LF note's #4.23), with M_P ≤ CRE's M₁ (CRE's M₁ = KM′ with K ≥ 12d + 1, the LF note's #D.M₁; table #T2.15); so R_ιM₁ε/L > 4dM₁ε ≥ 4dM_Pε, the ℓ¹ reach of □̃ beyond Ω₁ (□ of side 2M_Pε, □̃ adding 2M_Pε)"; R₁M₁ keeps one meaning in §9 |
+| 2. l.530: VAR p.300 and REG p.098 do not print R > 4dLR₁; it is a derived sufficient condition | minor | correct | l.530: "which suffices for □̃ ⊂ Ω₀ (VAR's Sect. F, p.300 l.33–37, whose source REG p.098 l.17–19 assumes L^{−1}RM > 2dR₁M₁ to this end)" |
+| 3. l.544: the block loss M₁ε presumes the ℓ^∞ distance | minor | correct (the decay is stated in a lattice distance that dominates the ℓ^∞ distance, so the count may be made in ℓ^∞) | l.544: "dist(·, Ω₁^c) ≥ dist_∞(·, Ω₁^c) ≥ M₁εL^j − RM₁ε/L − M₁ε − 2ε, with dist_∞ the ℓ^∞ distance, at most the distance in which VAR's decay is stated, and M₁ε the ℓ^∞ diameter of a big block"; the constant e^{δ₀(R/L + 2)M₁} and its uses in the LF note and the W-δ note are unchanged |
