@@ -88,12 +88,12 @@ to a clone of this repository. It uses this repository's `Lat`, `curl_operator`,
 
 ![A Spectre patch with edges coloured by pole fibre](https://raw.githubusercontent.com/brentharts/spectre-monotile-py/main/figures/spectre_in_e8.png)
 
-Module [`models/spectre_in_e8.py`](https://github.com/brentharts/spectre-monotile-py/blob/main/models/spectre_in_e8.py), 12 checks.
+Module [`models/spectre_in_e8.py`](https://github.com/brentharts/spectre-monotile-py/blob/main/models/spectre_in_e8.py), 13 checks.
 
 - The Spectre's own 4D lift ([`lift4d.py`](https://github.com/brentharts/spectre-monotile-py/blob/main/lift4d.py) in that repository, the Cheritat-Ma lift as cited there) writes every edge, a unit vector at a multiple of 30 degrees, as an integer step of a red
   hexagonal lattice (even multiples) or a green one (odd multiples). The lift lattice is `Z[zeta_12]`, a red A2 plus a green A2.
 - E8 has an order-3 rotation `R_w` that makes it a module over the Eisenstein integers. With two Hermitian-orthogonal roots, the lift lattice embeds in E8 **isometrically**: all 518
-  vertices of a 71-tile patch embed injectively, **every edge becomes a root**, and every tile outline becomes a closed walk of 14 roots (8 red, 6 green). The inner product of consecutive edge roots is
+  vertices of a 71-tile patch embed injectively, **every edge becomes a root**, and every tile outline becomes a closed walk of 14 roots (8 red and 6 green for 63 of the 71 tiles, 6 and 8 for the other 8, which differ by an odd multiple of 30 degrees). The inner product of consecutive edge roots is
   2 cos(turn) for equal colours and 0 for a red-green pair.
 - Corner types of the lifted outline, the same for all 71 tiles: 7 turns of 60 degrees, 6 turns of 90 degrees, 1 straight pass. This is the "small set of corner types" the programme's corner
   extraction would have to handle for a Spectre-shaped contour. They are visible in the hexagonal lattice and **invisible to the hypercubic action** of C1.
@@ -142,10 +142,21 @@ Ordered by cost.
 
 ## 6. Reproduce
 
+**In this repository** (the numerics that use the operators of `numerics/abelian_first_step`):
+
+    make install        # clones spectre-monotile-py next to this repository (needed by numerics/bridge_figs)
+    make test-quick     # about 2 minutes
+    make test           # about 10 minutes; numerics/corner_locality is the slow part
+    make figures        # regenerates the figures of numerics/corner_locality and numerics/bridge_figs
+
+The studies are described in [`numerics/corner_locality/README.md`](numerics/corner_locality/README.md) and [`numerics/bridge_figs/README.md`](numerics/bridge_figs/README.md).
+
+**In a clone of spectre-monotile-py** (the geometry and E8 models):
+
     # in a clone of spectre-monotile-py, with numpy, scipy, sympy, matplotlib
     export WILSON_RG_DIR=/path/to/4D_Wilson_Loop_RG
     python3 models/wilson_corner_locality.py --tests-only       # 9 checks, about 40 s
-    python3 models/spectre_in_e8.py --tests-only                # 12 checks
+    python3 models/spectre_in_e8.py --tests-only                # 13 checks
     python3 models/chair_e8_192.py --tests-only                 # 11 checks
     python3 models/e6_fibres.py --tests-only                    # 25 checks
     python3 models/voronoi_window.py --tests-only               # 10 checks, about 35 s
