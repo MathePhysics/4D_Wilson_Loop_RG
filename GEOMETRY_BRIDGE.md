@@ -13,8 +13,10 @@ Like the rest of this repository it was written with LLM assistance and has not 
 ## 0. Read this first
 
 1. **One link is real and numerical.** The abelian first-step operators in [`numerics/abelian_first_step`](numerics/abelian_first_step/README.md)
-   can be applied to loops other than squares. Doing so shows that the perimeter-plus-corner form `E_f = αP + b c` holds, with one constant per corner,
-   when every feature of the loop is at least two blocks wide, and fails for features one block wide and for dense corners (section 3, C1).
+   can be applied to loops other than squares. Doing so shows that, at the one placement the published square fits use (loop corner at a block centre),
+   the perimeter-plus-corner form `E_f = αP + b c` holds, with one constant per corner, when every feature of the loop is at least two blocks wide.
+   It fails for features one block wide and for dense corners. **The placement matters more than the corner term**: moving a loop against the blocks
+   changes `E_f` by 0.28 to 0.91, and the placement used is the lowest-energy one (section 3, C1, and [`numerics/corner_locality`](numerics/corner_locality/README.md)).
 2. **One link is structural and exact.** The 4D lattice the Spectre lift uses is a red hexagonal lattice plus a green one, and that sum embeds in E8 so that every
    Spectre edge is a root (C2). It gives the Spectre outline a small, fixed set of corner types in 4D.
 3. **The two do not yet meet.** The hypercubic action used in the abelian check sees every turn between different axes as 90 degrees, so it cannot tell the
@@ -71,9 +73,14 @@ to a clone of this repository. It uses this repository's `Lat`, `curl_operator`,
 - Squares of side 3, 6, 9 give 1.85575, 3.92455, 5.96995, against the published K = 10 values 1.855780, 3.924427, 5.970860. The energy is invariant to 1e-9 under permuting axes,
   reversing the loop and translating by L.
 - For seven loops with every feature at least 2L = 6 units wide (squares, rectangles, an L-shape, two skew loops that span three directions), `E_f = αP + bc` fits with
-  `α = 0.1709` per link and `b = -0.0444` per corner (`4b = -0.178`; the published square fit is `α = 0.1707`, `β = -0.17` to `-0.18`). Each loop left out is predicted to 0.006 or better, which is the oscillation
-  the published results already show. **One constant per corner works in this analogue when corners and edges are a few blocks apart.**
-- Thin rectangles and L-shapes with a 3-unit feature sit 0.016 to 0.039 below that fit. The range of the failure is the block size L.
+  `α = 0.1709` per link and `b = -0.0444` per corner (`4b = -0.178`; the published square fit is `α = 0.1707`, `β = -0.17` to `-0.18`). Each loop left out is predicted to 0.006 or better. **At that placement, one constant per corner works in this
+  analogue when corners and edges are a few blocks apart.**
+- Thin rectangles and L-shapes with a 3-unit feature sit 0.016 to 0.039 below that fit, at that placement. In a width scan (length 12, widths 3, 6, 9, 12; K = 6 and 8) the deviation is
+  -0.037 at width 3 and within 0.004 from width 6 on, so the range of the failure is the block size L.
+- **Placement.** Over all 81 positions of a loop modulo the block period (3 in each of four directions), `E_f` has a spread of 0.28 to 0.91 per loop, 15 to 25 percent of `E_f` and more than the whole corner
+  term (`|4b| = 0.18`); the published placement is the minimum for every loop tried. Averaged over the 81 positions the fit is `α = 0.1906`, `b = -0.0618` (`4b = -0.247`), still roughly additive
+  (leave-one-out 0.023), and the width-3 deficit becomes a small excess (+0.02). So the thin-loop deficit is a property of the aligned placement, and the published `α`, `β` are the values for the
+  most favourable placement. I have not compared this with how the programme's blocks sit against a loop.
 - The Spectre outline lifted to Z^4 (C2) is not additive: its `E_f` is 0.30 to 0.66 *above* the prediction at every dilation and in both orderings of a diagonal step. A diagonal becomes a
   lattice-scale zigzag whose corners are one link apart, so the corner terms interact. Two orderings of the same diagonal give different loops (13 versus 17 corners) with `E_f` 2.797 versus 2.649.
 
@@ -127,8 +134,8 @@ symmetry where E8 has a free action of order 24. So `192 = 24 x 8` remains a coi
 
 Ordered by cost.
 
-- **P2 (cheap).** Measure the range of the locality failure: rectangles of fixed length and widths 3, 6, 9, 12, 15 with the existing code, to see how the deviation from `αP + bc` decays with the width and whether the scale is L.
-- **P3 (cheap).** Average `E_f` over the position of the loop against the L = 3 blocks (offsets 0, 1, 2), to separate the corner constant from the block-periodic oscillation.
+- **P2 (done, Numeric).** Range of the locality failure: about L at the aligned placement (`numerics/corner_locality/width_scan.py`). Not yet run for `L` other than 3.
+- **P3 (done, Numeric).** Placement dependence: large, see C1 (`numerics/corner_locality/offset_average.py`). Open: which placement, if any, corresponds to the programme's construction, and a run at `L` other than 3.
 - **P1 (large).** A U(1) action on the `A2 + A2` lattice (triangular plaquettes in each plane, rectangles between planes) and a block-averaging map on hexagonal blocks, so that 60 and 120 degree corners can be told from 90 degree ones. This is the test C1 could not do.
 - **P5.** Decide whether a contour with 30-degree-multiple edges, whose hexagonal corners are 60 or 120 degrees, is admissible for the programme's corner extraction, and what its corner renormalisation `z_c` should depend on.
 - **P4 (out of scope here).** The same locality question for SU(2).
