@@ -3003,7 +3003,7 @@ The items of the LF longer than 5,000 characters are set out in paragraphs at th
 | {#T1.1} | 7 | Each constant is fixed in one stage and may depend only on constants o… |
 | {#T1.2} | 11 | 0 / d, G, and the exponents r, ε₀, β, β₂, β′, β″ / ranges: r := 2, CRE… |
 | {#T1.3} | 12 | 1 / L / lower bounds in d, G, and stage 0's exponents: L ≥ 4, L > 5 (s… |
-| {#T1.3-1} | 13 | 1 / L (N loops) / L ≥ L₀^{(N)} := (N_C/2)L₀^× for N_C loops, L₀^× of #… |
+| {#T1.3-1} | 13 | 1 / L (N loops) / L ≥ L₀^{(N)} := (N_C/2)²L₀^× = 10⁴N_C²u_𝔏 for N_C lo… |
 | {#T1.4} | 14 | 2 / Bałaban's constants that depend on d, L, G (δ₀, δ₁, B₀–B₅, PBG's a… |
 | {#T1.5} | 15 | 3 / R₀M₀, M′ (VAR's raised R₁M₁, #T2.7-1), K (PBG's and CRE's), M₁ = K… |
 | {#T1.5-1} | 16 | 3 / M ((C-M) of SW) / (C-M) M ≥ 2LM₁ + 2R₁M₁ and M ∈ R₁M₁ℕ, with R₁M₁ … |
@@ -4778,4 +4778,4 @@ Each definition X := … of the LF carries the tag {#D.X} immediately before X; 
 | {#D.ψ′} | 3266 | ψ′ := Σ_{y∈B}G_B(·, y)σ(y)/(2d), so that Δψ′ = −σ in B and ψ′ = 0 |
 | {#D.h_y} | 3267 | h_y := E^·G(S_{τ_B} − y), τ_B the exit time from B. Theorem 4.3.1  |
 
-Hashes at which the lines above hold: LF 94d3e82675b1, table 18cbd119fc8f (SHA256, first 12).
+Hashes at which the lines above hold: LF 94d3e82675b1, table 05cbd40be4db (SHA256, first 12).

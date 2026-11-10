@@ -128,10 +128,19 @@ Input: (4)'s message. Checked against the map (#MD2.4.8.1, #MD2.4.12.21-1, #MD2.
 - #T3.37's ε′, with (20c_πc_hC₁^{RG2})^{−1}, agrees with the CA closure's and the map's ε′, and #T4.46's 2.12c_πc_h agrees with the map's #MOMST.50-1. Both are unchanged. The background note uses neither C_pc′ nor #MD2.4.8.1, so it needs no change.
 - Announced to (4). LABELS 4c2c66efb348 → eb6a64d31149 → 734a37930def; table 77c1b5ec9928 → 33fe77b016b2 → 18cbd119fc8f. defcheck "-- 0 lines"; dmarks2 16; deadcheck and prefcheck known hits only; columns 10×5, 74×6, 267×7.
 
+## NL 204c1c20c891: L₀^{(N)}, u_𝔏^{(N)} and A′_E (Table)
+
+Input: two-loops' message (NL 204c1c20c891, NV 5137fb31c48d). Checked against NL #NL6A.6, #NL6A.9, #NL6A.9-1, #NL6B.1-1, #NL6B.1-2, #NL12.1, #NL1.5 and #NL9.6-1.
+- Re-derived: #569's condition at u_𝔏^{(N)} = (N_C/2)u_𝔏 reads (N_C/2)²u_𝔏(8496ν_f + 88ν_e)/L ≤ ν_r/4. With ν_f = 17ν/16, ν_e ≤ ν/8 and ν_r = ν, it needs L ≥ (N_C/2)²·36152u_𝔏, which L₀^{(N)} := (N_C/2)²·4·10⁴u_𝔏 = 10⁴N_C²u_𝔏 covers. The transport check 352N_C²u_𝔏 ≤ 4096L also holds.
+- #T1.3-1: L₀^{(N)} := (N_C/2)²L₀^× = 10⁴N_C²u_𝔏, still L₀^× at N_C = 2. The row adds the unit u_𝔏^{(N)} := (N_C/2)u_𝔏 of the 𝐑-made insertions, which replaces u_𝔏 in every condition of two-loops #917 that contains u_𝔏.
+- #T4.51: A′_E := 17(2R_e + 1)⁴, the pair's, for every N_C (#NL1.5, #NL9.6-1), in place of (8N_C + 1)(2R_e + 1)⁴. N_C is dropped from ν_×'s dependencies.
+- No row cites NL's u₁^{(N)} or C′. The table's u₁ is the pair's (#532).
+- Announced to (4). LABELS 734a37930def → c59773513fd1; table 18cbd119fc8f → 05cbd40be4db. defcheck "-- 0 lines"; dmarks2 16; deadcheck and prefcheck known hits only; columns 10×5, 74×6, 267×7.
+
 ## SHAs
 
-Table: d71e239470ea → eb5a6a505303 → b168c70703ab → 9f6ebf47c805 → 0fa578b35726 → ef03c153b6ad → cc3949e005fb → 77c1b5ec9928 → 18cbd119fc8f. LABELS: 2d2801629f41 → 146c7b49d22b → d444e40b4233 → 1f2b3fa09b9d → 740b198d7a9d → 58050f8936d3 → 0e94a6174742 → 4c2c66efb348 → 734a37930def. Background note: 249ae1a46a2a → 8510ab0aebd7 → 7bb5f99918ab → 3047b31464c3 → 22a230556c65 → c7612b0d6f3b → df792ffa33f3.
+Table: d71e239470ea → eb5a6a505303 → b168c70703ab → 9f6ebf47c805 → 0fa578b35726 → ef03c153b6ad → cc3949e005fb → 77c1b5ec9928 → 18cbd119fc8f → 05cbd40be4db. LABELS: 2d2801629f41 → 146c7b49d22b → d444e40b4233 → 1f2b3fa09b9d → 740b198d7a9d → 58050f8936d3 → 0e94a6174742 → 4c2c66efb348 → 734a37930def → c59773513fd1. Background note: 249ae1a46a2a → 8510ab0aebd7 → 7bb5f99918ab → 3047b31464c3 → 22a230556c65 → c7612b0d6f3b → df792ffa33f3.
 
 ## Status
 
-Table rows: no round needed. Background note: rounds 6–16 found F1–F12, all repaired. Rounds 17 (narrow) and 18 (full) are clean, so the note is done at df792ffa33f3, against the coarse-chain note d02ba134814f and map d3dc46ddacc5. The K rows follow D26 2dce56a49737, #T12.13 follows COMPLEX_COVARIANCE f1cbf76fb687, #T3.36 follows O6 908c956d462e, #T12.30-9 follows the coarse-chain note d02ba134814f, and #T12.17 and #T12.13-1 follow map d3dc46ddacc5.
+Table rows: no round needed. Background note: rounds 6–16 found F1–F12, all repaired. Rounds 17 (narrow) and 18 (full) are clean, so the note is done at df792ffa33f3, against the coarse-chain note d02ba134814f and map d3dc46ddacc5. The K rows follow D26 2dce56a49737, #T12.13 follows COMPLEX_COVARIANCE f1cbf76fb687, #T3.36 follows O6 908c956d462e, #T12.30-9 follows the coarse-chain note d02ba134814f, #T12.17 and #T12.13-1 follow map d3dc46ddacc5, and #T1.3-1 and #T4.51 follow NL 204c1c20c891.
