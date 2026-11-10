@@ -3149,10 +3149,10 @@
     {#MD2.4.4.17-3} In both cases
     {#MD2.4.4.18} e^{θ_{k+1}(𝒢)}‖Y^d_𝒢(U_{k+1})‖ ≤ b_𝒢Dev_{n′}(𝒢; U_{k+1}) for every traversal n′ of I(𝒢), b_𝒢 := (C_g/(c₀ᾱ_{k+1}))e^{θ_{k+1}(𝒢)}S_𝒢.
   - {#MD2.4.4.19} This is the per-insertion form of (5), at the real point U_{k+1}.
-  - {#MD2.4.4.20} *Complex data (on 𝒟_{k+1}^{sub}; SW closure §6(6b)).* D(k+1)(iii)'s dev clause at 𝐔 = e^{iηa′}U_{k+1}, 𝐉, for a′ in the sub-domain of D2.0(3) (the 𝐉-term bullet): the same Cauchy step on z ↦ Y(e^{iz(ηA + ηa″)}, z(R(u)J_{k+1} + (𝐉 − J_{k+1})), 0) − c_𝒢T with a″ := Ad(u)a′, radius c₀ᾱ_{k+1}/(C_gDev_{n′}(𝒢) + ‖a″‖_{sub} + ‖𝐉 − J‖_{sub}), gives e^{θ}‖Y^d_𝒢(𝐔, 𝐉)‖ ≤ b_𝒢(Dev_{n′}(𝒢) + a*_𝒢 + j*_𝒢) with a*_𝒢 ≤ α_{1,k+1}/C_g, j*_𝒢 ≤ 2α_{0,k+1}/C_g;
+  - {#MD2.4.4.20} *Complex data (on 𝒟_{k+1}^{sub}; SW closure §6(6b)).* D(k+1)(iii)'s dev clause at 𝐔 = e^{iηa′}U_{k+1}, 𝐉, for a′ in the sub-domain of D2.0(3) (the 𝐉-term bullet): the same Cauchy step on z ↦ Y(e^{izηa″}e^{izηA}, z(R(u)J_{k+1} + (𝐉 − J_{k+1})), 0) − c_𝒢T with a″ := Ad(u)a′ (𝐔^u = e^{iηa″}e^{iηA}, so f(1) needs no BCH correction), radius c₀ᾱ_{k+1}/(C_gDev_{n′}(𝒢) + ‖a″‖_{sub} + ‖𝐉 − J‖_{sub}), gives e^{θ}‖Y^d_𝒢(𝐔, 𝐉)‖ ≤ b_𝒢(Dev_{n′}(𝒢) + a*_𝒢 + j*_𝒢) with a*_𝒢 ≤ α_{1,k+1}/C_g, j*_𝒢 ≤ 2α_{0,k+1}/C_g;
     {#MD2.4.4.20-1} summed by (S-w), Σ_{𝒢∋n′}e^θ‖Y^d_𝒢(𝐔,𝐉)‖ ≤ C_χρ̃_{k+1}δ*^{(k+1)}_{n′}(U_{k+1}) + 3C_χρ̃_{k+1}α_{1,k+1}Σ_tw_t, the second term O(ρ_{k+1}) under q₀ = q₁.
 - {#MD2.4.4.21} *From the per-insertion form to D(k+1)(ii) (given (LPG′) and (7); SW closure §6(6a)).* With t(𝒢) = t_{n′}(𝒢) as above (containment), Dev_{n′}(𝒢) ≤ ℓ_{X(𝒢)}η_{k+1}^{−2}Δ^{(k+1)}_{n′}(R^{(k+1)}_{t(𝒢)+1}), for 𝒬_{n′}(𝒢)^{∼5} ⊂ Ω_{k+1} (C_box ≥ 6), since Δ^{(k+1)} takes only plaquettes of Ω_{k+1}.
-  {#MD2.4.4.21-1} The dev species and (LPG′) are taken for such groups only; a group with 𝒬_{n′}(𝒢)^{∼5} meeting Ω_{k+1}ᶜ for some n′ is attached to a component of Ω_{k+1}ᶜ met by it (*Scope*; D2.0(3)'s reclassification rule), with D2.6's bound.
+  {#MD2.4.4.21-1} The dev species and (LPG′) are taken for such groups only; a group with 𝒬_{n′}(𝒢)^{∼5} meeting Ω_{k+1}ᶜ for some n′ is att(k+1, Z) (#MD2.0.3.23; D2.6 closure 2.1(a)), with D2.6's bound.
   {#MD2.4.4.21-2} If the sizes satisfy
   {#MD2.4.4.22} (S) Σ_{𝒢∋n′, t(𝒢)=t}e^{θ_{k+1}(𝒢)}S_𝒢ℓ_{X(𝒢)} ≤ C_Sρ_{k+1}w_t for every t,
   {#MD2.4.4.23} then Σ_{𝒢∋n′}e^{θ_{k+1}(𝒢)}‖Y^d_𝒢‖ ≤ (C_gC_S/c₀)e^{η_w}(ρ_{k+1}/ᾱ_{k+1})δ*^{(k+1)}_{n′}(U_{k+1}) (w_t ≤ e^{η_w}w_{t+1}, η_w = (5/16)η_V).

@@ -48,10 +48,37 @@ Verdict: clean. No fatal, serious, minor, or cosmetic finding.
 - Pending in another session's file: two-loops' #NV.3-4-2, which (W) cites, states (W^𝔉) for (iv-e)'s C_{A,n}, but its proof (#NV.3-4-3, #NV.3-4-5 to #NV.3-4-7) still quotes 2√d, a_1 and the old C_{B,1}. The argument is unchanged; two-loops has been sent the corrections.
 - bgptr (known non-tags only), bgdefs (58, each once), bginternal (all items and conditions defined); longest line 659; 361 lines and 100,676 characters.
 
+## Background Note, Round 8 (full: every line of 7bb5f99918ab)
+
+Verdict: not clean (one minor finding and one cosmetic finding).
+- **F4** (minor, (iv-a)'s carrier item): it asked that g_k^{(j+1)}'s pending-variable dependence be "carried as the carrier species with §8's bound". D26 30cd68b6dc51 §8 has no species and no bound. Its conclusion (8.1, 8.3, 8.4) is a support statement: V_i^* = M^iU_{k+1} lies in the full step-i support (χ_i(□)(V_i^*) = 1 and χ_Ax = 1), which is the input of (T-dev)'s global induction (map #MD2.4.5.13-9). Repair in place: (iv-a) now asks for exactly that, plus g_k^{(j)} = g_k^{(j+1)} at B′_j = 0 on 5.1(a)'s terms, which §5.3 *The carrier item* proves. §5.3 now cites (iv-a) for the gloss instead of restating it, and it, *The complement* and 5.1(a) no longer use the undefined "carrier species". The opening list reads "attached species with D2.6's bounds and its carrier item".
+- **F5** (cosmetic, §1.1): two parentheticals in a row ("… T_c) (for k ≤ N − 1, …"); reworded to "…, and for k ≤ N − 1 (…)".
+- Re-derived in full and correct: §3.1's identity (N_kκ^{g_k,(K)} = κ_f^{(K)}e^{E^f_{const,k}}); §3.2's 𝐑-part sum (the bracket, 2s_j + 1 ≤ MR_j(8/c^R_E + 1)(2y + 1), (1 + x)e^{−x/2} ≤ 2e^{−1/2}, m̂^{β₀} ≤ L^{m/2}, the sum lemma, r^R_K), the exponent-difference factor, and log N_k; the §3.3 sum 8.48/(L − 1); §4.1(3)'s chart arithmetic (0.05 + 0.048, the M ≥ 6(d+2)/c_π step, 1.06·44/8 = 5.83); §4.2's b_d and 1.2b_d (8.91 ≤ 9.2, ratio ≤ 1.184), and ‖V − 1‖ ≤ 0.075 and 1.04; (iii-d)'s 17/16·3.1 ≤ 3.3, 4θ(1 + θ)³ ≤ 4.1θ, (103R_j)^d, 3.31, 1330, 444 + 400, and τ_c ≤ e^{0.52} under (C4R); (iv-b)'s tube count and the β-function sum (both ranges, 5/4 + 2G′/(p₀b(log G′)^{p₀−1})); (iv-e)'s ℒ_K term 2e^{c_C}δ_LF; §5.3's ε_A^g against D26 l.392–395, c_X = 81·25921·e^{1+ν_e}, (4)'s 1.12, and (iv-b) at k = 1 with e^{1/10} under (C5); the constant conditions (C1)–(C6).
+- Pre-check: changed lines re-read; "carrier" grepped file-wide (l.6, 39, 104, 110, 140, 235, 239, 243, 245, 263, 291, 292, 295); the map's #MD2.4.5.12 and #MD2.4.5.13-9 looked up and added to the sources; table #T12.30's "V_i^* (iv-a) is #T12.19-12's" still holds. bgptr (known non-tags only), bgdefs (58, each once), bginternal (all items and conditions defined); longest line 659; LF only (byte count; Git Bash's grep -c for CR gave a false count); 360 lines and 101,130 characters.
+
+## Background Note, Round 9 (narrow: F4 and F5 and their consumers)
+
+Verdict: clean. Re-read l.6, 33, 39, 104, 235, 239, 243, 291, 292, 295 and 323. (iv-a)'s two parts are exactly what §5.3 *The carrier item* proves: the support statement holds for both chains, and g_k^{(j)} at B′_j = 0 is g_k^{(j+1)} on every term, with the pending variables entering through U_{j+1}(V_{j+1}) as in f_{j+1}. 5.1(a), l.239 and l.295 read consistently with it.
+
+## Background Note, Round 10 (narrow: every SW citation, against SW 1eeaeff9e212)
+
+Input: (4)'s message (SW 18ca95375171 → 1eeaeff9e212, map 796d26f6e193, D26 30cd68b6dc51, D27 9b3902e3545b). I read SW's opening, §1–§4, §5's heading and (e), and §6(6a)–(6e) in the new file. Verdict: not clean (two minor findings).
+- **F6** (minor, §4.1(3), (C4)): the chart proof bounded a′ only by α_{1,j+1}L^{−(j+1)}, which is the radius on Ω_{j+1}, or on 𝒟^{sub}, where (S-w) is evaluated (SW §3(b3), (6b)). But (D3) and (iii-b) assert analyticity on all of D(j+1)(iii)'s domain, as SW §3(b2) needs for the class. That domain's older-layer radius is f_{j+1,n}α_{1,n}L^{−n} (SW §3(b1)), and the round 8 check of (C1)–(C6) missed this. Re-derived: an inner bond's blocks lie in Ω_k (§1.6), so the tube's layers have n ≥ k. Hence L^k·phase ≤ max(α_{1,j+1}L^{k−j−1}, α_{1,n}L^{k−n}) ≤ (1+β₀)α_{1,K}, and |𝐇| ≤ O(1)·4B₀e^{16κ_s}ε_H on every layer (D26 4.2's form, Lθ ≤ 1 by SW §6(6e)). Repair in place: (C4) := 1.06(d+2)(b_d^c)^{k−1}c_h(O(1)·4B₀e^{16κ_s}ε_H + (1+β₀)α_{1,K}) ≤ 1/22, on every layer. At k = 1 it holds under (Cε), since O(1)·4B₀e^{16κ_s}ε_H ≤ 1/(4.48c_π′M) and 1.06(d+2)/(8.96c_πM) ≤ 1/44 once M ≥ 6(d+2)/c_π (1.06·44/8.96 = 5.21). (C4γ) was (C4) with /L on 𝒟^{sub}, so (C4) now implies it and it is deleted; §5.3 (4) cites (C4), and its transport count names 𝒟^{sub}_{j+1}. Consumers re-read: the opening, 4.1(4), 4.2's complex recursion, (D3), *At another fixed k*, and *Derived here*. None depends on the /L.
+- **F7** (minor, 5.1(a)): it listed groups that "meet the collar Coll_{j+1} …" as excluded from (S-w)'s scope by SW §1(a3)(i)–(iii). Under SW §1(a1) the scope tests are D26 2.1(i)–(iii), and (i) concerns the one-layer neighbourhood of Λ_{j+1}ᶜ, not the collar. Repair: §2.2's parity exclusions (map (5) *Scope*); the groups failing 2.1(i)–(iii), outside (S-w)'s scope and att(j+1, coll); and a group failing only 2.1(iv), att(j+1, Z) inside the scope (SW §1(a2)).
+- Bookkeeping: (iii-b) cites the species of map #MD2.0.3.22–#MD2.0.3.25-1 by D26 2.1's tests (SW §1(a2)), read in full and added to the sources. The SW source entry reads "the opening, §1–§4, §5's heading and (e), §6(6a)–(6c), (6e)". (C6)'s SW §6(6e) and map #MD2.4.13.19-11 were checked against the new text.
+
+## Background Note, Round 11 (narrow: F6, F7 and their consumers)
+
+Verdict: clean. Re-read l.9, 158–161, 163, 172, 179, 186, 236, 284–285, 309, 317 and 354. One cosmetic finding was repaired: in 5.1(a) "these" could be read to include the parity exclusions, so the scope clause is now a parenthesis on the failing groups. bgptr (known non-tags only), bgdefs (58, each once), bginternal (all items and conditions defined; (C4γ) is gone); longest line 659; LF only; 361 lines and 101,353 characters.
+
+## Table: SW's Conditions (9f6ebf47c805)
+
+Announced to (4) before the edit. #T3.31 (VAR's a₁) now records SW's shrink conditions a₁ ≤ 2/(9O(1)B₃R₁M₁) and O(1)ξa₁ ≤ 1. Here ξ = L^{−1}η ≤ 1 (SW §5(2), (5)), and a₁ is taken at #T2.7's printed R₁M₁ (R₁ = R₁^V, map #MD2.2.6.190-22), not at #T1.6's raised M′. New sub-row #T1.5-1 holds (C-M), whose M₁ is VAR's, not #T1.5's CRE M₁. Lθ ≤ 1 is a smallness condition on g and gets no row. The printed-versus-raised point was sent to (4) for SW. Relabel → LABELS 1f2b3fa09b9d at LF 94d3e82675b1. defcheck "-- 0 lines"; dmarks2 16; deadcheck and prefcheck known hits only, shifted one line by the new row; columns 10×5, 74×6, 267×7.
+
 ## SHAs
 
-Table: d71e239470ea → eb5a6a505303 → b168c70703ab. LABELS: 2d2801629f41 → 146c7b49d22b → d444e40b4233. Background note: 249ae1a46a2a → 8510ab0aebd7 → 7bb5f99918ab.
+Table: d71e239470ea → eb5a6a505303 → b168c70703ab → 9f6ebf47c805. LABELS: 2d2801629f41 → 146c7b49d22b → d444e40b4233 → 1f2b3fa09b9d. Background note: 249ae1a46a2a → 8510ab0aebd7 → 7bb5f99918ab → 3047b31464c3 → 22a230556c65.
 
 ## Status
 
-Table rows: bookkeeping and re-pointing to D26's text, no round needed. Background note: round 6 found F1–F3 (repaired), round 7 (narrow) is clean, and a full round 8 is next.
+Table rows: no round needed. Background note: round 6 found F1–F3, round 8 found F4–F5, and round 10 found F6–F7, all repaired. Round 11 (narrow) is clean, and a full round 12 is next.
