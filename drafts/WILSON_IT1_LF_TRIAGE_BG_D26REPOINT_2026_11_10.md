@@ -95,10 +95,15 @@ Table #T12.13: δ̄_m := min(δ̄, μ4^{−m}) → δ̄₀ := min(δ̄, μ), δ�
 The table lists no K₁, Ĉ, c_nc or L ≥ 8 from the note, and it does not mirror #MOMGD.5-4 (deleted) or #MOMGD.23-1. The note's L ≥ 12(1+β₀)² and L > (1+β₀)⁹ follow from #T1.3's L ≥ L₀ = 5000. Announced to (4). Relabel → LABELS 58050f8936d3, table ef03c153b6ad; checks as before.
 Background note: bgptr gives known non-tags only against map 656eed60159c, so every cited map tag resolves. SW 2be3106d4b2f keeps the opening's (a)–(d), §1(a1)–(a2), §3(b1)–(b3), §5(e) and §6(6a)–(6e), and its new opening sentence (the printed R₁M₁) matches table #T2.7 and #T2.7-1. The note needs no change.
 
+## O6 908c956d462e, Map 4393221aa40a
+
+Table #T3.36: S_H ≤ g_k^{3/2}/16 (map #MOMGD.58) → S_H ≤ g_k^{3/2}/40 (map #MD2.2.6.193: 10S_H/g_j ≤ g_j^{1/2}/4), with S_H of #T12.13 (#MD2.2.6.185-2), whose definition is not repeated. "O6's (C1)" → "O6's (C3)", since O6's (C3), C₁^{RG2}ε_k^♯ < r_{α,k}/2, gives membership in 𝒫_k^m (O6 l.107, l.227). Announced to (4).
+The other O6 row citing a condition already reads "𝒫_k^{3/4} under O6's (C3)". The table has no q₁ = p₀ condition. The background note's map tags all resolve in 4393221aa40a (bgptr known non-tags only). Relabel → LABELS 0e94a6174742, table cc3949e005fb; checks as before.
+
 ## SHAs
 
-Table: d71e239470ea → eb5a6a505303 → b168c70703ab → 9f6ebf47c805 → 0fa578b35726 → ef03c153b6ad. LABELS: 2d2801629f41 → 146c7b49d22b → d444e40b4233 → 1f2b3fa09b9d → 740b198d7a9d → 58050f8936d3. Background note: 249ae1a46a2a → 8510ab0aebd7 → 7bb5f99918ab → 3047b31464c3 → 22a230556c65.
+Table: d71e239470ea → eb5a6a505303 → b168c70703ab → 9f6ebf47c805 → 0fa578b35726 → ef03c153b6ad → cc3949e005fb. LABELS: 2d2801629f41 → 146c7b49d22b → d444e40b4233 → 1f2b3fa09b9d → 740b198d7a9d → 58050f8936d3 → 0e94a6174742. Background note: 249ae1a46a2a → 8510ab0aebd7 → 7bb5f99918ab → 3047b31464c3 → 22a230556c65.
 
 ## Status
 
-Table rows: no round needed. Background note: round 6 found F1–F3, round 8 found F4–F5, and round 10 found F6–F7, all repaired. Rounds 11 (narrow) and 12 (full) are clean, so the note is done at 22a230556c65. The K rows follow D26 2dce56a49737, and #T12.13 follows COMPLEX_COVARIANCE f1cbf76fb687.
+Table rows: no round needed. Background note: round 6 found F1–F3, round 8 found F4–F5, and round 10 found F6–F7, all repaired. Rounds 11 (narrow) and 12 (full) are clean, so the note is done at 22a230556c65. The K rows follow D26 2dce56a49737, #T12.13 follows COMPLEX_COVARIANCE f1cbf76fb687, and #T3.36 follows O6 908c956d462e.

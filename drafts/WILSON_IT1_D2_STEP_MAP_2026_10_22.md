@@ -201,13 +201,13 @@
     {#MOMST.44-1} The 𝐄₁ difference is an RG2 Lemma 1 term, analytic for |B| < ε₁^{RG2}g₁^{−1} (RG2 (1.34)) with ε₁^{RG2} absolute (the closure's Premise: the step-1 interior terms are analytic on RG1's absolute widths, from CRE (1.26) and RG2 p.10; RG2 p.7's 4B₀C₁e^{16κ₁}ε₁ ≤ ¼α₂ with RG1's absolute α₂), so it has class (i)'s radius (closure b1, b4; #MOMST.47).
     {#MOMST.44-2} The 𝐑₁ difference does not occur for k ≤ N_k (LFR I p.177 (ii); D2.7 item 1(a)–(b)).
     {#MOMST.44-3} The 𝐁₁ and A(·) differences and V^{(1)}(S₂), whose analyticity space is CRE (3.43), are analytic only while the deformation stays inside the α_{1,1}-margin (D2.2(4)(f): 1/T_Y ≥ 16B₀e^{16κ_s}|B′|_Y/(min(β,1)α_{1,k})).
-    {#MOMST.44-4} With |B′| ≤ C₁^{RG2}|λCA| (‖C‖ = O(1) absorbed in C₁^{RG2}) this gives for them the radius λ_α := ρ_αg₁/δ₁, ρ_α := r_{α,1}/C₁^{RG2} (#T3.36), and g₁/λ_α = δ₁/ρ_α = O((log g₁^{−2})^{p₀−q₁}), which tends to 0 under q₀ = q₁ > p₀ and stays bounded, not small, if q₁ = p₀.
+    {#MOMST.44-4} With |B′| ≤ C₁^{RG2}|λCA| (‖C‖ = O(1) absorbed in C₁^{RG2}) this gives for them the radius λ_α := ρ_αg₁/δ₁, ρ_α := r_{α,1}/C₁^{RG2} (#T3.36), and g₁/λ_α = δ₁/ρ_α = O((log g₁^{−2})^{p₀−q₁}), which tends to 0 under q₀ = q₁ > p₀.
     {#MOMST.44-5} For these links (D2.6's, by b5) the radius ε′g₁/δ₁ of (i) is not an analyticity radius.
 - {#MOMST.45} Even and vanishing at 0 means K(λ) = ψ(λ²) with ψ(0) = 0.
   {#MOMST.45-1} For any λ′ below the class's radius (the sup is taken on a circle inside the domain), the Schwarz lemma gives
   {#MOMST.46} |K(g₁)| ≤ (g₁/λ′)²·sup_{|λ|=λ′}|K(λ)|,
   {#MOMST.47} so for a fixed λ′ = θλ_*, θ < 1, the gain is (δ₁/(θε′))²·sup_{|λ|=λ′}|K(λ)| for class (i) (the sup ≤ (C₁^{RG2}θε′/ε_H)·(D2.4(10)'s factors) by closure a1's identity 𝐕₁^{[λ]}(Y,B) = ½⟨Q(Y,B̃)B,B⟩ + 𝐕₁″(Y,B̃), B̃ = (λ/g₁)B, for the potentials, class-activities closure a1–a4; the product is c_λρ₂·(decay), a6).
-  {#MOMST.47-1} For a link with analyticity space CRE (3.43) (𝐁₁, A(·), V^{(1)}(S₂); D2.6's by b5) the same step with λ′ = θλ_α (it needs λ_α > g₁, i.e. ρ_α > δ₁, a constant comparison when q₁ = p₀) gives only (δ₁/(θρ_α))² = O(polylog), and the sup on |λ| = λ′ contains the insertion at |λA| ≈ ρ_α ∝ g₁, so this step gives O(g₁·polylog)·S_F for such a link.
+  {#MOMST.47-1} For a link with analyticity space CRE (3.43) (𝐁₁, A(·), V^{(1)}(S₂); D2.6's by b5) the same step with λ′ = θλ_α (it needs λ_α > g₁, i.e. ρ_α > δ₁, true for g small under q₁ > p₀) gives only (δ₁/(θρ_α))² = O(polylog), and the sup on |λ| = λ′ contains the insertion at |λA| ≈ ρ_α ∝ g₁, so this step gives O(g₁·polylog)·S_F for such a link.
   {#MOMST.47-2} Class (ii) takes λ′ = θλ_* as class (i) does, by #MOMST.44-1–#MOMST.44-2, and gets the same c_λρ₂ (closure b1, b4).
   {#MOMST.48} Pointwise, a single first-order insertion has size up to C₁^{RG2}δ₁/ε_H (D2.1(4) Claim, |B′|/ε_H), with δ₁ = g₁r₁ = A₁g₁(log g₁^{−2})^{p₀} on the support |A| < r₁.
   {#MOMST.48-1} For class (i) the step-2 integral gains one more factor of order δ₁/ε′.
@@ -1428,13 +1428,12 @@
     {#MD2.2.4.76-1} But that margin is ≥ α_{1,k}/2 ≥ (β/2)α_{1,k}, as β ≤ 1, so the same inequality closes it.
   - {#MOMGD.49} So the expansion of (e) needs, and CRE p.277's margin gives, 8B₀e^{16κ_s}O(1)ε_k < min(β,1)α_{1,k}/2.
     {#MOMGD.49-1} Without it already Φ_𝔅(0), and the Cauchy estimates in s(Δ) at t_Y = 1, would leave the domain.
-  - {#MD2.2.4.78} With ε_k = g_kA₀(log g_k^{−2})^{p₀} (CRE (2.4), p.255) and α_{1,k} = g_kC₁(log g_k^{−2})^{q₁} ((2.28), p.259: "q_0, q_1 are integers greater than 1, C_0, C_1 are sufficiently large positive numbers"), the inequality is q₁ > p₀ for g_K small (g_k ≤ (1+β₀)g_K for k ≤ K, CRE (2.6) with CRE (2.6)–(2.7)), or q₁ = p₀ with C₁/A₀ > 16B₀e^{16κ_s}O(1)/min(β,1).
-    {#MD2.2.4.78-1} (6)(e)'s complex data need the stronger C₁/A₀ > 32C₁^{RG2}B₀e^{16κ_s}O(1)/min(β,1) in the equality case.
+  - {#MD2.2.4.78} With ε_k = g_kA₀(log g_k^{−2})^{p₀} (CRE (2.4), p.255) and α_{1,k} = g_kC₁(log g_k^{−2})^{q₁} ((2.28), p.259: "q_0, q_1 are integers greater than 1, C_0, C_1 are sufficiently large positive numbers"), the inequality holds for g_K small under q₁ > p₀ (g_k ≤ (1+β₀)g_K for k ≤ K, CRE (2.6)–(2.7)).
     {#MD2.2.4.78-2} Related prints: V3 L3968's "p_0 ≥ 5𝔯" (at CRE p.246) and CRE p.259's "C_0, C_1 are sufficiently large positive numbers".
     {#MOMGD.49-5} So CRE p.277's margin, which holds for every small g_K, entails q₁ ≥ p₀: for q₁ < p₀ the ratio ε_k/α_{1,k} = (A₀/C₁)(log g_k^{−2})^{p₀−q₁} is unbounded as g_k → 0.
   - {#MOMGD.49-4} No printed comparison of q₁ with p₀ was found: q₁ occurs only on CRE p.259 and LFR II p.368, and p₀ is not fixed on CRE p.255 (search of the CRE, RG1, RG2, LFR I, LFR II, and UV3 transcriptions).
     {#MOMGD.49-2} D2 uses the stronger q₀ = q₁ > p₀ (SW closure §2; #MD2.4.12.51).
-    {#MOMGD.49-3} Under it ε_k/α_{1,k} → 0 as g_k → 0, so #MOMGD.49's inequality and (6)(e)'s complex-data form (#MD2.2.4.78-1) hold for g_K small, whatever the constants, and neither is taken from CRE p.277's margin.
+    {#MOMGD.49-3} Under it ε_k/α_{1,k} → 0 as g_k → 0, so #MOMGD.49's inequality and (6)(e)'s complex-data form (#MD2.2.6.173-3) hold for g_K small, whatever the constants, and neither is taken from CRE p.277's margin.
   - {#MD2.2.4.80} *T_Y.* T_Y is taken as large as the margin allows.
     {#MD2.2.4.80-1} By the inequality T_Y ≥ 1, and 1/T_Y = max(|B′|_Y/ε_H, 16B₀e^{16κ_s}|B′|_Y/(min(β,1)α_{1,k}), C′B₀e^{16κ_s}|B′|_Y/(min(β,1)α_{0,k})) ≤ 1, the third entry for the pointwise conditions (2.34) and (2.36) (#MD2.2.6.142) and, with C′ ≥ max(C_{(2.35)}, C_{(2.37)}) (both enlargements, #MD2.2.6.142 and the RMJ note §6), for (2.35) and (2.37) at the evaluation points.
     {#MD2.2.4.80-2} This is the factor per component in D2.4's count.
@@ -2093,7 +2092,7 @@
   {#MD2.2.6.155-3} At complex backgrounds the chain's transports are G^c-valued and the conjugations cost the factor e^{4c_Gdι(1 + o(1))} = 1 + o(1) on the constant ((4)(d′), Step 8 (ii)–(iii)).
   - {#MD2.2.6.156} *The complex data.* The ω-dependent old factors are evaluated at R(w(s,t))ω on the whole polydisc of (4)(e)–(f), |s(Δ)| ≤ e^{κ_s}, |t_Y| ≤ T_Y, not only at t = 1.
     {#MD2.2.6.156-1} There sup|𝐇(s,tB′)| ≤ 4B₀e^{16κ_s}(max_YT_Y|B′|_Y + sup|B′|) ≤ min(β,1)α_{1,k}/4 + 8C₁^{RG2}B₀e^{16κ_s}O(1)ε_k =: h_k, by 1/T_Y ≥ 16B₀e^{16κ_s}|B′|_Y/(min(β,1)α_{1,k}) ((4)(f)).
-    {#MD2.2.6.156-2} The second term is ≤ min(β,1)α_{1,k}/4, since ε_k/α_{1,k} = (A₀/C₁)(log g_k^{−2})^{p₀−q₁} (#MD2.4.5.2-1) tends to 0 uniformly in k for q₁ > p₀ (g_k ≤ (1+β₀)g_K, g_K small) and is ≤ A₀/C₁ for q₁ = p₀ (C₁/A₀ large); so h_k ≤ min(β,1)α_{1,k}/2 ≤ α_{1,k}/2, CRE p.277's margin's inequality in its complex-data form.
+    {#MD2.2.6.156-2} The second term is ≤ min(β,1)α_{1,k}/4, since ε_k/α_{1,k} = (A₀/C₁)(log g_k^{−2})^{p₀−q₁} (#MD2.4.5.2-1) tends to 0 uniformly in k for q₁ > p₀ (g_k ≤ (1+β₀)g_K, g_K small); so h_k ≤ min(β,1)α_{1,k}/2 ≤ α_{1,k}/2, CRE p.277's margin's inequality in its complex-data form.
     {#MD2.2.6.156-3} So the size is O(α_{1,k}), not O(ε_k).
   - {#MD2.2.6.157} *The adjacent layer, j = k−1.* There n = k, the layer Ω_k∖Ω_{k+1} is in the scale-k region, and RG2 (1.18) bounds 𝐇 by h_k directly.
     {#MD2.2.6.157-1} So |log w| ≤ C_wh_k.
@@ -2140,8 +2139,8 @@
     {#MD2.2.6.170-7} at the consumers' points they carry p.277's coefficient O(ε_j) times 2 with the decay rate reduced by ϑ_j → 0 (O6 closure §5a, from p.277's bound on the size-set K′ (O6 §5a(i)) and CRE p.277's margin for the 𝐄- and 𝐑-brackets (CRE p.276 l.2–13, l.38–39), with p.277's A(·)-suppression (p.277's suppression of the A(·)-coefficients by 𝐇_j's decay) derived in §5a(ii) from p.277's printed support statement, CRE (2.24), (2.1) and CRE p.277's 𝐇-decay, condition (C7)), and V^{(j)}'s action part uses §5a at a Cauchy radius g_j^{3/2} ((C4′));
     {#MD2.2.6.170-8} only CRE (3.28)'s derivatives (O6 §9) use the margin-limited coefficient, at Cauchy radius r_{α,j}/(4C₁^{RG2}g_j) inside 𝒫_j^{3/4} under (C3), with no further condition.
     {#MOMGD.36} *The consumers.* The consumers' points of #MD2.2.6.170-7 are those of the att bounds at complex σ_k of D2.6 closure §2.2–§2.3, §4.3, and §5.0, which receive the bracket terms with p.277's coefficient O(ε_j) times 2 and the decay rate reduced by ϑ_j; these bounds are inputs of (S-w) (#MD2.4.12.52), on which (Z) rests (#MD2.3.4.58).
-    {#MD2.2.6.170-9} The membership of the consumers' points in 𝒫_j^m is #MD2.2.6.173's computation, a smallness condition on g_K under q₀ = q₁ > p₀, or with q₁ = p₀ the constant conditions C₁/A₀ > 64C₁^{RG2}B₀e^{16κ_s}c₃/min(β,1) (#MD2.2.6.173); (3.43) is Bałaban's analyticity space in the integration field, a polylog radius of the same kind as CRE p.277's margin's; 𝒫_j^m contains the support, and whether (3.43)'s A-domain does is not used (O6 closure §7; the bounds on the support are O6 §7's support bound (c));
-    {#MD2.2.6.170-10} V^{(j)}'s action part by a Cauchy estimate at half CRE p.277's margin's radius in the direction of the change of variables, and its Gaussian-form part −⟨K(σ_j, A) + ½Kδ, δ⟩, K = C*Δ^{(j)}C, bounded through K's random-walk expansion with S_{j+1} separated from Λ_{j+1} by (3.20)'s layer (O6 closure §6); conditions (C1)–(C5), (C4′) and (C7) there, smallness conditions on g_K given (q₀ = q₁ > p₀).
+    {#MD2.2.6.170-9} The membership of the consumers' points in 𝒫_j^m is #MD2.2.6.173's computation, a smallness condition on g_K under q₀ = q₁ > p₀ (O6 closure §4); 𝒫_j^m contains the support, and (3.43)'s A-radius, defined nowhere, is not used (O6 closure §7; the bounds on the support are D2.6 closure 2.3 (c));
+    {#MD2.2.6.170-10} V^{(j)}'s action part by a Cauchy estimate at half CRE p.277's margin's radius in the direction of the change of variables, and its Gaussian-form part −⟨K(σ_j, A) + ½Kδ, δ⟩, K = C*Δ^{(j)}C, bounded through K's random-walk expansion with S_{j+1} separated from Λ_{j+1} by (3.20)'s layer (O6 closure §6); conditions (C2), (C3), (C4′), (C5) and (C7) there, smallness conditions on g_K given (q₀ = q₁ > p₀).
     - {#MD2.2.6.171} *V^{(j)}.* p.269: the change of variables on S_{j+1} changes the action "by terms corresponding to (1.24), and by terms obtained by the first order expansion of the action with respect to the perturbative parts of the changes of variables.
       {#MD2.2.6.171-1} We denote this new part of the action by V^{(k)}(S_{k+1},A_k,𝐇^{(k)}).
       {#MD2.2.6.171-2} All terms of the previous action contribute to it", and p.271 puts V^{(k)}(S_{k+1}) inside ⟨·⟩_{s=1,t} and tV^{(k)}(S_k) into the measure (3.27).
@@ -2157,7 +2156,7 @@
     {#MD2.2.6.173-1} Fix c_ω ≤ O(1), the O(1) of CRE (3.14).
     {#MD2.2.6.173-2} For |σ_j − σ_{j,0}| < r_{ω,j} around a real σ_{j,0} in the support, g_j|B| < 2O(1)ε_j, so |B′| ≤ 2C₁^{RG2}O(1)ε_j.
     {#MD2.2.6.173-3} So D2.1(4)'s conditions, (4)(f)'s margin condition and CRE p.277's margin's entailment hold with O(1) replaced by 2C₁^{RG2}O(1).
-    {#MD2.2.6.173-4} These are smallness conditions on g_K, and CRE p.277's margin's alternative q₁ = p₀ becomes C₁/A₀ > 32C₁^{RG2}B₀e^{16κ_s}O(1)/min(β,1) for membership, and 64 in place of 32 for the O6 closure's Cauchy and localisation radii (its (C3)).
+    {#MD2.2.6.173-4} These are smallness conditions on g_K under q₁ > p₀; the O6 closure's Cauchy and localisation radii use its (C3), C₁^{RG2}ε_j^♯ < r_{α,j}/2.
   - {#MD2.2.6.174} D(m)(iii)'s ω-clause, m ≥ j+1 (polydiscs): joint analyticity in σ_j on the polydiscs |σ_j − σ_{j,0}| < r^{(m)}_{ω,j} := r_{ω,j}(1/2 + 2^{−(m−j)}) per bond, around real σ_{j,0} in the support.
     {#MD2.2.6.174-1} A tube |Im σ_j| < r would not control the real shift of R(w)σ off the real support.
     {#MD2.2.6.174-2} At k = 1 this matches the row domain, the polydisc 𝒰_c.
@@ -3169,7 +3168,7 @@
   {#MD2.4.5.1-1} The factor 1/ᾱ_{k+1} of (4) is the Cauchy factor of the domain's radius, and S_𝒢 is of size ρ_{k+1} under (S) ((7); it holds as (S-w), (13)(d)).
   {#MD2.4.5.1-2} So the amendment is forced by the Cauchy route of (4), not by a choice.
 - {#MD2.4.5.2} *Sizes on the support are unchanged in order.* On the support, δ*^{(k)}_n(U_k) ≤ 2c_σB₃ε_kΣ_tw_t (D2.0(3)(b)).
-  {#MD2.4.5.2-1} So ρ̃_kδ*_n ≤ Cρ_kε_k/ᾱ_k, and ε_k/α_{i,k} = (A₀/C_i)(log g_k^{−2})^{p₀−q_i} ≤ A₀/C_i under CRE p.277's margin's entailments (q₁ > p₀, or q₁ = p₀ with C₁/A₀ large; q₀ > p₀, or q₀ = p₀ with C₀/A₀ large; both met by (q₀ = q₁ > p₀) of (12)(f)).
+  {#MD2.4.5.2-1} So ρ̃_kδ*_n ≤ Cρ_kε_k/ᾱ_k, and ε_k/α_{i,k} = (A₀/C_i)(log g_k^{−2})^{p₀−q_i} ≤ A₀/C_i under (q₀ = q₁ > p₀) of (12)(f), for g_K small.
   {#MD2.4.5.2-2} Hence ν_n^{(k)} = O(ρ_k) on the support, as before.
 - {#MD2.4.5.3} *At complex data* (D(k)(iii)) the dev term carries δ*^{(k),30}_n + a*^{(k)}_n(A′), and ρ̃_ka*_n(A′) ≤ Cρ_kα_{1,k}/ᾱ_k = Cρ_k·max(1, (C₁/C₀)(log g_k^{−2})^{q₁−q₀}); the same bound holds for j*_n(𝐉), since |𝐉 − J_k|/r_J < 2.
   {#MD2.4.5.3-1} So the complex-data size gains the factor max(1, λ_R(log g_k^{−2})^{q₁−q₀}) ≤ λ_R(1 + (log g_k^{−2})^{(q₁−q₀)₊}), with λ_R = C₁/C₀ = K_RLM + 1 ≥ 1 fixed after L and M (the two-loop note's #14; table #T2.24), of the same kind as ρ^c_{ph,k}'s.

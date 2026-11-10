@@ -37,7 +37,8 @@
 - Done 18:07: D26 7.2 *Linear size and cubes* (d′ + 1 ≤ d·#cubes, C_d′ := d(3(126)^d + 64^d + 2^d), ℓ₀^{box}; 30cd68b6dc51); SW rewritten (1eeaeff9e212); map 796d26f6e193 (#MD2.4.4.5, -8-3, -10, -12-1, -20, -21-1, #MD2.3.9.9-1); D27 15.6(e) (9b3902e3545b). Table fork and two-loops told.
 - Done 18:30: K₁ takes d^{−1} (direct route; trees of the enlargements need not lie in Z), K_{j+1} keeps 2(14)^d; D26 2dce56a49737 (with 4.2(iii) class (3)'s ω-freeness induction and §1's "contained in"), O2 1c529b0ff9ad, IT-1 62907f757621, map #MD2.0.5.36. O2′ archived to archive/ (README there).
 - Done 18:43: COMPLEX_COVARIANCE consolidated, f1cbf76fb687 (slot cocycle and (K4) deleted, δ̄₀ := min(δ̄, μ), Lemma 1 on the gauge-invariant 𝒟_W, path-point curvature closed via L^{−m} ≤ μ/(4M), T₁ from CRE p.268, c_π′, K₁ ≤ 3, L ≥ 12(1+β₀)²); map 656eed60159c (#MOMGD.5, -4 deleted; #MD2.4.13.19-1; RTR's X₀ in #MOMGD.23-1); SW 2be3106d4b2f (c_π′, printed R₁M₁). Table fork and two-loops told.
-- To do, non-BP, LF: O6, LINE_DEFECT (IT-1), LF_PACKET_PLAN, READINGS_INVENTORY.
+- Done 18:57: O6 consolidated, 908c956d462e (RG2 (1.18)'s factor 4 in the deformed shift, margin (7/16)min(β,1)α_{1,k}; S_H ≤ g^{3/2}/40 and slot moves 10S_H/g_j per #MD2.2.6.193; (C1), (C4) deleted; q₁ = p₀ alternatives removed); map 4393221aa40a. Table fork did #T3.36 (table cc3949e005fb); two-loops told, coarse-chain 1.04 point forwarded.
+- To do, non-BP, LF: LINE_DEFECT (IT-1), LF_PACKET_PLAN, READINGS_INVENTORY.
 - Delegated to two-loops (17:5x, user's request): RMJ, RW1, COARSE_CHAIN_INTERFACES (with the 1.04 factor), RTR_PROOF_PASS (CRE (2.32)), RC_PAYMENT_PASS (O2′ → D26), RC_PROOF_PASS, READINGS_RECHECK.
 - Map follow-ups: the remaining V3/V4 line pins.
 - Last, after everything above, the LF-owned BP files: BP_COUPLING_PROFILES, BP_VAR_PROP4_KERNEL, BP_COMPLEX_BASE_GAUGE, BP_CMP98_ADJOINT_AVERAGING, BP_LFR2_CHI_K_LAMBDA, BP_LFR2_LOOP_LOCALISATION.

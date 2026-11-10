@@ -3688,3 +3688,10 @@ Relabel → LABELS 740b198d7a9d, table 0fa578b35726, at LF 94d3e82675b1. The def
 - Announced to (4) before the edit and SHAs sent after. The background note's citations of map 656eed60159c and SW 2be3106d4b2f all resolve. Log: WILSON_IT1_LF_TRIAGE_BG_D26REPOINT_2026_11_10.md.
 
 Relabel → LABELS 58050f8936d3, table ef03c153b6ad, at LF 94d3e82675b1. The definition check prints 0 lines, and dmarks2 lists the 16 known leftovers. deadcheck and prefcheck show only their known hits. Columns are 10×5, 74×6, and 267×7.
+
+## O6 908c956d462e: #T3.36's S_H and (C3), 2026-11-10 18:57
+
+- #T3.36: S_H ≤ g_k^{3/2}/40 (map 4393221aa40a #MD2.2.6.193), replacing /16 (#MOMGD.58). S_H stays defined once, in #T12.13 (#MD2.2.6.185-2). The consumers' points lie in 𝒫_k^m under O6's (C3), as O6's (C1) is deleted.
+- Announced to (4) before the edit and SHAs sent after. The table has no q₁ = p₀ condition. Log: WILSON_IT1_LF_TRIAGE_BG_D26REPOINT_2026_11_10.md.
+
+Relabel → LABELS 0e94a6174742, table cc3949e005fb, at LF 94d3e82675b1. The definition check prints 0 lines, and dmarks2 lists the 16 known leftovers. deadcheck and prefcheck show only their known hits. Columns are 10×5, 74×6, and 267×7.
