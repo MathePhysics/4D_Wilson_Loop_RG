@@ -3745,7 +3745,7 @@ The items of the LF longer than 5,000 characters are set out in paragraphs at th
 | {#T12.30-6} | 791 | Δ_i := sup‖(M^iU′)(b) − (M^iU)(b)‖ over the scale-i bonds of the two b… |
 | {#T12.30-7} | 792 | N_tube := 4ℓ_C·3·2^{d−1}, the scale-K cubes met by the scale-k tube of… |
 | {#T12.30-8} | 793 | e^{c_C} := exp(4Cℓ_C(ρ_Kε_K + τ_K²) + r^R_K) ((iv-e)), whose c_C is no… |
-| {#T12.30-9} | 794 | The coarse chain at k = 1 (§5.3): c_X = 2099601e^{1+ν_e}, the coarse-c… |
+| {#T12.30-9} | 794 | The coarse chain at k = 1 (§5.3): c_X = 2099601e^{1+ν_e+5ν_f/L}(1+Ĉ^g)… |
 | {#T12.30-10} | 795 | e^{g,(j+1)}_X := Φ^g_ℓ(X) − Φ^g_{ℓ₀}(X), the coarse #T12.19-11 e^{(k+1… |
 
 ## Definitions of the LF
@@ -4778,4 +4778,4 @@ Each definition X := … of the LF carries the tag {#D.X} immediately before X; 
 | {#D.ψ′} | 3266 | ψ′ := Σ_{y∈B}G_B(·, y)σ(y)/(2d), so that Δψ′ = −σ in B and ψ′ = 0 |
 | {#D.h_y} | 3267 | h_y := E^·G(S_{τ_B} − y), τ_B the exit time from B. Theorem 4.3.1  |
 
-Hashes at which the lines above hold: LF 94d3e82675b1, table cc3949e005fb (SHA256, first 12).
+Hashes at which the lines above hold: LF 94d3e82675b1, table 77c1b5ec9928 (SHA256, first 12).
