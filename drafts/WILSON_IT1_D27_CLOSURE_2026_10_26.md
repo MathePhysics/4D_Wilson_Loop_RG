@@ -653,7 +653,7 @@ These masses are already paid by κ_j(X) in D26 7.2's enlarged induction, with 1
   The d′-parts are of the form of D26 7.3's subtraction O(1)M^dR_{k+1}^{d+1}d′(Y_i), with a larger O(1). κ_k(Y_i)'s p₀²(g)(d′+1) term (p.381 l.5–6) pays them for small g_k. The constant parts are polylogs of order ≤ r(d+1) < p₀. They join the left side of the last inequality, which still holds for small g_k.
 - *The bridge.* D26 §5's bridge (T3) applies at Y_i at every later step n ≥ k. Indeed, Y_i ⊆ Λ_nᶜ, and dist(Ω_{n+1}, Coll(Y_i)) ≥ 5R_{n+1} π_n-sides by (G1) at step n+1, as for every component. So 5.0–5.5 run verbatim, with S_R over m ≤ K.
 
-(d) *The 𝐑-dev insertions.* The 𝐑-dev insertions created at step k have j(W) = k. So (T-dev)'s global induction (map #MD2.4.6.4) for them starts at step k, and it needs D2.6's carrier item at step k only. D26 §9 supplies it for the term's band and boundary cubes.
+(d) *The 𝐑-dev insertions.* The 𝐑-dev insertions created at step k have j(W) = k. So (T-dev)'s global induction (map #MD2.4.6.4) for them starts at step k, and it needs D2.6's carrier item at step k only. D26 §8 supplies it for the term's band and boundary cubes.
 
 (e) *Step-1 species and base points.* The step-1 species and the base points O3 enter as at k ≤ N, since the post-R density keeps the CRE Sect. 2 form by LFR II Theorem 1 (p.355).
 

@@ -3657,3 +3657,11 @@ Relabel → LABELS 2d2801629f41, table d71e239470ea, at LF 94d3e82675b1. The def
 - PF rows: re-checked at PF 409030f42d02 (BPA 46dbafe8fd1f, unchanged). Every PF quote in #T4.52, #T12.4, #T12.4-1, #T12.4-4 and #T12.4-4-1 matches its tag (#PF0.1, #PF0.2, #PF0.5-2, #PF1.1, #PF2.1, #PF3.2-8d2a-3, #PF3.2-8d2d-4, #PF3.2-8d2e-3, #PF3.2-8d3g, #PF3.2-9b, #PF4.2-0, #PF4.2-0a-1, #PF4.2-0-1, #PF4.3, #PF4.3-2, #PF4.3-3, #PF4.4-2, #PF4.5). The soft-test factor changes only ι^{ℓ₀}_i's bound, which the table does not quote.
 - W-δ #W8.14: closed by (4). It cites #T1.3's lower bounds on L, and #W8.14-1 names the five that were missing.
 - D26 §8: unmoved. Its l.362 lists D2.4(4) *Scope* and D2.3 as given from the map, as the background note cites it.
+
+## The D26, O4 and O2 Consolidations: the #T12.14 and #T12.19 Rows, 2026-11-10 18:00
+
+- (4)'s consolidation (D26 e966df384742, then 30cd68b6dc51): #T12.14 and #T12.19 to #T12.19-12 now quote D26's current text. Entries D26 no longer has are deleted (C_X, c_A, H′, ℓ_𝐔, C′, abs(𝓕), m̂₀, B₁(Z), y). D26's 5.2, 6.1–6.4, 7.1, 7.2 and 8.1–8.3 pointers are corrected. The circular 𝔹_j(Ω) entry is fixed. New sub-rows #T12.19-2-1, #T12.19-8-1, #T12.19-9-1 and #T12.19-10-1 were made for length.
+- D26 7.2's old "d′ ≤ #cubes" was false for ∗-connected domains (the diagonal chain). I reported it, and (4) replaced it with d′ ≤ d·max(N − 2, 0) and C_d′ := d(3(126)^d + 64^d + 2^d), which #T12.19-9-1 now quotes. The box scale is ℓ₀^{box} (IT-1 note §3i(4)), and #T12.19's collar reads as D26 §1. My rows #T12.30-8 to #T12.30-10 carry 2d·e^{c_W} and a_j.
+- Every quoted D26 text was checked against the file. The rows were announced to (4) before the edit. Log: WILSON_IT1_LF_TRIAGE_BG_D26REPOINT_2026_11_10.md.
+
+Relabel → LABELS d444e40b4233, table b168c70703ab, at LF 94d3e82675b1. The definition check prints 0 lines, and dmarks2 lists the 16 known leftovers. deadcheck and prefcheck show only their known hits. Columns are 9×5, 74×6, and 267×7.

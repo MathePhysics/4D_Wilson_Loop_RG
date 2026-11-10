@@ -1,0 +1,57 @@
+# Table and Background Note after the D26, O4 and O2 Consolidations (10 Nov 2026): Triage
+
+Input: (4)'s message of 10 Nov 2026 (D26 e966df384742, map e31a51aceaa4, O4 66508a10abe6, O2 c287b8f06abc), items 0–12, naming table rows #T12.14 and #T12.19-2 to #T12.19-11 and the background note as stale. Every quoted D26 text was checked against the file before any edit; all agree. The rows were announced to (4) before editing.
+
+## Table (d71e239470ea → eb5a6a505303)
+
+- #T12.14: #MD2.0.4.6-9 (absent from the map) dropped from the η_w, ν_e and τ̂² citations; C_X deleted (map #MD2.0.5.37 now has 8(64)^d and no C_X).
+- #T12.19-2: ρ_ω := 2c_G′(C_w′ + 4C_{c₀} + 8C_odL)(1+β₀)²α_{1,1}r (D26 l.204), with #T12.15's C_w′, #T12.13's C_{c₀}, and C_o at BP_TL_GC_TRANSFORMS #6.17-2. The 5.0 constants after it moved to the new sub-row #T12.19-2-1 (length).
+- #T12.19-3: (T0), (T2), (T3) are in D26 5.2, not 5.1; the old §8 pointer is dropped.
+- #T12.19-4: c_A and H′ deleted (not in D26); C_inp := max(C_m^ℂϑ_V, 1) and C_I″ := C_link′C_inp·max_i#𝓕_{r_i} (l.283, l.289); C_III := e^{√2C_πϑ_*/2} + 1 (l.285).
+- #T12.19-5: ℓ_𝐔, ‖A‖_μ, E, C_E, q_s^ℂ, C_K, C_Δ and their clash notes deleted; σ_γ := γ⁻¹N_lat(μ_H), C_m^ℂ := 2N_nbσ_γc_ℓ, K(s), m̂(s) with P and K_Δ, and ℓ_Λ (all 6.3, l.300–304); ℓ is the side of the aligned ℓ-cubes of CRE (1.10), (1.20) (l.290), not "V3's cubes".
+- #T12.19-6: abs(𝓕), C′ with its ‖Y_i‖ clause, and m̂₀ deleted (not in D26); old §8 pointer dropped; C_m identified as IT-1 note §3j(5)'s constant (l.299), with clash notes against #T3.13 and #T12.7-19.
+- #T12.19-7: R₀ := 1 + 2N_adj²e^{2^d+1}, C_st := 2^{N_adj+1}N_adj^{2N_adj}, D_i(X) as at l.326; F_i cites #T12.19-5's m̂(s).
+- #T12.19-8 and new #T12.19-8-1: a_j (clash note against #T2.3's spacing), C_{B,1} (l.358), N′_{s,b} with P^s_W (l.362), C_h written out (l.379; clash note against #T4.35), 𝔅_Z with radius R_t and ties by the fixed order (l.382), C_in (l.383).
+- #T12.19-9 and new #T12.19-9-1: C_A(j) := a_j + …; ε_A gains its j = 1 term 205^d(ℓ/ℓ₀+2)⁴C_rτ₁²·3·2^{d−1} (l.395), with ℓ₀ named as IT-1 note §3i(7)'s box scale; C_X deleted.
+- #T12.19-10 and new #T12.19-10-1: Res(X) := (K₁/8)(d₁′(X)+1), Pol(X) := (K₁ − 2B₁ − K₁/4)(d₁′(X)+1) ≥ (K₁/2)(d₁′(X)+1) (l.409, which needs K₁ ≥ 8B₁, l.408); κ₁ as the modified (1.76), κ₁(Z) ≥ K₁(d₁′(Z)+1) − O(1)M^dR₁^{d+1}d₁′(Z) (l.405); LFR II's κ_j(Z) named apart from #T12.14's κ_j.
+- #T12.19-11: B₁(Z) and y deleted; ε₁ cited to §8.3 (2)(iii) (l.477, l.493).
+- #T12.19-12: §8.1 (l.440) and §8.3 (l.458–505; C_9 is in 8.3). A pre-existing circular entry "𝔹_j(Ω) := (𝔹 ∩ Ω^{∼−2}) ∪ (𝔹_j(Ω) ∩ …)" now reads "𝔹 ∪ 𝔹_j(Ω) := …", as at l.458.
+- Back-references: #T12.7's C_K note, #T12.21's C′ note and #T12.23's C_X note no longer name the deleted entries; #T12.15-1's c̄ pointer, #T12.21's g_* pointer and #T12.23's K₁ pointer re-pointed to the sub-rows.
+- My rows #T12.30-8 to #T12.30-10: 2√d → 2d in C_{A,n}, C_{A,1}, C^g_{A,n}; a_1 → a_j in a_j^g and C_A^g(j).
+- Checks: relabel (LABELS 2d2801629f41 → 756f6e34c78b → 146c7b49d22b at LF 94d3e82675b1); defcheck "-- 0 lines"; dmarks2 "unentered candidates 16"; deadcheck and prefcheck known hits only; columns 9×5, 74×6, 267×7. Every edited row ≤ 660 characters.
+
+## Background Note, Round 6 (narrow: the lines that cite D26)
+
+Verdict: not clean (two minor findings).
+- **F1** (minor, (iv-e)): the bound d_n′ + 1 ≤ √d·#cubes_n was cited to D26's ledger at j = 1, which no longer states it. D26 7.2's replacement "d_n′ ≤ #cubes_n" (l.393) is false for ∗-connected domains. Counterexample: the diagonal chain Q_k = [k, k+1]^d, whose corners are cut points, needs length ≥ √d(n − 2) (Euclidean) or d(n − 2) (edges). Repair: d_n′ + 1 ≤ d·#cubes_n, derived in place from RG1 p.257's definition of the linear size (in MR_n-cubes, LFR II p.380). A spanning tree of the ∗-adjacent cubes, with each cube's shared lattice vertices joined along its edges, gives an admissible connected graph of length ≤ d(#cubes_n − 2). So C_{A,n}, C_{A,1}, the class-(III) term of (W) and C^g_{A,n} carry 2d. The defect in D26 7.2 (and the factor d it puts on C_d′) was sent to (4).
+- **F2** (minor, §5.3 (5) and the conditions list): the older-layer transports were quoted as 2c_π(b_d^c)^kα per traversal under 8c_π(b_d^c)^kMα ≤ 1, while D26 5.4 has c_π′ := 2c_π·max(1, c_h) and 4c_π′Mα ≤ 1. These agree only when c_h ≤ 1. Repair: the note now quotes c_π′ and 4c_π′.
+- Bookkeeping: "D2.6 closure §9" → "§8" (seven places, §9.1 → §8.1); the carrier item's conclusion is stated as 8.3's, with 8.2's class empty; (iv-c)'s same-activity step now cites D26 7.4(a)'s locality with the coarse polymers X^g, and the conditions list no longer names D2.4(4) *Scope* and D2.3; "V3's marks" → "V4's marks"; a_1^g → a_j^g; the source lists name §8 for §8/§9 and add RG1 p.257 l.14–18 and LFR II p.380 l.28–29.
+- Pre-check: every changed line re-read. bgptr reports only the known non-tags; bgdefs: 58 symbols, each defined once; bginternal: every interface item and condition defined; longest line 659 (the (iv-e) line was split at a sentence boundary). D26 2.1, 2.2 (ε^{new,α} ≤ C_Mb_k·pl), 4.2 (T_Y), 5.4, 6.2 *Units* and 7.1 *Which M* re-checked against the note's citations.
+- Messages: two-loops (#NV.3-4-3, #NV.3-4-5 to #NV.3-4-7 quote 2√d, a_1 and the old C_{B,1}); (4) (the D26 7.2 defect, the ℓ₀ double use in 7.4(a), the SHAs).
+- Size: 360 lines and 100,784 characters (249ae1a46a2a) → 362 lines and 101,074 characters (8510ab0aebd7).
+
+## D26 30cd68b6dc51 (the Linear-Size Fix)
+
+(4) fixed 7.2 (its *Linear size and cubes*: d_n′(X) ≤ d·max(N − 2, 0) for a ∗-connected union of N MR_n-cubes, by the spanning-tree construction above). C_d′ is now d(3(126)^d + 64^d + 2^d), which covers both Σ_{n>j}(d_n′+1) ≤ d(3(126)^dd_j′ + 64^dR_j) and Σ_{n≥j}#cubes_n. The box scale is now written ℓ₀^{box}, and the collar is defined in §1. All of this was checked against the file.
+- Table (eb5a6a505303 → b168c70703ab): #T12.19's collar reads as D26 §1 (within 6 layers of Λ_{k+1}ᶜ, those of Λ_{k+1}ᶜ included); C_d′ is updated and moved to #T12.19-9-1 (length), with #T12.19-9 citing it; ℓ₀^{box} in #T12.19-9; #T12.30-8's C_{A,1} is written with LM_VR₁/ℓ₀^{box}. LABELS 146c7b49d22b → 4fa7e813cc81 → d444e40b4233. Checks as above, all passed.
+- Background note (8510ab0aebd7 → 7bb5f99918ab): (iv-e) cites D26 7.2 *Linear size and cubes* for d_n′ + 1 ≤ d·#cubes_n and drops its own derivation (state once), so the RG1 p.257 and LFR II p.380 source entries go too.
+- **F3** (minor, round 6, (iv-e)): the note uses ℓ and ℓ₀ for labels (§1.6, (iv-e)'s opening), but (iv-e)'s 205^d(ℓ/ℓ₀+2)⁴C_rτ₁² used them for the cube side and the box scale. Repair: 205^d(LM_VR₁/ℓ₀^{box}+2)⁴C_rτ₁² per cube of side LM_VR₁, naming D26's ℓ and ℓ₀^{box}.
+- Messages: to (4), the SHAs, the #T12.19 collar edit (not announced before) and the SW re-point. To two-loops (NV 53550dbb2832): #NV.3-4-5's ℓ/ℓ₀ clashes with NV's labels (D26 writes ℓ₀^{box}), and #NV.3-4-3 and #NV.3-4-7 carry 2d and 4d. A third point, that C_lw^{III} is no longer defined in D26 6.3, was wrong (l.308 defines it) and was retracted.
+- Bookkeeping: (C6)'s "(S-w) with k-independent constants (SW closure §7)" now cites SW §6(6e) ("C_S = e^{2ν_e}C_S′ … uniformly in k") and map #MD2.4.13.19-11 (pl = 2), since SW §7 is being deleted; the SW source entry reads §6(6a)–(6c), (6e).
+
+## Background Note, Round 7 (narrow: the changed lines and their consumers)
+
+Verdict: clean. No fatal, serious, minor, or cosmetic finding.
+- Re-read: §3.1 *The complement*, §3.4's carrier-item line, (a) of the attached-species list, (iv-a), R_bad, (iv-e) through *The weights fit (11.3)*, §5.3 *What the objects force*, (5), *The totals*, *The carrier item*, (iv-c), (iv-b) at k = 1, (C6), and the conditions list ((W), (W^g), the transport conditions).
+- C_{A,n}: 2A_n ≤ 2e^{c_W}C_A(n)(d_n′+1) ≤ 2d·e^{c_W}C_A(n)#cubes_n. At n = 1 the class-(III) term 2d·e^{c_W}C_lw^{III}M_VR₁ against L^dM^dR₁^d. Every consumer uses the 2d form.
+- (iv-a) asks for the carrier item at general k; §5.3 discharges it at k = 1 with no carrier species. These are consistent.
+- Pending in another session's file: two-loops' #NV.3-4-2, which (W) cites, states (W^𝔉) for (iv-e)'s C_{A,n}, but its proof (#NV.3-4-3, #NV.3-4-5 to #NV.3-4-7) still quotes 2√d, a_1 and the old C_{B,1}. The argument is unchanged; two-loops has been sent the corrections.
+- bgptr (known non-tags only), bgdefs (58, each once), bginternal (all items and conditions defined); longest line 659; 361 lines and 100,676 characters.
+
+## SHAs
+
+Table: d71e239470ea → eb5a6a505303 → b168c70703ab. LABELS: 2d2801629f41 → 146c7b49d22b → d444e40b4233. Background note: 249ae1a46a2a → 8510ab0aebd7 → 7bb5f99918ab.
+
+## Status
+
+Table rows: bookkeeping and re-pointing to D26's text, no round needed. Background note: round 6 found F1–F3 (repaired), round 7 (narrow) is clean, and a full round 8 is next.

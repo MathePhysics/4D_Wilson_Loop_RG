@@ -3644,104 +3644,108 @@ The items of the LF longer than 5,000 characters are set out in paragraphs at th
 | {#T12.19} | 690 | D2.6 closure (WILSON_IT1_D26_CLOSURE_2026_10_24.md, cited by section).… |
 | {#T12.19-1} | 691 | K := C*Δ^{(k)}C, X(ω) := ∪_jX̃_j^5 enlarged by C's range, K_X := Σ_{ω:… |
 | {#T12.19-2} | 692 | w(W) := e^{ν_rσ_j(W)}e^{(3/8)ν_e·ext^{coll}_j(W)}e^{θ(W)}‖Y_W‖, ext^{c… |
-| {#T12.19-3} | 693 | c_D^{chg} := 0, the charge of a fixed member (§5.1 (T0), §8), not the … |
-| {#T12.19-4} | 694 | T_i := U₁(r_i), T̂_i := U_ξ(m̂)(r_i), Y_i := π(T̂_i)π(T_i)^{−1} − 1, a… |
-| {#T12.19-5} | 695 | ℓ := LM_VR₁, the side of V3's cubes (§6.2), not the loop ℓ of §7.4; Re… |
-| {#T12.19-6} | 696 | abs(𝓕) := max_i abs(𝓕_{r_i}), W_III := e^{2^dν_r}, lw_1(Z) := Σ_{near … |
-| {#T12.19-7} | 697 | Start(i) := the boxes Δ₀ with Δ̃₀ ∩ 𝓕_{r_i} ≠ ∅, K_𝐔(s) := Σ_Δs_ΔK_Δ(𝐔… |
-| {#T12.19-8} | 698 | d^Z_1(n) := d(n, 𝔅_Z), a_1 := Cc_CC_cM²R_jρ̂_j·3·2^{d−1}, C_{B,1} := C… |
-| {#T12.19-9} | 699 | C_A(j) := a_1 + [j ≥ 2]C_Bρ_{t,j}R_j^d + [j = 1](C_{B,1} + (2C_{lw}g₀(… |
-| {#T12.19-10} | 700 | Res(Z) := (K₁/(8C_X))(d₁′(Z)+1), Pol(X) := (K₁ − (1 + C_X)B₁ − K₁/4)(d… |
-| {#T12.19-11} | 701 | K_{j+1} := ½γ₀A₁²p₀²(g_{j+1})/(2(14)^d), B_{j+1} := O(1)(64)^dM^dL^{d+… |
-| {#T12.19-12} | 702 | V_i^* := M^iU_{k+1} (§9.1), #T12.17's; 𝔹_j(Ω) := (𝔹 ∩ Ω^{∼−2}) ∪ (𝔹_j(… |
-| {#T12.20} | 703 | D2.7 closure (WILSON_IT1_D27_CLOSURE_2026_10_26.md, cited by item). N … |
-| {#T12.20-1} | 704 | Ξ := 1 + Σ_{r≥1}Σ_{{X′_1,…,X′_r}}Π_pF(X′_p) (15.3), not #T12.6's, #T12… |
-| {#T12.20-2} | 705 | span(P) := C when the slots of P cover C, and otherwise the complement… |
-| {#T12.20-3} | 706 | D2.7 15.0 and 15.5(i)–(i-0). For a component K of Z of either class, K… |
-| {#T12.20-3-1} | 707 | D2.7 15.5. η(D) := 2‖D‖e^{ε_D}(e^{x_D} − 1), which bounds a carried in… |
-| {#T12.20-3-2} | 708 | BP_LFR2_LOOP_LOCALISATION.md (BLL), for an object F of D2.7 15.5(i). τ… |
-| {#T12.20-3-2-1} | 709 | BLL's lengths and rate. ℓ_c(F, 𝒦), M^{−1} times the infimum of the tot… |
-| {#T12.20-3-3} | 710 | BLL's counts and sums. N_K := (100R_k + 3)^d (#BLL.1-1) and N⁺ := (104… |
-| {#T12.20-3-4} | 711 | BLL's constants. a := (63/128)δ, x_F := eC_Rq_a/T̂/, and x_K := eC_Rq_… |
-| {#T12.20-3-5} | 712 | BLL's names apart: h₀(F) is not #T2.25's h₀; C_R is not #T12.7-31-1's … |
-| {#T12.20-3-6} | 713 | BLL's collar. U⁰ := U(𝐁_k″(Y₁⁺(F)), d(𝐔)), EP #39-0's configuration fo… |
-| {#T12.20-3-7} | 714 | BLL's interpolation. X_o, the M-cubes of X(F)^{[1]} outside Z; p_Δ, th… |
-| {#T12.20-3-7-1} | 715 | BLL's split. V^z, V with V_𝔟 replaced by e^{iηz_𝔟b_𝔟}U⁰_𝔟, b_𝔟 := (iη)… |
-| {#T12.20-3-8} | 716 | BLL's thresholds and D2.7's collar. r_z := O(1)(1 + λ_R)²C_∂C_Hα_{1,k}… |
-| {#T12.20-3-9} | 717 | BLL's base and D2.7 15.4(i)'s reach. Y′₀ := T̂_Z^{[λ_T]} ∪ X(F)^{[3]} … |
-| {#T12.20-3-9-1} | 718 | D2.7 15.4(i), the size of a polymer P. /P/, the number of MR_k-cubes m… |
-| {#T12.20-4} | 719 | D_g := the contraction of g's tensors T_P, P ∈ g, in loop order over s… |
-| {#T12.20-5} | 720 | κ_k^R := e^{P_{k−1}(C)μ_k^R + 4ζ_k^R}, absorbed into κ_k (15.8); S_R :… |
-| {#T12.21} | 721 | Bałaban proofs BP_COUPLING_PROFILES.md, BP_JOINS_BLOCK_SIZE.md, BP_LAY… |
-| {#T12.21-1} | 722 | δ_* := min(δ₀^{PBG}, δ₀^{(2.43)}) (JOINS #4.20), not #T12.17's δ_*; M′… |
-| {#T12.21-2} | 723 | M := 2LM′ (COVERING #4.7-1-3) and M := 2M′ (COVERING #4.7-1-5-2), loca… |
-| {#T12.22} | 724 | Bałaban proof BP_PBG_3132.md (balaban_proofs/), PBG (3.131)–(3.132). μ… |
-| {#T12.22-0-1} | 725 | BP_PBG_3132.md, continued. c₀ := Σ_{z∈ℤ}e^{−½r abs(z)} (#BQ.5); □^{(n)… |
-| {#T12.22-1} | 726 | v := Q*B, A := tĜv, and Ĝ := Σ_□h_□G_□h_□ (#BQ.10); h̄_□(c) := h_□(c₋)… |
-| {#T12.22-2} | 727 | Δ(y) := B^j(y) for y ∈ Λ_j (PBG p.397 l.30) and j_y, the scale of y (#… |
-| {#T12.23} | 728 | Bałaban proof BP_PBG_DRESSED.md (balaban_proofs/), the dressed average… |
-| {#T12.23-1} | 729 | W := e^{iηX} (#BD.6); c_β := 3(1 + d) (#BD.6-3); κ_l := c₁c_βL^{l−1}η … |
-| {#T12.24} | 730 | Bałaban proof BP_PBG_COMPLEX.md (balaban_proofs/), PBG at complex data… |
-| {#T12.24-0} | 731 | x_b := Ad(u(b₋))A′(b), bch(x, y) := (1/i)log(e^{ix}e^{iy}), and A″(b) … |
-| {#T12.24-1} | 732 | X₀ := Q(𝐔)G_CQ*(𝐔) at (𝐔, 0), G_C := G₀(𝐔), G at 𝐉 = 0, not LFR II's g… |
-| {#T12.24-1-0} | 733 | C_□ at 𝐔, local: T^loc(τ) := W^{−1/2}X_□(e^{iητA″})W^{−1/2} on C_□'s l… |
-| {#T12.24-1-0-1} | 734 | F(𝐔, 𝐉) := 𝒫*Δ^{(k)}𝒫 with ⟨B, Δ^{(k)}B⟩ := ⟨B, (QG₁Q*)^{−1}B⟩ − a⟨B, … |
-| {#T12.24-1-1} | 735 | a_C, a threshold below which Steps 1–3 hold for Mα₀ + α₁ + γ, with Mα₀… |
-| {#T12.24-1-2} | 736 | a_C′ ≤ a_C/8, the threshold of Step 4 for G and of #BX.8–#BX.8-1 (#BX.… |
-| {#T12.24-1-2-1} | 737 | f := Q*(QGQ*)^{−1}(·, y′) (#BX.8) and N_Q := Q*(QG₁Q*)^{−1}Q (#BX.8-2)… |
-| {#T12.24-1-3} | 738 | Schur's test costs N_Q at most ¼δ₁′ once RM ≥ 2(d + 2)log L/δ₁′, and D… |
-| {#T12.24-1-4} | 739 | a_R, the threshold of (d): O(1)LMBα₀ + α₁ + γ₀ ≤ a_R, with a_R ≤ a_cx/… |
-| {#T12.24-2} | 740 | n₀ := ⌊N/ℓ₀⌋, ℓ := N/n₀, φ_z(y) := Π_μmax(0, 1 − abs(y_μ − ℓz_μ)_N/ℓ),… |
-| {#T12.24-2-1} | 741 | F_z := 1_{□_z}(xI + F_U^{(z)})1_{□_z} (#BX.10-3); Γ_z := F_z^{−1}, Γ₀ … |
-| {#T12.25} | 742 | Bałaban proof BP_VAR_189.md (balaban_proofs/), VAR (189). abs(A′)_∞ :=… |
-| {#T12.25-0} | 743 | ρ₀ := 3dL, the reach of a local link (#BV.3), not #T12.8's ρ₀ := C(d)l… |
-| {#T12.25-0-1} | 744 | Lemma D reads PRT2 p.231 l.8–9's condition on the part of a contour in… |
-| {#T12.25-0-2} | 745 | PRT2 does not fix whether a bond with endpoints in two layers counts i… |
-| {#T12.25-1} | 746 | ε̄, the radius fixed in #BV.4 (ε̄ ≤ ¼a₃, VAR's a₃ of Proposition 4), a… |
-| {#T12.25-1-1} | 747 | V₁(X) := Σ_pη⁴½tr(DX)(p)Σ_{b₁≺b₂}i[X″(b₁),X″(b₂)] and 𝒲₁(X) := δV₁/δX … |
-| {#T12.25-2} | 748 | 𝔄^♯ := 𝔄 − H𝔇𝔄, 𝒱′(X)[Y] := (d/dτ)𝒱(X+τY) at 0 (#BV.10), and 𝔈 := (d/d… |
-| {#T12.25-2-1} | 749 | r₀ := 15δ₀/32, r₁ := r₀ − δ₀/128, and r₂ := r₁ − δ₀/128 = 29δ₀/64 (#BV… |
-| {#T12.25-2-2} | 750 | t := abs(A′)_∞, f(ζ) := a_j³((δ²V/δA′²)(ζA′)𝔄)(b) with j = j(b), and C… |
-| {#T12.26} | 751 | Bałaban proof BP_REG_DRESSED.md (balaban_proofs/), REG and CMP98 at dr… |
-| {#T12.26-1} | 752 | A_d (#BR.5), C₀^{ch} and c₂^{CMP98} (#BR.6-3, #BR.6-4), C₁^{ch} (#BR.7… |
-| {#T12.26-2} | 753 | Ṽ′ := (the average of V′V₀)V̄₀^{−1} and β := α₀L^{−2} (#BR.7); a_Γ := … |
-| {#T12.26-2-1} | 754 | Local symbols of BP_REG_DRESSED.md: P, the smallest box containing y a… |
-| {#T12.26-3} | 755 | F(A) := A(e^{iηA}U₀), S := {A : Q_j(U₀, ηA) = B on Λ_j}, N_{u₁} := {λ … |
-| {#T12.27} | 756 | Bałaban proof BP_DERIVED_CONFIGS.md (balaban_proofs/), the derived con… |
-| {#T12.27-1} | 757 | N, with G ⊂ U(N) compact, connected, and semisimple (CMP98 p.020 l.17,… |
-| {#T12.27-1-0} | 758 | BC's thresholds: ε₁^* := min{a₁/max{2(d − 1), 2L²B₃}, c^X/(L²B₃max{1, … |
-| {#T12.27-1-2} | 759 | m^X, the top index of 𝐁^X, the largest index of a point of 𝐁^X, with Ω… |
-| {#T12.27-1-2-0} | 760 | 𝔤^c := 𝔤 ⊗ ℂ = 𝔤 + i𝔤 ⊂ gl(N, ℂ), the sum direct as 𝔤 consists of Herm… |
-| {#T12.27-1-2-1} | 761 | G^c := G·exp(𝔤), 𝔤 of Hermitian matrices, a closed subgroup of GL(N, ℂ… |
-| {#T12.27-1-2-2} | 762 | In CMP98, G = e^{i𝔤} is connected and G^c "may be defined as an image … |
-| {#T12.27-1-3} | 763 | BC's §G pair: r_B := C₁ε₁/2 ≤ log 2 and r_B^X := C₁ε₁^X/2 ≤ log 2, VAR… |
-| {#T12.27-2} | 764 | t(B) := (2B₅/C₁)abs(B), with abs(𝓗(B))_𝐁 ≤ t(B) for abs(B) < r_B (#BC.… |
-| {#T12.27-3} | 765 | The average in BC is the chain's, RG I (0.4)/(0.12) (p.253, p.254 l.2–… |
-| {#T12.27-4} | 766 | T^{(n)} := L^nη(ℤ^d + (½, …, ½)), B^n(y) := Δ(y) ∩ T_η with Δ(y) the c… |
-| {#T12.27-5} | 767 | U_L(V) := e^{iη𝓗(B)}U₀, the Landau-gauge representative (#BC.5-1-1); A… |
-| {#T12.27-6} | 768 | F(V) := U_{p,X}(M_{𝐁^X}(U_L(V))) (#BC.5-1-4-1), not #T12.26-3's F(A); … |
-| {#T12.27-6-0} | 769 | The points x_l, x_n := y, x ∈ B^l(x_l), x_l ∈ B(x_{l+1}), x₀ = x (CMP9… |
-| {#T12.27-6-1} | 770 | ε^{dev} and ε^{dev}_0, the gauge-fixed deviations from 1 (D2.7 15.6(d)… |
-| {#T12.28} | 771 | Bałaban proof BP_PBG_3130.md (balaban_proofs/), PBG's series (3.130) a… |
-| {#T12.28-1} | 772 | C_ser, the constant of the order-n bound B₀(C_serb_X)^n (#BG.8-5); a_s… |
-| {#T12.28-2} | 773 | X₀, an operator of local order −2 with constant κ_X (#BG.1-1), not #T1… |
-| {#T12.28-2-1} | 774 | σ_m := s₁ + ⋯ + s_m, σ* ≥ max_{m<n}abs(σ_n − σ_m), and s₀ ∈ (0, r) of … |
-| {#T12.28-3} | 775 | S := G′RD*, (E_±f)(b) := f(b_±), (R_•B)(b) := R(𝐔_b)B(b), and m(b), th… |
-| {#T12.28-3-1} | 776 | ε, PBG's Hölder exponent of B₀′(ε), is ½ in Step 3 (#BG.8-3); the end … |
-| {#T12.28-4} | 777 | P, DP, PD* and the middle factors Q′*(term of (3.98))Q′ of (Q′G′²Q′*)^… |
-| {#T12.28-5} | 778 | An expansion of Δ^{(2)} or X₀ is a sum of terms, each depending on (𝐔,… |
-| {#T12.29} | 779 | Bałaban proof BP_PF_ACTION_LOWER_BOUND.md (balaban_proofs/), the actio… |
-| {#T12.30} | 780 | Background-iteration closure (WILSON_IT1_BACKGROUND_ITERATION_CLOSURE_… |
-| {#T12.30-1} | 781 | ⟨𝒲⟩_j := Σ_ℓ∫𝒲(V_j)ρ_j^ℓ(V_j)dV_j/Z with Z := Σ_ℓ∫ρ_j^ℓ(V_j)dV_j, the … |
-| {#T12.30-2} | 782 | X_c := π((M^k(e^{iη𝐇_j}U_{j+1}))(c)·(M^kU_{j+1})(c)^{−1}) − 1, the com… |
-| {#T12.30-3} | 783 | E^f_{const,k} := Σ_{i≤k}E°^f_i and N_k := κ_f^{(k)}e^{E^f_{const,k}}∏_… |
-| {#T12.30-4} | 784 | x_k := 8a_dc_hB₃ℓ_Cε_KL^{−(K−k)}, the map's (7)(d) exponent (§3.2), no… |
-| {#T12.30-5} | 785 | 𝐔 := e^{iη(𝐇_j(s,B′_j) + a′)}U_{j+1}, the deformed background of D2.1(… |
-| {#T12.30-6} | 786 | Δ_i := sup‖(M^iU′)(b) − (M^iU)(b)‖ over the scale-i bonds of the two b… |
-| {#T12.30-7} | 787 | N_tube := 4ℓ_C·3·2^{d−1}, the scale-K cubes met by the scale-k tube of… |
-| {#T12.30-8} | 788 | e^{c_C} := exp(4Cℓ_C(ρ_Kε_K + τ_K²) + r^R_K) ((iv-e)), whose c_C is no… |
-| {#T12.30-9} | 789 | The coarse chain at k = 1 (§5.3): c_X = 2099601e^{1+ν_e}, the coarse-c… |
-| {#T12.30-10} | 790 | e^{g,(j+1)}_X := Φ^g_ℓ(X) − Φ^g_{ℓ₀}(X), the coarse #T12.19-11 e^{(k+1… |
+| {#T12.19-2-1} | 693 | δ_m := C_δc̄e^{−(25/8)(ν_e/L)R_{m+1}}, c̄ := e^{(3/8)ν_e}c̄_*sup_mb_m/… |
+| {#T12.19-3} | 694 | c_D^{chg} := 0, the charge of a fixed member (§5.2 (T0)), not the map'… |
+| {#T12.19-4} | 695 | T_i := U₁(r_i), T̂_i := U_ξ(m̂)(r_i), Y_i := π(T̂_i)π(T_i)^{−1} − 1, a… |
+| {#T12.19-5} | 696 | ℓ := LM_VR₁, the side of the aligned ℓ-cubes of CRE (1.10), (1.20) (§6… |
+| {#T12.19-6} | 697 | W_III := e^{2^dν_r}, lw_1(Z) := Σ_{near i→Z}Σ_Xe^{ν_rσ(Y_{i,X})}e^{(3/… |
+| {#T12.19-7} | 698 | Start(i) := the boxes Δ₀ with Δ̃₀ ∩ 𝓕_{r_i} ≠ ∅, F_i(s) := Y_i with #T… |
+| {#T12.19-8} | 699 | d^Z_1(n) := d(n, 𝔅_Z), a_j := Cc_CC_cM²R_jρ̂_j·3·2^{d−1}, times 205^d … |
+| {#T12.19-8-1} | 700 | C_h := (C′_bdg₀(1+3r)²·2C_mϑr + Ĉ^δ_bdC_sh′e^{3μ_Hρ_L/20}ϑg₀r² + C^δ_b… |
+| {#T12.19-9} | 701 | C_A(j) := a_j + [j ≥ 2]C_Bρ_{t,j}R_j^d + [j = 1](C_{B,1} + (2C_{lw}g₀(… |
+| {#T12.19-9-1} | 702 | C_d′ := d(3(126)^d + 64^d + 2^d) (§7.2 *Linear size and cubes*); m_A :… |
+| {#T12.19-10} | 703 | Res(X) := (K₁/8)(d₁′(X)+1) and Pol(X) := (K₁ − 2B₁ − K₁/4)(d₁′(X)+1) ≥… |
+| {#T12.19-10-1} | 704 | Per branch of LFR II pp.385–387, Res and Pol are inherited (Res(Z) := … |
+| {#T12.19-11} | 705 | K_{j+1} := ½γ₀A₁²p₀²(g_{j+1})/(2(14)^d), B_{j+1} := O(1)(64)^dM^dL^{d+… |
+| {#T12.19-12} | 706 | V_i^* := M^iU_{k+1} (§8.1), #T12.17's; 𝔹 ∪ 𝔹_j(Ω) := (𝔹 ∩ Ω^{∼−2}) ∪ (… |
+| {#T12.20} | 707 | D2.7 closure (WILSON_IT1_D27_CLOSURE_2026_10_26.md, cited by item). N … |
+| {#T12.20-1} | 708 | Ξ := 1 + Σ_{r≥1}Σ_{{X′_1,…,X′_r}}Π_pF(X′_p) (15.3), not #T12.6's, #T12… |
+| {#T12.20-2} | 709 | span(P) := C when the slots of P cover C, and otherwise the complement… |
+| {#T12.20-3} | 710 | D2.7 15.0 and 15.5(i)–(i-0). For a component K of Z of either class, K… |
+| {#T12.20-3-1} | 711 | D2.7 15.5. η(D) := 2‖D‖e^{ε_D}(e^{x_D} − 1), which bounds a carried in… |
+| {#T12.20-3-2} | 712 | BP_LFR2_LOOP_LOCALISATION.md (BLL), for an object F of D2.7 15.5(i). τ… |
+| {#T12.20-3-2-1} | 713 | BLL's lengths and rate. ℓ_c(F, 𝒦), M^{−1} times the infimum of the tot… |
+| {#T12.20-3-3} | 714 | BLL's counts and sums. N_K := (100R_k + 3)^d (#BLL.1-1) and N⁺ := (104… |
+| {#T12.20-3-4} | 715 | BLL's constants. a := (63/128)δ, x_F := eC_Rq_a/T̂/, and x_K := eC_Rq_… |
+| {#T12.20-3-5} | 716 | BLL's names apart: h₀(F) is not #T2.25's h₀; C_R is not #T12.7-31-1's … |
+| {#T12.20-3-6} | 717 | BLL's collar. U⁰ := U(𝐁_k″(Y₁⁺(F)), d(𝐔)), EP #39-0's configuration fo… |
+| {#T12.20-3-7} | 718 | BLL's interpolation. X_o, the M-cubes of X(F)^{[1]} outside Z; p_Δ, th… |
+| {#T12.20-3-7-1} | 719 | BLL's split. V^z, V with V_𝔟 replaced by e^{iηz_𝔟b_𝔟}U⁰_𝔟, b_𝔟 := (iη)… |
+| {#T12.20-3-8} | 720 | BLL's thresholds and D2.7's collar. r_z := O(1)(1 + λ_R)²C_∂C_Hα_{1,k}… |
+| {#T12.20-3-9} | 721 | BLL's base and D2.7 15.4(i)'s reach. Y′₀ := T̂_Z^{[λ_T]} ∪ X(F)^{[3]} … |
+| {#T12.20-3-9-1} | 722 | D2.7 15.4(i), the size of a polymer P. /P/, the number of MR_k-cubes m… |
+| {#T12.20-4} | 723 | D_g := the contraction of g's tensors T_P, P ∈ g, in loop order over s… |
+| {#T12.20-5} | 724 | κ_k^R := e^{P_{k−1}(C)μ_k^R + 4ζ_k^R}, absorbed into κ_k (15.8); S_R :… |
+| {#T12.21} | 725 | Bałaban proofs BP_COUPLING_PROFILES.md, BP_JOINS_BLOCK_SIZE.md, BP_LAY… |
+| {#T12.21-1} | 726 | δ_* := min(δ₀^{PBG}, δ₀^{(2.43)}) (JOINS #4.20), not #T12.17's δ_*; M′… |
+| {#T12.21-2} | 727 | M := 2LM′ (COVERING #4.7-1-3) and M := 2M′ (COVERING #4.7-1-5-2), loca… |
+| {#T12.22} | 728 | Bałaban proof BP_PBG_3132.md (balaban_proofs/), PBG (3.131)–(3.132). μ… |
+| {#T12.22-0-1} | 729 | BP_PBG_3132.md, continued. c₀ := Σ_{z∈ℤ}e^{−½r abs(z)} (#BQ.5); □^{(n)… |
+| {#T12.22-1} | 730 | v := Q*B, A := tĜv, and Ĝ := Σ_□h_□G_□h_□ (#BQ.10); h̄_□(c) := h_□(c₋)… |
+| {#T12.22-2} | 731 | Δ(y) := B^j(y) for y ∈ Λ_j (PBG p.397 l.30) and j_y, the scale of y (#… |
+| {#T12.23} | 732 | Bałaban proof BP_PBG_DRESSED.md (balaban_proofs/), the dressed average… |
+| {#T12.23-1} | 733 | W := e^{iηX} (#BD.6); c_β := 3(1 + d) (#BD.6-3); κ_l := c₁c_βL^{l−1}η … |
+| {#T12.24} | 734 | Bałaban proof BP_PBG_COMPLEX.md (balaban_proofs/), PBG at complex data… |
+| {#T12.24-0} | 735 | x_b := Ad(u(b₋))A′(b), bch(x, y) := (1/i)log(e^{ix}e^{iy}), and A″(b) … |
+| {#T12.24-1} | 736 | X₀ := Q(𝐔)G_CQ*(𝐔) at (𝐔, 0), G_C := G₀(𝐔), G at 𝐉 = 0, not LFR II's g… |
+| {#T12.24-1-0} | 737 | C_□ at 𝐔, local: T^loc(τ) := W^{−1/2}X_□(e^{iητA″})W^{−1/2} on C_□'s l… |
+| {#T12.24-1-0-1} | 738 | F(𝐔, 𝐉) := 𝒫*Δ^{(k)}𝒫 with ⟨B, Δ^{(k)}B⟩ := ⟨B, (QG₁Q*)^{−1}B⟩ − a⟨B, … |
+| {#T12.24-1-1} | 739 | a_C, a threshold below which Steps 1–3 hold for Mα₀ + α₁ + γ, with Mα₀… |
+| {#T12.24-1-2} | 740 | a_C′ ≤ a_C/8, the threshold of Step 4 for G and of #BX.8–#BX.8-1 (#BX.… |
+| {#T12.24-1-2-1} | 741 | f := Q*(QGQ*)^{−1}(·, y′) (#BX.8) and N_Q := Q*(QG₁Q*)^{−1}Q (#BX.8-2)… |
+| {#T12.24-1-3} | 742 | Schur's test costs N_Q at most ¼δ₁′ once RM ≥ 2(d + 2)log L/δ₁′, and D… |
+| {#T12.24-1-4} | 743 | a_R, the threshold of (d): O(1)LMBα₀ + α₁ + γ₀ ≤ a_R, with a_R ≤ a_cx/… |
+| {#T12.24-2} | 744 | n₀ := ⌊N/ℓ₀⌋, ℓ := N/n₀, φ_z(y) := Π_μmax(0, 1 − abs(y_μ − ℓz_μ)_N/ℓ),… |
+| {#T12.24-2-1} | 745 | F_z := 1_{□_z}(xI + F_U^{(z)})1_{□_z} (#BX.10-3); Γ_z := F_z^{−1}, Γ₀ … |
+| {#T12.25} | 746 | Bałaban proof BP_VAR_189.md (balaban_proofs/), VAR (189). abs(A′)_∞ :=… |
+| {#T12.25-0} | 747 | ρ₀ := 3dL, the reach of a local link (#BV.3), not #T12.8's ρ₀ := C(d)l… |
+| {#T12.25-0-1} | 748 | Lemma D reads PRT2 p.231 l.8–9's condition on the part of a contour in… |
+| {#T12.25-0-2} | 749 | PRT2 does not fix whether a bond with endpoints in two layers counts i… |
+| {#T12.25-1} | 750 | ε̄, the radius fixed in #BV.4 (ε̄ ≤ ¼a₃, VAR's a₃ of Proposition 4), a… |
+| {#T12.25-1-1} | 751 | V₁(X) := Σ_pη⁴½tr(DX)(p)Σ_{b₁≺b₂}i[X″(b₁),X″(b₂)] and 𝒲₁(X) := δV₁/δX … |
+| {#T12.25-2} | 752 | 𝔄^♯ := 𝔄 − H𝔇𝔄, 𝒱′(X)[Y] := (d/dτ)𝒱(X+τY) at 0 (#BV.10), and 𝔈 := (d/d… |
+| {#T12.25-2-1} | 753 | r₀ := 15δ₀/32, r₁ := r₀ − δ₀/128, and r₂ := r₁ − δ₀/128 = 29δ₀/64 (#BV… |
+| {#T12.25-2-2} | 754 | t := abs(A′)_∞, f(ζ) := a_j³((δ²V/δA′²)(ζA′)𝔄)(b) with j = j(b), and C… |
+| {#T12.26} | 755 | Bałaban proof BP_REG_DRESSED.md (balaban_proofs/), REG and CMP98 at dr… |
+| {#T12.26-1} | 756 | A_d (#BR.5), C₀^{ch} and c₂^{CMP98} (#BR.6-3, #BR.6-4), C₁^{ch} (#BR.7… |
+| {#T12.26-2} | 757 | Ṽ′ := (the average of V′V₀)V̄₀^{−1} and β := α₀L^{−2} (#BR.7); a_Γ := … |
+| {#T12.26-2-1} | 758 | Local symbols of BP_REG_DRESSED.md: P, the smallest box containing y a… |
+| {#T12.26-3} | 759 | F(A) := A(e^{iηA}U₀), S := {A : Q_j(U₀, ηA) = B on Λ_j}, N_{u₁} := {λ … |
+| {#T12.27} | 760 | Bałaban proof BP_DERIVED_CONFIGS.md (balaban_proofs/), the derived con… |
+| {#T12.27-1} | 761 | N, with G ⊂ U(N) compact, connected, and semisimple (CMP98 p.020 l.17,… |
+| {#T12.27-1-0} | 762 | BC's thresholds: ε₁^* := min{a₁/max{2(d − 1), 2L²B₃}, c^X/(L²B₃max{1, … |
+| {#T12.27-1-2} | 763 | m^X, the top index of 𝐁^X, the largest index of a point of 𝐁^X, with Ω… |
+| {#T12.27-1-2-0} | 764 | 𝔤^c := 𝔤 ⊗ ℂ = 𝔤 + i𝔤 ⊂ gl(N, ℂ), the sum direct as 𝔤 consists of Herm… |
+| {#T12.27-1-2-1} | 765 | G^c := G·exp(𝔤), 𝔤 of Hermitian matrices, a closed subgroup of GL(N, ℂ… |
+| {#T12.27-1-2-2} | 766 | In CMP98, G = e^{i𝔤} is connected and G^c "may be defined as an image … |
+| {#T12.27-1-3} | 767 | BC's §G pair: r_B := C₁ε₁/2 ≤ log 2 and r_B^X := C₁ε₁^X/2 ≤ log 2, VAR… |
+| {#T12.27-2} | 768 | t(B) := (2B₅/C₁)abs(B), with abs(𝓗(B))_𝐁 ≤ t(B) for abs(B) < r_B (#BC.… |
+| {#T12.27-3} | 769 | The average in BC is the chain's, RG I (0.4)/(0.12) (p.253, p.254 l.2–… |
+| {#T12.27-4} | 770 | T^{(n)} := L^nη(ℤ^d + (½, …, ½)), B^n(y) := Δ(y) ∩ T_η with Δ(y) the c… |
+| {#T12.27-5} | 771 | U_L(V) := e^{iη𝓗(B)}U₀, the Landau-gauge representative (#BC.5-1-1); A… |
+| {#T12.27-6} | 772 | F(V) := U_{p,X}(M_{𝐁^X}(U_L(V))) (#BC.5-1-4-1), not #T12.26-3's F(A); … |
+| {#T12.27-6-0} | 773 | The points x_l, x_n := y, x ∈ B^l(x_l), x_l ∈ B(x_{l+1}), x₀ = x (CMP9… |
+| {#T12.27-6-1} | 774 | ε^{dev} and ε^{dev}_0, the gauge-fixed deviations from 1 (D2.7 15.6(d)… |
+| {#T12.28} | 775 | Bałaban proof BP_PBG_3130.md (balaban_proofs/), PBG's series (3.130) a… |
+| {#T12.28-1} | 776 | C_ser, the constant of the order-n bound B₀(C_serb_X)^n (#BG.8-5); a_s… |
+| {#T12.28-2} | 777 | X₀, an operator of local order −2 with constant κ_X (#BG.1-1), not #T1… |
+| {#T12.28-2-1} | 778 | σ_m := s₁ + ⋯ + s_m, σ* ≥ max_{m<n}abs(σ_n − σ_m), and s₀ ∈ (0, r) of … |
+| {#T12.28-3} | 779 | S := G′RD*, (E_±f)(b) := f(b_±), (R_•B)(b) := R(𝐔_b)B(b), and m(b), th… |
+| {#T12.28-3-1} | 780 | ε, PBG's Hölder exponent of B₀′(ε), is ½ in Step 3 (#BG.8-3); the end … |
+| {#T12.28-4} | 781 | P, DP, PD* and the middle factors Q′*(term of (3.98))Q′ of (Q′G′²Q′*)^… |
+| {#T12.28-5} | 782 | An expansion of Δ^{(2)} or X₀ is a sum of terms, each depending on (𝐔,… |
+| {#T12.29} | 783 | Bałaban proof BP_PF_ACTION_LOWER_BOUND.md (balaban_proofs/), the actio… |
+| {#T12.30} | 784 | Background-iteration closure (WILSON_IT1_BACKGROUND_ITERATION_CLOSURE_… |
+| {#T12.30-1} | 785 | ⟨𝒲⟩_j := Σ_ℓ∫𝒲(V_j)ρ_j^ℓ(V_j)dV_j/Z with Z := Σ_ℓ∫ρ_j^ℓ(V_j)dV_j, the … |
+| {#T12.30-2} | 786 | X_c := π((M^k(e^{iη𝐇_j}U_{j+1}))(c)·(M^kU_{j+1})(c)^{−1}) − 1, the com… |
+| {#T12.30-3} | 787 | E^f_{const,k} := Σ_{i≤k}E°^f_i and N_k := κ_f^{(k)}e^{E^f_{const,k}}∏_… |
+| {#T12.30-4} | 788 | x_k := 8a_dc_hB₃ℓ_Cε_KL^{−(K−k)}, the map's (7)(d) exponent (§3.2), no… |
+| {#T12.30-5} | 789 | 𝐔 := e^{iη(𝐇_j(s,B′_j) + a′)}U_{j+1}, the deformed background of D2.1(… |
+| {#T12.30-6} | 790 | Δ_i := sup‖(M^iU′)(b) − (M^iU)(b)‖ over the scale-i bonds of the two b… |
+| {#T12.30-7} | 791 | N_tube := 4ℓ_C·3·2^{d−1}, the scale-K cubes met by the scale-k tube of… |
+| {#T12.30-8} | 792 | e^{c_C} := exp(4Cℓ_C(ρ_Kε_K + τ_K²) + r^R_K) ((iv-e)), whose c_C is no… |
+| {#T12.30-9} | 793 | The coarse chain at k = 1 (§5.3): c_X = 2099601e^{1+ν_e}, the coarse-c… |
+| {#T12.30-10} | 794 | e^{g,(j+1)}_X := Φ^g_ℓ(X) − Φ^g_{ℓ₀}(X), the coarse #T12.19-11 e^{(k+1… |
 
 ## Definitions of the LF
 
@@ -4773,4 +4777,4 @@ Each definition X := … of the LF carries the tag {#D.X} immediately before X; 
 | {#D.ψ′} | 3266 | ψ′ := Σ_{y∈B}G_B(·, y)σ(y)/(2d), so that Δψ′ = −σ in B and ψ′ = 0 |
 | {#D.h_y} | 3267 | h_y := E^·G(S_{τ_B} − y), τ_B the exit time from B. Theorem 4.3.1  |
 
-Hashes at which the lines above hold: LF 94d3e82675b1, table d71e239470ea (SHA256, first 12).
+Hashes at which the lines above hold: LF 94d3e82675b1, table b168c70703ab (SHA256, first 12).

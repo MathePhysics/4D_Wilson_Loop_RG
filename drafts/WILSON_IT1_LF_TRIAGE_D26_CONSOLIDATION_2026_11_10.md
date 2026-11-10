@@ -30,3 +30,12 @@
 - §5 rewritten: 5.4 at c_π′; 5.5's merged-bridge display had −(5/8)(ν_e/L)Σσ(D″) where the payment e^{−(5/4)(ν_e/L)σ(D″)} is what closes the step: corrected; 5.2's pointer to the map's (ii′-a) corrected to #MD2.0.3.42-1–#MD2.0.3.48-2.
 - Peer fixes: map #MOMGD.2 and continuum #ND.5.5 now quote (iv-e)'s bounds (2|κ_f^{(K)}| resp. |κ_f^{(K′)}| times exp(4Cℓ_C(ρε + τ²) + r^R)δ_LF); map (h) #MD2.0.5.41 gains r^R_K for the 𝐑-steps' constants.
 - Coarse chain (table fork, corrected 10 Nov): c_π is right; l.41's exponent needs the factor 1.04 (‖log V‖ ≤ 1.04Δ_k), so (C7) 1.08 → 1.12 and (C9) 1.06 → 1.11. To apply when that note is consolidated.
+
+## Files of This Run (updated as each is finished)
+
+- Done on 10 Nov: W-δ, continuum, Cauchy, the D2 map, D2.7, the LF (before 14:00); D26, O4, O2 (afternoon); O2′ redundant with D26, to archive once RC_PAYMENT_PASS no longer cites it (two-loops' citers re-pointed, 17:30).
+- To do, non-BP, LF: SW (in progress), COMPLEX_COVARIANCE, O6, LINE_DEFECT (IT-1), LF_PACKET_PLAN, READINGS_INVENTORY.
+- Delegated to two-loops (17:5x, user's request): RMJ, RW1, COARSE_CHAIN_INTERFACES (with the 1.04 factor), RTR_PROOF_PASS (CRE (2.32)), RC_PAYMENT_PASS (O2′ → D26), RC_PROOF_PASS, READINGS_RECHECK.
+- Map follow-ups: the remaining V3/V4 line pins; #MD2.4.4.10 and #MD2.4.4.12-1 (SW pointers "(17)", and 𝐇_𝒬 with p.268's factor, which SW §5(4) excludes); #MD2.4.4.5-2 (rule pointer → #MD2.0.3.22–#MD2.0.3.25-1); #MD2.3.9.9-1 (cite D26 7.4(a)).
+- Last, after everything above, the LF-owned BP files: BP_COUPLING_PROFILES, BP_VAR_PROP4_KERNEL, BP_COMPLEX_BASE_GAUGE, BP_CMP98_ADJOINT_AVERAGING, BP_LFR2_CHI_K_LAMBDA, BP_LFR2_LOOP_LOCALISATION.
+- D26 §9 renumbered §8 (17:24); map, D27, SW citers re-pointed; table fork told (BACKGROUND_ITERATION).
