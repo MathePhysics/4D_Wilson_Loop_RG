@@ -3712,7 +3712,7 @@ Relabel → LABELS 4c2c66efb348, table 77c1b5ec9928, at LF 94d3e82675b1. The def
 
 Relabel → LABELS 734a37930def, table 18cbd119fc8f, at LF 94d3e82675b1. The definition check prints 0 lines, and dmarks2 lists the 16 known leftovers. deadcheck and prefcheck show only their known hits. Columns are 10×5, 74×6, and 267×7.
 
-## NL 204c1c20c891: #T1.3-1 and #T4.51, 2026-11-10 20:40
+## NL 204c1c20c891: #T1.3-1 and #T4.51, 2026-11-10 21:31
 
 - #T1.3-1: L₀^{(N)} := (N_C/2)²L₀^× = 10⁴N_C²u_𝔏 (#NL6A.9), with the unit u_𝔏^{(N)} := (N_C/2)u_𝔏 of the 𝐑-made insertions in every condition of two-loops #917 that contains u_𝔏 (#NL6A.6, #NL6B.1-2, #NL12.1).
 - #T4.51: A′_E := 17(2R_e + 1)⁴, the pair's, for every N_C (#NL1.5, #NL9.6-1). No row cites NL's u₁^{(N)} or C′.
