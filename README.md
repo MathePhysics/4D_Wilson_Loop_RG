@@ -27,7 +27,7 @@ We believe that we have an LLM-generated proof of the following result.
 
 **Theorem (Continuum Limit of Renormalised Wilson Loops).** Let $G$ be a compact connected simple Lie group and fix a four-dimensional periodic torus admitted by Bałaban's construction. For any integer $n\geqslant 1$, let $C_1,\ldots,C_n$ be a fixed family of pairwise disjoint oriented squares, with sides parallel to coordinate axes, vertices on a common lattice of spacing $uL^{-q}$ for some integer $q\geqslant 0$, and side lengths at most half the torus period. For each $i$, let $\chi_i$ be a normalised irreducible character of $G$. There is a threshold $\bar g_0>0$ such that the following holds for every reference coupling $0<\bar g<\bar g_0$.
 
-At lattice spacing $\varepsilon_K = uL^{-K}$, we can choose the bare coupling $g_0(\varepsilon_K,\bar g)$ so that the running coupling at scale $u$ equals $\bar g$. For each loop $C_i$, there exists a sequence of multiplicative counterterms $\left(\kappa_{C_i}^{(K)} \right)_{K \in \N}$, such that the renormalised correlation function has a finite limit along the full sequence of ultraviolet cutoffs,
+At lattice spacing $\varepsilon_K = uL^{-K}$, we can choose the bare coupling $g_0(\varepsilon_K,\bar g)$ so that the running coupling at scale $u$ equals $\bar g$. For each loop $C_i$, there exists a sequence of multiplicative counterterms $\left(\kappa_{C_i}^{(K)} \right)_{K \in \mathbb{N}$, such that the renormalised correlation function has a finite limit along the full sequence of ultraviolet cutoffs,
 $$
 F_K(C_1,\ldots,C_n)
 \coloneqq
