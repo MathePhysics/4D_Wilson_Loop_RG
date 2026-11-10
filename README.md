@@ -33,7 +33,7 @@ F_K(C_1,\ldots,C_n)
 \coloneqq
 \frac{\mathbb E_{\varepsilon_K}\left[\prod_{i=1}^{n}W_{\chi_i}(C_i)\right]}
 {\prod_{i=1}^{n}\kappa_{C_i}^{(K)}}
-\;\xrightarrow{K \to \infty}\;
+\;\overset{K \to \infty}{\longrightarrow}\;
 \mathcal W_{\mathrm{ren}}(C_1,\ldots,C_n)\in\mathbb C
 \;.
 $$
