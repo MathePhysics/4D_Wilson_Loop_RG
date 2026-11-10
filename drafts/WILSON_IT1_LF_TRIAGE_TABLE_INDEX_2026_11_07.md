@@ -3665,3 +3665,19 @@ Relabel → LABELS 2d2801629f41, table d71e239470ea, at LF 94d3e82675b1. The def
 - Every quoted D26 text was checked against the file. The rows were announced to (4) before the edit. Log: WILSON_IT1_LF_TRIAGE_BG_D26REPOINT_2026_11_10.md.
 
 Relabel → LABELS d444e40b4233, table b168c70703ab, at LF 94d3e82675b1. The definition check prints 0 lines, and dmarks2 lists the 16 known leftovers. deadcheck and prefcheck show only their known hits. Columns are 9×5, 74×6, and 267×7.
+
+## SW 1eeaeff9e212's Conditions: #T3.31 and #T1.5-1, 2026-11-10 18:17
+
+- #T3.31 (VAR's a₁) records SW's shrink conditions a₁ ≤ 2/(9O(1)B₃R₁M₁) and O(1)ξa₁ ≤ 1, with ξ = L^{−1}η ≤ 1. SW takes a₁ at #T2.7's printed R₁M₁ (R₁ = R₁^V, map #MD2.2.6.190-22), not at #T1.6's raised M′.
+- New sub-row #T1.5-1 records (C-M): M ≥ 2LM₁ + 2R₁M₁ and M ∈ R₁M₁ℕ, with VAR's M₁, not #T1.5's CRE M₁.
+- Lθ ≤ 1 gets no row, as it is a smallness condition on g. The rows were announced to (4) before the edit and the SHAs sent after. The printed-versus-raised point was sent to (4) for SW. Log: WILSON_IT1_LF_TRIAGE_BG_D26REPOINT_2026_11_10.md.
+
+Relabel → LABELS 1f2b3fa09b9d, table 9f6ebf47c805, at LF 94d3e82675b1. The definition check prints 0 lines, and dmarks2 lists the 16 known leftovers. deadcheck and prefcheck show only their known hits, shifted one line by the new row. Columns are 10×5, 74×6, and 267×7.
+
+## K₁ and K_{j+1}: D26 7.2's Factor d, 2026-11-10 18:24
+
+- K₁ (#T12.19-9-1) takes d^{−1}(434)^{−d}: at Λ, the ∗-connected route gives (3/2)d(430)^d, which exceeds 2(434)^d at d = 4 (RC_PAYMENT 672f30ee25ee #RP.5-2-1 to #RP.5-2-2; re-derived).
+- K_{j+1} (#T12.19-11) can keep 2(14)^d. p.385's first inequality holds, since the ∼3 enlargement is face-connected; the gap is the union step, and the ∼2 route closes it with (3/2)d·10^d ≤ 2(14)^d for every d ≥ 1. D26 6b85e0efb834 prints 2d(14)^d, true but weaker, and that choice is (4)'s.
+- D26 2dce56a49737 has K₁ with d^{−1}, κ₁'s absorption term ·(d₁′+1), and K_{j+1} with 2(14)^d by the direct route. #T12.19-9-1 and #T12.19-10 are edited to match; #T12.19-11 is unchanged. Announced to (4) before the edit and SHAs sent after. Log: WILSON_IT1_LF_TRIAGE_BG_D26REPOINT_2026_11_10.md.
+
+Relabel → LABELS 740b198d7a9d, table 0fa578b35726, at LF 94d3e82675b1. The definition check prints 0 lines, and dmarks2 lists the 16 known leftovers. deadcheck and prefcheck show only their known hits. Columns are 10×5, 74×6, and 267×7.

@@ -73,12 +73,26 @@ Verdict: clean. Re-read l.9, 158–161, 163, 172, 179, 186, 236, 284–285, 309,
 
 ## Table: SW's Conditions (9f6ebf47c805)
 
-Announced to (4) before the edit. #T3.31 (VAR's a₁) now records SW's shrink conditions a₁ ≤ 2/(9O(1)B₃R₁M₁) and O(1)ξa₁ ≤ 1. Here ξ = L^{−1}η ≤ 1 (SW §5(2), (5)), and a₁ is taken at #T2.7's printed R₁M₁ (R₁ = R₁^V, map #MD2.2.6.190-22), not at #T1.6's raised M′. New sub-row #T1.5-1 holds (C-M), whose M₁ is VAR's, not #T1.5's CRE M₁. Lθ ≤ 1 is a smallness condition on g and gets no row. The printed-versus-raised point was sent to (4) for SW. Relabel → LABELS 1f2b3fa09b9d at LF 94d3e82675b1. defcheck "-- 0 lines"; dmarks2 16; deadcheck and prefcheck known hits only, shifted one line by the new row; columns 10×5, 74×6, 267×7.
+Announced to (4) before the edit. #T3.31 (VAR's a₁) now records SW's shrink conditions a₁ ≤ 2/(9O(1)B₃R₁M₁) and O(1)ξa₁ ≤ 1. Here ξ = L^{−1}η ≤ 1 (SW §5(2), (6)), and a₁ is taken at #T2.7's printed R₁M₁ (R₁ = R₁^V, map #MD2.2.6.190-22), not at #T1.6's raised M′. New sub-row #T1.5-1 holds (C-M), whose M₁ is VAR's, not #T1.5's CRE M₁. Lθ ≤ 1 is a smallness condition on g and gets no row. The printed-versus-raised point was sent to (4) for SW. Relabel → LABELS 1f2b3fa09b9d at LF 94d3e82675b1. defcheck "-- 0 lines"; dmarks2 16; deadcheck and prefcheck known hits only, shifted one line by the new row; columns 10×5, 74×6, 267×7.
+
+## Background Note, Round 12 (full: every line of 22a230556c65)
+
+Verdict: clean. Every line was read, and every arithmetic step was redone: §3.2's 𝐑-part bounds (2s_j + 1 ≤ MR_j(8/c^R_E + 1)(2y + 1), (1 + x)e^{−x/2} ≤ 2, the m̂ exponents at β₀ ≤ 1/4, the Cauchy sum lemma's 2 + 24R̂_K/c^R_E), the r_j and N_k sums (P_{j−1}(C) = 4ℓ_CL^{K−j+1}), 4.1(3)'s layer maximum, 4.1(4)'s constants (1.04·1.06 ≤ 1.11), 4.2's ratio 1.184 and the bound 0.075, (iii-d)'s numbers (4.1θ, 103R_j, 1330, 444 and 400), §5.2's series in G′, and 5.3 (4)'s per-cube factor.
+The NV update 53550dbb2832 → 0c758282badc keeps #NV.3-4-2's statement, and (W^𝔉) at N_C = 1 is (iv-e)'s (W) (#NV.3-4-1), so l.316, 328 and 348 stand. Two consecutive clean rounds (11 narrow, 12 full): the note is done at 22a230556c65.
+
+## D26 7.3's Conversion Factor: K₁ and K_{j+1}
+
+Source: RC_PAYMENT 672f30ee25ee #RP.5-2-1 to #RP.5-2-2, re-derived here.
+- K₁ takes d^{−1}(434)^{−d}. 𝒳 is ∗-connected, so d₁′(𝒳) + 1 ≤ d·#cubes₁(𝒳) ≤ (3/2)d(430)^dΣ_G(d₁′(G)+1), and at d = 4 this exceeds 2(434)^d, as (434/430)⁴ < 3.
+- K_{j+1} can keep 2(14)^d. p.385's first inequality holds: (Z^{(i)})^{∼3} is face-connected, so a tree through face-adjacent centres gives d₁′ ≤ #cubes − 1. The gap is the union step d′(Z) ≤ Σ_id′((Z^{(i)})^{∼3}), whose trees need not lie in Z. The ∼2 route closes it: d′(Z) + 1 ≤ (3/2)d·10^dΣ_i(d′(Z^{(i)})+1), and (3/2)d·10^d ≤ 2(14)^d for every d ≥ 1 ((3/4)d ≤ 1.4^d).
+- My 18:24 message to (4) wrongly gave K_{j+1} the factor d, since I had not checked that the enlargement is face-connected. Two-loops corrected it at 18:25, and I sent (4) a retraction.
+D26 2dce56a49737 (checked at l.29, 389, 409–410, 414–415 and 427–430): K₁ has d^{−1}, κ₁'s absorption term is ·(d₁′+1), and K_{j+1} keeps 2(14)^d by the direct route (d ≤ (4/3)(7/5)^d). l.410 and l.428 place the gap at the union step, and §1 *Counting cubes* quotes RG1 p.257's "contained in X".
+Table edited after the announcement to (4): #T12.19-9-1 (K₁ with d^{−1}) and #T12.19-10 (absorption term ·(d₁′(Z)+1)); #T12.19-11 is unchanged, and #T10.28-1 already has "contained in X". Relabel → LABELS 740b198d7a9d, table 0fa578b35726, at LF 94d3e82675b1. defcheck "-- 0 lines"; dmarks2 16; deadcheck and prefcheck known hits only; columns 10×5, 74×6, 267×7. The background note is unaffected: it uses K_{j+1} only in "ε_A^g ≤ K_{j+1}/8 for small g_*" and "Pol(Z) ≥ (K_j/2)(d_j′(Z)+1)".
 
 ## SHAs
 
-Table: d71e239470ea → eb5a6a505303 → b168c70703ab → 9f6ebf47c805. LABELS: 2d2801629f41 → 146c7b49d22b → d444e40b4233 → 1f2b3fa09b9d. Background note: 249ae1a46a2a → 8510ab0aebd7 → 7bb5f99918ab → 3047b31464c3 → 22a230556c65.
+Table: d71e239470ea → eb5a6a505303 → b168c70703ab → 9f6ebf47c805 → 0fa578b35726. LABELS: 2d2801629f41 → 146c7b49d22b → d444e40b4233 → 1f2b3fa09b9d → 740b198d7a9d. Background note: 249ae1a46a2a → 8510ab0aebd7 → 7bb5f99918ab → 3047b31464c3 → 22a230556c65.
 
 ## Status
 
-Table rows: no round needed. Background note: round 6 found F1–F3, round 8 found F4–F5, and round 10 found F6–F7, all repaired. Round 11 (narrow) is clean, and a full round 12 is next.
+Table rows: no round needed. Background note: round 6 found F1–F3, round 8 found F4–F5, and round 10 found F6–F7, all repaired. Rounds 11 (narrow) and 12 (full) are clean, so the note is done at 22a230556c65. The K rows follow D26 2dce56a49737. Next from (4): COMPLEX_COVARIANCE's δ̄₀ for table l.682 (#MOMGD.5-15).

@@ -739,7 +739,7 @@
     {#MD2.0.5.35} with ρ̂_j of order g_j²(log g_j^{−2})^{4p₀} and ρ_{t,j} of order g_j(log g_j^{−2})^{p₀}.
     {#MD2.0.5.35-1} The cost to be paid by Z's fundamental factor is D_j(Z) + A_j(Z).
     {#MD2.0.5.35-2} The bound of A_j(Z) by a multiple of d_j′(Z) + 1 (counting the step-j traversals within distance O(M) of Z, the marks and the inputs assigned to Z) and the size of the lw term are D2.6 closure §7.1 and §6.3.
-  - {#MD2.0.5.36} *The condition (stated for j = 1).* At creation at step 1 the cost is paid if C_dc_CMLR_1²τ̄² ≤ ¼c₄(434)^{−d}ϑ²A₁²(log g₁⁻²)^{2p₀} − O(1)2(64)^dM^dL^{d+1}R_1^{d+2}: p.385's j = 1 condition, with ¼γ₀(14)^{−d} replaced as in IT-1 note §3f(2) Minor 4, and its right side at most doubled once C_dc_Cτ̄² ≤ O(1)2(64)^dM^{d−1}L^dR_1^d.
+  - {#MD2.0.5.36} *The condition (stated for j = 1).* At creation at step 1 the cost is paid if C_dc_CMLR_1²τ̄² ≤ ¼c₄d^{−1}(434)^{−d}ϑ²A₁²(log g₁⁻²)^{2p₀} − O(1)2(64)^dM^dL^{d+1}R_1^{d+2}: p.385's j = 1 condition, with ¼γ₀(14)^{−d} replaced by ¼c₄d^{−1}(434)^{−d}ϑ² (D26 7.2, *The fundamental factor at j = 1*), and its right side at most doubled once C_dc_Cτ̄² ≤ O(1)2(64)^dM^{d−1}L^dR_1^d.
     {#MD2.0.5.36-1} The left side is g_K² times a polylog, so this holds for small g, by the same "p₀ large, g small" as p.385.
     {#MD2.0.5.36-2} The small domains of p.386 are paid in closure §7.3, which pays the small-domain costs D + A from ¼p₀(g_j).
     {#MD2.0.5.36-3} The comparison at general j, with (1.85)'s "γ₀A₁²p₀²(g_{j+1})(d′+1)", is D2.6 closure §7.3.
