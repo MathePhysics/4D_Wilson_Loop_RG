@@ -3,7 +3,7 @@
 {#GL.0} Status: derived, not reviewed (2026-11-10). Owned by the BETA session; other sessions read it only.
 
 {#GL.1} **The K-uniform bound, the Cauchy bound, and the limit along the full sequence hold for every finite family of pairwise vertex-disjoint simple closed loops on the L-adic lattices, read with general loops in place of squares, section by section, as NL reads the pair with N_C loops.** No new analytic input enters.
-{#GL.1-1} Each change is one of four kinds: a geometric count of §2, at most Λ̄(𝒞) times the square's (#GL2.1); a perimeter 4ℓ_C replaced by P_{K′}(C); the four corners replaced by the corner sum over 𝒦(C); or a condition fixed before the coupling, or a smallness condition on the coupling, that now depends on Λ̄(𝒞) (#GL7.1).
+{#GL.1-1} Each change is one of four kinds: a geometric count of §2, at most Λ̄(𝒞) times the square's (#GL2.1); a perimeter 4ℓ_C replaced by P_{K′}(C); the four corners replaced by the corner sum over 𝒦(C), with the corner isolation r_k(C) in place of s_k/2 (#GL2.7); or a condition fixed before the coupling, or a smallness condition on the coupling, that now depends on Λ̄(𝒞) and on the ratios P(C_i)/r(C_i) (#GL7.1). Since Λ̄(C) ≤ max(2, P(C)/(2r(C))) and abs(𝒦(C)) ≤ P(C)/(2r(C)) (#GL2.7-2), every shape constant is bounded in terms of P(C)/r(C).
 
 {#GL.2} Citations: NL (`WILSON_IT1_N_LOOPS_UNIFORM_BOUND_2026_11_05.md`) by #NL…, the two-loops note by #N, the pair's Cauchy note by #PC…, the Cauchy note by #C…, the large-field note as LF #N, the continuum note by #ND… and #NK…, the map by #MD… and #MO…, V4 (`WILSON_FIRST_RG_STEP_V4.tex`) by label, and the D2.6, D2.7 and background closures by section.
 
@@ -57,7 +57,7 @@
 
 {#GL2.7} *Corner isolation.* At step k give each corner c the last ⌊ℓ/2⌋ traversals of its incoming segment and the first ℓ′ − ⌊ℓ′/2⌋ of its outgoing one, ℓ, ℓ′ their lengths (the half-sides of the proof of V4 eq:corner-square-extraction-bound and of #MD2.3.6.6). The half-segments partition the traversals of C.
 {#GL2.7-1} Let S_in(c), S_out(c) be c's two segments and B_c the bent path of eq:corner-bent-path at c with rays along them. For a traversal b given to c, let r(b) be the least of P_k(C)/8 and the ℓ^∞-distance from b's initial site to the initial sites of the traversals of C and of B_c outside S_in(c) ∪ S_out(c).
-{#GL2.7-2} (a) r_k(C) ≤ r(b) ≤ diam_k(C), with r_k(C) := min(s_k(C)/2, δ_k(C), P_k(C)/8). For a square, r_k(C) = s_k/2.
+{#GL2.7-2} (a) r_k(C) ≤ r(b) ≤ diam_k(C), with r_k(C) := min(s_k(C)/2, δ_k(C), P_k(C)/8). The ratio P(C)/r(C) := P_k(C)/r_k(C) is independent of k (#GL1.4). Every segment has at least s_k(C) ≥ 2r_k(C) bonds and δ_k(C) ≥ r_k(C), so abs(𝒦(C)) ≤ P_k(C)/s_k(C) ≤ P(C)/(2r(C)) and Λ̄(C) ≤ max(2, P(C)/(2r(C))) (#GL2.1-1). For a square, r_k(C) = s_k/2 and P(C)/r(C) = 8.
 {#GL2.7-3} Proof of (a), for b in the last half of S_in(c), its initial site at distance a ≥ ⌈ℓ/2⌉ from the initial corner c′ of S_in(c): the previous segment is perpendicular to S_in(c) at c′, so all its sites have c′'s coordinate along v_c, at distance a; the segments not adjacent to S_in(c), among them the one after S_out(c), are at least δ_k(C) away; B_c's incoming ray beyond c′ is at distance more than a; its outgoing ray beyond S_out(c) is at distance more than ℓ′ ≥ s_k(C) in the e-coordinate of w_c.
 {#GL2.7-4} For b in the first half of S_out(c), at distance i ≤ ⌈ℓ′/2⌉ − 1 from c, the next segment and B_c's outgoing ray beyond it are at distance at least ℓ′ − i ≥ ⌊ℓ′/2⌋ + 1 > ℓ′/2, the segments not adjacent to S_out(c) at least δ_k(C), and B_c's incoming ray beyond S_in(c) more than ℓ ≥ s_k(C). The upper bound: the far end of b's segment is within its length ≤ diam_k(C).
 {#GL2.7-5} (b) Let Γ be a cluster of C's gas rooted at b (b ∈ J_Γ) whose network (the supports, arc hulls and merged domains of its groups, which contain the initial sites of its arcs' traversals, #MD2.3.4.8-1) has ℓ^∞-diameter less than r(b), on a torus with N_min ≥ 2diam_k(C). Then its arcs lie in S_in(c) ∪ S_out(c), in a subarc of fewer than 4r(b) ≤ P_k(C)/2 positions, and it does not wrap the torus.
@@ -80,7 +80,7 @@
 ## 3 The First Step (V4) {#GLS3}
 
 {#GL3.1} *Setting* (the notation paragraph of sec:main-result; the paragraph fixing C_n before eq:marginal-hull-extent). C_n is replaced by a loop C of 𝒞 in a fixed lift, based at a corner. Its corners are coarse sites (#GL1.4-2). It has n_C = P_0(C) contour bonds and P_c := P_0(C)/L coarse segments, a segment σ being a union of n_σ := ℓ_σ/L of them. The periods satisfy K_μ ≥ 3(diam_0(C)/L + 2) (#GL1.5-1).
-{#GL3.1-1} The reduction of a square to C_n by an axis permutation is not used, and reversal is treated as in V4, by χ̄. Write r_c := r_0(C)/L, s_c := s_0(C)/L, and P(C)/r(C) for the ratio P_k(C)/r_k(C), which is independent of k (#GL1.4) and equals 8 for a square.
+{#GL3.1-1} The reduction of a square to C_n by an axis permutation is not used, and reversal is treated as in V4, by χ̄. Write r_c := r_0(C)/L and s_c := s_0(C)/L; P(C)/r(C) is that of #GL2.7-2.
 
 {#GL3.2} *Hull constant* (eq:marginal-hull-extent). For C put c_h(C) := 16Λ̄(C)(1 + R_*), which is V4's 32(1 + R_*) for a square. The line and the bent path are fixed paths and keep V4's constants (c_h := 32(1 + R_*) on the line, c_h′ = 2c_h on the bent path).
 {#GL3.2-1} Proof: the contacts of γ have ℓ^∞-diameter D ≤ R_*abs(A_γ) + Σ_{F_γ}d_T(b, c) + 2R_* ≤ (1 + 3R_*)ℓ(γ), by V4's support network and ℓ(γ) ≥ 1. So H_γ ≤ 4Λ̄(C)D + 2 (#GL2.2-4) ≤ (12Λ̄(C)(1 + R_*) + 2)ℓ(γ) ≤ c_h(C)ℓ(γ).
@@ -126,6 +126,7 @@
 
 {#GL4.1} *D2.0.* C is a union of step-K′ bonds (#GL1.3-1), and P_j(C) = P_{K′}(C)L^{K′−j} replaces 4ℓ_CL^{K−j} (#MD2.0.1.6-5, #MD2.0.5.1, #MOMST.74), with n_C = P_0(C). The step factor is κ_j := exp(log κ_j(C)) of #GL2.9-3, in place of e^{−δm_jP_{j−1}(C)}z_j⁴ (#MD2.0.3.4).
 {#GL4.1-1} The remainder at a step (#MD2.0.5.6-4) and the clause on E_const (#MD2.0.3.52-1) take #GL2.8's form: abs(E_const,k) ≤ Σ_{j≤k}𝔞_j[C_E(P_{j−1}(C) + abs(𝒦(C)))e^{−c_dr_{j−1}(C)} + 3C̄_ZP_{j−1}(C)e^{−c^Zι_{T,j}}]. At the stopping step, P_{K′}(C) replaces 4ℓ_C (#MD2.0.5.41-2, #MOMGD.2).
+{#GL4.1-2} *The contour constant.* #MD2.0.5.30's c_C, which depends only on the shape of C, is c_C(C) := 2Λ̄(C): a half-open MR_n-cube holds the initial sites of at most 2Λ(C)(MR_n − 1) + 1 ≤ 2Λ̄(C)MR_n bonds of C (#GL2.3). For a square it is 4. The conditions containing it are a choice of ε_H made after C (#MD2.1.4.27-1) and smallness conditions on g (#MD2.0.5.36).
 
 {#GL4.2} *D2.1(4)* (#MD2.1.4.51). S(Y) has ℓ^∞-diameter D ≤ M#(Y), so length(I(Y)) ≤ 4Λ̄(C)D (#GL2.2-4) and length(I(G)) ≤ 4Λ̄(C)M#(G), in place of 4M#(G). The condition 4c_π′M‖a′‖_∞ ≤ 1 (#MD2.1.4.35, #MD2.1.4.45-1) becomes 4Λ̄(C)c_π′M‖a′‖_∞ ≤ 1. The torus distances are the lifted ones by #GL1.5.
 
@@ -153,6 +154,7 @@
 {#GL4.10-3} *W* (#MD2.4.12.23–#MD2.4.12.23-1). X_W with its arc cubes has at most (8 + 16/L)σ_k(W) + 32 π_k-cubes, at most (1 + 2/L) times the map's 8σ_k(W) + 80, and abs(win(W)) ≤ (20Λ̄(C) + 1)(M/L)σ_k(W) + 20Λ̄(C), at most Λ̄(C)/2 times the map's 41(M/L)σ_k(W) + 40.
 {#GL4.10-4} So every count in sh(M), sh(W), sh(Γ-vertex), sh(𝒞) and ℓ_X (#MD2.4.12.22-4, #MD2.4.12.23-2, #MD2.4.12.24–#MD2.4.12.26) is at most Λ̄(C)(1 + 2/L) times the map's, and so are their coefficients and c_sh.
 {#GL4.10-5} The condition (1106·17/16 + 41/8)Λ̄(C)(1 + 2/L)/L ≤ 1/4 of #MD2.4.12.23-2 holds for L ≥ 5000Λ̄(C). sh(𝒞) ≤ 2(83ν_f + 86ν_e)Λ̄(C)(1 + 2/L)#(𝒞) ≤ #(𝒞)/4 holds for ν ≤ 1/(1000Λ̄(C)) (#MD2.4.12.25).
+{#GL4.10-6} *Window positions* (#MD2.4.12.31). A window reaches d traversals beyond its interval only if 10Λ̄(C)(diam_v + 1) ≥ d, so C_win(C) := 2Σ_{d≥0}e^{−c_w(d/(10Λ̄(C)) − 1)₊}. As in two-loops #568, the sum is at most 10Λ̄(C) + 1 + 10Λ̄(C)/c_w, so C_win(C) ≤ 41Λ̄(C)/c_w for c_w ≤ 1, in place of 82/c_w, and #MD2.4.12.31-2's bound becomes 328Λ̄(C)M/min(1, ν_rL).
 
 {#GL4.11} *D2.4(12)(e)–(f) and the transports.* The ν-parts of the per-cube costs (143ν_f + 221ν_e and the like) are multiplied by at most Λ̄(C)(1 + 2/L), so they keep their margins for ν ≤ 1/(1000Λ̄(C)), which ν = η(C) satisfies. The transport lengths are multiplied by at most Λ̄(C), so #MD2.4.12.27-1's condition becomes c_π′α_{1,k+1}·4096Λ̄(C)M ≤ ν, which implies #MD2.4.13.19-2's c_π′α_{1,k+1}M ≤ ν/64.
 {#GL4.11-1} *D2.4(13)* (#MD2.4.13.19–#MD2.4.13.19-6). (S) holds under the map's conditions with L ≥ L₀(C) (#GL7.1), ν ≤ 1/(1000Λ̄(C)), the transport condition above, the arc conditions of #GL4.2–#GL4.3, and (TC) with the stopping j of #GL1.3. The entropy counts per cube are unchanged.
