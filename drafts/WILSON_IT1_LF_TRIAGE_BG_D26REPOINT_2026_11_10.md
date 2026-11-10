@@ -100,10 +100,38 @@ Background note: bgptr gives known non-tags only against map 656eed60159c, so ev
 Table #T3.36: S_H ≤ g_k^{3/2}/16 (map #MOMGD.58) → S_H ≤ g_k^{3/2}/40 (map #MD2.2.6.193: 10S_H/g_j ≤ g_j^{1/2}/4), with S_H of #T12.13 (#MD2.2.6.185-2), whose definition is not repeated. "O6's (C1)" → "O6's (C3)", since O6's (C3), C₁^{RG2}ε_k^♯ < r_{α,k}/2, gives membership in 𝒫_k^m (O6 l.107, l.227). Announced to (4).
 The other O6 row citing a condition already reads "𝒫_k^{3/4} under O6's (C3)". The table has no q₁ = p₀ condition. The background note's map tags all resolve in 4393221aa40a (bgptr known non-tags only). Relabel → LABELS 0e94a6174742, table cc3949e005fb; checks as before.
 
+## Coarse-Chain d02ba134814f: Background Note and Table
+
+Input: two-loops' message on the coarse-chain note d02ba134814f, with replacements proposed for the old l.184, 285, 289 and 317. Each was re-derived against the coarse-chain note before use. They were applied in c_π′ form, with the old l.183–184 merged into a pointer to #CC.2.2-4 and #CC.2.2-5.
+- (iii-a): ε_H^{(k)} := ε_H/(b_d^c)^k, and I^{(k)}(G) as #CC.0.9–#CC.0.10 define it, a bond carrying (M^k𝐔)(c) or T_c(𝐔) by #CC.0.6. The arc product is #CC.2.2-4, from #CC.1.3's per-bond bound exp(c_π′(b_d^c)^kℓ_kh(c)) and #CC.1.2-2's 1.03c_CML^{j−k} bonds per cube, with ℓ_k (#CC.0.3) and h(c) defined in place. 𝔞̄^g ≤ c_X(b_d^c)^{2k}𝔞̄ is cited to #CC.4.4 and #CC.K.3.
+- §5.3: the (1) domains cite #CC.4.1-4–#CC.4.1-6, #CC.0.10 and #CC.3.3-1. (4)'s per-cube factor is exp(1.03c_π′c_CM·O(1)·4B₀e^{16κ_s}ε_H)·exp(1.03c_π′c_CM(b_d^c)^kα_{1,j+1}/L). (5) is under (C9). c_X = 2099601e^{1+ν_e+5ν_f/L}(1+Ĉ^g)/(1+Ĉ), with pointers for ν_e, ν_f, Ĉ and Ĉ^g. (iv-c)'s locality cites #CC.1.1-1 and #CC.4.1-4. (Cε) now also implies the coarse-chain note's (C7), and the conditions list cites (C9).
+- Re-derived: per cube, 1.03c_CML^{j−k} bonds times c_π′(b_d^c)^kL^{k−j}h(c) give 1.03c_π′c_CM(b_d^c)^kh. The 𝐇 part is ≤ 1 under (Cε), as 1.12 ≥ 1.03 and O(1) ≥ 1. (C9) at i = j+1 gives 1.03·4M·c_π′(b_d^c)^kα_{1,j+1}/L ≤ 4.12ν/(4096L) ≤ 1 and 4c_π′(b_d^c)^kMα_{1,j+1} ≤ 4ν/4096 ≤ 1, with ν ≤ 1/1000 (map #MD2.4.13.19-3).
+- Pre-check before round 13: ℓ_k and h(c) were undefined at their first use, ν_e, ν_f, Ĉ and Ĉ^g lacked pointers, and table #T12.13-1 still listed (iii-a) as a c_π^ℂ user. All three were repaired.
+- Table, announced to (4): #T12.30-9's c_X is the coarse-chain note's (#CC.K.3), not #T12.20's. #T12.13-1's pointer is now "(background note 4.1(4), (iii-d))". LABELS 0e94a6174742 → 021eb3aaac12 → 4c2c66efb348; table cc3949e005fb → 7d4eab358ced → 77c1b5ec9928. defcheck "-- 0 lines"; dmarks2 16; deadcheck and prefcheck known hits only; columns 10×5, 74×6, 267×7.
+- Round 13 (narrow: the changed lines and their consumers): clean.
+- Round 14 (full): not clean (two minor findings).
+  - **F8** (l.280): X^g, 81 and 25921 were cited to "coarse-chain note §1–§2", and the sets were written Q^g. Repair: #CC.4.1-4–#CC.4.1-6 and 𝒬^g.
+  - **F9** (l.293): (iv-c)'s locality pointer was stale. Repair: #CC.1.1-1, #CC.4.1-4.
+- Round 15 (narrow): not clean (two minor findings in the repairs).
+  - **F10**: F8's repair cited I^{(k)}(𝒢) to "§1–§2 there". Repair: #CC.0.10, #CC.3.3-1.
+  - **F11** (l.182): the description of I^{(k)}(G) did not match #CC.0.9–#CC.0.10. Repair: the union over Y ∈ G of the smallest arcs of C^{(k)} containing the scale-k bonds whose blocks meet Y.
+- Round 16 (full, c7612b0d6f3b): not clean (one minor finding).
+  - **F12** (l.326): the coarse-chain source entry read "its notation, §1–§4, …". The note has no notation section, and the note cites #CC.0.1, #CC.0.3, #CC.0.4 (its opening) and #CC.0.6, #CC.0.9, #CC.0.10 (*What the Objects Are*). Repair: "its opening (#CC.0.1–#CC.0.4), *What the Objects Are*, §1–§4, §6, *Constants and Conditions*".
+- Round 17 (narrow: F12): clean. Every #CC tag the note cites lies in the listed parts and exists in d02ba134814f, and so do §3.3, §3.5 and §6.
+- Round 18 (full: every line of df792ffa33f3): clean. Map d3dc46ddacc5 still states what the note cites (ν_f = 17ν/16 and ν_e = ν/(2C_box) at #MD2.4.12.21, ν ≤ 1/1000, and the e^{1} per cube of #MD2.4.11.4-1). bgptr gives known non-tags only, bgdefs 58 symbols, and bginternal reports (C7) and (C9) as the coarse-chain note's. Longest line 659; LF only; 360 lines and 101,347 characters.
+
+## Map d3dc46ddacc5: C_pc′ and c_π′ (Table)
+
+Input: (4)'s message. Checked against the map (#MD2.4.8.1, #MD2.4.12.21-1, #MD2.4.12.27-1, #MD2.4.12.27-3, #MD2.4.12.27-6, #MD2.4.12.28, #MD2.4.12.28-0). Re-derived: 40c_π′α_{1,k+1} ≤ 40ν/(4096M) ≤ 1, and ν_e + ν_r/16 = ν/(2C_box) + ν/16 ≤ ν ≤ 1/1000, so e²C_pc bounds C_pce^{40c_π′α_{1,k+1}}e^{ν_e+ν_r/16}.
+- #T12.17: sh(v)'s transport term is c_π′α_{1,k+1}abs(win(v)), with #T12.20-3-2's c_π′. C_pc′ := e²C_pc bounds a piece's C_pce^{40c_π′α_{1,k+1}}, times e^{ν_e+ν_r/16} for a touched W. b(M-vertex)'s (r/648) now reads (r_κ/648), as #MD2.4.12.27-3 prints it.
+- #T12.13-1: #MD2.4.8.1's transport constant is now c_π′, so the row says that in a sentence of its own, after the c_π identifications, naming #T12.20-3-2's c_π′.
+- #T3.37's ε′, with (20c_πc_hC₁^{RG2})^{−1}, agrees with the CA closure's and the map's ε′, and #T4.46's 2.12c_πc_h agrees with the map's #MOMST.50-1. Both are unchanged. The background note uses neither C_pc′ nor #MD2.4.8.1, so it needs no change.
+- Announced to (4). LABELS 4c2c66efb348 → eb6a64d31149 → 734a37930def; table 77c1b5ec9928 → 33fe77b016b2 → 18cbd119fc8f. defcheck "-- 0 lines"; dmarks2 16; deadcheck and prefcheck known hits only; columns 10×5, 74×6, 267×7.
+
 ## SHAs
 
-Table: d71e239470ea → eb5a6a505303 → b168c70703ab → 9f6ebf47c805 → 0fa578b35726 → ef03c153b6ad → cc3949e005fb. LABELS: 2d2801629f41 → 146c7b49d22b → d444e40b4233 → 1f2b3fa09b9d → 740b198d7a9d → 58050f8936d3 → 0e94a6174742. Background note: 249ae1a46a2a → 8510ab0aebd7 → 7bb5f99918ab → 3047b31464c3 → 22a230556c65.
+Table: d71e239470ea → eb5a6a505303 → b168c70703ab → 9f6ebf47c805 → 0fa578b35726 → ef03c153b6ad → cc3949e005fb → 77c1b5ec9928 → 18cbd119fc8f. LABELS: 2d2801629f41 → 146c7b49d22b → d444e40b4233 → 1f2b3fa09b9d → 740b198d7a9d → 58050f8936d3 → 0e94a6174742 → 4c2c66efb348 → 734a37930def. Background note: 249ae1a46a2a → 8510ab0aebd7 → 7bb5f99918ab → 3047b31464c3 → 22a230556c65 → c7612b0d6f3b → df792ffa33f3.
 
 ## Status
 
-Table rows: no round needed. Background note: round 6 found F1–F3, round 8 found F4–F5, and round 10 found F6–F7, all repaired. Rounds 11 (narrow) and 12 (full) are clean, so the note is done at 22a230556c65. The K rows follow D26 2dce56a49737, #T12.13 follows COMPLEX_COVARIANCE f1cbf76fb687, and #T3.36 follows O6 908c956d462e.
+Table rows: no round needed. Background note: rounds 6–16 found F1–F12, all repaired. Rounds 17 (narrow) and 18 (full) are clean, so the note is done at df792ffa33f3, against the coarse-chain note d02ba134814f and map d3dc46ddacc5. The K rows follow D26 2dce56a49737, #T12.13 follows COMPLEX_COVARIANCE f1cbf76fb687, #T3.36 follows O6 908c956d462e, #T12.30-9 follows the coarse-chain note d02ba134814f, and #T12.17 and #T12.13-1 follow map d3dc46ddacc5.

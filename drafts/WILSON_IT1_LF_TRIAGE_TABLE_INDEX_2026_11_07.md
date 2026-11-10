@@ -3695,3 +3695,19 @@ Relabel → LABELS 58050f8936d3, table ef03c153b6ad, at LF 94d3e82675b1. The def
 - Announced to (4) before the edit and SHAs sent after. The table has no q₁ = p₀ condition. Log: WILSON_IT1_LF_TRIAGE_BG_D26REPOINT_2026_11_10.md.
 
 Relabel → LABELS 0e94a6174742, table cc3949e005fb, at LF 94d3e82675b1. The definition check prints 0 lines, and dmarks2 lists the 16 known leftovers. deadcheck and prefcheck show only their known hits. Columns are 10×5, 74×6, and 267×7.
+
+## The Coarse-Chain Note d02ba134814f: #T12.30-9 and #T12.13-1, 2026-11-10 20:27
+
+- #T12.30-9: c_X = 2099601e^{1+ν_e+5ν_f/L}(1+Ĉ^g)/(1+Ĉ), the coarse-chain note's (#CC.K.3), not #T12.20's c_X.
+- #T12.13-1: the c_π^ℂ users are the background note's 4.1(4) and (iii-d); (iii-a) now cites the coarse-chain note's c_π′ bounds instead.
+- Announced to (4) before the edit. The background note is done at df792ffa33f3 (rounds 17 narrow and 18 full clean). Log: WILSON_IT1_LF_TRIAGE_BG_D26REPOINT_2026_11_10.md.
+
+Relabel → LABELS 4c2c66efb348, table 77c1b5ec9928, at LF 94d3e82675b1. The definition check prints 0 lines, and dmarks2 lists the 16 known leftovers. deadcheck and prefcheck show only their known hits. Columns are 10×5, 74×6, and 267×7.
+
+## Map d3dc46ddacc5: #T12.17's C_pc′ and c_π′, #T12.13-1, 2026-11-10 20:27
+
+- #T12.17: C_pc′ := e²C_pc, bounding a piece's C_pce^{40c_π′α_{1,k+1}}, times e^{ν_e+ν_r/16} for a touched W (#MD2.4.12.28-0, #MD2.4.12.27-6). sh(v)'s transport term carries c_π′ (#MD2.4.12.21-1). b(M-vertex) reads (r_κ/648), as #MD2.4.12.27-3 prints it.
+- #T12.13-1: #MD2.4.8.1's transport constant is #T12.20-3-2's c_π′, stated in a sentence of its own.
+- Announced to (4) before the edit and SHAs sent after. #T3.37's ε′ (CA closure, map) and #T4.46's 2.12c_πc_h (#MOMST.50-1) are unchanged. Log: WILSON_IT1_LF_TRIAGE_BG_D26REPOINT_2026_11_10.md.
+
+Relabel → LABELS 734a37930def, table 18cbd119fc8f, at LF 94d3e82675b1. The definition check prints 0 lines, and dmarks2 lists the 16 known leftovers. deadcheck and prefcheck show only their known hits. Columns are 10×5, 74×6, and 267×7.
