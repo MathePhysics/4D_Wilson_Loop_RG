@@ -89,10 +89,16 @@ Source: RC_PAYMENT 672f30ee25ee #RP.5-2-1 to #RP.5-2-2, re-derived here.
 D26 2dce56a49737 (checked at l.29, 389, 409–410, 414–415 and 427–430): K₁ has d^{−1}, κ₁'s absorption term is ·(d₁′+1), and K_{j+1} keeps 2(14)^d by the direct route (d ≤ (4/3)(7/5)^d). l.410 and l.428 place the gap at the union step, and §1 *Counting cubes* quotes RG1 p.257's "contained in X".
 Table edited after the announcement to (4): #T12.19-9-1 (K₁ with d^{−1}) and #T12.19-10 (absorption term ·(d₁′(Z)+1)); #T12.19-11 is unchanged, and #T10.28-1 already has "contained in X". Relabel → LABELS 740b198d7a9d, table 0fa578b35726, at LF 94d3e82675b1. defcheck "-- 0 lines"; dmarks2 16; deadcheck and prefcheck known hits only; columns 10×5, 74×6, 267×7. The background note is unaffected: it uses K_{j+1} only in "ε_A^g ≤ K_{j+1}/8 for small g_*" and "Pol(Z) ≥ (K_j/2)(d_j′(Z)+1)".
 
+## COMPLEX_COVARIANCE f1cbf76fb687, Map 656eed60159c, SW 2be3106d4b2f
+
+Table #T12.13: δ̄_m := min(δ̄, μ4^{−m}) → δ̄₀ := min(δ̄, μ), δ̄ := min(1/2, CM/(2L)), with C the cube constant of CRE (2.38) (the note's (K1)). Checked against map #MOMGD.5-15 and the note's l.68 and l.101. δ_W (#MOMGD.5-10) is the same object. #T4.45 still matches the note: C_av, μ, *Averaging bound*, and the smallness of C_av(T₁ + T₃).
+The table lists no K₁, Ĉ, c_nc or L ≥ 8 from the note, and it does not mirror #MOMGD.5-4 (deleted) or #MOMGD.23-1. The note's L ≥ 12(1+β₀)² and L > (1+β₀)⁹ follow from #T1.3's L ≥ L₀ = 5000. Announced to (4). Relabel → LABELS 58050f8936d3, table ef03c153b6ad; checks as before.
+Background note: bgptr gives known non-tags only against map 656eed60159c, so every cited map tag resolves. SW 2be3106d4b2f keeps the opening's (a)–(d), §1(a1)–(a2), §3(b1)–(b3), §5(e) and §6(6a)–(6e), and its new opening sentence (the printed R₁M₁) matches table #T2.7 and #T2.7-1. The note needs no change.
+
 ## SHAs
 
-Table: d71e239470ea → eb5a6a505303 → b168c70703ab → 9f6ebf47c805 → 0fa578b35726. LABELS: 2d2801629f41 → 146c7b49d22b → d444e40b4233 → 1f2b3fa09b9d → 740b198d7a9d. Background note: 249ae1a46a2a → 8510ab0aebd7 → 7bb5f99918ab → 3047b31464c3 → 22a230556c65.
+Table: d71e239470ea → eb5a6a505303 → b168c70703ab → 9f6ebf47c805 → 0fa578b35726 → ef03c153b6ad. LABELS: 2d2801629f41 → 146c7b49d22b → d444e40b4233 → 1f2b3fa09b9d → 740b198d7a9d → 58050f8936d3. Background note: 249ae1a46a2a → 8510ab0aebd7 → 7bb5f99918ab → 3047b31464c3 → 22a230556c65.
 
 ## Status
 
-Table rows: no round needed. Background note: round 6 found F1–F3, round 8 found F4–F5, and round 10 found F6–F7, all repaired. Rounds 11 (narrow) and 12 (full) are clean, so the note is done at 22a230556c65. The K rows follow D26 2dce56a49737. Next from (4): COMPLEX_COVARIANCE's δ̄₀ for table l.682 (#MOMGD.5-15).
+Table rows: no round needed. Background note: round 6 found F1–F3, round 8 found F4–F5, and round 10 found F6–F7, all repaired. Rounds 11 (narrow) and 12 (full) are clean, so the note is done at 22a230556c65. The K rows follow D26 2dce56a49737, and #T12.13 follows COMPLEX_COVARIANCE f1cbf76fb687.

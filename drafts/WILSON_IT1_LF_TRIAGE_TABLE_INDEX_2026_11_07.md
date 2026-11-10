@@ -3681,3 +3681,10 @@ Relabel → LABELS 1f2b3fa09b9d, table 9f6ebf47c805, at LF 94d3e82675b1. The def
 - D26 2dce56a49737 has K₁ with d^{−1}, κ₁'s absorption term ·(d₁′+1), and K_{j+1} with 2(14)^d by the direct route. #T12.19-9-1 and #T12.19-10 are edited to match; #T12.19-11 is unchanged. Announced to (4) before the edit and SHAs sent after. Log: WILSON_IT1_LF_TRIAGE_BG_D26REPOINT_2026_11_10.md.
 
 Relabel → LABELS 740b198d7a9d, table 0fa578b35726, at LF 94d3e82675b1. The definition check prints 0 lines, and dmarks2 lists the 16 known leftovers. deadcheck and prefcheck show only their known hits. Columns are 10×5, 74×6, and 267×7.
+
+## COMPLEX_COVARIANCE f1cbf76fb687: #T12.13's δ̄₀, 2026-11-10 18:45
+
+- #T12.13: δ̄_m := min(δ̄, μ4^{−m}) is replaced by δ̄₀ := min(δ̄, μ), δ̄ := min(1/2, CM/(2L)), with C the cube constant of CRE (2.38) (map 656eed60159c #MOMGD.5-15). δ_W (#MOMGD.5-10) and #T4.45 are unchanged.
+- Announced to (4) before the edit and SHAs sent after. The background note's citations of map 656eed60159c and SW 2be3106d4b2f all resolve. Log: WILSON_IT1_LF_TRIAGE_BG_D26REPOINT_2026_11_10.md.
+
+Relabel → LABELS 58050f8936d3, table ef03c153b6ad, at LF 94d3e82675b1. The definition check prints 0 lines, and dmarks2 lists the 16 known leftovers. deadcheck and prefcheck show only their known hits. Columns are 10×5, 74×6, and 267×7.
