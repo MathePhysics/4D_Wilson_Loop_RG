@@ -1,10 +1,37 @@
 # General-Loops Note: Self-Check and Messages, 10 November 2026
 
-Note: `WILSON_IT1_GENERAL_LOOPS_2026_11_10.md`, owned by the BETA session. SHA 1d61bc4589e2 after this pass (246 lines, 182 tags). Status: derived, not reviewed. No referee round has been run.
+Note: `WILSON_IT1_GENERAL_LOOPS_2026_11_10.md`, owned by the BETA session. SHA 29310e03da68 after the second pass (291 lines, 217 tags). Status: derived, not reviewed. No referee round has been run.
 
 ## Open
 - (O1) Reflection positivity for general loops (#GL.3). Not treated. Closing it means reading the RP note with corner sums Σ_{c∈𝒦(C)}ζ_c under the reflection.
-- (O2) The pair factorisation bound (two-loops #941) is not read with general loops (#GL.3). Nothing in the note uses it.
+- Dependency, not owned here: #T4.44 identifies V4's C_box with 2916 and records only the map's lower bounds. V4's own requirement (sec:c4-8-4, sec:c4-11-4: C_box covers the lifting constant and the fixed ranges) is not recorded, and the map's comparison-box check #MD2.4.12.7-1 uses only C_box ≥ A_E (table session). My count gives about 48 for squares (message of 22:38). The table session passed it to the step-map session (4), which owns the identification; #T4.44 will cite their check.
+  - Depends on it here: #GL3.13-3's "C_box includes C_lift and these ranges", and #GL8.2-2's numbers through ν_e = ν/5832. #GL3.13-5's C_box ≥ 10 holds whatever the check finds, since it can only raise C_box.
+
+## Awaiting
+- Two-loops session: their decision on the #PF0.5 finding (below).
+- Step-map session (4): the C_box check (Open).
+
+## Table bb2bbb3fbd08 (LABELS 9eeed3a7792e), received after 22:38
+- The table session entered the note's §3.13, §3.14 and §8 after two clean full rounds: #T12.31-0 (Q, j), #T12.31-11-1 (general C^×_E, A^{cr,R}, C^{R×}_E), and #T12.31-12 to #T12.31-15. Each row was checked against the note. #T12.31-11-1's third term is #GL6.5-1's bound. #T12.31-14's comparison with the square was re-derived: Lip_χ((2/3)ℓ² + 4.24a_dc_hB₃ℓ) ≤ c_tyℓ² for ℓ ≥ 1. Acknowledged.
+
+## Second pass (21:40 to 22:24)
+- (O2) closed by §8 (#GLS8, #GL8.1–#GL8.7-2), the pair factorisation for two vertex-disjoint general loops with ℓ̄_i := P_{K′}(C_i)/4. Re-derived: the ladder chain #GL8.6-1–#GL8.6-3 in place of #PF4.3-4, N_lad(C_i) ≤ 3P_{K′}(C_i)diam_{K′}(C_i); c^𝒦_ty := 1 + 4Lip_χ(1 + 1.06a_dc_hB₃), checked against Lip_χ(4N_s + 4.24a_dc_hB₃) ≤ c^𝒦_tyN_s and ι ≤ ℓ̄_iι (ℓ̄_i ≥ 1); P_{K′}(C_i) ≤ N_s⁴ for a simple loop (#GL8.7-1); the step-1 network bound through the envelope, σ ≥ 3(D − 1)/A_E ≥ (D − 1)/(4M) (#GL8.5-1).
+- #GL8.2-2, D ≥ D_desc. D_desc ≤ M(80 + 30/ν_e) (64log4/3 ≤ 29.6); 30/ν_e = 174 960·1 200 000Λ̄(𝒞) ≤ 2.1·10¹¹Λ̄(𝒞) at N_C = 2; L³ ≥ 10L ≥ 160Λ̄(𝒞)²·1.8432·10⁹ ≥ 2.9·10¹¹Λ̄(𝒞) > 80 + 2.1·10¹¹Λ̄(𝒞), using Λ̄ ≥ 2.
+- #GL3.13 rewritten in place (22:27 to 22:37), with no inferred readings left. V4 prints what Q_W encloses (sec:c4-11-3; enlargement sec:c4-11-4; sec:c4-6-3). The closing transport is the inverse interval (sec:c4-4-3, the sentence defining L_f; sec:c4-6-3), so it adds no bonds. The rest of the contour enters only through the fixed complementary holonomy h, and V4's bounds are uniform in h (sec:c4-4-3, sec:c4-8-4).
+- V4's lifting proof (sec:c4-11-4) followed with the contour edges counted as abs(ℋ(W)): traversal ≤ C_liftLMn + 2abs(ℋ) ≤ max(C_lift, 2)LM𝔰; diam(Q_W) ≤ C_boxLMn + 2abs(ℋ) ≤ C_boxLM𝔰; IT-1's lifting constant ≤ 4C_box. Small groups: abs(ℋ(W)) ≤ 5LMn (two consecutive segments; ℋ(W) the union of the members' hulls by the class rule before def:groups); (C_box + 10)LMn < b/2; lift by eq:c4-9-3 (periods only). The comparison square Sq, S_q and ρ_q are deleted.
+- #GL3.14, IT-1. D(1) is IT-1's D1 on V3 (#MOMGD.47). V3 and V4 compared word by word at the 12 labels IT-1 uses (scratchpad v3v4_labels.py, typography normalised): equal up to typography. Count replacements 4n → P_c, n_C → P_0(C); §3e(6)'s N_C depends on L only; shell counts are volume counts.
+- #GL5.6 fixed on the table session's observation, checked against #ND.5.3: ℓ_C (not 4ℓ_C) is replaced in #ND.5.3 by P_{K′}(C). C_Σ is written C^E_Σ(C) (#GL4.6-1, #GL5.6, #GL6.5-2), as #T12.31-9. #GL5.2-8-1 says that u there and in §6 is #566's units factor.
+- Header lines #GL.1–#GL.3 and #GL1.2 updated for §8; (O2) removed from #GL.3.
+- line_check: no undefined tags, no l.N citations; #GL1.4-1 (603) and #GL6.3-1 (604) are within about 600.
+
+## Step-map session (4) message (received after 22:45; addressed to the two-loops session)
+- Its request (#RP.7 against IT-1 §3f(2) (D2)) concerns the two-loops session's files and is not acted on here. Its information that map #MOMGD.47 now reads IT-1 on V4 (map 7a5efbf79e33; IT-1 e510c7fbe62b) bears on #GL3.14, which had read IT-1 on V3. The note does not cite §3f, so the §3f rewrite does not touch it.
+- #GL3.14 rewritten in place (23:00 to 23:16). IT-1's §§2–3e cite V4 by label (its *Inputs* line; no V3 citation there), so the old twelve-label V3 comparison is deleted. IT-1's changes to V4 involve no contour: 𝒬⁺ (§3c(4⁗)(c)) is a union of ℓ-cubes about bad bonds, and repairs K and K′ (§3e(3.0), (3.6)) are margins and chart widths. §3h(7)'s thresholds involve the loop only through η (C′ρ₁ ≤ η/8), read as η(C).
+- New #GL3.14-0. §3i, used through §3i(7) in #GL8.5-2-1, still cites V3 by line. The cited lines were mapped to their V3 labels (scratchpad v3_line_labels.py), and 17 blocks were compared word for word with V4 (v3v4_labels.py): all equal up to typography. Among them are the support network (eq:marginal-cluster-tail), the restricted network with the hull bound and α′ = μ₁/(1024(1 + c_h)) (eq:regional-square-error), and finite range (eq:bulk-operator-definition). The previous #GL3.14 had not covered these line citations.
+- IT-1 anchors cited by #GL3.14-1 and #GL3.14-2 re-checked at e510c7fbe62b: §2(g), §3a(3)–(4), §3b(4), §3d(2), §3d(5) (quoted text matches), §3e(3.8), §3e(6), §3i(7).
+
+## Table session message (received before 22:20)
+- Table 7b51b1177ee9: general-loop rows #T12.31–#T12.31-11 entered. Their #ND.5.3 observation verified and fixed (above).
 
 ## Full read (every line, between 21:14 and 21:34)
 - #GL2.2-6 repaired. In case (a), V4's hull can be the whole contour when the smallest arc has ℓ_a = P_k/2 − 1 bonds, and diam_k(C) ≤ P_k/2 then exceeds 2Λ(C)D by up to 1. Closed by diam_k(C) ≤ P_k(C)/2 − s_k(C) ≤ ℓ_a: some segment runs along a coordinate other than the one of largest range, and that coordinate varies by at least 2s_k(C). Split as #GL2.2-6-1.
@@ -24,9 +51,12 @@ Note: `WILSON_IT1_GENERAL_LOOPS_2026_11_10.md`, owned by the BETA session. SHA 1
 
 ## Messages sent
 - Between 21:14 and 21:34 to the two-loops session ("yang mills 4 handover ⑂"). NL #NL6A.6/#NL6B.1 with two-loops #715-1/#716: N_C squares have 4N_C sides, so #716's D_P coefficient is 2^{d+1} + ½ + 8N_C. It needs to be at most 2^{d+2}u_𝔏 (σ_g's π(P) carries 2^{d+2}D_P, #691), which fails for N_C ≥ 368 636; the printed check (≤ 2^{d+2}) already fails at N_C = 4. Options given: restrict N_C, or u_𝔏^{(N)} := (N_C/2)u_𝔏. Adopted by them as option (b) in NL 204c1c20c891 (#NL6B.1-1, #NL6B.1-2, #NL6A.9).
-- 21:34 to the table session ("yang mills 4 handover (2) ⑂"). Rows A–E announced (general-loop symbols), table 05cbd40be4db re-grepped, no clashes. Awaiting their tags and SHA.
+- 21:34 to the table session ("yang mills 4 handover (2) ⑂"). Rows A–E announced (general-loop symbols), table 05cbd40be4db re-grepped, no clashes. Answered by #T12.31–#T12.31-11 (table 7b51b1177ee9).
 - 21:35 to the two-loops session. Note SHA 1d61bc4589e2. Separation carries over to general loops, with what it changes in the note. A wording remark on #NL1.3-1.1 for any future widening; no change is needed for squares.
 - 21:35 to the step-map session ("yang mills 4 handover (4)"). FYI: the note reads the map with general loops; no defect found.
+- 22:24 to the two-loops session. Pair factorisation note 9b4918036466, #PF0.5: the statement quotes #PF3.2-9a's right side without #PF3.2-9a-1's D ≥ D_desc, K′ ≥ K′_att and the two conditions of #PF3.2-8d2e-1. (a) D ≥ D_desc holds for squares: D_desc ≤ M(80 + 30/ν_e), ν = η = 1/2 400 000 (map #MD2.4.3.10), 30/ν_e ≤ 4.2·10¹¹, D ≥ h ≥ L^{q̄(j)} ≥ L³M (#307, NL #NL1.3-1, #T12.13), L ≥ L₀^×. (b) K′ ≥ K′_att for all large K. (c) #PF3.2-8d2e-1's conditions are not among #PF4.5's. (d) ℓ₁, ℓ₂ ≤ D occurs only in #PF0.5. With note SHA 1c99048d720c and what §8 changes. Corrected after the send: the pointer for D ≥ h is NL #NL1.3-1, not #NL1.3-2 (sent 22:25).
+- 22:24 to the table session. Their tags acknowledged; #GL5.6 fixed; C^E_Σ adopted. Rows announced, grepped against 7b51b1177ee9: ℓ̄_i, ℓ̄_i^{ph} (#GL8.1); N_lad(C_i) (#GL8.6-2); c^𝒦_ty, not #T12.4-4-1's c_ty, and the general a^{ty}_i (#GL8.6-4–#GL8.6-5); ḡ_ty(𝒞) (#GL8.7); w̄^{(i)}, N^{nr}, N^{LF} with P_Σ (#GL8.5-2-1, #GL8.5-3); local ρ_q, S_q, C_lift (#GL3.13); IT-1's multiplicity N_C ≠ #GL1.2's N_C (#GL3.14-2). Corrected after the send: N^{LF} is #T4.52's, not #T12.2-15's (sent 22:25). They entered #T12.31-12–#T12.31-15 (table 5d3828b85a8c).
+- 22:38 to the table session. #T12.31-12 is out of date after the #GL3.13 rewrite: ρ_q, S_q and Sq are gone, and C_lift is now cited at #GL3.13-2-1 and #GL3.13-3, with C_box ≥ 10 used in #GL3.13-5. Also an FYI on #T4.44 (see Open).
 
 ## Withdrawn before sending
 - D2.7 closure 15.8-1(4), "arc term ≤ 4(M + 1)/M ≤ 5" for C₁ ⊔ C₂. It is correct for the pair: a π_k-cube has side M < s_k, so it meets at most two sides of each square, at most four in all. The earlier slip claim (8 sides, c_off ≤ 11ν) is wrong and was not sent. The closure leaves this reason unstated, and the LF session that owns the closure is not live; to be mentioned to it as a remark when it is.

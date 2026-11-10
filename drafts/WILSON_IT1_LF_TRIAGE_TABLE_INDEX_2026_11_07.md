@@ -3719,3 +3719,33 @@ Relabel → LABELS 734a37930def, table 18cbd119fc8f, at LF 94d3e82675b1. The def
 - Announced to (4) before the edit and SHAs sent after. Log: WILSON_IT1_LF_TRIAGE_BG_D26REPOINT_2026_11_10.md.
 
 Relabel → LABELS c59773513fd1, table 05cbd40be4db, at LF 94d3e82675b1. The definition check prints 0 lines, and dmarks2 lists the 16 known leftovers. deadcheck and prefcheck show only their known hits. Columns are 10×5, 74×6, and 267×7.
+
+## General Loops 1d61bc4589e2: #T12.31 Block and #T4.53's C_w, 2026-11-10 21:59
+
+- New rows after #T12.30-10: #T12.31 (loops, corners, 𝒱, the physical unit u), #T12.31-0 (families, q(C), P^{co}(C), the stopping j), #T12.31-1 (lengths), #T12.31-2 (Λ, Λ̄, Λ_N, r_k(C), P/r), #T12.31-3 and #T12.31-3-1 (V4's step-1 constants at C), #T12.31-4 (A_h, A_s, η(C), η(𝒞)), #T12.31-5 (κ_C), and #T12.31-5-1 (c_C(C), C^𝒦_E).
+- They continue with #T12.31-6 (C_win(C), win_M, log κ_{k+1}(C)), #T12.31-7 (κ_j, the 𝐑-coefficients, C^{tr}_W(C)), #T12.31-8 (λ_K(C), λ^{(N)}_K, the Cauchy constants), #T12.31-9 (r^R_K(C), x_k, B_E, c_off), #T12.31-10 (the normalisation, C_win^×(𝒞)), and #T12.31-11 (u_𝔏(𝒞), L₀(𝒞), P_Σ, E*, w̄, A^cr).
+- #T4.53: the pair's wrap constant C_w (two-loops #893), which #T12.2-15, #T12.3-1, and #T12.3-3-1 use, is now defined there.
+- Rounds 1–6 found G1–G14, all repaired; rounds 7 (narrow) and 8 (full) are clean. Announced to (4) before the edit and SHAs sent after. Log: WILSON_IT1_LF_TRIAGE_BG_D26REPOINT_2026_11_10.md.
+
+Relabel → LABELS be350896ce4a, table 7b51b1177ee9, at LF 94d3e82675b1. The definition check prints 0 lines on LF and on the general-loops note, and dmarks2 lists the 16 known leftovers. deadcheck and prefcheck show only their known hits. Columns are 10×5, 74×6, and 267×7.
+
+## General Loops 6919e16b2fdd and the Pair Note's §3: #T12.31-11-1 to #T12.31-15 and #T12.4-1-1 to #T12.4-1-3, 2026-11-10 22:43
+
+- New rows after #T12.4-1: #T12.4-1-1 (R^{nf}_k, 𝒜_Z, ext_𝒜), #T12.4-1-1-1 (e^{(j)}_X, ω(Z), P(Z)), #T12.4-1-2 (κ_{th} and IT-1 §3i's η̄, C₀, C_s, C_net, N_nb; c_{bx}; w̄^{(i)}), and #T12.4-1-3 (N^{nr}, N^{LF}).
+- New rows after #T12.31-11: #T12.31-11-1 (the general-loop C^×_E, A^{cr,R}, C^{R×}_E), #T12.31-12 (C_lift; IT-1's multiplicity N_C), #T12.31-13 (ℓ̄_i, ℓ̄_i^{ph}, w̄^{(i)}, N^{nr}, N^{LF}), #T12.31-14 (N_lad(C_i), C_i^{(K′)}, a^{ty}_i), and #T12.31-15 (c^𝒦_ty, ḡ_ty(𝒞)). #T12.31-0 now defines Q and the general stopping j.
+- Rounds 1–4 found H1–H8, all repaired, and rounds 5 (full) and 6 (full) are clean. #T12.4-1-1-1, #T12.4-1-3, #T12.31-11-1 and #T12.31-15 were not announced before entry; SHAs were sent after. Log: WILSON_IT1_LF_TRIAGE_BG_D26REPOINT_2026_11_10.md.
+- The C_box item (V4 L5445, L5665, L5669) is closed by map #MD2.4.12.7-1-5 (next section).
+
+Relabel → LABELS 9eeed3a7792e, table bb2bbb3fbd08, at LF 94d3e82675b1. The definition check prints 0 lines on LF, on the general-loops note and on the pair note, and dmarks2 lists the 16 known leftovers. deadcheck and prefcheck show only their known hits. Columns are 10×5, 74×6, and 267×7.
+
+## IT-1 caac168e83ce: #T4.44's C_box, #T12.19-4-1, #T12.19-9-1 and #T12.32 to #T12.32-9, 2026-11-10 23:42
+
+- #T4.44: V4's requirements on C_box hold for every C_box ≥ 38 (map #MD2.4.12.7-1-5, re-derived), so 2916 meets them.
+- New #T12.19-4-1: ϑ_V is V4's ϑ := 1/(4c_hC_H^{near}) of the bad test, which IT-1 §3e–§3f, #T12.19-6's C_sh′ and #T12.19-8-1's C_h write ϑ. #T12.19-9-1 adds c_b (IT-1 §3f(2)) and separates CRE's B₁.
+- New #T12.32 to #T12.32-9: IT-1 §3e. These cover 𝐔, ϱ₁, h_ℂ, r_e, C_BCH; repair K's γ_c, h_c, A_*, C_d^K; r_H, C_e, V₁, C_H; C_Γ, s₀, C₃, C₄, s_*, c_G^K; and repair K′'s ρ₀, r_a, C_ℓ, r_iv, C_𝒢.
+- They continue with C_q, C_U, C′, E_C(a′); C_δ, μ_x, τ̄, C^δ_bd, C^𝐔_ph; §3f(3)'s C_DJ; and the locals of §3e and §3g(1).
+- Rounds 1–6 found R1–R7, all repaired; rounds 7 (narrow) and 8 (full) are clean. Reported to (4): IT-1 (3.6) K′ places C^a_k and C_p before ϑ_*, and D26 l.381 writes ϑ for ϑ_V. Log: WILSON_IT1_LF_TRIAGE_BG_D26REPOINT_2026_11_10.md.
+
+- 23:47: (4) repaired both items (IT-1 9c77825b2a82, D26 4dfb36e15797). #T12.19-6's C_sh′ and #T12.19-8-1's C_h now write ϑ_V, #T12.19-4-1's lists follow, and #T12.19-6 cites 6.4 for W_III. Rounds 9–10 found R8–R9, both repaired; rounds 11 (narrow) and 12 (full) are clean.
+
+Relabel → LABELS c6814d4faaee, table 7a0f3334905e, at LF 94d3e82675b1. The definition check prints 0 lines on LF, on the general-loops note and on the pair note, and dmarks2 lists the 16 known leftovers. deadcheck and prefcheck show only their known hits. Columns are 10×5, 74×6, and 267×7.

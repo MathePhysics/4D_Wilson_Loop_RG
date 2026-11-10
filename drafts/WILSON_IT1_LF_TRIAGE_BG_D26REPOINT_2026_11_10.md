@@ -137,10 +137,77 @@ Input: two-loops' message (NL 204c1c20c891, NV 5137fb31c48d). Checked against NL
 - No row cites NL's u₁^{(N)} or C′. The table's u₁ is the pair's (#532).
 - Announced to (4). LABELS 734a37930def → c59773513fd1; table 18cbd119fc8f → 05cbd40be4db. defcheck "-- 0 lines"; dmarks2 16; deadcheck and prefcheck known hits only; columns 10×5, 74×6, 267×7.
 
+## General Loops 1d61bc4589e2: #T12.31 Rows and #T4.53's C_w (Table)
+
+Input: the BETA session's message (general-loops note 1d61bc4589e2, derived, not reviewed). All 246 lines were read. Every symbol the note defines with ":=" was entered, and every clash, square-case, and pair-case pointer was looked up in its table row.
+- New rows #T12.31, #T12.31-0, #T12.31-1, #T12.31-2, #T12.31-3, #T12.31-3-1, #T12.31-4, #T12.31-5, #T12.31-5-1, and #T12.31-6 to #T12.31-11, after #T12.30-10. Local symbols are listed with their tags.
+- Re-derived: 1000·9Λ̄η(C) = 0.0075 < 1/128; 1000·9Λ̄η(𝒞) = 0.015/max(N_C, 2) < 1/(64max(N_C, 2)); 2(10Λ̄ + 1 + 10Λ̄/c_w) ≤ 41Λ̄/c_w; 2N_C(14Λ̄u + 1 + 14Λ̄u/c_w) ≤ 58N_CΛ̄u/c_w; (1 + (5/2)N_C)ν + (3/8)ν/5832 ≤ 4N_Cν; and u_𝔏(𝒞) ≥ u_𝔏^{(N)} and L₀(𝒞) ≥ L₀^{(N)}, as Λ_N ≥ 4N_C.
+- The square cases were checked against #T12.13 (A_h = 17, η = 1/2 400 000), #T12.17 (C_win, abs(win_M)), #T12.16 (κ_{k+1} = e^{−δm_{k+1}P_k}z_{k+1}⁴ with z_{k+1} = e^{ζ_{k+1}}), #T12.20-5, #T12.10, #T4.36, and #T12.30-4's x_k. The pair cases were checked against #T4.54's λ_K, #T12.2-15's E* and w̄^×, #T4.52's A^cr, and #T4.42's c_off.
+- Pre-check, before entry: #T4.31 and #T4.53 have ε^r_k, not r_k. #T4.54's λ_K is the pair sum that λ^{(N)}_K generalises, not a clash. The map's c_h is #T3.37's.
+- Round 1 (full): G1, (v_c, w_c) was not ordered. G2, 𝒞 and N_C were used before they were defined. G3, the general stopping j was undefined. G4, the physical u and the insertion's units factor u shared one row. G5, V4's R_* and μ were undefined and clash with #T2.11's R_* and the table's μ's. G6, σ, ℓ_σ, v_σ, κ_v, and ζ_{v,w} in κ_C were undefined, and n_σ was listed as local. G7, κ^R_v was undefined.
+- These were repaired with the sub-rows #T12.31-0, #T12.31-3-1, and #T12.31-5-1; no tag was renumbered.
+- Round 2 (narrow): G8, ℓ_v was undefined. G9, #T12.31-10 restated 𝒞 = (C_i). Round 3 (narrow): G10, "bent path" was undefined. Round 4 (narrow) was clean.
+- Round 5 (full): G11, C^𝒦_E was called a coefficient of the remainder rather than of its bound. G12, the map's C_Σ in B_E and E* clashed with #T10.35's and Cauchy §8's C_Σ; it is now C^E_Σ, as in #T4.37.
+- G13, the pair's wrap constant C_w of #T12.2-15's w̄^×, #T12.3-1's τ^{w,×}_K, and #T12.3-3-1's t_m was never defined in the table. #T4.53 now defines it from two-loops #893, and #T12.31-11 cites it. Round 6 (narrow): G14, "at most 16" read as a bound on C_w; it is the product of the 𝐑-steps' factors.
+- Round 7 (narrow) and round 8 (full) are clean, so the rows are done.
+- For the BETA session (information only): #GL5.6 says that P_{K′}(C) replaces 4ℓ_C in #ND.5.3, but #ND.5.3's B_E has ℓ_CA^R_ES_E. With #GL5.4-2's "P_{K′}(C) for ℓ_C", the note's B_E is a valid weakening, but #GL5.6's wording does not match #ND.5.3.
+- Announced to (4). LABELS c59773513fd1 → da1678b546aa → 8dfd147baf9e → dedd7d4ac789 → 3a3ed06cb922 → 68c8c9eaccb0 → be350896ce4a; table 05cbd40be4db → 40393683f6ae → fae38e82fd19 → 7ecb9fb4dd48 → 3448ffd15a23 → 6a98e1e05152 → 7b51b1177ee9. defcheck on LF and on the general-loops note: "-- 0 lines" each; dmarks2 16; deadcheck and prefcheck known hits only; columns 10×5, 74×6, 267×7.
+
+## General Loops 6919e16b2fdd and the Pair Note's §3: #T12.31-0, #T12.31-11-1 to #T12.31-15, #T12.4-1-1 to #T12.4-1-3 (Table)
+
+Input: the BETA session's message (general-loops note 1c99048d720c, §3.13, §3.14 and §8; then 6919e16b2fdd, which restructured #GL3.13), and the ten ":=" lines of the pair note's §3 (9b4918036466) that no row cited.
+- New rows #T12.4-1-1, #T12.4-1-1-1, #T12.4-1-2 and #T12.4-1-3 after #T12.4-1, and #T12.31-11-1 and #T12.31-12 to #T12.31-15 after #T12.31-11. #T12.31-0 now defines Q and the general stopping j, and #T12.31-11 lists its local symbols.
+- Re-derived: for a square, N_lad = ℓ_i² and P_{K′} = 4ℓ_i give a^{ty}_i ≤ c_tyℓ_i²ε_ty + ι^{ℓ₀}_i. N_lad ≤ 12ℓ̄_idiam_{K′} ≤ 6ℓ̄_iN_s, ℓ̄_i ≥ 1 and 4·1.06 = 4.24 give a^{ty}_i ≤ ℓ̄_i(c^𝒦_tyN_sε_ty + ι^{ℓ₀}_i). Also ℓ̄_iuL^{−j} = P_phys(C_i)/4.
+- Pre-check, before entry: defcheck flagged #GL.1's ℓ̄_i and #GL3.13-2's S_q, and both are now cited.
+- Round 1 (full): H1, #T12.4-1-1 gave #T12.7-13 for P(Z), which is #T12.7-29's history volume (and C_P is #T12.7-31's). H2, ext_𝒜 was compared with ext^{coll}_j, which is measured in π_j-sides; ext_𝒜 is #T12.19-2's ext^{(n)}, and at j = 1 #T12.19-3's ext^{𝒩,(n)}.
+- H3, #T12.4-1-2 left IT-1's μ₁′, C_s, C_net and N_nb unnamed, and its C_s and C_net clash with #T4.26's C_s and #T12.31-3-1's C_net(C). Also, κ is set in §3i(6), not §3i(7). H4, #T12.4-1-3 gave no pointers for c_d (the map's, #T12.16, which clashes with #T4.20's) or for 𝔞_{K′} (#T12.14).
+- H5, #T12.31-13's N^{nr} omitted the general forms of A^×, C^×_E and C^{R×}_E, and the long-group term that it drops. H6, #T12.31-14's C_i^{(K′)} clashed with #T12.4-4-1's coarse square.
+- After the repairs, #T12.4-1-1 had 743 characters, so it was split, giving #T12.4-1-1-1. N_nb := 7⁴ also defines #T12.19-5's N_nb.
+- Round 2 (narrow) was clean.
+- Round 3 (full): H7, the table lacked the general-loop C^×_E (its third term from #GL6.5-1), A^{cr,R} and C^{R×}_E. The new row #T12.31-11-1 gives them.
+- Between rounds 2 and 3, general-loops note 6919e16b2fdd removed ρ_q, S_q and Sq from #GL3.13. #T12.31-12 now records only C_lift, re-derived against #GL3.13-2 to #GL3.13-5.
+- Round 4 (narrow): H8, #T12.31-11-1 wrote ℓ₁ + ℓ₂ where #GL6.5, which covers N loops, has ℓ_Σ, and its "there" was ambiguous. Rounds 5 (full) and 6 (full) are clean, so the rows are done.
+- The map's C_box against V4's requirement (V4 sec:c4-8-4, L5445; sec:c4-11-4, L5665, L5669), reported by the BETA session, is closed by map #MD2.4.12.7-1-1 to #MD2.4.12.7-1-5 (next section).
+- #T12.4-1-1-1, #T12.4-1-3, #T12.31-11-1 and #T12.31-15 were entered without being announced first; (4) was told with the SHAs. LABELS be350896ce4a → db3a90533fee → d69b9435f903 → 5d8d0ba1ca16 → 2a8dd17d3301 → 540553777186 → ffab237c713a → 9eeed3a7792e.
+- Table 7b51b1177ee9 → 5aa1d07d9bc7 → f5ad27b19f5e → 5d3828b85a8c → 037a49add938 → 3bc66748fda4 → 2a080272da0e → bb2bbb3fbd08. defcheck on LF, on the general-loops note and on the pair note: "-- 0 lines" each; dmarks2 16; deadcheck and prefcheck known hits only; columns 10×5, 74×6, 267×7.
+
+## IT-1 caac168e83ce: C_box, ϑ_V, c_b and the §3e Constants, #T12.32 to #T12.32-9 (Table)
+
+Input: (4)'s messages (the map's C_box count; ϑ_V, c_b, B₁, the §3e constants and C_DJ; IT-1 §3g consolidated, §3h deleted).
+- Rows: #T4.44 cites #MD2.4.12.7-1-5. New #T12.19-4-1 gives ϑ_V. #T12.19-9-1 now carries c_b and separates CRE's B₁. The new block #T12.32 to #T12.32-9 covers IT-1 §3e(0)–(6), §3f(3) M8 and §3g(1).
+- Re-derived (C_box), from map #MD2.4.12.7-1-2 to #MD2.4.12.7-1-5:
+  - diam_∞(Q_W) ≤ 18LMn(W) + 4L + 2(8M + 4L) ≤ 19LMn(W), since LM ≥ 12L + 16M for L ≥ 54 and M ≥ 8L.
+  - Under (eq:c4-8-9), n(W) < b/(4C_boxLM), so C_box ≥ 19 makes the lift injective and puts Q_W within b/4 of a contact.
+  - The Euclidean diameter is at most twice the ℓ∞ one, so C_box ≥ 38 suffices, and 2916 meets V4's requirement.
+- Round 1 (full) found R1–R3:
+  - R1: #T12.32 used h_ℂ undefined.
+  - R2: #T12.32-4 said ϑ_* is taken over the closure of 𝒱_{ρ₀}, but ϑ_* is chosen, not a supremum.
+  - R3: #T12.32-6 left V4's C_M and N_lat unnamed.
+- Round 2 (narrow) found R4. The R2 repair said ϑ_* is chosen from C_C and C^a_k. In fact V4 fixes C^a_k after ϑ_* (V4 L4264, L4542), and ϑ_*'s conditions use only ϱ_*, H_* and K_*. #T12.32-4 now lists the six constants that K′ takes over the closure.
+- Also from round 2: IT-1's K′ bullet places C^a_k and C_p before ϑ_*, although its *(iv) at 𝐔* needs C^a_k ≥ e^kk!(4/ϑ_*)^kC_𝒢. Reported to (4), with a suggested repair. The table row holds under either order.
+- Round 3 (narrow) was clean. Round 4 (full) found R5 and R6:
+  - R5: #T12.19-4-1 omitted #T12.19-8-1's C_h, which writes ϑ_V as ϑ (D26 §7.1, l.381; reported to (4)).
+  - R6: #T12.32-5 cited 𝓔(r_n) to §3e(3.9) and called 𝓔_c a set fixed by r_n. 𝓔(r_n) is defined in §3e(3.8), as the bond set 𝓔_c of the row c of the traversal n (V4 L506).
+- Round 5 (narrow) was clean. Round 6 (full) found R7: #T12.32-6 took μ_x from #T12.19-6, but no row defined μ_x or μ_H. The row now gives μ_x := μ_H/20 (IT-1 §3j(5)) and V4's μ_H := γ/(h_+ρ_L) (V4 Lemma c5-1-1).
+- Round 7 (narrow) and round 8 (full) are clean, so the rows are done.
+- During rounds 6–8, IT-1 went caac168e83ce → 16534f9a2c96 → b4c7a72a3c0f → 11398a3e19ce, all changes in §3i–§3j. Every anchor of the batch was re-found in its cited item in 11398a3e19ce, map cb9d46678f56 and D26 9282fc1d22fe. #T12.32-6 has 624 characters, within the 660 limit for list rows.
+- (4) then repaired both reported items. IT-1 9c77825b2a82 orders K′ as ϱ_*, H_*, K_*, C_C, then ϑ_*, then C^a_k and C_p, and #T12.32-4 holds as written. D26 4dfb36e15797 writes ϑ_V in 6.4 *Tilt* and on l.379 and l.381.
+- So #T12.19-6's C_sh′ and #T12.19-8-1's C_h now write ϑ_V, and #T12.19-4-1's "write it ϑ" list keeps only IT-1 §3e and §3f. IT-1's §3i consolidation leaves every §3i anchor of #T12.4-1-2 and #T12.19-9 in its item.
+- Round 9 (narrow) found R8: #T12.19-4-1's list of ϑ_V's users omitted #T12.32-6. Round 10 (full, with #T12.19-6 and #T12.19-8-1 read whole against D26) found R9: #T12.19-6 cited §6.3 for W_III, which D26 defines in 6.4 (l.335). Rounds 11 (narrow) and 12 (full) are clean.
+- Table 99c0d18618f6 → 9dacb63576d1 → 494562303302 → 6e6acccc4ce6 → f4f089dd4cbc → 6a9a392e6060 → 7a0f3334905e. LABELS 7a980dfeec7b → 18538c3369a5 → fd7beb743955 → 899e7e91e276 → 9bbc0e4a13bf → b44c959564b7 → c6814d4faaee. defcheck on LF, on the general-loops note and on the pair note: "-- 0 lines" each; dmarks2 16; deadcheck and prefcheck known hits only; columns 10×5, 74×6, 267×7.
+
 ## SHAs
 
-Table: d71e239470ea → eb5a6a505303 → b168c70703ab → 9f6ebf47c805 → 0fa578b35726 → ef03c153b6ad → cc3949e005fb → 77c1b5ec9928 → 18cbd119fc8f → 05cbd40be4db. LABELS: 2d2801629f41 → 146c7b49d22b → d444e40b4233 → 1f2b3fa09b9d → 740b198d7a9d → 58050f8936d3 → 0e94a6174742 → 4c2c66efb348 → 734a37930def → c59773513fd1. Background note: 249ae1a46a2a → 8510ab0aebd7 → 7bb5f99918ab → 3047b31464c3 → 22a230556c65 → c7612b0d6f3b → df792ffa33f3.
+Table: d71e239470ea → eb5a6a505303 → b168c70703ab → 9f6ebf47c805 → 0fa578b35726 → ef03c153b6ad → cc3949e005fb → 77c1b5ec9928 → 18cbd119fc8f → 05cbd40be4db → 7b51b1177ee9 → bb2bbb3fbd08 → 99c0d18618f6 → 7a0f3334905e. LABELS: 2d2801629f41 → 146c7b49d22b → d444e40b4233 → 1f2b3fa09b9d → 740b198d7a9d → 58050f8936d3 → 0e94a6174742 → 4c2c66efb348 → 734a37930def → c59773513fd1 → be350896ce4a → 9eeed3a7792e → 7a980dfeec7b → c6814d4faaee. Background note: 249ae1a46a2a → 8510ab0aebd7 → 7bb5f99918ab → 3047b31464c3 → 22a230556c65 → c7612b0d6f3b → df792ffa33f3.
 
 ## Status
 
-Table rows: no round needed. Background note: rounds 6–16 found F1–F12, all repaired. Rounds 17 (narrow) and 18 (full) are clean, so the note is done at df792ffa33f3, against the coarse-chain note d02ba134814f and map d3dc46ddacc5. The K rows follow D26 2dce56a49737, #T12.13 follows COMPLEX_COVARIANCE f1cbf76fb687, #T3.36 follows O6 908c956d462e, #T12.30-9 follows the coarse-chain note d02ba134814f, #T12.17 and #T12.13-1 follow map d3dc46ddacc5, and #T1.3-1 and #T4.51 follow NL 204c1c20c891.
+Background note: rounds 6–16 found F1–F12, all repaired. Rounds 17 (narrow) and 18 (full) are clean, so the note is done at df792ffa33f3, against the coarse-chain note d02ba134814f and map d3dc46ddacc5.
+
+Table: the repoints needed no round. The K rows follow D26 2dce56a49737, #T12.13 follows COMPLEX_COVARIANCE f1cbf76fb687, #T3.36 follows O6 908c956d462e, #T12.30-9 follows the coarse-chain note d02ba134814f, #T12.17 and #T12.13-1 follow map d3dc46ddacc5, and #T1.3-1 and #T4.51 follow NL 204c1c20c891.
+
+The new #T12.31 rows and #T4.53's C_w follow the general-loops note 1d61bc4589e2. Rounds 1–6 found G1–G14, all repaired, and rounds 7 (narrow) and 8 (full) are clean, so they are done at table 7b51b1177ee9.
+
+The rows #T12.4-1-1 to #T12.4-1-3, #T12.31-0 and #T12.31-11-1 to #T12.31-15 follow general-loops note 6919e16b2fdd and pair note 9b4918036466. Rounds 1–4 found H1–H8, all repaired. Rounds 5 and 6 (both full) are clean, so the rows are done at table bb2bbb3fbd08.
+
+The rows #T4.44, #T12.19-4-1, #T12.19-6, #T12.19-8-1, #T12.19-9-1 and #T12.32 to #T12.32-9 follow IT-1 9c77825b2a82, map cb9d46678f56 and D26 4dfb36e15797. Rounds 1–10 found R1–R9, all repaired. Rounds 11 (narrow) and 12 (full) are clean, so the rows are done at table 7a0f3334905e. The C_box item is closed by map #MD2.4.12.7-1-5 (C_box ≥ 38).
