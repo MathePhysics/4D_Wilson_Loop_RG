@@ -36,7 +36,7 @@ F_K(C_1,\ldots,C_n)
 {\prod_{i=1}^{n}\kappa_{C_i}^{(K)}}
 \xrightarrow{K \to \infty}
 \mathcal W_{\mathrm{ren}}(C_1,\ldots,C_n)\in\mathbb C
-\;.
+.
 $$
 
 The statement holds for every finite number of disjoint loops, the correlation functions are [nonzero](drafts/WILSON_IT1_PAIR_NONVANISHING_2026_11_10.md#the-theorems) and [reflection positive](drafts/WILSON_IT1_PAIR_REFLECTION_POSITIVITY_2026_11_10.md#finite-products). The RG parameters, coupling threshold and bounds may depend on the family, its characters and the torus. 
