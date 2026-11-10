@@ -2,7 +2,7 @@
 
 27 October 2026. Separate continuation of `WILSON_IT1_CONTINUUM_LIMIT_CLOSURE_2026_10_26.md`, as requested. This work does not edit the existing note.
 
-**Status.** Work is paused at the user's request. Full-sequence convergence remains unproved. Section 6 concerns the marked probabilistic comparison for (1), with the physical denominator, inherited integrations and original R-operation retained. The vacuum age estimate in §6.8 has been reviewed under its stated inputs. The Wilson extension in §6.10 has an unresolved second-class re-entry payment, so (99)–(101) are not established. The recent-step derivation in §6.11 and the exploratory calculations recorded in §6.12 are unaccepted. The deterministic work in §5 is inactive and supplies no premise of §6; the reviews of §§5.9–5.11 were interrupted.
+**Status.** Work is paused at the user's request. Full-sequence convergence remains unproved. Section 6 concerns the marked probabilistic comparison for (1), with the physical denominator, inherited integrations and original 𝐑-operation retained. The vacuum age estimate in §6.8 has been reviewed under its stated inputs. The Wilson extension in §6.10 has an unresolved second-class re-entry payment, so (99)–(101) are not established. The recent-step derivation in §6.11 and the exploratory calculations recorded in §6.12 are unaccepted. The deterministic work in §5 is inactive and supplies no premise of §6; the reviews of §§5.9–5.11 were interrupted.
 
 ## 1. The Actual Two-Cutoff Comparison
 
@@ -26,7 +26,7 @@ Z_K=\int_{G^{E_K}}\rho_{0,K}(U)\,\mathrm dU,\qquad
 N_K(C)=\int_{G^{E_K}}W_\chi(C_K;U)\rho_{0,K}(U)\,\mathrm dU\;.
 $$
 
-Since the group is compact, the action is finite and continuous, and the bare density is strictly positive, 0<Z_K<∞. The scalar κ_K below is the original construction's product κ^{(k_K)}, including its perimeter and corner factors and any R-step contributions specified in D2.7. It is nonzero because it is an exponential. The target is
+Since the group is compact, the action is finite and continuous, and the bare density is strictly positive, 0<Z_K<∞. The scalar κ_K below is the original construction's product κ^{(k_K)}, including its perimeter and corner factors and any 𝐑-step contributions specified in D2.7. It is nonzero because it is an exponential. The target is
 
 $$
 F_K(C)=\frac{N_K(C)}{\kappa_K Z_K}\;.
@@ -62,7 +62,7 @@ $$
 \nu_K^+(1)=Z_{K+1},\quad \omega_K^+(1)=Z_{K+1}F_{K+1}(C)\;.
 $$
 
-These identities follow from the definition of pushforward, or equivalently from the normalisation of the group delta functions in the original T. They make no assertion that Bałaban's later R-operation preserves the law of the current coarse variables.
+These identities follow from the definition of pushforward, or equivalently from the normalisation of the group delta functions in the original T. They make no assertion that Bałaban's later 𝐑-operation preserves the law of the current coarse variables.
 
 ## 2. The Centred Cutoff Mark and the Denominator
 
@@ -94,7 +94,7 @@ $$
 
 The term containing the denominator difference is essential. A bound on an unnormalised numerator alone does not prove (1). Nor does choosing c_K=Z_{K+1}/Z_K estimate the remaining numerator difference: that choice only cancels the mass of the denominator mark.
 
-The first T-step is linear, so this comparison is an exact starting point for a marked expansion on the common ε_K lattice. Subsequent R-operations depend on the densities whose normalising quotients they use. One must compare the two actual constructions; there is no identity asserting that a single R acts linearly on \(\mathcal H_K\). The numerator must carry the observable through each operation with the same physical denominator as its corresponding vacuum construction.
+The first T-step is linear, so this comparison is an exact starting point for a marked expansion on the common ε_K lattice. Subsequent 𝐑-operations depend on the densities whose normalising quotients they use. One must compare the two actual constructions; there is no identity asserting that a single R acts linearly on \(\mathcal H_K\). The numerator must carry the observable through each operation with the same physical denominator as its corresponding vacuum construction.
 
 The target is the integrated centred mark in (1). Its connected cancellations should be kept inside the gauge-invariant marked expansion. No estimate of the total variation of the full coarse law is assumed or obtained here.
 
@@ -119,7 +119,7 @@ The relative-weight estimate in the continuum note controls the size of the larg
 
 ## 3. An Old-Scale Estimate That Can Be Completed
 
-The geometric estimate quoted in the continuum note is CRE (2.43), for the centred E-terms. CRE (2.44) gives a different age dependence for the centred R-terms. They should be estimated separately.
+The geometric estimate quoted in the continuum note is CRE (2.43), for the centred E-terms. CRE (2.44) gives a different age dependence for the centred 𝐑-terms. They should be estimated separately.
 
 The following calculation concerns a globally small-field geometry with Γ_n=∅ for n<k and |Γ_k|=N_s^4, and regular configurations in the domains of CRE Theorem 2. It is not an estimate of the sum over arbitrary large-field histories. Let \(\mathcal E_j^{[K]}\) be the complete expression on the left of CRE (2.43), with its F² counterterm subtracted, and let \(\mathcal R_j^{[K]}\) be the centred sum on the left of CRE (2.44). Take Ω to be the whole comparison torus. Then, pointwise on that regular domain,
 
@@ -148,7 +148,7 @@ $$
 \tag{6}
 $$
 
-For the R-terms, (5) and a decreasing-series integral bound give
+For the 𝐑-terms, (5) and a decreasing-series integral bound give
 
 $$
 \begin{aligned}
@@ -161,7 +161,7 @@ $$
 \tag{7}
 $$
 
-The constants depend on the fixed coupling window, group, L and the source constants, but not on K or m. Applying the same bounds in the two runs bounds the difference of their old centred E- and R-parts by twice the corresponding right-hand sides on any common regular coarse-field domain.
+The constants depend on the fixed coupling window, group, L and the source constants, but not on K or m. Applying the same bounds in the two runs bounds the difference of their old centred E- and 𝐑-parts by twice the corresponding right-hand sides on any common regular coarse-field domain.
 
 In particular, for all sufficiently large K one can choose m_K=⌊√K⌋≤k_K. Since p≥7/2,
 
@@ -199,9 +199,9 @@ These source notes are candidates for the missing depth estimate. They are not i
 
 ### The full-measure assembly
 
-`Balaban/DIFFERENCES_PROOFS.md` §4 records a normalised-density assembly, including selector-shell and majorant estimates. Its final paragraphs explicitly say that the proposed assembly uses R_law, a law-preserving modification of Bałaban's R-operation. The present Wilson construction uses the original R with the observable carried through its numerator. Replacing it by R_law would require a separate equivalence and transfer argument and would change the current route. No such substitution is made here.
+`Balaban/DIFFERENCES_PROOFS.md` §4 records a normalised-density assembly, including selector-shell and majorant estimates. Its final paragraphs explicitly say that the proposed assembly uses R_law, a law-preserving modification of Bałaban's 𝐑-operation. The present Wilson construction uses the original R with the observable carried through its numerator. Replacing it by R_law would require a separate equivalence and transfer argument and would change the current route. No such substitution is made here.
 
-The first T-step comparison in §1 is legitimate because it uses the manuscript's original T. It does not extend the pushforward interpretation to later R-steps.
+The first T-step comparison in §1 is legitimate because it uses the manuscript's original T. It does not extend the pushforward interpretation to later 𝐑-steps.
 
 The current continuum note (9.4)(a) now distinguishes the common linear T maps from the two runs' R operations. This agrees with CRE p.243, which states that R changes effective densities on large-field regions, and LFR2 (1.104), which displays Rρ_k. Preservation of an integrated partition function does not identify the densities as functions. The comparison here retains the original R operations and their marked numerators.
 
@@ -362,7 +362,7 @@ The two terms in (20) are the background insertions for the K+1 and K runs at th
 
 ### 5.5 The lift input still needs a uniform estimate
 
-The energy proof cannot be used solely because it is labelled a proof. Its input (I2) invokes the one-step minimal lift to supply the C^{1,β} regularity needed by its consistency estimate (I1). VAR Theorem 1 (9) must be read with that lift's actual scales.
+The energy proof cannot be used solely because it is labelled a proof. Its input (I2) invokes the one-step minimal lift to supply the C^{1,β} regularity needed by its consistency estimate (I1). VAR Theorem 1 (9) must be applied at that lift's actual scales.
 
 VAR is written with terminal coarse spacing one. Rescale its lengths by h; in four dimensions the Wilson action is unchanged by this change of physical units. For a one-step lift whose coarse spacing is h, the fine spacing is h/L. Taking j=1 in (9), the physical regularity scale is h. If the coarse plaquette bound is Mh², the theorem's dimensionless input parameter is of order Mh². The physical potential and its first derivative are h⁻¹ and h⁻² times their unit-coarse-scale values. For any fixed permitted cube-size factor in VAR (distinct from the curvature constant M here), its stated bounds therefore have the sizes
 
@@ -510,7 +510,7 @@ $$
 
 Outside the patch the same bounds follow from the membership F∈𝔘₁(B₃εh²) in VAR (8). Thus VAR (2) holds globally with parameter Cεh²R².
 
-Fix the PBG big-block size M₀ as a multiple of R₁M₁, and fix its localisation-cube enlargement factors before h. Enclose each PBG cube, if necessary, in a REG Proposition 6 cube of comparable fixed size made of R₁M₁-blocks. Every such cube meeting the changed region lies in the compatible gauge patch when R is large enough, and (28b) verifies PBG (3.35)–(3.36) there. Elsewhere use the local gauge of F. There is also a source justification that does not depend on this reading of the cube sizes: (28c) places F₀ in the full gauge-invariant regularity class globally, and REG Proposition 6, (1.135)–(1.136), supplies the required potential, gradient and second-operator bounds on any admissible cube of factor M with 7·4L²Mα₀≤c₁. This proposition applies to arbitrary regular configurations, not just minima. For the fixed localisation family the required smallness follows as α₀=Cεh²R² tends to zero.
+Fix the PBG big-block size M₀ as a multiple of R₁M₁, and fix its localisation-cube enlargement factors before h. Enclose each PBG cube, if necessary, in a REG Proposition 6 cube of comparable fixed size made of R₁M₁-blocks. Every such cube meeting the changed region lies in the compatible gauge patch when R is large enough, and (28b) verifies PBG (3.35)–(3.36) there. Elsewhere use the local gauge of F. There is also a source justification that does not depend on this choice of the cube sizes: (28c) places F₀ in the full gauge-invariant regularity class globally, and REG Proposition 6, (1.135)–(1.136), supplies the required potential, gradient and second-operator bounds on any admissible cube of factor M with 7·4L²Mα₀≤c₁. This proposition applies to arbitrary regular configurations, not just minima. For the fixed localisation family the required smallness follows as α₀=Cεh²R² tends to zero.
 
 For a coarse bond whose two blocks meet the changed region, both F₀ and F have logarithmic fine potentials bounded by CεhR² in the compatible gauge. The one-step map is analytic in a fixed finite family of fine matrices near the identity, with first derivatives bounded by a constant depending on L. Hence its relative coarse output has deviation at most C_Lη|a₀−a_F|≤Cεh²R². Outside these bonds the two outputs coincide by two-block locality. This proves the global mismatch bound in VAR (14).
 
@@ -1031,7 +1031,7 @@ One selected term can be signed or complex and need not have nonzero integral. E
 
 ### 6.2 Paying for the mark inside the fluctuation integral
 
-Here is a quantitative bound at the selected-integral level. Let n_Z be the number of real B- and X-coordinates read by a selected term, enlarged if necessary to the number available in Z. Let d_Z bound, uniformly over every selection with final domain Z, its original weakening and Mayer contours, and the comparison path, the operator norms of Ṗ_t and Γ̇_t and the bound
+Here is a quantitative bound at the selected-integral level. Let n_Z be the number of real B- and X-coordinates used by a selected term, enlarged if necessary to the number available in Z. Let d_Z bound, uniformly over every selection with final domain Z, its original weakening and Mayer contours, and the comparison path, the operator norms of Ṗ_t and Γ̇_t and the bound
 
 $$
 |\dot V_t(B)|\leq d_Z(n_Z+|B|^2)\;.
@@ -1176,7 +1176,7 @@ For an ordering of 𝒜, the measure difference in the first pairing is the sum 
 
 ### 6.5 Large-field normalisation and the inherited law
 
-The original R-operation remains in the calculation. Its local operation T′_k(X) is LFR2 (1.71), with the sums over old regions, integrations over old fields, Haar factor, axial gauge fixing, Wilson action, fluctuation quadratic form, V(X^∼), and every vacuum normaliser. In (1.91) it acts on the product of all the selected interaction factors, not on each factor separately. The component factorisation there is used only where Bałaban's construction establishes it.
+The original 𝐑-operation remains in the calculation. Its local operation T′_k(X) is LFR2 (1.71), with the sums over old regions, integrations over old fields, Haar factor, axial gauge fixing, Wilson action, fluctuation quadratic form, V(X^∼), and every vacuum normaliser. In (1.91) it acts on the product of all the selected interaction factors, not on each factor separately. The component factorisation there is used only where Bałaban's construction establishes it.
 
 At real external data let \(\mathsf T_t\) be this positive integral operation along a change of its full weight on a fixed carrier and fixed selectors. Put m_t=\(\mathsf T_t1\), \(\mathsf F_t=\mathsf T_tf_t/m_t\), and let Ψ_t be the logarithmic derivative of that full weight, including the inherited terms. Then
 
@@ -1195,7 +1195,7 @@ $$
 \tag{75}
 $$
 
-The multiplier m_t is kept: LFR2 (1.89) makes it small for an R-component. Dividing this estimate by m_t and then forgetting to restore m_t in (1.91) would lose precisely that gain. At complex data (1.73)–(1.75) give the corresponding factors involving sup|σ|, rather than positivity. A Wilson insertion with attached species is bounded by its actual attached-insertion bound; it is not automatically bounded by one. Field-independent constants in Ψ_t cancel in (74), but field-dependent component masses still enter the outer density.
+The multiplier m_t is kept: LFR2 (1.89) makes it small for an 𝐑-component. Dividing this estimate by m_t and then forgetting to restore m_t in (1.91) would lose precisely that gain. At complex data (1.73)–(1.75) give the corresponding factors involving sup|σ|, rather than positivity. A Wilson insertion with attached species is bounded by its actual attached-insertion bound; it is not automatically bounded by one. Field-independent constants in Ψ_t cancel in (74), but field-dependent component masses still enter the outer density.
 
 For changing selectors, use (66) at the unnormalised level. For endpoint integral operations on a common carrier the corresponding exact finite-difference formula is
 
@@ -1228,9 +1228,9 @@ $$
 
 Equation (77) is a disintegration identity for the original full law. In particular the second term is an inherited-history mark. It does not vanish merely because the first term has a local connected expansion. When no differentiable interpolation of histories has been constructed, the original finite-difference measure ℋ_K, rather than (77), remains the definition of the comparison.
 
-### 6.6 The coupling mark in the actual R-denominator — awaiting review
+### 6.6 The coupling mark in the actual 𝐑-denominator — awaiting review
 
-The denominator in LFR2 (1.1) is a normalised interacting small-field integral used by the original R-operation. Its coupling response can be bounded probabilistically without a factor g_k⁻² from differentiation on a shrinking field domain. The following calculation concerns this component of the cutoff mark, with its geometry, external data, background construction and selector fixed. Changes of those operands remain separate terms of the same comparison.
+The denominator in LFR2 (1.1) is a normalised interacting small-field integral used by the original 𝐑-operation. Its coupling response can be bounded probabilistically without a factor g_k⁻² from differentiation on a shrinking field domain. The following calculation concerns this component of the cutoff mark, with its geometry, external data, background construction and selector fixed. Changes of those operands remain separate terms of the same comparison.
 
 Fix one component Λ occurring in LFR2 (1.1), an axial gauge G₀, and its external data. Put x=g_k⁻² and, on the free Haar variables v on Λ, define
 
@@ -1282,9 +1282,9 @@ $$
 \tag{82}
 $$
 
-The changing-selector contribution is still (66), rather than a derivative of χ in (79). The bound is on this original R-denominator kernel only; it is not a total-variation estimate for the full effective law. The statement so far is for real external data. A complex-domain version must additionally retain the absolute-density and denominator bounds of (1.10)–(1.11); it is not inferred from positivity.
+The changing-selector contribution is still (66), rather than a derivative of χ in (79). The bound is on this original 𝐑-denominator kernel only; it is not a total-variation estimate for the full effective law. The statement so far is for real external data. A complex-domain version must additionally retain the absolute-density and denominator bounds of (1.10)–(1.11); it is not inferred from positivity.
 
-To put this bound into its actual caller, write one term of LFR2 (1.1), before the spectator integrations, as a numerator integral L_t multiplied by the density μ_t of its R-denominator. Let N_t be the same numerator integral with the complete Wilson insertion. Its integration includes every numerator factor in (1.1); the old operations explicitly omitted by Bałaban are still spectator operations and are applied afterwards. Conditional on their variables, the two output densities are L_tμ_t and N_tμ_t. Their derivatives are
+To put this bound into its actual caller, write one term of LFR2 (1.1), before the spectator integrations, as a numerator integral L_t multiplied by the density μ_t of its 𝐑-denominator. Let N_t be the same numerator integral with the complete Wilson insertion. Its integration includes every numerator factor in (1.1); the old operations explicitly omitted by Bałaban are still spectator operations and are applied afterwards. Conditional on their variables, the two output densities are L_tμ_t and N_tμ_t. Their derivatives are
 
 $$
 \partial_t(L_t\mu_t)=\dot L_t\mu_t+L_t\dot\mu_t,\qquad
@@ -1348,17 +1348,17 @@ The same identity holds with a bounded coarse-field test φ(MU) inserted, hence 
 
 On a joint branch, each endpoint's valid chart can be applied to its own copy of the same physical integration region. The two coordinate expressions for a fixed input integral are equal by change of variables, with their full Jacobians and transformed selector domains. This requires no estimate comparing their reference configurations. It is a statement about the complete branch integral. The joint refinement need not have the product-cutoff form of RG2 (2.14), so (87) does not by itself put its individual terms in the norm used in (69).
 
-The R-operation has a narrower cancellation. For a term written as L_tμ_t, N_tμ_t in (83), changing only its normalised replacement kernel gives L_t∂_tμ_t and N_t∂_tμ_t. Their integrals over the replacement variables vanish. This is the normalisation identity of LFR1 (1.102), applied to both the vacuum and complete numerator. The original R-kernels at the two endpoints are retained. The identity does not make the two R-densities equal and does not bound the absolute values of their localised pieces. In particular it does not remove the first term of (84), which changes the inherited numerator itself.
+The 𝐑-operation has a narrower cancellation. For a term written as L_tμ_t, N_tμ_t in (83), changing only its normalised replacement kernel gives L_t∂_tμ_t and N_t∂_tμ_t. Their integrals over the replacement variables vanish. This is the normalisation identity of LFR1 (1.102), applied to both the vacuum and complete numerator. The original 𝐑-kernels at the two endpoints are retained. The identity does not make the two 𝐑-densities equal and does not bound the absolute values of their localised pieces. In particular it does not remove the first term of (84), which changes the inherited numerator itself.
 
 These cancellations show why estimating every apparent change of background, quadratic splitting and selector separately is unnecessarily strong. For the full Cauchy estimate the nonzero mark must still be localised with the physical input-density and insertion differences kept together. A proof that the joint refinement and this combined mark obey the required connected norm is still needed; the integrated identities alone do not give that norm.
 
-### 6.8 A mark on old large-field histories in the R-gas — reviewed under the stated inputs
+### 6.8 A mark on old large-field histories in the 𝐑-gas — reviewed under the stated inputs
 
 There is an age-dependent probabilistic bound available before replacing every large-field factor by its value at the current coupling. It concerns the actual first-class component integrals in LFR2 (1.72), with all their inherited integrations retained. Unlike a uniform small-coupling bound, it tends to zero as the marked history becomes older.
 
 Use the finite nonnegative decomposition obtained by opening every selector sum in the recursive definition of T′_k(X), before any Mayer expansion. Its labels include the P_j, Q_j, R_j tests of LFR2 p.380; the preparatory binary choices on pp.381–383 (1−χ_j^{(n)}, 1−χ′_j, 1−χ_{j,Λ}, 1−χ′); the corresponding choices nested inside T_h and the ζ factors; the induced Ω_j, Λ_j, Z_j and their component genealogies; and the coordinate/tree choices. The continuous old fields remain integrated with their original joint weight. The abbreviated (Ω,Z) list in (1.71) alone is not the definition of a complete history here.
 
-On these labels define b for a newly created component to be its creation step; on a carry use the old b; on a merger use the minimum of the incoming indices, including a new component's index if present. In the preparatory branch where a component is kept and a new bad test occurs inside it, retain the old b. An absorbed first-class component no longer belongs to a later surviving lineage; its subsequent encoded R-terms are outside the event considered here. Thus b(X) is the earliest creation index in X's surviving lineage, the choice of j(X) used in LFR2 p.384. For 1≤m<k, insert the single indicator b(X)≤k−m on this finest nonnegative decomposition and then perform the original sums and integrations. The resulting positive sub-operation is T′_{k,m}(X). No probability law for the old fields is replaced.
+On these labels define b for a newly created component to be its creation step; on a carry use the old b; on a merger use the minimum of the incoming indices, including a new component's index if present. In the preparatory branch where a component is kept and a new bad test occurs inside it, retain the old b. An absorbed first-class component no longer belongs to a later surviving lineage; its subsequent encoded 𝐑-terms are outside the event considered here. Thus b(X) is the earliest creation index in X's surviving lineage, the choice of j(X) used in LFR2 p.384. For 1≤m<k, insert the single indicator b(X)≤k−m on this finest nonnegative decomposition and then perform the original sums and integrations. The resulting positive sub-operation is T′_{k,m}(X). No probability law for the old fields is replaced.
 
 Put
 
@@ -1455,13 +1455,13 @@ $$
 
 Here p₀≥5r>1. At the stopping lattice N_k is fixed as the initial cutoff is refined. For m_K=⌊√K⌋ the right side of (94) is therefore summable in K: for every fixed q>1 it is at most C_qK^{−q} once K is large.
 
-This is a decay estimate for old first-class R histories under the actual full positive integral, not merely a bound on an individual unnormalised numerator. It covers all old fields and history sums inside those component operations. It does not cover surviving or second-class components outside this gas, nor histories whose old component was already removed by an earlier R-step and now occurs through an inherited E-, R- or Wilson insertion.
+This is a decay estimate for old first-class R histories under the actual full positive integral, not merely a bound on an individual unnormalised numerator. It covers all old fields and history sums inside those component operations. It does not cover surviving or second-class components outside this gas, nor histories whose old component was already removed by an earlier 𝐑-step and now occurs through an inherited E-, R- or Wilson insertion.
 
 For a bounded scalar closed insertion f on this full history integral, deleting the event in (94) changes its normalised expectation by at most 2‖f‖_∞ times the probability in (94). For the renormalised Wilson expectation one cannot substitute ‖f‖_∞=1 after division by κ_K. Its application needs the paid Wilson-root expansion with this age mark inserted before local scalar extraction. In particular, if normalised component averages are used in that expansion, their component masses must first be restored: T′_k(X;z)1 can vanish for complex z, whereas the original unnormalised component integral with the whole closed insertion is analytic. The next step is that marked-root estimate with the original perimeter/corner factors, rather than an estimate of separate normalised arcs.
 
 ### 6.9 The physical denominator at the fixed stopping scale — window uniformity pending
 
-For a finite-volume Cauchy estimate, the source's global ultraviolet bound can be used directly. The volume in that bound must be read in its original convention. RG1 p.258, immediately before (0.30), explicitly identifies |T_η|=|T₁^{(k)}|; in four dimensions this is η⁴ times the number of fine sites. The displayed summation in (0.30) confirms that convention. It is also explicit in the predecessor UV3 p.256, (3)–(5). Thus the volume in CRE (2.50) and LFR2 (0.1) is fixed at the stopping scale. It is not the number of sites in the original fine lattice.
+For a finite-volume Cauchy estimate, the source's global ultraviolet bound can be used directly. The volume in that bound is the one of its original convention. RG1 p.258, immediately before (0.30), explicitly identifies |T_η|=|T₁^{(k)}|; in four dimensions this is η⁴ times the number of fine sites. The displayed summation in (0.30) confirms that convention. It is also explicit in the predecessor UV3 p.256, (3)–(5). Thus the volume in CRE (2.50) and LFR2 (0.1) is fixed at the stopping scale. It is not the number of sites in the original fine lattice.
 
 Write this fixed volume as V_stop, and let E^B_ε be the vacuum counterterm specified in CRE p.262: the sum of the one-step vacuum terms for the whole lattices. If the manuscript's E_ε is different, the actual vacuum and marked integrals both carry the factor exp(E^B_ε−E_ε). T is linear. In the actual R of LFR1 (1.100) and LFR2 (1.1), the replacement denominator is the Wilson-action integral, while a scalar multiplying the input remains in the numerator; hence R is degree-one homogeneous and the scalar stays common to both integrals. This is an identity for the original integrals, not a replacement of the physical denominator. LFR2 (0.1) gives
 
@@ -1494,7 +1494,7 @@ This global lower bound does not prove the conditional exterior-field estimate (
 
 The age-weighted root bound (99), and hence (101), are not established. The focused review identified a missing budget: D2.7 (15.8)(c) pays for a second-class component re-entering the induction by splitting its current factor exp(−2p₀(g_k)/(1+β₀)). That factor comes from the birth reserve used in (89). The retention argument from D2.6 alone therefore does not apply to a lineage passing through this branch. The pole-free contraction identities below remain valid, but their full-history age bounds are conditional on repairing this payment. No summable estimate for the renormalised Wilson expectation is claimed from this section yet.
 
-This step uses the existing D2.6 component-payment estimates (§§5 and 7.2–7.3 of its closure) and the D2.7 closed-loop localisation and group expansion (items 15.3–15.8 of its closure), with their recorded inputs, including R-far″. It does not certify those inputs. The new issue is the tag (90), whose large complex disc cannot be handled by dividing by the individual tagged component masses.
+This step uses the existing D2.6 component-payment estimates (§§5 and 7.2–7.3 of its closure) and the D2.7 closed-loop localisation and group expansion (items 15.3–15.8 of its closure), with their recorded inputs, including D2.7 15.5(ii). It does not certify those inputs. The new issue is the tag (90), whose large complex disc cannot be handled by dividing by the individual tagged component masses.
 
 Form the tagged numerator directly from the unnormalised integrals in LFR2 (1.91), with the complete closed Wilson contraction inserted. For a fixed selection of component histories it is a polynomial in z. When the loop visits one component several times, all its visits remain under that one component integral. In particular, do not replace this expression by a product of separately normalised arc averages. If the notation T′(X)1·𝒯_X is used, cancel this product back to T′(X) before introducing z. This removes apparent poles at zeros of T′(X;z)1.
 
@@ -1523,7 +1523,7 @@ $$
 \tag{99}
 $$
 
-Here κ_K is the original normalisation at z=1 and is kept fixed. To identify its factor in (99), all factors extracted before this last R-operation are already factored out in the incoming D(k) expansion. The remaining original R-factor is the exponential of its flat perimeter and corner coefficients. Their absolute cluster bounds in D2.7 (15.4) bound that factor and its inverse by constants depending on the current contour and coupling. Those constants are included in M_C. No estimate using the bare bound |W|≤1 divided by κ_K is used.
+Here κ_K is the original normalisation at z=1 and is kept fixed. To identify its factor in (99), all factors extracted before this last 𝐑-operation are already factored out in the incoming D(k) expansion. The remaining original 𝐑-factor is the exponential of its flat perimeter and corner coefficients. Their absolute cluster bounds in D2.7 (15.4) bound that factor and its inverse by constants depending on the current contour and coupling. Those constants are included in M_C. No estimate using the bare bound |W|≤1 divided by κ_K is used.
 
 The statement (99) needs the absolute root estimates of D2.6–D2.7, not merely the numerical boundedness of the final expectation in the earlier note's (8.1). Its proof must keep the inherited large-field integrals, pay their root factors through every branch, and then re-run the ultraviolet upper-bound count with the remaining budgets. This remains unfinished. The following ratio calculation is conditional on (99).
 
@@ -1552,11 +1552,11 @@ $$
 \tag{101}
 $$
 
-The vacuum factors cancel between the actual numerator and denominator bounds. With m=⌊√K⌋, (95) makes (101) summable in K. Its left side compares the original renormalised expectation with the intermediate expression obtained by omitting old first-class histories in the last R-gas, using the same original κ_K in both. It does not identify that intermediate expression with the corresponding one from the (K+1)-run. The recent-step comparison, the inherited contributions left by earlier R-operations, and the surviving and second-class histories still have to be compared.
+The vacuum factors cancel between the actual numerator and denominator bounds. With m=⌊√K⌋, (95) makes (101) summable in K. Its left side compares the original renormalised expectation with the intermediate expression obtained by omitting old first-class histories in the last 𝐑-gas, using the same original κ_K in both. It does not identify that intermediate expression with the corresponding one from the (K+1)-run. The recent-step comparison, the inherited contributions left by earlier 𝐑-operations, and the surviving and second-class histories still have to be compared.
 
 This summability statement is conditional on the unproved bound (99). It is not an established Wilson-loop estimate.
 
-### 6.11 Recent-step polarisation and the inherited R-contributions — working derivation
+### 6.11 Recent-step polarisation and the inherited 𝐑-contributions — working derivation
 
 The recent-step coupling counterterm is extracted from the second external-field derivative of the logarithm of the actual fluctuation integral. Its variation must retain the connected terms produced by the denominator. On a fixed branch and fixed selector carrier, write the complete exponent, including the Gaussian density and all inherited factors, as H(s,t,a). Here s is an external-field direction at the flat field and t is a variation of the input data. Let brackets and connected cumulants be for the normalised full integral with density exp H. Direct differentiation gives
 
@@ -1571,13 +1571,13 @@ $$
 
 The third cumulant is the ordinary centred connected cumulant; it is not replaced by Gaussian Wick contractions. Equation (102) follows by twice differentiating log Z and then using ∂_t⟨F⟩=⟨F_t⟩+Cov(F,H_t). It is inserted into the same connected expansion as (59), with all contractions completed. Changes of hard selectors are still separate finite-difference marks from (66). The source's linear polarisation projection, RG1 (1.20)–(1.22) or CRE (3.57)–(3.64), is applied to (102), not to an unnormalised numerator.
 
-There are two different analytic-domain issues. The native interior E-terms with no R-contribution in their coefficient ancestry use the RG1/RG2 construction. CRE p.278 identifies interior terms with that whole-lattice construction. Keeping the actual fluctuation cutoffs g_j r(g_j) does not require changing the physical plaquette tests: the background variables of a coefficient function can be analytically extended while the original integration cutoff stays fixed. For the R-free coefficient recursion, RG2's proof requires an upper bound on g_j|B|, which is met by g_jr(g_j) below its fixed smallness threshold. Its background-domain constants can then be kept fixed as in RG1.
+There are two different analytic-domain issues. The native interior E-terms with no 𝐑-contribution in their coefficient ancestry use the RG1/RG2 construction. CRE p.278 identifies interior terms with that whole-lattice construction. Keeping the actual fluctuation cutoffs g_j r(g_j) does not require changing the physical plaquette tests: the background variables of a coefficient function can be analytically extended while the original integration cutoff stays fixed. For the 𝐑-free coefficient recursion, RG2's proof requires an upper bound on g_j|B|, which is met by g_jr(g_j) below its fixed smallness threshold. Its background-domain constants can then be kept fixed as in RG1.
 
-This does not give a fixed-domain extension of the entire CRE E-term. CRE pp.270–271 explicitly puts older R-terms into E_k. Its k₁ is chosen to restore the required Euclidean covariance; the condition L^{−(k−j)}MR_j≤L is not an analytic-domain estimate. Those R-contributions retain their shrinking CRE domains and must remain marked.
+This does not give a fixed-domain extension of the entire CRE E-term. CRE pp.270–271 explicitly puts older 𝐑-terms into E_k. Its k₁ is chosen to restore the required Euclidean covariance; the condition L^{−(k−j)}MR_j≤L is not an analytic-domain estimate. Those 𝐑-contributions retain their shrinking CRE domains and must remain marked.
 
-Keep the two contributions distinct by labelling coefficient terms according to whether their ancestry contains a primitive R-term. A primitive R-family is treated as a supplied activity family with its original bound; its internal production need not be unfolded. In unfolding an E-coefficient, retain the label on every descendant and on its vacuum and coupling subtractions. The coupling projection is linear, so these coloured counterterms sum to the original counterterm. Couplings and the classical quadratic operators are held fixed in this activity-input comparison; their variations remain separate marks in (102). This is a decomposition of the convergent coefficient expressions, not a second physical flow with the R-operation removed. In particular the boundary and young-R channels of CRE (3.26) remain in their original channels and are not discarded.
+Keep the two contributions distinct by labelling coefficient terms according to whether their ancestry contains a primitive 𝐑-term. A primitive 𝐑-family is treated as a supplied activity family with its original bound; its internal production need not be unfolded. In unfolding an E-coefficient, retain the label on every descendant and on its vacuum and coupling subtractions. The coupling projection is linear, so these coloured counterterms sum to the original counterterm. Couplings and the classical quadratic operators are held fixed in this activity-input comparison; their variations remain separate marks in (102). This is a decomposition of the convergent coefficient expressions, not a second physical flow with the 𝐑-operation removed. In particular the boundary and young-R channels of CRE (3.26) remain in their original channels and are not discarded.
 
-The shrinking-domain loss for the R-labelled part can be budgeted using a feature explicitly available in CRE (2.31): its exponent κ₀ may be chosen arbitrarily large. Fix a target power q>6 and use the source bound at power q+7, with the source parameters chosen once for that exponent. In a local polymer norm with a fixed spare decay exponent, the primitive R-inputs then satisfy
+The shrinking-domain loss for the 𝐑-labelled part can be budgeted using a feature explicitly available in CRE (2.31): its exponent κ₀ may be chosen arbitrarily large. Fix a target power q>6 and use the source bound at power q+7, with the source parameters chosen once for that exponent. In a local polymer norm with a fixed spare decay exponent, the primitive 𝐑-inputs then satisfy
 
 $$
 \|R^{(j)}\|_{\kappa,j}\leq Cg_j^{q+7}\;.
@@ -1586,7 +1586,7 @@ $$
 
 Here the norm is the supremum over a creation-scale cube of the sum over polymers containing that cube, with weight exp(κd_j(X)), and the supremum of each activity on its original CRE complex domain. The source decay exponent is taken larger than κ so that the rooted sum converges. A factor two for endpoint differences is included in C.
 
-Here is the proposed value-level transfer for the R-descendant E-part:
+Here is the proposed value-level transfer for the 𝐑-descendant E-part:
 
 $$
 r_k^E\leq C\sum_{j\leq k}g_j^{-2}\|R^{(j)}\|_{\kappa,j}
@@ -1595,9 +1595,9 @@ a_n\geq0,\qquad\sum_{n\geq1}a_n<1\;.
 \tag{104}
 $$
 
-For the first term, subtract the vacuum value of each R-input and use the quadratic marginal expansion described after CRE (2.31), and in the proof of (2.44). At creation scale j its two field derivatives cost Cα_j⁻²≤Cg_j⁻². The factor (L^jη)⁴ in that marginal expansion pays the number of j-scale locations in a current-scale cube. The polynomial spatial moments are paid by the spare exponential decay. The extra fluctuation Cauchy factor in the difference R(U_shift)−R(U_background) is bounded under R-m and can be discarded for this upper bound. Thus the direct marked R-input is bounded by the first sum in (104). No field derivative is treated as cost-free.
+For the first term, subtract the vacuum value of each 𝐑-input and use the quadratic marginal expansion described after CRE (2.31), and in the proof of (2.44). At creation scale j its two field derivatives cost Cα_j⁻²≤Cg_j⁻². The factor (L^jη)⁴ in that marginal expansion pays the number of j-scale locations in a current-scale cube. The polynomial spatial moments are paid by the spare exponential decay. The extra fluctuation Cauchy factor in the difference R(U_shift)−R(U_background) is bounded under CRE p.277's margin and can be discarded for this upper bound. Thus the direct marked 𝐑-input is bounded by the first sum in (104). No field derivative is treated as cost-free.
 
-For the second term, telescope the Mayer factors in a normalised E-input difference. A selected factor is replaced by its difference multiplied by the integral of the exponential along the straight activity interpolation. Every resulting connected term contains one distinguished E-input mark. RG2 (1.24)–(1.29) gives the creation-age factor L^{−(k-i)} after the sum over its positions, together with the fluctuation/domain ratio. Under q₀=q₁>p₀ and R-m, that ratio is at most
+For the second term, telescope the Mayer factors in a normalised E-input difference. A selected factor is replaced by its difference multiplied by the integral of the exponential along the straight activity interpolation. Every resulting connected term contains one distinguished E-input mark. RG2 (1.24)–(1.29) gives the creation-age factor L^{−(k-i)} after the sum over its positions, together with the fluctuation/domain ratio. Under q₀=q₁>p₀ and CRE p.277's margin, that ratio is at most
 ω_* = C sup_j ε_j/min(α_{0,j},α_{1,j}), which tends to zero with the common small-coupling bound. CRE (2.6)–(2.9) bounds the ratios of the creation and current analytic radii by fixed powers of 1+k−i. The five field powers in (1.24) therefore add only a polynomial in that age; it is absorbed by replacing L^{−(k-i)} with L^{−β(k-i)}, with a fixed 0<β<1.
 
 The remaining connected expansion is rooted at this distinguished mark. Its unmarked vertices obey the same Kotecký–Preiss majorant as the original conditional integral; summing the rooted trees multiplies the mark bound by a fixed constant. This yields a_n=Cω_*L^{−βn}. Choosing the coupling small enough that Cω_*L^{−β}/(1−L^{−β})<1 gives the last condition in (104). The coupling subtraction of an E-input is carried with that input before this estimate; separating it would undo the irrelevant-order cancellation used in (1.24). All these estimates are on CRE's actual integration domains and include the inherited interactions in the selected majorants.
@@ -1620,9 +1620,9 @@ $$
 \tag{106}
 $$
 
-For the middle inequality use the running bound (5), with g_k⁻²−C₀≥g_k⁻²/2 in the small-coupling window, and compare the decreasing sum with the integral of (g_k⁻²/2+bs)^{−(q+5)/2}. This sum is at most Cg_k^{q+3}. The first marginal transport has already consumed two powers in (104); the history sum and the final two field derivatives consume four more. The seventh spare power remains available, for example for a fixed logarithmic loss. The calculation is linear in a primitive R-input mark of relative size d when d multiplies the first term of (104).
+For the middle inequality use the running bound (5), with g_k⁻²−C₀≥g_k⁻²/2 in the small-coupling window, and compare the decreasing sum with the integral of (g_k⁻²/2+bs)^{−(q+5)/2}. This sum is at most Cg_k^{q+3}. The first marginal transport has already consumed two powers in (104); the history sum and the final two field derivatives consume four more. The seventh spare power remains available, for example for a fixed logarithmic loss. The calculation is linear in a primitive 𝐑-input mark of relative size d when d multiplies the first term of (104).
 
-The useful distinction is that the native part could use the fixed-domain polarisation constant, while the R-labelled part can afford the shrinking-domain loss. Applying a g_k⁻² Cauchy constant indiscriminately to the native E-difference is not justified by this calculation. Conversely, (106) does not assert cutoff decay: it is an input-stability estimate, conditional on the ancestry decomposition and (104). The actual two-cutoff native-kernel source in (59), and the recent-step Wilson and selector marks, still require estimates.
+The useful distinction is that the native part could use the fixed-domain polarisation constant, while the 𝐑-labelled part can afford the shrinking-domain loss. Applying a g_k⁻² Cauchy constant indiscriminately to the native E-difference is not justified by this calculation. Conversely, (106) does not assert cutoff decay: it is an input-stability estimate, conditional on the ancestry decomposition and (104). The actual two-cutoff native-kernel source in (59), and the recent-step Wilson and selector marks, still require estimates.
 
 ### 6.12 Exploratory calculations recorded at the pause
 
@@ -1641,7 +1641,7 @@ L^{-(k-j)}
 \tag{107}
 $$
 
-This is the proposed polynomial-age payment behind (104). A separate issue remains: RG1 p.272 says that α₂ depends on α₀, but the required quantitative lower bound α_{2,j}≥cα_j was not derived. The displayed restrictions on α₃ alone do not prove all the domain comparisons needed in (104). The matching to R-m and the coloured coupling subtractions also remains unreviewed.
+This is the proposed polynomial-age payment behind (104). A separate issue remains: RG1 p.272 says that α₂ depends on α₀, but the required quantitative lower bound α_{2,j}≥cα_j was not derived. The displayed restrictions on α₃ alone do not prove all the domain comparisons needed in (104). The matching to CRE p.277's margin and the coloured coupling subtractions also remains unreviewed.
 
 #### The quadratic part of the cutoff mark
 
@@ -1738,13 +1738,13 @@ These considerations leave the recent-step signed comparison as the required obj
 
 #### Other incomplete constructions
 
-A common current-lattice representation was considered in which the quadratic covariance difference is retained explicitly and the nonlinear differences are propagated as marked interactions. The same physical T-map and the reference cancellation (86) motivate this, but they do not establish its local norm, its gauge-invariant decomposition or its compatibility with the original R-denominators and scalar extraction. A proposed contraction of the form “irrelevant Gaussian contraction plus a small interacting correction” was not derived for the actual data. No modified R-operation, new physical normalisation or autonomous replacement model was adopted.
+A common current-lattice representation was considered in which the quadratic covariance difference is retained explicitly and the nonlinear differences are propagated as marked interactions. The same physical T-map and the reference cancellation (86) motivate this, but they do not establish its local norm, its gauge-invariant decomposition or its compatibility with the original 𝐑-denominators and scalar extraction. A proposed contraction of the form “irrelevant Gaussian contraction plus a small interacting correction” was not derived for the actual data. No modified 𝐑-operation, new physical normalisation or autonomous replacement model was adopted.
 
 Arithmetic mixtures of the two full measures on the common lattice were considered as positive comparison paths. A geometric interpolation of densities would additionally require a justified common density, its support and a local expansion for its logarithm; these were not supplied. A coupling of the two histories conditional on a common coarse field was likewise only an identity-level possibility. It supplies neither independence inside either inherited law nor a small local difference norm.
 
 An exponential moment of the number of retained multiscale variables was also considered for integrating the old action tails under the full history law. With L_ret=∑_{n<k}(1+log g_n⁻²)|Γ_n|, the proposed insertion is e^{uL_ret}. It increases precisely the geometric costs already present in the large-field majorant. A uniform bound would require re-running creation, preparatory, merger and second-class re-entry payments with that extra cost. That re-run was not performed. In particular the already identified re-entry obstruction cannot be bypassed by asserting such a moment bound. The resulting proposed extensions of the old E-, R- and boundary-term tails to the full interacting history law were not established.
 
-The attempted bounds split the E-tail's determining layers at k−m/2. The newer layers would carry L^{−βm/2}; the older layers would require a weighted age estimate for surviving histories. The R-tail would use its coupling sum times the retained-variable moment. For the expectation under the full positive labelled history integral, the unproved candidates were
+The attempted bounds split the E-tail's determining layers at k−m/2. The newer layers would carry L^{−βm/2}; the older layers would require a weighted age estimate for surviving histories. The 𝐑-tail would use its coupling sum times the retained-variable moment. For the expectation under the full positive labelled history integral, the unproved candidates were
 
 $$
 \begin{aligned}
@@ -1763,9 +1763,9 @@ Here the use of δ would require the age estimate for all the surviving lineages
 
 ### 6.13 The remaining estimate in this expansion
 
-Equations (59), (64), (66), (72), (73), (76) and (84) specify the kernel, selector and normalisation marks that must be inserted into the existing marked-polymer induction. The bounds (64) and (72) establish how a small local difference is paid for in that expansion, including its denominator contribution. Equation (81) supplies the g_k² gain for the coupling variation of the actual R-denominator kernel. These calculations do not establish the complete small local difference between the two actual cutoff runs.
+Equations (59), (64), (66), (72), (73), (76) and (84) specify the kernel, selector and normalisation marks that must be inserted into the existing marked-polymer induction. The bounds (64) and (72) establish how a small local difference is paid for in that expansion, including its denominator contribution. Equation (81) supplies the g_k² gain for the coupling variation of the actual 𝐑-denominator kernel. These calculations do not establish the complete small local difference between the two actual cutoff runs.
 
-The unsolved step is a bound on the connected marked coefficients obtained after the full inherited integrations, with the Wilson insertion and the difference of its perimeter/corner factors included, whose propagation to the stopping scale gives a summable sequence in K. For the kernel contribution, (61) exposes the missing input explicitly: a cutoff-small bound for the marked precision, boundary coupling and full interaction, or a cancellation of their combined score inside the marked integral strong enough to replace those separate bounds. The selector marks (66), the R-component marks (76) and the inherited-history term (77) must be controlled in the same comparison. None is discarded as a uniformly small error at fixed terminal coupling.
+The unsolved step is a bound on the connected marked coefficients obtained after the full inherited integrations, with the Wilson insertion and the difference of its perimeter/corner factors included, whose propagation to the stopping scale gives a summable sequence in K. For the kernel contribution, (61) exposes the missing input explicitly: a cutoff-small bound for the marked precision, boundary coupling and full interaction, or a cancellation of their combined score inside the marked integral strong enough to replace those separate bounds. The selector marks (66), the 𝐑-component marks (76) and the inherited-history term (77) must be controlled in the same comparison. None is discarded as a uniformly small error at fixed terminal coupling.
 
 The present derivation therefore does not prove the Cauchy estimate (9). It advances the direct probabilistic calculation to these marked integrals and their connected norm; no conclusion from §5 is used to supply their cutoff decay.
 
@@ -1795,13 +1795,13 @@ The scalar expectations then have a unique limit. This last implication is eleme
 ## Source Locations
 
 - For §6: RG2, `../Balaban/tex/RG2/parts/p011.tex`–`p021.tex`, (1.41)–(1.43), (2.1)–(2.41), for the actual selected kernels, moment payment, resummation and gauge invariance; RG1 `p269.tex` and `p276.tex`, (2.16), (3.29), for the gauge actions. CRE `p271.tex`–`p278.tex`, (3.27)–(3.47), supplies the inherited interactions and normalised expectation expansion.
-- For §6.6: `../Balaban/tex/LFR1/parts/p201.tex`, (1.100)–(1.102), and `../Balaban/tex/LFR2/parts/p356.tex`–`p358.tex`, (1.1)–(1.11), identify the actual R-denominator, nonlinear fluctuation integral, component geometry and normalising bound. LFR2 `p378.tex`–`p390.tex`, (1.71)–(1.100), retains the inherited numerator and gives the large-field polymer expansion.
+- For §6.6: `../Balaban/tex/LFR1/parts/p201.tex`, (1.100)–(1.102), and `../Balaban/tex/LFR2/parts/p356.tex`–`p358.tex`, (1.1)–(1.11), identify the actual 𝐑-denominator, nonlinear fluctuation integral, component geometry and normalising bound. LFR2 `p378.tex`–`p390.tex`, (1.71)–(1.100), retains the inherited numerator and gives the large-field polymer expansion.
 
 - `WILSON_IT1_CONTINUUM_LIMIT_CLOSURE_2026_10_26.md`, §§1–3 and 5–9: the prescribed runs, normalisation, full remainder and existing comparison.
 - `WILSON_FIRST_RG_STEP_V5.tex`, `eq:bare-action`, `eq:bare-blocking-operator`, `eq:global-average`, `lem:global-average`: the exact bare measures and the original first blocking map.
 - `WILSON_IT1_D2_STEP_MAP_2026_10_22.md`, D2.2, D2.3 and D2.4: the marked construction to which (9) must apply.
 - `WILSON_IT1_D26_CLOSURE_2026_10_24.md`, §5.0: the pairwise running bound used for the carry estimate.
-- `../Balaban/tex/CRE/parts/p263.tex`, (2.43)–(2.46): the distinct E- and R-term age bounds; `p264.tex`, (2.47)–(2.50): boundary and partition-function bounds.
+- `../Balaban/tex/CRE/parts/p263.tex`, (2.43)–(2.46): the distinct E- and 𝐑-term age bounds; `p264.tex`, (2.47)–(2.50): boundary and partition-function bounds.
 - `../Balaban/tex/CRE/parts/p243.tex`, Introduction after (0.1), and `../Balaban/tex/LFR2/parts/p391.tex`–`p392.tex`, (1.104): R changes the effective densities; the iteration is RT.
 - `BETA_FUNCTION_WILSON_LOOPS.md`, Lemma 2.1, Theorem 8.1 and Corollary 8.2: the stated coupling input.
 - `WILSON_CAUCHY_ROUTE_DRAFT_2026_10_21.md`, §4.3; `WILSON_CAUCHY_LIPSCHITZ_2026_10_21.md`, §§3–5; `WILSON_CAUCHY_LIP1A_2026_10_21.md`: the earlier classical, Lipschitz and domain-transfer work.

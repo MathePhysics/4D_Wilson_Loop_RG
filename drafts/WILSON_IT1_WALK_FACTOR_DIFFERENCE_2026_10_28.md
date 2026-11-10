@@ -1,109 +1,14 @@
 # The Walk-Factor Difference (W-δ): The Two Runs' Walk Terms and Their Intertwined Comparison
 
 {#WP.1} Own working note on the inequality (W-δ) of `WILSON_IT1_LARGE_FIELD_DEPTH_2026_10_27.md` (the LF note), §4(d), *The functions of the configurations.*, sub-bullet (iii).
-{#WP.1-1} It edits no other note.
 {#WP.1-2} Bałaban is cited by printed page and line, checked on the transcriptions in `Balaban\tex\<paper>\parts`.
 {#WP.1-3} RG II's references are RG I's list (RG II p.2 l.2–3): [13] is PBG (CMP 99, 389–434) and [15] is VAR (CMP 102, 277–309) (RG I p.299 l.13–15).
 {#WP.1-4} PBG's [4] is PRT2 (CMP 96, 223–250) (PBG p.433 l.53).
-{#WP.1-5} The LF note is cited by line in the version with sha256 prefix d12047b06af2 (529 lines), where (W-δ) is at l.351; the current file (996 lines) has moved those lines; the citations of its l.650–655 (the telescoping of (iii) and n_H) and of its l.30 (Ω_i = T for i < j₀, in §7's cells) refer to the current file.
-{#WP.1-6} The Cauchy note is cited by section and display; the cited sections (§§6.2, 8.7, 9.2, 9.4, 9.7, 9.8, 10.1, and 10.4) are those of the current file (sha256 prefix 3d58d26979cd, 970 lines), by its headings.
+{#WP.1-5} The LF note is cited by its tags (#4.60 and the like) and by section.
+{#WP.1-6} The Cauchy note is cited by its tags (#C5.3-2 and the like), by section, and by display, and this note's own lines by their tags (#W6.4 and the like).
 {#WP.1-7} Notation: a_j := εL^j is the spacing of the shared scale j in run A's units, run A's fine lattice is T_ε with k averaging steps, run B's is T_{ε/L} with k + 1, and the shared scale j is run A's scale j and run B's scale j + 1.
 
-## Open Gaps {#WSOG}
-
-- {#WOG.1} **(Wδ-1) The per-shell defect of the local operators.** The local propagators G′_□, C_□, and G_□ of PBG (3.87) are inverses of operators on each run's own fine lattice, on a nested sequence of shells that reaches the scale 0 inside X̃⁵ (§1(c)).
-  {#WOG.1-1} The item is the functional form of their bilinear defect, shell by shell: for each 𝒜 in run B's local field space there are fields s₀, s₁, and s₂ on T_{ε/L} ∩ Ω₀^B(□) such that
-
-  {#WOG.2} β_□(ℱ, 𝒜) = ⟨D_B*ℱ, s₂⟩ + ⟨∇ℱ, s₁⟩ + ⟨ℱ, s₀⟩ for every ℱ, and on each block y of the shell n, sup_{Δ(y)}(|s₁| + |s₂| + L^nη|s₀|) ≤ C_L(β)ϖ_n‖𝒜‖_{1,β;y} (for the gauge-fixing part of G_□, with the decay-weighted norm ⟨𝒜⟩_y of 10.4 in place of ‖𝒜‖_{1,β;y}),
-
-  {#WOG.3} with ϖ_n := L^{−βn} on the shells n ≥ 1 of run A's local sequence, ϖ := 1 on run A's shell 0 and on run B's extra shell, and the same with the two slots exchanged, at aligned backgrounds and on the analyticity domain (3.37) (§4, §5).
-  {#WOG.3-1} For the gradient entries of (3.42)–(3.44) the sources s₁ and s₂ need in addition a Hölder bound at the scale of their shell.
-  {#WOG.3-2} The Cauchy note supplies such a functional form only for the global single-scale operator G₁ and for the gauge-fixing part (its (10.6c)), at the regularity of H₁ fields, and the form-level bound (10.6) only on the data space, through the variational sandwich (10.5′).
-  {#WOG.3-3} PBG does not compare operators on different fine lattices.
-  {#WOG.3-4} The route: the chain rule, the bilinear defect, and the oscillation of the Cauchy note's §10.4 run for Δ_a = D*D + Δ′ + DRD* + Q*aQ of PBG (3.82) and for Δ′_a = Δ_U + Q′*aQ′ of PBG (3.24), on each shell of the local sequence, with the C^{1,β} bounds (3.43) of the local propagators (PBG Corollary 3.6).
-  {#WOG.3-5} The averaging terms need no oscillation: §5(a) shows that the chain rule cancels them exactly, except for the scalar weights a_n, whose mismatch is of relative order L^{−2n}, and for run B's extra shell.
-  {#WOG.3-6} The Gram defect of the lift in Q′G′²Q′* vanishes for the scalar lift of §4(d), so C_□ reduces to the scalar G′_□ through the exact identity of 10.3.
-  {#WOG.3-7} §10 derives the following parts of this item: the aligned background in PBG's complex domain and the condition (S) for one-forms, through the cut-off local lift χ_Bℒ_N under R₀M₀ ≥ L (10.1); the functional form for the scalar operator Δ′_a, with the coarse side of G′_□ at blocks of □ and at general points (10.2); the comparison of C_□ at the points where R′₀(□) reads it (10.3);
-  {#WOG.3-8} and the functional form for the action part D*D + Δ′ of Δ_a, using only the size of the background curvature, and for the gauge-fixing part DRD* of Δ_a in the weighted form ⟨𝒜⟩_y, which §5(c) accepts at the rate min(δ_gf, δ₀′)/3, δ_gf = δ₀/486 (10.4); and the commutator factors K(h), P_{□,1}(∂h), and S_j(∂h) of PBG (3.88) and (3.101)–(3.105), as commutators of h_□ with these operators and with DD*, the case R = 1 of the gauge-fixing part (10.4).
-  {#WOG.3-9} With these, (Wδ-1) is derived on the coarse side, not reviewed in this form; the fine side of each propagator needs (Wδ-2).
-- {#WOG.4} **(Wδ-2) The fine side at the decoupled field.** The consumer, the run difference of the localised terms of V(Y), compares functions of each run's own fine field.
-  {#WOG.4-1} At the chain's configurations the frozen difference handles the fine side through ι, since ι(MU^B) = U^B for a minimiser U^B (LF note (i)).
-  {#WOG.4-2} The decoupled configuration 𝐔^B(s) at complex s is not a minimiser (LF note (iii), l.348), so ι(M𝐔^B(s)) ≠ 𝐔^B(s), and the averaged comparison (b) of §3 leaves run B's old term at 𝐔^B(s) against its value at ι_Y𝐔^A(s) uncompared, with ι_Y the one lift of all terms of V(Y) (LF note (i)).
-  {#WOG.4-3} The item is the fine-side form (c) of §3, per walk term, |(W^B_ω − ℒ_ιW^A_ω𝒥)λ| ≤ δ_w(ω) times the bound (3.108) in run B's norms, with ℒ_ι := dι_Y at the aligned background.
-  {#WOG.4-4} §4(b) derives the identity for it.
-  {#WOG.4-5} Its bound is (Wδ-1) with the slots exchanged, together with the C^{1,β} bound of ℒ_ι.
-  {#WOG.4-6} Its inputs are (Wδ-1) and the regularity of dι_Y, the data derivative of the localised lift on Y^∼ (the Cauchy note's §9.8, Bałaban's local minimiser with the collar data of Q_1^{s*}, analytic in the data by VAR Proposition 9), which on its inner domain is that of the one-step minimiser (PBG Theorem 3.12 for the one-step problem). 10.5 writes dι_Y = H₁𝔡v + D_Bγ, with H₁ PBG's (3.129) at k = 1, 𝔡v the data derivative (VAR's minimiser has plain-average data, and its Landau representative has the double bar V(Ū₀)^{−1}, CMP 99 (1.30)–(1.31)),
-  {#WOG.4-7} and D_Bγ the derivative of VAR's return to the axial gauge (CMP 98 (86)–(87)).
-  {#WOG.4-8} By the LF note's split of the bracket, (c) is used at the aligned pair (ι_Yc^A, c^A), c^A the chain configuration, where (S) holds for χ_Bℒ_ι exactly; the passage to run B's decoupled field is that note's (δ).
-  {#WOG.4-9} At the real chain configurations 10.5 derives, for ℒ_ι = H₁𝔡, (H_ℒ) away from the collar, the inclusion of Ω₀^A(□) in Ω₁(Y^∼), the Hölder bound of leg 2, and the tail.
-  {#WOG.4-10} By the gauge invariance of the terms under RG I (3.29) and the covariance of run B's own current, the gauge term leaves (c).
-  {#WOG.4-11} The value of the LF note's (δ) is unchanged, and written at the transformed pair lift it contains the commutator −[γ, δJ] with the pair-lift current defect δJ (bounded by 2 sup|γ| times (δ)'s current term), a second-order rotation of B, and the second-order part of the gauge factor (the LF note's piece (δ) of (ii) states (δ) in this form).
-  {#WOG.4-12} At the complex chain configurations c^A = M(U′U^B), 10.5 derives (H_ℒ) in the form that 10.1's cost paragraph uses (k₀ ≤ C(L^nε)^{−1}) and the Hölder bound, uniformly in n, with the shell gain L^{−2n} on the complex correction: a local complex linear gauge about the coarse site nearest each point, which subtracts the transported value of the complex field there, leaves only its variation near that point, with first differences controlled in every direction, the covariance of the lift and of PBG's norms removes the gauge exactly, VAR (190) bounds the field, and PBG's formula (3.129) for H₁,
-  {#WOG.4-13} expanded by resolvent identities, localises the difference of H₁ at the two backgrounds.
-  {#WOG.4-14} The nonlinearity of the lift at the decoupled configurations of (1.60), the piece (δ) of the LF note's (ii), is not a walk-factor difference and is not covered by (W-δ).
-- {#WOG.5} **(Wδ-3) The nonlinear functions between the runs.** 𝐇_k of RG II (1.2) is built from the propagators through the fixed points D of (1.3) and 𝐀₀ of (1.4), whose local functions C_j (VAR (44), (49)) and δV/δA′ (VAR (80)) are each run's own.
-  {#WOG.5-1} The decoupling replaces only the propagators (RG II p.3 l.30–33), so the two runs' 𝐇_k(s) also differ through these functions.
-  {#WOG.5-2} By (B4) of the Cauchy note's §10.1 the n-fold double bar of run B is the (n − 1)-fold one of run A applied to the one-step double bar.
-  {#WOG.5-3} §11 derives the exact composition of the nonlinear parts C_j, the explicit inverse A′ = A + HC(A) of VAR's linearising transformation, valid for arbitrary propagators, and from them two exact identities: D^B at run B's coordinate equals D^A at run A's coordinate of the one-step average plus the one-step remainder, and the two coordinates differ by a propagator term, which (c) bounds, and a kernel term R₁ quadratic in the field, which carries the factor L^{−j(x)} of the layer instead of δ_w.
-  {#WOG.5-4} §11 also gives the contraction of (1.4) for 𝐀₀'s difference, with (c) for H₀ and G̃, and a source σ.
-  {#WOG.5-5} In σ the two runs' currents and quadratic forms cancel exactly, and the terms with the coordinate difference split as above.
-  {#WOG.5-6} VAR's global sets are aligned in young histories.
-  {#WOG.5-7} The V of RG II (1.4) is VAR's (80) with Δ in place of Δ_π (VAR p.297), so 𝔉 is the action itself and σ has no Landau parts.
-  {#WOG.5-8} §11 works with the global lift ℒ of the Cauchy note's §10.4, and its bridge to ℒ_ι := dι_Y bounds (ℒ − ℒ_ι)u by (ε/a_j)^{β₂} on fields and (ε/a_j)^{1−β′} through G̃ on sources, because both are right inverses of the same Q₁ that reproduce affine fields at U = 1.
-  {#WOG.5-9} So every propagator term is the form (c) plus a bridge term.
-  {#WOG.5-10} The term G̃Δ^{(2)}H₀B of VAR (180), which RG II (1.4) does not print, is bounded through an exact identity for the defect of Δ^{(2)}.
-  {#WOG.5-11} The E-terms of σ carry the factor ϑ = δ_w + ϑ_ℒ + C₂L²L^{1−k/2}, through G̃Δ = P₀ − G̃DRD* for the cubic term.
-  {#WOG.5-12} The gradient of that term's output follows from PBG (3.44) with the crude lattice Hölder bound, at the exponent γ − 2β′ for any β′ > 0; with the propagator parts at γ_H = βγ_w/(1 + β) (§11, *The form (c) for VAR's H.*), the fixed points carry γ_H − 2β′.
-  {#WOG.5-13} The blocking artifact b beyond its second order is a sum of covariances over the cells, each with one oscillation factor, so its part of σ carries (ε/a_j)^{β_H}, any β_H < 1, and (ε/a_j)^{β_H−β′} in the gradient.
-  {#WOG.5-14} (Wδ-3) is derived, not reviewed in this form.
-  {#WOG.5-15} R₁ and the D difference carry the factor L^{−j(x)} ≤ L^{1−k/2} of the layer and need no matching in (δ).
-- {#WOG.6} **(Wδ-4) The collar of 𝐁₁ at the reflex edges of Ω and at ∂Ω.** §12 bounds the strip Ω ∖ Ω^A_2 at ∂Ω, Ω := Ω″^∼_{h+1}, run by run through the crossing decay from the strip to the collar's layers n ≥ 2.
-  {#WOG.6-1} The collar's layers are CRE's maximal domains, separated in the ℓ¹ distance (CRE p.256 l.57–62, PRT2 p.223 l.16), and are only one cube of the next scale wide.
-  {#WOG.6-2} Near a reflex edge of Ω (a face of ∂Ω of codimension ≥ 2 along which Ω^c is locally a convex wedge), for every n′ ≤ h a cube of 𝒟_{n′} touches the edge while it contains a block of the layer n′.
-  {#WOG.6-3} For d = 2 and Ω^c = {x₁, x₂ ≤ 0} near the edge, □ = [0, 2c_{n′}]² contains Q = [c_{n′}, 2c_{n′}]², whose ℓ¹ distance from the complement of the domain of the layer n′ − 1 is at least 2c_{n′} − dc_{n′}/(L − 1) ≥ c_{n′} for L > 2d.
-  {#WOG.6-4} The decay of such a cube's local operator, read at the single scale n′, gives no crossing between the strip and the layer n′.
-  {#WOG.6-5} Second, the walks whose cubes have Ω₀(□) meeting ∂Ω are compared through local problems that reach ∂Ω, where 10.1's (S) is not available.
-  {#WOG.6-6} These cubes are not a corner effect: at a flat face, Ω₀(□) ⊇ □̃⁴ meets ∂Ω for a fraction of order 4/L of every collar layer n′ = 2, …, h − 1.
-  {#WOG.6-7} Third, §11's 𝔡_H is built from global suprema, which for 𝐁₁ include the strip, so for H_{𝐁₁}, 𝔊, 𝐇_{𝐁₁}, and the source of (1.55) it has no decay in h.
-  {#WOG.6-8} The same occurs at the reflex edges and the boundaries of the boundary-layer sets Y_i (the finest-scale strips of the 𝐁(Y_i)), and in the uncancelled part of the source of (1.55) on the strip.
-  - {#WOG.7} *The requirement.* The consumer charges each point of a history with h_n = C_hθ̃^n, n the history's birth scale (the Cauchy note, l.363 and l.404), and the cut lies in the history's layer h ≥ n.
-    {#WOG.7-1} So a collar term needs a run difference ≤ C(ε/a_h)^γ times Bałaban's bound of the term, for an exponent γ > 0 for which the other terms already fit (§8); no new rate enters θ̃.
-  - {#WOG.8} *The derivation (derived, not reviewed).* §12, *The collar at ∂Ω and at the reflex edges.*, derives it.
-    {#WOG.8-1} The local problems of the cubes whose Ω₀(□) meets ∂Ω are posed on the intersection of their own sequence with the collar's, and PBG's bounds hold for them in the weighted distance of that sequence.
-    {#WOG.8-2} That distance dominates the collar's, which every contour pays at LM₁ per layer whatever the shape of ∂Ω.
-    {#WOG.8-3} Without (S), the identities of §4 acquire sources of the kind ϖ = 1 within 2ε of ∂Ω.
-    {#WOG.8-4} Each defect, weighted per point, combines with the crossing decay and the data gain to at most L^{O(1)}(ε/a_h)^γ, with γ = β for the walk operators and γ_H for the operators of the form (c) for H, whose 𝔡_H is localised per point.
-
-{#WOG.9} **Status.** Quoted and checked: the propagators H, G̃, and H₀ of RG II (1.2)–(1.4), their walk expansions (1.6)–(1.7), and the construction of the factors R_α(X) from the local propagators of PBG Sect. C, with their localisation, their Dirichlet boundary conditions, and their bounds (§1).
-{#WOG.9-1} Derived: what the two runs share and what they do not, with the two runs' local shell sequences (§2); that (W-δ) as printed is not well posed, and the per-walk-term forms (b) and (c) that replace it, (c) being the one the consumer needs (§3); the exact intertwined Galerkin identities for the local propagators on both sides, without boundary terms, given (S) (§4); the shell-by-shell reduction (§5): the chain rule cancels the averaging terms exactly on every shell, the scale-0 shell included, up to the scalar weights a_n and run B's extra shell;
-{#WOG.9-2} it does not reduce the Laplacian, curvature, and gauge-fixing parts of the scale-0 shells, but these contribute only at relative order ε/a_j through the decay across the shells; and, given (Wδ-1) on the shells n ≥ 1 and its ϖ = 1 form on the boundary shells, (S), and a lift with the block-sum bound C_ℒ, the sup entry of the coarse-side intertwining defect of G′_□ is ≤ C_□(β)(ε/a_j)^β times its (3.42) bound at the rate δ₀/3, and that of G_□ the same with C_ℒ′ and the rate δ₀′/3 (10.1), for any β < 1, under the conditions (W-c) on PBG's R₀M₀ (C_□ is treated in 10.3, at the rate δ₀/27);
-{#WOG.9-3} the premise that run A's aligned background lies in PBG's complex domain is derived in 10.1; the background part, per walk term, ≤ 4d̄(ω)/α_*′ times the bound (3.108), on PBG's domain (3.37) and the LF note's pair class (§6); and the telescoping per walk term, the absorption of (|ω| + 1) into B₀′, and the form of the bound (1.11) for the difference under the condition (W-M) on M (§7).
-{#WOG.9-4} Derived in §7, not reviewed: the local sequences of the bulk cubes whose □̃³ meets the finer layer, intersected with the global domains, and Corollary 3.6 for every bulk cube without PBG's class statement at p.409 l.2 (§7, *The cubes next to the finer layer.*); the differences of (3.97) and p.415 (for □₀ = □̃² on □'s own sequence, where they vanish;
-{#WOG.9-5} for □₀ = □̃₁² and 𝒟″'s cube on sequences constructed here, in the bulk p.408's recipe at □'s layer centred at the replaced cube (§7) and on the collar the collar's sequence restricted to nested cubes (§12), which agree with □'s sequence on □̃³, satisfy PRT2 (2.1)–(2.2) at the size R₀M₀, and satisfy Corollary 3.6 through §11's axial-gauge argument or the collar's scale-h regularity, under R ≥ 12dL, K ≥ 4 a power of L, M ≥ max(L², 6L) for PBG's block size M, L ≥ 4, L² > 9d, O(1)L⁵Mα₀ ≤ a₁, and, for the axial-gauge argument, O(1)L⁴C₀ε₁ ≤ α₀, ε₁ ≤ a₁/(3L), and R₁M₁ ≤ M,
-{#WOG.9-6} and for the collar cells also L ≥ 6, M ≥ 4M₁ for RG II's cube size M and CRE's M₁ = KM′, δ₀M₁ ≥ 1, ε₁ ≤ a₁/7 for VAR's cubes with M_V = 7M′, R_{h+1} ≥ L from CRE (2.5) for the cells' fit, and O(1)L³B₃ε₁^{(1)} ≤ α₀), the commutators with h′²_{□₀} and ζ_{□̃}, the partitions of 𝒟′ and 𝒟″ in c_h*, and the telescoping's branch without smallness, with C_tel, in the telescoping and in (1.11).
-{#WOG.9-7} Derived in §10, not reviewed in this form: the aligned background in PBG's complex domain, the local lift and (S) for one-forms, the defect of the scalar operator Δ′_a with the coarse side of G′_□ at blocks of □, and the defect of the action part of Δ_a.
-{#WOG.9-8} Derived in §10 as well: the comparison of C_□ (10.3), the defect of G′_□ at general points (10.2), the gauge-fixing part DRD* of Δ_a in a decay-weighted norm (10.4), and the commutator factors K(h), P_{□,1}(∂h), and S_j(∂h) of the walk terms (10.4), so the coarse side of every local propagator and of every explicit factor with ∂h is derived, not reviewed in this form;
-{#WOG.9-9} the regularity and exactness of the Landau-gauge part of the fine-side lift at the real and the complex chain configurations, and the transfer of the gauge term (10.5), so (Wδ-2) is derived, its complex step in repaired form, not reviewed; and, for (Wδ-3), the exact identities for the fixed points D and the linear coordinates between the runs, the contraction for 𝐀₀ with an explicit source σ, the reduction of σ in which the two runs' currents and quadratic forms cancel exactly, and the alignment of VAR's global sets in young histories (§11).
-{#WOG.9-10} (Wδ-3) (§11) has no open item of its own; it uses the width of 𝐁″_k's middle layers through PBG (3.42)–(3.44), which is derived in the LF note's *The middle layers.* (not reviewed), and its alignment excludes the collar of 𝐁₁.
-{#WOG.9-11} VAR (14) for the background of LFR II (1.57) and for that of (1.54) away from the cut is taken from Bałaban's statements (p.371 l.32–33; LFR I (1.84)); near the cut, (1.54)'s U_{1,2} is derived to satisfy it with C₁ = L³ under (163′) at the block size M′ (§12, *The band regularity of U_{1,2}.*, one clean review; it rests on the LF note's *The block size M′.*, *R₁ = 1*, *The separation.*, and *The middle layers.*, not reviewed).
-{#WOG.9-12} It is derived, not reviewed: the E-terms of σ (the gradient of G̃DRD*E at the exponent γ_H − 2β′), the blocking artifact b beyond its second order through the covariance form of b, the form (c) for VAR's H through the polarised defect of Δ′_π, and the telescoping at complex s per walk.
-{#WOG.9-13} At the pairs of 𝐇″_k, §11's oscillation of the blocking artifact at U_{1,2} is derived, not reviewed, through the Cauchy note's §9.7 at the layer j and 10.5's lift bounds rerun at the global layer (§12, *§11's oscillation at U_{1,2}.*).
-{#WOG.9-14} The same holds for the bridge to ℒ_ι at the complex chain configurations: the global-layer curvature of ι_Y(Mc(t)) through VAR's Sect. G at the real base U^B, with the first-order field compared to W̃ = (t − 1)𝐒_c, and the operators at U₁ by a Neumann series about U^B.
-{#WOG.9-15} The bridge's real-case input, the global-layer regularity of ι(V₀), is 10.5's derivation and is not printed.
-{#WOG.9-16} The weakest steps of (Wδ-2) are those named at the end of 10.5: G, H, G₁, and H₁ at the complex U₁ through PBG's (3.130)–(3.133) and its proof of Theorem 3.12 rerun there, and the premise at the real base V₀ = MU^B; 10.5's field bound rests on VAR (190), hence on (189), which Bałaban states without the calculation (VAR p.308 l.28–30). σ has no Landau parts, since RG II (1.4) uses the action itself (VAR p.297).
-{#WOG.9-17} So (W-δ) is derived, not reviewed in this form: (Wδ-1)–(Wδ-3) give, by §8, the exponent γ_w = min(β, (1 − ε₀)/3), with β < 1 the Hölder exponent of (Wδ-1), for the propagators built from G_a (H₀), the exponent γ_H := βγ_w/(1 + β) for those that contain Δ′_π or H (H, G̃, and 𝔊; §11, *The form (c) for VAR's H.*), and γ_H − 2β′, any β′ > 0, for the fixed points of 𝐇_k(s).
-{#WOG.9-18} §12 reduces the LF note's piece (β), the functions 𝐇″_k, 𝐇_{𝐁₁}, and 𝐇_k of LFR II (1.61)–(1.64) and their gauge transformations, to (W-δ) at three aligned problems on the layers at shared scales ≥ 1, with VAR's Sects.
-{#WOG.9-19} D–E form (111) and its current for 𝐇″_k and 𝐇_{𝐁₁} (§11) and a scale-0 gauge factor of size (ε/a_j); this is derived, not reviewed, and rests on Bałaban's regularity of U_{1,2} near the cut (LFR II p.370 l.35–38);
-{#WOG.9-20} at complex configurations the X_s representation's analyticity domain is derived, not reviewed, from Bałaban's proof of LFR I Proposition 1 run at complex data (LFR II pp.358–359), under the conditions on the constants collected in §8 (*The conditions on the constants.*) and the choice q₁ = q₀, C₁ = λ_RC₀, with run B's complex background the one-step lift continued by VAR's Proposition 9, read only through its gauge orbit, and its curvature bounded through the one-step identity H₁QA = A − G₁KA + H₁QG₁KA for PBG's constrained H₁ (PBG (3.128)–(3.129)) on the smooth data ε𝐇_c;
-{#WOG.9-21} the nonlinear part of the X_s change is bounded on the s-polydisc through §11's contraction and PBG's Hölder bounds of 𝐆 in all three entries (derived, not reviewed).
-{#WOG.9-22} In §12 the collar of 𝐁₁ is derived, not reviewed.
-{#WOG.9-23} Its layers at run A's scales n ≥ 2 are aligned, and on the remaining strip of the width 2M₁a_2, where the alignment and the young-history factor fail, each run's walks with a cube or a point on the strip are bounded separately in a representation of U₁ with the gain (a_n/a_h), and the walks that reach the strip only through an enlargement are aligned, since PBG's local operators are built on each cube's own sequence {Ω_m(□)}, except those whose intersected Ω₀(□) meets the strip or ∂Ω, which are compared through the boundary source with the per-point bound (*The enlargement-only walks.*); ∂Λ does not meet that strip.
-{#WOG.9-24} At the reflex edges of Ω and where a cube's Ω₀(□) meets ∂Ω, the local problems are posed on the intersection of PBG's sequence with the collar's domains, the crossing count is replaced by the decay in the collar's weighted distance, the comparison is made without (S) through a boundary source of the ϖ = 1 kind, and the run difference is bounded per point and, for the operators of the form (c) for H, in a norm localised in the collar's weighted distance; this closes (Wδ-4) (derived, not reviewed; §12, *The collar at ∂Ω and at the reflex edges.*).
-{#WOG.9-25} The collar's entry into 𝐇″_k through the source of LFR II (1.55) is compared at the pair, and the finest-scale strips of the boundary-layer sets 𝐁(Y_i) (CRE p.257 l.22–26) are bounded run by run (both derived, not reviewed), at the reflex edges and at the boundary as well, by the same paragraph.
-{#WOG.9-26} The width of 𝐁″_k's middle layers, which PBG Corollary 3.6 needs, is derived, not reviewed: at least 3LMR_{j+1} in their own units (the LF note's *The middle layers.*, from CRE (3.5)).
-{#WOG.9-27} Step 2 of the suggested route, the resolvent identity with a kernel bound on δ𝒪, fails as stated (§4(c)).
-
-## 1. The Factors R_α(X) (Quoted and Checked) {#WS1}
+## 1. The Factors R_α(X) {#WS1}
 
 {#W1.1} (a) *The propagators of RG II.* By "the results of Sect. G [15]", 𝐇_k(B′) = H₀B′ + 𝐀₀ − HD(H₀B′ + 𝐀₀) (RG II (1.2), p.2 l.25–30), with D(A′) = C(A′ − HD(A′)) (1.3) and 𝐀₀ + G̃(δV/δA′)(H₀B′ + 𝐀₀) = 0 (1.4), V of VAR (80) (p.2 l.41–43).
 {#W1.1-1} These are VAR (179)–(180) (VAR p.306 l.28–41), with H the lift of VAR (45)–(46) (p.285 l.19–29): HB minimises ½⟨A, ΔA⟩ under L^jηQ_jA = B on Λ_j and RD*A = 0, so H maps data on 𝔅_k to fields on the fine lattice.
@@ -135,11 +40,12 @@
 {#W1.9} PBG states the factor bounds only up to the power of the scale: "satisfies a bound of the type (3.89), possibly with an additional power of L^jη" (p.413 l.10–11), and then bounds whole terms instead (p.413 l.11).
 {#W1.9-1} So (1.7) is a bound of whole walk terms, not of factors.
 
-## 2. What the Two Runs Share (Derived) {#WS2}
+## 2. What the Two Runs Share {#WS2}
 
-- {#W2.1} *Shared.* The data of every layer of the R-operation's sets lie at shared scales j ≥ k/2 − 1 ≥ 1 (LF note §4(d), *The lifts and the chain rule.*).
+- {#W2.1} *Shared.* The data of every layer of the 𝐑-operation's sets lie at shared scales j ≥ k/2 − 1 ≥ 1 (LF note §4(d), *The lifts and the chain rule.*).
   {#W2.1-1} The big blocks of 𝒟_j are cells of ML^jηℤ^d, and ML^jε = ML^{j+1}(ε/L), so the partitions 𝒟, the cubes □, □̃ⁿ, the functions h_□ and ζ_{□̃} as functions of the point of space, the localisation domains X, the walks ω, the cubes σ₀ of RG II, and the s-weights are the same in both runs.
-  {#W2.1-2} The partition functions are defined at the end of PRT2 Sect. A as functions on the lattice; that they are restrictions of one function of the continuum to the two lattices is not checked here.
+  {#W2.1-2} PBG takes "the partition of unity {h_□} defined at the end of Sect. A in [4]" (PBG p.408 l.22–23). PRT2 builds it from "the corresponding family of functions h described in (1.118)", rescaled to the cubes' scales (PRT2 p.229 l.12), and (1.118) is h_z(x) = Π_μh((x_μ − z_μ)/M₀) with one fixed h ∈ C₀^∞(]−⅔, ⅔[) (PRT1 p.36 l.43–53). With the normalisation of #W7.16-11, which gives Σh_□² = 1 where layers meet, each h_□ is a function on ℝ^d determined by h and the cubes.
+  {#W2.1-2-1} ζ_{□̃} ∈ C₀^∞(□̃) is "defined similarly to h_□", equal to 1 on a cube containing □ (PBG p.414 l.46–47), and both runs take the same function on ℝ^d (#W7.22-1). So, the cubes being shared, each of these functions is the restriction of one function on ℝ^d to T_ε in run A and to T_{ε/L} in run B.
 - {#W2.2} *Not shared.* The factors act on, or take values in, fields and sources on each run's own fine lattice, T_ε ∩ Ω₀^A(□) or T_{ε/L} ∩ Ω₀^B(□): G̃ and every factor K(h)G_□h act between fine sources and fine fields, and H and H₀ map data to fine fields (§1(a), (d)).
 - {#W2.3} *The two local sequences.* For □ at the shared scale j, run A's sequence is {Ω_n^A(□)}_{n=0,…,j+1} with η = ε, and run B's is {Ω_{n′}^B(□)}_{n′=0,…,j+2} with η = ε/L.
   {#W2.3-1} By PBG p.408 l.32, dist(Ω_n^c, □̃⁴) = 2R₀M₀L^nη(L^{j−n} − 1)/(L − 1).
@@ -147,12 +53,10 @@
   {#W2.3-3} So Ω_{n+1}^B(□) = Ω_n^A(□) for n = 0, …, j + 1, the shells of the two runs at a common spacing L^nε coincide, and run B has one extra outer shell Ω₀^B ∖ Ω₁^B of width 2R₀M₀ε/L at the spacing ε/L, where run A's operators have their Dirichlet exterior.
   {#W2.3-4} On run A's shell 0 the two runs' spacings agree only after one averaging step: run A's field lives there on T_ε itself, and run B's field on T_{ε/L} is averaged once.
 
-## 3. (W-δ) as Printed, and the Form the Consumer Needs (Derived) {#WS3}
+## 3. The Forms of (W-δ) {#WS3}
 
-{#W3.1} (a) *The per-factor form.* A per-factor form of (W-δ) would ask that the two runs' factors R_α(X_i) differ by at most δ_w(X_i) times their bound in (1.7).
-{#W3.1-1} By §2 the two runs' factors act between different spaces, except those from data to data (the factors h_□C_□h_□ of (3.98)), so their difference is not defined.
-{#W3.1-2} By §1(d), (1.7) bounds whole walk terms, and PBG states no precise bound per factor.
-{#W3.1-3} So the LF note states (W-δ) per walk term (its (iii), l.650), and its statement there that the cubes, the localisation domains, and the factors s(Δ₁)⋯s(Δ_m) are the same in both runs holds (§2); the fluctuation variable B on the data space is shared, but the fields in which the walk terms of H, H₀, and G̃ take values are not.
+{#W3.1} (a) *Per walk term.* (W-δ) is stated per walk term (the LF note's (iii), #4.432 and #4.439): (1.7) bounds whole walk terms, PBG stating no bound per factor (#W1.9–#W1.9-1), and the two runs' factors act between different spaces (§2), except the factors h_□C_□h_□ of (3.98), which act from data to data.
+{#W3.1-3} The cubes, the localisation domains, and the factors s(Δ₁)⋯s(Δ_m) are the same in both runs (§2), and so is the fluctuation variable B on the data space; the fields in which the walk terms of H, H₀, and G̃ take values are not.
 
 {#W3.2} (b) *The averaged form.* Let W^X_ω denote the term of the walk ω in run X's expansion of H, H₀, or G̃, at run X's background.
 {#W3.2-1} Let Q₁ := Q̄₁(U^B) be the linear part of the one-step double bar at run B's background, as in the Cauchy note's §10.4, and ℒ a right inverse of Q₁.
@@ -165,12 +69,12 @@
   {#W3.4-2} For the composite walks of §11, H₀ among them (§7), the walk factors O(M^{−1/2})^{|ω|}M^{−½|ω|}e^{−(δ₀/6)d(ω,y,y′)} are replaced by weights summable over the walks with the constant B_T and the decay e^{−δ_min d_T(ω,y,y′)} (§11, *The junction sums.*).
   {#W3.4-3} By the Cauchy note's §10.4, Q₁ maps run B's constraint set {Q^B𝒜 = B} into run A's, so (b) is the comparison through the chain rule.
 
-{#W3.5} (c) *The fine form.* With ℒ_ι := dι_Y(Ũ), the data derivative of the localised lift ι_Y of V(Y) (LF note (i); the Cauchy note's *The lift.* before its §1, §9.7, and §9.8) at the aligned background, the fine form is, per walk term,
+{#W3.5} (c) *The fine form.* Let ι_Y be the localised lift of V(Y) (LF note (i); the Cauchy note's *The lift.* before its §1, §9.7, and §9.8). Its data derivative at the aligned background Ũ is dι_Y = H₁𝔡 + D_Bγ (#W10.5.7–#W10.5.9), and a gauge transformation of the pair lift, under which the terms are invariant, removes the gauge term D_Bγ (#W10.5.100–#W10.5.101). With ℒ_ι := H₁𝔡 at Ũ, the Landau part of dι_Y, the fine form is, per walk term,
 
   {#W3.6} |(W^B_ω − ℒ_ιW^A_ω𝒥′)λ(x)| ≤ δ_w(ω) times the bound of (b) in run B's norms,
 
   {#W3.7} with 𝒥′ the identity on data and 𝒥′ = ℒ_ι* on sources, the adjoint of the lift for the two runs' pairings, which maps run B's sources to run A's.
-  {#W3.7-1} Since Q₁ℒ_ι = id, applying Q₁ to (c) gives (b) with ℒ = ℒ_ι in its source map 𝒥 = ℒ*, and δ_w multiplied by the norm of Q₁.
+  {#W3.7-1} Since Q₁ℒ_ι = id on the data of Λ₁ (#W10.5.34), applying Q₁ to (c) gives (b) with ℒ = ℒ_ι in its source map 𝒥 = ℒ*, and δ_w multiplied by the norm of Q₁.
 
 {#W3.8} (d) *Which form the consumer needs.* The consumer is Σ_YV(Y), whose terms are numbers.
 {#W3.8-1} Each is built from a function 𝐄(□₀, 𝐔, 𝐀) of RG II (1.8), analytic in the fine field 𝐀 on the domain (I.3.31), at 𝐀^X(s) := (tζ̃_□ + t_□ζ_□)𝐇^X_k(s), which satisfies (I.3.31) with ½α₂ on the t_□ circle (RG II p.7 l.8–11).
@@ -183,13 +87,9 @@
   {#W3.10} The second bracket is a frozen difference of the kind of the LF note's (i), at a run-A argument, with the fine side carried by ι and ℒ_ι.
   {#W3.10-1} The first bracket is run B's function at two run-B fluctuation fields.
   {#W3.10-2} Cauchy's estimate in 𝐀 on (I.3.31) bounds it by a multiple of the size of 𝐀^B(s) − ℒ_ι𝐀^A(s) relative to ½α₂, which is the form (c) together with (Wδ-3).
-  {#W3.10-3} The form (b) controls only Q₁𝐀^B(s) − 𝐀^A(s): it leaves the part of 𝐀^B(s) − ℒ_ι𝐀^A(s) in ker Q₁ uncontrolled.
-  {#W3.10-4} At s = 1 that part is controlled by the chain's alignment, since the decoupled field there is the minimiser's and ι(MU^B) = U^B.
-  {#W3.10-5} At complex s the decoupled field is not a minimiser's (LF note #4.146).
-  {#W3.10-6} So (b) is well posed but does not suffice, and the consumer needs (c).
-  {#W3.10-7} This is (Wδ-2).
+  {#W3.10-3} The part of 𝐀^B(s) − ℒ_ι𝐀^A(s) in ker Q₁ is invisible to (b). At s = 1 the chain's alignment controls it, since the decoupled field there is the minimiser's and ι(MU^B) = U^B; at complex s the decoupled field is not a minimiser's (LF note #4.146). So the consumer uses (c); this is (Wδ-2).
 
-## 4. The Intertwined Galerkin Identities (Derived, Given (S)) {#WS4}
+## 4. The Intertwined Galerkin Identities {#WS4}
 
 {#W4.1} Fix □ at the shared scale j and one of the local operators of §1(c): 𝒪^X := Ω₀Δ_aΩ₀ (for G_□) or Ω₀Δ′_aΩ₀ (for G′_□), on the space 𝔉^X of fields on the bonds (or sites) of T^X ∩ Ω₀^X(□), with run B's background U^B and run A's aligned background Ũ := MU^B.
 {#W4.1-1} The pairings ⟨·,·⟩_X carry the weights η_X^d of PBG p.393 l.46 and are bilinear, so 𝒪^X is symmetric on the complex domain (3.37) as the analytic extension of a symmetric form.
@@ -222,24 +122,30 @@
   {#W4.10} With ℒ = ℒ_ι this is the identity of the form (c).
   {#W4.10-1} The Cauchy note's representation E = G₁^Qℒ*β(·, 𝒜^B) of §10.4 is the analogue of (a) for the data lift H₁ on the whole lattice.
 
-{#W4.11} (c) *Why the kernel route fails.* Step 2 of the suggested route asks for a kernel bound on δ𝒪, for instance Q₁*𝒪^AQ₁ − 𝒪^B on 𝔉^B.
-{#W4.11-1} For a field 𝒜 that alternates at the spacing ε/L inside one block, with Q₁𝒜 = 0, ⟨𝒜, (Q₁*𝒪^AQ₁ − 𝒪^B)𝒜⟩_B = −⟨𝒜, 𝒪^B𝒜⟩_B, which is of order (ε/L)^{−2}‖𝒜‖².
-{#W4.11-2} So the difference of the two runs' operators has no kernel bound with a small factor.
-{#W4.11-3} It is small only as a bilinear form between fields regular at the scale of their shell, through the oscillation, and the identities of (a) and (b) use it only there: β_□ is paired with G^Bg or ℒG^Af, which are C^{1,β} by (3.43) for G^B, and for ℒG^Af by (3.43) for G^A together with the regularity of the lift ((H_ℒ) of 10.1 on the coarse side; for ℒ_ι, part of (Wδ-2)).
+{#W4.11} (c) *Where the defect is small.* For a field 𝒜 that alternates at the spacing ε/L inside one block, with Q₁𝒜 = 0, β_□(𝒜, 𝒜) = −⟨𝒜, 𝒪^B𝒜⟩_B, which is of order (ε/L)^{−2}‖𝒜‖².
+{#W4.11-3} So β_□ is small only as a bilinear form between fields regular at the scale of their shell, through the oscillation, and the identities of (a) and (b) use it only there: β_□ is paired with G^Bg or ℒG^Af, which are C^{1,β} by (3.43) for G^B, and for ℒG^Af by (3.43) for G^A together with the regularity of the lift ((H_ℒ) of 10.1 on the coarse side; for ℒ_ι, part of (Wδ-2)).
 {#W4.11-4} The functional form (Wδ-1) is what turns this into kernel bounds (§5(c)).
 
 {#W4.12} (d) *The condition (S).* For the scalar operators (G′_□), (S) holds with the transported block-constant lift ℒ′f(x) := R(U^B(Γ_{y,x}))^{−1}f(y) for x ∈ B(y): by (3.19), Q′(U^B)ℒ′f(y) = Σ_{x∈B(y)}L^{−d}f(y) = f(y), so ℒ′ is an exact right inverse of finite range one block.
 {#W4.12-1} Ω₀^A(□) is a union of blocks B(y) of T_ε, y ∈ Ω₀^A, and the margin 2R₀M₀ε/L of §2 exceeds one block of T_ε when 2R₀M₀ ≥ L, so ℒ′ maps 𝔉^A into 𝔉^B. ℒ′ is also an isometry, ⟨ℒ′f, ℒ′f′⟩_B = ⟨f, f′⟩_A, since the bilinear trace form is invariant under Ad of the complexified group, so the Gram defect of the lift in Q′G′²Q′* vanishes for this ℒ′.
 {#W4.12-2} For one-forms, Q₁ = Q̄₁(U^B) is the main term of CMP 98 (124), the straight-path average of the tube, plus terms that vanish at U = 1 but not at a regular U^B.
 {#W4.12-3} The tube-constant lift inverts the main term exactly, but its right inverse for Q̄₁(U^B) obtained by a Neumann series has exponentially decaying tails, as do the Cauchy note's ℒ and dι.
-{#W4.12-4} A right inverse of Q̄₁(U^B) of finite range is not needed: the cut-off χ_Bℒ of any right inverse satisfies (S) under R₀M₀ ≥ L (10.1).
+{#W4.12-4} The cut-off χ_Bℒ of any right inverse satisfies (S) under R₀M₀ ≥ L (10.1).
 
 ## 5. The Shells of the Local Problems {#WS5}
 
 {#W5.1} Shells are indexed by run A's n: run A's shell n and run B's shell n + 1 coincide (§2), and run B's extra shell is indexed n = −1.
 {#W5.1-1} For a block y of the shell n, ‖𝒜‖_{1,β;y} := sup((L^nη)^{−1}|𝒜| + |∇𝒜|) + (L^nη)^β‖∇𝒜‖_β, taken over the blocks within weighted distance 2 of y, with the Hölder quotient of PBG (3.40); this is the norm of (Wδ-1).
 
-{#W5.2} (a) *The averaging terms (derived).* The a-terms are where the chain rule acts.
+{#WOG.1} **(Wδ-1) The per-shell defect of the local operators.** The local propagators G′_□, C_□, and G_□ of PBG (3.87) are inverses of operators on each run's own fine lattice, on a nested sequence of shells that reaches the scale 0 inside X̃⁵ (§1(c)).
+{#WOG.1-1} (Wδ-1) is the functional form of their bilinear defect, shell by shell: there is a constant C_df(β), independent of the shell n, the scale k, the volume, the block y, and 𝒜 (at the instances of §10 it is C′_L(β) + 8d + a of #W10.2.28–#W10.2.29 and C_{[h,O]}(β) and C_{[h,DR_□D*]}(β) of #W10.4.62), such that for each 𝒜 in run B's local field space there are fields s₀, s₁, and s₂ on T_{ε/L} ∩ Ω₀^B(□) with
+
+  {#WOG.2} β_□(ℱ, 𝒜) = ⟨D_B*ℱ, s₂⟩ + ⟨∇ℱ, s₁⟩ + ⟨ℱ, s₀⟩ for every ℱ, and on each block y of the shell n, sup_{Δ(y)}(|s₁| + |s₂| + L^nη|s₀|) ≤ C_df(β)ϖ_n‖𝒜‖_{1,β;y} (for the gauge-fixing part of G_□, with the decay-weighted norm ⟨𝒜⟩_y of 10.4 in place of ‖𝒜‖_{1,β;y}),
+
+  {#WOG.3} with ϖ_n := L^{−βn} on the shells n ≥ 1 of run A's local sequence, ϖ := 1 on run A's shell 0 and on run B's extra shell, and the same with the two slots exchanged, at aligned backgrounds and on the analyticity domain (3.37) (§4).
+  {#WOG.3-1} For the gradient entries of (3.42)–(3.44) the sources s₁ and s₂ need in addition a Hölder bound at the scale of their shell.
+
+{#W5.2} (a) *The averaging terms.* The a-terms are where the chain rule acts.
 - {#W5.3} Q*aQ of (3.16) carries the plain a and the weight (L^nη)^{d−2} on the bonds of Λ_n.
   {#W5.3-1} Run B's layer Λ^B_{n+1} is run A's Λ^A_n, with the weight (L^{n+1}ε/L)^{d−2} = (L^nε)^{d−2}, and Q^B_{n+1}(U^B) = Q^A_n(Ũ)Q₁ by (B4), exactly (the Cauchy note's §10.4), with Q^A₀ the identity on run A's shell 0 (the 0-fold composition of (3.15)).
   {#W5.3-2} For n ≥ 1, Q^A_n averages inside Ω^A₁(□), and for n = 0 the factor χ_A is 1 on Λ^A₀, so χ_A changes nothing.
@@ -252,13 +158,13 @@
   {#W5.4-5} They agree at n = 0, and for n ≥ 1, 1/a_{n+1} − 1/a_n = L^{−2n}/a, so |a_{n+1} − a_n|/a_n ≤ L^{−2n}/(1 − L^{−2}).
   {#W5.4-6} So the scalar a-part has the form of (Wδ-1) with ϖ_n replaced by L^{−2n}/(1 − L^{−2}) ≤ 2L^{−βn} for β ≤ 2, plus the extra-shell term as above.
 
-{#W5.5} (b) *The other terms ((Wδ-1), derived in §10, not reviewed).* The chain rule does not act on D*D (Δ_U for scalars), on the curvature term Δ′ of (3.10), or on DRD* = DD* − DPD* (p.414 l.3).
-{#W5.5-1} On run A's shells n ≥ 1 their defect is the oscillation of the Cauchy note's §10.4 at the ratio ε/(L^nε) = L^{−n}, which the Cauchy note derives for the global single-scale G₁ at H₁ fields and not for the local multiscale operators.
+{#W5.5} (b) *The other terms.* The chain rule does not act on D*D (Δ_U for scalars), on the curvature term Δ′ of (3.10), or on DRD* = DD* − DPD* (p.414 l.3).
+{#W5.5-1} On run A's shells n ≥ 1 their defect is the oscillation of the Cauchy note's §10.4 at the ratio ε/(L^nε) = L^{−n}, which 10.2 and 10.4 derive for the local multiscale operators.
 {#W5.5-2} DPD* is nonlocal through P = G′Q′*(Q′G′²Q′*)^{−1}Q′G′, so its defect needs the scalar comparisons first, then P, then G. On run A's shell 0 and on run B's extra shell nothing relates the two runs' operators: there run A's D*D on T_ε meets run B's averaged once, and run B's extra shell meets run A's Dirichlet exterior.
 {#W5.5-3} So, shell by shell, the chain rule reduces the averaging terms of every shell, the scale-0 shell included, to the shared lattice, and it does not reduce the Laplacian, curvature, and gauge-fixing parts of the scale-0 shells.
 {#W5.5-4} (c) shows that these parts need no reduction: with ϖ = 1 there, the decay through the shells makes their contribution of relative order L^{−j} = ε/a_j.
 
-{#W5.6} (c) *The reduction (derived, given (Wδ-1) and (S)).* Let ℒ satisfy (S) with range one block of T_ε and with Σ_{z∈Δ(y)}η_B^d(|∇_Bℒv(z)| + (L^nη)^{−1}|ℒv(z)|) ≤ C_ℒΣ_{y‴}Σ_{w∈Δ(y‴)}η_A^d(|∇_Av(w)| + (L^nη)^{−1}|v(w)|), the sum over the 3^d blocks y‴ next to y.
+{#W5.6} (c) *The reduction.* Let ℒ satisfy (S) with range one block of T_ε and with Σ_{z∈Δ(y)}η_B^d(|∇_Bℒv(z)| + (L^nη)^{−1}|ℒv(z)|) ≤ C_ℒΣ_{y‴}Σ_{w∈Δ(y‴)}η_A^d(|∇_Av(w)| + (L^nη)^{−1}|v(w)|), the sum over the 3^d blocks y‴ next to y.
 {#W5.6-1} Let y, y′ be blocks of □ (layers j and j + 1 of the local sequence), x ∈ Δ(y), and supp g ⊂ Δ(y′).
 {#W5.6-2} The conditions on PBG's R₀ and M₀ are
 
@@ -270,14 +176,14 @@
 
   {#W5.9} |(χ_AQ₁G^B_□ − G^A_□χ_Aℒ*)g(x)| ≤ C_□(β)(ε/a_j)^β(L^jη)²e^{−(δ₀/3)d(y,y′)}|g|,
 
-  {#W5.10} C_□(β) := 6c₀^d(1/6)c_βC₃, C₃ := 9·3^de^{4δ₀}(1 + L)C_ℒC_L(β)B₀B₀(β), and c_β := L^{1+β}(3 + L^β + L^{1+β}/(L − 1)), where the factor L^{1+β} covers the intersected sequences of §7 (*The shell sums of §5(c).*) and is kept for every cube.
+  {#W5.10} C_□(β) := 6c₀^d(1/6)c_βC₃, C₃ := 9·3^de^{4δ₀}(1 + L)C_ℒC_df(β)B₀B₀(β), with C_df(β) of (Wδ-1) (#WOG.1-1), and c_β := L^{1+β}(3 + L^β + L^{1+β}/(L − 1)), where the factor L^{1+β} covers the intersected sequences of §7 (*The shell sums of §5(c).*) and is kept for every cube.
 
   {#W5.11} Proof.
   {#W5.11-1} By §4(a) the left side is |(G^Aχ_Aℒ*(D_Bs₂ + ∇_B*s₁ + s₀))(x)|, with the sources of (Wδ-1) for 𝒜 = u_B := G^B_□g, split over the blocks y″ of the shells.
   - {#W5.12} Leg 2.
     {#W5.12-1} For y″ in the shell n, (3.42) and (3.43) for G^B_□ (Corollary 3.6), with the factor of the receiving layer, give ‖u_B‖_{1,β;y″} ≤ 3e^{2δ₀}B₀(β)(L^nη)e^{−δ₀d(y″,y′)}|g|.
     {#W5.12-2} The factor e^{2δ₀} covers the blocks within distance 2, and B₀ ≤ B₀(β).
-    {#W5.12-3} So by (Wδ-1), sup_{Δ(y″)}(|s₁| + |s₂| + L^nη|s₀|) ≤ 3e^{2δ₀}C_L(β)ϖ_nB₀(β)(L^nη)e^{−δ₀d(y″,y′)}|g|.
+    {#W5.12-3} So by (Wδ-1), sup_{Δ(y″)}(|s₁| + |s₂| + L^nη|s₀|) ≤ 3e^{2δ₀}C_df(β)ϖ_nB₀(β)(L^nη)e^{−δ₀d(y″,y′)}|g|.
   - {#W5.13} Leg 1.
     {#W5.13-1} For a source σ on Δ(y″), (G^Aχ_Aℒ*∇_B*σ)(x) = ⟨∇_Bℒ[G^A(·, x)], σ⟩_B by the symmetry of G^A, so it is ≤ sup|σ| times the block sum of ∇_BℒG^A(·, x).
     {#W5.13-2} By the bound on ℒ and (3.42) for G^A (the entries G∇* and G, the block sum of a kernel row being the operator bound on sources bounded on the block), this is ≤ sup|σ|·3^de^{2δ₀}C_ℒB₀[(L^jη) + (L^jη)²(L^nη)^{−1}]e^{−δ₀d(y,y″)}.
@@ -296,19 +202,19 @@
     {#W5.15-3} The shell 0 (ϖ = 1) gives L^{−(1+β)(j−1)} ≤ L^βL^{−βj}, and run B's extra shell (ϖ = 1, distance ≥ 2R₀M₀j, with d(y, y″) for y″ in the extra shell measured to the nearest block of run A's shell 0) gives ≤ L^{−βj}.
     {#W5.15-4} So Σ_nϖ_nL^{−(1+β)(j−n−1)₊} ≤ c_βL^{−βj}, and L^{−j} = ε/a_j in run A's units.
 
-  {#W5.16} The fine side (§4(b)) is the same computation with the roles exchanged, with ℒ_ιG^Af in leg 2, which needs the C^{1,β} bound of dι_Y (Wδ-2).
+  {#W5.16} The fine side (§4(b)) is the same computation with the roles exchanged, with ℒ_ιG^Af in leg 2, which needs the C^{1,β} bound of ℒ_ι (Wδ-2).
   {#W5.16-1} The gradient entries of (3.42)–(3.44) at x need ∇G^A∇* in leg 1, which (3.44) bounds only through a Hölder norm of the source, so they need the Hölder bound of s₁ and s₂ that (Wδ-1) includes.
   {#W5.16-2} C_□ is not covered by this computation: the two runs' data spaces differ by run B's extra data layer, and its bound is of the form (3.48), not (3.42). 10.3 gives the exact identity and the reduction.
   {#W5.16-3} The bound above, with the rate δ₀/3, holds for an ℒ of range one block, which covers the scalar G′_□ with ℒ′.
   {#W5.16-4} For the one-form G_□, the lift has exponential tails, and 10.1 gives the same bound with C_ℒ′ and the rate δ₀′/3.
 
-{#W5.17} (d) *The multiscale domains (derived).* A cube □ of a walk in X lies in a global layer j ≥ m(X) of the R-operation's set or at its interface with j + 1, so (ε/a_j)^β ≤ (ε/a_{m(X)})^β, and the coarser layers contribute less, as step 4 of the suggested route asks.
+{#W5.17} (d) *The multiscale domains.* A cube □ of a walk in X lies in a global layer j ≥ m(X) of the 𝐑-operation's set or at its interface with j + 1, so (ε/a_j)^β ≤ (ε/a_{m(X)})^β, and the coarser layers contribute less.
 {#W5.17-1} The shells at the scales n < j of the local sequence are PBG's construction inside □̃⁵, not layers of the global set; (c) shows that they cost only the factor c_β, so they do not move the bound to a finer scale.
 
-## 6. The Background Part (Derived) {#WS6}
+## 6. The Background Part {#WS6}
 
 {#W6.1} A walk term W^A_ω depends on the configuration on ∪_iX̃_i⁵ (Theorem 3.10, p.416 l.7–8).
-{#W6.1-1} By the LF note's (ii), *The Fine Side at the Multiscale Chain.*, *The coarse side.* (l.526), U^A = e^{iεA}Ũ with a_{j(x)}|A(x)| + a_{j(x)}²|∇A(x)| ≤ d̄(x) := C_U(M)(ε/a_{min(j(x),n)})^{(1−ε₀)/3}ε₁.
+{#W6.1-1} By the LF note's (ii), *The Fine Side at the Multiscale Chain.*, *The coarse side.* (#4.314), U^A = e^{iεA}Ũ with a_{j(x)}|A(x)| + a_{j(x)}²|∇A(x)| ≤ d̄(x) := C_U(M)(ε/a_{min(j(x),n)})^{(1−ε₀)/3}ε₁.
 {#W6.1-2} Put d̄(ω) := sup_{x∈∪X̃_i⁵}d̄(x) and U(t) := e^{itεA}Ũ.
 - {#W6.2} *The domain.* For |t| ≤ α₁/(2d̄(ω)), U(t) satisfies (3.37) layer by layer for the global layers (LF note §4(d), *The multipliers.*, #4.32).
   {#W6.2-1} For the local sequence of a cube, (3.37) asks |A| < α₁(L^nη)^{−1} on the shell n, which is weaker on the finer shells since L^nη ≤ a_{j(x)}.
@@ -317,21 +223,25 @@
   {#W6.3-2} PBG's proof of (3.108) uses only the constituent bounds (p.410 l.13–30), so W^A_ω(U(t)) is analytic for |t| < α₁/(2d̄(ω)), with the bound (3.108) there.
 - {#W6.4} *Cauchy's estimate.* With r := α₁/(2d̄(ω)) ≥ 2, |W^A_ω(U^A) − W^A_ω(Ũ)| ≤ sup_{|t|≤1}|∂_tW^A_ω(U(t))| ≤ sup_{|t|=r}|W^A_ω(U(t))|/(r − 1) ≤ (4d̄(ω)/α₁) times the bound (3.108), in each norm of (3.108).
 - {#W6.5} *The current.* The operators of PBG Sect. D (G₁ and H₁, and with them VAR's H) carry the current.
-  {#W6.5-1} For them the path is the LF note's pair path, with 𝐉(s) = J(U^A) − sδ𝐉 and a_m³|𝐉(s) − J(U^A)| ≤ c_J|s|d̄(x) (l.355), and the analyticity holds on the pair class 𝒟̄ (l.192).
+  {#W6.5-1} For them the path is the pair path (U(t), 𝐉(t)), 𝐉(t) := J′ + tδ𝐉, δ𝐉 := J(U^A) − J′, with J′ the intermediate current of the LF note at the multiscale chain of #W6.1-1, paired with Ũ (its #4.356, where δ𝐉 is δ𝐉_c), so the path runs from (Ũ, J′) at t = 0 to (U^A, J(U^A)) at t = 1.
+  {#W6.5-1-1} The currents obey a_{j(x)}³|δ𝐉(x)| ≤ x̂_Jd̄(x) and a_{j(x)}³|J′(x)| ≤ B̄′_Jε₁ (LF #4.357), and the analyticity holds on the pair class 𝒟̄ (LF #4.60).
   {#W6.5-2} The pair class bounds the current by α_Ja_{j(x)}^{−3} with α_J := Mα₀ (LF #4.60), so α_J is fixed with α₀.
-  {#W6.5-3} Under 2B̄_Jε₁ ≤ α_J the same estimate holds with α_*′ := min(α₁, α_J/c_J) in place of α₁.
+  {#W6.5-3} Put α_*′ := min(α₁, α_J/x̂_J) and take the pair (U(t), 𝐉(t)), with r := α_*′/(2d̄(ω)) ≥ 2 in place of the r of #W6.4.
+  {#W6.5-4} For |t| ≤ r, a_{j(x)}³|𝐉(t)(x)| ≤ a_{j(x)}³|J′(x)| + |t|a_{j(x)}³|δ𝐉(x)| ≤ B̄′_Jε₁ + rx̂_Jd̄(ω) ≤ B̄′_Jε₁ + ½α_J.
+  {#W6.5-5} So under 4B̄′_Jε₁ ≤ α_J the current is at most ¾α_Ja_{j(x)}^{−3}, the pair stays in 𝒟̄, and the estimate of #W6.4 holds with α_*′ in place of α₁.
 {#W6.6} The background part is therefore ≤ 4d̄(ω)/α_*′ ≤ 4C_U(M)ε₁(ε/a_{m(ω)})^{(1−ε₀)/3}/α_*′ times the bound of the walk term, with m(ω) the finest global layer that ∪X̃_i⁵ meets, under 4d̄(ω) ≤ α_*′.
-{#W6.6-1} If the consumer carries the change of background separately, as the LF note's (iii) does through r(Y), only the lattice part of §5 is needed.
+{#W6.6-1} The LF note's (iii) carries the change of background separately, through r(Y), and uses only the lattice part of §5.
 
-## 7. The Walk Term, the Telescoping, and (1.11) (Derived, Given (Wδ-1)–(Wδ-3)) {#WS7}
+## 7. The Walk Term, the Telescoping, and (1.11) {#WS7}
 
 - {#W7.1} *Constituents.* A walk term is a product of factors, and each factor is a product of at most N_c constituents.
   {#W7.1-1} N_c is an absolute number: "several" operators, at worst three attached to one (PBG p.412 l.3–6, l.34–35, p.415 l.28–30).
   {#W7.1-2} The constituents are the local propagators of §1(c), the multiplications by h_□, by the h′_□ of the partitions 𝒟′ and 𝒟″, by ζ_{□̃}, and by characteristic functions, the explicit local operators K′(h_□), K(h_□) (which contains S_j(∂h_□), PBG (3.103)–(3.104)), P_{□,1}(∂h_□), the scalar averaging commutators [h_□, Q′] of the third sum of (3.95), D, D*, Q′, and Q′*, the differences G′²_{□₀} − G′²_□ of (3.97), G′_{□₀} − G′_□, C_{□₀} − C_□, and h′_{□₀} − ζ_{□̃} (p.412 l.19–28, p.415 l.17–19), and the commutators [G′_{□₀}, h′²_{□₀}] (p.412 l.15–17), [ζ_{□̃}, C_□], and [ζ_{□̃}, G′_□] (p.415 l.23).
   {#W7.1-3} N_c counts the constituents after the expansions of these commutators below ([ζ_{□̃}, C_□] gives four products, each containing C_□ twice); it remains a fixed number.
-- {#W7.2} *Intertwining of the explicit constituents (derived; the multiplications' constant through 10.4's w_Q, not reviewed).* Q and Q′ intertwine exactly by (B4) and (3.19), and D by the covariance Q̄₁D_B = D_AQ′₁, PBG (3.114)–(3.115) at n = 1.
+- {#W7.2} *Intertwining of the explicit constituents.* Q and Q′ intertwine exactly by (B4) and (3.19), and D by the covariance Q̄₁D_B = D_AQ′₁, PBG (3.114)–(3.115) at n = 1.
   {#W7.2-1} For a multiplication by a function h of the point, Q₁(hf)(b) − h(b)(Q₁f)(b) is a sum over the fine bonds b′ of the tube of b of (h(b′) − h(b))f(b′) with the weights of Q₁.
-  {#W7.2-2} By the gradient bound |∂h| ≤ c_h(ML^jη)^{−1} (h_□ is a fixed C₀^∞ function rescaled to the cube, PRT1 (1.118); the h′_□ of 𝒟′ and 𝒟″ satisfy it with c_h* at their own layers, *The differences and the further commutators.* below), this is at most 3(2d + 1)c_hε/(ML^jη) = 3(2d + 1)c_h(ε/a_j)/M relative to the term (the total weight w_Q ≤ 3 of Q₁ times the ℓ¹ radius (2d + 1)ε of its kernel from the point where h is taken, as in 10.4).
+  {#W7.2-1-1} For □ ∈ 𝒟_j, |∂^kh_□| ≤ c_h(ML^jη)^{−k} for k ≤ 3, with c_h := L³c and c of #W7.16-11-3: in the bulk the cubes of 𝒟 that meet □ lie in the layers j − 1, j, and j + 1 (PRT2 (2.2), #W7.16-4), so j(h_□) ≥ j − 1.
+  {#W7.2-2} By the gradient bound |∂h| ≤ c_h(ML^jη)^{−1} (#W7.2-1-1; the h′_□ of 𝒟′ and 𝒟″ satisfy it with c_h* at their own layers, *The differences and the further commutators.* below), this is at most 3(2d + 1)c_hε/(ML^jη) = 3(2d + 1)c_h(ε/a_j)/M relative to the term (the total weight w_Q ≤ 3 of Q₁ times the ℓ¹ radius (2d + 1)ε of its kernel from the point where h is taken, as in 10.4).
   {#W7.2-3} The same holds for ℒ* with the factor C_ℒ when ℒ has range one block, and for ℒ̃* = ℒ_N*χ_B of 10.1 with the factor C_ℒ′m_Q, m_Q := 1 + sup_bΣ_cd_ε(b, c)e^{−¼δ_Qd_ε(b,c)}, a constant of d and δ_Q: the kernel difference is ℒ̃(b, c)(h(b) − h(c)) with |h(b) − h(c)| ≤ |∂h|εd_ε(b, c), and the tails are summed as in 10.1, *The cost in §5(c).* The characteristic functions among the constituents are those of □̃ and 1 − □̃ in (3.95) (p.411 l.8–9), which multiply data, the output of Q′, on which the two runs agree since Q′_B = Q′_AQ′₁; so they intertwine exactly.
   {#W7.2-4} The characteristic functions of the blocks Δ(y) of p.410 l.14 are not constituents: they are a partition of unity inserted to bound a term, so each run's bound inserts them on its own lattice, and they need no intertwining.
   {#W7.2-5} The scalar averaging commutator [h, Q′] maps scalar fine fields to data, and by Q′_AQ′₁ = Q′_B its intertwining defect is exactly [h, Q′_A]Q′₁ − [h, Q′_B] = −Q′_A[h, Q′₁], at most 4dεc_h(ML^jη)^{−1} times the sup of its argument (the factor 2 for Q′_A at complex backgrounds), against the bound c_KM^{−1} of [h, Q′_B] relative to Q′_B;
@@ -341,7 +251,6 @@
   {#W7.3-1} For G′_{□₀} − G′_□ and C_{□₀} − C_□ it says that they "are small by the same reason as before" (p.415 l.18–19).
   {#W7.3-2} The reason is that of (3.97): a difference of propagators defined on two domains carries, besides the usual factors, an exponential factor in the distance between the localisations and a closest point where the domains differ, proved in [2] from the random walk expansions and so valid for all of [4]'s propagators and for the cube sequences (p.412 l.23–27; restated at p.426 l.35–37, which names (3.97) as such a use).
   {#W7.3-3} Here the localisations lie in □̃ (the factors carry ζ_{□̃} and h_□), and the operators of □ and □₀ "may differ" only "outside □̃₀, and the distance from □̃ to □̃₀^c is at least M" (p.412 l.27–28), so the factor is again e^{−2δ₀M} ≤ (2δ₀M)^{−1}.
-  {#W7.3-4} PBG's general form, Theorem 3.14 ((3.154), p.427), is stated with Ω = Ω_k ∩ Ω′_k and an adjusted δ₀ and is not used here.
   {#W7.3-5} The two runs' differences are taken on the same cubes □ and □₀, which are scale-k objects (§2).
   {#W7.3-6} The defect of a difference is the difference of the two propagators' defects.
   {#W7.3-7} For G′ and C each is at most C_□(β)(ε/a_j)^β times the usual factors (§5(c), 10.1, 10.3, at the rate δ₀′/3 or δ₀/27), for the propagators of □₀ and of 𝒟″'s cube □̃₀² as well.
@@ -351,7 +260,7 @@
     {#W7.4-1} This is a valid choice for the expansion (3.90) on 𝒟′, which needs of the operator of □₀ only that its sequence agree with PBG's global sequence on a neighbourhood of supp h′_{□₀}, through the local identity (3.88). supp h′_{□₀} = supp φ lies within the sup distance (17/6)ML^jη of □, so in □̃³ at the sup distance ≥ (1/6)ML^jη from its boundary (*G′² is a composition* below, the construction of the partitions).
     {#W7.4-2} On □̃³ □'s sequence agrees with the global one (*The cubes next to the finer layer.*), and the stencils of the averagings at points of supp h′_{□₀}, of side ≤ L^{j+1}η ≤ (1/6)ML^jη under M ≥ 6L, stay in □̃³.
     {#W7.4-3} Corollary 3.6 and (2.1)–(2.2) hold for this sequence (*The cubes next to the finer layer.*).
-  - {#W7.5} *The cubes next to the finer layer (derived, not reviewed).* PBG's dichotomy at p.408 l.29–30, that □̃³ either lies in B^j(Λ_j) or also meets B^{j+1}(Λ_{j+1}), omits a third case.
+  - {#W7.5} *The cubes next to the finer layer.* PBG's dichotomy at p.408 l.29–30, that □̃³ either lies in B^j(Λ_j) or also meets B^{j+1}(Λ_{j+1}), omits a third case.
     {#W7.5-1} For j ≥ 1, a cube □ ∈ 𝒟_j within three big blocks of Ω_j^c has □̃³ meeting Ω_j^c, so the layer j − 1: the cubes of 𝒟_j need only one big block in B^j(Λ_j) (p.408 l.20–21), and □̃³ extends □ by 3ML^jη.
     {#W7.5-2} There PBG's sequence, with Ω_j(□) = □̃⁴ at the scale j, does not agree with the global one on □̃³, and p.409 l.2's statement that □̃⁵ lies in a cube of the class of (3.35) fails, since the class cubes lie in B^{j′}(Λ_{j′}) ∪ B^{j′+1}(Λ_{j′+1}) (p.396 l.14–16).
     {#W7.5-3} For the cubes of this case the sequence is intersected with the global domains, a choice made in both runs: Ω′_n(□) := Ω_n(□) ∩ Ω_n for n ≤ j, and Ω′_{j+1}(□) := ∅.
@@ -397,7 +306,8 @@
     {#W7.12-5} So Q̃^n = □̃₁^{n+2} for □₀, and Q̃^n = □̃₀^{n+2} for □″ when j_Q is □₀'s scale, as on p.408 l.23–24. j ≤ j_Q ≤ j + 1: a cube of 𝒟_{j+2} has a big block in Ω_{j+2} and the side 2ML^{j+2}η, while □̃₁ and □̃₀, which the removed cubes meet, lie within the ℓ¹ distance (8 + 2/L)dML^{j+1}η of □'s big block in B^j(Λ_j), outside Ω_{j+1}, and dist(Ω_{j+1}^c, Ω_{j+2}) > RML^{j+1}η ≥ (8d + 2d/L + 2dL)ML^{j+1}η under R ≥ 12dL and L ≥ 4 (PRT2 (2.2)).
     {#W7.12-6} Q's sequence is p.408's recipe at the layer j of □, centred at p_Q: Ω_{j+1}(Q) := Q̃³ ∩ B^{j+1}(Λ_{j+1}), Ω_j(Q) := Q̃⁴, and, for n < j, the cubes Ω_n(Q) centred at p_Q with dist(Ω_n(Q)^c, Ω_{n+1}(Q)) = 2R₀M₀L^nη, so that Ω₀(Q) ⊂ Q̃⁵ as on p.408 l.30–35.
     {#W7.12-7} This construction and the items below are for the cells in the bulk, those whose cubes □̃⁵ and Q̃⁵ lie in global layers that PRT2 (2.2) separates with R ≥ 12dL.
-    {#W7.12-8} On the collar of 𝐁₁, whose layers are only about L big blocks of their scale wide (§12, *The collar's layers.*), a cube of 𝒟_{j+2} can meet □̃₁, and the cells whose □̃⁵ or Q̃⁵ meets a collar layer are built on restricted sequences (§12, *The cells of 𝒟′ and 𝒟″ on the collar.*).    - Agreement.
+    {#W7.12-8} On the collar of 𝐁₁, whose layers are only about L big blocks of their scale wide (§12, *The collar's layers.*), a cube of 𝒟_{j+2} can meet □̃₁, and the cells whose □̃⁵ or Q̃⁵ meets a collar layer are built on restricted sequences (§12, *The cells of 𝒟′ and 𝒟″ on the collar.*).
+    - {#W7.12-9-0} Agreement.
     {#W7.12-9} Let Ω_n be the global domains.
     {#W7.12-10} If j_Q = j, then Q = □″ in the first case with Q̃ = □̃⁵, and Q's sequence agrees with the global one on Q̃ by the item *The cells.* of *The cubes next to the finer layer.* Otherwise j_Q = j + 1, and a cube of 𝒟_{j+1} (□₁, or one removed for □″) meets □̃₁ or □̃₀; Q̃ (□̃₁³ for □₀; □̃₁⁵, or □₀ extended by 3ML^{j+1}η, for □″) lies within the sup distance 8ML^{j+1}η, so within the ℓ¹ distance 8dML^{j+1}η, both of that cube's big block in B^{j+1}(Λ_{j+1}) ⊂ Ω_{j+1} and of □'s big block in B^j(Λ_j), which lies outside Ω_{j+1} (B^j(Λ_j) ∩ Ω_{j+1} = ∅ by PRT2 (2.3)).
     {#W7.12-11} Since dist(Ω_j^c, Ω_{j+1}) > RML^jη and dist(Ω_{j+1}^c, Ω_{j+2}) > RML^{j+1}η (PRT2 (2.2)), R ≥ 8dL gives Q̃ ⊂ Ω_j and Q̃ ∩ Ω_{j+2} = ∅.
@@ -440,9 +350,12 @@
     {#W7.16-8} The partitions of unity {h′_□} of 𝒟′ and 𝒟″ are "the corresponding partition of unity" (p.411 l.25–26) of these partitions, with h′_{□₀} = 1 on □̃ "by the construction of the partition 𝒟′" (p.412 l.12).
     {#W7.16-9} PBG does not write them out.
     {#W7.16-10} They are constructed here, a choice made in both runs.
-    {#W7.16-11} The partition of 𝒟 is PRT1's (1.118) function h, rescaled to each cube, with Σh_□² = 1 (PRT2 (2.36), p.229 l.12–15) and supp h_□ within (2/3)ML^{j′}η of the centre of □ ∈ 𝒟_{j′}.
+    {#W7.16-11} The partition of 𝒟 is built from PRT1's (1.118) function h, rescaled to each cube (PRT2 p.229 l.12), and normalised so that PRT2's (2.36) holds where layers meet. For □ ∈ 𝒟_{j′} with centre y put φ_□(x) := Π_μh((x_μ − y_μ)/(ML^{j′}η)) for x ∈ ℝ^d, N := (Σ_{□′∈𝒟}φ_{□′}²)^{1/2}, and h_□ := φ_□/N.
+    {#W7.16-11-1} N ≥ 1 on ℝ^d. The sets B^i(Λ_i) are unions of big blocks that partition T (p.408 l.19–22), so x lies in a closed big block b ⊂ B^i(Λ_i) of some scale i. The nonzero terms of Σ_zh_z(x)² = 1 of (1.118) at the scale i have |x_μ − z_μ| < (2/3)ML^iη for every μ, so z is a vertex of b; the cube of 2^d big blocks centred at a vertex of b contains b, so it lies in 𝒟_i (p.408 l.19–21). So the scale i alone gives N(x)² ≥ 1.
+    {#W7.16-11-2} Hence Σ_□h_□² = 1, 0 ≤ h_□ ≤ φ_□ ≤ 1 (h takes values in [0, 1], #W7.22-2), and supp h_□ = supp φ_□ lies within the sup distance (2/3)ML^{j′}η of y.
+    {#W7.16-11-3} At a point of supp φ_□, the cubes □′ with φ_{□′} ≠ 0 meet □, at most 2^d of them at each scale i, and |∂^kφ_{□′}²| ≤ c_k(ML^iη)^{−k}. The sum over the scales i ≥ j(h_□) gives |∂^kN²| ≤ 2^{d+1}c_k(Mℓ_{j(h_□)})^{−k}, and with N ≥ 1, |∂^kh_□| ≤ c(Mℓ_{j(h_□)})^{−k} for k ≤ 3, j(h_□) as in #W7.16-6 and c a constant of h and d.
+    {#W7.16-11-4} Each h_□ is a function on ℝ^d determined by h and the cubes of 𝒟.
     {#W7.16-12} If the cubes removed at p.411 l.23–25 are dropped and the others keep their h_□, then Σ_kept h_□² = 1 outside the union S of the supports of the removed h_□.
-    {#W7.16-13} The square root of the sum of the removed h_□² need not have derivative bounds where that sum vanishes, so it is not used.
     - {#W7.17} Let j₀ be the scale of □₀ (j in the first case, j + 1 in the second) and p the cube □ (first case) or □₁ (second case).
       {#W7.17-1} Let φ be a fixed profile with values in [0, 1], rescaled to the scale ML^{j₀}η, equal to 1 within the sup distance (8/3)ML^{j₀}η of p, supported within (17/6)ML^{j₀}η of p, with transitions of the width (1/6)ML^{j₀}η.
     - {#W7.18} φ = 1 on S and on □̃.
@@ -456,11 +369,11 @@
       {#W7.20-1} The removed supports lie within ML^{j₀}η + (5/3)ML^{j_Q}η ≤ (8/3)ML^{j_Q}η of □₀, and supp φ within (17/6)ML^{j_Q}η of □₀, inside Q̃ with the margin (1/6)ML^{j_Q}η.
     - {#W7.21} PBG uses the factors K(h′_□)G′_□h′_□ of these expansions with the bound (3.89) (p.411 l.28), whose factor O(M^{−1}) comes from these derivative bounds.
     {#W7.22} What the bounds use is that each h′_□ takes values in [0, 1] and satisfies these derivative bounds.
-    {#W7.22-1} PBG defines ζ_{□̃} "similarly to h_□" (p.414 l.46–48), with ζ = 1 on a cube whose boundary is at distance ≥ (2/3)M from ∂□ and supp ζ ⊂ □̃, which extends M beyond □ (p.408 l.23–24), so its transition band has width ≤ M/3 on the scale L^jη. ζ_{□̃} is chosen as a fixed profile with values in [0, 1], rescaled to □̃, with its transition band of width M/6.
+    {#W7.22-1} PBG defines ζ_{□̃} "similarly to h_□" (p.414 l.46–47), with ζ = 1 on a cube whose boundary is at distance ≥ (2/3)M from ∂□ and supp ζ ⊂ □̃, which extends M beyond □ (p.408 l.23–24), so its transition band has width ≤ M/3 on the scale L^jη. ζ_{□̃} is chosen as a fixed profile with values in [0, 1], rescaled to □̃, with its transition band of width M/6.
     {#W7.22-2} PRT1's h is taken with values in [0, 1].
     {#W7.22-3} This is a choice within (1.118): h(t) := cos(½πψ(|t|)) for 1/3 ≤ |t| ≤ 2/3, h := 1 for |t| ≤ 1/3 and 0 for |t| ≥ 2/3, with ψ smooth on [1/3, 2/3] with values in [0, 1], 0 near 1/3, 1 near 2/3, and ψ(t) + ψ(1 − t) = 1, lies in C₀^∞(]−2/3, 2/3[), and for 1/3 ≤ t ≤ 2/3, h²(t) + h²(t − 1) = cos²(½πψ(t)) + sin²(½πψ(t)) = 1, while on [0, 1/3] only h(t) = 1 is nonzero among the h(t − n).
     {#W7.22-4} So the h′ take values in [0, 1], and c_h* is a fixed constant of ζ's profile, φ's profile, and PRT1's h, with |h′_{□₀} − ζ_{□̃}| ≤ 1.
-- {#W7.23} *Telescoping (derived, not reviewed in this form: the branch without smallness and C_tel).* Q₁W^B_ω − W^A_ω𝒥 is a sum, over the constituents c of the walk term, of the product with run A's constituents to the left of c, the intertwining defect of c, and run B's constituents to the right, with Q₁, ℒ*, or the identity between constituents according to the slot (fine field, fine source, or data).
+- {#W7.23} *Telescoping.* Q₁W^B_ω − W^A_ω𝒥 is a sum, over the constituents c of the walk term, of the product with run A's constituents to the left of c, the intertwining defect of c, and run B's constituents to the right, with Q₁, ℒ*, or the identity between constituents according to the slot (fine field, fine source, or data).
   {#W7.23-1} There are at most N_c(|ω| + 1) such terms.
   {#W7.23-2} Suppose that each defect satisfies the bounds of its constituent times 𝔡_c (the LF note's δ_c; here 𝔡_c, since δ_c is a rate in 10.5), at the rate δ₀/3 of §5(c).
   {#W7.23-3} Then PBG's proof of (3.94) and (3.108) applies to each term: it inserts the localisations Δ(y_i), bounds each factor, and sums over the y_i with half of each exponential (p.410 l.13–30).
@@ -477,7 +390,7 @@
   {#W7.24-1} These factors "are used to control the sum over ω, and they determine the constant B₀" (RG II p.3 l.23–24).
   {#W7.24-2} So the sum converges for M₁ four times Bałaban's lower bound, with B₀′, the constant B₀ with the doubled factor, in place of B₀.
   {#W7.24-3} For the composite walks of §11, whose series-level groups carry no factor M₁^{−1/2}, the doubling is kept inside their constituent walks, and the series-level groups are paid by the per-group factor of (J) (§11, *The junction sums.*).
-- {#W7.25} *The bound (1.11) (derived, not reviewed in this form, with C_tel).* Bałaban's argument (p.5 l.13–16) uses δ₀d(ω) ≥ δ₁mM for m > 2⁴, with δ₁ depending on δ₀ only, and δ₁M ≥ κ₁.
+- {#W7.25} *The bound (1.11).* Bałaban's argument (p.5 l.13–16) uses δ₀d(ω) ≥ δ₁mM for m > 2⁴, with δ₁ depending on δ₀ only, and δ₁M ≥ κ₁.
   {#W7.25-1} At the rate δ₀/6 this needs (W-M) δ₁(δ₀/6)M ≥ κ₁, a condition on M. The rates δ₀/6 here and δ₀′/54 after 10.3 are those of the local constituents G′_□, C_□, and G_{a,□}, in the metric of the cube's own sequence; in PRT2's global distance they are divided by L (§11, *The condition on M.*, the definition of δ_min).
   {#W7.25-2} So (W-M) is read at the global rate δ₀′/(54L), with RG II's δ₁ linear in the rate.
   {#W7.25-3} §11's condition M ≥ 4κ₁/(ρδ_g) implies (W-M), since δ_min ≤ δ₀′/(54L) and δ_g ≤ δ₁.
@@ -489,144 +402,127 @@
   {#W7.25-9} So H₀(s), H(s), and G̃(s) are composites (§11): for them it holds with B_T for B₀′, the rate δ_min, e^{2·6^dκ₁} for e^{16κ₁}, and §11's condition M ≥ 4κ₁/(ρδ_g) in place of (W-M) (§11, *The condition on M.*).
   {#W7.25-10} A walk in Y meets only the layers of Y, so m(ω) ≥ m(Y) and (ε/a_{m(ω)})^{γ} ≤ (ε/a_{m(Y)})^{γ}.
 
-## 8. What (W-δ) Would Be, and Its Status {#WS8}
+## 8. The Bound (W-δ) and the Conditions on the Constants {#WS8}
 
-{#W8.1} Given (Wδ-1), (Wδ-2), and (Wδ-3), §§4–7 give the fine per-walk-term form (c), and with it (b), with
+{#W8.1} By (Wδ-1) (§5, §10), (Wδ-2) (10.5), and (Wδ-3) (§11), §§4–7 give the fine per-walk-term form (c), and with it (b), with
 
   {#W8.2} δ_w(ω) ≤ C_w(ε/a_{m(ω)})^{γ_w}, γ_w := min(β, (1 − ε₀)/3), C_w := N_c[(1 + 8δ₀Mc_∘)C_□(β) + 3(2d + 1)c_h*(1 + C_ℒ′m_Q)/M + 8dc_K^{−1}c_h* + c_K^{−1}MC_{[h]}(β)] + 4C_U(M)ε₁/α_*′ + C_w^{(11–12)},
 
-{#W8.3} where β < 1 is the Hölder exponent at which (Wδ-1) holds, C_□(β) is the largest of the constants of the local propagators G′_□ and G_□ (§5(c), 10.1) and of C_□ (10.3), 8δ₀Mc_∘C_□(β) bounds the relative defects of the differences of (3.97) and p.415 (§7), C_{[h]}(β) is that of the commutator factors (10.4, *The commutator factors K(h), P_{□,1}(∂h), and S_j(∂h)*), with Lc_h* for c_h and 1 + 3L²/M for the factor 1 + 3L/M of C_Q (§7), 3(2d + 1)c_h*(1 + C_ℒ′m_Q)/M bounds the relative defect of the multiplications, and 8dc_K^{−1}c_h* that of the scalar averaging commutators [f, Q′] and [Q′*,
-{#W8.3-1} f] (§7), and m(ω) is the finest global layer that ∪X̃_i⁵ meets.
+{#W8.3} where β < 1 is the Hölder exponent at which (Wδ-1) holds, C_□(β) is the largest of the constants of the local propagators G′_□ and G_□ (§5(c), 10.1) and of C_□ (10.3), and 8δ₀Mc_∘C_□(β) bounds the relative defects of the differences of (3.97) and p.415 (§7).
+{#W8.3-1} C_{[h]}(β) is the constant of the commutator factors (10.4, *The commutator factors K(h), P_{□,1}(∂h), and S_j(∂h)*), with Lc_h* for c_h and 1 + 3L²/M for the factor 1 + 3L/M of C_Q (§7); 3(2d + 1)c_h*(1 + C_ℒ′m_Q)/M bounds the relative defect of the multiplications, and 8dc_K^{−1}c_h* that of the scalar averaging commutators [f, Q′] and [Q′*, f] (§7); m(ω) is the finest global layer that ∪X̃_i⁵ meets.
 
 {#W8.4} C_w^{(11–12)} collects the enlargements that §§11–12 state for their own terms:
 
-  {#W8.5} C_w^{(11–12)} := O(1)(C(ε₀) + C₀′/C₀) + O(1)(1 + C_ℒ)L¹¹ + (1 + C_ℒ)L^{h₀} + O(1)B₀²C₀ε₁.
+  {#W8.5} C_w^{(11–12)} := O(1)(C(ε₀) + C₀′/C₀) + O(1)(1 + C_ℒ)L¹¹ + (1 + C_ℒ)L^{h₀}.
 
 - {#W8.6} O(1)C(ε₀) is the run difference of the currents, ∇b₁ in divergence form, at U^B (§11, *The term G̃Δ^{(2)}H₀B*, second bullet).
   {#W8.6-1} O(1)C₀′/C₀ is the same term at the pairs of 𝐇″_k (§12, *§11's oscillation at U_{1,2}*), with C₀′ε₁ := K_ℬ(C₀ + C(ε₀))ε₁ + C_ℬC(β₂)ε₂ of its bootstrap.
-  {#W8.6-2} By ε₂ ≤ B₁(O(1)B₃³B₅M⁶ε_k + C₁ε₁) (§12, *The band regularity of U_{1,2}*), C₀′/C₀ ≤ K_ℬ(1 + C(ε₀)/C₀) + C_ℬC(β₂)B₁(O(1)B₃³B₅M⁶ + C₁)/C₀ under ε_k ≤ ε₁, K_ℬ the bootstrap's constant of d, L, δ₁, and δ_ι (l.980).
+  {#W8.6-2} By ε₂ ≤ B₁(O(1)B₃³B₅M⁶ε_k + C₁ε₁) (§12, *The band regularity of U_{1,2}*), C₀′/C₀ ≤ K_ℬ(1 + C(ε₀)/C₀) + C_ℬC(β₂)B₁(O(1)B₃³B₅M⁶ + C₁)/C₀ under ε_k ≤ ε₁, K_ℬ the bootstrap's constant of d, L, δ₁, and δ_ι (#W12.77-1).
   {#W8.6-3} The ε₁ of ε₂'s bound is U_{1,2}'s membership parameter, the larger of the data bound over C₁ and U_i's data bounds ε_U^{(i)}; with C₁ = L³ ≥ 1 and ε_U^{(i)} ≤ O(1)B₃²B₅M⁶ε_k (§12, *The band regularity of U_{1,2}.*), it is at most V₀'s data parameter, the ε₁ of C₀′ε₁, with the O(1)s taken equal. ε_k ≤ ε₁ is among the conditions below.
   {#W8.6-4} It holds since the ε₁ of (9.2) there is the data parameter of V₀'s problem, O(1)B₃²B₅M⁶ε_k (§12, *§11's oscillation at U_{1,2}*), an upper bound that is taken ≥ ε_k.
-- {#W8.7} O(1)(1 + C_ℒ)L¹¹ is the walk terms that meet the strip Ω ∖ Ω^A_2 (§12, *The strip*, *The bound.*) and those that meet the finest-scale strips of the sets 𝐁(Y_i) (§12, *The source of (1.55)*, its item on these strips).
+- {#W8.7} O(1)(1 + C_ℒ)L¹¹ is the walk terms that meet the strip Ω ∖ Ω^A_2 (§12, *The strip*, *The bound.*) and those that meet the finest-scale strips of the sets 𝐁(Y_i) (#W12.254-6).
 - {#W8.8} (1 + C_ℒ)L^{h₀} is the strip terms at the finitely many h ≤ h₀ (§12, *The strip* and *The representation with the gain*), with h₀ the least integer such that L^{h₀} > max(2M₁/M, L(d + 1)).
-- {#W8.9} O(1)B₀²C₀ε₁ is the source of (1.55) (§12, *The source of (1.55)*).
 
 {#W8.10} For the composites of §11 (𝐇_k(s), G̃(s), and H₀(s)), C_w carries in addition the factor S_δ^{r₀} (§11, *Complex s*), and for 𝐇_k(s) the constant is C_𝔡B₀′(β′) (below).
 
 {#W8.11} In §§7–8 and 10, M without an index is PBG's block size KR₀M₀, which §§11–12 write M₁.
 {#W8.11-1} In C_U(M), in (W-M), and in the conditions on M of §§11–12 (M ≥ 4κ₁/(ρδ_g), M ≥ 16N_DM₁, M ≥ 4M₁), and in §12's ε₁ bounds O(1)B₃²B₅M⁶ε_k and B₅M⁵ε_k below and the ε₂ bound O(1)B₃³B₅M⁶ε_k of C₀′ and C₀ in C_w^{(11–12)}, M is RG II's cube size.
 {#W8.11-2} The letter K is PBG's integer in M = KR₀M₀ in §§7–8 and in §12's collar cells, the LF note's final scale K = k_s + j(C) where it is named so, and CRE's integer in M₁ = KM′ in §12's *The band regularity of U_{1,2}* (its block size, contraction, and chains), and K := B₀(C₄ + 4C₂)(36dL²B₁)², the coefficient of VAR's (165) (VAR p.304 l.17–19, printed with the factor (R₁M₁)²(M′ε₀)², where VAR's M′ = M/(R₁M₁) equals 1 for the cubes of size R₁M₁) in θ and in the condition 4KM′²B₃ε_U^{(i)} ≤ ½L^{−3}, whose M′ is the block size M′ = R₁M₁ of the notes, not VAR's ratio.
-{#W8.11-3} At l.932 K also names CRE's integer in "K > 4d", as in CRE's M₁ = KM′.
+{#W8.11-3} At #W12.28-9 K also names CRE's integer in "K > 4d", as in CRE's M₁ = KM′.
 {#W8.11-4} The constant of §12's bootstrap in *§11's oscillation at U_{1,2}* is written K_ℬ; it depends only on d, L, δ₁, and δ_ι.
 {#W8.11-5} R₁M₁ is everywhere the product of VAR and REG (VAR's M₁ at p.277 l.12, its R ≥ R₁ at l.17), also in C₀ = 4R₁M₁(B₃ + B₄(1)) and in M(ε₁) = R₁M₁a₁/ε₁.
-{#W8.11-6} In the LF note's conventions, derived there and not reviewed (its *The block size M′.*, *R₁ = 1*, *The separation.*, and *The constants.*), PBG's cubes are taken at the size M′, VAR's cube parameter R₁M₁ is M′, and the global layers are R′M′ wide in the units of their scale, R′ = LK − 1 with CRE's K. So PBG's block size, written M in §§7–8 and 10 and M₁ in §§11–12, is M′ = R₁M₁, and R ≥ 12dL reads R′ ≥ 12dL, that is CRE's K ≥ 12d + 1.
-{#W8.11-7} M₁ alone is PBG's block size M′, except in M₁ = KM′, in §11's passage on the collar (from "The collar lies within 2M₁a_h"), in §12's collar widths, in the conditions M ≥ 4M₁, M ≥ 2dM₁, and M ≥ 2(d + 1)L²M₁, in the (J-W) clause at the width R′M′ ≥ ½LM₁ and its M₁ ≥ 2M_J(d, L) (LF #4.24 and #4.29), and in the distance M₁a_k from Y to (Y^∼)^c (10.5's *The inclusion.*, §11's bridge, §12's localisation χ, and §12's *The lift's R_ι (checked).*; Y^∼ is the LF note's operation ∼ for CRE's M₁-cubes, LF #4.329), where it is CRE's M₁ = KM′ ≥ M′.
-{#W8.11-8} Reading M′ in place of CRE's M₁ is conservative only for the distances M₁a_k, which are lower bounds on distances; the lower bounds on M and the collar widths are taken at CRE's M₁.
-{#W8.11-9} C_ι has two meanings in 10.5: the O(1) of PBG (3.133) where it is so defined, and the Cauchy note's C_ι = O(1)L²C_LC_F (its §9.8, #C9.8.15-3) in the tail bounds of T, in C_ιε₁ ≤ min(α₁, Mα₀), and in the bridge. ε₀ is the exponent in γ_w and C(ε₀), except in §11's comparison with VAR, where VAR's ε₀ = α₀ (VAR p.280 l.51–52) is named as VAR's, and in §12's *The band regularity of U_{1,2}.*, where ε₀ is VAR's bound (2) and contains no exponent, and in §12's *No loop through M*, where CRE's δ₀ = (A₁/A₀)ε₀ (CRE p.247 l.50) is quoted with CRE's ε₀ and δ₀.
+{#W8.11-6} In the conventions of BP_JOINS_BLOCK_SIZE #4.22–#4.26-2, PBG's cubes are taken at the size M′, VAR's cube parameter R₁M₁ is M′, and the global layers are R′M′ wide in the units of their scale, R′ = LK − 1 with CRE's K. So PBG's block size, written M in §§7–8 and 10 and M₁ in §§11–12, is M′ = R₁M₁, and R ≥ 12dL reads R′ ≥ 12dL, that is CRE's K ≥ 12d + 1.
+{#W8.11-7} M₁ alone is PBG's block size M′, except in M₁ = KM′, in §11's passage on the collar (from "The collar lies within 2M₁a_h"), in §12's collar widths, in the conditions M ≥ 4M₁, M ≥ 2dM₁, and M ≥ 2(d + 1)L²M₁, in the (J-W) clause at the width R′M′ ≥ ½LM₁ and its M₁ ≥ 2M_J(d, L) (LF #4.24 and #4.29), and in the distance M₁a_k from Y to (Y^∼)^c (10.5's *The inclusion.*, §11's bridge, §12's localisation χ, and §12's *The lift's R_ι.*; Y^∼ is the LF note's operation ∼ for CRE's M₁-cubes, LF #4.329), where it is CRE's M₁ = KM′ ≥ M′.
+{#W8.11-8} Using M′ in place of CRE's M₁ is conservative only for the distances M₁a_k, which are lower bounds on distances; the lower bounds on M and the collar widths are taken at CRE's M₁.
+{#W8.11-9} ε₀ is the exponent in γ_w and C(ε₀), except in §11's comparison with VAR, where VAR's ε₀ = α₀ (VAR p.280 l.51–52) is named as VAR's, and in §12's *The band regularity of U_{1,2}.*, where ε₀ is VAR's bound (2) and contains no exponent, and in §12's *No loop through M*, where CRE's δ₀ = (A₁/A₀)ε₀ (CRE p.247 l.50) is quoted with CRE's ε₀ and δ₀.
 {#W8.11-10} In §12's *10.5's premise at 𝐇″_k.* and the field bound of *§11's oscillation at U_{1,2}*, VAR's 𝔘-parameter of (19) is written ε₀^𝔘, since the exponent ε₀ occurs there too. a₁ in O(1)L⁵Mα₀ ≤ a₁/2, α₁^A ≤ a₁/2, and B₅ε₁ ≤ a₁/2 is PBG's threshold of Corollary 3.5 and Theorem 3.4; in ε₁ ≤ a₁/7, ε₁ ≤ a₁/(3L), and M(ε₁) it is VAR's threshold of Theorem 1.
-{#W8.11-11} C_w is a constant of PBG's block size, CRE's M₁ = KM′ (through the factor C_ιe^{δ_ι(R_ι/L + 2)M₁} of C(ε₀), l.944 and l.946), RG II's cube size, β, β₂, β′, ε₀, ε₁, L, d, and Bałaban's constants.
+{#W8.11-11} C_w is a constant of PBG's block size, CRE's M₁ = KM′ (through the factor C_ιe^{δ_ι(R_ι/L + 2)M₁} of C(ε₀), #W12.42-6 and #W12.43), RG II's cube size, β, β₂, β′, ε₀, ε₁, L, d, and Bałaban's constants.
 {#W8.11-12} Each ε₁ in C_w is taken at a bound independent of k.
 {#W8.11-13} The ε₁ of §12 is O(1)B₃²B₅M⁶ε_k (*The background pairs.*) or B₅M⁵ε_k (*The collar of 𝐁₁.*, its bullet on the gain at the scale k, VAR (7) for U_{k,Λ}), and ε_k = g_kp₀(g_k) = A₀g_k(log g_k^{−2})^{p₀} (CRE (2.4)) ≤ Cḡp₀(ḡ), the k-independent bound of the LF note's §1 (*The regularity of the data.*, by CRE (2.4) and (2.6)): g_k ≤ (1 + β₀)ḡ by CRE (2.6), g ↦ gp₀(g) is increasing for small g, and C carries the factor 1 + β₀.
 {#W8.11-14} The ε₁ of the LF note's alignment is the larger of that bound and C(M)R_kε_k, with R_k ≤ L(log g_k^{−2})^r (CRE (2.5)); g ↦ g(log g^{−2})^{p₀+r} is increasing for small g, so C(M)R_kε_k is likewise at most a constant times its value at ḡ.
 {#W8.11-15} So C_w does not depend on k, the final scale K = k_s + j(C) of the LF note, ε, or the volume, since every constant above is local, and it depends on PBG's integer K only through PBG's block size.
-{#W8.11-16} The conditions are those of *The conditions on the constants.* below, the note's only collected list; 10.6 and §12 refer to it.
 {#W8.11-17} K ≥ 4 is used in the form K ≥ 2L/(L − 1), and K is taken as a power of L, a choice made in both runs, as PBG takes its sizes as powers of L (p.408 l.26).
 {#W8.11-18} With K ≥ 4 > 1 this gives K ≥ L, so the M-blocks of the scale j are unions of R₀M₀-blocks of the scale j + 1, as the coarsest domains Ω_{j+1}(□) = □̃³ ∩ B^{j+1}(Λ_{j+1}) and their analogues for the cells need. γ_w > 1/4 holds if β > 1/4 and ε₀ < 1/4.
-{#W8.11-19} If the background change is carried separately through r(Y), γ_w = β.
-{#W8.11-20} The telescoping of the LF note's (iii) holds as derived in §7 (not reviewed in this form, through its branch without smallness), with N_c and B₀′ in place of 2 and B₀, the constant C_tel of §7 in place of 3, and the rate δ₀/6 in (1.11), under (W-M).
+{#W8.11-19} For the LF note's (iii), which carries the background change through r(Y) (#W6.6-1), the exponent is β.
+{#W8.11-20} The telescoping of the LF note's (iii) holds as derived in §7, through its branch without smallness, with N_c and B₀′ in place of 2 and B₀, the constant C_tel of §7 in place of 3, and the rate δ₀/6 in (1.11), under (W-M).
 {#W8.11-21} The telescoping needs no smallness condition on δ_w(ω); the consumer's own smallness, the LF note's C_{Δ𝐇}ϑ_H ≤ 1/6 in (iii), holds for n ≥ n_H(M) there, and below n_H the LF note bounds the difference as a whole.
 
-{#W8.12} *The conditions on the constants.* This is the only collected list of the note; each condition is stated and used where its source in parentheses derives it.
+{#W8.12} *The conditions on the constants.* Each condition is stated and used where its source in parentheses derives it.
 {#W8.12-1} The constants are chosen in stages, each after the previous ones: (0) the exponents; (1) L; (2) the rates and constants computed from d, L, G, and Bałaban's constants (δ₀, δ₁, B₀–B₅, δ₀′, δ_c, δ_gf′, δ_D′, δ_ι, δ_min, δ_g, δ_br, δ_br^c, κ₁, c_u, c_G, r_G, r_υ, and the like; most depend on L, PBG p.397 l.37, VAR p.279 l.28), which depend on none of the later choices; (3) the sizes, by lower bounds, in the order R with CRE's K, then R₀M₀, then PBG's K, hence M′ = KR₀M₀ (K ≥ 4 a floor;
 {#W8.12-2} the lower bounds on M′ are met by K large, and no condition on R₀M₀ involves K), then RG II's M, each in terms of stages 0–2 and the sizes before it (M′ ≥ R₀M₀, M ≥ 4KM′, and (D2) with C_ι(M′) use earlier sizes); (4) PBG's α₀ and α₁, by upper bounds, with α_J := Mα₀ (LF #4.60) fixed with α₀; (5) VAR's ε₃, then ε₁, the fixed ε₁ of 10.5, and the fixed ε₁^{(1)} of 10.5's one-step problem at 𝐇″_k, by upper bounds (U_i's data bounds ε_U^{(i)} of §12 are γ-dependent, not fixed); (6) γ small.
 {#W8.12-3} RG I's thresholds α₀, α₁, α₂, and α₃ in §12's ratio of (D2) are not PBG's: they are CRE's γ-dependent α̃_{0,k}, α̃_{1,k} = λ_Rα̃_{0,k} (CRE (2.28), p.259 l.45–50), RG I's radius α₂ := c₂α̃_{0,k} of (3.14), and RG I's α₃ := β_IL^{−2}α̃_{0,k}/(2B₃⁺C_{Q*}) of Lemma 4, as in the Cauchy note (its #C5.37-4, with C_{Q*} of its #C5.6-5; the factor 1/C_{Q*} for the reduced current threshold of its norm class, its #C5.28-19 and #C5.37-5), with β_I RG I's class parameter β.
-{#W8.12-4} They are homogeneous in α̃_{0,k} and taken at the radii of the run: here Bałaban's thresholds, in the Cauchy and LF notes the radii r of R-Δ^c, also when Lemma 4 is run at input radii in [r, r⁺] (the Cauchy note's #C5.15-4, #C5.28-13, and #C8.2.2-3; the LF note's #4.397, #4.458).
+{#W8.12-4} They are homogeneous in α̃_{0,k} and taken at the radii of the run: here Bałaban's thresholds, in the Cauchy and LF notes the radii r of RΔ^c, also when Lemma 4 is run at input radii in [r, r⁺] (the Cauchy note's #C5.15-4, #C5.28-13, and #C8.2.2-3; the LF note's #4.397, #4.458).
 {#W8.12-5} The relations among them are fixed by c₂ (stage 2) and λ_R (stage 3), and their values enter only at stage 6 (§12, the ratio of (D2)).
 {#W8.12-6} VAR's a₀, a₁, and a₅, and with them M(ε₁), depend on R₁M₁ = M′ once VAR's product is raised to M′ (VAR (166), p.304 l.21–26 and l.52–54); they are fixed after stage 3 and enter only upper bounds on α₀ and ε₁, so the order holds.
 {#W8.12-7} No condition bounds α₀ or α₁ above by ε₁, ε_k, or ϱ.
-{#W8.12-8} VAR's M_V ≤ M(ε₁) = R₁M₁a₁/ε₁ is read as an upper bound on ε₁. 10.5's ε₁ is a fixed value between the data parameter and a₁, admissible since VAR Theorem 1's hypotheses are monotone in ε₁; it and ε₁^{(1)} are fixed after α₀, M′, and K and before γ.
+{#W8.12-8} VAR's M_V ≤ M(ε₁) = R₁M₁a₁/ε₁ is an upper bound on ε₁. 10.5's ε₁ is a fixed value between the data parameter and a₁, below that upper bound: (7) at the data parameter gives (7) at every such ε₁, so Theorem 1 applies with it (#T3.19-1), and its minimal orbit, the unique critical orbit, does not depend on the choice (BP_DERIVED_CONFIGS #BC.1-4-3). It and ε₁^{(1)} are fixed after α₀, M′, and K and before γ.
 {#W8.12-9} Every condition of stage 5 holds for γ small at the data parameter, which is ≤ Cḡp₀(ḡ).
 {#W8.12-10} The premises (S) (§4) and the eight choices of §12 are not conditions on the constants.
-- {#W8.13} Stage 0, the exponents: 0 < ε₀ < 1/125 (the LF note's bounds of (ii) and its scale threshold n₀′ for r(Y) ≤ 1/64, LF #4.425, #4.456, #4.521, #4.553–#4.554; it covers ε₀ < 1/4 for γ_w > 1/4 and the consumer's exponent, and §12's ε₀ < 2/5); β ∈ [3/4, 1) (§8 above, the consumer's (γ_H − 4β′)/2 > θ_V/8, which β ≥ 1/2 ensures; the LF note's (δ), *Where the current enters.*, β_o − β″ > ½ for the two-constants bounds of the smoothed current at complex points, which β ≥ 3/4 gives with β_o = min(β, 1 − 2ε₀) ≥ 3/4; it covers §12's β ∈ ((1 − ε₀)/3, 1);
-  {#W8.13-1} (Wδ-1), derived, not reviewed (#WOG.1, Open Gaps), holds for every β < 1); the LF note's β″ ∈ (0, 1/20], the crude lattice Hölder exponent of the second differences in its (δ) (*Where the current enters.*; it covers its β″ ≤ ½ of *The disc.*, its #4.312); β₂ = (1 + β)/2 (10.5); §11's β′ with 0 < β′ ≤ min(1/60, β_o − γ_w), β_o := min(β, 1 − 2ε₀) (§8 above, §12's bootstrap); CRE's coefficient β₀ of (2.6), which "can be chosen arbitrarily small, if g is sufficiently small" (CRE p.255 l.50), fixed as β₀ := 1/7 and realised by γ small in stage 6; it gives β₀ ≤ 1/7 (LF #3.56;
-  {#W8.13-2} the Cauchy note's #CP.26, #C5.27, #C5.28-6, and #C11c.3-2), β₀ ≤ ½ (LF #3.68, #4.527, #4.537, #4.596, and #4.605), and (1 + β₀)² = 64/49 ≤ 4/3 (stage 2's C_{αs} ≤ 2); it is not RG I's Hölder bound β₀ of (3.31) (#W12.222-1) nor VAR's β₀ = 1 (#W12.33-1); CRE's exponents with q₁ = q₀ > p₀ + 3r, q₀ an integer, within the LF note's choice q₁ ≥ q₀ > p₀ + 3r (LF #0.10 for q₀ > p₀ + 3r, LF #4.480 for q₁ ≥ q₀; CRE (2.28) asks q₀, q₁ to be integers greater than 1), used in §12's ratio of (D2).
-- {#W8.14} Stage 1, on L: L ≥ 4 (§7); L > 5, hence L ≥ 6 (§12, *The crossings.*, and the collar cells); L > 2d (§12, *The collar's layers.*); L ≥ 8d + 4 (§12, the distance from Y to C at R_ι = 4dL + 1; it also gives 10.5's M₁(L − 1 − R_ι/L) > 3 with M₁ ≥ 4); L ≥ 12d + 6 (§12, the localisation χ of *§11's oscillation at U_{1,2}*, M₁(L/3 − 1 − R_ι/L) > 3 with M₁ ≥ 4; it covers L ≥ 8d + 4 and the LF note's L ≥ 8d + 6 of its class tail of ι_X, LF #4.323); L² > 9d (§12, *The cells of 𝒟′ and 𝒟″ on the collar.*);
-  {#W8.14-1} (1 + β₀)² ≤ L with CRE's β₀ = 1/7 of stage 0, which L ≥ 6 gives (§12, the ratio of (D2), the cross-index comparison).
-- {#W8.15} Stage 2, on RG I's β_I and c₂: β_I := 2^{−7}, RG I's class parameter β (the Cauchy note's #C5.26, for 1 + 8β_I = 17/16 and β_IL^{−2} ≤ 2^{−9} in its #C5.28-16 and #C5.28-18 (the bounds 0.35 and 0.174 and the B′-part 2^{−9}), e^{β_I}·¼ < 0.26 and 0.92 + (1 + O(α_{1,k}))e^{β_I}/128 < 1 in its §8.2 (#C8.2.2-35, #C8.2.2-72), (1 + 2^{−9})² ≤ e^{β_I} (#C5.26-13), and e^{2β_I}·½ < 0.51 for the lift gauges of its #C5.5–#C5.7 and #C5.47), with (1 + 8β_I)L^{−2} ≤ 1 (RG I (3.52), p.280 l.18, which gives the first inequality of the condition (iii), |∂𝐔 − 1| < α₀ξ², p.262 l.37), hence (1 + 7β_I)L^{−2} ≤ 1 (p.279 l.28) and β_IL^{−2} ≤ 1;
+- {#W8.13} Stage 0, the exponents: 0 < ε₀ < 1/125 (the LF note's bounds of (ii) and its scale threshold n₀′ for r(Y) ≤ 1/64, LF #4.425, #4.456, #4.521, #4.553–#4.554; it covers ε₀ < 1/4 for γ_w > 1/4 and the consumer's exponent, and §12's ε₀ < 2/5); β ∈ [3/4, 1) (§8 above, the consumer's (γ_H − 4β′)/2 > θ_V/8, which β ≥ 1/2 ensures; the LF note's (δ), *Where the current enters.*, β_o − β″ > ½ for the two-constants bounds of the smoothed current at complex points, which β ≥ 3/4 gives with β_o = min(β, 1 − 2ε₀) ≥ 3/4; it covers §12's β ∈ ((1 − ε₀)/3, 1); (Wδ-1) (#WOG.1) holds for every β < 1);
+  {#W8.13-1} the LF note's β″ ∈ (0, 1/20], the crude lattice Hölder exponent of the second differences in its (δ) (*Where the current enters.*; it covers its β″ ≤ ½ of *The disc.*, its #4.312); β₂ = (1 + β)/2 (10.5); §11's β′ with 0 < β′ ≤ min(1/60, β_o − γ_w), β_o := min(β, 1 − 2ε₀) (§8 above, §12's bootstrap); CRE's coefficient β₀ of (2.6), which "can be chosen arbitrarily small, if g is sufficiently small" (CRE p.255 l.50), fixed as β₀ := 1/7 and realised by γ small in stage 6;
+  {#W8.13-2} it gives β₀ ≤ 1/7 (LF #3.56; the Cauchy note's #CP.26, #C5.27, #C5.28-6, and #C11c.3-2), β₀ ≤ ½ (LF #3.68, #4.527, #4.537, and #4.605), and (1 + β₀)² = 64/49 ≤ 4/3 (stage 2's C_{αs} ≤ 2); it is not RG I's Hölder bound β₀ of (3.31) (#W12.222-1) nor VAR's β₀ = 1 (#W12.33-1); CRE's exponents with q₁ = q₀ > p₀ + 3r, q₀ an integer, within the LF note's choice q₁ ≥ q₀ > p₀ + 3r (LF #4.420-1.1 for q₀ > p₀ + 3r, LF #4.480 for q₁ ≥ q₀; CRE (2.28) asks q₀, q₁ to be integers greater than 1), used in §12's ratio of (D2).
+- {#W8.14} Stage 1, on L: the lower bounds of table #T1.3. Of these, this note uses L ≥ 4 (§7); L > 5, hence L ≥ 6 (§12, *The crossings.*, and the collar cells); L > 2d (§12, *The collar's layers.*); L ≥ 8d + 4 (§12, the distance from Y to C at R_ι = 4dL + 1, and 10.5's M₁(L − 1 − R_ι/L) > 3 with M₁ ≥ 4); L ≥ 12d + 6 (§12, the localisation χ of *§11's oscillation at U_{1,2}*, M₁(L/3 − 1 − R_ι/L) > 3 with M₁ ≥ 4); L² > 9d (§12, *The cells of 𝒟′ and 𝒟″ on the collar.*);
+  {#W8.14-1} and (1 + β₀)² ≤ L with CRE's β₀ = 1/7 of stage 0 (§12, the ratio of (D2), the cross-index comparison). L ≥ 12d + 6 gives all of these, as (12d + 6)² > 9d and (1 + β₀)² = 64/49. The other bounds of #T1.3 serve the map, two-loops, and the LF note: L odd and L > 11, L ≥ L₀^× (which covers L ≥ 12d + 6), L ≥ 6d + c_b, L ≥ 128C_{αT}(1 + β₀), and (L-V). BLL's (κ-loc) follows from L ≥ L₀^× and RG II's ½(κ₁ − 1) ≥ 2Lκ (#BLL.29) and adds no condition.
+- {#W8.15} Stage 2, on RG I's β_I and c₂: β_I := 2^{−7}, RG I's class parameter β (the Cauchy note's #C5.26, for 1 + 8β_I = 17/16 and β_IL^{−2} ≤ 2^{−9} in its #C5.28-16 and #C5.28-18 (the bounds 0.35 and 0.174 and the B′-part 2^{−9}), e^{β_I}·¼ < 0.26 and 0.92 + (1 + O(α_{1,k}))e^{β_I}/128 < 1 in its §8.2 (#C8.2.2-35, #C8.2.2-72), (1 + 2^{−9})² ≤ e^{β_I} (#C5.26-13), and e^{2β_I}·½ < 0.51 for the lift gauges of its #C5.5–#C5.7 and #C5.47),
+  {#W8.15-0} with (1 + 8β_I)L^{−2} ≤ 1 (RG I (3.52), p.280 l.18, which gives the first inequality of the condition (iii), |∂𝐔 − 1| < α₀ξ², p.262 l.37), hence (1 + 7β_I)L^{−2} ≤ 1 (p.279 l.28) and β_IL^{−2} ≤ 1;
   {#W8.15-1} c₂ ≤ 1, c₂ within the rooms ½α₀, ½α₁, and (1 − L^{−3})α₀ of RG I's (3.13) (a constant of d, L, and B₃, the Cauchy note's #C5.36-11), and c₂ ≤ c_N := (128B₃²C₁₃C_{Q*}O(1))^{−1}, with C₁₃ ≥ 1 the constant of the moves of (I.3.13) and the O(1) at least max(1, B₅/B₃) times the constant of the data moves, B₅ the constant of VAR (173) through Proposition 9 [15] (the Cauchy note's #C5.8-28), so that the points (N) and (R3) of the Cauchy note's evaluation set lie in its norm class and its §8.2's moves fit the rooms (its #C5.8-27 and #C8.2.2);
-  {#W8.15-2} and c₂ ≤ (43B₃(4C_δ(ε₀)L^{7/3} + C_{Q*}(1 + 3C_φ)))^{−1} and c₂ ≤ ½ (the LF note's #4.284, for its C_{αs} = (1 + β₀)²(1 + c₂) ≤ (64/49)(3/2) < 2, not the Cauchy note's C_α, at stage 0's β₀ = 1/7;
-  {#W8.15-3} implied by the first when B₃ ≥ 1/43), with the LF note's C_δ(ε₀) (its #4.320, a constant of d, L, ε₀, B₀, B₀′(ε₀), C_ℒ′, and c_{δ_f/2}), the Cauchy note's C_{Q*} := 2(1 + (2d + 1)L^{d−1}) (its #C5.6-5), and the LF note's C_φ = O(1)(1 + B₀)B₀ of the gauge-fixing addition D_Aφ_A (its (δ), *The gauge-fixing terms.*, the pointwise entry), which do not involve c₂, for the t_□ part of the decoupled scale-j field on Bałaban's circle (3.15), whose entries are ⅓α₂, and its part C_φα₂ of D_Aφ_A (the LF note's (i) at the decoupled configurations and the lift half's *The conditions.*).
+  {#W8.15-2} and c₂ ≤ (43B₃(4C_δ(ε₀)L^{7/3} + C_{Q*}(1 + 3C_φ)))^{−1} and c₂ ≤ ½ (the LF note's #4.284, for its C_{αs} = (1 + β₀)²(1 + c₂) ≤ (64/49)(3/2) < 2, not the Cauchy note's C_α, at stage 0's β₀ = 1/7; implied by the first when B₃ ≥ 1/43),
+  {#W8.15-3} with the LF note's C_δ(ε₀) (its #4.320, a constant of d, L, ε₀, B₀, B₀′(ε₀), C_ℒ′, and c_{δ_f/2}), the Cauchy note's C_{Q*} (its #C5.6-5), and the LF note's C_φ of the gauge-fixing addition D_Aφ_A (its #4.284.2-1), which do not involve c₂, for the t_□ part of the decoupled scale-j field on Bałaban's circle (3.15), whose entries are ⅓α₂, and its part C_φα₂ of D_Aφ_A (the LF note's (i) at the decoupled configurations and the lift half's *The conditions.*).
   {#W8.15-4} These are homogeneous in α̃_{0,k} and do not involve γ.
-- {#W8.16} Stage 3, on the walk problems' R and PBG's integer K: R ≥ 12dL (§7's cells and cubes, §11's cube fitting), which at the joins reads CRE's K ≥ 12d + 1, a power of L, and covers R ≥ 8dL and R ≥ (2d + 1)L (§12, U^0_k on Λ^∼); K ≥ 4, a power of L, in PBG's M = KR₀M₀ (§7; it covers 10.3's K ≥ 2); R_ι = 4dL + 1 and R₁ = 1 for the lift's one-step problem (§12), with the product conditions of PRT2 (2.59) at R = R_ι and VAR p.304 at R₁ = 1;
-  {#W8.16-1} REG's Sect. F reach R > 4dLR₁ at M = R₁M₁ (§12, *The lift's R_ι (checked).*), which at R₁ = 1 holds by R ≥ 12dL for the walk problems and by R_ι = 4dL + 1 for the lift.
-  {#W8.16-2} CRE's K ≥ C(d) + 1 (the LF note's #4.22.1, the passage at a real base, whose RM ≥ C(d)R₁M₁L reads (LK − 1)M′ ≥ C(d)LM′ at R = R′ = LK − 1 and M = M′; its M′ ≥ L and RM ≥ L² follow from stage 3's M′ ≥ max(L², 6L) and K ≥ 2) and K ≥ C(L), a lower bound that does not involve M′ (LF #4.22.3, the background comparison at a real base).
+- {#W8.16} Stage 3, on the walk problems' R and PBG's integer K: R ≥ 12dL (§7's cells and cubes, §11's cube fitting), which at the joins reads CRE's K ≥ 12d + 1, a power of L, and covers R ≥ 8dL and R ≥ (2d + 1)L (§12, U^0_k on Λ^∼); K ≥ 4, a power of L, in PBG's M = KR₀M₀ (§7; it covers 10.3's K ≥ 2); R_ι = 4dL + 1 for the lift's one-step problem (#W12.237-6), with the product conditions of PRT2 (2.59) at RM = R_ιM₁ and VAR p.304 at R₁M₁ = M′ (#T2.7-1);
+  {#W8.16-1} REG's Sect. F reach R > 4dLR₁ at M = R₁M₁, R counted in blocks of VAR's M₁ (#W12.237-3), which at R₁M₁ = M′ holds for the walk problems by R′ ≥ 12dL (BP_JOINS_BLOCK_SIZE #4.24-2) and for the lift by #W12.237-6.
+  {#W8.16-2} CRE's K ≥ C(d) + 1 (the LF note's #4.22.1, the passage at a real base, whose RM ≥ C(d)R₁M₁L reads (LK − 1)M′ ≥ C(d)LM′ at R = R′ = LK − 1 and M = M′; its M′ ≥ L and RM ≥ L² follow from stage 3's M′ ≥ max(L², 6L) and K ≥ 2) and K ≥ C(L), a lower bound that does not involve M′ (LF #4.22.3, the background comparison at a real base); CRE's K ≥ R_thr(d, L)/L + 1 (LF #4.22-2, any separate threshold on R in PRT2, PBG, and VAR at the block size M′, which R′ = LK − 1 then meets). The LF note writes CRE's K as K_{M′}.
 - {#W8.17} Stage 3, on R₀M₀: R₀ a power of L with R₀ > 5dL (§11); R₀M₀ ≥ L (10.1); (W-c) (§5(c)); (W-c′) (2/3)δ₀R₀M₀ ≥ (2 + β)log L (10.2); (2.59) at α = 1/9 and 1/27 with (2/27)δ₀R₀M₀ ≥ (β + d + 5)log L (10.3); (2.59) at α = 1/243, 1/972, and 1/1458 with (1/486)δ₀R₀M₀ ≥ (β + d + 7)log L (10.4); δ_D′R₀M₀ ≥ 12β log L (§11, *The defect of D_□.*); ½δ₁R₀M₀ ≥ 4 log L and δ_ιR₀M₀ ≥ (3/2)log L (10.5, the fine-side lift); δ_cR₀M₀ ≥ 16 log L and R₀M₀ ≥ 40L² (10.5, the complex chain configurations); (J0) (§11; its part ⅛δ_minRM₁ > 2d log(16/δ_min) + 1 follows from its part on R₀M₀, since RM₁ ≥ 2R₀M₀);
   {#W8.17-1} the conditions of the compositions (Comp) in 10.2–10.4, which the conditions of 10.3 and 10.4 above imply.
 - {#W8.18} Stage 3, on PBG's block size M′ (M in §§7–8 and 10, M₁ in §§11–12): M′ ≥ max(M₁^{PBG}, R₀M₀, R₁M₁), a power of L (the LF note's *The block size M′.*); M′ ≥ max(L², 6L) (§7 and the collar cells); M₁ ≥ 4 (§12); δ₀M₁ ≥ 1 (§12, run B's regularity on □̃⁵); δ_ιM₁ ≥ 1 with the tail rate δ_ι (§12, the layered tail and the tail away from X in *§11's oscillation at U_{1,2}*, where it also bounds K_T); δ_minM₁ ≥ 6c_d log L, c_d = 2d(3^d + 1), which covers δ_minM₁ ≥ 6 log L (§12, the crossing decay and the strip crossings); (163′) B₃e^{−½δ₀M′} ≤ ½L^{−3} (§12, *The band regularity of U_{1,2}.*);
   {#W8.18-1} the lower bound on M₁ in (J) (§11); δ_brM₁ ≥ 2L^{1/3} and δ_br^cM₁ ≥ max(2L^{1/3}, L²/e) (§11, the bridge and its complex conclusion); δ_QRM₁ ≥ 6 log L, δ_brRM₁ ≥ 6 log L, δ_br^cRM₁ ≥ 6 log L, and δ₁RM₁ ≥ 12 log L (§11, the layer crossings of the bridge); (F-ι) ¼δ₁LM₁ ≥ (3 + β₂)log L + log 2 (§12, *§11's oscillation at U_{1,2}*); (F-W) at W = LM₁, ½δ_fLM₁ ≥ (7/3)log L (LF #4.318 and #4.322; its part at W = RM is on RG II's M below); (T-M₁) M₁ ≥ M₁^τ := (6/(eδ₀))(512B₃(1 + β₀)²C_ι/C_F)^{1/3}, a constant of d, L, and G (LF #4.323, the class tail of ι_X at every generation);
   {#W8.18-2} (J-W), (2.59) at α = 1/128 and ⅛δ_*LM₁ ≥ 4 log L + 1 (LF #4.18; §12's joins and the crossing decay), also at the width R′M′ ≥ ½LM₁, R′ = LK − 1, through M₁ ≥ 2M_J(d, L) (LF #4.24 and #4.29; the LF note's composites, LF #4.444); (1/16)δ_*M′ > 2d log c₀(⅛) + 1 at δ_* = min(δ₀^{PBG}, δ₀^{PRT2}), PRT2 (2.59) at α = ¼ with RM = M′ (the LF note's strip count at the composites, LF #4.22 and #4.445);
-  {#W8.18-3} δ₀M′ ≥ 64 log L and (1/128)δ₀M′ > 2d log c₀(1/64) + 1, PRT2 (2.59) at α = 1/32 with RM = M′, both with VAR's δ₀ of (190) (the LF note's *The age factor.*: the layer factors of VAR (190) on RG I's sequence on □₀, whose layers are more than R₁M₁ = M′ wide by REG (1.4), the sum (2.61) at α = 1/32, and the factor L^{−4} per layer crossed by the strip parts outside □₀); O(1)(4/δ_br)^dLC_ιC₀^{−1}(16/(eδ_brM₁))⁴ ≤ 1 (§12, the source M*e_c of the lift, with C_ι/C₀ ≤ O(1)L⁴C_LB₃ by VAR (8), independent of M′).
-  {#W8.18-4} ½δ_Q^{pl}LM₁ ≥ 2 log L + 1 with the local rate δ_Q^{pl} of ℒ (LF #4.40.2 and #4.29, the non-local link ℒ at the joins and the top N₀ layers of 𝐁″_k, whose crossing lengths are ≥ LM₁).
+  {#W8.18-3} δ₀M′ ≥ 64 log L and (1/128)δ₀M′ > 2d log c₀(1/64) + 1, PRT2 (2.59) at α = 1/32 with RM = M′, both with VAR's δ₀ of (190) (the LF note's *The age factor.*: the layer factors of VAR (190) on RG I's sequence on □₀, whose layers are more than R₁M₁ = M′ wide by REG (1.4), the sum (2.61) at α = 1/32, and the factor L^{−4} per layer crossed by the strip parts outside □₀).
+  {#W8.18-4} ½δ_Q^{pl}LM₁ ≥ 3 log L + 1 with the local rate δ_Q^{pl} of ℒ (LF #4.40.2-2 and #4.29, the profile-weighted non-local link ℒ at the joins and the top N₀ layers of 𝐁″_k, whose crossing lengths are ≥ LM₁).
 - {#W8.19} Stage 3, on RG II's cube size M: (F-W) at W = RM, ½δ_fRM ≥ (7/3)log L (LF #4.318 and #4.322), and at W = M for LFR I's frozen layers (LFR I p.179 l.22–24), which follows from (F-W) at LM₁ by M ≥ 2(d + 1)L²M₁ below; M ≥ 4M₁ with CRE's M₁ = KM′ (the collar fits of §§11–12), which gives VAR's M ≥ 4R₁M₁ (§12, VAR's cubes in Λ); M ≥ 2dM₁ with CRE's M₁ (the LF note's strip response of run B at the representation configurations, LF #4.449, and at the composites, LF #4.445), which covers M ≥ 4M₁ for d ≥ 2;
   {#W8.19-1} M ≥ 2(d + 1)L²M₁ with CRE's M₁ (the LF note's strip of misaligned layers at ∂□₀ and ∂Y_i, of the ℓ¹ width (d + 1)M₁a_2, kept at the distance ≥ 2Ma_n from the points read, LF #4.445 and #4.449), which covers M ≥ 2dM₁; M ≥ 16N_DM₁ (§11); M ≥ 4κ₁/(ρδ_g) and e^{−(1/3)δ₀M}e^{2·6^dκ₁} < 1 (§11, the κ₁ replay); min(δ₀, δ₁)M ≥ 8 log L (§12, the far data of the one-step lift); (W-M) (§7);
-  {#W8.19-2} M ≥ 2R_*, R_* the least R ≥ 1 with C_tlR^de^{−δ₀R} ≤ 1/16 for the tail C_tlR^de^{−δ₀R} of PBG (3.42) (the LF note's *The age factor.*, which puts its cut-off balls B(z, 2R_*a_{m′}) inside □₁, at the distance ≥ Ma_{m′} from its complement); (D2) (§12, *Analyticity and bounds.*); Bałaban's own lower bounds on M, listed in §12's *No loop through M*: RG I's M ≥ M(κ) (Theorem 3, p.264 l.38–39), RG II's δ₀M ≥ κ (p.21 l.36) and δ₁M ≥ κ₁ (p.5 l.15), CRE's "M = L^m is sufficiently large" (p.245 l.34), and LFR I's δ(M/M₁) ≥ 2 (p.186 l.35) and O(1)B₃B₅M⁵e^{−4δM} ≤ α with α ≤ 1/8 (p.200 l.14–21;
-  {#W8.19-3} CRE's conditions on MR₁ and M₂R₁, p.250 l.47–48 and p.251 l.39–40, hold for M fixed and γ small and are stage-6 conditions); λ_R = K_RLM + 1 with K_R ≥ 4B₃²O(1) and K_R ≥ O(1)(1 + B₃O(1)), which give RG I's B₃²O(1)Mα₀ < ½α₁ (p.277 l.54) and O(1)(α₂ + B₃O(1)Mα₀) < α₁ with LM in place of M, as the near domains at a finer layer read them (the Cauchy note's #C5.34-4) (p.285 l.17, and the same form in (4.18), p.285 l.23, and in |B| < α₁L^jη, p.280 l.44, K_R taking the largest of their O(1)s) at RG I's ratio α₁/α₀ = λ_R and α₂ = c₂α₀ ≤ α₀ (§12, *Analyticity and bounds.*, the ratio of (D2)).
-  {#W8.19-4} ⅛δ₀RM ≥ 4 log L + 1 and PRT2 (2.59) at α = ½ and at α = 1/128, with Bałaban's R and M of PRT2 (2.2) for CRE's domains (LF #4.9-2, #4.31, and #4.33: the row sums c_K of the residual's kernel, the ratio η_π ≤ δ₀/32, and the kernel form of VAR Proposition 4), and ½δ_Q^{pl}RM ≥ 2 log L + 1 (LF #4.40.2). At the joins and the top N₀ layers of 𝐁″_k they are read with LM₁ in place of RM, and (J-W) and ½δ_Q^{pl}LM₁ ≥ 2 log L + 1 of stage 3 cover them (LF #4.18-2).
-- {#W8.20} Stage 3′, after M, on B₃⁺ and a further upper bound on c₂: B₃⁺ := max(B₃, 2B_J), B_J the second-order operator bound of H_{1,j} that RG I p.279 l.29–31 invokes through the bounds (1.43)–(1.54) of [14] and the Landau-gauge representation (p.272 l.20–24), uniform in j, its existence Bałaban's printed claim ("The second is proved in the same way", p.280 l.21), its value not printed and possibly depending on M through the cube □₀ = □̃⁵ (p.273 l.40) (the Cauchy note's #C5.37-10), Bałaban's B₃ unchanged;
+  {#W8.19-2} M ≥ 2R_*, R_* the least R ≥ 1 with C_tlR^de^{−δ₀R} ≤ 1/16 for the tail C_tlR^de^{−δ₀R} of PBG (3.42) (the LF note's *The age factor.*, which puts its cut-off balls B(z, 2R_*a_{m′}) inside □₁, at the distance ≥ Ma_{m′} from its complement); (D2) (§12, *Analyticity and bounds.*); Bałaban's own lower bounds on M, listed in §12's *No loop through M*: RG I's M ≥ M(κ) (Theorem 3, p.264 l.38–39), RG II's δ₀M ≥ κ (p.21 l.36) and δ₁M ≥ κ₁ (p.5 l.15), CRE's "M = L^m is sufficiently large" (p.245 l.34), and LFR I's δ(M/M₁) ≥ 2 (p.186 l.35) and O(1)B₃B₅M⁵e^{−4δM} ≤ α with α ≤ 1/8 (p.200 l.14–21).
+  {#W8.19-3} CRE's conditions on MR₁ and M₂R₁ (p.250 l.47–48, p.251 l.39–40) hold for M fixed and γ small and are stage-6 conditions; λ_R = K_RLM + 1 with K_R ≥ 4B₃²O(1) and K_R ≥ O(1)(1 + B₃O(1)), which give RG I's B₃²O(1)Mα₀ < ½α₁ (p.277 l.54) and O(1)(α₂ + B₃O(1)Mα₀) < α₁ with LM in place of M, as the near domains at a finer layer read them (the Cauchy note's #C5.34-4) (p.285 l.17, and the same form in (4.18), p.285 l.23, and in |B| < α₁L^jη, p.280 l.44, K_R taking the largest of their O(1)s) at RG I's ratio α₁/α₀ = λ_R and α₂ = c₂α₀ ≤ α₀ (§12, *Analyticity and bounds.*, the ratio of (D2)).
+  {#W8.19-4} ⅛δ₀RM ≥ 4 log L + 1 and PRT2 (2.59) at α = ½ and at α = 1/128, with Bałaban's R and M of PRT2 (2.2) for CRE's domains (LF #4.9-2, #4.31, and #4.33: the row sums c_K of the residual's kernel, the ratio η_π ≤ δ₀/32, and the kernel form of VAR Proposition 4), and ½δ_Q^{pl}RM ≥ 3 log L + 1 (LF #4.40.2-1). At the joins and the top N₀ layers of 𝐁″_k they are read with LM₁ in place of RM, and (J-W) and ½δ_Q^{pl}LM₁ ≥ 3 log L + 1 of stage 3 cover them (LF #4.18-2, #4.40.2-2).
+- {#W8.20} Stage 3′, after M, on B₃⁺ and a further upper bound on c₂: B₃⁺ is the Cauchy note's (#C5.37-18), with B_J's existence and uniformity in j Bałaban's printed claim (#C5.37-9), and B_J possibly depending on M through the cube □₀ = □̃⁵ (#C5.37-10);
   {#W8.20-1} c₂ ≤ c_* := β_IL^{−2}/(2B₃⁺C_{Q*}O(1)) with the absolute O(1) of RG I (3.49), so that O(1)α₂ ≤ α₃ (RG I p.279 l.44–49; §12, the ratio of (D2)).
   {#W8.20-2} Stages 1–3 use c₂ only through stage 2's upper bounds (c₂ ≤ 1 in K_R's clause), so the further upper bound keeps them.
 - {#W8.21} Stage 4, upper bounds on PBG's α₀ and α₁ after L and the sizes: PBG's smallness of Mα₀ (p.396 l.32, for the class (3.35)–(3.36); used in Theorem 3.12, p.423 l.34, which asks α₀ sufficiently small, and at p.428 l.28) read at 2Mα₀, for the terms on the LF note's enlarged domain 𝒟^c (its *The induction.*); O(1)L⁵M′α₀ ≤ a₁/2 with PBG's a₁ (§7, §11's 16-block cubes; Corollary 3.6 at the real U₀; the half leaves the room for stage 5's ε₁ part of 10.5's O(1)L⁵M′(α₀ + O(1)LB₅ε₁) ≤ a₁);
-  {#W8.21-1} α₁^A ≤ a₁/2 below, B₅ε₁ ≤ a₁/2, and B₅ε₁^{(1)} ≤ a₁/2 (10.5, *G₁ and H₁*, the Cauchy polydisc of radius (a₁/2)(L^jη)^{−1} about the real points, inside PBG's domain at a₁); O(L³α₀) ≤ ½, which covers O(L²α₀) ≤ ½ (10.4, the weight w_Q ≤ 3 of Q₁); α₀ ≤ a₀ with VAR's a₀ (§11, VAR's ε₀ ≤ a₀ at α₀ = ε₀); O(1)C_D(L⁵M₁α₀ + α₁) ≤ ½ (§11, *The inverse.* and the boundary data cubes); (J) (§11); O(1)B₀C₃Mα₀ ≤ ½ (§11, *The form (c) for G̃ with the Δ^{(2)} term*); α₁^A = 4L²(C_L + 1)(c_uMα₀ + α₁) ≤ a₁/2, 4C₂εr ≤ 1, and 2Lc_Gc_uMα₀ ≤ 1 (10.1);
-  {#W8.21-2} C_ax·d(R_Q + 3)c_Fc_uMα₀ ≤ m_Q/4, 4Lα₁ ≤ r_G, and C_Qe^{½δ_Qr_T}C_ax′α₁ ≤ ½ (10.1, the lift); 8dc_Gα₁ ≤ log 2, C_tr′δ_T(0) ≤ 1, and c_F(Mα₀ + α₁ + α₁²) ≤ 1 with c_F ≥ 8L³(c_u + 1)/r_G, in effect O(1)L⁶(Mα₀ + α₁ + α₁²) ≤ r_G (10.2, 10.4); k_lc_F(Mα₀ + α₁ + α₁²) ≤ 1 and 32dc_F(Mα₀ + α₁ + α₁²) ≤ r_G (10.4); R₀M₀Mα₀ ≤ 1 (10.5); O(1)B₀²C_D(c_πα₀ + C₃Mα₀) ≤ ¼ (§11, *The inverse.*); η|A′| ≤ 1 for the Baker–Campbell–Hausdorff chart at the complex backgrounds (10.4); α_*′ := min(α₁, α_J/c_J) with α_J = Mα₀ (§6).
+  {#W8.21-1} α₁^A ≤ a₁/2 below, B₅ε₁ ≤ a₁/2, and B₅ε₁^{(1)} ≤ a₁/2 (10.5, *G₁ and H₁*, the Cauchy polydisc of radius (a₁/2)(L^jη)^{−1} about the real points, inside PBG's domain at a₁); O(L²α₀) ≤ ½ (10.4, the weight w_Q ≤ 3 of Q₁); α₀ ≤ a₀ with VAR's a₀ (§11, VAR's ε₀ ≤ a₀ at α₀ = ε₀); O(1)C_D(L⁵M₁α₀ + α₁) ≤ ½ (§11, *The inverse.* and the boundary data cubes); (J) (§11); O(1)B₀C₃Mα₀ ≤ ½ (§11, *The form (c) for G̃ with the Δ^{(2)} term*); α₁^A = 4L²(C_L + 1)(c_uMα₀ + α₁) ≤ a₁/2, 4C₂εr ≤ 1, and 2Lc_Gc_uMα₀ ≤ 1 (10.1);
+  {#W8.21-2} C_ax·d(R_Q + 3)c_Fc_uMα₀ ≤ m_Q/4, 4Lα₁ ≤ r_G, and C_Qe^{½δ_Qr_T}C_ax′α₁ ≤ ½ (10.1, the lift); 8dc_Gα₁ ≤ log 2, C_tr′δ_T(0) ≤ 1, and c_F(Mα₀ + α₁ + α₁²) ≤ 1 with c_F ≥ 8L³(c_u + 1)/r_G, in effect O(1)L⁶(Mα₀ + α₁ + α₁²) ≤ r_G (10.2, 10.4); k_lc_F(Mα₀ + α₁ + α₁²) ≤ 1 and 32dc_F(Mα₀ + α₁ + α₁²) ≤ r_G (10.4); R₀M₀Mα₀ ≤ 1 (10.5); O(1)B₀²C_D(c_πα₀ + C₃Mα₀) ≤ ¼ (§11, *The inverse.*); η|A′| ≤ 1 for the Baker–Campbell–Hausdorff chart at the complex backgrounds (10.4); α_*′ of #W6.5-3 (#T3.15), with α_J = Mα₀ (§6).
 - {#W8.22} Stage 5, upper bounds on ε₁ after α₀: O(1)L⁴C₀ε₁ ≤ α₀ and ε₁ ≤ a₁/(3L) with C₀ := 4R₁M₁(B₃ + B₄(1)) (§11, the axial-gauge (3.35) from VAR (9)–(10) on VAR's class cubes of the index m or m − 1); ε₁ ≤ a₁/7 for VAR's cubes with M_V = 7M′ (§12, the collar cells and the collar cubes); ε₁ ≤ a₁ with VAR's a₁ and B₅ε₁ ≤ a₁/2 with PBG's a₁ (10.5); O(1)L⁶M′B₅ε₁ ≤ a₁/2, its O(1) the product of the two O(1)s of 10.5's O(1)L⁵M′(α₀ + O(1)LB₅ε₁), so that with stage 4's O(1)L⁵M′α₀ ≤ a₁/2 the configuration of 10.5 satisfies O(1)L⁵M′(α₀ + O(1)LB₅ε₁) ≤ a₁, the smallness PBG requires of O(1)Mα₀ (10.5);
   {#W8.22-1} O(1)(R₀M₀)²L⁴C₀ε₁ ≤ 1 (10.5); C_ιε₁ ≤ min(α₁, Mα₀) (10.5); LC_ιε₁ ≤ O(1)M₁α₀ (§11, the bridge); the ε₃ of VAR (186)–(190) in VAR's range (10.5), that is 2ε₃ ≤ a₃ (VAR Proposition 4, p.292 l.50, at the doubled radius of the Cauchy estimate that gives (186), p.307 l.37–p.308 l.12) and 18C₂B₀ε₃ ≤ 1 (VAR p.286 l.20), with O(1)C_ℒ^gB₀C₂ε₃ ≤ ¼ and O(1)B₀C₂ε₃ ≤ 1 (§11, the fixed points D and the contraction); O(1)C_ℒ^gB₅ε₁ ≤ ε₃/2 (§11, the points A′^A in the identity's domain, and the circles of Cauchy's estimate in VAR (186));
-  {#W8.22-2} O(1)B₅ε₁ ≤ r_G/2, which gives r ≤ r_G/2 for the cell domain 𝒫 at the complex W of §11's Taylor formula, r := max(|A′^A|_{(−1)}, |∇A′^A|_{(−2)}) = O(B₅ε₁) (§11, l.755, l.879, l.881); 2B̄_Jε₁ ≤ α_J (§6); κ_V = O(1)B₀C₄C_ℒ^g(B₅ + B₀C₁B₃)ε₁ ≤ ½ with VAR's C₁ (§11, the contraction for 𝐀₀, read at B_T and 2·6^d); O(1)S_wB_TC₄B₅ε₁ ≤ ½ with S_w := sup_xΣ_ye^{−⅛δ_min d(x,y)} (the rate ⅛δ_min, the LF note's δ_w, not the note's δ_w(ω)), a constant of d, L, and δ_min (the LF note's (δ), *The weighted rerun.*, the Neumann series of VAR (188) in the weighted norm); c_κ(C₀ε₁)² ≤ 1 (§12, the source s_ι);
-  {#W8.22-3} B₅ε₁^{(1)} ≤ a₁/2 with PBG's a₁ and O(1)(R₀M₀)²L⁴C₀ε₁^{(1)} ≤ 1 (§12, 10.5's conditions at the one-step problem of 𝐇″_k); O(1)L³B₃ε₁^{(1)} ≤ α₀, O(1)L⁴C₀ε₁^{(1)} ≤ α₀, and ε₁^{(1)} ≤ a₁/(3L) (§12, the collar's (3.35) for U_{1,2} and VAR (9) for V₀).
+  {#W8.22-2} O(1)B₅ε₁ ≤ r_G/2, which gives r ≤ r_G/2 for the cell domain 𝒫 at the complex W of §11's Taylor formula, r := max(|A′^A|_{(−1)}, |∇A′^A|_{(−2)}) = O(B₅ε₁) (§11: r at #W11.149-1 and #W11.168-3, the size of A′^A at #W11.63-1, and r ≤ r_G/2 at #W11.166-7 and #W11.170-6); 4B̄′_Jε₁ ≤ α_J (§6, #W6.5-5);
+  {#W8.22-2-1} κ_V = O(1)B₀C₄C_ℒ^g(B₅ + B₀C₁B₃)ε₁ ≤ ½ with VAR's C₁ (§11, the contraction for 𝐀₀, read at B_T and 2·6^d); O(1)S_wB_TC₄B₅ε₁ ≤ ½ with S_w := sup_xΣ_ye^{−⅛δ_min d(x,y)} (the rate ⅛δ_min, the LF note's κ_w, not the walk-term defect δ_w(ω)), a constant of d, L, and δ_min (the LF note's (δ), *The weighted rerun.*, #4.284.14, the Neumann series of VAR (188) in the weighted norm);
+  {#W8.22-3} B₅ε₁^{(1)} ≤ a₁/2 with PBG's a₁ and O(1)(R₀M₀)²L⁴C₀ε₁^{(1)} ≤ 1 (§12, 10.5's conditions at the one-step problem of 𝐇″_k); O(1)L³B₃ε₁^{(1)} ≤ α₀, O(1)L⁴C₀ε₁^{(1)} ≤ α₀, and ε₁^{(1)} ≤ a₁/(3L) (§12, the collar's (3.35) for U_{1,2} and VAR (9) for V₀; the first O(1) is that of VAR's Sect. F, as VAR p.280 l.51–52 takes α₀ = ε₀, VAR's ε₀, for U₀ ∈ 𝔘_k(L³B₃ε₁)).
 - {#W8.23} Stage 6, for γ small: g small enough for CRE (2.6) with β₀ = 1/7 (stage 0; CRE p.255 l.50); the data parameter O(1)B₃²B₅M⁶ε_k at most the fixed ε₁ of 10.5 and at most ε₁^{(1)} (10.5, §12), which gives ε_k ≤ ε₁ (§8 above); 4d̄(ω) ≤ α_*′ (§6), with d̄ from the LF note's *The coarse side.* (its #4.314), an input whose conditions are the LF note's, stated there with the profile of its (b) and *The coarse side.* ((J-W) at the joins is in stage 3, and its ε₁ is the k-independent bound of the paragraph before this list);
-  {#W8.23-1} the alignment's r(Y) ≤ ½ (l.551) is not a condition on the constants but the scale threshold n ≥ n₀′ of the LF note (its #4.553), which exists under ε₀ < 1/125 (stage 0);
-  {#W8.23-2} O(1)C₀′ε₁ ≤ 1 at the data parameter ε₁ = O(1)B₃²B₅M⁶ε_k of (9.2), not the fixed ε₁ of 10.5 (§12, the bootstrap and the transport term, l.986), and O(1)C₀^cε₁″ ≤ 1 at the LF note's ε₁″ := C(M)ε′_k (its #4.560), the parameter of VAR's classes at the real points of its class at the full radii, for the base there (its *Real points.* of (δ), l.493), with C₀^c the bootstrap's C₀′ read with the target's and the base's parameters both at most O(1)ε₁″, a constant of M and the earlier stages, which holds for γ small since ε₁″ → 0, with the bootstrap's companion conditions read there too,
+  {#W8.23-1} the alignment's r(Y) ≤ ½ (#W10.5.45-22) is not a condition on the constants but the scale threshold n ≥ n₀′ of the LF note (its #4.553), which exists under ε₀ < 1/125 (stage 0);
+  {#W8.23-2} O(1)C₀′ε₁ ≤ 1 and c_κ(C₀′ε₁)² ≤ 1 at the data parameter ε₁ = O(1)B₃²B₅M⁶ε_k of (9.2), not the fixed ε₁ of 10.5 (§12, the bootstrap, the transport term, and the source s_ι, #W12.55-2, #W12.83-3, and #W12.249-7);
+    {#W8.23-2-1} O(1)C₀^cε₁″ ≤ 1 at the LF note's ε₁″ := C(M)ε′_k (its #4.560), the parameter of VAR's classes at the real points of its class at the full radii, for the base there (its *Real points.* of (δ), #4.281–#4.281-1), with C₀^c the bootstrap's C₀′ read with the target's and the base's parameters both at most O(1)ε₁″, a constant of M and the earlier stages, which holds for γ small since ε₁″ → 0, with the bootstrap's companion conditions read there too;
   {#W8.23-3} O(1)L⁵M′α₀^W ≤ a₁/2 and PBG's series condition at α₀^W := O(1)d²L²C₀^cε₁″, and C_ℒ″C_ℬε₂ ≤ 1 at ε₂ ≤ O(1)B₁ε₁″, all holding for γ small; O(1)L⁵M′α₀^W ≤ a₁/2 with PBG's a₁ at α₀^W := O(1)d²L²C₀′ε₁, and α₀^W below the absolute constant for which PBG's series (3.138) converges (Theorem 3.12's "α₀ sufficiently small", p.423 l.29–30, l.34) (§12, *The bootstrap.*, PBG's class at W_s); 4KM′²B₃ε_U^{(i)} ≤ ½L^{−3} with K the notes' name for the coefficient of VAR's (165) and U_i's data bounds ε_U^{(i)} ≤ O(1)B₃²B₅M⁶ε_k (§12, *The band regularity of U_{1,2}.*);
   {#W8.23-4} 4C_♯B₀C₄ε₄ ≤ ½ and ε₄ ≤ a₄ at ε₄ := 3B₀C₁B₃ε₁ with VAR's C₁, Proposition 6's printed value, with the data parameter ε₁ of (9.2), VAR's conditions at p.295 l.42 and l.20, l.45 at B = 0 for the ball (115), with C_♯ the constant of L and d of *The base at the layer j.* (§12); ε_U^{(i)} ≤ ε₁^{(1)}, so that stage 5's O(1)L³B₃ε₁^{(1)} ≤ α₀ gives the collar's (3.35) for U_{1,2} at its membership parameter L³B₃ε_U^{(i)} (§12, *The background pairs.*);
-  {#W8.23-5} RG II's conditions on its ε₂, read at B_T and 2·6^d (§11): 4C₂B_Te^{2·6^dκ₁}ε₂ ≤ 1 (RG II p.5 l.30, for (1.13)–(1.14) and the bound |A| < 2ε₂ of l.39) and ε₂ ≤ a₃ (Proposition 4 of VAR with ε₃ replaced by ε₂, p.5 l.40); e^{32κ₁}ε₁ below RG II's absolute constant (RG II p.7 l.7, the premise of (1.21); §3, the t_□ circle), and e^{4·6^dκ₁}ε₁ below it for the composites of run B, where 16 stands for 2·6^d and so 32 for 4·6^d (§11, l.836);
-  {#W8.23-6} the Ad factors at complex points, each within a factor 2 of isometric when c_G times the imaginary part of its argument is ≤ log 2: c_G·O(1)C_HC_Ŷ(α̃_{0,k} + α̃_{1,k}) ≤ log 2 for the gauge factors u and ũ (l.1083, l.1118, l.1124), c_GC_I(α̃_{0,k} + α̃_{1,k}) ≤ log 2 for w_y (l.1085), and c_G·O(1)dM(1 + C_G)C_HC_Ŷ(α̃_{0,k} + α̃_{1,k}) ≤ log 2 for the transports along the contours (l.1085, l.1125) (§12, *Analyticity and bounds.*);
-  {#W8.23-7} the conditions on ϱ̄ and ϱ of §11's bridge: O(1)Lϱ̄ ≤ C₁ε₁/4 with VAR's C₁ (VAR (172)), O(1)Lc_G(1 + B₀)ϱ̄ ≤ ½ log 2 (the complex return gauge and its Ad), O(1)c_GL^{d+3}(1 + B₀)ϱ̄ ≤ ½ (the series of V), and O(1)(1 + C_ℋ)ϱ ≤ C₀ε₁/2 with the Cauchy note's C₀ (the curvature of U₁), and the three conditions on κ_ℋ := O(1)c_G(1 + C_ℋ)ϱ̄ for its Neumann series at U₁ (l.706), O(1)B₀K_opS_{δ₁}κ_ℋ ≤ ½, O(1)C_Q′S_{δ_Q}κ_ℋ ≤ ½, and O(1)C_{QGQ}S_{δ₁/2}B₀K_opκ_ℋ ≤ ½; O(1)L²R₀M₀α_c ≤ C₁ε₁/2 and O(1)ϱ ≤ C₁ε₁/4 with VAR's C₁, and ϱ ≤ O(1)α₁^A/L (10.5, with half the right sides in §12, the room for ε₂);
-  {#W8.23-8} c_GLR₀M₀α_c ≤ 1, O(1)LR₀M₀α_c ≤ r_υ, 2c_G·O(1)LR₀M₀α_c ≤ ½log 2, and O(1)c_GLC_VC_aα_c ≤ ¼log 2 (10.5); O(1)LC_VC_aα_c ≤ ¼log 2, which gives O(1)L sup|ηℋ| ≤ ¼log 2 for the return gauge g of the complex chain configurations, since sup|ηℋ| ≤ O(1)C_VC_aα_cL^{−2n} by the bound of l.593 (10.5, l.593); C_ℒ″C_ℬε₂ ≤ 1 (§12, the bootstrap); the factors O(1)α₂^{−1}ε_k of RG I's Cauchy estimates small (p.273 l.25, p.280 l.49), RG I's field in the class (3.31) and in (3.14) with ⅓α₂ (p.276 l.42, p.273 l.13), and RG II's 4B₀C₁e^{16κ₁}ε₁ ≤ ¼α₂ with RG II's absolute C₁ (RG II p.7 l.9;
-  {#W8.23-9} §3, the t_□ circle), with 4B_TC₁e^{2·6^dκ₁}ε₁ ≤ ¼α₂ for the composites of run B (§11, l.836), and 4B_T′C₁e^{2·6^dκ₁}ε₁ ≤ ¼α₂, (3.14) with ⅓α₂ (p.273 l.13), and VAR's ball condition of (115), 2B_T′C₁B₃ε₁ ≤ a₄ with VAR's C₁ (an absolute bound, which holds since the data parameter tends to 0 with γ), at B_T′ := (3/2)B_T, for run B's terms of (1.60) along the k-field segment of the LF note's (iii) (its *The conditions along the segment.*), the ratio conditions by ε_k/α₂ = (A₀/(c₂C₀))(log g_k^{−2})^{p₀−q₀} with CRE's C₀, small under q₀ > p₀ + 3r,
-  {#W8.23-10} and the ball condition since ε_k = (ε_k/α₂)α₂ with α₂ → 0 (§12, the ratio of (D2)); RG I's bounds on its α₀ and α₁ at α₀ = α̃_{0,k}, α₁ = λ_Rα̃_{0,k}: O(1)Mα₁ ≤ β_I (RG I p.278 l.46, p.279 l.1–2), (4B₃²O(1)M)²α₀ ≤ β_I (p.278 l.64), and B₃(B₃O(1)Mα₀)² < β_Iα₀ (p.279 l.12), each also with LM in place of M at the radii of the layer n − 1 for the near domains at a finer layer (the Cauchy note's #C5.34-4), the O(1) of O(1)Mα₁ ≤ β_I taken at least that of the gauge bound ‖Ad(g)‖ ≤ exp(O(1)Mα₁) of the Cauchy note's #C5.26-8;
+  {#W8.23-5} RG II's conditions on its ε₂, read at B_T and 2·6^d (§11): 4C₂B_Te^{2·6^dκ₁}ε₂ ≤ 1 (RG II p.5 l.30, for (1.13)–(1.14) and the bound |A| < 2ε₂ of l.39) and ε₂ ≤ a₃ (Proposition 4 of VAR with ε₃ replaced by ε₂, p.5 l.40); e^{32κ₁}ε₁ below RG II's absolute constant (RG II p.7 l.7, the premise of (1.21); §3, the t_□ circle), and e^{4·6^dκ₁}ε₁ below it for the composites of run B, where 16 stands for 2·6^d and so 32 for 4·6^d (§11, #W11.122-18 and #W11.134-3);
+  {#W8.23-6} the Ad factors at complex points, each within a factor 2 of isometric when c_G times the imaginary part of its argument is ≤ log 2: c_G·O(1)C_HC_Ŷ(α̃_{0,k} + α̃_{1,k}) ≤ log 2 for the gauge factors u and ũ (#W12.174-1, #W12.209-2, #W12.215-3), c_GC_I(α̃_{0,k} + α̃_{1,k}) ≤ log 2 for w_y (#W12.176-5), and c_G·O(1)dM(1 + C_G)C_HC_Ŷ(α̃_{0,k} + α̃_{1,k}) ≤ log 2 for the transports along the contours (#W12.176-9, #W12.215-1) (§12, *Analyticity and bounds.*);
+  {#W8.23-7} the conditions on ϱ̄ and ϱ of §11's bridge: O(1)Lϱ̄ ≤ C₁ε₁/4 with VAR's C₁ (VAR (172)), O(1)Lc_G(1 + B₀)ϱ̄ ≤ ½ log 2 (the complex return gauge and its Ad), O(1)c_GL^{d+3}(1 + B₀)ϱ̄ ≤ ½ (the series of V), and O(1)(1 + C_ℋ)ϱ ≤ C₀ε₁/2 with the Cauchy note's C₀ (the curvature of U₁), and the three conditions on κ_ℋ := O(1)c_G(1 + C_ℋ)ϱ̄ for its Neumann series at U₁ (#W11.37-2, #W11.37-8–#W11.37-10), O(1)B₀K_opS_{δ₁}κ_ℋ ≤ ½, O(1)C_Q′S_{δ_Q}κ_ℋ ≤ ½, and O(1)C_{QGQ}S_{δ₁/2}B₀K_opκ_ℋ ≤ ½;
+  {#W8.23-7-1} O(1)L²R₀M₀α_c ≤ C₁ε₁/2 and O(1)ϱ ≤ C₁ε₁/4 with VAR's C₁, and ϱ ≤ O(1)α₁^A/L (10.5, with half the right sides in §12, the room for ε₂);
+  {#W8.23-8} c_GLR₀M₀α_c ≤ 1, O(1)LR₀M₀α_c ≤ r_υ, 2c_G·O(1)LR₀M₀α_c ≤ ½log 2, and O(1)c_GLC_VC_aα_c ≤ ¼log 2 (10.5); O(1)LC_VC_aα_c ≤ ¼log 2, which gives O(1)L sup|ηℋ| ≤ ¼log 2 for the return gauge g of the complex chain configurations, since sup|ηℋ| ≤ C_V sup a ≤ O(1)C_VC_aα_c on the blocks of a pair of 10.5's Hölder quotient (#W10.5.51, #W10.5.56-2, #W10.5.71-4, #W10.5.85-2); C_ℒ″C_ℬε₂ ≤ 1 (§12, the bootstrap);
+  {#W8.23-8-1} the factors O(1)α₂^{−1}ε_k of RG I's Cauchy estimates small (p.273 l.25, p.280 l.49), RG I's field in the class (3.31) and in (3.14) with ⅓α₂ (p.276 l.42, p.273 l.13), and RG II's 4B₀C₁e^{16κ₁}ε₁ ≤ ¼α₂ with RG II's absolute C₁ (RG II p.7 l.9; §3, the t_□ circle),
+  {#W8.23-9} with 4B_TC₁e^{2·6^dκ₁}ε₁ ≤ ¼α₂ for the composites of run B (§11, #W11.134-3), and 4B_T′C₁e^{2·6^dκ₁}ε₁ ≤ ¼α₂, (3.14) with ⅓α₂ (p.273 l.13), and VAR's ball condition of (115), 2B_T′C₁B₃ε₁ ≤ a₄ with VAR's C₁ (an absolute bound, which holds since the data parameter tends to 0 with γ), at B_T′ := (3/2)B_T, for run B's terms of (1.60) along the k-field segment of the LF note's (iii) (its *The conditions along the segment.*);
+  {#W8.23-10} the ratio conditions hold by ε_k/α₂ = (A₀/(c₂C₀))(log g_k^{−2})^{p₀−q₀} with CRE's C₀, small under q₀ > p₀ + 3r, and the ball condition since ε_k = (ε_k/α₂)α₂ with α₂ → 0 (§12, the ratio of (D2));
+  {#W8.23-10-1} RG I's bounds on its α₀ and α₁ at α₀ = α̃_{0,k}, α₁ = λ_Rα̃_{0,k}: O(1)Mα₁ ≤ β_I (RG I p.278 l.46, p.279 l.1–2), (4B₃²O(1)M)²α₀ ≤ β_I (p.278 l.64), and B₃(B₃O(1)Mα₀)² < β_Iα₀ (p.279 l.12), each also with LM in place of M at the radii of the layer n − 1 for the near domains at a finer layer (the Cauchy note's #C5.34-4), the O(1) of O(1)Mα₁ ≤ β_I taken at least that of the gauge bound ‖Ad(g)‖ ≤ exp(O(1)Mα₁) of the Cauchy note's #C5.26-8;
   {#W8.23-11} the error term O(1)(M⁶R_k(α̃_{0,k} + α̃_{1,k}) + exp(−R_k)) of LFR II (1.7) (p.358 l.4, with ε_k → O(1)(α̃_{0,k} + α̃_{1,k})) at most the lower bound γ₀^{LFR}(2d(100M)⁵)^{−1} of (1.9), half of the bound γ₀^{LFR}(d(100M)⁵)^{−1} that (1.8) gives for γ₀^{LFR}‖∂B′‖²/‖B′‖² (p.358 l.4, l.11, l.20; (1.8)'s exponent d + 1 is 5 at d = 4; γ₀^{LFR} is LFR II's constant of (1.7), not RG I's bound on 𝐉), which holds for γ small since R_k ≤ L(log g_k^{−2})^r (CRE (2.5)) gives M⁶R_k(α̃_{0,k} + α̃_{1,k}) = O(g_k(log g_k^{−2})^{q₀+r}) and R_k → ∞ (§12, *Analyticity and bounds.*);
-  {#W8.23-12} O(1)c_G(1 + B₀)ϱ̄ ≤ ¼log 2 (§11, the transports e^{iηℋ} at U₁); (D1), (C_s + C_Λ + C_Ŷ)(α̃_{0,k} + α̃_{1,k}) ≤ r_V with r_V the least of VAR's radius of absolute smallness in Propositions 4 and 6, the radius of the logarithm charts, and (16dLB₀²C₄)^{−1} (§12, *Analyticity and bounds.*).
+  {#W8.23-12} O(1)c_G(1 + B₀)ϱ̄ ≤ ¼log 2 (§11, the transports e^{iηℋ} at U₁); (D1), (C_s + C_Λ + C_Ŷ)(α̃_{0,k} + α̃_{1,k}) ≤ r_V with r_V the least of VAR's radius of absolute smallness in Propositions 4 and 6, the radius of the logarithm charts, and r_H := min{(16dLB₀²C₄)^{−1}, (24dLB₀²C₂)^{−1}} (§12, *Analyticity and bounds.*).
   {#W8.23-13} (T-π): 8B₀C_NLc_tot(1/128)c″_Kε₄ ≤ 1, 2C_{HD}Lc_tot(1/128)ε₄ ≤ 1, and ε₄ ≤ ¼a₃, at ε₄ := 3B₀C₁B₃ε₁ with VAR's C₁ and the data parameter ε₁ of (9.2), with ε₄ ≤ a₄ as above (LF #4.37–#4.38, the layer-weighted a priori inequality for VAR's fixed point; C_N, C_{HD}, c″_K, and c_tot(1/128) are constants of d, L, and Bałaban's constants, LF #4.32–#4.36).
 
-{#W8.24} The lattice part rests on (Wδ-1), the consumer's fine form on (Wδ-2), and the passage from the propagators to 𝐇_k(s) on (Wδ-3), all derived in §§10–11 and not reviewed in their current form.
-{#W8.24-1} The passage costs 2β′, β′ > 0 arbitrary, in the exponent of the gradient terms of the fixed point 𝐀₀ (§11, (1)(a) and (b)), so for 𝐇_k(s) the exponent is γ_H − 2β′, with γ_H = βγ_w/(1 + β) of §11's form (c) for H and the constant C_𝔡B₀′(β′), C_𝔡 the constant of 𝔡_H there (it contains 2C_w and the constants of ϑ_ℒ, ϑ, and C_bϑ_b).
+{#W8.24-1} The passage from the propagators to 𝐇_k(s) through (Wδ-3) costs 2β′, β′ > 0 arbitrary, in the exponent of the gradient terms of the fixed point 𝐀₀ (§11, (a) and (b)), so for 𝐇_k(s) the exponent is γ_H − 2β′, with γ_H = βγ_w/(1 + β) of §11's form (c) for H and the constant C_𝔡B₀′(β′), C_𝔡 the constant of 𝔡_H there (it contains 2C_w and the constants of ϑ_ℒ, ϑ, and C_bϑ_b).
 {#W8.24-2} Since 𝔡_H is built from global suprema, these exponents are in powers of L^{−j_min}, j_min ≥ k/2 − 1 the finest layer of the history, and in powers of ε/a_n, n ≤ k, they halve (§11, *The form (c) for VAR's H.*).
-{#W8.24-3} The consumer, the LF note's (iii), needs (ε/a_n)^{(γ_H − 4β′)/2} ≤ θ̃^nL^{−cn} for some c > 0 (a further 2β′ is lost there in the second kind of smoothed current functional, LF *The divergence part.*), which holds since θ̃ ≥ L^{−θ_V/8} (the Cauchy note's §8.7) once (γ_H − 4β′)/2 > θ_V/8, θ_V/8 = β′_C/(16(4 + β′_C)) ≤ 1/144, since the Cauchy note's own parameter β′_C := ½min(β_H, 1 − β_E) (its l.106, l.966; a different parameter from §11's β′) lies in [19/40, ½] and θ_V/8 increases in it.
+{#W8.24-3} The consumer, the LF note's (iii), needs (ε/a_n)^{(γ_H − 4β′)/2} ≤ θ̃^nL^{−cn} for some c > 0 (a further 2β′ is lost there in the second kind of smoothed current functional, LF *The divergence part.*), which holds since θ̃ ≥ L^{−θ_V/8} (the Cauchy note's §8.7) once (γ_H − 4β′)/2 > θ_V/8, θ_V/8 = β′_C/(16(4 + β′_C)) ≤ 1/144, since the Cauchy note's own parameter β′_C := ½min(β_H, 1 − β_E) (its #C5.3-2 and #CK.1-13; a different parameter from §11's β′) lies in [19/40, ½] and θ_V/8 increases in it.
 {#W8.24-4} For β ≥ 1/2 and ε₀ < 1/4, γ_H ≥ 1/12, so for §11's β′ ≤ 1/60 the left side is ≥ 1/120 and this holds.
 {#W8.24-5} The conditions (W-c) and (W-M) are lower bounds on PBG's R₀M₀ and on M. PBG takes R₀M₀ as the smallest pair satisfying the conditions of [4] (p.408 l.26–28), which are lower bounds, and B₀ and δ₀ depend on d and L only (Theorem 3.1, p.397 l.37).
-{#W8.24-6} A larger R₀M₀ leaves every step of PBG valid (checked): "In [4] we have proved all theorems under the assumption that R, M are sufficiently large", and R₀, M₀ are "a pair … of smallest possible numbers satisfying conditions needed in the proofs" (PBG p.408 l.26–27), so the theorems hold for every larger pair.
+{#W8.24-6} A larger R₀M₀ leaves every step of PBG valid: "In [4] we have proved all theorems under the assumption that R, M are sufficiently large", and R₀, M₀ are "a pair … of smallest possible numbers satisfying conditions needed in the proofs" (PBG p.408 l.26–27), so the theorems hold for every larger pair.
 {#W8.24-7} The rates and constants used here do not depend on R₀M₀ (§11, PRT2 Proposition 2.6, (2.83)–(2.85), p.237 l.3).
 
-## 9. The Suggested Route, Step by Step {#WS9}
-
-1. {#W9.1} *The factors.* Quoted and checked (§1).
-   {#W9.1-1} Each R_α(X) is a product of local propagators of PBG Sect. C on the sequence {Ω_n(□)}_{n=0,…,j+1} inside □̃⁵, with Dirichlet conditions on Ω₀(□)^c and the multiscale averagings Q and Q′ of the local layers down to the scale 0, at the run's background restricted to X̃⁵, together with partition functions and explicit local operators.
-2. {#W9.2} *The resolvent identity with a kernel bound on δ𝒪.* Fails as stated (§4(c)): the two runs' operators act on different lattices, and no common-space difference of them has a small kernel.
-   {#W9.2-1} It is replaced by the exact intertwined identities of §4(a)–(b), derived given (S), with the defect β_□ paired only against fields regular at their shell.
-3. {#W9.3} *The two parts.* The identities of §10.2 and §10.4 hold for the local operators with PBG's Dirichlet conditions in the intertwined form of §4, given (S).
-   {#W9.3-1} (S) is derived for the scalar operators (§4(d)) and for one-forms (10.1).
-   {#W9.3-2} The bounds (3.42)–(3.44) for the local operators are supplied by PBG (Corollary 3.6).
-   {#W9.3-3} The local defect bounds, the analogues of (10.6a)–(10.6c), are not supplied by PBG; they are (Wδ-1), derived in §10, not reviewed.
-   {#W9.3-4} The chain rule cancels the averaging terms of every shell (§5(a)), derived.
-   {#W9.3-5} The background part is derived (§6), on PBG's domain (3.37) and the pair class, not on Bałaban's old-term class.
-4. {#W9.4} *Multiscale domains.* Derived (§5(d)): the coarser layers contribute (ε/a_j)^β ≤ (ε/a_m)^β, and PBG's finer local shells cost only c_β.
-5. {#W9.5} *The non-inverse factors.* Derived for the averagings, the gauge directions, and the scalar averaging commutators [h, Q′] and [Q′*, h] (§7); derived, not reviewed, for the multiplications (§7, relative order 3(2d + 1)c_h*ε/(ML^jη), whose constant rests on the weight w_Q ≤ 3 of 10.4); the characteristic functions of □̃ and 1 − □̃ intertwine exactly, and the differences of (3.97) and p.415 and the commutators with h′²_{□₀} and ζ_{□̃} are derived in §7 (*The differences and the further commutators.*), not reviewed.
-   {#W9.5-1} For K′(h), K(h) (with S_j(∂h)), and P_{□,1}(∂h), within (Wδ-1), derived in 10.4 as commutators, not reviewed.
-6. {#W9.6} *The result.* §8: γ_w = min(β, (1 − ε₀)/3), C_w as stated, given (Wδ-1)–(Wδ-3) (§7) and, for the collar of 𝐁₁, (Wδ-4), derived in §§10–12, not reviewed.
-   {#W9.6-1} The telescoping of the LF note's (iii) (its #4.432) is derived against (1.7) and (1.11) in §7, not reviewed in this form (its branch without smallness, with C_tel).
-
-## 10. The Condition (S), the Scalar Operator G′_□, and C_□ (Derived) {#WS10}
-
-{#W10.1} This section treats the parts of (Wδ-1). 10.1 places the aligned background in PBG's complex domain and derives the condition (S) for one-forms. 10.2 derives the functional form of the bilinear defect for the scalar operator Δ′_a of PBG (3.24), with the coarse side of G′_□ at blocks of □ and at general points. 10.3 derives the comparison of C_□ through an exact identity. 10.4 derives the action part and, in a decay-weighted norm, the gauge-fixing part of the one-form operator Δ_a of G_□. 10.5 treats the fine-side lift ℒ_ι of (Wδ-2).
+## 10. The Condition (S), the Local Operators, and the Fine-Side Lift {#WS10}
 
 ### 10.1 The Aligned Background and the Condition (S) for One-Forms {#WS10.1}
 
@@ -659,8 +555,7 @@
   {#W10.1.7-1} The stencil of a coarse bond near ∂Ω^A_n reaches fine bonds of Ω^B_n ∖ Ω^B_{n+1}, where run B's bounds are larger by the factor L for the sup and L² for the gradient, and for n = 0 these bonds lie in Ω₀^B by the margin below.
   {#W10.1.7-2} So |Ã| < α₁^A(L^nε)^{−1} and |∇Ã| < α₁^A(L^nε)^{−2} on Ω^A_n, which is (3.37) with U = 1 for run A's local sequence.
 
-{#W10.1.8} This is the premise S1 under §§4–5.
-{#W10.1.8-1} (3.38) is not needed: Corollary 3.5 asks for (3.37) only.
+{#W10.1.8} So Theorems 3.1–3.3 hold for run A's local operators at Ũ, as §§4–5 use them; Corollary 3.5 asks for (3.37) only.
 
 {#W10.1.9} *The lift.* Let N be the set of coarse bonds within ℓ^∞-distance 2ε of Ω₀^A(□), P_N the restriction to N, and Q₁ = Q̄₁(U′U^B).
 {#W10.1.9-1} Let T_N := P_NQ₁Q₁*P_N on the fields on N, and put
@@ -690,7 +585,7 @@
   {#W10.1.16-6} Under C_Qe^{½δ_Qr_T}C_ax′α₁ ≤ ½, the series T_N^{−1} = Σ_{k≥0}(−T_N(U^B)^{−1}ΔT)^kT_N(U^B)^{−1} converges in ‖·‖_w, with ‖T_N^{−1}‖_w ≤ 2C_Q.
   {#W10.1.16-7} So |T_N^{−1}(c, c′)| ≤ 2C_Qe^{−½δ_Qd_ε(c,c′)}.
 - {#W10.1.17} *The gradient.* In the axial gauge about a coarse point, Iv is a convex combination of transported coarse values, and its fine differences are interpolated coarse differences of v up to 2C_trε|F||v| (the Cauchy note's first bullet, with the size of F only).
-  {#W10.1.17-1} (1 − Q₁I) annihilates fields constant in the axial gauge, so |(1 − Q₁I)v| ≤ C_1ε|∇_Av| + C_trε²|F||v|, by first-order Taylor in place of the second-order one.
+  {#W10.1.17-1} (1 − Q₁I) annihilates fields constant in the axial gauge, so |(1 − Q₁I)v| ≤ C₁ε|∇_Av| + max(C₁, 1)C_trε²|F||v|, with C₁ a constant of d bounding the total weight of the first differences in the remainder, by first-order Taylor in place of the second-order one of the Cauchy note's #C10.4.110–#C10.4.110-0, whose transport count holds with C₁ for C.
   {#W10.1.17-2} The fine differences of Q₁*w are at most 4(1 + 2dL^{d−1})(L/ε)sup|w| on the stencil.
   {#W10.1.17-3} With ε|F| ≤ c_F(Mα₀ + α₁ + α₁²)L^{−n}(L^nε)^{−1}, this gives (H_ℒ) with C_ℒ a constant of L, d, G, m_Q, and c_F.
   {#W10.1.17-4} At the complex background, the column-sum bound of Q₁* and the interpolation I in the G^c-valued axial gauge differ from their values at U^B by the entry bound of the complex perturbation, and they are covariant by the next paragraph.
@@ -721,15 +616,13 @@
 {#W10.1.22-7} The jump of χ_B at ∂Ω₀^B adds to ∇_Bℒ̃ a term at most (L/ε)|ℒ_Nw| on the bonds that cross ∂Ω₀^B.
 {#W10.1.22-8} These lie in run B's extra shell, where (ε/L)^{−1} is the factor of the shell's own norm and ϖ = 1, and §5(c) already bounds that shell by L^{−βj}.
 {#W10.1.22-9} So §5(c) holds with ℒ̃ under R₀M₀ ≥ L, with C_ℒ′ in place of 3^dC_ℒ and the rate δ₀′ in place of δ₀ throughout: in §5(c) (δ₀′/3), in (W-c), in 10.3, in §7's telescoping, and in (W-M).
-{#W10.1.22-10} When δ_Q ≥ 4δ₀, nothing changes.
 
-{#W10.1.23} The fine side needs the same for χ_Bℒ_ι, ℒ_ι = dι_Y, in place of ℒ_ι in §4(b): the bound (H_ℒ) for ℒ_ι; the tail (1 − χ_B)ℒ_ιG^Af of ℒ_ι outside Ω₀^B; and the exactness χ_AQ̄₁ℒ_ι = 1 on 𝔉^A.
+{#W10.1.23} The fine side needs the same for χ_Bℒ_ι, with ℒ_ι of §3(c), in place of ℒ in §4(b): the bound (H_ℒ) for ℒ_ι; the tail (1 − χ_B)ℒ_ιG^Af of ℒ_ι outside Ω₀^B; and the exactness χ_AQ̄₁ℒ_ι = 1 on 𝔉^A.
 {#W10.1.23-1} Since ι inverts the plain average, dι_Y is a right inverse of dM = Q̄₁ − D̄Θ₁ (the Cauchy note's (B1)), so Q̄₁dι_Y = 1 + D̄Θ₁dι_Y; 10.5 treats the three.
 {#W10.1.23-2} It splits dι_Y = H₁b(v) + D_Bγ₀, with H₁ PBG's lift for the double bar, applies §4 to the aligned pair (ι_Yc^A, c^A) that the LF note's split prescribes, and derives (H_ℒ), its Hölder bound, the tail, and the exactness for ℒ_ι = H₁𝔡 at the real chain configurations.
 {#W10.1.23-3} The gauge term and the complex chain configurations are treated in 10.5.
 
-{#W10.1.24} The condition 2R₀M₀ ≥ L of (W-c) becomes R₀M₀ ≥ L, and δ_QR₀M₀ ≥ 12 log L is added.
-{#W10.1.24-1} Like the other conditions of (W-c), these are lower bounds on PBG's R₀M₀ (PBG p.408 l.26–28, checked in §8).
+{#W10.1.24} 10.1 uses R₀M₀ ≥ L and δ_QR₀M₀ ≥ 12 log L of (W-c), lower bounds on PBG's R₀M₀ like the other conditions of (W-c) (PBG p.408 l.26–28, #W8.24-5–#W8.24-6).
 
 ### 10.2 The Bilinear Defect of Δ′_a (the Operator of G′_□) {#WS10.2}
 
@@ -839,11 +732,8 @@
 
   {#W10.2.36} 𝔈 := χ_AQ′₁G′^B_□ − G′^A_□χ_Aℒ′*, |𝔈g(x)| ≤ C′_□(β)(ε/a_j)^β(L^jη)²e^{−(δ₀/3)d(y,y′)}|g|,
 
-{#W10.2.37} with C′_□(β) the constant C_□(β) of §5(c) with C′_L(β) for C_L(β) and C_ℒ = 2.
-{#W10.2.37-1} The entries G′∇*, ∇G′, and ∇G′∇* are not derived here.
-{#W10.2.37-2} For G′∇*, leg 2 becomes G′^B∇*g, whose norm ‖·‖_{1,β;y″} contains ∇G′^B∇*g and its Hölder quotient; (3.44)–(3.45) bound these only through a Hölder norm of the source (p.398 l.14–21), and ∇G∇* is not bounded on sup-bounded sources uniformly in the number of fine spacings per block.
-{#W10.2.37-3} For ∇G′ and ∇G′∇*, leg 1 needs ∇G^A∇* as well.
-{#W10.2.37-4} These entries are not used below.
+{#W10.2.37} with C′_□(β) the constant C_□(β) of §5(c) with C′_L(β) + 8d + a for C_df(β) (the larger of the constants of #W10.2.28–#W10.2.29) and C_ℒ = 2.
+{#W10.2.37-1} The entries G′∇*, ∇G′, and ∇G′∇* are not used below.
 
 {#W10.2.38} *The coarse side at general points (E-gen).* Let x ∈ Δ(y) with y a block of run A's shell m ≥ 0, and supp g ⊂ Δ(y′) with y′ any block of run A's local sequence.
 {#W10.2.38-1} Under
@@ -872,7 +762,7 @@
   {#W10.2.45-4} So S(m) ≤ c′_βL^{−βm}.
 {#W10.2.46} The count over one layer and the factor e^{−(δ₀/3)d(y,y′)} are as in §5(c).
 {#W10.2.46-1} For m = 0 the bound is relatively of order 1, as it must be on run A's shell 0.
-{#W10.2.46-2} The entries G′∇*, ∇G′, and ∇G′∇* are not derived at general points either, for the reason given above, and 10.3 does not use them.
+{#W10.2.46-2} 10.3 does not use the entries G′∇*, ∇G′, and ∇G′∇* at general points.
 
 ### 10.3 The Operator C_□ {#WS10.3}
 
@@ -885,7 +775,6 @@
   {#W10.3.3} |(Q′G′²Q′*)^{−1}(y, y′)| ≤ B₀(L^jη)^{−4}(L^{j′}η)^{−d}e^{−δ₀d(y,y′)}, y ∈ Λ_j, y′ ∈ Λ_{j′}.
 
 {#W10.3.4} Here j and j′ are the layer indices of the points y and y′, not the scale of □.
-{#W10.3.4-1} The remark of p.398 l.48–51, made for Theorem 3.1, allows the powers to be redistributed between the two points by Lemma 2.1 of [4]; it is not used below, where every transfer of layer powers is explicit.
 
 {#W10.3.5} *Per-block bounds.* Write ℓ_m := L^mε for run A's layer m; run B's layer m + 1 has the same scale and is written with ℓ_m as well.
 {#W10.3.5-1} The norm on 𝔤^c is the Hermitian norm of the invariant inner product (PBG p.393 l.46), for which transposition below is exact.
@@ -923,8 +812,6 @@
   {#W10.3.16} [C^B_□]_{11} − C^A_□ = −[C^B_□]_{11}Δ_KC^A_□ − [C^B_□]_{12}K_{21}C^A_□.
 
   {#W10.3.17} Its factors are blocks of C^B_□ and C^A_□, bounded by (3.48) in each run, the block K_{21} of K^B, bounded by (3.42) for G′^B_□ and the counts of §5(c), and Δ_K.
-  {#W10.3.17-1} It needs neither a Neumann series nor a bound on K_{22}^{−1}.
-  {#W10.3.17-2} A Neumann series in C^A_□Δ_K fails: on run A's shell 0, where ϖ = 1, Δ_K is relatively of order 1.
 - {#W10.3.18} *Δ_K.* By Q′^B_{n+1} = Q′^A_nQ′₁ on 𝔇^A, Q′₁G′^B_□ = 𝔈 + G′^A_□ℒ′* on Ω₀^A, the symmetry of G′ for the bilinear pairing, and ℒ′* = Q′₁ with Q′₁ℒ′ = 1 (§4(d); the bilinear trace form is Ad(G^c)-invariant, so this holds at complex backgrounds),
 
   {#W10.3.19} Δ_K = Q′^A[𝔈ℒ′G′^A_□ + G′^A_□ℒ′*𝔈^T + 𝔈𝔈^T]Q′^{A*}.
@@ -1038,10 +925,10 @@
     {#W10.4.11-1} The pairing carries the transport of f″ and the axial-gauge values ℱ_c, which add the Ad factor 2 twice, so the part of f″[ℱ_c, 𝒜 − 𝒜_c] is an s₀-term with L^nε|s₀| ≤ 16C_{5L}k₂L^nε|F|(4dε + δ_T(n)L^nε)‖𝒜‖ ≤ 16C_{5L}k₂(4d + 32d²)ν_n‖𝒜‖.
   - {#W10.4.12} ℱ − ℱ_c is a sum along at most 4dL fine bonds of (ε/L) times transported values of ∇_Bℱ, plus at most δ_T(n)|ℱ|.
     {#W10.4.12-1} So the part of f″[ℱ − ℱ_c, 𝒜] is an s₁-term with |s₁| ≤ 16dC_{5L}k₂ε|F||𝒜| ≤ 16dC_{5L}k₂ν_n‖𝒜‖, plus an s₀-term with L^nε|s₀| ≤ 4C_{5L}k₂δ_T(n)‖𝒜‖ ≤ 128d²C_{5L}k₂ν_n‖𝒜‖.
-- {#W10.4.13} *X_tr, X_r, and the quartic terms.* The Cauchy note bounds each in units of 𝔰′𝔰, using only |ℱ| ≤ ℓ𝔰′, |∇ℱ| ≤ 𝔰′, |Dℱ| ≤ 2𝔰′ and the same for 𝒜, with ℓ the scale, and with factors ν_F, εℓ|F|, or ε²|F| in front.
-  {#W10.4.13-1} Each term is linear in the values of ℱ, ∇ℱ, or Dℱ at fixed 𝒜, so the same computation bounds its coefficients, term by term in the listed bounds.
+- {#W10.4.13} *X_tr, X_r, and the quartic terms.* Each is linear in ℱ at fixed 𝒜, and the Cauchy note bounds it by K𝔰′𝔰 (#C10.4.56–#C10.4.58, with a factor ν_F, εℓ|F|, or ε²|F| in K), using of ℱ only |ℱ| ≤ ℓ𝔰′, |∇ℱ| ≤ 𝔰′, and |Dℱ| ≤ 2𝔰′ on the cell of p (#C10.4.46-1), with ℓ the scale; its bound of ℱ − ℱ_c follows from the first two (#C10.4.36-1).
+  {#W10.4.13-1} With 𝔰′ := N(ℱ) := max(sup|ℱ|/ℓ, sup|∇ℱ|, sup|Dℱ|) over the cell, the term is a linear functional λ of ℱ with |λ(ℱ)| ≤ K𝔰N(ℱ). N is the norm of ℱ ↦ (ℱ/ℓ, ∇ℱ, Dℱ) in the maximum of three sup norms, whose dual norm is the sum of three ℓ¹ norms, so the Hahn–Banach theorem gives λ(ℱ) = ℓ^{−1}⟨ξ₀, ℱ⟩ + ⟨ξ₁, ∇ℱ⟩ + ⟨ξ₂, Dℱ⟩ with ‖ξ₀‖₁ + ‖ξ₁‖₁ + ‖ξ₂‖₁ ≤ K𝔰.
   {#W10.4.13-2} The terms of p read only the bonds of the box of (9.11) and the paths γ_{p′}, all within ℓ^∞-distance 2ε of p. So a fine bond meets the terms of at most 5^d base points and d² orientations, and the change from ε^d to (ε/L)^d costs L^d.
-  {#W10.4.13-3} The curl entries become s₁-entries as in the first bullet.
+  {#W10.4.13-3} The curl entries ξ₂ become s₁-entries of at most twice their size, as in the first bullet (#W10.4.8-7).
   {#W10.4.13-4} At ℓ = L^nε these are sources with sup(|s₁| + L^nε|s₀|) ≤ 32d²C_{5L}k_νν_n‖𝒜‖, with k_ν the sum of the coefficients of ν_F in the Cauchy note's bounds of X_tr, X_r, and the quartic terms ((10.6a)), the factor 16 for the Ad factors, and the factor 2 for the curl.
 - {#W10.4.14} *The current term.* PBG's current is J^A = D_A*F^A with F^A := η^{−2}Im ∂Ũ (PBG (3.11)), D* being the adjoint of D for the weighted bilinear pairing ((3.8)–(3.9)); F^A is the Cauchy note's F̂, not the logarithm Φ_p.
   {#W10.4.14-1} So summation by parts on Ω₀^A gives ⟨J^A, C₁^{(2)}[ℱ, 𝒜]⟩_A = ⟨F^A, D_AC₁^{(2)}[ℱ, 𝒜]⟩_A, plus boundary terms in run A's shell 0.
@@ -1064,9 +951,6 @@
 {#W10.4.18-1} On run A's shell 0 and run B's extra shell, β_∂ and the terms above hold with ϖ = 1.
 {#W10.4.18-2} There each bound above holds with L^{−βn} and ν_n replaced by 1, since ν_0 ≤ 1; the fine Hessian on the extra shell gives |s₁| ≤ 4‖𝒜‖ from the curl and (ε/L)|s₀| ≤ O(1)‖𝒜‖ from Δ′ under (3.37), and the cut coarse plaquettes give ε|s₀| ≤ O(C_{5L})‖𝒜‖ as in 10.2's boundary bullet.
 {#W10.4.18-3} The Hölder bound of the sources at β′ < β follows through their sup: distinct points of T_{ε/L} are at least ε/L apart, so the Hölder quotient at the scale L^nε is at most 2(L^nε)^{β′}(ε/L)^{−β′} times the sup, with the factor 2 of the transports at complex backgrounds, which gives the rate L^{β′}L^{−(β−β′)n}.
-
-{#W10.4.19} The Cauchy note bounds Cov_p(TF, Tf″) through osc_p(TF), which needs ∇F.
-{#W10.4.19-1} Here the oscillation falls on the fields instead, so the action part needs no bound on ∇F or on the current.
 
 {#W10.4.20} *DRD*: the weighted form.* The sources of the gauge-fixing part depend on 𝒜 through G′_□ and C_□, so they are not bounded by the norm of 𝒜 on the same block.
 {#W10.4.20-1} For a block y of the shell n let
@@ -1115,9 +999,9 @@
 {#W10.4.36-2} The first composition is at κ = δ₀/27 and gives the rate δ₀/81; the second is at κ = δ₀/81 and gives the rate δ₀/243.
 
 {#W10.4.37} The smallness of each term sits at an intermediate point or at the input point, and it is extracted inside (Comp) of 10.3.
-{#W10.4.37-1} The relative factor L^{−βmin(m,m′)} of C^A − [C^B]_{11} sits at its data points, and the factor L^{−βm} of 𝔈 at its output point.
-{#W10.4.37-2} Each is written as the intermediate power (ℓ_{m_w}/ε)^{−β} and moved to the layer of x by (Comp), at the cost L^{|p+q|}.
-{#W10.4.37-3} The powers of the three kernels and these factors give |p + q| ≤ d + 4 + β for G′∘C∘G′ and for the factors of type K₂₁, and |p + q| ≤ d + 6 + β in all terms.
+{#W10.4.37-1} The relative factor L^{−βmin(j_y,j_{y′})} of C^A − [C^B]_{11} at its data points y and y′ (#W10.3.35) is max(L^{−βj_y}, L^{−βj_{y′}}) ≤ L^{−βj_y} + L^{−βj_{y′}}, so that term splits into two, each with the factor of one data point, at the cost of a factor 2; y is the intermediate point of the first composition and y′ that of the second. The factor L^{−βm} of 𝔈 sits at its output point, which is x in 𝔈Q′₁*Q′_A*μ_B¹ and an intermediate point in [C^B]_{11}Q′_A𝔈f_B.
+{#W10.4.37-2} A factor at x is L^{−βn} already; one at an intermediate point w is the power (ℓ_{m_w}/ε)^{−β} and is moved to the layer of x by (Comp), at the cost L^{|p+q|}.
+{#W10.4.37-3} Each per-block bound carries its layer power at its output point: ℓ² for G′ and 𝔈 (#W10.3.7, #W10.3.8), ℓ^{−4} for C and its blocks (#W10.3.6, #W10.3.30-1, #W10.3.32), none for Q′ and Q′*. So the left factor of each composition has no power at the intermediate point, and p + q is the output power of the right factor, minus β if a smallness factor sits there: −4 or −4 − β in the first composition, 2 or 2 − β in the second, in every term of #W10.4.29–#W10.4.30. Hence |p + q| ≤ 4 + β ≤ d + 6 + β, the value the constants below are written with.
 {#W10.4.37-4} For μ_B⁰ and [C^B]_{12}, the crossing third of (Comp) gives the layer m_v = −1 of the intermediate point the factor L^{|p+q|}L^{−(|m_v − m_x| − 1)₊} ≤ L^{|p+q|}L^{−n}.
 {#W10.4.37-5} After the second composition sums the remaining intermediate layer, this is at most (n + 2)L^{2(d+7)}L^{−(n−1)} ≤ C_v(β)L^{−βn}, with C_v(β) := L^{2d+15}sup_n(n + 2)L^{−(1−β)n}.
 {#W10.4.37-6} So the kernel K of each term from the field f_X to δr satisfies |K(x←w)| ≤ c(β)L^{−βn}ℓ_{m_x}^{p}e^{−(δ₀/243)d(x,w)}, under (2/243)δ₀R₀M₀ ≥ (d + 8)log L and (2.59) at α = 1/243.
@@ -1129,7 +1013,7 @@
 {#W10.4.38-4} This holds under (1/486)δ₀R₀M₀ ≥ (β + d + 7)log L, which implies the conditions of the compositions.
 {#W10.4.38-5} So |δr| ≤ c_δL^{−βn}⟨𝒜⟩_y under (1/486)δ₀R₀M₀ ≥ (β + d + 7)log L and (2.59) at α = 1/972.
 {#W10.4.38-6} Here c_δ is the sum of the four contributions.
-{#W10.4.38-7} Each is a product of B₀, C_gen(β), C_C(β), C_v(β), L^d, the Ad factors, the counts N(δ₀/k) for k ≤ 972, (Comp)'s factors (3 + 2/(L − 1))L^{d+7}, the pairing's factor, and 2d, and e_f contributes 2dC_ld·3d(1 + 64d²) + 2C_tr.
+{#W10.4.38-7} Each is a product of B₀, C_gen(β), C_C(β), C_v(β), L^d, the Ad factors, the counts N(δ₀/k) for k ≤ 972, (Comp)'s factors (3 + 2/(L − 1))L^{d+7}, the pairing's factor, 2d, and the factor 2 of #W10.4.37-1, and e_f contributes 2dC_ld·3d(1 + 64d²) + 2C_tr.
 
 {#W10.4.39} *DRD*: the other sources.*
 - {#W10.4.40} (1 − Q′₁*Q′₁)r_B is the deviation of r_B from its average over a block of side ε.
@@ -1156,7 +1040,7 @@
 {#W10.4.48-1} The background's own current enters the action part only through the identity above, where summation by parts moves D* onto C₁^{(2)}.
 {#W10.4.48-2} The current of the pair class enters G₁ and H₁ of Sect. D, which §6 treats.
 
-{#W10.4.49} *The commutator factors K(h), P_{□,1}(∂h), and S_j(∂h) (derived, not reviewed).* These are the explicit factors of the walk terms that carry ∂h_□ (PBG (3.88), (3.101)–(3.105)), whose defects §7 assigns to (Wδ-1).
+{#W10.4.49} *The commutator factors K(h), P_{□,1}(∂h), and S_j(∂h).* These are the explicit factors of the walk terms that carry ∂h_□ (PBG (3.88), (3.101)–(3.105)), whose defects §7 assigns to (Wδ-1).
 {#W10.4.49-1} Each is a commutator of h := h_□ with an operator whose defect is derived above.
 - {#W10.4.50} *The identities.* By (3.88), the scalar factor of G′_□ is K′(h) = [h, Δ′_a].
   {#W10.4.50-1} By (3.101), P₁(∂h) = [DPD*, h], and by (3.104), K(h) = [h, Δ_a] − P₁(∂h) = [h, O_loc], O_loc := Δ_a + DPD* = D*D + Δ′ + DD* + Q*aQ, since DRD* = DD* − DPD* (p.414 l.3).
@@ -1179,15 +1063,14 @@
   {#W10.4.54-3} Write C_O for the constant of β_O.
 - {#W10.4.55} *The two h-terms.* On each run's lattice D_B*(hℱ) = hD_B*ℱ + (∂h)⋆ℱ and ∇(hℱ) = h∇ℱ + (∂h)⋆ℱ, with (∂h)⋆ the products with the lattice differences of h at points shifted by at most one bond.
   {#W10.4.55-1} So β_O(hℱ, 𝒜) has the sources hs₂, hs₁, and hs₀ + (∂h)⋆(s₁ + s₂).
-  {#W10.4.55-2} The shells of □'s local sequence have n ≤ j + 1. h_□ is a fixed C₀^∞ function rescaled to the cube (PRT1 (1.118), PRT2 p.229 l.12–15, as in §12, *The partition functions of a corner cube.*), so |∂^kh| ≤ c_h(Mℓ_j)^{−k} for k ≤ 3, and ℓ_n|∂h| and ℓ_n²|∂²h| are ≤ c_hL/M, using M ≥ L. The shifted points can read the sources of an adjacent block y′ in the shell n ± 1.
+  {#W10.4.55-2} The shells of □'s local sequence have n ≤ j + 1. h_□ is the partition function of #W7.16-11, with |∂^kh| ≤ c_h(Mℓ_j)^{−k} for k ≤ 3 (#W7.2-1-1; at the corner cubes, §12, *The partition functions of a corner cube.*), and ℓ_n|∂h| and ℓ_n²|∂²h| are ≤ c_hL/M, using M ≥ L. The shifted points can read the sources of an adjacent block y′ in the shell n ± 1.
   {#W10.4.55-3} Its bound C_Oϖ_{n±1}‖𝒜‖_{1,β;y′} converts to y through the layer ratio ≤ L, the ratio ϖ_{n−1}/ϖ_n = L^β, and the blocks within distance 3 of y in place of 2, which costs leg 2 of §5(c) the factor e^{δ₀}.
   {#W10.4.55-4} Hence these sources obey the bound of β_O times 1 + 2dc_hL^{2+β}/M in ‖·‖_{1,β;y}, read at the blocks within distance 3 of y; in the bound of the factor, leg 2 pays these blocks with e^{δ₀}, so the source term enters C_{[h,O]} below with 2dc_hL^{2+β}e^{δ₀}/M.
   {#W10.4.55-5} In ⟨·⟩_y the ℓ-ratio and the ϖ-ratio combine to at most L^{1−β}e^{δ_gf} ≤ 2L, so there the factor is at most 1 + 4dc_hL²/M.
   {#W10.4.55-6} For β_O(ℱ, h𝒜), the Hölder quotient of (3.40) runs over pairs of points in the blocks within distance 2 of y, so |x − x′| ≤ 5√dLℓ_n, and ℓ_n^β[h]_β ≤ (5√dL)^{1−β}ℓ_n|∂h|.
   {#W10.4.55-7} With |h| ≤ 1, the terms ℓ_n|∂h||𝒜| of the sup part and [h]_β|∇𝒜|, |∂h|[𝒜]_β, and [∂h]_β|𝒜| of the Hölder part give ‖h𝒜‖_{1,β;y} ≤ (1 + 4c_hL(5√dL)^{1−β}/M)‖𝒜‖_{1,β;y}, and ⟨h𝒜⟩_y ≤ (1 + 4c_hL(5√dL)^{1−β}/M)⟨𝒜⟩_y in the same way, since the supremum defining ⟨·⟩_y runs over shells n‴ ≤ j + 1.
   {#W10.4.55-8} The Hölder bounds of the sources at β′ < β carry these factors with β′ for β, since [hs]_{β′} ≤ [s]_{β′} + [h]_{β′}sup|s| and ℓ_n^{β′}[h]_{β′} ≤ (5√dL)^{1−β′}c_hL/M.
-- {#W10.4.56} *The two commutators with Q₁ at the local entries.* Q₁ averages over fine bonds b′ within the ℓ∞ distance 2ε of the coarse bond b (10.1, *The condition (S).*, which covers the non-main terms of CMP 98 (124)) with total weight at most w_Q := 2(1 + O(L²α₀)) ≤ 3 at complex backgrounds: the main term has weight 1 and the non-main terms of (124) weight O(L²α₀), both times the Ad factor 2, and O(L²α₀) ≤ ½ for α₀ small.
-  {#W10.4.56-1} The weight O(L²α₀) is a count, operators of the size O(L²α₀) on path sums of at most dL bonds against the main term's weight 1; read literally against the main term, the print's estimate "O(1)L²α₀L|A|" gives O(L³α₀), which is also ≤ ½ for α₀ small at fixed L, so w_Q ≤ 3 either way.
+- {#W10.4.56} *The two commutators with Q₁ at the local entries.* Q₁ averages over fine bonds b′ within the ℓ∞ distance 2ε of the coarse bond b (10.1, *The condition (S).*, which covers the non-main terms of CMP 98 (124)) with total weight at most w_Q := 2(1 + O(L²α₀)) ≤ 3 at complex backgrounds: the main term has weight 1, and each non-main term of (124) is a sum over the L^d points x ∈ B(c₋) of L^{−(d+1)} times an operator of norm O(L²α₀) (CMP 98 p.36 l.31–33) applied to a path sum of at most dL bonds, so of weight O(L²α₀), as (126) states; both are multiplied by the Ad factor 2, and O(L²α₀) ≤ ½ (§8, stage 4).
   {#W10.4.56-2} The fine bonds b′ lie within the ℓ¹ distance (2d + 1)ε of the base point of b, where h(b) is taken (PBG (3.102) takes h at c₋), so [h, Q₁]u(b) = Σ_{b′}w(b, b′)(h(b) − h(b′))u(b′) and |[h, Q₁]u| ≤ 3(2d + 1)ε|∂h|sup_{tube}|u|.
   {#W10.4.56-3} For the adjoints the row sums become column sums.
   {#W10.4.56-4} In the pairings the coarse bonds carry the weight ε^d and the fine bonds (ε/L)^d, so Q₁* has the kernel L^dw(b, b′) from the coarse bond b to the fine bond b′, and [Q₁*, h] = [h, Q₁]* the kernel L^dw(b, b′)(h(b) − h(b′)).
@@ -1238,12 +1121,18 @@
   {#W10.4.63-12} So the bracket costs at most L^{|n_b−n_c|+2}; the factor L^{|n_b−n_c|} is the third power that 10.1's tail share pays (*The cost in §5(c).*), and L² goes into C_{[h]}(β).
   {#W10.4.63-13} For the local entries the shell sum of §5(c) reduces to the local shells within one block of supp ∂h_□; for DR_□D* it is §5(c)'s full sum in the weighted form.
   {#W10.4.63-14} That computation gives ≤ C_{[h]}(β)(ε/a_j)^β times the bound of the product with the factor's small O(M^{−1}) of (3.89), or of P₁'s (3.49) bound (p.414 l.12–13), replaced by 1.
-  {#W10.4.63-15} Here C_{[h]}(β) is L² times the C_□(β) of §5(c) with C_{[h,O]}(β) for C_L(β) for K′ and K, and for P_{□,1} L times the constant of §5(c) in the weighted form that the gauge-fixing part above uses, at the rate δ_gf′/3, with C_{[h,DD*]} + C_{[h,DR_□D*]}.
+  {#W10.4.63-15} Here C_{[h]}(β) is L² times the C_□(β) of §5(c) with C_{[h,O]}(β) for C_df(β) for K′ and K, and for P_{□,1} L times the constant of §5(c) in the weighted form that the gauge-fixing part above uses, at the rate δ_gf′/3, with C_{[h,DD*]} + C_{[h,DR_□D*]}.
   {#W10.4.63-16} With c_KM^{−1} for these O(M^{−1}), the relative defect is therefore 𝔡_c ≤ c_K^{−1}MC_{[h]}(β)(ε/a_{min(j,n′)})^β ≤ c_K^{−1}MC_{[h]}(β)(ε/a_{m(ω)})^β, n′ the finest global layer at supp ∂h_□, and C_w of §8 gains N_cc_K^{−1}MC_{[h]}(β), a constant of M, β, L, d, and Bałaban's constants.
   {#W10.4.63-17} The factor M needs no smallness at the layers in the telescoping: §7's telescoping holds for every value of max_c𝔡_c, with the constant C_tel.
   {#W10.4.63-18} The consumer's smallness C_{Δ𝐇}ϑ_H ≤ 1/6 is met through the LF note's threshold n_H(M) (its (iii), *The condition C_Hϑ_H ≤ 1/6.*).
 
 ### 10.5 The Fine-Side Lift ℒ_ι {#WS10.5}
+
+{#WOG.4} **(Wδ-2) The fine side at the decoupled field.** The consumer, the run difference of the localised terms of V(Y), compares functions of each run's own fine field.
+{#WOG.4-1} At the chain's configurations the frozen difference handles the fine side through ι, since ι(MU^B) = U^B for a minimiser U^B (LF note (i)).
+{#WOG.4-2} The decoupled configuration 𝐔^B(s) at complex s is not a minimiser (LF note (iii), #4.427), so ι(M𝐔^B(s)) ≠ 𝐔^B(s), and the averaged comparison (b) of §3 leaves run B's old term at 𝐔^B(s) against its value at ι_Y𝐔^A(s) uncompared, with ι_Y the one lift of all terms of V(Y) (LF note (i)).
+{#WOG.4-3} (Wδ-2) is the fine-side form (c) of §3, per walk term, |(W^B_ω − ℒ_ιW^A_ω𝒥)λ| ≤ δ_w(ω) times the bound (3.108) in run B's norms, with ℒ_ι of §3(c).
+{#WOG.4-14} The nonlinearity of the lift at the decoupled configurations of (1.60) is not a walk-factor difference; the LF note treats it as the piece (δ) of its (ii).
 
 {#W10.5.1} *The identification.* ι_YU is Bałaban's local minimiser on Y^∼ with block data U on Ω₁ and collar data Q_1^{s*}U on the fine bonds Λ₀ (the Cauchy note's §9.8).
 {#W10.5.1-1} This is PBG's local problem at k = 1, with Ω₀ = Y^∼, η = ε/L, and Q₀ = 1, so that the condition (3.110) at j = 0 prescribes the fine field on Λ₀ (PBG p.417 l.6–18).
@@ -1261,7 +1150,7 @@
 {#W10.5.5} with b(v) the derivative of VAR's data B of (20) and γ₀ the derivative of the return to the axial gauge.
 {#W10.5.5-1} On Λ₀, b(v) = 𝔡v := dQ_1^{s*}v, since u = 1 there (VAR p.281 l.2–3).
 
-{#W10.5.6} *The data on Λ₁ (quoted and checked).* VAR's minimiser U_k(V) has plain-average data, Ū^j = V on Λ_j (VAR (3), p.278 l.10–13), so it is the analogue of ι_Y, and for the local problem ι_Y(V) is VAR's minimiser itself.
+{#W10.5.6} *The data on Λ₁.* VAR's minimiser U_k(V) has plain-average data, Ū^j = V on Λ_j (VAR (3), p.278 l.10–13), so it is the analogue of ι_Y, and for the local problem ι_Y(V) is VAR's minimiser itself.
 {#W10.5.6-1} Its Landau representative U₁ = U′^{u^{−1}} relative to U₀, with \overline{R₀u}^j = 1, has the double bar (Ū̄₁^j)_b = V_b(Ū₀^j)_b^{−1} =: V′_b on the bonds b inside Λ_j (CMP 99 (1.30), p.081, through CMP 98 (92)), and VAR (20) takes B_b = (1/i)log V′_b there (CMP 99 (1.31), p.082 l.2–15).
 {#W10.5.6-2} The bonds that cross from Λ₀ to Λ₁ carry the interface twist of the second line of CMP 99 (1.31), which reads the collar data and has vanishing derivative for v vanishing near the collar, the restriction used below.
 {#W10.5.6-3} The return to the axial gauge is u(y) = (\overline{R_{0,y}U₁})^{−1} at the coarse sites (CMP 98 (86)–(87), p.031).
@@ -1271,10 +1160,10 @@
 
 {#W10.5.8} with γ the derivative of the return gauge, γ = Θ₁H₁𝔡v at the coarse sites (CMP 98 (87) linearised).
 {#W10.5.8-1} The covariance ι_Y(V^υ) = ι_Y(V)^{ῡ}, with ῡ constant on the blocks (equal to υ on Λ₀, hence to 1 there for the υ used here, which is 1 near the collar), is VAR (181) (p.307 l.6–14), extended there to G^c-valued υ near G by analyticity.
-{#W10.5.8-2} The constraint of §4 is Q₁ := Q̄₁(ι_Yc^A), for which ℒ_ι := H₁𝔡 is an exact right inverse on the data of Λ₁.
+{#W10.5.8-2} The constraint of §4 is Q₁ := Q̄₁(ι_Yc^A), for which ℒ_ι (§3(c)) is an exact right inverse on the data of Λ₁.
 
 {#W10.5.9} Write 𝔡v := (dQ_1^{s*}v on Λ₀, v on Λ₁).
-{#W10.5.9-1} This subsection treats the Landau-gauge part ℒ_ι := H₁𝔡, which is the gauge of RG II's propagators (§1(a)).
+{#W10.5.9-1} This subsection treats ℒ_ι of §3(c), in the gauge of RG II's propagators (§1(a)).
 
 {#W10.5.10} In logarithmic units dQ_1^{s*}v equals Lv(c) on the one fine bond of B(c) that carries U(c), and 0 on the other bonds, so |𝔡v| ≤ L|v|.
 {#W10.5.10-1} The factor (L^{j′}η)^{−1} of (3.133) below cancels against the scale L^{j′}η of the data of (3.110): in 10.1's connection units ℒ_ι is H₁ in the normalisation of (3.126), for which (3.133) holds without that factor.
@@ -1284,9 +1173,9 @@
 {#W10.5.11-2} At k = 1 the scales are η on Λ₀ and Lη = ε on Λ₁.
 {#W10.5.11-3} Against the pairing measure this gives, at a real background satisfying (3.35)–(3.36) at the scale ε,
 
-  {#W10.5.12} |ℒ_ιv(x)| ≤ C_ιΣ_ce^{−½δ₁d_ε(x,c)}|v(c)|, |∇_Bℒ_ιv(x)| ≤ C_ιε^{−1}Σ_ce^{−½δ₁d_ε(x,c)}|v(c)|,
+  {#W10.5.12} |ℒ_ιv(x)| ≤ B_ιΣ_ce^{−½δ₁d_ε(x,c)}|v(c)|, |∇_Bℒ_ιv(x)| ≤ B_ιε^{−1}Σ_ce^{−½δ₁d_ε(x,c)}|v(c)|,
 
-{#W10.5.13} with C_ι := O(1) of (3.133) and δ₁ of (3.132).
+{#W10.5.13} with B_ι := O(1) of (3.133) and δ₁ of (3.132).
 {#W10.5.13-1} The first is the first part of (H_ℒ) for ℒ_ι, at the rate ½δ₁ in place of ½δ_Q.
 {#W10.5.13-2} The second is too weak for (H_ℒ): on run A's shell n it loses the factor L^n against (L^nε)^{−1}.
 
@@ -1297,7 +1186,7 @@
   {#W10.5.15} ℒ_ιv = Iv + H₁(𝔡v − QIv) − C̃₁G₁^{−1}Iv.
 
 - {#W10.5.16} ∇_BIv is bounded as in 10.1's gradient bullet.
-- {#W10.5.17} |𝔡v − QIv| ≤ C₁ε|∇_Av| + C_trε²|F||v| on Λ₁, by 10.1's first-order Taylor bound, with I, Q, and F taken at the background ι_Yc^A of H₁ (10.1's U′U^B, the exactness paragraph below).
+- {#W10.5.17} |𝔡v − QIv| ≤ C₁ε|∇_Av| + max(C₁, 1)C_trε²|F||v| on Λ₁, by 10.1's first-order Taylor bound, with I, Q, and F taken at the background ι_Yc^A of H₁ (10.1's U′U^B, the exactness paragraph below).
   {#W10.5.17-1} On Λ₀ this fails: at U = 1 and constant v, Iv is constant on every fine bond while dQ_1^{s*}v is a step field, so 𝔡v − Iv is of order |v| with ∇_Av = 0.
   {#W10.5.17-2} So the bound, and everything below, is for v vanishing on the coarse bonds within one block of those whose fine bonds meet Λ₀; for such v, 𝔡v = Iv = 0 on Λ₀, and the Dirichlet edge ∂Y^∼ is not reached.
   {#W10.5.17-3} With the crude ∇H₁ bound above, ∇_BH₁(𝔡v − QIv) has the form of (H_ℒ), with k₀ carrying ε|F| ≤ c_F(Mα₀ + α₁ + α₁²)L^{−n}(L^nε)^{−1}.
@@ -1322,24 +1211,24 @@
   {#W10.5.22-6} On run A's shell n, dist(·, Ω₁^c) ≥ Σ_{m<n}2R₀M₀L^mε ≥ 2R₀M₀nε by the shell widths of PBG p.408 l.29–35 and the inclusion below, so e^{−δ_ιdist/ε} ≤ L^{−3n} under δ_ιR₀M₀ ≥ (3/2)log L. So |H*J_T| ≤ O(1)C_ιε₁(ε/a)²ε^{−3}L^{−3n}, which is below the bound of the next sentence under C_ιε₁ ≤ Mα₀.
   {#W10.5.22-7} The decay of H at the scale ε transfers the bound to H*J with the factor L³ across shell boundaries, under ½δ₁R₀M₀ ≥ 4 log L. With ∇C̃₁ of size ε, this part is at most O(1)L³C₂Mα₀ε²(L^nε)^{−3}|v| ≤ O(1)L³C₂Mα₀L^{−2n}(L^nε)^{−1}|v|, of the form of k₀.
 
-{#W10.5.23} So, at the background ι_Yc^A = e^{i(ε/L)T}U^B of a real chain configuration c^A = MU^B, with U^B satisfying (3.35) and (3.36) on run B's shells and the T-part of the current as in the last bullet, ℒ_ι satisfies (H_ℒ) for v vanishing near the collar as above, with C_ℒ,ι a constant of L, d, G, B₀, B₀′(½), C_ι, C₂, and c_F, at the rate ½δ₁ in place of ½δ_Q, and with δ₀′ := min(δ₀, ¼δ_Q, ¼δ₁, ¼δ_c) in §5(c), the term ¼δ_c for the complex chain configurations below.
+{#W10.5.23} So, at the background ι_Yc^A = e^{i(ε/L)T}U^B of a real chain configuration c^A = MU^B, with U^B satisfying (3.35) and (3.36) on run B's shells and the T-part of the current as in the last bullet, ℒ_ι satisfies (H_ℒ) for v vanishing near the collar as above, with C_{ℒ,ι} a constant of L, d, G, B₀, B₀′(½), B_ι, C₂, and c_F, at the rate ½δ₁ in place of ½δ_Q, and with δ₀′ := min(δ₀, ¼δ_Q, ¼δ₁, ¼δ_c) in §5(c), the term ¼δ_c for the complex chain configurations below.
 {#W10.5.23-1} The callers apply ℒ_ι to G^A(·, x) and G^Af, which are supported in Ω₀^A(□); so the restriction suffices when Ω₀^A(□), enlarged by one block and the margin 2ε, lies in Ω₁(Y^∼).
 
 {#W10.5.24} *The inclusion.* Ω₀^A(□) ⊂ Ω₀^B(□) ⊂ □̃⁵ (PBG p.408 l.29–35), and □̃⁵ ⊂ X̃⁵ for the cube □ of a factor R_α(X), which reads the field on X̃⁵ (RG II p.3 l.16–17).
 {#W10.5.24-1} A walk term carries s(Δ) for every cube Δ of σ that meets its localisation domain ∪X̃_i⁵ (RG II p.3 l.30–33), and the localisation expansion keeps in V(Y) only the terms whose cubes Δ lie in Y, so ∪X̃_i⁵ ⊂ Y, since also □̃⁴ ⊂ Y: the cubes of σ are disjoint from the interior of □̃⁴ (RG II p.3 l.28–29), and Y(σ) = □̃⁴ ∪ (∪_{Δ∈σ}Δ), whose component Y₀ contains □̃⁴ (RG II p.4 l.10–15).
 {#W10.5.24-2} Y^∼ is Y with the adjacent M₁-cubes of the scale k, so dist(Y, (Y^∼)^c) ≥ M₁a_k (the LF note's *The Lift ι_Y*), with a_k ≥ Lε.
-{#W10.5.24-3} A point within 3ε of Y has its big block of side M₁ε at ℓ^∞-distance at least M₁a_k − 3ε − M₁ε from (Y^∼)^c, which exceeds R_ιM₁ε/L under M₁(L − 1 − R_ι/L) > 3, with R_ι = 4dL + 1 the parameter R of VAR (1) for the lift's one-step problem (*The lift's R_ι (checked).*); it holds under L ≥ 8d + 4 and M₁ ≥ 4.
-{#W10.5.24-4} So Ω₀^A(□) enlarged by 3ε lies in Ω₁(Y^∼) (derived, not reviewed).
+{#W10.5.24-3} A point within 3ε of Y has its big block of side M₁ε at ℓ^∞-distance at least M₁a_k − 3ε − M₁ε from (Y^∼)^c, which exceeds R_ιM₁ε/L under M₁(L − 1 − R_ι/L) > 3, with R_ι = 4dL + 1 the parameter R of VAR (1) for the lift's one-step problem (*The lift's R_ι.*); it holds under L ≥ 8d + 4 and M₁ ≥ 4.
+{#W10.5.24-4} So Ω₀^A(□) enlarged by 3ε lies in Ω₁(Y^∼).
 
-{#W10.5.25} *The Hölder bound (derived, not reviewed).* Leg 2 of §5(c) on the fine side needs ‖ℒ_ιu‖_{1,β;y″} for u := G^Af or G^A(·, x), on the blocks y″ of run A's shell n, at the spacing L^nε.
+{#W10.5.25} *The Hölder bound.* Leg 2 of §5(c) on the fine side needs ‖ℒ_ιu‖_{1,β;y″} for u := G^Af or G^A(·, x), on the blocks y″ of run A's shell n, at the spacing L^nε.
 {#W10.5.25-1} Fix β₂ := (1 + β)/2.
 {#W10.5.25-2} By (3.43) for G^A at the exponent β₂ (Corollary 3.6, with B₀(β₂)), (L^nε)^{β₂}‖∇_Au‖_{β₂} is bounded like the sup part of the norm.
 - {#W10.5.26} *The lattice lemma.* If |∇_Bf| ≤ Kε^{β₂} on the ε-neighbourhood of the blocks of the norm, then (L^nε)^β‖∇_Bf‖_β ≤ 2KL^β(L^nε)^{β₂}, since distinct points of T_{ε/L} are at least ε/L apart and ε ≤ L^nε.
   {#W10.5.26-1} The same holds for |∇_Bf| ≤ K′ with the factor 2K′L^βL^{nβ}.
-- {#W10.5.27} Iu: by the oscillation bullet of the Cauchy note's *Regularity of the Lifts.* (l.860), the fine differences of Iu oscillate over a fine 4-cell by at most the oscillation of ∇_Au over a coarse cell of side 6ε plus 4C_trε|F||u|, and at distances r ≥ 4ε they are interpolated coarse differences.
+- {#W10.5.27} Iu: by the oscillation bullet of the Cauchy note's *Regularity of the Lifts.* (#C10.4.109-5), the fine differences of Iu oscillate over a fine 4-cell by at most the oscillation of ∇_Au over a coarse cell of side 6ε plus 4C_trε|F||u|, its transport term being (6d + 3)·32d²ε²|F|sup|∇_Au| ≤ 576d³ε|F||u| by |∇_Au| ≤ 2|u|/ε, with 4d + 256d² + 576d³ ≤ 4C_tr, and at distances r ≥ 4ε they are interpolated coarse differences.
   {#W10.5.27-1} So (L^nε)^β‖∇_BIu‖_β ≤ 6L^β(L^nε)^{β₂}‖∇_Au‖_{β₂} + 8C_trL^βL^{nβ}ε|F||u|.
-- {#W10.5.28} H₁h, h := 𝔡u − QIu: with the nodes of the Cauchy note (l.858), Q^{str}I reproduces affine fields at U = 1, and its Taylor bullet (l.861) with the oscillation remainder in place of ε²|∇∇g| gives |h| ≤ Cε(6ε)^{β₂}‖∇_Au‖_{β₂} + C_trε²|F||u| on Λ₁.
-  {#W10.5.28-1} With (3.133), |∇_BH₁h| ≤ 6CC_ιε^{β₂}‖∇_Au‖_{β₂} + C_ιC_trε|F||u| up to the decay, and the lattice lemma applies.
+- {#W10.5.28} H₁h, h := 𝔡u − QIu: with the nodes of the Cauchy note (#C10.4.108-1–#C10.4.108-2), Q^{str}I reproduces affine fields at U = 1, and its Taylor bullet (#C10.4.110) with the oscillation remainder in place of ε²|∇∇g| gives |h| ≤ Cε(6ε)^{β₂}‖∇_Au‖_{β₂} + max(C, 1)C_trε²|F||u| on Λ₁.
+  {#W10.5.28-1} With (3.133), |∇_BH₁h| ≤ 6CB_ιε^{β₂}‖∇_Au‖_{β₂} + max(C, 1)B_ιC_trε|F||u| up to the decay, and the lattice lemma applies.
 - {#W10.5.29} C̃₁D*λ, λ := DP_πIu: in the axial gauge about a point x, D* annihilates the constant 2-form λ_x at U = 1, and the background adds at most O(1)|z − x||F||λ_x| at z.
   {#W10.5.29-1} (3.44) at ε_H = ½ with the lattice trick of the bullet above, applied to λ − λ_x on the blocks at distance R from x, where |λ − λ_x| ≤ (R + 2ε)^{β₂}‖λ‖_{β₂}, gives |∇_BC̃₁D*λ(x)| ≤ O(1)B₀′(½)L^{1/2}ε^{β₂}‖λ‖_{β₂} + O(1)ε²|F||λ|, and ‖λ‖_{β₂} ≤ 6L‖∇_Au‖_{β₂} plus curvature terms by the Iu bullet at β₂.
   {#W10.5.29-2} The curvature part [F, G′RD*Iu] of λ has its sup bounded by |F| times O(1)ε sup|u|, and by the second form of the lattice lemma its β₂-quotient is at most 2(L/ε)^{β₂} times that sup.
@@ -1348,48 +1237,38 @@
 - {#W10.5.30} C̃₁DRD*Iu: R = 1 − P, P := G′Q′*CQ′G′ is a projection, and P1 = 1 at U = 1, since Δ1 = 0 and Q′1 = 1 give 1 = G′Q′*(a·1).
   {#W10.5.30-1} So, with μ := D*Iu, |Rμ(z)| ≤ |R(μ − μ_z)(z)| + |Rμ_z(z)| ≤ O(1)(1 + ‖P‖_w)ε^{β₂}‖μ‖_{β₂} + C_Rε|F||μ| at every z, with ‖P‖_w the weighted norm of P from (3.42) and (3.48) and C_R the axial comparison of *Transports.* Then |∇_BC̃₁D(Rμ)| ≤ O(1)B₀′(½)L^{1/2}sup|Rμ| by (3.44), and the lattice lemma applies.
 - {#W10.5.31} The terms of size ε|F||u|, Δ_π^{(2)}Iu, and the factor P_π* have gradients bounded by k₀-type multiples of |u| carrying L^{−n}, L^{−2n}, or L^{−3n}; the lattice lemma's second form multiplies them by 2L^βL^{nβ}, which these factors absorb.
-{#W10.5.32} So, at the real chain configurations, ‖ℒ_ιu‖_{1,β;y″} ≤ C_HΣ_{y‴}e^{−¼δ₁d(y″,y‴)}‖u‖_{1,β₂;y‴}, with C_H a constant of L, d, G, C_ι, C_tr, C_R, C, B₀′(½), and ‖P‖_w, and leg 2 holds with B₀(β₂) in place of B₀(β) and the rate ¼δ₁, which δ₀′ allows.
+{#W10.5.32} So, at the real chain configurations, ‖ℒ_ιu‖_{1,β;y″} ≤ C_{ℒ,β}Σ_{y‴}e^{−¼δ₁d(y″,y‴)}‖u‖_{1,β₂;y‴}, with C_{ℒ,β} a constant of L, d, G, B_ι, C_tr, C_R, C, B₀′(½), and ‖P‖_w, and leg 2 holds with B₀(β₂) in place of B₀(β) and the rate ¼δ₁, which δ₀′ allows.
 
 {#W10.5.33} *The tail.* ℒ_ιG^Af is supported in Y^∼, not in Ω₀^B.
 {#W10.5.33-1} Outside Ω₀^B it reads G^Af on run A's shell 0 and beyond, at distance at least 2R₀M₀ε/L.
 {#W10.5.33-2} G^Af there is bounded by the decay of G^A from the block y of □ to shell 0, which §5(c) already counts in the shell-0 contribution at ϖ = 1 and bounds by L^{−βj}.
-{#W10.5.33-3} So (1 − χ_B)ℒ_ιG^Af is of the form of that contribution, with the factor 3C_ιN(½δ₁), N(½δ₁) the bound of (2.58) under (2.59) at α = δ₁/(2δ₀), and under ½δ₁R₀M₀ ≥ 4 log L for the shells crossed.
+{#W10.5.33-3} So (1 − χ_B)ℒ_ιG^Af is of the form of that contribution, with the factor 3B_ιN(½δ₁), N(½δ₁) the bound of (2.58) under (2.59) at α = δ₁/(2δ₀), and under ½δ₁R₀M₀ ≥ 4 log L for the shells crossed.
 
 {#W10.5.34} *The exactness.* PBG's averaging is the double bar (PBG (3.13), p.392 l.44–52), so the constraint of (3.110) is Q̄A = B and Q̄₁ℒ_ι = 1 on the data of Λ₁ exactly, with Q̄₁ at the background of H₁.
 {#W10.5.34-1} The background at which the fine form (c) is used is fixed by the LF note's split of the bracket (its (ii), the pieces of the re-summation through (δ)): (iii) compares run B's walk terms at run B's background ι_Yc^A with ℒ_ι applied to run A's at c^A = Mι_Yc^A, c^A the chain configuration, and the passage from ι_Yc^A to run B's decoupled field is the piece (δ) of that note, not part of (W-δ).
 {#W10.5.34-2} So §4 and 10.1 are applied to the aligned pair (ι_Yc^A, c^A): 10.1's U′U^B is ι_Yc^A, Q₁ := Q̄₁(ι_Yc^A), and ℒ_ι is the Landau part of dι_Y at c^A (*The data on Λ₁.*), whose constraint is this Q₁, taken at ι_Yc^A, the background of H₁.
 {#W10.5.34-3} With the cut-off χ_B and the margin of 10.1, (S) holds for χ_Bℒ_ι with this Q₁, with no correction.
-{#W10.5.34-4} At a real chain configuration c^A = MU^B (the LF note's (i)), ι_Yc^A = e^{i(ε/L)T}U^B (the Cauchy note's §9.8, *The tail.*), and 10.1's premise holds with U′ := e^{i(ε/L)T}, which is real: on run A's shell n, |T| ≤ C_ιε₁ε^{−1}(ε/a)²L^{−3n} and |∇T| ≤ C_ιε₁ε^{−2}(ε/a)²L^{−3n} (the Cauchy note l.541, its §9.8 *The decay.*, for both, with the factor L^{−3n} from dist(·, Ω₁^c) ≥ 2R₀M₀nε under δ_ιR₀M₀ ≥ (3/2)log L, as derived above in 10.5), which is within (3.37) under C_ιε₁ ≤ α₁.
-{#W10.5.34-5} Complex chain configurations are treated below. ι's constraint is the plain average, so Q₁^{pl}dι_Y = 1.
+{#W10.5.34-4} At a real chain configuration c^A = MU^B (the LF note's (i)), ι_Yc^A = e^{i(ε/L)T}U^B (the Cauchy note's §9.8, *The tail.*), and 10.1's premise holds with U′ := e^{i(ε/L)T}, which is real: on run A's shell n, |T| ≤ C_ιε₁ε^{−1}(ε/a)²L^{−3n} and |∇T| ≤ C_ιε₁ε^{−2}(ε/a)²L^{−3n} (the Cauchy note's §9.8, *The decay.*, #C9.8.15-1, for both, with the factor L^{−3n} from dist(·, Ω₁^c) ≥ 2R₀M₀nε under δ_ιR₀M₀ ≥ (3/2)log L, as derived above in 10.5), which is within (3.37) under C_ιε₁ ≤ α₁.
+{#W10.5.34-5} ι's constraint is the plain average, so Q₁^{pl}dι_Y = 1.
 {#W10.5.34-6} By (B1)–(B2), Q₁^{pl}ℒ_ι = 1 − D̄Θ₁ℒ_ι and Q₁^{pl}D_Bγ = D̄(γ at the coarse sites).
 {#W10.5.34-7} Since dι_Y = ℒ_ι + D_Bγ, Q₁^{pl}D_Bγ = D̄(γ at the coarse sites) gives γ = Θ₁ℒ_ι at the coarse sites, which is CMP 98 (87) linearised, and the difference between the plain average and the double bar lies entirely in the gauge term.
 
 {#W10.5.35} *Complex chain configurations.* At the complex points c(t) of the joint line (the LF note's *The joint line.*), which are the complex chain configurations, ι_Yc^A is complex.
 {#W10.5.35-1} Theorem 3.12 assumes a real background, and PBG defers the passage from (3.37)–(3.38) to (3.35)–(3.36) (p.396 l.51–53).
-{#W10.5.35-2} VAR's Sect. G gives the structure (quoted and checked): for c^A = V′V₀ with V₀ real satisfying VAR (7) and |B′| < 2C₁ε₁ (VAR (172), p.305 l.31–35), U₀ := U_k(V₀) is real, U_k(V′V₀)U₀^{−1} = exp iηℋ(B) in the Landau gauge, and ℋ = 𝒜₁ + H₁B − HD(𝒜₁ + H₁B) (VAR (173)–(175), p.305 l.36–52), with H₁ and H at U₀, 𝒜₁ the analytic solution of (175), of second order in H₁B by (176) (p.306 l.1–6), and ℋ satisfying VAR (19) with ε₂ = B₅ε₁.
-{#W10.5.35-3} Differentiating (174)–(175),
-  {#W10.5.36} dℋ = (1 − H𝔇)(1 + 𝔊V″)^{−1}H₁db,
-  {#W10.5.37} with V″ the second derivative of V of VAR (80) at 𝒜₁ + H₁B, 𝔇 := δD/δA′ there (VAR (70); D is the nonlinear part of the averaging, not a covariant derivative), and 𝔊 = G₁𝔓* (VAR p.294 l.24, PBG (3.148) and (3.153)).
-  {#W10.5.37-1} The factors are bounded in print:
-  - {#W10.5.38} H₁ and H at the real U₀: Theorem 3.12, at the two scales of the k = 1 problem;
-  - {#W10.5.39} 𝔊: PBG Theorem 3.13 (p.426 l.29–32) gives Theorems 3.3, 3.10, and 3.11 for it under (3.35)–(3.36), "assuming (3.132)", except the covariant-Laplacian entry;
-  - {#W10.5.40} 𝔇: VAR (73), |𝔇(A′; c, b)| ≤ O(1)C₃ε₃(L^jη)^{−d+1}e^{−½δ_Vd(c₋,y)}, nonlocal, δ_V VAR's rate;
-  - {#W10.5.41} V″: VAR (189), |Δ(y)V″𝔄| ≤ O(1)ε₃(L^jη)^{−3}e^{−¼δ_Vd(y,y′)}max(|𝔄|_{(−1)}, |∇𝔄|_{(−2)}), nonlocal and acting through the gradient of its argument; Bałaban states (189) without the calculation (VAR p.308 l.28–30);
-  - {#W10.5.42} the composite: VAR (190) (p.308 l.36–47) bounds δℋ/δB with its gradient and Hölder entries at the rate ⅛δ_V.
-  {#W10.5.43} These are crude bounds at the scales of the k = 1 problem, with ε₃ uniform.
-  {#W10.5.43-1} On run A's shell n the terms H₁𝔊V″(·) and H𝔇(·) therefore have gradients of order ε₃ε^{−1}|v|, against the (L^nε)^{−1}|v| that 10.1's cost paragraph uses (it uses k₀ only through k₀ ≤ C_ℒ(L^nε)^{−1}).
-  {#W10.5.43-2} So (H_ℒ) at the complex chain configurations needs the shell gain L^{−n} on ε₃, and leg 2 needs L^{−2n}: a Hölder quotient at the scale ε with the relative size L^{−n} is L^{nβ}L^{−n}ε^{−1} after the factor (L^nε)^β, which cancels ϖ_n = L^{−βn} in the shell sum of §5(c) at n near j.
+{#W10.5.35-2} VAR's Sect. G gives the structure: for c^A = V′V₀ with V₀ real satisfying VAR (7) and |B′| < 2C₁ε₁ (VAR (172), p.305 l.31–35), U₀ := U_k(V₀) is real, U_k(V′V₀)U₀^{−1} = exp iηℋ(B) in the Landau gauge, and ℋ = 𝒜₁ + H₁B − HD(𝒜₁ + H₁B) (VAR (173)–(175), p.305 l.36–52), with H₁ and H at U₀, 𝒜₁ the analytic solution of (175), of second order in H₁B by (176) (p.306 l.1–6), and ℋ satisfying VAR (19) with ε₂ = B₅ε₁.
+  {#W10.5.43} VAR (190) (p.308 l.36–47) bounds δℋ/δB, with its gradient and Hölder entries, at the rate ⅛δ_V (δ_V VAR's rate) and at the scales of the k = 1 problem, with no gain on run A's shells: on the shell n the gradients it gives are of order ε^{−1}|v|, against the (L^nε)^{−1}|v| that 10.1's cost paragraph uses (it uses k₀ only through k₀ ≤ C_ℒ(L^nε)^{−1}).
+  {#W10.5.43-2} So (H_ℒ) at the complex chain configurations needs the shell gain L^{−n}, and leg 2 needs L^{−2n}: a Hölder quotient at the scale ε with the relative size L^{−n} is L^{nβ}L^{−n}ε^{−1} after the factor (L^nε)^β, which cancels ϖ_n = L^{−βn} in the shell sum of §5(c) at n near j.
   {#W10.5.43-3} The bullets below obtain both from (190), without a weighted version of VAR's proofs.
-  - {#W10.5.44} *The weighted-kernel lemma (derived, not reviewed).* Let w(x) := L^{n(x)}, n(x) run A's shell index of x.
+  - {#W10.5.44} *The weighted-kernel lemma.* Let w(x) := L^{n(x)}, n(x) run A's shell index of x.
     {#W10.5.44-1} A kernel with |K(x, z)| ≤ C_Ke^{−δ_cd(x,z)/ε} satisfies sup_xΣ_z|K(x, z)|w(x)/w(z) ≤ LC_KN(δ_c/2) under δ_cR₀M₀ ≥ log L: from the shell m to the shell n > m the shells strictly between are crossed, at the distance Σ_{i=m+1}^{n−1}2R₀M₀L^iε ≥ 2R₀M₀(n − m − 1)ε, so w(x)/w(z) ≤ Le^{(δ_c/2)d(x,z)/ε}, and w(x)/w(z) ≤ 1 when n(z) ≥ n(x).
     {#W10.5.44-2} Pointwise products satisfy sup w|XY| ≤ (sup w|X|)sup|Y|.
-  - {#W10.5.45} *The base and the local gauge (derived, not reviewed).* The complex chain configurations are c^A = M(U′U^B), with U^B real and U′ as in 10.1.
+  - {#W10.5.45} *The base and the local gauge.* The complex chain configurations are c^A = M(U′U^B), with U^B real and U′ as in 10.1.
     {#W10.5.45-1} Let V₀ be run A's real chain configuration at the real point of the line, and take U^B := ι(V₀), the global one-step lift, so that MU^B = V₀ exactly.
     {#W10.5.45-2} U^B is the one-step minimiser at the data V₀, unique up to gauge (VAR Theorem 1 at one step).
     {#W10.5.45-3} Its regularity on run B's shells is that of the LF note's *The Fine Side at the Multiscale Chain.*, *The one-step problem.*: VAR Theorem 1 bounds the minimiser V₀ = c^A (not the data, whose hypothesis is only (7)): |A| < B₃Mε₁a_j^{−1}, |∇A| < B₃Mε₁a_j^{−2}, and ‖A‖_{1,β} < B₄(β)Mε₁a_j^{−2−β} for 0 ≤ β ≤ 1 (VAR (9)), and |∂*∂A| < B₃Mε₁a_j^{−3} (VAR (10)).
     {#W10.5.45-4} The argument of the Cauchy note's §9.7 carries |A|, |∇A|, and |∂*∂A| to U^B; the Hölder part is used only for V₀ itself, in the first differences of B″ below with the sources bounded pointwise by their layer.
     {#W10.5.45-5} This gives PBG's (3.35) on run B's shells from VAR (9), and (3.36) from VAR (10).
-    {#W10.5.45-6} The Cauchy note's §9.8, *The tail.*, gives ι_Y(V₀) = e^{i(ε/L)T}U^B, with the real tail T bounded at the Cauchy note's l.541 (§9.8, *The decay.*) and in the paragraph *The exactness.* above.
+    {#W10.5.45-6} The Cauchy note's §9.8, *The tail.*, gives ι_Y(V₀) = e^{i(ε/L)T}U^B, with the real tail T bounded at the Cauchy note's #C9.8.15-1 (§9.8, *The decay.*) and in the paragraph *The exactness.* above.
     {#W10.5.45-7} These are the premises that the real-case bounds above use, and they need V₀ to be a real chain configuration with VAR's bounds (9)–(10), as the members c^A (VAR Theorem 1) and the backgrounds of §12 are, not that V₀ be M of run B's own member (the runs' members differ by the coarse profile e^{iεA_c} of the LF note's (b)).
     {#W10.5.45-8} The real-case bounds above (H_ℒ and the Hölder bound of leg 2) then hold for ℒ_ι(V₀), and write c^A = V′V₀ with V′ = e^{iB′}.
     {#W10.5.45-9} From here to the end of the B″ bullets c^A denotes the complex coarse point Mc(t); since c(1) = ι_Y(V₀) and Mι_Y(V₀) = V₀, the sentences that write c^A for the real member V₀ are its value at t = 1, where B′ = 0.
@@ -1399,11 +1278,11 @@
     {#W10.5.45-13} Off Y, U′(t) = e^{i(ε/L)T}, the tail, small by §9.8.
     {#W10.5.45-14} By BCH, the field of U′(t) is (t − 1)𝐒_c + T plus commutator terms, and for |t| < 1/r(Y), r(Y) ≤ 1, a_{j(x)}|(t − 1)𝐒_c(x)| + a_{j(x)}²|∇(t − 1)𝐒_c(x)| ≤ (1 + r(Y))ϱ(x) ≤ 2ϱ(x).
     {#W10.5.45-15} Exactly, c(t) = e^{i(t−1)(ε/L)𝐒_c}ι_Y(V₀), since e^{it(ε/L)𝐒_c} and e^{−i(ε/L)𝐒_c} are exponentials of multiples of the same element on each bond, and Mι_Y(V₀) = V₀, since ι's constraint is the plain average (*The exactness.*).
-    {#W10.5.45-16} With W := ι_Y(V₀) and X := (t − 1)(ε/L)𝐒_c, e^{iB′(b)} = M(e^{iX}W)(b)(MW)(b)^{−1}, and M is CMP 98 (15), an average over the L^d contours Γ_{c,x} of b = c of the logarithms of the closed-contour factors U(Γ_{c,x})U(c)^{−1}.
-    {#W10.5.45-17} So, to first order, B′ is the average of the contour sums of X transported at W, and the BCH corrections are at most c_G times the contour sums of |X| times (the contour sums of |X| plus |log W(Γ_{c,x})W(c)^{−1}|), the last of the size of W's curvature.
-    {#W10.5.45-18} The tail T enters B′ only through the transports and these closed-contour factors, and B′ = 0 on the coarse bonds all of whose contours miss Y. Each contour has at most L + d(L − 1) ≤ (d + 1)L fine bonds, each carrying at most (ε/L)|(t − 1)𝐒_c|.
+    {#W10.5.45-16} With W := ι_Y(V₀) and X := (t − 1)(ε/L)𝐒_c, e^{iB′(b)} = M(e^{iX}W)(b)(MW)(b)^{−1}, and M is RG I (0.4): at a coarse bond c, MU(c) = e^{iY_c}U(c), with U(c) the transport along the L fine bonds of c and Y_c a convex combination of the logarithms of the loop holonomies h_{c,x}^{Γ,Γ′} = U(γ_{c,x}^{Γ,Γ′})U(c)^{−1} over x ∈ B(c₋) and the contour pairs (Γ, Γ′) (the Cauchy note's #C10.1.4-0-2).
+    {#W10.5.45-17} So, to first order, B′ is the same convex combination of the path sums of X transported at W, and the BCH corrections are at most c_G times the path sums of |X| times (the path sums of |X| plus |log h_{c,x}^{Γ,Γ′}(W)|), the last of the size of W's curvature.
+    {#W10.5.45-18} The tail T enters B′ only through the transports and these holonomies, and B′ = 0 on the coarse bonds all of whose paths miss Y. Each path γ_{c,x}^{Γ,Γ′} has at most (d + 1)L fine bonds (|n_ν| ≤ L/2, the Cauchy note's #C10.1.4-0-1), each carrying at most (ε/L)|(t − 1)𝐒_c|.
     {#W10.5.45-19} This section bounds ℒ_ι at the coarse point M(U′(t)U^B) = Mc(t).
-    {#W10.5.45-20} This contains the point at which the LF note's (iii) reads ℒ_ι (checked against its text).
+    {#W10.5.45-20} This contains the point at which the LF note's (iii) reads ℒ_ι.
     {#W10.5.45-21} (iii) compares run A's walk term at c^A with run B's at ι_Yc^A through dι_Y, at the coarse point Mι_Yc^A = c^A.
     {#W10.5.45-22} On the joint line of its *The joint line.*, c(1) = e^{i(ε/L)𝐒_c}c^B = ι_Yc^A, so this point is Mc(1), with |1| < 1/r(Y) for r(Y) ≤ ½.
     {#W10.5.45-23} So on all of Y^∼, at the global layer j(x), |B′| ≤ O(1)ϱ(x)ε/a_{j(x)} and the first differences of B′ are at most O(1)ϱ(x)(ε/a_{j(x)})², and VAR's (172) holds for B′ on all of Y^∼ under O(1)ϱ ≤ C₁ε₁/4.
@@ -1417,7 +1296,6 @@
     {#W10.5.45-31} So D_{V₀}ℓ is the value of B′ at x₀, transported, up to the holonomies of V₀ around the loops of these paths.
     {#W10.5.45-32} Let χ be equal to 1 within ρ_n/2 of x₀ and to 0 beyond ρ_n, with coarse first and second differences at most 2ε/ρ_n and 4(ε/ρ_n)².
     {#W10.5.45-33} Put θ := χℓ, υ := e^{iθ}, and V₁ := (c^A)^{υ^{−1}} = e^{iB″}V₀; this is VAR's transformation (16), which keeps the real base V₀.
-    {#W10.5.45-34} This linear gauge replaces an axial gauge about x₀: an axial gauge controls the differences of the complex field only along its integration direction, and an alternating plaquette makes its transverse first differences of order α₁^AL^{−n}, while the linear gauge only subtracts a transported constant and keeps the first differences of B′ in every direction.
     {#W10.5.45-35} The ball of radius ρ_n about x₀ reaches at most the shells n − 1, n, and n + 1, since the shell n − 1 has the width 2R₀M₀L^{n−1}ε > ρ_n.
     {#W10.5.45-36} Then:
     - {#W10.5.46} within ρ_n/2 of x₀, B″(b) = B′(b) − (D_{V₀}ℓ)(b) up to the BCH commutators of θ with B′, of size c_G|θ||B′|.
@@ -1433,9 +1311,9 @@
       {#W10.5.47-5} The commutator differences contain [θ, ΔB′] with |θ| ≤ O(1)LR₀M₀α_c and the commutators [θ, D_{V₀}θ], so they are at most O(1)c_GL³R₀M₀α_c²L^{−2n}.
       {#W10.5.47-6} So the first differences are at most O(1)L²(1 + c_GLR₀M₀α_c)α_cL^{−2n};
     - {#W10.5.48} between ρ_n/2 and ρ_n, B″ = B′ − χD_{V₀}ℓ − (∇χ)ℓ up to the same terms, and beyond ρ_n, B″ = B′.
-      {#W10.5.48-1} Here |∇χ||ℓ| ≤ (2ε/ρ_n)(ρ_n/ε)O(1)Lα_cL^{−n}, and |D_{V₀}ℓ| ≤ O(1)(L + R₀M₀L^{−2})α_cL^{−n}, since the holonomy part reaches (R₀M₀)²L^{−2}Mα₀α_cL^{−n} ≤ R₀M₀L^{−2}α_cL^{−n} under R₀M₀Mα₀ ≤ 1.
-      {#W10.5.48-2} So |B″| ≤ O(1)(L + R₀M₀L^{−2})α_cL^{−n} between ρ_n/2 and ρ_n, within the bound O(1)L²R₀M₀α_cL^{−n} used below.
-      {#W10.5.48-3} Its first differences are at most the bound of the previous item plus (2ε/ρ_n)O(1)(L + R₀M₀L^{−2})α_cL^{−n} + 4(ε/ρ_n)²(ρ_n/ε)O(1)Lα_cL^{−n} ≤ O(1)L²(1 + c_GLR₀M₀α_c)α_cL^{−2n}, since ε/ρ_n = L^{1−n}/(R₀M₀) ≤ L^{1−n}.
+      {#W10.5.48-1} Here |∇χ||ℓ| ≤ (2ε/ρ_n)(ρ_n/ε)O(1)Lα_cL^{−n}, and |D_{V₀}ℓ| ≤ O(1)(L + R₀M₀L^{−1})α_cL^{−n}: with d_ε ≤ ρ_n/ε = R₀M₀L^{n−1}, the holonomy part is at most d_ε·d_εO(1)Lα₀L^{−2n}·O(1)Lα_cL^{−n} ≤ O(1)(R₀M₀)²α₀α_cL^{−n}, and (R₀M₀)²α₀ ≤ R₀M₀L^{−1} under R₀M₀Mα₀ ≤ 1 and M ≥ L.
+      {#W10.5.48-2} The commutators are at most c_G|θ||B′| ≤ O(1)c_GL²R₀M₀α_c²L^{−n} (#W10.5.49), so |B″| ≤ O(1)(L + R₀M₀L^{−1} + c_GL²R₀M₀α_c)α_cL^{−n} ≤ O(1)L²R₀M₀α_cL^{−n} between ρ_n/2 and ρ_n under c_Gα_c ≤ 1; this is the bound used below.
+      {#W10.5.48-3} Its first differences are at most the bound of the previous item plus (2ε/ρ_n)O(1)(L + R₀M₀L^{−1})α_cL^{−n} + 4(ε/ρ_n)²(ρ_n/ε)O(1)Lα_cL^{−n} ≤ O(1)L²(1 + c_GLR₀M₀α_c)α_cL^{−2n}, since ε/ρ_n = L^{1−n}/(R₀M₀) ≤ L^{1−n}.
       {#W10.5.48-4} Beyond ρ_n, |B″(y)| ≤ O(1)Lα_cL^{−n(y)}, with n(y) the shell of y, and its first differences are those of B′;
     - {#W10.5.49} with ℓ(x₀) = 0, |θ| ≤ (ρ_n/ε)O(1)Lα_cL^{−n} ≤ O(1)LR₀M₀α_c on the ball;
     - {#W10.5.50} the amplitude a(x) := Σ_ye^{−δ_cd_ε(x,y)}|B″(y)| satisfies, for d_ε(x, x₀) ≤ ρ_n/(4ε),
@@ -1450,7 +1328,7 @@
     {#W10.5.53-4} The covariant derivatives and the Hölder quotient of PBG (3.40), with the transports R(U(Γ_{x,x′})) of the fine background, are exactly covariant, and Ad(ῡ) and Ad(υ)^{−1} have norm at most e^{2c_Gsup|θ|} ≤ √2.
     {#W10.5.53-5} So, with w := Ad(υ)^{−1}u, the norms of ℒ_ι(c^A)u in c^A's frame are those of ℒ_ι(V₁)w in V₁'s frame, up to the factor 2.
     {#W10.5.53-6} Two quantities are bounded below: ℒ_ι(V₁) − ℒ_ι(V₀) near x₀, and ℒ_ι(V₀) applied to the rotated data w.
-  - {#W10.5.54} *Localised differences (derived, not reviewed).* At V₁ = e^{iB″}V₀, VAR's §G applies with the real U₀ := ι_Y(V₀): ι_Y(V₁) = (exp(iηℋ(B″))U₀)^g, with ℋ in VAR's gauge (20)–(21) relative to U₀ and g the return to the axial gauge.
+  - {#W10.5.54} *Localised differences.* At V₁ = e^{iB″}V₀, VAR's §G applies with the real U₀ := ι_Y(V₀): ι_Y(V₁) = (exp(iηℋ(B″))U₀)^g, with ℋ in VAR's gauge (20)–(21) relative to U₀ and g the return to the axial gauge.
     {#W10.5.54-1} Let K(B) := δℋ/δB.
     - {#W10.5.55} (190) bounds K(B) at every B satisfying (172) by the entries of (3.133) for H₁, with a Hölder entry, at the rate ⅛δ_V.
       {#W10.5.55-1} Bałaban states this as "regularity and decay properties identical to the propagator H, or H₀" (VAR p.307 l.17–18).
@@ -1467,7 +1345,7 @@
       {#W10.5.57-5} So ℒ_ι(V₁) = H₁(U₁)𝔡₁, with 𝔡₁ the data derivative relative to V₁ itself, and the factor Φ(B″) enters through 𝔡₁ = Φ(B″)𝔡.
       {#W10.5.57-6} Here U₁ := ι_Y(V₁) = (exp(iηℋ(B″))U₀)^g, g the return to the axial gauge, block-local, with g = 1 at B″ = 0 and |Ad(g) − 1| ≤ O(1)L sup_{block}|ηℋ| by CMP 98 (86)–(87).
     - {#W10.5.58} The comparison of H₁ at U₁ and U₀, without a re-fixing of the gauge.
-      {#W10.5.58-1} H₁ is G^c-covariant: PBG (3.33)–(3.34) give the covariance of G′, R, Δ_a, and G under real gauge transformations, and H₁ = G₁Q*(QG₁Q*)^{−1} is built from these and from covariant local operators (derived, not printed for H₁).
+      {#W10.5.58-1} H₁ is G^c-covariant: PBG (3.33)–(3.34) give the covariance of G′, R, Δ_a, and G under real gauge transformations, and H₁ = G₁Q*(QG₁Q*)^{−1} is built from these and from covariant local operators.
       {#W10.5.58-2} For real g, Q(U^g) = Ad(ḡ)Q(U)Ad(g)^{−1} and G₁(U^g) = Ad(g)G₁(U)Ad(g)^{−1} give H₁(U^g) = Ad(g)H₁(U)Ad(ḡ)^{−1} by substitution, with Ad unitary.
       {#W10.5.58-3} At complex g the operators are the analytic continuations of the real ones: PBG extends "the operators to configurations with values in the complexified group G^c" and proves "the usual complex analyticity" (p.399 l.37–38; p.396 l.37), with Q* continued as the transpose.
       {#W10.5.58-4} So both sides are analytic in g, and they agree on G, a totally real submanifold of maximal dimension of G^c.
@@ -1486,8 +1364,7 @@
   {#W10.5.65-1} Theorem 3.4 continues this G₀ only.
 - {#W10.5.66} G of (3.130), H, and (QGQ*)^{−1}: PBG writes G = G₀(I − Δ′_πG₀)^{−1} = Σ_nG₀(Δ′_πG₀)^n (3.130), with Δ′_π of (3.120) bounded in (3.131) by c_πα₀ (PBG prints O(1)Mα₀; c_π carries §7's factor c_u, as in §11, *The form (c) for G̃*) through Theorem 3.1 for G′, the inequality (3.49), and the current.
   {#W10.5.66-1} With Theorem 3.3 for G₀, the series converges "in all norms appearing on the left-hand sides of the inequalities (3.42)–(3.47), except the inequality involving the Laplace operator in (3.42)" (p.422 l.12–13).
-  {#W10.5.66-2} (QGQ*)^{−1} satisfies (3.132) (p.422 l.17–21, proof at l.15, "in the same way as the operator (Q′G′²Q′*)^{−1}", not printed), and (3.132) with Theorem 3.3 for G gives (3.133) for H. At U₁ every input is continued above (G₀, G′, R, and P) or is local with the current bound J(U₁) of the G₁ bullet below, so (3.131), the series (3.130), (3.132), and (3.133) hold at U₁ with α₀ + O(1)LB₅ε₁ in place of α₀.
-  {#W10.5.66-3} This reruns PBG's proof, as for G₁ below; it is not printed.
+  {#W10.5.66-2} (QGQ*)^{−1} satisfies (3.132) (p.422 l.15–21, proved "in the same way as the operator (Q′G′²Q′*)^{−1}"), and (3.132) with Theorem 3.3 for G gives (3.133) for H. At U₁ every input is continued above (G₀, G′, R, and P) or is local with the current bound J(U₁) of the G₁ bullet below, so (3.131), the series (3.130), (3.132), and (3.133) hold at U₁ with α₀ + O(1)LB₅ε₁ in place of α₀.
 - {#W10.5.67} G₁ and H₁: PBG proves Theorem 3.12 for G₁ through the series (3.138) (p.423 l.25–31).
   {#W10.5.67-1} Its inputs are Theorem 3.3 for G, the bounds of the local operators, and the smallness of J; the series "is convergent for α₀ restricted by a small, absolute constant" and "in all norms appearing in the formulation of Theorem 3.3", and (3.129) with (3.132) for G₁ then gives (3.133) for H₁.
   {#W10.5.67-2} At U₁ = exp(iηℋ)U₀ the same inputs hold: Theorem 3.3 for G and (3.133) for H by the bullet above, the local operators by their formulas, and J(U₁) − J(U₀).
@@ -1498,11 +1375,10 @@
   {#W10.5.67-7} C_j^{(2)} is the second-order part of an analytic function of the configuration, so at U₁ the same bound holds with a larger constant, by Cauchy's estimate on a polydisc about U₀ of twice the radius of (3.37), under the corresponding halving of PBG's a₁ (α₁^A ≤ a₁/2 and B₅ε₁ ≤ a₁/2); the averages, and with them C_j, are analytic on the first inequality of (3.37) by Proposition 6 of [5] (PBG p.406 l.21–22).
   {#W10.5.67-8} PBG's proof therefore runs at U₁ unchanged and gives Theorem 3.12 for G₁(U₁) and H₁(U₁), under the condition that O(1)L⁵M(α₀ + O(1)LB₅ε₁) is as small as PBG requires of O(1)Mα₀ ("O(1)Mα₀ is still a sufficiently small number", p.396 l.32), that is ≤ a₁ (Corollary 3.6, p.408 l.6), the factor L⁵ for §7's sequences; §8 splits it into O(1)L⁵Mα₀ ≤ a₁/2 and O(1)L⁶MB₅ε₁ ≤ a₁/2.
   {#W10.5.67-9} Here J(U₁) is the holomorphic extension of η^{−2}Im D*∂U, with U^{−1} in place of U*, and J(U₁) − J(U₀) also contains (D*_{U₁} − D*_{U₀})F(U₀), of size O(1)|ηℋ||F(U₀)|η^{−1}, which the same bound covers.
-  {#W10.5.67-10} This reruns PBG's proof; it is not a printed statement.
   {#W10.5.67-11} Expand the difference of each product by X₁Y₁ − X₀Y₀ = (X₁ − X₀)Y₁ + X₀(Y₁ − Y₀), and each inverse by the resolvent identity X(U₁)^{−1} − X(U₀)^{−1} = −X(U₁)^{−1}(X(U₁) − X(U₀))X(U₀)^{−1}.
   {#W10.5.67-12} Every term of the expansion is then a product of kernels with the decay of their bounds (at the rate ½δ₀ of (3.68), or δ₀ for the local ones) and exactly one difference of a local operator or of J, at an intermediate point z.
-  {#W10.5.67-13} A local operator at U₁ and at U₀ differs by coefficients O(1)(|ηℋ| + η|∇(ηℋ)|) at z, and J by O(1)η^{−2}|∇(ηℋ)| plus O(1)|ηℋ| times the background curvature terms of J on the plaquettes at z (second differences on the lattice are at most 2η^{−1} times first differences); only powers of L change at k = 1.
-  {#W10.5.67-14} By the field bullet, both are at most O(1)C_Va(z) in the units of the operator.
+  {#W10.5.67-13} A local operator at U₁ and at U₀ differs by coefficients O(1)(|ηℋ| + η|∇(ηℋ)|) at z, and J by O(1)η^{−2}|∇(ηℋ)| plus O(1)|ηℋ| times the background curvature terms of J on the plaquettes at z (second differences on the lattice are at most 2η^{−1} times first differences).
+  {#W10.5.67-14} By the field bullet, both are at most O(1)(1 + L)C_Va(z) in the units of the operator: on Λ₀, of spacing η ≤ ε, η|∇(ηℋ)| ≤ C_Va and η^{−2}|∇(ηℋ)| ≤ η^{−3}C_Va, and on Λ₁, of spacing Lη = ε (#W10.5.11-2), the same quantities at the spacing Lη are at most L times these.
     {#W10.5.68} The intermediate sum is localised.
     {#W10.5.68-1} A term with its difference at z has the kernel e^{−δd_ε(x,z) − δd_ε(z,c)} ≤ e^{−(δ/2)d_ε(x,z)}e^{−(δ/2)d_ε(x,c)} from x to the data point c, with δ := min(½δ₀, ½δ₁) ≥ 8δ_c, since (3.132)–(3.133) decay at δ₁ and ½δ₁.
     {#W10.5.68-2} With a(z) ≤ C_a(1 + d_ε(x, x₀))(1 + d_ε(x, z))α_cL^{−2n} for z within ρ_n/(4ε) of x₀, and a ≤ O(1)L⁴R₀M₀α_cN(δ_c/4) elsewhere, Σ_ze^{−(δ/2)d_ε(x,z)}a(z) ≤ N₁(δ/2)C_a(1 + d_ε(x, x₀))α_cL^{−2n} + e^{−(δ/4)ρ_n/(8ε)}N(δ/4)sup a for x within ρ_n/(8ε) of x₀.
@@ -1511,7 +1387,7 @@
     {#W10.5.70} with C_Δ := O(1)C_V(1 + L)(N₁(δ/2) + N(δ/4))c_P, c_P the number of factors in the expansion of (3.129) times the product of their bound constants, at the rate δ_c.
     {#W10.5.70-1} The factor Φ(B″) − 1 = O(|B″|) is local on the data side, and |B″| ≤ a.
     {#W10.5.70-2} The covariant derivatives at V₁ and V₀ differ by the connections B″/ε on the data side and ηℋ(B″)/η on the fine side; these are terms of the type k₀ with the same factor.
-  - {#W10.5.71} *The conclusion at the complex chain configurations (derived, not reviewed).* Put C_♮ := C_ΔC_a.
+  - {#W10.5.71} *The conclusion at the complex chain configurations.* Put C_♮ := C_ΔC_a.
     {#W10.5.71-1} Let x be a point of run A's shell n ≥ 1 and x₀ the coarse site nearest to x, and work in the frame of x₀.
     {#W10.5.71-2} The region that the norm ‖·‖_{1,β;y″} reads at x has diameter at most 5L^{n′}ε, with n′ the shell of y″; n′ = n + 1 only near the boundary of the shell n, where the block of x belongs to the coarser shell.
     {#W10.5.71-3} So the diameter is at most 5L^{n+1}ε ≤ ρ_n/8 under R₀M₀ ≥ 40L², and where n′ = n + 1 the ranges r ≤ 5L^nε below read r ≤ 5L^{n+1}ε, which changes the numerical constants by at most the factor L³ (L² in the second Hölder part, L³ in the third), uniformly in n.
@@ -1533,30 +1409,27 @@
       {#W10.5.78-2} So, in V₀'s frame, ‖w‖_{1,β₂;y‴} ≤ C_fr‖u‖_{1,β₂;y‴} on every block y‴, with u in c^A's frame and C_fr := 2(1 + O(1)L²R₀M₀α_c), uniform in n (C_fr is the frame constant of this bullet, not §8's C_w).
     - {#W10.5.79} (H_ℒ), in the form that 10.1's cost paragraph uses, k₀ ≤ C(L^nε)^{−1}.
       {#W10.5.79-1} Here f(x) = Ad(ῡ(x))f₁(x), |f₀(x)| is bounded by the real (H_ℒ) applied to w, both its k₀ entry and its k₁|∇w| entry, the latter read by the gradient entry of the norm of w, and |g(x)| ≤ 2C_♮α_c(L^nε)^{−1}Σ_ce^{−δ_cd_ε}|w(c)|, since L^{−2n}ε^{−1} ≤ (L^nε)^{−1}.
-      {#W10.5.79-2} So k₀ ≤ 2(C_ℒ,ιC_fr + 2C_♮α_c)(L^nε)^{−1}, with n the shell of x.
+      {#W10.5.79-2} So k₀ ≤ 2(C_{ℒ,ι}C_fr + 2C_♮α_c)(L^nε)^{−1}, with n the shell of x.
       {#W10.5.79-3} The cost paragraph reads (L^{n(c)}ε)^{−1}|w(c)| with n(c) the shell of c; for n(c) > n + 1 the conversion is the weighted-kernel lemma, which halves the rate, so the rate here is ½δ_c.
       {#W10.5.79-4} The sup entry sup(L^nε)^{−1}|ℒ_ιu| of leg 2's norm follows in the same way from the sup entry of the localised differences and the sup entry of the real bound at V₀.
-      {#W10.5.79-5} The literal (H_ℒ) of 10.1, with the factor L^{−n} in k₀, is not claimed.
       {#W10.5.79-6} The rotation term of order α_c(L^nε)^{−1}|u| is part of k₀.
     - {#W10.5.80} The Hölder quotient.
       {#W10.5.80-1} By exact covariance, f(x) − R_c(Γ)f(x′) = Ad(ῡ(x))[f₁(x) − R₁(Γ)f₁(x′)], and
       {#W10.5.81} f₁(x) − R₁(Γ)f₁(x′) = [f₀(x) − R₀(Γ)f₀(x′)] + [g(x) − R₁(Γ)g(x′)] + (R₀(Γ) − R₁(Γ))f₀(x′).
       {#W10.5.82} Each part is multiplied by (L^nε/r)^β.
       - {#W10.5.83} The first is the real Hölder quotient at V₀ for the data w.
-        {#W10.5.83-1} It is ≤ C_HΣ_{y‴}e^{−¼δ₁d(y″,y‴)}‖w‖_{1,β₂;y‴} ≤ C_HC_frΣ_{y‴}e^{−¼δ₁d(y″,y‴)}‖u‖_{1,β₂;y‴}.
+        {#W10.5.83-1} It is ≤ C_{ℒ,β}Σ_{y‴}e^{−¼δ₁d(y″,y‴)}‖w‖_{1,β₂;y‴} ≤ C_{ℒ,β}C_frΣ_{y‴}e^{−¼δ₁d(y″,y‴)}‖u‖_{1,β₂;y‴}.
       - {#W10.5.84} The second, for r ≤ ε, is at most 3C_♮α_cL^{−2n}ε^{−1−β}r^β·Σ, and (L^nε/r)^β times this is ≤ 3C_♮α_cL^{nβ−2n}ε^{−1}Σ ≤ 3C_♮α_c(L^nε)^{−1}Σ.
         {#W10.5.84-1} For ε < r ≤ 5L^nε it is at most |g(x)| + √2|g(x′)| ≤ 3C_♮(2 + r/ε)α_cL^{−2n}ε^{−1}Σ, and (L^nε/r)^β(2 + r/ε) ≤ 3L^{nβ}(r/ε)^{1−β} ≤ 15L^n.
         {#W10.5.84-2} So it is ≤ 45C_♮α_c(L^nε)^{−1}Σ.
       - {#W10.5.85} The third.
         {#W10.5.85-1} R₁(Γ) = Ad(g(x))R′(Γ)Ad(g(x′))^{−1}, with R′ the transports of exp(iηℋ(B″))U₀ and g the block-local return to the axial gauge.
         {#W10.5.85-2} The fine path has at most L(r/ε + 1) bonds, so |R₀(Γ) − R₁(Γ)| ≤ O(1)L(sup_{y(x)}|ηℋ| + sup_{y(x′)}|ηℋ|) + 2c_GΣ_{b∈Γ}|ηℋ(b)|, the suprema over the blocks of x and x′ on which g is defined, ≤ O(1)LC_VC_aα_c(2 + r/ε)²L^{−2n}, under 2c_GΣ_{b∈Γ}|ηℋ(b)| ≤ ¼log 2 and O(1)L sup|ηℋ| ≤ ¼log 2, which give |R₁(Γ)| ≤ √2 (|R′(Γ)| ≤ 2^{1/4} and |Ad(g)^{±1}| ≤ 2^{1/8}).
-        {#W10.5.85-3} With |f₀(x′)| ≤ C_ℒ,ιC_frΣ_ce^{…}(k₁|∇w(c)| + k₀|w(c)|), the full (H_ℒ) bound, which the full norm absorbs (written (L^nε)^{−1}Σ below for its k₀ entry), and (L^nε/r)^β(2 + r/ε)²L^{−2n} ≤ 9L^{(n+1)β}L^{−2n} ≤ 9L for r ≤ ε and ≤ 9L^{nβ}(r/ε)^{2−β}L^{−2n} ≤ 225 for ε < r ≤ 5L^nε, it is ≤ O(1)L²C_VC_aC_ℒ,ιC_frα_c(L^nε)^{−1}Σ.
+        {#W10.5.85-3} With |f₀(x′)| ≤ C_{ℒ,ι}C_frΣ_ce^{…}(k₁|∇w(c)| + k₀|w(c)|), the full (H_ℒ) bound, which the full norm absorbs (written (L^nε)^{−1}Σ below for its k₀ entry), and (L^nε/r)^β(2 + r/ε)²L^{−2n} ≤ 9L^{(n+1)β}L^{−2n} ≤ 9L for r ≤ ε and ≤ 9L^{nβ}(r/ε)^{2−β}L^{−2n} ≤ 225 for ε < r ≤ 5L^nε, it is ≤ O(1)L²C_VC_aC_{ℒ,ι}C_frα_c(L^nε)^{−1}Σ.
     {#W10.5.86} The second and third parts are absorbed by the term (L^nε)^{−1}|u| of the norm.
 
     {#W10.5.87} So (H_ℒ), in the form that 10.1's cost paragraph uses, and the Hölder bound of leg 2 hold at the complex chain configurations.
-    {#W10.5.87-1} The constants are 2(C_ℒ,ιC_fr + 2C_♮α_c) and √2[C_HC_fr + O(1)(C_♮ + L²C_VC_aC_ℒ,ιC_fr)α_c], uniform in n.
-    {#W10.5.87-2} No triangle inequality through ℒ_ι(V₀)u is used, so the rotation stays inside one covariant comparison.
-    {#W10.5.87-3} In the pure-gauge case, c^A = V₀^υ, B″ is not zero (the cut-off leaves ∇((1 − χ)·) in the annulus and beyond, and the linear gauge removes only the transported value of B′ at x₀, leaving the variation of the gauge field's derivative and the holonomy terms), but it obeys the same bounds, so the estimate reduces to the real one up to terms of the sizes above.
+    {#W10.5.87-1} The constants are 2(C_{ℒ,ι}C_fr + 2C_♮α_c) and √2[C_{ℒ,β}C_fr + O(1)(C_♮ + L²C_VC_aC_{ℒ,ι}C_fr)α_c], uniform in n.
     {#W10.5.87-4} At n = 0, θ := 0, V₁ = c^A, and the same computation with L^{−2n} = 1 gives a constant uniform at the scale ε, where ϖ = 1.
     {#W10.5.87-5} The rate is ½δ_c after the conversion to the shell of c (the kernels above decay at δ/2 ≥ 4δ_c), so δ₀′ := min(δ₀, ¼δ_Q, ¼δ₁, ¼δ_c).
     {#W10.5.87-6} The conditions are:
@@ -1568,23 +1441,16 @@
     - {#W10.5.93} δ_cR₀M₀ ≥ 16 log L and R₀M₀ ≥ 40L²;
     - {#W10.5.94} V₀ = MU^B satisfying VAR (7) and VAR's bounds (9)–(10), and the ε₃ of (186)–(190) in VAR's range.
       {#W10.5.94-1} V₀'s membership comes from its data through VAR Theorem 1 (*The base and the local gauge.*), not from (3.35), so no condition bounds α₀ by ε₁;
-    - {#W10.5.95} M_V ≤ M(ε₁) for VAR's cube parameter, and VAR's ε₁ ≤ a₁ (VAR Theorem 1); the a₁ of "B₅ε₁ ≤ a₁/2" above is PBG's, the smallness of (3.37) in PBG Theorem 3.4.
-      {#W10.5.95-1} The field bound rests on (190), hence on (189), which Bałaban states without the calculation (VAR p.308 l.28–30).
-    {#W10.5.96} The ε₁ of these conditions is a parameter of V₀'s VAR (7) fixed between V₀'s data parameter and a₁, which VAR Theorem 1 admits since its hypotheses are monotone in ε₁ (as in §12, *§11's oscillation at U_{1,2}*).
+    - {#W10.5.95} M_V ≤ M(ε₁) for VAR's cube parameter, and VAR's ε₁ ≤ a₁ (VAR Theorem 1); the a₁ of "B₅ε₁ ≤ a₁/2" above is PBG's, the smallness of (3.37) in PBG Theorem 3.4.    {#W10.5.96} The ε₁ of these conditions is a parameter of V₀'s VAR (7) fixed between V₀'s data parameter and a₁, which VAR Theorem 1 admits as in #W8.12-8.
     {#W10.5.96-1} It is fixed after α₀, under the upper bounds on ε₁ above and in §8 (*The conditions on the constants.*).
     {#W10.5.96-2} The conditions that contain ϱ̄ or α_c, among them O(1)L²R₀M₀α_c ≤ C₁ε₁/2 and O(1)ϱ ≤ C₁ε₁/4, then hold for γ small, since ϱ = c_ρα_m tends to 0 with γ (the LF note's *The joint line.*), and so does the data parameter, which is ≤ Cḡp₀(ḡ) (§8).
 
-{#W10.5.97} *The gauge choice (derived, not reviewed).*
+{#W10.5.97} *The gauge choice.*
 - {#W10.5.98} The split of §3(d) holds for any linear lift ℒ, but its first bracket evaluates 𝐄^B(𝐔^B, ·) at fixed 𝐔^B, which is not invariant under a fine gauge shift of 𝐀 alone beyond first order.
   {#W10.5.98-1} So ℒ must be the lift for which the second bracket is the frozen difference of the LF note's (i).
   {#W10.5.98-2} That frozen difference is built with ι in VAR's axial gauge, hence with dι_Y = H₁𝔡 + D_Bγ.
 
-  {#W10.5.99} A direct bound on D_Bγ in the form (H_ℒ) fails at the gradient.
-  {#W10.5.99-1} The return to the one-step axial gauge is block-local (CMP 98 p.027 l.23; CRE p.248 l.36), and on each block it sets the field to zero on the bonds of the axial tree, so D_Bγ = −ℒ_ιv on the tree bonds.
-  {#W10.5.99-2} At constant ℒ_ιv, D_Bγ ≈ −ℒ_ιv on all bonds inside a block and ≈ (L − 1)ℒ_ιv on the bonds crossing to the next block, which reproduces the step field of Q_1^{s*}.
-  {#W10.5.99-3} So D_Bγ jumps by order L|v| between neighbouring bonds, and |∇_BD_Bγ| is of order L|v|/(ε/L) = L²|v|/ε, against the (L^nε)^{−1}-type k₁|∇_Av| + k₀|v| of (H_ℒ), even at n = 0 and ∇_Av = 0.
-
-  {#W10.5.100} The gauge invariance of the terms removes the gauge term from the lift (quoted, with the step below derived, not reviewed).
+  {#W10.5.100} The gauge invariance of the terms removes the gauge term from the lift.
   {#W10.5.100-1} The functions 𝐕_k(Y, 𝐔, 𝐉, B) and the terms 𝐄^{(j)}(X, U) are invariant under the simultaneous transformations 𝐔 → 𝐔^u, 𝐉 → R(u)𝐉, and B → R(u)B of RG I (3.29), for G^c-valued u in a small neighbourhood of the G-valued ones (RG II p.011 l.27–28; RG I p.257 l.25, p.276 l.17–22).
   {#W10.5.100-2} So the frozen difference G − 𝐓^A of the LF note's (i) is unchanged when the pair lift (ι_YV, Q₁^{pl}(ι_YV)*J(V)) is replaced by (ι_YV^{u(V)}, R(u(V))Q₁^{pl}(ι_YV)*J(V)), with every fluctuation argument B of the terms rotated to R(u(V))B, for any u(V) analytic in V with values in that neighbourhood.
   {#W10.5.100-3} Write V = Ũe^{v} near the aligned background and take u(V) := exp(−γ(v)), so that u(Ũ) = 1.
@@ -1593,89 +1459,42 @@
   - {#W10.5.102} the cost moves into the current, whose derivative gains the commutator −[γ(v), Q₁^{pl}(ι_YŨ)*J(Ũ)], which reads γ itself, not its differences;
   - {#W10.5.103} γ is bounded at zeroth order.
     {#W10.5.103-1} On each block the axial condition gives D_Bγ = −ℒ_ιv on the bonds of the axial tree, a path of at most dL bonds of length ε/L from the coarse site, where γ = Θ₁ℒ_ιv.
-    {#W10.5.103-2} With the factor 2 for Ad of a transport, |γ(x)| ≤ (O(1) + 2d)ε sup_{B(x)}|ℒ_ιv| ≤ (O(1) + 2d)εC_ιΣ_ce^{−½δ₁d_ε(x,c)}|v(c)| at real backgrounds, so u(V) lies in the neighbourhood for v in the domain of the terms.
+    {#W10.5.103-2} With the factor 2 for Ad of a transport, |γ(x)| ≤ (O(1) + 2d)ε sup_{B(x)}|ℒ_ιv| ≤ (O(1) + 2d)εB_ιΣ_ce^{−½δ₁d_ε(x,c)}|v(c)| at real backgrounds, so u(V) lies in the neighbourhood for v in the domain of the terms.
 
   {#W10.5.104} What the transfer adds to the LF note's (δ):
   - {#W10.5.105} The commutator.
     {#W10.5.105-1} It is of first order in v and not δ-small by itself.
     {#W10.5.105-2} Split the pair-lift current at the lifted decoupled configuration ι_YW, W := e^{iη𝐇^A(s)}c^A, as Q₁^{pl}(ι_YW)*J(W) = J^B(ι_YW) + δJ(W), with J^B run B's own current (RG I p.261 l.33–39) and δJ the pair-lift current defect, which the LF note's (δ) already compares (its piece (δ) of (ii)).
     {#W10.5.105-3} J^B is covariant, J^B(U^u) = R(u)J^B(U), for G^c-valued u near G, since ∂U is conjugated by u, D* is covariant, and Im is the analytic extension of PBG p.391 l.42–45.
-    {#W10.5.105-4} So R(u)J^B(ι_YW) = J^B((ι_YW)^u), the own current of the transformed configuration, with no commutator, and the commutator is −[γ(v), δJ(W)] alone (derived, not reviewed).
-    {#W10.5.105-5} The terms are analytic in the current, so its effect on a term f is at most 2 sup|γ| times the J-derivative bound of f times |δJ(W)|, that is, 2 sup|γ| ≤ 2(O(1) + 2d)εC_ι sup|ℒ_ιv| times the bound of (δ)'s current part, when that bound is of the form ‖∂_Jf‖|δJ|.
-    {#W10.5.105-6} Since 2 sup|γ| carries the factor ε/a_j, a bound |δJ| ≤ O(1)(a_j/ε)^{1−β″}a_j^{−3} with β″ > 0 suffices.
-    {#W10.5.105-7} The part Q₁^{pl}*J(W) of δJ is bounded by the class at W; the part J^B(ι_YW), the own current of the lifted configuration, is bounded with β″ = 2β_o/3 (a local gain exponent of this paragraph, not the LF note's β″ ∈ (0, 1/20] of §8's stage 0) through the constraint identity J^B = Q₁^{pl}*(J(W) + ∇Δ(W)), §12's oscillation bound at real points, and the two-constants theorem at complex points (the LF note's *The gauge terms of the transformed pair lift.*, *The part at ι_XW.*, derived, not reviewed).
+    {#W10.5.105-4} So R(u)J^B(ι_YW) = J^B((ι_YW)^u), the own current of the transformed configuration, with no commutator, and the commutator is −[γ(v), δJ(W)] alone.
+    {#W10.5.105-5} The terms are analytic in the current, so its effect on a term f is at most 2 sup|γ| times the J-derivative bound of f times |δJ(W)|, that is, 2 sup|γ| ≤ 2(O(1) + 2d)ε sup|ℒ_ιv| times the bound of (δ)'s current part, when that bound is of the form ‖∂_Jf‖|δJ|.
+    {#W10.5.105-6} Since 2 sup|γ| carries the factor ε/a_j, a bound |δJ| ≤ O(1)(a_j/ε)^{1−β_J}a_j^{−3} with β_J > 0 suffices.
+    {#W10.5.105-7} The part Q₁^{pl}*J(W) of δJ is bounded by the class at W; the part J^B(ι_YW), the own current of the lifted configuration, is bounded with β_J = 2β_o/3 through the constraint identity J^B = Q₁^{pl}*(J(W) + ∇Δ(W)), §12's oscillation bound at real points, and the two-constants theorem at complex points (the LF note's *The gauge terms of the transformed pair lift.*, *The part at ι_XW.*).
   - {#W10.5.106} The rotation of B. In RG II, B′ of 𝐇_k(B′) is the local function of B of (I.3.2) (RG II p.3 l.33–34), so γ is linear in the fluctuation, and R(u)^{−1}B − B = −[γ_c, B] + ⋯, with γ_c := γ at the coarse sites, is of second order in it.
     {#W10.5.106-1} It is not a lift nonlinearity or a current difference.
   - {#W10.5.107} The configuration.
     {#W10.5.107-1} The gauge factor u(W) of (ι_YW)^{u(W)} beyond first order in the fluctuation.
   {#W10.5.108} The transfer leaves the value of (δ) unchanged: by the invariance quoted above, run B's term at the pair lift equals its value at the transformed pair lift ((ι_YW)^{u(W)}, R(u)Q₁^{pl}(ι_YW)*J(W), R(u)B), with ι_X in place of ι_Y for the term of the polymer X, as in the LF note's piece (δ) of (ii).
   {#W10.5.108-1} Written at the transformed pair lift, which is the form in which (δ) meets ℒ_ι, (δ) contains the three terms above.
-  {#W10.5.108-2} The LF note's (δ) is stated in this form (its piece (δ) of (ii)), and it stays outside (W-δ), derived, not reviewed, there (its Open Gaps, point (3)).
+  {#W10.5.108-2} The LF note's (δ) is stated in this form (its #4.275.5–#4.275.5-2), and it stays outside (W-δ), bounded there (its #4.275).
   {#W10.5.108-3} Within (Wδ-2), the form (c), the gauge term is removed by this transfer.
 
-{#W10.5.109} *What remains in (Wδ-2).* No item beyond review of the complex step, with the first differences of B″ through VAR (9) at β = 1 for V₀ and the joint-line factor U′(t) with the tail.
-{#W10.5.109-1} The weakest steps are two.
-{#W10.5.109-2} One is G, H, G₁, and H₁ at the complex U₁, which reruns PBG's (3.130)–(3.133) and the proof of Theorem 3.12 at U₁, with Theorem 3.4 for G₀ and the current bound at U₁.
-{#W10.5.109-3} The other is the premise at the real base V₀ = MU^B with U^B := ι(V₀): the regularity of U^B on run B's shells, carried from V₀'s layers by the argument of the Cauchy note's §9.7 (*The base and the local gauge.*).
+### 10.6 Dependencies and Rates {#WS10.6}
 
-### 10.6 Status {#WS10.6}
-
-{#W10.6.1} Derived here, not reviewed in this form:
-- {#W10.6.2} the aligned background Ũ in the domain of PBG Corollary 3.5 for run A's local sequence (10.1);
-- {#W10.6.3} the local lift ℒ_N with (H_ℒ), at complex backgrounds, and (S) for one-forms through ℒ̃ = χ_Bℒ_N under R₀M₀ ≥ L, with the rate δ₀′ (10.1);
-- {#W10.6.4} the functional form of the defect of Δ′_a, with its Hölder bound at β′ < β (10.2), and the sup entry of the coarse side of G′_□ at blocks of □ and, with the relative factor L^{−βm}, at blocks of any shell m (E-gen) (10.2); the entries G′∇*, ∇G′, and ∇G′∇* are not derived and not used;
-- {#W10.6.5} the exact identity for C_□, the bound on Δ_K at all data points (terms with 𝔈 on the left from (E-gen), the transposed term by data-level transposition, no fine-side bound on 𝔈^T), and the bound on C^B_□ − C^A_□ at points of the support of h_□, at the rate δ₀/27 (10.3);
-- {#W10.6.6} the functional form of the defect of the action part D*D + Δ′ of Δ_a, with its Hölder bound, using only the size of the background curvature (10.4);
-- {#W10.6.7} the functional form of the defect of the gauge-fixing part DRD* in the weighted norm ⟨𝒜⟩_y, with the decomposition of δr, and §5(c) in the weighted form at the rate δ_gf′/3, δ_gf′ = min(δ₀/486, δ₀′) (10.4).
-
-- {#W10.6.8} the decomposition dι_Y = H₁𝔡v + D_Bγ (VAR's minimiser with plain-average data, its Landau representative with the double bar V(Ū₀)^{−1} by CMP 99 (1.30)–(1.31), and the return gauge of CMP 98 (86)–(87)); the aligned pair (ι_Yc^A, c^A) of the LF note's split, at which (S) holds for χ_Bℒ_ι exactly;
-  {#W10.6.8-1} and, at the real chain configurations, (H_ℒ) for ℒ_ι = H₁𝔡 with the T-part of the current through H*J = (DH)*X, the inclusion of Ω₀^A(□) with 3ε in Ω₁(Y^∼), the Hölder bound of leg 2 at the exponent β₂ = (1 + β)/2, and the tail (1 − χ_B)ℒ_ιG^Af of the form of the shell-0 contribution, at the rates ½δ₁ and ¼δ₁ (10.5);
-- {#W10.6.9} the weighted-kernel lemma for the shell weight L^{n(x)} (10.5);
-- {#W10.6.10} the transfer of the gauge term by the gauge invariance of the terms (RG I (3.29), RG II p.011 l.27–28), with the zeroth-order bound on γ.
-  {#W10.6.10-1} The value of the LF note's (δ) is unchanged; written at the transformed pair lift, with run B's own current covariant, it contains the commutator −[γ, δJ] with the pair-lift current defect (at most 2 sup|γ| times (δ)'s current term), the rotation of B, of second order, and the second-order part of the gauge factor.
-  {#W10.6.10-2} The LF note's piece (δ) of (ii) states (δ) in this form (10.5);
-- {#W10.6.11} at the complex chain configurations c^A = M(U′U^B), (H_ℒ) in the form of 10.1's cost paragraph and the Hölder bound of leg 2 for ℒ_ι, with constants uniform in n (10.5):
-  - {#W10.6.12} a complex linear gauge θ = χℓ about the coarse site nearest each point, cut off on the scale ρ_n = R₀M₀L^{n−1}ε, reduces the complex part to the field B″, which contains the variation of B′, the holonomy terms, and the cut-off terms, with the amplitude C_a(1 + d_ε)α_cL^{−2n}, α_c := C_cϱ̄ the size of B′ at the points c(t) of the joint line;
-  - {#W10.6.13} the covariance of ι_Y (VAR (181)), H₁, and the norms of PBG (3.40) turns the Hölder quotient into one quotient in V₁'s frame, split into the real quotient of the rotated data, the difference ℒ_ι(V₁) − ℒ_ι(V₀), and the transport difference;
-  - {#W10.6.14} (190) bounds the field ηℋ(B″) by the amplitude;
-  - {#W10.6.15} H₁ at U₁ and U₀ is compared through PBG (3.129) by products and resolvent identities with one local difference per term, with G₀ at U₁ from PBG Theorem 3.4 about the real U₀ (Theorems 3.1–3.3 there by Corollary 3.6 and the general theorems), and G, H, G₁, and H₁ at U₁ by PBG's (3.130)–(3.133) and proof of Theorem 3.12 rerun at U₁.
-
-{#W10.6.16} So the coarse side of (Wδ-1) is derived for G′_□, C_□, and G_□, and the regularity of the fine-side lift at the real and the complex chain configurations.
-
-{#W10.6.17} Dependencies (checked for circularity): 10.1–10.5 use run B's own conditions at the chain configurations ((3.35), (3.36), and (3.37), from the LF note's member and joint-line sections), the Cauchy note's §9.8 and §10.4, PBG, VAR, CRE, RG I, and RG II.
+{#W10.6.17} The derivations of 10.1–10.5 are not circular. They use run B's own conditions at the chain configurations ((3.35), (3.36), and (3.37), from the LF note's member and joint-line sections), the Cauchy note's §9.8 and §10.4, PBG, VAR, CRE, RG I, and RG II.
 {#W10.6.17-1} None of these uses (W-δ).
 {#W10.6.17-2} The Cauchy note consumes (LF), and (W-δ) is an input of (LF), but the Cauchy note's §§9–10, which are all that is used here, contain no reference to (LF) or (W-δ), and read the LF note only for its parameter choices (#4.22–#4.25, #D.R_ι, and #D.M₁), which contain no estimate.
 {#W10.6.17-3} From the LF note, 10.5 reads the form c(t) = e^{it(ε/L)𝐒_c}c^B of the joint line's points and the room ϱ that it reads (#4.301, #4.301-3), VAR (9)–(10) at the real member (#4.315), and the collar of Y^∼ (#4.329); these cite this note only for §8's stages, §12's #W12.22 and #W12.237, and the one-step problem at k = 1 as a method, and none of them uses (W-δ). The current along the joint line (#4.307–#4.312), which reads the LF note's (δ) and through it §11, is not read by 10.5.
 {#W10.6.17-4} (Wδ-2) uses the coarse side of (Wδ-1) only through the functional form of β_□, which contains no lift; the fine side of (Wδ-1) is the fine form (c), which (Wδ-2) supplies.
 {#W10.6.17-5} (Wδ-2) uses run B's own fixed points D and 𝒜₁ (VAR (49)–(50), (175)), not their run difference, which is (Wδ-3); (Wδ-3) uses (Wδ-2), not conversely.
-{#W10.6.17-7} The constants c_δ and C_gf are given as sums of products of named constants, not multiplied out.
 
-{#W10.6.18} Quoted from the print: PBG (3.10)–(3.12), (3.23)–(3.24) (p.394 l.19–29), (3.35)–(3.37) (p.396 l.20–44), (3.40) (p.397 l.10–16), (3.43) (p.398 l.2–8), (3.48) (p.398, transcription l.61–66, with the remark of l.48–51), p.406 l.11, and Corollaries 3.5 and 3.6 (p.407 l.47–49, p.408 l.1–8); CMP 98 (11), (78)–(80), and (122)–(123), the last through the Cauchy note.
-{#W10.6.18-1} Used from the notes: the Cauchy note's §9.8 (the bound of the nonlinear part of the averaging) and §10.4 (*Transports.*, the identities (i)–(iii), *Regularity of the Lifts.*, the column-sum property of (9.11), *The Remainder of the Coarse Curvature.*, *The Action Part of β.*, and *The Second Variation of b.*); §§2, 4, and 5 here.
-
-{#W10.6.19} Conditions of this section: each is stated where it arises in 10.1–10.5, and all are collected in §8, *The conditions on the constants.* (the lower bounds on R₀M₀ in its stage 3, the smallness conditions on α₀, α₁, and Mα₀ in its stage 4, the upper bounds on ε₁ in its stage 5, and the conditions on ϱ and α_c in its stage 6).
-{#W10.6.19-1} The rates are δ₀′ = min(δ₀, ¼δ_Q, ¼δ₁, ¼δ_c) in §5(c), (W-c), §7, and (W-M), the terms ¼δ₁ and ¼δ_c for the fine-side lift (10.5), δ_c := (1/16)min(δ_V, δ₀, δ₁); δ₀′/54 for C_□ (10.3) in §7 and (W-M); and δ_gf′/3, δ_gf′ = min(δ₀/486, δ₀′), for G_□ in §5(c) and (W-c), and correspondingly in §7 and (W-M), δ_D′ being independent of R₀M₀ (§11, *The junction sums.*). 10.5 also uses (3.43) for G^A at β₂ = (1 + β)/2.
-
-{#W10.6.20} Weakest step: the transfer of the Cauchy note's real-background expansions (the identity (iii), the expansion of d²b, and the bounds of X_tr, X_r, and the quartic terms) to the complex backgrounds of (3.37).
-{#W10.6.20-1} It rests on the analyticity of both sides in the configuration, the Ad(G^c)-invariance of the bilinear trace form, and the factor 2 per Ad of a complex transport.
-{#W10.6.20-2} The double bar at the complex background (dM̄ = Q₁, (B3), and the bound C₂′ of C₁^{(2)}) is reduced to CMP 98's real background through the Baker–Campbell–Hausdorff series (10.4), and the complex perturbation of Q̄₁ in the lift is bounded by analyticity and Cauchy's estimate (10.1).
-{#W10.6.20-3} The conversion of the Cauchy note's bounds in units of 𝔰′𝔰 into source bounds (10.4, third bullet) is checked through their stated form and the count of the terms' reach, not by recomputing each coefficient.
-{#W10.6.20-4} In DRD*, the weak point is the extraction of the smallness at intermediate points inside (Comp): the relative factors of C^A − [C^B]_{11} and 𝔈 as intermediate powers, and the extra-shell factor from the crossing third.
-{#W10.6.20-5} The bound |p + q| ≤ d + 6 + β is checked on the two composite types named in 10.4, not itemised for every term.
-{#W10.6.20-6} The per-term constants are collected in c_δ and C_gf, not multiplied out.
-
-{#W10.6.21} In 10.5 the weakest steps are G, H, G₁, and H₁ at the complex U₁, by PBG's (3.130)–(3.133) and proof of Theorem 3.12 rerun there, and the premise at the real base V₀ = MU^B.
-{#W10.6.21-1} The field bound rests on VAR (190), hence on (189), which Bałaban states without the calculation.
-
-{#W10.6.22} In §11 the weakest step is the source side of the bridge to ℒ_ι: the divergence form of (1 − I*Q₁*)δ_c and of I*G₁^{−1}C̃₁λ, and the transfer of a fine divergence through I*.
-{#W10.6.22-1} The next is the pointwise bound of Δ^AE in the quartic term, through second differences of the lifted field, which uses VAR (130) and (133) at the fixed point and the tube-constancy of Q₁*.
-{#W10.6.22-2} Then comes the identity for V. It rests on the order count of VAR (80) with Δ in place of Δ_π (VAR p.297), and on (26) at run B's field ℒA′ − H^BD^B(ℒA′), which (26) allows since it uses no gauge condition.
-
-{#W10.6.23} Status:
-- {#W10.6.24} inside (W-δ): derived, awaiting review; (Wδ-3) is derived in §11;
-- {#W10.6.25} outside (W-δ): the LF note's (δ), which, written at the transformed pair lift, contains the commutator −[γ, δJ], the rotation of B, and the second-order part of the gauge factor (its piece (δ) of (ii)), derived, not reviewed, there.
+{#W10.6.19} The rates are δ₀′ = min(δ₀, ¼δ_Q, ¼δ₁, ¼δ_c) in §5(c), (W-c), §7, and (W-M), the terms ¼δ₁ and ¼δ_c for the fine-side lift (10.5), δ_c := (1/16)min(δ_V, δ₀, δ₁); δ₀′/54 for C_□ (10.3) in §7 and (W-M); and δ_gf′/3, δ_gf′ = min(δ₀/486, δ₀′), for G_□ in §5(c) and (W-c), and correspondingly in §7 and (W-M), δ_D′ being independent of R₀M₀ (§11, *The junction sums.*). 10.5 also uses (3.43) for G^A at β₂ = (1 + β)/2.
 
 ## 11. The Nonlinear Functions Between the Runs (Wδ-3) {#WS11}
+
+{#WOG.5} **(Wδ-3) The nonlinear functions between the runs.** 𝐇_k of RG II (1.2) is built from the propagators through the fixed points D of (1.3) and 𝐀₀ of (1.4), whose local functions C_j (VAR (44), (49)) and δV/δA′ (VAR (80)) are each run's own.
+{#WOG.5-1} The decoupling replaces only the propagators (RG II p.3 l.30–33), so the two runs' 𝐇_k(s) also differ through these functions.
+{#WOG.5-2} By (B4) of the Cauchy note's §10.1 the n-fold double bar of run B is the (n − 1)-fold one of run A applied to the one-step double bar.
 
 {#W11.1} Notation as in VAR §C (p.285–286) and RG II (1.2)–(1.5).
 {#W11.1-1} In each run, Q_j(ηA) = L^jηQ_jA + C_j(L^jηA) on Λ_j (VAR (44)), with Q₀ = 1 and C₀ = 0.
@@ -1684,41 +1503,37 @@
 {#W11.1-4} The scale j + 1 of run B is the scale j of run A: Λ^A_j = Λ^B_{j+1} for all j, and Λ^A_0 = Λ^B_0 = Λ^B_1 = ∅ (*The alignment of the global sets.* below).
 {#W11.1-5} Q₁ := Q̄₁(U^B) is the linear part of the one-step double bar at U^B.
 
-{#W11.2} *The global lift (derived, not reviewed).* ℒ is the lift of the Cauchy note's §10.4 (its l.666), ℒg := Ig + Q₁*(Q₁Q₁*)^{−1}(g − Q₁Ig), with the gauge-covariant interpolation I of its *Regularity of the Lifts.* (l.858).
+{#W11.2} *The global lift.* ℒ is the lift of the Cauchy note's §10.4 (its #C10.4.1-2, with the correction of #C10.4.110-1), ℒg := Ig + Q₁*(Q₁Q₁*)^{−1}(g − Q₁Ig), with the gauge-covariant interpolation I of its *Regularity of the Lifts.* (#C10.4.108).
 {#W11.2-1} Q₁ℒ = 1 holds exactly on Y^∼, for every I, with Q₁ taken on the coarse bonds whose stencils (both endpoint blocks) lie in Y^∼ (*The bridge to ℒ_ι.* below).
 {#W11.2-2} Its bound in VAR's norms is as follows.
 - {#W11.3} I carries the coarse values to the fine bonds by the transports of U^B, with weights summing to 1, so |Ig| ≤ |g|.
   {#W11.3-1} In the gauge of VAR's cube at the global index j, in which PBG's (3.35) for U^B at the global layers (*The domain and the global-layer inputs.* of the bridge below) bounds the field, the background field is < c_uMα₀(L^jε)^{−1}, so |∇_BIg| ≤ O(1)(|∇_Ag| + c_Gc_uMα₀(L^jε)^{−1}|g|).
-- {#W11.4} Q₁I reproduces affine fields at U^B = 1 (l.858), and Q₁ at U^B differs from Q₁ at 1 by O(ε) times the background field.
+- {#W11.4} Q₁I reproduces affine fields at U^B = 1 (the Cauchy note's #C10.4.108-2), and Q₁ at U^B differs from Q₁ at 1 by O(ε) times the background field.
   {#W11.4-1} Hence |g − Q₁Ig| ≤ O(1)(ε|∇_Ag| + c_uMα₀L^{−j}|g|).
-- {#W11.5} The spectrum of Q₁Q₁* lies in [m_Q/2, M̃_Q], with the decay rate δ_Q, by the Cauchy note's *Regularity of the Lifts.* (l.862–864), whose input ε²|F| ≤ C₀ε₁ holds at U^B on Y^∼ by *The domain and the global-layer inputs.* of the bridge below.
+- {#W11.5} The spectrum of Q₁Q₁* lies in [m_Q/2, M̃_Q], with the decay rate δ_Q, by the Cauchy note's *Regularity of the Lifts.* (#C10.4.111–#C10.4.113-1), whose input ε²|F| ≤ C₀ε₁ holds at U^B on Y^∼ by *The domain and the global-layer inputs.* of the bridge below.
   {#W11.5-1} So (Q₁Q₁*)^{−1} is bounded in sup norm by C_Q′ := O(1)m_Q^{−1}Σ_ze^{−δ_Qd(0,z)} (the Cauchy note's C_Q with the rate δ_Q in place of ½δ_Q).
   {#W11.5-2} Across a boundary of VAR's global layers the weights of the norms change by at most L^{2+β₂} for the gradient and Hölder entries and by L³ for the current terms, so by at most L³ per boundary.
   {#W11.5-3} By VAR (1) (p.277), (L^jε)^{−1}dist(Ω_j^c, Ω_{j+1}) > RM₁ in run A's units, so the layer i has width more than RM₁L^iε ≥ RM₁ε, a point of the layer j lies at distance more than RM₁ε from the layers j ± 2, and every further boundary crossed adds at least RM₁ε.
   {#W11.5-4} The factor L³ of the adjacent layer goes into the constant.
   {#W11.5-5} Half of the rate, e^{−½δ_Qd_ε}, absorbs the factor L³ of each further boundary under δ_QRM₁ ≥ 6 log L, and the other half remains for the sums.
   {#W11.5-6} So the weighted bound holds with C_Q′ replaced by O(1)L³C_Q′ and the rate ½δ_Q.
-- {#W11.6} Q₁* is tube-constant up to the non-main terms of CMP 98 (124) (the Cauchy note's l.864), with |Q₁*h| ≤ 2(1 + 2dL^{d−1})|h| (l.864).
+- {#W11.6} Q₁* is tube-constant up to the non-main terms of CMP 98 (124) (the Cauchy note's #C10.4.113-4–#C10.4.113-6), with |Q₁*h| ≤ 2(1 + 2dL^{d−1})|h| (#C10.4.113-3, #C10.4.113-7).
   {#W11.6-1} Since each fine difference is the difference of two such values, |∇_BQ₁*h| ≤ 4(1 + 2dL^{d−1})(L/ε)|h|.
 
 {#W11.7} Since L^{j+1}η_B = L^jε, the weights of the norms |·|_{(−1)} and |∇·|_{(−2)} agree on aligned sets.
 {#W11.7-1} So
 
-  {#W11.8} (H_ℒ^g) max(|ℒg|_{(−1)}, |∇ℒg|_{(−2)}) ≤ C_ℒ^g max(|g|_{(−1)}, |∇g|_{(−2)}), C_ℒ^g := O(1)L^{d+1}C_Q′(1 + c_Gc_uMα₀),
+  {#W11.8} (H_ℒ^g) max(|ℒg|_{(−1)}, |∇ℒg|_{(−2)}) ≤ C_ℒ^g max(|g|_{(−1)}, |∇g|_{(−2)}), C_ℒ^g := O(1)L^{d+3}C_Q′(1 + c_Gc_uMα₀),
 
-{#W11.9} a constant of L, d, and G.
+{#W11.9} a constant of L, d, and G: the gradient of the second term of ℒg is at most 4(1 + 2dL^{d−1})(L/ε) times O(1)L³C_Q′ (#W11.5-6) times the bound of #W11.4-1, and in the weight (L^jε)² this is O(1)L^{d+3}C_Q′(1 + c_uMα₀)max(|g|_{(−1)}, |∇g|_{(−2)}), since (L^jε)²(L/ε)(ε|∇g| + c_uMα₀L^{−j}|g|) = L|∇g|(L^jε)² + Lc_uMα₀|g|L^jε.
 
-{#W11.10} For the local forms (c), §5(c) uses the cut-off χ_Bℒ_N of the right inverse ℒ_N of 10.1, not this ℒ, and the form (c) itself is stated with ℒ_ι := dι_Y (§3(c)).
-{#W11.10-1} §11 therefore passes from ℒ to ℒ_ι through *The bridge to ℒ_ι.* below.
-
-{#W11.11} *The bridge to ℒ_ι (derived, not reviewed).*
+{#W11.10} For the local forms (c), §5(c) uses the cut-off χ_Bℒ_N of the right inverse ℒ_N of 10.1, not this ℒ, and the form (c) itself is stated with ℒ_ι of §3(c).
+{#W11.11} *The bridge to ℒ_ι.*
 - {#W11.12} The domain and the global-layer inputs.
-  {#W11.12-1} U^B = ι_Yc^A is defined on Y^∼ only (the Cauchy note's l.518–520), so Q₁ is taken on the coarse bonds whose stencils (both endpoint blocks) lie in Y^∼, as 10.1 compresses Q₁ for T_N.
+  {#W11.12-1} U^B = ι_Yc^A is defined on Y^∼ only (the Cauchy note's #C9.8.13–#C9.8.13-2, read at X = Y), so Q₁ is taken on the coarse bonds whose stencils (both endpoint blocks) lie in Y^∼, as 10.1 compresses Q₁ for T_N.
   {#W11.12-2} The fields that the bridge acts on are supported in Y^∼ (*The support.* below).
   {#W11.12-3} In §11, U^B always means ι_Yc^A; 10.5's global lift of V₀ is written ι(V₀) here.
-  {#W11.12-4} At the real chain configuration c^A = V₀, 10.5's *The base and the local gauge* gives ι(V₀) with PBG's (3.35) and (3.36) at the global layer index j(x) of VAR's layers, from V₀'s layer bounds (VAR (9)–(10)) through the argument of the Cauchy note's §9.7, and U^B = ι_Yc^A = e^{i(ε/L)T}ι(V₀) with the tail T of the Cauchy note's §9.8.
-  {#W11.12-5} This regularity of ι(V₀) at the global layers is 10.5's derivation; it is not printed.
-  {#W11.12-6} By the Cauchy note's l.541 (§9.8, *The decay.*), |∇T| ≤ C_ιε₁a^{−2}, with the further bounds of 10.5's *The exactness.* So, on Y^∼, ε²|F| ≤ C₀ε₁ and |F| ≤ O(1)Mα₀a_{j(x)}^{−2} at U^B, at the global layer of each point.
+  {#W11.12-4} At the real chain configuration c^A = V₀, 10.5's *The base and the local gauge* gives ι(V₀) with PBG's (3.35) and (3.36) at the global layer index j(x) of VAR's layers, from V₀'s layer bounds (VAR (9)–(10)) through the argument of the Cauchy note's §9.7, and U^B = ι_Yc^A = e^{i(ε/L)T}ι(V₀) with the tail T of the Cauchy note's §9.8.  {#W11.12-6} By the Cauchy note's #C9.8.15-1 (§9.8, *The decay.*), |∇T| ≤ C_ιε₁a^{−2}, with the further bounds of 10.5's *The exactness.* So, on Y^∼, ε²|F| ≤ C₀ε₁ and |F| ≤ O(1)Mα₀a_{j(x)}^{−2} at U^B, at the global layer of each point.
   {#W11.12-7} The layered current bound |J| ≤ O(1)Mα₀a_{j(x)}^{−3} holds for ι(V₀).
   {#W11.12-8} At U^B it holds on the support of the fields of *The support.* below, which lies at a distance at least M₁a_k minus the collar's width (≤ RM₁ε/L + M₁ε) from the collar.
   {#W11.12-9} Near the collar the fine second differences of T give only |J| ≤ O(1)LC_ιε₁ε^{−3}.
@@ -1726,28 +1541,28 @@
   {#W11.12-11} The data bound below reads J only through H₁*J-type terms and local Δ′ terms at points of the support, so the collar enters only through kernels with the decay e^{−δ_brM₁L^k}/O(1).
   {#W11.12-12} The ratio of the crude current bound to the layered weight is at most L^{3k+1}.
   {#W11.12-13} With x := L^k, x³e^{−δ_brM₁x} ≤ (3/(eδ_brM₁))³, so L^{3k+1}e^{−δ_brM₁L^k} ≤ L(3/(eδ_brM₁))³ ≤ 1 under δ_brM₁ ≥ 2L^{1/3}.
-  {#W11.12-14} The boxes of the localisation of the Cauchy note's l.862–864 then read U^B only on Y^∼, so the spectrum of Q₁Q₁* lies in [m_Q/2, M̃_Q] there, with the decay rate δ_Q of l.864.
+  {#W11.12-14} The boxes of the localisation of the Cauchy note's #C10.4.112 then read U^B only on Y^∼, so the spectrum of Q₁Q₁* lies in [m_Q/2, M̃_Q] there, with the decay rate δ_Q of #C10.4.113-1.
   {#W11.12-15} PBG Theorem 3.12 for the one-step problem on Y^∼ needs only (3.35)–(3.36) at the inner scale ε, which these bounds give.
   {#W11.12-16} All curvature and current terms below are taken with these global-layer bounds, and not with 10.5's bounds on the local shells of □.
 - {#W11.13} The support.
   {#W11.13-1} At the decoupled parameters s, the kernels of H(s), G̃(s), and H₀(s) vanish unless both arguments are in the interior of one component of Y(σ), at distance more than M₁ from its boundary, and 𝐀₀ vanishes on a neighbourhood of Y(σ)^c (RG II p.4 l.18–24).
   {#W11.13-2} So every field on which the bridge acts below, namely H^A(s)c, H₀^A(s)B′, G̃^A(s)μ, 𝐇^A(s), and the sources of G̃^B(s), is supported in Y, at distance at least M₁a_k from the collar Λ₀ of the one-step problem on Y^∼ (10.5, *The inclusion.*).
   {#W11.13-3} No cut-off is needed, and the bounds below hold at every point, so in the global norms |·|_{(−1)} and |∇·|_{(−2)}.
-- {#W11.14} ℒ_ι. ℒ_ι is the Landau part H₁𝔡 of dι_Y at the aligned pair (10.5), at the background U^B = ι_Yc^A of this section.
+- {#W11.14} ℒ_ι. ℒ_ι is §3(c)'s, at the background U^B = ι_Yc^A of this section.
   {#W11.14-1} Its constraint is the same Q₁, and Q₁ℒ_ι = 1 on the data of Λ₁ exactly (10.5, *The exactness.*), so (ℒ − ℒ_ι)u ∈ ker Q₁ on Λ₁.
-  {#W11.14-2} Here ℒ_ι means H₁𝔡 throughout; the gauge term of dι_Y is removed by 10.5's *The gauge choice.*, not by this bridge.
+  {#W11.14-2} The gauge term of dι_Y is removed by 10.5's *The gauge choice.*, not by this bridge.
 - {#W11.15} The formula.
   {#W11.15-1} Let u be a run-A field supported in Y, at distance more than one block from the coarse bonds whose fine bonds meet Λ₀, so that u = 0 outside Y^∼ and near the collar, and ℒ_ιu is extended by 0 outside Y^∼.
   {#W11.15-2} Let h := u − Q₁Iu on Λ₁, the h of 10.5's *The Hölder bound.* Then 10.5's *The refined gradient.* gives ℒ_ιu = Iu + H₁h − C̃₁G₁^{−1}Iu with C̃₁ := G₁ − H₁Q₁G₁, and the definition gives ℒu = Iu + Q₁*(Q₁Q₁*)^{−1}h.
   {#W11.15-3} So
   {#W11.16} (ℒ − ℒ_ι)u = (Q₁*(Q₁Q₁*)^{−1} − H₁)h + C̃₁G₁^{−1}Iu.
-  {#W11.17} Both terms vanish at U^B = 1 for fields affine near the point, since Q₁I reproduces affine fields (the Cauchy note's l.858) and (Δ + DRD*)Iu = 0 for affine u, with Q₁*aQ₁ annihilated by C̃₁.
-- {#W11.18} The data bound. 10.5's *The Hölder bound.*, at the exponent β₂ < 1, bounds |h| ≤ Cε(6ε)^{β₂}‖∇_Au‖_{β₂} + C_trε²|F||u| on Λ₁, and the gradients of H₁h and of C̃₁G₁^{−1}Iu (its bullets on H₁h, C̃₁D*λ, C̃₁DRD*Iu, and the k₀-type terms) by C′ε^{β₂}‖∇_Au‖_{β₂} plus terms of size ε|F||u| and of the k₀-type with L^{−n}, L^{−2n}, or L^{−3n}, up to the decay e^{−½δ₁d_ε}.
+  {#W11.17} Both terms vanish at U^B = 1 for fields affine near the point, since Q₁I reproduces affine fields (the Cauchy note's #C10.4.108-2) and (Δ + DRD*)Iu = 0 for affine u, with Q₁*aQ₁ annihilated by C̃₁.
+- {#W11.18} The data bound. 10.5's *The Hölder bound.*, at the exponent β₂ < 1, bounds |h| ≤ Cε(6ε)^{β₂}‖∇_Au‖_{β₂} + max(C, 1)C_trε²|F||u| on Λ₁, and the gradients of H₁h and of C̃₁G₁^{−1}Iu (its bullets on H₁h, C̃₁D*λ, C̃₁DRD*Iu, and the k₀-type terms) by C′ε^{β₂}‖∇_Au‖_{β₂} plus terms of size ε|F||u| and of the k₀-type with L^{−n}, L^{−2n}, or L^{−3n}, up to the decay e^{−½δ₁d_ε}.
   {#W11.18-1} Their sup is at most O(1)ε times the same, since H₁ and C̃₁ gain a factor ε in sup against their gradient ((3.133), and (3.42) for G₁).
-  {#W11.18-2} By the Cauchy note's l.864 and the last bullet of *The global lift.*, |Q₁*ν| ≤ 2(1 + 2dL^{d−1})|ν| and |∇_BQ₁*ν| ≤ 4(1 + 2dL^{d−1})(L/ε)|ν|, with the decay e^{−δ_Qd_ε} of (Q₁Q₁*)^{−1}.
+  {#W11.18-2} By the Cauchy note's #C10.4.113-1 and #C10.4.113-3 and the last bullet of *The global lift.*, |Q₁*ν| ≤ 2(1 + 2dL^{d−1})|ν| and |∇_BQ₁*ν| ≤ 4(1 + 2dL^{d−1})(L/ε)|ν|, with the decay e^{−δ_Qd_ε} of (Q₁Q₁*)^{−1}.
   {#W11.18-3} With N_n(u) := max((L^nε)|u|, (L^nε)²|∇_Au|, (L^nε)^{2+β₂}‖∇_Au‖_{β₂}) on the blocks of run A's layer n, and (L^nε)²·ε^{β₂}(L^nε)^{−2−β₂} = (ε/a_n)^{β₂}, this gives at a point x of the layer n
   {#W11.19} (L^nε)|(ℒ − ℒ_ι)u(x)| + (L^nε)²|∇_B(ℒ − ℒ_ι)u(x)| ≤ C_br(ε/a_n)^{β₂}Σ_ye^{−δ_brd_ε(x,y)}N_{n(y)}(u),
-  {#W11.20} with δ_br := min(¼δ_Q, ¼δ₁), C_br := O(1)L^{d+4}(C + C′ + C_Q′C + C_tr + O(1)Mα₀), where C′ includes the constant B₀′(½)L^{1/2} of (3.44) for the entries C̃₁D* and C̃₁D.
+  {#W11.20} with δ_br := min(¼δ_Q, ¼δ₁), C_br := O(1)L^{d+4}(C + C′ + C_Q′C + C_tr + B₀ + (C_Q′ + B_ι)(r_I² + C_trMα₀) + O(1)Mα₀), where C′ includes the constant B₀′(½)L^{1/2} of (3.44) for the entries C̃₁D* and C̃₁D, and B₀ + (C_Q′ + B_ι)(r_I² + C_trMα₀) is the source side's (#W11.21-10).
   {#W11.20-1} The weights of N_{n(y)} and of the left side differ by at most L^{2+β₂} per boundary of VAR's global layers for the gradient and Hölder entries, and by L³ for the current terms.
   {#W11.20-2} The adjacent layer's factor L³ is in C_br; each further boundary adds at least RM₁ε to the distance (VAR (1)), and half of the rate absorbs its factor L³ under δ_brRM₁ ≥ 6 log L, as in the spectrum bullet of *The global lift.*, with δ_br the rate that remains.
   {#W11.20-3} In 10.5's bullets the curvature and current enter through ε|F| and ε²|J|.
@@ -1760,10 +1575,10 @@
   {#W11.21-4} It is therefore ∇_A*∇_A*K_c with K_c supported in the same range and |K_c| ≤ O(1)r_I²ε², and the background adds C_trε²|F| times a source.
   {#W11.21-5} For the second, G₁^{−1}C̃₁λ = (1 − Q₁*H₁*)λ, and the term Q₁*aQ₁ of G₁^{−1} drops, since Q₁C̃₁ = 0.
   {#W11.21-6} So it is D_B*(D_BC̃₁λ) + D_B(RD_B*C̃₁λ) plus the Δ′, Δ_π′, and Δ_π^{(2)} terms.
-  {#W11.21-7} These are fine divergences of fields bounded by O(1)|∇_BC̃₁λ| ≤ O(1)εΣe^{−½δ₁d_ε}|λ|, plus the Δ′, Δ′_π, and Δ_π^{(2)} terms, which carry ε²|F| or ε³|J| at the global layer of the point, so O(1)Mα₀(ε/a_j)² or O(1)Mα₀(ε/a_j)³ relative to |λ|, by the first bullet.
-  {#W11.21-8} I* carries a fine divergence ∇_B*f to a coarse divergence ∇_A*f̃ with |f̃| ≤ O(1)|f|, since the fine differences of Iv are interpolated coarse differences of v up to curvature terms (10.1's gradient bullet).
-  {#W11.21-9} PBG (3.42) for the entry G∇* gains one factor (L^jε)^{−1} less than G. The factor (Q₁Q₁*)^{−1}Q₁ − H₁* contributes C_Q′ + C_ι.
-  {#W11.21-10} So each part gives |G̃^A(ℒ − ℒ_ι)*λ| ≤ O(1)B₀(C_Q′ + C_ι)(1 + r_I²)(ε/a_j) times the bound of G̃^Aℒ*λ in |·|_{(−1)}.
+  {#W11.21-7} These are fine derivatives, a divergence and a gradient, of fields bounded by O(1)|∇_BC̃₁λ| ≤ O(1)B₀εΣe^{−½δ₁d_ε}|λ| (#W11.30-2), plus the Δ′, Δ′_π, and Δ_π^{(2)} terms, which carry ε²|F| or ε³|J| at the global layer of the point, so O(1)Mα₀(ε/a_j)² or O(1)Mα₀(ε/a_j)³ relative to |λ|, by the first bullet.
+  {#W11.21-8} I* carries a fine divergence ∇_B*f or gradient ∇_Bf to a coarse one, ∇_A*f̃ or ∇_Af̃, with |f̃| ≤ O(1)|f|, since the fine differences of Iv are interpolated coarse differences of v up to curvature terms (10.1's gradient bullet).
+  {#W11.21-9} PBG (3.42) for the entry G∇* gains one factor (L^jε)^{−1} less than G. The factor (Q₁Q₁*)^{−1}Q₁ − H₁* contributes C_Q′ + B_ι.
+  {#W11.21-10} So |G̃^A(ℒ − ℒ_ι)*λ| ≤ O(1)(B₀ + (C_Q′ + B_ι)(r_I² + C_trMα₀) + Mα₀)(ε/a_j) times the bound of G̃^A on the source Σ_ye^{−δ_brd_ε(·,y)}|λ(y)| in |·|_{(−1)}: the first part gives (C_Q′ + B_ι)r_I² through the entry G∇* on ∇_A*K_c, of size O(1)r_I²ε, and (C_Q′ + B_ι)C_trMα₀(ε/a_j)² from the background; the second gives B₀ through G∇*, and Mα₀(ε/a_j)² from the Δ′ terms; and ε ≤ a_j.
   {#W11.21-11} The term (ℒ − ℒ_ι)*λ itself is not supported in Y, since (Q₁Q₁*)^{−1} spreads it; it enters only through G̃^A(s), whose kernel restricts the source variable to Y(σ) (*The support.*), so it is paired with fields that vanish near the collar.
   {#W11.21-12} In |∇·|_{(−2)} the entry ∇G∇* of (3.44) with the crude lattice Hölder bound of (a) below gives (ε/a_j)^{1−β′}, any β′ ∈ (0, 1).
 - {#W11.22} The applications.
@@ -1777,7 +1592,7 @@
   {#W11.25-4} The output of §11 is Δ_𝐇 = 𝐇^B − ℒ𝐇^A.
   {#W11.25-5} The consumer's §3(d) needs 𝐇^B − ℒ_ι𝐇^A = Δ_𝐇 + (ℒ − ℒ_ι)𝐇^A. 𝐇^A(s) has the bound N_n from the propagator bounds: H₀(s) and H(s) on the data and D, and G̃(s) for 𝐀₀, each with its Hölder entry, with the sup bound |D(H(s(Y₀)), A′)| ≤ 4C₂|A′|² of RG II (1.14) (p.5) and the bounds of δV/δA′ from Proposition 4 of [15], which "holds for it (with ε₃ replaced by ε₂)" (RG II p.5 l.40–41).
   {#W11.25-6} So the last term carries C_bre^{16κ₁}(ε/a_j)^{β₂}.
-- {#W11.26} The complex chain configurations (derived, not reviewed).
+- {#W11.26} The complex chain configurations.
   {#W11.26-1} At a point c(t) of the joint line, the bridge is rerun at U₁ := ι_Y(Mc(t)), the one-step minimiser on Y^∼ at the complex data Mc(t), with all norms in the frame of the representative U₁ below.
   {#W11.26-2} The formula and the source-side identities are algebraic and hold at U₁ unchanged.
   {#W11.26-3} The inputs at U₁ are derived from the real background U^B, with no rerun of PBG at a complex background, as follows.
@@ -1789,7 +1604,7 @@
     {#W11.27-5} At ∂Y, W̃ jumps by at most O(L)ϱ̄/a over one fine bond of spacing η = ε/L, so there only the crude bounds η|W̃| ≤ O(1)ϱ̄ε/a and |∇W̃| ≤ O(1)L²ϱ̄/(aε) hold.
     {#W11.27-6} Every field of *The support.* lies at a distance > M₁a_k from ∂Y, since Y₀ ⊂ Y. So the jump enters the bounds at the support only through kernels with the decay e^{−δ_br^cM₁L^k}, at the rate δ_br^c of the conclusion below.
     {#W11.27-7} This beats the ratio O(1)L²a/ε ≤ O(1)L^{k+2} of the crude bound to the layered one, since L^{k+2}e^{−δ_br^cM₁L^k} ≤ L²/(eδ_br^cM₁) ≤ 1 under δ_br^cM₁ ≥ L²/e.
-    {#W11.27-8} The Neumann series below read only the relative sizes η|W̃| and ε²|∇(ηW̃)|/ε, which are ≤ O(1)ϱ̄ at the jump as well.
+    {#W11.27-8} The Neumann series of *The operators at U₁.* read ℋ only through η|ℋ| and ε²|∇ℋ| (#W11.37-2), and these stay within κ_ℋ at the jump: Θ₁ integrates along at most dL fine bonds of length η, so |D̄(Θ₁W̃)| ≤ O(1)sup|W̃| and |B| ≤ O(L)ϱ̄/a there by #W11.28; hence ε²|∇H₁B| ≤ O(1)LB_ιϱ̄ and η|H₁B| ≤ O(1)B_ιϱ̄, both ≤ κ_ℋ since C_ℋ ≥ O(1)L⁴B_ι, and 𝒜₁ and HD begin at second order in H₁B (#W11.31-1).
     {#W11.27-9} M is the plain average (ι's constraint is Q₁^{pl}dι_Y = 1, 10.5), while VAR (44) (p.285) expands the double bar Q₁ := Q̄₁(U^B).
     {#W11.27-10} By CMP 98 (88)–(89) (p.031) the plain ratio is the double-bar ratio between the return factors (\overline{R_{0,c_±}V₁}) of the two endpoint blocks.
     {#W11.27-11} Their linear parts give the gauge term of (B1)–(B2) of the Cauchy note's §10.1, so Mc(t) = e^{iεB}c^A with
@@ -1804,12 +1619,12 @@
     {#W11.29-7} This multiplies N_n by at most 1 + O(1)c_Gϱ̄.
   - {#W11.30} The first-order field.
     {#W11.30-1} From C̃₁ = G₁ − H₁Q₁G₁, 1 − H₁Q₁ = C̃₁G₁^{−1}, so H₁B − W̃ = −C̃₁G₁^{−1}W̃ + H₁(B − Q₁W̃).
-    {#W11.30-2} Since Q₁C̃₁ = 0 and C̃₁ is symmetric at the real U^B, the term Q₁*aQ₁ of G₁^{−1} drops, and C̃₁G₁^{−1}W̃ = C̃₁D*(DW̃) + C̃₁D(RD*W̃) + C̃₁(Δ′ + Δ′_π + Δ_π^{(2)})W̃, as in *The source side.* At the real U^B, PBG Theorem 3.12 and (3.130)–(3.133), with the entries (3.42)–(3.44) at the inner scale ε, give |∇C̃₁h| ≤ O(1)B₀εΣ_ye^{−½δ₁d_ε(x,y)}|h(y)|, and, for C̃₁D* and C̃₁D, one factor ε less with the constant B₀″ := B₀′(½)L^{1/2}(1 + C_ι)B₀ of (3.44) and the lattice Hölder trick (10.5).
+    {#W11.30-2} Since Q₁C̃₁ = 0 and C̃₁ is symmetric at the real U^B, the term Q₁*aQ₁ of G₁^{−1} drops, and C̃₁G₁^{−1}W̃ = C̃₁D*(DW̃) + C̃₁D(RD*W̃) + C̃₁(Δ′ + Δ′_π + Δ_π^{(2)})W̃, as in *The source side.* At the real U^B, PBG Theorem 3.12 and (3.130)–(3.133), with the entries (3.42)–(3.44) at the inner scale ε, give |∇C̃₁h| ≤ O(1)B₀εΣ_ye^{−½δ₁d_ε(x,y)}|h(y)|, and, for C̃₁D* and C̃₁D, one factor ε less with the constant B₀″ := B₀′(½)L^{1/2}(1 + B_ι)B₀ of (3.44) and the lattice Hölder trick (10.5).
     {#W11.30-3} With |DW̃|, |RD*W̃| ≤ O(1)ϱ̄a^{−2} and the Δ′ terms carrying ε²|F| or ε³|J| relative to |W̃|, this gives |∇C̃₁G₁^{−1}W̃| ≤ O(1)B₀″(1 + Mα₀)Σ_ye^{−½δ₁d_ε}ϱ̄a_{j(y)}^{−2}.
     {#W11.30-4} The second term is H₁(B − Q₁W̃) = −H₁D̄(Θ₁W̃) + H₁O(c_Gε|W̃|²).
-    {#W11.30-5} Since ∇H₁ is at most C_ιε^{−1} times a decaying kernel, |∇H₁D̄(Θ₁W̃)| ≤ O(1)C_ιΣe^{−½δ₁d_ε}(L|∇W̃| + ε|F||W̃|) ≤ O(1)C_ι(L + Mα₀)Σe^{−½δ₁d_ε}ϱ̄a^{−2}, and the quadratic part gives O(1)C_ιc_GΣe^{−½δ₁d_ε}ϱ̄²a^{−2}.
+    {#W11.30-5} Since ∇H₁ is at most B_ιε^{−1} times a decaying kernel, |∇H₁D̄(Θ₁W̃)| ≤ O(1)B_ιΣe^{−½δ₁d_ε}(L|∇W̃| + ε|F||W̃|) ≤ O(1)B_ι(L + Mα₀)Σe^{−½δ₁d_ε}ϱ̄a^{−2}, and the quadratic part gives O(1)B_ιc_GΣe^{−½δ₁d_ε}ϱ̄²a^{−2}.
     {#W11.30-6} The sums go to the layer of x as in *The data bound.*, with the adjacent layer's L³ in the constant and δ₁RM₁ ≥ 12 log L for the rest.
-    {#W11.30-7} So |∇(H₁B − W̃)| ≤ O(1)L³(B₀″(1 + Mα₀) + C_ι(L + Mα₀) + C_ιc_Gϱ̄)ϱ̄a_{j(x)}^{−2}, and the sup is a factor ε smaller.
+    {#W11.30-7} So |∇(H₁B − W̃)| ≤ O(1)L³(B₀″(1 + Mα₀) + B_ι(L + Mα₀) + B_ιc_Gϱ̄)ϱ̄a_{j(x)}^{−2}, and the sup is a factor ε smaller.
   - {#W11.31} The second-order terms.
     {#W11.31-1} By (176)–(177), 𝒜₁ and HD begin at second order in H₁B.
     {#W11.31-2} Put A′ := 𝒜₁ + H₁B; by the previous bullet, |A′| ≤ O(1)(1 + B₀)ϱa^{−1} and |∇A′| ≤ O(1)L³(1 + B₀)ϱa^{−2} at the layer of the point.
@@ -1828,25 +1643,24 @@
     {#W11.35-1} So |(δ/δA′)V^{(3)}(A′)| ≤ O(1)c_GL^{d+7}(1 + B₀)³(1 + Mα₀)ϱ̄²a^{−3}.
     {#W11.35-2} Since |∇𝔊g| ≤ O(1)B₀εΣe^{−½δ₁d_ε}|g|, the contraction of (175) gives |∇𝒜₁| ≤ O(1)c_GB₀L^{d+7}(1 + B₀)³(1 + Mα₀)ϱ̄²(ε/a)a^{−2}.
     {#W11.35-3} The terms of order m ≥ 4 of V carry m − 1 factors of A′ or its differences, so each further order has a further factor O(1)c_GL^{d+3}(1 + B₀)ϱ̄, and the series converges under O(1)c_GL^{d+3}(1 + B₀)ϱ̄ ≤ ½.
-    {#W11.35-4} D begins with C^{(2)}, the second-order part of the averaging, which is local of size O(1)c_Gε|A′|², so |∇HD| ≤ O(1)C_ιc_G(1 + B₀)²ϱ̄²a^{−2}.
+    {#W11.35-4} D begins with C^{(2)}, the second-order part of the averaging, which is local of size O(1)c_Gε|A′|², so |∇HD| ≤ O(1)B_ιc_G(1 + B₀)²ϱ̄²a^{−2}.
   - {#W11.36} The curvature and the current.
-    {#W11.36-1} So |∇(ℋ − W̃)| ≤ C_ℋϱa_{j(x)}^{−2} and |ℋ| ≤ O(1)(1 + B₀)ϱa_{j(x)}^{−1}, with C_ℋ := O(1)L³(B₀″(1 + Mα₀) + C_ι(L + Mα₀) + c_G(C_ι + B₀L^{d+4})(1 + B₀)³(1 + Mα₀)ϱ̄), and ϱ̄ in place of ϱ in this bullet.
+    {#W11.36-1} So |∇(ℋ − W̃)| ≤ C_ℋϱa_{j(x)}^{−2} and |ℋ| ≤ O(1)(1 + B₀)ϱa_{j(x)}^{−1}, with C_ℋ := O(1)L³(B₀″(1 + Mα₀) + B_ι(L + Mα₀) + c_G(B_ι + B₀L^{d+4})(1 + B₀)³(1 + Mα₀)ϱ̄), and ϱ̄ in place of ϱ in this bullet.
     {#W11.36-2} The plaquettes of exp(iηℋ)U^B give |F(U₁) − F(U^B)| ≤ |∇ℋ| + O(1)c_Gη|ℋ|(|F(U^B)| + |∇ℋ|) ≤ O(1)(1 + C_ℋ)ϱa_{j(x)}^{−2}.
     {#W11.36-3} So |F(U₁)| ≤ O(1)(Mα₀ + (1 + C_ℋ)ϱ)a_{j(x)}^{−2} at the global layer of each point, and ε²|F(U₁)| ≤ ε²|F(U^B)| + C₀ε₁/2 ≤ (3/2)C₀ε₁ under O(1)(1 + C_ℋ)ϱ ≤ C₀ε₁/2, by the base's ε²|F(U^B)| ≤ C₀ε₁; the bounds below that take C₀ε₁ at U₁ hold with (3/2)C₀ in place of C₀, absorbed in their O(1), and §8's thresholds that read C₀ε₁ at U₁ are stated with O(1)s that include this factor 3/2 (its square where C₀ε₁ enters squared).
     {#W11.36-4} J(U₁) − J(U^B) is the fine divergence of F(U₁) − F(U^B), at most O(1)(L/ε)(1 + C_ℋ)ϱa^{−2}, plus (D*_{U₁} − D*_{U^B})F(U^B), at most O(1)c_G|ℋ||F(U^B)| ≤ O(1)c_G(1 + B₀)Mα₀ϱa^{−3}.
     {#W11.36-5} So (L^nε)·ε²|J(U₁) − J(U^B)| ≤ O(1)L(1 + C_ℋ)ϱ(ε/a_n), which the data bound's current terms absorb with the gain (ε/a_n).
-    {#W11.36-6} VAR's (190) alone would give only |∇(ηℋ)| ≤ C_Vε^{−1}a(x), with no gain at the global layers.
-    {#W11.36-7} The gain comes from W̃, which already carries the data, so ℋ − W̃ is driven by the second differences of W̃, and C̃₁ gains one factor ε on them.
+    {#W11.36-7} The gain ε/a_n comes from W̃, which already carries the data, so ℋ − W̃ is driven by the second differences of W̃, and C̃₁ gains one factor ε on them.
   - {#W11.37} The operators at U₁.
     {#W11.37-1} Q₁, Q₁Q₁*, and the local parts of G₁^{−1} (Δ_U, the averaging term Q₁*aQ₁, and the Δ′ terms) differ at U₁ from their values at U^B by local operators of range at most 2ε.
     {#W11.37-2} Their coefficients change through the transports e^{iηℋ} and through F(U₁) − F(U^B), by a relative size at most κ_ℋ := O(1)c_G(1 + C_ℋ)ϱ̄ at the scale ε^{−2}, with first differences of the same relative size.
     {#W11.37-3} G₁^{−1} = Δ_π − Δ_π^{(2)} + DRD* + Q*aQ (PBG (3.128), (3.134)–(3.135); 10.5) also contains nonlocal factors: G′ in P_π = 1 − DG′RD*, the projection R = 1 − G′Q′*(Q′G′²Q′*)^{−1}Q′G′, and H through H*J in Δ_π^{(2)} (PBG (3.135)–(3.136), p.422 l.37–48).
     {#W11.37-4} As in 10.5's resolvent identities, each of these at U₁ minus its value at U^B is a sum of products of their decaying kernels at U^B, each product containing at least one local difference of relative size κ_ℋ or one current difference.
     {#W11.37-5} G′ and Q′G′²Q′* are themselves inverted by Neumann series about U^B, with the local difference of Δ′.
-    {#W11.37-6} So G₁^{−1}(U₁) − G₁^{−1}(U^B) =: δ is a kernel operator with |δ(x, y)| ≤ K_opκ_ℋε^{−2}e^{−δ₁d_ε(x,y)}, with K_op := O(1)B₀′(½)L^{1/2}(1 + C_{G′} + C_R + C_ι)², and the same for its first differences, where C_{G′} and C_R are the constants of G′ and R at U^B (PBG Corollary 3.6 and (3.24)).
+    {#W11.37-6} So G₁^{−1}(U₁) − G₁^{−1}(U^B) =: δ is a kernel operator with |δ(x, y)| ≤ K_opκ_ℋε^{−2}e^{−δ₁d_ε(x,y)}, with K_op := O(1)B₀′(½)L^{1/2}(1 + C_{G′} + C_R + B_ι)², and the same for its first differences, where C_{G′} and C_R are the constants of G′ and R at U^B (PBG Corollary 3.6 and (3.24)).
     {#W11.37-7} Kernels e^{−rd} compose to e^{−(r/2)d} times Σ_ze^{−(r/2)d_ε(0,z)} =: S_r.
     {#W11.37-8} So the Neumann series G₁(U₁) = Σ_n G₁(U^B)(−δG₁(U^B))^n, in the weighted norms of (3.42)–(3.44) with the derivatives moved to neighbouring factors as in PBG (3.138), converges at the rate ½δ₁ with 2B₀, under O(1)B₀K_opS_{δ₁}κ_ℋ ≤ ½.
-    {#W11.37-9} In the same way (Q₁Q₁*)^{−1} at U₁ has 2C_Q′ and the rate ½δ_Q, under O(1)C_Q′S_{δ_Q}κ_ℋ ≤ ½ (as in 10.1, its l.183).
+    {#W11.37-9} In the same way (Q₁Q₁*)^{−1} at U₁ has 2C_Q′ and the rate ½δ_Q, under O(1)C_Q′S_{δ_Q}κ_ℋ ≤ ½ (as in 10.1, #W10.1.16-4–#W10.1.16-7).
     {#W11.37-10} (Q₁G₁Q₁*)^{−1} at U₁, which H₁ needs, is a Neumann series about its value at U^B (PBG (3.130)–(3.133)), with the difference Q₁δ_GQ₁* + (Q₁ terms), δ_G := G₁(U₁) − G₁(U^B), at the rate ¼δ₁, under O(1)C_{QGQ}S_{δ₁/2}B₀K_opκ_ℋ ≤ ½, with C_{QGQ} the constant of (Q₁G₁Q₁*)^{−1} at U^B.
     {#W11.37-11} So H₁ = G₁Q₁*(Q₁G₁Q₁*)^{−1} and C̃₁ = G₁ − H₁Q₁G₁ at U₁ have the bounds of PBG Theorem 3.12 with constants O(1) times those at U^B and the rate ⅛δ₁, the products costing one halving each.
   - {#W11.38} I and the Taylor bound of Q₁I at U₁: these are the same local operators, with the transports e^{iηℋ} bounded by √2 under O(1)c_G(1 + B₀)ϱ̄ ≤ ¼log 2, and with |F(U₁)| from the curvature bullet.
@@ -1857,7 +1671,7 @@
 {#W11.40-1} With β₂ ≥ ½ and β′ ≤ ½, ϑ_ℒ ≤ C_bre^{16κ₁}L^{(1−k/2)/2} on the young histories.
 {#W11.40-2} In powers of L^{−j_min}, j_min ≥ k/2 − 1, its exponent min(β₂, 1 − β′) ≥ ½ is above γ_w, so it enters ϑ below without lowering the exponent in those powers; in powers of ε/a_{m(ω)} per walk it is a global supremum and gives no per-walk exponent.
 
-{#W11.41} *The composition of the averagings (derived, not reviewed).* By CMP 98 (90)–(91), the (j + 1)-fold double bar about U^B is the j-fold double bar about the plain average Ū₀ = MU^B, applied to the one-step double bar about U^B ((B4) of the Cauchy note's §10.1, at the nonlinear level).
+{#W11.41} *The composition of the averagings.* By CMP 98 (90)–(91), the (j + 1)-fold double bar about U^B is the j-fold double bar about the plain average Ū₀ = MU^B, applied to the one-step double bar about U^B ((B4) of the Cauchy note's §10.1, at the nonlinear level).
 {#W11.41-1} By (B3), M̄_{U^B}(U^B) = MU^B = c^A, so run A's objects below (Q^A_j, C^A, H^A, D^A, V^A, and 𝐀₀^A) are taken directly at c^A.
 {#W11.41-2} For a run-B field X let εY := Q^B_1(η_BX), the one-step average as a field on T_ε, so that Y = Q₁X + ε^{−1}C^B_1(εX).
 {#W11.41-3} Then Q^B_{j+1}(η_BX) = Q^A_j(εY) on Λ^A_j.
@@ -1865,13 +1679,13 @@
 
   {#W11.42} C^B_{j+1}(L^{j+1}η_BX) = C^A_j(L^jεY) + L^jQ^A_jC^B_1(εX) on Λ^A_j, j ≥ 0, that is, C^B(X) = C^A(Y) + Q̂^Aε^{−1}C^B_1(εX).
 
-{#W11.43} *The inverse of the linearising transformation (derived, not reviewed).* VAR's transformation is A = A′ − HD(A′), with D(A′) the unique fixed point of (50) on the set (51).
+{#W11.43} *The inverse of the linearising transformation.* VAR's transformation is A = A′ − HD(A′), with D(A′) the unique fixed point of (50) on the set (51).
 {#W11.43-1} Its inverse is explicit: A′ = A + HC(A).
 {#W11.43-2} Indeed, for A′ := A + HC(A) the data X := C(A) satisfies C(A′ − HX) = C(A) = X, so it is a fixed point of (50) at A′, and by uniqueness D(A′) = C(A), provided A′ and C(A) lie in the set (51).
 {#W11.43-3} This holds when |A|_{(−1)} ≤ ε₃/2 under VAR's condition 18C₂B₀ε₃ ≤ 1: then C(A) = 0 on Λ₀ (C₀ = 0), |C(A)| ≤ C₂|A|²_{(−1)} ≤ C₂ε₃²/4 < ε₃/B₀ by (44), and |A′|_{(−1)} ≤ ε₃/2 + B₀C₂ε₃²/4 < ε₃ by (46).
 {#W11.43-4} Nothing here uses Q̂H = 1, so the inverse holds for every operator H with which the contraction (53)–(54) runs, in particular for the decoupled propagators H(s) of RG II (1.5).
 
-{#W11.44} *The two runs' linear coordinates (derived, not reviewed).* Let A^B be a run-B field with |A^B|_{(−1)} ≤ ε₃/2 in run B's norm whose one-step average Y has |Y|_{(−1)} ≤ ε₃/2 in run A's norm.
+{#W11.44} *The two runs' linear coordinates.* Let A^B be a run-B field with |A^B|_{(−1)} ≤ ε₃/2 in run B's norm whose one-step average Y has |Y|_{(−1)} ≤ ε₃/2 in run A's norm.
 {#W11.44-1} Let A′^B := A^B + H^BC^B(A^B) be its run-B coordinate and A′_Y := Y + H^AC^A(Y) the run-A coordinate of Y. The composition and the inverse give, on the aligned sets, the exact identities
 
   {#W11.45} D^B(A′^B) = D^A(A′_Y) + Q̂^Aε^{−1}C^B_1(εA^B),
@@ -1882,7 +1696,7 @@
 {#W11.47-1} Both identities hold for arbitrary operators H^A and H^B, hence for the decoupled H^A(s) and H^B(s).
 {#W11.47-2} The one-step remainder ε^{−1}C^B_1(εA^B) is bounded by VAR (44) at j = 1 and by the Cauchy note's §9.8, |C^B_1(εA^B)| ≤ C₂ε²|A^B|², and H^AQ̂^A by (46).
 
-{#W11.48} *The size of the remainder terms (derived, not reviewed).* The propagator term Q₁(H^B − ℒH^A)C^B(A^B) is, by the bridge, the form (c) for H applied to the data C^B(A^B) plus the bridge term, so it carries the factor 𝔡_H (*The form (c) for VAR's H.*).
+{#W11.48} *The size of the remainder terms.* The propagator term Q₁(H^B − ℒH^A)C^B(A^B) is, by the bridge, the form (c) for H applied to the data C^B(A^B) plus the bridge term, so it carries the factor 𝔡_H (*The form (c) for VAR's H.*).
 {#W11.48-1} The term R₁ carries the factor of the layer instead.
 {#W11.48-2} The one-step remainder acts at the finest spacing ε, while the norm |·|_{(−1)} weighs a point x of the layer j(x) with L^{j(x)}ε.
 {#W11.48-3} So by VAR (44) at j = 1,
@@ -1892,14 +1706,9 @@
 {#W11.50} since |A^B(x)| ≤ |A^B|_{(−1)}(L^{j(x)}ε)^{−1} (L^{j+1}η_B = L^jε).
 {#W11.50-1} At a coarse bond whose averaging stencil reaches run B's finer layer, |A^B| is larger by the factor L there (10.1, *The shells.*), so the constant is C₂L² at such bonds.
 {#W11.50-2} With (46) for H^AQ̂^A, whose data at the layer j are L^jεQ_j of the field, |R₁|_{(−1)} ≤ (1 + O(1)B₀)C₂L² sup_xL^{−j(x)}|A^B|²_{(−1)}.
-{#W11.50-3} Only this sup bound is used below.
 {#W11.50-4} In a young history every layer has j ≥ k/2 − 1.
 {#W11.50-5} So R₁ is smaller than D, which has no such factor (VAR (55)), by the ratio ε/a_j of the form (c) at β = 1.
-{#W11.50-6} For abelian G the one-step logarithmic average is linear, so C^B_1 = 0 and R₁ = 0.
-{#W11.50-7} For non-abelian G, C^B_1 has a commutator part at second order (the Baker–Campbell–Hausdorff series of the product along the tube), and R₁ does not vanish in general.
-{#W11.50-8} At s = 1, 1 − H^AQ̂^A is the projection onto the kernel of run A's averages; for the decoupled H^A(s) it is not a projection, and only the bound above is used.
-
-{#W11.51} *The fine form of the field (derived, not reviewed).* The consumer of §3(d) compares the fields themselves, 𝐇^B − ℒ𝐇^A, where 𝐇^X := A′^X − H^XD^X(A′^X) and A′^X := H₀^XB′ + 𝐀₀^X (RG II (1.2)–(1.4), at s or at s = 1).
+{#W11.51} *The fine form of the field.* The consumer of §3(d) compares the fields themselves, 𝐇^B − ℒ𝐇^A, where 𝐇^X := A′^X − H^XD^X(A′^X) and A′^X := H₀^XB′ + 𝐀₀^X (RG II (1.2)–(1.4), at s or at s = 1).
 {#W11.51-1} By the inverse, D^X(A′^X) = C^X(𝐇^X).
 {#W11.51-2} Let Y be the one-step average of 𝐇^B and c₁ := ε^{−1}C^B_1(ε𝐇^B).
 {#W11.51-3} By the composition, C^B(𝐇^B) = C^A(Y) + Q̂^Ac₁, and Y − 𝐇^A = Q₁(𝐇^B − ℒ𝐇^A) + c₁ by Q₁ℒ = 1.
@@ -1921,7 +1730,7 @@
 {#W11.55-4} So it carries the factor ε/a_j of the layer, and the D part of (Wδ-3) is bounded by the forms (c) for H₀ and H, the 𝐀₀ difference, and this remainder.
 {#W11.55-5} The same bound applies to the run difference Q̂^Ac₁ of D at corresponding arguments.
 
-{#W11.56} *The functional V (derived, not reviewed).* RG II (1.4) is VAR's equation (180) of Sect. G (RG II p.2 cites Sect. G before (1.2) and (80) after (1.4)), and (180) is obtained from (143) (VAR p.306), which comes from (127).
+{#W11.56} *The functional V.* RG II (1.4) is VAR's equation (180) of Sect. G (RG II p.2 cites Sect. G before (1.2) and (80) after (1.4)), and (180) is obtained from (143) (VAR p.306), which comes from (127).
 {#W11.56-1} For (127) VAR applies the linearising transformation on the larger space (126), where RD*A′ = f is free, and gets "the functional (74), with the operator Δ instead of Δ_π" (VAR p.297, the paragraph before (126)).
 {#W11.56-2} So the V of (127), (143), (180), and RG II (1.4) is (80) with Δ in place of Δ_π.
 {#W11.56-3} Let 𝔉 denote (74) with Δ, on the set (77), without the gauge condition (76).
@@ -1934,11 +1743,9 @@
 {#W11.58-1} V vanishes to second order at A′ = 0, since each term of (80) is of order ≥ 3 (D is of order ≥ 2, and V₀ is of order ≥ 3 by (26)).
 {#W11.58-2} Let T₃ denote the Taylor remainder of order three at A′ = 0, that is, a function minus its Taylor polynomial of degree two.
 {#W11.58-3} Then V = T₃𝔉 on the whole set (77), and no gauge condition enters.
-{#W11.58-4} With VAR's Sect. C form (81), which has Δ_π, 𝔉 would carry the further term ½⟨A, (Δ_π − Δ)A⟩ of PBG (3.120); that form is used only on the slice (83) and does not enter (1.4).
-
 {#W11.59} Let A′ be in the set (77) of run A, A^B := ℒA′ − H^BD^B(ℒA′) the run-B field of the coordinate ℒA′, Y its one-step average with |Y|_{(−1)} ≤ ε₃/2, and E := A′_Y − A′.
 {#W11.59-1} By the second identity above and Q₁ℒ = 1, E = R₁ − Q₁(H^B − ℒH^A)C^B(A^B), of order ≥ 2.
-{#W11.59-2} The run-B action is A_{ε/L} = A_ε∘M̄ − b, with b the blocking artifact of the Cauchy note's *The Action Part of β.* (its l.697).
+{#W11.59-2} The run-B action is A_{ε/L} = A_ε∘M̄ − b, with b the blocking artifact of the Cauchy note's *The Action Part of β.* (its #C10.4.18).
 {#W11.59-3} A_ε(M̄(e^{iη_BA^B}U^B)) = A_ε(e^{iεY}c^A) is run A's action at the coordinate A′_Y, since Y = A′_Y − H^AD^A(A′_Y) by the inverse above.
 {#W11.59-4} Hence
 
@@ -1954,9 +1761,7 @@
 {#W11.63-1} The points A′^A of size O(B₅ε₁) lie in it under O(1)C_ℒ^gB₅ε₁ ≤ ε₃/2, so the gradient of the identity at A′^A is σ in every direction, as RG II (1.4) and VAR (127) need.
 {#W11.63-2} Here T₃[P^A(A′ + E) − P^A(A′)] = T₃⟨E, J^A⟩ + ⟨A′, Δ^AE⟩ + ½⟨E, Δ^AE⟩ − ⟨H^A(2C^{(2)A}(A′, E) + C^{(2)A}(E)), J^A⟩, with C^{(2)}(·, ·) the polarisation.
 {#W11.63-3} Every term of it, and V^A(A′ + E) − V^A(A′), contains E. The two runs' currents J^X and quadratic forms Δ^X therefore never meet: their degree-two parts cancel exactly.
-{#W11.63-4} With identical runs (ℒ = 1, E = 0, b = 0) the right side vanishes, as it must.
-
-{#W11.64} *The fixed point 𝐀₀ (derived, not reviewed).* Let A′^X := H₀^XB′ + 𝐀₀^X in each run, at the shared data B′, and let σ := ℒ*(δV^B/δA′)(ℒA′^A) − (δV^A/δA′)(A′^A), the gradient of V^B∘ℒ − V^A at A′^A.
+{#W11.64} *The fixed point 𝐀₀.* Let A′^X := H₀^XB′ + 𝐀₀^X in each run, at the shared data B′, and let σ := ℒ*(δV^B/δA′)(ℒA′^A) − (δV^A/δA′)(A′^A), the gradient of V^B∘ℒ − V^A at A′^A.
 {#W11.64-1} By RG II (1.4) in both runs, Δ₀ := 𝐀₀^B − ℒ𝐀₀^A satisfies
 
   {#W11.65} Δ₀ = −G̃^B[(δV^B/δA′)(A′^B) − (δV^B/δA′)(ℒA′^A)] − (G̃^B − ℒG̃^Aℒ*)(δV^B/δA′)(ℒA′^A) − ℒG̃^Aσ,
@@ -1976,8 +1781,7 @@
 {#W11.68-3} The decoupled propagators of RG II (1.5) enter only through these bounds, which hold at complex s by *Complex s.* below.
 {#W11.68-4} RG II's bound for H(s), G̃(s), and H₀(s) carries the factor e^{16κ₁}, so κ_V carries it too, and the condition κ_V ≤ ½ depends on κ₁.
 
-{#W11.69} *The current term of VAR (143) (derived, not reviewed).* VAR's Sects.
-{#W11.69-1} A–E take a background U₀ more general than a minimiser, under VAR's condition (14), U₀ ∈ 𝔘_k({Ω_j}, C₁B₃ε₁) and |Ū₀^j − V| < C₁ε₁ (VAR p.280 l.15–20).
+{#W11.69} *The current term of VAR (143).* VAR's Sects. A–E take a background U₀ more general than a minimiser, under VAR's condition (14), U₀ ∈ 𝔘_k({Ω_j}, C₁B₃ε₁) and |Ū₀^j − V| < C₁ε₁ (VAR p.280 l.15–20).
 {#W11.69-2} For it 𝐀₀ solves VAR (143) (p.300 l.14–17), A₀ = −G̃J + G̃Δ^{(2)}(A₀ + H₀B) − G̃(δV/δA′)(A₀ + H₀B), with J the current of U₀ and G̃ built from G_a = Δ_a^{−1}.
 {#W11.69-3} RG II (1.4) is the case of a critical background, where VAR (178) holds.
 {#W11.69-4} The problems of LFR II (1.54) and (1.57) are of the general kind (§12), so the comparison above is extended to (143).
@@ -1987,27 +1791,24 @@
   {#W11.70-3} Near it, U_{1,2} "satisfies the regularity conditions typical for an h-order configuration" on (Ω″_{h+1})^c ∩ Ω″^{∼2}_{h+1} (LFR II p.370 l.35–38), and regularity at the scale h implies it at the finer scales.
   {#W11.70-4} The second condition is on the data.
   {#W11.70-5} For (1.57), the data on Z″_k are 1, against the averages M^·(U_{k,Λ}) of the background, and |M^j(U_{k,Λ}) − 1| < O(1)B₃B₅M⁶ε_k inside Λ by LFR I (1.84).
-  {#W11.70-6} Bałaban states this for U_{k,Λ} and uses it to write (1.57) (LFR II p.371 l.32–33); it is taken as he states it.
+  {#W11.70-6} Bałaban states this for U_{k,Λ} and uses it to write (1.57) (LFR II p.371 l.32–33).
   {#W11.70-7} For (1.54), the background U_{1,2} has the data 1 on Z″_k ∩ Ω″^∼_{h+1} ((1.53)), and the argument of U^0_k there is M^·(U_0^{(AL)}) = exp iQ̃_·(η𝐀₀) (LFR II p.370 l.15–16), the averages of U_0 in the axial–Landau gauge.
   {#W11.70-8} LFR I (1.87) (p.197) gives |𝐀₀|, |∇𝐀₀|, |∂*∂𝐀₀| < O(1)B₃²B₅M⁶ε_k on Z″_k, so |M^j(U_0^{(AL)}) − 1| ≤ O(1)B₃²B₅M⁶ε_k there; (1.84) is for the axial gauge in k-blocks and does not apply to these data.
-  {#W11.70-9} Bałaban obtains (1.54) "from the results of Sects.
-  {#W11.70-10} D, E [15]" (p.370 l.38–39).
-  {#W11.70-11} So the data condition holds for both problems, as Bałaban states it, with a bound independent of the size of Λ.
+  {#W11.70-9} Bałaban obtains (1.54) "from the results of Sects. D, E [15]" (p.370 l.38–39).
+  {#W11.70-11} So the data condition holds for both problems, with a bound independent of the size of Λ.
   {#W11.70-12} Off the collar, the data of the problem are the background's own.
   - {#W11.71} What else is taken from p.370 l.35–38.
-    {#W11.71-1} VAR's Sects.
-    {#W11.71-2} A–E also use PBG's (3.35)–(3.36) at U_0.
-    {#W11.71-3} (3.35) is "The additional regularity condition (3.35) in (1.33)" of VAR p.280 l.51–52, where (1.33) is REG (1.33) (REG p.082 l.33), and the "Sect.
-    {#W11.71-4} F" there is REG's, *Removal of the Additional Regularity Assumption*, which proves (3.35) from U_0 ∈ 𝔘_k({Ω_j}, α₀) alone, with no criticality (REG p.097 l.29–30 and p.099 l.34–37).
+    {#W11.71-1} VAR's Sects. A–E also use PBG's (3.35)–(3.36) at U_0.
+    {#W11.71-3} (3.35) is "The additional regularity condition (3.35) in (1.33)" of VAR p.280 l.51–52, where (1.33) is REG (1.33) (REG p.082 l.33), and the "Sect. F" there is REG's, *Removal of the Additional Regularity Assumption*, which proves (3.35) from U_0 ∈ 𝔘_k({Ω_j}, α₀) alone, with no criticality (REG p.097 l.29–30 and p.099 l.34–37).
     {#W11.71-5} (3.36) follows from the same membership by REG's Proposition 6, which bounds (L^jη)³|∂^{η*}∂^ηA| and (L^jη)³|Δ^ηA| by 7dL²B₁Mα₀ on □_j in the gauge of Sect. F (REG (1.135)–(1.136), p.099 l.41–48, with REG's cube parameter M = R₁M₁), and VAR p.309 l.12 accepts REG's (1.7)–(1.9) in place of PBG's (3.35)–(3.38).
     {#W11.71-6} So both follow from 𝔘-membership.
     {#W11.71-7} §11 uses the curvature bounds (9.2) of the Cauchy note (|F| ≤ O(1)C₀ε₁a_j^{−2}, |∇F| ≤ O(1)C₀ε₁a_j^{−3}) in the oscillation of ∇b₁.
     {#W11.71-8} Near the cut, the 𝔘-membership is Bałaban's statement that U_{1,2} "is regular, and satisfies the regularity conditions typical for an h-order configuration" there. "Regularity conditions" and "regular" are REG's terms: REG's conditions (1.7)–(1.9) define its "spaces of regular field configurations" 𝔘_k (REG p.077 l.31).
-    {#W11.71-9} The statement is read as 𝔘-membership at the index h on the band, and this membership is derived at the parameter L³B₃ε_U^{(i)}, which tends to 0 with γ: U_{1,2} = 1 on the finest strips at the cut, and Sect. F's step at the block size M′ of the joins, with (163) taken as B₃e^{−½δ₀M′} ≤ ½L^{−3}, carries the decay across the refinement layers (§12, *The band regularity of U_{1,2}.*, derived, one clean review).
-    {#W11.71-10} (3.35)–(3.36) follow as above. 10.5's further inputs at U_{1,2} come from the minimiser base V₀ = (U_k^0)^{u_k^0} of (1.54), and the oscillation of the artifact at ι_Y(U_{1,2}) is bounded through that base with (ε/a_j)^{β_o}, β_o := min(β, 1 − 2ε₀), in place of ε/a_j (same place, derived, not reviewed).
+    {#W11.71-9} What is used of the statement is 𝔘-membership at the index h on the band, and this membership is derived at the parameter L³B₃ε_U^{(i)}, which tends to 0 with γ: U_{1,2} = 1 on the finest strips at the cut, and Sect. F's step at the block size M′ of the joins, with (163) taken as B₃e^{−½δ₀M′} ≤ ½L^{−3}, carries the decay across the refinement layers (§12, *The band regularity of U_{1,2}.*).
+    {#W11.71-10} (3.35)–(3.36) follow as above. 10.5's further inputs at U_{1,2} come from the minimiser base V₀ = (U_k^0)^{u_k^0} of (1.54), and the oscillation of the artifact at ι_Y(U_{1,2}) is bounded through that base with (ε/a_j)^{β_o}, β_o := min(β, 1 − 2ε₀), in place of ε/a_j (same place).
   - {#W11.72} The run-B background.
     {#W11.72-1} The comparison runs at the aligned pairs (ι(V₀), V₀) of §12, so run B's background is ι(U^A_{1,2}) or ι(U^A_{k,Λ}), not a background printed by Bałaban.
-    {#W11.72-2} (14) for it, the 𝔘-bounds and the data condition, comes from 10.5 and the first bullet of the bridge, whose input is again V₀'s layer bounds (VAR (9)–(10), read as above near the cut).
+    {#W11.72-2} (14) for it, the 𝔘-bounds and the data condition, comes from 10.5 and the first bullet of the bridge, whose input is again V₀'s layer bounds (VAR (9)–(10), applied as above near the cut).
 - {#W11.73} The form with the J term.
   {#W11.73-1} For an invertible symmetric K with QK^{−1}Q* invertible, G̃_Kf is the unique u with Qu = 0 and Ku − f ∈ Ran Q*.
   {#W11.73-2} (143) gives QA₀ = 0 and Δ_aA₀ − Δ^{(2)}A₀ − f ∈ Ran Q*, with f := −J + Δ^{(2)}H₀B − (δV/δA′)(A₀ + H₀B).
@@ -2025,10 +1826,10 @@
 - {#W11.78} σ.
   {#W11.78-1} The identity of *The functional V.* holds without criticality and already carries the currents J^A and J^B (the terms T₃⟨E, J^A⟩ and ⟨H^AC^{(2)A}, J^A⟩).
   {#W11.78-2} So σ and its bounds (a) and (b) are unchanged; (a) uses the (14) bound of J^A.
-- {#W11.79} The complex step. 10.5 reads VAR's Sect. G through the representation (173)–(175) of 𝒜₁ at a minimiser U₀ = U_k(V₀) (its l.475), which is critical.
+- {#W11.79} The complex step. 10.5 reads VAR's Sect. G through the representation (173)–(175) of 𝒜₁ at a minimiser U₀ = U_k(V₀) (#W10.5.35-2), which is critical.
   {#W11.79-1} For the B-derivatives of 𝒜₀ at a non-critical background, (182)–(184) and (188) (p.307 l.17–36, p.308 l.24–26) keep their form at the shifted point, since J does not depend on B.
 
-{#W11.80} *The term G̃Δ^{(2)}H₀B (derived, not reviewed).* RG II (1.4) (p.2 l.37–40) prints no Δ^{(2)} term, while VAR (180) (p.306 l.31–40), from which RG II takes it ("by the results of Sect. G"), carries −G̃Δ^{(2)}H₀B, with G = (Δ_a − Δ^{(2)})^{−1} in G̃.
+{#W11.80} *The term G̃Δ^{(2)}H₀B.* RG II (1.4) (p.2 l.37–40) prints no Δ^{(2)} term, while VAR (180) (p.306 l.31–40), from which RG II takes it ("by the results of Sect. G"), carries −G̃Δ^{(2)}H₀B, with G = (Δ_a − Δ^{(2)})^{−1} in G̃.
 {#W11.80-1} The term is bounded here, so the estimate holds with it.
 {#W11.80-2} Its run difference is
   {#W11.81} (G̃^B − ℒG̃^Aℒ*)Δ^{(2)B}H₀^BB′ + ℒG̃^A[ℒ*Δ^{(2)B}(H₀^B − ℒH₀^A)B′ + (ℒ*Δ^{(2)B}ℒ − Δ^{(2)A})H₀^AB′].
@@ -2044,12 +1845,12 @@
 - {#W11.86} The second reads the run difference of the currents.
   {#W11.86-1} The first-order part of 𝔉^B(ℒA′) = 𝔉^A(A′ + E) − b, with E of order ≥ 2, gives ℒ*J^B − J^A = −∇b₁, the first variation of the blocking artifact at the background.
   {#W11.86-2} By the identity of *The artifact through covariances.*, its variance part is dVar_p[v] = 2Cov_p(X, X′_v).
-  {#W11.86-3} This is a linear functional of the fine curl of v, with coefficients bounded by osc_pX (*The artifact through covariances.* in (b) below; the Cauchy note's l.747 gives |Cov_p| ≤ osc·osc), and osc_pX ≤ 4dε|∇F| + 4δ_T|F| with δ_T ≤ 32d²ν_F (the Cauchy note's l.753–754).
+  {#W11.86-3} This is a linear functional of the fine curl of v, with coefficients bounded by osc_pX (*The artifact through covariances.* in (b) below; the Cauchy note's #C10.4.45 and #C10.4.54 give |Cov_p| ≤ osc·osc), and osc_pX ≤ 4dε|∇F| + 4δ_T|F| with δ_T ≤ 32d²ν_F (the Cauchy note's #C10.4.49-2 and #C10.4.50).
   {#W11.86-4} The ρ-terms of that identity are of the same form.
   {#W11.86-5} The κ-terms have first variations of the relative order (ε/a_j)⁴ and are bounded in the same way.
-  {#W11.86-6} The curvature bounds are |F| ≤ O(1)C₀ε₁a_j^{−2} and |∇F| ≤ O(1)C₀ε₁a_j^{−3} (the Cauchy note's (9.2), its l.749) at the (k + 1)-step minimiser U^B with the data of the pair.
+  {#W11.86-6} The curvature bounds are |F| ≤ O(1)C₀ε₁a_j^{−2} and |∇F| ≤ O(1)C₀ε₁a_j^{−3} (the Cauchy note's (9.2), its #C10.4.46-3) at the (k + 1)-step minimiser U^B with the data of the pair.
   {#W11.86-7} The background here is the lift W = ι(U^A), which is not that minimiser.
-  {#W11.86-8} By the Cauchy note's §9.7, W = e^{i(ε/L)(ℒA′* + A″)}U^B with sup and gradient bounds ‖ℒA′* + A″‖ ≤ C(ε₀)(ε/a_j)^{1−2ε₀}ε₁ in the units of the layer (§9.7's argument at the layer j, with a_j for a; derived, not reviewed).
+  {#W11.86-8} By the Cauchy note's §9.7, W = e^{i(ε/L)(ℒA′* + A″)}U^B with sup and gradient bounds ‖ℒA′* + A″‖ ≤ C(ε₀)(ε/a_j)^{1−2ε₀}ε₁ in the units of the layer (§9.7's argument at the layer j, with a_j for a).
   {#W11.86-9} So |F(W) − F(U^B)| ≤ O(1)C(ε₀)(ε/a_j)^{1−2ε₀}ε₁a_j^{−2}, and osc_pX at W exceeds its value at U^B by at most twice that.
   {#W11.86-10} The gain of K below is therefore (ε/a_j)^{1−2ε₀} instead of ε/a_j, which fits δ_w(ω) of §8, since γ_w ≤ (1 − ε₀)/3 ≤ 1 − 2ε₀ for ε₀ ≤ 2/5.
   {#W11.86-11} As a pointwise source, ∇b₁ has no small factor, since the transposed curl costs η_B^{−1}.
@@ -2061,7 +1862,7 @@
 {#W11.88-1} Its polarisation at A = H₀^AB′ is applied to the directions through the derivatives of C^{(2)}, pointwise as in VAR (85)–(86), and ℒG̃^A of it is bounded by PBG (3.42) and (H_ℒ^g).
 {#W11.88-2} The defect enters with the factor Mα₀, which is small, and with ϑ.
 
-{#W11.89} *The form (c) for G̃ with the Δ^{(2)} term (derived, not reviewed).* VAR (180) takes G = (Δ_a − Δ^{(2)})^{−1} in G̃, while the forms (c) of (Wδ-1)–(Wδ-2) are derived for G_a := Δ_a^{−1}.
+{#W11.89} *The form (c) for G̃ with the Δ^{(2)} term.* VAR (180) takes G = (Δ_a − Δ^{(2)})^{−1} in G̃, while the forms (c) of (Wδ-1)–(Wδ-2) are derived for G_a := Δ_a^{−1}.
 {#W11.89-1} By (3.137) and the bilinear bound before it, Δ^{(2)} is bounded by O(1)C₃Mα₀ relative to Δ_a, with M PBG's block size and C₃ containing the factor c_u = O(1)L³ by which §7 reads PBG's O(1)Mα₀ bounds through (3.35) (O(1)L⁵ at the index j + 1 of PBG's own sequences; §7, *The cubes next to the finer layer.*); the constant c_π of Δ′_π below contains the same factor.
 {#W11.89-2} So G = Σ_{m≥0}G_a(Δ^{(2)}G_a)^m converges under O(1)B₀C₃Mα₀ ≤ ½, an upper bound on α₀ after L and M, as PBG's series (3.130) does.
 {#W11.89-3} It converges in the norms of (3.42)–(3.44) except the Laplace entry of (3.42), which is not used (as for (3.130), p.422 l.12–15).
@@ -2074,7 +1875,7 @@
   {#W11.91-1} The first kind are the forms (c) for G_a with the bridge, which carry δ_w + ϑ_ℒ.
   {#W11.91-2} The second kind are the polarised defect of Δ^{(2)} of the paragraph above, which carries 𝔡_H times O(1)C₃Mα₀.
   {#W11.91-3} Every other factor is bounded by B₀ (G_a, by (3.42)), by O(1)C₃Mα₀B₀ (Δ^{(2)}G_a), or by C_ℒ^g (ℒ and ℒ*, by (H_ℒ^g) and the source bound of the bridge).
-  {#W11.91-4} The m + 1 + m terms of the term m therefore sum to at most (2m + 1)(O(1)B₀C₃Mα₀)^m times B₀C_ℒ^g² times 𝔡_H, and the sum over m converges under the same condition.
+  {#W11.91-4} The m + 1 + m terms of the term m therefore sum to at most (2m + 1)(O(1)B₀C₃Mα₀)^m times B₀(C_ℒ^g)² times 𝔡_H, and the sum over m converges under the same condition.
   {#W11.91-5} Then G̃ = G − GQ*(QGQ*)^{−1}QG.
   {#W11.91-6} Q* needs no comparison: L^{j+1}η_BQ^B_{j+1} = L^jεQ^A_jQ₁ (*The composition of the averagings.*) and Q₁ℒ = 1 give Q^Bℒ = Q^A, so Q^{A*} = ℒ*Q^{B*}.
   {#W11.91-7} With F(X) := X − XQ^{B*}(Q^BXQ^{B*})^{−1}Q^BX, G̃^B = F(G^B) and ℒG̃^Aℒ* = F(P) with P := ℒG^Aℒ*, since Q^BPQ^{B*} = Q^AG^AQ^{A*}.
@@ -2082,7 +1883,7 @@
   {#W11.91-9} The other factors are bounded by (3.132) for the new G (VAR p.306 l.37–38).
   {#W11.91-10} So G̃^B − ℒG̃^Aℒ* carries 𝔡_H, and the uses of G̃ in *The fixed point 𝐀₀.* and *The term G̃Δ^{(2)}H₀B.* hold with it.
 
-{#W11.92} *The form (c) for VAR's H (derived, not reviewed).* VAR's H, the H of the linearising transformation, of (179), and of PBG (3.134), is the minimiser of ½⟨A, ΔA⟩ under QA = B and RD*A = 0 (VAR (45)–(46), PBG (3.109)–(3.110)).
+{#W11.92} *The form (c) for VAR's H.* VAR's H, the H of the linearising transformation, of (179), and of PBG (3.134), is the minimiser of ½⟨A, ΔA⟩ under QA = B and RD*A = 0 (VAR (45)–(46), PBG (3.109)–(3.110)).
 {#W11.92-1} So HB = G_πQ*(QG_πQ*)^{−1}B with G_π^{−1} = Δ_π + DRD* + Q*aQ (PBG (3.122), (3.126)), and G_π = Σ_nG_a(Δ′_πG_a)^n (PBG (3.130)), with Δ′_π of (3.120).
 {#W11.92-2} The series is not the Δ^{(2)} series above.
 {#W11.92-3} The same telescoping applies with Δ′_π in place of Δ^{(2)}, with (3.131) in place of (3.137).
@@ -2096,8 +1897,7 @@
   {#W11.95-1} The pairing ⟨K^A(A), ∇_A*K_b⟩ = ⟨∇_AK^A(A), K_b⟩ contains ∇D_Aω^A, the second differences of G′RD*A, which are bounded through the crude lattice Hölder bound of (a) at the exponent β′, so this term carries (ε/a_j)^{1−β′}C₀ε₁, which is ≤ 𝔰^{β/(1+β)} for β′ ≤ 1/2.
 - {#W11.96} The first term.
   {#W11.96-1} Write ω^B := G′^BR^BD_B*ℒA and ω^A := G′^AR^AD_A*A.
-  {#W11.96-2} The block-constant scalar lift ℒ′ of §4(d) cannot serve as the intermediate here: D_Bℒ′f vanishes on the fine bonds inside a block, up to holonomy terms O(ε|F||f|), and is about L·D_Af on the bonds that cross a block face, so D_Bℒ′ − ℒD_A is of relative size O(1) pointwise.
-  {#W11.96-3} The intermediate is instead I′, the transported multilinear interpolation of scalars, I′f(x) := Σ_yλ_y(x)R(U^B(Γ_{y,x}))^{−1}f(y), with λ_y the multilinear weights of the corners y of the run-A cell of x, and Γ_{y,x} the coordinate-ordered axial path of T_{ε/L} from y to x, which depends only on (y, x), so I′ is well defined on shared cell faces and gauge covariant.
+  {#W11.96-3} The intermediate is I′, the transported multilinear interpolation of scalars, I′f(x) := Σ_yλ_y(x)R(U^B(Γ_{y,x}))^{−1}f(y), with λ_y the multilinear weights of the corners y of the run-A cell of x, and Γ_{y,x} the coordinate-ordered axial path of T_{ε/L} from y to x, which depends only on (y, x), so I′ is well defined on shared cell faces and gauge covariant.
   {#W11.96-4} Then K^B(ℒA) − ℒK^A(A) = [K^B(ℒA; ω^B) − K^B(ℒA; I′ω^A)] + [K^B(ℒA; I′ω^A) − ℒK^A(A; ω^A)].
   - {#W11.97} The first bracket is bilinear, with one factor e := ω^B − I′ω^A and one factor D_Be.
     {#W11.97-1} Its sup: e = (ω^B − ℒ′ω^A) + (ℒ′ − I′)ω^A.
@@ -2123,14 +1923,13 @@
     {#W11.98-3} So the difference is ≤ O(1)(1 + B₀)²(ε/a_j)^β relative to the size of K, plus the background term c_uMα₀L^{−j} of the global lift's second bullet.
 - {#W11.99} So ½⟨ℒA, Δ′^B_πℒA⟩ − ½⟨A, Δ′^A_πA⟩ carries 𝔰^{β/(1+β)} + ϑ_b, the term (ε/a_j)^β of the second bracket being ≤ 𝔰^{β/(1+β)} since 𝔰 ≥ ε/a_j, times O(1)L^β(1 + B₀)²(Mα₀ + C₀ε₁) relative to Δ.
   {#W11.99-1} Here |J^B| ≤ O(1)Mα₀a_j^{−3} by PBG (3.36), and the ∇b₁ part carries C₀ε₁.
-  {#W11.99-2} The exponent β/(1+β) is lost in the gradient entry of e only; a derived gradient entry of the fine-side defect of G′RD* would remove the loss.
 - {#W11.100} The localised bilinear form.
   {#W11.100-1} The callers, the telescoped series (3.130) and (3.138), the kernel bounds (3.42)–(3.44) for H, G̃, 𝔊, and G₁, and the telescoping at complex s, use the polarised defect in the localised form of the kernel of G_aΔ′_πG_a, as PBG's estimates after (3.131) and on p.423 use it (PBG (3.131) itself localises A₁ and A₂; here the sources are localised): for A₁ = G_a f₁ and A₂ = G_a f₂ with f₁ supported in Δ(y) and f₂ in Δ(y′), and per walk at complex s.
   {#W11.100-2} Every step above is local.
   {#W11.100-3} K is a pointwise bilinear expression at each bond b paired with J(b). ω_i := G′RD*A_i is a walk sum whose terms decay from Δ(y) at the telescoped rate of §7 after 10.3, and the form (c) for G′RD* is itself a per-walk bound with that decay.
   {#W11.100-4} The interpolation inequality acts on balls of radius ℓ ≤ a_j, so at b it reads sup|e| and [∇e]_β on the ball of radius a_j about b only.
   {#W11.100-5} The second bracket is pointwise up to the exponential tail of (Q₁Q₁*)^{−1}.
-  {#W11.100-6} So at each b the defect is at most O(1)L^β(1 + B₀)²(Mα₀ + C₀ε₁)𝔰^{β/(1+β)}e^{−δ_π(d(b, y) + d(b, y′))} times the local sup norms of f₁ and f₂ in the units of (3.131), with δ_π := min(δ₀′/(54L), δ_Q)/4, a quarter of the smallest rate of the factors K, ω_i, and the second bracket: δ₀′/(54L) that of §7's telescoping after 10.3, which the form (c) for G′RD* uses (§7 runs at δ₀′ ≤ δ₀, 10.1, and C_□ divides it by 54, 10.3;
+  {#W11.100-6} So at each b the defect is at most O(1)L^β(1 + B₀)²(Mα₀ + C₀ε₁)𝔰^{β/(1+β)}e^{−δ_π(d(b, y) + d(b, y′))} times the local sup norms of f₁ and f₂ in the units of (3.131), with δ_π := min(δ₀′/(54L), δ_Q)/4, a quarter of the smallest rate of the factors K, ω_i, and the second bracket: δ₀′/(54L) that of §7's telescoping after 10.3, which the form (c) for G′RD* uses (§7 runs at δ₀′ ≤ δ₀, 10.1, and at δ₀′/54 once C_□ enters at δ₀/27, 10.3;
   {#W11.100-7} the rate δ₀′/54 is in the metric of the cube's own sequence, and the factor 1/L converts it to PRT2's global distance, as for δ_min below), and δ_Q that of (Q₁Q₁*)^{−1} (½δ_Q in the layer-weighted units of (3.131), *The global lift.*, which does not change the minimum, since δ₀′/(54L) ≤ δ_Q/(216L)).
   {#W11.100-8} D_□ is not a factor of Δ′_π; its rate enters through (QGQ*)^{−1} below.
   {#W11.100-9} A composition of kernels keeps a rate only when the other kernels decay strictly faster, with a constant that depends on the gap, and the factor ¼ gives that gap; the ball enlargement by a_j costs only a constant e^{O(1)}.
@@ -2144,7 +1943,7 @@
   {#W11.101-5} So 𝔡_H ≤ C_𝔡L^{−γ_Hj_min}, with γ_H := βγ_w/(1 + β) and C_𝔡 := (2C_w + 2C_bre^{16κ₁} + C₂L² + C_b + L)^{β/(1+β)}, a constant of the same quantities as C_w and of C_b, C_br, κ₁, and C₂.
   {#W11.101-6} In powers of ε/a_n, n ≤ k ≤ 2j_min + 2, this is at most C_𝔡L^{γ_H}(ε/a_n)^{γ_H/2}.
 
-{#W11.102} *Complex s (derived, not reviewed).* At complex s, H(s), G̃(s), and H₀(s) are defined walk by walk.
+{#W11.102} *Complex s.* At complex s, H(s), G̃(s), and H₀(s) are defined walk by walk.
 {#W11.102-1} Each operator is the sum (3.107) of [13] over generalised random walks ω, and the term of ω is multiplied by the s-variables of the σ₀-cubes that meet its localisation domain X̃₀⁵ ∪ … ∪ X̃_n⁵ (RG II p.3 l.8–14 and l.27–33).
 {#W11.102-2} So G̃(s) is not the series in G_a(s) and Δ^{(2)}(s), and the telescoping above is applied per walk.
 - {#W11.103} G and G_π.
@@ -2159,7 +1958,7 @@
   {#W11.104-4} For (QGQ*)^{−1} PBG prints no constituents; PRT2 prints the same construction for (QGQ*)^{−1} with G_□ in place of G′(□̃)² ("We form the equality for QGQ*C in exactly the same way as in (2.82) replacing … Q′, G′(□̃)², G′² by Q, G_□, G", p.249 l.7–9, Proposition 2.7), and the following transfers it to the composite G. G_□ is the series of G with G_a replaced by PBG's local propagator G_{a,□} of (3.87), which lives on the sequence {Ω_n(□)} with Dirichlet conditions outside Ω₀(□), □̃⁴ ⊂ Ω₀(□) ⊂ □̃⁵ (p.408 l.29–35;
   {#W11.104-5} for the intersected sequences of §7, Ω′_0(□) = Ω₀(□)), and with the walks of H in H*J and of G′RD* restricted to those localised in Ω₀(□).
   {#W11.104-6} The local inverses are D_□ := (QG_□Q*)^{−1}.
-  {#W11.104-7} They exist and are bounded: QG_□Q* = QG_{a,□}Q* + Q(G_□ − G_{a,□})Q*, the first has a bounded inverse with decay, derived as follows, since neither PRT2 (2.148), the bound of PRT2's local C_□, nor PBG's C_□, the local inverse of the scalar Q′G′_□²Q′*, states it.
+  {#W11.104-7} They exist and are bounded: QG_□Q* = QG_{a,□}Q* + Q(G_□ − G_{a,□})Q*, and the first has a bounded inverse with decay, as follows.
   {#W11.104-8} By (3.35) on □̃⁵ at the index j (§7, *The cubes next to the finer layer.*) there is a gauge transformation u on □̃⁵ with U^u = e^{iηA}, |A| ≤ c_uM₁α₀(L^jη)^{−1}, c_u = O(1)L³, so QG_{a,□}(U)Q* is u-conjugate to QG_{a,□}(1)Q* up to O(1)L⁵M₁α₀ relative to it (the shift to the coarsest index j + 1 included), as in PBG's reduction of Theorems 3.1–3.3 to the propagators without external field.
   {#W11.104-9} At U = 1, QG_{a,□}(1)Q* is PRT2's QGQ* for the sequence {Ω_n(□)}, with Dirichlet conditions outside Ω₀(□).
   {#W11.104-10} PRT2 states of its Theorem "this theorem holds for the operators G(Ω) with Dirichlet boundary conditions on Ω^c, Ω ⊃ Ω₁" (p.248 l.4), and Ω = Ω₀(□) ⊃ Ω₁(□).
@@ -2168,7 +1967,7 @@
   {#W11.104-13} It concerns the local C_□ = ((QG_□Q*)⌈_□)^{−1}, built from PRT2's torus-local G_□ (Proposition 2.5, on the torus T_□), which the outer Dirichlet condition does not affect.
   {#W11.104-14} The parametrix C = Σh_□C_□h_□ then gives the inverse, with the remainder R estimated as in the proof without boundary at the cubes away from the Dirichlet boundary.
   {#W11.104-15} PRT2 states that "All the reasonings and the results of this paper hold, with minor and obvious changes, for the operators G(Ω)" (p.228 l.43), the Dirichlet operators of p.228 l.18–33, so Proposition 2.7 for {Ω_n(□)} with the Dirichlet condition outside Ω₀(□) is Bałaban's statement.
-  {#W11.104-16} The changes at the data cubes □ adjacent to the Dirichlet boundary are spelled out below (derived, not reviewed): there the torus-local G_□ is replaced.
+  {#W11.104-16} The changes at the data cubes □ adjacent to the Dirichlet boundary are spelled out below: there the torus-local G_□ is replaced.
   - {#W11.105} These cubes are layer-0 cubes.
     {#W11.105-1} PBG's local sequence has "Ω_n(□) … a cube with a center at the center of □ and dist(Ω_n(□)^c, Ω_{n+1}(□)) = 2R₀M₀L^nη" (p.408 l.30–32; unchanged at n ≤ j − 1 by §7's intersection), so Λ₀(□) = Ω₀(□) ∖ Ω₁(□) has width 2R₀M₀η, and the data cubes of PRT2's partition for this sequence have side 2M₀η (PRT2 p.229 l.9–10, with M₀ for M).
     {#W11.105-2} PRT2's partition covers the whole lattice, so a data cube adjacent to ∂Ω₀(□) may protrude into Ω₀(□)^c.
@@ -2179,7 +1978,7 @@
   - {#W11.106} The operator.
     {#W11.106-1} There let G^D_□ := (Δ^D_a)^{−1} on PRT2's torus T_□ with the Dirichlet condition on T_□ ∖ Ω₀(□), every constituent of Δ_a, the projection R included, "defined by operators with Dirichlet boundary conditions" (PRT2 p.228 l.32).
     {#W11.106-2} PRT2's Theorem "holds for the operators G(Ω) with Dirichlet boundary conditions on Ω^c, Ω ⊃ Ω₁" (p.248 l.4), so G^D_□ has the random-walk representation and the decay of the Theorem, Proposition 2.6 (p.247 l.22–31), at its rate δ₃, which depends on d and L only.
-    {#W11.106-3} Proposition 2.6 is printed for the torus T_η; T_η is an arbitrary torus, and on T_□ = □̃³ with a single scale (T_□ ∩ Ω₁(□) = ∅ by the condition on R₀ above) and the Dirichlet condition on T_□ ∖ Ω₀(□) its proof applies unchanged (derived, not reviewed).
+    {#W11.106-3} Proposition 2.6 is printed for the torus T_η; T_η is an arbitrary torus, and on T_□ = □̃³ with a single scale (T_□ ∩ Ω₁(□) = ∅ by the condition on R₀ above) and the Dirichlet condition on T_□ ∖ Ω₀(□) its proof applies unchanged.
     {#W11.106-4} Let C_□ := (G^D_□⌈_{□∩Ω₀(□)})^{−1}, since Q = 1 on □: for a cube protruding into Ω₀(□)^c, C_□ and K below act on the bonds of □ ∩ Ω₀(□) only, since G^D_□ vanishes outside Ω₀(□).
   - {#W11.107} Upper bound.
     {#W11.107-1} For the positive operator P := Δ^D_a, the block-inverse formula gives (P^{−1}⌈_□)^{−1} = P_{□□} − P_{□□^c}(P_{□^c□^c})^{−1}P_{□^c□}, a Schur complement, so 0 < C_□ ≤ P_{□□}.
@@ -2204,7 +2003,8 @@
     {#W11.109-6} The commutator terms [h_□, □̃QG^D_□Q*] at the boundary cubes need only the decay of G^D_□ and |∂h_□| = O(M₀^{−1}), as at the interior cubes.
   - {#W11.110} The inverse.
     {#W11.110-1} So R is bounded as in the proof without boundary, with min(δ₄, δ₄^D) in place of δ₄, as PBG Corollary 3.6 uses PRT2 on its local sequences (p.408 l.1–11).
-    {#W11.110-2} The sequence satisfies PRT2 (2.1)–(2.4): PBG's sequence satisfies (2.1)–(2.2) rescaled to the L^{−j}-lattice (p.408 l.34), (2.3)–(2.4) are definitions, and the intersected sequences satisfy them by §7, *The cubes next to the finer layer.* So PRT2 Proposition 2.7, (2.149), applied to {Ω_n(□)}, gives (QG_{a,□}(1)Q*)^{−1} with a constant C_D and a rate δ_D; the inverse is the global one of that sequence, formed through the parametrix of p.249 l.7–9.
+    {#W11.110-2} The sequence satisfies PRT2 (2.1)–(2.4): PBG's sequence satisfies (2.1)–(2.2) rescaled to the L^{−j}-lattice (p.408 l.34), (2.3)–(2.4) are definitions, and the intersected sequences satisfy them by §7, *The cubes next to the finer layer.*
+      {#W11.110-2-1} So PRT2 Proposition 2.7, (2.149), applied to {Ω_n(□)}, gives (QG_{a,□}(1)Q*)^{−1} with the bound (2.149), |(QGQ*)^{−1}(b, b′)| ≤ C_D(L^jη)^{−2}(L^{j′}η)^{−d}e^{−δ_Dd(b,b′)} for b ∈ Λ_j, b′ ∈ Λ_{j′} (PRT2 p.249 l.11–14), with C_D := the O(1) of (2.149) and δ_D := ½δ₄, δ₄ the rate printed there; the inverse is the global one of that sequence, formed through the parametrix of p.249 l.7–9.
     {#W11.110-3} This is the use that PBG Corollaries 3.5–3.6 make of [4] for G′, (Q′G′²Q′*)^{−1}, and G. The relative bound of the u-conjugate at U, O(1)L⁵M₁α₀ with a decay at a rate slightly below ½δ₀, follows from PBG Theorem 3.4, which prints the bound (3.85) for VG (p.407), with the expansion of F₂ (p.406), the reduction of p.408 l.3–4 (α₁ = O(1)M₁α₀ in PBG, O(1)L⁵M₁α₀ with §7's constants), and the gauge covariance (3.32) (p.396 l.7) and (3.34); the Neumann series in O(1)C_DL⁵M₁α₀ ≤ ½ transfers the inverse to U with 2C_D and the rate ½δ_D′, δ_D′ := min(δ_D, ¼δ₀).
     {#W11.110-4} Here ¼δ₀ is below the perturbation's rate, which is slightly below ½δ₀ after the conjugation by u, so ½δ_D′ is at most half the smaller of the two rates.
     {#W11.110-5} The second part is at most O(1)B₀²(c_πα₀ + C₃Mα₀) relative to it, by the series (3.130) for G_π, whose factors Δ′_π are small with α₀ (PBG p.422 l.14–15, with a constant c_π), and by the series of VAR (180) for G, G = (Δ_a − Δ^{(2)})^{−1}, whose factors Δ^{(2)} carry O(1)C₃Mα₀ (PBG p.422 l.50–52).
@@ -2247,7 +2047,7 @@
   {#W11.118-5} The defect terms decay at the rate δ_min, which is at most half the smallest kernel rate of their constituents, by the composition gap above, δ_min := min(δ_π/4, δ₀′/(54L), δ_gf′/(6L), δ_D′/(12L)): δ_π/2 the kernel rate of the localised bilinear form, δ₀′/27 for C_□ in §7 (10.3 gives δ₀/27, and δ₀′ ≤ δ₀), δ_gf′/3 that of G_□ in §5(c) after the DRD* condition of 10.4, δ_gf′ = min(δ₀/486, δ₀′), and δ_D′/6 that of D_□ in (QGQ*)^{−1}, with its extra-shell term (*The defect of D_□.*).
   {#W11.118-6} Since δ₀′ = min(δ₀, ¼δ_Q, ¼δ₁, ¼δ_c) ≤ ¼δ_Q and δ₀′ ≤ ¼δ_c ≤ δ₀/64, with δ_c = (1/16)min(δ_V, δ₀, δ₁) (10.5), δ_π/4 = δ₀′/(864L) is below δ₀′/(54L) and δ_gf′/(6L), so δ_min = min(δ₀′/(864L), δ_D′/(12L)) ≤ δ₀/(55296L).
   {#W11.118-7} Here δ_D′ is the smallest of the rates of the local inverses of the G, G₁, and G_π problems, whose (QG₁Q*)^{−1} and (QG_πQ*)^{−1} are built in the same way.
-  {#W11.118-8} The factor 1/L converts the local constituents' rates to PRT2's global distance (derived, not reviewed).
+  {#W11.118-8} The factor 1/L converts the local constituents' rates to PRT2's global distance.
   {#W11.118-9} C_□, G_□, the local G_{a,□}, D_□, and the local composites decay in the weighted distance of their cube's own sequence {Ω_n(□)}, for □ ∈ 𝒟_j with the weight (L^nη)^{−1} on its shells n < j, (L^jη)^{−1} on □̃⁴ ∖ Ω_{j+1}(□), and (L^{j+1}η)^{−1} on Ω_{j+1}(□) = □̃³ ∩ B^{j+1}(Λ_{j+1}) (PBG p.408 l.29–35).
   {#W11.118-10} They act between points of □̃⁵: supp h_□ ⊂ □ (PRT1 (1.118), to which PRT2 p.229 l.12 points; PBG p.414 l.46 for ζ_{□̃}), the sums (3.95) and (3.97) act between □̃ and supp h_□ (p.412 l.20), the modified partitions use □₀ = □̃² or □̃₁² with □₁ ∈ 𝒟_{j+1} (p.411 l.22–26), and the internal junctions of the local composites range over Ω₀(□) ⊂ □̃⁵.
   {#W11.118-11} The rule is applied per constituent at its own scale j′: j′ = j for □ ∈ 𝒟_j and for the 𝒟′ cell □₀ = □̃², which uses □'s own sequence, and j′ = j_Q for the cubes Q of §7's second case (□₀ = □̃₁², with j_Q = j + 1, and 𝒟″'s cube □″), whose propagators live on Q's sequence of §7: p.408's recipe at the layer j of □, centred at p_Q, with the extensions of the scale j_Q, for the cells in the bulk, and §12's restricted sequences for the cells on the collar (PBG p.412 l.23–28: "valid for propagators defined by sequences {Ω_j} with Ω₀ contained in a cube for which the condition (3.25) is satisfied",
@@ -2268,7 +2068,7 @@
   {#W11.118-26} VAR's 𝔘_k alone bounds only F and the current (VAR p.278 l.5–6), so the |∇F| half needs VAR (9).
   {#W11.118-27} A class cube of the index j is a union of big blocks of the scale j of the side 2M_VL^jη, M_V a multiple of R₁M₁, whose cube □̃ of the side (2M_V + 4R₁M₁)L^jη with the same centre is contained in Ω_j ∖ Ω_{j+2} and not in Ω_{j+1} (VAR p.278 l.50–51 and p.279 l.2–4).
   {#W11.118-28} On such a cube VAR (9) at β = 1 and (10) give |F| ≤ C₀(M_V)ε₁a^{−2}, |∇F| ≤ C₀(M_V)ε₁a^{−3}, and the current ≤ C₀(M_V)ε₁a^{−3} at the spacing a = L^jη, with C₀(M_V) := 4M_V(B₃ + B₄(1)), as in the Cauchy note's (9.2), where C₀ := C₀(R₁M₁).
-  {#W11.118-29} Every point x of a global layer m lies in a class cube of the index m or m − 1 (derived, not reviewed).
+  {#W11.118-29} Every point x of a global layer m lies in a class cube of the index m or m − 1.
   {#W11.118-30} Here big blocks have a side at most R₁M₁L^jη, R ≥ 12dL, R₁M₁ ≤ M₁ (with equality, R₁M₁ = M′ = M₁, in the LF note's conventions, derived there, §8), and the layers have ℓ¹ widths > RM₁L^{m}η (VAR (1), PRT2 (2.2)), hence sup-norm widths > RM₁L^mη/d.
   - {#W11.119} If the sup-norm distance from x to Ω_m^c is at least 5R₁M₁L^mη, take the index m and M_V = R₁M₁, with x ∈ □. □̃ lies within 4R₁M₁L^mη of x, so □̃ ⊂ Ω_m, and □̃ misses Ω_{m+2}, which is at a sup-norm distance > RM₁L^{m+1}η/d ≥ 12L²R₁M₁L^mη. □̃ is not in Ω_{m+1}, since x ∉ Ω_{m+1}.
   - {#W11.120} Otherwise take the index m − 1 and M_V = 3LR₁M₁, so that □ has the side 6R₁M₁L^mη.
@@ -2299,12 +2099,12 @@
     {#W11.122-1} The constituent walks are of two kinds.
     {#W11.122-2} Chains decay in PBG's path distance (3.93), the infimum of the lengths of the paths from y to y′ through points y_i ∈ □_i ∩ 𝔅.
     {#W11.122-3} The Δ^{(2)}- and Δ_π^{(2)}-type composites (G and G̃ of VAR (180), G₁, H₁, 𝔊, H₀, (QGQ*)^{−1}, (QG₁Q*)^{−1}, (QG_aQ*)^{−1}, and the local G_□) are trees, with d(ω, y, y′) "a length of a shortest tree intersecting all domains X_i in ω" (PBG p.427 l.14–21), in the distance of PRT2 (2.46).
-    {#W11.122-4} That the tree contains y and y′ follows from its construction (derived from the print).
+    {#W11.122-4} That the tree contains y and y′ follows from its construction from the chains of (3.93).
     {#W11.122-5} PBG builds these expansions by inserting the chain expansions of type (3.107) into the operators of (3.138) and (3.134)–(3.135), where three chains meet in a localisation domain of C^{(2)} (p.427 l.14–20).
     {#W11.122-6} Each chain is bounded by (3.108) in the distance (3.93), the infimum over y_i ∈ □_i of d(y, y_1) + … + d(y_n, y′), which contains its endpoints (p.410 l.26–31).
     {#W11.122-7} The bound of the composite is the product of the chain bounds, summed over the junction points with part of the exponent, as in §11's *The junction sums.* So its exponent is the length of a tree through y, y′, the junction points, and points of every X_i.
     {#W11.122-8} RG II's d(ω) is of this kind.
-    {#W11.122-9} RG II's geometric inequality, printed for its walks (p.5 l.13–15), holds for d_T with changed constants (derived, not reviewed).
+    {#W11.122-9} RG II's geometric inequality, printed for its walks (p.5 l.13–15), holds for d_T with changed constants.
     {#W11.122-10} The domains of the new constituents are of the type of PBG's (3.96): unions of at most N_D cubes □̃⁵ of their layer j ≤ k, and connected: "each domain is a union of a connected, finite family of cubes", two cubes of the family joined by a chain of intersecting cubes (PBG p.413 l.3–5).
     {#W11.122-11} So the diameter is ≤ 12N_DM₁a_j for the cubes □̃⁵ of □ ∈ 𝒟_j, of side 12M₁a_j (PBG p.408 l.23–24), and ≤ 16N_DM₁a_{j′} for the 𝒟′ cells, whose cubes □̃₀⁵ have 16 big blocks of the scale j′ ≤ k; so it is ≤ Ma_k under M ≥ 16N_DM₁.
     {#W11.122-12} Each domain meets the tree, so the M-cubes of the scale k that the domains meet lie within the distance Ma_k of the tree.
@@ -2341,11 +2141,11 @@
     {#W11.131-2} So each small factor is grouped, as PBG groups the factors of its expansions so that each group has a small factor (p.412 l.3–8), with at most r_* joints: its own and those of the fixed formulas nested in it at the top level, r_* ≤ N_c + 1 + N_f(r₀ + 1), with r₀ the largest number of top-level joints of a fixed formula, plus one joint attaching it to the group (as the coefficient H*J of Δ^{(2)} is Σ_zH(z, ·)J(z)), and N_f ≤ 3 the largest number of fixed formulas at the top level of one small factor (Δ_π^{(2)} = P_π*Δ^{(2)}P_π carries two factors P_π and the H of Δ^{(2)}).
     {#W11.131-3} The series nested deeper inside a fixed formula, such as (3.130) for G_π inside H, form their own groups.
     {#W11.131-4} The group is small under
-    {#W11.132} (J) O(1)S_δ^{r_*}(B₀′C_DL(δ_minM₁)^{−1} + C_D(L⁵M₁α₀ + α₁) + B₀′(c_πα₀ + C₃Mα₀) + B₀′²C_D(c_πα₀ + C₃Mα₀)) ≤ ¼,
-    {#W11.133} with B₀′ (the constituent walks are summed with the doubled constant of §7), and B₀′²C_D in the first term (written B₀′C_D in (J), with the second B₀′ absorbed in that term's O(1), which is then a constant of d, L, and B₀′, since B₀′ is bounded uniformly for M₁ above Bałaban's threshold), since each R-factor of (3.96) contains a D_□ with |D_□| ≤ 4C_D and up to two propagator-type operators (PBG p.411 l.28–29; G, G_□, G₁, or G_π, whose constant is B₀′ or the composite's).
+    {#W11.132} (J) O(1)S_δ^{r_*}(B₀′²C_DL(δ_minM₁)^{−1} + C_D(L⁵M₁α₀ + α₁) + B₀′(c_πα₀ + C₃Mα₀) + B₀′²C_D(c_πα₀ + C₃Mα₀)) ≤ ¼,
+    {#W11.133} with B₀′ (the constituent walks are summed with the doubled constant of §7, bounded uniformly for M₁ above Bałaban's threshold), and B₀′²C_D in the first term, since each factor of (3.96) that contains R contains a D_□ with |D_□| ≤ 4C_D and up to two propagator-type operators (PBG p.411 l.28–29; G, G_□, G₁, or G_π, whose constant is B₀′ or the composite's).
     {#W11.133-1} C_D and the rate δ_D come from PRT2 at (R₀, M₀) and do not depend on M₁ or on a larger R₀M₀.
     {#W11.133-2} The positivity constant γ₀ of (QG_□Q*)↾_□ depends "on d and L only" (PRT2 p.248, (2.147)), and so do the rate δ₃ and the O(1) of Proposition 2.6 (p.247 l.23 and l.31).
-    {#W11.133-3} The upper bound and the decay that C_□'s bound and the rate δ₄ of (2.148) use (p.248 l.48–p.249 l.2) are those of the kernel of (QG_□Q*)↾_□ with PRT2's torus-local G_□, from its bounds (2.133) at the rate δ₂; δ₂ "depends on d and L only" (PRT2 p.246 l.35), and so does δ₄ (checked).
+    {#W11.133-3} The upper bound and the decay that C_□'s bound and the rate δ₄ of (2.148) use (p.248 l.48–p.249 l.2) are those of the kernel of (QG_□Q*)↾_□ with PRT2's torus-local G_□, from its bounds (2.133) at the rate δ₂; δ₂ "depends on d and L only" (PRT2 p.246 l.35), and so does δ₄.
     {#W11.133-4} For C_□^ξ the print says "This implies the same properties for C_□^ξ with the corresponding bounds and a decay rate δ₄" (p.248 l.48–p.249 l.2).
     {#W11.133-5} There the rate δ₁ depends "on δ₀ and the bound γ₀" (p.237 l.3–7), by a conjugation with e^{⟨a,·⟩} that uses only the lower bound and the kernel's upper bound and decay.
     {#W11.133-6} Here these are γ₀ and the bound (2.133) at δ₂, both of d and L only, and neither depends on R₀M₀ or on the size of □.
@@ -2364,25 +2164,20 @@
     {#W11.133-19} (J) is a lower bound on M₁ and, given M, an upper bound on α₀ of the kind of RG I's "Mα₀, Mα₁ are still small" (p.275 l.28); δ_min depends on neither.
     {#W11.133-20} In VAR's application α₀ = ε₀ (VAR p.280 l.52), and VAR's Theorem 1 assumes B₃ε₁ ≤ ε₀ and ε₀ ≤ a₀ (p.279 l.15; the remark at p.278 l.46–47 gives ε₁ = O(ε₀) in any case).
     {#W11.133-21} At α₀ = ε₀ the first follows from §11's O(1)L⁴C₀ε₁ ≤ α₀, since C₀ ≥ 4R₁M₁B₃ ≥ B₃, and the second is α₀ ≤ a₀, VAR's a₀, an upper bound on α₀ after L, listed in §8.
-    {#W11.133-22} The bridge's LC_ιε₁ ≤ O(1)M₁α₀, with M₁ PBG's block size M′ (the O(1)M₁α₀ is PBG's (3.36) size) and C_ι = O(1)L²C_LC_F of the Cauchy note (#C9.8.15-3; its C_F is VAR Theorem 1's one-step constant, not §12's C_F^Λ), is an upper bound on ε₁ imposed after α₀, M′, and L. C_F may carry the product R₁M₁ of the one-step problem, as C₀ does, so the condition is not read as a lower bound on M′; as an upper bound on ε₁ it holds for γ small whatever C_F's dependence on M′.
+    {#W11.133-22} The bridge's LC_ιε₁ ≤ O(1)M₁α₀, with M₁ PBG's block size M′ (the O(1)M₁α₀ is PBG's (3.36) size) and C_ι = O(1)L²C_LC_F of the Cauchy note (#C9.8.15-3; its C_F is VAR Theorem 1's one-step constant, not §12's C_F^Λ), is an upper bound on ε₁ imposed after α₀, M′, and L, and it holds for γ small whatever the dependence of C_F on R₁M₁.
     {#W11.133-23} The joints of the fixed formulas at the top level of a composite are bounded in number by r₀, so they cost S_δ^{r₀}, a constant in C_w.
     {#W11.134} So the composite walk terms are summable over the walks, with a constant B_T and the decay e^{−δ_min d_T(ω, x, y)}.
     {#W11.134-1} B_T := O(1)B₀′S_δ^{r₀}(1 + 4C_D)Σ_n(n + 1)2^{−n}: B₀′ for the constituent walks, S_δ^{r₀} for the top-level joints, at most ¼ per group under (J), and 4C_D for D_□.
     {#W11.134-2} It depends on d, L, δ_min, and PBG's and PRT2's constants, and is uniform in the volume, in k, in M and M₁ above their thresholds, and in κ₁.
     {#W11.134-3} Wherever §11 and §12 quote RG II's B₀e^{16κ₁} for the composites H(s), G̃(s), and H₀(s) (*The bridge*, *The applications.*, *The fixed point 𝐀₀.*, and (a) of the form (c)), B₀ stands for B_T and 16 for 2·6^d, and the smallness conditions read there (κ_V ≤ ½ and the ε₂ conditions of RG II (1.13)–(1.14), spelled out in §8, stages 5 and 6) are read with B_T.
-    {#W11.134-4} This is the form that RG II's κ₁ argument uses (p.5 l.13–16 and (1.11), where the supremum over the walks is bounded by 1); the factor M₁^{−½|ω|} of RG II (1.7) is not claimed for the series-level factors.
+    {#W11.134-4} This is the form that RG II's κ₁ argument uses (p.5 l.13–16 and (1.11), where the supremum over the walks is bounded by 1).
   - {#W11.135} The condition on M. Put ρ := δ_min/δ₀, with δ₀ PBG's rate.
-    {#W11.135-1} RG II's δ₀ is half of it ((1.7), with PBG's ½δ₀).
-    {#W11.135-2} For RG II's δ₁ the condition below, stated with PBG's δ₀, is conservative by a factor 2; δ₁′ is built from PBG's δ₀, and for it the condition is exact.
-    {#W11.135-3} Either way it is sufficient.
-    {#W11.135-4} The geometric inequality, derived above for d_T(ω), holds with δ_g.
+    {#W11.135-1} RG II's δ₀ is half of it ((1.7), with PBG's ½δ₀).    {#W11.135-4} The geometric inequality, derived above for d_T(ω), holds with δ_g.
     {#W11.135-5} Of the composite rate δ_min, ¼δ_min is spent on the s-weights, ¼δ_min is kept for the consumer's form (c), and ½δ_min is kept for the layer crossings of §12's strips (*The crossings.*).
     {#W11.135-6} The geometric inequality scales with the rate, ρδ₀d_T(ω) ≥ ρδ_gmM, so the condition becomes ¼ρδ_gM ≥ κ₁, the lower bound M ≥ 4κ₁/(ρδ_g) on M, of the same kind as Bałaban's.
     {#W11.135-7} It also gives RG II's e^{−(1/3)δ₀M}e^{16κ₁} < 1 (p.16 l.7) with 16 standing for 2·6^d, a further lower bound on M of the same kind.
 
-{#W11.136} *The Sects.
-{#W11.136-1} D–E form (111) (derived, not reviewed).* At a background U₀ satisfying VAR (14), VAR's Sects.
-{#W11.136-2} D–E represent the critical configurations through (111), A₁ + 𝔊J + 𝔊(δV/δA′)(A₁ + H₁B) = 0, with 𝔊 = G₁𝔓* the operator of PBG (3.148) (VAR p.294 l.20–28), and (112), 𝐇 = A₁ + H₁B − HD(A₁ + H₁B) (Proposition 5).
+{#W11.136} *The Sects. D–E form (111).* At a background U₀ satisfying VAR (14), VAR's Sects. D–E represent the critical configurations through (111), A₁ + 𝔊J + 𝔊(δV/δA′)(A₁ + H₁B) = 0, with 𝔊 = G₁𝔓* the operator of PBG (3.148) (VAR p.294 l.20–28), and (112), 𝐇 = A₁ + H₁B − HD(A₁ + H₁B) (Proposition 5).
 {#W11.136-3} VAR states that (143) "cannot replace Eq. (111)" (p.300 l.18–20); the two give the same 𝐇 at s = 1 when (143) has a unique solution in VAR's ball, but their walk-decoupled versions are different functions of s.
 {#W11.136-4} §12 needs the (111) form for 𝐇″_k.
 {#W11.136-5} The comparison runs as for 𝐀₀ and the current term above, with (A₁, 𝔊, H₁) in place of (𝐀₀, G̃, H₀):
@@ -2410,7 +2205,7 @@
   {#W11.140-1} (111) uses VAR's V of (80) with Δ_π (VAR p.290 l.26–30), while §11's σ-identity is derived for V with Δ.
   {#W11.140-2} The difference V_π − V_Δ = ⟨A′, Δ′_πHD⟩ − ½⟨HD, Δ′_πHD⟩ has a gradient whose pairing with any slice direction 𝔓δA at a slice point A₁ + H₁B vanishes: every polarised Δ′_π term contains ω = G′RD* of a slice vector, which is 0.
   {#W11.140-3} So at s = 1 in each run (111) holds with V_Δ in place of V_π.
-  {#W11.140-4} At complex s the decoupled 𝔊(s) and H₁(s) do not satisfy 𝔊(s) = G₁(s)𝔓*(s) or R D*H₁(s)B = 0, so the swap is not made there.
+  {#W11.140-4} At complex s the decoupled 𝔊(s) and H₁(s) do not satisfy 𝔊(s) = G₁(s)𝔓*(s) or RD*H₁(s)B = 0, so the swap is not made there.
   {#W11.140-5} The decoupled (111) is Bałaban's, with V_π, in both runs.
   {#W11.140-6} Its σ is the σ of V_Δ plus the run difference of the gradient of V_π − V_Δ, ∇(V^B_π − V^B_Δ)(ℒA′) − ℒ∇(V^A_π − V^A_Δ)(A′).
   {#W11.140-7} That difference is the polarised defect of Δ′_π with the arguments A′ and HD(A′) and their derivatives in A′, so it is bounded as in *The form (c) for VAR's H.*, together with the forms (c) for H and for the D-identities of §11 for HD.
@@ -2425,9 +2220,9 @@
   {#W11.142-3} All are shared by the runs, so *Complex s.* applies.
 {#W11.143} So 𝐇^B − ℒ𝐇^A for the (111) function carries 𝔡_H in its sup entries and 𝔡_H with the loss 2β′ in the exponent in its gradient entries (through the crude lattice Hölder bound on ∇G∇* in G₁), as for the (180) function, with the factor e^{16κ₁} at complex s.
 
-{#W11.144} *The parts of σ (derived, not reviewed).* G̃ = G − GQ*(QGQ*)^{−1}QG with G = (Δ_a − Δ^{(2)})^{−1} of VAR (180), Δ_a = Δ + DRD* + Q*aQ (VAR p.297 and p.300 l.4–11); the computation below writes G_a = Δ_a^{−1} for the identities G̃_aΔ_a = P₀ (VAR (131)) and G̃_aΔ = P₀ − G̃_aDRD*, the latter since G̃_aQ* = 0, and treats the Δ^{(2)} term separately.
+{#W11.144} *The parts of σ.* G̃ = G − GQ*(QGQ*)^{−1}QG with G = (Δ_a − Δ^{(2)})^{−1} of VAR (180), Δ_a = Δ + DRD* + Q*aQ (VAR p.297 and p.300 l.4–11); the computation below writes G_a = Δ_a^{−1} for the identities G̃_aΔ_a = P₀ (VAR (131)) and G̃_aΔ = P₀ − G̃_aDRD*, the latter since G̃_aQ* = 0, and treats the Δ^{(2)} term separately.
 {#W11.144-1} It contains the gauge-fixing term, so it acts on σ in every direction.
-{#W11.144-2} By the identity for V, σ is the gradient at A′^A of its right side, in every direction.
+{#W11.144-2} σ is the gradient at A′^A of the right side of #W11.62, in every direction (#W11.63-1).
 {#W11.144-3} It has two parts.
 - {#W11.145} The terms that contain E: E = R₁ − Q₁(H^B − ℒH^A)C^B(A^B).
   {#W11.145-1} The propagator part is the form (c) with the bridge and carries 𝔡_H (*The form (c) for VAR's H.*).
@@ -2435,42 +2230,28 @@
 - {#W11.146} The artifact T₃[b].
 {#W11.147} There are no Landau parts, since 𝔉 is the action itself.
 
-{#W11.148} *What remains open.* No item of §11 is open.
-{#W11.148-1} The weakest steps are the band regularity of U_{1,2}, VAR (14) at the index h derived through the trivial finest strips at the cut and the contraction of Sect. F's step under (163′) (§12, *The band regularity of U_{1,2}.*), and the large derived pieces listed below, among them the bridge at the complex chain configurations and the form (c) for VAR's H with its exponent γ_H.
-{#W11.148-2} The Dirichlet local sequences in Proposition 2.7 are Bałaban's statement (PRT2 p.228 l.43, "with minor and obvious changes"), with the changes at the layer-0 cubes adjacent to the Dirichlet boundary derived here under R₀ > 5dL.
-{#W11.148-3} At the pairs of 𝐇″_k the oscillation osc_p(TF) of the blocking artifact is bounded through the minimiser base of (1.54), with (ε/a_j)^{β_o}, β_o := min(β, 1 − 2ε₀), in place of ε/a_j (§12, *The background pairs.*, *§11's oscillation at U_{1,2}.*, derived, not reviewed, with 10.5's lift bounds rerun at the global layer).
-{#W11.148-4} The items below are derived and await review.
-{#W11.148-5} Among them are the cell-mean split of the fine fluctuation in the sup of e, the base inverse of QG_{a,□}Q* through the local gauge of (3.35) and PRT2's Proposition 2.7, the block identity of the defect of D_□ with its extra-shell term at the rate δ_D′/6, and the κ₁ replay at the rate δ_min.
-{#W11.148-6} Two choices enter: the 𝒟′-cell sequences, with (3.35) on their 16-block cubes, and the Dirichlet local sequences in Proposition 2.7, whose validity there is checked against its proof away from the Dirichlet boundary and derived at the layer-0 cubes adjacent to it (Dirichlet local operators, the Schur complement with its local majorant, and the kernel decay at the rate δ₄^D by PRT2's argument of p.237; not reviewed).
-{#W11.148-7} Two former readings are checked: the tree of d(ω, y, y′) contains y and y′ by its construction from the chains (3.93), and PBG's (3.7)–(3.10) are stated for every compact G ⊂ U(N) (p.389 l.12).
-{#W11.148-8} Every use of PBG (3.42)–(3.44) on the R-operation's multiscale sets needs the width of 𝐁″_k's middle layers (PBG's cube class, p.396 l.14–17).
-{#W11.148-9} That width is derived, not reviewed, in the LF note's *The middle layers.* The alignment covers 𝐁″_k on the young histories; the collar of 𝐁₁ is treated in §12.
-{#W11.148-10} VAR (14) for the background of LFR II (1.57) and for that of (1.54) away from the cut is taken from Bałaban's statements; near the cut, VAR (14) and PBG's (3.35)–(3.36) at U_{1,2} come from Bałaban's statement at LFR II p.370 l.35–38, which is read as REG's 𝔘-membership at the index h on the band (REG's term, p.077 l.31), with (3.35) by REG's Sect. F and (3.36) by REG's Proposition 6 (1.136).
-{#W11.148-11} The constant is not printed; the membership is derived with C₁ = L³ and ε₁ tending to 0 with γ (§12, *The band regularity of U_{1,2}.*, derived, one clean review; it rests on VAR at the block size M′ of the LF note's *The block size M′.*, *R₁ = 1*, *The separation.*, and *The middle layers.*, not reviewed). 10.5's Hölder and |∇F| inputs at 𝐇″_k come from the minimiser base of (1.54) (derived, not reviewed).
-{#W11.148-12} Derived, not reviewed: the form (c) for VAR's H through the Δ′_π defect, with the transported multilinear interpolation I′ and the interpolation inequality, at the exponent γ_H = βγ_w/(1 + β) in powers of L^{−j_min}, in the localised bilinear form of PBG (3.131) and per walk at complex s; the existence and bounds of the local inverses D_□ of the composite G_□;
-{#W11.148-13} the telescoping at complex s for every operator, with the walks of (QGQ*)^{−1} and (QG₁Q*)^{−1} built in the manner of PBG's expansion (3.95)–(3.98) of (Q′G′²Q′*)^{−1}, with the local G_□ and the smallness of R derived here, and the local inverses compared by the local resolvent identity; the global gauge-fixing defect of 𝔊 in sandwich form; the (111) comparison at complex s with Bałaban's V_π, through the run difference of ∇(V_π − V_Δ); the bridge at the complex chain configurations (*The bridge to ℒ_ι.*, last bullet, with the rate δ_br^c);
-{#W11.148-14} and the divergence form of (a) as a divergence of a sup-bounded field plus a sup-bounded source.
-{#W11.148-15} (1) The parts of σ: (a) and (b) are derived, not reviewed in their current form (the quartic and cubic terms of (a) through the divergence form, and the oscillations of (b) at complex backgrounds through *The oscillations.*).
+{#W11.148} *The middle layers and the choices.* Every use of PBG (3.42)–(3.44) on the 𝐑-operation's multiscale sets needs the width of 𝐁″_k's middle layers (PBG's cube class, p.396 l.14–17), which the LF note derives (its #4.317-0). The alignment covers 𝐁″_k on the young histories; the collar of 𝐁₁ is treated in §12.
+{#W11.148-6} Two choices enter, made in both runs: the 𝒟′-cell sequences, with (3.35) on their 16-block cubes, and the Dirichlet local sequences in Proposition 2.7, which is Bałaban's statement (#W11.104-15), with the changes at the layer-0 cubes adjacent to the Dirichlet boundary derived at #W11.104-16–#W11.110-3 under R₀ > 5dL.
 
-{#W11.149} (a) The E-terms (derived, not reviewed).
+{#W11.149} (a) The E-terms.
 {#W11.149-1} Write r := max(|A′^A|_{(−1)}, |∇A′^A|_{(−2)}) and ϑ := δ_w + ϑ_ℒ + C₂L² sup_xL^{−j(x)}.
-{#W11.149-2} The propagator part of E carries 𝔡_H, by *The form (c) for VAR's H.*, so max(|E|_{(−1)}, |∇E|_{(−2)}) ≤ C_E𝔡_Hr² and dE has the bound C_E𝔡_Hr per unit direction, with C_E := O(1)B₀C₂(C_ℒ^g)²(1 + B₀)²(1 + Mα₀ + C₀ε₁), the last factors from the Δ′_π defect (*The size of the remainder terms.*; the form (c) for the propagator part, applied to C^B(A^B) with |C^B(A^B)| ≤ 4C₂(C_ℒ^gr)² by VAR (55)).
-{#W11.149-3} In the bounds of (a) below, ϑ stands for 𝔡_H, and the constant written B₀C_ℒ^g there is the larger constant C_E wherever E enters.
+{#W11.149-2} The propagator part of E carries 𝔡_H, by *The form (c) for VAR's H.*, so max(|E|_{(−1)}, |∇E|_{(−2)}) ≤ C_E𝔡_Hr² and dE has the bound C_E𝔡_Hr per unit direction, with C_E := O(1)B₀C₂(C_ℒ^g)²(1 + B₀)²(1 + C_𝔡)²(1 + Mα₀ + C₀ε₁), the factor 1 + Mα₀ + C₀ε₁ from the Δ′_π defect (the form (c) for the propagator part, applied to C^B(A^B) with |C^B(A^B)| ≤ 4C₂(C_ℒ^gr)² by VAR (55)) and the factor (1 + C_𝔡)² from R₁ (*The size of the remainder terms.*), which carries ϑ.
+{#W11.149-3} Indeed the base 𝔡_H^{(1+β)/β} of 𝔡_H (#W11.101-4), and with it each of its terms, ϑ included, is ≤ (1 + C_𝔡)²𝔡_H: it is ≤ 𝔡_H if 𝔡_H ≤ 1, and ≤ C_𝔡^{1/β}𝔡_H ≤ (1 + C_𝔡)²𝔡_H otherwise, by 𝔡_H ≤ C_𝔡 (#W11.101-5) and 1/β ≤ 2.
 {#W11.149-4} The E-terms of σ are the gradients at A′^A of V^A(A′ + E) − V^A(A′) and of T₃[P^A(A′ + E) − P^A(A′)].
 {#W11.149-5} They are bounded in four groups.
 - {#W11.150} V^A(A′ + E) − V^A(A′).
   {#W11.150-1} Its gradient is [∇V^A(A′ + E) − ∇V^A(A′)] + dE*∇V^A(A′ + E).
-  {#W11.150-2} VAR (186)–(187) bound the second variation of V by O(1)C₄ times the size of the point, so the first part is ≤ O(1)C₄B₀C_ℒ^gϑr³ in |·|_{(−3)}.
-  {#W11.150-3} The adjoint dE* acts pointwise on (−3) objects as 𝔇*H* does in VAR (89)–(90), through the transpose of the form (c), which §3(c) states as a pointwise kernel bound per walk term, so the second part is ≤ O(1)B₀²C_ℒ^gC₄ϑr³.
+  {#W11.150-2} VAR (186)–(187) bound the second variation of V by O(1)C₄ times the size of the point, so the first part is ≤ O(1)C₄C_E𝔡_Hr³ in |·|_{(−3)}.
+  {#W11.150-3} The adjoint dE* acts pointwise on (−3) objects as 𝔇*H* does in VAR (89)–(90), through the transpose of the form (c), which §3(c) states as a pointwise kernel bound per walk term, so the second part is ≤ O(1)B₀C₄C_E𝔡_Hr³.
 - {#W11.151} The current terms of T₃[P^A(A′ + E) − P^A(A′)]: T₃⟨E, J^A⟩ and −⟨H^A(2C^{(2)A}(A′, E) + C^{(2)A}(E)), J^A⟩.
   {#W11.151-1} Their gradients are dE*J^A less its value at the quadratic part of E, and H^{A*}J^A paired with the derivatives of C^{(2)}, both pointwise as in VAR (85)–(86).
-  {#W11.151-2} With |J^A| ≤ C₁B₃ε₁(L^jη)^{−3}, they are ≤ O(1)C₁B₃B₀C_ℒ^gε₁ϑr² in |·|_{(−3)}.
-- {#W11.152} The divergence form (derived, not reviewed).
+  {#W11.151-2} With |J^A| ≤ C₁B₃ε₁(L^jη)^{−3}, they are ≤ O(1)C₁B₃(1 + B₀C₂)C_Eε₁𝔡_Hr² in |·|_{(−3)}.
+- {#W11.152} The divergence form.
   {#W11.152-1} By PBG (3.10) (p.392), Δ^A = D_A*(1 + c)D_A + 𝒦.
   {#W11.152-2} Here c := Re U(∂p) − 1 on the plaquettes, matrix-valued inside the trace, the quadratic coefficient of tr((DA)(p))² in PBG (3.7) less 1, so |c| ≤ O(1)ε⁴|F|² ≤ O(1)(C₀ε₁)².
   {#W11.152-3} It comes from the first part of Δ′ (with D¹_U in place of D; the η^{−2} of (3.10) goes with D¹_U).
   {#W11.152-4} D¹_U and D_U differ by transports, and the difference gives the first-order terms D_A*c(D¹_U − D_U) and (D¹_U − D_U)*cD_A, whose zeroth-order factors c(D¹_U − D_U) are of size O(ε|F|) times the coefficients: a divergence of a zeroth-order term, which goes into K, and a zeroth-order term applied to D_A, which goes into the source s below.
-  {#W11.152-5} PBG states (3.7)–(3.10) for configurations "with values in a compact Lie group G ⊂ U(N)" (p.389 l.12; CMP 98 p.18 l.22: "a Lie subgroup G of a unitary group U(N)"), with tr and Re U(∂p) taken in that embedding (checked).
+  {#W11.152-5} PBG states (3.7)–(3.10) for configurations "with values in a compact Lie group G ⊂ U(N)" (p.389 l.12; CMP 98 p.18 l.22: "a Lie subgroup G of a unitary group U(N)"), with tr and Re U(∂p) taken in that embedding.
   {#W11.152-6} Every compact Lie group has such an embedding by the Peter–Weyl theorem, so they hold for every compact G. 𝒦 comes from its commutator part, is of order zero, and has |𝒦| ≤ O(1)|F|.
   {#W11.152-7} So K below always includes the factor 1 + c.
   {#W11.152-8} PBG (3.42) and (3.44) bound G̃^A on localised sup-norm or Hölder sources, not columns of G̃^A, so the source dE*D_A*K is written as a run-A divergence ∇_A*f of a sup-bounded field plus a sup-bounded source s, and those entries are applied to f and s.
@@ -2489,62 +2270,53 @@
     {#W11.154-3} Hence m*D_A*K = D_B*(m′*K) + n*K, with |m′*K| ≤ O(1)C₂ε|A^B||K| and |n*K| ≤ O(1)C₂ε|∇A^B||K|.
     {#W11.154-4} Both carry ε/a_j against a_j|A^B| and a_j²|∇A^B|, and that is the factor L^{−j} of R₁.
   - {#W11.155} m* on the sup parts. dC^B_j averages over a block of size L^jη_B with coefficients O(1)C₂L^jη_B|A^B| (VAR (44)), so |m*g| ≤ O(1)C₂C_ℒ^gr|g| pointwise at the layer of the point.
-    {#W11.155-1} For R₁, m = ε^{−1}dC^B_1 has the coefficients O(1)C₂ε|A^B| ≤ O(1)C₂(ε/a_j)C_ℒ^gr, and that factor ε/a_j is what gives the part −H^AQ̂^A of s its factor ϑ.
+    {#W11.155-1} For R₁, m = ε^{−1}dC^B_1 has the coefficients O(1)C₂ε|A^B| ≤ O(1)C₂(ε/a_j)C_ℒ^gr, and that factor ε/a_j, at most the term L sup_x(ε/a_{j(x)})^β of the base of 𝔡_H and so ≤ (1 + C_𝔡)²𝔡_H (#W11.149-3), gives the part −H^AQ̂^A of s its factor 𝔡_H.
   - {#W11.156} 𝒯* = ℒ*(1 − (dD^B)*H^{B*}).
     {#W11.156-1} On a sup source, ℒ* and H^{B*} are sup-bounded with decay (*The global lift.*, and (3.133) for H^B on data as above), and |dD^B| ≤ O(1)C₂C_ℒ^gr by the Cauchy estimate behind RG II (1.14).
     {#W11.156-2} On the divergence D_B*g of the local part, D_Bℒ = 𝒞∇_A + 𝒩.
     {#W11.156-3} The coefficients 𝒞 are O(1)L with the decay e^{−δ_Qd}, and |𝒩| ≤ O(1)c_Gc_uMα₀a_j^{−1}, since D_Bℒ vanishes on constant fields at U^B = 1 (the conversion bullet of (b) below).
     {#W11.156-4} So ℒ*D_B*g = ∇_A*(𝒞*g) + 𝒩*g.
     {#W11.156-5} The term (dD^B)*(D_BH^B)*g is sup-bounded by (3.133) as above, with the factor a_j^{−1}.
-  {#W11.157} So dE*D_A*K = ∇_A*f + s with |f| ≤ O(1)L C₂(ε/a_j)r|K| and |s| ≤ O(1)C_Eϑra_j^{−1}Σe^{−½min(δ₀,δ_Q)d}|K|, at the layers of the points, with the layer crossings as in *The data bound.* of §11.
-  {#W11.157-1} The entries G∇* and G of PBG (3.42), at B₀e^{16κ₁} for G̃^A(s) (RG II p.5 l.15–16), then give |G̃^AdE*D_A*K|_{(−1)} ≤ O(1)e^{16κ₁}B₀LC_Eϑr|K|_{(−2)}.
+  {#W11.157} So dE*D_A*K = ∇_A*f + s with |f| ≤ O(1)L C₂(ε/a_j)r|K| and |s| ≤ O(1)C_E𝔡_Hra_j^{−1}Σe^{−½min(δ₀,δ_Q)d}|K|, at the layers of the points, with the layer crossings as in *The data bound.* of §11.
+  {#W11.157-1} The entries G∇* and G of PBG (3.42), at B₀e^{16κ₁} for G̃^A(s) (RG II p.5 l.15–16), then give |G̃^AdE*D_A*K|_{(−1)} ≤ O(1)e^{16κ₁}B₀LC_E𝔡_Hr|K|_{(−2)}.
   {#W11.157-2} The gradient entry applies (3.44) to f, ∇G∇*, with the crude lattice Hölder bound below, ‖f‖^{ξ′}_{β′} ≤ 3L^{j′β′}sup|f|, and the entry ∇G of (3.42) to s.
-  {#W11.157-3} So it holds at the exponent less 2β′, as in (1a).
+  {#W11.157-3} So it holds with the exponent lowered by 2β′, as in #W11.160-8.
   {#W11.157-4} No second differences of E enter.
 - {#W11.158} The quartic term ½⟨E, Δ^AE⟩.
-  {#W11.158-1} Its gradient is dE*Δ^AE = dE*D_A*(D_AE) + dE*𝒦E.
-  {#W11.158-2} The first is the divergence form with K := D_AE, |K|_{(−2)} ≤ O(1)B₀C_ℒ^gϑr² by (a)'s bound on E, so G̃^A of it is ≤ O(1)(B₀²C_ℒ^g)²ϑ²r³.
-  {#W11.158-3} The second is pointwise, with |𝒦| ≤ O(1)C₀ε₁a_j^{−2}, and is ≤ O(1)C₀ε₁(B₀C_ℒ^g)²ϑ²r³ in |·|_{(−3)}.
+  {#W11.158-1} Its gradient is dE*Δ^AE = dE*D_A*((1 + c)D_AE) + dE*𝒦E, by PBG (3.10) (#W11.152-1).
+  {#W11.158-2} The first is the divergence form with K := (1 + c)D_AE, |K|_{(−2)} ≤ O(1)C_E𝔡_Hr² by (a)'s bound on E and |c| ≤ 1, so G̃^A of it is ≤ O(1)e^{16κ₁}B₀LC_E²𝔡_H²r³ in |·|_{(−1)} (#W11.157-1).
+  {#W11.158-3} The second is pointwise: |𝒦| ≤ O(1)|F| ≤ O(1)C₀ε₁a_j^{−2} by (9.2) and |E|_{(−1)} ≤ C_E𝔡_Hr², so with the factor C_E𝔡_Hr of dE* it is ≤ O(1)C₀ε₁C_E²𝔡_H²r³ in |·|_{(−3)}.
 - {#W11.159} The cubic term ⟨A′, Δ^AE⟩.
   {#W11.159-1} Its gradient is Δ^AE + dE*Δ^AA′.
-  {#W11.159-2} The second is dE*D_A*(D_AA′^A) + dE*𝒦A′^A, the divergence form with K := D_AA′^A, |K|_{(−2)} ≤ r by the definition of r, plus a pointwise term ≤ O(1)C₀ε₁B₀C_ℒ^gϑr² in |·|_{(−3)}; so G̃^A of it is ≤ O(1)B₀³C_ℒ^gϑr².
+  {#W11.159-2} The second is dE*D_A*((1 + c)D_AA′^A) + dE*𝒦A′^A, the divergence form with K := (1 + c)D_AA′^A, |K|_{(−2)} ≤ 2r by the definition of r, so G̃^A of it is ≤ O(1)e^{16κ₁}B₀LC_E𝔡_Hr² in |·|_{(−1)} (#W11.157-1), plus a pointwise term ≤ O(1)C₀ε₁C_E𝔡_Hr² in |·|_{(−3)}.
   {#W11.159-3} No bound of Δ^AA′^A itself is used.
   {#W11.159-4} The term Δ^AE has no pointwise bound with a small factor.
   {#W11.159-5} It enters Δ₀ only through ℒG̃^A, and G̃^AΔ^A is explicit.
   {#W11.159-6} With G = Δ_a^{−1}, Δ_a = Δ + DRD* + Q*aQ, G̃Q* = GQ* − GQ*(QGQ*)^{−1}QGQ* = 0 and G̃G^{−1} = 1 − GQ*(QGQ*)^{−1}Q = P₀ (VAR (131)).
   {#W11.159-7} Hence G̃^AΔ^AE = P₀^AE − G̃^AD_AR^AD_A*E.
   {#W11.159-8} With the G = (Δ_a − Δ^{(2)})^{−1} of (180), the further term G̃^AΔ^{(2)A}E appears, bounded by PBG (3.137) as a small perturbation.
-  {#W11.159-9} P₀^AE ≤ (1 + B₀)|E| in |·|_{(−1)}, and likewise for its gradient in |∇·|_{(−2)} by VAR (46). |R^AD_A*E| ≤ O(1)|∇E| carries ϑ, with no gauge condition on A′^A or on H^A(s) (at complex s, R^AD_A*H^A(s) = 0 is not available).
-  {#W11.159-10} By the entries GD of PBG (3.42) (D in place of ∇*, p.398 l.49–50), |G̃^AD_AR^AD_A*E|_{(−1)} ≤ O(1)B₀²C_ℒ^gϑr².
-{#W11.160} So every E-term of ℒG̃^Aσ carries ϑ in |·|_{(−1)}.
+  {#W11.159-9} P₀^AE ≤ (1 + B₀)|E| in |·|_{(−1)}, and likewise for its gradient in |∇·|_{(−2)} by VAR (46). |R^AD_A*E| ≤ O(1)|∇E| carries 𝔡_H, with no gauge condition on A′^A or on H^A(s) (at complex s, R^AD_A*H^A(s) = 0 is not available).
+  {#W11.159-10} By the entries GD of PBG (3.42) (D in place of ∇*, p.398 l.49–50), |G̃^AD_AR^AD_A*E|_{(−1)} ≤ O(1)B₀C_E𝔡_Hr².
+{#W11.160} So every E-term of ℒG̃^Aσ carries 𝔡_H in |·|_{(−1)}.
 {#W11.160-1} In |∇·|_{(−2)} the same holds for all but ∇G̃^AD_AR^AD_A*E and the gradient entries of the divergence forms, which are treated alike.
 {#W11.160-2} The gradient entry ∇GD is bounded as in PBG (3.44) (D in place of ∇*), through ‖w‖^{ξ′}_{β′} + |w|, for any β′ ∈ (0, 1], with the constant B₀′(β′) and w := R^AD_A*E on the block of y′ in the layer j′, ξ′ = L^{−j′}.
 {#W11.160-3} The norm ‖·‖^{ξ′}_{β′} of (3.40) measures distances on the ξ′-lattice, where two distinct points are at least ξ′ apart.
 {#W11.160-4} So, crudely, ‖w‖^{ξ′}_{β′} ≤ 3ξ′^{−β′}sup|w| = 3L^{j′β′}sup|w|, with |R(U(Γ))| ≤ 2 at complex backgrounds in PBG's domain (3.37) with α₁ small.
 {#W11.160-5} No regularity of E beyond |∇E|_{(−2)} enters.
-{#W11.160-6} Hence |∇G̃^AD_AR^AD_A*E|_{(−2)} ≤ O(1)B₀′(β′)B₀²C_ℒ^g sup_{j′}L^{j′β′}·ϑr², with ϑ the global supremum of (a).
-{#W11.160-7} §8 attaches δ_w to m(ω), the finest global layer the walks meet, and on the young histories m ≥ k/2 − 1 (*The alignment of the global sets.*), while j′ ≤ k.
-{#W11.160-8} So L^{j′β′} ≤ L^{2β′}L^{2mβ′}, and each part (ε/a_m)^γ = L^{−mγ} of ϑ becomes L^{2β′}(ε/a_m)^{γ−2β′} (likewise C₂(ε/a_m)^{1−2β′}).
-{#W11.160-9} Any β′ ∈ (0, γ/2) leaves a positive exponent, at the cost of B₀′(β′), finite for β′ > 0.
-{#W11.160-10} (1a) is thus derived, with the exponent γ − 2β′ in place of γ for this one gradient term of Δ₀, β′ > 0 arbitrary; §8's use (γ_w − β′ > 1/4 with β′ small) holds with 2β′ in place of β′.
+{#W11.160-6} Hence |∇G̃^AD_AR^AD_A*E|_{(−2)} ≤ O(1)B₀′(β′)B₀C_E sup_{j′}L^{j′β′}·𝔡_Hr², with 𝔡_H built from global suprema (#W11.101-3).
+{#W11.160-7} 𝔡_H ≤ C_𝔡L^{−γ_Hj_min} (#W11.101-5), with j_min ≥ k/2 − 1 on the young histories (*The alignment of the global sets.*), while j′ ≤ k.
+{#W11.160-8} So L^{j′β′} ≤ L^{2β′}L^{2j_minβ′}, and L^{j′β′}𝔡_H ≤ C_𝔡L^{2β′}L^{−(γ_H−2β′)j_min}.
+{#W11.160-9} Any β′ ∈ (0, γ_H/2) leaves a positive exponent, at the cost of B₀′(β′), finite for β′ > 0.
+{#W11.160-10} So the E-terms of Δ₀ carry 𝔡_H, with the exponent γ_H − 2β′ in place of γ_H for this one gradient term, β′ > 0 arbitrary, as §8 uses it (#W8.24-1).
 
 
-{#W11.161} (b) The artifact (derived, not reviewed, in *The artifact through covariances.* below).
+{#W11.161} (b) The artifact (bounded in *The artifact through covariances.* below).
 {#W11.161-1} The blocking-artifact term is b beyond its second order.
-{#W11.161-2} Its locality is settled: by the column-sum property of (9.11), the Cauchy note writes b, as an identity in W, as the sum over the coarse plaquettes p of the cell functions ε⁴[½|Φ_p|² − ½Σ_{p′}w_{p,p′}|F_{p′}|² + κ_ε(Φ_p) − Σ_{p′}w_{p,p′}κ_η(F_{p′})] (its *The Second Variation of b.*, with Φ_p = F^w_p + εr_p, the κ_η terms distributed by Σ_pw_{p,p′} = η⁴/ε⁴ at d = 4), each analytic on the cell domain 𝒫 of its *Analyticity.*, so every derivative of b is a sum of terms supported on single cells, and the derivatives of b(e^{iη_BA^B(ℒA′)}U^B) in A′ carry the decay of H^B and D^B.
-{#W11.161-3} One input for its size is derived (not reviewed): at W = 1 the cell function g_p vanishes to fourth order on fields constant on the cell.
-{#W11.161-4} For W = e^{isηY_c}, Y_c(b) = Y_μ on the bonds of direction μ, W is invariant under the translations of the cell, so all fine plaquettes of one orientation have the same holonomy based at their corners, and F_{p′} = F := c s²[Y_μ, Y_ν] + O(s³η|Y|³); the coarse links of the average are e^{iεȲ_μ} with Ȳ_μ = sY_μ + O(s²ε|Y|²) (CMP 98 (15), as in the Cauchy note's third fact), so Φ_p = F + O(s³ε|Y|³).
-{#W11.161-5} Since the weights of a row sum to 1, ½|Φ_p|² − ½Σ_{p′}w_{p,p′}|F_{p′}|² = ⟨F, Φ_p − F⟩ + ½|Φ_p − F|² = O(s⁵), and the κ-terms are O(s⁸).
-{#W11.161-6} So the Taylor coefficients of s ↦ g_p(e^{isηY_c}) of orders 0 to 4 vanish, and by polarisation on the linear space of cell-constant fields d³g_p(1) and d⁴g_p(1) vanish on cell-constant arguments.
-{#W11.161-7} The first variation in a general direction ξ vanishes to third order as well: s ↦ dg_p(e^{isηY_c})[ξ] has vanishing coefficients of orders 0, 1, and 2.
-{#W11.161-8} At order 0, Φ_p(1) = F_{p′}(1) = 0.
-{#W11.161-9} At order 1, d²g_p(1)[Y_c, ξ] = ⟨dΦ_p(1)[Y_c], dΦ_p(1)[ξ]⟩ − Σ_{p′}w_{p,p′}⟨dF_{p′}(1)[Y_c], dF_{p′}(1)[ξ]⟩ = 0, since the curls of a constant field vanish.
-{#W11.161-10} At order 2, the terms with Φ_p(1), F_{p′}(1), dΦ_p(1)[Y_c], or dF_{p′}(1)[Y_c] vanish, leaving ⟨K, dΦ_p(1)[ξ] − Σ_{p′}w_{p,p′}dF_{p′}(1)[ξ]⟩ with K := d²Φ_p(1)[Y_c, Y_c] = d²F_{p′}(1)[Y_c, Y_c] (the s² coefficients above agree), and the bracket is 0 by the Cauchy note's second fact, the identity (9.11).
-{#W11.161-11} These two facts are not used below.
-{#W11.161-12} The comparator is VAR (97)–(98), |δV/δA′|_{(−3)} ≤ C₄max(|A′|_{(−1)}, |∇A′|_{(−2)})², and a pointwise bound of σ's artifact part has no small factor: on cell-constant fields the first variation of g_p in a single-bond direction is, as a source, of the order of the cubic part of δV/δA′ itself.
-{#W11.161-13} The small factor comes from the covariance structure of b, as in the Cauchy note's *The Second Variation of b.*, one order higher.
+{#W11.161-2} It is local: by the column-sum property of (9.11), the Cauchy note writes b, as an identity in W, as the sum over the coarse plaquettes p of the cell functions ε⁴[½|Φ_p|² − ½Σ_{p′}w_{p,p′}|F_{p′}|² + κ_ε(Φ_p) − Σ_{p′}w_{p,p′}κ_η(F_{p′})] (its *The Second Variation of b.*, with Φ_p = F^w_p + εr_p, the κ_η terms distributed by Σ_pw_{p,p′} = η⁴/ε⁴ at d = 4), each analytic on the cell domain 𝒫 of its *Analyticity.*, so every derivative of b is a sum of terms supported on single cells, and the derivatives of b(e^{iη_BA^B(ℒA′)}U^B) in A′ carry the decay of H^B and D^B.
+{#W11.161-12} The comparator is VAR (97)–(98), |δV/δA′|_{(−3)} ≤ C₄max(|A′|_{(−1)}, |∇A′|_{(−2)})².
+{#W11.161-13} Relative to it the artifact carries the factor ϑ_b of (#W11.177), which comes from the covariance structure of b, as in the Cauchy note's *The Second Variation of b.*, one order higher.
 
-{#W11.162} *The artifact through covariances (derived, not reviewed).* Notation as in the Cauchy note's l.739–756, at the run-B configurations W = e^{iη𝒜}U^B, η = η_B, in the axial gauge of its *Analyticity.* on each cell.
+{#W11.162} *The artifact through covariances.* Notation as in the Cauchy note's #C10.4.24–#C10.4.59, at the run-B configurations W = e^{iη𝒜}U^B, η = η_B, in the axial gauge of its *Analyticity.* on each cell.
 {#W11.162-1} The ingredients are as follows.
 - {#W11.163} The identity.
   {#W11.163-1} Let X_{p′} := TF_{p′} with T := Ad(W(γ_{p′})), so that F^w_p = Σ_{p′}w_{p,p′}X_{p′} and Φ_p = F^w_p + ρ_p with ρ_p := εr_p.
@@ -2566,21 +2338,21 @@
   {#W11.167-1} The primes denote the variations of X in the indicated directions. |Cov_p(Y, Z)| ≤ osc_pY·osc_pZ.
   {#W11.167-2} When Z is linear in the direction v, Cov_p(Y, Z) = Σ_{p′}w_{p,p′}⟨Y_{p′} − Σ_{q′}w_{p,q′}Y_{q′}, Z_{p′}⟩ is a linear functional of Z on the cell with coefficients bounded by osc_pY.
 - {#W11.168} The sizes.
-  {#W11.168-1} In the cell variable ζ = η𝒜, Cauchy's estimate on 𝒫 gives |d³(η²F_{p′})| ≤ k₃ with k₃ := O(1)m_G/r_G³, so |X‴_{uuv}| ≤ k₃η|u|²|v|, with the transport terms of l.752. |X″_{uv}| ≤ k₂|u||v| plus transport terms with the factor |a| ≤ 4dε|u|.
-  {#W11.168-2} X′_v = Tf_v + i[a_v, TF], with f_v the fine curl of v up to the factor dlog_h (l.751) and |a_v| ≤ 4dε|v|.
+  {#W11.168-1} In the cell variable ζ = η𝒜, Cauchy's estimate on 𝒫 gives |d³(η²F_{p′})| ≤ k₃ with k₃ := O(1)m_G/r_G³, so |X‴_{uuv}| ≤ k₃η|u|²|v|, with the transport terms of the Cauchy note's #C10.4.48. |X″_{uv}| ≤ k₂|u||v| plus transport terms with the factor |a| ≤ 4dε|u|.
+  {#W11.168-2} X′_v = Tf_v + i[a_v, TF], with f_v the fine curl of v up to the factor dlog_h (the Cauchy note's #C10.4.47) and |a_v| ≤ 4dε|v|.
   {#W11.168-3} At a point of the layer j, |u| ≤ C_ℒ^gra_j^{−1} and |∇u| ≤ C_ℒ^gra_j^{−2} by (H_ℒ^g), with r := max(|A′^A|_{(−1)}, |∇A′^A|_{(−2)}). |F| ≤ O(1)(C₀ε₁ + C_ℒ^gr)a_j^{−2}.
   {#W11.168-4} The oscillation of F at complex W is bounded in *The oscillations.* below, with the factor (ε/a_j)^{β_H}.
-- {#W11.169} The oscillations. osc_pX ≤ 4dε|∇F| + 4δ_T|F| (l.754). osc_pu ≤ 4dε|∇u| + δ_T|u| (*The Variations of r_p.*).
+- {#W11.169} The oscillations. osc_pX ≤ 4dε|∇F| + 4δ_T|F| (the Cauchy note's #C10.4.50). osc_pu ≤ 4dε|∇u| + δ_T|u| (*The Variations of r_p.*).
   {#W11.169-1} For the direction, v − v_c with v_c the axial-gauge value at y_p is a linear function of the differences of v on the cell, |v − v_c| ≤ 4dε|∇v| + δ_T|v|.
   {#W11.170} These bounds of the Cauchy note are proved at the real W = U^B.
   {#W11.170-1} At the complex W = e^{iηA^B(tx)}U^B of the Taylor formula they are rerun as follows.
-  {#W11.170-2} The plaquettes of W are those of U^B changed by the covariant curl of ηA^B plus BCH terms, so F(W) = F(U^B) + D_{U^B}∧A^B + O(|A^B|²) + O(η²|F||A^B|), with |A^B| ≤ C_ℒ^gra_j^{−1}, |∇A^B| ≤ C_ℒ^gra_j^{−2}, and the Hölder entry of ∇A^B at the exponent β_H by (3.133) for the H-fields and (3.43) for the G̃-fields, carried through ℒ by the Cauchy note's *Regularity of the Lifts.* (l.860–861).
-  {#W11.170-3} So osc_pF(W) ≤ 4dε|∇F(U^B)| + O(1)(6ε)^{β_H}ra_j^{−2−β_H} + O(1)εr²a_j^{−3}, which carries the factor (ε/a_j)^{β_H} against |F| ≤ O(1)(C₀ε₁ + r)a_j^{−2}.
-  {#W11.170-4} The transports of W along the cell's paths differ from those of U^B by O(1)ε|A^B| ≤ O(1)r(ε/a_j), so δ_T(W) ≤ δ_T + O(1)r(ε/a_j).
+  {#W11.170-2} The plaquettes of W are those of U^B changed by the covariant curl of ηA^B plus BCH terms, so F(W) = F(U^B) + D_{U^B}∧A^B + O(|A^B|²) + O(η|F||A^B|), with |A^B| ≤ C_ℒ^gra_j^{−1}, |∇A^B| ≤ C_ℒ^gra_j^{−2}, and the Hölder entry of ∇A^B at the exponent β_H by (3.133) for the H-fields and (3.43) for the G̃-fields, carried through ℒ by the Cauchy note's *Regularity of the Lifts.* (#C10.4.109–#C10.4.110).
+  {#W11.170-3} So osc_pF(W) ≤ 4dε|∇F(U^B)| + O(1)(6ε)^{β_H}ra_j^{−2−β_H} + O(1)εr²a_j^{−3} + O(1)C_ℒ^g(η/a_j)r|F|, the last from twice the supremum of the term O(η|F||A^B|), which carries the factor (ε/a_j)^{β_H} against |F| ≤ O(1)(C₀ε₁ + r)a_j^{−2}.
+  {#W11.170-4} The transports of W along the cell's paths differ from those of U^B by O(1)ε|A^B| ≤ O(1)C_ℒ^gr(ε/a_j), so δ_T(W) ≤ δ_T + O(1)C_ℒ^gr(ε/a_j).
   {#W11.170-5} *The Variations of r_p.* use only these plaquette and transport bounds.
   {#W11.170-6} So the three oscillation bounds hold at the complex W with |F|, |∇F| ε, and δ_T replaced by these, and every oscillation factor below carries (ε/a_j)^{β_H}, as ϑ_b requires, under r ≤ r_G/2 for the cell domain 𝒫.
 {#W11.171} Each term of d³β[u, u, Ξ] is then bounded with one explicit factor ε or η, relative to the comparator's size r²a_j^{−3} for a source and r²a_j^{−2} for a coefficient of ∇Ξ:
-- {#W11.172} Cov_p(X, X‴_{uuΞ}) ≤ (4dε|∇F| + 4δ_T|F|)k₃η|u|²|Ξ|, a source with the relative factor O(1)(ε/a_j)(η/a_j)(C₀ε₁ + L²C_ℒ^gr)(C_ℒ^g)²;
+- {#W11.172} Cov_p(X, X‴_{uuΞ}) ≤ (4dε|∇F| + 4δ_T|F|)k₃η|u|²|Ξ|, a source with the relative factor O(1)k₃(ε/a_j)(η/a_j)(C₀ε₁ + L²C_ℒ^gr)(C_ℒ^g)² ≤ O(1)k₃L(1 + C₀ε₁)(C_ℒ^g)²(ε/a_j), by η/a_j = L^{−j−1} and C_ℒ^gr ≤ O(1)C_ℒ^gB₅ε₁ ≤ ε₃ (#W11.63-1);
 - {#W11.173} Cov_p(X″_{uΞ}, X′_u) ≤ 2|X′_u|·[k₂(osc_pu|Ξ| + |u||Ξ − Ξ_c|) + transport terms].
   {#W11.173-1} The part with osc_pu is a source with the relative factor O(1)k₂(C_ℒ^g)²ε/a_j.
   {#W11.173-2} The part with Ξ − Ξ_c is a linear functional of the differences of Ξ, with coefficient O(1)k₂(C_ℒ^g)²εr²a_j^{−3}, the relative factor ε/a_j;
@@ -2588,50 +2360,46 @@
   {#W11.174-1} The term i[a_Ξ, TF] is a source with the factor 4dε|F|.
 {#W11.175} The ρ-terms are bounded by *The Variations of r_p.* and the third variation of εr_p by Cauchy's estimate (≤ k₃η|u|²|Ξ|), each paired with |F^w| ≤ |F| or with a variation carrying ε|F|, δ_T, or an oscillation, hence the relative factor O(1)(k₂ + k₃ + c_{r1} + c_{r3})(ε/a_j).
 {#W11.175-1} The κ-terms carry ε⁴|Φ|·|dΦ|² and smaller, by |d^iκ| ≤ c_κη⁴|X|^{4−i} and Cauchy's estimate for i = 3, so the relative factor is O(1)c_κ(ε/a_j)⁴.
-{#W11.175-2} The chain-rule terms d²β[ü, Ξ], 2d²β[u, Ξ̇], and dβ[Ξ̈] have the second and first variations of b, which are covariances with one oscillation factor each (the Cauchy note's l.745–756, with osc_pX′_{ü} ≤ 2ω + k_oν_F|∇ü| and the Hölder bound of the H-outputs ü and Ξ̇ by PBG (3.133), the entry ‖ζ∇H‖_β, and osc X for Ξ̈), times B₀(β_H)(C₂ + C₃)r from D (C₃ from d³D₃).
+{#W11.175-2} The chain-rule terms d²β[ü, Ξ], 2d²β[u, Ξ̇], and dβ[Ξ̈] have the second and first variations of b, which are covariances with one oscillation factor each (the Cauchy note's #C10.4.43–#C10.4.59, with osc_pX′_{ü} ≤ 2ω + k_oν_F|∇ü| and the Hölder bound of the H-outputs ü and Ξ̇ by PBG (3.133), the entry ‖ζ∇H‖_β, and osc X for Ξ̈), times B₀(β_H)(C₂ + C₃)r from D (C₃ from d³D₃).
 {#W11.175-3} So their relative factor is O(1)B₀(β_H)(C₂ + C₃)(ε/a_j)^{β_H}, with β_H < 1 the Hölder exponent used for H.
 
 {#W11.176} The conversion to run A. Ξ = ℒξ − H^BdD^B[ℒξ].
 {#W11.176-1} The H^B part is a source in ξ by PBG (3.133) for ∇H.
-{#W11.176-2} For the ℒ part, the map ξ ↦ (D_Bℒξ, ℒξ − (ℒξ)_c) on a cell vanishes, at U^B = 1, on fields constant on all of run A's lattice, and on fields constant only near the cell up to the decaying tails of (Q₁Q₁*)^{−1}: for constant ξ, Iξ is constant, Q₁I reproduces it (the Cauchy note's l.858), and the correction h = (Q₁Q₁*)^{−1}(ξ − Q₁Iξ) receives only the differences of ξ.
+{#W11.176-2} For the ℒ part, the map ξ ↦ (D_Bℒξ, ℒξ − (ℒξ)_c) on a cell vanishes, at U^B = 1, on fields constant on all of run A's lattice, and on fields constant only near the cell up to the decaying tails of (Q₁Q₁*)^{−1}: for constant ξ, Iξ is constant, Q₁I reproduces it (the Cauchy note's #C10.4.108-2), and the correction h = (Q₁Q₁*)^{−1}(ξ − Q₁Iξ) receives only the differences of ξ.
 {#W11.176-3} So it is a combination of run A's differences ∇_Aξ, with coefficients O(1)L summed with the decay e^{−δ_Qd} of (Q₁Q₁*)^{−1}, plus a source O(1)c_Gc_uMα₀a_j^{−1}|ξ| from the background, as in (H_ℒ^g).
 {#W11.176-4} Hence σ_b = ∇_A*K_b + s_b on run A's lattice, with
 
-  {#W11.177} |K_b|_{(−2)} + |s_b|_{(−3)} ≤ C_bϑ_br², ϑ_b := sup_x(ε/a_{j(x)})^{β_H}, C_b := O(1)LC_Q(C_ℒ^g)²(1 + C₀ε₁)(1 + k₂ + k₃ + c_{br} + c_{r1} + c_{r3} + c_κ)²(1 + B₀(β_H)(C₂ + C₃)),
+  {#W11.177} |K_b|_{(−2)} + |s_b|_{(−3)} ≤ C_bϑ_br², ϑ_b := sup_x(ε/a_{j(x)})^{β_H}, C_b := O(1)LC_Q′(C_ℒ^g)²(1 + C₀ε₁)(1 + k₂ + k₃ + c_{br} + c_{r1} + c_{r3} + c_κ)²(1 + B₀(β_H)(C₂ + C₃)),
 
 {#W11.178} pointwise with the factor of the source layer.
 {#W11.178-1} By PBG (3.42) for the entries G∇* and G (and the term GQ*(QGQ*)^{−1}QG of G̃ likewise), |G̃^Aσ_b|_{(−1)} ≤ O(1)B₀C_bϑ_br².
 {#W11.178-2} By PBG (3.44) with the crude lattice Hölder bound of (a), |∇G̃^Aσ_b|_{(−2)} ≤ O(1)B₀′(β′)C_b sup_{j′}(L^{j′β′}ϑ_{b,j′})r², for any β′ ∈ (0, β_H).
 {#W11.178-3} With (H_ℒ^g) for ℒ, the artifact part of 2|ℒG̃^Aσ| is at most O(1)C_ℒ^gB₀′(β′)C_b sup_{j′}(ε/a_{j′})^{β_H−β′}r², the supremum over the source layers.
 {#W11.178-4} Here the layer-local factor is available: the cell functions and the Hölder bound of the H-outputs are local in the target block. β_H < 1 is arbitrary in PBG (3.43), with the constant B₀(β_H).
-{#W11.178-5} So (b) is derived, not reviewed, with the exponent β_H − β′.
+{#W11.178-5} So (b) holds with the exponent β_H − β′.
 
-{#W11.179} *The alignment of the global sets (derived, not reviewed).* The consumer evaluates (W-δ) on the young histories of the Cauchy note's §6.2.
-{#W11.179-1} Every component of a young pair is born at a scale > k/2 (the Cauchy note's l.287), so the finest layer of the R-operation's set is at a scale n ≥ k/2 − 1 of run A, and n ≥ 1 for k ≥ 4 (derived in the LF note's §1, *The configurations.*, "every layer of X lies at a scale ≥ j₀ − 1 ≥ k/2 − 1", and used in its *The joins* and *The lifts and the chain rule.*; none of these uses (W-δ)).
+{#W11.179} *The alignment of the global sets.* The consumer evaluates (W-δ) on the young histories of the Cauchy note's §6.2.
+{#W11.179-1} Every component of a young pair is born at a scale > k/2 (the Cauchy note's #C6.2.12-2), so the finest layer of the 𝐑-operation's set is at a scale n ≥ k/2 − 1 of run A, and n ≥ 1 for k ≥ 4 (derived in the LF note's §1, *The configurations.*, "every layer of X lies at a scale ≥ j₀ − 1 ≥ k/2 − 1", and used in its *The joins* and *The lifts and the chain rule.*; none of these uses (W-δ)).
 {#W11.179-2} By §2, the layers are unions of cells of ML^jεℤ^d = ML^{j+1}(ε/L)ℤ^d, the same physical sets in both runs.
 {#W11.179-3} Hence Ω^A_j = Ω^B_{j+1} for every j ≥ 0, and Ω^B_0 = Ω^B_1 = Ω^A_0 is the domain of the problem.
 {#W11.179-4} The finest data sets are empty: Λ^A_0 = Λ^B_0 = Λ^B_1 = ∅.
 {#W11.179-5} In the all-small-field problem of the Cauchy note's §9.2 the same holds with the single data set Λ^B_{k+1} = Λ^A_k = T_a.
-{#W11.179-6} So the composition of the averagings, and with it the identities for D, for the linear coordinates, and for V, hold on all of run A's data sets of the R-operation's set 𝐁″_k on the young histories.
+{#W11.179-6} So the composition of the averagings, and with it the identities for D, for the linear coordinates, and for V, hold on all of run A's data sets of the 𝐑-operation's set 𝐁″_k on the young histories.
 {#W11.179-7} They do not hold on the collar of 𝐁₁, whose layers reach the finest scale (§12).
 
 {#W11.180} (2) R₁ outside (Wδ-3).
 {#W11.180-1} The LF note's (δ) compares the configurations ι_X(e^{iη𝐇^A(s)}c^A) and e^{iη𝐇^B(s)}ι_Yc^A themselves, so it contains R₁ and the D difference as they stand (its piece (δ) of (ii)).
 {#W11.180-2} Both carry the factor L^{−j(x)} ≤ L^{1−k/2} of *The size of the remainder terms.* on the young histories, so neither needs matching against ι_X's kernel.
-{#W11.180-3} The bound of (δ) as a whole belongs to the LF note and is outside (W-δ).
 
-{#W11.181} Dependencies (checked for circularity): §11 uses VAR (26), (41), (44)–(57), (73)–(83), (127), (130)–(133), (143), (180), (186)–(187), and p.297, PBG (3.40), (3.42)–(3.44), and (3.133), the Cauchy note's *Analyticity.* to *The Bounds.* (its l.715–756), CMP 98 (90)–(91), RG II (1.2)–(1.5), (B3)–(B5) of the Cauchy note's §10.1 and its *The Action Part of β.*, the birth scale of young pairs (the Cauchy note's l.287;
-{#W11.181-1} the LF note's *The configurations.*, *The joins*, and *The lifts and the chain rule.*), §2, §4(d), §5(a), 10.5 (*The refined gradient.*, *The Hölder bound.*, *The exactness.*, *The inclusion.*, and the complex step) for the bridge, PBG (3.129), (3.134)–(3.137), and the global lift of the Cauchy note's §10.4 (its l.666 and l.858) with Q₁ℒ = 1 and (H_ℒ^g), and, for the propagator terms only, the form (c).
-{#W11.181-2} It uses neither (W-δ) nor the LF note's (δ); that note's piece (δ) of (ii) cites §11 for the size of R₁, not conversely.
+{#W11.181} §11 is not circular: it uses neither (W-δ) nor the LF note's (δ), and that note's piece (δ) of (ii) cites §11 for the size of R₁, not conversely.
 
-## 12. The Localisation Functions of (1.61)–(1.64) (Derived, Not Reviewed, With Eight Choices) {#WS12}
+## 12. The Localisation Functions of (1.61)–(1.64) {#WS12}
 
 {#W12.1} The LF note's piece (β) (its #4.241) is the run difference of the functions of the localisation expansions of LFR II (1.61)–(1.64) and of the gauge transformations in them.
 {#W12.1-1} This section reduces it to (W-δ) at three problems, and derives the gauge part.
 
 {#W12.2} *The three functions (quoted).*
-- {#W12.3} 𝐇″_k, the function of the problem of 𝐁″_k about U_{1,2}, from VAR's Sects.
-  {#W12.3-1} D–E (LFR II (1.54), p.370 l.40–42).
+- {#W12.3} 𝐇″_k, the function of the problem of 𝐁″_k about U_{1,2}, from VAR's Sects. D–E (LFR II (1.54), p.370 l.40–42).
   {#W12.3-2} It enters (1.61) restricted to Y_1 and is localised with the cubes σ̃₀ disjoint from Λ (p.373 l.31–34).
 - {#W12.4} 𝐇_{𝐁₁}(−(1/i)log M^·(U_{k,Λ})⌈_{Z″_k}), the function of the problem of 𝐁₁ in the representation (1.62) of U_1 about U_{k,Λ} (p.374 l.3–6), localised with σ̃₀ (l.8–10).
 - {#W12.5} 𝐇_k(−(1/i)log V′_k⌈_Λ) of (1.63)–(1.64), the function of the problem of 𝐁_k about U_k, localised with σ̃₀ (p.374 l.26–29).
@@ -2639,39 +2407,34 @@
 {#W12.6-1} Its localisation substitutes walk-decoupled propagators into the functionals of the fixed points, as in RG II (1.5), and Bałaban writes each expansion "in the form of the expansion (6.10) [I]" (p.373 l.33, p.374 l.10 and l.28).
 {#W12.6-2} The representations (1.54), (1.57), and (1.58) (p.370 l.40–42, p.371 l.36–47) have the form (exp iη𝐇U)^{u^{−1}}.
 {#W12.6-3} For (1.58) this is VAR's representation of the minimiser about a minimiser (VAR (172) and (179), p.305–306).
-{#W12.6-4} For (1.54) it is the Sects.
-{#W12.6-5} D–E representation (112) about a background satisfying VAR (14).
+{#W12.6-4} For (1.54) it is the Sects. D–E representation (112) about a background satisfying VAR (14).
 {#W12.6-6} The factor u^{−1} is LFR's; VAR writes these in the Landau gauge without it.
 {#W12.6-7} Their fixed points are as follows.
 - {#W12.7} 𝐇_k is VAR's Sect. G function of the 𝐁_k problem about its minimiser U_k, with (179)–(180).
-- {#W12.8} 𝐇″_k is introduced by "From the results of Sects.
-  {#W12.8-1} D, E [15] we obtain" (p.370 l.40).
+- {#W12.8} 𝐇″_k is introduced by "From the results of Sects. D, E [15] we obtain" (p.370 l.40).
   {#W12.8-2} Its background U_{1,2} is a patch of the minimisers of the 𝐁₁ and 𝐁₂ problems and is not critical for 𝐁″_k.
   {#W12.8-3} Bałaban prints the function with the current as an argument, 𝐇″_k(𝐆″_kJ_{1,2}, …) (p.370 l.41), and localises 𝐆″_kJ_{1,2} through 𝐆″_kQ*_{𝐁″_k} = 0 and the criticality of J_{1,2} = J_1 on Ω″^∼_{h+1} for 𝐁₁ (p.370 l.45–52, p.371 l.1–25).
   {#W12.8-4} The arguments 𝐆″_kJ_{1,2} and H″_{1,k}Q̃(η𝐀₀) are those of VAR (111)–(112), with 𝐆″_k the 𝔊 of PBG (3.148) (p.370 l.49) and H″_{1,k} VAR's H₁.
-  {#W12.8-5} So 𝐇″_k is the (111) function at the background U_{1,2} with J = J_{1,2}, compared by §11's *The Sects.
-  {#W12.8-6} D–E form (111).* By (1.55), 𝐆″_kJ_{1,2} = 𝐆″_k(1 − θ)Q*_{𝐁₁}θ₁H*_{𝐁₁}J₁ + 𝐆″_kθJ_{1,2} (p.371 l.20–22), so the localised 𝐇″_k contains H_{𝐁₁}, an operator of the 𝐁₁ problem (derived, not reviewed, in *The source of (1.55).* below).
+  {#W12.8-5} So 𝐇″_k is the (111) function at the background U_{1,2} with J = J_{1,2}, compared by §11's *The Sects. D–E form (111).* By (1.55), 𝐆″_kJ_{1,2} = 𝐆″_k(1 − θ)Q*_{𝐁₁}θ₁H*_{𝐁₁}J₁ + 𝐆″_kθJ_{1,2} (p.371 l.20–22), so the localised 𝐇″_k contains H_{𝐁₁}, an operator of the 𝐁₁ problem (*The source of (1.55).* below).
 - {#W12.9} 𝐇_{𝐁₁} expands U_1, the minimiser of the 𝐁₁ problem on Ω″^∼_{h+1}, about U_{k,Λ}, the minimiser of the 𝐁_k problem.
   {#W12.9-1} Its current J(U_{k,Λ}) need not satisfy P₀*(𝐁₁)J = 0; neither Bałaban nor this note shows that it does.
   {#W12.9-2} Bałaban prints no operator form at (1.57).
   {#W12.9-3} It is taken here in the (111) form, as 𝐇″_k is printed; this is a choice of representation, by analogy with (1.54), and (111) and (143) give the same function at s = 1 by VAR's uniqueness (p.300 l.18).
-{#W12.10} §11 covers 𝐇_k by *The fixed point 𝐀₀.* (J = 0) and the other two by *The Sects.
-{#W12.10-1} D–E form (111).* The gauge transformation u^0_k is given by CMP 98 (106) as an analytic function of 𝐇″_k restricted to one block (p.373 l.29–30), and u_1 by "The same remarks" (p.373 l.44–p.374 l.2).
+{#W12.10} §11 covers 𝐇_k by *The fixed point 𝐀₀.* (J = 0) and the other two by *The Sects. D–E form (111).* The gauge transformation u^0_k is given by CMP 98 (106) as an analytic function of 𝐇″_k restricted to one block (p.373 l.29–30), and u_1 by "The same remarks" (p.373 l.44–p.374 l.2).
 {#W12.10-2} For u_{k,Λ}, Bałaban introduces the decoupling variables into the localised 𝐇_k of (1.63), "hence into u_{k,Λ}" (p.374 l.38–39), and (106) is used for it in the same way.
 {#W12.10-3} (106) is printed for a single domain; its layered form is Bałaban's usage at p.373 l.29–30.
 
-{#W12.11} *What §§3–11 use of the problem (derived, not reviewed).* §§3–11 use the determining set and the background through five inputs:
+{#W12.11} *What §§3–11 use of the problem.* §§3–11 use the determining set and the background through five inputs:
 - {#W12.12} the alignment Ω^A_j = Ω^B_{j+1} with empty finest data sets (§11, *The alignment of the global sets.*);
 - {#W12.13} a real background pair (U^B, V₀ := MU^B) with U^B := ι(V₀) satisfying PBG (3.35)–(3.36) on run B's shells and the tail of the Cauchy note's §9.8 (10.5, *The base and the local gauge.*);
 - {#W12.14} PBG's and VAR's bounds for the problem's operators at that background, by PBG Corollary 3.6, which assumes (2.1)–(2.4) of PRT2 for the sequence of domains (PBG p.408 l.2), layer widths included;
-- {#W12.15} the fixed-point equation: VAR (180) for 𝐇_k, and VAR (111) with the background's current for 𝐇″_k and 𝐇_{𝐁₁} (§11, *The current term of VAR (143).* and *The Sects.
-  {#W12.15-1} D–E form (111).*);
+- {#W12.15} the fixed-point equation: VAR (180) for 𝐇_k, and VAR (111) with the background's current for 𝐇″_k and 𝐇_{𝐁₁} (§11, *The current term of VAR (143).* and *The Sects. D–E form (111).*);
 - {#W12.16} for the localised operators, the boundaries of the localisation domains, which §4 treats without boundary terms given (S).
 {#W12.17} They hold for the three problems as follows.
-- {#W12.18} The alignment. 𝐁″_k and 𝐁_k have every layer at a shared scale ≥ 1 in a young history (the LF note's *The configurations.* and *The lifts and the chain rule.*). 𝐁₁ = 𝐁″_k ∪ 𝐁_h(Ω″^∼_{h+1}) adds the collar 𝐁_h(Ω).
+- {#W12.18} The alignment. 𝐁″_k and 𝐁_k have every layer at a shared scale ≥ 1 in a young history (the LF note's *The configurations.* and *The lifts and the chain rule.*). 𝐁₁ = 𝐁″_k ∪ 𝐁_h(Ω″^∼_{h+1}) adds the collar 𝐁_h(Ω), Ω := Ω″^∼_{h+1}.
   {#W12.18-1} CRE builds it on T_ξ, ξ = L^{−h}, the lattice of the layer h in that layer's units (CRE p.256 l.21–23 and l.57–62), with domains Ω = Ω_0 ⊃ … ⊃ Ω_h, Ω_n a union of L^nξM₁-cubes.
   {#W12.18-2} So its layers n = 0, …, h run from the finest scale at ∂Ω to the scale h, all within 2M₁ of ∂Ω, as the LF note's *The layers of 𝐁₁.* reads it: the layers j ≤ h − 1 of 𝐁₁ are the collar's. 𝐁₁'s finest data set is therefore not empty, and run B's collar carries data at its scales 0 and 1 there.
-  - {#W12.19} *The collar's layers (derived, not reviewed).* The misalignment is confined to a strip at ∂Ω.
+  - {#W12.19} *The collar's layers.* The misalignment is confined to a strip at ∂Ω.
     {#W12.19-1} CRE's 𝐁_j(Ω) is "a sequence of maximal domains" with Ω_n a union of L^nξM₁-cubes and dist(Ω_n, Ω_{n−1}^c) ≥ L^nξM₁ (CRE p.256 l.57–62).
     {#W12.19-2} The distance is the lattice distance |x − y| = Σ_μ|x_μ − y_μ| (PRT2 p.223 l.16).
     {#W12.19-3} Run A builds 𝐁_h(Ω) and run B builds 𝐁_{h+1}(Ω) from the same set Ω = Ω″^∼_{h+1}, a union of M₁a_h-cubes.
@@ -2685,52 +2448,28 @@
     {#W12.19-11} So Ω^A_2 = Ω^B_3, and by induction Ω^A_n = Ω^B_{n+1} for every n ≥ 2.
     {#W12.19-12} The two runs' collars therefore agree, layer by layer, at the shared scales n ≥ 2 of run A. They differ only on the strip Ω ∖ Ω^A_2, of the width at most 2c_2 = 2M₁a_2 at ∂Ω in the ℓ∞ distance and (d + 1)c_2 in the ℓ¹ distance (below, "the width 2M₁a_2" stands for this, the factor d + 1 changing constants only), which carries run A's layers 0 and 1 and run B's layers 0, 1, and 2.
     {#W12.19-13} The same holds for every piece 𝐁_j(Y_i) of the boundary-layer sets, built by the same rule.
-    {#W12.19-14} So the alignment fails only on these strips of the width 2M₁a_2, not on the whole collar.
     {#W12.19-15} The boundary-layer sets 𝐁(Y_i) ∪ · of p.373 l.17 and l.36 and p.374 l.13 are CRE's 𝐁 ∪ 𝐁(Ω): for a boundary ∂Ω contained in several domains Ω_j ∖ Ω_{j+1}, CRE constructs "the corresponding determining sets restricted to the domains" and joins them by (2.14) (CRE p.257 l.22–26), with a boundary layer "of the width 2M₁ at most, for the corresponding scale" (LFR II p.373 l.26–27).
     {#W12.19-16} Their pieces are the 𝐁_j(Y_i) of CRE p.256 l.57–62, so their layers run from the scale 0 at ∂Y_i up, and every boundary layer Y_i ∖ Y_i^0 has a finest-scale strip with no run-A counterpart.
-    {#W12.19-17} Both strips are bounded run by run in *The collar and the strips.* below.
 - {#W12.20} The background pairs.
   {#W12.20-1} For 𝐇_k the background is U_k, and for 𝐇_{𝐁₁} it is U_{k,Λ}; both are run A's real chain configurations with VAR's layer bounds (VAR Theorem 1 for their problems), so V₀ := U^A_k or U^A_{k,Λ} and U^B := ι(V₀) satisfy the premise of 10.5.
   {#W12.20-2} For 𝐇″_k the background is U_{1,2}.
   {#W12.20-3} On Ω″^∼_{h+1} it is U_1 and on the complement U_2, each the minimiser of its problem, so VAR Theorem 1 gives the layer bounds on each side, at the collar's finer scales near the cut.
   {#W12.20-4} Near the cut Bałaban states that U_{1,2} "is regular, and satisfies the regularity conditions typical for an h-order configuration on the domain (Ω″_{h+1})^c ∩ Ω″^{∼2}_{h+1}.
   {#W12.20-5} It is so, because the arguments of the corresponding functions are equal to 1 on this domain, and the exponential decay properties enforce the additional regularity" (p.370 l.35–38).
-    - {#W12.21} *The content of the statement (what VAR's Sects.
-      {#W12.21-1} D–E need at U_{1,2}, quoted; the membership on the band derived below, so no interpretation of the print's words is used).* p.370 l.35–38 says U_{1,2} "is regular, and satisfies the regularity conditions typical for an h-order configuration" on the band. "Regular" and "regularity conditions" are REG's terms: REG introduces "the following spaces of regular field configurations" 𝔘_k({Ω_j}, α₀) by its conditions (1.7)–(1.9) (REG p.077 l.31).
-      {#W12.21-2} What the expansion below uses is 𝔘-membership on the band, at the index h there: the conditions (1.7)–(1.9) of 𝔘_k({Ω_j}, ·) for the sequence of 𝐁″_k, whose layer at the cut is h.
-      {#W12.21-3} This membership is derived in *The band regularity of U_{1,2}.* below; as a reading of the print it would rest on the words alone, since "h-order configuration" occurs nowhere else in the transcriptions, and VAR's Theorem 1 (p.279 l.9–33) speaks of minimal configurations. p.370 prints no constant.
-      {#W12.21-4} The scale of the regularity at the index h is printed in the same section, at p.361 l.35–p.362 l.5.
-      {#W12.21-5} There the configuration U^0_{k,Z} "satisfies the regularity condition (1.96) [IV] on (Ω″^∼_{h+1})^c ∩ Ω_h.
-      {#W12.21-6} In fact by the same argument as the one leading to (1.96) [IV]", and LFR I (1.96) is |U(∂p) − 1| < ¾ε_h(L^{k−h}η)² (LFR I p.199 l.12–16).
-      {#W12.21-7} In the expansion of U^0_{k,Z} about U_{𝐁₁}, with 𝐁₁ = 𝐁″_k(Z) ∪ 𝐁_h(Ω″^{∼2}_{h+1}) joined by the same operation (2.14) [III] as in (1.52), the argument of 𝐇_{𝐁₁} lies in the boundary layer of the width 2M₁ and is bounded by 11d²ε_h ≤ 11d²(1+β₀)²R_k^{β₀}ε_k (p.361 l.46–p.362 l.5).
-      {#W12.21-8} So in LFR the plaquette regularity at the index h is at the parameter ε_h, which tends to 0 with γ.
+    - {#W12.21} *The hypotheses of VAR's Sects. D–E at U_{1,2}.* The sentence after p.370 l.35–38 reads "We construct the expansion of U_k^0 around the configuration U_{1,2}. From the results of Sects. D, E [15] we obtain" (1.54), so U_{1,2} is the base U_0 of VAR's Sects. D–E for 𝐁″_k's problem.
+      {#W12.21-17} Their hypotheses on the base are VAR (14), U_0 ∈ 𝔘_k({Ω_j}, C₁B₃ε₁) and |Ū₀^j − V| < C₁ε₁ "for some absolute constant C₁" (VAR p.280 l.15–21), one C₁ for both halves, and "the additional regularity condition (3.35)" (VAR p.280 l.48–53), REG's, with VAR p.280 l.42's smallness of the constants; the second-order operators of Sects. D–E and Proposition 9 use (3.36) as well (PBG p.396 l.33–34; VAR p.309 l.8–14).
+      {#W12.21-2} 𝔘_k({Ω_j}, α₀) is REG's space of "regular field configurations", defined by its conditions (1.7)–(1.9) (REG p.077 l.31), and VAR (2) is this membership (REG (1.7) and (1.9)). For U_{1,2} it is taken for the sequence of 𝐁″_k, whose layer at the cut is h, so on the band at the index h.
       {#W12.21-9} (3.35) follows from the 𝔘-membership alone by REG's Sect. F, which needs no criticality (REG p.097 l.29–30, p.099 l.34–37), as VAR p.280 l.51–52 uses it, and REG's Proposition 6 gives (3.36) with it: in a gauge u on □̃, L^jη|A|, (L^jη)²|∇^ηA|, (L^jη)³|∂^{η*}∂^ηA|, and (L^jη)³|Δ^ηA| are < 7dL²B₁M_Rα₀ on □_j, with REG's cube parameter M_R a multiple of R₁M₁ (REG (1.135)–(1.136), p.099 l.41–48), at the 𝔘-parameter α₀ of the membership.
       {#W12.21-10} REG's proof of (3.35) takes M_R = R₁M₁ ((1.134)).
       {#W12.21-11} On §11's 16-block cubes and PBG's class cubes M_R is a multiple of R₁M₁ at least the cube's side in big blocks, with 7dL²M_Rα₀ ≤ c₁ there; this changes constants only.
       {#W12.21-12} Sect. F works on the cube □̃ enlarged by 2R₁M₁ at its own scale (REG p.098 l.12–18); in the band this margin is within the room of §11's 16-block cubes, since 18M₁a_h + 2R₁M₁a_h ≤ 20KM′a_h ≤ MR_{h+1}a_{h+1}, as M₁ ≤ KM′ and R₁M₁ = M′ (§8), under M ≥ 4KM′ (the condition M ≥ 4M₁ with CRE's M₁ = KM′) and 4LR_{h+1} ≥ 24 for L > 5.
-      {#W12.21-13} The next sentence of p.370 reads "We construct the expansion of U_k^0 around the configuration U_{1,2}.
-      {#W12.21-14} From the results of Sects.
-      {#W12.21-15} D, E [15] we obtain" (1.54), so U_{1,2} is the base U_0 of VAR's Sects.
-      {#W12.21-16} D–E.
-      {#W12.21-17} Their hypotheses on the base are VAR (14), U_0 ∈ 𝔘_k({Ω_j}, C₁B₃ε₁) with the averages close to the data, and "the additional regularity condition (3.35)" (VAR p.280 l.48–53), REG's, with VAR p.280 l.42's smallness of the constants; the second-order operators of Sects.
-      {#W12.21-18} D–E and Proposition 9 use (3.36) as well (PBG p.396 l.33–34; VAR p.309 l.8–14).
-      {#W12.21-19} Bałaban's reason at p.370 l.37–38, "the exponential decay properties enforce the additional regularity", names that additional condition.
-      {#W12.21-20} VAR (14) asks U_0 ∈ 𝔘_k({Ω_j}, C₁B₃ε₁) and |Ū₀^j − V| < C₁ε₁ "for some absolute constant C₁" (VAR p.280 l.15–21), one C₁ for both halves.
-      {#W12.21-21} So Bałaban's statement, as he uses it, is VAR (14) at U_{1,2} for some absolute constant C₁, with 𝔘_k's conditions at the index h on the band, and with them PBG's (3.35)–(3.36) at α₀ = C₁B₃ε₁ by REG's Sect. F and Proposition 6.
-      {#W12.21-22} Here ε₁ is the parameter of (14) for 𝐁″_k's problem.
-      {#W12.21-23} The data half asks C₁ε₁ > O(1)B₃²B₅M⁶ε_k, the bound |M^j(U_0^{(AL)}) − 1| of §11's scope condition.
-      {#W12.21-24} Off the band the membership holds at B₃ε_U^{(i)} for the minimisers U_i (VAR Theorem 1), ε_U^{(i)} their data bounds, which tend to 0 with γ.
-      {#W12.21-25} On the band the membership is derived in *The band regularity of U_{1,2}.* below, at B₃ε_U^{(i)} with C₁ = L³ (derived, not reviewed).
-      {#W12.21-26} It makes ε₁ tend to 0 with γ, which *10.5's premise at 𝐇″_k* needs (ε₂ → 0 against the fixed ε₁^{(1)}); the presupposition of Sects.
-      {#W12.21-27} D–E alone would give only C₁ε₁ ≤ c₁.
-      {#W12.21-28} So ε₁ is the larger of the data bound over C₁ and the ε_U^{(i)}, and it tends to 0 with γ.
-      {#W12.21-29} The value of C₁ is not printed; no use below needs more than some C₁ depending on d and L only, as VAR's B₃ does, and the downstream bounds carry it as C₁ (|J| ≤ C₁B₃ε₁(L^jη)^{−3}, §11).
-      {#W12.21-30} VAR (2) is this 𝔘-membership (REG (1.7) and (1.9)), so VAR (2) at the index h gives (3.35)–(3.36) by REG's Sect. F and Proposition 6, and its second line gives the current bound used on the strip.
-      {#W12.21-31} It does not give the Hölder entry of VAR (9) or |∇F|, which 10.5 reads; these are taken at the minimiser base V₀ below.
-      {#W12.21-32} Off the band (14) comes from U_1 and U_2 being minimisers (VAR Theorem 1), and the averages against the data of (1.54) are those of §11's scope condition (LFR II p.370 l.15–16, LFR I (1.87)).
-      {#W12.21-33} It is used as he uses it: for PBG's and VAR's operators of 𝐇″_k at U_{1,2}, and for the current gain on the strip.
-    - {#W12.22} *The band regularity of U_{1,2} (derived, one clean review).* Bałaban's reason (p.370 l.37–38) has two parts: the arguments of U_1 and U_2 are 1 on the band, and the exponential decay enforces the regularity.
-      {#W12.22-1} Both are made precise here.
+      {#W12.21-30} So VAR (2) at the index h gives (3.35)–(3.36) at α₀ = C₁B₃ε₁, and its second line gives the current bound used on the strip. The Hölder entry of VAR (9) and |∇F|, which 10.5 reads, are taken at the minimiser base V₀ below.
+      {#W12.21-24} Off the band the membership holds at B₃ε_U^{(i)} for the minimisers U_i (VAR Theorem 1), ε_U^{(i)} their data bounds, and the averages against the data of (1.54) are those of §11's scope condition (LFR II p.370 l.15–16, LFR I (1.87)).
+      {#W12.21-25} On the band it holds at L³B₃ε_U^{(i)} (*The band regularity of U_{1,2}.* below), so C₁ := L³. VAR's constants, B₃ included, depend on d and L, and C₁ is of this kind; the downstream bounds carry it as C₁ (|J| ≤ C₁B₃ε₁(L^jη)^{−3}, §11).
+      {#W12.21-22} Here ε₁ is the parameter of (14) for 𝐁″_k's problem. The data half asks C₁ε₁ > O(1)B₃²B₅M⁶ε_k, the bound |M^j(U_0^{(AL)}) − 1| of §11's scope condition, so ε₁ is the larger of this bound over C₁ and the ε_U^{(i)}.
+      {#W12.21-28} Hence ε₁ ≤ O(1)B₃²B₅M⁶ε_k by #W12.22-3, and ε₁ tends to 0 with γ, as *10.5's premise at 𝐇″_k* needs (ε₂ → 0 against the fixed ε₁^{(1)}).
+      {#W12.21-33} VAR (14) at U_{1,2} is used for PBG's and VAR's operators of 𝐇″_k at U_{1,2} and for the current gain on the strip.
+    - {#W12.22} *The band regularity of U_{1,2}.* Bałaban's reason (p.370 l.37–38) has two parts: the arguments of U_1 and U_2 are 1 on the band, and the exponential decay enforces the regularity.
       {#W12.22-2} The result is VAR (2) at the index h on the band, for 𝐁″_k's sequence, with L³B₃ε_U^{(i)} on the side of U_i, ε_U^{(i)} the data bound of U_i's problem.
       {#W12.22-3} The data of U_1 are M^k(U_0^{(AL)}) on Λ ∩ Ω″_k, V″ on Λ^c, and 1, and those of U_2 are 1 and V″ (p.370 l.28–29), so ε_U^{(i)} ≤ O(1)B₃²B₅M⁶ε_k, the bound of §11's scope condition (LFR I (1.87)) with its O(1) taken at least the constant of the small-field conditions of order ε_k that V″ satisfies (as in *10.5's premise at 𝐇″_k* and *The collar of 𝐁₁.*). ε_U^{(i)} is not 10.5's fixed ε₁^{(1)}.
       - {#W12.23} The strips.
@@ -2738,17 +2477,17 @@
         {#W12.23-2} This is the sequence Ω̃ = Ω_0 ⊃ Ω_1 ⊃ … ⊃ Ω_h, with Ω_n a union of L^nηM₁-cubes and dist(Ω_n, Ω_{n−1}^c) ≥ L^nηM₁.
         {#W12.23-3} So its layer n, Ω_n ∖ Ω_{n+1}, has a width ≥ M₁L^{n+1}η, and its finest layer is a strip of width ≥ LM₁ bonds along ∂Ω̃, whose variables are the bond variables themselves (VAR (3)–(4): Ū^0 = U on Λ_0, and the residual gauge group has u = 1 on 𝔅_k ⊃ Λ_0; CRE p.256 l.26). 𝐁₂ has the same structure on the other side, from 𝐁_h((Ω̃)^c).
         {#W12.23-4} The refinement blocks carry the arguments 1 of (1.53), and p.370 l.37 states that the arguments are 1 on the band.
-        {#W12.23-5} In detail, with the domains of (1.52)–(1.53) taken within Z (the LF note's convention (R-Z), *The chain.*), the band is (Ω″_{h+1})^c ∩ Ω″^{∼2}_{h+1} ∩ Z, and Ω″_{h+1} ∩ Z = Z ∖ Z″_{h+1} by LFR I (1.12) (p.179 l.35), so the band lies in Z″_{h+1} ⊂ Z″_k (LFR I p.195 l.42).
+        {#W12.23-5} In detail, with the domains of (1.52)–(1.53) taken within Z (the LF note's convention (RZ), *The chain.*), the band is (Ω″_{h+1})^c ∩ Ω″^{∼2}_{h+1} ∩ Z, and Ω″_{h+1} ∩ Z = Z ∖ Z″_{h+1} by LFR I (1.12) (p.179 l.35), so the band lies in Z″_{h+1} ⊂ Z″_k (LFR I p.195 l.42).
         {#W12.23-6} On its part in Ω̃ the data of U_1 are 1⌈_{Z″_k∩Ω̃}, and the other arguments of U_1, M^k(U_0^{(AL)}) on Λ ∩ Ω″_k and V″ on Λ^c, sit off the band, since Ω″_k ⊂ Ω″_{h+1} and Λ^c ⊂ (Z″_k)^c.
         {#W12.23-7} On its part in Ω̃^c the data of U_2 are 1⌈_{(Ω̃)^c∩Ω″^{∼2}_{h+1}}.
         {#W12.23-8} Both strips lie in the band: the collar 𝐁_h(Ω̃) lies within 2M₁ of ∂Ω̃ at the scale h (CRE p.256 l.62, "Ω^{∼−2} ⊂ Ω_j"; LFR II p.371 l.2), and the band extends one layer of the ∼-cubes on each side of ∂Ω̃, MR_{h+1} at the scale h + 1 (LFR I p.179 l.7–8), with 2M₁ ≤ LMR_{h+1}; the same holds for 𝐁_h(Ω̃^c).
-        {#W12.23-9} Under (R-Z), U_1 lives on Ω̃ ∪ Z^c and U_2 on Ω̃^c ∩ Z, so the only interface between them is ∂(Ω̃^c ∩ Z).
+        {#W12.23-9} Under (RZ), U_1 lives on Ω̃ ∪ Z^c and U_2 on Ω̃^c ∩ Z, so the only interface between them is ∂(Ω̃^c ∩ Z).
         {#W12.23-10} It lies in Z, away from ∂Z: Ω̃^c ∩ Z ⊂ Z″_{h+1} ⊂ Ω^c_{h+1} ∩ Z, and every point of Z^c lies at a distance ≥ dist(Ω_k, Ω^c_{k−1}) ≥ 8MR_ka_k from Ω^c_{k₀+1} ∩ Z ⊃ Ω^c_{h+1} ∩ Z (the LF note's §4(d), *The cubes □₀ at Z.*).
         {#W12.23-11} So the only interface that meets the band is ∂Ω̃ ∩ Z.
       - {#W12.24} The band lies in the layer h of 𝐁″_k.
         {#W12.24-1} On Z, Ω″_{h+1} = Ω^{∼5}_{h+1} ∩ Z by LFR I (1.11)–(1.12), and Ω″^{∼2}_{h+1} adds two layers of the MR_{h+1}-cubes of the scale h + 1, so the band lies in Ω^{∼7}_{h+1} ∖ Ω_{h+1}.
-        {#W12.24-2} The LF note's *The middle layers.* (derived, not reviewed) gives dist(Ω_{h+1}, Ω_h^c) ≥ 8MR_{h+1}a_{h+1}, from CRE (3.5) together with the construction of Z′_j there; in print, "Each renormalization step adds at least ten layers of MR_k-cubes" (LFR I p.177 l.18–19) supports it.
-        {#W12.24-3} So Ω^{∼7}_{h+1} ⊂ Ω_h = Ω″_h, and the band lies in Ω″_h ∖ Ω″_{h+1}, 𝐁″_k's layer h.
+        {#W12.24-2} The LF note's *The middle layers.* (its #4.317-0) gives dist(Ω_{h+1}, Ω_h^c) ≥ 8MR_{h+1}a_{h+1}, from CRE (3.5) together with the construction of Z′_j there (also LFR I p.177 l.18–19: "Each renormalization step adds at least ten layers of MR_k-cubes").
+        {#W12.24-3} So Ω^{∼7}_{h+1} ∩ Z ⊂ Ω_h ∩ Z ⊂ Ω″_h, and the band lies in Ω″_h ∖ Ω″_{h+1}, 𝐁″_k's layer h.
       - {#W12.25} The cut.
         {#W12.25-1} Every configuration with these averages is 1 on the bonds of both finest strips, so U_{1,2} = 1 there, whatever representative of the minimal orbits is taken. ∂Ω̃ is a union of faces of cubes, so each plaquette lies in the closure of Ω̃ or in that of its complement, and the bonds on ∂Ω̃ are 1 from both sides.
         {#W12.25-2} A plaquette or a current that reads bonds of both U_1 and U_2 reads only bonds within one bond of ∂Ω̃.
@@ -2757,28 +2496,25 @@
         {#W12.26-1} On the band outside the strips, the layers of 𝐁₁ and 𝐁₂ are 𝐁″_k's, and VAR Theorem 1 for U_i gives (2) at the index h with B₃ε_U^{(i)}.
       - {#W12.27} The block size.
         {#W12.27-1} The collar's layers are only LM₁ wide in their own units, so VAR's Sect. F cube □̃, at the distance 2R₁M₁L^nη around a cube of the side 2R₁M₁L^nη (p.300 l.28–37), would reach through all the finer layers to the cut at the block size M₁.
-        {#W12.27-2} As everywhere at the joins, VAR is applied at the block size M′ of the LF note's *The joins.* (*The block size M′.*, *The separation.*): M′ a power of L at least VAR's R₁M₁ and a multiple of it, and CRE's M₁ := KM′ with K ≥ 12d + 1.
-        {#W12.27-3} Its R₁ is 1 in the sense of the LF note's *R₁ = 1 (a renaming of the product).*, equivalently VAR's block size M₁^{VAR} kept and its R₁ raised to M′/M₁^{VAR}: VAR's own constructions, the cubes of Theorem 1 and of Sect. F, (163), and (165), are run at the cube parameter M′, and the results of [3, 5, 6] that VAR invokes are applied at VAR's own block size, with R′M′/M₁^{VAR} ≥ R₁ blocks per layer.
+        {#W12.27-2} As everywhere at the joins, VAR is applied with its product R₁M₁ = M′, its block size M₁^{VAR} kept and its R₁ raised to M′/M₁^{VAR}, and CRE's M₁ := KM′ with K ≥ 12d + 1 (BP_JOINS_BLOCK_SIZE #4.22–#4.24).
         {#W12.27-4} This is not Bałaban's literal usage, which applies VAR at CRE's M₁ (CRE p.245 l.35–37, p.256 l.52–53).
-        {#W12.27-5} It rests on the LF note's *The block size M′.*, *R₁ = 1*, *The separation.*, and, through the band's layer, *The middle layers.* (derived, not reviewed there), and the derivation below inherits that status.
-        {#W12.27-6} Theorem 1 at M′ supplies the starting own-layer bounds on the collar.
-        {#W12.27-7} The collar then satisfies VAR (1) at the size M′ with R′ = LK − 1 > 4dL, VAR's ratio condition for its Sect. F cubes at R₁ = 1, so □̃ ⊂ B^{n−1}(Λ_{n−1}) ∪ B^n(Λ_n) ⊂ Ω_{n−1} (p.300 l.37).
+        {#W12.27-6} Theorem 1 at R₁M₁ = M′ supplies the starting own-layer bounds on the collar.
+        {#W12.27-7} The collar then satisfies VAR (1) with R = R′R₁ blocks of M₁^{VAR} (BP_JOINS_BLOCK_SIZE #4.23-0), R′ = LK − 1 > 4dL, which is VAR's ratio condition R > 4dLR₁ for its Sect. F cubes (#W12.237-3), so □̃ ⊂ B^{n−1}(Λ_{n−1}) ∪ B^n(Λ_n) ⊂ Ω_{n−1} (p.300 l.37).
         {#W12.27-8} VAR prints the step at j = k, "a general case can be obtained by obvious rescalings" (p.300 l.37), and it is used at the collar's layer n in that sense.
         {#W12.27-9} Below, R₁M₁ in VAR's Sect. F stands for M′, and B₃, δ₀, B₀, B₁, C₂, and C₄ are VAR's constants at that size in this sense, of d and L.
       - {#W12.28} On the strips: the step of Sect. F. Theorem 1 gives (2) only at the strip's own layer n < h.
         {#W12.28-1} At the index h the conditions are stronger by L^{2(h−n)} for the plaquettes and by L^{3(h−n)} for the currents (VAR (2): ε₀L^{−2j}η² and ε₀L^{−2j}(L^jη)^{−1}).
         {#W12.28-2} The decay comes from Sect. F, whose step is not a fixed halving.
         {#W12.28-3} (161)–(162) (VAR p.303) bound the linear part on Δ₀ by ¼max{B₃ε₁, B₃e^{−½δ₀R₁M₁}ε₀}, where ε₁ is the data plaquette bound on □_k and ε₀ the bound (2) outside □_k, and (165) adds K(R₁M₁)²ε₀², K := B₀(C₄ + 4C₂)(36dL²B₁)².
-        {#W12.28-4} In the linear part the half comes only from (163) (the print's final ½ε₀ also uses (166) for the quadratic part, which is kept explicitly in θ below), B₃e^{−½δ₀R₁M₁} ≤ ½, for which Bałaban states "We may assume that R₁M₁ is sufficiently big" (p.304 l.2).
         {#W12.28-5} With (168), which doubles the bound for (2) on Δ₀, and ½x + y ≤ max(x, 2y), one step gives (2) on Δ₀ with max{B₃p^{loc}, θe^{old}}, θ := B₃e^{−½δ₀R₁M₁} + 4K(R₁M₁)²e^{old}.
-        {#W12.28-6} Here p^{loc} is the data plaquette bound on □_k and e^{old} is the supremum over □̃ of the (2)-bounds, each normalised at its own layer; VAR's (145) already absorbs the factor L² of the finer layer ("with L²ε₀η² on the right-hand side", p.300 l.39–40), and reading a coarser layer at its own-layer value only discards a gain.
+        {#W12.28-6} Here p^{loc} is the data plaquette bound on □_k and e^{old} is the supremum over □̃ of the (2)-bounds, each normalised at its own layer; VAR's (145) already absorbs the factor L² of the finer layer ("with L²ε₀η² on the right-hand side", p.300 l.39–40), and evaluating a coarser layer at its own-layer value only discards a gain.
         {#W12.28-7} Through the 𝔘-membership in (150), the current condition of the finer layer carries L³ in place of L²; this changes only constants such as K, absorbed by (163′) and the smallness for γ small.
         {#W12.28-8} The cubes are taken in VAR's class: a cube of the index n meets Ω_n but not Ω_{n+1} (p.300 l.28), so a block of the layer n near Ω_{n+1} is treated by a cube of the index n + 1, whose output, normalised at the index n + 1, is stronger than needed at the layer n: its chain count starts at the index n + 1, and the conversion to the layer n gains the factor L^{−3} for the currents and L^{−2} for the plaquettes, which covers the count's loss.
         {#W12.28-9} Such a cube exists for every block: an index-n cube with □_k and □̃ off Ω_{n+1}, or else an index-(n + 1) cube, since K > 4d and L > 2d.
         {#W12.28-10} For the index-(n + 1) cube the block lies in the finer part □′_k of its local problem, where VAR prints no output (Δ₀ ⊂ B^j(Λ_j), p.302 l.45); there the local index of (152) at the points of □′_k costs at most factors of L in B₃ and K, which are absorbed before M′ is fixed.
         {#W12.28-11} So the local determining set (148)–(149) of every step carries the original data on □_k.
       - {#W12.29} The contraction.
-        {#W12.29-1} B₃ and δ₀ depend on d and L only ((162), p.303), so (163) is taken at the collar in the stronger form (163′) B₃e^{−½δ₀M′} ≤ ½L^{−3}, a lower bound on M′, hence on CRE's M₁ = KM′, of the same kind as CRE's conditions on M₁, which are lower bounds (the LF note's *The block size M′.*).
+        {#W12.29-1} B₃ and δ₀ depend on d and L only ((162), p.303), so VAR's (163), B₃e^{−½δ₀R₁M₁} ≤ ½ ("We may assume that R₁M₁ is sufficiently big", p.304 l.2), is taken at the collar in the stronger form (163′) B₃e^{−½δ₀M′} ≤ ½L^{−3}, a lower bound on M′, hence on CRE's M₁ = KM′, of the same kind as CRE's conditions on M₁, which are lower bounds (the LF note's *The block size M′.*).
         {#W12.29-2} Under (163′) and 4KM′²B₃ε_U^{(i)} ≤ ½L^{−3}, which holds for γ small, θ ≤ L^{−3} at every step, since the bounds only decrease.
       - {#W12.30} The chains.
         {#W12.30-1} As in the LF note's layered rerun (its *The real part.*, *The iteration.*), the limit bound at a block is at most the supremum over chains of steps of θ^{length}B₃p^{loc} at the chain's end, since the term θ^mε₀ of the starting bound tends to 0.
@@ -2791,8 +2527,7 @@
       - {#W12.31} So U_{1,2} satisfies VAR (14) on the band at the index h with C₁ = L³, a constant of d and L, and ε₁ the larger of the ε_U^{(i)} and the data bound over C₁.
         {#W12.31-1} PBG's (3.35)–(3.36) follow from it by REG's Sect. F and Proposition 6, as above.
         {#W12.31-2} The conditions added are (163′) on M′ and the smallness of ε_U^{(i)} for γ small.
-        {#W12.31-3} The ε_h-scale of p.361–362 is then a consistency check, not an input.
-    - {#W12.32} *10.5's premise at 𝐇″_k (derived, not reviewed).* 10.5 also reads the Hölder entry of VAR (9) and |∇F| at its real base (*The base and the local gauge.*).
+    - {#W12.32} *10.5's premise at 𝐇″_k.* 10.5 also reads the Hölder entry of VAR (9) and |∇F| at its real base (*The base and the local gauge.*).
       {#W12.32-1} VAR (2) does not contain these, so they are not taken at U_{1,2}.
       {#W12.32-2} Bałaban's expansion (1.54) (p.370) reads U_k^0 = (exp iη𝐇″_k(𝐆″_kJ_{1,2}, H″_{1,k}Q̃_·(η𝐀₀)⌈_{Z″_k∩Ω″^{∼2}_{h+1}})U_{1,2})^{(u_k^0)^{−1}}.
       {#W12.32-3} Here U_k^0 is the configuration (1.50) at B = 0, the minimiser of 𝐁″_k's problem at its data: Bałaban defines it as the minimiser function U_{𝐁″_k} at the data of (1.50) (p.370 l.14) and uses it as such, with VAR Theorem 1.
@@ -2805,24 +2540,24 @@
         {#W12.34-3} VAR (19) holds at the background U_{1,2} by VAR (14) there, derived in *The band regularity of U_{1,2}.*, with ε₂ as below.
       - {#W12.35} So 10.5 is run at 𝐇″_k with the base V₀ and the real point U_{1,2} = V′V₀, V′ := e^{iB′}, with ϱ + ε₂ in place of ϱ, also in ϱ̄ and α_c.
         {#W12.35-1} Its conditions O(1)(ϱ + ε₂) ≤ C₁^{(1)}ε₁^{(1)}/4 and O(1)(ϱ + ε₂) ≤ α₁^A/L hold for γ small once 10.5's conditions on ϱ hold with half the right sides, a condition of the same kind, in §8's list: ε₁^{(1)}, C₁^{(1)}, and α₁^A, the ε₁ and C₁ of 10.5's one-step problem and its threshold, are fixed before γ (its conditions B₅ε₁^{(1)} ≤ a₁/2 and O(1)(R₀M₀)²L⁴C₀ε₁^{(1)} ≤ 1 contain no coupling).
-        {#W12.35-2} One fixed ε₁^{(1)} serves both the one-step problem and VAR (9) for V₀, since VAR Theorem 1's hypotheses are monotone in ε₁: any ε₁ between the actual data parameter and a₁ is admissible. 10.5 reads V₀'s VAR (9)–(10) only through §11's pointwise cube fitting (VAR's class cubes of the index m or m − 1 at each point of a layer m, with M_V = R₁M₁ or 3LR₁M₁), whose M_V ≤ M(ε₁^{(1)}) = R₁M₁a₁/ε₁^{(1)} (VAR p.279 l.28) asks ε₁^{(1)} ≤ a₁/(3L), one more upper bound on ε₁^{(1)}.
-        {#W12.35-3} These bounds, with O(1)L⁴C₀ε₁^{(1)} ≤ α₀, are imposed after α₀, M′, and K, so ε₁^{(1)} is fixed after them, and before γ. ε₂ is VAR's (19), ε₂ ≥ B₁(ε₀^𝔘 + C₁ε₁) (VAR p.281 l.19, there written ε₀), at the base U_{1,2}, with ε₀^𝔘 the 𝔘-parameter of the target U_k^0 and C₁ε₁ that of the base: ε₂ = B₁(B₃ε₁(U_k^0) + C₁ε₁) (derived, not reviewed).
-        {#W12.35-4} Here B₃ε₁(U_k^0) is the regularity of the minimiser U_k^0 by VAR Theorem 1 at its data, whose bound O(1)B₃²B₅M⁶ε_k on Z″_k is that of §11's scope condition (LFR I (1.87)) and which off Z″_k are V″ under the small-field conditions of the order ε_k, and C₁ε₁ is the base's parameter of *The content of the statement.* So ε₂ ≤ B₁(O(1)B₃³B₅M⁶ε_k + C₁ε₁), which tends to 0 with γ by *The band regularity of U_{1,2}.* Its premise reads only V₀'s layer bounds, and U_{1,2} enters through V′.
+        {#W12.35-2} One fixed ε₁^{(1)} serves both the one-step problem and VAR (9) for V₀, by #W8.12-8. 10.5 reads V₀'s VAR (9)–(10) only through §11's pointwise cube fitting (VAR's class cubes of the index m or m − 1 at each point of a layer m, with M_V = R₁M₁ or 3LR₁M₁), whose M_V ≤ M(ε₁^{(1)}) = R₁M₁a₁/ε₁^{(1)} (VAR p.279 l.28) asks ε₁^{(1)} ≤ a₁/(3L), one more upper bound on ε₁^{(1)}.
+        {#W12.35-3} These bounds, with O(1)L⁴C₀ε₁^{(1)} ≤ α₀, are imposed after α₀, M′, and K, so ε₁^{(1)} is fixed after them, and before γ. ε₂ is VAR's (19), ε₂ ≥ B₁(ε₀^𝔘 + C₁ε₁) (VAR p.281 l.19, there written ε₀), at the base U_{1,2}, with ε₀^𝔘 the 𝔘-parameter of the target U_k^0 and C₁ε₁ that of the base: ε₂ = B₁(B₃ε₁(U_k^0) + C₁ε₁).
+        {#W12.35-4} Here B₃ε₁(U_k^0) is the regularity of the minimiser U_k^0 by VAR Theorem 1 at its data, whose bound O(1)B₃²B₅M⁶ε_k on Z″_k is that of §11's scope condition (LFR I (1.87)) and which off Z″_k are V″ under the small-field conditions of the order ε_k, and C₁ε₁ is the base's parameter of *The hypotheses of VAR's Sects. D–E at U_{1,2}.* So ε₂ ≤ B₁(O(1)B₃³B₅M⁶ε_k + C₁ε₁), which tends to 0 with γ by *The band regularity of U_{1,2}.* Its premise reads only V₀'s layer bounds, and U_{1,2} enters through V′.
         {#W12.35-5} In 10.5's notation U^B := ι(V₀), the lift of the base.
         {#W12.35-6} Run B's background ι(U_{1,2}) is ι(e^{iB′}V₀) = e^{i(ε/L)𝐒′}U^B, with a_{j(x)}|𝐒′(x)| + a_{j(x)}²|∇𝐒′(x)| ≤ 2C_δ(ε₀)L^{7/3}·O(1)ε₂ by the flow of the LF note's *The Fine Side at the Multiscale Chain.*, *The bound.*, run from V₀ along e^{itB′}V₀ with B′/ε in place of A_c (V₀ satisfies VAR (9)–(10), and B′ has the layered bounds above).
         {#W12.35-7} So run B's background is a point U′U^B of 10.5 with ϱ + O(1)C_δ(ε₀)L^{7/3}ε₂ in place of ϱ, within the conditions above for γ small.
         {#W12.35-8} The function compared is the (111) function with the current J_{1,2}, at the pair (ι_YU_{1,2}, U_{1,2}) of (iii).
-    - {#W12.36} *§11's oscillation at U_{1,2} (derived, not reviewed, with its base at the layer j).* §11 bounds the first variation of the blocking artifact through osc_p(TF) ≤ 4dε|∇F| + 4δ_T|F| (the Cauchy note's l.764), with F the fine curvature of the lift and |∇F| ≤ C₀ε₁a_j^{−3} from (9.2).
+    - {#W12.36} *§11's oscillation at U_{1,2}.* §11 bounds the first variation of the blocking artifact through osc_p(TF) ≤ 4dε|∇F| + 4δ_T|F| (the Cauchy note's #C10.4.50), with F the fine curvature of the lift and |∇F| ≤ C₀ε₁a_j^{−3} from (9.2).
       {#W12.36-1} At U_{1,2} the second differences of B′ are not bounded at the scale of the layer: VAR (19) bounds only its first differences, ∂*∂, and Δ.
       {#W12.36-2} So the oscillation is split at the base.
       - {#W12.37} Let c_t := e^{itB′}V₀, 0 ≤ t ≤ 1, so c_0 = V₀ and c_1 = U_{1,2}, and W_t := ι_Y(c_t).
         {#W12.37-1} The fine curvature satisfies F(W_1) = F(W_0) + ∫₀¹(D_{W_t}ℒ_ι(c_t)B′ + Q_t)dt.
         {#W12.37-2} Here ℒ_ι(c_t)B′ is the fine field of the derivative of the lift in the direction B′; it is H₁𝔡B′ + D_Bγ plus the interface-twist term of CMP 99 (1.31) at the bonds crossing from Λ₀ to Λ₁, which 10.5 drops for data vanishing near the collar and which here lies at distance ≥ M₁a_k from X, so it is bounded with the (1 − χ)v tail below.
-        {#W12.37-3} Q_t collects the commutator terms, at most c_{br}·4dε|ℒ_ι(c_t)(B′/ε)||F(W_t)| per fine plaquette (the Cauchy note's l.762, with the connection field B′/ε of the dimensionless logarithm B′).
+        {#W12.37-3} Q_t collects the commutator terms, at most c_{br}·4dε|ℒ_ι(c_t)(B′/ε)||F(W_t)| per fine plaquette (the Cauchy note's #C10.4.48-1, with the connection field B′/ε of the dimensionless logarithm B′).
       - {#W12.38} W_0 = ι_Y(V₀) is the lift of a minimiser, as at the other pairs: (9.2) holds at the (k + 1)-step minimiser with V₀'s data, and W_0 differs from it by the field of the Cauchy note's §9.7 at the layer j (*The base at the layer j.* below) and by the tail of ι_Y against ι (the Cauchy note's §9.8, *The tail.* and *The consequences.*), rerun with a layered input.
         - {#W12.39} §9.8's input is homogeneous: the mismatch B of *The collar mismatch.* is bounded through |F| ≤ C_Fε₁/a² at one scale a.
           {#W12.39-1} Here the points of Y^∼ carry |F| ≤ C_Fε₁a_{j′}^{−2} at their own layers j′, with a_{j′} ≥ ε, so B is at most LC_LC_Fε₁/ε per fine bond.
-          {#W12.39-2} That is (a/ε)² times the homogeneous bound LC_LC_F(ε/a)ε₁/a for every a, and it is read below at a = a_k, as in the Cauchy note's l.544.
+          {#W12.39-2} That is (a/ε)² times the homogeneous bound LC_LC_F(ε/a)ε₁/a for every a, and it is read below at a = a_k, as in the Cauchy note's #C9.8.17-3–#C9.8.17-4.
         - {#W12.40} Y^∼ exceeds Y by M₁a_k ≥ M₁a_j, so on X and within 2L fine spacings of it the decay of *The decay.*, at its rate δ_ι (written δ₀ there), gives e^{−δ_ιM₁a_k/ε} in place of e^{−δ_ιM₁L^j}, with the same factor e^{δ_ι(R_ι/L + 2)M₁} in C(ε₀).
           {#W12.40-1} *The consequences.* then bound the tail by (a_k/ε)²C(ε₀, δ_ιM₁)ε₁e^{−δ_ιM₁a_k/(2ε)}L^{j−k}, with C(ε₀, δ_ιM₁) = 2C(ε₀)/(eδ_ιM₁) ≤ C(ε₀) under δ_ιM₁ ≥ 1, and the factor L^{j−k} ≤ 1 is dropped.
         - {#W12.41} Half of the remaining decay pays the factor (a_k/ε)²: x²e^{−δ_ιM₁x/4} ≤ (8/(eδ_ιM₁))² ≤ 9 for x ≥ 0.
@@ -2830,23 +2565,23 @@
         - {#W12.42} So the tail is at most 9C(ε₀)(ε/a_j)^{1−2ε₀}ε₁ at every layer j ≥ 0, and the 9 is absorbed into C(ε₀).
           {#W12.42-1} *Away from X.* The tail is bounded through the weight ω of *The bootstrap.* below.
           {#W12.42-2} The mismatch is at most LC_LC_Fε₁/ε per fine bond, since a_{j′} ≥ ε, so *The decay.* at a = ε gives |T| ≤ C_ιε₁ε^{−1}e^{−δ_ιdist(·,Ω₁^c)/ε}, and with the fine differences ≤ 2L|T|/ε the curvature of W_0 changes by |F_T(x)| ≤ O(L)C_ιε₁ε^{−2}e^{−δ_ιdist(x,Ω₁^c)/ε}.
-          {#W12.42-3} Let δ′ := min(δ_ι, ⅛δ₁) and D := d_ε(x, Y); d_ε counts lattice steps, so εd_ε dominates the distance in dist, and dist(x′, Ω₁^c) ≥ dist(x, Ω₁^c) − εd_ε(x, x′), here and in the transfer at l.965.
+          {#W12.42-3} Let δ′ := min(δ_ι, ⅛δ₁) and D := d_ε(x, Y); d_ε counts lattice steps, so εd_ε dominates the distance in dist, and dist(x′, Ω₁^c) ≥ dist(x, Ω₁^c) − εd_ε(x, x′), here and in the transfer of #W12.62-6.
           {#W12.42-4} Since dist(x, Ω₁^c) ≥ 0 and, by the count of *The consequences.*, dist(x, Ω₁^c)/ε ≥ M₁a_k/ε − D − (R_ι/L + 2)M₁, e^{−δ_ιdist/ε} ≤ e^{δ′(R_ι/L + 2)M₁}e^{−δ′(M₁a_k/ε − D)}.
           {#W12.42-5} If ω(x) = (a_j/ε)², j = j(x), the bound e^{−δ_ιdist/ε} ≤ 1 gives |F_T(x)| ≤ O(L)C_ιε₁a_j^{−2}ω(x).
           {#W12.42-6} Otherwise ω(x) = e^{⅛δ₁D} ≥ e^{δ′D}, and (a_j/ε)²e^{−δ′M₁a_k/ε} ≤ (a_k/ε)²e^{−δ′M₁a_k/ε} ≤ (2/(eδ′M₁))² gives |F_T(x)| ≤ O(L)C_ιe^{δ′(R_ι/L + 2)M₁}(2/(eδ′M₁))²ε₁a_j^{−2}ω(x) ≤ O(L)C_ιe^{δ_ι(R_ι/L + 2)M₁}(2/(eδ′M₁))²ε₁a_j^{−2}ω(x), since δ′ ≤ δ_ι.
           {#W12.42-7} With K_T := max{1, (2/(eδ′M₁))²}, |F_T(x)| ≤ O(L)C(ε₀)K_Tε₁a_j^{−2}ω(x) at every x of Y^∼, with no upper bound on D. K_T is a constant of L and δ₁ under δ_ιM₁ ≥ 1 (§8, stage 3) and (F-ι), which gives ⅛δ₁M₁ ≥ ((3 + β₂)log L + log 2)/(2L).
-      {#W12.43} The Cauchy note's C(ε₀) contains C_ιe^{δ_ι(R_ι/L + 2)M₁} (its l.544, with its rate δ₀ the rate δ_ι and its R the lift's R_ι), so it grows with M₁ and enters no lower bound on M₁.
-      {#W12.43-1} So its oscillation is at most 4d(1 + 32d)C₀ε₁εa_j^{−3} + O(1)C(ε₀)(ε/a_j)^{1−2ε₀}ε₁a_j^{−2}.
-      - {#W12.44} *The base at the layer j (derived, not reviewed).* The Cauchy note's §9.4–9.7 take Ω_j to be the whole lattice, but each bound there is a bound in VAR's norms |·|_{(α)} of PBG (3.41), which are weighted layer by layer, and the inputs are local: (9.2)–(9.3) are VAR (9) at the layer of the point, and the sources r₁, r₀ of §9.3 satisfy |r₁| ≤ C_r(ε/a_j)ε₁a_j^{−2} and |r₀| ≤ C_r(ε/a_j)ε₁²a_j^{−3} at the layer j.
+      {#W12.43} The Cauchy note's C(ε₀) contains C_ιe^{δ_ι(R_ι/L + 2)M₁} (its #C9.8.17-3, with its rate δ₀ the rate δ_ι), so it grows with M₁ and enters no lower bound on M₁.
+      {#W12.43-1} So the oscillation of F(W_0) over a cell of the layer j is at most 4d(1 + 32d)C₀ε₁εa_j^{−3} + O(1)C(ε₀)(ε/a_j)^{1−2ε₀}ε₁a_j^{−2}.
+      - {#W12.44} *The base at the layer j.* The Cauchy note's §9.4–9.7 take Ω_j to be the whole lattice, but each bound there is a bound in VAR's norms |·|_{(α)} of PBG (3.41), which are weighted layer by layer, and the inputs are local: (9.2)–(9.3) are VAR (9) at the layer of the point, and the sources r₁, r₀ of §9.3 satisfy |r₁| ≤ C_r(ε/a_j)ε₁a_j^{−2} and |r₀| ≤ C_r(ε/a_j)ε₁²a_j^{−3} at the layer j.
         {#W12.44-1} Let s := 1 − ε₀ and |A|^♯_{(α)} := ε^{−s}|A|_{(α−s)}, so that a bound C(ε/a_{j(x)})^sε₁a_{j(x)}^α at every x reads |A|^♯_{(α)} ≤ Cε₁; then |r₁|^♯_{(−2)} ≤ C_rε₁ and |r₀|^♯_{(−3)} ≤ C_rε₁², since ε/a_j ≤ (ε/a_j)^s.
-        {#W12.44-2} The kernel sums of (9.8), (3.42) and (3.44) for 𝔊 (PBG Theorem 3.13), are summed over the layers of the source with Lemma 2.1 of [4] as in PBG's remark on p.398, which trades (L^jη)^α for (L^jη)^{α′}(L^{j′}η)^{α−α′} at a fixed fraction of δ₀, and the global form (3.47) holds for every γ ∈ [−4, 4].
+        {#W12.44-2} The kernel sums of (9.8), (3.42), and (3.44) for 𝔊 (PBG Theorem 3.13) are summed over the layers of the source with Lemma 2.1 of [4] as in PBG's remark on p.398, which trades (L^jη)^α for (L^jη)^{α′}(L^{j′}η)^{α−α′} at a fixed fraction of δ₀, and the global form (3.47) holds for every γ ∈ [−4, 4].
         {#W12.44-3} The Hölder factor 2(a/ε)^{ε₀} of (9.8) is taken at the layer of the source, where the shift by s = 1 − ε₀ absorbs it.
         {#W12.44-4} So ‖𝔊J‖^♯ ≤ C_G(ε₀)ε₁, with C_G(ε₀) enlarged by a constant of L and d.
         - {#W12.45} The fixed point needs only a bound at one argument, not a contraction in the shifted norm.
           {#W12.45-1} With B = 0, A₁* = −𝔊J − 𝔊(δV/δA′)(A₁*) (the Cauchy note's §9.4, VAR (116)), and (δV/δA′)(0) = 0, as (9.6) uses in T(0) = −𝔊J.
-          {#W12.45-2} The single-argument bound |(δV/δA′)(A)|^♯_{(−3)} ≤ O(1)C₄ε₄‖A‖^♯ (a rerun of the proof of VAR Proposition 4, used in (116)–(121) at B = 0, with ε₄ VAR's ball parameter of (115), max{|A₁|_{(−1)}, |∇A₁|_{(−2)}} < ε₄ (VAR p.294 l.59–60), subject to 2B₀C₁B₃ε₁ ≤ ε₄ ≤ a₄ (p.295 l.20), so ε₄ = O(ε₁) (p.295 l.2), taken here as ε₄ := 3B₀C₁B₃ε₁, the value Proposition 6 prints (p.295), with the data parameter ε₁ of (9.2)) follows as in the LF note's #4.238 (derived, not reviewed there), with the scale power ε^{−s}a_{j(b)}^{s} of |·|^♯ in place of its weight w.
+          {#W12.45-2} Let ε₄ be VAR's ball parameter of (115), max{|A₁|_{(−1)}, |∇A₁|_{(−2)}} < ε₄ (VAR p.294 l.59–60), subject to 2B₀C₁B₃ε₁ ≤ ε₄ ≤ a₄ (p.295 l.20); it is taken as ε₄ := 3B₀C₁B₃ε₁, the value Proposition 6 prints (p.295), with the data parameter ε₁ of (9.2). The single-argument bound |(δV/δA′)(A)|^♯_{(−3)} ≤ O(1)C₄ε₄‖A‖^♯ follows by rerunning the proof of VAR Proposition 4, used in (116)–(121) at B = 0, as in the LF note's #4.238, with the scale power ε^{−s}a_{j(b)}^{s} of |·|^♯ in place of its weight w.
           {#W12.45-3} The shifted norm |·|^♯_{(α)} = ε^{−s}|·|_{(α−s)} is VAR's layered norm at the exponent α − s ∈ [−4, 4], times ε^{−s}.
-          {#W12.45-4} The argument of l.449 uses four properties of the weight, each of which holds here.
+          {#W12.45-4} The rerun of the proof of VAR Proposition 4 in the shifted norm (#W12.45-2) uses four properties of the weight, each of which holds here.
           {#W12.45-5} First, a local factor next to the output point b carries the weight: the local derivative of C_j in 𝔇 at the block of b, V₀′ and its derivative at a plaquette of b, and the pointwise commutators (91)–(96).
           {#W12.45-6} The points of a block or plaquette lie in at most two adjacent layers, so the scale power changes there by at most L^s ≤ L. Second, the factors at the far end of a kernel, the current at b′ and the factors at c₁ in (85)–(86), are taken unshifted, the current in |·|_{(−3)}, ≤ C₁B₃ε₁ ≤ ε₄ (VAR's C₁; the second inequality is 3B₀ ≥ 1, B₀ an upper-bound constant taken ≥ 1/3 when it is fixed), and the factors at c₁ in |·|_{(−1)} and |∇·|_{(−2)}, ≤ ε₄, and the kernel's decay e^{−δ₀d} or e^{−½δ₀d} pays the sums over b′ and c₁ in VAR's layered norms, as in VAR.
           {#W12.45-7} Third, where A enters through HD(A), the weight sits on D, and |HD(A)|^♯_{(−1)} ≤ O(1)B₀|D(A)|^♯ by the kernel bound (3.133) of H summed by Lemma 2.1 of [4] (PBG p.398), the layer changes along H traded at a fixed fraction of δ₁; where D(A′) stands behind (QGQ*)^{−1} in VAR (88), the same holds with the decay (3.132) at the rate δ₁.
@@ -2872,19 +2607,19 @@
           {#W12.51-2} The terms H₁δB and HD(·) carry the Hölder entry of PBG (3.133), which holds for H and H₁ by PBG Theorem 3.12, again with sup-bounded arguments.
         - {#W12.52} The layers j′ of y′ are summed with the remark after PBG Theorem 3.1 (Lemma 2.1 of [4], p.398), which trades (L^jη)^α for (L^jη)^β(L^{j′}η)^γ, β + γ = α, at the cost of a fixed fraction of the decay rate δ₀.
           {#W12.52-1} This gives the layer factor (L^jη)^{−2−β₂} times the size of the data.
-      {#W12.53} So, by the integral formula of 10.5's field bullet, B′ = −η∫₀¹(δ𝐇″_k)(·)dt, with the data of size O(1)B₃(ε₀^𝔘 + C₁ε₁), the ε₀^𝔘-part being the 𝔘-parameter of the target, ≤ O(1)(B₃/B₁)ε₂ by ε₂ ≥ B₁(ε₀^𝔘 + C₁ε₁) (VAR p.281 l.19) (the factor B₃/B₁, a ratio of Bałaban's constants, is included in the O(1) and in C(β₂) below), has, at the layer j, in the covariant derivatives of U_{1,2} (the conversion to ∇_A at c_t costs a commutator of relative order c_{br}ε₂, since |B′| ≤ O(1)ε₂ε/a_j against the factor ε/a_j of a first difference), |B′| ≤ O(1)ε₂ε/a_j, first differences ≤ O(1)ε₂(ε/a_j)²,
-      {#W12.53-1} and their β₂-Hölder quotient ≤ C(β₂)ε₂(ε/a_j)²a_j^{−β₂}.
+      {#W12.53} So B′ = −η∫₀¹(δ𝐇″_k)(·)dt by the integral formula of 10.5's field bullet. The data have size O(1)B₃(ε₀^𝔘 + C₁ε₁) ≤ O(1)(B₃/B₁)ε₂ by ε₂ ≥ B₁(ε₀^𝔘 + C₁ε₁) (VAR p.281 l.19), with ε₀^𝔘 the 𝔘-parameter of the target; the ratio B₃/B₁ of Bałaban's constants is included in the O(1) and in C(β₂) below. Hence, at the layer j and in the covariant derivatives of U_{1,2}, |B′| ≤ O(1)ε₂ε/a_j and the first differences of B′ are ≤ O(1)ε₂(ε/a_j)².
+      {#W12.53-1} Their β₂-Hölder quotient is ≤ C(β₂)ε₂(ε/a_j)²a_j^{−β₂}. The conversion to ∇_A at c_t costs a commutator of relative order c_{br}ε₂, since |B′| ≤ O(1)ε₂ε/a_j against the factor ε/a_j of a first difference.
       - {#W12.54} Hence the fine curl of ℒ_ι(c_t)B′ has, on the box of side 2ε of a coarse plaquette, an oscillation at most C_ℬ(ε/a_j)^βC(β₂)ε₂a_j^{−2}, from the Hölder quotient of the gradient entry of ‖ℒ_ιB′‖_{1,β} over a distance ≤ (d + 6)^{1/2}ε.
         {#W12.54-1} Q_t adds O(1)c_{br}ε₂(ε/a_j)C₀′ε₁a_j^{−2}, under the bootstrap below.
         {#W12.54-2} These boxes, and those of the bullets below, are the boxes within 2ε of X, where the frozen term and its current slot live (the Cauchy note's §9.8, *The consequences.*), and where the weight ω of the bootstrap is at most e^{δ₁/4}; the factor e^{δ₁/4} is absorbed into the O(1)s and into C_ℬ.
-      - {#W12.55} The transport term 4δ_T|F| of osc_p(TF), with δ_T = 32d²ν_F, ν_F the supremum of ε²|F| over the paths of the plaquette (the Cauchy note's l.763–764), is read at W_1.
+      - {#W12.55} The transport term 4δ_T|F| of osc_p(TF), with δ_T = 32d²ν_F, ν_F the supremum of ε²|F| over the paths of the plaquette (the Cauchy note's #C10.4.49-2 and #C10.4.50), is read at W_1.
         {#W12.55-1} There |F(W_1)| ≤ |F(W_0)| + sup_t(|D_{W_t}ℒ_ι(c_t)B′| + |Q_t|) ≤ O(1)C₀′ε₁a_j^{−2}, by the bootstrap below at t = 1 with ω ≤ e^{δ₁/4}, with C₀′ε₁ as below.
         {#W12.55-2} So the transport term is at most 128d²(O(1)C₀′ε₁)²(ε/a_j)²a_j^{−2}, which is below the bound of the gradient term, since (ε/a_j)² ≤ (ε/a_j)^β and O(1)C₀′ε₁ ≤ 1 for γ small.
       - {#W12.56} So, with the lift bounds at the global layer (below), osc_p(TF) at ι_Y(U_{1,2}) ≤ O(1)C₀′ε₁(ε/a_j)^{β_o}a_j^{−2}, β_o := min(β, 1 − 2ε₀), with (ε/a_j)^{β_o} in place of ε/a_j; the base term of W_0 is in C₀′ε₁ (defined in the bootstrap below).
         {#W12.56-1} The divergence-form bound of ∇b₁ at the pairs of 𝐇″_k therefore reads |K| ≤ O(1)(ε/a_j)^{β_o}C₀′ε₁a_j^{−2}.
         {#W12.56-2} The terms built from it carry (ε/a_j)^{β_o} ≤ (ε/a_{m(ω)})^{γ_w} in place of ε/a_j, since j ≥ m(ω) and γ_w = min(β, (1 − ε₀)/3) ≤ β_o for ε₀ ≤ 2/5.
-        {#W12.56-3} This is within δ_w(ω) of §8, with C_ℬ, C(β₂), and C(ε₀), constants of L, d, β, ε₀, and Bałaban's constants, C_ℬ also of M′ through C_ℒ″, which contains C_ι, and C(ε₀) also of M₁, M′ (through C_ι), and R_ι (l.946), in C_w.
-      - {#W12.57} *The lift bounds at the global layer (derived, not reviewed).* 10.5's real-point bounds at V′V₀, (H_ℒ) and the Hölder bound of leg 2, are stated for data G^Af and G^A(·, x) vanishing near the collar of Y^∼ (10.5, *The bound.*), with norms at the local-shell scale L^nε.
+        {#W12.56-3} This is within δ_w(ω) of §8, with C_ℬ, C(β₂), and C(ε₀), constants of L, d, G, β, ε₀, and Bałaban's constants (#W12.76; B_ι depends on d and L only, PBG p.423 l.28), and C(ε₀) also of M₁, M′ (through C_ι), and R_ι (#W12.42-6), in C_w.
+      - {#W12.57} *The lift bounds at the global layer.* 10.5's real-point bounds at V′V₀, (H_ℒ) and the Hölder bound of leg 2, are stated for data G^Af and G^A(·, x) vanishing near the collar of Y^∼ (10.5, *The bound.*), with norms at the local-shell scale L^nε.
         {#W12.57-1} Here the data v := B′/ε are global and are read at the global layer a_j.
         {#W12.57-2} The bounds are rerun in this normalisation.
         - {#W12.58} The collar.
@@ -2903,23 +2638,23 @@
             {#W12.60-3} So the excess is at most O(1)K_Mε₂a_{j(c)}^{−2}(ε/a_{j(c)})^βω(c), since (a/ε)^β ≤ (a/ε)².
             {#W12.60-4} It enters the sums of *The layers.* as the other weakened local quantities of *The normalisation.* do.
           - {#W12.61} The crude part.
-            {#W12.61-1} (1 − χ)v vanishes within ⅓M₁a_k of Y. At a point x of Y^∼ let D := d_ε(x, Y), and let D′ be the distance of x from the support of (1 − χ)v in the units ε, so D + D′ ≥ ⅓M₁a_k/ε. 10.5's crude bound |∇_Bℒ_ιw(x)| ≤ C_ιε^{−1}Σ_ce^{−½δ₁d_ε(x,c)}|w(c)|, with a rate ¼δ₁ of the kernel paying the sum over c, gives it at most O(1)C_ιε^{−1}e^{−¼δ₁D′}sup|v| ≤ O(1)C_ιε₂ε^{−2}e^{−¼δ₁D′}, with sup|v| ≤ O(1)ε₂/a_{min} and a_{min} ≥ ε.
-            {#W12.61-2} At every x, relative to ε₂a_j^{−2}ω(x), j = j(x), this is at most O(1)C_ι if ω(x) = (a_j/ε)², and otherwise, with ω(x) = e^{⅛δ₁D}, at most O(1)C_ι(a_j/ε)²e^{−⅛δ₁(D + D′)} ≤ O(1)C_ι(a_k/ε)²e^{−δ₁M₁a_k/(24ε)} ≤ O(1)C_ιK_M.
-            {#W12.61-3} At x within 2ε of X ⊂ Y, D ≤ 2, so D′ ≥ ⅓M₁a_k/ε − 2, and relative to ε₂a_j^{−2}(ε/a_j)^β it is at most O(1)C_ι(a_j/ε)^{2+β}e^{−¼δ₁D′} ≤ O(1)C_ιe^{δ₁/2}(a_k/ε)³e^{−δ₁M₁a_k/(12ε)} ≤ O(1)C_ιK_M, since a_j ≤ a_k and β < 1.
+            {#W12.61-1} (1 − χ)v vanishes within ⅓M₁a_k of Y. At a point x of Y^∼ let D := d_ε(x, Y), and let D′ be the distance of x from the support of (1 − χ)v in the units ε, so D + D′ ≥ ⅓M₁a_k/ε. 10.5's crude bound |∇_Bℒ_ιw(x)| ≤ B_ιε^{−1}Σ_ce^{−½δ₁d_ε(x,c)}|w(c)|, with a rate ¼δ₁ of the kernel paying the sum over c, gives it at most O(1)B_ιε^{−1}e^{−¼δ₁D′}sup|v| ≤ O(1)B_ιε₂ε^{−2}e^{−¼δ₁D′}, with sup|v| ≤ O(1)ε₂/a_{min} and a_{min} ≥ ε.
+            {#W12.61-2} At every x, relative to ε₂a_j^{−2}ω(x), j = j(x), this is at most O(1)B_ι if ω(x) = (a_j/ε)², and otherwise, with ω(x) = e^{⅛δ₁D}, at most O(1)B_ι(a_j/ε)²e^{−⅛δ₁(D + D′)} ≤ O(1)B_ι(a_k/ε)²e^{−δ₁M₁a_k/(24ε)} ≤ O(1)B_ιK_M.
+            {#W12.61-3} At x within 2ε of X ⊂ Y, D ≤ 2, so D′ ≥ ⅓M₁a_k/ε − 2, and relative to ε₂a_j^{−2}(ε/a_j)^β it is at most O(1)B_ι(a_j/ε)^{2+β}e^{−¼δ₁D′} ≤ O(1)B_ιe^{δ₁/2}(a_k/ε)³e^{−δ₁M₁a_k/(12ε)} ≤ O(1)B_ιK_M, since a_j ≤ a_k and β < 1.
             {#W12.61-4} Its oscillation is at most twice its supremum.
             {#W12.61-5} The interface-twist term of dι_Y lies outside the (⅔M₁a_k)-neighbourhood of Y, by the inclusion above, and is bounded in the same way.
         - {#W12.62} The normalisation. 10.5's pointwise bounds, the refined gradient and the bullets of *The Hölder bound.*, are sums Σ_ce^{−½δ₁d_ε(x,c)} of local quantities at c.
           {#W12.62-1} These are |∇_Av(c)|, ε^{β₂}‖∇_Av‖_{β₂} near c, ε|F||v|(c), the term ε²|H*J||v|(c) of Δ_π^{(2)}, and the shell excess of *The collar.* The scale L^nε enters only through the shell bounds of ε|F| and of the current, and through the final normalisation (L^nε)^β.
           {#W12.62-2} At a point c of the global layer j(c) the bounds of B′ above give |v| ≤ O(1)ε₂a_{j(c)}^{−1}, |∇_Av| ≤ O(1)ε₂a_{j(c)}^{−2}, and ‖∇_Av‖_{β₂} ≤ C(β₂)ε₂a_{j(c)}^{−2−β₂}.
           {#W12.62-3} The curvature is ε|F(W_t)| ≤ 2C₀′ε₁εa_{j(c)}^{−2}ω(c) under the bootstrap below.
-          {#W12.62-4} The current satisfies |H*J(W_t)| ≤ O(1)L³[M′α₀a_j^{−3} + C_ιC(ε₀)ε₁(ε/a_j)^{1−2ε₀}ε^{−1}a_j^{−2} + C_ιC_ℬε₂ε^{−1}a_j^{−2}ω(c) + LC_ιε₁ε^{−3}e^{−δ′dist(c,Ω₁^c)/ε}] at c in the layer j = j(c), with α₀ PBG's parameter of §8, stage 4 (not the bootstrap's α₀^W).
+          {#W12.62-4} The current satisfies |H*J(W_t)| ≤ O(1)L³[M′α₀a_j^{−3} + B_ιC(ε₀)ε₁(ε/a_j)^{1−2ε₀}ε^{−1}a_j^{−2} + B_ιC_ℬε₂ε^{−1}a_j^{−2}ω(c) + LC_ιε₁ε^{−3}e^{−δ′dist(c,Ω₁^c)/ε}] at c in the layer j = j(c), with α₀ PBG's parameter of §8, stage 4 (not the bootstrap's α₀^W).
           {#W12.62-5} Its four parts are run B's class current (3.36) at the (k + 1)-step minimiser with V₀'s data, PBG's O(1)Mα₀(L^jη)^{−3} (p.396 l.29) with PBG's M the block size M′; the T-part of W_0, the field of *The base at the layer j.*, read through H*J = (DH)*X with |X_T| ≤ O(1)(|∇T| + |F||T|) as in 10.5's last bullet, where (DH)* at the one-step scale costs ε^{−1}; the change from W_0 to W_t, through the first differences of ℒ_ι(c_s)B′, with the same cost ε^{−1};
-          {#W12.62-6} and the tail of ι_Y against ι away from X (the W_0 bullet above), read in the same way through |∇T| ≤ 2L|T|/ε ≤ 2LC_ιε₁ε^{−2}e^{−δ_ιdist/ε} ≤ 2LC_ιε₁ε^{−2}e^{−δ′dist/ε} at the source points c′; (DH)* has the rate ½δ₁ (PBG (3.133)), so moving the profile from c′ to c costs e^{δ′d_ε(c,c′)} ≤ e^{⅛δ₁d_ε(c,c′)}, the factor e^{−⅛δ₁d_ε(c,c′)} of the kernel pays it, and the remaining rate ⅜δ₁ pays the sum over c′, whose constant is at most the crude part's sum constant at the rate ¼δ₁ in C_ℒ″ (l.979).
-          {#W12.62-7} After the factor ε²|v| of Δ_π^{(2)}, with |v| ≤ O(1)ε₂a_j^{−1}, the four parts contribute O(1)L³ times M′α₀(ε/a_j)², C_ιC(ε₀)ε₁(ε/a_j)^{2−2ε₀}, C_ιC_ℬε₂(ε/a_j)ω(c), and LC_ιε₁(a_j/ε)e^{−δ′dist(c,Ω₁^c)/ε} relative to ε₂a_j^{−2}.
-          {#W12.62-8} The last is at most LC(ε₀)K_Tε₁(ε/a_j)ω(c), with the factor C_ιe^{δ_ι(R_ι/L + 2)M₁} in C(ε₀) as in the W_0 bullet (l.946), by the two cases of that bullet: (a_j/ε) = (ε/a_j)ω(c) if ω(c) = (a_j/ε)², and otherwise (a_j/ε) ≤ (ε/a_j)(a_k/ε)² and (a_k/ε)²e^{−δ′(M₁a_k/ε − D)} ≤ K_Te^{δ′D} ≤ K_Tω(c).
+          {#W12.62-6} and the tail of ι_Y against ι away from X (the W_0 bullet above), read in the same way through |∇T| ≤ 2L|T|/ε ≤ 2LC_ιε₁ε^{−2}e^{−δ_ιdist/ε} ≤ 2LC_ιε₁ε^{−2}e^{−δ′dist/ε} at the source points c′; (DH)* has the rate ½δ₁ (PBG (3.133)), so moving the profile from c′ to c costs e^{δ′d_ε(c,c′)} ≤ e^{⅛δ₁d_ε(c,c′)}, the factor e^{−⅛δ₁d_ε(c,c′)} of the kernel pays it, and the remaining rate ⅜δ₁ pays the sum over c′, whose constant is at most the crude part's sum constant at the rate ¼δ₁ in C_ℒ″ (#W12.61-1, #W12.76).
+          {#W12.62-7} After the factor ε²|v| of Δ_π^{(2)}, with |v| ≤ O(1)ε₂a_j^{−1}, the four parts contribute O(1)L³ times M′α₀(ε/a_j)², B_ιC(ε₀)ε₁(ε/a_j)^{2−2ε₀}, B_ιC_ℬε₂(ε/a_j)ω(c), and LC_ιε₁(a_j/ε)e^{−δ′dist(c,Ω₁^c)/ε} relative to ε₂a_j^{−2}.
+          {#W12.62-8} The last is at most LC(ε₀)K_Tε₁(ε/a_j)ω(c), with the factor C_ιe^{δ_ι(R_ι/L + 2)M₁} in C(ε₀) as in the W_0 bullet (#W12.42-5–#W12.42-7), by the two cases of that bullet: (a_j/ε) = (ε/a_j)ω(c) if ω(c) = (a_j/ε)², and otherwise (a_j/ε) ≤ (ε/a_j)(a_k/ε)² and (a_k/ε)²e^{−δ′(M₁a_k/ε − D)} ≤ K_Te^{δ′D} ≤ K_Tω(c).
           - {#W12.63} The weakening.
             {#W12.63-1} Before the sums, each local quantity other than |∇_Av| is weakened to the form Kε₂a_{j(c)}^{−2}(ε/a_{j(c)})^βω(c), using ω ≥ 1, so that its bound scales as a_{j(c)}^{−2−β}; |∇_Av| ≤ O(1)ε₂a_{j(c)}^{−2}ω(c) scales as a_{j(c)}^{−2}.
-            {#W12.63-2} For ε^{β₂}‖∇_Av‖_{β₂} ≤ C(β₂)ε₂a^{−2}(ε/a)^{β₂} this uses β < β₂; for ε|F||v| ≤ O(1)C₀′ε₁ε₂a^{−2}(ε/a)ω it uses C₀′ε₁ ≤ 1; for the four parts of ε²|H*J||v| it uses M′α₀ ≤ 1 by R₀M₀M′α₀ ≤ 1 (§8, stage 4, where 10.5 writes M for M′), C(ε₀)ε₁ ≤ C(ε₀)K_Tε₁ ≤ C₀′ε₁ ≤ 1 with K_ℬ ≥ K_T ≥ 1 (*The bootstrap.*), C_ℬε₂ ≤ C_ℒ″C_ℬε₂ ≤ 1 with C_ℒ″ ≥ 1, and the exponents 2, 2 − 2ε₀, 1, and 1, all ≥ β; the shell excess has this form by *The collar.* The factors O(1)L⁴, C_ι, and K_M are in C_ℒ″ of *The terms.*
+            {#W12.63-2} For ε^{β₂}‖∇_Av‖_{β₂} ≤ C(β₂)ε₂a^{−2}(ε/a)^{β₂} this uses β < β₂; for ε|F||v| ≤ O(1)C₀′ε₁ε₂a^{−2}(ε/a)ω it uses C₀′ε₁ ≤ 1; for the four parts of ε²|H*J||v| it uses M′α₀ ≤ 1 by R₀M₀M′α₀ ≤ 1 (§8, stage 4, where 10.5 writes M for M′), C(ε₀)ε₁ ≤ C(ε₀)K_Tε₁ ≤ C₀′ε₁ ≤ 1 with K_ℬ ≥ K_T ≥ 1 (*The bootstrap.*), C_ℬε₂ ≤ C_ℒ″C_ℬε₂ ≤ 1 with C_ℒ″ ≥ 1, and the exponents 2, 2 − 2ε₀, 1, and 1, all ≥ β; the shell excess has this form by *The collar.* The factors O(1)L⁴, B_ι, and K_M are in C_ℒ″ of *The terms.*
         - {#W12.64} The layers.
           {#W12.64-1} The kernel's rate ½δ₁ is split as ¼δ₁ + ⅛δ₁ + ⅛δ₁.
           {#W12.64-2} Across a layer boundary the bound of a weakened local quantity changes by the factor L^{2+β} ≤ L^{3+β₂}, and that of |∇_Av| by L².
@@ -2933,14 +2668,14 @@
           - {#W12.69} The remaining rate ⅛δ₁ pays the sum over c, a constant of δ₁ and d in C_ℒ″.
           {#W12.70} So the sums are at most O(1)L^{3+β₂} times the bounds at the layer j of x, with ω(x) in place of ω(c), at every x of Y^∼.
         - {#W12.71} The terms.
-          {#W12.71-1} Every term of 10.5's decomposition ℒ_ιv = Iv + H₁(𝔡v − QIv) − C̃₁G₁^{−1}Iv other than Iv has, at every x of Y^∼, a supremum at most O(1)L^{3+β₂}C_ℒ″(1 + C(β₂))ε₂a_j^{−2}(ε/a_j)^βω(x), by *The weakening.* and the sums of *The layers.* The crude part of *The collar.* adds at most O(1)C_ιK_Mε₂a_j^{−2}ω(x) at every x, and O(1)C_ιK_Mε₂a_j^{−2}(ε/a_j)^β at x within 2ε of X. The bounds come from these sources:
-          - {#W12.72} H₁(𝔡v − QIv), through |h| ≤ Cε(6√dε)^{β₂}‖∇_Av‖_{β₂} + C_trε²|F||v|;
+          {#W12.71-1} Every term of 10.5's decomposition ℒ_ιv = Iv + H₁(𝔡v − QIv) − C̃₁G₁^{−1}Iv other than Iv has, at every x of Y^∼, a supremum at most O(1)L^{3+β₂}C_ℒ″(1 + C(β₂))ε₂a_j^{−2}(ε/a_j)^βω(x), by *The weakening.* and the sums of *The layers.* The crude part of *The collar.* adds at most O(1)B_ιK_Mε₂a_j^{−2}ω(x) at every x, and O(1)B_ιK_Mε₂a_j^{−2}(ε/a_j)^β at x within 2ε of X. The bounds come from these sources:
+          - {#W12.72} H₁(𝔡v − QIv), through |h| ≤ Cε(6√dε)^{β₂}‖∇_Av‖_{β₂} + max(C, 1)C_trε²|F||v|;
           - {#W12.73} C̃₁D*(DP_πIv) and C̃₁DRD*Iv, through (3.44) at ε_H = ½ applied to λ − λ_x and μ − μ_z, so that the local constant of the source is subtracted and only ε^{β₂}‖λ‖_{β₂} and O(1)ε²|F||λ| remain;
           - {#W12.74} Δ′P_πIv, through ε|F||v|; and
           - {#W12.75} Δ_π^{(2)}Iv, through ε²|H*J||v|.
-          {#W12.76} Here C_ℒ″ ≥ 1 is a constant of L, d, G, δ₁, B₀, B₀′(½), C_ι, C₂, C_tr, and c_F; it contains the factors O(1)L⁴, C_ι, and K_M of *The normalisation.* and *The collar.*, the constant of the sum over c in *The layers.* and that of the crude part's sum over c at the rate ¼δ₁ in *The collar.*, and the factor L² between the units of F and of the first differences (*The bootstrap.*).
-          {#W12.76-1} The fine differences of Iv oscillate over a box of side 2ε by at most the oscillation of ∇_Av over a coarse cell of side 6ε, plus 4C_trε|F||v| (the Cauchy note's l.870).
-          {#W12.76-2} That is at most (6√dε)^{β₂}C(β₂)ε₂a_j^{−2−β₂} + 8C_trC₀′ε₁ε₂(ε/a_j)a_j^{−2}ω(x).
+          {#W12.76} Here C_ℒ″ ≥ 1 is a constant of L, d, G, δ₁, B₀, B₀′(½), B_ι, C₂, C_tr, and c_F; it contains the factors O(1)L⁴, B_ι, and K_M of *The normalisation.* and *The collar.*, the constant of the sum over c in *The layers.* and that of the crude part's sum over c at the rate ¼δ₁ in *The collar.*, and the factor L² between the units of F and of the first differences (*The bootstrap.*).
+          {#W12.76-1} The fine differences of Iv oscillate over a box of side 2ε by at most the oscillation of ∇_Av over a coarse cell of side 6ε, plus 4C_trε|F||v| (the Cauchy note's #C10.4.109-5, with its transport term as in #W10.5.27).
+          {#W12.76-2} That is at most (6√dε)^{β₂}C(β₂)ε₂a_j^{−2−β₂} + O(1)C_trC₀′ε₁ε₂(ε/a_j)a_j^{−2}ω(x), by |v| ≤ O(1)ε₂a_j^{−1} and ε|F| ≤ 2C₀′ε₁εa_j^{−2}ω (#W12.62-2, #W12.62-3).
         - {#W12.77} The bootstrap.
           {#W12.77-1} Let C₀′ε₁ := K_ℬ(C₀ + C(ε₀))ε₁ + C_ℬC(β₂)ε₂ with K_ℬ a fixed constant of d, L, δ₁, and δ_ι, at least O(L)K_T (the base bound carries the L-powers of §11's cube fitting and the tail away from X of the W_0 bullet), C_ℬ := O(1)L^{3+β₂}C_ℒ″(1 + C(β₂)) (a constant of this bullet, distinct from 10.1's C_ℒ′), and impose C_ℒ″C_ℬε₂ ≤ 1, a smallness condition met for γ small.
           {#W12.77-2} Here and below the first differences of a field of link variables are in the units ε^{−2}: ε^{−2} times the dimensionless differences of the link variables, so that the bound ε₂(ε/a_j)² of B′ above reads ε₂a_j^{−2}.
@@ -2966,30 +2701,24 @@
           {#W12.82-1} At a box of side 2ε within 2ε of X, where ω ≤ e^{δ₁/4}, the oscillation of the fine curl of ℒ_ι(c_t)B′ is at most C_ℬC(β₂)ε₂(ε/a_j)^βa_j^{−2}, by *The terms.*, with the crude part there at x within 2ε of X, and the fine differences of Iv, since β < β₂ and C₀′ε₁ ≤ 1, with e^{δ₁/4} absorbed into C_ℬ.
           {#W12.82-2} The bound |F(W_1)| ≤ O(1)C₀′ε₁a_j^{−2} of the transport bullet is the bootstrap at t = 1 at these boxes.
           {#W12.82-3} These are the inputs used above, at the global layer and on the whole band, the cut included, since χ, the layers, and §9.7 use no property of the cut.
-      - {#W12.83} Also, in the order of the bounds above: Q_t includes the gauge part D_Bγ, the dlog term, and the change of frame T_1/T_0 between W_0 and W_1, all of order ≤ O(dL)c_{br}ε₂(ε/a_j)C₀′ε₁a_j^{−2}; the gauge part rotates the TF of the box together.
+      - {#W12.83} Q_t includes the gauge part D_Bγ, the dlog term, and the change of frame T_1/T_0 between W_0 and W_1, all of order ≤ O(dL)c_{br}ε₂(ε/a_j)C₀′ε₁a_j^{−2}; the gauge part rotates the TF of the box together.
         {#W12.83-1} In the gradient entry ∇G∇*, (ε/a_j)^{β_o} becomes (ε/a_j)^{β_o−β′}, which fits δ_w for 0 < β′ ≤ β_o − γ_w.
         {#W12.83-2} This needs β_o > γ_w, so the Hölder exponent needs β ∈ ((1 − ε₀)/3, 1) with ε₀ < 2/5, which §8's stage 0 (β ∈ [3/4, 1), 0 < ε₀ < 1/125) covers.
         {#W12.83-3} The smallness O(1)C₀′ε₁ ≤ 1 holds for γ small: the ε₁ of (9.2) here is the data parameter of V₀'s problem, O(1)B₃²B₅M⁶ε_k by *The background pairs.*, which tends to 0 with γ, and ε₂ tends to 0 with γ (*10.5's premise at 𝐇″_k.*).
-      {#W12.84} The bullet uses the derived membership (*The band regularity of U_{1,2}.*, for VAR (19) at U_{1,2}), the minimiser V₀, the Cauchy note's (9.2) and §9.4–9.8 at the layer j (*The base at the layer j.*, derived, not reviewed), the LF note's #4.238 for the single-argument bound (derived, not reviewed there), VAR Propositions 4 and 6, PBG Theorems 3.12 and 3.13 with (3.132), and 10.5 rerun at the global layer under (F-ι).
-      {#W12.84-1} The pair is (ι_Y(U_{1,2}), U_{1,2}), reached from the base pair (ι_YV₀, V₀) along c_t, with the localised lift ι_Y throughout.
-      {#W12.84-2} It holds on the whole band, the cut included.
-      {#W12.84-3} The LF note's items at U_{1,2} near the cut, which concern the terms read there, are separate (§12's Status).
+      {#W12.84} The pair is (ι_Y(U_{1,2}), U_{1,2}), reached from the base pair (ι_YV₀, V₀) along c_t, with the localised lift ι_Y throughout.
 - {#W12.85} The operators.
   {#W12.85-1} PBG's Theorems 3.1–3.3 and (3.133) hold for each problem at its background, by PBG Corollary 3.6 and the general theorems at real configurations satisfying (3.35)–(3.36), given the layer widths.
-  {#W12.85-2} For 𝐁″_k's middle layers h + 1 ≤ j ≤ k − N₀ the width is at least 3LMR_{j+1} in their own units (the LF note's *The middle layers.*, derived, not reviewed); at the joins the widths are LM₁, under (J-W).
+  {#W12.85-2} For 𝐁″_k's middle layers h + 1 ≤ j ≤ k − N₀ the width is at least 3LMR_{j+1} in their own units (the LF note's *The middle layers.*, its #4.317-0); at the joins the widths are LM₁, under (J-W).
   {#W12.85-3} For 𝐁₁, Bałaban separates U_{𝐁₁} from U_{𝐁₂} "by the boundary conditions" (p.370 l.22–25): the problem is posed on Ω″^∼_{h+1}, with the collar's fine data layers inside it.
   {#W12.85-4} Its operators carry the Dirichlet condition outside Ω″^∼_{h+1}, in the same sense as all of PBG's operators on their Ω₀ (PBG p.394 l.29–36: "All operators we will consider will be defined by using Dirichlet boundary conditions on Ω_0").
-  {#W12.85-5} The difference from the local problems of one cube □ is that at ∂Ω″^∼_{h+1} the two runs' finest domains share their boundary, so the margin that gives 10.1's (S) is missing.
-  {#W12.85-6} (S) is proved only for the margin of the local shells of one cube □ (10.1, *The condition (S).*), not at ∂Ω″^∼_{h+1}.
+  {#W12.85-5} The difference from the local problems of one cube □ is that at ∂Ω″^∼_{h+1} the two runs' finest domains share their boundary, so the margin of the local shells that gives 10.1's (S) (*The condition (S).*) is missing there.
   {#W12.85-7} The collar's strip, where (S) is missing, is bounded run by run without (S) in *The collar and the strips.* below, and the walks whose local problems reach ∂Ω″^∼_{h+1} are compared without (S) in *The collar at ∂Ω and at the reflex edges.*
 - {#W12.86} The fixed points.
-  {#W12.86-1} §11, with *The current term of VAR (143).* and *The Sects.
-  {#W12.86-2} D–E form (111).*, holds for any determining set with the alignment above and any operators with VAR's bounds (*The inverse of the linearising transformation.* uses no property of H beyond (53)–(54)).
+  {#W12.86-1} §11, with *The current term of VAR (143).* and *The Sects. D–E form (111).*, holds for any determining set with the alignment above and any operators with VAR's bounds (*The inverse of the linearising transformation.* uses no property of H beyond (53)–(54)).
 {#W12.87} So (β) reduces to (W-δ) and §11 at the aligned pairs on the layers at shared scales ≥ 1: for 𝐇_k at (ι(U^A_k), U^A_k), for 𝐇″_k at (ι(U^A_{1,2}), U^A_{1,2}) in the (111) form, and for 𝐇_{𝐁₁} at (ι(U^A_{k,Λ}), U^A_{k,Λ}) in the (111) form.
-{#W12.87-1} The collar of 𝐁₁ and the finest-scale strips of the sets 𝐁(Y_i) are bounded run by run below, and the source of (1.55) in 𝐇″_k, which reads the 𝐁₁ problem, is compared below (both derived, not reviewed).
-{#W12.87-2} (W-δ) itself is derived, not reviewed.
+{#W12.87-1} The collar of 𝐁₁ and the finest-scale strips of the sets 𝐁(Y_i) are bounded run by run below, and the source of (1.55) in 𝐇″_k, which reads the 𝐁₁ problem, is compared below.
 
-{#W12.88} *The gauge transformations (derived, not reviewed).* CMP 98 (106) writes u(x) as an ordered product over the scales j = k − 1, …, 0 of one-step factors.
+{#W12.88} *The gauge transformations.* CMP 98 (106) writes u(x) as an ordered product over the scales j = k − 1, …, 0 of one-step factors.
 {#W12.88-1} The factor of the scale j is R(U₀(Γ^{(j+1)}_{x_{j+1},x}))^{−1} times the return to the axial gauge of the j-fold double bar on the block of x_{j+1}, a function of the configuration on that block.
 {#W12.88-2} In run B the product has one more factor, of its scale 0.
 {#W12.88-3} By CMP 98 (91), the (j + 1)-fold double bar of run B is the j-fold double bar about MU^B of the one-step double bar ((B4) of the Cauchy note's §10.1).
@@ -3007,10 +2736,10 @@
   {#W12.92-2} Put δ := Q₁(𝐇^B − ℒ_ι𝐇^A) + c₁.
   {#W12.92-3} At a point x of the layer j(x), (106) is applied on the block of 𝐁″_k containing x, of the scale j(x), and runs over the scales j′ < j(x).
   {#W12.92-4} This is Bałaban's statement: "u^0_k(x) is an analytic function of 𝐇″_k restricted to this block of the set 𝐁″_k, to which the point x belongs.
-  {#W12.92-5} This function is given by the explicit formula (106) [12]" (LFR II p.373 l.30–31; checked).
+  {#W12.92-5} This function is given by the explicit formula (106) [12]" (LFR II p.373 l.30–31).
   {#W12.92-6} The block of the scale j′ containing x lies in the block of the scale j(x) containing x, hence in Ω_{j(x)}, where |δ| ≤ |δ|_{(−1)}a_{j(x)}^{−1}.
   {#W12.92-7} The factor of the scale j′ is an analytic function of the configuration on its block, whose linear part is the block average.
-  {#W12.92-8} It has the Lipschitz constant O(1)L^{j′+1}ε (derived, not reviewed).
+  {#W12.92-8} It has the Lipschitz constant O(1)L^{j′+1}ε.
   {#W12.92-9} In the units of the block of the scale j(x), the field has |A| ≤ |𝐇|_{(−1)}, and CMP 98 Proposition 4 (p.38–39) makes the angles Q_{j′}(U_0, ηA) of the j′-fold double bar analytic in A for |A| < c₄, with |Q_{j′}(U_0, ηA)| < 2α₁L^{j′}η for |A| < α₁ ((131), p.38).
   {#W12.92-10} A Cauchy estimate on |A| < ½α₁ gives the Lipschitz constant 4L^{j′}η for these angles.
   {#W12.92-11} By (105)–(106) (p.33), the factor of the scale j′ is a product near 1 of the inverse block average of at most O(d)L such angles and of the angles along Γ_{x_{j′+1},x_{j′}}, of length at most dL, which gives O(1)L^{j′+1}η with η = ε/a_{j(x)} in these units.
@@ -3021,12 +2750,22 @@
   {#W12.93-1} On the layers at shared scales ≥ 1 these values are read at run A's sites, the values compared above.
   {#W12.93-2} At a finest-scale layer of a boundary-layer set, run B has an extra layer with no counterpart in run A; it is bounded run by run in *The collar and the strips.* below.
 {#W12.94} So, on the layers at shared scales ≥ 1, the run difference of u^0_k, u_1, and u_{k,Λ} is bounded by (W-δ) for the corresponding function (the form (c) with the bridge, and §11's Δ_𝐇), by C₂L²L^{−j} from c₁, and by O(1)(ε/a_j) from f^B_0.
-{#W12.94-1} On the young histories every one of these carries the factor of the Status.
+{#W12.94-1} On the young histories every layer index is ≥ k/2 − 1 (§11, *The alignment of the global sets.*), so every one of these carries a positive power of L^{1−k/2}.
 {#W12.94-2} At a scale-0 layer, ε/a_0 = 1 and the factor is lost.
 
-{#W12.95} *The collar and the strips (derived, not reviewed).*
-{#W12.96} *The collar at ∂Ω and at the reflex edges (derived, not reviewed).* The paragraphs below on the collar use the following, which holds at the reflex edges and at the boundary of the set concerned (Ω or Y_i).
-{#W12.96-1} These paragraphs are *The strip.*, *The enlargement-only walks.*, *The representation with the gain.*, *The sources.*, *The weight.*, (D2), the source of (1.55) and its uncancelled part, and the finest-scale strips of the sets 𝐁(Y_i).
+{#W12.95} *The collar and the strips.*
+{#WOG.6} **(Wδ-4) The collar of 𝐁₁ at the reflex edges of Ω and at ∂Ω.** The strip Ω ∖ Ω^A_2 at ∂Ω, Ω := Ω″^∼_{h+1}, is bounded below run by run through the crossing decay from the strip to the collar's layers n ≥ 2.
+{#WOG.6-1} The collar's layers are CRE's maximal domains, separated in the ℓ¹ distance (CRE p.256 l.57–62, PRT2 p.223 l.16), and are only one cube of the next scale wide.
+{#WOG.6-2} First, near a reflex edge of Ω (a face of ∂Ω of codimension ≥ 2 along which Ω^c is locally a convex wedge), for every n′ ≤ h a cube of 𝒟_{n′} touches the edge while it contains a block of the layer n′: for Ω^c = {x₁, x₂ ≤ 0} near the edge, □ = [0, 2c_{n′}]^d contains Q = [c_{n′}, 2c_{n′}]^d, whose ℓ¹ distance from the complement of the domain of the layer n′ − 1 is at least 2c_{n′} − dc_{n′}/(L − 1) ≥ c_{n′} for L > 2d.
+{#WOG.6-4} So the decay of such a cube's local operator, read at the single scale n′, gives no crossing between the strip and the layer n′.
+{#WOG.6-5} Second, the walks whose cubes have Ω₀(□) meeting ∂Ω are compared through local problems that reach ∂Ω, where 10.1's (S) is not available.
+{#WOG.6-6} These cubes are not a corner effect: at a flat face, Ω₀(□) ⊇ □̃⁴ meets ∂Ω for a fraction of order 4/L of every collar layer n′ = 2, …, h − 1.
+{#WOG.6-7} Third, §11's 𝔡_H is built from global suprema, which for 𝐁₁ include the strip, so for H_{𝐁₁}, 𝔊, 𝐇_{𝐁₁}, and the source of (1.55) it has no decay in h.
+{#WOG.6-8} The same occurs at the reflex edges and the boundaries of the boundary-layer sets Y_i (the finest-scale strips of the 𝐁(Y_i)).
+{#WOG.7} *The requirement.* The consumer charges each point of a history with h_n = C_hθ̃^n, n the history's birth scale (the Cauchy note, #C8.6.2-6), and the cut lies in the history's layer h ≥ n.
+{#WOG.7-1} So a collar term needs a run difference ≤ C(ε/a_h)^γ times Bałaban's bound of the term, for an exponent γ > 0 for which the other terms already fit (§8); no new rate enters θ̃.
+{#W12.96} *The collar at ∂Ω and at the reflex edges.* The paragraphs below on the collar use the following, which holds at the reflex edges and at the boundary of the set concerned (Ω or Y_i).
+{#W12.96-1} These paragraphs are *The strip.*, *The enlargement-only walks.*, *The representation with the gain.*, *The sources.*, *The weight.*, (D2), the run difference of the source of (1.55), and the finest-scale strips of the sets 𝐁(Y_i).
 {#W12.96-2} The collar of Y^∼ does not enter V(Y): run B's terms are functions of the right side of (1.55) (*The source of (1.55).*, *Run B's terms contain no d^B*).
 {#W12.96-3} It is stated for Ω := Ω″^∼_{h+1}.
 {#W12.96-4} For Y_i it holds with their collars, built by the same construction (CRE p.256–257).
@@ -3035,10 +2774,8 @@
     {#W12.97-1} Let □ be a cube of the collar's layer n′ whose Ω₀(□) leaves Ω or meets the collar's layers below n′ − 1, or whose □̃³ meets the layer n′ − 1, in particular a cube touching a reflex edge.
     {#W12.97-2} The last case makes □'s sequence agree with the collar's on □̃³, which the cells of 𝒟′ and 𝒟″ use (*The cells of 𝒟′ and 𝒟″ on the collar.* below).
     {#W12.97-3} (3.88) asks the local operator to agree with the global one where h_□ ≠ 0, including the layer index, the a_j, and the blocks B^j(y), and PBG's centred sequence does not achieve this there.
-    {#W12.97-4} One way to achieve it, the one taken here, is to pose its local problem on Ω′_m(□) := Ω_m(□) ∩ Ω^{col}_m, the intersection of PBG's sequence with the collar's domains Ω^{col}_m of the scale m (Ω^{col}_0 := Ω), with Dirichlet conditions outside Ω′_0(□), in each run with its own collar.
+    {#W12.97-4} So its local problem is posed on Ω′_m(□) := Ω_m(□) ∩ Ω^{col}_m, the intersection of PBG's sequence with the collar's domains Ω^{col}_m of the scale m (Ω^{col}_0 := Ω), with Dirichlet conditions outside Ω′_0(□), in each run with its own collar.
     {#W12.97-5} This is the 𝐁₁ problem's constraint structure of *The operators.*, with the fine data layers inside Ω and the Dirichlet condition outside its finest domain (PBG p.394 l.29–36; PRT2 p.248 l.4), restricted to Ω₀(□).
-    {#W12.97-6} PBG's device at its own outer boundary differs: it takes T₁ ∖ Ω₁ in place of Λ₀ (p.408 l.22), so its scale-0 cubes extend across ∂Ω₀.
-    {#W12.97-7} The intersected sequence is a choice, made in both runs.
   - {#W12.98} PBG's bounds for them.
     {#W12.98-1} The intersected sequence satisfies PRT2 (2.1)–(2.4) at the size R₀M₀: dist((Ω′_m)^c, Ω′_{m+1}) ≥ min(2R₀M₀, LM₁)L^mη = 2R₀M₀L^mη, and the domains are unions of R₀M₀-blocks of their scale.
     {#W12.98-2} Corollary 3.6 also asks that Ω′_0(□) lie in a cube of the class of (3.35) (p.408 l.6–9), whose cubes lie in two consecutive layers (p.396 l.14–17), while Ω′_0(□) spans the collar's layers 0, …, n′.
@@ -3062,10 +2799,10 @@
     {#W12.98-20} These include the cubes that are not intersected but whose □̃⁵ enters the layer n′ − 1, since the collar's layers are only about L big blocks wide.
     {#W12.98-21} The argument uses only (3.35) at the index n′ on □̃⁵.
     {#W12.98-22} So Theorems 3.1–3.3 hold for these local operators, in the weighted distance d′ of PRT2 (2.46) for {Ω′_m(□)}.
-  - {#W12.99} The cells of 𝒟′ and 𝒟″ on the collar (derived, not reviewed).
+  - {#W12.99} The cells of 𝒟′ and 𝒟″ on the collar.
     {#W12.99-1} §7 builds the sequences of the cells Q (□₀ in the second case, and 𝒟″'s cube □″) for the cells in the bulk, where PRT2 (2.2) separates the layers with R ≥ 12dL.
     {#W12.99-2} The collar's layers are only about L big blocks of their scale wide (CRE p.256 l.57–62), so a cube coarser than □₁ can meet □̃ or □̃₁ there, and a cube of the first case can meet a coarser cube.
-    {#W12.99-3} The cells whose □̃⁵ or Q̃⁵ meets a layer of the collar are built as follows, a choice made in both runs.
+    {#W12.99-3} The cells whose □̃⁵ or Q̃⁵ meets a layer of the collar are built as follows.
     {#W12.99-4} Each run builds them from its own collar by the same rule, so at the shared scales n ≥ 2 the two runs' sequences agree (Ω^A_n = Ω^B_{n+1}, *The collar's layers.*; run B's C^B_{n+1} is run A's C_n, and run B's C^B_0 adds the extra shell 2R₀M₀ε/L of §2), and where Ω′_0(Q) meets the strip they differ only at the strip's points, as for the intersected sequences (*The enlargement-only walks.*).
     {#W12.99-5} M₁ is PBG's block size KR₀M₀ (the M of §7), a_n = L^nη in run A's units, and distances are ℓ∞ distances unless stated.
     - {#W12.100} The cells and their partitions.
@@ -3107,9 +2844,9 @@
       {#W12.104-7} If □'s sequence is not intersected, □̃³ lies in the layers j and j + 1 (the criterion of *The local problems.*), and PBG's sequence agrees with the collar's there in the same way.
       {#W12.104-8} So the operators of □ and Q agree on □̃³, and the factor e^{−2δ₀M₁} of (3.97) and p.415 follows as in §7's agreement item.
     - {#W12.105} Corollary 3.6.
-      {#W12.105-1} Q̃² lies in the band, at the distance ≥ 2M₁a_h from its boundaries (§11, *So the telescoping holds term by term*), where the backgrounds are regular at the scale h ≥ n_Q.
+      {#W12.105-1} Q̃² lies in the band, at the distance ≥ 2M₁a_h from its boundaries (#W12.105-6–#W12.105-8), where the backgrounds are regular at the scale h ≥ n_Q.
       {#W12.105-2} So (3.35) holds on Q̃² at every index n ≤ h, in the axial gauge of Q̃², as for the collar cubes in *PBG's bounds for them.*, with Q̃², of the side ≤ 14M₁a_{j_Q} ≤ 14M₁a_h, in place of □̃⁵.
-      {#W12.105-3} Here the side of Q̃² is ≤ 14M′a_{j_Q}, with PBG's block size M′, and VAR's product is R₁M₁ = M′ (§8, the LF note's *R₁ = 1*).
+      {#W12.105-3} Here the side of Q̃² is ≤ 14M′a_{j_Q}, with PBG's block size M′, and VAR's product is R₁M₁ = M′ (#T2.7-1).
       {#W12.105-4} VAR's cube there has M_V = 7M′, a multiple of R₁M₁, admissible once M(ε₁) = R₁M₁(a₁/ε₁) ≥ 7M′, that is ε₁ ≤ a₁/7, a smallness of ḡ through §8's bounds on ε₁.
       {#W12.105-5} Such a cube, a union of big blocks of the scale h (VAR p.279 l.2), contains Q̃²: for j_Q = h, Q̃² is itself a union of scale-h big blocks of the side ≤ 14M′a_h, since p_Q is snapped to the scale j_Q; for j_Q < h, its side is ≤ 14M′a_h/L ≤ 13M′a_h, so it lies in an aligned cube of the side 14M′a_h.
       {#W12.105-6} Its enlargement □̃ has the side 18M′a_h at most, and Q̃² lies within 22M₁a_h of the cut, with CRE's M₁ = KM′ ≥ M′, so □̃ reaches at most 40M₁a_h from the cut.
@@ -3141,18 +2878,17 @@
     {#W12.107-14} So a contour from (Ω^{col}_{s−1})^c to Ω^{col}_s has an ℓ¹ length ≥ L^sM₁ξ inside the layer of the scale s − 1, and a weighted length ≥ LM₁.
     {#W12.107-15} This uses only the separation of the domains, not the shape of ∂Ω, so it holds at the reflex edges.
     {#W12.107-16} Every kernel of a walk term therefore decays in d_col between the points it connects, at its rate for the kernels on 𝐁₁'s own sequence and at its rate divided by c_d for the local constituents on the intersected sequences.
-    {#W12.107-17} Between a point of the strip and a point of the collar's layer n, a contour crosses at least n − 3 full layers, at e^{−½δ_minLM₁} ≤ L^{−3} each.
+    {#W12.107-17} Between a point of the strip and a point of the collar's layer n, a contour crosses at least n − 3 full layers, at e^{−½δ_minLM₁/c_d} ≤ L^{−3} each (#W12.107-13).
     {#W12.107-18} So the count of *The crossings.* holds at the reflex edges, in d_col in place of the count of cubes.
     {#W12.107-19} The per-layer decay that *The sources.*, *The weight.*, and (D2) use holds there too.
   - {#W12.108} The partition functions of a corner cube.
-    {#W12.108-1} K(h_□) of (3.88) reads a_j and B^j(y) at the points of supp ∂h_□. supp h_□ lies within the ℓ∞-distance (2/3)M₁a_{n′} of the centre of □ (PRT1 (1.118), h ∈ C₀^∞(]−2/3, 2/3[), rescaled as PRT2 p.229 l.12–15).
-    {#W12.108-2} Near a reflex edge its points can lie in a layer j ≠ n′.
-    {#W12.108-3} Since supp h_□ has the ℓ¹ radius ≤ (2/3)dM₁a_{n′} < L²M₁a_{n′} = LM₁a_{n′+1}, at most the width of the layer n′ + 1, for L > 2d/3, it does not cross the layer n′ + 1, so it reaches no layer coarser than n′ + 1, so j ≤ n′ + 1 and the factor L^{j−n′} below is at most L. At a point of the layer j the last term of (3.88) is at most a_j(L^jη)^{−2}·dL^jη|∇h_□|·|G′_□λ|, with |∇h_□| ≤ O(1)(ML^{n′}η)^{−1}.
-    {#W12.108-4} (3.42) for the local sequence, at the layer j of the evaluation point, gives |G′_□λ| ≤ B₀(L^jη)²|λ| for λ on a block.
-    {#W12.108-5} So this term is ≤ O(M^{−1})L^{j−n′}B₀|λ|, and the gradient and Laplacian terms of (3.88) likewise.
-    {#W12.108-6} So (3.89) holds for these cubes with the decay e^{−δ₀d′}, and its factors O(M^{−1})L^{j−n′} for the corner cubes of the different layers n′ that overlap at a point sum geometrically.
-    {#W12.108-7} The partition with Σh_□² = 1 and |∇h_□| ≤ O(1)(ML^{n′}η)^{−1} is PBG's, Bałaban's (2.36) of PRT2 (p.229 l.12–15), which he states for the multiscale family.
-    {#W12.108-8} It is the same at the reflex edges as at the flat interfaces.
+    {#W12.108-1} The partition is §7's normalised one, h_□ = φ_□/N with N ≥ 1 and Σ_□h_□² = 1 (#W7.16-11–#W7.16-11-2), defined in the same way at the reflex edges as at the flat interfaces. K(h_□) of (3.88) reads a_j and B^j(y) at the points of supp ∂h_□, and supp h_□ lies within the ℓ∞-distance (2/3)M₁a_{n′} of the centre of □ (#W7.16-11-2).
+    {#W12.108-2} Near a reflex edge the points of supp h_□ can lie in a layer j ≠ n′. At a point u of the layer j, the cubes with φ_□(u) ≠ 0 have scales i ≥ j − 1 (#W12.106-3), at most 2^d of each scale (#W7.16-11-3), and near a reflex edge several coarser scales can occur.
+    {#W12.108-3} Let |∂φ_□| ≤ c_φ(M₁a_i)^{−1} for □ ∈ 𝒟_i, c_φ a constant of h and d. Then Σ_□|∂φ_□(u)|² ≤ 2^dc_φ²Σ_{i≥j−1}(M₁a_i)^{−2} ≤ 2^{d+1}c_φ²(M₁a_{j−1})^{−2}, and |∂N| ≤ (Σ_□|∂φ_□|²)^{1/2} by 2N∂N = Σ_□2φ_□∂φ_□ and Cauchy–Schwarz.
+    {#W12.108-4} From ∂h_□ = ∂φ_□/N − φ_□∂N/N², N ≥ 1, and Σ_□φ_□² = N², Σ_□|∂h_□(u)|² ≤ 2Σ_□|∂φ_□|² + 2|∂N|² ≤ 2^{d+3}c_φ²(M₁a_{j−1})^{−2}. In the same way Σ_□|∂²h_□(u)|² ≤ O(1)(M₁a_{j−1})^{−4}, using |∂²N| ≤ (Σ_□|∂²φ_□|²)^{1/2} + 2Σ_□|∂φ_□|², from ∂²(N²) = 2N∂²N + 2(∂N)² = Σ_□2(φ_□∂²φ_□ + (∂φ_□)²).
+    {#W12.108-5} At a point u of the layer j, the last term of (3.88) for □ is at most a_j(L^jη)^{−2}·dL^jη|∂h_□(u)|·|G′_□λ|, and (3.42) for the local sequence at the layer j of u (the local layer is the collar's there, #W12.106-4) gives |G′_□λ| ≤ B₀(L^jη)²|λ| for λ on a block.
+    {#W12.108-6} Each step R′ = Σ_□K(h_□)G′_□h_□ of the expansion (3.90) (PBG p.409) carries h_□ at its right end, and Σ_□|∂h_□(u)|h_□(v) ≤ (Σ_□|∂h_□(u)|²)^{1/2}(Σ_□h_□(v)²)^{1/2} ≤ 2^{(d+3)/2}c_φ(M₁a_{j−1})^{−1}. So the sum over □ of these terms is at most O(1)a_jdB₀(L/M₁)|λ|, whatever the number of scales that overlap at u, and the gradient and Laplacian terms of (3.88) likewise.
+    {#W12.108-7} So (3.89) holds for these cubes with the decay e^{−δ₀d′} and the factor O(L/M₁), within §7's factor Lc_h*/M₁ (#W7.16-4).
   - {#W12.109} The comparison without (S) at ∂Ω.
     {#W12.109-1} Let ℒ̃ := χ_Bℒ_N as in 10.1, with χ_B the characteristic function of Ω′^B_0(□). 10.1's margin argument gives χ_AQ₁(1 − χ_B) = 0, except on the coarse bonds within 2ε of ∂Ω, where Q̄₁ reads fine bonds outside Ω.
     {#W12.109-2} Put r := χ_AQ₁(1 − χ_B)ℒ_N, supported on those bonds, with |r(c, c′)| ≤ C_ℒe^{−½δ_Qd_ε(c,c′)} by (H_ℒ).
@@ -3160,7 +2896,6 @@
     {#W12.109-4} A field v of 𝔉^A vanishes outside Ω′^A_0(□), so |v| ≤ 3ε sup|∇v| within 2ε of ∂Ω, and there, in run A's finest layer, |𝒪^Av| ≤ O(1)ε^{−1}‖v‖_{1,β;y}.
     {#W12.109-5} So the extra terms are sources of the form ϖ = 1 on run A's shell 0 at ∂Ω, of the kind of run B's extra-shell term of §5(a).
     {#W12.109-6} The strip's other differences are of the same kind, at its points: run B's extra fine layer, the averaging of the two runs' layers 0 and 1 there, and K(h_□) at the points of supp ∂h_□ on the strip.
-    {#W12.109-7} The strip's data in H's data space are treated in the next bullet.
   - {#W12.110} The strip's data block.
     {#W12.110-1} Each run's data space of the inverses (QGQ*)^{−1} and (QG_πQ*)^{−1} in H, G̃, and 𝔊 is split as 𝔇^X = 𝔇_1 ⊕ 𝔇^X_2.
     - {#W12.111} 𝔇_1 holds the data on run A's layers n ≥ 2.
@@ -3180,7 +2915,7 @@
     {#W12.117-1} The same holds with G_π in place of G.
     - {#W12.118} The first term is the form (b) for G, Q₁G^BQ₁* − G^A, between blocks of the two runs' inverses.
       {#W12.118-1} It is bounded per point by the bullets above.
-    - {#W12.119} The second and third terms pass through 𝔇_2 and are bounded absolutely: each is a product of blocks of D^X and K^X, the second term with two run-A blocks and one run-B block, the third with one run-A block and two run-B blocks; each is bounded absolutely, and no difference between runs is taken.
+    - {#W12.119} The second and third terms pass through 𝔇_2 and are bounded absolutely, with no difference between runs: the second is a product of two run-A blocks and one run-B block of D^X and K^X, the third of one run-A block and two run-B blocks.
       {#W12.119-1} Their kernels decay at the composite rate δ_min (§11), of which ½δ_min is kept for the crossings at complex s, as in *The strip.* So a term evaluated at x₀ that reads data at z carries e^{−½δ_min(d_col(x₀, S) + d_col(S, z))}, with S the strip.
       {#W12.119-2} As in *The crossings.* of *The strip.*, this is at most L^{−3(m(x₀)−5)₊}L^{−3(m(z)−5)₊}.
       {#W12.119-3} The data at z carry (a_{m(z)}/a_h) (*The data.*), and none at the layers ≥ h, where m(z) = h.
@@ -3217,7 +2952,7 @@
       - {#W12.131} ϑ_ℒ carries min(β₂, 1 − β′) ≥ ½ > γ_w.
       - {#W12.132} ϑ carries these and ε/a.
       - {#W12.133} ϑ_b carries β_H.
-        {#W12.133-1} Any β_H < 1 is allowed (*The artifact through covariances.*), and β_H ≥ γ_w is taken, a choice made in both runs.
+        {#W12.133-1} Any β_H < 1 is allowed (*The artifact through covariances.*), and β_H ≥ γ_w is taken.
       - {#W12.134} The cell-mean term carries β ≥ γ_w.
 
       {#W12.135} The derivation multiplies at most two factors at a point, such as q(x) and a field.
@@ -3235,25 +2970,23 @@
   {#W12.140-1} Its layers reach the finest scale within 2M₁ of ∂Ω″^∼_{h+1}.
   {#W12.140-2} The layers at run A's scales n ≥ 2 are aligned (*The collar's layers.*), so the remaining part is the strip of the width 2M₁a_2 at ∂Ω″^∼_{h+1}.
   {#W12.140-3} There the alignment of §11 fails, run B has an extra fine layer with no counterpart in run A, the young-history factor ε/a_j is O(1), and 10.1's (S) is not available at that boundary.
-  {#W12.140-4} *The strip.* below bounds each run's terms on the strip separately, within the consumer's weight, in the representation of U₁ with the gain, and the run difference of that representation's gauge factor is derived after it (both derived, not reviewed). ∂Λ does not meet the strip (*The representation with the gain.*).
+  {#W12.140-4} *The strip.* below bounds each run's terms on the strip separately, within the consumer's weight, in the representation of U₁ with the gain, and the run difference of that representation's gauge factor is derived after it. ∂Λ does not meet the strip (*The representation with the gain.*).
   {#W12.140-5} The collar also enters 𝐇″_k and u^0_k through (1.55).
   {#W12.140-6} The localised source 𝐆″_k(1 − θ)Q*_{𝐁₁}θ₁H*_{𝐁₁}J₁ contains H_{𝐁₁}, the operator of the whole 𝐁₁ problem, collar included, and θ₁ sits a few h-blocks from the collar's fine layers.
-  {#W12.140-7} *The source of (1.55).* below derives run B's (1.55) at the pair up to a small defect, and the run difference of its terms (derived, not reviewed).
-  {#W12.140-8} A route without alignment, not carried out: the cut lies in 𝐁″_k's layer h, so h ≥ j₀ − 1 ≥ k/2 − 1 in a young history (the LF note's *The configurations.*), and on (Ω″_{h+1})^c ∩ Ω″^{∼2}_{h+1} the backgrounds are regular at the scale h (*The band regularity of U_{1,2}.* in §12, derived, not reviewed, for U_{1,2}; VAR's (9)–(10) for U_k and U_{k,Λ}).
+  {#W12.140-7} *The source of (1.55).* below shows that run B's terms at the pair read the right side of (1.55), and bounds the run difference of that source.
+  {#W12.140-8} The cut lies in 𝐁″_k's layer h, so h ≥ j₀ − 1 ≥ k/2 − 1 in a young history (the LF note's *The configurations.*), and on (Ω″_{h+1})^c ∩ Ω″^{∼2}_{h+1} the backgrounds are regular at the scale h (*The band regularity of U_{1,2}.* for U_{1,2}; VAR's (9)–(10) for U_k and U_{k,Λ}).
   {#W12.140-9} Then every term of either run located in the collar's layer n carries a factor (a_n/a_h)^p from that regularity (p = 3 for the current J, p = 1 for a field), or the crossing decay L^{−4(h−n−1)} of (J-W) from the layers ≥ h, so the terms in the collar's finest layers need no comparison, while those in its layers n ≥ 2 are compared with δ_w(n)(a_n/a_h)^p ≤ (ε/a_h)^γ for p ≥ γ.
-  {#W12.140-10} Its inputs are: the size of 𝐇_{𝐁₁}'s data field −(1/i)log M^·(U_{k,Λ}) on Z″_k ∩ Ω″^∼_{h+1} (LFR II (1.57); Z″_k reaches the cut, p.370 l.28) in the collar's fine-layer norms, which is set by Bałaban's axial gauge in Λ (p.371 l.32–33) and must not depend on the size of Λ, and a lower bound M₁ ≥ 4R₀M₀, which keeps the local domains Ω₀(□) of the cubes in the collar's layers n ≥ 2 off the finest layer and off ∂Ω″^∼_{h+1}.
-  {#W12.140-11} The second input holds (checked, not reviewed).
+  {#W12.140-10} It uses two inputs: the size of 𝐇_{𝐁₁}'s data field −(1/i)log M^·(U_{k,Λ}) on Z″_k ∩ Ω″^∼_{h+1} (LFR II (1.57); Z″_k reaches the cut, p.370 l.28) in the collar's fine-layer norms, set by Bałaban's axial gauge in Λ (p.371 l.32–33) and bounded independently of the size of Λ, and the lower bound M₁ ≥ 4R₀M₀, which keeps the local domains Ω₀(□) of the cubes in the collar's layers n ≥ 2 off the finest layer and off ∂Ω″^∼_{h+1}.
+  {#W12.140-11} The second input holds.
   {#W12.140-12} CRE's M₁ "is the size of large cubes for which all the theorems of the previous papers, especially those concerning the variational problem, are valid" (CRE p.245 l.34–36).
   {#W12.140-13} PBG proves its theorems for big blocks of the size M = KR₀M₀, with K a positive integer and "M … much bigger than M₀" (PBG p.408 l.25–27).
   {#W12.140-14} So M₁ = KR₀M₀ in PBG's notation is a condition imposed on M₁ (PBG p.408 l.26–28; CRE p.245 l.35–36), and K ≥ 4 gives M₁ ≥ 4R₀M₀.
   {#W12.140-15} CRE's R₀ of p.245 l.32, the smallest power of L with R₀ ≥ (log g₀^{−2})^r, is a different constant from PBG's R₀.
-  {#W12.140-16} The first input holds in part.
+  {#W12.140-16} The first input has two parts, the size of the data and their gain.
   {#W12.140-17} Z″_k ⊂ Λ, and Bałaban states that U_{k,Λ} satisfies LFR I (1.84) (LFR II p.371 l.32–33), |M^j(U_{k,Λ}) − 1| < O(1)B₃B₅M⁶ε_k inside Λ at every scale j (LFR I p.197), with Λ in a cube of the size 100M by condition (i) (LFR I p.192).
   {#W12.140-18} So the data angles of 𝐇_{𝐁₁} are at most O(1)B₃B₅M⁶ε_k at every layer, independently of the size of Λ.
-  {#W12.140-19} The gain (a_n/a_h) of the route for these data in the collar's layers n < h is derived, not reviewed, with p = 1 for the data fields and p = 3 for the current:
-  - {#W12.141} (1.84) is uniform in j and does not give the gain.
-    {#W12.141-1} In Bałaban's gauge the gain fails: Q_k^{s*} puts the whole angle V(c) on the bonds between k-blocks and 1 inside them (CRE (1.3), p.246, with k-blocks for 1-blocks as at CRE p.257 l.34).
-    {#W12.141-2} So the data angles of the bonds of every scale that cross a k-block face are of the size ε_k.
+  {#W12.140-19} The gain (a_n/a_h) for these data in the collar's layers n < h holds with p = 1 for the data fields and p = 3 for the current:
+  - {#W12.141} (1.84) is uniform in j and does not give the gain, and Bałaban's gauge does not either, since there Q_k^{s*} puts the whole angle V(c) on the bonds between k-blocks (CRE (1.3), p.246).
   - {#W12.142} The gain holds in a gauge that is smooth at the scale k.
     {#W12.142-1} U_{k,Λ} = U_k(V″⌈_{Λ^c}, V_Λ^{(A)}) is VAR's minimiser for data at the single scale k.
     {#W12.142-2} Its data satisfy VAR (7) (p.278) with ε₁ := B₅M⁵ε_k: on Λ by (1.78) (LFR I p.194), and on Λ^c because V″ and the determining set there are those of the new configuration U_k (LFR II p.370 l.5–7), which satisfies the small-field conditions of its scales.
@@ -3275,13 +3008,12 @@
     {#W12.144-1} LFR I (1.87) (p.197) gives |𝐀₀|, |∇𝐀₀|, |∂*∂𝐀₀| < O(1)B₃²B₅M⁶ε_k on Z″_k in the units of the scale k, for the background whose average LFR II takes as exp iQ̃(η𝐀₀) (p.370 l.15–16).
     {#W12.144-2} So a_n|Q̃_n𝐀₀| ≤ O(1)B₃²B₅M⁶ε_k(a_n/a_k), and (3.133) for H″_{1,k} gives the same gain.
     {#W12.144-3} The cut-off of the data at ∂Z″_k costs only a jump of this size, so p = 1 holds there too.
-  - {#W12.145} *The strip (derived, not reviewed).* On the strip Ω ∖ Ω^A_2 the two runs are not compared.
+  - {#W12.145} *The strip.* On the strip Ω ∖ Ω^A_2 the two runs are not compared.
     {#W12.145-1} Each run's terms there are bounded separately, and the bound fits the consumer's weight.
     - {#W12.146} Where the strip lies. ∂Ω lies in the layer h of 𝐁″_k, at a distance ≥ 2M₁a_h from that layer's boundary inside Ω (CRE p.257 l.9–11: "this boundary of Ω_j, Ω_{j+1}, which is contained in Ω"; the LF note's *The joins*, *The layers of 𝐁₁.*).
       {#W12.146-1} The strip lies inside Ω, so this is the boundary that matters.
-      {#W12.146-2} The strip, of the width ≤ (d + 1)M₁a_2, therefore lies in that layer once L^{h−2} > d + 1; the finitely many smaller h are absorbed in C_w as at the end of *The representation with the gain.* and it carries the collar's layers of 𝐁₁ at the physical spacings ≤ a_2 in both runs (run A's layers 0 and 1, run B's layers 0, 1, and 2).
+      {#W12.146-2} The strip, of the width ≤ (d + 1)M₁a_2, therefore lies in that layer once L^{h−2} > d + 1; the finitely many smaller h are absorbed in C_w as at the end of *The representation with the gain.*, and it carries the collar's layers of 𝐁₁ at the physical spacings ≤ a_2 in both runs (run A's layers 0 and 1, run B's layers 0, 1, and 2).
       {#W12.146-3} So a walk ω whose ∪X̃_i⁵ meets the strip has m(ω) ≤ h, with m(ω) read in the global layers of 𝐁″_k, as the consumer reads it (its young-history factor is (ε/a_{m(Y)})^γ in 𝐁″_k's layers), and its weight in §8 is at least (ε/a_h)^{γ_w}.
-      {#W12.146-4} Read in 𝐁₁'s own layers, m(ω) ≤ 2 would make δ_w(ω) of order 1, so that reading is not used.
     - {#W12.147} The data.
       {#W12.147-1} In each run, the bullets above, applied to that run's problem, give the data of 𝐇_{𝐁₁} and of H″_{1,k}Q̃(η𝐀₀) at a bond of physical spacing a the factor (a/a_h), and the current the factor (a/a_h)³.
       {#W12.147-2} On the strip this is at most (a_2/a_h) = L²(ε/a_h).
@@ -3294,7 +3026,7 @@
       {#W12.148-6} Near the flat parts of ∂Ω and its convex edges this count is the count of cubes.
       {#W12.148-7} At a reflex edge of Ω, where cubes of 𝒟_{n′} touch ∂Ω for every n′ ≤ h, it holds in the collar's weighted distance d_col instead, by *The crossing decay at every point.* of *The collar at ∂Ω and at the reflex edges.*, with the per-point bound there in place of the bound below.
       {#W12.148-8} Each layer is ≥ M₁ wide in its own units (CRE p.256 l.57–62).
-      {#W12.148-9} The walks of H, G̃, H₁, and 𝔊 are composites, whose constituents include the terms of the re-expansions (3.96) of (QGQ*)^{−1} and (QG₁Q*)^{−1} (§11), D_□ at ¼δ_D′, and G_□ at δ_gf′/3, so their constituents decay at rates ≥ 2δ_min, with δ_min of §11's κ₁ replay, and the composites at the rate δ_min (§11, *The junction sums.*), not at ½δ₀.
+      {#W12.148-9} The walks of H, G̃, H₁, and 𝔊 are composites, whose constituents include the terms of the re-expansions (3.96) of (QGQ*)^{−1} and (QG₁Q*)^{−1} (§11), D_□ at ¼δ_D′, and G_□ at δ_gf′/3, so their constituents decay at rates ≥ 2δ_min, with δ_min of §11's κ₁ replay, and the composites at the rate δ_min (§11, *The junction sums.*).
       {#W12.148-10} Of that rate, ¼δ_min goes to the s-weights (the κ₁ replay, which covers these run-by-run terms as well), ¼δ_min is kept for the form (c), and ½δ_min is kept for the crossings (§11, *The condition on M.*).
       {#W12.148-11} It gives e^{−½δ_minM₁} ≤ L^{−3} per crossing under δ_minM₁ ≥ 6 log L. This is a lower bound on M₁ = KR₀M₀, met by K large, since δ_min is fixed by δ₀, δ_π, δ₀′, δ_gf′, and δ_D′, before M₁.
       {#W12.148-12} So the data it reads carry (a_n/a_h)L^{−3(n−5)} = L^{13−2n}(a_2/a_h) ≤ L⁹(a_2/a_h) for 2 ≤ n < h.
@@ -3316,10 +3048,10 @@
       {#W12.150-3} So the difference is at most O(1)(1 + C_ℒ)L¹¹(ε/a_h) ≤ O(1)(1 + C_ℒ)L¹¹(ε/a_{m(ω)})^{γ_w}, since ε/a_h ≤ 1, γ_w ≤ 1, and a_{m(ω)} ≤ a_h.
       {#W12.150-4} This is δ_w(ω) of §8, with C_w enlarged by O(1)(1 + C_ℒ)L¹¹ and the rate of the form (c) unchanged.
       {#W12.150-5} Neither (S), nor the alignment, nor the young-history factor of the strip's own layers enters.
-    - {#W12.151} *The enlargement-only walks (derived, not reviewed).* A walk whose cubes and evaluation and source points lie off the strip, while some X̃_i⁵ meets it, has its cubes in Ω^A_2 = Ω^B_3, at run A's layers n ≥ 2, where the two runs' layers agree (*The collar's layers.*).
+    - {#W12.151} *The enlargement-only walks.* A walk whose cubes and evaluation and source points lie off the strip, while some X̃_i⁵ meets it, has its cubes in Ω^A_2 = Ω^B_3, at run A's layers n ≥ 2, where the two runs' layers agree (*The collar's layers.*).
       {#W12.151-1} PBG builds the local operator of a cube □ of the layer n on its own sequence {Ω_m(□)}: Ω_{n+1}(□) = □̃³ ∩ B^{n+1}(Λ_{n+1}), Ω_n(□) = □̃⁴, and each finer Ω_m(□) is a cube centred at the centre of □, with Ω₀(□) ⊂ □̃⁵ (PBG p.408 l.29–35 and p.409 l.1–3), and "the operators constructed for this sequence" are G′_□, C_□, and G_□ (p.409 l.1–3).
       {#W12.151-2} So the local operator depends on □, on □̃³ ∩ B^{n+1}, and on the background and data on Ω₀(□), and not on the global layers inside □̃⁵.
-      {#W12.151-3} PBG takes every operator with Dirichlet conditions on its Ω₀^c (p.394 l.29–36), but its local construction (p.408) does not treat cubes whose Ω₀(□) meets that boundary; where Ω₀(□) meets ∂Ω, the local problem is posed here on the intersected sequence {Ω′_m(□)} of *The collar at ∂Ω and at the reflex edges.*, with the Dirichlet condition of the 𝐁₁ problem, a choice made in both runs.
+      {#W12.151-3} PBG takes every operator with Dirichlet conditions on its Ω₀^c (p.394 l.29–36), but its local construction (p.408) does not treat cubes whose Ω₀(□) meets that boundary; where Ω₀(□) meets ∂Ω, the local problem is posed here on the intersected sequence {Ω′_m(□)} of *The collar at ∂Ω and at the reflex edges.*, with the Dirichlet condition of the 𝐁₁ problem, in both runs.
       {#W12.151-4} A walk term also contains the factors K(h_□) of (3.88)–(3.90), which read the global layer structure (the a_j and the blocks B^j(y)) on supp ∂h_□ ⊂ □.
       {#W12.151-5} For a cube □ of the layer n ≥ 2 that support lies in Ω^A_2 = Ω^B_3, where the runs are aligned. □, B^{n+1} with n + 1 ≥ 3, and Ω are the same in both runs, and the two runs' local sequences differ as on the aligned layers, run B's having one finer cube layer by the same rule.
       {#W12.151-6} So the walk is compared by (W-δ) as an aligned walk, as on *The collar's layers.*, and the strip enters only through the points of Ω₀(□) at which the walk reads the background pair and the data.
@@ -3329,12 +3061,8 @@
       {#W12.151-10} An intersected sequence reads the collar's domains on Ω₀(□).
       {#W12.151-11} Where Ω₀(□) misses the strip, these agree in the two runs (Ω^A_n = Ω^B_{n+1} for n ≥ 2), and the walk is aligned as above.
       {#W12.151-12} Where Ω₀(□) meets ∂Ω, or an intersected Ω₀(□) meets the strip, the two runs' domains differ only at the strip's points, PBG's bounds for the local problem on the intersected sequence hold by *PBG's bounds for them.* of *The collar at ∂Ω and at the reflex edges.*, and the comparison is made there without (S), through the boundary source r, with the per-point bound.
-    - {#W12.152} The gauge.
-      {#W12.152-1} The data gain does not hold for (1.57)'s argument X in Bałaban's gauge, so the bound is for the representation with X_s of the next sub-bullet, whose gauge factor's run difference is derived after it.
-  - {#W12.153} *The representation with the gain (derived, not reviewed).* The argument X := −(1/i)log M^·(U_{k,Λ})⌈_{Z″_k} of (1.57) is the deviation of U_{k,Λ}'s data from U₁'s data, which are 1 on Z″_k and agree with U_{k,Λ}'s elsewhere (the first line of (1.57)).
-    {#W12.153-1} Under a gauge transformation of both, the deviation at a bond is conjugated, so |X| does not depend on the gauge, and in Bałaban's gauge it has the entries of the size ε_k of the first sub-bullet.
-    {#W12.153-2} So no joint gauge transformation of U₁ and U_{k,Λ} gives a gain.
-    {#W12.153-3} A gain needs a relative regauging of the two data sets at the data points of Z″_k.
+  - {#W12.153} *The representation with the gain.* The argument X := −(1/i)log M^·(U_{k,Λ})⌈_{Z″_k} of (1.57) is the deviation of U_{k,Λ}'s data from U₁'s data, which are 1 on Z″_k and agree with U_{k,Λ}'s elsewhere (the first line of (1.57)).
+    {#W12.153-1} Under a gauge transformation of both, the deviation at a bond is conjugated, so |X| does not depend on the gauge; in Bałaban's gauge its entries have the size ε_k (#W12.141), so the gain needs a relative regauging of the two data sets at the data points of Z″_k.
     {#W12.153-4} The regauging of U₁'s data by h below is one, and it gives a second representation of U₁.
     {#W12.153-5} Let w be the gauge function that takes U_{k,Λ} to the fine axial gauge of Z″_k: w(x) is the transport of U_{k,Λ} along the fine axial contour from a corner of Z″_k to x, for x in Z″_k.
     {#W12.153-6} Let h := w at the endpoints of the data bonds of Z″_k ∩ Ω″^∼_{h+1} and h := 1 at all other endpoints of data bonds of 𝐁₁ (whose data are V″ on Λ^c, M^k(U^{(AL)}_0) on Λ ∩ Ω″_k, and 1 on Z″_k ∩ Ω″^∼_{h+1}, by (1.53), p.370).
@@ -3345,7 +3073,7 @@
     {#W12.153-11} With U^g(b) = g_xU(b)g_y^{−1}, the data of U₁^{h̃^{−1}} are w_x^{−1}w_y on Z″_k ∩ Ω″^∼_{h+1}, and they agree with U_{k,Λ}'s elsewhere, except on the bonds of the other layers that share an endpoint with Z″_k.
     {#W12.153-12} On Z″_k, M^·(U_{k,Λ})(b) = w_x^{−1}M^·(U^{ax})(b)w_y, with U^{ax} := U_{k,Λ}^{w}, by the covariance of the averages.
     {#W12.153-13} So, on a bond b = (x, y) of Z″_k, the deviation of U_{k,Λ}'s data from those of U₁^{h̃^{−1}} is X_s := −(1/i)log((w_x^{−1}w_y)^{−1}M^·(U_{k,Λ})(b)) = −(1/i)log(w_y^{−1}M^·(U^{ax})(b)w_y), with |X_s| = |log M^·(U^{ax})(b)|.
-    {#W12.153-14} This carries the gain (a_n/a_k) of the third sub-bullet.
+    {#W12.153-14} This carries the gain (a_n/a_k) of #W12.143-3.
     {#W12.153-15} On the interface bonds of the other layers the deviation is w(x), with no gain.
     {#W12.153-16} These lie at the two interfaces of Z″_k ∩ Ω″^∼_{h+1}.
     {#W12.153-17} The interface with the layer k, Λ ∩ Ω″_k, is at a distance ≥ 2M₁a_h from the cut, since ∂Ω″^∼_{h+1} lies in the layer h at that distance from its boundaries (CRE p.257 l.9–15) and Ω″_k ⊂ Ω″_{h+1}.
@@ -3372,7 +3100,6 @@
       {#W12.156-2} At complex s they do not.
       {#W12.156-3} The localisation expansion of (1.62) (p.374 l.8–10) decouples the operators of 𝐇_{𝐁₁} walk by walk, and the expansions at X and at X_s have different terms, with equal sums only at s = 1.
       {#W12.156-4} So the X_s representation is a change of Bałaban's construction, made in both runs.
-      {#W12.156-5} Bałaban's own expansion, at X, has no gain on the strip.
       {#W12.156-6} The properties of LFR II's terms that the later steps use are their localisation, their analyticity on the class, and their bounds, and they hold for the X_s representation:
       - {#W12.157} Localisation.
         {#W12.157-1} A term of the X_s representation depends on (𝐔, 𝐉) through U_{k,Λ}, as in Bałaban's, and also through w, a product of U_{k,Λ}'s links along contours in Λ.
@@ -3381,12 +3108,12 @@
       - {#W12.158} No complex gauge transformation. w is a product of the links of U_{k,Λ}(𝐔), analytic on the class, but G^c-valued at complex 𝐔: on the class the links are e^{iηA′}U with U G-valued and |A′| bounded by the class radius α̃_{1,k} in the units of the scale k (CRE (2.39)), and over the ≤ O(1)dMa_k/ε fine bonds of a contour Im log w reaches O(1)dMα̃_{1,k}, which is O(dM) times the class radius.
         {#W12.158-1} So h̃ and u_s cannot be applied to configurations through the complex gauge invariance of the terms, which holds only for u near G (CRE p.259 (iii), RG II p.011 l.27–28).
         {#W12.158-2} For a gauge-invariant analytic function of the single configuration U₁ the gauge factor can be dropped: at real 𝐔 and s = 1 the values at U₁^{X_s}(1) := exp(iη𝐇_{𝐁₁}(X_s)(1))U_{k,Λ} and at U₁ agree, both sides are analytic on the class, which is connected and contains the real configurations as a totally real submanifold of maximal dimension, and the identity theorem extends the equality.
-      - {#W12.159} *The boundary-layer data of (1.62) (derived, not reviewed).* LFR II's terms are not functions of U₁ alone.
+      - {#W12.159} *The boundary-layer data of (1.62).* LFR II's terms are not functions of U₁ alone.
         {#W12.159-1} In (1.62) (p.373 l.37–43) the boundary-layer data are u_{1,−}^{−1}exp iQ̃(η𝐇_{𝐁₁})R(u_{1,+})M^·(U_{k,Λ}), while the interior data V″, M^·(U_0^{(AL)}), and 1 are the original variables, and Bałaban states that this gauge factor cannot be removed, "because we use the two different representations for fields at the boundary of the boundary layer" (p.373 l.27–29, applied to (1.62) at l.44).
         {#W12.159-2} The X_s representation keeps this structure, with 𝐇_{𝐁₁}(X_s) for 𝐇_{𝐁₁} and u′ for u₁, because the boundary layers of the domains Y₂ do not meet Z″_k, and h̃ = 1 there.
         - {#W12.160} Y₂ contains every component of Λ it meets.
           {#W12.160-1} Each component of Y₂′ contains a component of Λ (p.373 l.33–34).
-          {#W12.160-2} The localisation expansion of 𝐇_{𝐁₁} decouples only on the cubes of σ̃₀, which are disjoint with Λ (p.373 l.32), so a domain of the expansion that meets a component Λ_c contains it (derived from the print).
+          {#W12.160-2} The localisation expansion of 𝐇_{𝐁₁} decouples only on the cubes of σ̃₀, which are disjoint with Λ (p.373 l.32), so a domain of the expansion that meets a component Λ_c contains it.
           {#W12.160-3} In (6.10) [I] = RG II (1.10) (RG II p.4 l.3–16) only the cubes of σ ⊂ σ₀ are decoupled, and every domain Y(σ) contains the cubes outside σ₀, as it contains □̃⁴.
           {#W12.160-4} With σ̃₀ in place of σ₀, every cube meeting Λ lies in every Y(σ).
           {#W12.160-5} A component Λ_c is connected by bonds, which are axial, so the cubes meeting it are connected through (d − 1)-dimensional walls, and the component of Y(σ) that meets Λ_c contains all of them.
@@ -3405,7 +3132,7 @@
           {#W12.163-1} So U₁'s boundary-layer data are u′_−^{−1}exp iQ̃(η𝐇_{𝐁₁}(X_s))R(u′_+)M^·(U_{k,Λ}), and (1.62) holds with 𝐇_{𝐁₁}(X_s) and u′, with the same interior data.
           {#W12.163-2} At complex s, this is the function substituted into the term. 𝐇_{𝐁₁}(X_s)(s) has the bounds of 𝐇_{𝐁₁}(X)(s) up to O(1)M (*Analyticity and bounds.* below).
           {#W12.163-3} Bałaban's smallness on the boundary layers is by decay: "The function 𝐇_{𝐁₁} is very small on Y₂∖Y₂⁰, again by the exponential decay and the localization of its argument" (p.375 l.7–8).
-          {#W12.163-4} For 𝐇_{𝐁₁}(X_s) it follows from Bałaban's smallness of 𝐇_{𝐁₁}(X) and from the decay of D := 𝐇_{𝐁₁}(X_s) − 𝐇_{𝐁₁}(X) away from Z″_k (derived, not reviewed).
+          {#W12.163-4} For 𝐇_{𝐁₁}(X_s) it follows from Bałaban's smallness of 𝐇_{𝐁₁}(X) and from the decay of D := 𝐇_{𝐁₁}(X_s) − 𝐇_{𝐁₁}(X) away from Z″_k.
           - {#W12.164} The support.
             {#W12.164-1} X_s − X is supported on the data bonds of Z″_k and on the interface bonds that share an endpoint with them.
           - {#W12.165} The weight.
@@ -3418,7 +3145,7 @@
           - {#W12.167} The decoupled functions.
             {#W12.167-1} At complex s, |s(Δ)| ≤ e^{κ₁}, a walk term of 𝐇_{𝐁₁}(·)(s) carries at most e^{mκ₁}, m the number of its s-parameters.
             {#W12.167-2} RG II spends the whole decay δ₀d(ω) on this factor (p.5 l.13–16), so it prints no decay at complex s.
-            {#W12.167-3} The operators of 𝐇_{𝐁₁} (H, H₁, and 𝔊) are composites, whose walks decay at the rate δ_min (§11, *The junction sums.*), not at the rate ½δ₀ of PBG's base walks.
+            {#W12.167-3} The operators of 𝐇_{𝐁₁} (H, H₁, and 𝔊) are composites, whose walks decay at the rate δ_min (§11, *The junction sums.*).
             {#W12.167-4} Here only a quarter of δ_min is spent on the s-factors, as in §11's *The condition on M.*: by the geometric inequality for d_T (§11, *The distance of a composite walk.*), e^{−¼δ_min d_T}e^{mκ₁} ≤ 1 for m above the threshold under M ≥ 4κ₁/(ρδ_g), and e^{mκ₁} is bounded by the constant written e^{16κ₁} below it.
             {#W12.167-5} So 𝐇_{𝐁₁}(·)(s) has kernel bounds in the form of (3.108) at the rate ¾δ_min, times e^{16κ₁}, and ¾δ_min exceeds δ_ω = δ_min/2 by ¼δ_min, the margin of the weighted contraction below.
             {#W12.167-6} The same holds for D(s).
@@ -3427,9 +3154,8 @@
           {#W12.168-1} At complex points the absolute bounds on X_s and X and the comparison of this decay with the room of the boundary-layer entries are (D1) and (D2) of *Analyticity and bounds.* below.
           {#W12.168-2} No complex gauge factor with a large imaginary part enters the boundary-layer data.
           {#W12.168-3} The factor h̃ acts only inside Z″_k's neighbourhood, through the data X_s of the fixed point.
-      - {#W12.169} Analyticity and bounds (derived, not reviewed).
+      - {#W12.169} Analyticity and bounds.
         {#W12.169-1} X_s enters only as the data of 𝐇_{𝐁₁}, and the X_s representation differs from Bałaban's only where 𝐇_{𝐁₁}(X_s)(s) is read.
-        {#W12.169-2} Its control at complex points has three parts: where it is read; an absolute bound on X and X_s, from Bałaban's proof of LFR I Proposition 1 run at complex data; and the decay of D to the places where it is read.
         - {#W12.170} *Where it is read.* In (1.62) (p.373 l.37–43) 𝐇_{𝐁₁} enters only through the boundary-layer data u′_−^{−1}exp iQ̃(η𝐇_{𝐁₁})R(u′_+)M^·(U_{k,Λ}) on Y₂ ∖ Y₂⁰; the interior data V″, M^·(U_0^{(AL)}), and 1 are the original variables.
           {#W12.170-1} (1.62) enters (1.61) through its averages on the boundary layer (Y₁^0)^c ∩ Y₁ (p.373 l.18–22), and the first-stage terms read U₁ on X ⊂ Z^c (p.372 l.39–p.373 l.6).
           {#W12.170-2} The boundary layers of Y₂ lie at a distance ≥ ½Ma_k from Z″_k (*The boundary-layer data of (1.62).*).
@@ -3440,38 +3166,36 @@
         - {#W12.171} *The absolute bound at complex points.* Let 𝐔 = U′U be the decomposition of CRE (2.39) (p.261), with U G-valued and U′ = exp iεA′.
           {#W12.171-1} At a complex point the data of U_{k,Λ}(𝐔) are M^·(𝐔) on Λ^c and V_Λ^{(A)}(M^k(𝐔)) on Λ (LFR II p.374 l.40–41), the axial representative of the minimal orbit of LFR I Proposition 1 (p.194) at complex data.
           {#W12.171-2} Proposition 1 prints no bound at complex data, so its proof is run there.
-          {#W12.171-3} Bałaban proves it (LFR II p.359 l.3–28) through the equation (1.13) for V_Λ = exp(iB′)V_k on Λ, in the axial gauge G₀ of Λ, with V_k an extension of the data into Λ: P₀H*_{1,k}Δ₁H_{1,k}P₀ is invertible with the bound γ₀^{−1}2d(100M)⁵ by (1.9), the source is the current J_{k,Z} of U_{k,Z}(V_k), and the contraction (with VAR's Proposition 4) gives |B′| ≤ 2γ₀^{−1}2d(100M)⁵B₃²4ε_k. "The above equations, bounds and statements are valid for 𝐠^c-valued fields" (p.359 l.26–28), and at complex points Bałaban takes V_k := M^k(𝐔),
-          {#W12.171-4} "and all the bounds above hold with ε_k replaced by O(α_{0,k} + α_{1,k})" (p.358, for 𝐔 in the class at the scale k).
+          {#W12.171-3} Bałaban proves it (LFR II p.359 l.2–28) through the equation (1.13) for V_Λ = exp(iB′)V_k on Λ, in the axial gauge G₀ of Λ, with V_k an extension of the data into Λ: P₀H*_{1,k}Δ₁H_{1,k}P₀ is invertible with the bound γ₀^{−1}2d(100M)⁵ by (1.9), the source is the current J_{k,Z} of U_{k,Z}(V_k), and the contraction (with VAR's Proposition 4) gives |B′| ≤ 2γ₀^{−1}2d(100M)⁵B₃²4ε_k. "The above equations, bounds and statements are valid for 𝐠^c-valued fields" (p.359 l.26), and at complex points Bałaban takes V_k := M^k(𝐔),
+          {#W12.171-4} "and all the bounds above hold with ε_k replaced by O(α_{0,k} + α_{1,k})" (p.358 l.27–29, for 𝐔 in the class at the scale k).
           {#W12.171-5} Run at the complex data: the extension is M^k(𝐔) on Λ, and |∂M^k(𝐔) − 1| ≤ O(1)α̃_{0,k}, since CRE (2.34) bounds the complex plaquettes of 𝐔 directly and (2.39) bounds the imaginary parts of the conjugating transports by O(1)α̃_{1,k}.
-          {#W12.171-6} The source and the error term O(1)(M⁶R_kε_k + exp(−R_k)) of (1.7) (p.358 l.4) take ε_k → O(1)(α̃_{0,k} + α̃_{1,k}), and the error term stays below half of the lower bound γ₀(2d(100M)⁵)^{−1} of (1.9) for γ small (here γ₀ is LFR II's constant of (1.7)), since M⁶R_k(α̃_{0,k} + α̃_{1,k}) = O(g_k(log g_k^{−2})^{q₀+r}) by CRE (2.5) and R_k → ∞.
+          {#W12.171-6} The source and the error term O(1)(M⁶R_kε_k + exp(−R_k)) of (1.7) (p.358 l.4) take ε_k → O(1)(α̃_{0,k} + α̃_{1,k}), and the error term stays ≤ γ₀(2d(100M)⁵)^{−1}, half of the lower bound γ₀(d(100M)⁵)^{−1}‖B′‖² that (1.8) gives for γ₀‖∂B′‖², so (1.9) holds for γ small (γ₀ is LFR II's constant of (1.7)), since M⁶R_k(α̃_{0,k} + α̃_{1,k}) = O(g_k(log g_k^{−2})^{q₀+r}) by CRE (2.5) and R_k → ∞.
           {#W12.171-7} So
           {#W12.172} V_Λ(M^k(𝐔)) = exp(iB′)M^k(𝐔) on Λ, |B′| ≤ C_Λ(α̃_{0,k} + α̃_{1,k}), C_Λ := O(1)γ₀^{−1}d(100M)⁵B₃²,
           {#W12.173} for γ small.
           {#W12.173-1} The multiscale class enters through α̃_{i,n} ≤ (1 + β₀)α̃_{i,k} for n ≤ k (g_n ≤ (1 + β₀)g_k by CRE (2.6), and g ↦ g(log g^{−2})^q is increasing for g small).
-          {#W12.173-2} At the real configuration U the same proof gives the real minimiser U^r := U_{k,Z}(V_Λ(M^k(U))), with |∂V_Λ − 1| < B₅M⁵O(1)α̃_{0,k} on Λ ((1.78) at ε = O(1)α̃_{0,k}, the generalisation that p.359 l.28–29 calls obvious), so with plaquettes < O(1)B₃B₅M⁵α̃_{0,k}(ε/a)² (VAR Theorem 1; on Λ^c the data satisfy VAR (7), derived from the print: VAR's remark after (7) (p.278 l.47) obtains (7) "by Proposition 2 [4]", [4] being CMP 98 (VAR p.309 l.25).
-          {#W12.173-3} CMP 98 Proposition 2 (p.26 l.48–55) bounds |Ū^j(∂p) − 1| < 2α₀ from the plaquette condition (52) on U alone, locally on the blocks of p. The data are averages M^·(U) of the one fine configuration U, so every (∂V)(p′) of VAR (7), the mixed plaquettes with V̄ included, is a plaquette of a j-fold average of U. The class's plaquette bound therefore gives (7) with ε₁ = O(1)α̃_{0,k}, and VAR (2)'s current condition is not used).
-          {#W12.173-4} The deviation Ŷ of the complex data from the real ones is O(1)α̃_{1,n} at a data bond of the layer n on Λ^c (it averages a_n/ε fine bonds of U′, each with ε|A′| < α̃_{1,n}ε/a_n), and on Λ at most |B′(𝐔)| + |B′(U)| + O(1)α̃_{1,k}.
-          {#W12.173-5} So |Ŷ| ≤ C_Ŷ(α̃_{0,k} + α̃_{1,k}), C_Ŷ := O(1) + 2C_Λ.
-          {#W12.173-6} VAR's representation of the minimiser about a minimiser (VAR (172) and (179), with "the same analyticity properties" at complex data, VAR p.306) gives U_{k,Λ}(𝐔) = (exp(iη𝐇_c)U^r)^{u^{−1}} with |𝐇_c|_{(−1)} and its gradient entry a²|∇𝐇_c| ≤ C_H|Ŷ| and u the gauge factor of CMP 98 (106), local to the k-blocks.
-          {#W12.173-7} The linear bound is derived from the printed estimates (derived, not reviewed).
-          {#W12.173-8} Proposition 6 prints ε₄ = 3B₀C₁B₃ε₁ (p.295, with VAR's own C₁), in terms of the regularity parameter.
-          {#W12.173-9} Its B₃ε₁ comes from the current term B₀|J|_{(−3)} < B₀C₁B₃ε₁ of the contraction estimate (p.295 l.13).
-          {#W12.173-10} About a minimiser U₀ = U_k(V₀) the current satisfies 𝔓*(U₀)J = 0 ((170)–(171), p.305), and the equation (175) for 𝒜₁ has no current term.
-          {#W12.173-11} So the estimate of p.295 l.13 reads |𝒜₁| ≤ B₀C₄(|𝒜₁| + B₀|B|)² in the norm max{|·|_{(−1)}, |∇·|_{(−2)}}, which gives |𝒜₁| ≤ 4B₀³C₄|B|² for B₀|B| ≤ (16B₀C₄)^{−1}.
-          {#W12.173-12} In (174), ℋ = 𝒜₁ + H₁B − HD(𝒜₁ + H₁B), |H₁B| ≤ B₀|B| (Theorem 3.13 of [5], as on p.295 l.10), and HD is of second order ((56)).
-          {#W12.173-13} With |B| ≤ dL sup|B′|, the relation that p.295 l.16 uses, this gives |ℋ|_{(−1)}, |∇ℋ|_{(−2)} ≤ C_H|Ŷ| with C_H := 2dLB₀, for |Ŷ| ≤ (16dLB₀²C₄)^{−1}, which gives B₀|B| ≤ (16B₀C₄)^{−1} and which (D1) secures.
-          {#W12.173-14} The representation (179)–(180) has the same function ℋ (p.306 l.48).
+          {#W12.173-2} At the real configuration U the same proof gives the real minimiser U^r := U_{k,Z}(V_Λ(M^k(U))). By LFR I (1.78) at ε = O(1)α̃_{0,k} (the generalisation from ε_k to ε that LFR II p.359 l.27–28 calls obvious), |∂V_Λ − 1| < O(1)B₅M⁵α̃_{0,k} on Λ, so the plaquettes of U^r are < O(1)B₃B₅M⁵α̃_{0,k}(ε/a)² by VAR Theorem 1.
+          {#W12.173-3} VAR Theorem 1 assumes VAR (7) for the data (p.279 l.9), and VAR obtains (7) "by Proposition 2 [4]" (p.278 l.46), [4] being CMP 98 (VAR p.309 l.24). CMP 98 (53)–(54) (p.26 l.27–53) bound |Ū^j(∂p) − 1| < 2α₀ from the plaquette condition (52) on U alone, locally on the blocks of p. The data are averages M^·(U) of the one fine configuration U, so every (∂V)(p′) of VAR (7), the mixed plaquettes with V̄ included, is a plaquette of a j-fold average of U. So the class's plaquette bound gives (7) with ε₁ = O(1)α̃_{0,k}; VAR (2)'s current condition is not used.
+          {#W12.173-4} Let Ŷ := −i log(𝐕V^{−1}), with 𝐕 and V the complex and the real data, so that e^{iŶ} is the V′ of VAR (172) for this pair. At a data bond of the layer n on Λ^c, |Ŷ| ≤ O(1)α̃_{1,n}, since the bond averages a_n/ε fine bonds of U′, each with ε|A′| < α̃_{1,n}ε/a_n. On Λ, Ŷ = −i log(e^{iB′(𝐔)}e^{iZ}e^{−iB′(U)}) with e^{iZ} := M^k(𝐔)M^k(U)^{−1} and |Z| ≤ O(1)α̃_{1,k}, so within the logarithm charts of (D1) |Ŷ| ≤ 2(|B′(𝐔)| + |B′(U)|) + O(1)α̃_{1,k}.
+          {#W12.173-5} So |Ŷ| ≤ C_Ŷ(α̃_{0,k} + α̃_{1,k}), C_Ŷ := O(1) + 4C_Λ.
+          {#W12.173-6} VAR's representation of the minimiser about a minimiser ((172)–(175), p.305 l.31–53), in which ℋ is an analytic function of B (p.305 l.11–12, p.306 l.1–2), continues analytically to the complex data and gives U_{k,Λ}(𝐔) = (exp(iη𝐇_c)U^r)^{u^{−1}}, with |𝐇_c|_{(−1)} and its gradient entry a²|∇𝐇_c| ≤ C_H|Ŷ| and u the gauge factor of CMP 98 (106), local to the k-blocks.
+          {#W12.173-8} Proposition 6's ε₄ = 3B₀C₁B₃ε₁ (p.295 l.49, with VAR's own C₁) is not linear in |B|, because of the current term B₀|J|_{(−3)} < B₀C₁B₃ε₁ of (117) (p.295 l.12).
+          {#W12.173-10} About a minimiser U₀ = U_k(V₀) the current satisfies 𝔓*(U₀)J = 0 ((170)–(171), p.305 l.15–29), and the equation (175) for 𝒜₁ has no current term.
+          {#W12.173-11} So, in the norm max{|·|_{(−1)}, |∇·|_{(−2)}}, (117) bounds the map 𝒜 ↦ −𝔊(δV/δA′)(𝒜 + H₁B) on the ball |𝒜| ≤ ρ by B₀C₄(ρ + B₀|B|)², and (120) gives it the contraction constant 4B₀C₄(ρ + B₀|B|). Let ρ := 4B₀³C₄|B|² and B₀|B| ≤ (16B₀C₄)^{−1}. Then ρ ≤ ¼B₀|B|, so B₀C₄(ρ + B₀|B|)² ≤ (25/16)B₀³C₄|B|² ≤ ρ and 4B₀C₄(ρ + B₀|B|) ≤ 5/16. Hence the solution 𝒜₁ of (175), unique in VAR's space (115), satisfies |𝒜₁| ≤ 4B₀³C₄|B|².
+          {#W12.173-12} In (174), ℋ = 𝒜₁ + H₁B − HD(𝒜₁ + H₁B), with |H₁B| ≤ B₀|B| (Theorem 3.13 of [5], as on p.295 l.9). So x := max{|𝒜₁ + H₁B|_{(−1)}, |∇(𝒜₁ + H₁B)|_{(−2)}} ≤ (5/4)B₀|B|, and VAR (57)–(58) (p.286 l.38 – p.287 l.6), from (55), bound both norms of ℋ by x + 4B₀C₂x² for x ≤ (18C₂B₀)^{−1}.
+          {#W12.173-13} VAR's B and B′ = Ŷ satisfy |B| ≤ dL sup|Ŷ|, the relation of p.295 l.15. Let |Ŷ| ≤ r_H := min{(16dLB₀²C₄)^{−1}, (24dLB₀²C₂)^{−1}}, which (D1) secures. Then B₀|B| ≤ (16B₀C₄)^{−1} and B₀|B| ≤ (24B₀C₂)^{−1}, so x ≤ (18C₂B₀)^{−1}, 4B₀C₂x ≤ ¼, and x + 4B₀C₂x² ≤ (25/16)B₀|B|. Hence |ℋ|_{(−1)}, |∇ℋ|_{(−2)} ≤ C_H|Ŷ| with C_H := 2dLB₀.
+          {#W12.173-14} The representation (179)–(180) has the same function ℋ (p.306 l.47).
         - {#W12.174} *The data X and X_s.* The plaquettes of U^r are < O(1)B₃B₅M⁵α̃_{0,k}(ε/a)², and exp(iη𝐇_c) moves them by ≤ O(1)C_H|Ŷ|(ε/a)².
           {#W12.174-1} The plaquette holonomies of U_{k,Λ}(𝐔) are those of exp(iη𝐇_c)U^r conjugated by values of u, whose imaginary part is of the size of 𝐇_c.
           {#W12.174-2} So they are ≤ O(1)(B₃B₅M⁵ + C_HC_Ŷ)(α̃_{0,k} + α̃_{1,k})(ε/a)².
           {#W12.174-3} The data angle of U^{ax} = U_{k,Λ}^w at a bond b of the layer n is the holonomy of the loop made of the two axial contours to the endpoints of b and of b itself.
           {#W12.174-4} By the lattice Stokes formula it is a product of plaquette holonomies conjugated by transports along the contours, over an area ≤ O(1)dMa_ka_n.
-          {#W12.174-5} Under (D1) below the conjugations by u and by the transports along contours of the length ≤ O(1)dMa_k distort by at most 2.
+          {#W12.174-5} Under §8's Ad conditions for u and for the transports along the contours (stage 6), the conjugations by u and by these transports, along contours of the length ≤ O(1)dMa_k, distort by at most 2.
           {#W12.174-6} So
           {#W12.175} |X_s| ≤ C_s(a_n/a_k)(α̃_{0,k} + α̃_{1,k}), C_s := O(1)dM(B₃B₅M⁵ + C_HC_Ŷ),
           {#W12.176} at real and complex points alike, on the data bonds of Z″_k.
           {#W12.176-1} On the interface bonds that share an endpoint with Z″_k, X_s − X is log w(x) at that endpoint, with no gain.
-          {#W12.176-2} In Bałaban's gauge of Λ, U^r = U(𝐁_k(Λ), data) with the data within O(1)d²B₃B₅M⁶α̃_{0,k} of 1 ((1.83) at ε = O(1)α̃_{0,k}, with the 11d² of p.197 l.10–12 and the B₃ of the printed (1.84)).
+          {#W12.176-2} In Bałaban's gauge of Λ, U^r = U(𝐁_k(Λ), M^·(U^r)) by (1.85) (LFR I p.197 l.16–19), and its data are within O(1)d²B₃B₅M⁶α̃_{0,k} of 1 by (1.83) and the estimate of p.197 l.10 at ε = O(1)α̃_{0,k}: this is (1.84) with the factor 11d² of l.10 kept.
           {#W12.176-3} So by VAR's representation its links are exp(iη𝐀^r) up to the local gauge factor, with a_k|𝐀^r| ≤ O(1)d²C_HB₃B₅M⁶α̃_{0,k}, and 𝐇_c adds C_HC_Ŷ(α̃_{0,k} + α̃_{1,k}). w(x) is a product of ≤ O(1)dMa_k/ε fine links, so |log w(x)| ≤ C_I(α̃_{0,k} + α̃_{1,k}), C_I := O(1)d³MC_H(B₃B₅M⁶ + C_Ŷ).
           {#W12.176-4} C_s is taken ≥ C_I, so |X_s| ≤ C_s(α̃_{0,k} + α̃_{1,k}) holds on the interface bonds as well, without the gain.
           {#W12.176-5} The same bound gives |Im log w_y| ≤ C_I(α̃_{0,k} + α̃_{1,k}), so under §8's Ad condition for w_y (stage 6) the conjugation Ad(w_y) in X_s = −(1/i)log(w_y^{−1}M^·(U^{ax})(b)w_y) distorts by at most 2.
@@ -3479,45 +3203,45 @@
           {#W12.176-7} At real points his finer data M^j(U₀) deviate from Q^{s*}_{k−j}V_Λ, which puts the scale-k angle on the bonds that cross k-block faces and 1 inside the k-blocks, by "< 11d²O(1)B₃B₅M⁵ε_k" (p.197 l.10), an estimate by the Stokes formula along his contours ((1.80) and (1.65) of [14]).
           {#W12.176-8} At complex points the same Stokes formula holds for the G^c-valued configuration: the deviation is a product of plaquette elements lassoed to the base point along his contours, and their number is the area count of the real estimate, a geometric count.
           {#W12.176-9} The lassos conjugate by transports along contours in Λ whose imaginary parts are ≤ O(1)dM(1 + C_G)C_HC_Ŷ(α̃_{0,k} + α̃_{1,k}) (*The curvature.* below), so under §8's Ad condition for the transports along the contours (stage 6) each Ad is within a factor 2 of isometric, and the complex plaquettes are ≤ O(1)(B₃B₅M⁵ + C_HC_Ŷ)(α̃_{0,k} + α̃_{1,k})(ε/a_k)² on Λ, as for X_s.
-          {#W12.176-10} This gives |X| ≤ (1 + 22d²)C_s(α̃_{0,k} + α̃_{1,k}) at real and complex points (derived, not reviewed).
+          {#W12.176-10} This gives |X| ≤ (1 + 22d²)C_s(α̃_{0,k} + α̃_{1,k}) at real and complex points.
           {#W12.176-11} VAR Proposition 6 needs only the absolute smallness of its data, which (D1) gives.
           {#W12.176-12} So 𝐇_{𝐁₁}(X_s)(s) and 𝐇_{𝐁₁}(X)(s) are analytic on the class, with the bounds of Proposition 6 and (3.133) at complex s, as in §3(d).
         - {#W12.177} *The domain.* U₁^{X_s}(s) = exp(iη𝐇_{𝐁₁}(X_s)(s))U_{k,Λ}(𝐔) is not read on Z″_k (*Where it is read.*), and U_{k,Λ}(𝐔) is the same function, the background, in both representations.
           {#W12.177-1} So the X_s representation lies in Bałaban's domain once the changes it makes where it is read (D(s), the change of u′, and the responses of the minimisers of (1.62) and (1.61)) stay below a fixed fraction c of the room of the entries they move.
           {#W12.177-2} Two conditions give this, with C_{H₁} the constant of the bounds of 𝐇_{𝐁₁}(·)(s):
           - {#W12.178} (D1) Absolute smallness.
-            {#W12.178-1} (C_s + C_Λ + C_Ŷ)(α̃_{0,k} + α̃_{1,k}) ≤ r_V, with r_V the least of the radius of absolute smallness in VAR's Propositions 4 and 6, the radius of the analytic charts of the logarithms above, and (16dLB₀²C₄)^{−1}, the threshold of the linear bound of 𝒜₁ above; this holds for γ small.
+            {#W12.178-1} (C_s + C_Λ + C_Ŷ)(α̃_{0,k} + α̃_{1,k}) ≤ r_V, with r_V the least of the radius of absolute smallness in VAR's Propositions 4 and 6, the radius of the analytic charts of the logarithms above, and r_H, the threshold of the linear bound of ℋ (#W12.173-13); this holds for γ small.
             {#W12.178-2} It also places U_{k,Λ}(𝐔) in PBG's complex domain (3.35)–(3.37), whose constants are fixed, so the operators of 𝐇_{𝐁₁} there have PBG's bounds.
           - {#W12.179} (D2) The decay against the room. 𝐇_{𝐁₁} lives on the layers n ≤ k of 𝐁₁.
             {#W12.179-1} A data point of the layer n on a boundary layer of Y₂ lies at the physical distance ≥ ½Ma_k from Z″_k.
             {#W12.179-2} For n = k this gives d′ ≥ M/2.
-            {#W12.179-3} For n < k the point lies outside Λ, which belongs to the layer k, so a path from Z″_k to it runs ≥ (M − 2M₁)a_k ≥ ½Ma_k inside Λ, which counts ≥ M/2 in the units a_k.
+            {#W12.179-3} For n < k the point lies outside Λ, which belongs to the layer k, so a path from Z″_k to it runs ≥ (M − 2M₁)a_k ≥ ½Ma_k inside Λ (M ≥ 4M₁), which counts ≥ M/2 in the units a_k.
             {#W12.179-4} It then crosses each layer m = n + 1, …, k − 1, each at least M₁ ≥ 1 wide in its own units (CRE p.256 l.57–62), so d′ ≥ M/2 + (k − n − 1).
             {#W12.179-5} There |D(s)| ≤ 2C_{H₁}(|X_s| + |X|)e^{−δ_ωd′} ≤ 48d²e^{δ_ω}C_{H₁}C_s(α̃_{0,k} + α̃_{1,k})e^{−δ_ω(M/2 + k − n)}, with 2 + 22d² ≤ 24d².
             {#W12.179-6} The room there is α̃_{1,n} for A′, which D moves with its real and imaginary parts, and α̃_{0,n} for the plaquettes, which D moves by |D|(ε/a)².
-            {#W12.179-7} Summing the recursion of CRE (2.6) gives g_k² ≤ g_n²(1 + (k − n)) for g_k small, so α̃_{i,k}/α̃_{i,n} ≤ O(1)(1 + β₀)(k − n + 1)^{1/2}.
+            {#W12.179-7} CRE (2.6) gives g_k² ≤ (1 + g_k²β′(k − n))g_n² ≤ (k − n + 1)g_n² for g_k²β′ ≤ 1. Since g ↦ g(log g^{−2})^q is increasing for g small, α̃_{i,k}/α̃_{i,n} ≤ 1 if g_k ≤ g_n, and otherwise α̃_{i,k}/α̃_{i,n} ≤ g_k/g_n. So α̃_{i,k}/α̃_{i,n} ≤ (k − n + 1)^{1/2}.
             {#W12.179-8} With c_ω := sup_{t≥0}(1 + t)^{1/2}e^{−δ_ωt/2} and α̃_{1,k} = λ_Rα̃_{0,k} (the choice below), both moves are below c times their room when
-            {#W12.180} O(1)(1 + β₀)d²C_{H₁}C_sc_ω(1 + λ_R)e^{−δ_ωM/4} ≤ c.
+            {#W12.180} O(1)d²C_{H₁}C_sc_ω(1 + λ_R)e^{−δ_ωM/4} ≤ c.
             {#W12.181} C_s and λ_R grow polynomially in M. C_H and δ₀ are constants of VAR and PBG, which depend on d and L only (PBG Theorem 3.1, p.397 l.37: "M₁, δ₀, a₀, B₀ dependent on d and L only", for M ≥ M₁).
             {#W12.181-1} C_{H₁} carries in addition RG II's factor e^{16κ₁} (RG II p.5 l.16). κ₁ is fixed by lower bounds in κ, δ, and L only: ¼(κ₁ − 1) ≥ (1 − δ)κ (RG II p.9 l.16), (1/16)κ₁ ≥ (1 − 2δ)κ (p.9 l.26), ⅛(κ₁ − 1) ≥ (1 − 3δ)κ (p.16 l.20), ½(κ₁ − 1) ≥ 2Lκ (p.20 l.17), and "κ₁ sufficiently large" (p.8 l.17). κ is fixed before M ("we take M sufficiently large, so that δ₀M ≥ κ", p.21 l.36), and RG II's conditions that tie M to κ₁ are lower bounds on M (p.5 l.15, p.16 l.7).
             {#W12.181-2} So κ₁ does not depend on M. RG II's M-dependent factors, such as E₀(α₁/α₃)⁵ (p.7 l.27) and O(M^q) (p.8 l.24), multiply ε₁ and are absorbed for γ small, so they feed back into no lower bound on M. So LFR's M enters none of C_H, C_{H₁}, and δ₀, and (D2) is a lower bound on M.
             {#W12.182} The change of u′ is O(1)|D(s)| at the same points, since u′ is a local analytic function of 𝐇_{𝐁₁} on the block (CMP 98 (106)).
-            {#W12.182-1} The minimisers of (1.62) and (1.61) are analytic in their data (VAR Proposition 6, last statement, p.296 l.2), so each response is O(1) times the change of its data, and it decays away from the changed data: the linear part is H₁ applied to the change, with H₁'s kernel decay, and the nonlinear part is bounded in the weighted norm |·|_{ω′} by the contraction, as for D in *The weight.* and *The equation.* Cauchy's estimate alone gives the size of the response but not its decay.
+            {#W12.182-1} The minimisers of (1.62) and (1.61) are analytic in their data (VAR Proposition 6, last statement, p.296 l.2), so each response is O(1) times the change of its data, and it decays away from the changed data: the linear part is H₁ applied to the change, with H₁'s kernel decay, and the nonlinear part is bounded in the weighted norm |·|_{ω′} by the contraction, as for D in *The weight.* and *The equation.*
             {#W12.182-2} (1.62)'s response enters (1.61) only through the averages on the boundary layer of Y₁.
             {#W12.182-3} (1.61)'s minimiser U^0_k responds on all of Y₁, Λ^∼ included, where 𝐄(X, U^0_k) reads it.
-            {#W12.182-4} The boundary layer of Y₁ lies at a distance ≥ RMa_{k−1} − 2dMa_k ≥ Ma_k from Λ_c (*Where it is read.*) once R ≥ (2d + 1)L, a lower bound on R of the kind of R ≥ 2dL used there.
+            {#W12.182-4} The boundary layer of Y₁ lies at a distance ≥ RMa_{k−1} − 2dMa_k ≥ Ma_k from Λ_c (#W12.170-3) once R ≥ (2d + 1)L, which holds for g small by CRE (2.5), as in #W12.160-9.
             {#W12.182-5} So on Λ^∼ the response of U^0_k is below the response at the boundary layers times e^{−δ_ωM/2}.
             {#W12.182-6} These three effects are absorbed into the O(1) of (D2).
           - {#W12.183} The ratio.
             {#W12.183-1} (D2) needs α̃_{1,k}/α̃_{0,k} bounded uniformly in k.
-            {#W12.183-2} This holds with q₁ := q₀ and C₁ := λ_RC₀, λ_R := K_RLM + 1, the factor L for the near domains at a finer layer, where RG I's M reads LM (the Cauchy note's l.158), with K_R ≥ 4B₃²O(1) and K_R ≥ O(1)(1 + B₃O(1)), with the leading O(1)s of RG I p.277 l.54 and the largest of those of p.285 l.17, p.285 l.23, and p.280 l.44; the lower bound on M is (D2).
+            {#W12.183-2} This holds with q₁ := q₀ and C₁ := λ_RC₀, λ_R := K_RLM + 1, the factor L for the near domains at a finer layer, where RG I's M reads LM (the Cauchy note's #C5.34-4 and #C5.35-1), with K_R ≥ 4B₃²O(1) and K_R ≥ O(1)(1 + B₃O(1)), with the leading O(1)s of RG I p.277 l.54 and the largest of those of p.285 l.17, p.285 l.23, and p.280 l.44; the lower bound on M is (D2).
             {#W12.183-3} Here RG I's α₀ and α₁ are CRE's thresholds α̃_{0,k} = g_kC₀(log g_k^{−2})^{q₀} and α̃_{1,k} = λ_Rα̃_{0,k} (CRE (2.28), p.259 l.45–50); none of them is PBG's α₀ or α₁, and the C₀, C₁ of this paragraph are CRE's, not the Cauchy note's.
             {#W12.183-4} CRE applies RG I at the thresholds (2.28), with q₀, q₁ integers greater than 1 and C₀, C₁ "sufficiently large positive numbers" (p.259 l.50), and Bałaban presents the resulting bounds as proved.
             {#W12.183-5} The choice here is within (2.28): q₁ = q₀, an integer greater than max(1, p₀ + 3r), C₀ ≥ λ_QC₀^{low}, and C₁ = λ_RC₀ ≥ λ_QC₁^{low}, with λ_Q the LF note's factor (its #4.460) and C₀^{low}, C₁^{low} Bałaban's lower bounds ("sufficiently large", p.259 l.50); C₀ := λ_Qmax(C₀^{low}, C₁^{low}/λ_R) gives both.
-            {#W12.183-6} A lower bound on C₁ proportional to C₀, as the Cauchy note's C₁ > 2B₃²O(1)MC₀ (its l.161), is met by λ_R alone (K_R ≥ 4B₃²O(1)) and is not part of C₁^{low}.
-            {#W12.183-7} RG I's α₂ and α₃ are the Cauchy note's (its l.161, l.163, and l.966): α₂ := c₂α̃_{0,k} and α₃ := β_IL^{−2}α̃_{0,k}/(2B₃⁺C_{Q*}), with β_I RG I's class parameter β and C_{Q*} the Cauchy note's (its l.112), the factor 1/C_{Q*} keeping the B′-part of Lemma 4's output current below the reduced current threshold of its norm class (its l.150, l.163).
+            {#W12.183-6} A lower bound on C₁ proportional to C₀, as the Cauchy note's C₁ > 2B₃²O(1)MC₀ (its #C5.36-3), is met by λ_R alone (K_R ≥ 4B₃²O(1)) and is not part of C₁^{low}.
+            {#W12.183-7} RG I's α₂ and α₃ are the Cauchy note's (its #C5.36-11, #C5.37-4, and #C5.37-18): α₂ := c₂α̃_{0,k} and α₃ := β_IL^{−2}α̃_{0,k}/(2B₃⁺C_{Q*}), with β_I RG I's class parameter β and C_{Q*} the Cauchy note's (its #C5.6-5), the factor 1/C_{Q*} keeping the B′-part of Lemma 4's output current below the reduced current threshold of its norm class (its #C5.28-17, #C5.28-19, and #C5.37-19).
             {#W12.183-8} These are the thresholds of the terms of index k.
-            {#W12.183-9} A term of index j < k has CRE's α_{i,j} (CRE p.259 l.41–47), and the step-k quantities compared with them carry α̃_{i,k}/α̃_{i,j} ≤ (1 + β₀)²(k − j)^{1/2} (CRE (2.6), as in the Cauchy note's l.161).
+            {#W12.183-9} A term of index j < k has CRE's α_{i,j} (CRE p.259 l.41–47), and the step-k quantities compared with them carry α̃_{i,k}/α̃_{i,j} ≤ (1 + β₀)²(k − j)^{1/2} (CRE (2.6), as in the Cauchy note's #C5.36-1).
             {#W12.183-10} CRE's bounds for these terms are Bałaban's statements at the thresholds (2.28), and the choice here lies within (2.28), so they apply as presented.
             {#W12.183-11} RG I's displays carry the factors L^{j−k} that pay the ratio (L^jη in (3.17), p.273 l.25; L^{j−1}η in (3.37), p.277 l.49; η replaced by L^{−n} in CRE, p.276 l.6–12).
             {#W12.183-12} Where a display drops the factor before the comparison, as (3.51) replaces (L^{j−1}η)² by L^{−2} (p.280 l.10–11), the comparison holds with the factor kept: at η = L^{−k}, α̃_{0,k}(L^{j−k−1})² ≤ (1 + β₀)²(k − j)^{1/2}L^{2(j−k)}L^{−2}α̃_{0,j} ≤ L^{−2}α̃_{0,j}, since (k − j)^{1/2} ≤ L^{k−j} and (1 + β₀)² ≤ L ≤ L^{k−j} for k > j.
@@ -3525,26 +3249,26 @@
             - {#W12.184} α₂ = c₂α₀ is a radius of (3.14).
               {#W12.184-1} RG I takes (3.13) on U^c_j(X, ½α₀, ½α₁, α₀) and needs its arguments in the term's domain U^c_j(X, α₀, α₁, γ₀), γ₀ = α₀ (p.263 l.2–3), whose current bound is |𝐉| < γ₀ (p.262 l.37).
               {#W12.184-2} The 𝐉 entry of (3.13) is (L^{j−1}η)³𝐉 plus terms that vanish at 𝐀 = 0 (p.272 l.27–36), and (L^{j−1}η)³ ≤ L^{−3}, so the rooms are ½α₀, ½α₁, and (1 − L^{−3})α₀, all proportional to α₀ since α₁ = λ_Rα₀ ≥ α₀.
-              {#W12.184-3} So c₂ depends at most on d, L, and B₃ (the Cauchy note's l.161, the room in (iv) through Proposition 9).
-            - {#W12.185} α₃ satisfies RG I's two conditions: B₃α₃ ≤ B₃⁺α₃ = ½β_IL^{−2}α̃_{0,k}/C_{Q*} < ½α̃_{1,k} (p.280 l.6), since β_IL^{−2} ≤ 1 < λ_R (stage 2) and C_{Q*} ≥ 1, and 2B₃α₃ ≤ 2B₃⁺α₃ = β_IL^{−2}α̃_{0,k}/C_{Q*} ≤ β_IL^{−2}α̃_{0,k} (p.280 l.16), with B₃⁺ := max(B₃, 2B_J) of the Cauchy note's l.163, Bałaban's B₃ unchanged.
+              {#W12.184-3} So c₂ depends at most on d, L, and B₃ (the Cauchy note's #C5.36-11, and #C5.36-13 for the room in (iv) through Proposition 9).
+            - {#W12.185} α₃ satisfies RG I's two conditions: B₃α₃ ≤ B₃⁺α₃ = ½β_IL^{−2}α̃_{0,k}/C_{Q*} < ½α̃_{1,k} (p.280 l.6), since β_IL^{−2} ≤ 1 < λ_R (stage 2) and C_{Q*} ≥ 1, and 2B₃α₃ ≤ 2B₃⁺α₃ = β_IL^{−2}α̃_{0,k}/C_{Q*} ≤ β_IL^{−2}α̃_{0,k} (p.280 l.16), with B₃⁺ of the Cauchy note's #C5.37-18.
             - {#W12.186} "α₂ sufficiently small" (p.279 l.47).
               {#W12.186-1} RG I proves (3.36) for |B′| < α₃ (p.279 l.48–49) and applies it at B′ = τQ′, with |Q′| < O(1)α₂L^jη by (3.49) (p.279 l.44) and L^jη ≤ 1.
               {#W12.186-2} This needs O(1)α₂ ≤ α₃, that is c₂ ≤ c_* := β_IL^{−2}/(2B₃⁺C_{Q*}O(1)) with the absolute O(1) of (3.49), a homogeneous condition at stage 2 that does not involve γ.
             - {#W12.187} The class (3.31) and (3.14) contain the field: "for ε₁ sufficiently small" (p.276 l.42) and "ε₁ is so small that 𝐇_j(B(t)) satisfies (3.14) with 1/3α₂" (p.273 l.13).
               {#W12.187-1} Here RG I's ε₁ is the restriction |B′(b)| < ε₁ on the fluctuation field (p.266 l.46), which in CRE is O(ε_k): CRE's restriction 2δ_k, δ_k = (A₁/A₀)ε_k (CRE (3.3), p.265 l.26–39; ε_k of (2.4), p.255 l.31–34), gives |A′_k| < O(1)ε_k (p.267 l.27–28), and CRE speaks of "O(ε_k) arising from the bound of the fluctuation field" (p.277 l.9).
-              {#W12.187-2} So the ratio is O(1)ε_k/α₂ = O(1)(A₀/(c₂C₀))(log g_k^{−2})^{p₀−q₀}, small for γ small by the LF note's choice q₀ > p₀ + 3r (LF #0.10), after c₂ and C₀ are fixed.
-            - {#W12.188} The term O(1)α₂ of p.285 l.17, and the same form in (4.18) (p.285 l.23) and in |B| < α₁L^jη (p.280 l.44): O(1)(α₂ + B₃O(1)LMα₀) ≤ O(1)(1 + B₃O(1))LMα₀ < (K_RLM + 1)α₀ = α₁ under c₂ ≤ 1, LM ≥ 1, and K_R ≥ O(1)(1 + B₃O(1)), with LM in place of M as at a finer layer and a fortiori with M. RG I's B₃²O(1)Mα₀ < ½α₁ (p.277 l.54), with LM in place of M, reads B₃²O(1)LM < ½λ_R, which K_R ≥ 4B₃²O(1) gives.
-            - {#W12.189} The factors α₂^{−1}ε₁ of p.273 l.25 and p.280 l.49 ("this differentiation yields a factor O(1)α₂^{−1}ε₁, and taking ε₁ sufficiently small we can get the required constant", p.280 l.49; p.273 l.25 prints the factor 6α₂^{−1}L^jηB₀B₃|ζ_□𝐇_k(B′)|, with |𝐇_k(B′)| = O(ε₁)): O(1)α₂^{−1}ε_k = O(1)(A₀/(c₂C₀))(log g_k^{−2})^{p₀−q₀}, small for γ small as above.
+              {#W12.187-2} So the ratio is O(1)ε_k/α₂ = O(1)(A₀/(c₂C₀))(log g_k^{−2})^{p₀−q₀}, small for γ small by the LF note's choice q₀ > p₀ + 3r (LF #4.420-1.1), after c₂ and C₀ are fixed.
+            - {#W12.188} The term O(1)α₂ of p.285 l.17, the same form behind (4.18) (p.285 l.23–25, "by similar considerations as in the proof of (4.17)"), and |B| < α₁L^jη (p.280 l.44): O(1)(α₂ + B₃O(1)LMα₀) ≤ O(1)(1 + B₃O(1))LMα₀ < (K_RLM + 1)α₀ = α₁ under c₂ ≤ 1, LM ≥ 1, and K_R ≥ O(1)(1 + B₃O(1)), with LM in place of M as at a finer layer and a fortiori with M. RG I's B₃²O(1)Mα₀ < ½α₁ (p.277 l.54), with LM in place of M, reads B₃²O(1)LM < ½λ_R, which K_R ≥ 4B₃²O(1) gives.
+            - {#W12.189} The factors α₂^{−1}ε₁. RG I's (3.17) carries 6α₂^{−1}L^jηB₀B₃|ζ_□𝐇_k(B′)| with |𝐇_k(B′)| = O(ε₁) (p.273 l.25–26), and p.280 l.49 reads "this differentiation yields a factor O(1)α₂^{−1}ε₁, and taking ε₁ sufficiently small we can get the required constant". Here O(1)α₂^{−1}ε_k = O(1)(A₀/(c₂C₀))(log g_k^{−2})^{p₀−q₀}, small for γ small as in #W12.187-2.
             - {#W12.190} The factor (2n²B₃/α₂)^n of (4.5) (p.282 l.13) multiplies |ζ̃_□B|^m|(1 − ζ̃_□)B|^{n−m} with |B| < α₁L^jη, so it is at most (2n²B₃λ_R/c₂)^n(L^jη)^n, paid by the factor e^{−δ₀M(L^jη)^{−1}} of p.282 l.18 as in RG I, with λ_R/c₂ in place of α₁/α₂.
             - {#W12.191} The ratios α₁/α₂ = λ_R/c₂ in (8B₃α₁/α₂)⁴ (p.286 l.12–20) and α₁/α₃ = 2B₃⁺C_{Q*}λ_RL²/β_I in E₀α₃^{−5}|B|⁵ ≤ E₀(α₁/α₃)⁵(L^jη)⁵ of (3.54) (p.280 l.39–44) are constants of M, K_R, d, L, B₃, B₃⁺, c₂, and β_I, uniform in k.
               {#W12.191-1} RG I recovers E₀ through the factor O(1)α₂^{−1}ε₁ of p.280 l.47–49, so they enter only the γ-small condition of the previous items.
             - {#W12.192} The LF note's other restrictions on C₀ and C₁ are lower bounds, upper bounds that hold for γ small, and homogeneous relations (*Bałaban's Statements at the Reduced Thresholds*).
               {#W12.192-1} So C₀ := λ_Qmax(C₀^{low}, C₁^{low}/λ_R) and C₁ := λ_RC₀ satisfy all of them, and q₁ = q₀ is within the LF note's choice q₁ ≥ q₀.
-          - {#W12.193} No loop through M (derived, not reviewed).
-            {#W12.193-1} CRE's C₁ of (2.28) now depends on M, so the choice is consistent only if no lower bound on M involves CRE's C₀ or C₁.
-            {#W12.193-2} In CRE they occur in (2.28) (p.259 l.47–50), and C₁ also in (3.43), the fluctuation domain |A| < C₁p₁(g_k) (p.276 l.29–31), which the print does not tie to (2.28).
-            {#W12.193-3} Either way that C₁ bounds an analyticity radius in the fluctuation field, which must lie in the margin α₃ ∝ g_kC₀(log g_k^{−2})^{q₀} after the factor g_k; this holds for γ small since q₀ > p₀ + 3r > p₀ (LF #0.10) and p₁ < p₀ (LFR I p.183 l.2), with γ depending on C₁/C₀ = λ_R, and it enters no lower bound on M. VAR's absolute C₁ of (14), which enters B₅ = 6B₁B₃C₁ ((173)), RG II's absolute C₁ (p.6 l.54–57), and 10.5's C₁^{(1)} are other constants, not changed by the sixth choice.
-            {#W12.193-4} A search of the transcriptions of RG I, RG II, CRE, LFR I, and LFR II for conditions on M finds these, and none of them involves CRE's C₀ or C₁:
+          - {#W12.193} No loop through M.
+            {#W12.193-1} CRE's C₁ = λ_RC₀ of (2.28) depends on M, so the choice is consistent only if no lower bound on M involves CRE's C₀ or C₁.
+            {#W12.193-2} In CRE they occur in (2.28) (p.259 l.47–50), and C₁ also in (3.43)'s A-radius, which no note uses (table #T11.12-2, #T11.12-2-1), so it enters no lower bound on M.
+            {#W12.193-3} VAR's absolute C₁ of (14), which enters B₅ = 6B₁B₃C₁ ((173)), RG II's absolute C₁ (p.6 l.54–57), and 10.5's C₁^{(1)} are other constants, not changed by the sixth choice.
+            {#W12.193-4} The conditions on M in RG I, RG II, CRE, LFR I, and LFR II are the following, and none of them involves CRE's C₀ or C₁:
             - {#W12.194} RG I's M ≥ M(κ), with γ, ε₀, ε₁, α₀, and α₁ chosen after κ and M (Theorem 3, p.264 l.38–39);
             - {#W12.195} RG II's δ₀M ≥ κ (p.21 l.36), δ₁M ≥ κ₁ (p.5 l.15), and e^{−δ₀M/3}e^{16κ₁} < 1 (p.16 l.7), with κ₁ fixed by lower bounds in κ, δ, and L (*(D2)* above);
             - {#W12.196} CRE's "M = L^m is sufficiently large" (p.245 l.34), and the conditions on MR₁ and M₂R₁ (p.250 l.47–48, p.251 l.39–40), which compare O(1)B₃e^{−δMR₁}ε₁ with δ₀ = (A₁/A₀)ε₀ (p.247 l.50) and hold for M fixed and γ small because R₁ ≥ (log g₁^{−2})^r tends to infinity (p.246 l.24–25); they involve A₀/A₁, not C₀ or C₁;
@@ -3561,13 +3285,12 @@
           {#W12.201-5} So, for 𝐔 in the class at C₀ and C₁, Bałaban's U^0_k(𝐔) lies in the space of (1.65) at C₀ and C₁ (his (1.65)).
           {#W12.201-6} The X_s representation moves its entries by at most half of their room there, on the boundary layers and on Y₁, Λ^∼ included.
           {#W12.201-7} So the moved configuration lies in the space of (1.65) at 2C₀ and 2C₁, on which the terms are analytic with Bałaban's bounds (1.66) at these constants.
-          {#W12.201-8} The run difference of the gauge factor below is then used only through the data X_s, which depend on h.
     {#W12.202} With *The boundary-layer data of (1.62).*, which places every boundary layer at a distance ≥ ½Ma_k from Z″_k, the strip bound of *The strip.* holds for the terms of the X_s representation, in both runs.
-  - {#W12.203} *The run difference of the gauge change (derived, not reviewed).* In each run, h is built from that run's U_{k,Λ}, with run B's pair U^B := ι(V₀), V₀ := U^A_{k,Λ} (*The background pairs.* above).
+  - {#W12.203} *The run difference of the gauge change.* In each run, h is built from that run's U_{k,Λ}, with run B's pair U^B := ι(V₀), V₀ := U^A_{k,Λ} (*The background pairs.* above).
     {#W12.203-1} At a site x of run A, both runs take the transport along the same straight segments of the fine axial contour, run A over its bonds of the spacing ε and run B over its sub-bonds of the spacing ε/L.
     {#W12.203-2} Since MU^B = V₀ exactly (the LF note's (i)), V₀(b) is the one-step average of U^B over the paths across b.
     {#W12.203-3} Each such path differs from the straight one by a flux through an area ≤ dε², so |log(V₀(b)^{−1}U^B(Γ_b))| ≤ O(1)dε²|F(U^B)|.
-    {#W12.203-4} The bi-invariant distance of products adds these, and the contour has at most O(1)dMa_k/ε bonds, since Λ lies in a cube of the size 100M at the scale k (LFR I p.192). 10.5 gives |F(U^B)| ≤ O(1)Mα₀a_k^{−2} at the global layer k of the points of Λ (10.5, the curvature at U^B).
+    {#W12.203-4} The bi-invariant distance of products adds these, and the contour has at most O(1)dMa_k/ε bonds, since Λ lies in a cube of the size 100M at the scale k (LFR I p.192 l.47). 10.5 gives |F(U^B)| ≤ O(1)Mα₀a_k^{−2} at the global layer k of the points of Λ (10.5, the curvature at U^B).
     {#W12.203-5} This gives
     {#W12.204} |h^B(x)h^A(x)^{−1} − 1| ≤ O(1)d²M²α₀(ε/a_k)
     {#W12.205} at every data point x of run A in Z″_k, at real 𝐔.
@@ -3576,21 +3299,20 @@
     {#W12.205-3} The data X_s depend on h as well: X_s^X = −(1/i)log(((h^X_x)^{−1}h^X_y)^{−1}M^·(U^X_{k,Λ})(b)) on a bond b = (x, y) of Z″_k.
     {#W12.205-4} So X_s^B and X_s^A differ, besides the data difference that (W-δ) compares, by the conjugation with h^B(h^A)^{−1} at the two endpoints, so by ΔX_s ≤ O(1)d²M²α₀(ε/a_k) at real 𝐔, with 10.5's curvature bound at U^B as above.
     {#W12.206} At complex 𝐔 run B's background is the one-step lift ι(V₀(𝐔)). h^B and X_s^B depend on it only through its orbit under the gauge transformations that are 1 at the points of the ε-lattice, since transports between these points and the data are invariant under them.
-    {#W12.206-1} So neither the gauge of run B's representative nor run B's class conditions at the thresholds α̃ enters here; the LF note's lift items at complex points (*The lift condition at complex points.*, derived, not reviewed) concern these. ι's problem is VAR's at one step (the LF note's *The one-step problem.*).
+    {#W12.206-1} So neither the gauge of run B's representative nor run B's class conditions at the thresholds α̃ enters here; the LF note's lift items at complex points (*The lift condition at complex points.*) concern these. ι's problem is VAR's at one step (the LF note's *The one-step problem.*).
     - {#W12.207} The complex lift.
       {#W12.207-1} Let V_r := U^r, the real minimiser of *The absolute bound at complex points.* Its plaquettes at the spacing ε are < ε₁^ι := O(1)B₃B₅M⁵α̃_{0,k}(ε/a_k)², so VAR Theorem 1 at one step gives the real lift ι(V_r), with |F(ι(V_r))| ≤ O(1)B₃Mε₁^ιε^{−2} (VAR (9)–(10), as the LF note's *The one-step problem.* uses them).
       {#W12.207-2} V₀(𝐔) = (exp(iη𝐇_c)U^r)^{u^{−1}}, so its ε-bond data deviate from those of V_r, after the gauge factor u, by B(𝐔) with |B(𝐔)| ≤ O(1)(ε/a_k)C_HC_Ŷ(α̃_{0,k} + α̃_{1,k}).
-      {#W12.207-3} Proposition 9 states the solution map ℋ of (179)–(180) analytic in the external configuration on PBG's class, with (190), and VAR p.309 l.1–4 continues its operators to complex configurations.
+      {#W12.207-3} VAR Proposition 9 (p.309 l.8–14) states the solution map ℋ of (179)–(180) analytic in B, for G^c-valued small V′, and in the external configuration on PBG's class, with (190); p.309 l.1–3 extends its operators "to arbitrary, regular configurations U".
       {#W12.207-4} So VAR's representation about the minimiser ι(V_r) gives ι(V₀(𝐔)) = (exp(i(ε/L)𝐇^ι)ι(V_r))^{ũ^{−1}}, 𝐇^ι := ℋ(B(𝐔)), with |𝐇^ι|_{(−1)} ≤ C_H|B(𝐔)| and ũ the extension of u given by gauge covariance, an identity of analytic functions that holds at real 𝐔.
       {#W12.207-5} At real 𝐔 this is the real lift, so its orbit is the holomorphic extension of the real one, and MU^B = V₀ holds at complex 𝐔 too.
-    - {#W12.208} The curvature (derived, not reviewed).
-      {#W12.208-1} The bound |𝐇^ι|_{(−1)} ≤ C_H|B(𝐔)| is in the one-step norm at the spacing ε, so it gives |∇𝐇^ι| only up to C_H|B|ε^{−2}, a factor a_k/ε too large, and VAR Theorem 1 is printed for G-valued data only.
-      {#W12.208-2} The bound below uses the smoothness of B instead.
+    - {#W12.208} The curvature.
+      {#W12.208-1} VAR Theorem 1 is printed for G-valued data, and the one-step bound |𝐇^ι|_{(−1)} ≤ C_H|B(𝐔)| at the spacing ε controls ∇𝐇^ι only up to C_H|B|ε^{−2}, so the curvature is bounded through the smoothness of B.
       {#W12.208-3} The operators are those of the real background ι(V_r), and only the data are complex.
       - {#W12.209} The data.
         {#W12.209-1} The gauge factor u of V₀(𝐔) acts at ε-sites (CMP 98 (106)), so the orbit invariance above does not remove it.
         {#W12.209-2} By the gauge covariance of the lift (VAR (181)), ι(V^{u^{−1}}) = ι(V)^{ũ^{−1}}, so F(ι(V₀(𝐔))) is F(ι(exp(iε𝐇_c)U^r)) conjugated by ũ, whose Ad costs at most a factor 2 for γ small (*The bound.*).
-        {#W12.209-3} So u is dropped, so V₀(𝐔) = exp(iε𝐇_c)U^r on the ε-bonds and B(b) = ε𝐇_c(b). 𝐇_c is bounded in VAR's layer norm, which reads a(x)|𝐇_c(x)| and a(x)²|∇𝐇_c(x)|, by the bound C_HC_Ŷ(α̃_{0,k} + α̃_{1,k}) that gives |B(𝐔)|.
+        {#W12.209-3} Hence u can be dropped: V₀(𝐔) = exp(iε𝐇_c)U^r on the ε-bonds, and B(b) = ε𝐇_c(b). 𝐇_c is bounded in VAR's layer norm, which reads a(x)|𝐇_c(x)| and a(x)²|∇𝐇_c(x)|, by the bound C_HC_Ŷ(α̃_{0,k} + α̃_{1,k}) that gives |B(𝐔)|.
         {#W12.209-4} So |𝐇_c| ≤ C_HC_Ŷα̃a_k^{−1} and |∇𝐇_c| ≤ C_HC_Ŷα̃a_k^{−2} on Λ, and ε²|∇𝐇_c| ≤ C_HC_Ŷα̃ at every point, with α̃ := α̃_{0,k} + α̃_{1,k} and ∇ the covariant difference at U^r.
       - {#W12.210} The interpolant.
         {#W12.210-1} Let A_e be the field on the fine bonds of the spacing ε/L that takes, on a fine bond b′, the value of 𝐇_c at the ε-bond parallel to b′ and nearest to it, transported to b′ by ι(V_r), corrected on the fine bonds of each ε-bond b by a local right inverse of Q so that QA_e = 𝐇_c exactly, Q the one-step averaging operator linearised at ι(V_r).
@@ -3612,7 +3334,7 @@
         {#W12.213-8} The data of the ε-bonds at a distance ≤ ½Ma_k from the point x read lie at a distance ≥ ½Ma_k from Λ^c, with the gain a_k^{−2} (the points read lie in Z″_k, at a distance ≥ Ma_k from Λ^c).
         {#W12.213-9} The others carry |∇𝐇_c| ≤ C_HC_Ŷα̃ε^{−2} = C_HC_Ŷα̃a_k^{−2}L^{2k}, with the weight at most e^{−½min(δ₀, δ₁)d}.
         {#W12.213-10} Half of that weight sums over these bonds to O(1)min(δ₀, δ₁)^{−d}, which C_G absorbs, and the other half is at most e^{−⅛min(δ₀, δ₁)ML^k} at the distance ≥ ½Ma_k = ½ML^kε.
-        {#W12.213-11} L^{2k}e^{−⅛min(δ₀, δ₁)ML^k} ≤ 1 once min(δ₀, δ₁)M ≥ 8 log L, since the exponent is then ≥ L^k log L ≥ 2k log L, a lower bound on M. So |∇(H₁B/ε)(x)| ≤ O(1)C_GLC_HC_Ŷα̃a_k^{−2} at these points (derived, not reviewed).
+        {#W12.213-11} L^{2k}e^{−⅛min(δ₀, δ₁)ML^k} ≤ 1 once min(δ₀, δ₁)M ≥ 8 log L, since the exponent is then ≥ L^k log L ≥ 2k log L, a lower bound on M. So |∇(H₁B/ε)(x)| ≤ O(1)C_GLC_HC_Ŷα̃a_k^{−2} at these points.
       - {#W12.214} The nonlinear part. 𝐇^ι solves VAR's fixed point at one step, (111)–(112) about the real minimiser ι(V_r): 𝐇^ι = A₁ + H₁B − HD(A₁ + H₁B), A₁ = −𝔊J − 𝔊(δV/δA′)(A′).
         {#W12.214-1} The current J of ι(V_r) obeys VAR (10), |J| ≤ O(1)B₃Mε₁^ιε^{−3} = O(1)B₃²B₅M⁶α̃a_k^{−2}ε^{−1}, and ∇𝔊 costs O(1)B₀ε by (3.42), which gives O(1)B₀B₃²B₅M⁶α̃a_k^{−2}.
         {#W12.214-2} The sources δV/δA′ and HD are at least quadratic in A′ (VAR (98), RG II (1.13)), with |A′|_{(−1)} ≤ O(1)C_H|B| ≤ O(1)C_H²C_Ŷα̃(ε/a_k) in the one-step norm, so their contribution to ∇𝐇^ι is ≤ O(1)B₀ε^{−2}(C_H²C_Ŷα̃ε/a_k)² ≤ O(1)B₀C_H⁴C_Ŷ²α̃²a_k^{−2}.
@@ -3620,14 +3342,14 @@
         {#W12.215-1} So |∇𝐇^ι| ≤ O(1)(C_GLC_HC_Ŷ + B₀B₃²B₅M⁶)α̃a_k^{−2}, with the fine difference ∇ at ι(V_r), and |𝐇^ι| ≤ O(1)(1 + C_G)C_HC_Ŷα̃a_k^{−1}.
         {#W12.215-2} The curvature of exp(i(ε/L)𝐇^ι)ι(V_r) at a fine plaquette is F(ι(V_r)) plus the covariant curl of 𝐇^ι plus terms ≤ O(1)(|𝐇^ι|² + (ε/L)|𝐇^ι||F(ι(V_r))|), and |F(ι(V_r))| ≤ O(1)B₃Mε₁^ιε^{−2} = O(1)B₃²B₅M⁶α̃a_k^{−2}.
         {#W12.215-3} The gauge factor ũ is G^c-valued with imaginary part of the size of 𝐇_c, so its Ad changes |F| by a factor ≤ 2 for γ small.
-    {#W12.216} So |F(U^B)| ≤ C_F^Λ(α̃_{0,k} + α̃_{1,k})a_k^{−2} on Λ, C_F^Λ := O(1)(B₀B₃²B₅M⁶ + C_GLC_HC_Ŷ) (it depends on M and is distinct from the Cauchy note's C_F, which enters C_ι), at real and complex 𝐔, and |F(U_{k,Λ}(𝐔))| obeys the same bound by *The data X and X_s.* The imaginary parts of both runs' transports along the contours sum to ≤ O(1)dM(1 + C_G)C_HC_Ŷ(α̃_{0,k} + α̃_{1,k}), which is absolutely small for γ small, a condition taken with (D1).
+    {#W12.216} So |F(U^B)| ≤ C_F^Λ(α̃_{0,k} + α̃_{1,k})a_k^{−2} on Λ, C_F^Λ := O(1)(B₀B₃²B₅M⁶ + C_GLC_HC_Ŷ) (it depends on M and is distinct from the Cauchy note's C_F, which enters C_ι), at real and complex 𝐔, and |F(U_{k,Λ}(𝐔))| obeys the same bound by *The data X and X_s.* The imaginary parts of both runs' transports along the contours sum to ≤ O(1)dM(1 + C_G)C_HC_Ŷ(α̃_{0,k} + α̃_{1,k}), the quantity of §8's Ad condition for these transports (stage 6).
     {#W12.216-1} So their Ad is within a factor 2 of isometric, and the flux sum gives
       {#W12.217} |h^B(x)h^A(x)^{−1} − 1|, |ΔX_s| ≤ O(1)d²MC_F^Λ(α̃_{0,k} + α̃_{1,k})(ε/a_k)
       {#W12.218} at complex 𝐔, with the logarithms in their analytic chart for γ small.
       {#W12.218-1} This carries ε/a_k ≤ (ε/a_{m(ω)})^{γ_w} for every m(ω) ≤ k.
       {#W12.218-2} Through the Lipschitz bound of 𝐇_{𝐁₁} in its data (VAR Proposition 6), this is an absolute change of 𝐇_{𝐁₁} of the size of these bounds times the Lipschitz constant, a run-B term carrying ε/a_k.
       {#W12.218-3} Its part linear in the data is a sum of walk terms with the source ΔX_s, each at most these bounds times the walk bound (3.108) with a normalised source, as in *The strip.*, so it fits δ_w(ω).
-      - {#W12.219} The nonlinear part (derived, not reviewed).
+      - {#W12.219} The nonlinear part.
         {#W12.219-1} It is bounded on the s-polydisc as §11 bounds the fixed point 𝐀₀ (*The fixed point 𝐀₀.*), without a per-walk decomposition.
         - {#W12.220} The identity.
           {#W12.220-1} Let D_h(s) := 𝐇^B_{𝐁₁}(X_s^B)(s) − 𝐇^B_{𝐁₁}(X̂_s)(s), both run B's function, with X̂_s run B's data with h^A in place of h^B at run A's data points, and X̂_s := X_s^B at run B's extra finest data bonds of 𝐁₁'s collar strip, where h^A does not exist (so ΔX_s := 0 there; those terms are bounded run by run by *The strip.*, which holds for the X_s representation in each run with that run's own w).
@@ -3645,142 +3367,74 @@
           {#W12.222-4} The first bracket is 𝔊(s) applied to the difference of the sources δV/δA′.
           {#W12.222-5} VAR Proposition 4 bounds the whole source, its divergence-form parts included, in the sup norm |·|_{(−3)} by the max norm ((98), p.293), and VAR (119)–(120) do the same for differences.
           {#W12.222-6} So the source difference has the sup ≤ O(1)ε₂|A′^B − Â′|_{max}, which the contraction bounds by O(1)|H₁(s)ΔB|. 𝔊(s) maps sup-bounded sources into the Hölder entry at every β < 1: PBG (3.43) (p.398 l.2–8), through Theorems 3.3 and 3.13 (p.399 l.18–19, p.426 l.29–31), which are stated at real configurations satisfying (3.35)–(3.36), and at the complex 𝐔 through PBG's extension of the operators to the domain (3.37) (p.399 l.31, p.402 l.56, p.406 l.10).
-          {#W12.222-7} PBG states the analyticity and the bounds of Theorems 3.1–3.3 on (3.37); the Hölder bound of 𝔊 there is obtained by running its perturbation series (3.130) and (3.138) at the complex 𝐔 in the norms of (3.43), as Theorem 3.13 runs them at real 𝐔 (derived, not reviewed).
-          {#W12.222-8} RG II prints "in all norms" for H(s(Y₀)) (p.5 l.15–16), not for 𝔊(s).
-          {#W12.222-9} For the decoupled 𝔊(s) the same argument applies: 𝔊's walk terms satisfy the bounds of all these norms with the walk decay, the decoupling multiplies each walk term by its s-factors, and the sum over the walks is bounded as for H(s), with the split of the decay of *The decoupled functions.* So ‖D_h(s)‖_{1,β} ≤ O(1)B₀e^{16κ₁}|ΔB| for 0 ≤ β ≤ β₀, with the same factor ε/a_k as the other two entries.
+          {#W12.222-7} PBG states the analyticity and the bounds of Theorems 3.1–3.3 on (3.37); the Hölder bound of 𝔊 there is obtained by running its perturbation series (3.130) and (3.138) at the complex 𝐔 in the norms of (3.43), as Theorem 3.13 runs them at real 𝐔.
+          {#W12.222-9} RG II prints "in all norms" for H(s(Y₀)) (p.5 l.16). For the decoupled 𝔊(s) the same argument applies: 𝔊's walk terms satisfy the bounds of all these norms with the walk decay, the decoupling multiplies each walk term by its s-factors, and the sum over the walks is bounded as for H(s), with the split of the decay of *The decoupled functions.* So ‖D_h(s)‖_{1,β} ≤ O(1)B₀e^{16κ₁}|ΔB| for 0 ≤ β ≤ β₀, with the same factor ε/a_k as the other two entries.
         - {#W12.223} The consumer.
           {#W12.223-1} Each localised term is a Cauchy integral in s on |s(Δ)| = e^{κ₁} (§3(d), RG II (1.23)), so it reads D_h only through this bound on the polydisc, as it reads Δ₀.
           {#W12.223-2} The factor ε/a_k is ≤ (ε/a_{m(Y)})^{γ_w} for every m(Y) ≤ k, so the bound fits the weight of every term that reads it.
-          {#W12.223-3} For 𝐇_{𝐁₁}, a background function, the relevant radius is the class radius, not the t_□ rescaling of RG II (1.23), and at the class radius the absolute bound suffices (checked).
+          {#W12.223-3} For 𝐇_{𝐁₁}, a background function, the relevant radius is the class radius, not the t_□ rescaling of RG II (1.23), and at the class radius the absolute bound suffices.
           {#W12.223-4} In RG II (1.23) t_□ multiplies the fluctuation function 𝐇_k(B′). 𝐇_{𝐁₁} = 𝐇_{𝐁₁}(−(1/i)log M^·(U_{k,Λ})⌈_{Z″_k}) carries no such parameter (LFR II p.374 l.4–8).
-          {#W12.223-5} Bałaban expresses each term "as a function of the variables (𝐔, 𝐉)", with M^·(𝐔) and V_Λ^{(A)}(M^k(𝐔)) in place of the data, "an analytic function of (𝐔, J) with a large domain of analyticity" (p.374 l.38–42).
+          {#W12.223-5} Bałaban expresses each term "as a function of the variables (𝐔, 𝐉)", with M^·(𝐔) and V_Λ^{(A)}(M^k(𝐔)) in place of the data, "an analytic function of (𝐔, J) with a large domain of analyticity" (p.374 l.37–42).
           {#W12.223-6} So the terms read 𝐇_{𝐁₁} at the 𝐔 of the class.
           {#W12.223-7} At run B's extra finest data bonds of 𝐁₁'s collar strip in Z″_k, h^B enters X_s^B with no run-A counterpart; there ΔX_s := 0, and the terms are bounded run by run by *The strip.*
-- {#W12.224} *The source of (1.55) (derived, not reviewed).* Bałaban obtains (1.55) (LFR II p.371) from two facts.
+- {#W12.224} *The source of (1.55).* Bałaban obtains (1.55) (LFR II p.371) from two facts.
   {#W12.224-1} First, 𝐆″_k(1 − θ)(1 − Q*_{𝐁₁}H*_{𝐁₁})Q*_{𝐁₁} = 0, since H_{𝐁₁} satisfies Q_{𝐁₁}H_{𝐁₁} = 1.
   {#W12.224-2} Second, "the above condition for J₁", which gives d := 𝐆″_k(1 − θ)(1 − Q*_{𝐁₁}H*_{𝐁₁})J₁ = 0.
   {#W12.224-3} Then θ₁ is inserted because 𝐆″_k kills Ran Q*_{𝐁″_k} and Q_{𝐁₁} = Q_{𝐁″_k} off the boundary layer (p.370 l.49 to p.371 l.2).
   {#W12.224-4} The first fact and the insertion of θ₁ are structural and hold in run B at any background.
-  {#W12.224-5} So, at the pair, run B's 𝐆″^BJ^B_{1,2} differs from the right side of (1.55) in run B by d^B, with d^A = 0 by Bałaban.
-  {#W12.224-6} Run B's terms read only the right side (*Run B's terms contain no d^B* below), so d^B enters no term; the items on d^B below bound it, and the comparison does not use them.
+  {#W12.224-5} So, at the pair, run B's 𝐆″^BJ^B_{1,2} differs from the right side of (1.55) in run B by d^B := 𝔊^B(1 − θ)(1 − Q^{B*}H^{B*})J^B, with 𝔊 := 𝐆″_k and H := H_{𝐁₁}, while d^A = 0 by Bałaban.
+  {#W12.224-6} Run B's terms read only the right side, so d^B enters no term:
+  - {#W12.248} Run B's terms contain no d^B.
+    {#W12.248-1} Bałaban writes (1.55) before the localisation (LFR II p.371 l.2: "We use this fact to localize the considered expression"), localises 𝐇″_k (p.373 l.31–32), which by p.371 is its right side, and expresses every term of the expansion "as a function of the variables (𝐔, 𝐉)" (p.374 l.37–38).
+    {#W12.248-2} So run B's terms are functions of RHS(1.55)_B, defined on run B's configurations alone and independent of the pair and of Y, and the term of the domain Y at ι_Yc^A is that function evaluated there; no term of V(Y) reads d^B.
   - {#W12.225} θ and θ₁.
-    {#W12.225-1} Bałaban fixes them only by their support properties: θ = 1 on (Ω″^∼_{h+1})^c and on the boundary layer of the width 2M₁ at the scale h, changing to 0 near its inner boundary, and θ₁ = 1 where θ ≠ 0, 1 (p.371).
+    {#W12.225-1} Bałaban fixes them only by their support properties: θ = 1 on (Ω″^∼_{h+1})^c and on the boundary layer of the width 2M₁ at the scale h, changing to 0 near its inner boundary, and θ₁ = 1 where θ ≠ 0, 1 (p.371 l.2–4, l.21).
     {#W12.225-2} Bałaban also requires θ ∈ C₀^∞((Ω″_{h+1})^c).
     {#W12.225-3} These sets are physical sets at the scale h, the same in both runs, since the cut lies in the layer h at a shared scale.
     {#W12.225-4} Both runs are therefore taken with the same functions θ and θ₁ of physical space, smooth at the scale h; this is a choice, permitted because Bałaban fixes them only by these properties, and it leaves them no run difference.
-  - {#W12.226} d^B (not used by the comparison). d^B = 𝔊^B(1 − θ)(1 − Q^{B*}H^{B*})J^B, with 𝔊 := 𝐆″_k and H := H_{𝐁₁}, is supported on supp(1 − θ), the bulk of Ω″^∼_{h+1}, and has no θ₁ factor, so it is not compared with a run-A term; it is bounded absolutely, walk term by walk term.
+  - {#W12.226} *The current difference.*
     {#W12.226-1} Run B's configuration at the pair is the lift ι_Y of run A's, run B's local minimiser with the data of its argument on Y^∼.
     {#W12.226-2} Write S_B(W) = S_A(MW) − b(W) with b the blocking artifact and ∇_Wb its fine gradient.
     {#W12.226-3} Differentiating, J^B = M*J^A − ∇_Wb at W = ι_Yc^A, with M* the transpose of the linearised one-step average, with no criticality needed.
-    {#W12.226-4} The criticality of the lift under its one-step constraint gives ∇_Wb = M*κ with κ := dι*∇_Wb, the data gradient of the gauge-invariant function b∘ι.
-    {#W12.226-5} The linear part of M is Q₁ − D̄Θ₁ (§11, the complex step: B = Q₁W̃ − D̄(Θ₁W̃) + …), with Q₁ the linear part of the one-step double bar, and the gauge invariance of S_A and of b∘ι gives D̄*J^A = 0 and D̄*κ = 0, so M*J^A = Q₁*J^A and M*κ = Q₁*κ.
-    {#W12.226-6} Run B's averages compose through the double bar, Q^{B*} = Q₁*Q^{A*} on the aligned layers, and Bałaban's condition that J₁ annihilates the kernel of Q_{𝐁₁} (p.370 l.50–52) gives J^A = Q^{A*}μ, so Q₁*J^A = Q^{B*}μ, which 1 − Q^{B*}H^{B*} annihilates.
-    {#W12.226-7} Hence (1 − Q^{B*}H^{B*})J^B = −(1 − Q^{B*}H^{B*})Q₁*κ, and
-    {#W12.227} d^B = −𝔊^B(1 − θ)(1 − Q^{B*}H^{B*})Q₁*κ.
-    {#W12.228} These identities hold where ι_Y is the critical lift, and on the layers where the runs are aligned.
-    - {#W12.229} ι_Y minimises the one-step problem on Y^∼.
-      {#W12.229-1} Its constraints are the one-step averages on the big blocks of Ω₁ and the fine data Q₁^{s*}c^A on the collar Λ₀ = Y^∼ ∖ Ω₁ (the LF note's *The Lift ι_Y.*).
-    - {#W12.230} Let Y^− be the set of fine bonds whose one-step blocks lie in Ω₁.
-      {#W12.230-1} On Y^−, the Euler–Lagrange equation gives J^B = M*λ, with λ the multiplier of the one-step constraint, defined on the constrained coarse bonds and extended by λ := 0 to the other coarse bonds.
-      {#W12.230-2} So ∇_Wb = M*κ′ there, with κ′ := J^A − λ on every coarse bond.
-    - {#W12.231} On the bonds C := Y^∼ ∖ Y^−, which contain the collar bonds, no such identity is used.
-      {#W12.231-1} C may also contain bonds where the Euler–Lagrange equation holds; e_c below then carries them too, with the same distance bound.
-
-    {#W12.232} The run-B-only terms there are not of the kind of *The strip.*: ι_Y is not critical there, its collar data are of Q₁^{s*} type, and the gain inputs of *The strip.* do not apply.
-    {#W12.232-1} They are removed by locality.
-    - {#W12.233} Locality.
-      {#W12.233-1} Every term of V(Y) depends on the backgrounds only as restricted to its domains: "A term in this expansion depends on the background field U_{1,2} restricted to Y_2" (LFR II p.373); U_{k,Λ} on Y₃ and U_k on Y₄ (p.374, the second and third localisations); and V(Y, U_k) "depends on the new background field U_k restricted to Y" (p.377 l.7) (all checked).
-      {#W12.233-2} These are statements of functional locality.
-      {#W12.233-3} The structural form used here is RG II p.4 l.18–24: the decoupled kernels vanish unless both arguments lie in one component of Y(σ), so the walk kernels of a term with the domain Y are supported in Y (as in *The bridge to ℒ_ι.*, *The support.*).
-      - {#W12.234} So run B's term at ι_Yc^A reads J^B only at points of Y, and, by the kernel support, d^B may be computed with any field equal to J^B there, whether or not it is the current of a configuration.
-      - {#W12.235} The walk terms of d^B that enter V(Y) read κ only at points of Y, and at their neighbours of the summation by parts below.
-      - {#W12.236} Y and these neighbours lie in Y^−, since dist(Y, Ω₁^c) ≥ M₁a_k − R_ιM₁ε/L − M₁ε > 2Lε (the LF note's *The Lift ι_Y.*, *The size.*), with R_ι the parameter R of VAR (1) for the one-step problem of the lift.
-      - {#W12.237} *The lift's R_ι (checked).* R_ι is a parameter of the lift's one-step problem, separate from the R of the walk problems' sequences (R ≥ 12dL, and R_j ≥ (log g_j^{−2})^r of CRE (2.5)).
-        {#W12.237-1} VAR's Sect. F construction, which places the minimiser in the space (8), takes a cube □ of size 2ML^jη with M = R₁M₁ and the cube □̃ with dist(□, □̃^c) = 2R₁M₁L^jη, and states □̃ ⊂ B^{j−1}(Λ_{j−1}) ∪ B^j(Λ_j) ⊂ Ω_{j−1} (VAR p.300 l.28–37).
-        {#W12.237-2} Its source states the condition: "We assume that RM is bigger than R₁M₁, for example L^{−1}RM > 2dR₁M₁, thus we have □̃ ⊂ Ω_{k−1}" (REG p.098 l.17–18).
-        {#W12.237-3} In VAR's units, with big blocks of size M₁, the ℓ¹ reach d(2M + 2R₁M₁)L^jη of □̃ beyond Ω_j must stay inside the layer j − 1, of width RM₁L^{j−1}η by VAR (1), so R > 2dL(M/M₁ + R₁) = 4dLR₁ at M = R₁M₁.
-        {#W12.237-4} This is a condition on the ratio R/R₁, not on a product.
-        {#W12.237-5} The other printed conditions are lower bounds on RM or R₁M₁ (PRT2 (2.59), p.233 l.40–42, and its layer sums, p.235 l.10; VAR p.304 l.3–5), or smallness conditions fixed after them (VAR p.304 l.24 on a₅).
-        {#W12.237-6} The lift is taken with R₁ := 1 and R_ι := 4dL + 1, which meets R_ι > 4dLR₁, and with M₁ large for the product conditions (checked at PRT2 pp.224 and 233–235, VAR pp.277, 279, and 300–304, REG p.098).
-        {#W12.237-7} The two-layer cube conditions of PBG p.396 l.14–17 and PRT2 p.235 l.29–35 hold at one step for PBG's class.
-        {#W12.237-8} PRT2's "We assume that either □̃ ⊂ B^j(Λ_j), or it intersects B^{j+1}(Λ_{j+1}) also" (p.235 l.31) is the case assumption of the bound (2.71) on C_□, with j the index of its scaling.
-        {#W12.237-9} It holds with j the finest layer that □̃ meets, whenever □̃ meets at most two consecutive layers, which the layer widths ≥ LM₁ > 4M give.
-        {#W12.237-10} A layer-1 cube next to the collar, whose □̃ reaches layer 0, takes j = 0.
-        {#W12.237-11} It is not a condition on R. The choice R_ι = 4dL + 1 is the eighth choice of §12.
-    - {#W12.238} The identity on Y^−.
-      {#W12.238-1} Mι_YU = U on the coarse bonds of Y^∼, so (Mdι)* = 1 there.
-      {#W12.238-2} Hence κ = dι*∇_Wb = κ′ + e_c, with e_c := dι*(χ_C(∇_Wb − M*κ′)) and χ_C the indicator of C. On Y^− this gives ∇_Wb = M*κ − M*e_c and J^B = Q₁*J^A − Q₁*κ + M*e_c, with M*J^A = Q₁*J^A and M*κ = Q₁*κ as above.
-    - {#W12.239} The size of e_c.
-      {#W12.239-1} On C, |∇_Wb| ≤ O(1)LC_ιε₁ε^{−3} by the crude current bound of *The bridge to ℒ_ι.* (its first bullet). |M*κ′| ≤ O(1)LC_ιε₁ε^{−3} likewise, since locally λ = (MM*)^{−1}MJ^B, with the spectrum of Q₁Q₁* in [m_Q/2, M̃_Q] (the same bullet).
-      - {#W12.240} dι* = ℒ_ι* has the kernel decay e^{−δ_brd/ε}: ℒ decays at δ_Q ≥ δ_br, and ℒ − ℒ_ι at δ_br (*The bridge to ℒ_ι.*).
-        {#W12.240-1} The distance from Y to C is ≥ M₁a_k − R_ιM₁ε/L − M₁ε − 2ε ≥ ½M₁a_k, since L^k ≥ L ≥ 2(R_ι/L + 1 + 2/M₁) = 2(4d + 1/L + 1 + 2/M₁) for L ≥ 8d + 4 and M₁ ≥ 4.
-      - {#W12.241} Summing the kernel over C at half the rate gives |e_c| ≤ O(1)(4/δ_br)^dLC_ιε₁ε^{−3}e^{−¼δ_brM₁L^k} on Y and its neighbours.
-        {#W12.241-1} Here O(1) contains the factor 2(1 + 2dL^{d−1}) of |Q₁*h| ≤ 2(1 + 2dL^{d−1})|h| (§11, the Cauchy note's l.864), together with the O(1) bound of the local part (D̄Θ₁)* of M* = Q₁* − (D̄Θ₁)* and the factor L^d of the fine bonds per coarse bond, so it depends on d and L, which are fixed first.
-      - {#W12.242} Relative to the scale (ε/a_j)C₀ε₁a_j^{−3} at which the sources of d^B enter the final bound O(1)B₀²(ε/a_j)C₀ε₁ times (3.108) below, the ratio is at most O(1)(4/δ_br)^dLC_ιC₀^{−1}L^{4k}e^{−¼δ_brM₁L^k}.
-        {#W12.242-1} With x := L^k, x⁴e^{−¼δ_brM₁x} ≤ (16/(eδ_brM₁))⁴.
-      - {#W12.243} So M*e_c is a sup-bounded source at that scale, without the extra small factor c_Gc_uMα₀ + C₀ε₁ of s_ι, under the lower bound O(1)(4/δ_br)^dLC_ιC₀^{−1}(16/(eδ_brM₁))⁴ ≤ 1 on M₁.
-        {#W12.243-1} This is of the kind of the bridge's δ_brM₁ ≥ 2L^{1/3}, and it is in §8, *The conditions on the constants.* The ratio C_ι/C₀ = O(1)L²C_LC_F/C₀ is bounded independently of M′.
-        {#W12.243-2} The lift's data parameter is the coarse plaquette deviation of U^A_k ≈ MU^B, at most O(1)C₀ε₁(ε/a)² by the Cauchy note's (9.2)–(9.3), and VAR Theorem 1 places the minimiser in the space 𝔘_k({Ω_j}, B₃ε₁) of its (8) at that data parameter (p.279 l.11–15).
-        {#W12.243-3} That space bounds |∂U(p) − 1| by B₃ε₁L^{−2j} on Ω_j (VAR p.278 l.5), with no cube factor.
-        {#W12.243-4} At one step, η = ε/L and j = 0, 1, this gives |F| ≤ O(1)L²B₃C₀ε₁/a² on X^∼, with a the finest scale on X^∼, since VAR's ε₁ is a supremum over 𝔅_k (VAR (7)); the ratio needs only this constant, not the pointwise form in a(x).
-        {#W12.243-5} So C_F ≤ O(1)L²B₃C₀ and C_ι/C₀ ≤ O(1)L⁴C_LB₃.
-        {#W12.243-6} VAR (9) is not used here, since its constant B₃M carries the cube factor.
-        {#W12.243-7} So the condition is a lower bound on M₁ that no later choice feeds back into.
-    - {#W12.244} The extension.
-      {#W12.244-1} Let χ be the indicator of the coarse bonds whose stencils lie in Y^−.
-      {#W12.244-2} Put J̃ := Q₁*J^A − Q₁*(χκ) + χ_{Y^−}M*e_c.
-      - {#W12.245} Then J̃ = J^B at the points that the walk terms of V(Y) read.
-        {#W12.245-1} (1 − Q^{B*}H^{B*})Q₁*J^A = 0 as above, so d̃ := 𝔊^B(1 − θ)(1 − Q^{B*}H^{B*})J̃ = −𝔊^B(1 − θ)(1 − Q^{B*}H^{B*})(Q₁*(χκ) − χ_{Y^−}M*e_c).
-      - {#W12.246} Its walk terms that enter V(Y) are those of d^B.
-        {#W12.246-1} At the points they read, χκ = κ, together with the neighbours of the summation by parts.
-        {#W12.246-2} So these terms are bounded below with κ, its divergence form, and s_ι, with M*e_c added to s_ι.
-      - {#W12.247} Walk terms that read points outside Y do not enter V(Y).
-        {#W12.247-1} This is the same locality, and it does not use the collar of Y^∼.
-      - {#W12.248} Run B's terms contain no d^B (checked).
-        {#W12.248-1} Bałaban writes (1.55) before the localisation (LFR II p.371: "We use this fact to localize the considered expression"), localises 𝐇″_k (p.373 l.32–33), which by p.371 is its right side, and expresses every term of the expansion "as a function of the variables (𝐔, 𝐉)" (p.374 l.38).
-        {#W12.248-2} So run B's terms are functions of RHS(1.55)_B, defined on run B's configurations alone and independent of the pair and of Y, and the term of the domain Y at ι_Yc^A is that function evaluated there. d^B is the difference between the unrewritten 𝐆″^BJ^B_{1,2} and RHS(1.55)_B at a background where J₁'s criticality fails, and no term of V(Y) reads it.
-        {#W12.248-3} The walk terms of 𝔊(1 − θ)(1 − Q^{B*}H^{B*})Q₁*J^A at s ≠ 1, which carry no factor ε/a_j, therefore do not arise.
-        {#W12.248-4} The bounds of d^B and d̃ above bound that difference; the comparison of the terms does not use them.
-        {#W12.248-5} Run A's d^A is 0.
-
-    {#W12.249} The cancellation of Q₁*J^A fails where H^{B*} reads the unaligned strip Ω ∖ Ω^A_2 of 𝐁₁ at ∂Ω″^∼_{h+1}.
-    {#W12.249-1} There Q₁*J^A need not lie in the range of Q^{B*}, and the uncancelled part (1 − Q^{B*}H^{B*})Q₁*J^A is bounded run by run.
-    {#W12.249-2} The current carries (a/a_h)³ on the strip (*The sources.*), so it is a source ≤ O(1)L⁶(ε/a_h)³C₀ε₁a^{−3} there.
-    {#W12.249-3} Its walk terms meet the strip, so m(ω) ≤ h with m(ω) read in 𝐁″_k's layers, and they fit δ_w(ω) as in *The bound.* of *The strip.* Here κ denotes the source of §11, not RG II's activity rate κ, and κ_ε, κ_η, and c_κ below are the blocking-artifact function of §11 and its constant. κ is §11's ∇b₁ = ℒ*∇_Wb with dι = ℒ_ι in place of ℒ; the divergence form of §11, ∇b₁ = ∇_A*K + s with |K| ≤ O(1)(ε/a_j)C₀ε₁a_j^{−2}, uses only the covariance identity of the artifact and the sup, gradient, and Hölder bounds of the lift, which ℒ_ι has by *The bridge to ℒ_ι.*, so κ = ∇_A*K_ι + s_ι with the same bounds.
-    {#W12.249-4} The source part has three pieces: the background term of *The conversion to run A.* in (b), O(1)c_Gc_uMα₀a_j^{−1} times the coefficient field, at most O(1)c_Gc_uMα₀(ε/a_j)C₀ε₁a_j^{−3}; the transport parts i[a_v, TF] of the covariance form; and its ρ-terms, these two at most O(1)(ε/a_j)²(C₀ε₁)²a_j^{−3}.
+    {#W12.226-4} Since Mι_YU = U on the coarse bonds of Y^∼, (dι_Y)*M* = 1 there, so (dι_Y)*J^B − J^A = −κ there, with κ := (dι_Y)*∇_Wb, the data gradient of the gauge-invariant function b∘ι_Y. The gauge term D_Bγ of dι_Y (10.5) adds nothing to κ, since the gauge invariance of b gives D_B*∇_Wb = 0.
+    {#W12.226-5} The terms of V(Y) read the currents only at points of Y, which lie in Y^∼: V(Y, U_k) "depends on the new background field U_k restricted to Y" (LFR II p.377 l.7), and the walk kernels of a term with the domain Y are supported in Y (RG II p.4 l.18–24).
+    {#W12.249-3} Here κ is not RG II's activity rate κ, and κ_ε, κ_η, and c_κ below are the blocking-artifact function of §11 and its constant. κ is §11's ∇b₁ = ℒ*∇_Wb with ℒ_ι in place of ℒ; the divergence form of §11, ∇b₁ = ∇_A*K + s with |K| ≤ O(1)osc_pX (#W11.86-3), uses only the covariance identity of the artifact and the sup, gradient, and Hölder bounds of the lift, which ℒ_ι has by *The bridge to ℒ_ι.*, so κ = ∇_A*K_ι + s_ι with |K_ι| ≤ O(1)(ε/a_j)^{β_o}C₀′ε₁a_j^{−2}, by the oscillation bound at ι_Y(U_{1,2}) (#W12.56–#W12.56-1).
+    {#W12.249-4} The source part has three pieces: the background term of *The conversion to run A.* in (b), O(1)c_Gc_uMα₀a_j^{−1} times the coefficient field, at most O(1)c_Gc_uMα₀(ε/a_j)^{β_o}C₀′ε₁a_j^{−3}; the transport parts i[a_v, TF] of the covariance form; and its ρ-terms, these two at most O(1)(ε/a_j)²(C₀′ε₁)²a_j^{−3}, since |F| ≤ O(1)C₀′ε₁a_j^{−2} there (#W12.55-1).
     {#W12.249-5} The κ-terms of b, κ_ε(Φ_p) − Σwκ_η(F_{p′}), have first variations linear in the fine curls of v up to transport terms: the variation of a coarse holonomy of MW, converted to fine curls by the nonabelian Stokes formula, carries commutator terms with the coefficient O(ε|F|), which are of the kind of s_ι and are bounded with it.
     {#W12.249-6} The linear part enters K_ι in divergence form, with the coefficient dκ_ε.
-    {#W12.249-7} By §11's bound |d^iκ_η| ≤ c_κη⁴|X|^{4−i} at η = ε and i = 1, |dκ_ε| ≤ c_κε⁴|F|³ ≤ O(1)c_κ(ε/a_j)⁴(C₀ε₁)²|F|, so they add at most O(1)c_κ(C₀ε₁)²(ε/a_j)C₀ε₁a_j^{−2} to |K_ι|, within its bound once c_κ(C₀ε₁)² ≤ 1, an upper bound on the fixed ε₁ (§8, stage 5).
-    {#W12.249-8} So |s_ι| ≤ O(1)(c_Gc_uMα₀ + C₀ε₁)(ε/a_j)C₀ε₁a_j^{−3}; it enters 𝔊^B through the entry G of (3.42) with no derivative to move, and carries ε/a_j as K_ι does.
-    {#W12.249-9} The derivative of ∇_A*K_ι is moved onto the walk in three steps.
-    {#W12.249-10} Q₁*∇_A* = ∇_B*Q₁^{(2)*}, the transpose of the averaging identity ∇_AQ₁ = Q₁^{(2)}∇_B, with ∇_A the full difference operator of (b) (run A's differences ∇_Aξ), Q₁^{(2)} the average over the L translates by the fine spacing composed with Q₁, acting on difference fields, and |Q₁^{(2)*}K| ≤ O(1)|K|.
-    {#W12.249-11} The identity is exact for the linear average at U = 1, since that average commutes with the translations by ε.
-    {#W12.249-12} At U^B, with the linearised double bar, it holds up to a zeroth-order operator with the coefficient ≤ O(1)ε|F|(1 + ε²|F|) ≤ O(1)C₀ε₁(ε/a_j)a_j^{−1}, which gives sources of the kind of s_ι, bounded with it.
-    {#W12.249-13} Through 1 − Q^{B*}H^{B*}, H^{B*}∇_B*K′ = (∇_BH^B)*K′, bounded by (3.133).
-    {#W12.249-14} Through 1 − θ, (1 − θ)∇_B*K″ = ∇_B*((1 − θ)K″) + [∇_B*, θ]K″, the commutator ≤ O(1)a_h^{−1}|K″|, supported where ∇θ ≠ 0, in the layer h, so a walk through it has m(ω) ≤ h and the commutator term carries ε/a_h ≤ ε/a_{m(ω)}.
-    {#W12.249-15} Finally ∇_B* lands on 𝔊^B through the entry ∇G of (3.42).
-    {#W12.249-16} So each walk term ω of d^B is at most O(1)B₀²(ε/a_j)C₀ε₁ times the bound (3.108) of the walk term with a source of the current's size, with j the layer of the source point; the walks are composites of walks of 𝔊^B and of H_{𝐁₁}, with the rate of the slower.
-    {#W12.249-17} The source point lies in ∪X̃_i⁵ of the walk, so j ≥ m(ω), and supp(1 − θ) lies at layers ≥ h.
-    {#W12.249-18} So the term fits δ_w(ω) of §8, with C_w enlarged by O(1)B₀²C₀ε₁ and the rate of (3.108) unchanged, and it would fit the consumer's form (c) as a run-B walk term with the run-A term 0; no term reads it.
-    {#W12.249-19} The terms of d^B are walk terms of 𝔊^B and H^B with a source, of the form (6.10) [I] of the other terms.
-    {#W12.249-20} Its status at complex backgrounds is that of §11's current term, whose ∇b₁ bound it uses.
+    {#W12.249-7} By §11's bound |d^iκ_η| ≤ c_κη⁴|X|^{4−i} at η = ε and i = 1, |dκ_ε| ≤ c_κε⁴|F|³ ≤ O(1)c_κ(ε/a_j)⁴(C₀′ε₁)²|F|, so they add at most O(1)c_κ(C₀′ε₁)²(ε/a_j)C₀′ε₁a_j^{−2} to |K_ι|, within its bound once c_κ(C₀′ε₁)² ≤ 1, which holds for γ small (§8, stage 6).
+    {#W12.249-8} So |s_ι| ≤ O(1)(c_Gc_uMα₀ + C₀′ε₁)(ε/a_j)^{β_o}C₀′ε₁a_j^{−3}; it enters 𝔊^B through the entry G of (3.42) with no derivative to move, and carries (ε/a_j)^{β_o} as K_ι does.
+    {#W12.249-9} So κ enters the walk terms as §11's ∇b₁ does (#W11.86-12–#W11.86-14), with K_ι and s_ι in place of K and s and β_o in place of 1 − 2ε₀: (ε/a_j)^{β_o} ≤ (ε/a_{m(ω)})^{γ_w} (#W12.56-2), and the gradient entry's (ε/a_j)^{β_o−β′} is within the exponent γ_w − 2β′ that §8 uses (#W11.160-10).
+    {#W12.249-20} At complex backgrounds κ is bounded as §11's current term is, through the ∇b₁ bound of that term.
+    - {#W12.237} *The lift's R_ι.* R_ι is a parameter of the lift's one-step problem, separate from the R of the walk problems' sequences (R ≥ 12dL, and R_j ≥ (log g_j^{−2})^r of CRE (2.5)).
+      {#W12.237-1} VAR's Sect. F construction, which places the minimiser in the space (8), takes a cube □ of size 2ML^jη with M = R₁M₁ and the cube □̃ with dist(□, □̃^c) = 2R₁M₁L^jη, and states □̃ ⊂ B^{j−1}(Λ_{j−1}) ∪ B^j(Λ_j) ⊂ Ω_{j−1} (VAR p.300 l.28–37).
+      {#W12.237-2} Its source states the condition: "We assume that RM is bigger than R₁M₁, for example L^{−1}RM > 2dR₁M₁, thus we have □̃ ⊂ Ω_{k−1}" (REG p.098 l.19).
+      {#W12.237-3} In VAR's units, with big blocks of size M₁, the ℓ¹ reach d(2M + 2R₁M₁)L^jη of □̃ beyond Ω_j must stay inside the layer j − 1, of width RM₁L^{j−1}η by VAR (1), so R > 2dL(M/M₁ + R₁) = 4dLR₁ at M = R₁M₁.
+      {#W12.237-4} This is a condition on the ratio R/R₁, not on a product.
+      {#W12.237-5} The other printed conditions are lower bounds on RM or R₁M₁ (PRT2 (2.59), p.233 l.40–42, and its layer sums, p.235 l.10; VAR p.304 l.2–5), or smallness conditions fixed after them (VAR p.304 l.24 on a₅).
+      {#W12.237-6} The lift's layer is R_ι := 4dL + 1 blocks of CRE's M₁ wide, and VAR's product is R₁M₁ = M′ ≤ CRE's M₁ with VAR's block size M₁^{VAR} (#T2.7-1; BP_JOINS_BLOCK_SIZE #4.23), so the layer is R = R_ιM₁/M₁^{VAR} ≥ R_ιR₁ > 4dLR₁ blocks of M₁^{VAR} wide, with CRE's M₁ large for the product conditions (PRT2 pp.224 and 233–235, VAR pp.277, 279, and 300–304, REG p.098).
+      {#W12.237-7} The two-layer cube conditions of PBG p.396 l.14–17 and PRT2 p.235 l.29–35 hold at one step for PBG's class.
+      {#W12.237-8} PRT2's "We assume that either □̃ ⊂ B^j(Λ_j), or it intersects B^{j+1}(Λ_{j+1}) also" (p.235 l.35) is the case assumption of the bound (2.71) on C_□, with j the index of its scaling.
+      {#W12.237-9} It holds with j the finest layer that □̃ meets, whenever □̃ meets at most two consecutive layers, which the layer widths ≥ LM₁ > 4M give.
+      {#W12.237-10} A layer-1 cube next to the collar, whose □̃ reaches layer 0, takes j = 0.
+      {#W12.237-11} It is not a condition on R. The choice R_ι = 4dL + 1 is the eighth choice of §12.
   - {#W12.250} The run difference of the source.
-    {#W12.250-1} The two runs' sources 𝐆″(1 − θ)Q*θ₁H*_{𝐁₁}J₁ differ by the forms (c) for 𝔊 (§11, *The Sects.
-    {#W12.250-2} D–E form (111).*) and for H_{𝐁₁} (§11's form (c) for H, with the strips of *The strip.*), by the commutators of ℒ and ℒ* with θ and θ₁, which are functions smooth at the scale h, so of relative size O(1)(ε/a_h) by the exponential tail of ℒ at the rate δ_Q (*The global lift.*), and by the current difference ℒ*J^B − J^A = −∇b₁, bounded in divergence form as above.
-    {#W12.250-3} H^{B*} reads the collar only through H_{𝐁₁}'s kernel, bounded by *The strip.* So the source difference carries 𝔡_H + O(1)(ε/a_h)^β times the bound of the source term, the power β because at this pair the current difference is bounded through the minimiser base with the Hölder bound of ℒ (§12's oscillation); this fits δ_w, since γ_w ≤ β.
+    {#W12.250-1} The two runs' sources 𝐆″(1 − θ)Q*θ₁H*_{𝐁₁}J₁ differ by the forms (c) for 𝔊 (§11, *The Sects. D–E form (111).*) and for H_{𝐁₁} (§11's form (c) for H, with the strips of *The strip.*); by the commutators of ℒ and ℒ* with θ and θ₁;
+    {#W12.250-2} and by the current difference, which at the pair is (dι_Y)*J^B − J^A = −κ, bounded in divergence form (*The current difference.*). θ and θ₁ are smooth at the scale h, so the commutators are of relative size O(1)(ε/a_h) by the exponential tail of ℒ at the rate δ_Q (*The global lift.*).
+    {#W12.250-3} H^{B*} reads the collar only through H_{𝐁₁}'s kernel, bounded by *The strip.* So the source difference carries 𝔡_H + O(1)(ε/a_h)^{β_o} times the bound of the source term, the power β_o of K_ι and s_ι (*The current difference.*), on the boundary layer of the scale h where θ₁ lives; this fits δ_w, since γ_w ≤ β_o (#W12.56-2).
 - {#W12.251} The finest-scale strips of the sets 𝐁(Y_i) (CRE p.257 l.22–26).
   {#W12.251-1} Every boundary layer Y_i ∖ Y_i^0 has one, with no run-A counterpart.
-  {#W12.251-2} Derived below, not reviewed: these strips are bounded run by run, as in *The strip.*
+  {#W12.251-2} These strips are bounded run by run below, as in *The strip.*
   - {#W12.252} The data.
     {#W12.252-1} In (1.61) and (1.62) (p.373), the data on the boundary layer (Y_i^0)^c ∩ Y_i are the averages of U = (exp iη𝐇U_b)^{u^{−1}}, with U_b the background and u the gauge factor.
     {#W12.252-2} The other data in Y_i are those of the other representation, and only data in Y_i enter.
     {#W12.252-3} By the covariance of the averages, these boundary-layer data are the averages of exp(iη𝐇)U_b, transformed by u at the data points of the layer.
-    {#W12.252-4} Bałaban keeps u "because we use the two different representations for fields at the boundary of the boundary layer" (p.373, after (1.61)).
+    {#W12.252-4} Bałaban keeps u "because we use the two different representations for fields at the boundary of the boundary layer" (p.373 l.28–29).
     {#W12.252-5} Bonds of the layer and of Y_i^0 share endpoints at the inner boundary of the layer (CRE (2.2), p.255).
   - {#W12.253} The regauging.
     {#W12.253-1} Let h := u at the endpoints of the layer's data bonds, inner shared endpoints included, and h := 1 at the other endpoints in Y_i.
     {#W12.253-2} The representation at data^h is the representation at the data, gauge-transformed by an extension h̃ of h, up to a transformation that is 1 at the data points.
-    {#W12.253-3} The effective action is gauge invariant (LFR II p.378 l.18–19; CRE p.274 l.41 for the terms of (3.38)), so every term 𝐄(X, ·) takes the same value at both, at real configurations.
+    {#W12.253-3} The effective action is gauge invariant (LFR II p.378 l.16–17; CRE p.274 l.41 for the terms of (3.38)), so every term 𝐄(X, ·) takes the same value at both, at real configurations.
     {#W12.253-4} At complex s, u(s) is G^c-valued.
     {#W12.253-5} Each term is analytic on its class, which is invariant under G-valued gauge transformations (LFR I p.191 l.32), and for (𝐔, 𝐉) in the class, g ↦ 𝐄(X, (𝐔, 𝐉)^g) − 𝐄(X, (𝐔, 𝐉)) is analytic on a connected neighbourhood of the G-valued g on which (𝐔, 𝐉)^g stays in the class.
     {#W12.253-6} It vanishes on the G-valued g, a totally real submanifold of maximal dimension of G^c, so it vanishes on the whole neighbourhood. u(s) lies in that neighbourhood, since its imaginary part is of the size of 𝐇(s), far inside the class radius.
@@ -3790,7 +3444,7 @@
     {#W12.253-10} Only the bonds of Y_i^0 at the shared inner endpoints change, by u(x), with no gain.
   - {#W12.254} The bound.
     {#W12.254-1} The strip has the width ≤ (d + 1)M₁a_2 at ∂Y_i.
-    {#W12.254-2} The inner boundary of the layer, ∂Y_i^0 with Y_i^0 = Y_i^{∼−2} (CRE (2.14), p.257 l.14), is at a distance ≥ 2M₁a_j from ∂Y_i, by the definition of Y^{∼−2} as the set of points at a distance ≥ 2M₁a_j from Y^c at the scale j (CRE (2.14)); CRE p.256 l.62, "dist(Ω_j, Ω^c) ≤ 2M₁, or Ω^{∼−2} ⊂ Ω_j", is the upper bound on the reach of the fine layers; the width 2M₁ "at most" of p.373 l.26–27 is an upper bound and is not used here.
+    {#W12.254-2} The inner boundary of the layer, ∂Y_i^0 with Y_i^0 = Y_i^{∼−2} (CRE (2.14), p.257 l.14), is at a distance ≥ 2M₁a_j from ∂Y_i, by the definition of Y^{∼−2} as the set of points at a distance ≥ 2M₁a_j from Y^c at the scale j.
     {#W12.254-3} The layers 2, …, j − 1 of the layer's pieces lie between, so a walk that meets the strip (a cube, or the evaluation or source point, in it) reads the bonds changed by u(x) only through a cube of a layer ≥ j − 1, across at least j − 5 of them away from the reflex edges of Y_i, as in *The crossings.* of *The strip.* A walk that meets the strip only through an enlargement is aligned, by *The enlargement-only walks.*, applied to the pieces 𝐁_j(Y_i), which are built by the same rule.
     {#W12.254-4} Its crossings and bound then give, for each run's walk term ω that meets the strip, at most O(1)L¹¹(ε/a_j)(1 + |𝐇|_{(−1)}) times its bound at the rate ¼δ_min kept for the form (c) (*The strip.*).
     {#W12.254-5} The term 1 is the background's own current on the strip, relative to the problem of 𝐁(Y_i), with the factor (a_n/a_j)³ of VAR (10) at U_k and U_{k,Λ}, and of the derived band regularity (*The band regularity of U_{1,2}.*) at U_{1,2}.
@@ -3802,31 +3456,4 @@
     {#W12.256-1} This bounds the strips of the representations of 𝐇″_k, 𝐇_{𝐁₁}, and 𝐇_k in (1.61), (1.62), and the (1.63) of p.374, and the fine side of their gauge transformations there.
     {#W12.256-2} Away from the strips, *The gauge transformations.* compares u on the shared layers.
     {#W12.256-3} For 𝐇_{𝐁₁} the data of the strip of Y_2 are those of (1.57), with the representation of the collar.
-{#W12.257} *Derived, not reviewed.* The reduction of (β) to (W-δ) and §11 on the layers at shared scales ≥ 1: 𝐇_k in the (180) form, and 𝐇″_k and 𝐇_{𝐁₁} in the (111) form (for 𝐇_{𝐁₁} a choice of representation), the gauge factors there; the collar of 𝐁₁, with its strip bounded run by run and its enlargement-only walks aligned, at the reflex edges of Ω and at ∂Ω through the intersected local sequences, the crossing decay in d_col, the comparison without (S), the per-point bound, and the localised 𝔡_H (*The collar at ∂Ω and at the reflex edges.*), and ∂Λ at a distance ≥ Ma_k from it;
-{#W12.257-1} the X_s representation, a change of Bałaban's construction made in both runs, with its data gain and the run difference of its gauge factor; its analyticity domain at complex 𝐔, through the places where it is read, the absolute bound on X and X_s from Bałaban's proof of LFR I Proposition 1 run at complex data, and the decay of 𝐇_{𝐁₁}(X_s) − 𝐇_{𝐁₁}(X) to the boundary layers of Y₂ in a weighted norm, under (D1) and (D2); the (1.55) source of 𝐇″_k at the pair, read by run B's terms only through the right side of (1.55) (LFR II p.371, pp.373–374), so that no bulk defect enters;
-{#W12.257-2} and the finest-scale strips of the sets 𝐁(Y_i), with the same treatment at the reflex edges of Y_i and at ∂Y_i.
-{#W12.257-3} Eight choices are made: the (111) form for 𝐇_{𝐁₁}, the X_s representation, the same functions θ and θ₁, the extension h̃, the intersected local sequences {Ω′_m(□)} at ∂Ω and at the reflex edges, the constants q₁ = q₀ and C₁ = λ_RC₀ of CRE (2.28) (*Analyticity and bounds.*), the artifact exponent β_H ≥ γ_w (*The localised 𝔡_H.*), all made in both runs, and the lift's parameters R_ι = 4dL + 1 and R₁ = 1 (*The lift's R_ι (checked).*).
-{#W12.257-4} The conditions of this section on the constants are collected in §8, *The conditions on the constants.*, with their sources here.
-{#W12.257-5} The conditions on L, L > 5 (*The crossings.*), L > 2d (*The collar's layers.*), L ≥ 8d + 4 (the distance from Y to C at R_ι = 4dL + 1), and L ≥ 12d + 6 (the localisation χ of *§11's oscillation at U_{1,2}*), are imposed first, since δ₀, δ_min, and κ₁ depend on L; the lower bounds on the sizes follow, after δ₀, δ_min, and κ₁, which depend on none of them; then the upper bounds on α₀; then those on ε₁ and ε₁^{(1)}, where ε₁^{(1)} is fixed after α₀, M′, and K and before γ; and (D1) holds for γ small.
-{#W12.257-6} The collar's O(1)L³B₃ε₁^{(1)} ≤ α₀ carries the O(1) of VAR's Sect. F, as VAR p.280 l.51–52 takes α₀ = ε₀ (VAR's ε₀) for U₀ ∈ 𝔘_k(L³B₃ε₁).
-{#W12.257-7} LFR II p.370 l.35–38 is read as REG's 𝔘-membership at the index h, and the membership is derived at L³B₃ε_U^{(i)} (*The band regularity of U_{1,2}.*, derived, one clean review); it makes ε₁, and with it ε₂, tend to 0 with γ, which 10.5's premise at 𝐇″_k needs.
-{#W12.257-8} Seven steps follow; the third is that derivation's consequence, and the other six are checked against the print or derived from it:
-  - {#W12.258} the domains Y₂′ of (6.10) [I] with σ̃₀, from RG II (1.10);
-  - {#W12.259} (106) on the block of 𝐁″_k containing x, which is Bałaban's statement at p.373 l.30–31;
-  - {#W12.260} the consequences of Bałaban's regularity of U_{1,2} near the cut, read as REG's 𝔘-membership at the index h (REG p.077 l.31): PBG (3.35)–(3.36) by REG's Sect. F and Proposition 6 (LFR II p.370 l.35–38; REG p.097–099).
-    {#W12.260-1} The membership itself is derived in *The band regularity of U_{1,2}.* (one clean review);
-  - {#W12.261} the Lipschitz constant of the scale-j′ factor, from CMP 98 Proposition 4 and (131) (*The gauge transformations.*);
-  - {#W12.262} the linear bound |𝐇_c| ≤ C_H|Ŷ|, from the estimate of VAR p.295 l.13 with no current term about a minimiser;
-  - {#W12.263} VAR (7) for the data, from CMP 98 Proposition 2;
-  - {#W12.264} the class radius, from LFR II p.374 l.38–42 (*Analyticity and bounds.*).
-    {#W12.264-1} Also derived, not reviewed: the run difference of the gauge change and of X_s, through 10.5 at real 𝐔 and, at complex 𝐔, the curvature of the one-step lift continued by VAR's Proposition 9, read only through its gauge orbit, bounded through the one-step identity H₁QA = A − G₁KA + H₁QG₁KA for PBG's constrained H₁ (PBG (3.128)–(3.129)) applied to an interpolant of the smooth data ε𝐇_c, with the far data controlled by the one-step decay; the transfer of LFR I's Stokes estimate (the 11d² of p.197 l.10) to complex points, with the factor 22d²;
-    {#W12.264-2} the crossing count on the strips for the walks with a cube or a point on them, and the alignment of the walks that reach a strip only through an enlargement; and the nonlinear part of the X_s change, bounded on the s-polydisc in all three entries through the contraction of *The fixed point 𝐀₀.* and PBG's Hölder bounds of 𝐆.
-    {#W12.264-3} The identification of 𝐇″_k with VAR's (111) function rests on "From the results of Sects.
-    {#W12.264-4} D, E [15]" and on the printed operators 𝐆″_k (p.370 l.49) and H″_{1,k}.
-    {#W12.264-5} The boundary-layer data of (1.62) keep Bałaban's structure in the X_s representation, since the boundary layers of the domains Y₂ lie at a distance ≥ ½Ma_k from Z″_k, where h̃ = 1 (*The boundary-layer data of (1.62).*, derived, not reviewed).
-    {#W12.264-6} Bałaban's regularity of U_{1,2} near the cut (p.370 l.35–38) is used as he uses it: 𝔘-membership at the index h, VAR (14) with C₁ = L³ (derived, one clean review; it rests on the LF note's *The block size M′.*, *R₁ = 1*, *The separation.*, and *The middle layers.*, not reviewed, the weakest steps of §12), and PBG's (3.35)–(3.36) by REG's Sect. F and Proposition 6. ε₂ is VAR's (19) at U_{1,2}, ε₂ = B₁(B₃ε₁(U_k^0) + C₁ε₁), and tends to 0 with γ (*10.5's premise at 𝐇″_k.*, derived, not reviewed).
-    {#W12.264-7} The sixth choice closes no loop through M (*No loop through M.*, derived, not reviewed).
-    {#W12.264-8} The regularity of U_{1,2} is load-bearing for the operators of 𝐇″_k and for the current gain on the strip. 10.5's premise at 𝐇″_k reads the minimiser base V₀ = (U_k^0)^{u_k^0} of (1.54), with U_{1,2} = e^{iB′}V₀ (*The background pairs.*, derived, not reviewed).
-    {#W12.264-9} §11's oscillation of the blocking artifact at ι_Y(U_{1,2}) is bounded through the same base, along c_t = e^{itB′}V₀ with 10.5's Hölder bound of leg 2 and PBG's Hölder entries of 𝐇″_k at β₂, with (ε/a_j)^{β_o}, β_o := min(β, 1 − 2ε₀), in place of ε/a_j (*The background pairs.*, *§11's oscillation at U_{1,2}.*, derived, not reviewed, with 10.5's lift bounds rerun at the global layer under the weighted bootstrap on all of Y^∼).
-    {#W12.264-10} This piece concerns only (β), the comparison of the functions at the pair (ι_Y(U_{1,2}), U_{1,2}), reached from the base pair (ι_YV₀, V₀) along c_t = e^{itB′}V₀.
-    {#W12.264-11} The LF note's items at U_{1,2} near the cut, the terms read there, r_z, and (5.1c), are separate from §12: the LF note reduces them to the member U_1, extended by 1 off its support, and treats U_2 through the background entry U_{1,2} (its *(i) and r_z at U_{1,2}* and *The background entry U_{1,2}.*, derived, not reviewed).
+{#W12.257} *The choices.* Eight choices are made: the (111) form for 𝐇_{𝐁₁}, the X_s representation, the same functions θ and θ₁, the extension h̃, the intersected local sequences {Ω′_m(□)} at ∂Ω and at the reflex edges, the constants q₁ = q₀ and C₁ = λ_RC₀ of CRE (2.28) (*Analyticity and bounds.*), the artifact exponent β_H ≥ γ_w (*The localised 𝔡_H.*), all made in both runs, and the lift's parameter R_ι = 4dL + 1 (#W12.237-6).

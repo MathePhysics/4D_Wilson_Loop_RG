@@ -1,10 +1,10 @@
 # Continuation drafts and supporting notes
 
-Snapshot of the saved working files updated on 28 October 2026, including the Cauchy-estimate, large-field-depth, walk-factor and two-loop drafts. Mathematical content is copied unchanged; repository links are adjusted where needed. Their assumptions, qualifications and open dependencies remain in force.
+Snapshot of the saved working notes prepared on 10 November 2026, including the single-loop and multiloop continuum limits, nonvanishing and reflection-positivity notes. Mathematical content is copied unchanged apart from repository link adjustments. The construction and source assumptions are stated in the notes.
 
 ## Iteration of the Wilson loop insertion
 
-Start with the [27 October status report](WILSON_IT1_STATUS_REPORT_2026_10_27.md), which identifies the arguments, source readings and dependencies recorded there. The [26 October report](WILSON_IT1_STATUS_REPORT_2026_10_26.md) is retained as an earlier snapshot. Then read these two companion drafts:
+Start with these two companion drafts. The [27 October status report](WILSON_IT1_STATUS_REPORT_2026_10_27.md) and [26 October report](WILSON_IT1_STATUS_REPORT_2026_10_26.md) record earlier stages of the work.
 
 - [First-step insertion and the class for iteration](WILSON_IT1_LINE_DEFECT_2026_10_21.md).
 - [D2: the step map](WILSON_IT1_D2_STEP_MAP_2026_10_22.md), including D2.0-D2.4 and the subsequent coarse-loop comparison notes.
@@ -24,23 +24,27 @@ The supporting triage records from rounds 20–49, the [rounds 50–51 triage](W
 ### Further Iteration and Coupling Estimates
 
 - [Beta function for the Wilson-loop analysis](BETA_FUNCTION_WILSON_LOOPS.md): one-loop coefficient, remainder and coupling-flow derivations, with the distinction between RG1, CRE and the tube construction; the semisimple extension covers additive actions through a product construction with independently tuned couplings.
-- [Complex gauge covariance](WILSON_IT1_COMPLEX_COVARIANCE_2026_10_29.md) and [averaged current](WILSON_IT1_RMJ_CLOSURE_2026_10_30.md): complex carry and evaluation estimates, derived with their stated inputs and awaiting review.
+- [Complex gauge covariance](WILSON_IT1_COMPLEX_COVARIANCE_2026_10_29.md) and [averaged current](WILSON_IT1_RMJ_CLOSURE_2026_10_30.md): complex carry and evaluation estimates.
 - [Step-1 branch-weight comparison](WILSON_IT1_RW1_CLOSURE_2026_10_30.md): the real and complex representations and their stated review qualifications.
 - [Round-53 dispositions](WILSON_IT1_TRIAGE_R53_2026_10_29.md): iteration and R-step findings and repairs.
 - [Real base-current draft](WILSON_IT1_JBASE_DRAFT_2026_11_03.md) and [old-layer response draft](WILSON_IT1_REVAL_OLD_DRAFT_2026_11_03.md): supporting R-step calculations with their recorded scopes and review qualifications.
 
 ### Two-Loop Correlation Functions
 
-- [Two-loop uniform-bound draft](WILSON_IT1_TWO_LOOPS_UNIFORM_BOUND_2026_10_27.md): the pair insertion class, mixed terms, R-steps and conditional cutoff-uniform bound.
+- [Two-loop uniform-bound draft](WILSON_IT1_TWO_LOOPS_UNIFORM_BOUND_2026_10_27.md): the pair insertion class, mixed terms, R-steps and cutoff-uniform bound.
 - [Two-loop review dispositions](WILSON_IT1_TWO_LOOPS_TRIAGE_R1_2026_10_27.md): the recorded objections, repairs and remaining qualifications.
-- [Pair Cauchy comparison and full-sequence convergence](WILSON_IT1_TWO_LOOPS_CAUCHY_2026_11_05.md): the cross and wrap insertion differences, scalar constants, summable cutoff estimate and limit, derived with their stated transfers and awaiting review.
-- [Multiloop construction and limit](WILSON_IT1_N_LOOPS_UNIFORM_BOUND_2026_11_05.md): the class, counts, first-step extension, cutoff-uniform bound and Cauchy argument for each fixed finite family of vertex-disjoint squares, derived and awaiting review. The [work outline](WILSON_IT1_N_LOOPS_PLAN_2026_11_04.md) records its organisation and adversarial pass.
-- [Pair factorisation and separation decay](WILSON_IT1_PAIR_FACTORISATION_2026_11_05.md): the connected-function decomposition and target at small size-to-distance ratio. Long-group locality, the near/far reduction and an assembled comparison bound are derived. The far-component cluster-tail check and stopping-scale covariance estimates remain open.
+- [Pair Cauchy comparison and full-sequence convergence](WILSON_IT1_TWO_LOOPS_CAUCHY_2026_11_05.md): the cross and wrap insertion differences, scalar constants, summable cutoff estimate and limit.
+- [Multiloop construction and limit](WILSON_IT1_N_LOOPS_UNIFORM_BOUND_2026_11_05.md): the class, counts, first-step extension, cutoff-uniform bound and Cauchy argument for each fixed finite family of vertex-disjoint squares. The [work outline](WILSON_IT1_N_LOOPS_PLAN_2026_11_04.md) records its organisation and adversarial pass.
+- [Nonvanishing](WILSON_IT1_PAIR_NONVANISHING_2026_11_10.md#the-theorems): lower bounds for single loops and every fixed finite family at sufficiently small coupling, #NV.4–#NV.5.
+- [Reflection positivity](WILSON_IT1_PAIR_REFLECTION_POSITIVITY_2026_11_10.md#finite-products): the lattice proof, inequalities for reflected pairs and the extension to finite products in a half-torus, #RP.9–#RP.12.
+- [Pair factorisation and separation decay](WILSON_IT1_PAIR_FACTORISATION_2026_11_05.md): a cutoff-uniform bound on the connected two-loop function, including the far-component cluster tails and stopping-scale covariance. The bound retains terms independent of separation.
+- [Separation-decay plan](WILSON_IT1_PAIR_DECAY_PLAN_2026_11_10.md) and [Lemma A](WILSON_IT1_PAIR_DECAY_LEMMA_A_2026_11_10.md): further work on the separation dependence.
 - [Layered passage](WILSON_IT1_PASSAGE_LAYERED_DRAFT_2026_11_04.md) and [contact weights](WILSON_IT1_CONTACTS_FREE_BOND_WEIGHT_DRAFT_2026_11_04.md): supporting response estimates with their recorded premises and review scopes.
 - [Cube-condition repair](WILSON_IT1_CVCUBE_REPAIR_STAGED_2026_11_04.md) and [real-base uniformity repair](WILSON_IT1_IIUNIF_REPAIR_STAGED_2026_11_04.md): staged drafts with their own qualifications.
 
 ### Supporting Proof and Source Checks
 
+- [Bałaban proof notes](balaban_proofs/): supporting derivations for background fields, gauge transformations, localisation, propagators and the R-step arguments.
 - [Bałaban paper labels and bibliography](BALABAN_PAPER_LABELS.md): internal labels, official citations, aliases and source cross-references.
 - [Source readings](READINGS_RECHECK_2026_10_23.md).
 - [RC proof pass](RC_PROOF_PASS_2026_10_23.md) and [RC payment pass](RC_PAYMENT_PASS_2026_10_24.md).
@@ -49,11 +53,11 @@ The supporting triage records from rounds 20–49, the [rounds 50–51 triage](W
 
 ## Comparison of ultraviolet cutoffs
 
-- [27 October Cauchy-estimate draft](WILSON_IT1_CAUCHY_ESTIMATE_2026_10_27.md): the matched-term comparison and its proposed one-step estimates.
+- [27 October Cauchy-estimate draft](WILSON_IT1_CAUCHY_ESTIMATE_2026_10_27.md): the matched-term comparison, summable cutoff estimate and full-sequence limit.
 - [Large-field depth](WILSON_IT1_LARGE_FIELD_DEPTH_2026_10_27.md): comparison of large-field integrands and loop dressings under lattice refinement.
-- [Walk-factor differences](WILSON_IT1_WALK_FACTOR_DIFFERENCE_2026_10_28.md): local propagator comparisons and the open W-delta estimates.
+- [Walk-factor differences](WILSON_IT1_WALK_FACTOR_DIFFERENCE_2026_10_28.md): localised propagator comparisons and walk-factor estimates.
 - [Large-field repair calculations](WILSON_IT1_LF_GAMMA_REPAIR_ATTEMPTS_2026_10_28.md): interface, multiplier and marked-component calculations with their stated remaining inputs.
-- [Cutoff comparison](WILSON_IT1_CONTINUUM_CUTOFF_COMPARISON_2026_10_27.md): the exact two-cutoff target, old-scale estimates and the remaining full-sequence comparison.
+- [Cutoff comparison](WILSON_IT1_CONTINUUM_CUTOFF_COMPARISON_2026_10_27.md): an earlier direct marked-polymer investigation of the two-cutoff comparison.
 - [Cauchy route](WILSON_CAUCHY_ROUTE_DRAFT_2026_10_21.md): comparison of theories with successive ultraviolet cutoffs.
 - [Lipschitz continuity of the RG step](WILSON_CAUCHY_LIPSCHITZ_2026_10_21.md): supporting difference estimates and their scope.
 - [LIP-1(a)](WILSON_CAUCHY_LIP1A_2026_10_21.md): the proposed use of fixed RG1 constants with the CRE fluctuation cutoff.

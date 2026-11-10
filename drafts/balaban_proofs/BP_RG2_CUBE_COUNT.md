@@ -1,0 +1,29 @@
+# Bałaban Proof: The Number of Cubes of a Localisation Domain
+
+Bałaban proof: the bound on the number of cubes of a localisation domain that RG2 prints as (1.28), p.8 l.19, (2.30), p.18 l.25, and at p.9 l.23, in a form that also holds when d_j(X) = 0, and a check of RG2's uses of it. Status: under review, not yet clean. Used by BETA_FUNCTION_WILSON_LOOPS.md (#B0.37-3, #B2.1.16-a, #B2.1.49, #B2.1.49-1, #B2.2.41, #B2.2.73-1, #B2.2.811, #B9.54), BP_FAMILY_LOCALISATION.md (#BFL.186-2b, #BFL.196-4) and BP_FAMILY_RG1.md (#BFR.219-3). The tags {#BK.n} are this file's own. RG1 = CMP 109; RG2 = CMP 116. Pins are to Balaban\tex\<paper>\parts\pNNN_corrected.tex.
+
+## Statement
+
+- {#BK.1} *Statement.* Let X ∈ 𝐃_j, a union of a connected finite family of closed cubes of π_j of side M (RG1 p.257 l.2–11), and let N(X) := M^{−4}|X| be the number of these cubes, |X| the volume of X. RG1 defines d_j(X) as the length, divided by M, of a shortest tree graph in the continuous space contained in X and meeting all the cubes of X (p.257 l.14–16), and does not name the norm on ℝ⁴ in which the length is measured. For every norm |·|_p, p ∈ [1, ∞],
+  {#BK.1-1} N(X) ≤ 2⁸(2 + d_j(X)) ≤ 2⁹(1 + d_j(X)) and diam X ≤ M(2d_j(X) + 4),
+  with d_j(X) measured in |·|_p and diam X in the Euclidean norm. RG1's remark that some shortest trees run along edges of cubes (l.17–18) is not used.
+  {#BK.1-2} RG2's (1.28), (2.30) and p.9 l.23 state N(Y) ≤ 3·2³d_k(Y), which fails when d_k(Y) = 0: a single cube has N(Y) = 1. RG2 says of the sum (1.26) that "we sum over X with d_j(X) ≠ 0, as it follows from our inductive construction" (p.8 l.8); #BK.6 checks RG2's uses with #BK.1 in place of RG2's count, which needs no such restriction.
+
+## Proof
+
+- {#BK.2} *A tour of a tree.* Let T be a tree graph of RG1's class for X, contained in X and meeting every cube of X. The proof uses only that T is a finite union of rectifiable arcs (straight segments, for instance) between finitely many points, connected and without cycles. Write ℓ_p(T) for the sum of the |·|_p-lengths of its arcs and ℓ := ℓ_∞(T). As |v|_∞ ≤ |v|_p for v ∈ ℝ⁴, ℓ ≤ ℓ_p(T).
+  {#BK.2-1} Doubling every arc of T gives a connected multigraph with all degrees even, so it has a closed walk through every doubled arc once (Euler). Traversed by |·|_∞-arclength, this walk is a map γ: [0, 2ℓ] → T onto T with |γ(s) − γ(s′)|_∞ ≤ |s − s′|. If T is one point, ℓ = 0 and γ is constant.
+- {#BK.3} *Covering points.* Let n := ⌈ℓ/M⌉ and s_i := min(2iM, 2ℓ) for i = 0, …, n. Every s ∈ [0, 2ℓ] has |s − s_i| ≤ M for some i: take the i < n with 2iM ≤ s < 2(i + 1)M, or i = n if s = 2ℓ, and use s_i if s ≤ 2iM + M, and s_{i+1} otherwise, as then s ≤ s_{i+1} ≤ 2(i + 1)M < s + M. So every point of T lies within |·|_∞-distance M of one of the n + 1 ≤ ℓ/M + 2 points p_i := γ(s_i).
+- {#BK.4} *The count.* The corners of the cubes of π_j form a translate c + Mℤ⁴ (the centres are the points of T_M^{(j+m)}, p.257 l.3). A cube □ = ∏_ν[a_ν, a_ν + M], a ∈ c + Mℤ⁴, meets the box ∏_ν[p_ν − M, p_ν + M] iff a_ν ∈ [p_ν − 2M, p_ν + M] for every ν, an interval of length 3M holding at most 4 points of c_ν + Mℤ. So at most 4⁴ = 2⁸ cubes meet it. Every cube of X contains a point of T, which lies in the box around some p_i (#BK.3), so N(X) ≤ 2⁸(n + 1) ≤ 2⁸(2 + ℓ/M) ≤ 2⁸(2 + ℓ_p(T)/M). The infimum over T gives N(X) ≤ 2⁸(2 + d_j(X)).
+- {#BK.5} *The diameter.* Two points x, x′ of X lie in cubes □, □′ of X, which contain points y, y′ of T. A cube of side M has Euclidean diameter 2M in d = 4. The arc of T from y to y′ has |·|_∞-length at most ℓ, so |y − y′|_∞ ≤ ℓ and |y − y′| ≤ 2|y − y′|_∞ ≤ 2ℓ_p(T). So |x − x′| ≤ 2M + 2ℓ_p(T) + 2M, and the infimum over T gives diam X ≤ M(2d_j(X) + 4). ∎
+
+## RG2's Uses
+
+- {#BK.6} With #BK.1 in place of RG2's count, each use in RG2 holds with larger absolute constants, for κ large depending on δ (as RG2 assumes, "for δκ sufficiently large", p.9 l.20). The bounds below are for d := d_k(Y), and δκ ≥ 1 gives 1 + d ≤ e^{δκd}.
+  - {#BK.6-1} p.8 l.17–19 and p.9 l.23 bound the number of cubes □₀ ⊂ Y by an exponential of d. #BK.1 gives N(Y) ≤ 2⁹exp((1/16)(κ₁ − 2)d) for κ₁ ≥ 18, and N(Y) ≤ 2⁹exp(δκd). The factor 2⁹ enters the constants O(M^q) of (1.29) and C₁ of (1.36).
+  - {#BK.6-2} (2.20), p.16 l.26–31, follows without the count. The sum Σ_{Y∈𝐃}α₄exp(−δκd_k(Y)) runs over distinct Y ⊂ Y₀, so it is at most Σ_{□⊂Y₀}Σ_{Y∋□}α₄exp(−δκd_k(Y)) ≤ O(1)α₄M^{−4}|Y₀| by (1.26), p.8 l.5, with δκ for κ. The quadratic part follows by Schur's test, as Σ_{b′}M^{−4}exp(−(1/16)(κ₁ − 1)M^{−1}|b_− − b′_−|) ≤ O(1).
+  - {#BK.6-3} p.19 l.19: RG2 bounds the right-hand side exp(εM^{−4}|Z₀|) of (2.34), times exp(−δκd_k(Z₀)), by 1, where ε := exp(−γ₂ε₁²/(20γ²)) ≤ ε₂ ≤ 1 (p.19 l.10–12). By #BK.1 the product is at most e^{2⁹ε}exp((2⁹ε − δκ)d_k(Z₀)) ≤ e^{2⁹} for δκ ≥ 2⁹. This factor, one per component Z_i, multiplies ε₂ in (2.35). It is absorbed by the O(1) in the conditions on ε₂ of p.20 l.4 and l.6 (#B2.1.26) and in C₃ (p.20 l.25).
+  - {#BK.6-4} p.19 l.40: (1.28) with δκ for κ counts cubes. #BK.1 adds the factor 2⁹ to (L + 2)⁴O(1)ε₂.
+  - {#BK.6-5} p.20 l.24: exp(c(LM)^{−4}|Z|), with c bounded by an absolute constant c₀ (p.20 l.23–24), times exp(−δ½Lκd_{k+1}(Z)), is at most e^{2⁹c₀} for δ½Lκ ≥ 2⁹c₀, by #BK.1 at j = k + 1. RG2 bounds it by 1. The factor joins the O(1) of C₃.
+  - {#BK.6-6} p.21 l.15–19: in (2.40), Σ_{Z⊂X}exp(−½δLκd_{k+1}(Z) + 2(LM)^{−4}|Z|) ≤ e^{2¹⁰}Σ_{□⊂X}Σ_{Z∋□}exp(−(½δLκ − 2¹⁰)d_{k+1}(Z)) ≤ e^{2¹⁰}O(1)(LM)^{−4}|X| by (1.26), with ½δLκ − 2¹⁰ for κ. Then (LM)^{−4}|X| ≤ exp((LM)^{−4}|X|), and this times exp(−½δLκd_{k+1}(X)) is at most e^{2⁹} for ½δLκ ≥ 2⁹, where RG2 has 1. Both factors join the O(1) of (2.41).
+- {#BK.7} So RG2's Lemmas 1–3 and (2.41) hold as stated, with larger absolute constants O(1), C₁ and C₃. The thresholds on κ above are lower bounds that depend on δ, and κ is taken large.
