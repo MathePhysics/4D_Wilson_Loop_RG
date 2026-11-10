@@ -23,7 +23,7 @@ Register of this note: WILSON_IT1_D2_STEP_MAP_2026_10_22.md ("the map"), WILSON_
 
 - *The density.* ρ_k = Σ_{{Ω_j},{Λ_j}} χ_k(Ω_k)𝐓_k exp A_k (CRE (2.18), p.257). Here 𝐓_k = Π_j𝐓^{(j)} is the product of the integrals over the old fields V_j in the large-field regions Z_j = Λ_j^c ((2.3), (2.19)–(2.22), p.258), and A_k = −A + 𝐄_k + 𝐑_k + 𝐁_k − E_k ((2.23)).
   A term of ρ_k is the summand of one sequence {Ω_j, Λ_j}. Its pending variables are V_k everywhere and the old fields V_j inside Z_j.
-- *The numerator.* N_k^C = Σ_{{Ω_j},{Λ_j}} χ_k(Ω_k)𝐓_k[𝒲_k exp A_k] (map #MD2.0.3.66), with 𝒲_k the dressed loop of class D(k) (D26 §0). 𝒲_k consists of the leading word, the slot insertions, and the attached species of D2.6. The leading word is a function of V_k on Ũ_k^c and of the old fields in the large-field regions the loop crosses. The labels κ, 𝓔, and Q are numbers of the term (D(k)(v)).
+- *The numerator.* N_k^C = Σ_{{Ω_j},{Λ_j}} χ_k(Ω_k)𝐓_k[𝒲_k exp A_k] (map #MD2.0.3.66), with 𝒲_k the dressed loop of class D(k) (map D2.0(3)). 𝒲_k consists of the leading word, the slot insertions, and the attached species of D2.6. The leading word is a function of V_k on Ũ_k^c and of the old fields in the large-field regions the loop crosses. The labels κ, 𝓔, and Q are numbers of the term (D(k)(v)).
   E[W(C)] = ∫N_k^C dV_k / ∫ρ_k dV_k at every k, since both sides are the same integral over the original field (map #MD2.0.3.66).
 - *The class.* The 𝐑-operation (LFR I p.177 ff.; LFR II (1.72), p.379) acts on the components of Z_k = Λ_k^c such that
   (i) the component lies in a cube of side 100MR_k, and
@@ -603,7 +603,7 @@ with κ_k^R := e^{P_{k−1}(C)μ_k^R + 4ζ_k^R} absorbed into κ_k.
 - The dev insertions are D(k)'s on the old small-field region at U^R, the D_g of 15.6, and the dev parts of E_k^R(C;V_k) and of Ψ(S).
 - The att species are D26's on the unchanged components, item 7's att(k, Y_i) at the second-class components, 15.6(e)'s at the regions the polymers meet, and the terms of E^{R,∂}_k(ℓ) attached per component by 15.4(iii).
 
-Each entry is in D(k)'s register (D26 §0):
+Each entry has the form D(k) requires (map D2.0(3)):
 - the dev insertions by 15.6(a)–(d), with the comparison box in Ω_k;
 - the att species per component, with masses paid by κ (15.3) or, for 15.4(iii)'s terms, within Res;
 - the labels κ, 𝓔, Q as numbers of the term.
@@ -675,7 +675,7 @@ These masses are already paid by κ_j(X) in D26 7.2's enlarged induction, with 1
 
 So D26's step lemmas apply to the post-R term and produce D(k+1).
 
-*The D2.6 items left to D2.7.* D26 §8's "the joint expansion of the links e_X with LFR II (1.90)–(1.97) at the 𝐑-operation" is 15.3's ratio of gases, with the links e_X as constituents of the polymers meeting C. A polymer containing a first-class component carries e^{−2(1+β₀)^{−1}p₀(g_k)+1} by (1.89), and only such polymers are new at the 𝐑-step.
+*The D2.6 items left to D2.7.* The joint expansion of the links e_X with LFR II (1.90)–(1.97) at the 𝐑-operation (map #MD2.0.4.6-8) is 15.3's ratio of gases, with the links e_X as constituents of the polymers meeting C. A polymer containing a first-class component carries e^{−2(1+β₀)^{−1}p₀(g_k)+1} by (1.89), and only such polymers are new at the 𝐑-step.
 
 *The links in the gas.* On the term, e^{E^∂} = Π_Xe^{e_X} over the links attached to the components. Each e_X is a number given the term's labels (map #MD2.0.3.64, #MD2.3.8.7), rooted at a traversal of C (D26 7.4(a)), with its set X̂ (two-loops #629-2–#629-2-2). Each factor is expanded as 1 + (e^{e_X} − 1).
 - A link that reads the labels of a component X_c of Z meets X_c^∼ (two-loops #629-0-2–#629-0-3). X_c^∼ lies in the X′ holding a first-class X_c (p.377 l.5–6, p.389 l.10).
@@ -821,7 +821,7 @@ So the commensurability at every 𝐑-step k ≤ K′ follows from D2.3(4)(Z-g)'
   - p.387 (1.87)–(1.89), l.37–39; pp.388–390 (1.90)–(1.102); p.389 l.27–28 (the extraction of e^{−p₀(g_k)}); p.390 l.27 (Euclidean covariance); p.391 l.1–2, (1.103)–(1.104), and l.3–24.
 - CRE (CMP 119, 243–285), parts p244, p245, p246, p254–p260, p263, p265, p267, p268: p.244 (0.2); p.245 l.34 (M = L^m), p.246 l.25 (R₁ a power of L); p.255 (2.5) (R_j the smallest power of L with R_j ≥ (log g_j^{−2})^r); pp.255–258 (2.3)–(2.23); p.260 (2.30)–(2.31); p.263 (2.43)–(2.46); p.265 δ_k; p.267 (3.12)–(3.15) and the resummation ζ; p.268 (3.16)–(3.19).
 - The map: #MP.1–#MOSTC.6, #MOMST.6, #MOMST.47–#MOMST.49, #MOMST.82–#MOMST.92, #MOMGD.2–#MOMGD.12, #MOMGD.19–#MOMGD.25-2, #MOMGD.30, #MOMGD.49, #MD2.2.6.98–#MD2.2.6.116, #MD2.0.3.14, #MD2.0.3.19, #MD2.0.3.26–#MD2.0.3.31, #MD2.0.3.35, #MD2.0.3.40–#MSD2.0.5, #MD2.0.5.29, #MSD2.0.6–#MSD2.1, #MD2.2.3.4, #MD2.2.3.18–#MD2.2.4.1, #MD2.2.6.190, #MD2.3.4.16–#MD2.3.4.19, #MD2.3.4.51, #MD2.3.5.5, #MD2.4.4.5, #MD2.4.5.13–#MD2.4.5.17, #MD2.4.6.2–#MD2.4.6.16.
-- D26 §0, §1, §4.3–§5.6, §7.2–§7.4, §8; RC Sects. 1–7 (whole); IT-1 §3f.
+- D26 §1, §4.3–§5.6, §7.2–§7.4; RC Sects. 1–7 (whole); IT-1 §3f.
 
 ## What is Bałaban's and what is derived
 

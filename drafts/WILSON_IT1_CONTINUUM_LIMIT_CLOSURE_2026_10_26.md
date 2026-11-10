@@ -172,7 +172,7 @@
 ## Sources Read {#NSR}
 
 - {#NR.1} Map: the passages cited above by tag.
-- {#NR.2} WILSON_IT1_BACKGROUND_ITERATION_CLOSURE_2026_10_26.md (header, What the Objects Are, §1–§3); WILSON_IT1_D26_CLOSURE_2026_10_24.md §0, §7.1–7.3, and §8; WILSON_IT1_D27_CLOSURE_2026_10_26.md item 1 and 15.8; WILSON_IT1_CAUCHY_ESTIMATE_2026_10_27.md (the conditions #CP.22–#CP.28, §7.1, §11).
+- {#NR.2} WILSON_IT1_BACKGROUND_ITERATION_CLOSURE_2026_10_26.md (header, What the Objects Are, §1–§3); WILSON_IT1_D26_CLOSURE_2026_10_24.md §7.1–7.3; WILSON_IT1_D27_CLOSURE_2026_10_26.md item 1 and 15.8; WILSON_IT1_CAUCHY_ESTIMATE_2026_10_27.md (the conditions #CP.22–#CP.28, §7.1, §11).
 - {#NR.3} CRE (CMP 119): pp.243 ((0.1), the sequence (𝐑T)^kρ₀), 244, 245, 246, 254, 255, 256, 257, 258, 259, 260, 261, 262, 263, 264 (Theorems 1 and 2, Corollary 3, (0.2), (1.1)–(1.4), (1.29)–(1.30), (2.1)–(2.12), (2.16)–(2.25), (2.29)–(2.50)).
 - {#NR.4} RG1 (CMP 109): pp.259, 260 (Theorems 1 and 2, (0.31), (1.1)–(1.4)).
 - {#NR.5} LFR1 (CMP 122): pp.175, 176, 177, 178 ((0.1)–(0.6), conditions (i)–(ii), (1.1)–(1.9)).
