@@ -702,27 +702,27 @@ the formula of §2. In it:
 - ν_n: Cρ̂ for the traversals within O(LM) of E(B_ξ) ∪ (I∖D(Λ)), decaying away from them. These are carried and never exponentiated.
 - No factor exponential in n_C enters (1): the identity is exact, and q° is bounded by Kotecký–Preiss.
 
-## 3e. D1.2b: analyticity in the background (worked 00:30–00:57, 22 Oct; reviewed in round 4 (e-red, e-gauss, e-rest); repairs written 07:03–07:23, 22 Oct (session log), not reviewed; summary in §3h)
+## 3e. D1.2b: Analyticity in the Background
 
-**(0) Target, in Bałaban's form (quoted and checked; round-4 repairs e-red S1, m2, m3, m5, m8).**
+**(0) Target, in Bałaban's Form.**
 - Every localised term of 𝐁_k has "an extension to an analytic function on the space Ũ_j^c(X, α̃₀, α̃₁)" (CRE p.261, after (2.41)); the regular terms are analytic on U_j^c(X, α_{0,j}, α_{1,j}) (p.259). The pending variable A is not complexified ((2.41)–(2.42)).
 - The complex direction is 𝐔 = U′U, with U G-valued and regular ((2.34), (2.38)), and U′ = exp iξA′, A′ 𝔤^c-valued: "L^nξ|A′|, (L^nξ)²|∇_U^ξA′| < (1−β(1−2^{−(j−n)}))α_{1,n}" ((2.39), p.261), with α_{1,j} = g_jC₁(log g_j^{−2})^{q₁} ((2.28), p.259).
-- Units: ξ = L^{−j} is the spacing of the fine lattice T_ξ (p.256 l.59). At j = n = 1 the factor in (2.39) is 1. In V3's dimensionless fine-lattice units the complex phase per fine bond is a′ := ξA′, and (2.39) reads ‖a′‖_∞ < α_{1,1}/L, with fine differences < α_{1,1}/L².
-- So a sufficient candidate target for D1(iii), in the form of the input that Bałaban's step-2 machinery takes. In some respects it asks more than CRE's set. Whether its base points (real U₁ in the support of a term's indicators) cover CRE's (2.34)/(2.38), and whether D2 needs more, are D2 items (e-red m2).
-  - **D1(iii)′.** Fix a labelled term, a real U₁ in the support of its indicators, and a 𝔤^c-valued a′ on the fine bonds of Ω₁ with ‖a′‖_∞ < ρ₁, where ρ₁ := α_{1,1}/L.
-    - *Where a′ acts (e-red m5).* 𝐔 := e^{ia′}U₁ on every fine bond of Ω₁, including the bonds of J(Λ) and the de-younged bonds. The variables on these bonds stay real: the young variable on D(Λ), the exterior variable on J(Λ) and the pending A on Ω₁ ∩ Λ₁ᶜ. V₀ on Ω₁ᶜ is unchanged.
-    - Then the term's background-dependent factors (Υ¹_W, the words U_j, f_ξ(m)) extend to analytic functions of a′ at 𝐔, equal to the real ones at a′ = 0. At 𝐔 the shift is the real m₀ := m(U₁), and the background dependence of m is carried by the tilt of (3.12). So f_ξ(m) at 𝐔 means f_ξ(m₀) at the background 𝐔. At the later steps n the carried t > 0 species, the leading word, and the lw slots are §3j(6)'s representation at the real centre tm̂(𝐔(U_{n+1}), ω₀,₀) of the step's external background (WILSON_IT1_O4_CLOSURE_2026_10_26.md §2(c); D26 closure 6.4 *The centre*).
+- Units: ξ = L^{−j} is the spacing of the fine lattice T_ξ (p.256 l.59). At j = n = 1 the factor in (2.39) is 1. In V4's dimensionless fine-lattice units the complex phase per fine bond is a′ := ξA′, and (2.39) reads h_ℂ(a′(b)) < α_{1,1}/L, with fine differences < α_{1,1}/L². Put ϱ₁ := α_{1,1}/L (the map's ϱ_{an,1}, #MD2.0.3.53-7) and ‖a′‖_∞ := max_b h_ℂ(a′(b)).
+- D1(iii)′ drops CRE's condition on differences, so its domain contains CRE's at j = n = 1 (map #MD2.0.3.53-1, #MD2.2.6.137-1).
+  - **D1(iii)′.** Fix a labelled term, a real U₁ in the support of its indicators, and a 𝔤_ℂ-valued a′ on the fine bonds of Ω₁ with ‖a′‖_∞ < ϱ₁.
+    - *Where a′ acts.* 𝐔 := e^{ia′}U₁ on every fine bond of Ω₁, including the bonds of J(Λ) and the de-younged bonds. The variables on these bonds stay real: the young variable on D(Λ), the exterior variable on J(Λ) and the pending A on Ω₁ ∩ Λ₁ᶜ. V₀ on Ω₁ᶜ is unchanged.
+    - The term is expanded at the real centre m̂₀ := m̂(U₁) of §3j(1), the shift of the real base point (D26 closure 6.4 *Shift*, *The centre*); the background dependence of the shift at 𝐔 is carried by the tilt of (3.12). Then the background-dependent factors (Υ¹_W, the words U_j and the leading word f_ξ(m̂₀)) extend to analytic functions of a′, equal to the real ones at a′ = 0.
     - They are covariant under G-valued gauge transformations, with a′ transformed by the adjoint.
-    - D1(ii) holds there in the per-traversal form of §3a(8), with three changes (e-red S1, e-rest M1):
-      - δ*_n(U₁) is replaced by δ*^{30}_n(U₁) + a*_n(a′);
-      - the rate 31η/8 of §3a(6) becomes 30η/8, in δ*_n, in the large-field and wrapping terms and in c := 30η/(8 max(C_box, C));
-      - each group's majorant carries e^{C′𝔰(W)ρ₁}, absorbed by the freed η/8 of the pin weight once C′ρ₁ ≤ η/8 ((3.8)).
-    - Here δ*^{30}_n is δ*_n of §3a(6) with (31/8)ηk replaced by (30/8)ηk, a*_n(a′) := Σ_{k≥1}(k+1)e^{−(30/8)ηk}A_n(C_box LM(k+1)) and A_n(R) := max{‖a′(b)‖ : b within distance R of n}. [Amended by D26 closure 6.5 *(iii)'s complex rate* (round 24, s6 m7; annotated here 25 Oct, round 25, s6 minor 5): with V3's θ°-booking (θ° ≤ νσ/16 in place of η/8) the rate is 61/16, so read δ*^{30} and a* with e^{−(61/16)ηk}; the same holds at (3.8) and in map D(k)(iii).] The exterior marks of §3a(7) keep their rate η/(C_F LM) and gain the tilt marks 𝔪^δ_Y of (3.12).
-  - The indicators are functions of the real data and stay outside, as factors (§OPEN, D1.2b).
-  - q°, E^∂_{D(Λ)}, φ and e_X are numbers on each labelled term (§3b(5), L986), so nothing is asked of them.
-- The replacement of δ*_n by δ*^{30}_n + a*_n is admissible. At U₁ = id and a′ ≠ 0 the background is not flat, and a*_n is of order ‖a′‖_∞. For D2's Cauchy estimates this is the expected size: the bound on the ρ₁-polydisc, divided by ρ₁, bounds the first derivative in the fluctuation direction.
+    - D1(ii) holds there in the per-traversal form of §3a(8), with three changes:
+      - δ*_n(U₁) is replaced by δ*^c_n(U₁) + a*_n(a′);
+      - the rate (31/8)η of §3a(6) becomes (61/16)η, in δ*^c_n, in the large-field and wrapping terms and in c := 61η/(16 max(C_box, C));
+      - each group's majorant carries the factor e^{C′𝔰(W)ϱ₁} of (3.8).
+    - Here δ*^c_n(U) := Σ_{k≥1}(k+1)³e^{−(61/16)ηk}Δ_n(C_boxLM(k+1)), a*_n(a′) := Σ_{k≥1}(k+1)e^{−(61/16)ηk}A_n(C_boxLM(k+1)) and A_n(R) := max{h_ℂ(a′(b)) : b within distance R of n}. The exterior marks of §3a(7) keep their rate η/(C_FLM) and gain the tilt marks 𝔪^δ_Y of (3.12).
+  - The indicators are functions of the real data and stay outside, as factors.
+  - q°, E^∂_{D(Λ)}, φ and e_X are numbers on each labelled term (§3b(5)), so nothing is asked of them.
+- a*_n has the size D2's Cauchy estimates need: at U₁ = id and a′ ≠ 0 the background is not flat, a*_n is of order ‖a′‖_∞, and the bound on the ϱ₁-polydisc, divided by ϱ₁, bounds the first derivative in the fluctuation direction.
 
-**(1) Complex symmetric matrices (derived).** Let H = R + iS be a complex symmetric n×n matrix, with R, S real symmetric (the entrywise real and imaginary parts), R ≥ γ′ > 0 as a quadratic form, and ‖H‖ ≤ m. Write ⟨·,·⟩ for the Hermitian product on ℂⁿ.
+**(1) Complex Symmetric Matrices.** Let H = R + iS be a complex symmetric n×n matrix, with R, S real symmetric (the entrywise real and imaginary parts), R ≥ γ′ > 0 as a quadratic form, and ‖H‖ ≤ m. Write ⟨·,·⟩ for the Hermitian product on ℂⁿ.
 - (a) *Numerical range.* For x ∈ ℂⁿ, ⟨x,Rx⟩ and ⟨x,Sx⟩ are real, so Re⟨x,Hx⟩ = ⟨x,Rx⟩ ≥ γ′‖x‖². This passes to every principal restriction H_E = ι_E^*Hι_E, with the same γ′ and m: Re⟨x,H_Ex⟩ = Re⟨ι_Ex,Hι_Ex⟩. This replaces min–max and interlacing.
 - (b) *Inverse.* γ′‖x‖² ≤ Re⟨x,Hx⟩ ≤ ‖x‖‖Hx‖, so H is invertible with ‖H^{−1}‖ ≤ 1/γ′, and γ′ ≤ m.
 - (c) *Neumann series.* With m′ := m²/γ′,
@@ -738,74 +738,73 @@ the formula of §2. In it:
 
   |E_H[F]| ≤ (|det H|/det R)^{1/2}E_R[|F|] ≤ e^{n‖S‖²/(4γ′²)}E_R[|F|].
 
-  The exponent of the cost is linear in the dimension n. So it is harmless only on local carriers, never on I (see (2)(e)).
-- (f) *Perturbation from a real background.* Let H_𝐔 have entries analytic in the background on a polydisc, with finite range, and H_U real with γ ≤ H_U ≤ m at a real U. If ‖H_𝐔 − H_U‖ ≤ s, then ‖R − H_U‖ ≤ s and ‖S‖ ≤ s, since entrywise real and imaginary parts do not increase the operator norm (Re M = (M + M̄)/2 and ‖M̄‖ = ‖M‖). So (a)–(e) hold with γ′ = γ − s and m + s in place of m.
-  - *Symmetry (e-red m7).* H_𝐔 is complex symmetric. In the chart of (2)(c), H_𝐔ᵀ − H_𝐔 is analytic in the complex chart phases on a connected polydisc. It vanishes at the real phases, where H is a real symmetric compression, and a power series that vanishes at the real points of a polydisc vanishes identically.
-  - *Notation.* In §3e, R := Re H. V3's Hessian range (the R of Lemma hessian-gauge-locality) is written R_V.
+  The exponent of the cost is linear in the dimension n. So it is harmless only on local carriers, never on I ((3.4)).
+- (f) *Perturbation from a real background.* Let H_𝐔 be complex symmetric, and H_U real with γ ≤ H_U ≤ m at a real U. If ‖H_𝐔 − H_U‖ ≤ s, then ‖R − H_U‖ ≤ s and ‖S‖ ≤ s, since entrywise real and imaginary parts do not increase the operator norm (Re M = (M + M̄)/2 and ‖M̄‖ = ‖M‖). So (a)–(e) hold with γ′ = γ − s and m + s in place of m.
+  - *Symmetry.* The compressed Hessian H_𝐔 at 𝐔 = e^{ia′}U₁ is complex symmetric: H_𝐔ᵀ − H_𝐔 is analytic in a′ on the connected polydisc ‖a′‖_∞ < ϱ₁ ((2)(c)) and vanishes at real a′, where e^{ia′}U₁ is a real background and H a real symmetric compression; a power series that vanishes at the real points of a polydisc vanishes identically.
+  - *Notation.* In §3e, R := Re H. V4's Hessian range (the R of (fixed-kernel-inputs)) is written R_V.
 
 **(2) Reduction.**
 - (a) *Analyticity follows from the bounds.* On a fixed labelled term the factors are built from four things:
-  - entries analytic in the background (§c4-10-1, L4880, on ‖Z‖ < 2τ_b, Z complex);
-  - integrals over real fluctuation variables, with cutoff domains in the fluctuation variables only ("The protected cutoff domain is fixed throughout", L4937; to be checked for every cutoff in (3));
+  - local maps analytic in the background: the entries of H, the maps of Lemma c2-uniform-chart and the primitives of Lemma c2-primitive-bounds on the link neighbourhood of (2)(c), and along the coefficient path the finite analytic entries of §c4-10-1 on its joint domain;
+  - integrals over real fluctuation variables, with cutoff domains in the fluctuation variables only ("The protected cutoff domain is fixed throughout", §c4-10-3; every cutoff is checked in (3.7));
   - finite or convergent cluster sums;
-  - logarithms defined as convergent cluster series or on matrix balls (L4907).
-  An integral of an analytic integrand that is locally uniformly dominated is analytic (differentiation under the integral). A locally uniformly convergent series of analytic functions is analytic (Weierstrass). So analyticity on the ρ₁-polydisc follows from the majorants of (3), taken uniformly on it.
-  - *Along the path (e-red m6).* The same argument gives analyticity on a complex neighbourhood of each path background of (2)(d). Those backgrounds lie within C‖a′‖ of V3's real path, and (3.1)–(3.6) hold at every background within Cρ₁ of a real one in V3's domain.
-- (b) *Covariance.* For G-valued u, (e^{ia′}U₁)^u = e^{i Ad_{u}a′}U₁^u at the initial site of each bond. The formula of each factor is covariant identically in 𝐔, so the extension is covariant with a′ ↦ Ad_u a′, and ‖Ad_u a′‖ = ‖a′‖.
-- (c) *Local charts (repaired, e-red m1).* At U₁, V3 evaluates the entries in the U₁ charts of Lemma c5-4-0(c) (L2491): Lemma c2-uniform-chart, phases ‖φ‖_∞ ≤ τ_L/2 in a site gauge. The bound ‖Z‖ < 2τ_b of §c4-10-1 (L4880) is established only along the path, by the phase test (L3080).
-  - In the same gauge 𝐔 = e^{ia′_φ}e^{iφ}, with a′_φ the gauge transform of a′. So 𝐔 = e^{iφ^c} with φ^c := (1/i)log(e^{ia′_φ}e^{iφ}) and ‖φ^c − φ‖ ≤ C‖a′‖ (BCH).
-  - So every entry at 𝐔 is evaluated in the complex neighbourhood {‖Re φ‖ ≤ τ_L/2 + ρ₀, ‖Im φ‖ ≤ ρ₀} of (3.6), once Cρ₁ ≤ ρ₀. Along the path ((2)(d)) the margin below 2τ_b is the phase test's.
-  - By the Cauchy estimates on the polydisc and the finite range, ‖H_𝐔 − H_{U₁}‖ ≤ C_Hρ₁ (Schur test), and (1)(f) applies with s = C_Hρ₁.
-- (d) *The path argument (derived, modulo (3)).* Let W be a good group passing V3's real phase test, and let g_W be the real rooted tree gauge of U₁ on Q_W (Lemma c4-10-5). Then on Q_W, 𝐔^{g_W} = e^{i Ad a′}e^{iB_W}.
-  - Put B^c_W(b) := (1/i)log(e^{i Ad a′(b)}e^{iB_W(b)}) on Q_W and B^c_W = 0 on the other bonds. Then ‖B^c_W − B_W‖_∞ ≤ C‖a′‖_{Q_W}, so ‖ω^c_W‖_∞ ≤ C_tg diam(Q_W)²δ_{Q_W}(U₁) + C‖a′‖_{Q_W}.
-  - The path is U^c_{W,t} := e^{itB^c_W}, 0 ≤ t ≤ 1. At t = 1 the coefficient is the extended one at 𝐔, by coefficient locality on Q_W and (2)(b). At t = 0 it is the flat reference, as in V3.
-  - t ↦ c_W(U^c_{W,t}; h) is C¹ with derivative 𝒟_{ω^c}c_W, because c_W is analytic along the path, by (a).
-  - The real gauge is used on purpose. A complex tree gauge would multiply complex links along tree paths of length up to diam(Q_W) ≤ C_box LM𝔰(W), with growth e^{C diam·ρ₁}. That is not bounded uniformly in 𝔰. The real gauge preserves ‖a′‖.
-  - So the good-group bound of §3a(3) holds at 𝐔 once Lemma c4-9-1's derivative bound holds along complex paths with ‖Im‖ ≤ Cρ₁ ((3)), in the form |𝒟_ω c_W(U_t)| ≤ 2C e^{C′𝔰(W)ρ₁}‖ω‖(L_f + n(W))M(W) ((3.11)). The extra term C‖a′‖_{Q_W}(L_f+n)M ≤ C𝔰‖a′‖_{Q_W}M gives Cρ a*_n, by the summation of §3a(6) at the rate 30η/8 ((0), (3.8)). [Re-run in D26 closure 6.5 *(iii)'s complex rate* with θ° ≤ νσ/16 in place of η/8: the rate becomes 61/16 (round 24, s6 m7; annotated 25 Oct, round 26, s6 m4).]
+  - logarithms defined as convergent cluster series or on matrix balls of radius < 1/2 (the constraint-Jacobian logarithm of §c4-10-1).
+  An integral of an analytic integrand that is locally uniformly dominated is analytic (differentiation under the integral). A locally uniformly convergent series of analytic functions is analytic (Weierstrass). So analyticity on the ϱ₁-polydisc follows from the majorants of (3), taken uniformly on it. The same argument gives analyticity on a complex neighbourhood of each path background of (2)(d).
+- (b) *Covariance.* For G-valued u, (e^{ia′}U₁)^u = e^{i Ad_{u}a′}U₁^u at the initial site of each bond. The formula of each factor is covariant identically in 𝐔, so the extension is covariant with a′ ↦ Ad_u a′, and h_ℂ(Ad_u a′(b)) = h_ℂ(a′(b)).
+- (c) *Local charts.* V4 evaluates every local map at U₁ in a site gauge u in which the stencil phases satisfy ‖φ‖_∞ ≤ τ_L/2 (Lemma c5-4-0(c) and the applicability paragraph after Lemma c2-uniform-chart). In that gauge 𝐔^u(b) = e^{i Ad_{u(b_-)}a′(b)}U₁^u(b).
+  - On 𝔤, ‖x‖_op ≤ √N h(x), since h(x)² = N^{−1}Tr x². So ‖X‖_op ≤ √(2N)h_ℂ(X) on 𝔤_ℂ, and ‖e^{iX} − id‖_op ≤ ‖X‖_ope^{‖X‖_op} ≤ 2√(2N)h_ℂ(X) once √(2N)h_ℂ(X) ≤ log 2.
+  - Put r_e := ρ₀/(4√(2N)), with ρ₀ ≤ 1 the width of repair K′ ((3.6)). For ‖a′‖_∞ < r_e every link of 𝐔^u lies within ρ₀/2 of the real link U₁^u(b), so the local maps are evaluated in K′'s link neighbourhood 𝒱_{ρ₀}, where they are analytic with K′'s constants. The ϱ₁-polydisc lies inside once ϱ₁ ≤ r_e/2, a g₀-threshold; the margin is used for the Cauchy estimates of (3.1).
+- (d) *The path argument.* Let W be a good group passing V4's phase test C_tg diam(Q_W)²δ_{Q_W}(U₁) ≤ τ_b/2 ((c4-10-17)), and let g_W be the real rooted tree gauge of U₁ on Q_W (Lemma c4-10-5), so that U₁^{g_W} = e^{iB_W} on Q_W with ‖B_W‖_∞ ≤ τ_b/2. Then on Q_W, 𝐔^{g_W} = e^{i Ad a′}e^{iB_W}.
+  - *The complex exponent.* §c4-10-1 chooses τ_b so that ‖Z‖ < 2τ_b keeps every link within 1/2 of id. Since ‖4B_W‖_∞ < 2τ_b, the eigenvalues of 4B_W(b), which stay where |e^{iλ} − 1| < 1/2 along the segment from 0, have modulus < 2 arcsin(1/4) < 1, so ‖B_W(b)‖_op < 1/4. With ‖Ad a′(b)‖_op ≤ √(2N)ϱ₁ ≤ 1/4, the Baker–Campbell–Hausdorff series log(e^Xe^Y) = X + Y + R(X,Y) converges (‖X‖_op + ‖Y‖_op < log 2), and R(X,0) = R(0,Y) = 0 give ‖R(X,Y)‖_op ≤ C_B‖X‖_op‖Y‖_op on ‖X‖_op + ‖Y‖_op ≤ 1/2, with C_B the sup of ‖D_XD_YR‖ there, a constant of N.
+  - Put B^c_W(b) := (1/i)log(e^{i Ad a′(b)}e^{iB_W(b)}) on Q_W and B^c_W = 0 off Q_W. Since h_ℂ(X) ≤ ‖X‖_op, ‖B^c_W − B_W‖_∞ ≤ C_BCH‖a′‖_{Q_W} with C_BCH := 1 + C_B√(2N)/4. So ‖B^c_W‖_∞ ≤ τ_b once C_BCHϱ₁ ≤ τ_b/2, and the direction ω^c_W := B^c_W has ‖ω^c_W‖_∞ ≤ C_tg diam(Q_W)²δ_{Q_W}(U₁) + C_BCH‖a′‖_{Q_W}.
+  - The path is U^c_{W,t} := e^{itB^c_W}, 0 ≤ t ≤ 1, inside §c4-10-1's joint domain, where the Cauchy estimates hold at complex Z with ‖Z‖ ≤ τ_b. At t = 1 the coefficient is the extended one at 𝐔 ((3.10)). At t = 0 it is the flat reference, as in V4.
+  - t ↦ c_W(U^c_{W,t}; h) is C¹ with derivative 𝒟_{ω^c_W}c_W, because c_W is analytic along the path, by (a).
+  - The real gauge is used on purpose. A complex tree gauge would multiply complex links along tree paths of length up to diam(Q_W) ≤ C_boxLM𝔰(W), with growth e^{C diam·ϱ₁}, which is not bounded uniformly in 𝔰. The real gauge preserves ‖a′‖.
+  - So the good-group bound of §3a(3) holds at 𝐔 once Lemma c4-9-1's derivative bound holds along the complex paths, in the form |𝒟_ωc_W(U^c_{W,t})| ≤ 2Ce^{C′𝔰(W)ϱ₁}‖ω‖_∞(L_f + n(W))M(W) ((3.11)). The extra term C_BCH‖a′‖_{Q_W}(L_f+n(W))M(W) ≤ C𝔰‖a′‖_{Q_W}M(W) gives Cρa*_n, by the summation of §3a(6) at the rate 61/16 ((3.8)).
 - (e) *What is left.* By (a)–(d), D1(iii)′ follows from one statement:
-  - (★) (restated, e-red S1, e-rest M1). Under repairs K and K′ ((3.0), (3.6)), V3's majorants for the coefficient and its directional derivatives hold at complex backgrounds e^{iZ^c}, with Re Z^c in V3's real domain and ‖Im Z^c‖ ≤ Cρ₁, with the real shift m₀ and the tilt of (3.12), and with three kinds of extra factor:
-    - per group, e^{C′𝔰(W)ρ₁} from the words and closed contractions ((3.8)), and a factor 2 on the derivative bounds from the complex direction ((3.7));
+  - (★) Under repairs K and K′ ((3.0), (3.6)), V4's majorants for the coefficient and its directional derivatives hold at the backgrounds 𝐔 of (c) and along the complex paths of (d), at the real centre m̂₀ with the tilt of (3.12), with three kinds of extra factor:
+    - per group, e^{C′𝔰(W)ϱ₁} from the words and closed contractions ((3.8)), and a factor 2 on the derivative bounds from the complex direction ((3.7));
     - per Gaussian component, e^{C₄s|J_Z|} with |J_Z| ≤ 4(LM+1)⁴N₁(Z), from the determinant ratio of (1)(d) and the complex T^c ((3.4));
-    - per host, the tilt part of (3.12), which keeps the host bound ω̃_t ≤ ω_* and adds the marks 𝔪^δ_Y.
-  - The majorants in question are M(W) and (c4-12-4), Lemma c4-9-1, their D(Λ) forms (L3080), and the exterior bound (c5-5-8).
-  - The factors are not of the form 1 + O(ρ₁) uniformly in the group, since 𝔰(W) is unbounded. Since ρ₁ ≍ g₁(log g₁^{−2})^{q₁} → 0, they are absorbed by three g₀-thresholds: C′ρ₁ ≤ η/8 (the pin weight, at the lowered rate 30η/8) [re-run in D26 closure 6.5 *(iii)'s complex rate* with θ° ≤ νσ/16 in place of η/8: the rate becomes 61/16 (round 24, s6 m7; annotated 25 Oct, round 26, s6 m4)]; s ≤ (16C₄(LM+1)⁴)^{−1} (the Gaussian budget under K, (3.4)); and the tilt threshold of (3.12).
+    - per host, the tilt part of (3.12), which keeps the host bound ω̃_t ≤ ω_*/2 and adds the marks 𝔪^δ_Y.
+  - The majorants in question are M(W) and (c4-12-4), Lemma c4-9-1, their D(Λ) forms (the coefficient-path paragraph of the proof of Prop. c5-6-def), and the exterior bound (c5-5-8).
+  - The factors are not of the form 1 + O(ϱ₁) uniformly in the group, since 𝔰(W) is unbounded. Since ϱ₁ ≍ g₁(log g₁^{−2})^{q₁} → 0, they are absorbed by three g₀-thresholds: C′ϱ₁ ≤ η/8 (the pin weight, (3.8)); s ≤ (16C₄(LM+1)⁴)^{−1} (the Gaussian budget under K, (3.4)); and the tilt threshold of (3.12).
 
-**(3) V3's inputs at complex backgrounds (checked 00:46–00:57).** Throughout, H is the I-compression (or the D(Λ)-compression, L3076) at 𝐔, H_U the same at the real U₁ (or along V3's real path), and s := ‖H − H_U‖ ≤ C_Hρ₁. Write R := Re H and S := Im H (entrywise). γ = γ_L/2, h_+ = m_L, as in (fixed-kernel-inputs) (L713).
+**(3) V4's Inputs at Complex Backgrounds.** Throughout, H is the I-compression (or the D(Λ)-compression, Lemma c5-4-0(a)) at 𝐔, H_U the same at the real U₁ (or along V4's real path), and s := ‖H − H_U‖ ≤ C_Hϱ₁ ((3.1)). Write R := Re H and S := Im H (entrywise). γ = γ_L/2 and h_+ = m_L, as in (fixed-kernel-inputs).
 
-- **(3.0) Margins: the constant chain is re-run (repair K; round-4 repairs e-gauss m1–m4, m10).** The payment has no margin as V3 states it: with V3's choices, C_d(α_G + δ_M²)|J_Z| ≤ C_d(α_G + δ_M²)·4(LM+1)⁴N₁(Z) ≤ N₁(Z) can hold with equality in the last step (L3831). Repair K: run V3's chain, in V3's order (γ, h_+, R_V; κ₁; n_*, R_*, C_w; M₁, ρ_w, M; α_G; then g₀; L715), with these changes:
-  - γ_c := γ/2 in place of γ, and h_c := h_+ + γ/2 in place of h_+, throughout the chain. In particular q_H and s_H of Lemma walk-series are computed from (γ_c, h_c) (e-gauss m4).
-  - a_*β ≤ 1/8 in place of 1/4 in (fixed-kernel-grouping) (L719).
-  - C_w := (4/3)s_H^{−1/2}n_*V_*a_* and δ_M := 2C_w4^{−N_M} (e-gauss m1). The factor 4/3 bounds 1/(1 − a_*β^c) for a_*β^c ≤ 1/4. So the tail constants of (3.2) are bounded by the same C_w in the real and the complex case, and the margins below hold as stated.
-  - In the choice of M: 4C_d^Kδ_M²(LM+1)⁴ ≤ 1/4 in place of 1/2, and h_c²δ_M²/γ_c ≤ 1/16 in place of 1/8. The second follows from the first, since C_d^K ≥ 2d_Gh_c²/γ_c gives h_c²δ_M²/γ_c ≤ 1/(32d_G) (e-gauss m10). It is kept for reference.
+- **(3.0) Margins: Repair K.** The Gaussian payment has no margin as V4 states it: C_d(α_G + δ_M²)|J_Z| ≤ C_d(α_G + δ_M²)·4(LM+1)⁴N₁(Z) ≤ N₁(Z), from 4C_dδ_M²(LM+1)⁴ ≤ 1/2 ((c-standing-conditions)) and α_G ≤ (8C_d(LM+1)⁴)^{−1} (proof of Lemma gaussian-payment, after (fixed-kernel-trace-payment)), can hold with equality. Repair K runs V4's chain in V4's order (γ, h_+, R_V; κ₁; n_*, R_*, C_w, A_*, C_d; M₁, M₂, M; α_G; then g₀; Section app:thresholds) with these changes:
+  - γ_c := γ/2 in place of γ, and h_c := h_+ + γ/2 in place of h_+, throughout the chain; in particular s_H = 2h_c, q_H = 1 − γ_c/s_H, and n_*, β, C_w and δ_M are computed from these. V4's lemmas of Section sec:fixed-first-kernel hold with these parameters, since γ_c ≤ H ≤ h_c.
+  - In (c-standing-conditions), 4C_d^Kδ_M²(LM+1)⁴ ≤ 1/4 in place of 4C_dδ_M²(LM+1)⁴ ≤ 1/2. It implies h_c²δ_M²/γ_c ≤ 1/16, in place of h_+²δ_M²/γ ≤ 1/8, since C_d^K ≥ 2d_Gh_c²/γ_c gives h_c²δ_M²/γ_c ≤ 1/(32d_G).
   - α_G ≤ min(γ_c/2, γ_c²/(16A_*²), (8C_d^K(LM+1)⁴)^{−1}).
-  - Here A_* := h_c(γ_c^{−1/2}+1), and C_d^K := d_G max(1/γ_c + 2A_*²/γ_c², 2h_c²/γ_c). This is (fixed-kernel-trace-payment)'s constant (L3829) at (γ_c, h_c, A_*), with its 2/3 replaced by 1 and its δ-coefficient doubled ((3.4); e-gauss m5).
+  - Here A_* := h_c(γ_c^{−1/2}+1), and C_d^K := d_G max(1/γ_c + 2A_*²/γ_c², 2h_c²/γ_c): (fixed-kernel-trace-payment)'s C_d at (γ_c, h_c, A_*), with its 2/3 replaced by 1 and its δ-coefficient doubled ((3.4)).
 
-  Every change is a choice made before the coupling, so the order and the coupling-independence of V3's constants are kept. Every later choice of V3's chain is re-made from the changed earlier ones. V3's choices after α_G put no lower bound on α_G and no upper bound on M (checked in (3.11); e-gauss m2). CRE's conditions on M are lower bounds or arithmetic: "M be large" (p.245), M ≥ 8LM₂, odd powers of L, M/M₁ integral (L3968). So K's smaller α_G and larger M violate none of them (e-rest M7). Then g₀ is reduced so that s ≤ s_*, with s_* fixed by the chain (collected at the end of (3.4)). V3's real statements hold a fortiori under K, since every condition changed is monotone in the direction used. Repair K′ of (3.6) is a further change; it needs the user's agreement.
-- **(3.1) Hessian bounds.** By (1)(f), γ − s ≤ R ≤ h_+ + s and ‖S‖ ≤ s, with V3's range R_V. The bound s ≤ C_Hρ₁ comes from the Schur bound c_H on the entry derivatives (L3076). Those derivatives come from Cauchy estimates on the joint polydisc of §c4-10-1, so they hold in complex directions at complex points of a smaller polydisc.
-  - *Evidence (e-gauss m7).* The entries are bounded on §c4-10-1's joint complex polydisc "uniformly in Z" (L4880ff.), which gives the Cauchy estimates. At U₁ the real chart has the margin ρ₀ of (3.6) (e-red m1, (2)(c)), and along the path the phase test's margin.
-  - For s ≤ γ/4, R ≥ γ − s ≥ γ_c and R ≤ h_+ + s ≤ h_c (e-gauss m6: s < γ/2 strictly is needed below, and s ≤ γ/4 is put into s_*). The min–max step at D(Λ) (L3076) is replaced by (1)(a).
-- **(3.2) Walk series (L717–755) and tail (L3804–3809).**
-  - *Real-only step:* "has operator norm at most q_H^n" (L717) is spectral.
-  - *Complex (e-gauss m4).* 𝖠_H = (1 − R/s_H) − iS/s_H, with q_H, s_H computed from (γ_c, h_c) under K. For s ≤ γ/4, 0 ≤ 1 − R/s_H ≤ 1 − (γ − s)/s_H, so
-    - ‖𝖠_H‖ ≤ 1 − (γ − 2s)/s_H, used for the square root below;
-    - ‖𝖠_H‖ ≤ q_H + s/s_H, used for the walk constants, since γ − s ≥ γ_c.
-    Block supports and stencils do not change.
-  - With n_* chosen under K, (1 + s/(s_Hq_H))^{n_*} ≤ 2 for s ≤ s_Hq_H log 2/n_*. Then β^c := V_*(q_H + s/s_H)^{n_*} ≤ 2β and a_*β^c ≤ 2a_*β ≤ 1/4 (e-gauss m5). With C_w and δ_M as fixed in K (e-gauss m1), Lemma walk-series (bound, holomorphy in σ on the larger polydisc, gauge law) and (fixed-kernel-rooted-tail) hold with V3's constants.
+  Every change is a choice made before the coupling, so the order and the coupling-independence of V4's constants are kept, every later choice being re-made from the changed earlier ones. No later choice bounds α_G from below or M from above ((3.11)). CRE's conditions on M are lower bounds or arithmetic: "M be large" (p.245), M ≥ 8LM₂, odd powers of L, M/M₁ integral (Section app:thresholds), so K's smaller α_G and larger M violate none of them. Then g₀ is reduced so that s ≤ s_*, with s_* fixed by the chain ((3.4)). V4's real statements hold under K, since every changed condition is monotone in the direction used.
+- **(3.1) Hessian bounds.** By (1)(f), γ − s ≤ R ≤ h_+ + s and ‖S‖ ≤ s, with V4's range R_V.
+  - *The bound s ≤ C_Hϱ₁.* Each entry H(b,c) is the second derivative at the zero fluctuation of the plaquette, gauge and row terms of the regional sum (the paragraph before Lemma hessian-gauge-locality), which are built from the maps of Lemma c2-uniform-chart; it depends on the links within R_V of b_- ((fixed-kernel-inputs)). As a function of a′ on the n_e bonds of its stencil it is analytic on the polydisc ‖a′‖_∞ < r_H := min(r_e, r_iv) ((2)(c); (3.6) for the gauge terms), and bounded there by a constant C_ent of K′.
+  - Cauchy's estimate along the complex lines z ↦ a′ + zv, h_ℂ(v(b)) = 1 on one bond and v = 0 elsewhere, |z| < r_H/2, bounds each first derivative by 2C_ent/r_H at points with ‖a′‖_∞ ≤ r_H/2. So each entry moves by at most C_e‖a′‖_∞, C_e := 2n_eC_ent/r_H, and Schur's test with at most V₁ = 4(2R_V+3)⁴ nonzero blocks per row and column gives s ≤ V₁C_eϱ₁ at 𝐔, for ϱ₁ ≤ r_H/2.
+  - Along the complex paths of (2)(d), the compressions at e^{itB^c_W} and at V4's e^{itB_W} differ by at most c_Ht‖B^c_W − B_W‖_∞ ≤ c_HC_BCHϱ₁: integrate 𝒟H along the segment between the exponents, inside ‖Z‖ ≤ τ_b, where V4's Schur bound c_H holds at complex Z ((3.5)). Put C_H := max(V₁C_e, c_HC_BCH).
+  - For s ≤ γ/4, R ≥ γ − s ≥ γ_c and R ≤ h_+ + s ≤ h_c (s ≤ γ/4 is put into s_*). The min–max step for the principal restriction (Lemma c5-4-0(a)) is replaced by (1)(a).
+- **(3.2) Walk series (Lemma walk-series) and tail ((fixed-kernel-rooted-tail)).**
+  - *Real-only step:* "has operator norm at most q_H^n" (the paragraph before (fixed-kernel-grouping)) is spectral.
+  - *Complex.* 𝖠_H = (1 − R/s_H) − iS/s_H, with s_H = 2h_c and q_H = 1 − γ_c/s_H under K. For s ≤ γ/4, 0 ≤ 1 − R/s_H ≤ 1 − (γ − s)/s_H, so ‖𝖠_H‖ ≤ 1 − (γ − 2s)/s_H ≤ q_H, since γ − 2s ≥ γ_c. So every block of 𝖠_H^n has operator norm at most q_H^n, and block supports and stencils do not change. Hence the bound and the holomorphy in σ of Lemma walk-series, and (fixed-kernel-rooted-tail), hold at 𝐔 with V4's constants under K.
   - The binomial series still sums to a square root of 𝖦 = H^{−1}, since (Σ_j a_jx^j)² = (1−x)^{−1} as power series and ‖𝖠_H‖ < 1. It is symmetric, and ‖𝖦^{1/2}‖ ≤ s_H^{−1/2}(1 − ‖𝖠_H‖)^{−1/2} ≤ (γ − 2s)^{−1/2}.
-- **(3.3) Conditioning (Lemma conditioning, L763–772).**
+- **(3.3) Conditioning (Lemma conditioning).**
   - *Real-only step:* the proof is probabilistic ("conditional law").
-  - *Complex (repaired, e-gauss S1).* The convex set {R > 0, ‖𝖠_H‖ < 1} used before is too large: (3.4) covers only s ≤ s_*. Put
+  - *Complex.* The convex set {R > 0, ‖𝖠_H‖ < 1} is too large, since (3.4) covers only s ≤ s_*. Put
     - 𝒦 := {H real symmetric : γ ≤ H ≤ h_+};
     - 𝒩 := {H complex symmetric : dist_op(H, 𝒦) < s_*}.
   - 𝒩 is convex (the Minkowski sum of the convex 𝒦 and an open ball), hence connected, and open. It contains the nonempty set of real symmetric H with dist(H, 𝒦) < s_*, which is open in the real symmetric matrices. It contains H_𝐔, since H_{U₁} ∈ 𝒦 and ‖H_𝐔 − H_{U₁}‖ ≤ s < s_*. Every H ∈ 𝒩 lies within s < s_* of some H′ ∈ 𝒦, so (1)(f), (3.2) and (3.4) apply to it.
   - Both sides of (c-conditioning) are analytic in H on 𝒩. The left side is a normalised complex Gaussian ((1)(e)); the right side converges locally uniformly by (3.4).
   - They agree on the real points of 𝒩. An analytic function on a connected open set that vanishes on a nonempty open set of real points vanishes identically (its power series vanishes there). So they agree on 𝒩.
-  - L778, "C_{E₀} is real, positive and independent of σ; its determinant is one fixed positive number": at 𝐔, C_{E₀} is complex symmetric with Re C_{E₀}^{−1} ≥ γ − s, and det C_{E₀} is one fixed nonzero number, independent of σ.
-  - *Uses (e-gauss m8).* The sentence is not cited elsewhere in V3. det C_{E₀} recurs at L4917, as the local normalisation. So only its σ-independence and its nonvanishing are used.
-- **(3.4) Gaussian payment (Lemma gaussian-payment, L794–803; proof L3803–3833), recomputed.** Write H_E = R_E + iS_E for ι_{E₀}^*Hι_{E₀}, C := H_E^{−1} = C′ + iC″, and γ′ := γ − s.
-  - *(i).* The tail bound of (3.2) and ‖H‖ ≤ h_+ + s ≤ h_c give ‖Γ(σ) − Γ(1)‖ ≤ h_cδ_M. With the binomial square root of C (the series of (3.2) for H_E, a principal restriction, so (1)(a) applies), ‖C^{1/2}‖ ≤ (γ−2s)^{−1/2} and ‖C^{1/2}(Γ(σ)−Γ(1))‖ ≤ h_c(γ−2s)^{−1/2}δ_M.
-  - *Consumers of (i) (e-gauss m9).* V3 uses only the first bound of (i): L3819 takes it for ‖Γ₁‖ and ‖Γ₂‖. The second bound occurs only in the statement (L797) and its derivation (L3809). So no consumer receives the non-Hermitian binomial square root.
-  - *Real-only step:* "Γ_{E₀}(1) is real, so Γ₂ = Im(Γ_{E₀}(σ) − Γ_{E₀}(1))" (L3811). At 𝐔, Γ(1) = ι^*HΠ𝖦^{1/2} is complex. Differentiating the series along the segment from H_U to H (inside 𝒩) gives ‖Γ(1) − Γ(1)|_{H_U}‖ ≤ C_Γ s, with C_Γ := γ_c^{−1/2} + h_cγ_c^{−3/2}/2, since γ − 2s ≥ γ_c for s ≤ γ/4. So ‖Γ₂‖ ≤ h_cδ_M + C_Γs and ‖Γ₁‖ ≤ A_c := h_c((γ−2s)^{−1/2} + 1) + C_Γs. At s = 0, A_c = h_c(γ^{−1/2}+1) < A_* (since γ > γ_c), so A_c ≤ A_* for s below a fixed s_A.
+  - V4's sentence after (fixed-kernel-density), "C_{E₀} is real, positive and independent of σ; its determinant is one fixed positive number on the whole polydisc", becomes: at 𝐔, C_{E₀} is complex symmetric, independent of σ, with Re C_{E₀}^{−1} = R_E ≥ γ − s, and det C_{E₀} is one fixed nonzero number ((1)(b)).
+  - The sentence is not cited elsewhere in V4, and det C_{E₀} recurs only in the locality paragraph of §c4-10-2, as the local normalisation. So only its σ-independence and its nonvanishing are used.
+- **(3.4) Gaussian payment (Lemma gaussian-payment, proved in Section app:fixed-kernel-payment), recomputed.** Write H_E = R_E + iS_E for ι_{E₀}^*Hι_{E₀}, C := H_E^{−1} = C′ + iC″, and γ′ := γ − s ≥ γ_c. By (1)(f), (a) and (b), R_E ≥ γ′, ‖S_E‖ ≤ s and ‖C‖ ≤ 1/γ′.
+  - *(i).* The tail bound of (3.2) and ‖H‖ ≤ h_+ + s ≤ h_c give ‖Γ(σ) − Γ(1)‖ ≤ h_cδ_M. With the binomial square root of C (the series of (3.2) for H_E, to which (1)(a) applies), ‖C^{1/2}‖ ≤ (γ−2s)^{−1/2} and ‖C^{1/2}(Γ(σ)−Γ(1))‖ ≤ h_c(γ−2s)^{−1/2}δ_M.
+  - V4 uses only the first bound of (i): the norm paragraph of the proof takes it for ‖Γ₁‖ and ‖Γ₂‖. The second bound occurs only in the statement and in the tail paragraph that derives it. So no consumer receives the non-Hermitian square root C^{1/2}.
+  - *Real-only step:* "Γ_{E₀}(1) is real, so Γ₂ = Im(Γ_{E₀}(σ) − Γ_{E₀}(1))" (the reserve-identity paragraph of the proof). At 𝐔, Γ(1) = ι_{E₀}^*HΠ_{I∖E₀}𝖦^{1/2} is complex.
+    - On the segment H_t := H_U + t(H − H_U), 0 ≤ t ≤ 1, ‖H_t − H_U‖ ≤ s, so (3.2) applies at every H_t: ‖𝖠_{H_t}‖ ≤ x := 1 − (γ−2s)/s_H, and dH_t/dt = H − H_U has norm s.
+    - The binomial coefficients a_j are positive, so ‖d𝖦_t^{1/2}/dt‖ ≤ s_H^{−1/2}Σ_j ja_jx^{j−1}·s/s_H = ½(γ−2s)^{−3/2}s, since Σ_j ja_jx^{j−1} = ½(1−x)^{−3/2}.
+    - With ‖𝖦_t^{1/2}‖ ≤ (γ−2s)^{−1/2}, ‖H_t‖ ≤ h_c and γ − 2s ≥ γ_c, the product rule gives ‖Γ(1) − Γ(1)|_{H_U}‖ ≤ C_Γs, C_Γ := γ_c^{−1/2} + h_cγ_c^{−3/2}/2. Γ(1)|_{H_U} is real, so ‖Γ₂‖ ≤ h_cδ_M + C_Γs.
+    - ‖Γ₁‖ ≤ ‖Γ(σ)‖ ≤ ‖H‖‖𝖦^{1/2}‖ + h_cδ_M ≤ h_c((γ−2s)^{−1/2} + 1) ≤ A_*, by δ_M ≤ 1 and γ − 2s ≥ γ_c.
   - *The B-integral.* |dμ_C(B)| = (2π)^{−n/2}|det H_E|^{1/2}e^{−⟨B,R_EB⟩/2}dB. Against e^{α_G‖B‖²/2} and |e^{−⟨B,ΓX⟩}| = e^{−⟨B,Γ₁X⟩}, the B-integral is
 
     (|det H_E|/det R_E)^{1/2}·det(1 − α_GR_E^{−1})^{−1/2}·e^{⟨Γ₁X,(R_E−α_G)^{−1}Γ₁X⟩/2}.
@@ -814,27 +813,26 @@ the formula of §2. In it:
 
     T^c := Γ₁ᵀ[(R_E−α_G)^{−1} − C′]Γ₁ + Γ₂ᵀC′Γ₂ + Γ₁ᵀC″Γ₂ + Γ₂ᵀC″Γ₁,
 
-    real symmetric and supported on J_Z (Lemma component-blocks is a support statement). At S = 0 this is V3's T_{α_G}. T^c need not be positive semidefinite, and nothing below uses that it is.
-  - *Norm.* C − R_E^{−1} = −iCS_ER_E^{−1}, so ‖C′ − R_E^{−1}‖, ‖C″‖ ≤ s/γ′², and ‖C′‖ ≤ 1/γ′. Hence
+    real symmetric and supported on J_Z (Lemma component-blocks is a support statement). At S = 0 and s = 0 this is V4's T_{α_G} of (fixed-kernel-actual-reserve-form). T^c need not be positive semidefinite, and nothing below uses that it is.
+  - *Norm.* C − R_E^{−1} = −iCS_ER_E^{−1}, so ‖C′ − R_E^{−1}‖, ‖C″‖ ≤ s/γ′² (entrywise parts do not increase the norm, (1)(f)), and ‖C′‖ ≤ 1/γ′. With ‖(R_E−α_G)^{−1} − R_E^{−1}‖ ≤ α_G/(γ′(γ′−α_G)) (resolvent identity),
 
-    ‖T^c‖ ≤ A_c²[α_G/(γ′(γ′−α_G)) + s/γ′²] + ‖Γ₂‖²/γ′ + 2A_c‖Γ₂‖s/γ′² ≤ 2α_GA_c²/γ′² + 2h_c²δ_M²/γ′ + C₃s.
+    ‖T^c‖ ≤ A_*²[α_G/(γ′(γ′−α_G)) + s/γ′²] + ‖Γ₂‖²/γ′ + 2A_*‖Γ₂‖s/γ′² ≤ 2α_GA_*²/γ_c² + 2h_c²δ_M²/γ_c + C₃s.
 
-    Under K, the first two terms are at most 1/8 + 1/8, so ‖T^c‖ ≤ 1/3 for s ≤ 1/(12C₃).
-  - *The constant C₃ (e-gauss m5).* Put s₀ := γ/4. For s ≤ s₀ use γ′ ≥ γ_c, A_c ≤ A_*, δ_M ≤ 1, γ′ − α_G ≥ γ′/2, and ‖Γ₂‖² ≤ 2h_c²δ_M² + 2C_Γ²s². The terms of ‖T^c‖ that carry a factor s then sum to at most C₃s, with
+    Under K the first two terms are at most 1/8 + 1/8, so ‖T^c‖ ≤ 1/3 for s ≤ 1/(12C₃).
+  - *The constant C₃.* Put s₀ := γ/4. For s ≤ s₀ use γ′ ≥ γ_c, δ_M ≤ 1, γ′ − α_G ≥ γ′/2 (α_G ≤ γ_c/2), ‖Γ₂‖² ≤ 2h_c²δ_M² + 2C_Γ²s² and ‖Γ₂‖ ≤ h_c + C_Γs₀. The terms of ‖T^c‖ that carry a factor s then sum to at most C₃s, with
 
     C₃ := A_*²/γ_c² + 2A_*(h_c + C_Γs₀)/γ_c² + 2C_Γ²s₀/γ_c.
-  - *Determinants.* (1)(d) gives ½log(|det H_E|/det R_E) ≤ d_G|E₀|s²/(4γ′²). The eigenvalues of α_GR_E^{−1} lie in [0, 1/2], as in V3. For |t| ≤ 1/3, −½log(1−t) ≤ |t|, so log det_{J_Z}(1−T^c)^{−1/2} ≤ d_G|J_Z|‖T^c‖. With E₀ ⊆ J_Z the total is at most (C_d^c(α_G + δ_M²) + C₄s)|J_Z|, where C_d^c is (fixed-kernel-trace-payment)'s C_d at (γ′, h_c, A_c) with 2/3 replaced by 1 and the δ-term doubled.
-  - *Constants (e-gauss m5).* C₄ := d_G(C₃ + s₀/(4γ_c²)): the determinant ratio contributes d_G|E₀|s²/(4γ′²) ≤ d_G|J_Z|s·s₀/(4γ_c²), and the s-part of ‖T^c‖ contributes d_G|J_Z|C₃s.
-    - V3's constant is C_d = d_G max(1/γ + 4A_*²/(3γ²), 2h_+²/(3γ)) (L3829), from the factor 2/3 and ‖T_α‖ ≤ 2α_GA_*²/γ² + h_+²δ_M²/γ.
-    - Here the factor is 1 (|t| ≤ 1/3, eigenvalues of either sign) and the δ-term is 2h_c²δ_M²/γ′. So C_d^c = d_G max(1/γ′ + 2A_c²/γ′², 2h_c²/γ′), and C_d^K := d_G max(1/γ_c + 2A_*²/γ_c², 2h_c²/γ_c).
-    - C_d^c ≤ C_d^K, since γ′ ≥ γ_c and A_c ≤ A_*. C_d^K is the constant with which K chooses α_G and M.
-  - *Result.* With |J_Z| ≤ 4(LM+1)⁴N₁(Z) (L3831) and K, the total is at most (1/2 + 1/4)N₁(Z) + 4C₄s(LM+1)⁴N₁(Z) ≤ N₁(Z) for s ≤ (16C₄(LM+1)⁴)^{−1}. So (ii) holds at 𝐔 with the same e^{N₁(Z)}, and it factors over the components as in V3, since T^c, C and Γ are block diagonal. (iii) is pointwise in B and unchanged. The tilt of (3.12) is paid in the host potentials, not in this budget.
-  - *The threshold s_*.* s_* := min(γ/4, s_Hq_H log 2/n_*, s_A, 1/(12C₃), (16C₄(LM+1)⁴)^{−1}). It is fixed by the chain under K, before the coupling. Then g₀ is reduced so that C_Hρ₁ ≤ s_*.
-- **(3.5) The complex-Gaussian moment payment (§c4-10-3, L4919–4937), recomputed.**
-  - The same computation per component gives |G_σ|e^{α_G‖B‖²/2} = (prefactor)·exp(−⟨y,(R_E−α_G)y⟩/2 − ⟨X,(1−T^c)X⟩/2), with y = B + (R_E−α_G)^{−1}Γ₁X.
-  - With R_E − α_G ≥ γ′/2, ‖T^c‖ ≤ 1/3 and ‖Γ₁‖ ≤ A_c, the real form is at least c_G^c(‖B‖² + ‖X‖²), where c_G^c := min(γ′/2, 2/3)/(2(1+2A_c/γ′)²), V3's (c4-10-13) with 3/4 → 2/3. It is at least c_G^K := min(γ_c/2, 2/3)/(2(1+2A_*/γ_c)²), which replaces V3's c_G (L4930) at its two uses, (c4-10-14) and L5021 (e-gauss m5).
-  - The mass is ≤ e^{N₁(Z)} by (3.4), and (c4-10-14) holds with c_G^c.
-  - The derivative terms Tr(C_E𝒟_ωH_E)/2, ⟨B,(𝒟_ωH_E)B⟩/2, ⟨B,(𝒟_ωΓ)X⟩ and 𝒟_ω⟨ΓX,C_EΓX⟩/2 are bounded as in V3, using |Tr(AB)| ≤ (dim)‖A‖‖B‖, ‖C_E‖ ≤ 1/γ′ and 𝒟_ωC_E = −C_E(𝒟_ωH_E)C_E.
+  - *Determinants.* (1)(d) gives ½log(|det H_E|/det R_E) ≤ d_G|E₀|s²/(4γ′²). The eigenvalues of α_GR_E^{−1} lie in [0, α_G/γ′] ⊆ [0, 1/2], and −½log(1−t) ≤ t there, so log det_{E₀}(1−α_GR_E^{−1})^{−1/2} ≤ α_Gd_G|E₀|/γ′. The eigenvalues of T^c lie in [−1/3, 1/3], where −½log(1−t) ≤ |t|, so log det_{J_Z}(1−T^c)^{−1/2} ≤ d_G|J_Z|‖T^c‖.
+    - With E₀ ⊆ J_Z the total is at most d_G|J_Z|(α_G/γ_c + 2α_GA_*²/γ_c² + 2h_c²δ_M²/γ_c) + C₄s|J_Z| ≤ (C_d^K(α_G + δ_M²) + C₄s)|J_Z|, with C_d^K of (3.0) and C₄ := d_G(C₃ + s₀/(4γ_c²)): the determinant ratio contributes at most d_G|J_Z|s·s₀/(4γ_c²), and the s-part of ‖T^c‖ at most d_G|J_Z|C₃s.
+    - V4's C_d of (fixed-kernel-trace-payment) carries the factor 2/3 of −½log(1−t) ≤ (2/3)t on [0, 1/4]. Here the eigenvalues have either sign and reach 1/3, so the factor is 1, and the δ-term is 2h_c²δ_M²/γ_c in place of h_+²δ_M²/γ. This is why K chooses α_G and M with C_d^K.
+  - *Result.* With |J_Z| ≤ 4(LM+1)⁴N₁(Z) (the paragraph after (fixed-kernel-trace-payment)) and K, the total is at most (1/2 + 1/4)N₁(Z) + 4C₄s(LM+1)⁴N₁(Z) ≤ N₁(Z) for s ≤ (16C₄(LM+1)⁴)^{−1}. So (ii) holds at 𝐔 with the same e^{N₁(Z)}, and it factors over the components as in V4, since T^c, C and Γ are block diagonal ((fixed-kernel-exact-blocks)). (iii) is pointwise in real B and unchanged. The tilt of (3.12) is paid in the host potentials, not in this budget.
+  - *The threshold s_*.* s_* := min(γ/4, 1/(12C₃), (16C₄(LM+1)⁴)^{−1}). It is fixed by the chain under K, before the coupling. Then g₀ is reduced so that C_Hϱ₁ ≤ s_*.
+- **(3.5) The complex-Gaussian moment payment (§c4-10-3), recomputed.**
+  - The computation of (3.4) per component gives: |G_σ|e^{α_G‖B‖²/2} is (|det H_E|/det R_E)^{1/2} times the positive real Gaussian of (c4-10-12) with R_E and T^c in place of H_E and T_α, in the variables y := B + (R_E−α_G)^{−1}Γ₁X.
+  - With R_E − α_G ≥ γ′/2, 1 − T^c ≥ 2/3 as a form, and ‖(R_E−α_G)^{−1}Γ₁‖ ≤ 2A_*/γ′, the real form ⟨y,(R_E−α_G)y⟩ + ⟨X,(1−T^c)X⟩ is at least min(γ′/2, 2/3)(‖y‖² + ‖X‖²), and ‖B‖² + ‖X‖² ≤ 2(1+2A_*/γ′)²(‖y‖² + ‖X‖²). So it is at least c_G^K(‖B‖² + ‖X‖²), with c_G^K := min(γ_c/2, 2/3)/(2(1+2A_*/γ_c)²): (c4-10-13) with γ_c and 2/3 in place of γ and 3/4.
+  - c_G^K replaces c_G at its two uses, (c4-10-14) and the dominated-convergence paragraph of §c4-11-3. The mass is at most e^{N₁(Z)} by (3.4), so (c4-10-14) holds at 𝐔 with c_G^K.
+  - The derivative terms Tr(C_E𝒟_ωH_E)/2, ⟨B,(𝒟_ωH_E)B⟩/2, ⟨B,(𝒟_ωΓ)X⟩ and 𝒟_ω⟨ΓX,C_EΓX⟩/2 are bounded as in V4, using |Tr(AB)| ≤ (dim)‖A‖‖B‖, ‖C_E‖ ≤ 1/γ′, 𝒟_ωC_E = −C_E(𝒟_ωH_E)C_E, and V4's Schur bound c_H on 𝒟_ωH/‖ω‖_∞ (§c4-10-2). c_H is a Cauchy bound from the joint balls ‖Z‖ < 2τ_b of §c4-10-1, so it holds at complex Z with ‖Z‖ ≤ τ_b, as (c4-10-3) does (the paragraph *Contour Rows in the Joint Domain*), hence along the complex paths of (2)(d).
+  - The block bound V_jjq_H^{j−1}c_H/s_H behind (c4-10-6) uses only the block norms of 𝖠_H^l, which are at most q_H^l by (3.2). So (c4-10-6) holds along the complex paths with V4's constants under K; this is the walk-derivative input of §c4-10-2 used in (c4-12-1) and Lemma c4-9-2.
 - **(3.8) Words and characters (derived).**
   - *Real-only step:* "|f_ξ| ≤ 1" (L3064) and ‖U_j‖ = 1 hold at unitary data.
   - *Complex (repaired, e-rest M3).*
