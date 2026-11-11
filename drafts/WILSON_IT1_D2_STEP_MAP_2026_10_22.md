@@ -1,7 +1,7 @@
 # D2: the step map with the Wilson loop insertion
 
 {#MP.1} Companion of WILSON_IT1_LINE_DEFECT_2026_10_21.md (the *IT-1 note*).
-{#MP.1-1} Its §4 defines the step-1 class and the target D1, and its gaps block lists the D2 items.
+{#MP.1-1} Its §4 defines the step-1 class and the target D1.
 {#MP.1-2} D2's first two items are in the IT-1 note: §3i (the thin form of E^∂) and §3j (the carrier dependence of the t > 0 species).
 {#MP.1-3} This file holds the rest, from D2.0 on.
 
@@ -29,8 +29,7 @@
   - {#MWTCI.8} The answer is E[W(C)] = κ^{(K)}·⟨𝒲_K⟩_final + errors. The continuum limit W^∞(C) exists along the full sequence of lattice spacings for every admissible loop (WILSON_IT1_CONTINUUM_LIMIT_CLOSURE_2026_10_26.md (8.4)), by the Cauchy property across K of the renormalised expectation (WILSON_IT1_CAUCHY_ESTIMATE_2026_10_27.md #C7.1).
     {#MWTCI.8-1} W^∞(C) is a weak limit point of the stopping-scale effective measures tested against the fixed coarse loop plus a bounded remainder (the continuum note's (8.2), given D(K′) on every labelled term), whose large-field part is at most δ_LFB_LF (its (4.4) and (7), with the Cauchy note's §11).
 - {#MWTCI.9} The target stays the bare Wilson loop; the dressing is how its renormalisation is computed, not a change of observable.
-- {#MWTCI.10} The distance of the dressed object from the coarse Wilson loop after one step is V4's Proposition prop:coarse-loop-form and Remark rem:coarse-loop-form, after Corollary cor:main-leading-size (V4 L239 on, at hash 5154b2eadc35).
-  {#MWTCI.10-3} From here on in this file, V4 line numbers after L238 are shifted by +76 (5496 → 5572 lines).
+- {#MWTCI.10} The distance of the dressed object from the coarse Wilson loop after one step is V4's Proposition prop:coarse-loop-form and Remark rem:coarse-loop-form, after Corollary cor:main-leading-size.
   {#MWTCI.10-4} It uses V4's Lip_χ, giving |W_χ(C_n;V) − W_χ(C_n;U₁)| ≤ Lip_χ(e^{6c_hLn_Cε₁} − 1).
   {#MWTCI.10-5} At one step there is no fluctuation integral left over which the difference could average: both loops are functions of V, and any average is over the coarse ensemble E_h, i.e. the later steps.
 - {#MWTCI.11} **That bound is the pointwise bound integrated; it uses no cancellation and is not an expectation-level comparison.** The expectation-level comparison, with the step-2 fluctuation average taken before any absolute value, is the section ONE MORE STEP below.
@@ -42,22 +41,22 @@
 
 {#MOSTC.1} *Result.* On A_cov, if s := 2c_hA_Lε₁L^{−2} ≤ 1/10 and t := e^s − 1 ≤ r_G (both hold for g₁ small; V4 prop:coarse-loop-form assumes the same), then |W_χ(C_n;V) − W_χ(C_n;U₁)| ≤ e^{4nc_πξ} − 1 with ξ ≤ 2.12c_hA_Lε₁L^{−2}, A_L ≤ (d−1)(d+4)L²/8; for d = 4, ≤ e^{6.4c_πc_hn_Cε₁/L} − 1.
 
-{#MOSTC.2} *Setting.* V4 Theorem 1, fine units, d = 4 where numbers are given; V4 line numbers in this section refer to V4 at SHA-256 563736a8dfb9.
+{#MOSTC.2} *Setting.* V4 Theorem 1, fine units, d = 4 where numbers are given.
 {#MOSTC.2-1} C_n has 4n coarse bonds c_0, …, c_{4n−1}.
-{#MOSTC.2-2} Each c_j is ±c for a positively oriented coarse bond c, the straight fine path of L bonds from c_− to c_+ = c_− + Le_μ (V4 L254).
+{#MOSTC.2-2} Each c_j is ±c for a positively oriented coarse bond c, the straight fine path of L bonds from c_− to c_+ = c_− + Le_μ (V4's opening conventions, before (wilson-definition)).
 {#MOSTC.2-3} For c_j = −c, V(c_j) = V(c)^{−1} = e^{iX_{c_j}}U₁(c_j): RG1 (0.4) is inverse-consistent, since re-indexing x̃ = x′, Γ̃ = Γ′, Γ̃′ = Γ and the Ad-equivariance of the principal logarithm give X_{−c} = −Ad(U(−c))X_c.
 {#MOSTC.2-4} U₁(c) is the product of U₁ along the fine bonds of c (RG1 p.252, "a contour which is obtained by a parallel transport of c"; as at #MOMST.74), so V4's leading word is W_χ(C_n;U₁) = d_π^{−1}tr π(U₁(c_0)⋯U₁(c_{4n−1})), and the coarse Wilson loop is W_χ(C_n;V) = d_π^{−1}tr π(V(c_0)⋯V(c_{4n−1})). ‖·‖ is the operator norm, and c_π := sup{‖π_*(Y)‖ : Y ∈ 𝔤, ‖Y‖ ≤ 1}, a constant of G ⊂ U(N) and π.
 
 {#MOSTC.3} *Inputs.*
 - {#MOSTC.4} (I1) CRE (1.12), p.248: U₁ is the critical point of A + 𝐆 on {U = V₀ on Ω₁ᶜ, Ū = V on Ω₁^{(1)}}.
-  {#MOSTC.4-1} V4 L461 takes U₁ among the critical points of the constrained functional of CRE (1.12), and V4 Theorem 1(i) fixes RG1 (0.4) as the average.
+  {#MOSTC.4-1} V4 (B1) determines U₁ by the conditions of CRE (1.12), the critical point of the constrained functional being its minimum (p.248), and V4 Theorem 1(i) fixes RG1 (0.4) as the average.
   {#MOSTC.4-2} So V(c) = Ū₁(c) for every coarse bond c of Ω₁^{(1)}.
 - {#MOSTC.5} (I2) RG1 (0.4), p.253: Ū(c) = e^{iX_c}U(c) with X_c := Σ_{x∈B(c_−)}L^{−d}Σ_{Γ∈G(c_−,x)}|G(c_−,x)|^{−1}Σ_{Γ′∈G(c_+,x′)}|G(c_+,x′)|^{−1}(1/i)log U(ℓ), ℓ = ℓ(x,Γ,Γ′) := Γ∪[x,x′]∪(−Γ′)∪(−c), a closed fine loop at c_−, and [x,x′] the translate of c to x.
   {#MOSTC.5-1} The weights are nonnegative and sum to 1, so X_c is a convex combination of the (1/i)log U(ℓ).
 - {#MOSTC.6} (I3) RG1 (0.3), p.252: B(y) is the set of fine points of the cube of side L (the coarse spacing) centred at y.
   {#MOSTC.6-1} By (0.3), B(y) = Δ(y) ∩ T^{(n−1)}_{L^{−1}δ} with Δ(y) the cube of side δ centred at y (p.252 l.23–26), so x = y + Σ_νn_νL^{−1}δe_ν with |n_ν|L^{−1}δ ≤ δ/2, i.e. |n_ν| ≤ (L−1)/2 for L odd, and B(y) has L^d points, as (0.4)'s weight L^{−d} requires. The contour construction of p.252 l.28–31 uses only that the n_μ are the coordinates of x − y, not the bound printed there.
   {#MOSTC.6-2} G(y,x) consists of the monotone staircase paths of displacement n, one for each order of the nonzero directions.
-- {#MOSTC.7} (I4) V4 Lemma c2-plaquette-deviation (L4141–4145): on every branch, ‖U₁(∂p) − 1‖ ≤ 2c_hε₁L^{−2}, with ε₁ = g₁p₀(g₁), for every fine plaquette p with a bond within distance 3R_c of I. On A_cov, Λ_b ⊆ I = Λ₁^* for every contour bond b (V4 L283, L2357; I is the set of free bonds with an endpoint in Λ₁, L2458), so each coarse bond c of C_n has a site in Λ₁.
+- {#MOSTC.7} (I4) V4 Lemma c2-plaquette-deviation: on every branch, ‖U₁(∂p) − 1‖ ≤ 2c_hε₁L^{−2}, with ε₁ = g₁p₀(g₁), for every fine plaquette p with a bond within distance 3R_c of I. On A_cov, Λ_b ⊆ I = Λ₁^* for every contour bond b (V4, *Location* in the proof of Proposition coarse-loop-form, by sec:c3-6; I is the set of free bonds with an endpoint in Λ₁, sec:c5-0), so each coarse bond c of C_n has a site in Λ₁.
   {#MOSTC.7-1} Every bond and plaquette used below lies in the two endpoint blocks of c and the paths between them, within ℓ^∞ distance 2L of that site.
   {#MOSTC.7-2} Lemma collar-coverage(i) puts all sites within ℓ^∞ distance LMR₁ − 1 > 2L of Λ₁ in Ω₁^{∼−1}, so c is a bond of Ω₁^{(1)} and (I1) applies; 3R_c ≥ 3(2R_loc + 1) = 12L + 15 > 8L + 1, so (I4) applies to all those plaquettes.
 
@@ -73,7 +72,7 @@
 {#MOSTC.12-2} For unitary W and g, ‖gWg^{−1} − 1‖ = ‖W − 1‖ = ‖W^{−1} − 1‖, and ‖∏(1 + a_m) − 1‖ ≤ ∏(1 + ‖a_m‖) − 1, so
   {#MOSTC.13} ‖U₁(ℓ) − 1‖ ≤ (1 + 2c_hε₁L^{−2})^{A_L} − 1 ≤ e^{s} − 1 =: t, s := 2c_hA_Lε₁L^{−2}.
 {#MOSTC.14} For unitary W with ‖W − 1‖ ≤ t < 2, the principal logarithm satisfies ‖(1/i)log W‖ ≤ 2arcsin(t/2), since |e^{iφ} − 1| = 2|sin(φ/2)| for φ ∈ (−π, π].
-{#MOSTC.14-1} It lies in 𝔤 once t ≤ r_G, the G-dependent radius of V4 prop:coarse-loop-form (L252).
+{#MOSTC.14-1} It lies in 𝔤 once t ≤ r_G, the G-dependent radius of V4 prop:coarse-loop-form.
 {#MOSTC.14-2} Under t ≤ r_G, X_c ∈ 𝔤 by (I2), ‖X_c‖ ≤ ξ := 2arcsin(t/2), and ‖V(c)U₁(c)^{−1} − 1‖ = ‖e^{iX_c} − 1‖ ≤ 2sin(ξ/2) = t.
 {#MOSTC.14-3} For s ≤ 1/10, ξ ≤ 1.06s: t = e^s − 1 ≤ s(1 + s/2 + e^s s²/6) ≤ 1.052s ≤ 0.1052, and 2arcsin(t/2) ≤ t(1 − t²/4)^{−1/2} since arcsin′ is increasing on [0,1), with (1 − t²/4)^{1/2} ≥ 0.9986.
 {#MOSTC.14-4} For d = 4: s ≤ 6c_hε₁, ‖V(c)U₁(c)^{−1} − 1‖ ≤ e^{6c_hε₁} − 1 and ‖X_c‖ ≤ 6.4c_hε₁.
@@ -91,9 +90,9 @@
 {#MOSTC.21} the last step by eq:thm-main-moment under the additional hypotheses of Theorem 1(iii), with the Result's conditions s ≤ 1/10 and t ≤ r_G for the pointwise bound on A_cov.
 
 {#MOSTC.22} *(5) What this says.*
-- {#MOSTC.23} Per fine contour bond the exponent of the upper bound is 6.4c_πc_hε₁/L = O(L^{−1}g polylog), against C_χρ(ε₁ + e^{−cb/(LM)}) = O(g³ polylog) in V4's bound on E_def (C_χ depends on L and χ, V4 L157).
+- {#MOSTC.23} Per fine contour bond the exponent of the upper bound is 6.4c_πc_hε₁/L = O(L^{−1}g polylog), against C_χρ(ε₁ + e^{−cb/(LM)}) = O(g³ polylog) in V4's bound on E_def (C_χ of (c4-6-8) depends on L, the group and χ, V4 sec:main-result *Notation*).
 - {#MOSTC.24} For a loop of fixed physical side ℓ_C, n_C ≈ 4ℓ_C/ε, so the bound is e^{O(L^{−1}g₁p₀(g₁)ℓ_C/ε)} − 1, small for n_C ≪ L/ε₁.
-- {#MOSTC.25} The factor L^{−2} of the plaquette bound is V4's lemma for the minimiser U₁ (its proof, V4 L4149; ONE MORE STEP (1)); a general regular field has only 2c_hε₁.
+- {#MOSTC.25} The factor L^{−2} of the plaquette bound is V4's lemma for the minimiser U₁ (the proof of V4 Lemma c2-plaquette-deviation; ONE MORE STEP (1)); a general regular field has only 2c_hε₁.
 - {#MOSTC.26} The average is RG1's (0.4), which V4 fixes, not RG1's second average (0.12), p.254.
 
 ## ONE MORE STEP: THE DRESSED LOOP AGAINST THE COARSE LOOP IN EXPECTATION {#MSOMST}
@@ -125,9 +124,9 @@
 
 {#MOMST.9} *(0) Units.* Bałaban's step-1 units: block spacing 1, fine spacing η = L^{−1}.
 {#MOMST.9-1} V4's C_n has P₁(C) = 4n scale-1 bonds c_j and n_C = 4nL fine bonds.
-{#MOMST.9-2} Norms: ‖·‖ the operator norm, |·| CRE's matrix norm, ‖Y‖ ≤ c_h|Y| (V4 Conventions, L407 of V4 at 563736a8dfb9; c_h compares h(Y) = (N^{−1}tr Y*Y)^{1/2} in a faithful N-dimensional unitary representation, for any compact G ⊂ U(N)).
+{#MOMST.9-2} Norms: ‖·‖ the operator norm, |·| CRE's matrix norm, ‖Y‖ ≤ c_h|Y| (the *Conventions* paragraph of V4 sec:sourced-effective-interaction; c_h compares h(Y) = (N^{−1}tr Y*Y)^{1/2} in a faithful N-dimensional unitary representation, for any compact G ⊂ U(N)).
 
-{#MOMST.10} *(1) The step-1 plaquette bound loses L² (derived from the proof of V4 Lemma lem:c2-plaquette-deviation, V4 L4141 at 563736a8dfb9).*
+{#MOMST.10} *(1) The step-1 plaquette bound loses L² (derived from the proof of V4 Lemma lem:c2-plaquette-deviation).*
 - {#MOMST.11} The proof has sup_{p′⊂□′^∼}|U_{1,□′}(∂p′) − 1| < ε₁L^{−2} for the local minimum, and ‖U₁(e) − U_{1,□′}(e)‖ ≤ c_hO(1)B₃e^{−δ_cLM₂R₁}ε₁ on the bonds of □′^{∼2}.
   {#MOMST.11-1} The V4 proof bounds the second by c_hε₁L^{−2}/4.
 - {#MOMST.12} Keep the exponential: ‖U₁(∂p) − 1‖ ≤ c_hε₁L^{−2} + 4c_hO(1)B₃e^{−δ_cLM₂R₁}ε₁ ≤ 2c_hε₁L^{−2} once 4O(1)B₃L²e^{−δ_cLM₂R₁} ≤ 1, a condition on g₀ (R₁ → ∞ as g₀ → 0, V4's own threshold argument).
@@ -231,7 +230,7 @@
 {#MOMST.51} *(6) The perimeter part and the comparison after step 2 ((5), with D2.2–D2.3 applied to g₁).*
 - {#MOMST.52} *g₁'s step-2 expansion.* By (3), g₁(e^{iB′}V^{(1)}) = d_π^{−1}tr∏_j(1 + X_j)π(V^{(1)}(c_j)) in loop order, where C ⊂ B(Γ₂), X_j := π(e^{iB′(c_j)}) − 1 for a positively traversed c_j and X_j := π(V^{(1)}(c_j)e^{−iB′(−c_j)}V^{(1)}(c_j)^{−1}) − 1 for a negatively traversed one: a closed word X₁U₁X₂U₂⋯ of D2.2(5)(a)'s form, with the slots at the scale-1 bonds c_j and U_j = π(V^{(1)}(c_j)), V^{(1)} = M(U₂), a function of U₂ only.
   {#MOMST.52-1} D2.2(5) uses of the insertions only that each depends on A on a bounded domain D_j through B′ ((5)(a), (c): D_J^#, the (2.9)–(2.10) linking), and boundedness on the support ((5)(e)); D2.2(6) uses covariance and analyticity in the slot variables; D2.3 uses Schur at the flat reference and contour locality; D2.4 uses the per-slot size.
-  {#MOMST.52-2} For X_j: it depends on A through B′(c_j) only, B′ being the local function of A of RG1 (3.2) (RG2 p.3; D2.1(4)(b)'s "locality of B′ in B"), so D_j is the π₁-hull of the bonds on which B′(c_j) depends (c_j, or the corridor of c_j if c_j is a designated bond b₀(c′), (3)); it carries no s-parameter and no propagator; ‖X_j‖ ≤ e^{c_πc_h|B′(c_j)|} − 1 ≤ 1.06c_πc_h|B′(c_j)| ≤ 1.06c_πc_hC₁^{RG2}g₁|A|_{D_j} on the support at real points (c_h from the norm convention of (0), V4 L407; the 1.06 needs c_πc_hC₁^{RG2}ε′ ≤ 1/10, which closure a2's ε′ ≤ (20c_πc_hC₁^{RG2})^{−1} gives);
+  {#MOMST.52-2} For X_j: it depends on A through B′(c_j) only, B′ being the local function of A of RG1 (3.2) (RG2 p.3; D2.1(4)(b)'s "locality of B′ in B"), so D_j is the π₁-hull of the bonds on which B′(c_j) depends (c_j, or the corridor of c_j if c_j is a designated bond b₀(c′), (3)); it carries no s-parameter and no propagator; ‖X_j‖ ≤ e^{c_πc_h|B′(c_j)|} − 1 ≤ 1.06c_πc_h|B′(c_j)| ≤ 1.06c_πc_hC₁^{RG2}g₁|A|_{D_j} on the support at real points (c_h from the norm convention of (0), V4 sec:sourced-effective-interaction *Conventions*; the 1.06 needs c_πc_hC₁^{RG2}ε′ ≤ 1/10, which closure a2's ε′ ≤ (20c_πc_hC₁^{RG2})^{−1} gives);
   {#MOMST.52-3} at complex points ‖X_j‖ ≤ 2.12c_πc_h|B′(c_j)| under 2c_πc_hC₁^{RG2}ε′ ≤ 1/10 (also given by closure a2's ε′), and X_j is entire in B′(c_j); it is covariant, X_j^u = π(u(c_{j−}))X_jπ(u(c_{j−}))^{−1}, by the formula RG1 (0.4) for M (log is Ad-covariant; (0.6) is the covariance of the set average) and the covariance of B′ (D2.2(6)(b)); at the flat reference U₂ = 1 the words are invariant under constant gauge transformations, so Schur applies as in D2.3(2); X_j depends on C only through c_j.
   {#MOMST.52-4} So D2.2(5)–(6), D2.3 and D2.4 run with the slot set {c_j} and the per-slot factor 2.12c_πc_hC₁^{RG2}|λA|_{D_j} at complex λ (1.06c_πc_hC₁^{RG2}g₁|A|_{D_j} at the real point) in place of D2.1(4)'s Claim, with three changes: the transports between slots are M(U₂)-transports, so D2.3(2)'s split uses T_{M(𝐔)}(I) in place of T_𝐔(I) ((6)(b)'s covariance covers it since M is covariant); the leading word is g̃₂, outside D(2) ((7)(e)(i)); and the coarse slots depend on U₂ through M(U₂) on the two blocks of c_j, which enlarges X(𝒢) and ℓ_X by those blocks in D2.4's (LPG′)/Cauchy step.
   {#MOMST.52-5} The output is the display below with δm₂^g, ζ₂^g, E°_2^g and g̃₂'s deviation words, given the same input (S-w) for the coarse gas (SW closure with the three changes of the first bullet, #MOMGD.5; (T′), (Z), and the Kotecký–Preiss condition follow from it), which has fewer and simpler slot factors than f₁'s.
@@ -259,7 +258,7 @@
 - {#MOMST.56} **The comparison after step 2.** With D2.2's output for each loop, writing 𝓔₂^f, 𝓔₂^g for the step-2 exponents and g̃₂ for g₁'s averaged word,
   {#MOMST.57} e^{δm₂^fP₁(C)−4ζ₂^f}E_h[1_{A_cov}e^{E°_ξ}f₁] − e^{δm₂^gP₁(C)−4ζ₂^g}E_h[1_{A_cov}e^{E°_ξ}g₁] = E^{(2)}[e^{𝓔₂^f}Δ_bg] + E^{(2)}[(e^{𝓔₂^f} − e^{𝓔₂^g})g̃₂] + (difference of the averaged deviation words) + (large-field terms),
   {#MOMST.58} where 1_{A_cov} is taken constant on each labelled term of ρ₂.
-  {#MOMST.58-1} V4 lem:covered (L1217–1218 at 563736a8dfb9) calls a branch ξ covered when every contour bond is a bond of Ω₁ and every free-input stencil F_r of a contour bond lies in the region I of the branch; so 1_{A_cov} is a function of the branch data Ω₁ and I. I is determined by the step-1 history labels that ρ₂'s labelled terms keep: V4 L2404 and L5136 give I = Λ₁^*, CRE p.254 labels the terms of ρ_k by {Ω_j}, {Λ_j}, and D2.2(2)(a) keeps V3's Λ = Λ₁^fin.
+  {#MOMST.58-1} V4 Lemma covered calls a branch ξ covered when every contour bond is a bond of Ω₁ and every free-input stencil F_r of a contour bond lies in the region I of the branch; so 1_{A_cov} is a function of the branch data Ω₁ and I. I is determined by the step-1 history labels that ρ₂'s labelled terms keep: V4 sec:c5-0 gives I = Λ₁^*, CRE p.254 labels the terms of ρ_k by {Ω_j}, {Λ_j}, and D2.2(2)(a) keeps V4's Λ = Λ₁^fin.
   - {#MOMST.59} The first term is bounded by Lip_χ(e^{6c_hB₃n_Cε₂L^{−3}} − 1) times the step-2 moment of the fine chain's dressing e^{𝓔₂^f} (B₃ as in (4)).
   - {#MOMST.60} The second.
     {#MOMST.60-1} By D2.3(8), 𝓔₂ − 𝓔₁ = E^∂_2(ℓ) + E°_2(C,T) for each loop, with E^∂_2(ℓ) := log S°(ℓ) − log S°(ℓ₀) and E°_2 the corner and torus remainder of the flat reference gas.
@@ -291,7 +290,7 @@
   {#MOMST.74-2} M^k := M∘⋯∘M is the k-fold iterate of RG1 (0.4), the average V4 fixes (#MOSTC.4-1, #MOSTC.26; CMP98 p.31). RG1 p.265 (2.3), "V^{(k)} = Ū^k_{k+1} = M^k(U_{k+1})", and CRE (3.4), (3.10) use the symbol M^k without defining it.
   {#MOMST.74-3} C^{(k)} is C regarded as a scale-k loop.
   {#MOMST.74-4} T_c(U) is the straight fine transport along a scale-k bond c (the contour variable U(c) of RG1 (0.4), as in ONE STEP (I2)). a_d := 0.3(d−1)(d+4), so a_d = 7.2 for d = 4.
-- {#MOMST.75} *(a) Lemma (iterated average against the straight transport).* Let U be a fine field with ‖U(∂p) − 1‖ ≤ t on every fine plaquette of a region Ω, let L ≥ 3(d+3), and let k ≥ 1 with a_dL^{2k}t ≤ min(1/10, log(1 + r_G)) (the chart condition; r_G as in V4 L722 at 563736a8dfb9, so that ‖W − 1‖ ≤ r_G puts W ∈ G in the chart domain, where (0.4)'s log is the principal logarithm with values in 𝔤).
+- {#MOMST.75} *(a) Lemma (iterated average against the straight transport).* Let U be a fine field with ‖U(∂p) − 1‖ ≤ t on every fine plaquette of a region Ω, let L ≥ 3(d+3), and let k ≥ 1 with a_dL^{2k}t ≤ min(1/10, log(1 + r_G)) (the chart condition; r_G the group constant of V4 app:background-estimates, recalled in the *Conventions* of sec:sourced-effective-interaction, so that ‖W − 1‖ ≤ r_G puts W ∈ G in the chart domain, where (0.4)'s log is the principal logarithm with values in 𝔤).
   {#MOMST.75-1} Then for every j ≤ k and every scale-j bond c with B^j(c_−) ∪ B^j(c_+) ⊂ Ω,
   {#MOMST.76} (M^jU)(c) = e^{iE_c}T_c(U), ‖E_c‖ ≤ a_dL^{2j}t.
   {#MOMST.77} Proof by induction on j; j = 0 is E = 0.
@@ -353,15 +352,15 @@
   - {#MD2.0.1.2} CRE (2.17) tests the fine plaquettes of T_η at threshold ε_kη²;
   - {#MD2.0.1.3} CRE p.268 states the regularity of U_{k+1} at the threshold 2B₃ε_{k+1}(L^{−1}η)², with (L^{−1}η)² the squared fine spacing of step k+1;
   - {#MD2.0.1.4} LFR I p.178 reads the LM₂R_j-cubes of T_{L^{−j}} as the L^{−(k−j)}LM₂R_j-cubes of T_η.
-- {#MD2.0.1.5} *V3's units at step 1* are fine units (the fine lattice has unit spacing, the block lattice spacing L).
-  {#MD2.0.1.5-1} V3's ℓ = LMR₁ and the side L²M₂R₁ of the CRE (1.18) cubes are in fine units (IT-1 note §3f(2) R1).
-- {#MD2.0.1.6} *The contour.* C is a closed contour of fine bonds that is a union of block bonds at every scale j ≤ K (V3's squares C_n; IT-1 note §4).
-  {#MD2.0.1.6-1} V3's C_n is a coarse translate of a square of side nL in fine units.
+- {#MD2.0.1.5} *V4's units at step 1* are fine units (the fine lattice has unit spacing, the block lattice spacing L).
+  {#MD2.0.1.5-1} V4's ℓ = LMR₁ (V4 sec:c5-0) and the side L²M₂R₁ of the CRE (1.18) cubes are in fine units (IT-1 note §3f(2) R1).
+- {#MD2.0.1.6} *The contour.* C is a closed contour of fine bonds that is a union of block bonds at every scale j ≤ K (V4's squares C_n; IT-1 note §4).
+  {#MD2.0.1.6-1} V4's C_n is a coarse translate of a square of side nL in fine units (V4 sec:c5-5-0).
   {#MD2.0.1.6-2} It is a union of scale-j bonds for every j ≤ K when L^{K−1} divides n and the translate is by a scale-K lattice vector, with torus periods that are multiples of L^K.
   {#MD2.0.1.6-3} This restricts n and the periods to arithmetic progressions, which stay arbitrarily large.
   {#MD2.0.1.6-4} P_j(C) is the number of scale-j bonds of C, so P_j(C) = L^{−j}P_0(C).
   {#MD2.0.1.6-5} For a square loop of physical side ℓ_C at spacing L^{−K}, P_j(C) = 4ℓ_CL^{K−j}.
-  {#MD2.0.1.6-6} (ℓ_C is not V3's collar width ℓ = LMR₁.)
+  {#MD2.0.1.6-6} (ℓ_C is not V4's collar width ℓ = LMR₁, sec:c5-0.)
 - {#MD2.0.1.7} *Scales.* ε_j = g_jp₀(g_j), R_j and the couplings obey CRE (2.4)–(2.9).
   {#MD2.0.1.7-1} In particular ε_n ≤ (1+β₀)(n−m)^{1/2}ε_m, ε_m ≤ (1+β₀)²(n−m)^{β₀}ε_n and R_n ≤ LR_m for n > m (CRE (2.8)–(2.9)).
 
@@ -381,7 +380,7 @@
   - {#MD2.0.2.8} So |∂P(U_{k+1}) − 1| ≤ m²·2B₃ε_{k+1}(L^{−1}η)² = 2B₃ε_{k+1}L^{−2(k+1−j)}.
     {#MD2.0.2.8-1} No small-field expansion is used.
   - {#MD2.0.2.9} For j = k: a plaquette of the step-k lattice has deviation at most 2B₃ε_{k+1}L^{−2} under the step-(k+1) background.
-- {#MD2.0.2.10} *Units (IT-1 note §6(c)).* (L^{−1}η)² is the area of a fine plaquette in step-(k+1) units.
+- {#MD2.0.2.10} *Units.* η = L^{−k} is the fine spacing in step-k units (RG1 p.257 l.36; CRE p.276 l.7), so (L^{−1}η)² is the area of a fine plaquette in step-(k+1) units.
   {#MD2.0.2.10-1} So the step-k plaquettes of the step-(k+1) background deviate by at most 2B₃ε_{k+1}L^{−2}, the L^{−2} of the heuristic.
   {#MD2.0.2.10-2} This is a statement about the background only; the contraction of the insertions is D2.4's.
 
@@ -392,14 +391,14 @@
 
 {#MD2.0.3.2} 𝒲_k = κ^{(k)} e^{𝓔_k} [ f_k + Σ_{𝔅≠∅ compatible} Q_k(𝔅)·dim(π)⁻¹ tr(Y_{W₁}U_{(1)} ⋯ Y_{W_m}U_{(m)}) ].
 
-- {#MD2.0.3.3} *Outer variables:* the pending variables of T_k: the V_j on Ω_{j+1}ᶜ and the fluctuation fields A_j on Z_{j+1} ∩ Ω_{j+1} (CRE (2.20)–(2.21)), the exterior and de-younged variables of the labels (IT-1 note §4, D1.1).
+- {#MD2.0.3.3} *Outer variables:* the pending variables of T_k: the V_j on Ω_{j+1}ᶜ and the fluctuation fields A_j on Z_{j+1} ∩ Ω_{j+1} (CRE (2.20)–(2.21)), the exterior and de-younged variables of the labels (IT-1 note §4, *Definition*).
 - {#MD2.0.3.4} *κ^{(k)} := ∏_{j=1}^{k} κ_j* with κ_j := e^{−δm_jP_{j−1}(C)}z_j⁴, the exact step-j perimeter and corner coefficients.
-  {#MD2.0.3.4-1} With δm_1 := δm^σP(C_n)/P_0(C_n) and z_1 := z_c^σ, κ_1 is V3's e^{−δm^σP(C_n)}(z_c^σ)⁴ (D1(i)); this holds for any normalisation of P(C_n) proportional to n.
+  {#MD2.0.3.4-1} With δm_1 := δm^σP(C_n)/P_0(C_n) and z_1 := z_c^σ, κ_1 is V4's κ_{C_n} = e^{−δm^σP(C_n)}(z_c^σ)⁴ (eq:extracted-loop-scalar; D1(i)); this holds for any normalisation of P(C_n) proportional to n.
 - {#MD2.0.3.5} *Leading word f_k := dim(π)⁻¹tr π(Hol_C(U_k)),* a scalar.
-  {#MD2.0.3.5-1} At k = 1, D1's leading word is V3's f_ξ(m̂) = W_χ(C;U_ξ(m̂)), which contains the shift (IT-1 note §3j(4)); D(1) ⊇ D1 writes f_ξ(m̂) − f_1 as att(1, ·) insertions by the telescoping of *Species* below: by IT-1 note §3j(2) it depends on Λ only within R_N of C, and it is driven by the large-field and collar data through ℓ_Λ (its size and its place in the label sum are the D2.6 item of IT-1 note §3j(0)).
+  {#MD2.0.3.5-1} At k = 1, D1's leading word is f_ξ(m̂) = W_χ(C;U_ξ(m̂)), V4's f_ξ at the real centre m̂, which contains the shift (IT-1 note §3j(4)); D(1) ⊇ D1 writes f_ξ(m̂) − f_1 as att(1, ·) insertions by the telescoping of *Species* below: by IT-1 note §3j(2) it depends on Λ only within R_N of C, and it is driven by the large-field and collar data through ℓ_Λ (its size and its place in the label sum are the D2.6 item of IT-1 note §3j(0)).
   {#MD2.0.3.5-2} The holonomy is written as a product, over the step-k bonds of C, of the transports of U_k along their fine bonds.
   {#MD2.0.3.5-3} Where C crosses a large-field region, outer variables enter as in D1.1 (IT-1 note §3d(1)).
-- {#MD2.0.3.6} *Groups, families, insertions, words, interactions:* as in IT-1 note §4, with V3's groups replaced by the groups that the step-k map produces (D2.2).
+- {#MD2.0.3.6} *Groups, families, insertions, words, interactions:* as in IT-1 note §4, with V4's groups replaced by the groups that the step-k map produces (D2.2).
   {#MD2.0.3.6-1} Their sizes are measured in step-k units.
   - {#MD2.0.3.7} *Interaction clause in cluster form (D2.3(3)).* At every step, Q_k(𝔅) = exp(−Σ_{Γ hits 𝔅}φ_k(Γ)), the sum over the clusters Γ of the step-k reference group gas (a pure hard-core gas) that are incompatible with some member of 𝔅, with φ_k(Γ) numbers given the labels that depend on C only through J_Γ, the traversals in the arcs of Γ's groups, and Σ_{Γ hits W}|φ_k(Γ)| ≤ θ(W).
     {#MD2.0.3.7-1} At k = 1 this is IT-1 note §4's form.
@@ -408,12 +407,12 @@
   {#MD2.0.3.9-1} For a traversal n of a step-k bond of C,
   {#MD2.0.3.10} δ*_n^{(k)}(U) := η_k^{−2}Σ_{t≥1}w_tΔ_n^{(k)}(R_t^{(k)}), w_t := (t+1)³e^{−η_wt}, η_w := (5/16)η_V (D2.4(12)(b) *Base*, with ν_e := ν/(2C_box) and the complex factor e^{η𝔰/8} of D2.6 closure §6.5's budget; the step-1 proof of (ii-t) also carries the reserve and extent weights and §3j(6)'s share),
   {#MD2.0.3.11} Δ_n^{(k)}(R) := max{δ_p(U) : p a fine plaquette of Ω_k (of Λ₁ at k = 1) within step-k distance R of n}, with max ∅ := 0.
-  {#MD2.0.3.11-1} The step-k distance is V3's d_T times η_k.
-  {#MD2.0.3.12} δ_p is V3's plaquette deviation, η_V is V3's exponent η (renamed, since η is the fine spacing here), and the radii R_t^{(k)} are fixed by D2.2's group scale, with R_t^{(1)} := C_boxM(t+1), V3's C_boxLM(t+1) in step-1 units.
+  {#MD2.0.3.11-1} The step-k distance is V4's d_T (sec:marginal-perimeter) times η_k.
+  {#MD2.0.3.12} δ_p is V4's plaquette deviation, η_V is V4's exponent η (renamed, since η is the fine spacing here), and the radii R_t^{(k)} are fixed by D2.2's group scale, with R_t^{(1)} := C_boxM(t+1), V4's C_boxLM(t+1) in step-1 units.
   {#MD2.0.3.12-1} (Note from D2.4(6)(γ): R_t^{(k)} := C_boxM(t+1) in step-k units at every k.)
   - {#MD2.0.3.13} (a) At k = 1, δ*_n^{(1)}(U) ≥ L²δ*_{n_f}(U) for every fine traversal n_f ⊂ n, with δ*_{n_f} of IT-1 note §3a(6): η_1^{−2} = L², and the neighbourhoods of n contain those of n_f.
-  - {#MD2.0.3.14} (b) For k ≥ 2, on the support of the step-k characteristic functions on which p.268 states the regularity (k ≤ N; for k > N, D2.7), δ*_n^{(k)}(U_k) ≤ 2c_σB₃ε_kΣ_tw_t, by p.268 at the step k−1 → k (|∂U_k − 1| < 2B₃ε_kη_k² on Ω_k), with c_σ converting CRE's matrix norm into V3's |·|_σ.
-    {#MD2.0.3.14-1} At k = 1, δ_p(U₁) ≤ Cε₁ for p ⊂ Λ₁ (V3 L5033, Lemma c2-plaquette-deviation), so δ*_n^{(1)}(U₁) ≤ CL²ε₁Σ_tw_t.
+  - {#MD2.0.3.14} (b) For k ≥ 2, on the support of the step-k characteristic functions on which p.268 states the regularity (k ≤ N; for k > N, D2.7), δ*_n^{(k)}(U_k) ≤ 2c_σB₃ε_kΣ_tw_t, by p.268 at the step k−1 → k (|∂U_k − 1| < 2B₃ε_kη_k² on Ω_k), with c_σ converting CRE's matrix norm into V4's |·|_σ.
+    {#MD2.0.3.14-1} At k = 1, δ_p(U₁) ≤ Cε₁ for p ⊂ Λ₁ (V4 Lemma c2-plaquette-deviation, applied in sec:c4-11-5), so δ*_n^{(1)}(U₁) ≤ CL²ε₁Σ_tw_t.
   - {#MD2.0.3.15} (c) For the same plaquettes and radii, η_{k+1}^{−2}max = L²·η_k^{−2}max for every U. This is the exact form of the L^{−2} of (5).
     {#MD2.0.3.15-1} The plaquette set changes from Ω_k to Ω_{k+1} (Λ₁ to Ω₂ at the first step), so the maximum in δ*^{(k)}_n(U_{k+1}) is split: the plaquettes of Ω_{k+1} give ≤ L^{−2}δ*^{(k+1)} after D2.4's matching; those of Ω_k∖Ω_{k+1} contribute at most η_k^{−2}·sup_{p⊂Ω_k∖Ω_{k+1}}δ_p(U_{k+1})·Σ_{t: R_t^{(k)} ≥ dist(n, Ω_k∖Ω_{k+1})}w_t, which by the membership condition (2.34) at j = k+1, n = k (|∂U − 1| < (1 − β/2)α_{0,k}η_k²) is ≤ c_σ(1 − β/2)α_{0,k}Σ_{t: …}w_t once U_{k+1} is shown to lie in the space.
     {#MD2.0.3.15-2} Here α_{0,k} = g_kC₀(log g_k⁻²)^{q₀} (CRE (2.28), p.259) is bounded uniformly in k, since x(log x⁻²)^{q₀} increases for log x⁻² > 2q₀ and g_k ≤ (1+β₀)g_K by the last inequality of CRE (2.6) (#MD2.0.5.2-2), under the condition (1+β₀)g_K < e^{−q₀}.
@@ -465,7 +464,7 @@
     - {#MD2.0.3.31} *Tail clause (D2.4(5)).* Dev_{Q^#_W}, ℓ_W and b_W stay in the normalisation of the step at which W was made, and with β_W := b_Wℓ_Wη_{j(W)}^{−2}, (ii) also contains (ii-t) Σ_{W∋n, t^{(k)}(W)≥t}β_W ≤ C_χρ̃_kη_k^{−2}W_t for every t, W_t := Σ_{t′≥t}w_{t′}.
       {#MD2.0.3.31-1} The sum form above follows from it by Abel summation; at k = 1 it follows from IT-1 note §3a(6)'s proof.
     - {#MD2.0.3.32} *Reserve and extent weights (D2.4(12)(b)).* (ii) and (iii) carry the weight e^{ν_rσ_k(W) + ν_e·ext_k(W)} inside their per-position sums, ν_r := ν, ν_e := ν/(2C_box) (D2.6 closure §6.5's budget), ext_k(W) the extent of X(W) ∪ Q^#_W from every traversal of W in π_k-sides (production units for carried insertions; C_box ≥ 4A_E ≥ 4 so that ν_e ≤ ν/8): the form (ii-w) of D2.4(12)(b), per traversal only (a per-cube clause does not carry; cube positions by the box reduction of D2.4(12)(e)), for the dev species.
-      {#MD2.0.3.32-1} At k = 1 it is (c4-6-5), V3 L4619–4622, with L2791 (e^{4νσ} pins) and L2795–2798; it carries k → k+1 as (ii-t) does, and D2.4(12)–(13) prove it for the new groups ((S-w)).
+      {#MD2.0.3.32-1} At k = 1 it is V4 (c4-6-5) (Lemma c4-6-2), with V4 Lemma c5-5-8(a) (the e^{4νσ} pins and the ε̄_t displays) and (b); it carries k → k+1 as (ii-t) does, and D2.4(12)–(13) prove it for the new groups ((S-w)).
       {#MD2.0.3.32-2} It is what pays for merged old members in the step-(k+1) count.
   - {#MD2.0.3.33} *Per component.* The second term is stated per component: for each step-k large-field component Z, Σ_{W∋n, W∈att(k,Z)}e^{θ(W)}‖Y_W‖ ≤ Cρ̂_ke^{−cd_k^Z(n)/M}, with d_k^Z(n) the step-k distance from n to Z's data; Cρ̂_ke^{−cd_k(n)/M} in the display denotes this family of bounds.
     {#MD2.0.3.33-1} At k = 1 it follows from the argument of IT-1 note §3a(4)(i) with Q_W ∩ Z ≠ ∅, which gives d^Z(n) ≤ diam(Q_W) + 1.
@@ -473,19 +472,19 @@
     {#MD2.0.3.33-3} At k = 1 the display also has the lw term Σ_{i∈n}‖Y_i‖.
   - {#MD2.0.3.34} Only the attached parts made at step k stay in (ii).
     {#MD2.0.3.34-1} Those made at earlier steps are bounded by (ii′) below, per large-field component.
-    {#MD2.0.3.34-2} Reason: an object made at step j has decay length λ_{k,j} := ML^{−(k−j)} in step-k units (V3's LM, fine units at step 1, M in step-1 units; the scale-j lattice is T_{L^{−(k−j)}} in step-k units, (1)).
+    {#MD2.0.3.34-2} Reason: an object made at step j has decay length λ_{k,j} := ML^{−(k−j)} in step-k units (V4's LM, fine units at step 1, M in step-1 units; the scale-j lattice is T_{L^{−(k−j)}} in step-k units, (1)).
     {#MD2.0.3.34-3} A term Cρ̂_je^{−cd_j(n)/λ_{k,j}} kept in (ii) costs a factor L per step, as the collar parts do, so D(k)(iv) would fail.
     {#MD2.0.3.34-4} The wrap terms stay in (ii) for every j: each grows by at most L per step, so the scale-j one is ≤ CL^{k−j}ρ̂_je^{−cN^{(j)}_min/M}, small under the torus condition of (5)(g); ρ̂_j here is max(C_S′ρ̂_j, C_S″b_j) (D2.6 closure 2.1; (5)(g) amended).
     {#MD2.0.3.34-5} Distances are step-k distances.
   - {#MD2.0.3.35} d_j(n) is the distance from n to the scale-j large-field data: E(B_ξ) of the step-j labels, together with the de-younged bonds of the step-j carrier on uncovered terms (d(n), d^Λ(n) of D1(ii) at j = 1).
-    {#MD2.0.3.35-1} N^{(j)}_min is the smallest torus period in step-j units (V3's N_min/L at j = 1). 𝔪̂^{(j)}_Δ and m^{(j)}_b are the marks and shifts of the step-j labels (IT-1 note §3a(7), §3j). ρ̂_j = max(ρ_j, ρ_{ph,j}) and ρ_{t,j} are the step-j analogues of ρ̂ and ρ_t.
-    {#MD2.0.3.35-2} *Fixed here:* r_k := A₁(log g_k⁻²)^{p₀}, ρ_k := C_ρg_k²(1+r_k)⁴ (the step-k analogue of V3's ρ = O(g₀²(1+r)⁴)), ρ_{t,k} := C′_χg_k(1+2r_k)/u_* and ρ_{ph,k} := C_phg_k²(1+2r_k)⁴, as at k = 1 below.
+    {#MD2.0.3.35-1} N^{(j)}_min is the smallest torus period in step-j units (V4's N_min/L at j = 1). 𝔪̂^{(j)}_Δ and m^{(j)}_b are the marks and shifts of the step-j labels (IT-1 note §3a(7), §3j). ρ̂_j = max(ρ_j, ρ_{ph,j}) and ρ_{t,j} are the step-j analogues of ρ̂ and ρ_t.
+    {#MD2.0.3.35-2} *Fixed here:* r_k := A₁(log g_k⁻²)^{p₀}, ρ_k := C_ρg_k²(1+r_k)⁴ (the step-k analogue of V4's ρ = O(g₀²(1+r)⁴)), ρ_{t,k} := C′_χg_k(1+2r_k)/u_* and ρ_{ph,k} := C_phg_k²(1+2r_k)⁴, as at k = 1 below.
     {#MD2.0.3.35-3} D2.2 proves its bounds with these ρ's.
-  - {#MD2.0.3.36} At k = 1 this is D1(ii), summed over the L fine traversals of each coarse bond, with C_χ ↦ L^{−1}C_χ by (a) (V3's traversals are fine, L122), and:
+  - {#MD2.0.3.36} At k = 1 this is D1(ii), summed over the L fine traversals of each coarse bond, with C_χ ↦ L^{−1}C_χ by (a) (V4's traversals are fine, V4 sec:main-result *Notation*), and:
     - {#MD2.0.3.37} the attached constants C ↦ e^{2c/M}LC: L fine traversals, each with e^{−c(d(n_f)−1)/(LM)} ≤ e^{c/(LM)}e^{c/M}e^{−cd_1(n)/M};
-    - {#MD2.0.3.38} D1(ii)'s collar term has g₀ and D(1)(ii) has g₁: C′_χ ↦ (1+β₀)C′_χ by g₀ ≤ (1+β₀)g₁ (the last inequality of CRE (2.6), p.255, n = 1, m = 0); likewise V3's ρ (at g₀) ≤ C(1+β₀)⁶ρ₁ with ρ₁ := C_ρg₁²(1+r₁)⁴ as in (5)(c).
-    - {#MD2.0.3.39} The remaining conversions. ρ_t ≤ (1+β₀)²ρ_{t,1} with ρ_{t,1} := C′_χg₁(1+2r₁)/u_*: V3's ρ_t = u_t/u_* = C′_χg₀(1+2r)/u_* (V3 L3973, item 4), g₀ ≤ (1+β₀)g₁ as above, and r ≤ (1+β₀)r₁ by the second inequality of CRE (2.7) (n = 1, m = 0); u_* is fixed before the coupling (V3 L3968).
-      {#MD2.0.3.39-1} In the same way ρ_ph ≤ C_phg₀²(1+2r)⁴ (V3 L2865, under its (iii)) gives ρ_ph ≤ (1+β₀)⁶ρ_{ph,1} with ρ_{ph,1} := C_phg₁²(1+2r₁)⁴, so ρ̂ ≤ C(1+β₀)⁶ρ̂₁, with C absorbing V3's O(·) in ρ = O(g₀²(1+r)⁴).
+    - {#MD2.0.3.38} D1(ii)'s collar term has g₀ and D(1)(ii) has g₁: C′_χ ↦ (1+β₀)C′_χ by g₀ ≤ (1+β₀)g₁ (the last inequality of CRE (2.6), p.255, n = 1, m = 0); likewise V4's ρ (at g₀) ≤ C(1+β₀)⁶ρ₁ with ρ₁ := C_ρg₁²(1+r₁)⁴ as in (5)(c).
+    - {#MD2.0.3.39} The remaining conversions. ρ_t ≤ (1+β₀)²ρ_{t,1} with ρ_{t,1} := C′_χg₁(1+2r₁)/u_*: V4's ρ_t = u_t/u_* = C′_χg₀(1+2r)/u_* (V4 app:thresholds, item 4), g₀ ≤ (1+β₀)g₁ as above, and r ≤ (1+β₀)r₁ by the second inequality of CRE (2.7) (n = 1, m = 0); u_* is fixed before the coupling (V4 app:thresholds, opening list).
+      {#MD2.0.3.39-1} In the same way ρ_ph ≤ C_phg₀²(1+2r)⁴ (V4 sec:c5-5R, under (c5-5R-T)(iii)) gives ρ_ph ≤ (1+β₀)⁶ρ_{ph,1} with ρ_{ph,1} := C_phg₁²(1+2r₁)⁴, so ρ̂ ≤ C(1+β₀)⁶ρ̂₁, with C absorbing V4's O(·) in ρ = O(g₀²(1+r)⁴).
       {#MD2.0.3.39-2} The collar term of D(1)(ii) is the sum of D1(ii)'s collar terms over the L fine traversals of n, so its constant is L times D1(ii)'s; the decay converts exactly, e^{−ηdist(Δ,n_f)/(C_FLM)} ≤ e^{−η_Vdist(Δ,n)/(C_FM)} ≤ e^{−c_*′dist(Δ,n)/M} (IT-1 note §3a(7): fine distances are L times step-1 distances, and dist(Δ,n_f) ≥ dist(Δ,n)).
   - {#MD2.0.3.40} The first term bounds the species dev; the others bound att(k, ·), att(k, coll), lw(·) (at k = 1) and wrap(·), which carry no deviation.
     {#MD2.0.3.40-1} The attached species made at step j leave (ii) at the end of step j + 1's map and are bounded from then on by (ii′).
@@ -520,11 +519,11 @@
     {#MD2.0.3.52-2} Without that restriction each of the at most a* other steps adds Cτ_{j−1}²(Π_j + 1 + 4s_{j−1}), Π_j the period of D2.3(4), and a* does not grow with K.
 - {#MD2.0.3.53} *D(k)(iii):* for real U_k in the support of the term's indicators, which are kept as factors, the background-dependent factors extend analytically to 𝐔 = e^{iη_kA′}U_k, for complex parts satisfying the per-bond bounds of the complex part of (2.39) on each Ω_n∖Ω_{n+1} (the loop's factors are not localised in Bałaban's domains X ∈ 𝐃_k): |η_kA′| < (1 − β(1 − 2^{−(k−n)}))α_{1,n}L^{−n} per fine bond on Ω_n∖Ω_{n+1} (n < k) and on Ω_k (n = k), G-covariantly.
   {#MD2.0.3.53-1} For k = 1 this sup-only domain is the domain; it is larger than CRE's Ũ_k^c, which also asks (L^nξ)²|∇_U^ξA′| < (1−β(1−2^{−(k−n)}))α_{1,n}, and it is D1(iii)′'s form.
-  {#MD2.0.3.53-3} (ii) holds there with δ*^{(k),30}_n(U_k) + a*^{(k)}_n(A′), and with ρ_{ph,k} replaced by ρ^c_{ph,k} := C_phg_k²(1+2r_k)⁴(1 + (log g_k⁻²)^{(q₁−p₀)₊}) and the tilt marks 𝔪^δ_Y of D1.2b included in 𝔪̂^{(k)}, as the IT-1 gaps block records at k = 1;
-  {#MD2.0.3.53-4} the tolerance this needs is D2.4's, δ*^{(k),30}_n the quantity δ*^{(k)}_n with weights (t+1)³e^{−(30/8)η_Vt}, the rate D1(iii)′ gives at complex data (IT-1 gaps block, D1.2b), and a*^{(k)}_n(A′) := η_k^{−1}Σ_{t≥1}(t+1)e^{−(30/8)η_Vt}max{|η_kA′(b)| : b a fine bond within step-k distance R_t^{(k)} of n}, the step-k form of IT-1 note §3e(0)'s a*_n(a′) := Σ_{k≥1}(k+1)e^{−(30/8)ηk}A_n(C_boxLM(k+1)).
-  {#MD2.0.3.53-5} With V3's θ°-booking the rate in δ*^{(k),30} and a*^{(k)} is (61/16)η_V in place of the (30/8)η_V displayed (D2.6 closure 6.5 *(iii)'s complex rate*). The normalisation η_k^{−1} makes it a block-scale field: along a step-k bond the first-order change of the transport is Σ_bη_kA′(b) over its L^k fine bonds, of size |A′|.
+  {#MD2.0.3.53-3} (ii) holds there with δ*^{(k),c}_n(U_k) + a*^{(k)}_n(A′) in place of δ*^{(k)}_n(U_k), with ρ_{ph,k} replaced by ρ^c_{ph,k} := C^𝐔_phg_k²(1+2r_k)⁴(1 + (log g_k⁻²)^{(q₁−p₀)₊}), and with the tilt marks 𝔪^δ_Y included in 𝔪̂^{(k)}; at k = 1 this is IT-1 note D1(iii)′ (§3e(0); (3.12) *Order* and *Tilt marks*).
+  {#MD2.0.3.53-4} The tolerance this needs is D2.4's. Here δ*^{(k),c}_n is δ*^{(k)}_n with the weights (t+1)³e^{−(61/16)η_Vt}, and a*^{(k)}_n(A′) := η_k^{−1}Σ_{t≥1}(t+1)e^{−(61/16)η_Vt}max{|η_kA′(b)| : b a fine bond within step-k distance R_t^{(k)} of n}: the step-k forms of IT-1 note §3e(0)'s δ*^c_n and a*_n(a′), at the complex rate 61/16 of D2.6 closure §6.5 *(iii)'s complex rate*.
+  {#MD2.0.3.53-5} The normalisation η_k^{−1} makes a*^{(k)}_n a block-scale field: along a step-k bond the first-order change of the transport is Σ_bη_kA′(b) over its L^k fine bonds, of size |A′|.
   {#MD2.0.3.53-6} At k = 1, a*^{(1)}_n ≥ L·a*_{n_f} for every fine traversal n_f ⊂ n, as in (a).
-  {#MD2.0.3.53-7} At k = 1 the radius is ϱ_{an,1} := α_{1,1}/L, the radius written ρ₁ in D1(iii)′ (renamed here, since ρ₁ is the insertion scale of (5)(c)).
+  {#MD2.0.3.53-7} At k = 1 the radius is ϱ_{an,1} := α_{1,1}/L, IT-1 note §3e(0)'s ϱ₁ in D1(iii)′ (ρ₁ is the insertion scale of (5)(c)).
   - {#MD2.0.3.54} *The domain for k ≥ 2 (D2.2(6)(e)).* For k ≥ 2 the domain is CRE's: the full complex part of Ũ_k^c at 𝐔 = e^{iη_kA′}U_k, that is (2.34) for 𝐔 and (2.36) for 𝐉 per plaquette and bond, (2.38) per cube, and (2.39) per bond with both the sup and the gradient condition, (L^nξ)²|∇_U^ξA′| < (1−β(1−2^{−(k−n)}))α_{1,n}, posed on Ω_n∖Ω_{n+1} for n = 1, …, k−1 and on Ω_k.
     {#MD2.0.3.54-0} (2.35) and (2.37), which constrain the averaged configurations built on a domain X, are posed for each factor that uses them on that factor's own domain (Bałaban's X ∈ 𝐃_k, CRE p.261; the domain Z of RG2 p.15's covariance operators for the step's Ĥ(M), D2.2(6)(c), #MD2.2.6.131).
     {#MD2.0.3.54-1} The step-(k−1) → k integration produces factors with RG2's propagators, which are analytic only on a gradient-controlled domain (RG2 p.15).
@@ -541,25 +540,24 @@
   - {#MD2.0.3.56} *The variable 𝐉 for k ≥ 2 (D2.2(6)(b)).* For k ≥ 2 the factors are functions of (𝐔, 𝐉, ω), and the domain is posed on (𝐔, 𝐉): with the conditions above, CRE (2.36)–(2.37), p.261, |𝐉| < (1 − β(1 − 2^{−(k−n)}))α_{0,n}(L^nξ)^{−3} on each Ω_n∖Ω_{n+1} and on Ω_k (CRE's space Ũ_k^c is "the set of configurations (𝐔,𝐉)", p.261).
     {#MD2.0.3.56-1} Covariance is under (𝐔, 𝐉, ω) ↦ (𝐔^u, R(u)𝐉, R(u)ω) (CRE p.261: "(G-valued) gauge transformations of 𝐔, 𝐉, A (the variables 𝐉, A are transformed by the adjoint representation of the gauge transformations)").
     {#MD2.0.3.56-2} The factors are evaluated at 𝐉 = J_k.
-    {#MD2.0.3.56-3} At k = 1 the factors are V3's, functions of 𝐔 and, on uncovered terms, of the exterior fields; there is no 𝐉.
+    {#MD2.0.3.56-3} At k = 1 the factors are V4's, functions of 𝐔 and, on uncovered terms, of the exterior fields; there is no 𝐉.
     - {#MD2.0.3.57} *The 𝐉-term of (ii).* The dev parts are functions of 𝐉 that vanish at (1, 0, 0), so the bound of (ii) on this domain needs a deviation term in 𝐉 − J_k; without it, at flat U_k with A′ = 0 and 𝐉 ≠ J_k, the bound would force the dev parts to vanish.
       {#MD2.0.3.57-1} With r_J(b) := (1 − β(1 − 2^{−(k−n)}))α_{0,n}(L^nξ)^{−3}, the (2.36) radius at b, and ϱ(b) := (1 − β(1 − 2^{−(k−n)}))α_{1,n}L^{−n}, the A′-radius, put
-      {#MD2.0.3.58} j*^{(k)}_n(𝐉) := η_k^{−1}Σ_{t≥1}(t+1)e^{−(30/8)η_Vt}max{ϱ(b)|𝐉(b) − J_k(b)|/r_J(b) : b within step-k distance R_t^{(k)} of n}.
-      {#MD2.0.3.58-1} The rate is (61/16)η_V in place of (30/8)η_V, as for δ*^{(k),30} and a*^{(k)} above (D2.6 closure 6.5 *(iii)'s complex rate*).
-      {#MD2.0.3.59} For k ≥ 2, (ii) holds on the (𝐔, 𝐉) domain with δ*^{(k),30}_n(U_k) + a*^{(k)}_n(A′) + j*^{(k)}_n(𝐉).
+      {#MD2.0.3.58} j*^{(k)}_n(𝐉) := η_k^{−1}Σ_{t≥1}(t+1)e^{−(61/16)η_Vt}max{ϱ(b)|𝐉(b) − J_k(b)|/r_J(b) : b within step-k distance R_t^{(k)} of n}, at the rate of δ*^{(k),c} and a*^{(k)}.
+      {#MD2.0.3.59} For k ≥ 2, (ii) holds on the (𝐔, 𝐉) domain with δ*^{(k),c}_n(U_k) + a*^{(k)}_n(A′) + j*^{(k)}_n(𝐉).
       {#MD2.0.3.59-1} At the real point 𝐉 = J_k the new term vanishes, so (ii) at real data is unchanged, and D(1) has no 𝐉.
       {#MD2.0.3.59-2} *Sub-domain form (SW closure §3):* this dev-term bound at complex data is asserted on 𝒟_k^{sub} only (the top-layer radii α_{1,k}L^{−k}, α_{0,k}(L^kξ)^{−3} with the layer's factor on every layer); analyticity stays on the full domain; the per-insertion form likewise, with Dev_W over the per-traversal region of SW closure §5(e).
       {#MD2.0.3.59-3} The 𝐉-part of the dev bound is proved with the rest, by D2.4(4)'s Cauchy step, which runs in 𝐉 on the (2.36) polydisc as in A′ (SW closure (6b)).
   - {#MD2.0.3.60} The outer fields ω_j, j ≥ 1, are slot variables: the old A_j, which receive the values ψ_{j+1}(A_j^{new}; 𝐇^{(j)}) on S_{j+1}^{(j)*} and A_j elsewhere (D2.2(6)(b)).
     {#MD2.0.3.60-1} The ω-clause is analyticity in the slot variables.
     {#MD2.0.3.60-2} The same holds at j = 0, by #MD2.0.3.60-3–#MD2.0.3.60-4.
-    {#MD2.0.3.60-3} On the bonds of (R₁^{∼2} ∩ S₁)^* V3's variable is A′, with A = Ψ_ξA′ through the C^∞ cutoff ω_b (V3 L538), and the slots are not analytic in A′ there.
+    {#MD2.0.3.60-3} On the bonds of (R₁^{∼2} ∩ S₁)^* V4's variable is A′, with A = Ψ_ξA′ through the C^∞ cutoff ω_b (V4 (native-source-exact-boundary-map)), and the slots are not analytic in A′ there.
     {#MD2.0.3.60-4} So at j = 0 the outer variable ω₀ is CRE (1.15)'s A = Ψ_ξA′, a slot variable; A′ and the cutoff values ω_b(A′(b)), frozen as real factors at the real configuration (as in D2.2(6)(e), *The radii*), only give its values, and the later rotations R(w) act on these values (#MOMGD.52).
     {#MD2.0.3.60-5} The lw slots' bounds on the r_{ω,0} = 1 polydisc are in the closure (§6.1 (a)–(b)).
   - {#MD2.0.3.61} *Outer fluctuation fields.* The ω-dependent factors (the insertions that consult outer fluctuation fields, on uncovered terms) extend analytically also in ω, jointly with 𝐔, to the ω within distance r_ω^{(k)} of a real point of the support, per bond (per layer j, r^{(k)}_{ω,j}: the polydiscs of D2.2(6)(e)), with the same bounds.
     {#MD2.0.3.61-1} The radii r^{(k)}_{ω,j} = r_{ω,j}(1/2 + 2^{−(k−j)}) are in the units of the slot variable σ_j (the old A_j, in step-j units), and r_{ω,j} is fixed at step j and does not change with k (D(k)(iv) concerns constants, and r_{ω,j} is a scale-j radius); the step-1 exterior fields have index j = 0, with r_{ω,0} = 1 in B-units.
     {#MD2.0.3.61-2} The original field V₀ on Ω₁ᶜ is part of 𝐔, not of ω.
-    {#MD2.0.3.61-3} *At k = 1.* In V3's free variables B (phases A = g₀C_UB), the exterior fields A_e and a_old enter the ω-dependent factors in three ways.
+    {#MD2.0.3.61-3} *At k = 1.* In V4's free variables B (phases A = g₀C_UB), the exterior fields A_e and a_old enter the ω-dependent factors in three ways.
     {#MD2.0.3.61-4} They enter the cross term s⟨a, H_{ξ,IJ}A_e⟩ of (c4-11-1), which is linear, hence entire.
     {#MD2.0.3.61-5} They enter the near primitives 𝔭(a + sA_e) of (c4-11-1).
     {#MD2.0.3.61-6} They enter the row solutions and path products of the rows they feed.
@@ -571,16 +569,16 @@
     {#MD2.0.3.61-12} *The bound clause (D2.6 closure §4.2(iii)).* At k = 1 the analyticity is shown above, and the bounds at complex ω₀ are closure §5.0's, for the t > 0 species on the sub-polydisc 𝒟^{sub}_{ω,0} of radius ρ_ω ≪ r_{ω,0} around the term's step-1 exterior data, which contains every point the consumers evaluate at (WILSON_IT1_O4_CLOSURE_2026_10_26.md §2(e); for the lw slots, closure §6.1 *The ω-polydisc*).
     {#MD2.0.3.61-13} For the ω-dependent members made at steps k ≥ 2 the bounds over the polydiscs rest on O6 (closure §2.2 (1′)), and the evaluation of every factor on Ω₁∖Ω₂ rests on the base points of D2.2(6)(e) *The inclusion*, at every k.
   - {#MD2.0.3.62} *Reference clause (D2.3(2)).* On every labelled term ℓ the background-dependent factors are defined and analytic also at 𝐔 = e^{iη_kA′}·1, A′ in the domain above, for k ≥ 2 with 𝐉 in the domain of (2.36)–(2.37) around 𝐉 = 0 = J(1), jointly with ω within its radii of ω = 0, although (1, 0) need not lie in the support of ℓ's indicators.
-    {#MD2.0.3.62-1} At k = 1 this is V4 L1130 (the step-1 lemmas "apply to U = id directly", on every branch); at step k+1 D2.3(2) derives it from D2.2(6)(e)'s argument at U_{k+1} = 1.
+    {#MD2.0.3.62-1} At k = 1 this is V4 Section joint-extraction, the reference-data paragraph after (part1-grouped-source) (the step-1 lemmas "apply to U = id directly", on every branch); at step k+1 D2.3(2) derives it from D2.2(6)(e)'s argument at U_{k+1} = 1.
     {#MD2.0.3.62-2} The bounds at the reference point are D2.4's.
 - {#MD2.0.3.63} *D(k)(iv):* all constants are independent of k, K, the contour size, the torus and the labelled term.
-- {#MD2.0.3.64} *D(k)(v), scalar parts (added from D2.2(4)(a)).* On each labelled term, Q_k(𝔅) and 𝓔_k depend on the labels only, not on V_k and not on the outer variables: they are numbers given the labels, as at k = 1 (IT-1 note §4(iii): "φ and e_X are numbers on each labelled term"; q°, E° are taken at U°₁ = id with the term's labels, V3 L986, and E^∂_{D(Λ)} at flat reference data, §3b(5)).
+- {#MD2.0.3.64} *D(k)(v), scalar parts (added from D2.2(4)(a)).* On each labelled term, Q_k(𝔅) and 𝓔_k depend on the labels only, not on V_k and not on the outer variables: they are numbers given the labels, as at k = 1 (IT-1 note §4(iii): "φ and e_X are numbers on each labelled term"; q°, E° are built from the reference data U°₁ = id with the term's labels, V4 Lemma c5-5-3(b), (d) and IT-1 note §2(g), and E^∂_{D(Λ)} at flat reference data, IT-1 note §3b(5)).
   {#MD2.0.3.64-1} Field-dependent scalar parts are scalar insertions.
   {#MD2.0.3.64-2} At step k+1 it is proved in D2.2(6)(c).
 - {#MD2.0.3.65} *D(k)(vi), torus consistency (D2.3(4), item (Z); for the insertions in local-agreement form and for the cluster weights φ_k(Γ), numbers given ℓ, D2.3(4) (Z-e); in summed form: on ℓ₀, for (𝐔, 𝐉) on T and (𝐔′, 𝐉′) on T′ ⊃ T that coincide under the covering on the ι_{T,k}/4-neighbourhood of a lift of the dependence set of each W that embeds in T, (I) Σ_{W∋n, embeds}e^{θ(W)}|ΔY_W| ≤ C_rel^{(k)}e^{−c_kι_{T,k}}·(D(k)(ii)'s right side, the larger of its T- and T′-values) and (O) sup_bΣ_{Γ∋b, embeds}|Δφ_k(Γ)|e^{a°(Γ)} ≤ C_rel^{(k)}e^{−c_kι_{T,k}}ρ_k·pl per position b (the form D2.4(13)(c) carries;
   {#MD2.0.3.65-1} the "hits W" form follows by the ≤ 81Mσ_k(W) positions of a group incompatible with W), φ_k being numbers given ℓ; the step-1 base is D2.3(4)(Z-h)).* For a cluster Γ of the reference group gas of the step-k output on the trivial-label term ℓ₀ (D2.3(3)) whose groups have short arcs on a straight line or on a bent path, the weight Φ°(Γ; T) is defined on every torus T of the sequence (H3) in which Γ embeds (dependence set of diameter < ι_T/4, D2.3(4) (Z)), and has a limit Φ°^∞(Γ) as the periods grow, with Σ_{Γ: b∈J_Γ}|Φ°(Γ;
   {#MD2.0.3.65-2} T) − Φ°^∞(Γ)| ≤ 3C_Z^{(k)}𝔞_ke^{−c^Zι_{T,k}} (#MD2.3.4.50) for every traversal b, 𝔞_k := max(τ_{k−1}², ρ_k·pl) (amplitude from D2.3(4)(Z-f)).
-  {#MD2.0.3.65-3} At k = 1 this is D2.3(4)(Z-h) (V3's step-1 objects are exactly local: zero difference on embedding objects) with (Z-f)'s non-embedding clusters; V4's periodisation is not used.
+  {#MD2.0.3.65-3} At k = 1 this is D2.3(4)(Z-h) (V4's step-1 objects are exactly local: zero difference on embedding objects) with (Z-f)'s non-embedding clusters; V4's periodisation is not used.
   {#MD2.0.3.65-4} Its carrying to step k+1 is D2.3(4)(Z-f) with D2.4(12)(f), (13)(c), needing D2.4's (S-w) but not (T).
 - {#MD2.0.3.66} *D(k), the identity.* The numerator density after k steps is N_k^C = Σχ_k(Ω_k)T_k[𝒲_k exp A_k], over the admissible sequences of ρ_k.
   {#MD2.0.3.66-1} For k ≤ N the basic step of the 𝐑-operation (LFR I Sect. 1) acts on no component (LFR I p.177 (ii)), R is the identity on every term for k ≤ N (WILSON_IT1_D27_CLOSURE_2026_10_26.md item 1), and so N_k^C is T applied k times to W(C;U)ρ₀ with CRE's expansions.
@@ -596,14 +594,14 @@
 - {#MD2.0.4.6} *D2.6, large fields* (WILSON_IT1_D26_CLOSURE_2026_10_24.md).
   {#MD2.0.4.6-1} Every evaluation point of the step lies in the analyticity domain of every factor by *The inclusion* (#MD2.2.6.189) and CRE p.277's margin (closure 2.2). At complex σ_k the terms of 𝐏^{(k)} keep the printed bound with the fluctuation factor doubled, and the bracket terms keep p.277's coefficient O(ε_k) times 2, with the decay rate reduced by ϑ_k → 0 (O6 §5, §5a; closure 2.2 *Complex σ_k*). The band-cube input of (T-dev) holds on every band cube, those with □′^{∼4} ⊄ Ω_{i+1} by route (a) (closure §8.3).
   {#MD2.0.4.6-3} The carried t > 0 species are bounded over complex backgrounds by WILSON_IT1_O4_CLOSURE_2026_10_26.md. At step n the term is expanded at the real centre tm̂, m̂ := m̂(𝐔(U_{n+1}), ω₀,₀), where 𝐔(U_{n+1}) is the step's real external background on the species' region, independent of the step's fluctuation, and ω₀,₀ is the term's real exterior data of step 1 (O4 §2(c); closure 6.4 *The centre*).
-  {#MD2.0.4.6-4} For every real centre the expansion is exact at every real point and analytic in every field, so the carried species are IT-1 note §3j(6)'s representation at that centre on the polydisc 𝒫(𝐔(U_{n+1})). Every evaluation point of every step lies within 9ρ₁/16 of 𝐔(U_{n+1}) per fine bond (O4 §2(b), under L ≥ 4(1+β₀)², closure 4.2's RM₁ ≥ 32log(4L·O(1))/δ₀, and CRE (2.9)).
+  {#MD2.0.4.6-4} For every real centre the expansion is exact at every real point and analytic in every field, so the carried species are IT-1 note §3j(4)'s representation at that centre, extended to the polydisc 𝒫(𝐔(U_{n+1})) by §3e(3.12). Every evaluation point of every step lies within 9ϱ₁/16 of 𝐔(U_{n+1}) per fine bond (O4 §2(b), under L ≥ 4(1+β₀)², closure 4.2's RM₁ ≥ 32log(4L·O(1))/δ₀, and CRE (2.9)).
   {#MD2.0.4.6-5} The carry lemma (closure §5) evaluates fixed members at every step, and the change of centre between steps is the change between two exact expansions of the same term. The bound over the ω₀-polydisc is stated on the sub-polydisc 𝒟^{sub}_{ω,0} of radius ρ_ω ≪ r_{ω,0}, which contains every point R(w_n(s,t))ω₀ the consumers evaluate at; the tilt constant carries the factor 1 + C_ω (closure 5.0 *The step-1 t > 0 species*, 7.1 *Step-1 marks*; O4 §2(e)).
   {#MD2.0.4.6-6} D2.2(3)(b)'s extra label for 2 ≤ k ≤ N is WILSON_IT1_O2_CLOSURE_2026_10_26.md: Λ₁ = Ω₁^{∼−2} ∩ (R₁′^∼)ᶜ with R₁ determined by S₁ (CRE (1.20) p.251, p.253, p.255), so the pair (Λ₁, Λ) carries no extra summation index: the sum over Λ₁ is CRE's own Σ_{S₁} inside 𝐓₁, (2.18) p.257.
   {#MD2.0.4.6-7} The step-1 term has CRE's inductive form with Λ in Λ₁'s role; 𝐓₁ is carried whole at the later steps ((3.1), (3.24)), and LFR II's induction takes only κ₁(X), j(X) = 1, and (1.76) per component of Λᶜ. Since Z₁ = Λᶜ contains the retreat region (closure 6.2 *The components*), the retreat slots are lw slots, carried by closure §5 with the bridge of closure 5.6 at every step, and no merge of label polymers is made within D2.6 (closure 6.5). So:
   {#MD2.0.4.6-8} Z₁ = Λᶜ, every free bond lies in E(Z₁), the slots are lw(X) insertions, Ret(Λ) ∩ Ω₂ = ∅ by CRE (3.5), the bridge holds at every step, and no merge is made within D2.6. The members and factors whose evaluation domain meets Ω₁∖Ω₂, the ω₀- and ω₁-dependent factors among them, are evaluated at every k at D2.2(6)(e)'s base points on that layer; the joint linking expansion at the 𝐑-operation is D2.7's. D2.6's items:
   - {#MD2.0.4.7} the attached terms of D(k)(ii);
-  - {#MD2.0.4.8} the non-scalar large-field parts (IT-1 note §6(d));
-  - {#MD2.0.4.9} the exposed segments (IT-1 gaps block);
+  - {#MD2.0.4.8} the non-scalar large-field parts (at step 1 the att(1, Z) and wrap(1) parts of IT-1 note §3a(4), (8));
+  - {#MD2.0.4.9} the exposed segments (IT-1 note §3d(3), (5));
   - {#MD2.0.4.10} the carrier at step k+1: p.256's "other conditions", domains made by a retreat, and the extra outer label (IT-1 note §3c(4′), (4⁗)).
     {#MD2.0.4.10-1} This item is an input of D2.2 and of (5)(c)'s evaluation at U_{k+1}, and is proved with D2.2 (D2.2(3));
   - {#MD2.0.4.11} the lifetime payment of (5)(f): Bałaban's induction pp.384–389 with the enlarged summand.
@@ -629,7 +627,7 @@
 
 ### (5) The Count Check of D(k) → D(k+1) {#MSD2.0.5}
 
-{#MD2.0.5.1} Regime: a loop of physical side ℓ_C, K steps, P_k(C) = 4ℓ_CL^{K−k}. τ_k and ρ_k are the step-k analogues of V3's τ = C[g(1+r)³ + e^{−cr²}] and ρ = O(g²(1+r)⁴), r = A₁(log g⁻²)^{p₀}, so τ_k² and ρ_k are g_k² times a power of log g_k⁻².
+{#MD2.0.5.1} Regime: a loop of physical side ℓ_C, K steps, P_k(C) = 4ℓ_CL^{K−k}. τ_k and ρ_k are the step-k analogues of V4's τ = C[g(1+r)³ + e^{−cr²}] and ρ = O(g²(1+r)⁴) (V4 Remark main-regime (1)), r = A₁(log g⁻²)^{p₀}, so τ_k² and ρ_k are g_k² times a power of log g_k⁻².
 - {#MD2.0.5.2} *The couplings.* G is compact, connected, and simple (V4 (H1)). RG I Theorem 2 (p.259 l.28–38) is printed for G = SU(2), its proof left to a separate paper; for simple G it is BETA_FUNCTION_WILSON_LOOPS.md Corollary 8.2, which gives, for every small renormalised g and ε = L^{−K}, a bare g₀ with g_K = g and every g_k in ]0, γ_B] (#B8.34–#B8.35; γ_B is RG I's γ, not D2.3(4)'s γ := sup_K g_K), and (0.31) up to an additive constant (#B8.36).
   {#MD2.0.5.2-1} With x_k = g_k^{−2}, Cor. 8.2 supplies the window bound (W), b(n−m) − C ≤ x_m − x_n ≤ b′(n−m) + C for all m ≤ n ≤ K (#B2.5, #B8.31-1–#B8.32).
   {#MD2.0.5.2-2} So CRE (2.6) holds with b′ + C in place of β′, 1/g_k² ≤ 1/g_K² + (b′ + C)(K−k), and g_k ≤ (1+β₀)g_K uniformly in K − k once γ_B is small depending on β₀ (#B8.38–#B8.38-1).
@@ -643,8 +641,7 @@
   - {#MD2.0.5.4} (3)(a) matches δ*^{(1)} with IT-1 note §3a(6) at k = 1.
     {#MD2.0.5.4-1} Matching the neighbourhoods of n with those of n′ is in D2.4.
 
-- {#MD2.0.5.5} **(a) Perimeter scalar parts.** Size of order τ_k² per step-k bond (V3 L158, at hash a520a59f363d: |κ^σ_v| ≤ Cτ² (the sentence following eq:marginal-full-perimeter, by eq:marginal-cluster-tail, with eq:marginal-square-mass) gives |δm^σ|P(C_n) = n|Σ_vκ^σ_v| ≤ 4Cnτ².
-  {#MD2.0.5.5-1} L158 is one long TeX line, the "(1) The scales" remark after the main theorem, and it also holds the perimeter-rate sentence that the definitions quote).
+- {#MD2.0.5.5} **(a) Perimeter scalar parts.** Size of order τ_k² per step-k bond (V4 Remark main-regime (1): |κ^σ_v| ≤ Cτ² (the sentence following eq:marginal-full-perimeter, by eq:marginal-cluster-tail, with eq:marginal-square-mass) gives |δm^σ|P(C_n) = n|Σ_vκ^σ_v| ≤ 4Cnτ²).
   {#MD2.0.5.5-2} Count P_k.
   {#MD2.0.5.5-3} P_kτ_k² → ∞: for k < K, CRE (2.6) (#MD2.0.5.2-2) gives g_k² ≥ g_K²/((1+β₀)²(K−k)) and CRE (2.7) (p = 6p₀) gives (log g_k⁻²)^{6p₀} ≥ (1+β₀)^{−1}(log g_K⁻²)^{6p₀}, so P_kτ_k² ≥ cℓ_CL^{K−k}(K−k)^{−1}g_K²(log g_K⁻²)^{6p₀}/(1+β₀)³.
   {#MD2.0.5.5-4} The flat-reference, period-invariant (Π_{k+1}-periodic) part is **absorbed exactly** into δm_{k+1}, with zero remainder (D2.3).
@@ -718,10 +715,10 @@
     {#MD2.0.5.25-2} Against the class bound ρ_{k+1}δ*^{(k+1)} this is the factor L²g_k²ρ_k/ρ_{k+1} ≤ (1+β₀)⁸L²g_K², small for g_K ≤ g(L) (g_k ≤ (1+β₀)g_K, CRE (2.6)).
     {#MD2.0.5.25-3} With D2.4(5)'s ρ̃ the old dev bound is ρ̃_kδ*, and against ρ̃_{k+1}δ*^{(k+1)} the factor is L²g_k²ρ̃_k/ρ̃_{k+1} ≤ (1+β₀)^{10}L²g_K², which is D2.4(6)'s C_dL²(1+β₀)²g_K²·(1+β₀)⁸.
 - {#MD2.0.5.26} **(e) Fresh insertions.** These come from integrating the step-(k+1) fluctuations of the leading word f_k.
-  {#MD2.0.5.26-1} They are of order C_newρ_{k+1}δ*^{(k+1)} per new traversal: V3's §3a deviation form at step k+1, with D2.1's form of f_k (D2.1–D2.2).
+  {#MD2.0.5.26-1} They are of order C_newρ_{k+1}δ*^{(k+1)} per new traversal: IT-1 note §3a(6)'s deviation form at step k+1, with D2.1's form of f_k (D2.1–D2.2).
 - {#MD2.0.5.27} **(f) Large-field attached parts and exposed segments.**
   - {#MD2.0.5.28} Count: P_k·p_k, with p_k the probability that a step-k bond lies near a large-field region. p_k ≤ e^{−c(log g_k⁻²)^{2p₀}}.
-    {#MD2.0.5.28-1} The bound P_kp_k = 4ℓ_CL^{K−k}e^{−c(log g_k⁻²)^{2p₀}} diverges as K − k → ∞, since (log(K−k))^{2p₀} = o(K−k), so these terms are carried as local activities attached to the large-field regions, as V3's E_bdry is (iteration audit §4(5)).
+    {#MD2.0.5.28-1} The bound P_kp_k = 4ℓ_CL^{K−k}e^{−c(log g_k⁻²)^{2p₀}} diverges as K − k → ∞, since (log(K−k))^{2p₀} = o(K−k), so these terms are carried as local activities attached to the large-field regions, as V4's E_bdry (Theorem 1, eq:thm-main-bounds) is (iteration audit §4(5)).
   - {#MD2.0.5.29} *Payment, per component and over its lifetime.* LFR II p.381 gives the fundamental factor exp(−½γ₀A₁²p₀²(g_j)(d_j′(Z_j^{(i)})+1) − 2p₀(g_j)) for each large-field region Z_j^{(i)} *created at step j* (IT-1 note RC payment's (d″)(ii) gives the step-1 form, with ½c₄ϑ²A₁²p₀²(g₁)).
     {#MD2.0.5.29-1} By p.384 the factor of a component Z of Z_j is exp(−κ_j(Z) − 2p₀(g_{j(Z)})), and it "controls K renormalization steps" through (1.80).
     {#MD2.0.5.29-2} The attached and exposed costs near Z recur at every one of these steps, so the payment must cover all of them.
@@ -758,7 +755,7 @@
   {#MD2.0.5.40-5} Both are lower bounds on the periods, which may be taken as large as needed.
   {#MD2.0.5.40-6} *Wrap amplitudes (D2.6 closure 2.1 *Precedence and units*).* A wrap(k+1) group failing (i) or (iii) has amplitude C_S″b_k, so D(k)(ii)'s wrap display carries max(C_S′ρ̂_j, C_S″b_j) at each j; the sum over j is ≤ 2max(C_S′, C_S″)sup_jmax(ρ̂_j, b_j) times the same torus factor, and the condition holds with b_j in place of ρ̂_j (b_j → 0 with g_j).
 - {#MD2.0.5.41} **(h) The norm of the dressed loop.** |𝒲_k| ≤ |κ^{(k)}|e^{|𝓔_k|}∏_n(1+ν_n) is at most |κ^{(k)}|exp(CP_k(ρ_kε_k + τ_k²) + r^R_K), where r^R_K (table #T12.30-4) bounds the sum of the 𝐑-steps' constants E°^R_j in 𝓔_k (#MD2.3.5.5-2) over any set of steps; this bound is exponentially large in L^{K−k}.
-  {#MD2.0.5.41-1} D(k) never uses it, and the step map may use only local bounds: Cauchy estimates on polydiscs in bounded sets of variables (IT-1 note §6(f4)) and cluster expansions with local activities.
+  {#MD2.0.5.41-1} D(k) never uses it, and the step map may use only local bounds: Cauchy estimates on polydiscs in bounded sets of variables (IT-1 note §3e(6)(a)) and cluster expansions with local activities.
   {#MD2.0.5.41-2} At k = K, P_K = 4ℓ_C, so |𝒲_K| ≤ |κ^{(K)}|exp(4Cℓ_C(ρ_Kε_K + τ_K²) + r^R_K).
 
 ### (6) The Bałaban Inputs and Their Sources {#MSD2.0.6}
@@ -782,7 +779,7 @@
   - {#MOMGD.24} *RG2 Lemma 3's repair (D2.4(1)).* A repair of its proof, since RG2 (1.28) and (2.30), left inequality, are false at single cubes (RG1 p.257: d_j = 0 for one cube); it holds on every use in RG2 pp.7–21, and Lemma 3 holds as printed with enlarged absolute constants.
 - {#MOMGD.22} *The step-1 domain Λ.* CRE pp.277–278 concern Bałaban's own Λ_{k+1}, and RG2 p.1 is programmatic, so the construction at Λ is not Bałaban's printed statement. Its construction part is RC_PROOF_PASS Passes 4–6, which write out the step-1 construction at Λ with every cited hypothesis checked at Λ (PBG Thms 3.9, 3.10, 3.14, 3.15; RG2 Sects. 1–2 via the Bałaban project's GLT/GCT, RG2_NOTES.md; a 5-cube margin argument for the Λ-independence of interior terms; the 𝐁 format (2.41)–(2.42) and the count (2.47) at Λ).
   {#MOMGD.22-1} This includes the Mayer expansion of the shifted cutoffs on the collar 𝒦₁ (Pass 5 (e), with Pass 6: V4's young carrier is D(Λ) = Λ* (V4 Section c5-0 and Section c5-2-3, current L2458 and L2540), and its collar J_col(Λ) contains every free bond with an endpoint within ρ_L − 1 of Λ, J₁(Λ) ⊂ J_col(Λ) by Lemma c5-1-2; the rounds are LINE_DEFECT's 𝒬⁺, for which Lemma c5-3-1(b) holds;
-  {#MOMGD.22-2} by V3 L388 the Hessian is CRE's C*Δ₁C, so m_t = t·m with V4's mean shift m, and V4 Remark c5-3-2 with (c5-4-1) gives t|m_b|_σ ≤ r/4 on every bond of D(Λ); no new tested bonds, nothing new to pay;
+  {#MOMGD.22-2} by V4 (regular-covariance-hessian) and the paragraph after it the Hessian is CRE's C*Δ₁C, so m_t = t·m with V4's mean shift m, and V4 Remark c5-3-2 with (c5-4-1) gives t|m_b|_σ ≤ r/4 on every bond of D(Λ); no new tested bonds, nothing new to pay;
   {#MOMGD.22-3} the X-local pieces, at real and at complex backgrounds (Ũ^c₁(X), base (U, J_U)), by the local shift m^{loc}_t of Pass 6 (f), the ρ₂-truncated walk sum of m_t with |m_t − m^{loc}_t| ≤ 1/(m_Lr²), which keeps the cutoff pieces local in U and leaves the linear factor e^{−⟨A″,w⟩}, |w| ≤ 2/r², Mayer-interpolated as single-cube potentials W(Δ) (|W(Δ)| ≤ 4n_Δ/r, since |A″_b| ≤ 2r on the W-host bonds, each W-host paid by Cauchy at radius r^{1/2};
   {#MOMGD.22-4} the empty selection is RG2's 1), with the pointwise bound |m^{loc}_t| ≤ r/2 at the real base from (c5-4-1)'s constant at Ũ′ = Ũ^{v^{−1}}, Ũ the global extension of the local gauge v on the U-range of each shifted bond (locality alone), the shifted sharp cutoffs confined to P ∪ P″ (χ = χ⁰ + Δ on the collar bonds of Y₀; the potentials' shift s-decoupled) and the penalty at r/2); the coupling of the R₁ large field to ΛA vanishes (Pass 5 (b)).
   {#MOMGD.25-1} The collar step uses V4's collar tests at ϑr, not a bound on K: the printed bound (3.187) gives K = O(1), not K ≤ 1 − η.
@@ -1172,7 +1169,7 @@
   {#MD2.2.4.7-3} It is D2.0(3)'s D(k)(v).
 
 {#MD2.2.4.8} *(b) Cov(1) (from V3 and the IT-1 note).*
-- {#MD2.2.4.9} The step-1 insertions are Y_W = X_W·(transport of the interval), with X_W = Υ¹_W + a^Λ_W·id (IT-1 note §5 S3).
+- {#MD2.2.4.9} The step-1 insertions are Y_W = X_W·(transport of the interval), with X_W = Υ¹_W + a^Λ_W·id (IT-1 note §3a(5) *The matrix coefficient*).
   {#MD2.2.4.9-1} Their extension to 𝐔 = e^{ia′}U₁ is covariant, with a′ ↦ Ad_u a′, on every labelled term (IT-1 note §3e(2)(b): "The formula of each factor is covariant identically in 𝐔"; §3e(4)).
 - {#MD2.2.4.10} The coefficient form is V3 (c4-11-5), c_W(U^g; g(o)hg(o)^{−1}) = c_W(U;h).
   {#MD2.2.4.10-1} Burnside (V3 Lemma c5-5-7(a)) turns it into the matrix form: for irreducible π the π(h), h ∈ G, span End(V_π), so tr(Xπ(h)) = 0 for all h forces X = 0.
@@ -2068,7 +2065,7 @@
     {#MD2.2.6.148-1} They depend on the fluctuation field (CRE p.268: "We want to have characteristic functions depending on the fluctuation field only", (3.16)) or on the real step-(k+1) configuration (the (3.3) factors that remain), and the latter are among the term's indicators, kept as factors.
   - {#MD2.2.6.149} Ĥ(M), and with it Y_𝒢 of (d), is then analytic in a′ by Morera's theorem in each variable under the integrals, and jointly by Hartogs' theorem.
     {#MD2.2.6.149-1} This needs: an integrable majorant for the parameter integrals, locally uniform in a′ (RG2 p.15's second measure is complex, and the large-field B is unbounded, so a uniform bound in B is not available); locally uniform convergence of the cluster series inside Ĥ(M), Ψ(M) and the vacuum sums, with Weierstrass' theorem.
-    {#MD2.2.6.149-2} Both are part of D2.4's sizes at complex data (D(k+1)(ii) with δ*^{(k+1),30} + a*^{(k+1)}). Ĥ(M) is G-covariant by (b).
+    {#MD2.2.6.149-2} Both are part of D2.4's sizes at complex data (D(k+1)(ii) with δ*^{(k+1),c} + a*^{(k+1)}). Ĥ(M) is G-covariant by (b).
 - {#MD2.2.6.150} *The ω-clause: where ω lives.* At step k the components of ω are ω₀, V3's exterior fields on the bonds I∖D(Λ) and J (IT-1 note L786–790) of Ω₁∩Λᶜ, and the slot variables ω_j := σ_j, the old A_j on Ω_{j+1}∩Λ_{j+1}ᶜ ((b)), for 1 ≤ j ≤ k−1.
   {#MD2.2.6.150-1} Since Ω_{j+2} ⊆ Λ_{j+1} (CRE pp.264–265), ω_j lies in the layer Ω_{j+1}∖Ω_{j+2}.
   {#MD2.2.6.150-2} That layer is a union of scale-(j+1) blocks: VAR p.277, "B^j(Λ_j)=Ω_j∖Ω_{j+1}", with VAR's Λ_j := Ω_j^{(j)}∖Ω_{j+1}^{(j)}, not CRE's.
@@ -3170,7 +3167,7 @@
 - {#MD2.4.5.2} *Sizes on the support are unchanged in order.* On the support, δ*^{(k)}_n(U_k) ≤ 2c_σB₃ε_kΣ_tw_t (D2.0(3)(b)).
   {#MD2.4.5.2-1} So ρ̃_kδ*_n ≤ Cρ_kε_k/ᾱ_k, and ε_k/α_{i,k} = (A₀/C_i)(log g_k^{−2})^{p₀−q_i} ≤ A₀/C_i under (q₀ = q₁ > p₀) of (12)(f), for g_K small.
   {#MD2.4.5.2-2} Hence ν_n^{(k)} = O(ρ_k) on the support, as before.
-- {#MD2.4.5.3} *At complex data* (D(k)(iii)) the dev term carries δ*^{(k),30}_n + a*^{(k)}_n(A′), and ρ̃_ka*_n(A′) ≤ Cρ_kα_{1,k}/ᾱ_k = Cρ_k·max(1, (C₁/C₀)(log g_k^{−2})^{q₁−q₀}); the same bound holds for j*_n(𝐉), since |𝐉 − J_k|/r_J < 2.
+- {#MD2.4.5.3} *At complex data* (D(k)(iii)) the dev term carries δ*^{(k),c}_n + a*^{(k)}_n(A′), and ρ̃_ka*_n(A′) ≤ Cρ_kα_{1,k}/ᾱ_k = Cρ_k·max(1, (C₁/C₀)(log g_k^{−2})^{q₁−q₀}); the same bound holds for j*_n(𝐉), since |𝐉 − J_k|/r_J < 2.
   {#MD2.4.5.3-1} So the complex-data size gains the factor max(1, λ_R(log g_k^{−2})^{q₁−q₀}) ≤ λ_R(1 + (log g_k^{−2})^{(q₁−q₀)₊}), with λ_R = C₁/C₀ = K_RLM + 1 ≥ 1 fixed after L and M (the two-loop note's #14; table #T2.24), of the same kind as ρ^c_{ph,k}'s.
   {#MD2.4.5.3-2} This is the complex-data tolerance of (0) for the dev term only.
   {#MD2.4.5.3-3} This is the size of the right side away from older layers (next bullet); the clause itself holds on the sub-domain for new groups ((4) *Complex data*) and for carried insertions about U_{k+1} (SW closure §6(6c), given (T-dev)).

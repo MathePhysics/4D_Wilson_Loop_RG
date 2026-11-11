@@ -218,9 +218,24 @@ Input: ⑂ (3)'s NL messages (rows from e2ca5b9e7a82, with ℋ(D) renamed 𝒯(D
 - Round 4 (narrow) and round 5 (full, with the unchanged #T12.31 rows' §3, §6 and §8 anchors re-read in ebaefc789f80) are clean, so the rows are done.
 - Table 7a0f3334905e → 6002edcf2457 → a13230452afd → 0aa0a9313e4b → 4da161f7f9f4 → 5c94a0d5dd14 → db7ae55b6e5a → ff88007cace7. LABELS c6814d4faaee → b7f8d8374c5d → 9495906b1bc0 → 4ee3cc98399f → 5bf9a254d0d8 → e384dc944732. defcheck on LF, on the general-loops note and on the pair note: "-- 0 lines" each; dmarks2 16; deadcheck and prefcheck known hits only; columns 10×5, 74×6, 267×7.
 
+## IT-1 d3aef750d7a9, O4 952a1687d5c4 and D26 45edbc7927d4: #T12.19-2, #T12.19-4-1 to #T12.19-8-1, #T12.32-6, #T12.32-8, #T12.32-10 to #T12.32-12-1, #T12.34 and #T12.34-1 (Table)
+
+Input: (4)'s message on IT-1 §3j and §3e(3.12), O4 and D26, sent at IT-1 c334172e64a1 and D26 d592a6c7431d. The rows follow the files on disk, IT-1 d3aef750d7a9 and D26 45edbc7927d4.
+- New rows: #T12.32-10 and #T12.32-10-1 (§3j(1)–(3): ε_s, σ_H(T), q_s, ℓ_s, m̃, δ_N, m̂, λ, R_N, c_ℓ, ε_N, δ̂, C_sh), #T12.32-11 (§3j(4): s_p, τ̂_N, ω̂_t, ω̄̂, Ĉ^δ_bd, the raised C_bd), #T12.32-12 and #T12.32-12-1 (§3j(5)–(6): N₀, 𝔖̂₁, 𝔖̂₂, μ̂′, C_F = A_E, C_τ, C₀′, C_ph with C₀′, N(g₀), R_t, n_t, a_lab), #T12.34 and #T12.34-1 (O4: ρ_ω, C_ω, ω̃′_t, ω̄̃′, C^δ_bd).
+- Edited rows: #T12.19-2 (ρ_ω to #T12.34), #T12.19-4-1 (ϑ_V wherever written; c_h in §3j and D26 §6.4), #T12.19-5, #T12.19-7 and #T12.19-8-1 (pointers; ρ₁ → ϱ₁), #T12.19-6 (C_m's formula; m̂, λ, δ̂ and C_sh′ to #T12.32-10 and #T12.32-10-1), #T12.32-6 (the old C^δ_bd deleted; τ̄ not #T12.14's τ̄²), #T12.32-8 (δ̂).
+- Re-derived: 4c_G′(C_w′/2 + 4C_{c₀} + 8C_odL) = 2c_G′(C_w′ + 8C_{c₀} + 16C_odL); with α_{1,1} = Lϱ₁, 8m_L(2ρ_L+1)⁴ρ_ωe^{μ_xρ_L} = C_ωC_δϱ₁ϑ_Vr; with ϑ_V = γ/(4c_hm_LN_lat(μ_H)), 4c_hc_ℓϑ_Vγ^{−1}N_lat(μ_H) = 4(2ρ_L+1)⁴; (5/4)(1 + ω̄̂)e^{ω̄̂} ≤ (5/2)e for ω̄̂ ≤ 1 gives Ĉ^δ_bd.
+- Round 1 (full) found I1–I4:
+  - I1: #T12.19-5, #T12.19-6 and #T12.32-8 sent c_ℓ, δ̂ and C_sh to #T12.32-10; they are #T12.32-10-1's.
+  - I2: #T12.19-8-1 sent C^δ_bd to #T12.34; it is #T12.34-1's.
+  - I3: #T12.32-12 and #T12.32-12-1 cited Lemma c5-5-8(b) for C_F and A_E; V4 sets C_F := A_E, the envelope constant of lem:c4-6-env.
+  - I4: #T12.19-2 left ω₀,₀ unnamed, and #T12.32-11 left B_h unqualified.
+- Round 2 (narrow) is clean. Round 3 (full) found I5: #T12.32-11 cited (c) for ω̂_t, which §3j(4) defines in the bullet after *Host bound*.
+- Rounds 4 (narrow) and 5 (full) are clean, so the rows are done.
+- Table ff88007cace7 → 0a9d08071c16 → 5e325c9e5904 → 37e1056450c0. LABELS e384dc944732 → 8a5651829f1d → a3dced12f772 → 3e685cf2133e. defcheck on LF and on the pair note: "-- 0 lines" each. On general-loops note 6be701a1022e it prints lines in the new §9 only (#GL9.2 to #GL9.8-2), whose rows BETA has not sent. dmarks2 16; deadcheck and prefcheck known hits only; columns 10×5, 74×6, 267×7.
+
 ## SHAs
 
-Table: d71e239470ea → eb5a6a505303 → b168c70703ab → 9f6ebf47c805 → 0fa578b35726 → ef03c153b6ad → cc3949e005fb → 77c1b5ec9928 → 18cbd119fc8f → 05cbd40be4db → 7b51b1177ee9 → bb2bbb3fbd08 → 99c0d18618f6 → 7a0f3334905e → ff88007cace7. LABELS: 2d2801629f41 → 146c7b49d22b → d444e40b4233 → 1f2b3fa09b9d → 740b198d7a9d → 58050f8936d3 → 0e94a6174742 → 4c2c66efb348 → 734a37930def → c59773513fd1 → be350896ce4a → 9eeed3a7792e → 7a980dfeec7b → c6814d4faaee → e384dc944732. Background note: 249ae1a46a2a → 8510ab0aebd7 → 7bb5f99918ab → 3047b31464c3 → 22a230556c65 → c7612b0d6f3b → df792ffa33f3.
+Table: d71e239470ea → eb5a6a505303 → b168c70703ab → 9f6ebf47c805 → 0fa578b35726 → ef03c153b6ad → cc3949e005fb → 77c1b5ec9928 → 18cbd119fc8f → 05cbd40be4db → 7b51b1177ee9 → bb2bbb3fbd08 → 99c0d18618f6 → 7a0f3334905e → ff88007cace7 → 37e1056450c0. LABELS: 2d2801629f41 → 146c7b49d22b → d444e40b4233 → 1f2b3fa09b9d → 740b198d7a9d → 58050f8936d3 → 0e94a6174742 → 4c2c66efb348 → 734a37930def → c59773513fd1 → be350896ce4a → 9eeed3a7792e → 7a980dfeec7b → c6814d4faaee → e384dc944732 → 3e685cf2133e. Background note: 249ae1a46a2a → 8510ab0aebd7 → 7bb5f99918ab → 3047b31464c3 → 22a230556c65 → c7612b0d6f3b → df792ffa33f3.
 
 ## Status
 
@@ -235,3 +250,5 @@ The rows #T12.4-1-1 to #T12.4-1-3, #T12.31-0 and #T12.31-11-1 to #T12.31-15 foll
 The rows #T4.44, #T12.19-4-1, #T12.19-6, #T12.19-8-1, #T12.19-9-1 and #T12.32 to #T12.32-9 follow IT-1 9c77825b2a82, map cb9d46678f56 and D26 4dfb36e15797. Rounds 1–10 found R1–R9, all repaired. Rounds 11 (narrow) and 12 (full) are clean, so the rows are done at table 7a0f3334905e. The C_box item is closed by map #MD2.4.12.7-1-5 (C_box ≥ 38).
 
 The rows #T1.3-1, #T12.31-1, #T12.31-2, #T12.31-4, #T12.31-9 to #T12.31-11 and #T12.33 to #T12.33-4-1 follow NL e2ca5b9e7a82, general-loops note ebaefc789f80 and two-loops cea1a21316cc. Rounds 1–3 found N1–N12, all repaired. Rounds 4 (narrow) and 5 (full) are clean, so the rows are done at table ff88007cace7. At general-loops notes 11df5d85a367 (𝒯(D) for ℋ(D), new #GL6.2-0-1 and #GL6.2-0-2, no new symbols) and b4b6a5cc0dfe (#GL6.1-4-2 cites #T12.33–#T12.33-1) every #GL tag the table cites is present with its anchor unchanged, and defcheck prints 0 lines.
+
+The rows #T12.19-2, #T12.19-4-1 to #T12.19-8-1, #T12.32-6, #T12.32-8, #T12.32-10 to #T12.32-12-1, #T12.34 and #T12.34-1 follow IT-1 d3aef750d7a9, O4 952a1687d5c4 and D26 45edbc7927d4. Rounds 1–3 found I1–I5, all repaired. Rounds 4 (narrow) and 5 (full) are clean, so the rows are done at table 37e1056450c0.
