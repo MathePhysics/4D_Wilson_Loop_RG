@@ -926,9 +926,9 @@ the formula of §2. In it:
 
     with δ̂ := H_{U₁,DD}m̂₀ + ℓ_{U₁} the real tilt of §3j(3) and δℓ := (H_𝐔 − H_{U₁})_{DD}m̂₀ + (H_𝐔 − H_{U₁})_{DJ}A^{Λ,Ψ}, which vanishes at a′ = 0.
   - *The constant.* e^{−t²(½⟨m̂₀,Hm̂₀⟩ + ⟨m̂₀,ℓ_𝐔⟩)} is a nonzero number, the same in the numerator and the denominator of every ratio (c5-4-3) and in Ξ^{f,t}_Λ. V4 never estimates its counterpart e^{½t²⟨m,Hm⟩} in (c5-4-2), and the extension of (3.10) uses normalised quantities only through cluster series ((3.7) *Normalisers*). So it cancels.
-  - *The size of δℓ.* An entry H(b,b′) vanishes for d(b,b′) > ρ_L at every background, its entry stencil being empty (Lemma hessian-gauge-locality), and the entries of H_𝐔 − H_{U₁} have norm at most C_eϱ₁ ((3.1)). With h(m̂₀(b′)) ≤ 2C_mϑrΣ_{e∈J₁(Λ)}e^{−μ_xd(b′,e)} (§3j(5)), h(A^{Λ,Ψ}_e) < ϑr on J₁(Λ), d(b′,e) ≥ d(b,e) − ρ_L and at most 4(2ρ_L+1)⁴ bonds b′ with d(b,b′) ≤ ρ_L (proof of Lemma c5-5-1),
+  - *The size of δℓ.* An entry H(b,b′) vanishes for d(b,b′) > ρ_L at every background, its entry stencil being empty (Lemma hessian-gauge-locality), and the entries of H_𝐔 − H_{U₁} have norm at most C_eϱ₁ ((3.1)). With h(m̂₀(b′)) ≤ 2C_mϑrΣ_{e∈J₁(Λ)}e^{−μ_xd(b′,e)} (§3j(5)) and J₁(Λ) ⊆ J_col(Λ), h(A^{Λ,Ψ}_e) ≤ |A^{Λ,Ψ}_e|_σ < ϑr on J_col(Λ) (Lemma c5-3-1(b)), which contains every e ∈ J(Λ) within ρ_L of D(Λ), d(b′,e) ≥ d(b,e) − ρ_L and at most 4(2ρ_L+1)⁴ bonds b′ with d(b,b′) ≤ ρ_L (proof of Lemma c5-5-1),
 
-    h_ℂ(δℓ(b)) ≤ C_δϱ₁ϑrΣ_{e∈J₁(Λ)}e^{−μ_xd(b,e)},   C_δ := C_ee^{μ_xρ_L}(8(2ρ_L+1)⁴C_m + 1).
+    h_ℂ(δℓ(b)) ≤ C_δϱ₁ϑrΣ_{e∈J_col(Λ)}e^{−μ_xd(b,e)},   C_δ := C_ee^{μ_xρ_L}(8(2ρ_L+1)⁴C_m + 1).
 
   - *The tilt in the host potentials.* Each b ∈ D(Λ) has its probe host Y_b ∈ 𝐃₀(Λ), with b ∈ E(Y_b) (Lemma c5-4-0(d), (c-probe-host)). With the probe L_Y(λ,B) := Σ_{b:Y_b=Y}⟨λ_b,B_b⟩ of V4 Section c5-5 (before Lemma c5-5-2), put P̃_t(Y,B) := 𝐏_t(Y,B) − tL_Y(δ^𝐔,B) and W̃_t(Y,B) := Θ^t_{E(Y)}(B)P̃_t(Y,B), with V4's 𝐏_t(Y,B) = Σ_{𝔭 near, Y_𝔭=Y}𝔭(B + tm̂₀ + tA^{Λ,Ψ}) at 𝐔 (proof of Lemma c5-5-6(a)). On the support of Θ^t every box factor is 1, so Σ_YW̃_t = Σ_Y𝐖_t − t⟨B,δ^𝐔⟩ there and the expansion is exact. The Gaussian stays centred with the complex H, as (3.4) needs. At real backgrounds this is §3j(4)'s tilt.
   - *Bounds.* W̃_t(Y,·) depends on B|_{E(Y)} only and vanishes off the translated local box, where |B_b|_σ < r + |m̂₀_b|_σ ≤ 5r/4; so V4's properties (i)–(iii) of the proof of Lemma c5-4-1 hold, as V4 records for 𝐖_t + L_Y before Lemma c5-5-2. For real x, |⟨x,y⟩| ≤ h(x)h_ℂ(y) ≤ |x|_σh_ℂ(y) (h ≤ |·|_σ, proof of Lemma c5-5-7z(b)), and at most C_M bonds b have Y_b = Y ((c5-5R-T)).
@@ -936,9 +936,9 @@ the formula of §2. In it:
   - *Tilt threshold.* Items 4(ii) and (iii) of Section app:thresholds ((c5-5-T)(ii), (iii); (c5-5R-T)(ii)) are required with ω̃_t and ω̄̃ in place of ω_t and ω̄ at t > 0. They are g₀-thresholds: ω_t, ω̄ and τ̂_N tend to 0 with g₀ (§3j(6)), and τ̄ ≤ Cϱ₁r² with ϱ₁r² ≍ g₁(log g₁^{−2})^{q₁}A₁²(log g₀^{−2})^{2p₀} → 0. Then Lemmas c5-4-2 and c4-7-1 and §c5-5, §c5-5R apply at 𝐔 with W̃_t ((3.7), (3.9)). The second branch of (iii) enters only through P̃₀ = 𝐏₀ and is unchanged.
   - *Tilt marks.* On the support of Θ^t the t-derivative of the tilt part is −L_Y(δ^𝐔,B), of modulus at most (5/4)rΣ_{b:Y_b=Y}h_ℂ(δ^𝐔(b)). In a host mark without exterior input it adds, as for V4's second 𝔪_Y,
 
-    𝔪^δ_Y := (5/4)r(1+ω̄̃)e^{ω̄̃}e^{κs_p}e^{1/8}ω_*^{−1}Σ_{b:Y_b=Y}h_ℂ(δ^𝐔(b)) ≤ C^δ_bd rΣ_{b:Y_b=Y}h_ℂ(δ^𝐔(b)),   C^δ_bd := (5/2)e^{1+κs_p+1/8}/ω_*,
+    𝔪^δ_Y := (5/4)r(1+ω̄̃)e^{ω̄̃}e^{κs_p}e^{1/8}ω_*^{−1}Σ_{b:Y_b=Y}h_ℂ(δ^𝐔(b)) ≤ Ĉ^δ_bd rΣ_{b:Y_b=Y}h_ℂ(δ^𝐔(b)),
 
-    by ω̄̃ ≤ 1. With h_ℂ(δ^𝐔(b)) ≤ h(δ̂(b)) + h_ℂ(δℓ(b)) and §3j(5)'s bound on δ̂, 𝔪^δ_Y ≤ C^δ_bd(C_she^{3μ_Hρ_L/20}g₀ + C_δϱ₁)ϑr²Σ_{b:Y_b=Y}Σ_{e∈J₁(Λ)}e^{−μ_xd(b,e)}. This is the form of V4's host marks without exterior input at rate μ_x, small in the coupling, and the tilt marks enter Prop. c5-5-9 as those marks do ((3.9)). At a′ = 0 they are §3j(4)'s tilt marks.
+    with §3j(4)'s Ĉ^δ_bd = (5/2)e^{1+κs_p+1/8}/ω_*, by ω̄̃ ≤ 1. With h_ℂ(δ^𝐔(b)) ≤ h(δ̂(b)) + h_ℂ(δℓ(b)), §3j(5)'s bound on δ̂ and J₁(Λ) ⊆ J_col(Λ), 𝔪^δ_Y ≤ Ĉ^δ_bd(C_she^{3μ_Hρ_L/20}g₀ + C_δϱ₁)ϑr²Σ_{b:Y_b=Y}Σ_{e∈J_col(Λ)}e^{−μ_xd(b,e)}. This is the form of V4's host marks without exterior input at rate μ_x, small in the coupling, and the tilt marks enter Prop. c5-5-9 as those marks do ((3.9)). At a′ = 0 they are §3j(4)'s tilt marks.
   - *Order.* At 𝐔, ρ_ph is V4's with ω̃_t in place of ω_t: the class-(β) factor of Step 3 of the proof of Lemma c5-5R-3 is 2ω̃_t/ω_*, with R_Υ := ω_*/(2ω̃_t) in Lemma c5-5R-2(c). Since g₁ ≤ (1+β₀)g₀ (CRE (2.6), p.255) and x(log x^{−2})^{q₁} increases for small x, ϱ₁ ≤ C₁(1+β₀)g₀(log g₀^{−2})^{q₁}/L. With r = A₁(log g₀^{−2})^{p₀} and r²/(1+2r)³ ≤ 1/(8r), ρ_tτ̄ ≤ Cg₀²(1+2r)⁴(log g₀^{−2})^{q₁−p₀}, and ρ_tτ̂_N ≤ Cg₀²(1+2r)⁴ (§3j(6)). So ρ_ph ≤ C^𝐔_phg₀²(1+2r)⁴(1 + (log g₀^{−2})^{(q₁−p₀)₊}) at 𝐔, and ε̄_ph = 2K_χC_pinρ_ph with it.
 
 **(4) Result.** Assume repairs K and K′ ((3.0), (3.6)), and let g₀ satisfy, besides V4's thresholds with the constants of K and K′:
@@ -960,8 +960,8 @@ The constants are V4's under K and K′ and those defined in (1)–(3), independ
 **(5) Count Check.**
 - A_n(R) ≤ ‖a′‖_∞ < ϱ₁ and Σ_{k≥1}(k+1)e^{−(61/16)ηk} < ∞, so a*_n(a′) ≤ C_ηϱ₁. With δ*^c_n ≤ C_ηε₁ (§3a(6) *Count check*, at the rate 61/16), the curvature term is at most C_χρC_η(ε₁ + ϱ₁) on the polydisc; ε₁ and ϱ₁ are both g₁ times a power of log g₁^{−2}.
 - The other costs at 𝐔 are e^{C′𝔰(W)ϱ₁} ≤ e^{η𝔰(W)/8} per group, e^{C₄s|J_Z|} ≤ e^{N₁(Z)/4} per component, and e^{κs_p}τ̄ per host inside ω̃_t ≤ ω_*/2. None is a volume factor: the global Hessian enters only through the local det C_{E₀} ((3.3), (3.4)).
-- *Tilt marks per traversal.* Each bond has one probe host, so by (3.12) the tilt marks sum to at most C^δ_bd(C_she^{3μ_Hρ_L/20}g₀ + C_δϱ₁)ϑr²Σ_{b∈D(Λ)}Σ_{e∈J₁(Λ)}e^{−μ_xd(b,e)}, against the weights e^{−ηdist(Δ,n)/(C_FLM)} of §3a(7). As in the proof of Prop. c5-5-9 (ν = η), passing from the assigned cube to the host costs C_dist, and from the host to a bond b ∈ E(Y) costs e^{νR_st/(C_FLM)}; no factor N_host enters, since each bond has one probe host.
-  - The splitting of (c5-5-2) with X = {n} and μ = η/(C_FLM) bounds the sum by C(g₀ + ϱ₁)ϑr²N_lat(μ_x/2)Σ_{e∈J₁(Λ)}e^{−min(μ_x/2, η/(C_FLM))dist(e,n)}: (g₀ + ϱ₁)r² times the collar decay.
+- *Tilt marks per traversal.* Each bond has one probe host, so by (3.12) the tilt marks sum to at most Ĉ^δ_bd(C_she^{3μ_Hρ_L/20}g₀ + C_δϱ₁)ϑr²Σ_{b∈D(Λ)}Σ_{e∈J_col(Λ)}e^{−μ_xd(b,e)}, against the weights e^{−ηdist(Δ,n)/(C_FLM)} of §3a(7). As in the proof of Prop. c5-5-9 (ν = η), passing from the assigned cube to the host costs C_dist, and from the host to a bond b ∈ E(Y) costs e^{νR_st/(C_FLM)}; no factor N_host enters, since each bond has one probe host.
+  - The splitting of (c5-5-2) with X = {n} and μ = η/(C_FLM) bounds the sum by C(g₀ + ϱ₁)ϑr²N_lat(μ_x/2)Σ_{e∈J_col(Λ)}e^{−min(μ_x/2, η/(C_FLM))dist(e,n)}: (g₀ + ϱ₁)r² times the collar decay.
 
 **(6) Words on the Polydisc.** At 𝐔 the words U_j and f_ξ(m̂₀) have norm up to E_C(a′) ≤ e^{C_Un_Cϱ₁} ((4)), which grows with the perimeter. So no estimate takes their supremum over the whole ϱ₁-polydisc; their Cauchy estimates are local, as follows.
 - *(a) Cauchy estimates in a bounded set of variables.* Let F be f_ξ(m̂₀) or a word U_j, analytic in a′ on {‖a′‖_∞ < ϱ₁} with |F(a′)| ≤ exp(C_UΣ_{n∈C_F}‖a′‖_{𝓔(r_n)}) ((3.8) *Words*; C_F the traversals of C for f_ξ and of U_j for U_j; operator norm for words). Fix an h-orthonormal basis (T_k) of 𝔤, so that h_ℂ(Σ_kz_kT_k) ≤ √d_G max_k|z_k|. Fix a′₀ with ‖a′₀‖_∞ < ϱ₁, a set S of fine bonds and 0 < r < ϱ₁ − ‖a′₀‖_∞, and put D_S := {a′₀ + z : z(b) = Σ_kz_k(b)T_k, z = 0 off S, |z_k(b)| ≤ r/√d_G}.
@@ -1386,149 +1386,35 @@ CRE pp.276–278 repeat the scheme, citing RG2 as "Sect. 6 [I]" and "(I.7.3)–(
 
 **(7) Result.** The t > 0 species, the words and f_ξ(m̂) depend on Λ only within R_t + ρ_L of their footprints ((2), (4), (6)). V4's uses of the shift in Sections c5-4 to c5-7 are of three kinds, and each holds at m̂: the pointwise uses (|m_b|_σ ≤ r/4, values at b and the segments sm) verbatim ((4)); the expansion at the young variable B + tm, with its constant, by the identity of (4); and the sums of h(m_b), over E(Y), I_C and I_{𝓗(W)} or weighted as in (c5-5-2), by (5). The new conditions are N = N(g₀) ≥ N₀, ℓ_s = ℓ_s(L, G) and the g₀-thresholds of (4)–(6); the rates μ_H/2 and μ′ of Prop. c5-5-9 and its consumers become μ_x/2 and μ̂′.
 
-## 4. The class 𝔇₁ and the target D1 (draft)
+## 4. The Class 𝔇₁ and the Target D1
 
-Repaired after reviews it1-b-frame-20261021-r1 (S1–S4, S6) and it1-a-dev-20261021-r1 (S-2). The earlier draft indexed insertions by intervals. That cannot contain V3's bracket: several groups can have the same interval, and q° and Υ depend on the groups themselves. Its norms were also unquantified, and its clause (ii) was vacuous (dev := ‖Y‖/(2K_χM) satisfies it by §3 and §2(f)).
-
-**Definition (draft).** A *dressed loop of step 1* for C_n on a labelled term (final region Λ, carrier D(Λ)) is a function of V and of the outer variables that the term holds constant, of the form
+**Definition.** A *dressed loop of step 1* for the square C_n on a labelled term (final region Λ, carrier D(Λ)) is a function of V and of the outer variables that the term holds constant, of the form
 
 𝒲 = κ_C e^{E} [ f + Σ_{𝔅≠∅ compatible} Q(𝔅)·dim(π)⁻¹ tr(Y_{W₁}U₁ ⋯ Y_{Wₙ}U_n) ].
 
-The outer variables are V₀ on Ω₁ᶜ, the exterior variable on J, and the de-younged bonds I∖D(Λ) (L2594). On uncovered terms they also enter the contour links (§3d(1)). The ingredients:
-- **groups** W of V3 (Lemma c5-5-3(a)), with size |W| := σ(W), and **families** 𝔅 compatible in V3's sense: "all their constituent domains … mutually compatible and their intervals are disjoint" (L967);
+The outer variables are V₀ on Ω₁ᶜ, the exterior variable on J(Λ), and the de-younged bonds I∖D(Λ), which are constants of the term (V4 Lemma c5-4-4); on uncovered terms they also enter the contour links (§3d(1)). The ingredients:
+- **groups** W of V4 Lemma c5-5-3(a), of size σ(W), and **families** 𝔅 = {W₁, …, Wₙ}, in the cyclic order of their intervals, compatible in V4's sense: "all their constituent domains (roots and cluster members) are mutually compatible and their intervals are disjoint" (V4 Section joint-extraction);
 - **insertions** Y_W ∈ End(V_π), one per group;
-- **leading word** f, a unitary word of the background (V3: f_ξ(m)); on uncovered terms it also contains outer variables (§3d(1); d11-r2 m-g);
+- a **leading word** f, a unitary word of the background (f_ξ(m̂) on covered terms, §3j(4) *Identity*); on uncovered terms it also contains outer variables (§3d(1));
 - **words** U_j, unitary words of the background and the outer variables;
-- **interactions** Q(𝔅) = exp(−Σ_{Γ hits 𝔅} φ(Γ)), over the clusters Γ of the reference group gas, with "hits" as in Lemma c5-5-3(d);
-- **scalar exponent** E = Σ_X e_X + E_const, a sum of local terms plus a constant of the contour and the torus.
+- **interactions** Q(𝔅) = exp(−Σ_{Γ hits 𝔅} φ(Γ)), over the clusters Γ of the reference group gas, with "hits" as in V4 Lemma c5-5-3(d);
+- a **scalar exponent** E = Σ_X e_X + E_const, a sum of local terms e_X and a constant E_const of the contour and the torus.
 
-The norms, quantified as V3 and §3 to §3b supply them. Here a > 0, and the bounds hold for every traversal n and every coarse segment j:
-- |Q(𝔅)| ≤ ∏_{W∈𝔅} e^{θ°(W)} with θ°(W) ≤ νσ(W)/16 (Lemma c5-5-3(d), rooted Kotecký–Preiss; §2(d));
-- Σ_{W∋n} e^{θ°(W)}‖Y_W‖ ≤ ν_n, with ν_n as in D1(ii) below;
-- Σ_{X within R_0 of K_j} |e_X|e^{a·diam X} ≤ Cτ²e^{−c'd_j} (§3b(4); D(1) uses the thin form of §3i(7) instead, map #MD2.0.3.51), and |E_const| ≤ Cτ²(4ne^{−cι_T} + (n+1)e^{−cn}).
+The norms are as follows, for some a > 0, every traversal n and every coarse segment j:
+- |Q(𝔅)| ≤ ∏_{W∈𝔅} e^{θ°(W)} with θ°(W) ≤ νσ(W)/16 (§2(d));
+- Σ_{W∋n} e^{θ°(W)}‖Y_W‖ ≤ ν_n, with ν_n bounded in D1(ii);
+- Σ_{X within R_0 of K_j} |e_X|e^{a·diam X} ≤ Cτ²e^{−c′d_j} (§3b(4); the map's D(1) uses the thin form of §3i(7), map #MD2.0.3.51), and |E_const| ≤ Cτ²(4ne^{−cι_T} + (n+1)e^{−cn}).
 
-**D1 (candidate target).** It is not certified as the weakest form D2 can use: D2 is in WILSON_IT1_D2_STEP_MAP_2026_10_22.md, where D(1) ⊇ D1 (map D2.0(3)) and §6(c)'s count is D2.4. For the squares C_n under (c5-7-T), for every n, and for every labelled term (covered or not, §3d), F^Λ(1) is a dressed loop of step 1 such that:
-- **(i)** κ_C = e^{−δm^σP(C_n)}(z_c^σ)⁴, the exact first-step coefficients of V3;
-- **(ii) per-traversal form.** For every traversal n,
+**D1.** For the squares C_n under (c5-7-T), every n, and every labelled term, covered or not (§3d), F^Λ(1) is a dressed loop of step 1 such that:
+- **(i)** κ_C = e^{−δm^σP(C_n)}(z_c^σ)⁴, V4's exact first-step coefficients (eq:extracted-loop-scalar; §2(g));
+- **(ii)** for every traversal n,
 
-  ν_n ≤ C_χρ δ*_n(U₁) + Cρ e^{−c(d(n)−1)/(LM)} + Cρ e^{−cN_min/(LM)} + Cρ_t[Σ_Δ 𝔪̂_Δ e^{−η dist(Δ,n)/(C_F LM)} + C'_χ g₀ Σ_b h(m_b) e^{−η dist(b,n)/(C_F LM)}],
+  ν_n ≤ C_χρ δ*_n(U₁) + Cρ e^{−c(d(n)−1)/(LM)} + Cρ e^{−cN_min/(LM)} + Cρ_t[Σ_Δ 𝔪̂_Δ e^{−η dist(Δ,n)/(C_F LM)} + C′_χ g₀ Σ_b h(m̂_b) e^{−η dist(b,n)/(C_F LM)}],
 
-  with the notation of §3a(6),(7); on uncovered terms d(n) is replaced by d^Λ(n) = dist(Γ_n, E(B_ξ) ∪ (I∖D(Λ))) and ρ by ρ̂ = max(ρ, ρ_ph) (§3d(4); d11-r2 m-g). The first term is the *deviation part*. It is gauge-invariant local curvature that vanishes at flat data, with dev(W) = 𝔰(W)³δ_{Q_W}(U₁) for good groups. The other terms are *attached parts*. They are attached to B_ξ, to the torus wrap and to the collar data, with the decay shown, and they carry no deviation; they are routed to D2(d);
-- **(iii)** D1(iii)′ of §3e(0): for real U₁ in the support of the term's indicators, which are kept as factors, the background-dependent factors (Υ¹_W, hence Y_W; the words U_j; f) extend analytically to 𝐔 = e^{ia′}U₁ with ‖a′‖_∞ < ρ₁ = α_{1,1}/L, G-covariantly, with (ii) holding there with δ*^{30}_n(U₁) + a*_n(a′) (§3e(0); rate (61/16)η after the D2.6 closure 6.5); φ and e_X are numbers on each labelled term (D1.2b). The analyticity in the coarse field V comes from this and VAR Prop. 9, and belongs to D2;
+  with the notation of §3a(6)–(7), the marks 𝔪̂_Δ including the tilt marks of §3j(4); on uncovered terms d(n) is replaced by d^Λ(n) = dist(Γ_n, E(B_ξ) ∪ (I∖D(Λ))) and ρ by ρ̂ = max(ρ, ρ_ph) (§3d(4)). The first term, the *deviation part*, is gauge-invariant local curvature and vanishes at flat data (§3, §3a(5)). The other terms, the *attached parts*, are attached to B_ξ, to the torus wrap and to the collar data with the decay shown, and carry no deviation (§3a(8));
+- **(iii)** D1(iii)′ of §3e(0), proved in §3e(4): for real U₁ in the support of the term's indicators, which are kept as factors, the background-dependent factors (Υ¹_W, hence Y_W; the words U_j; f) extend analytically to 𝐔 = e^{ia′}U₁ with ‖a′‖_∞ < ϱ₁ = α_{1,1}/L, G-covariantly, and (ii) holds there with δ*^c_n(U₁) + a*_n(a′) in place of δ*_n(U₁); φ and e_X are numbers on each labelled term (§3b(5));
 - **(iv)** all constants are independent of n, the torus and the labelled term.
 
-No smallness of Σ_W ‖Y_W‖ is claimed.
+No smallness of Σ_W ‖Y_W‖ is claimed. D1 is per labelled term; the assembly of F_ξ(1) into CRE's form Σχ₁T₁[· exp A₁] is §3c.
 
-These contours are unions of coarse-bond traversals at every scale, which a dressed loop of step 1 needs. For a contour not aligned with the coarse blocks there is no coarse loop. V3 defines κ_C only for C_n, and Remark c5-5-11(6) makes "the square/torus geometry" "a standing hypothesis of C_pin, A_F, A_E and the hull bounds". Rectangles, needed only for the Creutz route of the iteration audit §6, are open.
-
-D1 is per labelled term. F_ξ(1) and the form ρ₁ = Σχ₁T₁[· exp A₁] that step 2 needs come from the labelled terms by an assembly, gap D1.0.
-
-**Where D1 stands.**
-- On covered labelled terms, §2 gives the form, with (i) and (iv) from V3 under (c5-7-T).
-- §3a gives (ii) at real data (D1.2a).
-- (iii), in the form D1(iii)′, is derived in §3e (D1.2b) on every labelled term, under repair K; not reviewed.
-- §3b gives the carrier part of E as a local sum (D1.3). E_const = E°_{T,n} depends only on n and the torus.
-- D1.0 (assembly) is derived at step 1 with the choice (P) (§3c), including D1.0(P)(ii): the ϑδ₀ bad-cube factor's part (ii)'s two dependencies, D2.7's step-1 part and the acceptance item, are derived in RC_PAYMENT_PASS_2026_10_24.md Sects. 2–4 (reviewed and repaired, the repairs unreviewed; map #MOMGD.12; gaps block l.95). The lines below that still call it OPEN pending D2.7 are superseded by this.; p.256's conditions for the later steps are part of the acceptance item, whose small-field part is in the D2 file, D2.2(3)(b) (rd5-d2-r3 m8).
-- D1.1 (uncovered branches): §3d gives the form, (i), (ii) and (iv) on every labelled term; not reviewed.
-
-## 5. Skeptic pass on D1
-
-- **S1 (reference point).** Closed; see §3.
-- **S2 (vacuity).** Without a quantitative (ii), almost anything with bounded local activities fits the definition. The earlier qualitative (ii), "dev vanishes at the reference point and is gauge-invariant", was itself vacuous: dev := ‖Y‖/(2K_χM) satisfies it by §3 and §2(f). The content is the per-traversal form of §4(ii): the deviation part is local curvature, and every other part is attached, with explicit decay, to B_ξ, the wrap or the collar data. That is what is expected to make the non-scalar dressing irrelevant at step 2 (§6(c), heuristic).
-- **S3 (gauge).** dev must be gauge-invariant, for example local curvature, while U₁ = id is a gauge choice.
-  - What is needed: X_W := Υ^1_W + a^Λ_W·id is covariant under gauge transformations of the data supported near ℋ(W), acting by conjugation at the initial site of the interval (T_W(B)P_W⁻¹ is based there).
-  - Then one can pass to the rooted tree gauge on Q_W, with ‖B_W‖_∞ ≤ C_tg diam(Q_W)²δ_{Q_W}(U₁) ((c4-10-17)), so the deviation scales as (LM𝔰)²δ.
-  - **Closed for good groups (§3a(5)).** V3 itself proves the comparison through the rooted tree gauge and coefficient covariance (§c4-8-1, §c4-11, at D(Λ) L3082), with the gauge-invariant δ_{Q_W}.
-  - For groups that are not good, no deviation is claimed. Their covariance is still needed for the step-2 covariance below.
-  - At step 2 the gauge changes, so the covariance of the dressed loop under the step-2 gauge, for all groups, is part of D2.
-- **S4 (count at step 1).** At step 1 nothing is summed along the contour.
-  - The scalar reference gas is exact, inside S° = κ_C e^{E°}.
-  - The insertions are carried and never exponentiated. Their total is the audit's term §4(6): by §3a(6),(8) it is of order n_Cρε₁ on far histories, plus O(ρ) per traversal near B_ξ.
-  - The shift parts sit near the exterior, through D_ξ = Σ_{b∈I_C} e^{−μd(b,J)/2} (L2447).
-- **S5 (non-interleaving).** Disjoint insertion sites are necessary but not sufficient to contain V3's bracket. The class is therefore indexed by V3's groups, with V3's compatibility (§4). At step 2, an insertion site of the coarse contour can contain several step-1 insertions. Merging them into one coarse insertion is a plan only (D2).
-- **S6 (large-field weight).** On uncovered branches, the large-field suppression of the branch weight multiplies 𝒲; it is not used to bound 𝒲. D1's bounds (ii) and (iv) hold there by §3d; (iii) holds there by §3e(4). At D2 the 𝐑-operation has to resum the suppression (§6(d)).
-
-## 6. Where the difficulty goes: D2 (not started)
-
-- **(a) The step map.** Integrate the step-2 fluctuations with a dressed loop as the observable. Lemma c5-5-3 is needed with f a dressed loop instead of a bare W_χ: the old insertions become part of f.
-- **(b) Exact absorption.** The scalar part produced at step 2 must go exactly into S°₂ = κ₂e^{E°₂}, giving δm₂ and z₂ (IT-3). It comes from the step-2 reference gas and from pair contractions of step-1 insertions.
-- **(c) Contraction count (heuristic; to be derived).**
-  - Suppose dev is proportional to curvature. For a smooth background, fine-scale curvature is about L⁻² times coarse curvature, and each coarse bond carries L fine sites. So the non-scalar part contracts by about L⁻¹ per step.
-  - Scalar curvature terms are gauge-invariant and have no linear term, because tr π(X) = 0 for X in the semisimple 𝔤. So they are at least quadratic and contract by about L⁻³.
-  - Insertions induced by the shift stay attached to large-field regions.
-  - This is dimension counting, not a derivation. Deriving it needs regularity of the minimisers (VAR) on small-field regions. OPEN.
-  - **The Bałaban input for it.** CRE p. 268, after (3.17): "The field U_{k+1} satisfies the regularity condition |∂U_{k+1} − 1| < 2B₃ε_{k+1}(L⁻¹η)² on Ω_{k+1}".
-    - In §3a, dev(W) = 𝔰(W)³δ_{Q_W}(U₁) is a plaquette deviation.
-    - So at step 2 the input is this bound for the step-2 background, read on the fine plaquettes of the step-1 insertions.
-    - Whether (L⁻¹η)² gives the L⁻² of the heuristic has to be checked against the scale convention of η on that page. OPEN.
-- **(d) Large-field defects.** At step 2, Bałaban's 𝐑-operation replaces large-field expressions by small-field ones "in such a way, that integrals of the densities are unchanged" (LFR I p.176, (0.3)–(0.4)). CRE refers to it on p.254 ("new terms obtained by the 𝐑-operations"). CRE p.257 describes the operations T_k, not R. With the contour inside a large-field region, R must also carry the arc holonomy, which has norm ≤ 1.
-  - Scalar parts: a polymer expansion with modified activities for the polymers that touch C.
-  - Non-scalar parts: they should vanish at flat outer data if the constant-gauge argument of §3 applies there. Not checked. OPEN.
-
-## 7. Next steps, in order
-
-Done at 21:36:
-- S1 (§3);
-- D1.2a (§3a). It came from V3's path argument, not from a Cauchy estimate: V3's coefficient path already compares each good group with its reference;
-- S3 for good groups (§3a(5)).
-
-Done at 21:50: D1.3 (§3b), not reviewed.
-
-Done (reports written 21:54–22:00 by file time; read and repaired by 22:14): the six reviews were read and repaired (status lines of this note, of the iteration audit and of the LIP-1(a) note).
-
-Done 22:14–22:23: D1.0 at step 1 (§3c), up to the choice (A)/(P) and the check D1.0(P). Not reviewed. If (P) is chosen, D2 starts from CRE's T₁ form, with V3's labels as refined labels.
-
-Done 23:10–23:31: reviews it1-d-d13 (§3b) and it1-c-d10 (§3c up to (4″)) read and repaired. Neither found anything fatal. §3b now has the anchored decomposition. §3c now defines V^{(0)} as the exact change, bounds the cross-component blocks, routes the bad tests through the positivity bound and uses the enlarged retreat 𝒬⁺ (§3c(4⁗)).
-
-Done 23:35–23:48: the D1.0 leftovers. The four placements of §3c(2) are fixed (the Λ₁-row placement for z^{(0)}, since derived). The label sum factorises over the ∗-components of Λᶜ (§3c(4⁗)(d), derived). Not reviewed.
-
-Done 23:50–00:15 (22 Oct): D1.1 by the closed-contour route (§3d). The identity holds on every labelled term, with V3's coverage hypotheses checked at each use. Not reviewed.
-
-Done 00:24:46 (22 Oct): review round 3 launched at the user's "Launch reviewers and continue": packets it1-c2-place, it1-c4t-ii, it1-c4q-rep and it1-d11 (§3c(2), §3c(4‴), §3c(4⁗), §3d). Reports written 00:37–00:40.
-
-Done 00:30–00:57 (22 Oct): D1.2b (§3e), in the form D1(iii)′, with repair K of V3's constants. Not reviewed; not in round 3.
-
-Done 01:05–02:05 (22 Oct): every round-3 finding repaired (§3f). Not reviewed.
-
-Done 05:18:41 (22 Oct): review round 4 and the review of the ϑδ₀ bad-cube factor launched at the user's "Run a review on the reading of R-d'' and R4" (nine packets, header). Before the launch, §3f(2) R1 was corrected: [16] is UV3 and is transcribed.
-
-Done 05:19–05:29 (22 Oct): the D1.3 leftovers (§3g). The reference species are local in the carrier, with a size- and diameter-weighted bound. The label sum has the polymer form. Not reviewed.
-
-Done 05:55–07:28 (22 Oct, session log): the round-4 reports read and repaired (§3h; triage file in verification/isolated_reviewer/reviews). No fatal finding. The ϑδ₀ bad-cube factor is not printed, so D1.0(P)(ii) is OPEN. Repair K′ is proposed. Not reviewed.
-
-Done 08:57–09:39 (22 Oct, from the user's "1.(a), 2(a)" at 08:57): the ϑδ₀ bad-cube factor derived (§3f(2) R1, (D0)–(D2)). The bad-cube factor comes pointwise from half of the T₁^Λ form, by a localisation lemma from H ≥ 0 (CRE p.248) and V3's local gap near I. Its insertion into (1.79) rests on the halved-T-form assumption (not printed). Not reviewed.
-
-Done 10:18 (22 Oct): the user accepted the halved-T-form assumption as a logged Bałaban reading ("(a)"), to be reviewed with (D0)–(D2) in the next round.
-
-Done 10:25:42 (22 Oct, at the user's "(a)"): review round 5 launched, packets it1-rd3-pw-20261022-r1 ((D0)–(D1), geometry, use) and it1-rd3-rs-20261022-r1 ((D2), the halved-T-form assumption, positivity, Minor 4's factor), on claude-opus-5-5. Finished 10:39 and 10:43; no fatal finding.
-
-Done 10:33–10:50 (22 Oct, date): D2's first item, the thin form of E^∂, derived in §3i. Not reviewed.
-
-Done 10:50–11:04 (22 Oct, date): round 5 read and repaired in §3f(2) R1. The halved-T-form assumption is withdrawn; the ϑδ₀ bad-cube factor's part (ii) follows from the printed (1.79) by Hölder's inequality and the subadditivity of the linear size (rd3-rs S1). The comparison with Λ₁ is withdrawn (rd3-rs S2). The ϑδ₀ bad-cube factor is restated in two parts (rd3-pw S1); the minors are applied. Not reviewed.
-
-Done 11:12:37 (22 Oct, at the user's "Yes: launch the review of the round-5 repairs … and §3i now"): review round 6 launched, packets it1-rd4-d2-20261022-r1 (§3f(2) R1 (D2), Minor 4's factor), it1-rd4-thin1-20261022-r1 (§3i(0)–(4)) and it1-rd4-thin2-20261022-r1 (§3i(5)–(7)), on claude-opus-5-5. No fatal finding.
-
-Done 11:13–11:30 (22 Oct): the constraint §6(f) written.
-
-Done by 11:36 (22 Oct, date): round 6 read. d2 S1: the Hölder route is not valid as used; thin1 S1: the complex-s claim of §3i(2) is wrong; thin2 S1: X(Γ,Y) need not be connected.
-
-Done 11:36–12:04 (22 Oct, date): d2 S1 and m1–m12 repaired in §3f(2) R1 and the §3c lines. The ϑδ₀ bad-cube factor's part (ii) is derived factor by factor at Λ, under the k = 1 construction check, the p.380 P₁/Q₁ location and CRE p.250's cube comparison; (D-b⁺) and (D1⁺) are added. Not reviewed.
-
-Done 12:04–12:13 (22 Oct, date): thin1 S1, M1–M7 and thin2 S1, m1–m11 repaired in §3i. Not reviewed.
-
-Done 12:13–12:24 (22 Oct, date): D2's second item, the carrier dependence of the t > 0 species, derived in §3j, except (O1)–(O3). Not reviewed.
-
-Done after 12:26, by 12:43 (22 Oct, date): the p.380 P₁/Q₁ location and CRE p.250's cube comparison checked against UV3 (70)–(71) p.273, VAR p.279 and CRE pp.245–250. Neither is a reading: the 12:24 listing as readings was made before the available sources were read. The p.380 P₁/Q₁ location's status is "location checked; rates quoted from p.380 (step k ≥ N + 1)" (rd5-d2-r2 m2); CRE p.250's comparison on Ω₁^{∼−1} is quoted and checked and not used. D1.0(P) at step 1 rests on the k = 1 construction check, apart from the open D2.7 item of the ϑδ₀ bad-cube factor's part (ii) (now two items, §3f(2) R1 status; rd5-d2-r4 m-1(c)).
-
-Done after 12:44, by 12:53 (22 Oct, date): §3j (O1)–(O3) closed. V3's η is fixed by forest-sum bounds only (L4619, L4775, L4790), which do not imply η/(A_ELM) ≤ μ_H/20. The condition is withdrawn as unneeded: §3j(5) now uses the pointwise decay form at rate μ_H/20, which serves Prop. c5-5-9 and all its consumers for every η. The pass over V3 L2479–3120 classified every use of m. No V3 change beyond the m → m̂ repair. Not reviewed.
-
-Done 13:06 (22 Oct, at the user's "Yes: launch the review of the round-6 repairs …" and "launch them through the app"): review round 7 started as six app sessions on claude-opus-5-5, one subsection per packet: it1-rd5-dbq, -d2, -thin1, -thin2, -tj1, -tj2 (all -20261022-r1; builder verification/isolated_reviewer/build_round7_review_packets_20261022.py, rendered to .packet.md).
-
-Done 13:17–13:21 (22 Oct, date): the LFR II T′ citation check ((D2) (l)), against pp.356–380 and LFR I p.178. pp.356–379 use the step-1 domain data only through the k = 1 construction check and (1.76). At k = 1, T′_k acts on no component (LFR I p.177 (ii); wording corrected 13:26), so (D2) now bounds CRE's step-1 integral on 𝒳, and the step-k B-integral is dropped from (D2) *Setting*, (h) and *The bound*. [Superseded by the rd5-d2-r2 S1 repair (i) and rd5-d2-r3 m1; rd5-d2-r4 m-1(c).] Not reviewed; not in round 7.
-
-Done 14:11–14:24 (22 Oct, date): round 7 read and triaged. No fatal finding. Serious findings repaired: rd5-dbq S1 ((B-q) replaces CRE p.250's cube comparison's layer clause, from V3's logged (B1)(iii); (D-b⁺), (D1⁺) redone with ε′, μ̂′, r_∂ = (4C_n+1)r), rd5-d2 S1 (the (D2) (l) check), rd5-tj1 S1 (finite check in §3j(4)), rd5-tj2 S1 (Repair A) and S2 (per-cube count in §3j(6)). Minors applied in §3f(2) R1, §3i (thin1 M-a to M-h, thin2 m1 to m8: rooted form in (7), admissibility criterion in (2), R_H defined, d⁺ in the near-segment step, ᾱ, K̄₂, C̄′_*, inputs and range of D) and §3j. New open item: the complex-background polylog factor, for D2.4. Not reviewed.
-
-Remaining:
-1. **Repair K′:** agreed by the user for the overhaul (22 Oct, 08:57: "1.(a), 2(a)"); not made in V3.
-2. **D2:** continued in WILSON_IT1_D2_STEP_MAP_2026_10_22.md, at D2.2 with D2.5 (the user's "Do all of D2", 22 Oct).
-3. **Review of the round-7 repairs and of the T′ corrections of (D2):** with the next D2 review batch.
+*Proof.* The form, (i) and (iv): §2 on covered terms, under (c5-7-T), and §3d on uncovered ones, read at m̂ (§3j(4)); the local form of E: §3b. (ii): §3a(6)–(8) with §3j(5), and §3d(4) on uncovered terms. (iii): §3e(4).
