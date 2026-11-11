@@ -3766,7 +3766,7 @@ The items of the LF longer than 5,000 characters are set out in paragraphs at th
 | {#T12.31-8} | 812 | λ_K := P_{K′}(C)‖dπ‖(4C_G(ε₀) + C_Y)ε₁L^{−(1−ε₀)k}, written λ_K(C), #T… |
 | {#T12.31-9} | 813 | r^R_K(C) := (P(C)/r(C))C^R_1R̂_K²(2 + 48R̂_K/c^R_E)e^{−p₀(g_K)/5} (#GL… |
 | {#T12.31-10} | 814 | The continuum normalisation (#GL5.6-1): δm_{k,v} := −κ^{(k)}_v/Π_k, mi… |
-| {#T12.31-11} | 815 | u_𝔏(𝒞) := Λ_N(𝒞)u_𝔏 (#GL6.4-2); L₀(𝒞) := Λ_N(𝒞)²L₀^× (#GL6.4-3, #GL7.1… |
+| {#T12.31-11} | 815 | u_𝔏(𝒞) := 2Λ̄(𝒞)u_𝔏 (#GL6.4-2); L₀(𝒞) := 4Λ̄(𝒞)²L₀^× (#GL6.4-3, #GL7.1… |
 | {#T12.31-11-1} | 816 | For general loops C^×_E is #T4.52's with P_Σ/4 for #T4.51's ℓ_Σ, which… |
 | {#T12.31-12} | 817 | C_lift is V4's constant C of sec:c4-11-4, covering the lifting network… |
 | {#T12.31-13} | 818 | The pair factorisation for two general loops C₁, C₂ (§8). ℓ̄_i := P_{K… |
@@ -3787,6 +3787,7 @@ The items of the LF longer than 5,000 characters are set out in paragraphs at th
 | {#T12.33-2} | 833 | (H1′) (#NL6A.2-1): S_D is the union of a family 𝒫_D of pieces, each of… |
 | {#T12.33-3} | 834 | Step 1 (§9). For a group γ with contacts on C_i, H^i_γ is V4's hull if… |
 | {#T12.33-4} | 835 | K₁, of N_C, L, M, η and V4's constant C of #NL9.6-5-2, is not #T12.19-… |
+| {#T12.33-4-1} | 836 | C^src is V4's, with the rows' derivative constants maximised over χ₁, … |
 
 ## Definitions of the LF
 
@@ -4818,4 +4819,4 @@ Each definition X := … of the LF carries the tag {#D.X} immediately before X; 
 | {#D.ψ′} | 3266 | ψ′ := Σ_{y∈B}G_B(·, y)σ(y)/(2d), so that Δψ′ = −σ in B and ψ′ = 0 |
 | {#D.h_y} | 3267 | h_y := E^·G(S_{τ_B} − y), τ_B the exit time from B. Theorem 4.3.1  |
 
-Hashes at which the lines above hold: LF 94d3e82675b1, table 6002edcf2457 (SHA256, first 12).
+Hashes at which the lines above hold: LF 94d3e82675b1, table ff88007cace7 (SHA256, first 12).

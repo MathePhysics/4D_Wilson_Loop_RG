@@ -196,9 +196,31 @@ Input: (4)'s messages (the map's C_box count; ϑ_V, c_b, B₁, the §3e constant
 - Round 9 (narrow) found R8: #T12.19-4-1's list of ϑ_V's users omitted #T12.32-6. Round 10 (full, with #T12.19-6 and #T12.19-8-1 read whole against D26) found R9: #T12.19-6 cited §6.3 for W_III, which D26 defines in 6.4 (l.335). Rounds 11 (narrow) and 12 (full) are clean.
 - Table 99c0d18618f6 → 9dacb63576d1 → 494562303302 → 6e6acccc4ce6 → f4f089dd4cbc → 6a9a392e6060 → 7a0f3334905e. LABELS 7a980dfeec7b → 18538c3369a5 → fd7beb743955 → 899e7e91e276 → 9bbc0e4a13bf → b44c959564b7 → c6814d4faaee. defcheck on LF, on the general-loops note and on the pair note: "-- 0 lines" each; dmarks2 16; deadcheck and prefcheck known hits only; columns 10×5, 74×6, 267×7.
 
+## NL e2ca5b9e7a82 and General Loops ebaefc789f80: #T1.3-1, #T12.31, #T12.33 to #T12.33-4-1 (Table)
+
+Input: ⑂ (3)'s NL messages (rows from e2ca5b9e7a82, with ℋ(D) renamed 𝒯(D) and K₂ set in #NL9.6-4b only) and BETA's general-loops message (§6–§7 settled, the multi-loop factor 2Λ̄(𝒞) for every N_C).
+- NL rows: #T1.3-1 states that L₀^×, u_𝔏 and #NL12.1's conditions are N_C-free. #T12.31-11 loses its u_𝔏^{(N)} and L₀^{(N)} clauses. New #T12.33 (δ, N_i, admissible pieces, Σ(𝒫)), #T12.33-1 (tube hulls), #T12.33-2 ((H1′), 𝒯(D)), #T12.33-3 (H^i_γ, A_s^{(N)}), #T12.33-4 (K₁, K₂, φ_c, Φ_c) and #T12.33-4-1 (C^src, the response constant).
+- General-loop rows: #T12.31-1 (s_k(C), δ_k(C) ≥ L²MR_k), #T12.31-2 (Λ_N deleted), #T12.31-4 (A_s^{(N)}(𝒞), η(𝒞)), #T12.31-9 (c_off), #T12.31-10 (C_win^×(𝒞)), #T12.31-11 (u_𝔏(𝒞), L₀(𝒞), the transport condition, the locals).
+- Re-derived: 1000·9Λ̄(𝒞)/(1 200 000Λ̄(𝒞)) = 3/400 < 1/128 = ϖ/8. With D₀ := 14Λ̄(𝒞)u and a := c_w/D₀, Σ_{d≥0}e^{−c_w(d/D₀ − 1)₊} ≤ D₀ + 1 + 1/a, as θ + e^{−aθ}/(1 − e^{−a}) ≤ 1 + 1/a on (0, 1]. So C_win^×(𝒞) ≤ 116Λ̄(𝒞)u/c_w for c_w ≤ 1, Λ̄ ≥ 2, u ≥ 1.
+- Also re-derived: 2(M + 1)/M ≤ 5/2 for M ≥ 4 gives c_off = (7/2)ν_r + (3/8)ν_e ≤ 4ν. A coarse bond is L^{j−q(C)+K′−k} ≥ L^{q̄(j)+K′−k} step-k bonds, since j ≥ Q + q̄(j). L₀(𝒞) = 4Λ̄(𝒞)²L₀^× is 2Λ̄(𝒞) from u_𝔏(𝒞) times 2Λ̄(𝒞) from the coefficients, L₀^× being linear in u_𝔏.
+- Round 1 (full) found N1–N7:
+  - N1: #T1.3-1 gave the one-loop count (#NL1.3-5) as the reason for every u_𝔏 claim; it is the reason for #NL6B.1-1 only.
+  - N2: #T12.33-2's u_D is two-loops' factor of *Units with a factor* (#510, #570), not #NL6A.6's u.
+  - N3: #T12.33-2 cited #518 for ℐ(D), which defines ℐ(D) only for an 𝐑-made D.
+  - N4: #T12.33-3 made 1000ηA_s^{(N)} < ϖ/8 a hypothesis of the hull bound; it is the condition of V4's lem:c4-8-2(c) with A_s^{(N)}.
+  - N5: #T12.33-4 left φ_c and Φ_c undefined. Φ_c is V4's constant bound 4(2R_0′ + 1)(1 + 1/c) + 8/c² of (c5-7-boundary-marks), not a single-square part.
+  - N6: #T12.33-3 cited #T12.12 for A_h, η and ϖ, which are #T12.13's. N7: #T12.33-4 used ℓ_Σ without #T4.51.
+- Then NL e2ca5b9e7a82 and the general-loops rows were entered. Round 2 (full) found N8–N10:
+  - N8: #T1.3-1 said N_C enters only the scale conditions, but N_C also enters the bounds (#NL.1.2).
+  - N9: #T12.33-2's ℐ(D) pointer listed some species only; it is two-loops' arc set (#394, #574-1).
+  - N10: #T12.31-11's "for #T1.3-1's 4096M" was ambiguous.
+- Round 3 (narrow) found N11 and N12. N11: #T1.3-1 called u_𝔏 a unit, not the units factor, and its two clauses on conditions read as contradictory. N12: #T12.31-1 had a double "and".
+- Round 4 (narrow) and round 5 (full, with the unchanged #T12.31 rows' §3, §6 and §8 anchors re-read in ebaefc789f80) are clean, so the rows are done.
+- Table 7a0f3334905e → 6002edcf2457 → a13230452afd → 0aa0a9313e4b → 4da161f7f9f4 → 5c94a0d5dd14 → db7ae55b6e5a → ff88007cace7. LABELS c6814d4faaee → b7f8d8374c5d → 9495906b1bc0 → 4ee3cc98399f → 5bf9a254d0d8 → e384dc944732. defcheck on LF, on the general-loops note and on the pair note: "-- 0 lines" each; dmarks2 16; deadcheck and prefcheck known hits only; columns 10×5, 74×6, 267×7.
+
 ## SHAs
 
-Table: d71e239470ea → eb5a6a505303 → b168c70703ab → 9f6ebf47c805 → 0fa578b35726 → ef03c153b6ad → cc3949e005fb → 77c1b5ec9928 → 18cbd119fc8f → 05cbd40be4db → 7b51b1177ee9 → bb2bbb3fbd08 → 99c0d18618f6 → 7a0f3334905e. LABELS: 2d2801629f41 → 146c7b49d22b → d444e40b4233 → 1f2b3fa09b9d → 740b198d7a9d → 58050f8936d3 → 0e94a6174742 → 4c2c66efb348 → 734a37930def → c59773513fd1 → be350896ce4a → 9eeed3a7792e → 7a980dfeec7b → c6814d4faaee. Background note: 249ae1a46a2a → 8510ab0aebd7 → 7bb5f99918ab → 3047b31464c3 → 22a230556c65 → c7612b0d6f3b → df792ffa33f3.
+Table: d71e239470ea → eb5a6a505303 → b168c70703ab → 9f6ebf47c805 → 0fa578b35726 → ef03c153b6ad → cc3949e005fb → 77c1b5ec9928 → 18cbd119fc8f → 05cbd40be4db → 7b51b1177ee9 → bb2bbb3fbd08 → 99c0d18618f6 → 7a0f3334905e → ff88007cace7. LABELS: 2d2801629f41 → 146c7b49d22b → d444e40b4233 → 1f2b3fa09b9d → 740b198d7a9d → 58050f8936d3 → 0e94a6174742 → 4c2c66efb348 → 734a37930def → c59773513fd1 → be350896ce4a → 9eeed3a7792e → 7a980dfeec7b → c6814d4faaee → e384dc944732. Background note: 249ae1a46a2a → 8510ab0aebd7 → 7bb5f99918ab → 3047b31464c3 → 22a230556c65 → c7612b0d6f3b → df792ffa33f3.
 
 ## Status
 
@@ -211,3 +233,5 @@ The new #T12.31 rows and #T4.53's C_w follow the general-loops note 1d61bc4589e2
 The rows #T12.4-1-1 to #T12.4-1-3, #T12.31-0 and #T12.31-11-1 to #T12.31-15 follow general-loops note 6919e16b2fdd and pair note 9b4918036466. Rounds 1–4 found H1–H8, all repaired. Rounds 5 and 6 (both full) are clean, so the rows are done at table bb2bbb3fbd08.
 
 The rows #T4.44, #T12.19-4-1, #T12.19-6, #T12.19-8-1, #T12.19-9-1 and #T12.32 to #T12.32-9 follow IT-1 9c77825b2a82, map cb9d46678f56 and D26 4dfb36e15797. Rounds 1–10 found R1–R9, all repaired. Rounds 11 (narrow) and 12 (full) are clean, so the rows are done at table 7a0f3334905e. The C_box item is closed by map #MD2.4.12.7-1-5 (C_box ≥ 38).
+
+The rows #T1.3-1, #T12.31-1, #T12.31-2, #T12.31-4, #T12.31-9 to #T12.31-11 and #T12.33 to #T12.33-4-1 follow NL e2ca5b9e7a82, general-loops note ebaefc789f80 and two-loops cea1a21316cc. Rounds 1–3 found N1–N12, all repaired. Rounds 4 (narrow) and 5 (full) are clean, so the rows are done at table ff88007cace7. At general-loops notes 11df5d85a367 (𝒯(D) for ℋ(D), new #GL6.2-0-1 and #GL6.2-0-2, no new symbols) and b4b6a5cc0dfe (#GL6.1-4-2 cites #T12.33–#T12.33-1) every #GL tag the table cites is present with its anchor unchanged, and defcheck prints 0 lines.

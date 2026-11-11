@@ -3749,3 +3749,12 @@ Relabel → LABELS 9eeed3a7792e, table bb2bbb3fbd08, at LF 94d3e82675b1. The def
 - 23:47: (4) repaired both items (IT-1 9c77825b2a82, D26 4dfb36e15797). #T12.19-6's C_sh′ and #T12.19-8-1's C_h now write ϑ_V, #T12.19-4-1's lists follow, and #T12.19-6 cites 6.4 for W_III. Rounds 9–10 found R8–R9, both repaired; rounds 11 (narrow) and 12 (full) are clean.
 
 Relabel → LABELS c6814d4faaee, table 7a0f3334905e, at LF 94d3e82675b1. The definition check prints 0 lines on LF, on the general-loops note and on the pair note, and dmarks2 lists the 16 known leftovers. deadcheck and prefcheck show only their known hits. Columns are 10×5, 74×6, and 267×7.
+
+## NL e2ca5b9e7a82 and General Loops ebaefc789f80: #T1.3-1, #T12.31 and #T12.33 to #T12.33-4-1, 2026-11-11 00:06
+
+- #T1.3-1: L ≥ L₀^× and the units factor u_𝔏 of the 𝐑-made insertions hold for every N_C (#NL6A.9, #NL6A.6), and #NL12.1's conditions do not involve N_C; only the scale conditions of #T12.33-4 do (#NL12.1-1).
+- New #T12.33 to #T12.33-4-1: NL's separation δ, admissible pieces and Σ(𝒫), tube hulls 𝒯(𝒫, A), (H1′) and 𝒯(D), H^i_γ and A_s^{(N)}, K₁ and K₂, φ_c and V4's Φ_c, C^src, and the response constant max_iC_{resp,χ_i}.
+- General loops, now N_C-free: #T12.31-1 (s_k(C), δ_k(C) ≥ L²MR_k), #T12.31-2 (Λ_N deleted), #T12.31-4 (A_s^{(N)}(𝒞), η(𝒞) := 1/(1 200 000Λ̄(𝒞))), #T12.31-9 (c_off := (7/2)ν_r + (3/8)ν_e ≤ 4ν), #T12.31-10 (C_win^×(𝒞) ≤ 116Λ̄(𝒞)u/c_w), and #T12.31-11 (u_𝔏(𝒞) := 2Λ̄(𝒞)u_𝔏, L₀(𝒞) := 4Λ̄(𝒞)²L₀^×, 8192Λ̄(𝒞)M).
+- Rounds 1–3 found N1–N12, all repaired; rounds 4 (narrow) and 5 (full) are clean. Announced to (4) before the edit and SHAs sent after. Log: WILSON_IT1_LF_TRIAGE_BG_D26REPOINT_2026_11_10.md.
+
+Relabel → LABELS e384dc944732, table ff88007cace7, at LF 94d3e82675b1. The definition check prints 0 lines on LF, on the general-loops note and on the pair note, and dmarks2 lists the 16 known leftovers. deadcheck and prefcheck show only their known hits. Columns are 10×5, 74×6, and 267×7.
