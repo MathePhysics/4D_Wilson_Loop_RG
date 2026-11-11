@@ -3201,7 +3201,7 @@ The items of the LF longer than 5,000 characters are set out in paragraphs at th
 | {#T6.17} | 225 | (q₀ = q₁ > p₀): the exponents of CRE (2.28) are taken equal and larger… |
 | {#T6.18} | 226 | CRE p.277's margin: 8B₀e^{16κ_s}O(1)ε_k < min(β,1)α_{1,k}/2, the expan… |
 | {#T6.19} | 227 | The operation ∼ (CRE p.245 l.40–43): on the cubes □ of the second part… |
-| {#T6.19-1} | 228 | Compatible partitions (CRE p.245 l.38–39, p.257 l.43) are read as nest… |
+| {#T6.19-1} | 228 | Compatible partitions (CRE p.245 l.38–40, p.257 l.43) are nested, ever… |
 | {#T6.20} | 229 | χ_Ax: the axial-gauge characteristic function. It arises from the iden… |
 | {#T6.20-1} | 230 | CRE's Q̃ in δ(Q̃A) of (1.14)–(1.15) is #T10.21-2's LQ̃ at the backgrou… |
 | {#T6.20-2} | 231 | CRE's σ in (1.14)–(1.15) is σ_H/σ_H(0) bondwise (#T10.36-4). The Haar … |
@@ -3828,7 +3828,6 @@ The items of the LF longer than 5,000 characters are set out in paragraphs at th
 | {#T12.35-2} | 874 | RW1 §5. 𝒫(U₁) := {A′ : abs(A′(b)) < α_{1,1} for every bond b} (#RW1.5-… |
 | {#T12.35-3} | 875 | dμ_{C_{E₀}}(B) and (det H_{E₀})^{1/2} := exp(½tr log H_{E₀}) (#RW1.5b)… |
 | {#T12.35-4} | 876 | ϱ_χ, V4's cutoff radius r(g₀), and p_𝐔(a) := p_{e^{iζ}}(R_{u,*}a) (#RW… |
-| {#T12.35-5} | 877 | RW1 §5(g). c_𝒱, a two-sided comparison of VAR's norm with ‖·‖_op, not … |
 
 ## Definitions of the LF
 
@@ -4860,4 +4859,4 @@ Each definition X := … of the LF carries the tag {#D.X} immediately before X; 
 | {#D.ψ′} | 3266 | ψ′ := Σ_{y∈B}G_B(·, y)σ(y)/(2d), so that Δψ′ = −σ in B and ψ′ = 0 |
 | {#D.h_y} | 3267 | h_y := E^·G(S_{τ_B} − y), τ_B the exit time from B. Theorem 4.3.1  |
 
-Hashes at which the lines above hold: LF 94d3e82675b1, table c571f2502afe (SHA256, first 12).
+Hashes at which the lines above hold: LF 94d3e82675b1, table 03ddaed65c83 (SHA256, first 12).

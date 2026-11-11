@@ -81,3 +81,12 @@ User's instruction: "Continue with RW1, when consolidating check for "not used" 
 - No change needed: #RP.6 and #NV.9 are definitions. #RP.10-2 is a limit. #RP.10-3 and #NV.10 ("for every K") are fixed-ε identities of the lattice measure with κ^{(K′)} an explicit exponential (#ND.6.1), so they need no torus threshold. #NV.11-3's "do not involve n" stays true, as K_tor depends on the loop only through its side (#NWTOA.1-7), which takes finitely many values at fixed q.
 - Pre-check: labels_pair_cauchy.py passes (347 tags, LABELS unchanged at dfe71a7404c6). NL #NL12.1 is 500 characters.
 - SHAs: PC bbed461c87b5, NL 19fc310faab8.
+
+## Open Gaps Closed (11 November, 03:12; user: "Close the open gaps")
+
+- RW1 §5(g). LF deleted #MD2.3.4.37-6, -7 (map 2064119167f8). Re-derived from RG1 p.261 (1.6), p.256 (0.20) and p.264 (1.20)–(1.22): Π^T_{j+1} is the second derivative at B = 0 of the torus 𝐄^{(j+1)}, β_{j+1} is defined by its ℤ^d limit, which exists by (1.7), and the action carries β_{j+1}(g_j) as a number and 𝐄^{(j+1)} whole. So the torus second derivatives feed no step, and §5(g)'s only consumer was #MD2.3.4.37-6. Deleted #RW1.5g–#RW1.5g-11; #RW1.0-1, #RW1.4-12, #RW1.5 and #RW1.5bp-14 no longer mention it (#RW1.5bp-14 keeps ε₁ through μ̂ = C_{L,R_c}ε₁). (h) is renamed (g) (#RW1.5h, -1 → #RW1.5g, -1; cited only in history files). This removes RW1's use of q₁ > p₀; no other RW1 line uses it.
+- Table fork's RW1 points. #RW1.4-10 cites #MD2.3.4.49's C_Z^{(1)} instead of restating it; #RW1.5a defines ι_E as the extension by zero (V4 eq:c-regional-hessian's ι_I), distinct from #RW1.0-3's ι.
+- 4δ_M (#RW1.5bp-2, table #T1.5-2). V4 app:thresholds puts only lower bounds on M (M ≥ 8LM₂, "M large", δ_M ≤ 1, h₊²δ_M²/γ ≤ 1/8, 4C_dδ_M²(LM + 1)⁴ ≤ 1/2), with γ, h₊, n_*, R_*, C_w^{V4}, C_d fixed before M. RW1's conditions are the last three at 4δ_M, and δ_M = 2C_w^{V4}4^{−N_M} → 0, so they hold for M large. Closed.
+- NL #NL9.9-0. Φ_c now points to V4 eq:c5-7-boundary-marks (lem:c5-7-expmoment), a constant of L and c with Φ_c ≥ 4; the wrong reason "the term of a site at distance 0" is gone.
+- Pre-check: RW1 has no remaining reference to #RW1.5g's symbols (λ_2, W_2, c_𝒱, b_V, 𝒟_B, F_𝔱, C_𝓗, δ_𝓗, U₀, N_dep, Θ_λ, C_{2,·}) or to #MD2.3.4.37; LF line endings kept.
+- SHAs: RW1 015631c26127 (was aa66652f0d6a), NL d5e3aaad039a (was 19fc310faab8).

@@ -2186,7 +2186,7 @@
     {#B4.173} V^{(k)} = M^k(U) (RG1 (2.3), p.265).
     {#B4.173-1} Write f(B′) := (1/i)log[M(V′V^{(k)})M(V^{(k)})^{−1}] = Q̃(B′) of RG1 (2.4),
     {#B4.174} p.266.
-    {#B4.174-1} We read f as RG1's LQ̃B′ + C̃(B′) of p.267 l.26, the function that p.267 l.24–26 linearizes (inferred, not printed; BP_RG2_COMPLEX_B.md #BH.3-0), so the linear operator Q̃ is L^{−1} times the linear part of f,
+    {#B4.174-1} f is RG1's LQ̃B′ + C̃(B′): p.267 l.21–26 determines the transformation that 'linearizes the function Q̃(B′)' by an equation with left side LQ̃B′ + C̃(B′), and C̃ has no constant or linear part, as D̃(B) = C̃(B − hD̃(B)) begins with quadratic terms (l.29; #T10.21-2, BP_RG2_COMPLEX_B.md #BH.3-0). So the linear operator Q̃ is L^{−1} times the linear part of f,
     {#B4.175} and C̃^{(2)} is the quadratic part of f (p.261 l.10–11; D̃^{(2)} = C̃^{(2)}, p.267 l.29). h_B(c) is L^{−1} times
     {#B4.176} the inverse of the coefficient of B′(b₀(c)) in (Q̃B′)(c), so that LQ̃h_B = I, and 𝒫 solves Q̃B′ = 0 for the
     {#B4.177} variables B′(b₀(c)) (p.267 l.18–23, p.268 l.2–3). 𝐆^{(2)} is the sum over y and x ∈ B(y) of |B̃′(y, x)|², with B̃′(y, x) the linear part of
