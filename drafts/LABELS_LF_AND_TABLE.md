@@ -3262,7 +3262,7 @@ The items of the LF longer than 5,000 characters are set out in paragraphs at th
 | {#T4.44} | 276 | C_box, ν_e (the map's box constant and extent rate; two loops) / C_box… |
 | {#T4.44-0-1} | 277 | continued / it meets the map's conditions C_box ≥ 4A_E and C_box ≥ 6, … |
 | {#T4.45} | 278 | C_av, μ (covariance note) / C_av := 2(B₃ + 2c_dB₅), with c_d the covar… |
-| {#T4.45-0-1} | 279 | continued / μ := min(1, MC₀/(2C_avC₁)), the covariance note's step fac… |
+| {#T4.45-0-1} | 279 | continued / μ := min(1, MC₀/(2C_avC₁)), the covariance note's disc fac… |
 | {#T4.46} | 280 | c₃, c_λ / c₃ := (2A₁/A₀ + (4dL)²(1 + β₀)B₃)(1 + O(ε_k)), the O(1) of C… |
 | {#T4.46-0-1} | 281 | continued / c_λ := ((1+β₀)⁶/C_ρ)·max{C₁^{RG2}/(θε′ε_H), 2.12c_πc_hC₁^{… |
 | {#T4.47} | 282 | f_n, f♮_n, 𝒟♮_k, λ_w, λ_cur, μ, μ^{(k)}_n, w, c_w (two loops) / f_n :=… |
@@ -5290,4 +5290,4 @@ Each definition X := … of the LF carries the tag {#D.X} immediately before X; 
 | {#D.ψ′} | 3274 | ψ′ := Σ_{y∈B}G_B(·, y)σ(y)/(2d), so that Δψ′ = −σ in B and ψ′ = 0 |
 | {#D.h_y} | 3275 | h_y := E^·G(S_{τ_B} − y), τ_B the exit time from B. Theorem 4.3.1  |
 
-Hashes at which the lines above hold: LF ada99ead6f26, table 90a8ede1cabe (SHA256, first 12).
+Hashes at which the lines above hold: LF ada99ead6f26, table 235e36f006f6 (SHA256, first 12).

@@ -3975,3 +3975,11 @@ Relabel → LABELS 3a0bd5263c21, table ec9f2c4c2477. defcheck prints 0 lines on 
   - Not done: round 11 (full) and a further clean round are still to come. Log: WILSON_IT1_LF_TRIAGE_BG_D26REPOINT_2026_11_10.md.
 
 Relabel → LABELS 1f2d22af7f71, table 90a8ede1cabe (LF ada99ead6f26). build_packet --check reports 0 conflicts, and the pin check finds 0 failures among 665 pins.
+
+## The Table Fork's Review of Every Section, Round 11, 2026-11-11 22:05
+
+- Round 11 (narrow) re-read every row changed in round 10 against the tags it cites, with the consumers of the touched symbols. It found R11-1 to R11-6, all minor and all repaired in place at table 235e36f006f6.
+  - Content: g_Γ := W(Γ)W(y, x)^{−1} (#T12.7-35-0-1); φ of N_{□₀}, #W7.17-1's profile (#T12.6-22); the map's s₂ named apart from the LF's (#T12.17-1); the map's two C′ named apart (#T12.17-1-0-3); the continuum note's δm_k, D2.3's (#T12.38-0-2); and μ, the covariance note's disc factor (#T4.45-0-1).
+  - Not done: round 12 (full) and, if it is not clean, further rounds until two consecutive clean rounds, the second full. Log: WILSON_IT1_LF_TRIAGE_BG_D26REPOINT_2026_11_10.md.
+
+Relabel → LABELS af5e255b6597, table 235e36f006f6 (LF ada99ead6f26). build_packet --check reports 0 conflicts, and the pin check finds 0 failures among 665 pins.
