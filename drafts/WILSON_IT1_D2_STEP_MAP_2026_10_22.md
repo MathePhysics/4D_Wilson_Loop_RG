@@ -134,7 +134,7 @@
   {#MOMST.16-2} RG1 p.268: "the expression under the exponential above vanishes at g_k = 0".
 - {#MOMST.17} CRE (3.16), p.268: the small-field cutoff is χ^{(1)}(R₂ᶜ) = ∏_{□′}χ({sup_{b∈(□′^{∼2})^{(1)*}}|A₁(b)| < δ₁}).
   {#MOMST.17-1} The R^c factor is a product (corrected p.268 l.18; the raw transcription has Σ): the second line of (3.16) writes it as the single function χ^{(k)}(R^c_{k+1}), and the first step's (1.18) prints ∏ on R₁^c (p.250 l.29).
-  {#MOMST.17-2} A₁ in (3.16) is the variable after p.267 l.42's scaling A_k′ = g_kA_k, so the test is |A| < δ₁; since g₁ < 1 it gives g₁|A| < δ₁, i.e. |A| < δ₁/g₁ =: r₁, which is the form of the first step's printed test |A| < g₀^{−1}δ₀ ((1.18), p.250 l.29). (5) uses only this consequence, as an upper bound on the support.
+  {#MOMST.17-2} A₁ in (3.16) is the variable after p.267 l.42's scaling A_k′ = g_kA_k, so the test is |A| < δ₁; since g₁ < 1 it gives g₁|A| < δ₁, i.e. |A| < δ₁/g₁ ≤ r₁ (#MD2.0.3.35-2, #MD2.4.11.2-3), which is the form of the first step's printed test |A| < g₀^{−1}δ₀ ((1.18), p.250 l.29). (5) uses only this consequence, as an upper bound on the support.
 - {#MOMST.18} χ′₁.
   {#MOMST.18-1} CRE p.268: "the characteristic functions χ_k′ depend now on the field V^{(k)} … We want to have characteristic functions depending on the fluctuation field only".
   {#MOMST.18-2} So χ′₁ is a function of A₁ and V^{(1)}.
@@ -408,7 +408,7 @@
     {#MD2.0.3.14-1} At k = 1, δ_p(U₁) ≤ Cε₁ for p ⊂ Λ₁ (V4 Lemma c2-plaquette-deviation, applied in sec:c4-11-5), so δ*_n^{(1)}(U₁) ≤ CL²ε₁Σ_tw_t.
   - {#MD2.0.3.15} (c) For the same plaquettes and radii, η_{k+1}^{−2}max = L²·η_k^{−2}max for every U. This is the exact form of the L^{−2} of (5).
     {#MD2.0.3.15-1} The plaquette set changes from Ω_k to Ω_{k+1} (Λ₁ to Ω₂ at the first step), so the maximum in δ*^{(k)}_n(U_{k+1}) is split: the plaquettes of Ω_{k+1} give ≤ L^{−2}δ*^{(k+1)} after D2.4's matching; those of Ω_k∖Ω_{k+1} contribute at most η_k^{−2}·sup_{p⊂Ω_k∖Ω_{k+1}}δ_p(U_{k+1})·Σ_{t: R_t^{(k)} ≥ dist(n, Ω_k∖Ω_{k+1})}w_t, which by the membership condition (2.34) at j = k+1, n = k (|∂U − 1| < (1 − β/2)α_{0,k}η_k²) is ≤ c_σ(1 − β/2)α_{0,k}Σ_{t: …}w_t once U_{k+1} is shown to lie in the space.
-    {#MD2.0.3.15-2} Here α_{0,k} = g_kC₀(log g_k⁻²)^{q₀} (CRE (2.28), p.259) is bounded uniformly in k, since x(log x⁻²)^{q₀} increases for log x⁻² > 2q₀ and g_k ≤ (1+β₀)g_K by the last inequality of CRE (2.6) (#MD2.0.5.2-2), under the condition (1+β₀)g_K < e^{−q₀}.
+    {#MD2.0.3.15-2} Here α_{0,k} = ĝ_kC₀(log ĝ_k⁻²)^{q₀} (CRE (2.28), p.259, at ĝ_k, #MD2.0.1.7) is bounded uniformly in k, since x(log x⁻²)^{q₀} increases for log x⁻² > 2q₀ and ĝ_k ≤ ĝ_K ≤ g_K (ĝ_j increases in j, LF #P.1-3-1), under the condition g_K < e^{−q₀}.
     {#MD2.0.3.15-4} RG1 Theorem 3 (p.264) is stated under "0<g_k≤γ for k=0,1,…,K", RG I's γ, written γ_B in D2 (Lipschitz note §5); the sequence of #MD2.0.5.2 has g_k ≤ (1+β₀)g_K (#MD2.0.5.2-2), so it stays in ]0, γ_B] at every step once sup_K g_K ≤ γ_B/(1+β₀).
     {#MD2.0.3.15-6} That part decays with the distance to Ω_{k+1}ᶜ and joins the scale-(k+1) attached part.
     {#MD2.0.3.15-7} Both the matching of the neighbourhoods and radii of an old traversal n with those of the new traversal n′ ⊇ n and this split are D2.4 items.
@@ -786,7 +786,7 @@
 ### (1) Quoted {#MSD2.1.1}
 
 {#MD2.1.1.1} *Notation.* RG2's constant κ₁ is written κ_s in this section, to keep it apart from D2.0(3)'s step-1 perimeter coefficient κ₁; the threshold of (4) is ε_H, to keep it apart from CRE's ε₀ = g₀p₀(g₀).
-{#MD2.1.1.1-1} RG2's ε₂, ε₃ keep their names; RG2's ε₁ is written ε₁^{RG2} and VAR's ε₁ is written ε₁^{VAR}, to keep both apart from CRE's ε_k = g_kp₀(g_k) at k = 1.
+{#MD2.1.1.1-1} RG2's ε₂, ε₃ keep their names; RG2's ε₁ is written ε₁^{RG2} and VAR's ε₁ is written ε₁^{VAR}, to keep both apart from CRE's ε_k (#MD2.0.1.7) at k = 1.
 {#MD2.1.1.1-2} CRE's "[I]" is RG I, CMP 109, 249–301 (CRE reference list, p.285).
 
 - {#MD2.1.1.2} *The step-(k+1) variables.*
@@ -2060,7 +2060,7 @@
     {#MD2.2.6.152-1} These are kept as factors in T_{j+1}.
     {#MD2.2.6.152-2} CRE p.268 removes a (3.3) factor only on cubes □′ ⊂ R_{j+1}ᶜ, where it "is equal to 1, because of the bound on A_k introduced by the second", the (3.16) factor.
     {#MD2.2.6.152-3} So the support is unchanged.
-  - {#MD2.2.6.153} By (a), Input 1, A_j′ = g_jA_j on the free bonds, so |A_j| < O(1)ε_j/g_j = O(1)A₀(log g_j^{−2})^{p₀}.
+  - {#MD2.2.6.153} By (a), Input 1, A_j′ = g_jA_j on the free bonds, so |A_j| < O(1)ε_j/g_j ≤ O(1)A₀(log ĝ_j^{−2})^{p₀} (#MD2.0.1.7).
     {#MD2.2.6.153-1} This bounds the slot variable σ_j = A_j of (b) directly, which is the bound the ω-clause uses.
     {#MD2.2.6.153-2} After ψ_{j+1} on S_{j+1}, |g_jA_j^{new} − g_jA_j| ≤ 2|𝐇^{(j)}| ≤ δ_j/20 by (a)'s proof step (b), and δ_j = (A₁/A₀)ε_j (Input 4).
     {#MD2.2.6.153-3} So also |A_j^{new}| ≤ O(1)ε_j/g_j on the support.
@@ -2544,7 +2544,7 @@
         {#MD2.3.4.16-5} (7)'s torus sum with N^{(k)}_min ≍ (T_ph/u)L^{K′−k+j(C)} (N^{(k)}_min, s_k, and P_k are physical lengths in step-k units, the same in the stopped run as in the K-step run); D2.3(4)(Z-d)'s torus condition (TC), reduced there to the coarsest torus through R_K and ι_{T,K}: at K′ it reads ι_{T,K′} ≥ 32C_DL⁴M(L+1)(1+γ²β′j(C))^{β₀}(log g_min^{−2})^r by CRE (2.7), implied by the unit-scale condition since ι_{T,K′} = L^{j(C)}ι_{T,K} and L^{j(C)} ≥ L^{q̄(j(C))} ≥ (1+γ²β′j(C))^{β₀}, and (Z-g)'s lcm then runs over k ≤ K′;
         {#MD2.3.4.16-6} the deviation insertions summed at the stopping scale (D2.0(5)(c), checked with K′ in place of K: its per-step statements are the step map's and do not see K; its K-dependent constants are the coupling sup, g_k ≤ (1+β₀)g_K for k < K′ by CRE (2.6)'s last inequality as before, so the feedback recursion's condition g_K ≤ g(L) is unchanged, and the torus count in (ε)'s wrap term, N^{(j)}_min ≍ (T_ph/u)L^{K′−j+j(C)}, so the sum over j ≤ K′ is at most 2C(sup_jρ̂_j)e^{−c′(T_ph/u)L^{j(C)}/M} and the condition T_ph ≥ CM of (ε) reads (T_ph/u)L^{j(C)} ≥ CM, weaker than at K);
         {#MD2.3.4.16-7} ONE MORE STEP (7)(d), for K′ ≤ N only (its own scope; for K′ > N D2.7's), with CRE p.268 at step K′−1, where ε_{K′} ≤ (1+β₀)(1+g_K²β′j(C))^{β₀}ε_K, which is CRE (2.8)'s second line (p.256, printed; also from (2.4), (2.6), (2.7)), so its bound is O(pL^{j(C)−q}(1+g_K²β′j(C))^{β₀}ε_K/L), with constants independent of K, and its two smallness conditions are conditions on g_K for the given loop.
-        {#MD2.3.4.16-8} They hold for small couplings: j(C) is least and q̄ is nondecreasing, so j(C) − q ≤ q̄(j(C)) and ℓ_C = pL^{j(C)−q} ≤ pL⁴M(1+γ²β′(j(C)+1))^{β₀}(log g_min^{−2})^r; with ε_{K′} ≤ (1+β₀)(1+γ²β′j(C))^{β₀}ε_K and ε_K = g_KA₀(log g_K^{−2})^{p₀}, ℓ_Cε_{K′} = O(p·γ(log g_min^{−2})^{r+p₀}(1+γ²β′(j(C)+1))^{2β₀}), and j(C) = O(log log g_min^{−2}) at fixed q, so ℓ_Cε_{K′} → 0 as γ → 0 with γ/g_min bounded (for instance g_K = ḡ → 0).
+        {#MD2.3.4.16-8} They hold for small couplings: j(C) is least and q̄ is nondecreasing, so j(C) − q ≤ q̄(j(C)) and ℓ_C = pL^{j(C)−q} ≤ 2pL⁴M(1+γ²β′(j(C)+1))^{β₀}(log g_min^{−2})^r (#MD2.3.4.15-6); with ε_{K′} ≤ (1+β₀)(1+γ²β′j(C))^{β₀}ε_K (CRE (2.8) for ĝ, LF #P.1-3-1) and ε_K = ĝ_KA₀(log ĝ_K^{−2})^{p₀} ≤ g_KA₀(log g_K^{−2})^{p₀} (#MD2.0.1.7), ℓ_Cε_{K′} = O(p·γ(log g_min^{−2})^{r+p₀}(1+γ²β′(j(C)+1))^{2β₀}), and j(C) = O(log log g_min^{−2}) at fixed q, so ℓ_Cε_{K′} → 0 as γ → 0 with γ/g_min bounded (for instance g_K = ḡ → 0).
         {#MD2.3.4.16-9} D2.3(8)'s assembly and κ^{(K′)} (the perimeter coefficients of the steps 1, …, K′ and the corner factors) are the same formulas with K′.
         {#MD2.3.4.16-10} Every bound stated for k ≤ K in terms of g_K ((7)'s amplitude 𝔞̄ = max(τ̄², sup_kρ_k·pl) in its ρ part, (d)'s factor (1+β₀)⁸L²g_K², and the conditions "for every k ≤ K, g_K small" of D2.2 and D2.4) restricts to k ≤ K′ by the same g_k ≤ (1+β₀)g_K and the monotonicity of τ(g), ρ(g) for small g.
         {#MD2.3.4.16-12} D2.5–D2.7 at K′: D2.5 in D2.2(4); D2.6 for K′ ≤ N in the D2.6 closure, whose §7.2–7.3 reruns D2.0(5)(f)'s large-field induction (Bałaban pp.384–389); D2.7 for K′ > N in the D2.7 closure's item 15, with its 15.8 (the links in the gas, and O2 at k > N).
@@ -3247,7 +3247,7 @@
     {#MD2.4.6.8} since ρ̃_kα_{0,k} = ρ_kα_{0,k}/ᾱ_k and W_t decays exponentially in t.
     {#MD2.4.6.8-1} This is per component, as D(k+1)(ii)'s att bound is (D2.0(3), "Per component").
   - {#MD2.4.6.9} D(k+1)(ii)'s att constant is Cρ̂_{k+1}, with ρ_k ≤ (1+β₀)⁶ρ_{k+1}.
-    {#MD2.4.6.9-1} So the split needs α_{0,k}/α_{1,k} = (C₀/C₁)(log g_k^{−2})^{q₀−q₁} bounded, i.e. q₀ ≤ q₁, met by q₀ = q₁ of SW closure §2.
+    {#MD2.4.6.9-1} So the split needs α_{0,k}/α_{1,k} = (C₀/C₁)(log ĝ_k^{−2})^{q₀−q₁} bounded, i.e. q₀ ≤ q₁, met by q₀ = q₁ of SW closure §2.
 - {#MD2.4.6.10} *The recursion with ρ̃.* The old dev parts on Ω_{k+1} give, by (ii-t) carried ((5)) and its sum form, Σ_{n⊂n′}C_χ^{(k)}ρ̃_kδ*^{(k)}_n ≤ L^{−1}(ρ̃_k/ρ̃_{k+1})C_χ^{(k)}ρ̃_{k+1}δ*^{(k+1)}_{n′}.
   - {#MD2.4.6.11} By CRE (2.6), first and last lines with n − m = 1, g_{k+1} ≤ (1+β₀)g_k and g_k ≤ (1+β₀)g_{k+1}.
     {#MD2.4.6.11-1} By (2.7), first printed line and third (the continuation of the second, with (n−m)^{β₀} = 1 at n − m = 1), (log g_{k+1}^{−2})^p ≤ (1+β₀)(log g_k^{−2})^p and (log g_k^{−2})^p ≤ (1+β₀)(log g_{k+1}^{−2})^p.
@@ -3450,7 +3450,7 @@
 {#MD2.4.11.2-6} All three are O(g_k(log g_k^{−2})^{p₀}), uniformly in k ≤ K for g_K small (g_k ≤ (1+β₀)g_K, CRE (2.6)–(2.7)).
 {#MD2.4.11.2-7} This agrees with D2.1(4)'s *The hypothesis* (|B′| < O(1)ε_k from (3.14)) and sharpens its constant.
 
-{#MD2.4.11.3} *(c) The per-slot bounds (at the complex data of (7)'s domain).* Let the background be 𝐔 = e^{iηa′}U_{k+1} in D(k+1)(iii)'s domain, C a square (the target's C), and assume that the hull I(G) with its allowance lies in Ω_k, where D(k+1)(iii)'s radius is ≤ Lα_{1,k} ((4)(f); on Ω_n∖Ω_{n+1} with n < k it is α_{1,n}L^{k−n}, not small), and that 20c_π′M‖a′‖_∞ ≤ 1 there (D2.2(6)(d) *Arcs*; true for g_K small since α_{1,k} = g_kC₁(log g_k^{−2})^{q₁} → 0 with L, M fixed, and implied by (12)(d)'s c_π′α_{1,k+1}·41M/L ≤ ν_r/16);
+{#MD2.4.11.3} *(c) The per-slot bounds (at the complex data of (7)'s domain).* Let the background be 𝐔 = e^{iηa′}U_{k+1} in D(k+1)(iii)'s domain, C a square (the target's C), and assume that the hull I(G) with its allowance lies in Ω_k, where D(k+1)(iii)'s radius is ≤ Lα_{1,k} ((4)(f); on Ω_n∖Ω_{n+1} with n < k it is α_{1,n}L^{k−n}, not small), and that 20c_π′M‖a′‖_∞ ≤ 1 there (D2.2(6)(d) *Arcs*; true for g_K small since α_{1,k} = ĝ_kC₁(log ĝ_k^{−2})^{q₁} → 0 (#MD2.2.4.78) with L, M fixed, and implied by (12)(d)'s c_π′α_{1,k+1}·41M/L ≤ ν_r/16);
 {#MD2.4.11.3-1} groups whose hull leaves Ω_k are older-layer groups ((5) *Older layers*), left with the kind (γ).
 - {#MD2.4.11.4} (α) Pure loop groups: D2.1(4)'s Claim with the merged-arc constant, ‖Y_G(B)‖ ≤ ∏_{Y∈G}(|B′|_Y/ε_H)e^{−(κ_s−3)#(Y)} pointwise in B, hence ≤ (b_k/ε_H)^{n(G)}e^{−(κ_s−3)#(G)} on the support.
   {#MD2.4.11.4-1} The factor per component is the Schwarz factor 1/T_Y with T_Y = ε_H/|B′|_Y; the decay per cube is Cauchy's e^{−(κ_s−1)} in s(Δ) less e^{1} for the 𝐇-transports (|B′|_Y ≤ ε_H, c_π′c_CM4B₀e^{16κ_s}ε_H ≤ 1) and e^{1} for the a′-transports (20c_π′M‖a′‖_∞·length ≤ #(G) + n(G) by D2.2(6)(d), absorbed as e^{−(κ_s−3)#(Y)}·e^{n(G)}, the e^{n(G)} going into the per-component constant below).
@@ -3643,7 +3643,7 @@
     {#MD2.4.12.26-1} Then (2x/L + 3)⁴ ≤ C_ℓe^{(ν_e/8)x} for the boxes and 1 + y ≤ C_τe^{τy}, τ := ν_f/16, for the rest: ℓ_X ≤ ∏_{pieces}C_pce^{ℓ(piece)}, C_pc := 483C_τmax(C_τ, C_ℓ) (an M or 𝒞 piece takes C_τ² for its two terms, a W piece C_τ for its window and 1 + 2(2x/L + 3)⁴ ≤ 3C_ℓe^{(ν_e/8)x} for its box), ℓ(M) := (ν_f/8)(#(M) + 8n_{k+1}(M)/M + 81) + ν_f|win_M|/M, ℓ(W) := ν_f|win(W)|/M + (ν_e/8)ext_k(W), ℓ(𝒞) := (ν_f/8)#(𝒞) + ν_f|win_𝒞|/M, which the bounds above include.
     {#MD2.4.12.26-2} The constant C_pc per piece multiplies the activities in w̃ ((e)): for old pieces it is absorbed by the smallness of the old rooted sums (g_K small), for M in C_M ((f)).
   {#MD2.4.12.27} *Transports.* The transport part of the shares: c_π′α_{1,k+1}|win(W)| ≤ (ν_r/16)σ_k(W) + 40c_π′α_{1,k+1} once c_π′α_{1,k+1}·41M/L ≤ ν_r/16; c_π′α_{1,k+1}|win_M| ≤ ν_f#(M) + (ν_r/64)Σ_{W∈𝔅(M)}σ_k(W) + 40c_π′α_{1,k+1} once c_π′α_{1,k+1}·60M ≤ ν_f and c_π′α_{1,k+1}·48M/L ≤ ν_r/64; c_π′α_{1,k+1}|win_𝒞| ≤ ν_f#(𝒞) once c_π′α_{1,k+1}·80M ≤ ν_f.
-  {#MD2.4.12.27-1} All hold under c_π′α_{1,k+1}·4096M ≤ ν (α_{1,k} = g_kC₁(log g_k^{−2})^{q₁} → 0, CRE p.277's margin, with L, M, ν fixed before g), and the per-piece constant e^{40c_π′α_{1,k+1}} ≤ e is absorbed in the activities.
+  {#MD2.4.12.27-1} All hold under c_π′α_{1,k+1}·4096M ≤ ν (α_{1,k} = ĝ_kC₁(log ĝ_k^{−2})^{q₁} → 0, #MD2.2.4.78; CRE p.277's margin, with L, M, ν fixed before g), and the per-piece constant e^{40c_π′α_{1,k+1}} ≤ e is absorbed in the activities.
   {#MD2.4.12.27-2} (11)(c)(β)'s a′-transports along the slot arcs are a separate factor ∏_{W∈𝔅(M)}e^{(ν_r/16)(σ_k(W)+1)} inside |H̃(M)| (under its c_π′α_{1,k+1}·20M/L ≤ ν_r/16 and 20c_π′M‖a′‖_∞ ≤ ν_r/16), the σ-part paid from the touched W's reserve below and the e^{ν_r/16} as in #MD2.4.12.27-6.
   {#MD2.4.12.27-3} *Charges.* b(W) := (ν_r/4)σ_k(W) + (ν_e/4)ext_k(W) + c_sh; b(Γ) := Σ_{W′∈Γ}b(W′); b(𝒞) := #(𝒞)/2; b(M-vertex) := (κ_s/4)#(G_M) + (r_κ/648)#(M∖D′) + 1 + Σ_{W∈𝔅(M)}b(W) + Σ_{𝒱(M)}b(𝒞) (with (10)'s counting constant 324: e^{−r_κd_{k+1}(M;D′)} ≤ e^{−(r_κ/324)#(M∖D′)}e^{20c_Dr_κ#(G_M)}, since #(M∖D′) ≤ 80#(D′) + 324d and #(D′) ≤ 81c_D#(G_M)).
   {#MD2.4.12.27-4} *The reserve budget of an old W:* of the weight ν_rσ_k(W) in (ii-w), sh(W) takes ν_r/4, its transports ν_r/16, b(W) ν_r/4, the window counts of (e) ν_r/8, the interaction weight of (e) (carried by every member of an occurrence) ν_r/16, (11)(c)(β)'s a′-transports of a touched W ν_r/16, and the share parts an M-vertex passes to its touched W ν_r/16: (3ν_f + 9ν_e)(48/L)σ_k(W) + (ν_r/64)σ_k(W) ≤ (ν_r/16)σ_k(W) for L ≥ L₀; in all 7/8, with ν_r/8 to spare.

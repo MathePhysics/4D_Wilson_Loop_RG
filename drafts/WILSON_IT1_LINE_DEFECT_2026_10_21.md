@@ -446,7 +446,8 @@ V4 proves only |E^∂_D| ≤ Cτ²Σ_j e^{−cd_j} ((regional-square-boundary-co
     - S₁ ⊂ Ω₁∩Λ₁ᶜ ⊂ Ω₁∩Λᶜ, because V4 keeps the S₁ and R₁ of the original Λ₁ (Section c5-3-1, the convention after Lemma c5-3-0).
     - The new characteristic functions on Ω₁∩Λᶜ are the box factors on I∖D(Λ) and the collar tests: good, |A_e(e)|_σ < ϑr, or bad, ≥ ϑr.
   - *What (P) needs.* CRE's inductive description (Sect. 2) and Theorem 1 must accept the refined labels: at step 1 this is D1.0(P), (4′)–(4⁗); at the later steps it is RC_PAYMENT_PASS_2026_10_24.md Sects. 2–3 for the large-field objects and the 𝐑-terms, and map #MD2.2.3.2–#MD2.2.3.23 for the small-field objects.
-    - CRE's large-fluctuation threshold is sup|A′(b)| ≥ g₀⁻¹δ₀ ((1.23), p.252), and g₀⁻¹δ₀ is V4's r (Section main-result; Section c5-0). p.247 prints δ₀ = g₀A₁(log g₀⁻²)^{p₀} (corrected transcription), and V4 writes r = A₁(log g₀⁻²)^{p₀}. In the tube δ₀ = A₁ĝ₀(log ĝ₀⁻²)^{p₀} (BETA_FUNCTION_WILSON_LOOPS.md #B2.2.174-1, #B2.2.175), so r = (ĝ₀/g₀)A₁(log ĝ₀⁻²)^{p₀}, and ĝ₀ ≤ g₀ ≤ ρ_γ^{1/2}ĝ₀ (WILSON_IT1_CAUCHY_ESTIMATE_2026_10_27.md #CP.14) gives ρ_γ^{−1/2}A₁(log ĝ₀⁻²)^{p₀} ≤ r ≤ A₁(log ĝ₀⁻²)^{p₀} ≤ A₁(log g₀⁻² + log ρ_γ)^{p₀}.
+    - CRE's large-fluctuation threshold is sup|A′(b)| ≥ g₀⁻¹δ₀ ((1.23), p.252), and g₀⁻¹δ₀ is V4's r (Section main-result; Section c5-0). p.247 prints δ₀ = g₀A₁(log g₀⁻²)^{p₀} (corrected transcription), and V4 writes r = A₁(log g₀⁻²)^{p₀}.
+      - In the tube δ₀ = A₁ĝ₀(log ĝ₀⁻²)^{p₀} (BETA_FUNCTION_WILSON_LOOPS.md #B2.2.174-1, #B2.2.175), so r = (ĝ₀/g₀)A₁(log ĝ₀⁻²)^{p₀}, and ĝ₀ ≤ g₀ ≤ ρ_γ^{1/2}ĝ₀ (WILSON_IT1_CAUCHY_ESTIMATE_2026_10_27.md #CP.14) gives r ≥ ρ_γ^{−1/2}A₁(log ĝ₀⁻²)^{p₀}. With ℓ := log g₀⁻² and t := log(g₀²/ĝ₀²) ≥ 0, r = A₁(ℓ + t)^{p₀}e^{−t/2} ≤ A₁ℓ^{p₀}e^{(p₀/ℓ − 1/2)t} ≤ A₁(log g₀⁻²)^{p₀}, V4's value, once ℓ ≥ 2p₀ (table #T3.35 at k = 0).
     - A bad collar test is at ϑr, with ϑ ≤ 1/16 (Remark c5-1-3), on a bond where |A_e(e)|_σ < r also holds (Lemma collar-coverage(iii) at the round of testing, or the box factor; (4⁗)(b); Lemma c5-3-3(iii) concerns the final carrier and is not used here). It is therefore *not* a CRE large-fluctuation function. It refines the small-field set, and its suppression comes from the Gaussian weight in T₁ ((4⁗)(b)).
 
 **(4′) D1.0(P) against CRE pp.256–259 and Sect. 3.**
@@ -960,7 +961,7 @@ the formula of §2. In it:
 - C′ϱ₁ ≤ η/8 and C_qg₀(1+r) ≤ 1 ((3.8));
 - the tilt threshold of (3.12).
 
-Each is a condition on g₀ alone: the constants are fixed before the coupling, and ϱ₁ ((3.12) *Order*), g₀(1+r)³, ϱ₁r², and τ̂_N tend to 0 with g₀, as r ≤ A₁(log g₀^{−2} + log ρ_γ)^{p₀} (§3c(4) *What (P) needs*). Then D1(iii)′ holds on every labelled term, covered or not (§3d(2); (3.11) *Uncovered terms*): for real U₁ in the support of the term's indicators and ‖a′‖_∞ < ϱ₁,
+Each is a condition on g₀ alone: the constants are fixed before the coupling, and ϱ₁ ((3.12) *Order*), g₀(1+r)³, ϱ₁r², and τ̂_N tend to 0 with g₀, as r ≤ A₁(log g₀^{−2})^{p₀} (§3c(4) *What (P) needs*). Then D1(iii)′ holds on every labelled term, covered or not (§3d(2); (3.11) *Uncovered terms*): for real U₁ in the support of the term's indicators and ‖a′‖_∞ < ϱ₁,
 - Υ¹_W, the words U_j and f_ξ(m̂₀) are analytic in a′ and G-covariant ((3.10));
 - D1(ii) holds in the per-traversal form of §3a(8), with the curvature term C_χρ[δ*^c_n(U₁) + a*_n(a′)], the large-field and wrapping terms at the rate (61/16)η ((0), (3.8)), and the exterior marks of §3a(7) at their rate, including 𝔪^δ_Y ((3.9)); the root weight max(ρ, ρ_ph) has ρ_ph as in (3.12) *Order*;
 - ‖U_j(𝐔)‖ ≤ exp(Σ_{n∈U_j}c_n) and |f_ξ(m̂₀)(𝐔)| ≤ E_C(a′) ((3.8), (3.9));

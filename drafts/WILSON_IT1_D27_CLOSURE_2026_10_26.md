@@ -572,7 +572,7 @@ The per-cube sums of 15.3 and 15.4(i) pay the sums over the groups and over the 
 So it enters D2.0(5)(c)'s recursion as a term C″MR_ke^{−p₀(g_k)/4}C_χ^{(k)} in the coefficient of C_χ^{(k)}, which stays below 1 for small g_k.
 
 *The size of C^R_k.*
-- r^{ext}_k is a constant times α_{0,k} = g_kC₀(log g_k^{−2})^{q₀} for g_k small (#T4.50; CRE (2.28) p.259). So r^{ext}_k is of order g_k times a power of log g_k^{−2}.
+- r^{ext}_k is a constant times α_{0,k} = ĝ_kC₀(log ĝ_k^{−2})^{q₀} for g_k small (#T4.50; CRE (2.28) p.259 at ĝ_k, map #MD2.2.4.78). So r^{ext}_k is of order g_k times a power of log g_k^{−2}, as ĝ_k ≤ g_k ≤ ρ_γ^{1/2}ĝ_k (Cauchy #CP.14).
 - ρ̃_k = ρ_k/ᾱ_k, with ρ_k = C_ρg_k²(1+r_k)⁴ (map #MD2.0.3.35) and ᾱ_k of order g_k(log g_k^{−2})^q.
 
 So 1/(r^{ext}_kρ̃_k) ≤ g_k^{−2}·(a polylog of g_k^{−2}), the constant 1/c_{ext} being fixed after L and M. Hence
