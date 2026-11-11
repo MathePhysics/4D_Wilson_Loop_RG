@@ -2482,7 +2482,7 @@
 
 {#5.33} (R) 1/R_i ≤ c_{RW}(ε₁/((1 − β)min(α_{0,i}, α_{1,i})))L^{3m_W−(1−ε₀)(k−m_W)},  {#D.c_RW} c_{RW} := x̄_J(4C_G(ε₀)c″_K + 1) + 4C_G(ε₀)c″_K.
 
-  - {#5.34} By CRE (2.28) and (2.4), with q₀ = q₁ > p₀ (the SW closure §2) and C₀, C₁ ≥ A₀, α_{0,i}, α_{1,i} ≥ ε_i. By #4.458-0.1 at m = i ≥ k − m_W, with m_s = 1 (#D.m_s), as here k = K − j(C) = k_s (the Cauchy note's #C1.1, #D.k_s), ε₁/ε_i ≤ C_{αε}R_k(m_W + 1)^{1/2} with {#D.C_αε} C_{αε} := C(M)(1 + β₀). Also 3m_W − (1 − ε₀)(k − m_W) ≤ −(4 − 7ε₀)k/8.
+  - {#5.34} By CRE (2.28) and (2.4), with q₀ = q₁ > p₀ (the SW closure §2) and C₀, C₁ ≥ A₀, α_{0,i}, α_{1,i} ≥ ε_i. By #4.458-0.1 at m = i ≥ k − m_W, with m_s = 1 (#D.m_s), as here k = K − j(C) = k_s (#D.k_s; the Cauchy note's #C1.1), ε₁/ε_i ≤ C_{αε}R_k(m_W + 1)^{1/2} with {#D.C_αε} C_{αε} := C(M)(1 + β₀). Also 3m_W − (1 − ε₀)(k − m_W) ≤ −(4 − 7ε₀)k/8.
   - {#5.35} For R_i ≥ 2, Cauchy's estimate on |t − 1| ≤ R_i shows that every insertion of run A changes along the path by ≤ {#D.v_i} v_i := 2/R_i times its bound, with
 
 {#5.36} (V) v_i ≤ {#D.r̄_K} r̄_K := 2c_{RW}C_{αε}(1 − β)^{−1}R_k(m_W + 1)^{1/2}L^{−(4−7ε₀)k/8}.
