@@ -3967,3 +3967,11 @@ Relabel → LABELS 950ab17d60ee, table c4c5ac132304. defcheck prints 0 lines on 
   - Not done: round 10 (narrow) and round 11 (full) are still to come. Log: WILSON_IT1_LF_TRIAGE_BG_D26REPOINT_2026_11_10.md.
 
 Relabel → LABELS 3a0bd5263c21, table ec9f2c4c2477. defcheck prints 0 lines on the 12 standing notes, build_packet --check reports 0 conflicts, and the pin check finds 0 failures among 664 pins.
+
+## The Table Fork's Review of Every Section, Round 10, 2026-11-11 21:37
+
+- Round 10 (narrow) had three parts: the uncited := definitions of the notes in #TP.1's scope; the tags the table cites in the notes that other sessions edited; and every row changed in round 9, with its consumers. It found R10-1 to R10-5, all minor and all repaired in place at table 90a8ede1cabe.
+  - Content: δ_m and δc_𝒢 defined (#T12.7-0-6, #T12.3-3); new local-object rows #T12.6-22, #T12.7-34 to #T12.7-35-0-1, #T12.17-1 to #T12.17-1-0-3, and #T12.38 to #T12.38-0-2; δ′_j, c′_j, and N_s identified (#T12.7-30-0-1, #T12.7-0-18, #T12.38); ε_γ := 2δ′/b + 2C_Wγ²/(1 − C_Wγ²) after Cauchy #C5.7-8's repair (#T12.7-0-1, #T10.31-1); the covariance note's c_d in C_av (#T4.45); V4's A_E (#T12.16-0-4); and the pin #C9.4-1 (#T3.28).
+  - Not done: round 11 (full) and a further clean round are still to come. Log: WILSON_IT1_LF_TRIAGE_BG_D26REPOINT_2026_11_10.md.
+
+Relabel → LABELS 1f2d22af7f71, table 90a8ede1cabe (LF ada99ead6f26). build_packet --check reports 0 conflicts, and the pin check finds 0 failures among 665 pins.
