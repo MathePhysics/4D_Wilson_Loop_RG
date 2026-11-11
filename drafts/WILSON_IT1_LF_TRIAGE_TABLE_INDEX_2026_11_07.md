@@ -3819,3 +3819,14 @@ Relabel → LABELS df5691132d30, table ae5e18927daf, at LF 94d3e82675b1. The def
 - Rounds 1–4 are clean (two on the map rows, two on #T12.31-12). Requested by (4) and BETA; SHAs sent after. Log: WILSON_IT1_LF_TRIAGE_BG_D26REPOINT_2026_11_10.md.
 
 Relabel → LABELS c73455137f70, table 3e9dd1981ea0, at LF 94d3e82675b1. The definition check prints 0 lines on LF, on the pair note, on the general-loops note e5868db66fa8 and on NL. dmarks2 lists the 16 known leftovers. deadcheck and prefcheck show only their known hits. Columns are 10×5, 74×6, and 267×7.
+
+## V4's (H4) Readings: ∼, Compatible Partitions, CRE's Q̃ and σ, RG1's LQ̃ and M₁, 2026-11-11 02:45
+
+- #T6.19: touching means a common point (RG1's □̃ⁿ, p.257 l.6–7), so □^∼ is the cube of side (L + 2)M₂R₀ concentric with □. Inferred, not printed in CRE.
+- #T6.19-1 (new): compatible partitions are nested (REG p.98 l.19–21). Inferred.
+- #T10.21-2: Q̃(B′) = LQ̃B′ + C̃(B′) is now derived, from RG1 p.267 l.21–26 with p.261 l.10–11; (2.4) is on p.266.
+- #T6.20-1 (new): CRE's Q̃ = LQ_{U₁}, from the constants of (1.14). #T6.20-2 (new): CRE's σ = σ_H/σ_H(0), from the σ₀ count.
+- #T2.9-1 (new): M₁ is PBG Theorem 3.1's lower bound (REG p.77 l.16; PBG p.397 l.37–38).
+- Requested by (4). Round 1 found O1–O2, both repaired; rounds 2 (narrow) and 3 (full) are clean. Map e36778a633e4: all 419 cited tags are present. SHAs sent after. Log: WILSON_IT1_LF_TRIAGE_BG_D26REPOINT_2026_11_10.md.
+
+Relabel → LABELS 16d105361e83, table 50377d2c8c33, at LF 94d3e82675b1. The definition check prints 0 lines on LF, on the pair note, on the general-loops note and on NL. dmarks2 lists the 16 known leftovers. deadcheck and prefcheck show only their known hits. Columns are 10×5, 74×6, and 268×7.
