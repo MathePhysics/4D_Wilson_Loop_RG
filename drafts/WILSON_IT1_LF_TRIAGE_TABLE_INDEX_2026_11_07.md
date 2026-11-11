@@ -3767,3 +3767,12 @@ Relabel → LABELS e384dc944732, table ff88007cace7, at LF 94d3e82675b1. The def
 - Rounds 1–3 found I1–I5, all repaired; rounds 4 (narrow) and 5 (full) are clean. Announced to (4) before the edit and SHAs sent after. Log: WILSON_IT1_LF_TRIAGE_BG_D26REPOINT_2026_11_10.md.
 
 Relabel → LABELS 3e685cf2133e, table 37e1056450c0, at LF 94d3e82675b1. The definition check prints 0 lines on LF and on the pair note; on general-loops note 6be701a1022e only the new §9, not yet sent by BETA, prints. dmarks2 lists the 16 known leftovers. deadcheck and prefcheck show only their known hits. Columns are 10×5, 74×6, and 267×7.
+
+## General Loops 6c7f55d1ee64: §9 and #GL1.5-2 in #T12.31-1-1, #T12.31-16 to #T12.31-17, 2026-11-11 01:02
+
+- New #T12.31-1-1: diam_ph(C) := uL^{−K}diam_0(C), with the torus conditions holding for K ≥ q(C) + 2 iff 3diam_ph(C) < T_ph (#GL1.5-2).
+- New #T12.31-16 to #T12.31-16-2: level q (j_q, P^{co}_q(C)), 𝒞^{gl}_q, H₊, 𝔊^{gl}_q, the reflection θ, H₋, θ𝔇, (θ̂C, χ′) = (θC, χ̄), κ_{C,χ} with κ_{θC,χ̄} = conj κ_{C,χ}, and §9.5–§9.6's locals.
+- New #T12.31-17: #GL9.8's a_C and c_C, the general forms of the nonvanishing note's. Edited: #T12.31-5-1 (NV's c_den is its 2Λ̄(𝒞)) and #T12.30-8 ("the nonvanishing note's e^{c_C}").
+- Round 1 found J1–J3, all repaired; rounds 2 (narrow) and 3 (full) are clean. Announced to (4) before the edit and SHAs sent after. Log: WILSON_IT1_LF_TRIAGE_BG_D26REPOINT_2026_11_10.md.
+
+Relabel → LABELS 9a2252417817, table 8c89f561c7cc, at LF 94d3e82675b1. The definition check prints 0 lines on LF, on the pair note and on general-loops note 6c7f55d1ee64. dmarks2 lists the 16 known leftovers. deadcheck and prefcheck show only their known hits. Columns are 10×5, 74×6, and 267×7.

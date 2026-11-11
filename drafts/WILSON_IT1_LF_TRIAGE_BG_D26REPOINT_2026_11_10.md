@@ -233,10 +233,22 @@ Input: (4)'s message on IT-1 §3j and §3e(3.12), O4 and D26, sent at IT-1 c3341
 - Rounds 4 (narrow) and 5 (full) are clean, so the rows are done.
 - Table ff88007cace7 → 0a9d08071c16 → 5e325c9e5904 → 37e1056450c0. LABELS e384dc944732 → 8a5651829f1d → a3dced12f772 → 3e685cf2133e. defcheck on LF and on the pair note: "-- 0 lines" each. On general-loops note 6be701a1022e it prints lines in the new §9 only (#GL9.2 to #GL9.8-2), whose rows BETA has not sent. dmarks2 16; deadcheck and prefcheck known hits only; columns 10×5, 74×6, 267×7.
 
+## General Loops 6c7f55d1ee64: #T12.31-1-1, #T12.31-5-1, #T12.31-16 to #T12.31-17 and #T12.30-8 (Table)
+
+Input: BETA's message on §9 (reflection positivity) and #GL1.5-2, with rows (a)–(d) proposed. Entered: (a) as #T12.31-1-1; (b) and (c) as #T12.31-16 and #T12.31-16-1, with θ, H₋, θ𝔇 and (θ̂C, χ′); (d) as a clause of #T12.31-16-2, beside κ_{C,χ} and §9.5–§9.6's locals. #GL9.8's a_C and c_C are in #T12.31-17. NV's c_den is named in #T12.31-5-1, which already gives 2Λ̄(𝒞).
+- Re-derived: with K_μ = (T_ph/u)L^{K−1} and diam_0(C)/L = (diam_ph(C)/u)L^{K−1}, K_μ ≥ 3(diam_0(C)/L + 2) is T_ph − 3diam_ph(C) ≥ 6uL^{1−K}, and T_ph − 3diam_ph(C) ∈ uL^{−q(C)}ℤ. P_{K′}(C) = P^{co}(C)L^{j_q−q(C)} = P^{co}_q(C)L^{j_q−q}, a step-K′ bond being uL^{−j_q}. For a square, #GL9.8's c_C is NV's, as P_{K′}(C) = 4ℓ_C, and #GL9.8's a_C is at most NV's, as a^{ty}_C ≤ c_tyℓ_C²ε_ty + ι^{ℓ₀} (#T12.31-14).
+- defcheck is tag-based: a range "#GL9.5-2 to #GL9.5-4" does not cite #GL9.5-3, so the locals are cited by their own tags.
+- Round 1 (full) found J1–J3:
+  - J1: #T12.31-16, #T12.31-16-1 and #T12.31-17 cited #RP and #NV tags without naming either note's file.
+  - J2: #T12.30-8 called the nonvanishing note "the pair note", the table's name for the pair factorisation note.
+  - J3: #T12.31-17's ι^{ℓ₀} had no pointer; it is #T12.4-4's ι^{ℓ₀}_i at one loop.
+- Rounds 2 (narrow) and 3 (full) are clean, so the rows are done.
+- Table 37e1056450c0 → f2f84535fce4 → be0328776e9a → 3d1e48f03480 → 8c89f561c7cc. LABELS 3e685cf2133e → d7578bcc7615 → 5a44322bde7c → 9bcf40ff20b8 → 9a2252417817. defcheck on LF, on the pair note and on general-loops note 6c7f55d1ee64: "-- 0 lines" each. dmarks2 16; deadcheck and prefcheck known hits only; columns 10×5, 74×6, 267×7.
+
 ## SHAs
 
-Table: d71e239470ea → eb5a6a505303 → b168c70703ab → 9f6ebf47c805 → 0fa578b35726 → ef03c153b6ad → cc3949e005fb → 77c1b5ec9928 → 18cbd119fc8f → 05cbd40be4db → 7b51b1177ee9 → bb2bbb3fbd08 → 99c0d18618f6 → 7a0f3334905e → ff88007cace7 → 37e1056450c0.
-LABELS: 2d2801629f41 → 146c7b49d22b → d444e40b4233 → 1f2b3fa09b9d → 740b198d7a9d → 58050f8936d3 → 0e94a6174742 → 4c2c66efb348 → 734a37930def → c59773513fd1 → be350896ce4a → 9eeed3a7792e → 7a980dfeec7b → c6814d4faaee → e384dc944732 → 3e685cf2133e. Background note: 249ae1a46a2a → 8510ab0aebd7 → 7bb5f99918ab → 3047b31464c3 → 22a230556c65 → c7612b0d6f3b → df792ffa33f3.
+Table: d71e239470ea → eb5a6a505303 → b168c70703ab → 9f6ebf47c805 → 0fa578b35726 → ef03c153b6ad → cc3949e005fb → 77c1b5ec9928 → 18cbd119fc8f → 05cbd40be4db → 7b51b1177ee9 → bb2bbb3fbd08 → 99c0d18618f6 → 7a0f3334905e → ff88007cace7 → 37e1056450c0 → 8c89f561c7cc.
+LABELS: 2d2801629f41 → 146c7b49d22b → d444e40b4233 → 1f2b3fa09b9d → 740b198d7a9d → 58050f8936d3 → 0e94a6174742 → 4c2c66efb348 → 734a37930def → c59773513fd1 → be350896ce4a → 9eeed3a7792e → 7a980dfeec7b → c6814d4faaee → e384dc944732 → 3e685cf2133e → 9a2252417817. Background note: 249ae1a46a2a → 8510ab0aebd7 → 7bb5f99918ab → 3047b31464c3 → 22a230556c65 → c7612b0d6f3b → df792ffa33f3.
 
 ## Status
 
@@ -253,3 +265,5 @@ The rows #T4.44, #T12.19-4-1, #T12.19-6, #T12.19-8-1, #T12.19-9-1 and #T12.32 to
 The rows #T1.3-1, #T12.31-1, #T12.31-2, #T12.31-4, #T12.31-9 to #T12.31-11 and #T12.33 to #T12.33-4-1 follow NL e2ca5b9e7a82, general-loops note ebaefc789f80 and two-loops cea1a21316cc. Rounds 1–3 found N1–N12, all repaired. Rounds 4 (narrow) and 5 (full) are clean, so the rows are done at table ff88007cace7. At general-loops notes 11df5d85a367 (𝒯(D) for ℋ(D), new #GL6.2-0-1 and #GL6.2-0-2, no new symbols) and b4b6a5cc0dfe (#GL6.1-4-2 cites #T12.33–#T12.33-1) every #GL tag the table cites is present with its anchor unchanged, and defcheck prints 0 lines.
 
 The rows #T12.19-2, #T12.19-4-1 to #T12.19-8-1, #T12.32-6, #T12.32-8, #T12.32-10 to #T12.32-12-1, #T12.34 and #T12.34-1 follow IT-1 d3aef750d7a9, O4 952a1687d5c4 and D26 45edbc7927d4. Rounds 1–3 found I1–I5, all repaired. Rounds 4 (narrow) and 5 (full) are clean, so the rows are done at table 37e1056450c0.
+
+The rows #T12.31-1-1, #T12.31-5-1, #T12.31-16 to #T12.31-17 and #T12.30-8 follow general-loops note 6c7f55d1ee64, with the reflection-positivity note 42e029b94d78 and the nonvanishing note 5137fb31c48d for the #RP and #NV anchors. Round 1 found J1–J3, all repaired. Rounds 2 (narrow) and 3 (full) are clean, so the rows are done at table 8c89f561c7cc.

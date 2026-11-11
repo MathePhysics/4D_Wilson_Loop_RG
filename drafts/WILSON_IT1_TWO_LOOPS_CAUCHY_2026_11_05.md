@@ -27,7 +27,7 @@
 {#PC2.1-6} Everything else in its §§2–11 bounds the two runs' densities.
 {#PC2.2} *(a) for the pair.* Let B^×_W be the supremum over K of the right side of #918 with the factor (1 − w_{ℓ₀}) replaced by 1, as #ND.8.1 does for one loop, finite by #919. Then |𝒲^×/(κ_{C₁}κ_{C₂})| ≤ B^×_W pointwise in V on every labelled term of either run, and |F^×_K| ≤ B^×_W for every K.
 {#PC2.2-1} The bound is assembled from pointwise bounds: |f^{(1)}f^{(2)}| ≤ 1 (#390); the insertion bound per traversal with the product bound of the cross carry lemma (#923, #487); and, on ℓ ≠ ℓ₀, e^{A^×}B^×_LF with B^×_LF a supremum over the terms (#602, #924). It is one number for both runs and uniform in K (#919).
-{#PC2.3} *(d) for the pair.* N_s ≥ 2max(ℓ₁, ℓ₂) (#290), and ℓ_i ≥ MR_k for γ small by #C11c.4's argument for each C_i.
+{#PC2.3} *(d) for the pair.* N_s ≥ 2max(ℓ₁, ℓ₂), which follows from V4's torus hypothesis for each loop (#290), and ℓ_i ≥ MR_k for γ small by #C11c.4's argument for each C_i.
 {#PC2.4} So the Cauchy note's density bounds hold for the pair with B^×_W in place of B_W:
 - {#PC2.4-1} the unmatched set: δ_LFa^{(U)}_KB^×_W (#C6.1.3-1);
 - {#PC2.4-2} the shells of the all-small-field pair: b^{(S)}_KB^×_W (#C3.10-2, #C7.1-5);
@@ -355,7 +355,7 @@
 
 {#PC7.1} F^×_K = W^×_ren(ε_K) is a Cauchy sequence, so it converges along the full sequence K → ∞.
 {#PC7.1-1} Its limit is the unique limit point of #936: W^{×,∞}(C₁, C₂) = e^{Ē^×}μ̄(W_{χ₁}(C₁^{(K′)};·)W_{χ₂}(C₂^{(K′)};·)) + r̄^×, now independent of the subsequence, and with it Ē^× = lim_KE^×_const,K′ by §5.
-{#PC7.2} The limit exists for every pair of vertex-disjoint squares, each in a plane parallel to a coordinate plane (#332, #332.1), of physical sides pL^{−q}u at ℓ^∞ distance D ≥ 1 in step-K′ units, in the countable admissible family (#ND.8.5), with sides at most half the torus period (N_s ≥ 2max(ℓ₁, ℓ₂), #290). No diagonal argument is needed.
+{#PC7.2} The limit exists for every pair of vertex-disjoint squares, each in a plane parallel to a coordinate plane (#332, #332.1), of physical sides pL^{−q}u at ℓ^∞ distance D ≥ 1 in step-K′ units, in the countable admissible family (#ND.8.5), with sides below T_ph/3, the squares for which V4's torus hypothesis holds at every K (#290-1). No diagonal argument is needed.
 {#PC7.3} Not claimed: factorisation of W^{×,∞} at large distance (#941–#943), and anything about the limit at fixed coupling beyond (8.2)'s smallness statements (#944–#948).
 
 ## Conditions {#PCSK}
