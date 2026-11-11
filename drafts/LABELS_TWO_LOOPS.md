@@ -74,709 +74,710 @@ Each content line of `WILSON_IT1_TWO_LOOPS_UNIFORM_BOUND_2026_10_27.md` and of i
 | {#287} | note | 75 | 5·2^{d+3}ν_r ≤ 1 ((6B), (6C)), which gives 5·2^{d+2}ν_r ≤ 1 and (5/2)ν… |
 | {#288} | note | 76 | L ≥ L₀^× := 4·10⁴u_𝔏, 1.8432·10⁹ at d = 4 ((6A)(i), (6C), #241; D2.7 1… |
 | {#290} | note | 78 | The span bound of (6B) uses a torus period of at least twice each side… |
-| {#290-1} | note | 79 | On the fixed torus (continuum note #NWTOA.1: T_ph is a fixed multiple … |
-| {#292} | note | 81 | *Inherited:* the inputs of the single-loop (6.3). These are: |
-| {#293} | note | 82 | (S-w) (map D2.4(12)–(13)); |
-| {#294} | note | 83 | D2.6's inputs (for the carry lemma: the D2.6 closure 5.3's list, with … |
-| {#295} | note | 84 | D2.7, whose 15.5 rests on BLL (`balaban_proofs/BP_LFR2_LOOP_LOCALISATI… |
-| {#296} | note | 85 | the large-field payment behind B_LF (continuum note (4.4), #ND.4.9); |
-| {#297} | note | 86 | the reading of V4's step-1 factors in D(1)'s weights (map #MD2.4.5.10)… |
-| {#299} | note | 87 | the evaluation at U^R of the insertions that R leaves unchanged (D2.7 … |
-| {#300} | note | 88 | the bounds /μ^R_n/, /ζ^R_n/ ≤ C_R𝔞_n on the coefficients of the 𝐑-step… |
-| {#304} | note | 90 | What the Objects Are |
-| {#306} | note | 92 | The pair observable W_{χ₁}(C₁;U)W_{χ₂}(C₂;U) is the normalised trace o… |
-| {#307} | note | 93 | The stopping step is common to both loops: K′ = K − j, with j the leas… |
-| {#308} | note | 94 | So the corners of both loops are period points, and every step is comm… |
-| {#309} | note | 95 | At K′, C_i is a fixed contour C_i^{(K′)} with side ℓ_i = p_iL^{j−q_i} … |
-| {#310} | note | 96 | D ≥ 1 is the ℓ^∞ distance between C₁ and C₂ in step-K′ units. |
-| {#311} | note | 97 | In step-k units the sides are ℓ_iL^{K′−k}, and every traversal of C_i … |
-| {#313} | note | 99 | What That Forces |
-| {#315} | note | 101 | **The normalisation factorises exactly.** The coefficients δm_{k+1} an… |
-| {#315-1} | note | 102 | The cross constant E^× of (5) is the only cross term that the step map… |
-| {#316} | note | 103 | **A cross group has no scalar flat value.** A group with arcs on both … |
-| {#317} | note | 104 | **Cross groups are made with a doubly exponential decay in the distanc… |
-| {#318} | note | 105 | A cross group made at step k spans at least DL^{K′−k} step-k units. |
-| {#319} | note | 106 | The extent weight of (S-w) has the same rate at every step. |
-| {#320} | note | 107 | So the cross mass made at step k is ≤ C𝔞̄(ℓ₁+ℓ₂)L^{K′−k}e^{−ν_×DL^{K′−… |
-| {#321} | note | 108 | **So the cross groups are carried, not taken out.** |
-| {#322} | note | 109 | They form their own species cross(j), last in D2.0(3)'s order. They ar… |
-| {#323} | note | 110 | The D2.6 closure's carry lemma carries them without a bridge. Every la… |
-| {#324} | note | 111 | The doubly exponential decay pays this geometric growth: the carried c… |
-| {#325} | note | 112 | So the class carries everything to the stopping step, and the large-fi… |
-| {#326} | note | 113 | Taking the cross words out at the step that makes them doesn't work: o… |
-| {#328} | note | 115 | Derivation |
-| {#330} | note | 117 | (1) Setting |
-| {#332} | note | 119 | C₁, C₂ are coarse translates of counterclockwise squares, each in a pl… |
-| {#332.1} | note | 120 | *The planes.* V4 Section 10 states the pair in the plane of e₁, e₂, an… |
-| {#332.1-1} | note | 121 | The cross arguments use only distances between V(C₁) and V(C₂) (#333–#… |
-| {#333} | note | 122 | *The cross distance.* For a step-k traversal n of C_i, δ_n^{(k)} is th… |
-| {#334} | note | 123 | Both squares are unions of step-K′ bonds with corners on the step-K′ l… |
-| {#335} | note | 124 | Put Δ_×^{(k)} := Σ_ne^{−ν_×δ_n^{(k)}/M} over the step-k traversals of … |
-| {#336} | note | 125 | Then Δ_×^{(k)} ≤ 4(ℓ₁+ℓ₂)L^{K′−k}e^{−ν_×DL^{K′−k}/M}. |
-| {#337} | note | 126 | *Constants.* |
-| {#338} | note | 127 | c_d = ν/(32A_dML), A_d := max(2, A_E + 1), and C_S′ are those of the t… |
-| {#339} | note | 128 | ν_e = ν/(2C_box) is the extent rate of (S-w) (D2.4(12)(b)). |
-| {#340} | note | 129 | C_ζ is that of D2.3(5). |
-| {#341} | note | 130 | 𝔞̄ := max(τ̄², sup_kρ_k·pl_k, sup_kρ_{k+1}·pl_k), with pl_k := 1 + (lo… |
-| {#342} | note | 131 | 𝔟̄ := max(𝔞̄, sup_kmax(ρ̂_k, b_k)·pl_k) is the amplitude of the wrap g… |
-| {#343} | note | 132 | ν_× := min(ν_e, 2η/A′_E). |
-| {#344} | note | 133 | C_Σ(χ) is D2.3(7)'s constant for the character χ. |
-| {#345} | note | 134 | C_ν is the constant of ρ̃_kδ*_n = O(ρ_k) on the support, under map #MD… |
-| {#346} | note | 135 | c̄ := e^{(3/8)ν_e}c̄_*sup_mb_m/ᾱ_m and C_δ := 2 are the D2.6 closure's… |
-| {#347} | note | 136 | c̄_* contains C″ = 2(K_an+1)C_be^{(5/8)ν_e}/ε_* (D2.6 closure 5.5). K_… |
-| {#348} | note | 137 | r₀ := 2 is the range, in step-k units, within which a constituent carr… |
-| {#349} | note | 138 | At step 1 the contact sets lie within 2L fine units, that is two step-… |
-| {#350} | note | 139 | At k ≥ 1 the new slots of a component Y are the bonds of C in Y (map #… |
-| {#351} | note | 140 | r₀ enters only through e^{c_dr₀}. |
-| {#352} | note | 141 | *Norm of a cross group.* Y_𝒢 is a sum of terms, each an ordered produc… |
-| {#353} | note | 142 | The rooted sums of D2.4(12) are sums of exactly this form ((6A)(i)). |
-| {#354} | note | 143 | A word containing Y_𝒢 is a normalised trace on V_{π₁} ⊗ V_{π₂} of prod… |
-| {#356} | note | 145 | (2) The Two-Loop Class (Definition) |
-| {#358} | note | 147 | For k ≥ 0, the pair's dressed loop of step k on a labelled term is |
-| {#360} | note | 149 | 𝒲^×_k = κ^{(k)}_{C₁}κ^{(k)}_{C₂}e^{𝓔^×_k}[f^{(1)}_kf^{(2)}_k + Σ_{𝔅≠∅}… |
-| {#362} | note | 151 | f^{(i)}_k := dim(π_i)^{−1}tr π_i(Hol_{C_i}(U_k)). |
-| {#363} | note | 152 | 𝔅 is a family of insertions. Each has arcs on one loop only (a C_i-ins… |
-| {#364} | note | 153 | w(𝔅) is the normalised trace on V_{π₁} ⊗ V_{π₂} of the two-contour wor… |
-| {#365} | note | 154 | Q_k(𝔅) = exp(−Σ_{Γ hits 𝔅}φ_k(Γ)), over the clusters of the pair's ste… |
-| {#366} | note | 155 | κ^{(k)}_{C_i} := ∏_{j≤k}e^{−δm^{χ_i}_jP_{j−1}(C_i)}(z^{χ_i}_j)⁴, with … |
-| {#367} | note | 156 | 𝓔^×_k is the sum of the local terms and the constant E^×_const,k := E_… |
-| {#368} | note | 157 | *The other clauses.* The norms (ii) and (ii′), analyticity (iii), the … |
-| {#369} | note | 158 | *The species.* D(k)'s species (map #MD2.0.3.21–#MD2.0.3.26) and one mo… |
-| {#370} | note | 159 | The cross groups made by the step map at step j that are not attached … |
-| {#371} | note | 160 | The cross groups of the 𝐑-gas made by the 𝐑-operation at step j > N_B … |
-| {#372} | note | 161 | The descendants of both ((6), and (6B)'s second case). In D2.0(3)'s or… |
-| {#373} | note | 162 | *(ii^cr), the cross clause.* For each j ≤ k the cross(j) insertions pr… |
-| {#374} | note | 163 | w(W) := e^{λ_k(W)ν_rσ(W)}e^{θ(W)}‖Y_W‖ is the D2.6 closure 5.0's weigh… |
-| {#375} | note | 164 | Each insertion is counted once, at the first traversal of its arc set.… |
-| {#376} | note | 165 | *The base.* At k = 0 there are no insertions and κ^{(0)} := 1, so N^×_… |
-| {#377} | note | 166 | *D^×(1).* This is IT-1's step-1 class built on V4 Section 10's objects… |
-| {#378} | note | 167 | the groups of Definition def:two-loop-groups; |
-| {#379} | note | 168 | the reference scalars a_W, with a_W := 0 for cross groups; |
-| {#380} | note | 169 | the retreated carrier D(Λ) of Lemma lem:two-loop-retreated, with its c… |
-| {#381} | note | 170 | V4's cross families W are the species cross(1). Their factors are boun… |
-| {#382} | note | 171 | *The identity (by (6)).* With N^×_k := Σ_ℓχT[𝒲^×_ke^{A_k}] the class's… |
-| {#384} | note | 173 | (3) The Step Map for the Pair, Ingredient by Ingredient |
-| {#386} | note | 175 | *D2.0(1)–(2), units and background regularity:* D2.0(1)'s contour bull… |
-| {#387} | note | 176 | *D2.1, the leading word (by the product rule):* |
-| {#388} | note | 177 | f^{(1)}_kf^{(2)}_k = (f^{(1)}_{k+1} + s^{(1)})(f^{(2)}_{k+1} + s^{(2)}… |
-| {#389} | note | 178 | Expanded, this is the product of the two single-loop expansions: f^{(1… |
-| {#390} | note | 179 | So the slots are C_i-insertions, and the words keep the two-trace form… |
-| {#391} | note | 180 | *D2.2, the small-field map:* the observable enters only through the sl… |
-| {#392} | note | 181 | *D2.2(6)(d), the groups (definition):* |
-| {#393} | note | 182 | The merging rules are applied with hulls and long-ness per loop, as V4… |
-| {#394} | note | 183 | The arc set is ℐ(𝒢) = ℐ₁(𝒢) ⊔ ℐ₂(𝒢). The hull on C_i is taken in the c… |
-| {#395} | note | 184 | The linked hull (map #MD2.2.6.119, "the shorter of the two arcs of C b… |
-| {#396} | note | 185 | A C_i-group has ℐ_{3−i}(𝒢) = ∅. A cross group has both parts nonempty.… |
-| {#397} | note | 186 | *D2.3(2), the flat value:* |
-| {#398} | note | 187 | For a C_i-group, Schur's lemma for π_i (as V4 Lemma lem:two-loop-schur… |
-| {#399} | note | 188 | For a cross group, c_𝒢 := 0. Definition. |
-| {#400} | note | 189 | *D2.3(3), the factorisation:* (6). Derived. |
-| {#401} | note | 190 | *D2.3(4):* |
-| {#402} | note | 191 | Contour locality: (4), by D2.3(4)'s induction for objects with short a… |
-| {#403} | note | 192 | Periodicity: the corners of both loops are period points under the sto… |
-| {#404} | note | 193 | *D2.3(5), the coefficients:* δm^{χ_i}_{k+1} and ζ^{χ_i}_{k+1}, one pai… |
-| {#405} | note | 194 | *D2.3(6)–(8), the remainder, the sum over the steps, and the assembly:… |
-| {#406} | note | 195 | *D2.4, the contraction count and (S-w):* |
-| {#407} | note | 196 | These are per position. A position meets the traversals of two contour… |
-| {#408} | note | 197 | The dev contraction is used for C_i-groups only. Cross groups need no … |
-| {#409} | note | 198 | *D2.5, D2.6, and D2.7:* (6A) and (6B). |
-| {#411} | note | 200 | (4) Locality for the Pair, for Short Arcs |
-| {#413} | note | 202 | (L×) Take any step k and a non-cross object of the pair on C_i: an ins… |
-| {#414} | note | 203 | Then it is the object of the single-loop class of C_i with the same co… |
-| {#415} | note | 204 | Conversely, a single-loop object of C_i whose network has no point wit… |
-| {#416} | note | 205 | The network of a group contains the domains of its old members and of … |
-| {#418} | note | 207 | *Step 1.* |
-| {#419} | note | 208 | V4 Lemma lem:two-loop-grouping(c): the C_i-groups of the pair are the … |
-| {#420} | note | 209 | a_W = a^{(i)}_W (V4 L3590). |
-| {#421} | note | 210 | The paragraph *Cancellation* in the proof of Lemma lem:two-loop-cross:… |
-| {#422} | note | 211 | A constituent with a contact on C_{3−i} lies within r₀ of C_{3−i}. |
-| {#423} | note | 212 | At the retreated carrier D(Λ) these transfer: by the proof of Lemma le… |
-| {#425} | note | 214 | *Step k → k+1.* |
-| {#426} | note | 215 | A step-(k+1) object is built from its constituents by the composition,… |
-| {#427} | note | 216 | For short arcs these use the contour only through the slots, arcs, and… |
-| {#428} | note | 217 | The constituents are step-k objects whose networks lie inside the new … |
-| {#429} | note | 218 | Consider an old occurrence with arcs on both loops, that is, a cluster… |
-| {#430} | note | 219 | So no non-cross object contains such an occurrence or a cross insertio… |
-| {#431} | note | 220 | (4) covers only the groups short on C_i: D2.3(4)'s contour locality is… |
-| {#433} | note | 222 | (5) The Factorisation of the Reference Gas |
-| {#435} | note | 224 | Work on ℓ₀ at the map k → k+1, k ≥ 1. The first step is V4's (*The fir… |
-| {#436} | note | 225 | S°(ℓ₀) is the pair's reference group gas: C₁- and C₂-groups with their… |
-| {#437} | note | 226 | S°_{C_i}(ℓ₀) is the single-loop gas of C_i. |
-| {#439} | note | 228 | Put E^×_{k+1} := log S°(ℓ₀) − log S°_{C₁}(ℓ₀) − log S°_{C₂}(ℓ₀). |
-| {#441} | note | 230 | *Allocation.* In each gas put a(b) := Σ_{Γ: b∈J_Γ}Φ°(Γ)//J_Γ/ (D2.3(6)… |
-| {#442} | note | 231 | Then log S° = Σ_ba(b) over the step-k traversals of C, and log S°_{C_i… |
-| {#443} | note | 232 | So E^×_{k+1} = Σ_iΣ_{b∈C_i}(a(b) − a_{C_i}(b)). The rearrangement uses… |
-| {#444} | note | 233 | *Cancellation.* Let b ∈ C_i, and let Γ ∋ b be a cluster of either gas … |
-| {#445} | note | 234 | Its network has no point within r₀ of C_{3−i}. |
-| {#446} | note | 235 | By (L×) it is a cluster of both gases, with the same weight and the sa… |
-| {#447} | note | 236 | So a(b) − a_{C_i}(b) contains only clusters of network diameter ≥ δ_b^… |
-| {#448} | note | 237 | The latter have network diameter ≥ ℓ_iL^{K′−k} = P_k(C_i)/4: the arc o… |
-| {#449} | note | 238 | *Bound.* By (T′) for each gas (for the pair gas by (6A)(v)), /a(b) − a… |
-| {#450} | note | 239 | /E^×_{k+1}/ ≤ 8C_S′e^{c_dr₀}𝔞_{k+1}(ℓ₁+ℓ₂)L^{K′−k}e^{−c_dDL^{K′−k}} + … |
-| {#451} | note | 240 | The second term does not decay in D. It would, given the long-group an… |
-| {#452} | note | 241 | *The first step.* E^×_1 is V4's cross exponent at the retreated carrie… |
-| {#453} | note | 242 | *Assembly.* |
-| {#454} | note | 243 | By D2.3(8) for C_i alone, log S°_{C_i}(ℓ₀) = −δm^{χ_i}_{k+1}P_k(C_i) +… |
-| {#455} | note | 244 | So log S°(ℓ₀) = −Σ_iδm^{χ_i}_{k+1}P_k(C_i) + 4Σ_iζ^{χ_i}_{k+1} + E°_{k… |
-| {#456} | note | 245 | Then D2.3(8)'s assembly holds for the pair, with κ_{k+1} := κ_{C₁,k+1}… |
-| {#457} | note | 246 | E^∂_{k+1}(ℓ) := log S°(ℓ) − log S°(ℓ₀) is D2.3(8)'s, for the pair gas. |
-| {#459} | note | 248 | (6) The Cross Groups: Production and Carry |
-| {#461} | note | 250 | *The step.* Apply the map k → k+1 to N^×_k. After the interactions are… |
-| {#462} | note | 251 | D2.3(3)'s multilinear expansion Y_𝒢 = c_𝒢T + Y^d_𝒢 and its resummation… |
-| {#463} | note | 252 | For a cross group c_𝒢 = 0, so Y^d_𝒢 = Y_𝒢: the group enters the new wo… |
-| {#464} | note | 253 | The result is 𝒲^×_{k+1} of (2), with insertions of every species, Q^{o… |
-| {#465} | note | 254 | Nothing is split off. So the numerator identity (map #MD2.0.3.66) give… |
-| {#466} | note | 255 | *The species of a new cross group.* |
-| {#467} | note | 256 | The species rule of map #MD2.0.3.22–#MD2.0.3.25-1, with the tests of t… |
-| {#468} | note | 257 | A cross group made from parents that are not all dev takes the first s… |
-| {#469} | note | 258 | The other new cross groups are cross(k+1). They pass §2.1's tests (i)–… |
-| {#470} | note | 259 | Map #MD2.0.3.21's reclassification is a rule for dev insertions, so a … |
-| {#471} | note | 260 | At an 𝐑-step these rules are replaced by (6B)'s. The single-loop membe… |
-| {#472} | note | 261 | *Production.* Let 𝒢 be a cross(k+1) group, and m := K′ − k − 1. |
-| {#473} | note | 262 | (S-w) applies to 𝒢 on every labelled term (D2.4(12)(b), for the groups… |
-| {#474} | note | 263 | 𝒢 has a traversal n ∈ ℐ_i(𝒢) and a traversal of C_{3−i} in ℐ(𝒢) ⊆ X(𝒢)… |
-| {#475} | note | 264 | Pin 𝒢 at the first traversal of its arc set and use (S-w) at the posit… |
-| {#476} | note | 265 | A^cr_{k+1} := Σ_{𝒢∈cross(k+1)}e^{c_W}w(𝒢) ≤ e^{c_W}C_S′ρ_{k+1}pl_kΔ_×^… |
-| {#477} | note | 266 | *The first step.* The cross(1) insertions are V4's cross groups at the… |
-| {#478} | note | 267 | The distance. V4 Lemma lem:two-loop-cross(a) gives 𝔰(W) > δ_a/(A′_ELM)… |
-| {#479} | note | 268 | The pins. The pins (c4-6-5) hold for the groups of the pair (Lemma lem… |
-| {#480} | note | 269 | Pin each cross group at a traversal of its hull, and spend 2η𝔰 on the … |
-| {#481} | note | 270 | A^cr_1 ≤ e^{c_W}Σ_{a∈ℐ_C}e^{−c_×δ_a/(LM)}Σ_{W∋a}M^{(ρ)}_Λ(W)e^{4η𝔰(W)}… |
-| {#482} | note | 271 | with C_pin the pins' constant (C_pin ≤ C_×, L3711). |
-| {#483} | note | 272 | A fine traversal a inside a step-1 traversal n has δ_a ≥ Lδ_n^{(1)} fi… |
-| {#484} | note | 273 | So the bound holds at every step with C_cr := e^{c_W}L·max(C_S′, C_V(1… |
-| {#485} | note | 274 | *Lemma (cross carry).* Let j ≤ n < K′. On every labelled term, on 𝒟^λ_… |
-| {#486} | note | 275 | M^cr_{n+1}(j) ≤ (1 + C_δc̄)(1 + y^R_{n+1})M^cr_n(j), and M^cr_j(j) ≤ (… |
-| {#487} | note | 276 | summed over the terms of the multilinear expansion at step n+1, the pr… |
-| {#488} | note | 277 | y^R_k and A^R_k are (6B)'s at the 𝐑-steps k > N_B, and 0 at the other … |
-| {#489} | note | 278 | The constants do not depend on j, n, K, or the labelled term. |
-| {#490} | note | 279 | *Proof.* This is the D2.6 closure §5 at lineage extent zero, without (… |
-| {#491} | note | 280 | (T0) holds as written. The cross(j) insertions present at step n are f… |
-| {#492} | note | 281 | 5.1: a cross insertion carries no deviation, and its bound is a sup bo… |
-| {#493} | note | 282 | 5.4: its transports do not grow, interval by interval, under D2.6 §5.4… |
-| {#494} | note | 283 | (T2) and 5.5 without a bridge give 5.6's displays for the steps withou… |
-| {#495} | note | 284 | So y_{n+1} ≤ C_δc̄M^cr_n(j) and M^cr_{n+1}(j) ≤ (1 + C_δc̄)M^cr_n(j), … |
-| {#496} | note | 285 | D2.6 closure 5.5's split of a fixed member's e^{ν_rσ} is unchanged: fo… |
-| {#496.1} | note | 286 | A carried cross(j) insertion can lie on a layer where the room is λ ti… |
-| {#497} | note | 287 | At an 𝐑-step the factor 1 + y^R_k and the new mass A^R_k are (6B)'s, a… |
-| {#498} | note | 288 | A group whose parents have several species is counted in its first par… |
-| {#499} | note | 289 | There is no bridge. A later step touches the insertion through supp B′… |
-| {#500} | note | 290 | *The smallness (H^cr):* C_δc̄ ≤ 1. Like the D2.6 closure's C_δc̄S_R ≤ … |
-| {#501} | note | 291 | *The large-field terms.* Nothing is taken out below K′, so the cross s… |
-| {#503} | note | 293 | (6A) The Two-Component Form of the Map |
-| {#505} | note | 295 | Each item is the one-contour statement with C := C₁ ⊔ C₂, checked wher… |
-| {#506} | note | 296 | (i) *Multi-interval arc sets.* |
-| {#507} | note | 297 | *Intervals.* A group's arc set on C_i is the union of the linked hulls… |
-| {#508} | note | 298 | *Connectedness.* For an insertion D, X_D is its counted domain, the cu… |
-| {#509} | note | 299 | (H0) X^{Cov}_D lies in the closed ℓ∞-neighbourhood of radius 8M fine u… |
-| {#510} | note | 300 | (H1) A closed-connected set S_D contains X_D ∪ X^{Cov}_D, with diam_ℓ∞… |
-| {#511} | note | 301 | (H2) E_D := X_D ∪ (the π_k-cubes meeting H₁(D) ∪ H₂(D)) is closed-conn… |
-| {#512} | note | 302 | D's domain one step later is the set of π_{k+1}-cubes meeting the 8M-n… |
-| {#513} | note | 303 | The constituents of a class are connected through its joined pairs. |
-| {#514} | note | 304 | Each constituent's domain meets ℐ(𝒢); or it meets X^{Cov}_D for a touc… |
-| {#515} | note | 305 | The linked hulls of the classes are connected by overlaps on one loop … |
-| {#516} | note | 306 | So S_𝒢 is closed-connected, and diam_ℓ∞(S_𝒢) ≤ M#_{k+1}(𝒢) + n_{k+1}(𝒢… |
-| {#517} | note | 307 | So 𝒢 has (H0)–(H2), with S_𝒢 and u = 1. Its Cov domain lies in S_𝒢, si… |
-| {#518} | note | 308 | *𝐑-made insertions.* Let D be the insertion of a group g of the 𝐑-gas:… |
-| {#519} | note | 309 | (H0): D depends on U^R on hull^×(g), on span(g) when g is on one loop,… |
-| {#520} | note | 310 | (H1) holds with u = u_𝔏 and S_D := S_g of (6B), *The count*, for D_g^×… |
-| {#521} | note | 311 | (H2): E_D := X_D ∪ (the π_k-cubes meeting H₁(D) ∪ H₂(D)) ∪ (the π_k-cu… |
-| {#521-1} | note | 312 | *Its size.* Put σ := σ_g for D_g^× and σ := σ̃(D_g) for D_g. X_D has a… |
-| {#521-2} | note | 313 | A cube meeting ∪dom^♮P outside X_D meets (T_W)_{5M} for a W ∈ 𝔅(g), be… |
-| {#521-3} | note | 314 | For a big W, a cube meeting (T_W)_{5M} lies at d_□ ≤ 6 from a cube of … |
-| {#521-4} | note | 315 | With #E_W ≤ 65σ(W) + 160 ≤ (197/3)σ(W) (#561, u_W = 1, σ(W) ≥ 240) and… |
-| {#521-5} | note | 316 | So #E_D ≤ (46080 + 163904 + 1028200)σ_g + 160 for D_g^×, as Σ_{W big}σ… |
-| {#522} | note | 317 | The members need no cubes of their own. A slot member W lies in a slot… |
-| {#523} | note | 318 | T_W is closed-connected, contains X_W and ℐ(W), and lies in X_W ∪ (the… |
-| {#524} | note | 319 | E_D is closed-connected. Each dom^♮P is connected (#630), so the π_k-c… |
-| {#525} | note | 320 | For a cross group the spans in S_g need not lie in H₁(D) ∪ H₂(D), and … |
-| {#526} | note | 321 | *Base.* At step 1 the hypothesis holds by V4's connectivity. |
-| {#527} | note | 322 | *Connectivity* (V4 lem:two-loop-pins(a), its proof): for a component γ… |
-| {#528} | note | 323 | *Support.* Y_W depends on the configuration on X(W), on the coefficien… |
-| {#529} | note | 324 | Put S_W := the closed ℓ∞-neighbourhood of radius 8M fine units of X(W)… |
-| {#530} | note | 325 | *Counts.* #_1(X_W) ≤ n(W), since n(W) counts the π₁-cubes of the roots… |
-| {#531} | note | 326 | *Diameter.* S_W is the union of the 8M-neighbourhoods of the at most n… |
-| {#532} | note | 327 | So the step-1 insertions have the units of *Units with a factor* with … |
-| {#533} | note | 328 | *Vertices on two loops.* For a vertex with intervals on both loops, di… |
-| {#534} | note | 329 | For a W-vertex and a Γ-member with an interval on C_i, map (12)(d)'s b… |
-| {#535} | note | 330 | Put Q_v := M ∪ ∪_{W∈𝔅(M)}S_W ∪ ∪_{𝒱(M)}supp 𝒞. It is closed-connected:… |
-| {#536} | note | 331 | Each int_i(v) contains a point of Q_v: a bond of C_i in a component of… |
-| {#537} | note | 332 | diam_v ≤ diam_ℓ∞(Q_v) ≤ M#(M) + Σ_{W∈𝔅(M)}(diam_ℓ∞(S_W) + 1) + Σ_{𝒱(M)… |
-| {#538} | note | 333 | with diam_ℓ∞(S_W) ≤ u_W(M/L)σ_k(W), u_W the factor of *Units with a fa… |
-| {#539} | note | 334 | The window extends each int_i(v), so /win(v)/ ≤ Σ_i/int_i(v)/ + 80(dia… |
-| {#540} | note | 335 | *Touched W.* A touched W has /win(W)/ ≤ 88u_W(M/L)σ_k(W) + 84 and at m… |
-| {#543} | note | 336 | *Vacuum links.* /win^{(2)}_𝒞/ := 80(M#(𝒞) + 1), so /win^{(2)}_𝒞//M ≤ 8… |
-| {#544} | note | 337 | *Filled hulls.* Let D be an old insertion (a W-vertex, a member of a Γ… |
-| {#545} | note | 338 | H_i(D) := the smallest arc of C_i containing ℐ_i(D). |
-| {#546} | note | 339 | win(D) := the union over i of H_i(D), extended along C_i by 20(diam_D … |
-| {#547} | note | 340 | The positions of D are unchanged: the traversals of ℐ(D) and the cubes… |
-| {#548} | note | 341 | In D's production units, map *Arcs* (#MD2.4.12.22) and the connectedne… |
-| {#549} | note | 342 | *Covering.* The covering lemma's part (2) holds piece by piece. |
-| {#550} | note | 343 | Let the supports of v and D meet or touch at x, and let v have an inte… |
-| {#551} | note | 344 | By part (1) the shorter arc between them has length at most 2(diam_v +… |
-| {#552} | note | 345 | For a member with several pieces on C_i, the joining arc of the pair i… |
-| {#553} | note | 346 | If D has no interval on v's loop, the pair has no arc to cover ((iii))… |
-| {#554} | note | 347 | Part (3) runs per loop. So ℐ(𝒢) ⊆ ∪_vwin(v), and map (12)(c)'s bounds … |
-| {#566} | note | 348 | *Units with a factor.* Let an insertion D have, for a u ≥ 1, n(D) ≤ uM… |
-| {#555} | note | 349 | *Positions.* By *Filled hulls*, in the D2.6 closure's units (5.2 (T0),… |
-| {#568} | note | 350 | A traversal of win(D) is within /H_i(D)/ + 20(diam_D + 1) ≤ 24u((M/L)σ… |
-| {#558} | note | 351 | In (T0)'s condition the window term counts the other vertices whose wi… |
-| {#560} | note | 352 | *The share of D.* E_D is closed-connected ((H2) of *Connectedness*). |
-| {#561} | note | 353 | By *Arc cubes* (map #MD2.4.12.19) it has at most #(X_D) + Σ_i(8/H_i(D)… |
-| {#562} | note | 354 | D's domain one step later, the π_{k+1}-cubes meeting the 8M-neighbourh… |
-| {#563} | note | 355 | So #_{k+1}(X_D) ≤ 16 + 20480/L + 8320uσ_k(D)/L, and /win(D)/ ≤ 88u(M/L… |
-| {#564} | note | 356 | Map (12)(d)'s computation then gives sh(D) ≤ (ν_r/4)σ_k(D) + (ν_e/8 + … |
-| {#569} | note | 357 | The share's conditions are u(8496ν_f + 88ν_e)/L ≤ ν_r/4, which holds f… |
-| {#570} | note | 358 | The factors: u ≤ u₁ = 1 + 4/M + 48/L for the step-1 insertions (*Base*… |
-| {#570-1} | note | 359 | An untouched insertion keeps its production σ and factor (map #MD2.2.4… |
-| {#571} | note | 360 | So u ≤ u_𝔏 for every insertion (u₁ ≤ 2), and #569's conditions hold fo… |
-| {#572} | note | 361 | So (T0)'s condition for all insertions, D2.7's 𝒟(𝒴) apart, is (170u_𝔏 … |
-| {#572-1} | note | 362 | 𝒟(𝒴)'s windows lie within 20(diam X_𝒟 + 1) of its pieces' intervals in… |
-| {#573} | note | 363 | *M-vertices.* D2.2(4)(e) is read per loop: I_i(Y) is the smallest arc … |
-| {#573-1} | note | 364 | *Its insertions.* 𝔅(M) is the set of touched old insertions, those who… |
-| {#573-2} | note | 365 | So Y_G is the contraction along I(G) of the touched insertions and the… |
-| {#574} | note | 366 | *The enlargement.* D2.2(4)(e) enlarges I(Y) at each end to the end of … |
-| {#574-1} | note | 367 | J's owner W has X^{Cov}_W ⊇ ℐ(W) ⊇ J (Cov(k), map #MD2.2.4.3; the touc… |
-| {#575} | note | 368 | Map (12)(d)'s count holds per loop with diam_ℓ∞(S_W) in place of diam_… |
-| {#576} | note | 369 | So n_{k+1}(M) ≤ 40M#(M) + 96(M/L)Σ_{W∈𝔅(M)}u_Wσ_k(W) and /win^{(2)}_M/… |
-| {#577} | note | 370 | Map (12)(d)'s computation of sh(M), with #(X_M) ≤ #(M) + 8n_{k+1}(M)/M… |
-| {#578} | note | 371 | sh(M) ≤ ν_f(282#(M) + 22) + ν_e(441#(M) + 164) + (3ν_f + 9ν_e)(96/L)Σ_… |
-| {#579} | note | 372 | for M ≥ 100, in place of the map's ν_f(142#(M) + 11) + ν_e(221#(M) + 8… |
-| {#580} | note | 373 | A cube of M∖D′ then costs log 64 + log 2 + 2 + 1/8 + 24c + 283ν_f + 44… |
-| {#581} | note | 374 | The constant part, 22ν_f + 164ν_e ≤ 0.045 for ν ≤ 1/1000, is charged t… |
-| {#582} | note | 375 | The window sums of a two-loop vertex have four ends, with C_win^×'s co… |
-| {#583} | note | 376 | The part passed to a touched W is (3ν_f + 9ν_e)(96u_W/L)σ_k(W) + (ν_r/… |
-| {#584} | note | 377 | The transport conditions c_π′α_{1,k+1}·120M ≤ ν_f and u_Wc_π′α_{1,k+1}… |
-| {#585} | note | 378 | The per-piece constants 80c_π′ (the map's 40c_π′) and 84c_π′ of the tr… |
-| {#585-1} | note | 379 | A root traversal fixes its arc I_i(M) with two end offsets. An end bon… |
-| {#586} | note | 380 | (ii) *Long groups.* At k ≥ 1 a long arc is a union of linked hulls wit… |
-| {#587} | note | 381 | (iii) *The linked hull.* As in (3): the covering lemma's part (2) is a… |
-| {#588} | note | 382 | (iv) *Base points.* Each loop's traversals are numbered cyclically fro… |
-| {#589} | note | 383 | (v) *The reference gas.* Its species are C₁- and C₂-groups only (cross… |
-| {#590} | note | 384 | Its Kotecký–Preiss condition is the c-version of the pair's (S-w) (map… |
-| {#591} | note | 385 | The pair enters through the per-position counts of (12)(e)–(f): the tr… |
-| {#592} | note | 386 | (vi) *The range r₀.* r₀ := 2 ((1)). |
-| {#593} | note | 387 | *D2.5.* Covariance is a property of each insertion at the ends of each… |
-| {#594} | note | 388 | For an insertion with intervals I ∈ ℐ(W), Cov(k) (map #MD2.2.4.3) is r… |
-| {#595} | note | 389 | The composition argument (map (4)(c)–(e), #MD2.2.4.13, #MD2.2.4.93) ac… |
-| {#596} | note | 390 | *D2.6.* The attached species, their carry, and their payment are per l… |
-| {#597} | note | 391 | (T3) uses the square geometry of the loop that carries the joining arc… |
-| {#598} | note | 392 | A fixed member D″ with several intervals adds at most 12uσ(D″)/L π_{n+… |
-| {#598-1} | note | 393 | The charge is 12uν_e/L ≤ ν_r/16 for L ≥ 24u_𝔏, implied by L ≥ L₀^×, si… |
-| {#599} | note | 394 | 5.5's share of a fixed member, sh(W) ≤ (ν_r/4)σ(W) + c_W, holds for th… |
-| {#600} | note | 395 | §7.2's payment is per component. The contour-density constant c_C of §… |
-| {#601} | note | 396 | So the D2.6 closure holds for C₁ ⊔ C₂. Attached cross groups need no f… |
-| {#602} | note | 397 | *B^×_LF.* B^×_LF is the continuum note's large-field payment (4.4) (#N… |
-| {#604} | note | 398 | (4.4) holds given D2.7 (continuum note #ND.4.9) and rests on the D2.6 … |
-| {#605} | note | 399 | *D2.7.* (6B). Items 2 (the class and its exclusions do not involve the… |
-| {#607} | note | 401 | (6B) The 𝐑-Steps for the Pair |
-| {#609} | note | 403 | The 𝐑-operation is the identity at the steps k ≤ N_B (D2.7 item 1), wi… |
-| {#610} | note | 404 | *Item 3.* R′'s integral identity holds for every integrable integrand.… |
-| {#611} | note | 405 | *15.0, 15.2, and 15.3.* C ∩ X⁺ is a union of arcs on one or both loops… |
-| {#612} | note | 406 | *15.5.* D2.7 15.5's localisation (BLL) is per object: a far letter, a … |
-| {#613} | note | 407 | 15.5(ii)(β-4) holds for C₁ ⊔ C₂ with eight sides in place of four. F_h… |
-| {#613-1} | note | 408 | A carried insertion D of any species is an object of 15.5(i), with Dep… |
-| {#613-2} | note | 409 | The parts go where 15.5(i-3)–(i-5) send them. A part whose h(D) ∪ 𝒦 co… |
-| {#613-3} | note | 410 | /X(D)/ ≤ 2N_Kσ(D) for g small, N_K of #T12.20-3-3. Indeed, Dep(D) ⊆ X_… |
-| {#613-4} | note | 411 | So 2(ε_D + x_D) ≤ 4/X(D)/e^{−63R_k/256} ≤ 8N_Ke^{−R_k/8}ϑ_k²σ(D) ≤ ϑ_k… |
-| {#613-5} | note | 412 | D's parts total at most ‖D‖e^{ε_D}(1 + 2(e^{x_D} − 1)) ≤ ‖D‖e^{2(ε_D+x… |
-| {#614} | note | 413 | 15.5(ii)(β-5) holds with the bonds of C₁ ⊔ C₂: those with ρ(Y₁(i), X) … |
-| {#617} | note | 414 | For a slot holding a carried insertion D, of any species, this note de… |
-| {#617-0} | note | 415 | This definition is how 15.5(i) joins D to the polymer here, a construc… |
-| {#617-1} | note | 416 | Dep(D) is X_D ∪ X^{Cov}_D, together with Z′ for an att(j, Z′) with Z′ … |
-| {#618} | note | 417 | A carried insertion of a single-loop species in a slot is part of that… |
-| {#619} | note | 418 | A cross member W is evaluated where 15.5 evaluates every insertion: on… |
-| {#620} | note | 419 | *The groups of 15.4.* For the pair, a span is taken only for a polymer… |
-| {#620.1} | note | 420 | A slot's bonds here are those it contributes to ℐ(g) (#617): the bonds… |
-| {#621} | note | 421 | For two polymers with spans this is 15.4's interleaving, so the groups… |
-| {#622} | note | 422 | Such a group's span is span(g) := ∪_{P∈g}span(P), as in 15.4. The span… |
-| {#623} | note | 423 | A polymer without a span needs none: its tensor is contracted on its s… |
-| {#624} | note | 424 | #620's relation puts a slot bond of one polymer in the span of the oth… |
-| {#625} | note | 425 | *15.1 and 15.4(i).* For a group with slots on C_i only, the contractio… |
-| {#626} | note | 426 | *Lengths.* Let P be a polymer of 15.3, X′_1, …, X′_s the localisation … |
-| {#627} | note | 427 | D_P := Σ_r(d_k(X′_r) + 4R_k + 2λ̂ + 498) + 4Σ_{P′}ex(Y_{P′}), |
-| {#628} | note | 428 | with d_k the linear size in M-units (RG I p.257 l.14–16; it equals LFR… |
-| {#628-1} | note | 429 | In (6A) and (6B) a π_k-cube is a block of the partition π_k of the ste… |
-| {#628-1-1} | note | 430 | An MR_k-cube, a block of the MR_k-partition, is a union of π_k-cubes: … |
-| {#628-1-1-1} | note | 431 | Compatibility is Bałaban's set sense, each cube of the coarser partiti… |
-| {#628-1-2} | note | 432 | An MR_k-cube meets a set of sites and bonds in the same block sense, s… |
-| {#628-1-3} | note | 433 | *Cubes.* For a partition into cubes of side s, the closed cubes meetin… |
-| {#628-1-3-1} | note | 434 | An arc of length less than s spans less than s in each coordinate, so … |
-| {#629} | note | 435 | dom P is the union of the domains of P's constituents (15.3), the X′_r… |
-| {#629-00} | note | 436 | With D2.7 15.4(i)'s ℓ_D and s_D, put T⁺_D := (T_D)_{5M} ∪ s_D when ℓ_D… |
-| {#629-0} | note | 437 | *A link's data.* A link X ∈ 𝔏 (D2.7's; #241's links of #247 are anothe… |
-| {#629-0-1} | note | 438 | The 𝐑-operation sums the labels of each component X_c of Z, those on t… |
-| {#629-0-1-1} | note | 439 | A cluster's activities read data only on its dependence set (map #MD2.… |
-| {#629-0-2} | note | 440 | Here LMR_j-cubes are CRE (3.16)'s, the MR_j-cubes of T_{L^{−j}}. The s… |
-| {#629-0-2-1} | note | 441 | For j < k, a point some labelling puts in a step-j label set lies in Λ… |
-| {#629-0-3} | note | 442 | A cutoff cube of a step j ≤ n, an old insertion's too, is an LM₂R_j-cu… |
-| {#629-1} | note | 443 | Its counted domain dom_c P is the set of the π_k-cubes meeting dom P, … |
-| {#629-2} | note | 444 | For n(X) ≥ 2, a link's set X̂ is its network, the union of its groups'… |
-| {#629-2-1} | note | 445 | For n(X) ≥ 2, the constituents' cubes number at most #_n(𝒢) (map #MD2.… |
-| {#629-2-2} | note | 446 | For n(X) = 1, X̂ is the union of the envelopes of X's groups (V3 Lemma… |
-| {#629-2-3} | note | 447 | An 𝐑-step has k ≥ 3 (k > N_B > N₀ ≥ 1, #609), so a π_k-cube is L^{k−1}… |
-| {#629-2-4} | note | 448 | A closed walk along a spanning tree of X̂'s π₁-cubes passes at most 2A… |
-| {#629-2-5} | note | 449 | So with ℓ_P, P's links' counts (table #T4.42), the links of every step… |
-| {#629-3} | note | 450 | Then diam_∞(dom^♮P) ≤ M(D_P + 2ℓ_P) + (43/20)MΣ_{D∈𝔅^{big}(P)}σ(D) in … |
-| {#629-4} | note | 451 | *The links' weights.* Each link pays its terms below from its weight a… |
-| {#629-4-0} | note | 452 | Of that quarter, the links' parts of the weights and extents and of #8… |
-| {#629-4-1} | note | 453 | The other a°(X)/8 = (ν/256)σ_{n(X)}(X) is the link's length decay. A q… |
-| {#629-5} | note | 454 | *The links' units.* A link adds at most 2^{d+2}σ_{n(X)}(X) cubes and, … |
-| {#630} | note | 455 | dom P ∪ ∪_{D∈𝔅(P)}(T_D ∪ s_D) is connected (D2.7 15.4(i), *Why a span … |
-| {#631} | note | 456 | Cover dom^♮P by the following sets: W_r := X′_r ∪ ∪_{K⊆X′_r}K^{(λ̂+248… |
-| {#632} | note | 457 | Each first-class component X of P lies in one X′_r, since X′_0 = ∪_{Y∈… |
-| {#633} | note | 458 | X⁺ widens X by two layers of MR_k-cubes: X^∼ adds one, since ∼ means "… |
-| {#634} | note | 459 | Y_{P′}^{[1]} ⊂ Y′₀^{[1]} ∪ ∪_ee^{[1]}, and Y′₀ ⊂ X(F)^{[3]} ∪ ∪_{K∈h(F… |
-| {#635} | note | 460 | The sets of #631 have diameters at most M(d_k(X′_r) + 4R_k + 2λ̂ + 498… |
-| {#636} | note | 461 | *The free decay.* Put c_F^× := δM/2 = ½ (#728.5). For a polymer P that… |
-| {#637} | note | 462 | d_k(X′_r): the activity of a polymer P with localisation domain X′ car… |
-| {#637-0} | note | 463 | D2.7's gases use e^{−κ(size)} of it, the size counted in MR_k-cubes (1… |
-| {#637-1} | note | 464 | One pays the M-level shapes. From a root M-cube, (1.67)'s tree of leng… |
-| {#639} | note | 465 | 4ex(Y_{P′}): the pieces carry e^{3κex(Y_{P′})} (15.5(ii)(α)), and 15.5… |
-| {#643} | note | 466 | κ and κ₁ here are RG II's. LFR II's κ₁ is that of its localisation exp… |
-| {#644} | note | 467 | κ > 6·2^d. By p.389 l.12, κ ≥ 6·2^d/β, and β < 1: p.376 l.5–6 bounds e… |
-| {#645} | note | 468 | The constants 4R_k + 2λ̂ + 498 and e^{2^{d+1}κ} per X′_r: the exponent… |
-| {#647} | note | 469 | So 15.3's bounds and 15.4's Kotecký–Preiss sums hold for the activitie… |
-| {#648} | note | 470 | *The volume.* (1.95)'s volume factor is βκ/(6·2^d) per π_k-cube of X′∖… |
-| {#649} | note | 471 | *The factor of (1.89) per component.* Each first-class component carri… |
-| {#650} | note | 472 | (1.96)'s sum over the components uses e^{−p₀(g_k)/2} of it, as Bałaban… |
-| {#651} | note | 473 | The rest, c₁ = e^{−p₀(g_k)}, is (1.95)'s factor extracted before the s… |
-| {#652} | note | 474 | *The margin.* The rest, e^{−p₀(g_k)/2+3+2ΣA+2a_k}, has in its exponent… |
-| {#652-1} | note | 475 | Each localisation domain disjoint from ∪_iY_i, and each group of the 𝐑… |
-| {#653} | note | 476 | 15.6(e)'s att charge is paid in D26 7.2's reserve Res(Z), not from (1.… |
-| {#654} | note | 477 | A first-class component X lies in a cube of side 100MR_k: "the compone… |
-| {#655} | note | 478 | p.389's assumption (#649) gives 2κ(100R_k)^d ≤ 2(1+β₀)^{−1}p₀(g_k) − (… |
-| {#656} | note | 479 | *The cross constant of the step.* Let Ξ^c_{12}, Ξ^c_1, and Ξ^c_2 be 15… |
-| {#657} | note | 480 | Since E_k^R(C;ℓ₀) = log(Ξ^c/Ξ) (15.4), #T4.52's E^{R×}_k is log Ξ^c_{1… |
-| {#658} | note | 481 | These gases are 15.4's series at the flat reference: c_g and F(P)/_fla… |
-| {#659} | note | 482 | (a) A cluster with no polymer meeting C₂ has the same polymers, activi… |
-| {#660} | note | 483 | The rest contain a polymer meeting C₁ and one meeting C₂. Their object… |
-| {#660-1} | note | 484 | Hence Σ_P(D_P + 2ℓ_P) ≥ DL^m/M over the cluster's polymers (#311, #629… |
-| {#661} | note | 485 | With *The free decay* and the links' length decay (#629-4-1), the clus… |
-| {#662} | note | 486 | /E^{R×}_k/ ≤ C^×_{KP}(ℓ₁+ℓ₂)L^me^{−p₀(g_k)/2}e^{−ν_rDL^m/(1024M)}, C^×… |
-| {#663} | note | 487 | The rest of 15.4 holds per loop, with μ^R_k and ζ^R_k computed for eac… |
-| {#664} | note | 488 | The term-dependent part E^{R,∂}_k(ℓ) is charged per MR_k-cube to its c… |
-| {#665} | note | 489 | *The sum over the 𝐑-steps.* p₀(g) decreases in g, so e^{−p₀(g_k)/2} ≤ … |
-| {#666} | note | 490 | Σ_{N_B<k≤K′}/E^{R×}_k/ ≤ C^×_{KP}(ℓ₁+ℓ₂)e^{−p₀(ḡ_R)/2}e^{−ν_rD/(1024M)… |
-| {#667} | note | 491 | It is bounded uniformly in K, it decays in D, and it is small when ḡ_R… |
-| {#668} | note | 492 | *15.6–15.7 for the groups on one loop.* As written, per loop: D_g is a… |
-| {#669} | note | 493 | *15.6 for the cross groups of the 𝐑-gas.* Since c_g = 0, every cross g… |
-| {#670} | note | 494 | *The arc set.* D_g^× is the tensor of g's slots, contracted in loop or… |
-| {#670-1} | note | 495 | By the rule of *The groups of 15.4*, no bond of a slot of g lies in th… |
-| {#671} | note | 496 | *The slots of a cross member.* Let a cross member W lie in a polymer P… |
-| {#672} | note | 497 | A single product (arc piece)·W·(arc piece) does not serve. W is covari… |
-| {#673} | note | 498 | Every interval of W inside a first-class X′⁺ lies in a component of P.… |
-| {#674} | note | 499 | The pieces are not arc words of 15.2 on their own: an end of an interv… |
-| {#675} | note | 500 | The slot is invariant under every transformation supported at the fixe… |
-| {#676} | note | 501 | It is covariant under the external transformations at the ends of the … |
-| {#677} | note | 502 | So 15.2(α)–(β) apply to P's tensor T_P, the joint average over the com… |
-| {#678} | note | 503 | 15.6(a)'s covariance holds at the ends of each interval of ℐ(g): 15.2 … |
-| {#678-1} | note | 504 | Its counted domain is hull_c(g) := ∪_{P∈g}dom_c P (*Lengths*); #π_k(hu… |
-| {#679} | note | 505 | D_g^× does not vanish at pure gauge, so (d)'s deviation bound does not… |
-| {#680} | note | 506 | Its bound is (c)'s, ‖D_g^×‖ ≤ B(g), with ‖W‖ for each cross member W i… |
-| {#681} | note | 507 | For every group g of the 𝐑-gas, cross or on one loop, Ψ_g sums the clu… |
-| {#682} | note | 508 | /Ψ_g/ ≤ C_Ψ′e^{−p₀(g_k)/2}(#π_k(hull^× g) + N_sl(g) + Σ_{P∈g with a sp… |
-| {#683} | note | 509 | with C_jn of *The rooted sum*, and /span(P)/ ≤ 4M(D_P + 2ℓ_P + (43/20)… |
-| {#684} | note | 510 | *15.6(e)'s scope rule.* Its first alternative makes a dev term att(k, … |
-| {#685} | note | 511 | The second alternative, a polymer of g meeting a second-class or uncha… |
-| {#685-1} | note | 512 | Its D_g^× has *The count*'s units, which do not use the activities; wh… |
-| {#689} | note | 513 | The other cross groups have no polymer meeting a second-class or uncha… |
-| {#690} | note | 514 | *The count.* For every cross group g of the 𝐑-gas, att ones included, … |
-| {#691} | note | 515 | σ_g := Σ_{W∈𝔅^×(g)}σ(W) + ½Σ_{D∈𝔅^s(g)}σ(D) + Σ_{P∈g}π(P), π(P) := #π_… |
-| {#692} | note | 516 | with 𝔅(P) the carried insertions in P's slots, and σ(D) the production… |
-| {#693} | note | 517 | *The units of the members.* Let D ∈ 𝔅(g) be produced at step j ≤ k, wi… |
-| {#693-1} | note | 518 | When j < k, X_D is D's domain one step later, which contains X^{Cov}_D… |
-| {#693-2} | note | 519 | In both cases X^{Cov}_D ⊆ X_D ∪ ℐ(D), so Dep(D) ⊆ T_D ∪ Z′ (#617-1), a… |
-| {#694} | note | 520 | #_k(X_D) + n_k(D)/M ≤ (21/20)σ(D) + 17 and diam_∞(T_D) ≤ M((21/20)σ(D)… |
-| {#695} | note | 521 | When j = k, u_D = 1, so #_k(X_D) + n_k(D)/M ≤ σ(D) and diam_∞(S_D) ≤ M… |
-| {#696} | note | 522 | When j < k, they come from *The share of D*. At step j + 1, #_{j+1}(X_… |
-| {#696-0} | note | 523 | So the count stays at most 16.1 + 0.23σ(D) for u_D ≤ u_𝔏 and L ≥ L₀^× … |
-| {#696-1} | note | 524 | The intervals lie in the filled hulls, so n_k(D)/M ≤ 8u_Dσ(D)/L + 4/M.… |
-| {#697} | note | 525 | The 17 is the rounding of a small domain to whole cubes: the 8M-neighb… |
-| {#698} | note | 526 | *Big and small members.* Call D big if σ(D) ≥ 240 when j = k, or σ(D) … |
-| {#698-0} | note | 527 | If ℓ_D > 2MR_k, D is big and ℓ_D ≤ (11/10)Mσ(D). Indeed ℓ_D ≤ diam_∞T_… |
-| {#698-1} | note | 528 | A small member has #_k(X_D) < 240, n_k(D) < 240M, and diam_∞(T_D) < 24… |
-| {#698-2} | note | 529 | A small member whose T_D meets X⁺ for a component X of its polymer has… |
-| {#699} | note | 530 | 𝔅(P) holds the carried insertions in P's slots (D2.7 15.5(i)): those i… |
-| {#699-0} | note | 531 | Each X_D lies in dom P (#629), its intervals are in ℐ(g), and D_g^× de… |
-| {#699-1} | note | 532 | Otherwise D is far: T_D lies over 2MR_k from every component K of P, K… |
-| {#699-2} | note | 533 | Then ex(Y_{P′}) ≥ R_k, and so for a letter's piece P′ in P, which has … |
-| {#699-3} | note | 534 | Dep(F) is a bond of C not contained in any K⁺, or lies in T_D, so it l… |
-| {#699-4} | note | 535 | So a quarter of the piece's term 4ex(Y_{P′}) of D_P covers the object … |
-| {#701} | note | 536 | *The rounding.* The rounding is counted per cube, not per member, sinc… |
-| {#703} | note | 537 | The small members of X's slots lie, with their sets (T_D)_{5M}, in X^{… |
-| {#705} | note | 538 | No per-member constant of the slot members 𝔅(g) remains in the uses be… |
-| {#706} | note | 539 | A single-loop insertion D_g made at an 𝐑-step j (D2.7 15.6) is a funct… |
-| {#706-1} | note | 540 | The counted domain X_{D_g} is the set of the π_j-cubes of ∪_{P∈g}dom_c… |
-| {#709} | note | 541 | (H1): S_{D_g} is closed-connected by #524's reasons and contains X_{D_… |
-| {#710} | note | 542 | σ̄(g) := Σ_{P∈g}(#π_j(B_P) + (2^{d+1} + ½)D_P + 2^{d+2}ℓ_P) + /span(g)… |
-| {#713} | note | 543 | A member with intervals on both loops, a cross insertion whose interva… |
-| {#714} | note | 544 | Cubes: #π_k(hull_c g) ≤ Σ_{D big}#_k(X_D) + Σ_P(#π_k(B_P) + (2^{d+1} +… |
-| {#714-1} | note | 545 | The cubes of hull^×(g) outside hull_c(g) number at most 13^d(#_k(X_D) … |
-| {#715} | note | 546 | Traversals: the bonds of ℐ(g) outside the big members' intervals lie i… |
-| {#715-1} | note | 547 | A bond in an X^{(247)} lies in one W_r, of ℓ^∞-diameter ≤ M(d_k(X′_r) … |
-| {#716} | note | 548 | Together, #π_k(hull_c g) + n_k(D_g^×)/M ≤ (21/20)Σ_{D big}σ(D) + Σ_P(#… |
-| {#717} | note | 549 | Diameter: S_g := ∪_{P∈g}dom^♮P ∪ ∪_{P∈g with a span}span(P) is closed-… |
-| {#718} | note | 550 | Each dom^♮P is connected (#630) and contains its slots, and an interle… |
-| {#719} | note | 551 | diam_∞(S_g) is at most #516's sum over its pieces: *Lengths*' pieces o… |
-| {#720} | note | 552 | By #629-3, diam_∞(S_g) ≤ 2MΣ_P(D_P + 2ℓ_P) + (43/20)MΣ_{W∈𝔅^×(g) big}σ… |
-| {#721} | note | 553 | So D_g^× has (T0)'s units with u_𝔏σ_g in place of σ, with counted doma… |
-| {#722} | note | 554 | *The rates.* Take #T4.53's ε^r_k, ϑ_k, and λ_n at the 𝐑-steps. ϑ_k pay… |
-| {#722-1} | note | 555 | The weights of the cross insertions after step n carry the rate λ_n(D)… |
-| {#722-2} | note | 556 | An 𝐑-made insertion has w_k(D_g^×) := e^{λ_k(D_g^×)ν_rσ_g}e^{θ(g)}‖D_g… |
-| {#722-3} | note | 557 | The cross insertions here are all the insertions with intervals on bot… |
-| {#723} | note | 558 | *The payment.* For every group g of the 𝐑-gas, cross or on one loop, t… |
-| {#724} | note | 559 | The polymer part of /Ψ_g/ is at most C_Ψ′e^{−p₀(g_k)/2}(2 + 20M)Σ_P(#π… |
-| {#724-1} | note | 560 | For small g_k this is at most ν_r per unit, and λ_k ≤ 1. The links add… |
-| {#725} | note | 561 | e^{(5/2)ν_r#π_k(X′_r)} is paid by a_V/2 per cube, since (5/2)ν_r ≤ ¼ ≤… |
-| {#726} | note | 562 | e^{(5/2)ν_r#π_k(X^{(λ̂+248)})} ≤ e^{5p₀(g_k)/64} is paid by the margin… |
-| {#727} | note | 563 | e^{(5/2)ν_r2^{d+2}D_P} is paid by e^{(c_F^×/2)D_P}, since 5·2^{d+2}ν_r… |
-| {#728} | note | 564 | δ is at most the rate δ_𝐇 of p.376 l.11–13's factor, which LFR II obta… |
-| {#728-1} | note | 565 | VAR (190) prints that decay as exp(−⅛δ₀d(y,y′)) (p.308 l.42), in the d… |
-| {#728.1} | note | 566 | *Units.* BLL measures lengths by d_□, in M-cubes (#BLL.1-0), at the ra… |
-| {#728.1-1} | note | 567 | δ_α is fixed before M (κ₁ by map #MD2.2.6.163). The 𝐇-rate of #728 and… |
-| {#728.3} | note | 568 | The rate δ of #3.3, #286, #287, (6B)–(6C), and (8) (#917) is δ_α/M. #4… |
-| {#728.4} | note | 569 | The δ of #47, #91, #99, and #209 is LFR I's printed rate at the pages … |
-| {#728.5} | note | 570 | δ_α = 1. D2.7's κ₁ is RG II's (map #MD2.2.6.163, RG II's (1.11)), and … |
-| {#729} | note | 571 | Of the rest of e^{−c_F^×D_P}, e^{−(c_F^×/4)D_P} is a reserve: *The roo… |
-| {#730} | note | 572 | The member part of /Ψ_g/ is at most C_Ψ′e^{−p₀(g_k)/2}Σ_{D∈𝔅(g) big}((… |
-| {#730-1} | note | 573 | By *The units of the members*, #_k(X_D) + n_k(D) ≤ M(21/20)σ(D) for a … |
-| {#732} | note | 574 | A single-loop member D enters D_g^×'s weight with at most e^{(λ_k/2 + … |
-| {#733} | note | 575 | This is within its weight, species by species, since σ(D) is the produ… |
-| {#734} | note | 576 | dev: e^{ν_rσ + ν_e·ext} inside (ii)'s and (iii)'s per-position sums, i… |
-| {#735} | note | 577 | att(j, ·), j ≤ k, att(k, ·) included: the weighted mass e^{ν_rσ_j(W)}e… |
-| {#736} | note | 578 | lw: each piece of an lw slot is counted as a fixed member with its own… |
-| {#737} | note | 579 | wrap(j), j ≥ 2: (S-w) carries e^{θ + ν_rσ_j + ν_e·ext_j} (map #MD2.0.3… |
-| {#737-1} | note | 580 | The D2.6 closure 2.1(e) spends the extent weight on ext_j ≥ N^{(j)}_mi… |
-| {#737-2} | note | 581 | The weight is a fixed factor of each insertion, so the weighted sums g… |
-| {#738} | note | 582 | wrap(1): a group whose Q_W does not lift has ‖Υ⁰_W‖ ≤ 2K_χM^{(ρ)}_Λ(W)… |
-| {#739} | note | 583 | Σ_{W∋n, wrap(1)}e^{θ°(W) + ν_r𝔰(W)}‖Υ⁰_W‖ ≤ 2K_χCρe^{−(3/4)ηN_min/(CLM… |
-| {#740} | note | 584 | since 4 − 1/8 − 1 − 1/8 − 2 = 3/4. This is map #MD2.0.3.18-1's bound C… |
-| {#741} | note | 585 | Its mass stays inside e^{2ΣA} (15.3), as for one loop. |
-| {#742} | note | 586 | *The rooted sum.* For a π_k-cube or a bond □, consider the groups g of… |
-| {#742-1} | note | 587 | The factor e^{−(ϑ_k/4)ν_rσ(D)} pays the sum over D's parts: their tota… |
-| {#742-2} | note | 588 | The sum over these g of the products of these factors is ≤ C_gre^{−p₀(… |
-| {#743} | note | 589 | The members are data of the term, and their norms stay with their own … |
-| {#744} | note | 590 | A single-loop member's norm sits inside the activity's e^{2ΣA} (15.3, … |
-| {#745} | note | 591 | A cross member's factor sits in its own slot of (T0)'s product form (*… |
-| {#746} | note | 592 | The sums of D_g^×'s weights below are read with this convention. It pe… |
-| {#747} | note | 593 | The polymers through a fixed cube are summed by 15.4's Kotecký–Preiss … |
-| {#748} | note | 594 | *Spans.* A polymer P with a span has no cross member (*The groups of 1… |
-| {#749} | note | 595 | The torus period is at least twice each side (#290). Two points of a s… |
-| {#750} | note | 596 | On a square of side s, points on opposite sides are at ℓ^∞-distance ≥ … |
-| {#751} | note | 597 | So span(P) has at most 4δ_P bonds, and diam_∞(span P) ≤ δ_P = diam_∞(d… |
-| {#752} | note | 598 | *Joins.* A polymer P′ joins g at a bond b that is a slot of g in span(… |
-| {#753} | note | 599 | At a bond b of a span in g holding a slot of P′, P′ meets a π_k-cube m… |
-| {#754} | note | 600 | At a slot b of g in span(P′), span(P′) is an arc of at most 4δ_{P′} bo… |
-| {#754-1} | note | 601 | Since 4δ_{P′} ≤ 4M(D_{P′} + 2ℓ_{P′} + (43/20)S_{P′}), the indicator of… |
-| {#755} | note | 602 | So the polymers joining g at b, with their own joins, sum to ≤ C_jne^{… |
-| {#756} | note | 603 | *Join count.* A polymer P of g has at most 16MD_P slot bonds outside i… |
-| {#757} | note | 604 | Several joins can share one position, so a position contributes Σ_{m≥0… |
-| {#758} | note | 605 | The factor e^{20MC_jne^{−p₀(g_k)/2}D_P} of the polymer's part is ≤ e^{… |
-| {#759} | note | 606 | A big member D has n_k(D) ≤ M(21/20)σ(D) slot bonds, and a single-loop… |
-| {#760} | note | 607 | C_gr and C_jn depend on d, M, c_F^×, ν_r, 15.4's C_KP, D(k)(iii)'s bou… |
-| {#761} | note | 608 | *First case: no member of g is a carried cross insertion.* A polymer P… |
-| {#762} | note | 609 | P has no span, so it carries e^{−(c_F^×/8)D_P} for this (#729), its li… |
-| {#763} | note | 610 | The single-loop insertions in g's slots end inside them (15.5 above). … |
-| {#764} | note | 611 | #T4.52's A^R_k sums e^{c_W}w_k(D_g^×) over the first-case groups, with… |
-| {#765} | note | 612 | A^R_k ≤ 4e^{c_W}C_gr(ℓ₁+ℓ₂)L^me^{−p₀(g_k)/2}e^{−ν_rDL^m/(1076M)}. |
-| {#766} | note | 613 | *Second case: g has a carried cross member.* D_g^× is a descendant of … |
-| {#767} | note | 614 | Each member is a slot of one polymer, and each polymer is in one group… |
-| {#769} | note | 615 | D_g^× is #241's D_G with G = {g} (#246), the polymer of W's slot meeti… |
-| {#773} | note | 616 | Steps 1–3 of (T0)'s product form, with the members' factors ≤ w_{k−1},… |
-| {#774} | note | 617 | *The smallness (H^R)* is #T4.53's: S^R ≤ 1/32 and C_yS^R ≤ log 2. |
-| {#775} | note | 618 | Then λ_n ≥ 31/32 for every n, and Π_{N_B<k≤K′}(1 + y^R_k) ≤ e^{C_yS^R}… |
-| {#776} | note | 619 | It is a smallness of g_{K′}, as in 15.7: by Cor. 8.2 of BETA_FUNCTION_… |
-| {#776-1} | note | 620 | R_k ≥ (log u_k)^r ≥ (log u_k)² (CRE (2.5), p.255 l.36–39; r ≥ 2), so e… |
-| {#777} | note | 621 | *The 𝐑-made total.* With (1 + C_δc̄)^m ≤ L^m (#500) and (7)'s sum lemm… |
-| {#778} | note | 622 | Σ_{N_B<k≤K′}(1 + C_δc̄)^{K′−k}A^R_k ≤ A^{cr,R} := 4e^{c_W}C_gr(ℓ₁+ℓ₂)e… |
-| {#779} | note | 623 | *15.8.* The post-R term carries D^×(k)'s species and the cross clause,… |
-| {#780} | note | 624 | One in no slot of a polymer, in no span of a marked group, and in no b… |
-| {#781} | note | 625 | One in a slot of a group that 15.6(e)'s scope rule makes att(k, ·) is … |
-| {#782} | note | 626 | One in the block inside a second-class component Y_i^∼ is a fixed fact… |
-| {#783} | note | 627 | Item 5(a) of D2.7 bounds the block's average by the sup of its word ov… |
-| {#784} | note | 628 | It is then treated as the previous class: its factor stays in the cros… |
-| {#785} | note | 629 | That this sup is ≤ w_{k−1}(W) is #230: the evaluation points of 𝐓′_k(Y… |
-| {#786} | note | 630 | The others are slots of the small-field cross groups, and their descen… |
-| {#787} | note | 631 | One in the span of a marked group on one loop is a member of that grou… |
-| {#789} | note | 633 | (6C) The Attached 𝐑-Groups and the 𝐑-Step's Evaluation Points |
-| {#791} | note | 635 | *The attached groups.* Let g be a group of the 𝐑-gas, a cross group of… |
-| {#793} | note | 637 | *The weights.* A cross group with a cross member carries e^{λ_k(D_g^×)… |
-| {#794} | note | 638 | ext^{coll} is measured from Coll_k, which contains the component's cub… |
-| {#795} | note | 639 | For a cross group, hull^×(g)⁺ adds one layer of MR_k-cubes to a set of… |
-| {#796} | note | 640 | For a group on one loop, ext^{coll} has the bound of *The single loop'… |
-| {#797} | note | 641 | The constants are polylogs of order r < p₀, paid by the margin of (1.8… |
-| {#798} | note | 642 | So the polymer part costs at most (1 + 1/1000)ν_r + ν_r ≤ (5/2)ν_r per… |
-| {#799} | note | 643 | A single-loop member D of a cross group gains (ν_r/1000)·½σ(D) of exte… |
-| {#800} | note | 644 | *First case: no localisation domain of a polymer of g contains a secon… |
-| {#800-0} | note | 645 | For a localisation domain X′ disjoint from ∪_iY_i, (1.95)'s activity c… |
-| {#801} | note | 646 | *The free decay* and *The volume* use only these factors and the facto… |
-| {#803} | note | 647 | *Second case: a localisation domain X′ of a polymer of g contains a se… |
-| {#804} | note | 648 | *Size.* Y_i is a component of Z of the second class (LFR II p.378 l.21… |
-| {#805} | note | 649 | *Distance.* d_k(X′) ≤ d_{k,∪Y}(X′) + dΣ_{Y_i⊆X′}(#π_k(Y_i) + 1) (#805-… |
-| {#806} | note | 650 | *The cost.* Off ∪_iY_i, the polymer part of the weight and the uses of… |
-| {#806-1} | note | 651 | At a q = 0 part of X′ (#812), no first-class component of X′ pays #645… |
-| {#807} | note | 652 | *The roots.* A rooted sum of (6B) through a π_k-cube of Y_i runs over … |
-| {#808} | note | 653 | Those with a localisation domain containing Y_i. Such a domain contain… |
-| {#809} | note | 654 | The others, which have the first case's factors and are summed by the … |
-| {#810} | note | 655 | So the root count at Y_i is at most N(Y_i) := 3^d(101R_k)^d + 1. On a … |
-| {#811} | note | 656 | In Ψ's per-cube bound at the cubes of Y_i the same multiplicity enters… |
-| {#812} | note | 657 | *The clusters with q = 0.* Split each activity F(X′) = Σ_q(…) of (1.91… |
-| {#813} | note | 658 | A q = 0 part's activity carries no word of Y_i, the blocks inside Y_i^… |
-| {#814} | note | 659 | The q = 0 parts have amplitude α^{1/3}, and the part of their weights … |
-| {#814-0} | note | 660 | *The root and the count.* Each Y_i has a π_k-cube r^Y_i off Y_i with a… |
-| {#814-3} | note | 661 | Every q = 0 part (X′, 0) meeting Y_i, a union of V-domains, contains r… |
-| {#814-4} | note | 662 | Rooted at r^Y_i of the first Y_i that they contain, these clusters sum… |
-| {#814-4-1} | note | 663 | The Kotecký–Preiss weights are a(X′) := ½(#π_k(X′∖∪_jY_j) + #{Y_j ⊆ X′… |
-| {#814-4-1-1} | note | 664 | *The shares of /P/_w.* In the sums of #814-4-2-3–#814-4-3 a unit of /P… |
-| {#814-4-1-2} | note | 665 | An insertion D with a piece in P has the other two (D2.7 15.5(i-5-0)):… |
-| {#814-4-1-3} | note | 666 | A walk of at most 2m_D steps through these cubes cuts into at most 2m_… |
-| {#814-4-1-4} | note | 667 | In these sums the activities carry D by its weight: its weight of D2.6… |
-| {#814-4-2} | note | 668 | *The Bałaban polymers at an MR_k-cube.* Those meeting an MR_k-cube Q s… |
-| {#814-4-2-3} | note | 669 | *The groups at an MR_k-cube.* The groups whose hulls meet an MR_k-cube… |
-| {#814-4-2-4} | note | 670 | P∖fixed is then rooted at one of the R_k^d M-cubes of Q′ or of the at … |
-| {#814-4-2-5} | note | 671 | Per root, #637-1's shapes cost e^{O(1)} with its factor e^{−(β/8)κd_k}… |
-| {#814-4-3} | note | 672 | *The criterion.* At a unit of a Bałaban polymer, a π_k-cube c off ∪_jY… |
-| {#814-4-3-1} | note | 673 | A group incompatible with a group g has its hull meeting one of the at… |
-| {#814-4-3-2} | note | 674 | These are α small after d, κ, β and ν (γ small, stage 6 of #T1.9; p.37… |
-| {#815} | note | 675 | So their part of /Ψ(S)/ is at most C_Ψ″ per second-class component, un… |
-| {#815.1} | note | 676 | These insertions are pieces of D2.7 15.8-1(1)'s fixed member at Y_i's … |
-| {#815.2} | note | 677 | 15.8-1(6) and (6-0) pay w^Ψ_c inside #814's Kotecký–Preiss sum, each p… |
-| {#815.2-1} | note | 678 | So #814–#815 hold for these weighted activities: Σ_cw^Ψ_c/d_c/ ≤ 2C_Ψ″… |
-| {#816} | note | 679 | *The size decay.* d_{k,∪Y} gives no decay on the cubes of Y_i, and D2.… |
-| {#816-1} | note | 680 | The q = 0 parts of #814 lie in polymers without slots, since a group w… |
-| {#817} | note | 681 | *The factor per component.* E(Y_i) := N(Y_i)e^{(d+1)(102R_k)^d + 4R_k … |
-| {#817-1} | note | 682 | And log N(Y_i) + 4R_k + 2λ̂ + 498 + 2^{d+1}κ + C_Ψ″ + m^w_Ψ + κ101^d ≤… |
-| {#818} | note | 683 | *Per term.* A localisation domain contains Y_i or is disjoint from it,… |
-| {#819} | note | 684 | *The payment of Π_iE(Y_i).* Y_i satisfies (i), (ii) (LFR I p.177 l.23–… |
-| {#819-1} | note | 685 | The print attaches that branch and Π′ to components "for which some la… |
-| {#820} | note | 686 | D2.7 15.8(c) divides this factor into quarters as D2.6 7.2's small-dom… |
-| {#820-1} | note | 687 | The quarter also pays the factor e^{A_k} ≤ e of the leading word's tra… |
-| {#821} | note | 688 | Y_i's persistent factor exp(−κ_k(Y_i) − 2p₀(g_{j(Y_i)})) (p.384 l.5–6)… |
-| {#822} | note | 689 | So Π_iE(Y_i) is paid on every term of step k by factors of that term. … |
-| {#823} | note | 690 | *The charge.* The rooted mass of D2.7 15.4(iii) through an MR_k-cube o… |
-| {#825} | note | 692 | *The single loop's 𝐑-made groups.* Let g be a group of D2.7 15.6 on on… |
-| {#826} | note | 693 | σ̃(D_g) := Σ_{P∈g}π(P) + ⅓Σ_{D∈𝔅(g)}σ(D) + Σ_{W∈𝒲_g}(½σ(W) + 17), with… |
-| {#827} | note | 694 | the extent e^{ν_e·ext_k(D_g)} when it is dev (map (ii-w)), and the wei… |
-| {#828} | note | 695 | *Units.* By *Spans*, /span(g)//M ≤ Σ_P(4D_P + 8ℓ_P + (43/5)Σ_{D∈𝔅^{big… |
-| {#829} | note | 696 | Hence σ(D_g), diam_∞(S_{D_g})/M and n_k(D_g)/M = /span(g)//M are at mo… |
-| {#830} | note | 697 | So D_g has the units of (6A)(i)'s *Units with a factor* with u = u_𝔏, … |
-| {#832} | note | 698 | *The extent.* hull(g) = ∪_{P∈g}(dom P ∪ span P) lies in ∪_{P∈g}(dom^♮P… |
-| {#833} | note | 699 | D_g's domain and box lie in X(D_g) ∪ hull_𝒲(g)⁺, with hull_𝒲(g) := hul… |
-| {#834} | note | 700 | ext_k(D_g) ≤ 2Σ_P(D_P + 2ℓ_P) + (43/10)Σ_{D∈𝔅(g) big}σ(D) + 2R_k + 1 +… |
-| {#835} | note | 701 | With ν_e = ν_r/(2C_box) ≤ ν_r/5832 (#629-4-0), the polymer part costs … |
-| {#836} | note | 702 | *The attached extent.* When D_g is att(k, ·) (D2.7 15.6(e)–(f)), its l… |
-| {#837} | note | 703 | *The member terms.* For W ∈ 𝒲_g let e_W := ext(W) if W is dev, and oth… |
-| {#838} | note | 704 | Every point of D_g's Y-set is in hull(g)⁺, within R_k π_k-sides of hul… |
-| {#839} | note | 705 | *Case (a): D_g's Y-set meets Coll_k* (D2.6 closure §1). This holds whe… |
-| {#840} | note | 706 | *Case (b): otherwise.* Then D_g is att only through a non-dev member. … |
-| {#840-1} | note | 707 | A cube y₀ of Y_{W₁} has dist(y₀, base) ≤ ext^{base}(W₁), the extent fr… |
-| {#841} | note | 708 | The lineage's growth at the 𝐑-step: D_g's mass is at most B(g)Π_{W∈𝒲_g… |
-| {#841-1} | note | 709 | W₁'s interval is one arc in span(g), so the groups holding W₁ are summ… |
-| {#842} | note | 710 | *Wrap members.* A D_g with a wrap member depends on U^R on that member… |
-| {#842-1} | note | 711 | When W₁ is a single-loop insertion, these D_g add at most ε^r_kw(W₁) a… |
-| {#843} | note | 712 | *The payment.* The parts of (3/8)ν_eΔ_g from diam_∞(hull g)/M and from… |
-| {#843-1} | note | 713 | The term 2max_We_W is taken at one member W. For a dev W it costs (3/4… |
-| {#844} | note | 714 | *The members' weights.* A member W enters σ̃ with ½σ(W) + 17. Its rese… |
-| {#844-1} | note | 715 | So D2.7 15.7's member sum x_g := Σ_{W⊂span(g)}b_WDev_{Q^#_W} runs with… |
-| {#844-2} | note | 716 | An insertion D with h(D) = ∅ ((6B), *15.5*) is untouched on its part D… |
-| {#844-2-1} | note | 717 | So its options together carry at most e^{ν_rσ(D)}‖D‖(1 + (η(D)/‖D‖)e^{… |
-| {#844-4} | note | 718 | In D2.6 closure 5.3 the T-step and the 𝐑-step act in turn, and a two-l… |
-| {#844-4-1} | note | 719 | They are carried by the cross carry lemma's step, without a bridge ((6… |
-| {#844-5} | note | 720 | Each of them, D, has a closed-connected S_D meeting both loops, which … |
-| {#844-6} | note | 721 | They are counted once, at the 𝐑-step k, at this lifetime cap: with P_k… |
-| {#844-7} | note | 722 | At the 𝐑-step k, P grows by the factor 1 + C_ϑϑ_k of the h(D) = ∅ opti… |
-| {#844-8} | note | 723 | In the dev recursion (map #MD2.4.6.14) the carried terms gain the fact… |
-| {#844-9} | note | 724 | The wrap(j) insertions are in neither recursion: they are carried in (… |
-| {#845} | note | 725 | An att or lw member is not in x_g: its mass is in its species' total t… |
-| {#845-1} | note | 726 | The normalisation is applied to every insertion of these species, so t… |
-| {#846} | note | 727 | So ΣA stays a polylog of order r < p₀, as #652 uses. |
-| {#847} | note | 728 | D2.6 7.1–7.3 use A_j(Z) through E_j(Z) := 2A_j(Z) + … ≤ ε_A(d_j′(Z)+1)… |
-| {#848} | note | 729 | A wrap member is not in x_g or in these totals: D_g is then wrap(k) (*… |
-| {#849} | note | 730 | *The payment.* For D_g, #723's rate (5/2)ν_r per unit of Σ_P(#π_k(B_P)… |
-| {#850} | note | 731 | It is paid as in the first case above when no localisation domain of a… |
-| {#853} | note | 732 | *D2.7 15.4(i) and 15.7 over the carried insertions.* D2.7 pays the sin… |
-| {#854} | note | 733 | Joins through a span that runs through D's slots are summed as in (6B)… |
-| {#855} | note | 734 | 15.7's diameter factor diam_k(hull(g)⁺) and the linear factor /span(g)… |
-| {#855-1} | note | 735 | Let n ≤ Σ_PD_P/(4R_k + 2λ̂ + 498) be the number of localisation domain… |
-| {#856} | note | 736 | The exponent x_g, at most /span(g)/e^{17ν_r}C_χρ̃_kδ̄* (#844-1), gains… |
-| {#857} | note | 737 | The polymer parts, 3ν_r/80 per unit of D_P in all, are paid within the… |
-| {#858} | note | 738 | *D's weight.* D ∈ 𝔅(g) pays from its weight e^{ν_rσ(D)}, released at t… |
-| {#861} | note | 740 | *The evaluation points.* |
-| {#862} | note | 741 | *The integration variables are real.* In (1.71), "only the quadratic f… |
-| {#863} | note | 742 | These run over the supports of the 𝐑-step's χ′(X), χ_{h,1/2}((Ω″^∼_{h+… |
-| {#864} | note | 743 | On every class component the pre-R term's indicators are either kept a… |
-| {#865} | note | 744 | *The configuration.* In (1.49) the old terms are evaluated at U_k″ = (… |
-| {#866} | note | 745 | U_k^0's data: off Λ, 𝐁_k″ and V″ coincide with the determining set and… |
-| {#867} | note | 746 | By (1.65), U_k^0 maps Ũ_k^c(Y_4, α̃_0, α̃_1) into Ũ_k″^c(Y_1, α̃_0, α̃… |
-| {#868} | note | 747 | *The insertions.* Each insertion of the term is a function of 15.0's U… |
-| {#868-1} | note | 748 | Bałaban's inclusion is printed with its reason, the old terms being "c… |
-| {#869} | note | 749 | D(k)(iii) asserts no bound at the points of 𝒟_k outside 𝒟^{sub}_k (SW … |
-| {#870} | note | 750 | The insertions' own evaluation point U_k^{(0)} is Bałaban's chain of t… |
-| {#871} | note | 751 | *What this gives.* The analyticity of every insertion and word at the … |
-| {#872} | note | 752 | *What it does not give.* The bounds: e^{2ΣA}, the dev masses, the cros… |
-| {#874} | note | 754 | (7) The Count Check over the Steps |
-| {#876} | note | 756 | *A sum lemma.* For L ≥ 2 and a > 0: Σ_{m≥0}L^me^{−aL^m} ≤ e^{−a}(1 + 6… |
-| {#877} | note | 757 | For m ≥ 1, L^m − 1 ≥ L^m/2. So the terms with m ≥ 1 are ≤ e^{−a}x^pe^{… |
-| {#878} | note | 758 | sup_{y>0}Σ_{m∈ℤ}(yL^m)^pe^{−yL^m} ≤ 3. The terms with yL^m ≤ 1 form a … |
-| {#879} | note | 759 | Hence Σ_{m≥1} ≤ e^{−a}·3(2/a)^p. |
-| {#880} | note | 760 | *The cross constant.* For x ≥ 1 and a > 0, xe^{−ax} ≤ e^{−a}(1 + 1/a).… |
-| {#881} | note | 761 | C^×_E := 4LC_V(1+β₀)⁶C_×𝔞̄(ℓ₁+ℓ₂)e^{−c_×D/M}(1 + M/(c_×D)) + 8C_S′e^{c… |
-| {#882} | note | 762 | The first term is the first step, with x = L^{K′−1}. The second and th… |
-| {#883} | note | 763 | The first two terms decay in D. The third, from the groups long on one… |
-| {#884} | note | 764 | *The 𝐑-steps' remainders.* Each 𝐑-step adds to E_const,k(C_i, χ_i) the… |
-| {#885} | note | 765 | The torus has period N_s in step-K′ units (#334), so N_min^{(k)} = N_s… |
-| {#886} | note | 766 | So, for β₀ ≤ 1/4 and L ≥ 4, the remainders E°^R_k(C_i) over any set of… |
-| {#887} | note | 767 | R̂_{K′} is a constant times a power of log g_{K′}^{−2}, while p₀(g_{K′… |
-| {#888} | note | 768 | Hence the 𝐑-steps add at most |
-| {#889} | note | 769 | C^{R°}_E := 2C^R_1R̂_{K′}²(2 + 24R̂_{K′}/c^R_E)e^{−p₀(g_{K′})/5} ≤ 2e^… |
-| {#890} | note | 770 | D2.3(7)'s C_Σ𝔞̄ is computed from the reference-gas remainders E°_{k+1}… |
-| {#891} | note | 771 | So /E^×_const,k/ ≤ E* := (C_Σ(χ₁) + C_Σ(χ₂))𝔞̄ + C^{R°}_E + C^×_E + C^… |
-| {#892} | note | 772 | *The wrap total.* |
-| {#893} | note | 773 | D(k)(ii)'s wrap terms are ≤ C_wL^{k−j}𝔟̄e^{−c_wN^{(j)}_min/M} per trav… |
-| {#893-1} | note | 774 | At j = 1 the wrap(1) insertions carry the weight e^{ν_r𝔰} ((6B), *The … |
-| {#894} | note | 775 | Summed over j ≤ k and over the 4(ℓ₁+ℓ₂)L^{K′−k} traversals of step k, … |
-| {#895} | note | 776 | This is small under the torus condition (map #MD2.3.4.16), as in the c… |
-| {#896} | note | 777 | *The carried cross total.* (1 + C_δc̄)^m ≤ L^m (#500). Under (H^R), (1… |
-| {#897} | note | 778 | Σ_{j≤n}M^cr_n(j) ≤ 2Σ_{j=1}^{K′}(1 + C_δc̄)^{K′−j}(A^cr_j + A^R_j) ≤ A… |
-| {#898} | note | 779 | A^cr := 4C_cr𝔞̄(ℓ₁+ℓ₂)e^{−ν_×D/M}(1 + 12M²/(ν_×D)²) ≥ 4C_cr𝔞̄(ℓ₁+ℓ₂)Σ_… |
-| {#899} | note | 780 | with A^{cr,R} of (6B). |
-| {#900} | note | 781 | The first inequality uses n − j ≤ K′ − j. |
-| {#901} | note | 782 | A^× is uniform in K, and it decays in D. |
-| {#902} | note | 783 | Each bound is uniform in K. |
-| {#903} | note | 784 | A^cr is linear in 𝔞̄(ℓ₁+ℓ₂). C^×_E is linear in 𝔞̄ and at most a const… |
-| {#904} | note | 785 | C^{R×}_E and A^{cr,R} are linear in e^{−p₀(ḡ_R)/2}(ℓ₁+ℓ₂). C^{R°}_E ≤ … |
-| {#905} | note | 786 | w̄ is linear in 𝔟̄(ℓ₁+ℓ₂). |
-| {#907} | note | 788 | (8) The Pair Identity at the Stopping Scale and the K-Uniform Bound |
-| {#909} | note | 790 | *(8.1) The identity (from (2) and the continuum note's (2) with C := C… |
-| {#910} | note | 791 | On ℓ₀ at K′, f^{(i)}_{K′} = W_{χ_i}(C_i^{(K′)};V_{K′}) + β^{(i)}, with… |
-| {#911} | note | 792 | So f^{(1)}f^{(2)} = W_{χ₁}(C₁^{(K′)})W_{χ₂}(C₂^{(K′)}) + β^×, with /β^… |
-| {#912} | note | 793 | Exactly, |
-| {#913} | note | 794 | W^×_ren(ε) = e^{E^×_const,K′}μ^{[K]}_{ℓ₀}(W_{χ₁}(C₁^{(K′)};·)W_{χ₂}(C₂… |
-| {#914} | note | 795 | r^×_K := e^{E^×_const,K′}μ^{[K]}_{ℓ₀}(β^× + I^×_{K′}) + Σ_{ℓ≠ℓ₀}w_ℓ⟨e^… |
-| {#915} | note | 796 | Here I^× is the insertion sum of the class at K′, cross insertions inc… |
-| {#917} | note | 798 | *(8.2) The K-Uniform Bound (given D^×(K′) on every labelled term, whos… |
-| {#918} | note | 799 | /W^×_ren(ε)/ ≤ e^{E*}[1 + Σ_i8.48(1 + 2κ_s^{LF})a_dc_hB₃ℓ_iε_{K′}Lip_{… |
-| {#919} | note | 800 | is bounded independently of K: ε_{K′}, ρ_{K′}, 𝔞̄, g_{K′}, and ḡ_R dep… |
-| {#920} | note | 801 | C_χ is #345's. B^×_LF is (6A)'s, #602's supremum of LF #3.99-1's B_LF … |
-| {#921} | note | 802 | Proof: |
-| {#922} | note | 803 | /μ_{ℓ₀}(W_{χ₁}W_{χ₂})/ ≤ w_{ℓ₀} ≤ 1. |
-| {#923} | note | 804 | /I^×_{K′}/ ≤ exp(Σ_nν_n + A^×) − 1 over the 4(ℓ₁+ℓ₂) step-K′ traversal… |
-| {#924} | note | 805 | On the large-field terms the cross insertions multiply the words' boun… |
-| {#925} | note | 806 | The constants are (7). |
-| {#934} | note | 808 | *(8.3) Subsequences (as the continuum note's (8.2)).* |
-| {#935} | note | 809 | μ^{[K]}_{ℓ₀}, E^×_const,K′, and r^×_K are bounded uniformly in K. |
-| {#936} | note | 810 | So every sequence of lattice spacings has a subsequence along which th… |
-| {#938} | note | 812 | (9) What the Bound Does Not Give |
-| {#940} | note | 814 | Convergence along the full sequence. `WILSON_IT1_TWO_LOOPS_CAUCHY_2026… |
-| {#941} | note | 815 | Factorisation. A bound on W^×_ren − W_ren(C₁)W_ren(C₂), with both sing… |
-| {#942} | note | 816 | A^×, C^{R×}_E, and the first two terms of C^×_E decay in D. The long-g… |
-| {#943} | note | 817 | μ^{[K]}_{ℓ₀} couples the two coarse loops; the pair factorisation note… |
-| {#944} | note | 818 | Smallness of the cross terms at fixed coupling. A^cr and C^×_E are bou… |
-| {#945} | note | 819 | with q := max(q₁, q₂, q₁₂), ℓ_i = p_iL^{j−q_i} ≤ p_iL^{q−q_i}L^{q̄(j)+… |
-| {#946} | note | 820 | 𝔞̄ ≤ 𝔟̄, and 𝔟̄ is O(g_k(1+2r_k)⁴pl_k) maximised over k (ρ_k, ρ_{ph,k}… |
-| {#947} | note | 821 | so 𝔞̄(ℓ₁+ℓ₂) → 0 there, as ℓ_Cε_{K′} → 0 does in the continuum note's … |
-| {#948} | note | 822 | C^{R×}_E and A^{cr,R} carry the factor e^{−p₀(ḡ_R)/2} ((6B)), so they … |
+| {#290-1} | note | 79 | On the fixed torus (continuum note #NWTOA.1: T_ph = 2L^{m_T}u, m_T ≥ 0… |
+| {#290-2} | note | 80 | (H3)'s other conditions (table #T12.31-1-2) hold on the fixed torus fo… |
+| {#292} | note | 82 | *Inherited:* the inputs of the single-loop (6.3). These are: |
+| {#293} | note | 83 | (S-w) (map D2.4(12)–(13)); |
+| {#294} | note | 84 | D2.6's inputs (for the carry lemma: the D2.6 closure 5.3's list, with … |
+| {#295} | note | 85 | D2.7, whose 15.5 rests on BLL (`balaban_proofs/BP_LFR2_LOOP_LOCALISATI… |
+| {#296} | note | 86 | the large-field payment behind B_LF (continuum note (4.4), #ND.4.9); |
+| {#297} | note | 87 | the reading of V4's step-1 factors in D(1)'s weights (map #MD2.4.5.10)… |
+| {#299} | note | 88 | the evaluation at U^R of the insertions that R leaves unchanged (D2.7 … |
+| {#300} | note | 89 | the bounds /μ^R_n/, /ζ^R_n/ ≤ C_R𝔞_n on the coefficients of the 𝐑-step… |
+| {#304} | note | 91 | What the Objects Are |
+| {#306} | note | 93 | The pair observable W_{χ₁}(C₁;U)W_{χ₂}(C₂;U) is the normalised trace o… |
+| {#307} | note | 94 | The stopping step is common to both loops: K′ = K − j, with j the leas… |
+| {#308} | note | 95 | So the corners of both loops are period points, and every step is comm… |
+| {#309} | note | 96 | At K′, C_i is a fixed contour C_i^{(K′)} with side ℓ_i = p_iL^{j−q_i} … |
+| {#310} | note | 97 | D ≥ 1 is the ℓ^∞ distance between C₁ and C₂ in step-K′ units. |
+| {#311} | note | 98 | In step-k units the sides are ℓ_iL^{K′−k}, and every traversal of C_i … |
+| {#313} | note | 100 | What That Forces |
+| {#315} | note | 102 | **The normalisation factorises exactly.** The coefficients δm_{k+1} an… |
+| {#315-1} | note | 103 | The cross constant E^× of (5) is the only cross term that the step map… |
+| {#316} | note | 104 | **A cross group has no scalar flat value.** A group with arcs on both … |
+| {#317} | note | 105 | **Cross groups are made with a doubly exponential decay in the distanc… |
+| {#318} | note | 106 | A cross group made at step k spans at least DL^{K′−k} step-k units. |
+| {#319} | note | 107 | The extent weight of (S-w) has the same rate at every step. |
+| {#320} | note | 108 | So the cross mass made at step k is ≤ C𝔞̄(ℓ₁+ℓ₂)L^{K′−k}e^{−ν_×DL^{K′−… |
+| {#321} | note | 109 | **So the cross groups are carried, not taken out.** |
+| {#322} | note | 110 | They form their own species cross(j), last in D2.0(3)'s order. They ar… |
+| {#323} | note | 111 | The D2.6 closure's carry lemma carries them without a bridge. Every la… |
+| {#324} | note | 112 | The doubly exponential decay pays this geometric growth: the carried c… |
+| {#325} | note | 113 | So the class carries everything to the stopping step, and the large-fi… |
+| {#326} | note | 114 | Taking the cross words out at the step that makes them doesn't work: o… |
+| {#328} | note | 116 | Derivation |
+| {#330} | note | 118 | (1) Setting |
+| {#332} | note | 120 | C₁, C₂ are coarse translates of counterclockwise squares, each in a pl… |
+| {#332.1} | note | 121 | *The planes.* V4 Section 10 states the pair in the plane of e₁, e₂, an… |
+| {#332.1-1} | note | 122 | The cross arguments use only distances between V(C₁) and V(C₂) (#333–#… |
+| {#333} | note | 123 | *The cross distance.* For a step-k traversal n of C_i, δ_n^{(k)} is th… |
+| {#334} | note | 124 | Both squares are unions of step-K′ bonds with corners on the step-K′ l… |
+| {#335} | note | 125 | Put Δ_×^{(k)} := Σ_ne^{−ν_×δ_n^{(k)}/M} over the step-k traversals of … |
+| {#336} | note | 126 | Then Δ_×^{(k)} ≤ 4(ℓ₁+ℓ₂)L^{K′−k}e^{−ν_×DL^{K′−k}/M}. |
+| {#337} | note | 127 | *Constants.* |
+| {#338} | note | 128 | c_d = ν/(32A_dML), A_d := max(2, A_E + 1), and C_S′ are those of the t… |
+| {#339} | note | 129 | ν_e = ν/(2C_box) is the extent rate of (S-w) (D2.4(12)(b)). |
+| {#340} | note | 130 | C_ζ is that of D2.3(5). |
+| {#341} | note | 131 | 𝔞̄ := max(τ̄², sup_kρ_k·pl_k, sup_kρ_{k+1}·pl_k), with pl_k := 1 + (lo… |
+| {#342} | note | 132 | 𝔟̄ := max(𝔞̄, sup_kmax(ρ̂_k, b_k)·pl_k) is the amplitude of the wrap g… |
+| {#343} | note | 133 | ν_× := min(ν_e, 2η/A′_E). |
+| {#344} | note | 134 | C_Σ(χ) is D2.3(7)'s constant for the character χ. |
+| {#345} | note | 135 | C_ν is the constant of ρ̃_kδ*_n = O(ρ_k) on the support, under map #MD… |
+| {#346} | note | 136 | c̄ := e^{(3/8)ν_e}c̄_*sup_mb_m/ᾱ_m and C_δ := 2 are the D2.6 closure's… |
+| {#347} | note | 137 | c̄_* contains C″ = 2(K_an+1)C_be^{(5/8)ν_e}/ε_* (D2.6 closure 5.5). K_… |
+| {#348} | note | 138 | r₀ := 2 is the range, in step-k units, within which a constituent carr… |
+| {#349} | note | 139 | At step 1 the contact sets lie within 2L fine units, that is two step-… |
+| {#350} | note | 140 | At k ≥ 1 the new slots of a component Y are the bonds of C in Y (map #… |
+| {#351} | note | 141 | r₀ enters only through e^{c_dr₀}. |
+| {#352} | note | 142 | *Norm of a cross group.* Y_𝒢 is a sum of terms, each an ordered produc… |
+| {#353} | note | 143 | The rooted sums of D2.4(12) are sums of exactly this form ((6A)(i)). |
+| {#354} | note | 144 | A word containing Y_𝒢 is a normalised trace on V_{π₁} ⊗ V_{π₂} of prod… |
+| {#356} | note | 146 | (2) The Two-Loop Class (Definition) |
+| {#358} | note | 148 | For k ≥ 0, the pair's dressed loop of step k on a labelled term is |
+| {#360} | note | 150 | 𝒲^×_k = κ^{(k)}_{C₁}κ^{(k)}_{C₂}e^{𝓔^×_k}[f^{(1)}_kf^{(2)}_k + Σ_{𝔅≠∅}… |
+| {#362} | note | 152 | f^{(i)}_k := dim(π_i)^{−1}tr π_i(Hol_{C_i}(U_k)). |
+| {#363} | note | 153 | 𝔅 is a family of insertions. Each has arcs on one loop only (a C_i-ins… |
+| {#364} | note | 154 | w(𝔅) is the normalised trace on V_{π₁} ⊗ V_{π₂} of the two-contour wor… |
+| {#365} | note | 155 | Q_k(𝔅) = exp(−Σ_{Γ hits 𝔅}φ_k(Γ)), over the clusters of the pair's ste… |
+| {#366} | note | 156 | κ^{(k)}_{C_i} := ∏_{j≤k}e^{−δm^{χ_i}_jP_{j−1}(C_i)}(z^{χ_i}_j)⁴, with … |
+| {#367} | note | 157 | 𝓔^×_k is the sum of the local terms and the constant E^×_const,k := E_… |
+| {#368} | note | 158 | *The other clauses.* The norms (ii) and (ii′), analyticity (iii), the … |
+| {#369} | note | 159 | *The species.* D(k)'s species (map #MD2.0.3.21–#MD2.0.3.26) and one mo… |
+| {#370} | note | 160 | The cross groups made by the step map at step j that are not attached … |
+| {#371} | note | 161 | The cross groups of the 𝐑-gas made by the 𝐑-operation at step j > N_B … |
+| {#372} | note | 162 | The descendants of both ((6), and (6B)'s second case). In D2.0(3)'s or… |
+| {#373} | note | 163 | *(ii^cr), the cross clause.* For each j ≤ k the cross(j) insertions pr… |
+| {#374} | note | 164 | w(W) := e^{λ_k(W)ν_rσ(W)}e^{θ(W)}‖Y_W‖ is the D2.6 closure 5.0's weigh… |
+| {#375} | note | 165 | Each insertion is counted once, at the first traversal of its arc set.… |
+| {#376} | note | 166 | *The base.* At k = 0 there are no insertions and κ^{(0)} := 1, so N^×_… |
+| {#377} | note | 167 | *D^×(1).* This is IT-1's step-1 class built on V4 Section 10's objects… |
+| {#378} | note | 168 | the groups of Definition def:two-loop-groups; |
+| {#379} | note | 169 | the reference scalars a_W, with a_W := 0 for cross groups; |
+| {#380} | note | 170 | the retreated carrier D(Λ) of Lemma lem:two-loop-retreated, with its c… |
+| {#381} | note | 171 | V4's cross families W are the species cross(1). Their factors are boun… |
+| {#382} | note | 172 | *The identity (by (6)).* With N^×_k := Σ_ℓχT[𝒲^×_ke^{A_k}] the class's… |
+| {#384} | note | 174 | (3) The Step Map for the Pair, Ingredient by Ingredient |
+| {#386} | note | 176 | *D2.0(1)–(2), units and background regularity:* D2.0(1)'s contour bull… |
+| {#387} | note | 177 | *D2.1, the leading word (by the product rule):* |
+| {#388} | note | 178 | f^{(1)}_kf^{(2)}_k = (f^{(1)}_{k+1} + s^{(1)})(f^{(2)}_{k+1} + s^{(2)}… |
+| {#389} | note | 179 | Expanded, this is the product of the two single-loop expansions: f^{(1… |
+| {#390} | note | 180 | So the slots are C_i-insertions, and the words keep the two-trace form… |
+| {#391} | note | 181 | *D2.2, the small-field map:* the observable enters only through the sl… |
+| {#392} | note | 182 | *D2.2(6)(d), the groups (definition):* |
+| {#393} | note | 183 | The merging rules are applied with hulls and long-ness per loop, as V4… |
+| {#394} | note | 184 | The arc set is ℐ(𝒢) = ℐ₁(𝒢) ⊔ ℐ₂(𝒢). The hull on C_i is taken in the c… |
+| {#395} | note | 185 | The linked hull (map #MD2.2.6.119, "the shorter of the two arcs of C b… |
+| {#396} | note | 186 | A C_i-group has ℐ_{3−i}(𝒢) = ∅. A cross group has both parts nonempty.… |
+| {#397} | note | 187 | *D2.3(2), the flat value:* |
+| {#398} | note | 188 | For a C_i-group, Schur's lemma for π_i (as V4 Lemma lem:two-loop-schur… |
+| {#399} | note | 189 | For a cross group, c_𝒢 := 0. Definition. |
+| {#400} | note | 190 | *D2.3(3), the factorisation:* (6). Derived. |
+| {#401} | note | 191 | *D2.3(4):* |
+| {#402} | note | 192 | Contour locality: (4), by D2.3(4)'s induction for objects with short a… |
+| {#403} | note | 193 | Periodicity: the corners of both loops are period points under the sto… |
+| {#404} | note | 194 | *D2.3(5), the coefficients:* δm^{χ_i}_{k+1} and ζ^{χ_i}_{k+1}, one pai… |
+| {#405} | note | 195 | *D2.3(6)–(8), the remainder, the sum over the steps, and the assembly:… |
+| {#406} | note | 196 | *D2.4, the contraction count and (S-w):* |
+| {#407} | note | 197 | These are per position. A position meets the traversals of two contour… |
+| {#408} | note | 198 | The dev contraction is used for C_i-groups only. Cross groups need no … |
+| {#409} | note | 199 | *D2.5, D2.6, and D2.7:* (6A) and (6B). |
+| {#411} | note | 201 | (4) Locality for the Pair, for Short Arcs |
+| {#413} | note | 203 | (L×) Take any step k and a non-cross object of the pair on C_i: an ins… |
+| {#414} | note | 204 | Then it is the object of the single-loop class of C_i with the same co… |
+| {#415} | note | 205 | Conversely, a single-loop object of C_i whose network has no point wit… |
+| {#416} | note | 206 | The network of a group contains the domains of its old members and of … |
+| {#418} | note | 208 | *Step 1.* |
+| {#419} | note | 209 | V4 Lemma lem:two-loop-grouping(c): the C_i-groups of the pair are the … |
+| {#420} | note | 210 | a_W = a^{(i)}_W (V4 sec:two-loops-extraction). |
+| {#421} | note | 211 | The paragraph *Cancellation* in the proof of Lemma lem:two-loop-cross:… |
+| {#422} | note | 212 | A constituent with a contact on C_{3−i} lies within r₀ of C_{3−i}. |
+| {#423} | note | 213 | At the retreated carrier D(Λ) these transfer: by the proof of Lemma le… |
+| {#425} | note | 215 | *Step k → k+1.* |
+| {#426} | note | 216 | A step-(k+1) object is built from its constituents by the composition,… |
+| {#427} | note | 217 | For short arcs these use the contour only through the slots, arcs, and… |
+| {#428} | note | 218 | The constituents are step-k objects whose networks lie inside the new … |
+| {#429} | note | 219 | Consider an old occurrence with arcs on both loops, that is, a cluster… |
+| {#430} | note | 220 | So no non-cross object contains such an occurrence or a cross insertio… |
+| {#431} | note | 221 | (4) covers only the groups short on C_i: D2.3(4)'s contour locality is… |
+| {#433} | note | 223 | (5) The Factorisation of the Reference Gas |
+| {#435} | note | 225 | Work on ℓ₀ at the map k → k+1, k ≥ 1. The first step is V4's (*The fir… |
+| {#436} | note | 226 | S°(ℓ₀) is the pair's reference group gas: C₁- and C₂-groups with their… |
+| {#437} | note | 227 | S°_{C_i}(ℓ₀) is the single-loop gas of C_i. |
+| {#439} | note | 229 | Put E^×_{k+1} := log S°(ℓ₀) − log S°_{C₁}(ℓ₀) − log S°_{C₂}(ℓ₀). |
+| {#441} | note | 231 | *Allocation.* In each gas put a(b) := Σ_{Γ: b∈J_Γ}Φ°(Γ)//J_Γ/ (D2.3(6)… |
+| {#442} | note | 232 | Then log S° = Σ_ba(b) over the step-k traversals of C, and log S°_{C_i… |
+| {#443} | note | 233 | So E^×_{k+1} = Σ_iΣ_{b∈C_i}(a(b) − a_{C_i}(b)). The rearrangement uses… |
+| {#444} | note | 234 | *Cancellation.* Let b ∈ C_i, and let Γ ∋ b be a cluster of either gas … |
+| {#445} | note | 235 | Its network has no point within r₀ of C_{3−i}. |
+| {#446} | note | 236 | By (L×) it is a cluster of both gases, with the same weight and the sa… |
+| {#447} | note | 237 | So a(b) − a_{C_i}(b) contains only clusters of network diameter ≥ δ_b^… |
+| {#448} | note | 238 | The latter have network diameter ≥ ℓ_iL^{K′−k} = P_k(C_i)/4: the arc o… |
+| {#449} | note | 239 | *Bound.* By (T′) for each gas (for the pair gas by (6A)(v)), /a(b) − a… |
+| {#450} | note | 240 | /E^×_{k+1}/ ≤ 8C_S′e^{c_dr₀}𝔞_{k+1}(ℓ₁+ℓ₂)L^{K′−k}e^{−c_dDL^{K′−k}} + … |
+| {#451} | note | 241 | The second term does not decay in D. It would, given the long-group an… |
+| {#452} | note | 242 | *The first step.* E^×_1 is V4's cross exponent at the retreated carrie… |
+| {#453} | note | 243 | *Assembly.* |
+| {#454} | note | 244 | By D2.3(8) for C_i alone, log S°_{C_i}(ℓ₀) = −δm^{χ_i}_{k+1}P_k(C_i) +… |
+| {#455} | note | 245 | So log S°(ℓ₀) = −Σ_iδm^{χ_i}_{k+1}P_k(C_i) + 4Σ_iζ^{χ_i}_{k+1} + E°_{k… |
+| {#456} | note | 246 | Then D2.3(8)'s assembly holds for the pair, with κ_{k+1} := κ_{C₁,k+1}… |
+| {#457} | note | 247 | E^∂_{k+1}(ℓ) := log S°(ℓ) − log S°(ℓ₀) is D2.3(8)'s, for the pair gas. |
+| {#459} | note | 249 | (6) The Cross Groups: Production and Carry |
+| {#461} | note | 251 | *The step.* Apply the map k → k+1 to N^×_k. After the interactions are… |
+| {#462} | note | 252 | D2.3(3)'s multilinear expansion Y_𝒢 = c_𝒢T + Y^d_𝒢 and its resummation… |
+| {#463} | note | 253 | For a cross group c_𝒢 = 0, so Y^d_𝒢 = Y_𝒢: the group enters the new wo… |
+| {#464} | note | 254 | The result is 𝒲^×_{k+1} of (2), with insertions of every species, Q^{o… |
+| {#465} | note | 255 | Nothing is split off. So the numerator identity (map #MD2.0.3.66) give… |
+| {#466} | note | 256 | *The species of a new cross group.* |
+| {#467} | note | 257 | The species rule of map #MD2.0.3.22–#MD2.0.3.25-1, with the tests of t… |
+| {#468} | note | 258 | A cross group made from parents that are not all dev takes the first s… |
+| {#469} | note | 259 | The other new cross groups are cross(k+1). They pass §2.1's tests (i)–… |
+| {#470} | note | 260 | Map #MD2.0.3.21's reclassification is a rule for dev insertions, so a … |
+| {#471} | note | 261 | At an 𝐑-step these rules are replaced by (6B)'s. The single-loop membe… |
+| {#472} | note | 262 | *Production.* Let 𝒢 be a cross(k+1) group, and m := K′ − k − 1. |
+| {#473} | note | 263 | (S-w) applies to 𝒢 on every labelled term (D2.4(12)(b), for the groups… |
+| {#474} | note | 264 | 𝒢 has a traversal n ∈ ℐ_i(𝒢) and a traversal of C_{3−i} in ℐ(𝒢) ⊆ X(𝒢)… |
+| {#475} | note | 265 | Pin 𝒢 at the first traversal of its arc set and use (S-w) at the posit… |
+| {#476} | note | 266 | A^cr_{k+1} := Σ_{𝒢∈cross(k+1)}e^{c_W}w(𝒢) ≤ e^{c_W}C_S′ρ_{k+1}pl_kΔ_×^… |
+| {#477} | note | 267 | *The first step.* The cross(1) insertions are V4's cross groups at the… |
+| {#478} | note | 268 | The distance. V4 Lemma lem:two-loop-cross(a) gives 𝔰(W) > δ_a/(A′_ELM)… |
+| {#479} | note | 269 | The pins. The pins (c4-6-5) hold for the groups of the pair (Lemma lem… |
+| {#480} | note | 270 | Pin each cross group at a traversal of its hull, and spend 2η𝔰 on the … |
+| {#481} | note | 271 | A^cr_1 ≤ e^{c_W}Σ_{a∈ℐ_C}e^{−c_×δ_a/(LM)}Σ_{W∋a}M^{(ρ)}_Λ(W)e^{4η𝔰(W)}… |
+| {#482} | note | 272 | with C_pin the pins' constant (C_pin ≤ C_×, by the last sentence of V4… |
+| {#483} | note | 273 | A fine traversal a inside a step-1 traversal n has δ_a ≥ Lδ_n^{(1)} fi… |
+| {#484} | note | 274 | So the bound holds at every step with C_cr := e^{c_W}L·max(C_S′, C_V(1… |
+| {#485} | note | 275 | *Lemma (cross carry).* Let j ≤ n < K′. On every labelled term, on 𝒟^λ_… |
+| {#486} | note | 276 | M^cr_{n+1}(j) ≤ (1 + C_δc̄)(1 + y^R_{n+1})M^cr_n(j), and M^cr_j(j) ≤ (… |
+| {#487} | note | 277 | summed over the terms of the multilinear expansion at step n+1, the pr… |
+| {#488} | note | 278 | y^R_k and A^R_k are (6B)'s at the 𝐑-steps k > N_B, and 0 at the other … |
+| {#489} | note | 279 | The constants do not depend on j, n, K, or the labelled term. |
+| {#490} | note | 280 | *Proof.* This is the D2.6 closure §5 at lineage extent zero, without (… |
+| {#491} | note | 281 | (T0) holds as written. The cross(j) insertions present at step n are f… |
+| {#492} | note | 282 | 5.1: a cross insertion carries no deviation, and its bound is a sup bo… |
+| {#493} | note | 283 | 5.4: its transports do not grow, interval by interval, under D2.6 §5.4… |
+| {#494} | note | 284 | (T2) and 5.5 without a bridge give 5.6's displays for the steps withou… |
+| {#495} | note | 285 | So y_{n+1} ≤ C_δc̄M^cr_n(j) and M^cr_{n+1}(j) ≤ (1 + C_δc̄)M^cr_n(j), … |
+| {#496} | note | 286 | D2.6 closure 5.5's split of a fixed member's e^{ν_rσ} is unchanged: fo… |
+| {#496.1} | note | 287 | A carried cross(j) insertion can lie on a layer where the room is λ ti… |
+| {#497} | note | 288 | At an 𝐑-step the factor 1 + y^R_k and the new mass A^R_k are (6B)'s, a… |
+| {#498} | note | 289 | A group whose parents have several species is counted in its first par… |
+| {#499} | note | 290 | There is no bridge. A later step touches the insertion through supp B′… |
+| {#500} | note | 291 | *The smallness (H^cr):* C_δc̄ ≤ 1. Like the D2.6 closure's C_δc̄S_R ≤ … |
+| {#501} | note | 292 | *The large-field terms.* Nothing is taken out below K′, so the cross s… |
+| {#503} | note | 294 | (6A) The Two-Component Form of the Map |
+| {#505} | note | 296 | Each item is the one-contour statement with C := C₁ ⊔ C₂, checked wher… |
+| {#506} | note | 297 | (i) *Multi-interval arc sets.* |
+| {#507} | note | 298 | *Intervals.* A group's arc set on C_i is the union of the linked hulls… |
+| {#508} | note | 299 | *Connectedness.* For an insertion D, X_D is its counted domain, the cu… |
+| {#509} | note | 300 | (H0) X^{Cov}_D lies in the closed ℓ∞-neighbourhood of radius 8M fine u… |
+| {#510} | note | 301 | (H1) A closed-connected set S_D contains X_D ∪ X^{Cov}_D, with diam_ℓ∞… |
+| {#511} | note | 302 | (H2) E_D := X_D ∪ (the π_k-cubes meeting H₁(D) ∪ H₂(D)) is closed-conn… |
+| {#512} | note | 303 | D's domain one step later is the set of π_{k+1}-cubes meeting the 8M-n… |
+| {#513} | note | 304 | The constituents of a class are connected through its joined pairs. |
+| {#514} | note | 305 | Each constituent's domain meets ℐ(𝒢); or it meets X^{Cov}_D for a touc… |
+| {#515} | note | 306 | The linked hulls of the classes are connected by overlaps on one loop … |
+| {#516} | note | 307 | So S_𝒢 is closed-connected, and diam_ℓ∞(S_𝒢) ≤ M#_{k+1}(𝒢) + n_{k+1}(𝒢… |
+| {#517} | note | 308 | So 𝒢 has (H0)–(H2), with S_𝒢 and u = 1. Its Cov domain lies in S_𝒢, si… |
+| {#518} | note | 309 | *𝐑-made insertions.* Let D be the insertion of a group g of the 𝐑-gas:… |
+| {#519} | note | 310 | (H0): D depends on U^R on hull^×(g), on span(g) when g is on one loop,… |
+| {#520} | note | 311 | (H1) holds with u = u_𝔏 and S_D := S_g of (6B), *The count*, for D_g^×… |
+| {#521} | note | 312 | (H2): E_D := X_D ∪ (the π_k-cubes meeting H₁(D) ∪ H₂(D)) ∪ (the π_k-cu… |
+| {#521-1} | note | 313 | *Its size.* Put σ := σ_g for D_g^× and σ := σ̃(D_g) for D_g. X_D has a… |
+| {#521-2} | note | 314 | A cube meeting ∪dom^♮P outside X_D meets (T_W)_{5M} for a W ∈ 𝔅(g), be… |
+| {#521-3} | note | 315 | For a big W, a cube meeting (T_W)_{5M} lies at d_□ ≤ 6 from a cube of … |
+| {#521-4} | note | 316 | With #E_W ≤ 65σ(W) + 160 ≤ (197/3)σ(W) (#561, u_W = 1, σ(W) ≥ 240) and… |
+| {#521-5} | note | 317 | So #E_D ≤ (46080 + 163904 + 1028200)σ_g + 160 for D_g^×, as Σ_{W big}σ… |
+| {#522} | note | 318 | The members need no cubes of their own. A slot member W lies in a slot… |
+| {#523} | note | 319 | T_W is closed-connected, contains X_W and ℐ(W), and lies in X_W ∪ (the… |
+| {#524} | note | 320 | E_D is closed-connected. Each dom^♮P is connected (#630), so the π_k-c… |
+| {#525} | note | 321 | For a cross group the spans in S_g need not lie in H₁(D) ∪ H₂(D), and … |
+| {#526} | note | 322 | *Base.* At step 1 the hypothesis holds by V4's connectivity. |
+| {#527} | note | 323 | *Connectivity* (V4 lem:two-loop-pins(a), its proof): for a component γ… |
+| {#528} | note | 324 | *Support.* Y_W depends on the configuration on X(W), on the coefficien… |
+| {#529} | note | 325 | Put S_W := the closed ℓ∞-neighbourhood of radius 8M fine units of X(W)… |
+| {#530} | note | 326 | *Counts.* #_1(X_W) ≤ n(W), since n(W) counts the π₁-cubes of the roots… |
+| {#531} | note | 327 | *Diameter.* S_W is the union of the 8M-neighbourhoods of the at most n… |
+| {#532} | note | 328 | So the step-1 insertions have the units of *Units with a factor* with … |
+| {#533} | note | 329 | *Vertices on two loops.* For a vertex with intervals on both loops, di… |
+| {#534} | note | 330 | For a W-vertex and a Γ-member with an interval on C_i, map (12)(d)'s b… |
+| {#535} | note | 331 | Put Q_v := M ∪ ∪_{W∈𝔅(M)}S_W ∪ ∪_{𝒱(M)}supp 𝒞. It is closed-connected:… |
+| {#536} | note | 332 | Each int_i(v) contains a point of Q_v: a bond of C_i in a component of… |
+| {#537} | note | 333 | diam_v ≤ diam_ℓ∞(Q_v) ≤ M#(M) + Σ_{W∈𝔅(M)}(diam_ℓ∞(S_W) + 1) + Σ_{𝒱(M)… |
+| {#538} | note | 334 | with diam_ℓ∞(S_W) ≤ u_W(M/L)σ_k(W), u_W the factor of *Units with a fa… |
+| {#539} | note | 335 | The window extends each int_i(v), so /win(v)/ ≤ Σ_i/int_i(v)/ + 80(dia… |
+| {#540} | note | 336 | *Touched W.* A touched W has /win(W)/ ≤ 88u_W(M/L)σ_k(W) + 84 and at m… |
+| {#543} | note | 337 | *Vacuum links.* /win^{(2)}_𝒞/ := 80(M#(𝒞) + 1), so /win^{(2)}_𝒞//M ≤ 8… |
+| {#544} | note | 338 | *Filled hulls.* Let D be an old insertion (a W-vertex, a member of a Γ… |
+| {#545} | note | 339 | H_i(D) := the smallest arc of C_i containing ℐ_i(D). |
+| {#546} | note | 340 | win(D) := the union over i of H_i(D), extended along C_i by 20(diam_D … |
+| {#547} | note | 341 | The positions of D are unchanged: the traversals of ℐ(D) and the cubes… |
+| {#548} | note | 342 | In D's production units, map *Arcs* (#MD2.4.12.22) and the connectedne… |
+| {#549} | note | 343 | *Covering.* The covering lemma's part (2) holds piece by piece. |
+| {#550} | note | 344 | Let the supports of v and D meet or touch at x, and let v have an inte… |
+| {#551} | note | 345 | By part (1) the shorter arc between them has length at most 2(diam_v +… |
+| {#552} | note | 346 | For a member with several pieces on C_i, the joining arc of the pair i… |
+| {#553} | note | 347 | If D has no interval on v's loop, the pair has no arc to cover ((iii))… |
+| {#554} | note | 348 | Part (3) runs per loop. So ℐ(𝒢) ⊆ ∪_vwin(v), and map (12)(c)'s bounds … |
+| {#566} | note | 349 | *Units with a factor.* Let an insertion D have, for a u ≥ 1, n(D) ≤ uM… |
+| {#555} | note | 350 | *Positions.* By *Filled hulls*, in the D2.6 closure's units (5.2 (T0),… |
+| {#568} | note | 351 | A traversal of win(D) is within /H_i(D)/ + 20(diam_D + 1) ≤ 24u((M/L)σ… |
+| {#558} | note | 352 | In (T0)'s condition the window term counts the other vertices whose wi… |
+| {#560} | note | 353 | *The share of D.* E_D is closed-connected ((H2) of *Connectedness*). |
+| {#561} | note | 354 | By *Arc cubes* (map #MD2.4.12.19) it has at most #(X_D) + Σ_i(8/H_i(D)… |
+| {#562} | note | 355 | D's domain one step later, the π_{k+1}-cubes meeting the 8M-neighbourh… |
+| {#563} | note | 356 | So #_{k+1}(X_D) ≤ 16 + 20480/L + 8320uσ_k(D)/L, and /win(D)/ ≤ 88u(M/L… |
+| {#564} | note | 357 | Map (12)(d)'s computation then gives sh(D) ≤ (ν_r/4)σ_k(D) + (ν_e/8 + … |
+| {#569} | note | 358 | The share's conditions are u(8496ν_f + 88ν_e)/L ≤ ν_r/4, which holds f… |
+| {#570} | note | 359 | The factors: u ≤ u₁ = 1 + 4/M + 48/L for the step-1 insertions (*Base*… |
+| {#570-1} | note | 360 | An untouched insertion keeps its production σ and factor (map #MD2.2.4… |
+| {#571} | note | 361 | So u ≤ u_𝔏 for every insertion (u₁ ≤ 2), and #569's conditions hold fo… |
+| {#572} | note | 362 | So (T0)'s condition for all insertions, D2.7's 𝒟(𝒴) apart, is (170u_𝔏 … |
+| {#572-1} | note | 363 | 𝒟(𝒴)'s windows lie within 20(diam X_𝒟 + 1) of its pieces' intervals in… |
+| {#573} | note | 364 | *M-vertices.* D2.2(4)(e) is read per loop: I_i(Y) is the smallest arc … |
+| {#573-1} | note | 365 | *Its insertions.* 𝔅(M) is the set of touched old insertions, those who… |
+| {#573-2} | note | 366 | So Y_G is the contraction along I(G) of the touched insertions and the… |
+| {#574} | note | 367 | *The enlargement.* D2.2(4)(e) enlarges I(Y) at each end to the end of … |
+| {#574-1} | note | 368 | J's owner W has X^{Cov}_W ⊇ ℐ(W) ⊇ J (Cov(k), map #MD2.2.4.3; the touc… |
+| {#575} | note | 369 | Map (12)(d)'s count holds per loop with diam_ℓ∞(S_W) in place of diam_… |
+| {#576} | note | 370 | So n_{k+1}(M) ≤ 40M#(M) + 96(M/L)Σ_{W∈𝔅(M)}u_Wσ_k(W) and /win^{(2)}_M/… |
+| {#577} | note | 371 | Map (12)(d)'s computation of sh(M), with #(X_M) ≤ #(M) + 8n_{k+1}(M)/M… |
+| {#578} | note | 372 | sh(M) ≤ ν_f(282#(M) + 22) + ν_e(441#(M) + 164) + (3ν_f + 9ν_e)(96/L)Σ_… |
+| {#579} | note | 373 | for M ≥ 100, in place of the map's ν_f(142#(M) + 11) + ν_e(221#(M) + 8… |
+| {#580} | note | 374 | A cube of M∖D′ then costs log 64 + log 2 + 2 + 1/8 + 24c + 283ν_f + 44… |
+| {#581} | note | 375 | The constant part, 22ν_f + 164ν_e ≤ 0.045 for ν ≤ 1/1000, is charged t… |
+| {#582} | note | 376 | The window sums of a two-loop vertex have four ends, with C_win^×'s co… |
+| {#583} | note | 377 | The part passed to a touched W is (3ν_f + 9ν_e)(96u_W/L)σ_k(W) + (ν_r/… |
+| {#584} | note | 378 | The transport conditions c_π′α_{1,k+1}·120M ≤ ν_f and u_Wc_π′α_{1,k+1}… |
+| {#585} | note | 379 | The per-piece constants 80c_π′ (the map's 40c_π′) and 84c_π′ of the tr… |
+| {#585-1} | note | 380 | A root traversal fixes its arc I_i(M) with two end offsets. An end bon… |
+| {#586} | note | 381 | (ii) *Long groups.* At k ≥ 1 a long arc is a union of linked hulls wit… |
+| {#587} | note | 382 | (iii) *The linked hull.* As in (3): the covering lemma's part (2) is a… |
+| {#588} | note | 383 | (iv) *Base points.* Each loop's traversals are numbered cyclically fro… |
+| {#589} | note | 384 | (v) *The reference gas.* Its species are C₁- and C₂-groups only (cross… |
+| {#590} | note | 385 | Its Kotecký–Preiss condition is the c-version of the pair's (S-w) (map… |
+| {#591} | note | 386 | The pair enters through the per-position counts of (12)(e)–(f): the tr… |
+| {#592} | note | 387 | (vi) *The range r₀.* r₀ := 2 ((1)). |
+| {#593} | note | 388 | *D2.5.* Covariance is a property of each insertion at the ends of each… |
+| {#594} | note | 389 | For an insertion with intervals I ∈ ℐ(W), Cov(k) (map #MD2.2.4.3) is r… |
+| {#595} | note | 390 | The composition argument (map (4)(c)–(e), #MD2.2.4.13, #MD2.2.4.93) ac… |
+| {#596} | note | 391 | *D2.6.* The attached species, their carry, and their payment are per l… |
+| {#597} | note | 392 | (T3) uses the square geometry of the loop that carries the joining arc… |
+| {#598} | note | 393 | A fixed member D″ with several intervals adds at most 12uσ(D″)/L π_{n+… |
+| {#598-1} | note | 394 | The charge is 12uν_e/L ≤ ν_r/16 for L ≥ 24u_𝔏, implied by L ≥ L₀^×, si… |
+| {#599} | note | 395 | 5.5's share of a fixed member, sh(W) ≤ (ν_r/4)σ(W) + c_W, holds for th… |
+| {#600} | note | 396 | §7.2's payment is per component. The contour-density constant c_C of §… |
+| {#601} | note | 397 | So the D2.6 closure holds for C₁ ⊔ C₂. Attached cross groups need no f… |
+| {#602} | note | 398 | *B^×_LF.* B^×_LF is the continuum note's large-field payment (4.4) (#N… |
+| {#604} | note | 399 | (4.4) holds given D2.7 (continuum note #ND.4.9) and rests on the D2.6 … |
+| {#605} | note | 400 | *D2.7.* (6B). Items 2 (the class and its exclusions do not involve the… |
+| {#607} | note | 402 | (6B) The 𝐑-Steps for the Pair |
+| {#609} | note | 404 | The 𝐑-operation is the identity at the steps k ≤ N_B (D2.7 item 1), wi… |
+| {#610} | note | 405 | *Item 3.* R′'s integral identity holds for every integrable integrand.… |
+| {#611} | note | 406 | *15.0, 15.2, and 15.3.* C ∩ X⁺ is a union of arcs on one or both loops… |
+| {#612} | note | 407 | *15.5.* D2.7 15.5's localisation (BLL) is per object: a far letter, a … |
+| {#613} | note | 408 | 15.5(ii)(β-4) holds for C₁ ⊔ C₂ with eight sides in place of four. F_h… |
+| {#613-1} | note | 409 | A carried insertion D of any species is an object of 15.5(i), with Dep… |
+| {#613-2} | note | 410 | The parts go where 15.5(i-3)–(i-5) send them. A part whose h(D) ∪ 𝒦 co… |
+| {#613-3} | note | 411 | /X(D)/ ≤ 2N_Kσ(D) for g small, N_K of #T12.20-3-3. Indeed, Dep(D) ⊆ X_… |
+| {#613-4} | note | 412 | So 2(ε_D + x_D) ≤ 4/X(D)/e^{−63R_k/256} ≤ 8N_Ke^{−R_k/8}ϑ_k²σ(D) ≤ ϑ_k… |
+| {#613-5} | note | 413 | D's parts total at most ‖D‖e^{ε_D}(1 + 2(e^{x_D} − 1)) ≤ ‖D‖e^{2(ε_D+x… |
+| {#614} | note | 414 | 15.5(ii)(β-5) holds with the bonds of C₁ ⊔ C₂: those with ρ(Y₁(i), X) … |
+| {#617} | note | 415 | For a slot holding a carried insertion D, of any species, this note de… |
+| {#617-0} | note | 416 | This definition is how 15.5(i) joins D to the polymer here, a construc… |
+| {#617-1} | note | 417 | Dep(D) is X_D ∪ X^{Cov}_D, together with Z′ for an att(j, Z′) with Z′ … |
+| {#618} | note | 418 | A carried insertion of a single-loop species in a slot is part of that… |
+| {#619} | note | 419 | A cross member W is evaluated where 15.5 evaluates every insertion: on… |
+| {#620} | note | 420 | *The groups of 15.4.* For the pair, a span is taken only for a polymer… |
+| {#620.1} | note | 421 | A slot's bonds here are those it contributes to ℐ(g) (#617): the bonds… |
+| {#621} | note | 422 | For two polymers with spans this is 15.4's interleaving, so the groups… |
+| {#622} | note | 423 | Such a group's span is span(g) := ∪_{P∈g}span(P), as in 15.4. The span… |
+| {#623} | note | 424 | A polymer without a span needs none: its tensor is contracted on its s… |
+| {#624} | note | 425 | #620's relation puts a slot bond of one polymer in the span of the oth… |
+| {#625} | note | 426 | *15.1 and 15.4(i).* For a group with slots on C_i only, the contractio… |
+| {#626} | note | 427 | *Lengths.* Let P be a polymer of 15.3, X′_1, …, X′_s the localisation … |
+| {#627} | note | 428 | D_P := Σ_r(d_k(X′_r) + 4R_k + 2λ̂ + 498) + 4Σ_{P′}ex(Y_{P′}), |
+| {#628} | note | 429 | with d_k the linear size in M-units (RG I p.257 l.14–16; it equals LFR… |
+| {#628-1} | note | 430 | In (6A) and (6B) a π_k-cube is a block of the partition π_k of the ste… |
+| {#628-1-1} | note | 431 | An MR_k-cube, a block of the MR_k-partition, is a union of π_k-cubes: … |
+| {#628-1-1-1} | note | 432 | Compatibility is Bałaban's set sense, each cube of the coarser partiti… |
+| {#628-1-2} | note | 433 | An MR_k-cube meets a set of sites and bonds in the same block sense, s… |
+| {#628-1-3} | note | 434 | *Cubes.* For a partition into cubes of side s, the closed cubes meetin… |
+| {#628-1-3-1} | note | 435 | An arc of length less than s spans less than s in each coordinate, so … |
+| {#629} | note | 436 | dom P is the union of the domains of P's constituents (15.3), the X′_r… |
+| {#629-00} | note | 437 | With D2.7 15.4(i)'s ℓ_D and s_D, put T⁺_D := (T_D)_{5M} ∪ s_D when ℓ_D… |
+| {#629-0} | note | 438 | *A link's data.* A link X ∈ 𝔏 (D2.7's; #241's links of #247 are anothe… |
+| {#629-0-1} | note | 439 | The 𝐑-operation sums the labels of each component X_c of Z, those on t… |
+| {#629-0-1-1} | note | 440 | A cluster's activities read data only on its dependence set (map #MD2.… |
+| {#629-0-2} | note | 441 | Here LMR_j-cubes are CRE (3.16)'s, the MR_j-cubes of T_{L^{−j}}. The s… |
+| {#629-0-2-1} | note | 442 | For j < k, a point some labelling puts in a step-j label set lies in Λ… |
+| {#629-0-3} | note | 443 | A cutoff cube of a step j ≤ n, an old insertion's too, is an LM₂R_j-cu… |
+| {#629-1} | note | 444 | Its counted domain dom_c P is the set of the π_k-cubes meeting dom P, … |
+| {#629-2} | note | 445 | For n(X) ≥ 2, a link's set X̂ is its network, the union of its groups'… |
+| {#629-2-1} | note | 446 | For n(X) ≥ 2, the constituents' cubes number at most #_n(𝒢) (map #MD2.… |
+| {#629-2-2} | note | 447 | For n(X) = 1, X̂ is the union of the envelopes of X's groups (V3 Lemma… |
+| {#629-2-3} | note | 448 | An 𝐑-step has k ≥ 3 (k > N_B > N₀ ≥ 1, #609), so a π_k-cube is L^{k−1}… |
+| {#629-2-4} | note | 449 | A closed walk along a spanning tree of X̂'s π₁-cubes passes at most 2A… |
+| {#629-2-5} | note | 450 | So with ℓ_P, P's links' counts (table #T4.42), the links of every step… |
+| {#629-3} | note | 451 | Then diam_∞(dom^♮P) ≤ M(D_P + 2ℓ_P) + (43/20)MΣ_{D∈𝔅^{big}(P)}σ(D) in … |
+| {#629-4} | note | 452 | *The links' weights.* Each link pays its terms below from its weight a… |
+| {#629-4-0} | note | 453 | Of that quarter, the links' parts of the weights and extents and of #8… |
+| {#629-4-1} | note | 454 | The other a°(X)/8 = (ν/256)σ_{n(X)}(X) is the link's length decay. A q… |
+| {#629-5} | note | 455 | *The links' units.* A link adds at most 2^{d+2}σ_{n(X)}(X) cubes and, … |
+| {#630} | note | 456 | dom P ∪ ∪_{D∈𝔅(P)}(T_D ∪ s_D) is connected (D2.7 15.4(i), *Why a span … |
+| {#631} | note | 457 | Cover dom^♮P by the following sets: W_r := X′_r ∪ ∪_{K⊆X′_r}K^{(λ̂+248… |
+| {#632} | note | 458 | Each first-class component X of P lies in one X′_r, since X′_0 = ∪_{Y∈… |
+| {#633} | note | 459 | X⁺ widens X by two layers of MR_k-cubes: X^∼ adds one, since ∼ means "… |
+| {#634} | note | 460 | Y_{P′}^{[1]} ⊂ Y′₀^{[1]} ∪ ∪_ee^{[1]}, and Y′₀ ⊂ X(F)^{[3]} ∪ ∪_{K∈h(F… |
+| {#635} | note | 461 | The sets of #631 have diameters at most M(d_k(X′_r) + 4R_k + 2λ̂ + 498… |
+| {#636} | note | 462 | *The free decay.* Put c_F^× := δM/2 = ½ (#728.5). For a polymer P that… |
+| {#637} | note | 463 | d_k(X′_r): the activity of a polymer P with localisation domain X′ car… |
+| {#637-0} | note | 464 | D2.7's gases use e^{−κ(size)} of it, the size counted in MR_k-cubes (1… |
+| {#637-1} | note | 465 | One pays the M-level shapes. From a root M-cube, (1.67)'s tree of leng… |
+| {#639} | note | 466 | 4ex(Y_{P′}): the pieces carry e^{3κex(Y_{P′})} (15.5(ii)(α)), and 15.5… |
+| {#643} | note | 467 | κ and κ₁ here are RG II's. LFR II's κ₁ is that of its localisation exp… |
+| {#644} | note | 468 | κ > 6·2^d. By p.389 l.12, κ ≥ 6·2^d/β, and β < 1: p.376 l.5–6 bounds e… |
+| {#645} | note | 469 | The constants 4R_k + 2λ̂ + 498 and e^{2^{d+1}κ} per X′_r: the exponent… |
+| {#647} | note | 470 | So 15.3's bounds and 15.4's Kotecký–Preiss sums hold for the activitie… |
+| {#648} | note | 471 | *The volume.* (1.95)'s volume factor is βκ/(6·2^d) per π_k-cube of X′∖… |
+| {#649} | note | 472 | *The factor of (1.89) per component.* Each first-class component carri… |
+| {#650} | note | 473 | (1.96)'s sum over the components uses e^{−p₀(g_k)/2} of it, as Bałaban… |
+| {#651} | note | 474 | The rest, c₁ = e^{−p₀(g_k)}, is (1.95)'s factor extracted before the s… |
+| {#652} | note | 475 | *The margin.* The rest, e^{−p₀(g_k)/2+3+2ΣA+2a_k}, has in its exponent… |
+| {#652-1} | note | 476 | Each localisation domain disjoint from ∪_iY_i, and each group of the 𝐑… |
+| {#653} | note | 477 | 15.6(e)'s att charge is paid in D26 7.2's reserve Res(Z), not from (1.… |
+| {#654} | note | 478 | A first-class component X lies in a cube of side 100MR_k: "the compone… |
+| {#655} | note | 479 | p.389's assumption (#649) gives 2κ(100R_k)^d ≤ 2(1+β₀)^{−1}p₀(g_k) − (… |
+| {#656} | note | 480 | *The cross constant of the step.* Let Ξ^c_{12}, Ξ^c_1, and Ξ^c_2 be 15… |
+| {#657} | note | 481 | Since E_k^R(C;ℓ₀) = log(Ξ^c/Ξ) (15.4), #T4.52's E^{R×}_k is log Ξ^c_{1… |
+| {#658} | note | 482 | These gases are 15.4's series at the flat reference: c_g and F(P)/_fla… |
+| {#659} | note | 483 | (a) A cluster with no polymer meeting C₂ has the same polymers, activi… |
+| {#660} | note | 484 | The rest contain a polymer meeting C₁ and one meeting C₂. Their object… |
+| {#660-1} | note | 485 | Hence Σ_P(D_P + 2ℓ_P) ≥ DL^m/M over the cluster's polymers (#311, #629… |
+| {#661} | note | 486 | With *The free decay* and the links' length decay (#629-4-1), the clus… |
+| {#662} | note | 487 | /E^{R×}_k/ ≤ C^×_{KP}(ℓ₁+ℓ₂)L^me^{−p₀(g_k)/2}e^{−ν_rDL^m/(1024M)}, C^×… |
+| {#663} | note | 488 | The rest of 15.4 holds per loop, with μ^R_k and ζ^R_k computed for eac… |
+| {#664} | note | 489 | The term-dependent part E^{R,∂}_k(ℓ) is charged per MR_k-cube to its c… |
+| {#665} | note | 490 | *The sum over the 𝐑-steps.* p₀(g) decreases in g, so e^{−p₀(g_k)/2} ≤ … |
+| {#666} | note | 491 | Σ_{N_B<k≤K′}/E^{R×}_k/ ≤ C^×_{KP}(ℓ₁+ℓ₂)e^{−p₀(ḡ_R)/2}e^{−ν_rD/(1024M)… |
+| {#667} | note | 492 | It is bounded uniformly in K, it decays in D, and it is small when ḡ_R… |
+| {#668} | note | 493 | *15.6–15.7 for the groups on one loop.* As written, per loop: D_g is a… |
+| {#669} | note | 494 | *15.6 for the cross groups of the 𝐑-gas.* Since c_g = 0, every cross g… |
+| {#670} | note | 495 | *The arc set.* D_g^× is the tensor of g's slots, contracted in loop or… |
+| {#670-1} | note | 496 | By the rule of *The groups of 15.4*, no bond of a slot of g lies in th… |
+| {#671} | note | 497 | *The slots of a cross member.* Let a cross member W lie in a polymer P… |
+| {#672} | note | 498 | A single product (arc piece)·W·(arc piece) does not serve. W is covari… |
+| {#673} | note | 499 | Every interval of W inside a first-class X′⁺ lies in a component of P.… |
+| {#674} | note | 500 | The pieces are not arc words of 15.2 on their own: an end of an interv… |
+| {#675} | note | 501 | The slot is invariant under every transformation supported at the fixe… |
+| {#676} | note | 502 | It is covariant under the external transformations at the ends of the … |
+| {#677} | note | 503 | So 15.2(α)–(β) apply to P's tensor T_P, the joint average over the com… |
+| {#678} | note | 504 | 15.6(a)'s covariance holds at the ends of each interval of ℐ(g): 15.2 … |
+| {#678-1} | note | 505 | Its counted domain is hull_c(g) := ∪_{P∈g}dom_c P (*Lengths*); #π_k(hu… |
+| {#679} | note | 506 | D_g^× does not vanish at pure gauge, so (d)'s deviation bound does not… |
+| {#680} | note | 507 | Its bound is (c)'s, ‖D_g^×‖ ≤ B(g), with ‖W‖ for each cross member W i… |
+| {#681} | note | 508 | For every group g of the 𝐑-gas, cross or on one loop, Ψ_g sums the clu… |
+| {#682} | note | 509 | /Ψ_g/ ≤ C_Ψ′e^{−p₀(g_k)/2}(#π_k(hull^× g) + N_sl(g) + Σ_{P∈g with a sp… |
+| {#683} | note | 510 | with C_jn of *The rooted sum*, and /span(P)/ ≤ 4M(D_P + 2ℓ_P + (43/20)… |
+| {#684} | note | 511 | *15.6(e)'s scope rule.* Its first alternative makes a dev term att(k, … |
+| {#685} | note | 512 | The second alternative, a polymer of g meeting a second-class or uncha… |
+| {#685-1} | note | 513 | Its D_g^× has *The count*'s units, which do not use the activities; wh… |
+| {#689} | note | 514 | The other cross groups have no polymer meeting a second-class or uncha… |
+| {#690} | note | 515 | *The count.* For every cross group g of the 𝐑-gas, att ones included, … |
+| {#691} | note | 516 | σ_g := Σ_{W∈𝔅^×(g)}σ(W) + ½Σ_{D∈𝔅^s(g)}σ(D) + Σ_{P∈g}π(P), π(P) := #π_… |
+| {#692} | note | 517 | with 𝔅(P) the carried insertions in P's slots, and σ(D) the production… |
+| {#693} | note | 518 | *The units of the members.* Let D ∈ 𝔅(g) be produced at step j ≤ k, wi… |
+| {#693-1} | note | 519 | When j < k, X_D is D's domain one step later, which contains X^{Cov}_D… |
+| {#693-2} | note | 520 | In both cases X^{Cov}_D ⊆ X_D ∪ ℐ(D), so Dep(D) ⊆ T_D ∪ Z′ (#617-1), a… |
+| {#694} | note | 521 | #_k(X_D) + n_k(D)/M ≤ (21/20)σ(D) + 17 and diam_∞(T_D) ≤ M((21/20)σ(D)… |
+| {#695} | note | 522 | When j = k, u_D = 1, so #_k(X_D) + n_k(D)/M ≤ σ(D) and diam_∞(S_D) ≤ M… |
+| {#696} | note | 523 | When j < k, they come from *The share of D*. At step j + 1, #_{j+1}(X_… |
+| {#696-0} | note | 524 | So the count stays at most 16.1 + 0.23σ(D) for u_D ≤ u_𝔏 and L ≥ L₀^× … |
+| {#696-1} | note | 525 | The intervals lie in the filled hulls, so n_k(D)/M ≤ 8u_Dσ(D)/L + 4/M.… |
+| {#697} | note | 526 | The 17 is the rounding of a small domain to whole cubes: the 8M-neighb… |
+| {#698} | note | 527 | *Big and small members.* Call D big if σ(D) ≥ 240 when j = k, or σ(D) … |
+| {#698-0} | note | 528 | If ℓ_D > 2MR_k, D is big and ℓ_D ≤ (11/10)Mσ(D). Indeed ℓ_D ≤ diam_∞T_… |
+| {#698-1} | note | 529 | A small member has #_k(X_D) < 240, n_k(D) < 240M, and diam_∞(T_D) < 24… |
+| {#698-2} | note | 530 | A small member whose T_D meets X⁺ for a component X of its polymer has… |
+| {#699} | note | 531 | 𝔅(P) holds the carried insertions in P's slots (D2.7 15.5(i)): those i… |
+| {#699-0} | note | 532 | Each X_D lies in dom P (#629), its intervals are in ℐ(g), and D_g^× de… |
+| {#699-1} | note | 533 | Otherwise D is far: T_D lies over 2MR_k from every component K of P, K… |
+| {#699-2} | note | 534 | Then ex(Y_{P′}) ≥ R_k, and so for a letter's piece P′ in P, which has … |
+| {#699-3} | note | 535 | Dep(F) is a bond of C not contained in any K⁺, or lies in T_D, so it l… |
+| {#699-4} | note | 536 | So a quarter of the piece's term 4ex(Y_{P′}) of D_P covers the object … |
+| {#701} | note | 537 | *The rounding.* The rounding is counted per cube, not per member, sinc… |
+| {#703} | note | 538 | The small members of X's slots lie, with their sets (T_D)_{5M}, in X^{… |
+| {#705} | note | 539 | No per-member constant of the slot members 𝔅(g) remains in the uses be… |
+| {#706} | note | 540 | A single-loop insertion D_g made at an 𝐑-step j (D2.7 15.6) is a funct… |
+| {#706-1} | note | 541 | The counted domain X_{D_g} is the set of the π_j-cubes of ∪_{P∈g}dom_c… |
+| {#709} | note | 542 | (H1): S_{D_g} is closed-connected by #524's reasons and contains X_{D_… |
+| {#710} | note | 543 | σ̄(g) := Σ_{P∈g}(#π_j(B_P) + (2^{d+1} + ½)D_P + 2^{d+2}ℓ_P) + /span(g)… |
+| {#713} | note | 544 | A member with intervals on both loops, a cross insertion whose interva… |
+| {#714} | note | 545 | Cubes: #π_k(hull_c g) ≤ Σ_{D big}#_k(X_D) + Σ_P(#π_k(B_P) + (2^{d+1} +… |
+| {#714-1} | note | 546 | The cubes of hull^×(g) outside hull_c(g) number at most 13^d(#_k(X_D) … |
+| {#715} | note | 547 | Traversals: the bonds of ℐ(g) outside the big members' intervals lie i… |
+| {#715-1} | note | 548 | A bond in an X^{(247)} lies in one W_r, of ℓ^∞-diameter ≤ M(d_k(X′_r) … |
+| {#716} | note | 549 | Together, #π_k(hull_c g) + n_k(D_g^×)/M ≤ (21/20)Σ_{D big}σ(D) + Σ_P(#… |
+| {#717} | note | 550 | Diameter: S_g := ∪_{P∈g}dom^♮P ∪ ∪_{P∈g with a span}span(P) is closed-… |
+| {#718} | note | 551 | Each dom^♮P is connected (#630) and contains its slots, and an interle… |
+| {#719} | note | 552 | diam_∞(S_g) is at most #516's sum over its pieces: *Lengths*' pieces o… |
+| {#720} | note | 553 | By #629-3, diam_∞(S_g) ≤ 2MΣ_P(D_P + 2ℓ_P) + (43/20)MΣ_{W∈𝔅^×(g) big}σ… |
+| {#721} | note | 554 | So D_g^× has (T0)'s units with u_𝔏σ_g in place of σ, with counted doma… |
+| {#722} | note | 555 | *The rates.* Take #T4.53's ε^r_k, ϑ_k, and λ_n at the 𝐑-steps. ϑ_k pay… |
+| {#722-1} | note | 556 | The weights of the cross insertions after step n carry the rate λ_n(D)… |
+| {#722-2} | note | 557 | An 𝐑-made insertion has w_k(D_g^×) := e^{λ_k(D_g^×)ν_rσ_g}e^{θ(g)}‖D_g… |
+| {#722-3} | note | 558 | The cross insertions here are all the insertions with intervals on bot… |
+| {#723} | note | 559 | *The payment.* For every group g of the 𝐑-gas, cross or on one loop, t… |
+| {#724} | note | 560 | The polymer part of /Ψ_g/ is at most C_Ψ′e^{−p₀(g_k)/2}(2 + 20M)Σ_P(#π… |
+| {#724-1} | note | 561 | For small g_k this is at most ν_r per unit, and λ_k ≤ 1. The links add… |
+| {#725} | note | 562 | e^{(5/2)ν_r#π_k(X′_r)} is paid by a_V/2 per cube, since (5/2)ν_r ≤ ¼ ≤… |
+| {#726} | note | 563 | e^{(5/2)ν_r#π_k(X^{(λ̂+248)})} ≤ e^{5p₀(g_k)/64} is paid by the margin… |
+| {#727} | note | 564 | e^{(5/2)ν_r2^{d+2}D_P} is paid by e^{(c_F^×/2)D_P}, since 5·2^{d+2}ν_r… |
+| {#728} | note | 565 | δ is at most the rate δ_𝐇 of p.376 l.11–13's factor, which LFR II obta… |
+| {#728-1} | note | 566 | VAR (190) prints that decay as exp(−⅛δ₀d(y,y′)) (p.308 l.42), in the d… |
+| {#728.1} | note | 567 | *Units.* BLL measures lengths by d_□, in M-cubes (#BLL.1-0), at the ra… |
+| {#728.1-1} | note | 568 | δ_α is fixed before M (κ₁ by map #MD2.2.6.163). The 𝐇-rate of #728 and… |
+| {#728.3} | note | 569 | The rate δ of #3.3, #286, #287, (6B)–(6C), and (8) (#917) is δ_α/M. #4… |
+| {#728.4} | note | 570 | The δ of #47, #91, #99, and #209 is LFR I's printed rate at the pages … |
+| {#728.5} | note | 571 | δ_α = 1. D2.7's κ₁ is RG II's (map #MD2.2.6.163, RG II's (1.11)), and … |
+| {#729} | note | 572 | Of the rest of e^{−c_F^×D_P}, e^{−(c_F^×/4)D_P} is a reserve: *The roo… |
+| {#730} | note | 573 | The member part of /Ψ_g/ is at most C_Ψ′e^{−p₀(g_k)/2}Σ_{D∈𝔅(g) big}((… |
+| {#730-1} | note | 574 | By *The units of the members*, #_k(X_D) + n_k(D) ≤ M(21/20)σ(D) for a … |
+| {#732} | note | 575 | A single-loop member D enters D_g^×'s weight with at most e^{(λ_k/2 + … |
+| {#733} | note | 576 | This is within its weight, species by species, since σ(D) is the produ… |
+| {#734} | note | 577 | dev: e^{ν_rσ + ν_e·ext} inside (ii)'s and (iii)'s per-position sums, i… |
+| {#735} | note | 578 | att(j, ·), j ≤ k, att(k, ·) included: the weighted mass e^{ν_rσ_j(W)}e… |
+| {#736} | note | 579 | lw: each piece of an lw slot is counted as a fixed member with its own… |
+| {#737} | note | 580 | wrap(j), j ≥ 2: (S-w) carries e^{θ + ν_rσ_j + ν_e·ext_j} (map #MD2.0.3… |
+| {#737-1} | note | 581 | The D2.6 closure 2.1(e) spends the extent weight on ext_j ≥ N^{(j)}_mi… |
+| {#737-2} | note | 582 | The weight is a fixed factor of each insertion, so the weighted sums g… |
+| {#738} | note | 583 | wrap(1): a group whose Q_W does not lift has ‖Υ⁰_W‖ ≤ 2K_χM^{(ρ)}_Λ(W)… |
+| {#739} | note | 584 | Σ_{W∋n, wrap(1)}e^{θ°(W) + ν_r𝔰(W)}‖Υ⁰_W‖ ≤ 2K_χCρe^{−(3/4)ηN_min/(CLM… |
+| {#740} | note | 585 | since 4 − 1/8 − 1 − 1/8 − 2 = 3/4. This is map #MD2.0.3.18-1's bound C… |
+| {#741} | note | 586 | Its mass stays inside e^{2ΣA} (15.3), as for one loop. |
+| {#742} | note | 587 | *The rooted sum.* For a π_k-cube or a bond □, consider the groups g of… |
+| {#742-1} | note | 588 | The factor e^{−(ϑ_k/4)ν_rσ(D)} pays the sum over D's parts: their tota… |
+| {#742-2} | note | 589 | The sum over these g of the products of these factors is ≤ C_gre^{−p₀(… |
+| {#743} | note | 590 | The members are data of the term, and their norms stay with their own … |
+| {#744} | note | 591 | A single-loop member's norm sits inside the activity's e^{2ΣA} (15.3, … |
+| {#745} | note | 592 | A cross member's factor sits in its own slot of (T0)'s product form (*… |
+| {#746} | note | 593 | The sums of D_g^×'s weights below are read with this convention. It pe… |
+| {#747} | note | 594 | The polymers through a fixed cube are summed by 15.4's Kotecký–Preiss … |
+| {#748} | note | 595 | *Spans.* A polymer P with a span has no cross member (*The groups of 1… |
+| {#749} | note | 596 | The torus period is at least twice each side (#290). Two points of a s… |
+| {#750} | note | 597 | On a square of side s, points on opposite sides are at ℓ^∞-distance ≥ … |
+| {#751} | note | 598 | So span(P) has at most 4δ_P bonds, and diam_∞(span P) ≤ δ_P = diam_∞(d… |
+| {#752} | note | 599 | *Joins.* A polymer P′ joins g at a bond b that is a slot of g in span(… |
+| {#753} | note | 600 | At a bond b of a span in g holding a slot of P′, P′ meets a π_k-cube m… |
+| {#754} | note | 601 | At a slot b of g in span(P′), span(P′) is an arc of at most 4δ_{P′} bo… |
+| {#754-1} | note | 602 | Since 4δ_{P′} ≤ 4M(D_{P′} + 2ℓ_{P′} + (43/20)S_{P′}), the indicator of… |
+| {#755} | note | 603 | So the polymers joining g at b, with their own joins, sum to ≤ C_jne^{… |
+| {#756} | note | 604 | *Join count.* A polymer P of g has at most 16MD_P slot bonds outside i… |
+| {#757} | note | 605 | Several joins can share one position, so a position contributes Σ_{m≥0… |
+| {#758} | note | 606 | The factor e^{20MC_jne^{−p₀(g_k)/2}D_P} of the polymer's part is ≤ e^{… |
+| {#759} | note | 607 | A big member D has n_k(D) ≤ M(21/20)σ(D) slot bonds, and a single-loop… |
+| {#760} | note | 608 | C_gr and C_jn depend on d, M, c_F^×, ν_r, 15.4's C_KP, D(k)(iii)'s bou… |
+| {#761} | note | 609 | *First case: no member of g is a carried cross insertion.* A polymer P… |
+| {#762} | note | 610 | P has no span, so it carries e^{−(c_F^×/8)D_P} for this (#729), its li… |
+| {#763} | note | 611 | The single-loop insertions in g's slots end inside them (15.5 above). … |
+| {#764} | note | 612 | #T4.52's A^R_k sums e^{c_W}w_k(D_g^×) over the first-case groups, with… |
+| {#765} | note | 613 | A^R_k ≤ 4e^{c_W}C_gr(ℓ₁+ℓ₂)L^me^{−p₀(g_k)/2}e^{−ν_rDL^m/(1076M)}. |
+| {#766} | note | 614 | *Second case: g has a carried cross member.* D_g^× is a descendant of … |
+| {#767} | note | 615 | Each member is a slot of one polymer, and each polymer is in one group… |
+| {#769} | note | 616 | D_g^× is #241's D_G with G = {g} (#246), the polymer of W's slot meeti… |
+| {#773} | note | 617 | Steps 1–3 of (T0)'s product form, with the members' factors ≤ w_{k−1},… |
+| {#774} | note | 618 | *The smallness (H^R)* is #T4.53's: S^R ≤ 1/32 and C_yS^R ≤ log 2. |
+| {#775} | note | 619 | Then λ_n ≥ 31/32 for every n, and Π_{N_B<k≤K′}(1 + y^R_k) ≤ e^{C_yS^R}… |
+| {#776} | note | 620 | It is a smallness of g_{K′}, as in 15.7: by Cor. 8.2 of BETA_FUNCTION_… |
+| {#776-1} | note | 621 | R_k ≥ (log u_k)^r ≥ (log u_k)² (CRE (2.5), p.255 l.36–39; r ≥ 2), so e… |
+| {#777} | note | 622 | *The 𝐑-made total.* With (1 + C_δc̄)^m ≤ L^m (#500) and (7)'s sum lemm… |
+| {#778} | note | 623 | Σ_{N_B<k≤K′}(1 + C_δc̄)^{K′−k}A^R_k ≤ A^{cr,R} := 4e^{c_W}C_gr(ℓ₁+ℓ₂)e… |
+| {#779} | note | 624 | *15.8.* The post-R term carries D^×(k)'s species and the cross clause,… |
+| {#780} | note | 625 | One in no slot of a polymer, in no span of a marked group, and in no b… |
+| {#781} | note | 626 | One in a slot of a group that 15.6(e)'s scope rule makes att(k, ·) is … |
+| {#782} | note | 627 | One in the block inside a second-class component Y_i^∼ is a fixed fact… |
+| {#783} | note | 628 | Item 5(a) of D2.7 bounds the block's average by the sup of its word ov… |
+| {#784} | note | 629 | It is then treated as the previous class: its factor stays in the cros… |
+| {#785} | note | 630 | That this sup is ≤ w_{k−1}(W) is #230: the evaluation points of 𝐓′_k(Y… |
+| {#786} | note | 631 | The others are slots of the small-field cross groups, and their descen… |
+| {#787} | note | 632 | One in the span of a marked group on one loop is a member of that grou… |
+| {#789} | note | 634 | (6C) The Attached 𝐑-Groups and the 𝐑-Step's Evaluation Points |
+| {#791} | note | 636 | *The attached groups.* Let g be a group of the 𝐑-gas, a cross group of… |
+| {#793} | note | 638 | *The weights.* A cross group with a cross member carries e^{λ_k(D_g^×)… |
+| {#794} | note | 639 | ext^{coll} is measured from Coll_k, which contains the component's cub… |
+| {#795} | note | 640 | For a cross group, hull^×(g)⁺ adds one layer of MR_k-cubes to a set of… |
+| {#796} | note | 641 | For a group on one loop, ext^{coll} has the bound of *The single loop'… |
+| {#797} | note | 642 | The constants are polylogs of order r < p₀, paid by the margin of (1.8… |
+| {#798} | note | 643 | So the polymer part costs at most (1 + 1/1000)ν_r + ν_r ≤ (5/2)ν_r per… |
+| {#799} | note | 644 | A single-loop member D of a cross group gains (ν_r/1000)·½σ(D) of exte… |
+| {#800} | note | 645 | *First case: no localisation domain of a polymer of g contains a secon… |
+| {#800-0} | note | 646 | For a localisation domain X′ disjoint from ∪_iY_i, (1.95)'s activity c… |
+| {#801} | note | 647 | *The free decay* and *The volume* use only these factors and the facto… |
+| {#803} | note | 648 | *Second case: a localisation domain X′ of a polymer of g contains a se… |
+| {#804} | note | 649 | *Size.* Y_i is a component of Z of the second class (LFR II p.378 l.21… |
+| {#805} | note | 650 | *Distance.* d_k(X′) ≤ d_{k,∪Y}(X′) + dΣ_{Y_i⊆X′}(#π_k(Y_i) + 1) (#805-… |
+| {#806} | note | 651 | *The cost.* Off ∪_iY_i, the polymer part of the weight and the uses of… |
+| {#806-1} | note | 652 | At a q = 0 part of X′ (#812), no first-class component of X′ pays #645… |
+| {#807} | note | 653 | *The roots.* A rooted sum of (6B) through a π_k-cube of Y_i runs over … |
+| {#808} | note | 654 | Those with a localisation domain containing Y_i. Such a domain contain… |
+| {#809} | note | 655 | The others, which have the first case's factors and are summed by the … |
+| {#810} | note | 656 | So the root count at Y_i is at most N(Y_i) := 3^d(101R_k)^d + 1. On a … |
+| {#811} | note | 657 | In Ψ's per-cube bound at the cubes of Y_i the same multiplicity enters… |
+| {#812} | note | 658 | *The clusters with q = 0.* Split each activity F(X′) = Σ_q(…) of (1.91… |
+| {#813} | note | 659 | A q = 0 part's activity carries no word of Y_i, the blocks inside Y_i^… |
+| {#814} | note | 660 | The q = 0 parts have amplitude α^{1/3}, and the part of their weights … |
+| {#814-0} | note | 661 | *The root and the count.* Each Y_i has a π_k-cube r^Y_i off Y_i with a… |
+| {#814-3} | note | 662 | Every q = 0 part (X′, 0) meeting Y_i, a union of V-domains, contains r… |
+| {#814-4} | note | 663 | Rooted at r^Y_i of the first Y_i that they contain, these clusters sum… |
+| {#814-4-1} | note | 664 | The Kotecký–Preiss weights are a(X′) := ½(#π_k(X′∖∪_jY_j) + #{Y_j ⊆ X′… |
+| {#814-4-1-1} | note | 665 | *The shares of /P/_w.* In the sums of #814-4-2-3–#814-4-3 a unit of /P… |
+| {#814-4-1-2} | note | 666 | An insertion D with a piece in P has the other two (D2.7 15.5(i-5-0)):… |
+| {#814-4-1-3} | note | 667 | A walk of at most 2m_D steps through these cubes cuts into at most 2m_… |
+| {#814-4-1-4} | note | 668 | In these sums the activities carry D by its weight: its weight of D2.6… |
+| {#814-4-2} | note | 669 | *The Bałaban polymers at an MR_k-cube.* Those meeting an MR_k-cube Q s… |
+| {#814-4-2-3} | note | 670 | *The groups at an MR_k-cube.* The groups whose hulls meet an MR_k-cube… |
+| {#814-4-2-4} | note | 671 | P∖fixed is then rooted at one of the R_k^d M-cubes of Q′ or of the at … |
+| {#814-4-2-5} | note | 672 | Per root, #637-1's shapes cost e^{O(1)} with its factor e^{−(β/8)κd_k}… |
+| {#814-4-3} | note | 673 | *The criterion.* At a unit of a Bałaban polymer, a π_k-cube c off ∪_jY… |
+| {#814-4-3-1} | note | 674 | A group incompatible with a group g has its hull meeting one of the at… |
+| {#814-4-3-2} | note | 675 | These are α small after d, κ, β and ν (γ small, stage 6 of #T1.9; p.37… |
+| {#815} | note | 676 | So their part of /Ψ(S)/ is at most C_Ψ″ per second-class component, un… |
+| {#815.1} | note | 677 | These insertions are pieces of D2.7 15.8-1(1)'s fixed member at Y_i's … |
+| {#815.2} | note | 678 | 15.8-1(6) and (6-0) pay w^Ψ_c inside #814's Kotecký–Preiss sum, each p… |
+| {#815.2-1} | note | 679 | So #814–#815 hold for these weighted activities: Σ_cw^Ψ_c/d_c/ ≤ 2C_Ψ″… |
+| {#816} | note | 680 | *The size decay.* d_{k,∪Y} gives no decay on the cubes of Y_i, and D2.… |
+| {#816-1} | note | 681 | The q = 0 parts of #814 lie in polymers without slots, since a group w… |
+| {#817} | note | 682 | *The factor per component.* E(Y_i) := N(Y_i)e^{(d+1)(102R_k)^d + 4R_k … |
+| {#817-1} | note | 683 | And log N(Y_i) + 4R_k + 2λ̂ + 498 + 2^{d+1}κ + C_Ψ″ + m^w_Ψ + κ101^d ≤… |
+| {#818} | note | 684 | *Per term.* A localisation domain contains Y_i or is disjoint from it,… |
+| {#819} | note | 685 | *The payment of Π_iE(Y_i).* Y_i satisfies (i), (ii) (LFR I p.177 l.23–… |
+| {#819-1} | note | 686 | The print attaches that branch and Π′ to components "for which some la… |
+| {#820} | note | 687 | D2.7 15.8(c) divides this factor into quarters as D2.6 7.2's small-dom… |
+| {#820-1} | note | 688 | The quarter also pays the factor e^{A_k} ≤ e of the leading word's tra… |
+| {#821} | note | 689 | Y_i's persistent factor exp(−κ_k(Y_i) − 2p₀(g_{j(Y_i)})) (p.384 l.5–6)… |
+| {#822} | note | 690 | So Π_iE(Y_i) is paid on every term of step k by factors of that term. … |
+| {#823} | note | 691 | *The charge.* The rooted mass of D2.7 15.4(iii) through an MR_k-cube o… |
+| {#825} | note | 693 | *The single loop's 𝐑-made groups.* Let g be a group of D2.7 15.6 on on… |
+| {#826} | note | 694 | σ̃(D_g) := Σ_{P∈g}π(P) + ⅓Σ_{D∈𝔅(g)}σ(D) + Σ_{W∈𝒲_g}(½σ(W) + 17), with… |
+| {#827} | note | 695 | the extent e^{ν_e·ext_k(D_g)} when it is dev (map (ii-w)), and the wei… |
+| {#828} | note | 696 | *Units.* By *Spans*, /span(g)//M ≤ Σ_P(4D_P + 8ℓ_P + (43/5)Σ_{D∈𝔅^{big… |
+| {#829} | note | 697 | Hence σ(D_g), diam_∞(S_{D_g})/M and n_k(D_g)/M = /span(g)//M are at mo… |
+| {#830} | note | 698 | So D_g has the units of (6A)(i)'s *Units with a factor* with u = u_𝔏, … |
+| {#832} | note | 699 | *The extent.* hull(g) = ∪_{P∈g}(dom P ∪ span P) lies in ∪_{P∈g}(dom^♮P… |
+| {#833} | note | 700 | D_g's domain and box lie in X(D_g) ∪ hull_𝒲(g)⁺, with hull_𝒲(g) := hul… |
+| {#834} | note | 701 | ext_k(D_g) ≤ 2Σ_P(D_P + 2ℓ_P) + (43/10)Σ_{D∈𝔅(g) big}σ(D) + 2R_k + 1 +… |
+| {#835} | note | 702 | With ν_e = ν_r/(2C_box) ≤ ν_r/5832 (#629-4-0), the polymer part costs … |
+| {#836} | note | 703 | *The attached extent.* When D_g is att(k, ·) (D2.7 15.6(e)–(f)), its l… |
+| {#837} | note | 704 | *The member terms.* For W ∈ 𝒲_g let e_W := ext(W) if W is dev, and oth… |
+| {#838} | note | 705 | Every point of D_g's Y-set is in hull(g)⁺, within R_k π_k-sides of hul… |
+| {#839} | note | 706 | *Case (a): D_g's Y-set meets Coll_k* (D2.6 closure §1). This holds whe… |
+| {#840} | note | 707 | *Case (b): otherwise.* Then D_g is att only through a non-dev member. … |
+| {#840-1} | note | 708 | A cube y₀ of Y_{W₁} has dist(y₀, base) ≤ ext^{base}(W₁), the extent fr… |
+| {#841} | note | 709 | The lineage's growth at the 𝐑-step: D_g's mass is at most B(g)Π_{W∈𝒲_g… |
+| {#841-1} | note | 710 | W₁'s interval is one arc in span(g), so the groups holding W₁ are summ… |
+| {#842} | note | 711 | *Wrap members.* A D_g with a wrap member depends on U^R on that member… |
+| {#842-1} | note | 712 | When W₁ is a single-loop insertion, these D_g add at most ε^r_kw(W₁) a… |
+| {#843} | note | 713 | *The payment.* The parts of (3/8)ν_eΔ_g from diam_∞(hull g)/M and from… |
+| {#843-1} | note | 714 | The term 2max_We_W is taken at one member W. For a dev W it costs (3/4… |
+| {#844} | note | 715 | *The members' weights.* A member W enters σ̃ with ½σ(W) + 17. Its rese… |
+| {#844-1} | note | 716 | So D2.7 15.7's member sum x_g := Σ_{W⊂span(g)}b_WDev_{Q^#_W} runs with… |
+| {#844-2} | note | 717 | An insertion D with h(D) = ∅ ((6B), *15.5*) is untouched on its part D… |
+| {#844-2-1} | note | 718 | So its options together carry at most e^{ν_rσ(D)}‖D‖(1 + (η(D)/‖D‖)e^{… |
+| {#844-4} | note | 719 | In D2.6 closure 5.3 the T-step and the 𝐑-step act in turn, and a two-l… |
+| {#844-4-1} | note | 720 | They are carried by the cross carry lemma's step, without a bridge ((6… |
+| {#844-5} | note | 721 | Each of them, D, has a closed-connected S_D meeting both loops, which … |
+| {#844-6} | note | 722 | They are counted once, at the 𝐑-step k, at this lifetime cap: with P_k… |
+| {#844-7} | note | 723 | At the 𝐑-step k, P grows by the factor 1 + C_ϑϑ_k of the h(D) = ∅ opti… |
+| {#844-8} | note | 724 | In the dev recursion (map #MD2.4.6.14) the carried terms gain the fact… |
+| {#844-9} | note | 725 | The wrap(j) insertions are in neither recursion: they are carried in (… |
+| {#845} | note | 726 | An att or lw member is not in x_g: its mass is in its species' total t… |
+| {#845-1} | note | 727 | The normalisation is applied to every insertion of these species, so t… |
+| {#846} | note | 728 | So ΣA stays a polylog of order r < p₀, as #652 uses. |
+| {#847} | note | 729 | D2.6 7.1–7.3 use A_j(Z) through E_j(Z) := 2A_j(Z) + … ≤ ε_A(d_j′(Z)+1)… |
+| {#848} | note | 730 | A wrap member is not in x_g or in these totals: D_g is then wrap(k) (*… |
+| {#849} | note | 731 | *The payment.* For D_g, #723's rate (5/2)ν_r per unit of Σ_P(#π_k(B_P)… |
+| {#850} | note | 732 | It is paid as in the first case above when no localisation domain of a… |
+| {#853} | note | 733 | *D2.7 15.4(i) and 15.7 over the carried insertions.* D2.7 pays the sin… |
+| {#854} | note | 734 | Joins through a span that runs through D's slots are summed as in (6B)… |
+| {#855} | note | 735 | 15.7's diameter factor diam_k(hull(g)⁺) and the linear factor /span(g)… |
+| {#855-1} | note | 736 | Let n ≤ Σ_PD_P/(4R_k + 2λ̂ + 498) be the number of localisation domain… |
+| {#856} | note | 737 | The exponent x_g, at most /span(g)/e^{17ν_r}C_χρ̃_kδ̄* (#844-1), gains… |
+| {#857} | note | 738 | The polymer parts, 3ν_r/80 per unit of D_P in all, are paid within the… |
+| {#858} | note | 739 | *D's weight.* D ∈ 𝔅(g) pays from its weight e^{ν_rσ(D)}, released at t… |
+| {#861} | note | 741 | *The evaluation points.* |
+| {#862} | note | 742 | *The integration variables are real.* In (1.71), "only the quadratic f… |
+| {#863} | note | 743 | These run over the supports of the 𝐑-step's χ′(X), χ_{h,1/2}((Ω″^∼_{h+… |
+| {#864} | note | 744 | On every class component the pre-R term's indicators are either kept a… |
+| {#865} | note | 745 | *The configuration.* In (1.49) the old terms are evaluated at U_k″ = (… |
+| {#866} | note | 746 | U_k^0's data: off Λ, 𝐁_k″ and V″ coincide with the determining set and… |
+| {#867} | note | 747 | By (1.65), U_k^0 maps Ũ_k^c(Y_4, α̃_0, α̃_1) into Ũ_k″^c(Y_1, α̃_0, α̃… |
+| {#868} | note | 748 | *The insertions.* Each insertion of the term is a function of 15.0's U… |
+| {#868-1} | note | 749 | Bałaban's inclusion is printed with its reason, the old terms being "c… |
+| {#869} | note | 750 | D(k)(iii) asserts no bound at the points of 𝒟_k outside 𝒟^{sub}_k (SW … |
+| {#870} | note | 751 | The insertions' own evaluation point U_k^{(0)} is Bałaban's chain of t… |
+| {#871} | note | 752 | *What this gives.* The analyticity of every insertion and word at the … |
+| {#872} | note | 753 | *What it does not give.* The bounds: e^{2ΣA}, the dev masses, the cros… |
+| {#874} | note | 755 | (7) The Count Check over the Steps |
+| {#876} | note | 757 | *A sum lemma.* For L ≥ 2 and a > 0: Σ_{m≥0}L^me^{−aL^m} ≤ e^{−a}(1 + 6… |
+| {#877} | note | 758 | For m ≥ 1, L^m − 1 ≥ L^m/2. So the terms with m ≥ 1 are ≤ e^{−a}x^pe^{… |
+| {#878} | note | 759 | sup_{y>0}Σ_{m∈ℤ}(yL^m)^pe^{−yL^m} ≤ 3. The terms with yL^m ≤ 1 form a … |
+| {#879} | note | 760 | Hence Σ_{m≥1} ≤ e^{−a}·3(2/a)^p. |
+| {#880} | note | 761 | *The cross constant.* For x ≥ 1 and a > 0, xe^{−ax} ≤ e^{−a}(1 + 1/a).… |
+| {#881} | note | 762 | C^×_E := 4LC_V(1+β₀)⁶C_×𝔞̄(ℓ₁+ℓ₂)e^{−c_×D/M}(1 + M/(c_×D)) + 8C_S′e^{c… |
+| {#882} | note | 763 | The first term is the first step, with x = L^{K′−1}. The second and th… |
+| {#883} | note | 764 | The first two terms decay in D. The third, from the groups long on one… |
+| {#884} | note | 765 | *The 𝐑-steps' remainders.* Each 𝐑-step adds to E_const,k(C_i, χ_i) the… |
+| {#885} | note | 766 | The torus has period N_s in step-K′ units (#334), so N_min^{(k)} = N_s… |
+| {#886} | note | 767 | So, for β₀ ≤ 1/4 and L ≥ 4, the remainders E°^R_k(C_i) over any set of… |
+| {#887} | note | 768 | R̂_{K′} is a constant times a power of log g_{K′}^{−2}, while p₀(g_{K′… |
+| {#888} | note | 769 | Hence the 𝐑-steps add at most |
+| {#889} | note | 770 | C^{R°}_E := 2C^R_1R̂_{K′}²(2 + 24R̂_{K′}/c^R_E)e^{−p₀(g_{K′})/5} ≤ 2e^… |
+| {#890} | note | 771 | D2.3(7)'s C_Σ𝔞̄ is computed from the reference-gas remainders E°_{k+1}… |
+| {#891} | note | 772 | So /E^×_const,k/ ≤ E* := (C_Σ(χ₁) + C_Σ(χ₂))𝔞̄ + C^{R°}_E + C^×_E + C^… |
+| {#892} | note | 773 | *The wrap total.* |
+| {#893} | note | 774 | D(k)(ii)'s wrap terms are ≤ C_wL^{k−j}𝔟̄e^{−c_wN^{(j)}_min/M} per trav… |
+| {#893-1} | note | 775 | At j = 1 the wrap(1) insertions carry the weight e^{ν_r𝔰} ((6B), *The … |
+| {#894} | note | 776 | Summed over j ≤ k and over the 4(ℓ₁+ℓ₂)L^{K′−k} traversals of step k, … |
+| {#895} | note | 777 | This is small under the torus condition (map #MD2.3.4.16), as in the c… |
+| {#896} | note | 778 | *The carried cross total.* (1 + C_δc̄)^m ≤ L^m (#500). Under (H^R), (1… |
+| {#897} | note | 779 | Σ_{j≤n}M^cr_n(j) ≤ 2Σ_{j=1}^{K′}(1 + C_δc̄)^{K′−j}(A^cr_j + A^R_j) ≤ A… |
+| {#898} | note | 780 | A^cr := 4C_cr𝔞̄(ℓ₁+ℓ₂)e^{−ν_×D/M}(1 + 12M²/(ν_×D)²) ≥ 4C_cr𝔞̄(ℓ₁+ℓ₂)Σ_… |
+| {#899} | note | 781 | with A^{cr,R} of (6B). |
+| {#900} | note | 782 | The first inequality uses n − j ≤ K′ − j. |
+| {#901} | note | 783 | A^× is uniform in K, and it decays in D. |
+| {#902} | note | 784 | Each bound is uniform in K. |
+| {#903} | note | 785 | A^cr is linear in 𝔞̄(ℓ₁+ℓ₂). C^×_E is linear in 𝔞̄ and at most a const… |
+| {#904} | note | 786 | C^{R×}_E and A^{cr,R} are linear in e^{−p₀(ḡ_R)/2}(ℓ₁+ℓ₂). C^{R°}_E ≤ … |
+| {#905} | note | 787 | w̄ is linear in 𝔟̄(ℓ₁+ℓ₂). |
+| {#907} | note | 789 | (8) The Pair Identity at the Stopping Scale and the K-Uniform Bound |
+| {#909} | note | 791 | *(8.1) The identity (from (2) and the continuum note's (2) with C := C… |
+| {#910} | note | 792 | On ℓ₀ at K′, f^{(i)}_{K′} = W_{χ_i}(C_i^{(K′)};V_{K′}) + β^{(i)}, with… |
+| {#911} | note | 793 | So f^{(1)}f^{(2)} = W_{χ₁}(C₁^{(K′)})W_{χ₂}(C₂^{(K′)}) + β^×, with /β^… |
+| {#912} | note | 794 | Exactly, |
+| {#913} | note | 795 | W^×_ren(ε) = e^{E^×_const,K′}μ^{[K]}_{ℓ₀}(W_{χ₁}(C₁^{(K′)};·)W_{χ₂}(C₂… |
+| {#914} | note | 796 | r^×_K := e^{E^×_const,K′}μ^{[K]}_{ℓ₀}(β^× + I^×_{K′}) + Σ_{ℓ≠ℓ₀}w_ℓ⟨e^… |
+| {#915} | note | 797 | Here I^× is the insertion sum of the class at K′, cross insertions inc… |
+| {#917} | note | 799 | *(8.2) The K-Uniform Bound (given D^×(K′) on every labelled term, whos… |
+| {#918} | note | 800 | /W^×_ren(ε)/ ≤ e^{E*}[1 + Σ_i8.48(1 + 2κ_s^{LF})a_dc_hB₃ℓ_iε_{K′}Lip_{… |
+| {#919} | note | 801 | is bounded independently of K: ε_{K′}, ρ_{K′}, 𝔞̄, g_{K′}, and ḡ_R dep… |
+| {#920} | note | 802 | C_χ is #345's. B^×_LF is (6A)'s, #602's supremum of LF #3.99-1's B_LF … |
+| {#921} | note | 803 | Proof: |
+| {#922} | note | 804 | /μ_{ℓ₀}(W_{χ₁}W_{χ₂})/ ≤ w_{ℓ₀} ≤ 1. |
+| {#923} | note | 805 | /I^×_{K′}/ ≤ exp(Σ_nν_n + A^×) − 1 over the 4(ℓ₁+ℓ₂) step-K′ traversal… |
+| {#924} | note | 806 | On the large-field terms the cross insertions multiply the words' boun… |
+| {#925} | note | 807 | The constants are (7). |
+| {#934} | note | 809 | *(8.3) Subsequences (as the continuum note's (8.2)).* |
+| {#935} | note | 810 | μ^{[K]}_{ℓ₀}, E^×_const,K′, and r^×_K are bounded uniformly in K. |
+| {#936} | note | 811 | So every sequence of lattice spacings has a subsequence along which th… |
+| {#938} | note | 813 | (9) What the Bound Does Not Give |
+| {#940} | note | 815 | Convergence along the full sequence. `WILSON_IT1_TWO_LOOPS_CAUCHY_2026… |
+| {#941} | note | 816 | Factorisation. A bound on W^×_ren − W_ren(C₁)W_ren(C₂), with both sing… |
+| {#942} | note | 817 | A^×, C^{R×}_E, and the first two terms of C^×_E decay in D. The long-g… |
+| {#943} | note | 818 | μ^{[K]}_{ℓ₀} couples the two coarse loops; the pair factorisation note… |
+| {#944} | note | 819 | Smallness of the cross terms at fixed coupling. A^cr and C^×_E are bou… |
+| {#945} | note | 820 | with q := max(q₁, q₂, q₁₂), ℓ_i = p_iL^{j−q_i} ≤ p_iL^{q−q_i}L^{q̄(j)+… |
+| {#946} | note | 821 | 𝔞̄ ≤ 𝔟̄, and 𝔟̄ is O(g_k(1+2r_k)⁴pl_k) maximised over k (ρ_k, ρ_{ph,k}… |
+| {#947} | note | 822 | so 𝔞̄(ℓ₁+ℓ₂) → 0 there, as ℓ_Cε_{K′} → 0 does in the continuum note's … |
+| {#948} | note | 823 | C^{R×}_E and A^{cr,R} carry the factor e^{−p₀(ḡ_R)/2} ((6B)), so they … |
 | {#3.2.1} | BP_TL_NSTEP_FRAME.md | 5 | *The stage blocks and the choice of N (quoted and checked).* The stage… |
 | {#3.2.1-1} | BP_TL_NSTEP_FRAME.md | 6 | LFR I does not fix N: "Conditions on N will be formulated in construct… |
 | {#3.2.1.1} | BP_TL_NSTEP_FRAME.md | 7 | (i) N > N₀ (p.179 l.10). (ii) N ≤ O(1)(log g_k^{−2})^ν with ½ν ≤ p₀ − … |

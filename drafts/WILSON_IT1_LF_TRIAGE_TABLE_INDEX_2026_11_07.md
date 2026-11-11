@@ -3800,3 +3800,12 @@ Relabel → LABELS 75f09f514822, table 98951278d317, at LF 94d3e82675b1. The def
 - Round 1 (narrow) found L1, the T_ph pointer, now repaired. Rounds 2 (narrow) and 3 (full) are clean. Requested by BETA and (4); SHAs sent after. Log: WILSON_IT1_LF_TRIAGE_BG_D26REPOINT_2026_11_10.md.
 
 Relabel → LABELS c5b80d907958, table 913bbd6cafdd, at LF 94d3e82675b1. The definition check prints 0 lines on LF, on the pair note, on the general-loops note bdbcc51cccba and on NL. dmarks2 lists the 16 known leftovers. deadcheck and prefcheck show only their known hits. Columns are 10×5, 74×6, and 267×7.
+
+## Map 3ff093a40ac4, General Loops c7f59b0cb310 and Continuum d598e46ff20a: τ̂_n², C_ε, M_V and K_tor, 2026-11-11 01:50
+
+- #T12.14 defines τ̂_n² (with ρ̂_n) and τ̂̄² (#MD2.0.5.30-1, #MD2.0.5.31-2), D_j(Z) takes τ̂_n² with #MD2.0.5.30-2's rooted n = 1 summand, τ̄² cites #MD2.3.4.16-4 and #MD2.3.7.1, and the #MD2.0.5.37 item is gone. #T12.19-9 and #T12.30-8 cite #T12.14's τ̂_n² and τ̂̄².
+- New #T12.19-9-2: D26 §7.2's C_ε, not #T12.9's. #T12.19-5: M_V in #T12.4, #T12.19-5, #T12.19-9 and #T12.30-8 is CRE's and V4's M, not #T2.12's VAR parameter.
+- New #T12.31-1-2 and #T12.31-1-3: V4's other (H3) torus conditions, with K_tor(C) (continuum #NWTOA.1-7) and K_tor(𝒞) (#GL1.5-3); P_c := P_0(C)/L leaves #T12.31-5's §3 locals.
+- Rounds 1 and 2 found N1–N6, all repaired. Rounds 3 (narrow) and 4 (full) are clean. Requested by (4) and BETA; SHAs sent after. Log: WILSON_IT1_LF_TRIAGE_BG_D26REPOINT_2026_11_10.md.
+
+Relabel → LABELS df5691132d30, table ae5e18927daf, at LF 94d3e82675b1. The definition check prints 0 lines on LF, on the pair note, on the general-loops note c7f59b0cb310 and on NL. dmarks2 lists the 16 known leftovers. deadcheck and prefcheck show only their known hits. Columns are 10×5, 74×6, and 267×7.
