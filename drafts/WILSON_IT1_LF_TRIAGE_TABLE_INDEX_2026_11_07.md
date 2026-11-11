@@ -3758,3 +3758,12 @@ Relabel → LABELS c6814d4faaee, table 7a0f3334905e, at LF 94d3e82675b1. The def
 - Rounds 1–3 found N1–N12, all repaired; rounds 4 (narrow) and 5 (full) are clean. Announced to (4) before the edit and SHAs sent after. Log: WILSON_IT1_LF_TRIAGE_BG_D26REPOINT_2026_11_10.md.
 
 Relabel → LABELS e384dc944732, table ff88007cace7, at LF 94d3e82675b1. The definition check prints 0 lines on LF, on the general-loops note and on the pair note, and dmarks2 lists the 16 known leftovers. deadcheck and prefcheck show only their known hits. Columns are 10×5, 74×6, and 267×7.
+
+## IT-1 d3aef750d7a9, O4 952a1687d5c4 and D26 45edbc7927d4: #T12.19, #T12.32 and #T12.34, 2026-11-11 00:46
+
+- New #T12.32-10 to #T12.32-12-1, IT-1 §3j: the local shift m̂ := λm̃ and its constants (ℓ_s, ε_s, q_s, R_N, c_ℓ, ε_N), the real tilt δ̂ and C_sh, s_p, τ̂_N, ω̂_t, ω̄̂, Ĉ^δ_bd, the raised C_bd, N₀, 𝔖̂₁, 𝔖̂₂, μ̂′, C_τ, C₀′ := C₀ + C_τ, C_ph read with C₀′, N(g₀), R_t := R_{N(g₀)}, n_t and a_lab.
+- New #T12.34 and #T12.34-1, O4: ρ_ω, C_ω, ω̃′_t, ω̄̃′ and C^δ_bd := (1 + C_ω)C_δĈ^δ_bd.
+- Edited: #T12.19-2 (ρ_ω), #T12.19-4-1 (ϑ_V, c_h), #T12.19-5 to #T12.19-8-1 (pointers, C_m's formula, ϱ₁), #T12.32-6 (old C^δ_bd deleted, τ̄²), #T12.32-8 (δ̂).
+- Rounds 1–3 found I1–I5, all repaired; rounds 4 (narrow) and 5 (full) are clean. Announced to (4) before the edit and SHAs sent after. Log: WILSON_IT1_LF_TRIAGE_BG_D26REPOINT_2026_11_10.md.
+
+Relabel → LABELS 3e685cf2133e, table 37e1056450c0, at LF 94d3e82675b1. The definition check prints 0 lines on LF and on the pair note; on general-loops note 6be701a1022e only the new §9, not yet sent by BETA, prints. dmarks2 lists the 16 known leftovers. deadcheck and prefcheck show only their known hits. Columns are 10×5, 74×6, and 267×7.
