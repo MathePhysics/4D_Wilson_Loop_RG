@@ -1,6 +1,6 @@
 # The Pair Factorisation: The Connected Two-Loop Function at Small Size-to-Distance Ratio (5 November 2026)
 
-{#PF.1} *Result.* For ḡ ≤ ḡ_ty (#PF4.5), #PF0.5-1 holds uniformly in K. Its first term, the covariance under the all-small-field term ℓ₀, is bounded at the stopping scale through the size of the Wilson action (§4); it is small in the coupling and does not depend on D (#PF0.5-2).
+{#PF.1} *Result.* Under the conditions of #PF0.5, #PF0.5-1 holds uniformly in K. Its first term, the covariance under the all-small-field term ℓ₀, is bounded at the stopping scale through the size of the Wilson action (§4); it is small in the coupling and does not depend on D (#PF0.5-2).
 
 {#PF.2} The two-loops note `WILSON_IT1_TWO_LOOPS_UNIFORM_BOUND_2026_10_27.md` is cited by #N, the pair's Cauchy note `WILSON_IT1_TWO_LOOPS_CAUCHY_2026_11_05.md` by #PC…, the continuum note by #ND…, the Cauchy note by #C…, the map by #MD…, and V4 by label or line.
 
@@ -13,7 +13,7 @@
 {#PF0.2} *Physical units.* ℓ_i = p_iL^{j−q_i} step-K′ units is the side ℓ_i^{ph} := p_iL^{−q_i}u (#945, #PC7.2), and D step-K′ units is the physical ℓ^∞ distance D^{ph} := DuL^{−j}. The period N_s is T_ph = N_suL^{−j} (#290). So ℓ_i/D = ℓ_i^{ph}/D^{ph} and ℓ_i/N_s = ℓ_i^{ph}/T_ph, independent of j.
 {#PF0.3} *On a fixed torus, D is large only when the loops are small against their distance.* The physical torus is fixed, so D^{ph} ≤ T_ph/2 (#334, D ≤ N_s/2). A bound that decays in D at fixed ℓ_i^{ph} is therefore a bound that decays in D^{ph}/ℓ_i^{ph}. A bound that decays in D^{ph} uniformly in the torus size would be exponential clustering in infinite volume, a mass-gap statement. It is not the target here.
 {#PF0.4} *The form of the target.* Nothing in the construction makes the covariance vanish at a fixed ratio ℓ_i^{ph}/D^{ph}. So the bound sought is small in the coupling, with the torus-scale factor ℓ₁ℓ₂/N_s² = ℓ₁^{ph}ℓ₂^{ph}/T_ph² (#PF0.2).
-{#PF0.5} *The bound.* For C₁, C₂ as in #332–#332.1 with ℓ₁, ℓ₂ ≤ D, and ḡ ≤ ḡ_ty (#PF4.5), uniformly in K,
+{#PF0.5} *The bound.* For C₁, C₂ as in #332–#332.1, ḡ ≤ ḡ_ty (#PF4.5), D ≥ D_desc (#PF3.2-8d2e-3) and the two conditions of #PF3.2-8d2e-1, uniformly in the K with K′ ≥ K′_{att} (#PF3.2-8d2a-3),
 {#PF0.5-1} |W^×_ren − W_ren(C₁)W_ren(C₂)| ≤ 4|e^{E^{(1)}_{const,K′} + E^{(2)}_{const,K′}}|ρ_{cv}²ℓ₁ℓ₂/N_s² + 6δ_LFB^{(1)}_WB^{(2)}_W + (the right side of #PF3.2-9a),
 {#PF0.5-2} with ρ_{cv} := sup_k(ρ_k + ε_k), ρ_k the activities' amplitude (map #MD2.0.3.35-2), ε_k CRE's small-field threshold (map #MD2.0.2.2), and E^{(i)}_{const,K′} the constant of C_i's dressing on ℓ₀ (#PF4.2-0-1). The first term is §4's bound on the covariance under ℓ₀ (#PF4.6). It does not depend on D, and it is small in the coupling relative to the product of the means (#PF4.6-2).
   {#PF0.5-3} The second term is the large-field labels' share (#PF4.2-0a), with δ_LF of #ND.7.1 and B^{(i)}_W #ND.8.1's B_W for C_i with its coefficient 8.48 and the O(1) of O(C_χρ_{K′}) multiplied by 1 + 2κ_s^{LF} (LF #3.99; #910); it does not decay in D. The third decays exponentially in D, except for the wraps' share, which decays exponentially in N_s (#PF3.2-9b).

@@ -3784,3 +3784,19 @@ Relabel → LABELS 9a2252417817, table 8c89f561c7cc, at LF 94d3e82675b1. The def
 - Rounds 1 and 3 found K1–K6, all repaired; rounds 4 (narrow) and 5 (full) are clean. NL's torus rewording (sides below T_ph/3) touches no row. Announced to (4) and ⑂ (3) before the edit; SHAs sent after. Log: WILSON_IT1_LF_TRIAGE_BG_D26REPOINT_2026_11_10.md.
 
 Relabel → LABELS a20c7e0e549b, table 3a5a8b58dbc8, at LF 94d3e82675b1. The definition check prints 0 lines on LF, on the pair note, on general-loops note e552097262de and on NL de703f746b46. dmarks2 lists the 16 known leftovers. deadcheck and prefcheck show only their known hits. Columns are 10×5, 74×6, and 267×7.
+
+## PF a0ac855ab471 and Map 46692055652a: #T12.4-1, #T12.4-1-0 and #T12.17, 2026-11-11 01:32
+
+- PF's N_s form of the covariance term touches no row. #T12.4-1 now defines N_s, the torus period in step-K′ units, with T_ph = N_suL^{−j} (#PF0.2; two-loops #290). Its measures move to the new #T12.4-1-0, and #T12.4-1-2's "label ℓ₀" points there.
+- #T12.17: C₃^{(10)} is dropped (map #MD2.4.10.7-5 deleted), and ν := η is V4's reserve constant (V4 Lemma c5-5-8), not V3's.
+- Rounds 1 (narrow) and 2 (full) are clean. Requested by (4) and ⑂ (3); SHAs sent after. Log: WILSON_IT1_LF_TRIAGE_BG_D26REPOINT_2026_11_10.md.
+
+Relabel → LABELS 75f09f514822, table 98951278d317, at LF 94d3e82675b1. The definition check prints 0 lines on LF, on the pair note a0ac855ab471, on the general-loops note and on NL. dmarks2 lists the 16 known leftovers. deadcheck and prefcheck show only their known hits. Columns are 10×5, 74×6, and 267×7.
+
+## General Loops bdbcc51cccba and Continuum 24eddcd2e20c: #T12.31-13 and #T12.31-1-1, 2026-11-11 01:41
+
+- #T12.31-13 states #GL8.1's ℓ̄_i/N_s = ℓ̄_i^{ph}/T_ph in place of ℓ̄_i/D = ℓ̄_i^{ph}/D^{ph}, with N_s #T12.4-1's and T_ph #T12.31-1-1's.
+- #T12.31-1-1: the torus period is T_ph = 2L^{m_T}u, m_T ≥ 0 a fixed integer (V4's (H3); continuum #NWTOA.1), in place of T_ph ∈ uℤ.
+- Round 1 (narrow) found L1, the T_ph pointer, now repaired. Rounds 2 (narrow) and 3 (full) are clean. Requested by BETA and (4); SHAs sent after. Log: WILSON_IT1_LF_TRIAGE_BG_D26REPOINT_2026_11_10.md.
+
+Relabel → LABELS c5b80d907958, table 913bbd6cafdd, at LF 94d3e82675b1. The definition check prints 0 lines on LF, on the pair note, on the general-loops note bdbcc51cccba and on NL. dmarks2 lists the 16 known leftovers. deadcheck and prefcheck show only their known hits. Columns are 10×5, 74×6, and 267×7.

@@ -268,10 +268,27 @@ The table had no definition of A^{cr,R}: #T12.2-13 called it #T4.52's, but #T4.5
 - Rounds 4 (narrow) and 5 (full) are clean, so the rows are done.
 - Table 8c89f561c7cc → fcd30dab65f4 → 86f4c7196e50 → 1edb18c7e001 → 7f4aae5e6f5b → 3a5a8b58dbc8. LABELS 9a2252417817 → 2339bfbca854 → 718b544cce05 → 1fe94b76f7c9 → ed2c8c78a342 → a20c7e0e549b. defcheck on LF, on the pair note, on general-loops note e552097262de and on NL de703f746b46: "-- 0 lines" each. dmarks2 16. deadcheck and prefcheck show the known hits only, one line lower below the new #T12.2-13-1. Columns 10×5, 74×6, 267×7; CR 0; new rows at most 620 characters.
 
+## PF a0ac855ab471 and Map 46692055652a: #T12.4-1, #T12.4-1-0, #T12.4-1-2 and #T12.17 (Table)
+
+Input: ⑂ (3)'s message on PF a0ac855ab471 (the ℓ₀ covariance term in the N_s form, the user's decision) and (4)'s request on map 46692055652a (deletions only).
+- PF: defcheck prints 0 lines. No row quotes the changed first term of #PF0.5-1, #PF4.4-1 or #PF4.6-1 (now 4abs(e^{…})ρ_cv²ℓ₁ℓ₂/N_s²). #T12.4-1's #PF0.2 and #PF0.5-2, #T4.52's C^{LF×} (#PF3.2-9b) and #T12.4-1-2's w̄^{(i)} (#PF3.2-8f) are unchanged in PF.
+- The table had no definition of N_s. #T12.4-1 now gives it: the torus period in step-K′ units, with T_ph = N_suL^{−j} and so ℓ_i/N_s = ℓ_i^{ph}/T_ph (#PF0.2; two-loops #290, where N_s = (T_ph/u)L^j and ℓ_i = (ℓ_i^{ph}/u)L^j). #T12.4-1 was 674 characters, so the measures (O_i, 𝐏_{ℓ₀}, 𝐄_{ℓ₀}, 𝐏_{lf}) move to the new #T12.4-1-0, and #T12.4-1-2's "label ℓ₀" follows them. TL #290 and #T12.31-13 cite #T12.4-1 only for ℓ_i and ℓ_i^{ph}, which stay.
+- Map: #T12.17's C₃^{(10)} is dropped, since #MD2.4.10.7-5 is deleted and nothing else in the table uses it. #T12.17's "ν := η, V3's reserve constant" now reads V4's, of Section c4-6-2, as V4 Lemma c5-5-8 and #MD2.4.3.10 state. Every #MD tag the table cites is present in the map.
+- Round 1 (narrow) and round 2 (full) on the changed rows are clean.
+- Table 3a5a8b58dbc8 → 98951278d317. LABELS a20c7e0e549b → 75f09f514822. defcheck on LF, on the pair note, on the general-loops note and on NL: "-- 0 lines" each. dmarks2 16. deadcheck and prefcheck show the known hits only, a further line lower below #T12.4-1-0. Columns 10×5, 74×6, 267×7; CR 0.
+
+## General Loops bdbcc51cccba and Continuum 24eddcd2e20c: #T12.31-13 and #T12.31-1-1 (Table)
+
+Input: BETA's request on GL bdbcc51cccba (#GL8.1 in the N_s form of PF a0ac855ab471, D^{ph} gone from GL) and (4)'s request on the continuum note (#NWTOA.1's torus is V4's (H3) family, renamed m₀ → m_T at 24eddcd2e20c after the clash with #T12.8's and #T12.33-10-1's m₀ was flagged).
+- #T12.31-13: ℓ̄_i/D = ℓ̄_i^{ph}/D^{ph} becomes ℓ̄_i/N_s = ℓ̄_i^{ph}/T_ph, as #GL8.1 states. Re-derived: P_{K′}(C)uL^{−j} = P^{co}(C)uL^{−q(C)} = P_phys(C) (#GL1.3-2, #GL5.6-1), so ℓ̄_iuL^{−j} = ℓ̄_i^{ph}, and T_ph = N_suL^{−j} (#T12.4-1). The rest of the row matches #GL8.5-2-1, #GL8.4-1 and #GL8.5-3. GL's other changes (#GL8.2, #GL8.5-3-1, #GL8.6-5-1, #GL8.7-2) are quoted by no row.
+- #T12.31-1-1: T_ph ∈ uℤ becomes T_ph = 2L^{m_T}u, m_T ≥ 0 a fixed integer (V4's (H3); #NWTOA.1). Re-derived from V4 (H3): N_μ = 2L^m at ε = uL^{−K} gives T_ph = 2L^{m−K}u, so m_T = m − K and K_μ = N_μ/L = (T_ph/u)L^{K−1}. #GL1.5-2's argument uses only T_ph ∈ uℤ, which m_T ≥ 0 gives, so the row's conclusion stands. m_T occurs nowhere else in the table or in GL.
+- Round 1 (narrow) found L1 (minor): #T12.31-13 cited T_ph as #T12.4-1's, but #T12.4-1 only relates T_ph to N_s; T_ph's value is #T12.31-1-1's. Repaired: "N_s #T12.4-1's and T_ph #T12.31-1-1's". Round 2 (narrow) is clean. Round 3 (full) covers the #T12.31 block: all 92 cited #GL tags are present in bdbcc51cccba, every cited continuum tag is present, and #T12.31-13 to #T12.31-16 match #GL8.1, #GL8.5-2-1, #GL8.5-3, #GL8.6–#GL8.7 and #GL9.1–#GL9.2. Clean.
+- Table 98951278d317 → 327e03bf0262 → dbf78d2d6047 → 913bbd6cafdd. LABELS 75f09f514822 → d34bf3e481da → 7e99abf52604 → c5b80d907958. defcheck on LF, on the pair note, on the general-loops note and on NL: "-- 0 lines" each. dmarks2 16. deadcheck and prefcheck show the known hits only. Columns 10×5, 74×6, 267×7; CR 0.
+
 ## SHAs
 
-Table: d71e239470ea → eb5a6a505303 → b168c70703ab → 9f6ebf47c805 → 0fa578b35726 → ef03c153b6ad → cc3949e005fb → 77c1b5ec9928 → 18cbd119fc8f → 05cbd40be4db → 7b51b1177ee9 → bb2bbb3fbd08 → 99c0d18618f6 → 7a0f3334905e → ff88007cace7 → 37e1056450c0 → 8c89f561c7cc → 3a5a8b58dbc8.
-LABELS: 2d2801629f41 → 146c7b49d22b → d444e40b4233 → 1f2b3fa09b9d → 740b198d7a9d → 58050f8936d3 → 0e94a6174742 → 4c2c66efb348 → 734a37930def → c59773513fd1 → be350896ce4a → 9eeed3a7792e → 7a980dfeec7b → c6814d4faaee → e384dc944732 → 3e685cf2133e → 9a2252417817 → a20c7e0e549b. Background note: 249ae1a46a2a → 8510ab0aebd7 → 7bb5f99918ab → 3047b31464c3 → 22a230556c65 → c7612b0d6f3b → df792ffa33f3.
+Table: d71e239470ea → eb5a6a505303 → b168c70703ab → 9f6ebf47c805 → 0fa578b35726 → ef03c153b6ad → cc3949e005fb → 77c1b5ec9928 → 18cbd119fc8f → 05cbd40be4db → 7b51b1177ee9 → bb2bbb3fbd08 → 99c0d18618f6 → 7a0f3334905e → ff88007cace7 → 37e1056450c0 → 8c89f561c7cc → 3a5a8b58dbc8 → 98951278d317 → 327e03bf0262 → dbf78d2d6047 → 913bbd6cafdd.
+LABELS: 2d2801629f41 → 146c7b49d22b → d444e40b4233 → 1f2b3fa09b9d → 740b198d7a9d → 58050f8936d3 → 0e94a6174742 → 4c2c66efb348 → 734a37930def → c59773513fd1 → be350896ce4a → 9eeed3a7792e → 7a980dfeec7b → c6814d4faaee → e384dc944732 → 3e685cf2133e → 9a2252417817 → a20c7e0e549b → 75f09f514822 → d34bf3e481da → 7e99abf52604 → c5b80d907958. Background note: 249ae1a46a2a → 8510ab0aebd7 → 7bb5f99918ab → 3047b31464c3 → 22a230556c65 → c7612b0d6f3b → df792ffa33f3.
 
 ## Status
 
@@ -292,3 +309,7 @@ The rows #T12.19-2, #T12.19-4-1 to #T12.19-8-1, #T12.32-6, #T12.32-8, #T12.32-10
 The rows #T12.31-1-1, #T12.31-5-1, #T12.31-16 to #T12.31-17 and #T12.30-8 follow general-loops note 6c7f55d1ee64, with the reflection-positivity note 42e029b94d78 and the nonvanishing note 5137fb31c48d for the #RP and #NV anchors. Round 1 found J1–J3, all repaired. Rounds 2 (narrow) and 3 (full) are clean, so the rows are done at table 8c89f561c7cc.
 
 The rows #T12.33-5 to #T12.33-10-1 enter NL's 37 flagged definitions, and #T12.2-13-1 defines A^{cr,R}, which the table lacked. They follow NL de703f746b46, two-loops b94da3099515, map 64ec666317fa, general-loops note e552097262de and V4. Rounds 1 and 3 found K1–K6, all repaired. Rounds 4 (narrow) and 5 (full) are clean, so the rows are done at table 3a5a8b58dbc8. NL is now on the standing defcheck list.
+
+#T12.4-1 follows PF a0ac855ab471: N_s is defined, with T_ph = N_suL^{−j}, and the measures are split off into #T12.4-1-0. #T12.17 follows map 46692055652a, without C₃^{(10)} and with V4's ν := η. Rounds 1 (narrow) and 2 (full) are clean, so these rows are done at table 98951278d317.
+
+#T12.31-13 follows GL bdbcc51cccba (ℓ̄_i/N_s = ℓ̄_i^{ph}/T_ph), and #T12.31-1-1 follows continuum 24eddcd2e20c (T_ph = 2L^{m_T}u, V4's (H3)). Round 1 found L1, which is repaired. Rounds 2 (narrow) and 3 (full) are clean, so these rows are done at table 913bbd6cafdd.

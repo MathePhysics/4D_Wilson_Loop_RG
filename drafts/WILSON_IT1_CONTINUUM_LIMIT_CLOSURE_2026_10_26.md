@@ -10,10 +10,14 @@
 
 ## What the Objects Are {#NSWTOA}
 
-- {#NWTOA.1} **The stopping lattice is fixed.** ε = uL^{−K}, u fixed, C a square of physical side pL^{−q}u, torus periods T_ph fixed multiples of u.
+- {#NWTOA.1} **The stopping lattice is fixed.** ε = uL^{−K}, u fixed, torus period T_ph = 2L^{m_T}u in every direction with the integer m_T ≥ 0 fixed (so the fine periods N_μ = 2L^{m_T+K} are those of V4's (H3), sec:main-result *Hypotheses*), and C a square of physical side s = pL^{−q}u < T_ph/3 (integers p ≥ 1, q ≥ 0).
   {#NWTOA.1-1} The stopping scale is a := uL^{−j(C)} with j(C) the least j ≥ q + q̄(j), q̄(j) := ⌈log_L(L³M(1+γ²β′(j+1))^{β₀}(log g_min^{−2})^r)⌉ (map #MOMGD.30, #MD2.3.4.15; g_min := inf_K g_K > 0, γ := sup_K g_K).
   {#NWTOA.1-2} Under the coupling prescription j(C) depends on q, L, M, β₀, β′, r, g_min, γ only, so for every K the step K′ := K − j(C) integrates over the field V_{K′} on the lattice T^{(K′)} of spacing a with N_s := (T_ph/u)L^{j(C)} sites per side, |T^{(K′)}| = N_s⁴ sites, and C is the fixed closed contour C^{(K′)} of P_{K′}(C) = 4ℓ_C bonds, ℓ_C = pL^{j(C)−q}.
   {#NWTOA.1-3} None of a, N_s, ℓ_C, or C^{(K′)} depends on K.
+  {#NWTOA.1-4} *The side bound is V4's square/torus condition.* V4's fine periods are N_μ = LK_μ and its square C_n has side nL fine bonds, so here K_μ = (T_ph/u)L^{K−1} and n = pL^{K−1−q}, and V4's K_μ ≥ 3(n+2) ((c5-7-T)(iii); sec:main-result *Hypotheses*) reads T_ph − 3s ≥ 6uL^{1−K}.
+  {#NWTOA.1-5} If s ≥ T_ph/3 it fails at every K. If s < T_ph/3, then T_ph − 3s = uL^{−q}(2L^{m_T+q} − 3p) ≥ uL^{−q}, which is ≥ 6uL^{1−K} once K ≥ q + 2 (L ≥ 13, V4 (c-standing-conditions)); and K ≥ j(C) ≥ q + q̄(j(C)) ≥ q + 3 (#NWTOA.1-1; q̄ ≥ 3, since the argument of log_L is at least L³ for g_min ≤ e^{−1/2}).
+  {#NWTOA.1-6} V4's other conditions on the torus are lower bounds on N_μ ≥ L^K: N_μ a multiple of LMR₁ and at least 200LMR₁, K_μ > max(2, 2R_p+8) (sec:main-result *Hypotheses*), and 4ne^{−cι_T} ≤ 1, i.e. N_min ≥ 4R_0 + (4/c)log(4n) ((c5-7-T)(iii)).
+  {#NWTOA.1-7} LMR₁ is a power of L with R₁ ≤ L(log g₁^{−2})^r ≤ L(1+γ²β′K)^{β₀}(log g_min^{−2})^r (CRE (2.5), (2.7), as in map #MD2.3.4.15-5), and log(4n) ≤ log(4p) + K log L, so these hold for K ≥ K_tor(C), with K_tor depending on p, L, M, β₀, β′, r, γ, g_min and V4's c, R_0, R_p. Every statement below is for K ≥ K_tor(C), which is all that the limit K → ∞ uses.
 - {#NWTOA.2} **The run depends on K.** The density ρ_{K′} = ρ^{[K]}_{K′} on T^{(K′)} is the output of K′ = K − j(C) renormalisation steps from the ε-lattice, with the bare coupling g_0(ε, g) of RG I Theorem 2.
   {#NWTOA.2-1} Its K-dependence passes through four channels and no other: (i) the effective coupling g_{K′} and the sequence g_1, …, g_{K′} (CRE (2.24), p.259, with RG I Theorem 2's g_0(ε, g));
   {#NWTOA.2-2} (ii) the ε-lattice minimiser U_{K′}(V_{K′}) (CRE (2.12), p.256: the minimal orbit of A^η on {U regular, M_𝔹(U) = V}, a field on T_η with η = L^{−K′} in step-K′ units, i.e. on the ε-lattice), through which every function of V_{K′} in the action is defined (CRE p.258: A_k "depends on the gauge field variable V … through the background field U_k(V)"), and the fluctuation covariances built from it (RG1 (1.4), p.260: Z^{(j)}(U_k) = ∫dB δ(Q̃B)exp[−½⟨B,Δ^{(j)}(U_k)B⟩]);
@@ -42,7 +46,7 @@
 
 - {#ND.1.1} By the map's #MD2.3.4.15–#MD2.3.4.16, with ε = uL^{−K} the torus of physical period T_ph has T_ph/ε = (T_ph/u)L^K fine sites per side and N_s = (T_ph/u)L^{K−K′} = (T_ph/u)L^{j(C)} sites per side at step K′; C has side ℓ_C = pL^{−q}u/a = pL^{j(C)−q} step-K′ bonds.
   {#ND.1.1-1} Both are fixed once j(C) is, and j(C) is fixed by #MD2.3.4.15 under the prescription.
-  {#ND.1.1-2} The torus condition (TC) and the admissible-sides condition hold at K′ by #MD2.3.4.16-5.
+  {#ND.1.1-2} The torus condition (TC) holds at K′ by #MD2.3.4.16-5, every step k+1 ≤ K′ is commensurate by #MD2.3.4.15-9, and the torus is one of V4's (H3) for C by #NWTOA.1-4–#NWTOA.1-7.
 - {#ND.1.2} *The coupling at the stopping scale.* CRE (2.6), p.255, with n = K, m = K′ (n − m = j(C)): g_{K′} ≤ (1+β₀)g_K and g_K ≤ (1+g_K²β′j(C))^{1/2}g_{K′}, so g_{K′} ∈ [g_K(1+γ²β′j(C))^{−1/2}, (1+β₀)g_K], a window fixed by the prescription; CRE (2.8), p.256: ε_{K′} ≤ (1+β₀)(1+g_K²β′j(C))^{β₀}ε_K; CRE (2.9): R_{K′} ≤ L(1+g_K²β′j(C))^{β₀}R_K.
   {#ND.1.2-2} The coupling prescription itself (g_0(ε, g) with g_K = g and all g_k ∈ ]0, γ]) is RG I Theorem 2's first assertion, p.259 (printed for SU(2); general G by p.260's "restriction to the group SU(2) is superficial", Bałaban's, accepted; for simple G Corollary 8.2: "a bare g_0(ε, g), independent of the torus; g_K = g, and all g_k in ]0, γ]").
 
@@ -153,7 +157,7 @@
   {#ND.8.3} W^∞(C) := lim_iW_ren(ε_{K_i}) = e^{Ē}μ̄(W_χ(C^{(K′)};·)) + r̄:
   {#ND.8.4} a weak limit point of the stopping-scale effective measures tested against the fixed coarse loop, plus a remainder bounded by (5.6), whose large-field part is at most δ_LFB_LF ((7)).
   {#ND.8.4-1} This is the continuum Wilson-loop expectation of (6.3) along the subsequence, with κ^{(K′)} divided out exactly ((6.1)–(6.2)) and nothing else subtracted; r_K as a whole converges along the subsequence by construction.
-- {#ND.8.5} *(8.3) The countable family of loops.* The admissible loops are the squares of physical side pL^{−q}u, p, q ∈ ℕ (map #MOMGD.30), on the fixed torus, a countable family {C_n}.
+- {#ND.8.5} *(8.3) The countable family of loops.* The admissible loops are the squares of #NWTOA.1 on the fixed torus, of physical side pL^{−q}u < T_ph/3 (map #MOMGD.30; the bound is V4's, #NWTOA.1-4–#NWTOA.1-5), a countable family {C_n}.
   {#ND.8.5-1} A subsequence along which W_ren(·; C_1) converges, a sub-subsequence for C_2, and so on, give by the diagonal argument one subsequence along which W_ren(ε_{K_i}; C_n) converges for every n and, for every stopping index j that occurs, the measures μ^{[K]}_{ℓ₀} on G^{bonds(T^{(j)})} converge (one more diagonal over j).
   {#ND.8.5-2} So one sequence of lattice spacings defines the continuum expectation W^∞(C_n) of every admissible loop at once, normalised loop-wise by (6.2), or by the common stopping index for any finite subfamily, the two differing by (6.2)'s bounded K-dependent factor, which converges along a further subsequence, available by the same diagonal argument.
 - {#ND.8.6} *(8.4) The full sequence.* Under the Cauchy note's conditions (T1), (T2), (T-Λ), and (T-c) (#CP.22–#CP.28), which hold for ḡ small, uniformly in K (#CP.22-3, #CP.26-1, #CP.27-2, #CP.28-1), and with its input (LF), derived in WILSON_IT1_LARGE_FIELD_DEPTH_2026_10_27.md (#CP.2–#CP.2-2), its #C7.1 gives |W_ren(ε_{K+1}; C) − W_ren(ε_K; C)| ≤ a_K with Σ_Ka_K < ∞ (#C7.1-4; W_ren(ε_K) is its F_K, #C7.4-8).
