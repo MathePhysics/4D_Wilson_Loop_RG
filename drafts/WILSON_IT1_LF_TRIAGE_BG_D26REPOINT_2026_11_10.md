@@ -670,3 +670,16 @@ The table's 30 citations "two-loops #x" of tags now in BP_TL files name those fi
 The table fork's review of every section, round 1 (full), found the defects of the section above, all repaired at table 6115bfa3aeee. Round 2 (narrow) found three minor defects, repaired at table 299b3fb7dfbb, and round 3 (narrow) is clean. Round 4 (full) found F1–F46, all repaired at table 6df1b69246ca. Round 5 (narrow) found R5-1 to R5-4, all repaired at table c4c5ac132304, and round 6 (narrow) found R6-1, repaired at table ff0cedb9e60c. The R̄ and N̄ rows follow the Cauchy rewrite of #CP.13–#CP.14-1, and the rows at ĝ follow LF 2a832c50e91c.
 
 Round 7 (narrow) found R7-1 and R7-2, repaired at table c9fad6da153e, and round 8 (narrow) is clean. Round 9 (full) found minor and cosmetic defects, all repaired at table ec9f2c4c2477. Round 10 (narrow) found R10-1 to R10-5, all repaired at table 90a8ede1cabe, and round 11 (narrow) found R11-1 to R11-6, all repaired at table 235e36f006f6. Round 12 (narrow) is clean. The table is done after two consecutive clean rounds, the second full; round 13 is full.
+
+Round 13 (full), §§1–4, found nine minor defects, so round 13 is not clean. All are repaired at table 62a338e3e715, labels af8a37a22d98.
+- R13-1: #T3.37's λ_* = ε′g₁/δ₁ = ε′/r₁ needs the CA closure's δ₁ at g₁. The new row #T3.37-0-1 states this; that δ₁ bounds #T3.27-0-5's δ₁ at ĝ₁ (map #MOMST.48).
+- R13-2: θ := e^{−δ₀RM₁/32} is printed at map #MD2.2.4.83-1, which #T3.37 now cites.
+- R13-3: #T4.29-0-10's gauge is c = W + δ𝐇(s) + w_□ (LF #4.454.35-3), not W₀.
+- R13-4: #T4.41's recursion gains the old vertices' term ε^Q_iD^{ins}_i (Cauchy #C8.3.3-4-2, -4-3; ε^Q_i #T12.7-0-6).
+- R13-5: f♮_n = f_n(1 + x_n/4) cites GC #6.13-1, not #6.13-0, in #T4.49 and #T4.49-0-1.
+- R13-6: #T4.47-0-1 defines N_* (EP #52.1-1) and names K as #T4.48's.
+- R13-7: #T4.51's b_k cites #T3.35-0-1.
+- R13-8: #T4.55-0-1's i₀ cites #PC4.14-1.4.
+- R13-9: #T4.56's REG pin p.090 l.8–11 missed (1.77) and α₄'s role. With #T6.6's offset (a REG pin is the file line minus 1), those sit at l.3–7, so the pin is now p.090 l.3–10. A first pass that read REG pins as file lines moved p.094 l.28 and p.096 l.39 by mistake; both are restored and are correct.
+
+Pre-check for the repairs: every changed row was re-read against its source. Rows are at most 644 characters, CR 0, and no cell contains a pipe. The new tag T3.37-0-1 was unused before. (4) was told before the edits and sent the SHAs after. Information sent to (4), not a table defect: CA closure l.21 writes r₁ := δ₁/g₁ = A₁(log g₁^{−2})^{p₀}. That equality holds only for δ₁ at g₁; with the notes' δ₁ at ĝ₁ it is ≤.
