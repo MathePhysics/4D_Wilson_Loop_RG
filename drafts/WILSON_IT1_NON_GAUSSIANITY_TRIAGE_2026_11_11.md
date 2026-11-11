@@ -55,6 +55,14 @@ Owner: BETA session. Note: `WILSON_IT1_NON_GAUSSIANITY_2026_11_11.md`.
 
 - To the two-loops session, the PF and NV owner: sent 2026-11-11 (see below).
 - To the table session: announced the new rows (list above), to be entered after their reply; no table edit by this session.
+- From the two-loops session (03:2x), against PF 3137f5cade3e and NV a23c5c204987, each re-derived there:
+  - #PF4.3-1 holds for every T, so ḡ⁸ at T_ng.
+  - #BPA.6 is general in T, so #PF4.3-3 and #PF4.3-5 run with ε_ng.
+  - T_ng ≤ (C_fsC_q + C_ℰC_q + 4)(log ḡ^{−2})^{4r+1}, and 18NT_ng ≤ p₀(g_{K′}) by 2p₀ > 8r + 1.
+  - (2)(a): the majorant reading of #ND.5.4-2, with Q(∅) = 1, disjoint arcs, m_× ≤ 𝖬₀𝖬_ke^{N^×}.
+  - (2)(b): on ℓ₀, N^×, N^{(0)} + N^{(k)} ≤ N^{nr}, with no N^{LF} and no δ̄_D.
+  - Lemma E♯'s sums are confirmed; it is not taken into NV. The telescoping without 1.06 is agreed.
+  - Each point matches #NG5.4–#NG5.5-11 as written. No change.
 
 ## For the user
 

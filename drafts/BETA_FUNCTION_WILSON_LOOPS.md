@@ -1472,7 +1472,7 @@
      {#B2.2.712} (σ_H/σ_H(0))(g_kB)δ_{rT}(B)χ′(X), and over the gauge field V_h with χ_{h,1/2}, of T_h(Z_h ∩ X) applied to the exponential of
      {#B2.2.713} −½⟨DH″_{1,k,X}B, ζDH″_{1,k,X}B⟩ − A((g″_k(·))^{−2}ζ₁⌈_X, U″_{h+2}(exp ig_kB, V″)) + V(X^∼, U_k) + E_k(X) and the
      {#B2.2.714} normalisation constants.
-     {#B2.2.714-0} Here σ_H is UV3's Haar density of one bond, a function on 𝔤, and σ₀ = σ_H(0) (#T10.36-4, #T10.36-4-3). LFR2's σ in (1.71) is (σ_H/σ_H(0))(g_kB), the product of (σ_H/σ_H(0))(g_kB(b)) over the bonds b (#T10.36-4) (inferred, not printed): on a bond b, the Haar measure in A = g_kB(b) is σ₀g_k^{dim 𝔤}(σ_H/σ_H(0))(g_kB(b))dB(b), and log(σ₀g_k^{dim 𝔤}) is (1.71)'s −½d(𝐠)log g_k^{−2} + log σ₀ per bond of (𝐁₀∖T₀) ∩ X, d(𝐠) = dim 𝔤 (LFR2 p.379 l.5).
+     {#B2.2.714-0} Here σ_H is UV3's Haar density of one bond, a function on 𝔤, and σ₀ = σ_H(0) (#T10.36-4, #T10.36-4-3). LFR2's σ in (1.71) is (σ_H/σ_H(0))(g_kB), the product of (σ_H/σ_H(0))(g_kB(b)) over the bonds b (#T10.36-4): LFR2 p.356 l.35–37 prints the factor e^{(−½d(𝐠)log g_k^{−2} + log σ₀)|Λ^{(k)}∖G₀|} when ∫dV′ is written as ∫dB′σ(g_kB′) with V′ = exp ig_kB′, and on a bond b, the Haar measure in A = g_kB(b) is σ₀g_k^{dim 𝔤}(σ_H/σ_H(0))(g_kB(b))dB(b), and log(σ₀g_k^{dim 𝔤}) is (1.71)'s −½d(𝐠)log g_k^{−2} + log σ₀ per bond of (𝐁₀∖T₀) ∩ X, d(𝐠) = dim 𝔤 (LFR2 p.379 l.5).
      {#B2.2.714-0a} δ_{rT}(B) fixes B on the bonds of the axial-gauge tree rT of LFR2 p.379 l.9–11.
      {#B2.2.714-1} T_h(Z_h ∩ X) is the ordered product CRE (2.20) of the operations (2.21) of the earlier
      {#B2.2.715} steps, integrals over gauge fields V_j with the Haar measure and over fluctuation fields A_j with Gaussian

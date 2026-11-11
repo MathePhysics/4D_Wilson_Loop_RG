@@ -3839,3 +3839,14 @@ Relabel → LABELS 16d105361e83, table 50377d2c8c33, at LF 94d3e82675b1. The def
 - Requested by ⑂ (3); announced to (4). Rounds 1 and 3 found P1–P3, all repaired; rounds 4 (narrow) and 5 (full) are clean. SHAs sent after. Log: WILSON_IT1_LF_TRIAGE_BG_D26REPOINT_2026_11_10.md.
 
 Relabel → LABELS 8f078eb887ad, table c571f2502afe, at LF 94d3e82675b1. The definition check prints 0 lines on LF, on the pair note, on the general-loops note, on NL and on RW1. dmarks2 lists the 16 known leftovers. deadcheck and prefcheck show only their known hits. Columns are 11×5, 74×6, and 268×7.
+
+## Forced Readings, c_att, RW1 015631c26127 and PROFILES ff354875761c, 2026-11-11 03:25
+
+- #T6.19, #T6.19-3 (new): touching is a common point, forced by CRE (1.10) and p.248 l.8–9. #T6.19-2 (new) gives □^∼.
+- #T6.19-1, #T6.19-4 (new): compatible means nested, forced by CRE p.246 l.23–27 and p.250 l.36–37, l.49–50.
+- #T10.36-4, #T10.36-4-3: σ/σ₀ is printed for RG1 (p.267 l.14) and forced for LFR2 (p.379 l.5).
+- #T12.14: c_att, which is #T12.19's c. #T12.19 enters c^{(1)} and marks the clash with #T12.16's c. #T10.21-2 also cites #BH.3-0-1.
+- #T12.35-5 is removed and #T12.35-4 drops U₀, following RW1 015631c26127. #T12.21 lists PROFILES ff354875761c's symbols by tag.
+- Requested by (4), ⑂ (3) and BETA; announced to (4). Rounds 1–6 found Q1–Q6, all repaired; rounds 7 (narrow) and 8 (full) are clean. SHAs sent after. Log: WILSON_IT1_LF_TRIAGE_BG_D26REPOINT_2026_11_10.md.
+
+Relabel → LABELS 7087843b4b0b, table 1741a64f26a7, at LF 94d3e82675b1. The definition check prints 0 lines on the standing list, on PROFILES and on LAYER_WIDTHS. dmarks2 lists the 16 known leftovers. deadcheck and prefcheck show only their known hits, with the deadcheck lines after l.229 at +3. Columns are 11×5, 74×6, and 268×7.
