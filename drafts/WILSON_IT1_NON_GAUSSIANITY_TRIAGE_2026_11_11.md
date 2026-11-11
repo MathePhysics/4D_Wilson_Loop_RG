@@ -64,6 +64,16 @@ Owner: BETA session. Note: `WILSON_IT1_NON_GAUSSIANITY_2026_11_11.md`.
   - Lemma E♯'s sums are confirmed; it is not taken into NV. The telescoping without 1.06 is agreed.
   - Each point matches #NG5.4–#NG5.5-11 as written. No change.
 
+## Work on (O1), 2026-11-11 03:48 (note 124102a7911b → 9464f27abd5c)
+
+- Gap found in the description of (O1b): 𝐏_{ℓ₀} is gauge invariant and restricts the plaquettes only, so it does not confine the holonomies around the torus cycles. At second order the fluctuations around a flat connection are twisted free fields, not the untwisted field of the old Lemma F.
+- §4 was rewritten in place for a twist θ ∈ [0,1)⁴. Lemma F(a) is the old bound at θ = 0. Lemma F(b): Re Cov ≤ −(st)²/(1200𝖳⁴) for every θ, if d + t ≤ 𝖳/3, s ≤ 𝖳/2 and ε ≤ 𝖳/4. The proof uses the image sum of the twisted 1-D Green's function, whose real part is positive for |z| < 𝖳/2, and keeps one mode. Hence D^θ ≥ (st)²/(400𝖳⁴), and the witness's 3max(4t, s) < T_ph meets the hypotheses.
+- #NG6.2-1–#NG6.2-3 and #NG.2-1 now state (O1b) with the twists.
+- (O1a) routes:
+  - Size: the insertion bound is linear Cauchy, ρ̃ = ρ/ᾱ (#MD2.0.3.30). A second-order Cauchy, with the linear term killed by global gauge invariance, would need q₀ > 2p₀ + 4r roughly. That is a new lower bound on q₀; not adopted.
+  - Locality: translation covariance on ℓ₀ (RTR, #MD2.3.1.15, #MD2.3.4.4) and torus locality (#MD2.3.4.25) are in the map. Missing: a loop-locality (agreement) statement for the V-dependent insertions.
+- (O1b) inputs still open: second-moment comparison of 𝐏_{ℓ₀} with the Gaussian around flat connections, and the flux covariance of the scale-K′ quadratic form against the fine twisted free field. A route for the action part: CRE Theorem 2 (2.43) on real fields along V₀e^{iλX}, plus per-polymer analyticity (2.27)(ii),(iv) for the cubic remainder (summable over scales by L^{−2(k−j)}), plus the gauge-invariant vanishing of the linear term (RG1 p.264 l.12–14). Not yet written.
+
 ## For the user
 
 - Route: the witness compares with abelian Gaussian charge models and their limits (#NG2.3). A 𝔤-valued Gaussian field with path-ordered holonomies is not covered.
