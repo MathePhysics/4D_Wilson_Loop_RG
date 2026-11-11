@@ -9,7 +9,7 @@
 
 ## 1. Setting {#PCS1}
 
-{#PC1.1} F^×_K = E_{ε_K}[W_{χ₁}(C₁)W_{χ₂}(C₂)]/(κ^{(K′)}_{C₁}κ^{(K′)}_{C₂}), ε_K = uL^{−K}, with the common stopping step K′ = K − j and j the least j ≥ max(q₁, q₂, q₁₂) + q̄(j), which does not depend on K (#307).
+{#PC1.1} F^×_K = E_{ε_K}[W_{χ₁}(C₁)W_{χ₂}(C₂)]/(κ^{(K′)}_{C₁}κ^{(K′)}_{C₂}), ε_K = uL^{−K}, with the common stopping step K′ = K − j and j the least j ≥ max(q₁, q₂, q₁₂) + q̄(j), which does not depend on K (#307). Every statement below is for K ≥ max(K_tor(C₁), K_tor(C₂)), where #917's torus hypothesis holds (#290-1, #290-2); the limit K → ∞ uses no other K.
 {#PC1.1-1} Runs A and B are the Cauchy note's (#C1.1): spacings ε and ε/L, both pinned at the unit scale, k := K − j = K′ and k + 1 steps to the common stopping lattice T_a, a = uL^{−j}. The Cauchy note's j(C) is this j throughout.
 {#PC1.2} On each labelled term at the stopping scale the normalised pair numerator is 𝒲^×/(κ_{C₁}κ_{C₂}) = e^{𝓔^×_{K′}}[f^{(1)}f^{(2)} + Σ_{𝔅≠∅}Q(𝔅)w(𝔅)] (#360), and Z·E_ε[W_{χ₁}(C₁)W_{χ₂}(C₂)] = ∫N^×_{K′}dV (#382).
 {#PC1.2-1} So F^×_K has the form of the Cauchy note's F_K (#C1.2), with the pair's dressed word in place of 𝒲 and the same densities ρ^A_k, ρ^B_{k+1}, which do not depend on the observable.
@@ -355,7 +355,7 @@
 
 {#PC7.1} F^×_K = W^×_ren(ε_K) is a Cauchy sequence, so it converges along the full sequence K → ∞.
 {#PC7.1-1} Its limit is the unique limit point of #936: W^{×,∞}(C₁, C₂) = e^{Ē^×}μ̄(W_{χ₁}(C₁^{(K′)};·)W_{χ₂}(C₂^{(K′)};·)) + r̄^×, now independent of the subsequence, and with it Ē^× = lim_KE^×_const,K′ by §5.
-{#PC7.2} The limit exists for every pair of vertex-disjoint squares, each in a plane parallel to a coordinate plane (#332, #332.1), of physical sides pL^{−q}u at ℓ^∞ distance D ≥ 1 in step-K′ units, in the countable admissible family (#ND.8.5), with sides below T_ph/3, the squares for which V4's torus hypothesis holds at every K (#290-1). No diagonal argument is needed.
+{#PC7.2} The limit exists for every pair of vertex-disjoint squares, each in a plane parallel to a coordinate plane (#332, #332.1), of physical sides pL^{−q}u at ℓ^∞ distance D ≥ 1 in step-K′ units, in the countable admissible family (#ND.8.5), with sides below T_ph/3 (#290-1). No diagonal argument is needed.
 {#PC7.3} Not claimed: factorisation of W^{×,∞} at large distance (#941–#943), and anything about the limit at fixed coupling beyond (8.2)'s smallness statements (#944–#948).
 
 ## Conditions {#PCSK}

@@ -198,5 +198,5 @@
 
 ## Conditions {#NLSK}
 
-{#NL12.1} Those of the two-loops note's (8.2) (#917) and of the pair's Cauchy note (#PC8.1), with u_𝔏 (#NL6A.6), L ≥ L₀^× (#NL6A.9), ν ≤ 1/1000 and c_π′α_{1,k+1}·4096M ≤ ν at every step (#NL6A.7), V4's torus hypothesis for each loop (sides below T_ph/3, #290-1), the stopping rule #NL1.2, and the step-1 thresholds of §9 with the characters' constants maximised over χ₁, …, χ_{N_C} (#NL9.4, #NL9.9), 1000ηA_s^{(N)} < ϖ/8 among them (#NL9.6-4a). None of these involves N_C.
+{#NL12.1} Those of the two-loops note's (8.2) (#917) and of the pair's Cauchy note (#PC8.1), with u_𝔏 (#NL6A.6), L ≥ L₀^× (#NL6A.9), ν ≤ 1/1000 and c_π′α_{1,k+1}·4096M ≤ ν at every step (#NL6A.7), V4's torus hypothesis for each loop (sides below T_ph/3 and K ≥ K_tor(C_i), #290-1, #290-2), the stopping rule #NL1.2, and the step-1 thresholds of §9 with the characters' constants maximised over χ₁, …, χ_{N_C} (#NL9.4, #NL9.9), 1000ηA_s^{(N)} < ϖ/8 among them (#NL9.6-4a). None of these involves N_C.
   {#NL12.1-1} The conditions that involve N_C are on the scale: K′ ≥ K₁ (#NL9.6-5-2), K′ ≥ K₂ (#NL9.6-4b), and #NL9.9-0, which hold for all large K, as K′ = K − j with j independent of K (#MD2.3.4.15-8); §8 and §10 use only large K (#NL8.5, #NL10.6).

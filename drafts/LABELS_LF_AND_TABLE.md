@@ -3007,820 +3007,828 @@ The items of the LF longer than 5,000 characters are set out in paragraphs at th
 | {#T1.4} | 14 | 2 / Bałaban's constants that depend on d, L, G (δ₀, δ₁, B₀–B₅, PBG's a… |
 | {#T1.5} | 15 | 3 / R₀M₀, M′ (VAR's raised R₁M₁, #T2.7-1), K (PBG's and CRE's), M₁ = K… |
 | {#T1.5-1} | 16 | 3 / M ((C-M) of SW) / (C-M) M ≥ 2LM₁ + 2R₁M₁ and M ∈ R₁M₁ℕ, with R₁M₁ … |
-| {#T1.6} | 17 | 3′ / VAR's a₀, a₁, a₅, and M(ε₁), taken at VAR's raised product R₁M₁ =… |
-| {#T1.7} | 18 | 4 / PBG's α₀ (with α_J := Mα₀, LF #4.60), then PBG's α₁ (RG I's α's ar… |
-| {#T1.8} | 19 | 5 / VAR's ε₃ first, then ε₁ (VAR's, and 10.5's fixed value), ε₁^{(1)} … |
-| {#T1.9} | 20 | 6 / γ (hence ḡ, ε_k, the data parameters, ε_U^{(i)}, ϱ, ϱ̄, α_c, d̄(ω)… |
-| {#T1.10} | 22 | Rule 1: no condition bounds α₀ or α₁ above by ε₁, by ε_k, or by ϱ. |
-| {#T1.11} | 23 | Rule 2: VAR's upper bound M_V ≤ M(ε₁) = R₁M₁a₁/ε₁ is used as an upper … |
-| {#T1.12} | 24 | Rule 3: an O(1) belongs to the stage of the result it comes from; an O… |
-| {#T1.13} | 25 | Rule 4: a constant that may grow with a size (C₀ and C_F carry R₁M₁ = … |
-| {#T1.14} | 26 | Rule 5: every condition the note uses on its constants is entered in W… |
-| {#TS2} | 28 | ## 2. Sizes and Integers |
-| {#T2.1} | 32 | d / dimension (4 for the application; the notes keep d) / — / 0 / none… |
-| {#T2.2} | 33 | L / block-spin factor / RG I, CRE / 1 / none / |
-| {#T2.3} | 34 | a_j, a_n / L^jε, the lattice spacing of the scale j / CRE / — / a_{j(x… |
-| {#T2.4} | 35 | η, ε / finest spacing; ε in the notes, η in PBG and VAR / PBG, VAR / —… |
-| {#T2.5} | 36 | M′ / PBG's block size at the joins (BP_JOINS_BLOCK_SIZE #4.22), and th… |
-| {#T2.6} | 37 | R₀M₀ / PBG's local-sequence size / PBG p.408 l.26–27; W-δ #W11.105-6 /… |
-| {#T2.7} | 38 | R₁M₁ (printed) / VAR's and REG's product as printed (VAR p.277 l.12, R… |
-| {#T2.7-1} | 39 | R₁M₁ = M′ (raised) / VAR's constructions on the LF note's chain and in… |
-| {#T2.8} | 40 | M₁ (default) / PBG's block size M′ / W-δ §8 #W8.11 / 3 / see next row … |
-| {#T2.9} | 41 | M₁ (CRE) / CRE's block size KM′ ≥ M′, a power of L ≥ 2M_J(d, L) for (J… |
-| {#T2.9-1} | 42 | M₁ as a threshold / CRE's M₁, "the size of large cubes for which all t… |
-| {#T2.10} | 43 | M (§§7–8, 10) / PBG's block size KR₀M₀ = M′ / PBG p.408 l.28 / 3 / wri… |
-| {#T2.11} | 44 | M (§§11–12) / RG II's cube size; also in C_U(M), (W-M) δ₁(δ₀/6)M ≥ κ₁ … |
-| {#T2.11-0} | 45 | M (RG I's definition; bare M in BFWL) / RG I defines M: "cubes of a si… |
-| {#T2.11-1} | 46 | M (bare M in BFWL) / BFWL's bare M: RG I's cube size (#T2.11-0; §§0, 2… |
-| {#T2.11-2} | 47 | M (bare M in BFWL), other meanings / VAR's M in Lemma 10.14 (#B10.177-… |
-| {#T2.11-3} | 48 | M₀, M₁ (BFWL) / M₀ := C_ΛO(1)C₃ε*, Proposition 2.9's bound of R on the… |
-| {#T2.12} | 49 | M_V / VAR's cube parameter (VAR writes M), a multiple of R₁M₁ with M_V… |
-| {#T2.13} | 50 | M′_V / VAR's own M′ := M/(R₁M₁) / VAR p.300 l.30, p.304 / — / LF only;… |
-| {#T2.14} | 51 | K (PBG) / integer in PBG's M = KR₀M₀, a power of L, K ≥ 4 / PBG, W-δ §… |
-| {#T2.15} | 52 | K (CRE) / integer in CRE's M₁ = KM′, written K_{M′} in the LF (BP_JOIN… |
-| {#T2.16} | 53 | K (VAR) / the notes' name for the coefficient of VAR's (165), K := B₀(… |
-| {#T2.17} | 54 | K_T / max{1, (2/(eδ′M₁))²}, δ′ := min(δ_ι, ⅛δ₁); the tail of ι_Y again… |
-| {#T2.18} | 55 | K (LF scale) / the final scale k_s + j(C) / LF / — / only where named … |
-| {#T2.19} | 56 | K_ℬ / constant of §12's bootstrap, depending on d, L, δ₁, and δ_ι, K_ℬ… |
-| {#T2.20} | 57 | R / walk-problem separation of PRT2 (2.2); R ≥ 12dL / PRT2, W-δ §7 / 3… |
-| {#T2.21} | 58 | R′ / LK − 1, the global layers' width in units of M′ / BP_JOINS_BLOCK_… |
-| {#T2.22} | 59 | R_ι (lift) / R_ι = 4dL + 1, the lift's layer width in blocks of CRE's … |
-| {#T2.23} | 60 | R_k / CRE's R_k = least power L^n, n an integer, with R_k ≥ (log g_k^{… |
-| {#T2.24} | 61 | λ_R / K_RLM + 1 (the L for RG I's M replaced by LM at a finer layer, C… |
-| {#T2.25} | 62 | h₀ / least integer with L^{h₀} > max(2M₁/M, L(d + 1)) / W-δ #W8.8 / 3 … |
-| {#T2.26} | 63 | n_C / the number of contour bonds of the loop: n_C = 4nL for the coars… |
-| {#TS3} | 65 | ## 3. Exponents and Small Parameters |
-| {#T3.1} | 69 | ε₀ (exponent) / exponent in γ_w, C(ε₀), δ^f_j, and the LF note's d̄; 0… |
-| {#T3.2} | 70 | β / Hölder exponent of (Wδ-1); β ∈ [3/4, 1) / W-δ §8, #W12.83 / 0 / §1… |
-| {#T3.3} | 71 | β″ (LF) / crude lattice Hölder exponent of the second differences in L… |
-| {#T3.4} | 72 | β₂ / (1 + β)/2, the exponent of (3.43) for G^A / W-δ 10.5, 10.6 / 0 / … |
-| {#T3.5} | 73 | β′ (§11) / 0 < β′ ≤ min(1/60, β_o − γ_w), β_o := min(β, 1 − 2ε₀) / W-δ… |
-| {#T3.6} | 74 | β′ (Cauchy, LF) / the age exponent, β′ := ½min(β_H, 1 − β_E) ≥ 19/40, … |
-| {#T3.7} | 75 | β_E / the small positive exponent of CRE (3.67) and of the irrelevant … |
-| {#T3.8} | 76 | θ_V, θ̃ / θ_V := β′/(2(4 + β′)) (≈ 0.053 at β′ = 19/40), θ_V < β′/8; θ… |
-| {#T3.9} | 77 | α₀ / PBG's regularity parameter of (3.35)–(3.36) / PBG p.396 / 4 / VAR… |
-| {#T3.10} | 78 | α₀^W / §12 bootstrap's class parameter, α₀^W := O(1)d²L²C₀′ε₁, γ-depen… |
-| {#T3.11} | 79 | ω / §12 bootstrap's weight, ω(c) := min{(a_{j(c)}/ε)², e^{⅛δ₁d_ε(c,Y)}… |
-| {#T3.12} | 80 | α₁ (PBG) / PBG's complex-domain parameter of (3.37); PBG has no α₂ / P… |
-| {#T3.13} | 81 | α₀, α₁, α₂, α₃ (RG I); λ_Q, μ_P, C_mem, C_m, C_{Q*}; C_α, C_r, ρ̄ (Cau… |
-| {#T3.14} | 82 | γ₀ / RG I's bound on 𝐉 in U_j^c (γ₀ = α₀, RG I p.263 l.2–3); LFR II's … |
-| {#T3.15} | 83 | α_J, α_*′ / α_J := Mα₀, the pair class's current bound (LF #4.60), fix… |
-| {#T3.16} | 84 | α₁^A / 4L²(C_L + 1)(c_uMα₀ + α₁), run A's complex-domain size / W-δ 10… |
-| {#T3.17} | 85 | ϱ, ϱ̄ / ϱ = c_ρα_m, the size of the joint line's moves; ϱ̄ := sup over… |
-| {#T3.18} | 86 | α_c / C_cϱ̄, the size of B′ at the points c(t) / W-δ #W10.5.45-24 / 6 … |
-| {#T3.19} | 87 | ε₁ (VAR) / VAR Theorem 1's data parameter of (7), abs((∂V)(p′) − 1) < … |
-| {#T3.19-1} | 88 | ε₁ (VAR), the choice / (7) at ε gives (7) at every ε′ ∈ [ε, a₁], so Th… |
-| {#T3.20} | 89 | ε₁ (10.5) / a fixed value between V₀'s data parameter and a₁, below th… |
-| {#T3.21} | 90 | ε₁^{(1)} / the ε₁ of 10.5's one-step problem at 𝐇″_k, also serving VAR… |
-| {#T3.22} | 91 | ε_U^{(i)} / the data bounds of U_i's problems (𝐁₁, 𝐁₂), ε_U^{(i)} ≤ O(… |
-| {#T3.23} | 92 | ε₃ / VAR's parameter of (50)–(51) (p.285), (77) (p.290) and Propositio… |
-| {#T3.24} | 93 | ε₄, C_♯ / VAR's ball parameter of (115), 2B₀C₁B₃ε₁ ≤ ε₄ ≤ a₄, taken as… |
-| {#T3.25} | 94 | data parameters / O(1)B₃²B₅M⁶ε_k (*The background pairs.*), B₅M⁵ε_k (*… |
-| {#T3.26} | 95 | ε₂ / second band parameter; ε₂ ≤ B₁(O(1)B₃³B₅M⁶ε_k + C₁ε₁) / W-δ §12 /… |
-| {#T3.27-0} | 96 | A₀, A₁ (CRE) / the constants of p₀(g) = A₀(log g^{−2})^{p₀}, ε_j = g_j… |
-| {#T3.27} | 97 | ε_k, ϑ_k, r^χ_k, m_k, T₀, μ_k, c_m, C_fl, C₁₃, c_{δ₂} / ε_k := g_kp₀(g… |
-| {#T3.28} | 98 | a₀ (PBG) / PBG Theorem 3.1's threshold, Mα₀ ≤ a₀ / PBG p.397, Cauchy #… |
-| {#T3.29} | 99 | a₀ (VAR) / VAR's threshold; α₀ ≤ a₀ at α₀ = ε₀ / VAR p.279 / 3′ / not … |
-| {#T3.30} | 100 | a₁ (PBG) / threshold of PBG Corollary 3.5 and Theorem 3.4; in O(1)L⁵Mα… |
-| {#T3.31} | 101 | a₁ (VAR), a₁^{(M_P)} / threshold of VAR Theorem 1; in ε₁ ≤ a₁/7, ε₁ ≤ … |
-| {#T3.32} | 102 | a₃ (VAR) / threshold of VAR Proposition 4, ε₃ ≤ a₃; a constant of d an… |
-| {#T3.32-1} | 103 | a₄ (VAR) / Proposition 6: "There exists a positive, absolute constant … |
-| {#T3.32-2} | 104 | dependence of Bałaban's constants / "The constants a₃, C₄ depend on d … |
-| {#T3.33} | 105 | γ, ḡ / γ, the coupling-side small parameter; ḡ, the unit-scale couplin… |
-| {#T3.34} | 106 | κ (Bałaban) / the decay rate of the inductive bounds, large at fixed β… |
-| {#T3.34-1} | 107 | κ_s, κ_c (LF) / the widths of the LF's soft tests: κ_s := β/30 = 1/240… |
-| {#T3.34-2} | 108 | ε₁^{JB}, M₀ (LF), ε₁′ (LF) / ε₁^{JB} := max(2(1 + 2κ_s^{LF})L²ε_0, 2(1… |
-| {#T3.34-3} | 109 | λ_β (LF) / λ_β := 1 − βΣ_{i=h+1}^j2^{−abs(l−i)} − βΣ_{q=l+1}^k2^{−(q−l… |
-| {#T3.35} | 110 | r_k, x_k, b_k (the step-k small-field cutoff) / CRE p.268 l.18 prints … |
-| {#T3.36} | 111 | r_{α,k}, 𝒫_k^m, ε_k^♯ (CRE p.277's margin) / r_{α,k} := min(β,1)α_{1,k… |
-| {#T3.37} | 112 | θ, ε′, λ_*, λ′ (CA closure) / θ ∈ (0,1) fixed (θ = ½ serves); ε′ := mi… |
-| {#T3.38} | 113 | C^P(j), ε̄^g_A (two-loops Cauchy) / C^P(j) := O(1)13^dC_d′(LR_j + 1)su… |
-| {#T3.39} | 114 | β (CRE) / CRE's constant in the coefficients 1 − β(1 − 2^{−(j−n)}) of … |
-| {#T3.40} | 115 | p₁, p₁(g), δ′_j / p₁(g) := (log g^{−2})^{p₁}, with p₁ < p₀, "other con… |
-| {#T3.41} | 116 | ν_L, N_k, θ_L (two loops) / N_k := max(N₀ + 1, N′_k), the N of the 𝐑-s… |
-| {#T3.42} | 117 | h_k (the map's polydisc 𝐇-bound); ȟ_k, ȟ_n (the map's curvature-check … |
-| {#TS4} | 119 | ## 4. Derived Constants |
-| {#T4.1} | 123 | c_u / O(1)L³, the constant of (3.35) on □̃⁵ at the index j (O(1)L⁵ at … |
-| {#T4.2} | 124 | c_π / the constant of Δ′_π in (3.131) (PBG prints O(1)Mα₀), containing… |
-| {#T4.3} | 125 | C₃ / constant of the Δ^{(2)} factors, O(1)C₃Mα₀, containing c_u / PBG … |
-| {#T4.4} | 126 | C₀ / C₀ := c₁₁C₀^{VAR}, with C₀^{VAR} := 4R₁M₁(B₃ + B₄(1)) the constan… |
-| {#T4.5} | 127 | C₀′ / C₀′ε₁ := K_ℬ(C₀ + C(ε₀))ε₁ + C_ℬC(β₂)ε₂; for the base at the rea… |
-| {#T4.6} | 128 | C₁ / five distinct constants under one letter: VAR (14)'s absolute C₁ … |
-| {#T4.7} | 129 | C(ε₀) / the Cauchy note's constant of §9.7–9.8; it absorbs C_ιe^{δ_ι(R… |
-| {#T4.8} | 130 | C_F / the one-step lift's curvature constant, abs(F) ≤ C_Fε₁/a² on X^∼… |
-| {#T4.9} | 131 | C_ι / O(1)L²C_LC_F with O(1) ≥ 2 of the Cauchy note's §9.8 (#C9.8.15-3… |
-| {#T4.9-1} | 132 | B_ι, C_{ℒ,β} / B_ι := the O(1) of PBG (3.133), the bounds of H₁ and so… |
-| {#T4.10} | 133 | c_G, r_G / Lie-algebra constant and the radius of the BCH and logarith… |
-| {#T4.10-1} | 134 | C_L / the sum of the absolute weights of the plain linear average Ā″, … |
-| {#T4.11} | 135 | c_F / c_F ≥ 8L³(c_u + 1)/r_G / W-δ 10.4 / d, G, L (c_u, r_G) / |
-| {#T4.12} | 136 | C_c / the larger O(1) of the two bounds on B′ / W-δ #W10.5.45 / stage … |
-| {#T4.13} | 137 | C_tel / max(3, (5/2)(c₁ + c₂)), c₁ the total weight of Q₁ and c₂ the c… |
-| {#T4.14} | 138 | C_ℬ, C_ℒ, C_ℒ′, C_ℒ″ / C_ℬ := O(1)L^{3+β₂}C_ℒ″(1 + C(β₂)), §12 bootstr… |
-| {#T4.15} | 139 | δ_g / min(δ₁, δ₁′), RG II's geometric constant / W-δ #W11.122 / stage … |
-| {#T4.16} | 140 | δ_min / min(δ_π/4, δ₀′/(54L), δ_gf′/(6L), δ_D′/(12L)) / W-δ #W11.118 /… |
-| {#T4.17} | 141 | δ_br, δ_br^c / the bridge's rates at the real and the complex chain co… |
-| {#T4.18} | 142 | δ₀′, δ_c, δ_gf′ / δ₀′ = min(δ₀, ¼δ_Q, ¼δ₁, ¼δ_c); δ_c := (1/16)min(δ_V… |
-| {#T4.19} | 143 | κ_V, κ_ℋ / κ_V = O(1)B₀C₄C_ℒ^g(B₅ + B₀C₁B₃)ε₁ (§11's contraction); κ_ℋ… |
-| {#T4.20} | 144 | c_d / 2d(3^d + 1) / W-δ §8 #W8.18 / d / |
-| {#T4.21} | 145 | γ_w, γ_H / γ_w := min(β, (1 − ε₀)/3); γ_H := βγ_w/(1 + β); γ_H − 2β′ f… |
-| {#T4.22} | 146 | C_w / the constant of δ_w(ω) ≤ C_w(ε/a_{m(ω)})^{γ_w}, #W8.2 plus C_w^{… |
-| {#T4.23} | 147 | c₀(α), c_tot(α) / c₀(α) := Σ_{z∈ℤ}e^{−αδ₀abs(z)} < 4/(αδ₀); PRT2's cou… |
-| {#T4.24} | 148 | d̄, d̄_j / d̄(x) := C_U(M)(ε/a_{min(j(x),n)})^{(1−ε₀)/3}ε₁, n the birt… |
-| {#T4.25} | 149 | C_U(M) / 4C_G(ε₀)c″_K + 2B₀c_KC′_Δ(M) + C_T; enters only upper bounds … |
-| {#T4.26} | 150 | C_s, C_T / C_s := C_ℒL⁹B₃ + dL⁵(C_F + L²B₃), the strip sources' size b… |
-| {#T4.27} | 151 | C_TJ, c_R, x₄ / C_TJ := O(1)B₀C_ℒ′c_λc_Rc₀(⅛)^dL^{33}B₃, with B₃·O(B₃)… |
-| {#T4.28} | 152 | C_r′, C″ / C_r′ := O(B₃)sup_{x≥1}P(Lx)e^{−δ₀Mx} (□̃² meets only the la… |
-| {#T4.29} | 153 | c_∂, C″_∂ / c_∂ := 2(C_{π′} + C_T)/C_U(M), C_{π′} #T12.9-3-1's, the co… |
-| {#T4.29-1} | 154 | C_{ε′} / C_{ε′} := C sup_{p≥−1}(p + 2)L^{−ε′p} for ε′ > 0, C depending… |
-| {#T4.29-2} | 155 | C_irr / C_irr := c_□^{−1}L^{4+β′}max(2C_α⁺, 2C_{ε′}), the age-factor c… |
-| {#T4.29-3} | 156 | C_{J_S}, C_α⁺ / C_{J_S} := O(1)B₀c₀(1)^d, with the O(1) of the bound o… |
-| {#T4.29-4} | 157 | n₀, n_h / n₀ := the least integer n′ ≥ max(3, n_A, n_H, n_R) (#T4.29, … |
-| {#T4.29-5} | 158 | n₀″, n₀‴, n₀′ / n₀″ := the least integer ≥ n₀ with the move of the fir… |
-| {#T4.29-5-1} | 159 | n₀′'s bounds / at every n ≥ n₀′: r(Y) ≤ 1/64 by LF #4.553 (#4.553-2), … |
-| {#T4.29-6} | 160 | n_H, n_R / n_H := the least integer ≥ 2 with 6C_{Δ𝐇}(C_Hw + 1)L^{γ_H −… |
-| {#T4.29-7} | 161 | C_ex, E_pt, σ_c^ℂ(x) / C_ex := 3^{5/2}8^{q₀}(1 + β₀)³C(M, β, κ)E₀, so … |
-| {#T4.29-8} | 162 | n_F^c / n_F^c := the least k_s with C_{rF}θ̃^{k_s/8} ≤ ½ (#D.n_F^c), s… |
-| {#T4.29-9} | 163 | n_N / n_N := the least n′ with (2log(ḡ^{−2} + b′(3k/4 + j(C)) + C))^{ν… |
-| {#T4.30} | 164 | C⁰_{rsp}, C_{rsp}, C_Λ, δ (two loops), λ, c′, λ^{(k)}_n / C⁰_{rsp} := … |
-| {#T4.31} | 165 | C_{gr}, C_{jn}, C_{lk}, C_y, y^R_k (two loops) / C_{gr} := 2^dC_{KP}·C… |
-| {#T4.32} | 166 | C_G (two loops), S_L, B_G / C_G := O(1), a constant of d, abs(d_{n+1}(… |
-| {#T4.32-0} | 167 | C_{D₀} (two loops) / C_{D₀} := O(C_G), abs(D₀λ̂)_{(0)} ≤ 2(abs(A_L)_{(… |
-| {#T4.32-1} | 168 | B̄_G, C_u (two loops) / B̄_G := B_G + C_uLC_GS_L, with C_u, depending … |
-| {#T4.33} | 169 | c_9, C_b, C_r (Cauchy §9), C_ℒ (Cauchy §9.4), C_gap, c₁₁, C₀^{VAR}, ε_… |
-| {#T4.34} | 170 | C_ℒ^{ker}, c_ε, C_ℒ^π / C_ℒ^{ker}, the constant of the local bounds ab… |
-| {#T4.35} | 171 | C^{LF}(ε₀), C_{yd}, C_w(ε₀), ε₁^{LF}, c^{LF}_{ε₁} (Cauchy §6.2) / ε₁^{… |
-| {#T4.36} | 172 | λ_K, C_Y, f^A_k (Cauchy §7) / f^A_k := dim(π)^{−1}tr π(Hol_C(U^A_k(V))… |
-| {#T4.37} | 173 | C^E_Σ, C^T_E, c^T_E, C̄_Z, c^Z, C^R_E, c^R_E, a_E, A_E, A^{TZ}_E (Cauc… |
-| {#T4.38} | 174 | m^E_K, τ^E_K, S_E, C^E_r, r^E_i, N^{pt}, κ_I, a_{Ew}, r̄^E_K, r^V_K, C… |
-| {#T4.39} | 175 | C_a (Cauchy §8.7) / C_a := 2C_s(1 − L^{−β′}/θ̃)^{−1} + C_S″ + C_e + 4C… |
-| {#T4.40} | 176 | C^w_M, c^w_M, c^w_N, A_w, a_w, m^w_K, τ^w_K, S_w, C^{w,2}_M, c^{w,2}_M… |
-| {#T4.41} | 177 | d^{ins}_i, D^{ins}_i, C_{ins}, C^*_{ins} (Cauchy §8.3, §8.7, the marke… |
-| {#T4.42} | 178 | 𝒟(𝒴), D̂_g, σ^{set}, σ^𝒟, ℓ_P, λ_𝔏, D^∪_P, σ̃(c), u, b_Y, c_off, ŷ_g, … |
-| {#T4.43} | 179 | C_Ψ″, m^w_Ψ, N(Y_i), E(Y_i) (two loops) / C_Ψ″, the constant of the su… |
-| {#T4.44} | 180 | C_box, ν_e (the map's box constant and extent rate; two loops) / C_box… |
-| {#T4.45} | 181 | C_av, μ (covariance note) / C_av := 2(B₃ + 2c_dB₅), the constant of (K… |
-| {#T4.46} | 182 | c₃, c_λ / c₃ := (2A₁/A₀ + (4dL)²(1 + β₀)B₃)(1 + O(ε_k)), the O(1) of C… |
-| {#T4.47} | 183 | f_n, f♮_n, 𝒟♮_k, λ_w, λ_cur, μ, μ^{(k)}_n, w, c_w (two loops) / f_n :=… |
-| {#T4.48} | 184 | K, C_K, C_K^α, C_* (two loops) / K := O(C_QS_L), C_Q #T4.30's, the fac… |
-| {#T4.49} | 185 | 𝒟^λ_k, 𝒟^3_k, 𝒟^{♮,3}_k, 𝒟^{λ,3}_k, x_n, c_{nm} (two loops) / for λ ≥ … |
-| {#T4.50} | 186 | r^{an}_k, r^{ext}_k, c_{ext} (two loops) / r^{an}_k := min(3r_{α,k}/(4… |
-| {#T4.51} | 187 | pl_k, 𝔟̄, ν_×, A′_E, C_χ, K_χ, r₀, ℓ_Σ, Δ_×, and the flat values c_𝒢, … |
-| {#T4.52} | 188 | C_cr, C_cr^λ, A^cr_{k+1}, A^R_k, A^cr, A^×, E^×_{k+1}, κ_{k+1}, E°_{k+… |
-| {#T4.53} | 189 | ε^r_k, ϑ_k, λ_n, S^R (at the 𝐑-steps), t_k, C_ϑ, y^s_k, C_att, u₁, C_w… |
-| {#T4.54} | 190 | F^×_K, F^{(N)}_K, λ^{(i)}_K, λ_K, a_×, a^×_w, â_*, m_K, τ^cr_K, C_×′, … |
-| {#T4.55} | 191 | ε̂_i, δε̂_i, u₀, C^{ε̂}, C^{ε̂}_1, q^{fr}_K, x̄_K, q^{car}_K, q_K, τ^{… |
-| {#T4.56} | 192 | α₂^{REG}, α₃^{REG}, α₄^{REG} (REG) / α₂^{REG}, the bound abs(A) < α₂(L… |
-| {#T4.56-0} | 193 | B₀′^{REG}, C₁′^{REG}, C₂′^{REG}, C₄′^{REG}, C₂^{REG}, c₂^{REG}, c₃^{RE… |
-| {#T4.56-0-1} | 194 | C₀^{CMP98}, c₂′^{CMP98}, C₃^{CMP98}, C₄′^{CMP98}, C₅′^{CMP98}, c₂^{CMP… |
-| {#T4.56-0-2} | 195 | A_d, C₀^{ch}, C₁^{ch}, C_{L1}, C_{(1.65)}, C₁₁ (the chain) / A_d := 3d… |
-| {#T4.56-1} | 196 | c₂′^{ch}, κ_G, K₆, K_F, K_{B₃} (the chain) / c₂′^{ch} := ε/(3d(d + 2)L… |
-| {#TS5} | 198 | ## 5. Conditions |
-| {#T5.1} | 200 | The full list, by stage and with its sources, is W-δ §8, *The conditio… |
-| {#TS6} | 202 | ## 6. Conventions |
-| {#T6.1} | 204 | Distances: ℓ∞ unless stated; an ℓ¹ separation s gives an ℓ∞ separation… |
-| {#T6.2} | 205 | Layers: run A's layer j is run B's layer j + 1; a_{j(x)} is the scale … |
-| {#T6.3} | 206 | Units: F and its first differences carry ε^{−2} times the dimensionles… |
-| {#T6.4} | 207 | Cubes: □̃^k is □ enlarged by k layers of blocks of its own size; a cub… |
-| {#T6.5} | 208 | CMP98 (15): the block average is an average over the L^d contours Γ_{c… |
-| {#T6.5-1} | 209 | CMP98 (92), (97), (99) (p.031 l.55–59, p.032 l.28–35, l.49–53): for U … |
-| {#T6.5-2} | 210 | CMP98 Proposition 3 (p.036 l.49–52): there are C₁ = C(d) and c₃ = c(d,… |
-| {#T6.6} | 211 | Citations: transcription line numbers count the \pagemark line as l.1;… |
-| {#T6.7} | 212 | Wherever PBG's printed O(1)Mα₀ comes through (3.35), it is c_uMα₀ at t… |
-| {#T6.8} | 213 | c^A: the complex coarse point Mc(t) from #W10.5.45's "write c^A = V′V₀… |
-| {#T6.9} | 214 | Sets: the bonds and plaquettes of a set are those that intersect it (R… |
-| {#T6.10} | 215 | (RZ): in LFR I §1 and LFR II (1.50)–(1.55) the regions Z_j stand for t… |
-| {#T6.10-1} | 216 | Each component of Z, of either class of LFR II p.378 l.14–15, lies in … |
-| {#T6.11} | 217 | The current variable 𝐉 replaces the functions J_j = D^{ξ*}_{U_j}ξ^{−2}… |
-| {#T6.11-1} | 218 | CRE's 𝐉_{p,X}(M^·(𝐔)) of (2.37) is RG I's J_n of (1.15) at n = p on X:… |
-| {#T6.12} | 219 | The majorant of the Cauchy note's (LF) (#CP.2) for the shell terms is … |
-| {#T6.13} | 220 | The decoupling parameters are complex with /s(Δ)/ ≤ e^{κ₁} (RG II p.5 … |
-| {#T6.14} | 221 | CRE's layer form: U_k "restricted to Ω_n∖Ω_{n+1} coincides with a U_n-… |
-| {#T6.15} | 222 | The scale-j current argument of RG I (3.13) is (L^{j−1}η)³𝐉 + Δ_𝐔𝐀 − P… |
-| {#T6.16} | 223 | Statement labels of the notes, each a derived statement at the tag giv… |
-| {#T6.17} | 224 | (q₀ = q₁ > p₀): the exponents of CRE (2.28) are taken equal and larger… |
-| {#T6.18} | 225 | CRE p.277's margin: 8B₀e^{16κ_s}O(1)ε_k < min(β,1)α_{1,k}/2, the expan… |
-| {#T6.19} | 226 | The operation ∼ (CRE p.245 l.40–43): on the cubes □ of the second part… |
-| {#T6.19-1} | 227 | Compatible partitions (CRE p.245 l.38–39, p.257 l.43) are read as nest… |
-| {#T6.20} | 228 | χ_Ax: the axial-gauge characteristic function. It arises from the iden… |
-| {#T6.20-1} | 229 | CRE's Q̃ in δ(Q̃A) of (1.14)–(1.15) is #T10.21-2's LQ̃ at the backgrou… |
-| {#T6.20-2} | 230 | CRE's σ in (1.14)–(1.15) is σ_H/σ_H(0) bondwise (#T10.36-4). The Haar … |
-| {#T6.21} | 231 | Names of closed inputs, each a print citation, a derivation, or a tag:… |
-| {#T6.22} | 232 | Statement labels of the closures, each derived at the place given: (TT… |
-| {#T6.23} | 233 | Norms: abs(·) in the LF and the Cauchy note is CMP98 (19)'s operator n… |
-| {#TS7} | 235 | ## 7. Implications Between Conditions |
-| {#T7.1} | 237 | R ≥ 12dL implies R ≥ 8dL, R ≥ (2d + 1)L, and, for the walk problems, V… |
-| {#T7.2} | 238 | L ≥ 12d + 6 implies L ≥ 8d + 4; with M₁ ≥ 4 it gives M₁(L/3 − 1 − R_ι/… |
-| {#T7.3} | 239 | M ≥ 4M₁ with CRE's M₁ = KM′ implies VAR's M ≥ 4R₁M₁, since R₁M₁ = M′ ≤… |
-| {#T7.4} | 240 | ε₁ ≤ a₁/7 makes M_V = 7M′ admissible (M(ε₁) = M′a₁/ε₁ ≥ 7M′); ε₁ ≤ a₁/… |
-| {#T7.5} | 241 | O(1)L⁴C₀ε₁ ≤ α₀ implies the current bounds O(1)Mα₀a^{−3} wherever PBG … |
-| {#T7.6} | 242 | The conditions of 10.3 and 10.4 on R₀M₀ imply those of the composition… |
-| {#T7.7} | 243 | L > 5 with R_{h+1} ≥ 1 gives 4LR_{h+1} ≥ 24; with R_{h+1} ≥ L (#T2.23,… |
-| {#TS8} | 245 | ## 8. Cube-Fit Budgets on the Collar |
-| {#T8.1} | 247 | Distances in units of a_h from the cut; M₁ is CRE's KM′; the band's bo… |
-| {#T8.2} | 251 | collar cell / Q̃² inside Q̃⁵, side ≤ 20M₁a_{j′} / ≤ 22M₁ / ≥ 2M₁ / #W1… |
-| {#T8.3} | 252 | PBG cube / □̃⁵, side 12M′a_{n′} / ≤ 10M₁ / ≥ 14M₁ / #W12.98 / |
-| {#T8.4} | 253 | VAR cube for □̃⁵ / M_V = 7M′ (grid-aligned, beyond □ by ≤ 8M′a_h), tes… |
-| {#T8.5} | 254 | VAR cube for Q̃² / M_V = 7M′ (contains Q̃² by the scale-j_Q alignment)… |
-| {#T8.6} | 255 | REG's Sect. F margin / 18M₁a_h + 2R₁M₁a_h ≤ 20KM′a_h / ≤ 20KM′ / ≥ 4KM… |
-| {#T8.7} | 256 | VAR cubes in Λ / M_V = R₁M₁, test cube in the ℓ∞-ball of radius 4R₁M₁a… |
-| {#TS9} | 258 | ## 9. Checks Before Each Packet |
-| {#T9.1} | 260 | Grep for the canonical strings of Sections 2–4 and for their known sta… |
-| {#T9.2} | 261 | Sweep the note for conditions not in §8's list: grep "under ", "log L"… |
-| {#T9.3} | 262 | For each reason given for a bound, check that the cited display states… |
-| {#T9.4} | 263 | For each symbol taken from a cited paper (α₀, α₁, α₂, ε₁, C₀, C₁, M, K… |
-| {#T9.5} | 264 | Run every check of this section on the final hash immediately before t… |
-| {#T9.6} | 265 | For each new or changed inequality, record its stage and kind (Section… |
-| {#T9.7} | 266 | For each new constant, add a row here before using it in a note; for e… |
-| {#T9.8} | 267 | For each new cube fit, add a row to Section 8 with the side, the reach… |
-| {#TS10} | 269 | ## 10. The Beta-Function Note |
-| {#T10.1} | 271 | Scope: BETA_FUNCTION_WILSON_LOOPS.md (BFWL), cited by its tags #Bs.n, … |
-| {#T10.1-1} | 275 | δ (BFWL) / δ without an index: the window constant of #B0.21 in §§0, 2… |
-| {#T10.1-1-4} | 276 | δ in §10, δ_{RG2} (BFWL) / in §10 a g-valued variation of the configur… |
-| {#T10.1-1-3} | 277 | δ_{μν}, δ^{ab} (BFWL) / the Kronecker tensor, δ_{μν} in §6 and δ^{ab} … |
-| {#T10.1-1-1} | 278 | δB, δ(·), δ/δA (BFWL) / δB, RG I's field of p.282 l.29 (BP_FAMILY_RG1 … |
-| {#T10.1-1-2} | 279 | δ with an index (BFWL) / δ_{RG2} (#T10.28-3-1-1); δ_k and δ_j, CRE's c… |
-| {#T10.1-1-2-1} | 280 | δ₀, δ₁, δ_i, δ′_i, δ₃, δ_{C,i}, δ_{C,*}, δ_Π (BFWL) / δ₀, the decay ra… |
-| {#T10.1-2} | 281 | N (BFWL) / the size of U(N) ⊃ G in §§1 and 10; the depth of the R-oper… |
-| {#T10.1-2-1} | 282 | N(Q′_k), N_χ(Y₀), N_triv (BFWL) / N(Q′_k) := {λ : Q′_kλ = 0}, the kern… |
-| {#T10.1-3} | 283 | β, β′ (BFWL, several meanings) / β_{k+1}, the coefficients of the coup… |
-| {#T10.1-3-0} | 284 | β′, β₀ (CRE (2.6)) / CRE (2.6)'s β′ (p.255 l.44), #T10.33's β′ = b′ + … |
-| {#T10.1-3-2} | 285 | β, β_i (BFWL §10) / Lemma 10.1's proof writes β for an Ad(G)-invariant… |
-| {#T10.1-3-1} | 286 | β′ (BFWL), further meanings / CRE (3.61)'s β′_j := Π^{(j)}_{22,11}, wi… |
-| {#T10.1-4} | 287 | γ (BFWL, several meanings) / (a) Theorem 0.1's γ (#B0.14), chosen smal… |
-| {#T10.1-4-1} | 288 | γ (BFWL), further meanings / (c) #BX.1's bound abs(𝐉(b)) < γ(L^jη)^{−3… |
-| {#T10.2} | 289 | p₀ / CRE's exponent in p₀(g) = A₀(log g^{−2})^{p₀}, with BFWL's p₀ > (… |
-| {#T10.2-1} | 290 | p₀(g) in LFR2 / in the LFR2 displays quoted at BFWL #B2.2.350–#B2.2.36… |
-| {#T10.3} | 291 | r, ∂̄, M_𝔉 / radius of the complex ball 𝔅_r of top fields, sup abs(B) … |
-| {#T10.4} | 292 | α₀ (BFWL §7) / RG I's α₀ in abs(J) < α₀ on U_k^c (γ₀ = α₀) / RG I (1.1… |
-| {#T10.5} | 293 | B₅ε₁ / VAR's ε₂, the bound abs(𝓗) < B₅ε₁ of the Landau gauge / VAR Pro… |
-| {#T10.6} | 294 | γ₀, γ₁ (PRT1) / PRT1 prints two pairs under these names: 0 < γ₀ ≤ Δ₀(p… |
-| {#T10.6-1} | 295 | γ₀, γ₁ (BFWL), other meanings / γ₀, the coupling of "(0.33) [I]", whic… |
-| {#T10.6-2} | 296 | γ₀, γ₁ (BFWL), further meanings / PRT2's γ₀ of (2.147), "a positive co… |
-| {#T10.7} | 298 | c₀, c₁, c_N, c_v / Lemma 5.2's constants of d: c₀ = (2/π)^{2d+4} ≤ Δ₀φ… |
-| {#T10.8} | 299 | α (Lemma 5.2) / PRT1's fractional exponent α ∈ (0, 1) of the alias sum… |
-| {#T10.9} | 300 | a (PBG) / PBG's constant in aQ*Q of G = (Δ_π + DRD* + aQ*Q)^{−1} / PBG… |
-| {#T10.10} | 301 | R, N(Q′), 𝒩, N(p) / R the orthogonal projection onto Δ_U N(Q′), N(Q′) … |
-| {#T10.11} | 302 | K, K′ / K := 𝐇 − h (§§4, 7; #B4.73, #B7.34), K′ := K − Δ′_π; also the … |
-| {#T10.12} | 303 | C (§§4, 7) / generic constants C, independent of k, whose value may ch… |
-| {#T10.13} | 304 | 𝒫, C^{(k)} / 𝒫: Bałaban's parametrisation B′ = 𝒫B of the step variable… |
-| {#T10.13-1} | 305 | b₀(c), B(y) (BFWL index) / b₀(c), for a bond c of T^{(k+1)}: the bond … |
-| {#T10.13-2} | 306 | D^η_U, A^η (BFWL index) / (D^η_Uλ)(b) := η^{−1}(R(U(b))λ(b₊) − λ(b₋)) … |
-| {#T10.13-3} | 307 | M^k (BFWL index) / M^k, the k-th order average of RG I (0.21), Ū^k = M… |
-| {#T10.13-3-1} | 308 | M^k, the reading's support / composing RG I (0.17) and (0.19) (p.255 l… |
-| {#T10.13-4} | 309 | Z^{(k)} (BFWL index) / Z^{(k)}(U) := ∫dB δ(Q̃B)exp[−½⟨B, Δ^{(k)}(U)B⟩]… |
-| {#T10.14} | 310 | 𝐆^{(2)} / the quadratic part of the axial gauge-fixing term, 𝐆(B′) = ½… |
-| {#T10.15} | 311 | X(U, j), Θ, τ / X(U, j) := K(U, j) − Δ′_π(U, j) − Δ^{(2)}_π(U, j), the… |
-| {#T10.16} | 312 | δ₀, δ₁, B₀ (§7) / PBG's rates and constant: B₀e^{−δ₀d(y,y′)} of Theore… |
-| {#T10.17} | 313 | κ / the Killing ratio in c = (11/48π²)κ (§6 from Lemma 6.5, §8), K = κ… |
-| {#T10.17-2} | 314 | κ_i^N, κ_i, κ_Δ, κ₀, κ₁ (BFWL) / κ_i^N and κ_i, the factors' Killing r… |
-| {#T10.17-1} | 315 | κ's value for SU(N) / κ = 2N² for SU(N) with tr = Tr/N: gl(N, ℂ) ≅ ℂ^N… |
-| {#T10.18} | 316 | tr, r, g_i, K_i, ϑ_i, P (§10) / tr the normalised trace of G ⊂ U(N); s… |
-| {#T10.18-0} | 317 | κ_i^N, κ_i, c_i (§10) / κ_i^N by K_i = κ_i^N·tr, tr #T10.18's (Lemma 1… |
-| {#T10.18-1} | 318 | ρ_i, N_i, H_i, G_×, Φ, Z (§10) / for an additive action, ρ_i: G → U(N_… |
-| {#T10.18-1-1} | 319 | g_{0,i}, w_i (§10) / g_{0,i} the bare coupling of factor i, g_{0,i}^{−… |
-| {#T10.19} | 320 | T_p, 𝒪, X_𝒪, Π^N / T_p := {y ∈ T : e^{ip·y} = 1}, the translations fix… |
-| {#T10.20} | 321 | d(q), C_I / d(q) the distance from q to 2πℤ⁴; C_I the absolute constan… |
-| {#T10.20-1} | 322 | d, d(·,·), d_j, d_ε (BFWL) / d, the dimension, and d(𝔤) that of 𝔤 (#B2… |
-| {#T10.20-1-1} | 323 | d/dt, d^n, d_ε, d_η, d̂ (BFWL) / the derivatives d/dt and d^nF[δ] (#B1… |
-| {#T10.21} | 324 | h_B, H_{1,j} / h_B: RG1's operator h of p.267 l.18–23, with LQ̃h = I o… |
-| {#T10.21-2} | 325 | C̃^{(2)}, C̃, D̃^{(2)} / C̃^{(2)} the second-order part of the nonline… |
-| {#T10.21-1} | 326 | C^{(2)}, C_G / C^{(2)} the second-order part of the dressed chain aver… |
-| {#T10.22} | 327 | 𝒞, H_h, G_𝐌, S (§4) / 𝒞(U) := (𝒫*Δ^{(k)}(U, 0)𝒫)^{−1}, 𝒞(1) = C^{(k)}(… |
-| {#T10.23} | 328 | Q̃, P; Q, Q′; Q_k, Q′_k / Q̃: the linearisation of the chain's average… |
-| {#T10.24-0} | 329 | ∂, ∂*, ∂^η / ∂, PRT1's lattice exterior derivative at U = 1 at the spa… |
-| {#T10.24} | 330 | v, ∂¹, p̂ / §4: v_ν(p) := e^{ip_ν} − 1, the coarse gradient symbol, = … |
-| {#T10.25} | 331 | (L), (N) / the regular factors (L), with bounded Bloch symbols and bou… |
-| {#T10.26} | 332 | 𝒩_U(j), S, 𝒲, H_S, a, a′ (§6) / in Proposition 6.3: HD = 𝒩_U(J) in the… |
-| {#T10.27} | 333 | M′, M(ε₁) / §10: M′ := max(O(1)L, 12)M + R₁M₁, rounded up to a multipl… |
-| {#T10.28} | 334 | c, 𝒩, γ′, c_ε, R′_k (§0) / c := (11/48π²)κ (#B0.6), #T10.17's; 𝒩 := 𝐇D… |
-| {#T10.28-0} | 335 | c (BFWL), other meanings / a bond of T^{(k+1)} with endpoints c_±, in … |
-| {#T10.28-0-1} | 336 | c (BFWL), other meanings, continued / the coupling function of a Wilso… |
-| {#T10.28-1} | 337 | d_j(X), U_k(V) (§0, RG I) / d_j(X), the linear size of X at scale j, t… |
-| {#T10.28-1-0} | 338 | J_k (§0, RG I) / J_k := D^{ξ*}_{U_k}ξ^{−2}π Im ∂U_k, the current of U_… |
-| {#T10.28-1-1} | 339 | (𝐔, 𝐉), U_k(ε₀) (§0, RG I) / (𝐔, 𝐉), the variables replacing (U_j, J_j… |
-| {#T10.28-2} | 340 | CRE's parameters in BFWL §0 / BFWL uses the exponent r and the scales … |
-| {#T10.28-3} | 341 | E₀, B₀, C₁, C₂, q (RG II's constants) / E₀, the constant of RG I's ind… |
-| {#T10.28-3-0} | 342 | α₂ (RG I, RG II) / α₂, RG I's constant of (3.14) (RG I p.272 l.38–41),… |
-| {#T10.28-3-1} | 343 | C₁′ (RG II's constant) / C₁′, the constant RG II prints as C₁ in (1.20… |
-| {#T10.28-3-1-1} | 344 | δ_{RG2} (RG II's constant) / δ_{RG2} := (1 − 2L^{−1})/12, RG II's δ ∈ … |
-| {#T10.28-3-1-2} | 345 | 𝒲(𝔱), 𝔱₀ / 𝒲(𝔱), the configurations W on the bonds of a coarse bond c,… |
-| {#T10.28-3-1-2-1} | 346 | ϕ, F_{C̃}, r_{C̃}, N_{C̃}, K_{C̃} / F_{C̃}(ϕ, W), a fixed function of … |
-| {#T10.28-3-1-3} | 347 | c_{C̃}, h_{C̃}, p_{C̃} (BP_RG2_COMPLEX_B) / c_{C̃} := 2K_{C̃}r_{C̃}^{−… |
-| {#T10.28-3-1-3-1} | 348 | ε_{D̃}, 𝒪_ε, 𝔵, T_Z (BP_RG2_COMPLEX_B) / ε_{D̃} := min{¼r_{C̃}, (16h_{… |
-| {#T10.28-3-1-3-2} | 349 | K_{F₃} (BP_RG2_COMPLEX_B) / the constant of the Cauchy estimate for ∂²… |
-| {#T10.28-3-2} | 350 | M₁, α₄, γ₂, α₆ (RG II's constants) / RG II's, as printed: the cube siz… |
-| {#T10.28-3-3} | 351 | C₃, C₃′ (RG II's constants) / C₃ := 2(L+2)⁴O(1)2E₀C₁α₄^{−1}α₆^{−1}M^q … |
-| {#T10.28-3-4} | 352 | ε₂, ε₃ (RG II's auxiliaries) / RG II p.5 l.23's auxiliary ε₂, the radi… |
-| {#T10.28-3-4-1} | 353 | ε₂ (RG II p.19) / ε₂ := 2E₀ε₁C₁α₄^{−1}α₆^{−1}M^q exp C₂κ₁ (RG II p.19 … |
-| {#T10.28-4} | 354 | C, C^{(j)}, 𝒫, P^{(j)} (RG I) / C, RG I's linear parametrisation of th… |
-| {#T10.28-4-1} | 355 | Q̂ (RG II) / Q̂, BFWL's name for the quadratic form of RG II (1.40) (p… |
-| {#T10.28-4-1-1} | 356 | β (RG I (3.16)) / the enlargement factor in (1 + β)α₀, (1 + β)α₁ of RG… |
-| {#T10.28-4-2} | 357 | B_loc, δB_loc, Z (BP_RG2_COMPLEX_B) / B_loc := Q(ηA) on □₀, the field … |
-| {#T10.28-4-2-1} | 358 | ℬ_t, ℬ_□, B^R (BP_RG2_COMPLEX_B) / ℬ_t := Q_j(ηt𝐇_k(B′)) and ℬ_□ := Q_… |
-| {#T10.28-4-2-1-1} | 359 | w (BP_RG2_COMPLEX_B) / w := u_{k+1}^{−1}v^{−1}, from the gauge transfo… |
-| {#T10.28-4-2-1-2} | 360 | ℬ (BP_RG2_COMPLEX_B) / the argument of 𝐇_j, in (δ/δℬ)𝐇_j, RG I's (δ/δB… |
-| {#T10.28-4-2-2} | 361 | 𝐀 (BP_RG2_COMPLEX_B) / 𝐀 := (tζ̃_□ + t_□ζ_□)𝐇_k(B′), the field of RG I… |
-| {#T10.28-4-3} | 362 | m_X (BP_RG2_COMPLEX_B) / m_X := 2L^jηB₀B₃exp(−½δ₀dist^{(ξ)}(X, □) − ½δ… |
-| {#T10.28-4-4} | 363 | ε₁ (RG I, RG II) / RG I's cutoff of (2.9), χ({abs(B′(b)) < ε₁}) (p.266… |
-| {#T10.28-4-5} | 364 | a₁ (RG I, RG II; BFWL) / RG I's absolute positive constant with 𝐇_k an… |
-| {#T10.28-4-5-1} | 365 | a₁ (BFWL), other meanings / VAR's a₁ (#T3.31) in §10 (#B10.159, #B10.1… |
-| {#T10.29} | 366 | x_k, h_k, c(x), f_K, t (§2 flow) / x_k := g_k^{−2}, with g_j := x_j^{−… |
-| {#T10.30} | 367 | Π, Λ, R_{k+1}, p, χ_q, E(z; q), R(z; q) (§2.2) / Π(x) := ∂²F(U_{k+1}(e… |
-| {#T10.30-1} | 368 | q_th, q′_th (§2.2) / q_th, the constant fixed in Lemma 2.8 and used in… |
-| {#T10.30-2} | 369 | C_Λ (§2.1) / the constant of Proposition 2.4 and Lemma 2.5, abs(Λ(F)) … |
-| {#T10.31} | 370 | Proposition 2.9 (i) / a_{k+1}(h) := lim_{q→∞}½∂_z²R(0; q) (#B2.2.90-1)… |
-| {#T10.31-1} | 371 | S, C_rem (Proposition 2.9 (i)) / S := Σ_{j≥0}4^jq_th²exp(−γ₂4^jq_th²/4… |
-| {#T10.32} | 372 | q_j, C_a, S₄, T_n, C′_rem (Proposition 2.9) / q_j := 2^jq_th for all j… |
-| {#T10.33} | 373 | ρ_γ, ρ̄, ℓ_k, u_k, T_k, ĝ_k, δ′, b, b′, C, β′ (the tube) / ρ_γ := max(… |
-| {#T10.33-1} | 374 | H_k (the tube) / H_k, the set of (x_0, …, x_k) with x_j ∈ T_j (#T10.33… |
-| {#T10.33-2} | 375 | C₀, C_{0,i} (§§2, 8, 10) / C₀, Remark 2.3's constant, the bound 2C of … |
-| {#T10.34} | 376 | the tube's CRE data / R_j^T, the least power of L ≥ (log ĝ_j^{−2})^r, … |
-| {#T10.35} | 377 | C_Σ, θ, ρ, q_*, x̂ (Lemmas 2.10–2.12) / C_Σ := 2^{κ₀/2}(1 + 2/((κ₀−2)c… |
-| {#T10.35-1} | 378 | K_V, C_cen (Lemmas 2.10–2.12) / K_V, the constant with which an R′-inp… |
-| {#T10.35-2} | 379 | C′, C_R, r (Lemmas 2.10–2.12) / r := min(α^T_{0,k+1}, α^T_{1,k+1})/C_c… |
-| {#T10.35-3} | 380 | s, E^{(j)}(s), β_j(s) (Proposition 2.11) / s ∈ ℂ, the multiplier sR^{(… |
-| {#T10.36} | 381 | u_i, P_i, r_i, φ_δ, f_h, m(X, x) (the R-terms of the tube) / u_i(B) :=… |
-| {#T10.36-1} | 382 | φ_b, φ_1 (CRE's bump) / φ_b(B′) := φ_1(abs(B′)/δ^T), with δ^T the cuto… |
-| {#T10.36-2} | 383 | c_lf, c_τ (large fields of the tube) / c_lf > 0, depending on d and L … |
-| {#T10.36-2-1} | 384 | d′, M₀^{LFR2} (large fields of the tube) / d′ := d′_j(Z_j^{(i)}) ≥ 0, … |
-| {#T10.36-3} | 385 | R₁ (CRE), Ω, Γ_n, 𝒩_w / R₁, CRE's absolute constant in R₁g_j^{κ₀}Σ_{n=… |
-| {#T10.36-4} | 386 | σ_H, σ_H(0) / σ_H, UV3's Haar density of one bond, a function on 𝔤 (#T… |
-| {#T10.36-4-3} | 387 | σ_H as UV3's σ / UV3 defines σ by the Haar measure dU′ = σ(A′)dA′ = σ(… |
-| {#T10.36-4-1} | 388 | δ_{rT} / δ_{rT}(B) fixes B on the bonds of the axial-gauge tree rT, bu… |
-| {#T10.36-4-2} | 389 | σ's other meanings / the Cauchy variables σ^ℂ(Δ), RG II's σ(Δ), with Q… |
-| {#T10.36-4-2-1} | 390 | σ in §10 (representations) / a representation of G with factors σ_1, …… |
-| {#T10.36-5} | 391 | λ_T, c_tor, R_ε, 𝓕_ε (torus independence) / λ_T, the torus side in lat… |
-| {#T10.37} | 392 | p_j, C_F, ε_k^F, C_e (Proposition 2.14) / p_j := δ_j^T/g_j (#B2.2.859)… |
-| {#T10.37-1} | 393 | ā_k, e_{k+1}(h) (Proposition 2.14) / ā_k, the statement's coefficients… |
-| {#T10.37-1-1} | 394 | E_k^{(0)}, F^h_j (Proposition 2.14) / E_k^{(0)}, the input of step k o… |
-| {#T10.37-2} | 395 | s, a_{k+1}(s), C′_a (Proposition 2.14) / s ∈ ℂ, the multiplier of Σ_{j… |
-| {#T10.38} | 396 | §3 operators, slice / Y_0 := ker P and D_0 := D restricted to Y_0 (#B3… |
-| {#T10.38-1} | 397 | §3 operators, determinant lemma / K := ker Q and Δ_F := h + DDᵀ (#B3.2… |
-| {#T10.39} | 398 | T_p, 𝒪, T₀, M^{k+1}, λ, h, J^{(k)} (§3) / T_p (#B3.2.44) and 𝒪 := p′ +… |
-| {#T10.40} | 399 | v, a_ρ, I(p), C, Δ^{(k)}, Y, F(U, j) (§4) / v_ν(p) (#B4.4-1) is #T10.2… |
-| {#T10.40-1} | 400 | Θ, F_jj, A₁, R̃, V, C_α (§4) / Θ(U) and F_jj := ∂²_jF(1, 0) (#B4.105),… |
-| {#T10.41} | 401 | c_𝒞, f, A(Γ), S′, 𝐌, G_𝐌, S (§4 proofs) / c_𝒞 := min(γ₀′, 1)/(2dC_{d,L… |
-| {#T10.42} | 402 | ℒ_k, Φ_k, ℰ_k, q (§5) / ℒ_k(B) := Σ_{j=1}^{k}E^{(j)}(0, U_k(e^{iB})) (… |
-| {#T10.42-1} | 403 | b(p), 𝒥_k, m, V*, V_1, U(t) (§5) / b(p) := (Σ_νabs(∂¹_ν(p))²/(Δ₀(p)²φ_… |
-| {#T10.43} | 404 | η, d_εA, ω (§5 alias sums) / η := L^{−k}, L odd (RG I p.251 l.14), so … |
-| {#T10.43-1} | 405 | Q_m, B_m, P_m, P̂_m (§5 alias sums) / (Q_mA)_μ(Y) := abs(B_m)^{−1}Σ_{r… |
-| {#T10.44} | 406 | s(k), N, I(ξ), Σ(ξ), f (§6.1) / s(k) := Σ_μ4sin²(k_μ/2) (#B6.1); N(k, … |
-| {#T10.44-0} | 407 | G, Δ²G, r_s, h_s (§6.1) / G(k, ξ) := N(k, ξ)/(s(k)s(k+ξ)) and Δ²G(k) :… |
-| {#T10.44-1} | 408 | Ñ, M_N, a, u, w, n₀, n₁, n₂ (Lemma 6.1, local) / Ñ, a trigonometric po… |
-| {#T10.45} | 409 | §6.2 / B_tb(U) := −½log det(Hess A(U) + D_UD_Uᵀ) + log det(D_UᵀD_U) (#… |
-| {#T10.45-0} | 410 | §6.2, proof of Proposition 6.3 / H := Hess A(U), D, Π_D := D(DᵀD)^{−1}… |
-| {#T10.45-1} | 411 | D_b, F_b, Δ_v, Δ_gh, V_v¹, V_gh¹ (§6.2) / D_b := ∂ + i ad b, F_b := F(… |
-| {#T10.45-2} | 412 | Λ, X̃, H̃, Ď, M̃, V¹, V² (§6.2 chart) / Λ, a finite torus of the bare … |
-| {#T10.45-2-1} | 413 | φ, T, Ã, Gr, E, E₂ (§6.2 chart change) / φ with e^{ib}e^{iφ(X̃)} = e^{… |
-| {#T10.45-3} | 414 | e_k, b̂, m_ξ, v¹, v² (§6.2 symbols) / e_k, the plane waves, with the p… |
-| {#T10.45-3-1} | 415 | 𝔦, O_U, Ξ, v̌, d̂ (§6.2 parity and symbols) / the point inversion 𝔦, 𝔦… |
-| {#T10.46} | 416 | p̂, 𝐇, J, Q, T, c_𝒩, K, Π_D (§7 setting) / abs(p̂) (#B7.3) is #T10.24'… |
-| {#T10.46-0} | 417 | φ_A, Δ′_π, λ_A, G, H, C_G (§7 setting) / φ_A := (DᵀD)^{−1}DᵀA (#B7.34-… |
-| {#T10.46-1} | 418 | R(U), R_b, G′, ρ_y (§7 setting) / R(U)X := UXU^{−1} and R_b := R(U_b),… |
-| {#T10.47} | 419 | ‖·‖_∞, ‖·‖_2, û, U^L, V^L, K′, m_t, V′, V₀, Φ, F^{com}_p (§7) / ‖X‖_∞ … |
-| {#T10.47-1} | 420 | P_T, Π_V, Δ⁰, V¹, V² (§7) / P_T, the orthogonal projection onto #T10.3… |
-| {#T10.48} | 421 | A(τ), U(τ), β_n, ‖·‖_E, ‖·‖_{E′}, ‖·‖_{E*}, S, S′, P, Λ, M (§7 Lemma 7… |
-| {#T10.49-0} | 422 | Q^{(j)}, Q̃^{(j)}, Q′^{(j)}, Q_{≤j}, Q̃_{≤j} (§7) / the step-j factors… |
-| {#T10.49} | 423 | §7 proofs / X := K′(1, j)Hz (#B7.99), local; B^L_1 := a^{(k)}_1 (#B7.1… |
-| {#T10.49-1} | 424 | θ_j, θ_{j,1}, θ_{j,2}, ℛ_c, Q′_{(i→l)}, C_⊥ (BFWL, local) / θ_j(y, x),… |
-| {#T10.49-1-1} | 425 | C′, b_i, b_i′ (BFWL §10, local) / b_i, b_i′, the per-factor slopes, an… |
-| {#T10.49-1-2} | 426 | Ψ, n, K_N (Lemma 7.3) / Ψ, the analytic function on a complex polydisc… |
-| {#T10.49-1-3} | 427 | c_j^{(2)}, m(d, L), a^{(j)}(t), Ψ̃, K̃₂ (§7) / c_j^{(2)}, the second-o… |
-| {#T10.49-2} | 428 | F₁, F₂, Δ^±F, x_±, x₀ (Lemma 6.1, local) / F₁, F₂, functions of class … |
-| {#T10.50} | 429 | δ₁′, H_i, G_×, Φ, zU (§§9–10) / δ₁′ := min(δ_cx, ½δ₀)/8 (#B9.29-3a-1),… |
-| {#T10.51} | 430 | Proposition 10.3 / μ := max_ic_i/w_i and I := {i : c_i/w_i = μ} (#B10.… |
-| {#T10.51-1} | 431 | Proposition 10.3, continued / b := 2c_iln L − δ′_i, b′ := 2c_iln L + δ… |
-| {#T10.52} | 432 | κ, ψ_l, a(u), ã_i, c_⊗ (§10 actions) / κ := κ_1^N = ⋯ = κ_r^N (#B10.87… |
-| {#T10.52-1} | 433 | c_ã, c_a, λ_i, h_i, A, Ã_i, C, ad_i, J_i, J_c (§10 actions) / c_ã > 0,… |
-| {#T10.53} | 434 | Lemmas 10.8–10.9 / θ := min_ih_i (#B10.125, #B10.200), s_h := θa + Σ_i… |
-| {#T10.53-3} | 435 | A, Δ″, K_C, C_Ad (Lemma 10.10) / A := Σ_ih_i^{1/2}δ_i and Δ″ := ⊕_iΔ′_… |
-| {#T10.53-2} | 436 | J♮_i, a, R, F(p), Δ^{(2)} (Lemmas 10.10–10.11) / J♮_i := J_(i) + (θ/h_… |
-| {#T10.53-0} | 437 | β_max, C_c″ (Lemma 10.9) / β_max := max_{j≤k+1, i}abs(β_{j,i}), the co… |
-| {#T10.53-1} | 438 | 𝔊̂, G_s (Lemma 10.11) / 𝔊̂ := Ĝ₁ − Ĝ₁DRD*Ĝ₁ − Ĥ₁QĜ₁, the formula of PB… |
-| {#T10.54} | 439 | t_j, P₀, X_♭, V, X₀ (Lemma 10.11) / t_j := θ/h_j (#BFP.152); P₀ := D*D… |
-| {#T10.54-1} | 440 | E, Y_♭ (Lemma 10.11, continued) / E := h^{1/2}Ĝh^{−1/2} − P₀^{−1}, of … |
-| {#T10.55} | 441 | Lemma 10.12 / H := h^{−1/2}Ĥh^{1/2} (#BFP.163); Ǧ := h^{−1/2}Ĝ₁𝔓̂*h^{1… |
-| {#T10.55-1} | 442 | Lemma 10.13 / β := h − h′ and b := max_iabs(β_i), and c_bg > 0, depend… |
-| {#T10.55-1-1} | 443 | Lemma 10.13, continued / A* := h^{1/2}δ′ (#B10.171); R₃ and V^A(A) := … |
-| {#T10.56} | 444 | Lemmas 10.14–10.15 / U := U_{h′} and J, RG1's (1.8) at U (#B10.177); 𝒰… |
-| {#T10.56-3} | 445 | θ_0, Δ_ct, U′_t, r_n, f_X (Lemma 10.15) / θ_0 := min_ih^0_i and Δ_ct (… |
-| {#T10.56-0} | 446 | basic operators, Y-part (Lemma 10.14) / the basic operators P₀^{−1}, G… |
-| {#T10.56-1} | 447 | N_σ (Lemma 10.14) / N_σ := (4·5^d + 54)^d, a term of a basic operator … |
-| {#T10.56-1-1} | 448 | δ_σ (Lemma 10.14) / δ_σ := δ₁′/(32N_σ), δ₁′ #T10.50's: δ_σM ≥ κ₁ gives… |
-| {#T10.56-2} | 449 | κ₁ (RG II) / RG II's decoupling parameter, "κ₁ is a sufficiently big p… |
-| {#T10.56-2-1} | 450 | κ₁ (Lemmas 10.14–10.15) / a local choice κ₁ := max(16κ, 18), κ those l… |
-| {#T10.57} | 451 | Lemma 10.16 / 𝐆_h(V) := ½Σ_yΣ_{x≠y}abs(h^{1/2}(1/i)log V(y, x))² and B… |
-| {#T10.57-0} | 452 | 𝐔_t, 𝐉_t, r, c_{𝒞,h} (Lemma 10.16) / 𝐔_t, 𝐉_t (#BFR.211-2a); r (#BFR.2… |
-| {#T10.57-1} | 453 | X_{♭,1}, δ₃ (Lemma 10.16) / X_{♭,1} := QG_{♭,1}Q* = ⊕_iQG₁^{(i)}Q*, wi… |
-| {#T10.58} | 454 | δ_Π, β_i, T, α′ (Lemma 10.17) / δ_Π := ½min(δ₁/2, κ(2M)^{−1}) and β_i … |
-| {#T10.59} | 455 | ϱ, R′, r₀ (two meanings in BFWL) / ϱ: §9's rate ϱ > 0 of (3.187) for δ… |
-| {#T10.59-1} | 456 | a_j(y, x), a₀, …, a_n, d̄, h₀, λ′ (local in BFWL) / ta_j(y, x), the li… |
-| {#TS11} | 458 | ## 11. Source Definitions |
-| {#T11.1} | 460 | The definitions the notes rely on, quoted from the parts files, so tha… |
-| {#T11.2} | 462 | PRT2's bond sets (PRT2 p.224 l.17–19; Lemma 2.4, p.245 l.75–76; (2.97)… |
-| {#T11.3} | 463 | PRT1's Δ_k and σ_k (PRT1 (1.62), p.28 l.24–29; (1.65)–(1.67), p.29 l.3… |
-| {#T11.4} | 464 | CRE (1.17) (CRE p.250 l.1–15). The expressions (1.14)–(1.16), except t… |
-| {#T11.5} | 465 | Lawler–Limic, Random Walk: A Modern Introduction (author draft, D:\Dow… |
-| {#T11.6} | 466 | CMP98's normalisation u (CMP98 (85)–(87), p.31 l.1–18). (85) defines t… |
-| {#T11.6-1} | 467 | CMP98 Proposition 6 (p.043 l.3–10). If U₀ satisfies (52), abs(U(∂p) − … |
-| {#T11.7-0} | 468 | RG I's lattice sets (RG I p.251 l.27–28, p.252 l.8–12). A union of cub… |
-| {#T11.7-0-1} | 469 | RG I's blocks and contours ((0.3), p.252 l.21–32). For y in a lattice … |
-| {#T11.7-0-2} | 470 | RG I's averages M^·(𝐔) (RG I (1.15), p.262 l.49): M^·(𝐔, b) = M^p(𝐔, b… |
-| {#T11.7} | 472 | RG I's U^c_j(X, α₀, α₁, γ₀) (RG I p.262 l.12–55), a union of G^c-orbit… |
-| {#T11.8} | 473 | RG I (1.17) (p.263 l.7–22). (i)–(iii) at α₀′ give abs(∂U_n − 1) < 2B₃α… |
-| {#T11.9} | 474 | Lemma 4's input space U′^c_{k+1}(□₀, (1+2β)α₀, (1+2β)α₁, α₀) (RG I p.2… |
-| {#T11.10} | 475 | CRE's class Ũ^c_j(X, α̃₀, α̃₁) (CRE p.261 l.5–40) is local on X. Its b… |
-| {#T11.11} | 476 | CRE Theorem 2 (CRE p.263 l.10–31). The age-decayed bound (2.43) is sta… |
-| {#T11.12} | 477 | CRE p.276 l.2–16 and (3.43) (p.276 l.26–32). Bałaban repeats Sect. 3 [… |
-| {#T11.12-1} | 478 | The terms of the expansion (I.6.41) with localisation domains Y in Λ_{… |
-| {#T11.12-2} | 479 | The remaining terms, whose domains meet Λ_{k+1} without lying in it an… |
-| {#T11.12-2-1} | 480 | No note uses (3.43)'s A-radius. The notes take these terms on O6's 𝒫_k… |
-| {#T11.12-3} | 481 | CRE does not print that the points of his class lie on □₀ in Lemma 4's… |
-| {#T11.13} | 482 | CRE p.280 l.14–20, the first case. It applies (3.3) and (3.18)–(3.28) … |
-| {#T11.14} | 483 | The Cauchy note's classes. The common polydisc 𝒫_j(X; s) (#C5.5) is th… |
-| {#T11.15} | 484 | Bałaban's complex backgrounds and local functions. RG I p.273 l.39–46:… |
-| {#T11.16} | 485 | Bałaban's determining sets and the 𝐑-step's large-field set. CRE (2.2)… |
-| {#T11.16-1} | 486 | LFR II's new background field (LFR II (1.35), p.365 l.13–16). With V′_… |
-| {#T11.17} | 487 | The Cauchy note's evaluation set (#C5.8). d_j is taken on ℰ_j(X; r) ⊂ … |
-| {#T11.18} | 488 | VAR's R-gauge representative (VAR (145)–(153), p.301). U′_k satisfies … |
-| {#T11.18-1} | 489 | VAR Sect. F's hypotheses (VAR p.300 l.25–26). Sect. F proves "all the … |
-| {#T11.19} | 490 | VAR's spaces and invariance group (VAR (2)–(7), p.278). 𝔘_k({Ω_j}, ε₀)… |
-| {#T11.19-1} | 491 | VAR's [6] is REG, "Spaces of regular gauge field configurations on a l… |
-| {#T11.19-2} | 492 | A set Ω ⊂ T_η also denotes the bonds with at least one end-point in Ω,… |
-| {#T11.20} | 493 | PBG's gauge fixing and G′ (PBG (3.17)–(3.24), pp.393–394; Theorem 3.1,… |
-| {#T11.20-1} | 494 | PBG's covariant supremum norms (PBG (3.39), p.397 l.4–8). The norms ar… |
-| {#T11.20-2} | 495 | PBG's penalty coefficients (PBG (3.24), p.394 l.24–29). ⟨λ, Q′*aQ′λ⟩ =… |
-| {#T11.21} | 496 | VAR (190) (p.308 l.38–48), the response of the representation field. a… |
-| {#T11.21-1} | 497 | VAR's representation of the second variable (VAR (172)–(173), p.305 l.… |
-| {#T11.21-2} | 498 | 𝓗 = 𝒜₁ + H₁B − HD(𝒜₁ + H₁B) (174), 𝒜₁ + 𝔊((δ/δA′)V)(𝒜₁ + H₁B) = 0 (175… |
-| {#T11.22} | 499 | The averaging of gauge transformations (CMP98 (78)–(81), p.30). (\over… |
-| {#T11.22-1} | 500 | CMP98 Proposition 2 (CMP98 p.026 l.46–52). For U with (52), abs(U(∂p) … |
-| {#T11.23} | 501 | Lawler–Limic, *Random Walk: A Modern Introduction*, §6.5 "Capacity, tr… |
-| {#T11.24} | 502 | VAR's R-gauge representative as a Landau minimiser for the line averag… |
-| {#T11.25} | 503 | VAR's problem at a base and PBG's linear problems (VAR Prop. 2, p.281;… |
-| {#T11.25-1} | 504 | VAR Proposition 3 (VAR p.289 l.30–34). The transformation (47) with (4… |
-| {#T11.26} | 505 | Bałaban's logarithm (CMP98 (21)–(25), p.21 l.26–50). log is "an invers… |
-| {#T11.26-1} | 506 | For G ⊂ U(N), log U ∈ i𝔤 for U ∈ G in a G-dependent neighbourhood of 1… |
-| {#T11.27} | 507 | CRE's localised determining sets (CRE p.256 l.55–63, p.257 l.1–26). Fo… |
-| {#T11.27-1} | 508 | The unit of Bałaban's cube sizes (RG I p.257 l.2–4, l.11–12; LFR I p.1… |
-| {#T11.27-2} | 509 | So in #T11.27's (2.14) the M₁-cubes of T_ξ are M₁L^jη-cubes of T_η, ∼ … |
-| {#T11.28} | 510 | V on 𝐁, M_𝐁, and Q_k^{s*} (CRE p.256 l.26–53; (1.3), p.246 l.38–45; p.… |
-| {#T11.29} | 511 | LFR I's Λ, U_{k,Z}, and χ_{k,Λ} (LFR I (1.73)–(1.75), p.192 l.40–55, p… |
-| {#T11.29-0} | 512 | LFR I Proposition 1 (LFR I p.194 l.37–48). For V_k⌈_{Z∩Λ^c} with abs(∂… |
-| {#T11.29-1} | 513 | LFR I's representation of U_0 inside Λ (LFR I p.195 l.14–20, p.197 l.1… |
-| {#T11.29-2} | 514 | U_0 is taken "in the axial gauge in k-blocks" inside Λ (p.197 l.9), an… |
-| {#T11.29-2-1} | 515 | LFR I does not define the "axial gauge in k-blocks"; V_Λ = M^k(U_0) is… |
-| {#T11.29-2-1-1} | 516 | So u = 1 at the corners y of the k-blocks (#T11.33-1), and a contour Γ… |
-| {#T11.29-3} | 517 | (1.86): expanding around the configuration 1 and transforming "to the … |
-| {#T11.30} | 518 | LFR II's U_0 (LFR II (1.3)–(1.4), p.357 l.11–26, l.45–48). U_0 "is a m… |
-| {#T11.30-0} | 519 | LFR II's analytic extension in 𝐔 (p.358 l.23–30, l.39–43). The lower b… |
-| {#T11.30-0-1} | 520 | LFR II's lower bound on the quadratic form (LFR II (1.7)–(1.9), p.358 … |
-| {#T11.30-0-2} | 521 | (1.9): ⟨H_{1,k}B′, Δ₁(ζ₀)H_{1,k}B′⟩ ≥ (γ₀/(2d(100M)⁵))‖B′‖² "for g_k s… |
-| {#T11.30-1} | 522 | LFR II's extension of V_Λ and U_0 (LFR II (1.38)–(1.45), p.366 l.30–43… |
-| {#T11.30-2} | 523 | (1.40) (p.367 l.2–10) has "exactly one solution B′_Λ(B̃′), which is an… |
-| {#T11.30-3} | 524 | (1.44)–(1.45): M^j(U_0(𝐔)) = Ṽ_{j,Z}(M̃^k(U′))M^j(U_0(U)), Ṽ_{j,Z}(V′)… |
-| {#T11.31} | 525 | The localisation representations and their argument bounds. LFR II (1.… |
-| {#T11.32} | 526 | The two-loops note's post-R map (two-loops #39, #124, #133–#134; deriv… |
-| {#T11.33} | 527 | REG's axial gauge relative to U₀, Ax_k(𝔅_k, U₀) (REG (1.16)–(1.20), p.… |
-| {#T11.33-0} | 528 | For a general base U₀ it is not the absolute axial gauge (1.15), p.078… |
-| {#T11.33-1} | 529 | CMP98's blocks (CMP98 (1)–(4), p.017 l.17–33, p.018 l.2–7). Ω^{(j)} = … |
-| {#T11.33-2} | 530 | Derived, not printed: for y ∈ L^jηℤ^d, B^j(y) is ηℤ^d ∩ Π_μ[y_μ, y_μ +… |
-| {#T11.33-2-1} | 531 | By #T11.33-2's nesting, x_n ∈ B(x_{n+1}) iff B^n(x_n) ⊂ B^{n+1}(x_{n+1… |
-| {#T11.34} | 532 | The chain's relative variables and gauge-transformation average (balab… |
-| {#T11.35} | 533 | The chain's axial gauge and norm (BP_REG_DRESSED.md #BR.2, #BR.2-3). A… |
-| {#T11.36} | 534 | CMP98's classes of gauge transformations (CMP98 Sect. F, p.044 l.3–13,… |
-| {#T11.37} | 535 | REG's statements used, recorded as statements (Bałaban's, accepted). L… |
-| {#T11.37-1} | 536 | REG (1.36) and (1.47) (REG p.082 l.44–50, p.084 l.36–45; print lines, … |
-| {#TS12} | 538 | ## 12. Note-Local Symbols |
-| {#T12.1} | 540 | The objects a note defines for one argument, with the tag of the defin… |
-| {#T12.2} | 542 | Two-loops note. Λ^{old} := Λ∖Ω″^{∼2}_{h+1} (#5); W_ms := max_jW_j (#5.… |
-| {#T12.2-1} | 543 | W^×_ren(ε) := E_ε[W_{χ₁}(C₁)W_{χ₂}(C₂)]/(κ^{(K′)}_{C₁}κ^{(K′)}_{C₂}), … |
-| {#T12.2-2} | 544 | e_θ(x) := e^{iθ·x}, u(θ) := Π_μn^{−1}Σ_{k=0}^{n−1}e^{iθ_μk}, S₂(θ) := … |
-| {#T12.2-3} | 545 | P(𝐔) := U^{post}(M(𝐔)) ∈ 𝓜^c (#39-00), where the note's extension is e… |
-| {#T12.2-4} | 546 | r_J(b) := f_nα_{0,k}L^{n−k}(L^nξ)^{−3}, the current's radius (#55), no… |
-| {#T12.2-5} | 547 | B̂_j := R(v_{n+1})B_j and σ^s_n := s_n(·; R(e^{Y_{n+1}})B̂_j) − s_n(·;… |
-| {#T12.2-6} | 548 | B := (1/i)log M(𝐔)M(U)^{−1} (#125); 𝐕 := P_{k+1}(𝐔) (#130.2); d_𝐕 := M… |
-| {#T12.2-7} | 549 | C_T^{(K)} := max(1/ε_H, 64KB₀e^{16κ_s}/((1−β)min(β,1)), C_K^αB₀e^{16κ_… |
-| {#T12.2-8} | 550 | A_k(S) := c_πΣ_{b∈S}sup‖Im ηA_b‖ and c_π := sup{‖dπ(Y)‖ : Y ∈ 𝔤, ‖Y‖ ≤… |
-| {#T12.2-9} | 551 | θ^×(G) := Σ_{W∈𝒲^×(G)}θ(W) (#250); ℐ(D_G) := ∪_{g∈G}ℐ(g) ∪ ∪_Wℐ(W), wi… |
-| {#T12.2-9-1} | 552 | w_n(D) := e^{λ_n(D)ν_rσ(D)}e^{θ(D)}‖D‖, a cross insertion's weight aft… |
-| {#T12.2-10} | 553 | C := C₁ ⊔ C₂, the pair's contour (#332, #368, #467, #505, #609, #909);… |
-| {#T12.2-11} | 554 | N^×_0 := W_{χ₁}(C₁)W_{χ₂}(C₂)ρ₀ (#376) and N^×_k := Σ_ℓχT[𝒲^×_ke^{A_k}… |
-| {#T12.2-12} | 555 | abs(win^{(2)}_𝒞) := 80(M#(𝒞) + 1) (#543) and abs(win^{(2)}_M) := n_{k+… |
-| {#T12.2-12-1} | 556 | H_i(D), the smallest arc of C_i containing ℐ_i(D) (#545); r₀ := 2 (#59… |
-| {#T12.2-13} | 557 | 𝔅^s(g) := 𝔅(g)∖𝔅^×(g) and B_P := ∪_rX′_r ∪ ∪_{X∈P}X^{(λ̂+248)}, X^{(n)… |
-| {#T12.2-13-1} | 558 | A^{cr,R} := 4e^{c_W}C_gr(ℓ₁+ℓ₂)e^{−p₀(ḡ_R)/2}e^{−ν_rD/(1076M)}(1 + 138… |
-| {#T12.2-14} | 559 | B_Q (#814-4-2) is #T12.20-1's; w^Ψ_c := e^{ν_rσ̃(c) + (3/8)ν_e(2Σ_{P∈c… |
-| {#T12.2-17} | 560 | Two-loops note, the domains of a polymer P. dom P, the union of the do… |
-| {#T12.2-17-1} | 561 | (A)_r, the points within ℓ^∞-distance r of A; T⁺_D := (T_D)_{5M} ∪ s_D… |
-| {#T12.2-18} | 562 | Two-loops note, lengths and weights. D_P := Σ_r(d_k(X′_r) + 4R_k + 2λ̂… |
-| {#T12.2-15} | 563 | E* := (C_Σ(χ₁) + C_Σ(χ₂))𝔞̄ + C^{R°}_E + C^×_E + C^{R×}_E (#891), #T4.… |
-| {#T12.2-16} | 564 | Two-loops mixed term, the real base (BP_TL_MIXED_TERM.md #5.10.5-3, th… |
-| {#T12.3} | 565 | Pair Cauchy note. c^n_𝒢, the rest's value at (1, 0), and c^a_𝒢 := c_𝒢 … |
-| {#T12.3-1} | 566 | Pair Cauchy note, the comparisons. k := K − j, run A's steps to the co… |
-| {#T12.3-2} | 567 | Pair Cauchy note, the attached content. a := a°, FV (5.10)'s weight (#… |
-| {#T12.3-3} | 568 | Pair Cauchy note, the marked and wrap differences. ε̂̄^{(2)} := sup_iε… |
-| {#T12.3-3-1} | 569 | Pair Cauchy note, the marked and wrap differences, continued. t_m := 4… |
-| {#T12.3-6} | 570 | Pair Cauchy note, the birth at j₀. ρ^{j₀}_K := max(ρ^{LF,×}_K, C^E_r(k… |
-| {#T12.3-4} | 571 | Pair Cauchy note, the steps. β^cr_K := (8ρ^{LF,×}_K + r̄_K)A^{×,2} + 4… |
-| {#T12.3-5} | 572 | Pair Cauchy note, the result. E^{cr}_{K′} := Σ_{j≤K′}E^×_j + Σ_{N_B<j≤… |
-| {#T12.3-5-1} | 573 | Pair Cauchy note, the wraps' t-step. r°(c) := sup_bΣ_{𝒢∋b}abs(c_𝒢)e^{2… |
-| {#T12.3-5-2} | 574 | Pair Cauchy note, the three gases. δε̂^∨_i := max(δε̂_i, δε̂^{(1)}_i, … |
-| {#T12.3-5-3} | 575 | Pair Cauchy note, the three gases' radius. u₀^∨ := ν_r/(5184Mδε̂^∨_i),… |
-| {#T12.4} | 576 | Pair factorisation note. s_j := 7M for j ≥ 2 and s₁ := 2M_VR₁; K′_{att… |
-| {#T12.4-1} | 577 | Pair factorisation note, §0, the units. ℓ_i^{ph} := p_iL^{−q_i}u, the … |
-| {#T12.4-1-0} | 578 | Pair factorisation note, §§1 and 4, the measures. O_i := 𝒲̂^{(i)}, loo… |
-| {#T12.4-1-1} | 579 | Pair factorisation note, §3, the near and far parts. R^{nf}_k := (DL^{… |
-| {#T12.4-1-1-1} | 580 | e^{(j)}_X is #T12.19-11's (#PF3.2-8d3). ω(Z) is #T12.7-13's, with #T12… |
-| {#T12.4-1-2} | 581 | κ_{th} := η̄/(4C₀ + 4), the rate κ of IT-1 §3i(7), set in §3i(6) (#PF3… |
-| {#T12.4-1-3} | 582 | N^{nr} := A^× + C^×_E + C^{R×}_E + w̄^× + Σ_iw̄^{(i)} + 4(ℓ₁+ℓ₂)(ν̄e^{… |
-| {#T12.4-4} | 583 | Pair factorisation note, §4, the typical action. W^{ℓ₀}_i := W_χ(C_i;U… |
-| {#T12.4-4-1} | 584 | Pair factorisation note, §4, the fields on 𝒱_ty. ε_ty := 3(2NT_ty)^{1/… |
-| {#T12.5} | 585 | Contacts draft (§1). s̄ := max(s, ρ₀), s the fine distance from b to t… |
-| {#T12.6} | 586 | W-δ note. ℒ_ι := H₁𝔡 at Ũ, the Landau part of dι_Y = H₁𝔡 + D_Bγ (#W3.5… |
-| {#T12.6-1} | 587 | W-δ note, §§P–5. a_j := εL^j, the spacing of the shared scale j in run… |
-| {#T12.6-2} | 588 | 𝐀^X(s) := (tζ̃_□ + t_□ζ_□)𝐇^X_k(s) (#W3.8-1); β_□(ℱ, 𝒜) := ⟨χ_AQ₁ℱ, 𝒪^… |
-| {#T12.6-3} | 589 | d̄(x) (#W6.1-1) is #T4.24's; d̄(ω) := sup_{x∈∪X̃_i⁵}d̄(x) and U(t) := … |
-| {#T12.6-4} | 590 | h(t) := cos(½πψ(abs(t))) for 1/3 ≤ abs(t) ≤ 2/3, 1 below and 0 above (… |
-| {#T12.6-5} | 591 | β_I := 2^{−7} (#W8.15) is #T11.13's; c_N (#W8.15-1) is #T3.27's; C_{Q*… |
-| {#T12.6-6} | 592 | S_w (#W8.22-2-1) is #T12.12's at κ_w = ⅛δ_min, not #T4.40's; κ_V (#W8.… |
-| {#T12.6-7} | 593 | β′_□(ℱ, 𝒜) := ⟨χ_AQ′₁ℱ, Δ′^A_aχ_AQ′₁𝒜⟩_A − ⟨ℱ, Δ′^B_a𝒜⟩_B (#W10.2.4); … |
-| {#T12.6-7-1} | 594 | C_df(β), the constant of (Wδ-1), independent of the shell n, the scale… |
-| {#T12.6-8} | 595 | c₃ := 3 + 2/(L − 1) ≤ 5 (#W10.3.20-1), not #T4.46's c₃; c_K := 640e^{2… |
-| {#T12.6-9} | 596 | δ_gf′ (#W10.4.22-4) and δ₀′ and δ_c (#W10.5.23, #W10.5.87-5, #W10.6.19… |
-| {#T12.6-10} | 597 | k_𝒦(ℱ, 𝒜) := ⟨χ_AQ₁ℱ, 𝒦^Aχ_AQ₁𝒜⟩_A − ⟨ℱ, 𝒦^B𝒜⟩_B (#W10.4.51); C_Q := 4… |
-| {#T12.6-11} | 598 | 𝔡v := (dQ_1^{s*}v on Λ₀, v on Λ₁) (#W10.5.5-1, #W10.5.9) and ℒ_ι (#W10… |
-| {#T12.6-12} | 599 | ϱ̄ and α_c := C_cϱ̄ (#W10.5.45-24) are #T3.17's and #T3.18's; ℓ(y) := … |
-| {#T12.6-13} | 600 | ℒg := Ig + Q₁*(Q₁Q₁*)^{−1}(g − Q₁Ig), the global lift (#W11.2); C_ℒ^g … |
-| {#T12.6-14} | 601 | Δ₀ := 𝐀₀^B − ℒ𝐀₀^A (#W11.53, #W11.64-1); A′^X := H₀^XB′ + 𝐀₀^X and σ :… |
-| {#T12.6-15} | 602 | δ_π := min(δ₀′/(54L), δ_Q)/4 (#W11.100-6) and δ_D′ := min(δ_D, ¼δ₀) (#… |
-| {#T12.6-15-1} | 603 | C_D := the O(1) of PRT2 (2.149) and δ_D := ½δ₄, δ₄ the rate printed th… |
-| {#T12.6-16} | 604 | ϑ := δ_w + ϑ_ℒ + C₂L² sup_xL^{−j(x)} (#W11.149-1); C_E := O(1)B₀C₂(C_ℒ… |
-| {#T12.6-16-1} | 605 | W-δ note, §11, the artifact. C_b := O(1)LC_Q′(C_ℒ^g)²(1 + C₀ε₁)(1 + k₂… |
-| {#T12.6-17} | 606 | V₀ := MU^B (#W12.13), U^A_k or U^A_{k,Λ} (#W12.20-1, #W12.203), and (U… |
-| {#T12.6-18} | 607 | N(A) := (δV/δA′)(A + H₁B) (#W12.49) and λ := δJ + N′(A₁)(δA₁ + H₁δB) (… |
-| {#T12.6-19} | 608 | ε₁ := B₅M⁵ε_k, VAR's data parameter for §12's problem (#W12.142-2); ω_… |
-| {#T12.6-19-1} | 609 | W-δ note, §12, the data and (D1). Ŷ := −i log(𝐕V^{−1}), 𝐕 and V the co… |
-| {#T12.6-20} | 610 | C_s := O(1)dM(B₃B₅M⁵ + C_HC_Ŷ) (#W12.175) and C_I := O(1)d³MC_H(B₃B₅M⁶… |
-| {#T12.6-21} | 611 | ΔX_s := 0 on the collar strip (#W12.223-7); d := 𝐆″_k(1 − θ)(1 − Q*_{𝐁… |
-| {#T12.7} | 612 | Cauchy note. ι_XU := U(𝐁_1(X^∼), M^·(Q_1^{s*}U)), Bałaban's local mini… |
-| {#T12.7-1} | 613 | Cauchy note, prologue and §§1–2. κ_s (#C3.10-2, #CK.1-29) is #T3.34-1'… |
-| {#T12.7-2} | 614 | Cauchy note, prologue: the thresholds. ε^*(g) := C_XC_ptC_KPL⁴C^𝐀_α[C_… |
-| {#T12.7-3} | 615 | Cauchy note, prologue: the sums. N′(g) := log_L(MR(g)) + 3, the memory… |
-| {#T12.7-4} | 616 | Cauchy note, the stopping sums. ℓ_K := (log(bK + ḡ^{−2}))^{rd+2p₀}, μ_… |
-| {#T12.7-4-1} | 617 | Cauchy note, the stopping sums, continued. a^{(U)}_K := 2e^{−C_P(K−j(C… |
-| {#T12.7-5} | 618 | Cauchy note, §3. Q₁^{pl}(W) := dM(W), the plain linearised one-step av… |
-| {#T12.7-6} | 619 | Cauchy note, §3: the irrelevant parts. irr(Δ_j) := Δ_j(U) − Δ_j(1) − Π… |
-| {#T12.7-7} | 620 | Cauchy note, §3: the quadratic forms. Φ_P(x) := (1/iε²)log U(∂p_P(x)),… |
-| {#T12.7-7-1} | 621 | Cauchy note, §§9–10: the contours. 𝐆(y, x), RG I's family of shortest … |
-| {#T12.7-7-2} | 622 | Cauchy note, §§9–10: the contours, continued. Γ_{y,x}, PRT1 (1.7)'s ax… |
-| {#T12.7-8} | 623 | Cauchy note, §5: the classes. β′ (#C5.3-2) is #T3.6's; α′_{i,m} := α_{… |
-| {#T12.7-9} | 624 | Cauchy note, §5: the constants. α_{2,m} := c₂α_{0,m} (#C5.36-11, #C5.4… |
-| {#T12.7-10} | 625 | Cauchy note, §5: the pair line. U^A := U^A_k(V), U^B := U^B_{k+1}(V), … |
-| {#T12.7-11} | 626 | Cauchy note, §5: the moves along the pair line. C_Π(j) := C′_Π(8B₃/α_{… |
-| {#T12.7-12} | 627 | Cauchy note, §5: the current constants. C_σ := 64 (#C5.83-2), not #T12… |
-| {#T12.7-13} | 628 | Cauchy note, §6. ω(Z) := exp(C_PP(Z)) on the component Z, 1 on the oth… |
-| {#T12.7-14} | 629 | Cauchy note, §§6.2 and 7.5. σ̂^Λ_{k,j} and C_{yd} (#C6.2.18-7) are #T4… |
-| {#T12.7-15} | 630 | Cauchy note, §8.1–8.2. δΔ^{(k)} := Δ^{(k+1)}_B − Δ^{(k)}_A (#C8.1.1-1)… |
-| {#T12.7-16} | 631 | Cauchy note, §8.2: the frozen terms. F^{nr}_j(A) := irr_□(Δ_j)(c(𝐔̂_z,… |
-| {#T12.7-17} | 632 | Cauchy note, §§8.2–8.5. C_g := (1 − L^{−β′})^{−1}max(C_T′/(2C_T), 1) (… |
-| {#T12.7-18} | 633 | Cauchy note, §8.6. q(V) := ∫dV restricted to Z′ of ρ(Z, V) over the sa… |
-| {#T12.7-18-1} | 634 | Cauchy note, §8.6, the constants. C_n := 2(1 + L^d + 3^d)(4 + C_ψ + C_… |
-| {#T12.7-19} | 635 | Cauchy note, §8.7. θ̃ (#C8.7.1-1) is #T3.8's; m_i := iθ̃^i + w_K (#C8.… |
-| {#T12.7-20} | 636 | Cauchy note, §8.7: C_S″ := C_S[2C_s((1 − L^{−1/3}/θ̃)^{−1} + (1 − L^{−… |
-| {#T12.7-20-1} | 637 | Cauchy note, §8.7: the factor N₀^+(j) of c^B_j = (C^B_{R,1}/C_R)N₀^+(j… |
-| {#T12.7-21} | 638 | Cauchy note, §9.1–9.5. U^A := U_k(V) on T_ε, U^B := U_{k+1}(V) on T_{ε… |
-| {#T12.7-22} | 639 | Cauchy note, §9.5–9.8. c_δ := sup_yΣ_{y′}e^{−δ₀d(y,y′)}, not #T3.27's … |
-| {#T12.7-23} | 640 | Cauchy note, §10.1–10.2. ℓ := εL^{j−1} (#C10.1.1); δ₂ (#C10.1.3-3), #T… |
-| {#T12.7-23-1} | 641 | Cauchy note, §10.1–10.2, continued. w_u := v₁(U₁^u)^{−1}·u/·v₁(U₁), u/… |
-| {#T12.7-24} | 642 | Cauchy note, §10.3. U^A := U^A_j, U^B := U^B_{j+1}, Ũ := Ũ_j, and V :=… |
-| {#T12.7-24-2} | 643 | Cauchy note, §10.3, complex pairs. B₀^{cx} ≥ B₀, a constant of d, L an… |
-| {#T12.7-24-3} | 644 | Cauchy note, §10.3, the transport column. k_G ≥ 2, a constant of G bou… |
-| {#T12.7-24-4} | 645 | Cauchy note, §10.3, the BCH constants. c_B and r_{BCH}, constants of G… |
-| {#T12.7-24-1} | 646 | Cauchy note, §10.3, continued. (Ad(w)λ^B)(c) := Ad(w(c₋))λ^B(c) (#C10.… |
-| {#T12.7-25} | 647 | Cauchy note, §10.3: the constants. c_e := sup_ya^{−d}max(Σ_pη^de^{−½δ₁… |
-| {#T12.7-25-1} | 648 | Cauchy note, §10.3: the constants, continued. δ^μ_i := sup abs(μ′_i − … |
-| {#T12.7-26} | 649 | Cauchy note, §10.4: the forms. U^B := U^B_{j+1} (#C10.4.1); Q₁ := Q̄₁(… |
-| {#T12.7-27} | 650 | Cauchy note, §10.4: the gauge fixing. Y := sZ′_c + tZ_c, local (#C10.4… |
-| {#T12.7-28} | 651 | Cauchy note, §10.4–10.5: the lifts. T_Q := Q₁Q₁* on the coarse bond fi… |
-| {#T12.7-29} | 652 | Cauchy note, §11. ε_a := g_a/(2B₃), the plaquette bound of the block d… |
-| {#T12.7-29-1} | 653 | Cauchy note, §11: the large-field weight. c₀ := O(1) + 1, the constant… |
-| {#T12.7-30} | 654 | Cauchy note, the constants index #CK.1-2–#CK.1-33 (#CK.1-2, #CK.1-3, #… |
-| {#T12.7-31} | 655 | Cauchy note, further definitions. E^A_const := E_const,k = Σ_{j≤k}E°^A… |
-| {#T12.7-31-1} | 656 | Cauchy note, §§6.2 and 8.2–8.6. s_K := s′_K + L^ds^{LF}_K (#C6.2.12-3)… |
-| {#T12.7-32} | 657 | Cauchy note, §8.7: the linear map. (𝒯u)_{i+1} := ε^*[D_i[u] + C_SΣ_{j≤… |
-| {#T12.7-33} | 658 | Cauchy note, §§9–10, further. δ_Q^{pl} := (r_T^{pl})^{−1}log(1/q^{pl})… |
-| {#T12.8} | 659 | Large-field note, preamble and §§0–3. δ_j := (g^B_j)^{−2} − (g^A_j)^{−… |
-| {#T12.8-1} | 660 | Large-field note, the data parameter. ε₁ := max(C max_j(ε_j + ϑ_j), C(… |
-| {#T12.8-2} | 661 | Large-field note, §0, the layer width and the distances. w_* := the le… |
-| {#T12.8-2-1} | 662 | Large-field note, §0, the test fields, the exponents, and the exit rad… |
-| {#T12.9} | 663 | Large-field note, §4 to the alignment at complex points. 𝐁_{1.70} := 𝐁… |
-| {#T12.9-2} | 664 | Large-field note, §4: α₀^{CMP} := 4C₀^{ms}ε₁ (#D.α₀^CMP, #4.53-1.0), C… |
-| {#T12.9-1} | 665 | Large-field note, §4 from the complex points. ‖𝐒‖ := sup_x(a_{j(x)}abs… |
-| {#T12.9-1-1} | 666 | Large-field note, §4, the data angles. C_Λ^δ := #W12.172's C_Λ (#T12.6… |
-| {#T12.9-1-2} | 667 | w := ζ₁/(g″)², the weights at which LFR II (1.70) evaluates A (#4.41, … |
-| {#T12.9-1-3} | 668 | Large-field note, §4, the chain's arguments. C_Ψ, the constant of Bała… |
-| {#T12.9-1-4} | 669 | Large-field note, §4, σ on 𝒟^c. σ^B := the exponent of 𝐓′_k(X, ·) (#4.… |
-| {#T12.9-1-5} | 670 | Large-field note, §4, the data change on the disc. D^δ_z := the data o… |
-| {#T12.9-1-6} | 671 | Large-field note, §4, the room. W^δ_z := e^{iη𝐇^δ_z}U^δ_0, a G^c-gauge… |
-| {#T12.9-1-7} | 672 | Large-field note, §4, the creation of 𝔹. N := N̄(K − k_R), #CP.13's de… |
-| {#T12.9-1-8} | 673 | Large-field note, §4, the recursion. C_{wr}, the constant of the age w… |
-| {#T12.9-1-8-1} | 674 | Large-field note, §4, the recursion's sums. W^♯ := Σ_{r≥1}w_rμ_N(r)L^{… |
-| {#T12.9-1-8-2} | 675 | Large-field note, §4, the age factor's lift. ℒ_ι^W := dι_Y(W^A), the f… |
-| {#T12.9-1-9} | 676 | Large-field note, §4, the fluctuation step. (𝐔(s), 𝐉(s)) := (e^{−isεA}… |
-| {#T12.9-1-9-1} | 677 | Large-field note, §4, the fluctuation step's conditions. M_c^F := (2C_… |
-| {#T12.9-1-9-2} | 678 | Large-field note, §4, the fluctuation step's radius. (i − m)₊ := max(i… |
-| {#T12.9-1-9-3} | 679 | Large-field note, §4, the fluctuation step's constants. C_c′, the cons… |
-| {#T12.9-3} | 680 | Large-field note, §4, the group, the displacements, and the twist. r_e… |
-| {#T12.9-3-1} | 681 | Large-field note, §4, the weights' constants. c_o := 1 + 2B_G(1 + c_𝔠)… |
-| {#T12.9-3-2} | 682 | Large-field note, §4, the Jacobian at the fluctuation step. ω_c := L^{… |
-| {#T12.9-3-2-1} | 683 | Large-field note, §4, the run difference of the Jacobian. C_det := 2C_… |
-| {#T12.9-3-3} | 684 | Large-field note, §4, the twisted data. 𝔭(z) := (e^z − 1)/z, so that (… |
-| {#T12.10} | 685 | Large-field note, §5. m_W := ⌊k/8⌋ (#D.m_W); ‖dπ‖ := sup_{abs(Y)=1}‖dπ… |
-| {#T12.11} | 686 | Large-field note, Appendix A. Z_D, the set of the sites of Λ^c in D, f… |
-| {#T12.11-1} | 687 | Large-field note, Appendix A, the local distance and the weights. y⁺, … |
-| {#T12.11-2} | 688 | Large-field note, Appendix A, the test field, the balls, the gauge gen… |
-| {#T12.11-3} | 689 | Large-field note, Appendix A, the deep region and the scale L. 𝒟_c := … |
-| {#T12.11-3-1} | 690 | Large-field note, Appendix A, the boundary values. λ_∂ := the supremum… |
-| {#T12.12} | 691 | Large-field note, names shared with other rows. (a) Clashes, each a di… |
-| {#T12.12-1} | 692 | Large-field note, names shared within the note. r := min(PBG's O(1)Mα₀… |
-| {#T12.13} | 693 | Step map, coarse transport, coarse step, and gauge (MOSTC, MOMST, MOMG… |
-| {#T12.13-1} | 694 | c_π := sup{‖π_*(Y)‖ : Y ∈ 𝔤, ‖Y‖ ≤ 1}, ‖·‖ the operator norm, a consta… |
-| {#T12.14} | 695 | Step map, D2.0 and D2.1. κ^{(k)} := ∏_{j=1}^kκ_j with κ_j := e^{−δm_jP… |
-| {#T12.15} | 696 | Step map, D2.2. T^{(k+1)} := CRE (3.23)–(3.25)'s sum over S_{k+1} of t… |
-| {#T12.16} | 697 | Step map, D2.3. R_ξ(𝔅) := Σ_{𝒮⊆𝔅}(−1)^{abs(𝔅∖𝒮)}(∏_{W∈𝔅∖𝒮}a_W)A_ξ(𝒮), … |
-| {#T12.17} | 698 | Step map, D2.4. #(Y) := M^{−4}abs(Y) at scale k and (LM)^{−4}abs(Z) at… |
-| {#T12.18} | 699 | Bałaban proof BP_LFR2_REPLACEMENT.md (balaban_proofs/). V^♭ := V on Λ^… |
-| {#T12.18-1} | 700 | In #T12.18, V, V_k′, V_Λ and V″ are the transforms by #160.2's u, U = … |
-| {#T12.19} | 701 | D2.6 closure (WILSON_IT1_D26_CLOSURE_2026_10_24.md, cited by section).… |
-| {#T12.19-1} | 702 | K := C*Δ^{(k)}C, X(ω) := ∪_jX̃_j^5 enlarged by C's range, K_X := Σ_{ω:… |
-| {#T12.19-2} | 703 | w(W) := e^{ν_rσ_j(W)}e^{(3/8)ν_e·ext^{coll}_j(W)}e^{θ(W)}‖Y_W‖, ext^{c… |
-| {#T12.19-2-1} | 704 | δ_m := C_δc̄e^{−(25/8)(ν_e/L)R_{m+1}}, c̄ := e^{(3/8)ν_e}c̄_*sup_mb_m/… |
-| {#T12.19-3} | 705 | c_D^{chg} := 0, the charge of a fixed member (§5.2 (T0)), not the map'… |
-| {#T12.19-4} | 706 | T_i := U₁(r_i), T̂_i := U_ξ(m̂)(r_i), Y_i := π(T̂_i)π(T_i)^{−1} − 1, a… |
-| {#T12.19-4-1} | 707 | ϑ_V, wherever the table writes it, is V4's ϑ := 1/(4c_{\mathrm h}C_H^{… |
-| {#T12.19-5} | 708 | ℓ := LM_VR₁, the side of the aligned ℓ-cubes of CRE (1.10), (1.20) (§6… |
-| {#T12.19-6} | 709 | W_III := e^{2^dν_r} (§6.4), lw_1(Z) := Σ_{near i→Z}Σ_Xe^{ν_rσ(Y_{i,X})… |
-| {#T12.19-7} | 710 | Start(i) := the boxes Δ₀ with Δ̃₀ ∩ 𝓕_{r_i} ≠ ∅, F_i(s) := Y_i with #T… |
-| {#T12.19-8} | 711 | d^Z_1(n) := d(n, 𝔅_Z), a_j := Cc_CC_cM²R_jρ̂_j·3·2^{d−1}, times 205^d … |
-| {#T12.19-8-1} | 712 | C_h := (C′_bdg₀(1+3r)²·2C_mϑ_Vr + Ĉ^δ_bdC_sh′e^{3μ_Hρ_L/20}ϑ_Vg₀r² + C… |
-| {#T12.19-9} | 713 | C_A(j) := a_j + [j ≥ 2]C_Bρ_{t,j}R_j^d + [j = 1](C_{B,1} + (2C_{lw}g₀(… |
-| {#T12.19-9-1} | 714 | C_d′ := d(3(126)^d + 64^d + 2^d) (§7.2 *Linear size and cubes*); m_A :… |
-| {#T12.19-9-2} | 715 | C_{εA}, a constant depending on L, the group and V4's constants, with … |
-| {#T12.19-10} | 716 | Res(X) := (K₁/8)(d₁′(X)+1) and Pol(X) := (K₁ − 2B₁ − K₁/4)(d₁′(X)+1) ≥… |
-| {#T12.19-10-1} | 717 | Per branch of LFR II pp.385–387, Res and Pol are inherited (Res(Z) := … |
-| {#T12.19-11} | 718 | K_{j+1} := ½γ₀A₁²p₀²(g_{j+1})/(2(14)^d), B_{j+1} := O(1)(64)^dM^dL^{d+… |
-| {#T12.19-12} | 719 | V_i^* := M^iU_{k+1} (§8.1), #T12.17's; 𝔹 ∪ 𝔹_j(Ω) := (𝔹 ∩ Ω^{∼−2}) ∪ (… |
-| {#T12.20} | 720 | D2.7 closure (WILSON_IT1_D27_CLOSURE_2026_10_26.md, cited by item). N … |
-| {#T12.20-1} | 721 | Ξ := 1 + Σ_{r≥1}Σ_{{X′_1,…,X′_r}}Π_pF(X′_p) (15.3), not #T12.6's, #T12… |
-| {#T12.20-2} | 722 | span(P) := C when the slots of P cover C, and otherwise the complement… |
-| {#T12.20-3} | 723 | D2.7 15.0 and 15.5(i)–(i-0). For a component K of Z of either class, K… |
-| {#T12.20-3-1} | 724 | D2.7 15.5. η(D) := 2‖D‖e^{ε_D}(e^{x_D} − 1), which bounds a carried in… |
-| {#T12.20-3-2} | 725 | BP_LFR2_LOOP_LOCALISATION.md (BLL), for an object F of D2.7 15.5(i). τ… |
-| {#T12.20-3-2-1} | 726 | BLL's lengths and rate. ℓ_c(F, 𝒦), M^{−1} times the infimum of the tot… |
-| {#T12.20-3-3} | 727 | BLL's counts and sums. N_K := (100R_k + 3)^d (#BLL.1-1) and N⁺ := (104… |
-| {#T12.20-3-4} | 728 | BLL's constants. a := (63/128)δ, x_F := eC_Rq_a/T̂/, and x_K := eC_Rq_… |
-| {#T12.20-3-5} | 729 | BLL's names apart: h₀(F) is not #T2.25's h₀; C_R is not #T12.7-31-1's … |
-| {#T12.20-3-6} | 730 | BLL's collar. U⁰ := U(𝐁_k″(Y₁⁺(F)), d(𝐔)), EP #39-0's configuration fo… |
-| {#T12.20-3-7} | 731 | BLL's interpolation. X_o, the M-cubes of X(F)^{[1]} outside Z; p_Δ, th… |
-| {#T12.20-3-7-1} | 732 | BLL's split. V^z, V with V_𝔟 replaced by e^{iηz_𝔟b_𝔟}U⁰_𝔟, b_𝔟 := (iη)… |
-| {#T12.20-3-8} | 733 | BLL's thresholds and D2.7's collar. r_z := O(1)(1 + λ_R)²C_∂C_Hα_{1,k}… |
-| {#T12.20-3-9} | 734 | BLL's base and D2.7 15.4(i)'s reach. Y′₀ := T̂_Z^{[λ_T]} ∪ X(F)^{[3]} … |
-| {#T12.20-3-9-1} | 735 | D2.7 15.4(i), the size of a polymer P. /P/, the number of MR_k-cubes m… |
-| {#T12.20-4} | 736 | D_g := the contraction of g's tensors T_P, P ∈ g, in loop order over s… |
-| {#T12.20-5} | 737 | κ_k^R := e^{P_{k−1}(C)μ_k^R + 4ζ_k^R}, absorbed into κ_k (15.8); S_R :… |
-| {#T12.21} | 738 | Bałaban proofs BP_COUPLING_PROFILES.md, BP_JOINS_BLOCK_SIZE.md, BP_LAY… |
-| {#T12.21-1} | 739 | δ_* := min(δ₀^{PBG}, δ₀^{(2.43)}) (JOINS #4.20), not #T12.17's δ_*; M′… |
-| {#T12.21-2} | 740 | M := 2LM′ (COVERING #4.7-1-3) and M := 2M′ (COVERING #4.7-1-5-2), loca… |
-| {#T12.22} | 741 | Bałaban proof BP_PBG_3132.md (balaban_proofs/), PBG (3.131)–(3.132). μ… |
-| {#T12.22-0-1} | 742 | BP_PBG_3132.md, continued. c₀ := Σ_{z∈ℤ}e^{−½r abs(z)} (#BQ.5); □^{(n)… |
-| {#T12.22-1} | 743 | v := Q*B, A := tĜv, and Ĝ := Σ_□h_□G_□h_□ (#BQ.10); h̄_□(c) := h_□(c₋)… |
-| {#T12.22-2} | 744 | Δ(y) := B^j(y) for y ∈ Λ_j (PBG p.397 l.30) and j_y, the scale of y (#… |
-| {#T12.23} | 745 | Bałaban proof BP_PBG_DRESSED.md (balaban_proofs/), the dressed average… |
-| {#T12.23-1} | 746 | W := e^{iηX} (#BD.6); c_β := 3(1 + d) (#BD.6-3); κ_l := c₁c_βL^{l−1}η … |
-| {#T12.24} | 747 | Bałaban proof BP_PBG_COMPLEX.md (balaban_proofs/), PBG at complex data… |
-| {#T12.24-0} | 748 | x_b := Ad(u(b₋))A′(b), bch(x, y) := (1/i)log(e^{ix}e^{iy}), and A″(b) … |
-| {#T12.24-1} | 749 | X₀ := Q(𝐔)G_CQ*(𝐔) at (𝐔, 0), G_C := G₀(𝐔), G at 𝐉 = 0, not LFR II's g… |
-| {#T12.24-1-0} | 750 | C_□ at 𝐔, local: T^loc(τ) := W^{−1/2}X_□(e^{iητA″})W^{−1/2} on C_□'s l… |
-| {#T12.24-1-0-1} | 751 | F(𝐔, 𝐉) := 𝒫*Δ^{(k)}𝒫 with ⟨B, Δ^{(k)}B⟩ := ⟨B, (QG₁Q*)^{−1}B⟩ − a⟨B, … |
-| {#T12.24-1-1} | 752 | a_C, a threshold below which Steps 1–3 hold for Mα₀ + α₁ + γ, with Mα₀… |
-| {#T12.24-1-2} | 753 | a_C′ ≤ a_C/8, the threshold of Step 4 for G and of #BX.8–#BX.8-1 (#BX.… |
-| {#T12.24-1-2-1} | 754 | f := Q*(QGQ*)^{−1}(·, y′) (#BX.8) and N_Q := Q*(QG₁Q*)^{−1}Q (#BX.8-2)… |
-| {#T12.24-1-3} | 755 | Schur's test costs N_Q at most ¼δ₁′ once RM ≥ 2(d + 2)log L/δ₁′, and D… |
-| {#T12.24-1-4} | 756 | a_R, the threshold of (d): O(1)LMBα₀ + α₁ + γ₀ ≤ a_R, with a_R ≤ a_cx/… |
-| {#T12.24-2} | 757 | n₀ := ⌊N/ℓ₀⌋, ℓ := N/n₀, φ_z(y) := Π_μmax(0, 1 − abs(y_μ − ℓz_μ)_N/ℓ),… |
-| {#T12.24-2-1} | 758 | F_z := 1_{□_z}(xI + F_U^{(z)})1_{□_z} (#BX.10-3); Γ_z := F_z^{−1}, Γ₀ … |
-| {#T12.25} | 759 | Bałaban proof BP_VAR_189.md (balaban_proofs/), VAR (189). abs(A′)_∞ :=… |
-| {#T12.25-0} | 760 | ρ₀ := 3dL, the reach of a local link (#BV.3), not #T12.8's ρ₀ := C(d)l… |
-| {#T12.25-0-1} | 761 | Lemma D reads PRT2 p.231 l.8–9's condition on the part of a contour in… |
-| {#T12.25-0-2} | 762 | PRT2 does not fix whether a bond with endpoints in two layers counts i… |
-| {#T12.25-1} | 763 | ε̄, the radius fixed in #BV.4 (ε̄ ≤ ¼a₃, VAR's a₃ of Proposition 4), a… |
-| {#T12.25-1-1} | 764 | V₁(X) := Σ_pη⁴½tr(DX)(p)Σ_{b₁≺b₂}i[X″(b₁),X″(b₂)] and 𝒲₁(X) := δV₁/δX … |
-| {#T12.25-2} | 765 | 𝔄^♯ := 𝔄 − H𝔇𝔄, 𝒱′(X)[Y] := (d/dτ)𝒱(X+τY) at 0 (#BV.10), and 𝔈 := (d/d… |
-| {#T12.25-2-1} | 766 | r₀ := 15δ₀/32, r₁ := r₀ − δ₀/128, and r₂ := r₁ − δ₀/128 = 29δ₀/64 (#BV… |
-| {#T12.25-2-2} | 767 | t := abs(A′)_∞, f(ζ) := a_j³((δ²V/δA′²)(ζA′)𝔄)(b) with j = j(b), and C… |
-| {#T12.26} | 768 | Bałaban proof BP_REG_DRESSED.md (balaban_proofs/), REG and CMP98 at dr… |
-| {#T12.26-1} | 769 | A_d (#BR.5), C₀^{ch} and c₂^{CMP98} (#BR.6-3, #BR.6-4), C₁^{ch} (#BR.7… |
-| {#T12.26-2} | 770 | Ṽ′ := (the average of V′V₀)V̄₀^{−1} and β := α₀L^{−2} (#BR.7); a_Γ := … |
-| {#T12.26-2-1} | 771 | Local symbols of BP_REG_DRESSED.md: P, the smallest box containing y a… |
-| {#T12.26-3} | 772 | F(A) := A(e^{iηA}U₀), S := {A : Q_j(U₀, ηA) = B on Λ_j}, N_{u₁} := {λ … |
-| {#T12.27} | 773 | Bałaban proof BP_DERIVED_CONFIGS.md (balaban_proofs/), the derived con… |
-| {#T12.27-1} | 774 | N, with G ⊂ U(N) compact, connected, and semisimple (CMP98 p.020 l.17,… |
-| {#T12.27-1-0} | 775 | BC's thresholds: ε₁^* := min{a₁/max{2(d − 1), 2L²B₃}, c^X/(L²B₃max{1, … |
-| {#T12.27-1-2} | 776 | m^X, the top index of 𝐁^X, the largest index of a point of 𝐁^X, with Ω… |
-| {#T12.27-1-2-0} | 777 | 𝔤^c := 𝔤 ⊗ ℂ = 𝔤 + i𝔤 ⊂ gl(N, ℂ), the sum direct as 𝔤 consists of Herm… |
-| {#T12.27-1-2-1} | 778 | G^c := G·exp(𝔤), 𝔤 of Hermitian matrices, a closed subgroup of GL(N, ℂ… |
-| {#T12.27-1-2-2} | 779 | In CMP98, G = e^{i𝔤} is connected and G^c "may be defined as an image … |
-| {#T12.27-1-3} | 780 | BC's §G pair: r_B := C₁ε₁/2 ≤ log 2 and r_B^X := C₁ε₁^X/2 ≤ log 2, VAR… |
-| {#T12.27-2} | 781 | t(B) := (2B₅/C₁)abs(B), with abs(𝓗(B))_𝐁 ≤ t(B) for abs(B) < r_B (#BC.… |
-| {#T12.27-3} | 782 | The average in BC is the chain's, RG I (0.4)/(0.12) (p.253, p.254 l.2–… |
-| {#T12.27-4} | 783 | T^{(n)} := L^nη(ℤ^d + (½, …, ½)), B^n(y) := Δ(y) ∩ T_η with Δ(y) the c… |
-| {#T12.27-5} | 784 | U_L(V) := e^{iη𝓗(B)}U₀, the Landau-gauge representative (#BC.5-1-1); A… |
-| {#T12.27-6} | 785 | F(V) := U_{p,X}(M_{𝐁^X}(U_L(V))) (#BC.5-1-4-1), not #T12.26-3's F(A); … |
-| {#T12.27-6-0} | 786 | The points x_l, x_n := y, x ∈ B^l(x_l), x_l ∈ B(x_{l+1}), x₀ = x (CMP9… |
-| {#T12.27-6-1} | 787 | ε^{dev} and ε^{dev}_0, the gauge-fixed deviations from 1 (D2.7 15.6(d)… |
-| {#T12.28} | 788 | Bałaban proof BP_PBG_3130.md (balaban_proofs/), PBG's series (3.130) a… |
-| {#T12.28-1} | 789 | C_ser, the constant of the order-n bound B₀(C_serb_X)^n (#BG.8-5); a_s… |
-| {#T12.28-2} | 790 | X₀, an operator of local order −2 with constant κ_X (#BG.1-1), not #T1… |
-| {#T12.28-2-1} | 791 | σ_m := s₁ + ⋯ + s_m, σ* ≥ max_{m<n}abs(σ_n − σ_m), and s₀ ∈ (0, r) of … |
-| {#T12.28-3} | 792 | S := G′RD*, (E_±f)(b) := f(b_±), (R_•B)(b) := R(𝐔_b)B(b), and m(b), th… |
-| {#T12.28-3-1} | 793 | ε, PBG's Hölder exponent of B₀′(ε), is ½ in Step 3 (#BG.8-3); the end … |
-| {#T12.28-4} | 794 | P, DP, PD* and the middle factors Q′*(term of (3.98))Q′ of (Q′G′²Q′*)^… |
-| {#T12.28-5} | 795 | An expansion of Δ^{(2)} or X₀ is a sum of terms, each depending on (𝐔,… |
-| {#T12.29} | 796 | Bałaban proof BP_PF_ACTION_LOWER_BOUND.md (balaban_proofs/), the actio… |
-| {#T12.30} | 797 | Background-iteration closure (WILSON_IT1_BACKGROUND_ITERATION_CLOSURE_… |
-| {#T12.30-1} | 798 | ⟨𝒲⟩_j := Σ_ℓ∫𝒲(V_j)ρ_j^ℓ(V_j)dV_j/Z with Z := Σ_ℓ∫ρ_j^ℓ(V_j)dV_j, the … |
-| {#T12.30-2} | 799 | X_c := π((M^k(e^{iη𝐇_j}U_{j+1}))(c)·(M^kU_{j+1})(c)^{−1}) − 1, the com… |
-| {#T12.30-3} | 800 | E^f_{const,k} := Σ_{i≤k}E°^f_i and N_k := κ_f^{(k)}e^{E^f_{const,k}}∏_… |
-| {#T12.30-4} | 801 | x_k := 8a_dc_hB₃ℓ_Cε_KL^{−(K−k)}, the map's (7)(d) exponent (§3.2), no… |
-| {#T12.30-5} | 802 | 𝐔 := e^{iη(𝐇_j(s,B′_j) + a′)}U_{j+1}, the deformed background of D2.1(… |
-| {#T12.30-6} | 803 | Δ_i := sup‖(M^iU′)(b) − (M^iU)(b)‖ over the scale-i bonds of the two b… |
-| {#T12.30-7} | 804 | N_tube := 4ℓ_C·3·2^{d−1}, the scale-K cubes met by the scale-k tube of… |
-| {#T12.30-8} | 805 | e^{c_C} := exp(4Cℓ_C(ρ_Kε_K + τ_K²) + r^R_K) ((iv-e)), whose c_C is no… |
-| {#T12.30-9} | 806 | The coarse chain at k = 1 (§5.3): c_X = 2099601e^{1+ν_e+5ν_f/L}(1+Ĉ^g)… |
-| {#T12.30-10} | 807 | e^{g,(j+1)}_X := Φ^g_ℓ(X) − Φ^g_{ℓ₀}(X), the coarse #T12.19-11 e^{(k+1… |
-| {#T12.31} | 808 | General-loops note (WILSON_IT1_GENERAL_LOOPS_2026_11_10.md, cited by #… |
-| {#T12.31-0} | 809 | A family 𝒞 = (C₁, …, C_{N_C}), N_C ≥ 1, consists of pairwise vertex-di… |
-| {#T12.31-1} | 810 | Lengths in step-k bonds, each its step-K′ value times L^{K′−k} and wri… |
-| {#T12.31-1-1} | 811 | diam_ph(C) := uL^{−K}diam_0(C) ∈ uL^{−q(C)}ℤ, the physical ℓ^∞-diamete… |
-| {#T12.31-1-2} | 812 | V4's torus conditions of (H3) besides K_μ ≥ 3(n + 2) (#T12.31-1-1 for … |
-| {#T12.31-1-3} | 813 | For general loops, 4n becomes P_c := P_0(C)/L = P^{co}(C)L^{K−1−q(C)},… |
-| {#T12.31-2} | 814 | Λ(C) := sup_{x≠y}d_C(x, y)/abs(x − y)_∞ over the points of C, d_C the … |
-| {#T12.31-3} | 815 | V4's first step at C (§3). c_h(C) := 16Λ̄(C)(1 + R_*), V4's hull const… |
-| {#T12.31-3-1} | 816 | C_net(C) := 8(1 + R_*)(1 + q_*(C) + c_h(C)), β(C) := μ/(1024(1 + c_h(C… |
-| {#T12.31-4} | 817 | A_h(C) := 8Λ̄(C) + 1, #T12.13's A_h = 17 for a square (#GL3.11-2); A_s… |
-| {#T12.31-5} | 818 | κ_C := exp(Σ_σn_σκ_{v_σ} + Σ_{c∈𝒦(C)}ζ_{v_c,w_c}), V4's flat factor at… |
-| {#T12.31-5-1} | 819 | The single-loop chain at C (§§2, 4–5): c_C(C) := 2Λ̄(C), the map's con… |
-| {#T12.31-6} | 820 | C_win(C) := 2Σ_{d≥0}e^{−c_w(d/(10Λ̄(C)) − 1)₊} ≤ 41Λ̄(C)/c_w (#GL4.10-… |
-| {#T12.31-7} | 821 | κ_j := exp(log κ_j(C)), the general form of #T12.14's κ_j (#GL4.1). At… |
-| {#T12.31-8} | 822 | λ_K := P_{K′}(C)‖dπ‖(4C_G(ε₀) + C_Y)ε₁L^{−(1−ε₀)k}, written λ_K(C), #T… |
-| {#T12.31-9} | 823 | r^R_K(C) := (P(C)/r(C))C^R_1R̂_K²(2 + 48R̂_K/c^R_E)e^{−p₀(g_K)/5} (#GL… |
-| {#T12.31-10} | 824 | The continuum normalisation (#GL5.6-1): δm_{k,v} := −κ^{(k)}_v/Π_k, mi… |
-| {#T12.31-11} | 825 | u_𝔏(𝒞) := 2Λ̄(𝒞)u_𝔏 (#GL6.4-2); L₀(𝒞) := 4Λ̄(𝒞)²L₀^× (#GL6.4-3, #GL7.1… |
-| {#T12.31-11-1} | 826 | For general loops C^×_E is #T4.52's with P_Σ/4 for #T4.51's ℓ_Σ, which… |
-| {#T12.31-12} | 827 | C_lift := 6, the constant of the lifting network's non-contour edges (… |
-| {#T12.31-13} | 828 | The pair factorisation for two general loops C₁, C₂ (§8). ℓ̄_i := P_{K… |
-| {#T12.31-14} | 829 | N_lad(C_i), the number of plaquettes in the ladder chain of C_i^{(K′)}… |
-| {#T12.31-15} | 830 | c^𝒦_ty := 1 + 4Lip_χ(1 + 1.06a_dc_hB₃), not #T12.4-4-1's c_ty, gives a… |
-| {#T12.31-16} | 831 | Reflection positivity at level q (§9), with the reflection-positivity … |
-| {#T12.31-16-1} | 832 | 𝔊^{gl}_q := the finite families of pairwise vertex-disjoint loops of 𝒞… |
-| {#T12.31-16-2} | 833 | κ_{C,χ} := κ^{(K′)}_{C,χ} at K′ = K − j_q, with log κ_{C,χ} = Σ_{k≤K′}… |
-| {#T12.31-17} | 834 | Nonvanishing for general loops (#GL9.8), with the nonvanishing note WI… |
-| {#T12.32} | 835 | IT-1 note (WILSON_IT1_LINE_DEFECT_2026_10_21.md, cited by section and … |
-| {#T12.32-1} | 836 | §3e(3.0), repair K: γ_c := γ/2 and h_c := h_+ + γ/2 replace V4's γ = γ… |
-| {#T12.32-2} | 837 | §3e(3.1): r_H := min(r_e, r_iv), not #T12.6-19-1's r_H, is the radius … |
-| {#T12.32-3} | 838 | §3e(3.4)–(3.5): C_Γ := γ_c^{−1/2} + h_cγ_c^{−3/2}/2; s₀ := γ/4; C₃ := … |
-| {#T12.32-4} | 839 | §3e(3.6), repair K′: ρ₀ ∈ (0, 1], of L and the group, is the width of … |
-| {#T12.32-5} | 840 | §3e(3.8)–(3.9): C_q := C·C_BCH, with C the constant of V4's (c4-10-4),… |
-| {#T12.32-6} | 841 | §3e(3.12), the shift at 𝐔: C_δ := C_ee^{μ_xρ_L}(8(2ρ_L + 1)⁴C_m + 1), … |
-| {#T12.32-7} | 842 | §3f(3) M8: C_{DJ} := 13L²m_L ≥ (m_L·164L⁴m_L)^{1/2}, the Schur bound o… |
-| {#T12.32-8} | 843 | Local to §3e: ‖a′‖_∞, ‖a′‖_X, m̂₀ = m̂(U₁), A_n(R), δ*^c_n and a*_n ((… |
-| {#T12.32-9} | 844 | Local to IT-1 §3g(1): E_D(Z) := {b ∈ D : b has an endpoint in Z}, for … |
-| {#T12.32-10} | 845 | §3j(1)–(2), the local shift. ε_s := m_Lσ_H(ℓ_s − ρ_L), the row-sum bou… |
-| {#T12.32-10-1} | 846 | §3j(3): c_ℓ := 4(2ρ_L+1)⁴m_L, with sup_ch(ℓ_Λ(c)) ≤ c_ℓϑ_Vr, and ε_N :… |
-| {#T12.32-11} | 847 | §3j(4), the t-family at m̂: d₀(Y) < s_p for every host of 𝐃₀(Λ), with … |
-| {#T12.32-12} | 848 | §3j(5): N₀ := the least N with 2c_hγ^{−1}N_lat(μ_H)c_ℓe^{μ_Hρ_L/10}e^{… |
-| {#T12.32-12-1} | 849 | §3j(6): N(g₀) := the least N ≥ N₀ with e^{−μ_Hℓ_sN/4} ≤ g₀, and R_t :=… |
-| {#T12.33} | 850 | N-loops note (WILSON_IT1_N_LOOPS_UNIFORM_BOUND_2026_11_05.md, cited by… |
-| {#T12.33-1} | 851 | Tube hulls (#NL1.3-6.1). Let S′ be a connected union of a finite famil… |
-| {#T12.33-2} | 852 | (H1′) (#NL6A.2-1): S_D is the union of a family 𝒫_D of pieces, each of… |
-| {#T12.33-3} | 853 | Step 1 (§9). For a group γ with contacts on C_i, H^i_γ is V4's hull if… |
-| {#T12.33-4} | 854 | K₁, of N_C, L, M, η and V4's constant C of #NL9.6-5-2, is not #T12.19-… |
-| {#T12.33-4-1} | 855 | C^src is V4's, with the rows' derivative constants maximised over χ₁, … |
-| {#T12.33-5} | 856 | N-loops note, the pair's objects for N_C loops, with C := ⊔_iC_i for t… |
-| {#T12.33-6} | 857 | The class (§2). 𝒲^{(N)}_k := Π_iκ^{(k)}_{C_i}·e^{𝓔_k}[Π_if^{(i)}_k + Σ… |
-| {#T12.33-6-1} | 858 | E^{(N)}_const,k := Σ_iE_const,k(C_i, χ_i) + Σ_{j≤k}E^×_j + Σ_{N_B<j≤k}… |
-| {#T12.33-7} | 859 | Cross constants (§5). E^×_{k+1} := log S°(ℓ₀) − Σ_ilog S°_{C_i}(ℓ₀) (#… |
-| {#T12.33-7-0} | 860 | The R-steps (§6B). For A ⊆ {1, …, N_C}, Ξ^c_A is #T12.20-2's Ξ^c for t… |
-| {#T12.33-7-1} | 861 | Step 1 (§9). E^×_ξ := 𝓛 − Σ_i𝓛_i (#NL9.7-2), with 𝓛 and 𝓛_i the connec… |
-| {#T12.33-8} | 862 | Sets of §6A, with #T12.33-1's tube hulls and #T12.33-2's 𝒯(D). The pai… |
-| {#T12.33-8-1} | 863 | For a merged D_G, 𝒫_{D_G} consists of its groups' families (#NL6A.3-1,… |
-| {#T12.33-9} | 864 | Cross vertices (#NL6A.5). A cross vertex v has no window extension: wi… |
-| {#T12.33-9-1} | 865 | For an M-vertex, 𝒫_M consists of the π_{k+1}-cubes of M and the 𝒫_W, W… |
-| {#T12.33-10} | 866 | Constants (§7). C^×_E (#NL7.1-1), E* := Σ_iC_Σ(χ_i)𝔞̄ + C^{R°}_E + C^×… |
-| {#T12.33-10-1} | 867 | C^{R°}_E := N_CC^R_1R̂_{K′}²(2 + 24R̂_{K′}/c^R_E)e^{−p₀(g_{K′})/5} ≤ N… |
-| {#T12.34} | 868 | O4 note (WILSON_IT1_O4_CLOSURE_2026_10_26.md, cited by section). ρ_ω :… |
-| {#T12.34-1} | 869 | ω̃′_t := ω_t + e^{κs_p}((1 + C_ω)τ̄ + τ̂_N) and ω̄̃′ := ω̄ + e^{κs_p}(… |
+| {#T1.5-2} | 17 | 3 / M (RW1), V4's M / V4's δ_M conditions of eq:c-standing-conditions … |
+| {#T1.6} | 18 | 3′ / VAR's a₀, a₁, a₅, and M(ε₁), taken at VAR's raised product R₁M₁ =… |
+| {#T1.7} | 19 | 4 / PBG's α₀ (with α_J := Mα₀, LF #4.60), then PBG's α₁ (RG I's α's ar… |
+| {#T1.8} | 20 | 5 / VAR's ε₃ first, then ε₁ (VAR's, and 10.5's fixed value), ε₁^{(1)} … |
+| {#T1.9} | 21 | 6 / γ (hence ḡ, ε_k, the data parameters, ε_U^{(i)}, ϱ, ϱ̄, α_c, d̄(ω)… |
+| {#T1.10} | 23 | Rule 1: no condition bounds α₀ or α₁ above by ε₁, by ε_k, or by ϱ. |
+| {#T1.11} | 24 | Rule 2: VAR's upper bound M_V ≤ M(ε₁) = R₁M₁a₁/ε₁ is used as an upper … |
+| {#T1.12} | 25 | Rule 3: an O(1) belongs to the stage of the result it comes from; an O… |
+| {#T1.13} | 26 | Rule 4: a constant that may grow with a size (C₀ and C_F carry R₁M₁ = … |
+| {#T1.14} | 27 | Rule 5: every condition the note uses on its constants is entered in W… |
+| {#TS2} | 29 | ## 2. Sizes and Integers |
+| {#T2.1} | 33 | d / dimension (4 for the application; the notes keep d) / — / 0 / none… |
+| {#T2.2} | 34 | L / block-spin factor / RG I, CRE / 1 / none / |
+| {#T2.3} | 35 | a_j, a_n / L^jε, the lattice spacing of the scale j / CRE / — / a_{j(x… |
+| {#T2.4} | 36 | η, ε / finest spacing; ε in the notes, η in PBG and VAR / PBG, VAR / —… |
+| {#T2.5} | 37 | M′ / PBG's block size at the joins (BP_JOINS_BLOCK_SIZE #4.22), and th… |
+| {#T2.6} | 38 | R₀M₀ / PBG's local-sequence size / PBG p.408 l.26–27; W-δ #W11.105-6 /… |
+| {#T2.7} | 39 | R₁M₁ (printed) / VAR's and REG's product as printed (VAR p.277 l.12, R… |
+| {#T2.7-1} | 40 | R₁M₁ = M′ (raised) / VAR's constructions on the LF note's chain and in… |
+| {#T2.8} | 41 | M₁ (default) / PBG's block size M′ / W-δ §8 #W8.11 / 3 / see next row … |
+| {#T2.9} | 42 | M₁ (CRE) / CRE's block size KM′ ≥ M′, a power of L ≥ 2M_J(d, L) for (J… |
+| {#T2.9-1} | 43 | M₁ as a threshold / CRE's M₁, "the size of large cubes for which all t… |
+| {#T2.10} | 44 | M (§§7–8, 10) / PBG's block size KR₀M₀ = M′ / PBG p.408 l.28 / 3 / wri… |
+| {#T2.11} | 45 | M (§§11–12) / RG II's cube size; also in C_U(M), (W-M) δ₁(δ₀/6)M ≥ κ₁ … |
+| {#T2.11-0} | 46 | M (RG I's definition; bare M in BFWL) / RG I defines M: "cubes of a si… |
+| {#T2.11-1} | 47 | M (bare M in BFWL) / BFWL's bare M: RG I's cube size (#T2.11-0; §§0, 2… |
+| {#T2.11-2} | 48 | M (bare M in BFWL), other meanings / VAR's M in Lemma 10.14 (#B10.177-… |
+| {#T2.11-3} | 49 | M₀, M₁ (BFWL) / M₀ := C_ΛO(1)C₃ε*, Proposition 2.9's bound of R on the… |
+| {#T2.12} | 50 | M_V / VAR's cube parameter (VAR writes M), a multiple of R₁M₁ with M_V… |
+| {#T2.13} | 51 | M′_V / VAR's own M′ := M/(R₁M₁) / VAR p.300 l.30, p.304 / — / LF only;… |
+| {#T2.14} | 52 | K (PBG) / integer in PBG's M = KR₀M₀, a power of L, K ≥ 4 / PBG, W-δ §… |
+| {#T2.15} | 53 | K (CRE) / integer in CRE's M₁ = KM′, written K_{M′} in the LF (BP_JOIN… |
+| {#T2.16} | 54 | K (VAR) / the notes' name for the coefficient of VAR's (165), K := B₀(… |
+| {#T2.17} | 55 | K_T / max{1, (2/(eδ′M₁))²}, δ′ := min(δ_ι, ⅛δ₁); the tail of ι_Y again… |
+| {#T2.18} | 56 | K (LF scale) / the final scale k_s + j(C) / LF / — / only where named … |
+| {#T2.19} | 57 | K_ℬ / constant of §12's bootstrap, depending on d, L, δ₁, and δ_ι, K_ℬ… |
+| {#T2.20} | 58 | R / walk-problem separation of PRT2 (2.2); R ≥ 12dL / PRT2, W-δ §7 / 3… |
+| {#T2.21} | 59 | R′ / LK − 1, the global layers' width in units of M′ / BP_JOINS_BLOCK_… |
+| {#T2.22} | 60 | R_ι (lift) / R_ι = 4dL + 1, the lift's layer width in blocks of CRE's … |
+| {#T2.23} | 61 | R_k / CRE's R_k = least power L^n, n an integer, with R_k ≥ (log g_k^{… |
+| {#T2.24} | 62 | λ_R / K_RLM + 1 (the L for RG I's M replaced by LM at a finer layer, C… |
+| {#T2.25} | 63 | h₀ / least integer with L^{h₀} > max(2M₁/M, L(d + 1)) / W-δ #W8.8 / 3 … |
+| {#T2.26} | 64 | n_C / the number of contour bonds of the loop: n_C = 4nL for the coars… |
+| {#TS3} | 66 | ## 3. Exponents and Small Parameters |
+| {#T3.1} | 70 | ε₀ (exponent) / exponent in γ_w, C(ε₀), δ^f_j, and the LF note's d̄; 0… |
+| {#T3.2} | 71 | β / Hölder exponent of (Wδ-1); β ∈ [3/4, 1) / W-δ §8, #W12.83 / 0 / §1… |
+| {#T3.3} | 72 | β″ (LF) / crude lattice Hölder exponent of the second differences in L… |
+| {#T3.4} | 73 | β₂ / (1 + β)/2, the exponent of (3.43) for G^A / W-δ 10.5, 10.6 / 0 / … |
+| {#T3.5} | 74 | β′ (§11) / 0 < β′ ≤ min(1/60, β_o − γ_w), β_o := min(β, 1 − 2ε₀) / W-δ… |
+| {#T3.6} | 75 | β′ (Cauchy, LF) / the age exponent, β′ := ½min(β_H, 1 − β_E) ≥ 19/40, … |
+| {#T3.7} | 76 | β_E / the small positive exponent of CRE (3.67) and of the irrelevant … |
+| {#T3.8} | 77 | θ_V, θ̃ / θ_V := β′/(2(4 + β′)) (≈ 0.053 at β′ = 19/40), θ_V < β′/8; θ… |
+| {#T3.9} | 78 | α₀ / PBG's regularity parameter of (3.35)–(3.36) / PBG p.396 / 4 / VAR… |
+| {#T3.10} | 79 | α₀^W / §12 bootstrap's class parameter, α₀^W := O(1)d²L²C₀′ε₁, γ-depen… |
+| {#T3.11} | 80 | ω / §12 bootstrap's weight, ω(c) := min{(a_{j(c)}/ε)², e^{⅛δ₁d_ε(c,Y)}… |
+| {#T3.12} | 81 | α₁ (PBG) / PBG's complex-domain parameter of (3.37); PBG has no α₂ / P… |
+| {#T3.13} | 82 | α₀, α₁, α₂, α₃ (RG I); λ_Q, μ_P, C_mem, C_m, C_{Q*}; C_α, C_r, ρ̄ (Cau… |
+| {#T3.14} | 83 | γ₀ / RG I's bound on 𝐉 in U_j^c (γ₀ = α₀, RG I p.263 l.2–3); LFR II's … |
+| {#T3.15} | 84 | α_J, α_*′ / α_J := Mα₀, the pair class's current bound (LF #4.60), fix… |
+| {#T3.16} | 85 | α₁^A / 4L²(C_L + 1)(c_uMα₀ + α₁), run A's complex-domain size / W-δ 10… |
+| {#T3.17} | 86 | ϱ, ϱ̄ / ϱ = c_ρα_m, the size of the joint line's moves; ϱ̄ := sup over… |
+| {#T3.18} | 87 | α_c / C_cϱ̄, the size of B′ at the points c(t) / W-δ #W10.5.45-24 / 6 … |
+| {#T3.19} | 88 | ε₁ (VAR) / VAR Theorem 1's data parameter of (7), abs((∂V)(p′) − 1) < … |
+| {#T3.19-1} | 89 | ε₁ (VAR), the choice / (7) at ε gives (7) at every ε′ ∈ [ε, a₁], so Th… |
+| {#T3.20} | 90 | ε₁ (10.5) / a fixed value between V₀'s data parameter and a₁, below th… |
+| {#T3.21} | 91 | ε₁^{(1)} / the ε₁ of 10.5's one-step problem at 𝐇″_k, also serving VAR… |
+| {#T3.22} | 92 | ε_U^{(i)} / the data bounds of U_i's problems (𝐁₁, 𝐁₂), ε_U^{(i)} ≤ O(… |
+| {#T3.23} | 93 | ε₃ / VAR's parameter of (50)–(51) (p.285), (77) (p.290) and Propositio… |
+| {#T3.24} | 94 | ε₄, C_♯ / VAR's ball parameter of (115), 2B₀C₁B₃ε₁ ≤ ε₄ ≤ a₄, taken as… |
+| {#T3.25} | 95 | data parameters / O(1)B₃²B₅M⁶ε_k (*The background pairs.*), B₅M⁵ε_k (*… |
+| {#T3.26} | 96 | ε₂ / second band parameter; ε₂ ≤ B₁(O(1)B₃³B₅M⁶ε_k + C₁ε₁) / W-δ §12 /… |
+| {#T3.27-0} | 97 | A₀, A₁ (CRE) / the constants of p₀(g) = A₀(log g^{−2})^{p₀}, ε_j = g_j… |
+| {#T3.27} | 98 | ε_k, ϑ_k, r^χ_k, m_k, T₀, μ_k, c_m, C_fl, C₁₃, c_{δ₂} / ε_k := g_kp₀(g… |
+| {#T3.28} | 99 | a₀ (PBG) / PBG Theorem 3.1's threshold, Mα₀ ≤ a₀ / PBG p.397, Cauchy #… |
+| {#T3.29} | 100 | a₀ (VAR) / VAR's threshold; α₀ ≤ a₀ at α₀ = ε₀ / VAR p.279 / 3′ / not … |
+| {#T3.30} | 101 | a₁ (PBG) / threshold of PBG Corollary 3.5 and Theorem 3.4; in O(1)L⁵Mα… |
+| {#T3.31} | 102 | a₁ (VAR), a₁^{(M_P)} / threshold of VAR Theorem 1; in ε₁ ≤ a₁/7, ε₁ ≤ … |
+| {#T3.32} | 103 | a₃ (VAR) / threshold of VAR Proposition 4, ε₃ ≤ a₃; a constant of d an… |
+| {#T3.32-1} | 104 | a₄ (VAR) / Proposition 6: "There exists a positive, absolute constant … |
+| {#T3.32-2} | 105 | dependence of Bałaban's constants / "The constants a₃, C₄ depend on d … |
+| {#T3.33} | 106 | γ, ḡ / γ, the coupling-side small parameter; ḡ, the unit-scale couplin… |
+| {#T3.34} | 107 | κ (Bałaban) / the decay rate of the inductive bounds, large at fixed β… |
+| {#T3.34-1} | 108 | κ_s, κ_c (LF) / the widths of the LF's soft tests: κ_s := β/30 = 1/240… |
+| {#T3.34-2} | 109 | ε₁^{JB}, M₀ (LF), ε₁′ (LF) / ε₁^{JB} := max(2(1 + 2κ_s^{LF})L²ε_0, 2(1… |
+| {#T3.34-3} | 110 | λ_β (LF) / λ_β := 1 − βΣ_{i=h+1}^j2^{−abs(l−i)} − βΣ_{q=l+1}^k2^{−(q−l… |
+| {#T3.35} | 111 | r_k, x_k, b_k (the step-k small-field cutoff) / CRE p.268 l.18 prints … |
+| {#T3.36} | 112 | r_{α,k}, 𝒫_k^m, ε_k^♯ (CRE p.277's margin) / r_{α,k} := min(β,1)α_{1,k… |
+| {#T3.37} | 113 | θ, ε′, λ_*, λ′ (CA closure) / θ ∈ (0,1) fixed (θ = ½ serves); ε′ := mi… |
+| {#T3.38} | 114 | C^P(j), ε̄^g_A (two-loops Cauchy) / C^P(j) := O(1)13^dC_d′(LR_j + 1)su… |
+| {#T3.39} | 115 | β (CRE) / CRE's constant in the coefficients 1 − β(1 − 2^{−(j−n)}) of … |
+| {#T3.40} | 116 | p₁, p₁(g), δ′_j / p₁(g) := (log g^{−2})^{p₁}, with p₁ < p₀, "other con… |
+| {#T3.41} | 117 | ν_L, N_k, θ_L (two loops) / N_k := max(N₀ + 1, N′_k), the N of the 𝐑-s… |
+| {#T3.42} | 118 | h_k (the map's polydisc 𝐇-bound); ȟ_k, ȟ_n (the map's curvature-check … |
+| {#TS4} | 120 | ## 4. Derived Constants |
+| {#T4.1} | 124 | c_u / O(1)L³, the constant of (3.35) on □̃⁵ at the index j (O(1)L⁵ at … |
+| {#T4.2} | 125 | c_π / the constant of Δ′_π in (3.131) (PBG prints O(1)Mα₀), containing… |
+| {#T4.3} | 126 | C₃ / constant of the Δ^{(2)} factors, O(1)C₃Mα₀, containing c_u / PBG … |
+| {#T4.4} | 127 | C₀ / C₀ := c₁₁C₀^{VAR}, with C₀^{VAR} := 4R₁M₁(B₃ + B₄(1)) the constan… |
+| {#T4.5} | 128 | C₀′ / C₀′ε₁ := K_ℬ(C₀ + C(ε₀))ε₁ + C_ℬC(β₂)ε₂; for the base at the rea… |
+| {#T4.6} | 129 | C₁ / five distinct constants under one letter: VAR (14)'s absolute C₁ … |
+| {#T4.7} | 130 | C(ε₀) / the Cauchy note's constant of §9.7–9.8; it absorbs C_ιe^{δ_ι(R… |
+| {#T4.8} | 131 | C_F / the one-step lift's curvature constant, abs(F) ≤ C_Fε₁/a² on X^∼… |
+| {#T4.9} | 132 | C_ι / O(1)L²C_LC_F with O(1) ≥ 2 of the Cauchy note's §9.8 (#C9.8.15-3… |
+| {#T4.9-1} | 133 | B_ι, C_{ℒ,β} / B_ι := the O(1) of PBG (3.133), the bounds of H₁ and so… |
+| {#T4.10} | 134 | c_G, r_G / Lie-algebra constant and the radius of the BCH and logarith… |
+| {#T4.10-1} | 135 | C_L / the sum of the absolute weights of the plain linear average Ā″, … |
+| {#T4.11} | 136 | c_F / c_F ≥ 8L³(c_u + 1)/r_G / W-δ 10.4 / d, G, L (c_u, r_G) / |
+| {#T4.12} | 137 | C_c / the larger O(1) of the two bounds on B′ / W-δ #W10.5.45 / stage … |
+| {#T4.13} | 138 | C_tel / max(3, (5/2)(c₁ + c₂)), c₁ the total weight of Q₁ and c₂ the c… |
+| {#T4.14} | 139 | C_ℬ, C_ℒ, C_ℒ′, C_ℒ″ / C_ℬ := O(1)L^{3+β₂}C_ℒ″(1 + C(β₂)), §12 bootstr… |
+| {#T4.15} | 140 | δ_g / min(δ₁, δ₁′), RG II's geometric constant / W-δ #W11.122 / stage … |
+| {#T4.16} | 141 | δ_min / min(δ_π/4, δ₀′/(54L), δ_gf′/(6L), δ_D′/(12L)) / W-δ #W11.118 /… |
+| {#T4.17} | 142 | δ_br, δ_br^c / the bridge's rates at the real and the complex chain co… |
+| {#T4.18} | 143 | δ₀′, δ_c, δ_gf′ / δ₀′ = min(δ₀, ¼δ_Q, ¼δ₁, ¼δ_c); δ_c := (1/16)min(δ_V… |
+| {#T4.19} | 144 | κ_V, κ_ℋ / κ_V = O(1)B₀C₄C_ℒ^g(B₅ + B₀C₁B₃)ε₁ (§11's contraction); κ_ℋ… |
+| {#T4.20} | 145 | c_d / 2d(3^d + 1) / W-δ §8 #W8.18 / d / |
+| {#T4.21} | 146 | γ_w, γ_H / γ_w := min(β, (1 − ε₀)/3); γ_H := βγ_w/(1 + β); γ_H − 2β′ f… |
+| {#T4.22} | 147 | C_w / the constant of δ_w(ω) ≤ C_w(ε/a_{m(ω)})^{γ_w}, #W8.2 plus C_w^{… |
+| {#T4.23} | 148 | c₀(α), c_tot(α) / c₀(α) := Σ_{z∈ℤ}e^{−αδ₀abs(z)} < 4/(αδ₀); PRT2's cou… |
+| {#T4.24} | 149 | d̄, d̄_j / d̄(x) := C_U(M)(ε/a_{min(j(x),n)})^{(1−ε₀)/3}ε₁, n the birt… |
+| {#T4.25} | 150 | C_U(M) / 4C_G(ε₀)c″_K + 2B₀c_KC′_Δ(M) + C_T; enters only upper bounds … |
+| {#T4.26} | 151 | C_s, C_T / C_s := C_ℒL⁹B₃ + dL⁵(C_F + L²B₃), the strip sources' size b… |
+| {#T4.27} | 152 | C_TJ, c_R, x₄ / C_TJ := O(1)B₀C_ℒ′c_λc_Rc₀(⅛)^dL^{33}B₃, with B₃·O(B₃)… |
+| {#T4.28} | 153 | C_r′, C″ / C_r′ := O(B₃)sup_{x≥1}P(Lx)e^{−δ₀Mx} (□̃² meets only the la… |
+| {#T4.29} | 154 | c_∂, C″_∂ / c_∂ := 2(C_{π′} + C_T)/C_U(M), C_{π′} #T12.9-3-1's, the co… |
+| {#T4.29-1} | 155 | C_{ε′} / C_{ε′} := C sup_{p≥−1}(p + 2)L^{−ε′p} for ε′ > 0, C depending… |
+| {#T4.29-2} | 156 | C_irr / C_irr := c_□^{−1}L^{4+β′}max(2C_α⁺, 2C_{ε′}), the age-factor c… |
+| {#T4.29-3} | 157 | C_{J_S}, C_α⁺ / C_{J_S} := O(1)B₀c₀(1)^d, with the O(1) of the bound o… |
+| {#T4.29-4} | 158 | n₀, n_h / n₀ := the least integer n′ ≥ max(3, n_A, n_H, n_R) (#T4.29, … |
+| {#T4.29-5} | 159 | n₀″, n₀‴, n₀′ / n₀″ := the least integer ≥ n₀ with the move of the fir… |
+| {#T4.29-5-1} | 160 | n₀′'s bounds / at every n ≥ n₀′: r(Y) ≤ 1/64 by LF #4.553 (#4.553-2), … |
+| {#T4.29-6} | 161 | n_H, n_R / n_H := the least integer ≥ 2 with 6C_{Δ𝐇}(C_Hw + 1)L^{γ_H −… |
+| {#T4.29-7} | 162 | C_ex, E_pt, σ_c^ℂ(x) / C_ex := 3^{5/2}8^{q₀}(1 + β₀)³C(M, β, κ)E₀, so … |
+| {#T4.29-8} | 163 | n_F^c / n_F^c := the least k_s with C_{rF}θ̃^{k_s/8} ≤ ½ (#D.n_F^c), s… |
+| {#T4.29-9} | 164 | n_N / n_N := the least n′ with (2log(ḡ^{−2} + b′(3k/4 + j(C)) + C))^{ν… |
+| {#T4.30} | 165 | C⁰_{rsp}, C_{rsp}, C_Λ, δ (two loops), λ, c′, λ^{(k)}_n / C⁰_{rsp} := … |
+| {#T4.31} | 166 | C_{gr}, C_{jn}, C_{lk}, C_y, y^R_k (two loops) / C_{gr} := 2^dC_{KP}·C… |
+| {#T4.32} | 167 | C_G (two loops), S_L, B_G / C_G := O(1), a constant of d, abs(d_{n+1}(… |
+| {#T4.32-0} | 168 | C_{D₀} (two loops) / C_{D₀} := O(C_G), abs(D₀λ̂)_{(0)} ≤ 2(abs(A_L)_{(… |
+| {#T4.32-1} | 169 | B̄_G, C_u (two loops) / B̄_G := B_G + C_uLC_GS_L, with C_u, depending … |
+| {#T4.33} | 170 | c_9, C_b, C_r (Cauchy §9), C_ℒ (Cauchy §9.4), C_gap, c₁₁, C₀^{VAR}, ε_… |
+| {#T4.34} | 171 | C_ℒ^{ker}, c_ε, C_ℒ^π / C_ℒ^{ker}, the constant of the local bounds ab… |
+| {#T4.35} | 172 | C^{LF}(ε₀), C_{yd}, C_w(ε₀), ε₁^{LF}, c^{LF}_{ε₁} (Cauchy §6.2) / ε₁^{… |
+| {#T4.36} | 173 | λ_K, C_Y, f^A_k (Cauchy §7) / f^A_k := dim(π)^{−1}tr π(Hol_C(U^A_k(V))… |
+| {#T4.37} | 174 | C^E_Σ, C^T_E, c^T_E, C̄_Z, c^Z, C^R_E, c^R_E, a_E, A_E, A^{TZ}_E (Cauc… |
+| {#T4.38} | 175 | m^E_K, τ^E_K, S_E, C^E_r, r^E_i, N^{pt}, κ_I, a_{Ew}, r̄^E_K, r^V_K, C… |
+| {#T4.39} | 176 | C_a (Cauchy §8.7) / C_a := 2C_s(1 − L^{−β′}/θ̃)^{−1} + C_S″ + C_e + 4C… |
+| {#T4.40} | 177 | C^w_M, c^w_M, c^w_N, A_w, a_w, m^w_K, τ^w_K, S_w, C^{w,2}_M, c^{w,2}_M… |
+| {#T4.41} | 178 | d^{ins}_i, D^{ins}_i, C_{ins}, C^*_{ins} (Cauchy §8.3, §8.7, the marke… |
+| {#T4.42} | 179 | 𝒟(𝒴), D̂_g, σ^{set}, σ^𝒟, ℓ_P, λ_𝔏, D^∪_P, σ̃(c), u, b_Y, c_off, ŷ_g, … |
+| {#T4.43} | 180 | C_Ψ″, m^w_Ψ, N(Y_i), E(Y_i) (two loops) / C_Ψ″, the constant of the su… |
+| {#T4.44} | 181 | C_box, ν_e (the map's box constant and extent rate; two loops) / C_box… |
+| {#T4.45} | 182 | C_av, μ (covariance note) / C_av := 2(B₃ + 2c_dB₅), the constant of (K… |
+| {#T4.46} | 183 | c₃, c_λ / c₃ := (2A₁/A₀ + (4dL)²(1 + β₀)B₃)(1 + O(ε_k)), the O(1) of C… |
+| {#T4.47} | 184 | f_n, f♮_n, 𝒟♮_k, λ_w, λ_cur, μ, μ^{(k)}_n, w, c_w (two loops) / f_n :=… |
+| {#T4.48} | 185 | K, C_K, C_K^α, C_* (two loops) / K := O(C_QS_L), C_Q #T4.30's, the fac… |
+| {#T4.49} | 186 | 𝒟^λ_k, 𝒟^3_k, 𝒟^{♮,3}_k, 𝒟^{λ,3}_k, x_n, c_{nm} (two loops) / for λ ≥ … |
+| {#T4.50} | 187 | r^{an}_k, r^{ext}_k, c_{ext} (two loops) / r^{an}_k := min(3r_{α,k}/(4… |
+| {#T4.51} | 188 | pl_k, 𝔟̄, ν_×, A′_E, C_χ, K_χ, r₀, ℓ_Σ, Δ_×, and the flat values c_𝒢, … |
+| {#T4.52} | 189 | C_cr, C_cr^λ, A^cr_{k+1}, A^R_k, A^cr, A^×, E^×_{k+1}, κ_{k+1}, E°_{k+… |
+| {#T4.53} | 190 | ε^r_k, ϑ_k, λ_n, S^R (at the 𝐑-steps), t_k, C_ϑ, y^s_k, C_att, u₁, C_w… |
+| {#T4.54} | 191 | F^×_K, F^{(N)}_K, λ^{(i)}_K, λ_K, a_×, a^×_w, â_*, m_K, τ^cr_K, C_×′, … |
+| {#T4.55} | 192 | ε̂_i, δε̂_i, u₀, C^{ε̂}, C^{ε̂}_1, q^{fr}_K, x̄_K, q^{car}_K, q_K, τ^{… |
+| {#T4.56} | 193 | α₂^{REG}, α₃^{REG}, α₄^{REG} (REG) / α₂^{REG}, the bound abs(A) < α₂(L… |
+| {#T4.56-0} | 194 | B₀′^{REG}, C₁′^{REG}, C₂′^{REG}, C₄′^{REG}, C₂^{REG}, c₂^{REG}, c₃^{RE… |
+| {#T4.56-0-1} | 195 | C₀^{CMP98}, c₂′^{CMP98}, C₃^{CMP98}, C₄′^{CMP98}, C₅′^{CMP98}, c₂^{CMP… |
+| {#T4.56-0-2} | 196 | A_d, C₀^{ch}, C₁^{ch}, C_{L1}, C_{(1.65)}, C₁₁ (the chain) / A_d := 3d… |
+| {#T4.56-1} | 197 | c₂′^{ch}, κ_G, K₆, K_F, K_{B₃} (the chain) / c₂′^{ch} := ε/(3d(d + 2)L… |
+| {#TS5} | 199 | ## 5. Conditions |
+| {#T5.1} | 201 | The full list, by stage and with its sources, is W-δ §8, *The conditio… |
+| {#TS6} | 203 | ## 6. Conventions |
+| {#T6.1} | 205 | Distances: ℓ∞ unless stated; an ℓ¹ separation s gives an ℓ∞ separation… |
+| {#T6.2} | 206 | Layers: run A's layer j is run B's layer j + 1; a_{j(x)} is the scale … |
+| {#T6.3} | 207 | Units: F and its first differences carry ε^{−2} times the dimensionles… |
+| {#T6.4} | 208 | Cubes: □̃^k is □ enlarged by k layers of blocks of its own size; a cub… |
+| {#T6.5} | 209 | CMP98 (15): the block average is an average over the L^d contours Γ_{c… |
+| {#T6.5-1} | 210 | CMP98 (92), (97), (99) (p.031 l.55–59, p.032 l.28–35, l.49–53): for U … |
+| {#T6.5-2} | 211 | CMP98 Proposition 3 (p.036 l.49–52): there are C₁ = C(d) and c₃ = c(d,… |
+| {#T6.6} | 212 | Citations: transcription line numbers count the \pagemark line as l.1;… |
+| {#T6.7} | 213 | Wherever PBG's printed O(1)Mα₀ comes through (3.35), it is c_uMα₀ at t… |
+| {#T6.8} | 214 | c^A: the complex coarse point Mc(t) from #W10.5.45's "write c^A = V′V₀… |
+| {#T6.9} | 215 | Sets: the bonds and plaquettes of a set are those that intersect it (R… |
+| {#T6.10} | 216 | (RZ): in LFR I §1 and LFR II (1.50)–(1.55) the regions Z_j stand for t… |
+| {#T6.10-1} | 217 | Each component of Z, of either class of LFR II p.378 l.14–15, lies in … |
+| {#T6.11} | 218 | The current variable 𝐉 replaces the functions J_j = D^{ξ*}_{U_j}ξ^{−2}… |
+| {#T6.11-1} | 219 | CRE's 𝐉_{p,X}(M^·(𝐔)) of (2.37) is RG I's J_n of (1.15) at n = p on X:… |
+| {#T6.12} | 220 | The majorant of the Cauchy note's (LF) (#CP.2) for the shell terms is … |
+| {#T6.13} | 221 | The decoupling parameters are complex with /s(Δ)/ ≤ e^{κ₁} (RG II p.5 … |
+| {#T6.14} | 222 | CRE's layer form: U_k "restricted to Ω_n∖Ω_{n+1} coincides with a U_n-… |
+| {#T6.15} | 223 | The scale-j current argument of RG I (3.13) is (L^{j−1}η)³𝐉 + Δ_𝐔𝐀 − P… |
+| {#T6.16} | 224 | Statement labels of the notes, each a derived statement at the tag giv… |
+| {#T6.17} | 225 | (q₀ = q₁ > p₀): the exponents of CRE (2.28) are taken equal and larger… |
+| {#T6.18} | 226 | CRE p.277's margin: 8B₀e^{16κ_s}O(1)ε_k < min(β,1)α_{1,k}/2, the expan… |
+| {#T6.19} | 227 | The operation ∼ (CRE p.245 l.40–43): on the cubes □ of the second part… |
+| {#T6.19-1} | 228 | Compatible partitions (CRE p.245 l.38–39, p.257 l.43) are read as nest… |
+| {#T6.20} | 229 | χ_Ax: the axial-gauge characteristic function. It arises from the iden… |
+| {#T6.20-1} | 230 | CRE's Q̃ in δ(Q̃A) of (1.14)–(1.15) is #T10.21-2's LQ̃ at the backgrou… |
+| {#T6.20-2} | 231 | CRE's σ in (1.14)–(1.15) is σ_H/σ_H(0) bondwise (#T10.36-4). The Haar … |
+| {#T6.21} | 232 | Names of closed inputs, each a print citation, a derivation, or a tag:… |
+| {#T6.22} | 233 | Statement labels of the closures, each derived at the place given: (TT… |
+| {#T6.22-1} | 234 | RMJ, (2.37) for 𝐉_{p,X}(M^·(𝐔)) with the step-k constant at every eval… |
+| {#T6.23} | 235 | Norms: abs(·) in the LF and the Cauchy note is CMP98 (19)'s operator n… |
+| {#TS7} | 237 | ## 7. Implications Between Conditions |
+| {#T7.1} | 239 | R ≥ 12dL implies R ≥ 8dL, R ≥ (2d + 1)L, and, for the walk problems, V… |
+| {#T7.2} | 240 | L ≥ 12d + 6 implies L ≥ 8d + 4; with M₁ ≥ 4 it gives M₁(L/3 − 1 − R_ι/… |
+| {#T7.3} | 241 | M ≥ 4M₁ with CRE's M₁ = KM′ implies VAR's M ≥ 4R₁M₁, since R₁M₁ = M′ ≤… |
+| {#T7.4} | 242 | ε₁ ≤ a₁/7 makes M_V = 7M′ admissible (M(ε₁) = M′a₁/ε₁ ≥ 7M′); ε₁ ≤ a₁/… |
+| {#T7.5} | 243 | O(1)L⁴C₀ε₁ ≤ α₀ implies the current bounds O(1)Mα₀a^{−3} wherever PBG … |
+| {#T7.6} | 244 | The conditions of 10.3 and 10.4 on R₀M₀ imply those of the composition… |
+| {#T7.7} | 245 | L > 5 with R_{h+1} ≥ 1 gives 4LR_{h+1} ≥ 24; with R_{h+1} ≥ L (#T2.23,… |
+| {#TS8} | 247 | ## 8. Cube-Fit Budgets on the Collar |
+| {#T8.1} | 249 | Distances in units of a_h from the cut; M₁ is CRE's KM′; the band's bo… |
+| {#T8.2} | 253 | collar cell / Q̃² inside Q̃⁵, side ≤ 20M₁a_{j′} / ≤ 22M₁ / ≥ 2M₁ / #W1… |
+| {#T8.3} | 254 | PBG cube / □̃⁵, side 12M′a_{n′} / ≤ 10M₁ / ≥ 14M₁ / #W12.98 / |
+| {#T8.4} | 255 | VAR cube for □̃⁵ / M_V = 7M′ (grid-aligned, beyond □ by ≤ 8M′a_h), tes… |
+| {#T8.5} | 256 | VAR cube for Q̃² / M_V = 7M′ (contains Q̃² by the scale-j_Q alignment)… |
+| {#T8.6} | 257 | REG's Sect. F margin / 18M₁a_h + 2R₁M₁a_h ≤ 20KM′a_h / ≤ 20KM′ / ≥ 4KM… |
+| {#T8.7} | 258 | VAR cubes in Λ / M_V = R₁M₁, test cube in the ℓ∞-ball of radius 4R₁M₁a… |
+| {#TS9} | 260 | ## 9. Checks Before Each Packet |
+| {#T9.1} | 262 | Grep for the canonical strings of Sections 2–4 and for their known sta… |
+| {#T9.2} | 263 | Sweep the note for conditions not in §8's list: grep "under ", "log L"… |
+| {#T9.3} | 264 | For each reason given for a bound, check that the cited display states… |
+| {#T9.4} | 265 | For each symbol taken from a cited paper (α₀, α₁, α₂, ε₁, C₀, C₁, M, K… |
+| {#T9.5} | 266 | Run every check of this section on the final hash immediately before t… |
+| {#T9.6} | 267 | For each new or changed inequality, record its stage and kind (Section… |
+| {#T9.7} | 268 | For each new constant, add a row here before using it in a note; for e… |
+| {#T9.8} | 269 | For each new cube fit, add a row to Section 8 with the side, the reach… |
+| {#TS10} | 271 | ## 10. The Beta-Function Note |
+| {#T10.1} | 273 | Scope: BETA_FUNCTION_WILSON_LOOPS.md (BFWL), cited by its tags #Bs.n, … |
+| {#T10.1-1} | 277 | δ (BFWL) / δ without an index: the window constant of #B0.21 in §§0, 2… |
+| {#T10.1-1-4} | 278 | δ in §10, δ_{RG2} (BFWL) / in §10 a g-valued variation of the configur… |
+| {#T10.1-1-3} | 279 | δ_{μν}, δ^{ab} (BFWL) / the Kronecker tensor, δ_{μν} in §6 and δ^{ab} … |
+| {#T10.1-1-1} | 280 | δB, δ(·), δ/δA (BFWL) / δB, RG I's field of p.282 l.29 (BP_FAMILY_RG1 … |
+| {#T10.1-1-2} | 281 | δ with an index (BFWL) / δ_{RG2} (#T10.28-3-1-1); δ_k and δ_j, CRE's c… |
+| {#T10.1-1-2-1} | 282 | δ₀, δ₁, δ_i, δ′_i, δ₃, δ_{C,i}, δ_{C,*}, δ_Π (BFWL) / δ₀, the decay ra… |
+| {#T10.1-2} | 283 | N (BFWL) / the size of U(N) ⊃ G in §§1 and 10; the depth of the R-oper… |
+| {#T10.1-2-1} | 284 | N(Q′_k), N_χ(Y₀), N_triv (BFWL) / N(Q′_k) := {λ : Q′_kλ = 0}, the kern… |
+| {#T10.1-3} | 285 | β, β′ (BFWL, several meanings) / β_{k+1}, the coefficients of the coup… |
+| {#T10.1-3-0} | 286 | β′, β₀ (CRE (2.6)) / CRE (2.6)'s β′ (p.255 l.44), #T10.33's β′ = b′ + … |
+| {#T10.1-3-2} | 287 | β, β_i (BFWL §10) / Lemma 10.1's proof writes β for an Ad(G)-invariant… |
+| {#T10.1-3-1} | 288 | β′ (BFWL), further meanings / CRE (3.61)'s β′_j := Π^{(j)}_{22,11}, wi… |
+| {#T10.1-4} | 289 | γ (BFWL, several meanings) / (a) Theorem 0.1's γ (#B0.14), chosen smal… |
+| {#T10.1-4-1} | 290 | γ (BFWL), further meanings / (c) #BX.1's bound abs(𝐉(b)) < γ(L^jη)^{−3… |
+| {#T10.2} | 291 | p₀ / CRE's exponent in p₀(g) = A₀(log g^{−2})^{p₀}, with BFWL's p₀ > (… |
+| {#T10.2-1} | 292 | p₀(g) in LFR2 / in the LFR2 displays quoted at BFWL #B2.2.350–#B2.2.36… |
+| {#T10.3} | 293 | r, ∂̄, M_𝔉 / radius of the complex ball 𝔅_r of top fields, sup abs(B) … |
+| {#T10.4} | 294 | α₀ (BFWL §7) / RG I's α₀ in abs(J) < α₀ on U_k^c (γ₀ = α₀) / RG I (1.1… |
+| {#T10.5} | 295 | B₅ε₁ / VAR's ε₂, the bound abs(𝓗) < B₅ε₁ of the Landau gauge / VAR Pro… |
+| {#T10.6} | 296 | γ₀, γ₁ (PRT1) / PRT1 prints two pairs under these names: 0 < γ₀ ≤ Δ₀(p… |
+| {#T10.6-1} | 297 | γ₀, γ₁ (BFWL), other meanings / γ₀, the coupling of "(0.33) [I]", whic… |
+| {#T10.6-2} | 298 | γ₀, γ₁ (BFWL), further meanings / PRT2's γ₀ of (2.147), "a positive co… |
+| {#T10.7} | 300 | c₀, c₁, c_N, c_v / Lemma 5.2's constants of d: c₀ = (2/π)^{2d+4} ≤ Δ₀φ… |
+| {#T10.8} | 301 | α (Lemma 5.2) / PRT1's fractional exponent α ∈ (0, 1) of the alias sum… |
+| {#T10.9} | 302 | a (PBG) / PBG's constant in aQ*Q of G = (Δ_π + DRD* + aQ*Q)^{−1} / PBG… |
+| {#T10.10} | 303 | R, N(Q′), 𝒩, N(p) / R the orthogonal projection onto Δ_U N(Q′), N(Q′) … |
+| {#T10.11} | 304 | K, K′ / K := 𝐇 − h (§§4, 7; #B4.73, #B7.34), K′ := K − Δ′_π; also the … |
+| {#T10.12} | 305 | C (§§4, 7) / generic constants C, independent of k, whose value may ch… |
+| {#T10.13} | 306 | 𝒫, C^{(k)} / 𝒫: Bałaban's parametrisation B′ = 𝒫B of the step variable… |
+| {#T10.13-1} | 307 | b₀(c), B(y) (BFWL index) / b₀(c), for a bond c of T^{(k+1)}: the bond … |
+| {#T10.13-2} | 308 | D^η_U, A^η (BFWL index) / (D^η_Uλ)(b) := η^{−1}(R(U(b))λ(b₊) − λ(b₋)) … |
+| {#T10.13-3} | 309 | M^k (BFWL index) / M^k, the k-th order average of RG I (0.21), Ū^k = M… |
+| {#T10.13-3-1} | 310 | M^k, the reading's support / composing RG I (0.17) and (0.19) (p.255 l… |
+| {#T10.13-4} | 311 | Z^{(k)} (BFWL index) / Z^{(k)}(U) := ∫dB δ(Q̃B)exp[−½⟨B, Δ^{(k)}(U)B⟩]… |
+| {#T10.14} | 312 | 𝐆^{(2)} / the quadratic part of the axial gauge-fixing term, 𝐆(B′) = ½… |
+| {#T10.15} | 313 | X(U, j), Θ, τ / X(U, j) := K(U, j) − Δ′_π(U, j) − Δ^{(2)}_π(U, j), the… |
+| {#T10.16} | 314 | δ₀, δ₁, B₀ (§7) / PBG's rates and constant: B₀e^{−δ₀d(y,y′)} of Theore… |
+| {#T10.17} | 315 | κ / the Killing ratio in c = (11/48π²)κ (§6 from Lemma 6.5, §8), K = κ… |
+| {#T10.17-2} | 316 | κ_i^N, κ_i, κ_Δ, κ₀, κ₁ (BFWL) / κ_i^N and κ_i, the factors' Killing r… |
+| {#T10.17-1} | 317 | κ's value for SU(N) / κ = 2N² for SU(N) with tr = Tr/N: gl(N, ℂ) ≅ ℂ^N… |
+| {#T10.18} | 318 | tr, r, g_i, K_i, ϑ_i, P (§10) / tr the normalised trace of G ⊂ U(N); s… |
+| {#T10.18-0} | 319 | κ_i^N, κ_i, c_i (§10) / κ_i^N by K_i = κ_i^N·tr, tr #T10.18's (Lemma 1… |
+| {#T10.18-1} | 320 | ρ_i, N_i, H_i, G_×, Φ, Z (§10) / for an additive action, ρ_i: G → U(N_… |
+| {#T10.18-1-1} | 321 | g_{0,i}, w_i (§10) / g_{0,i} the bare coupling of factor i, g_{0,i}^{−… |
+| {#T10.19} | 322 | T_p, 𝒪, X_𝒪, Π^N / T_p := {y ∈ T : e^{ip·y} = 1}, the translations fix… |
+| {#T10.20} | 323 | d(q), C_I / d(q) the distance from q to 2πℤ⁴; C_I the absolute constan… |
+| {#T10.20-1} | 324 | d, d(·,·), d_j, d_ε (BFWL) / d, the dimension, and d(𝔤) that of 𝔤 (#B2… |
+| {#T10.20-1-1} | 325 | d/dt, d^n, d_ε, d_η, d̂ (BFWL) / the derivatives d/dt and d^nF[δ] (#B1… |
+| {#T10.21} | 326 | h_B, H_{1,j} / h_B: RG1's operator h of p.267 l.18–23, with LQ̃h = I o… |
+| {#T10.21-2} | 327 | C̃^{(2)}, C̃, D̃^{(2)} / C̃^{(2)} the second-order part of the nonline… |
+| {#T10.21-1} | 328 | C^{(2)}, C_G / C^{(2)} the second-order part of the dressed chain aver… |
+| {#T10.22} | 329 | 𝒞, H_h, G_𝐌, S (§4) / 𝒞(U) := (𝒫*Δ^{(k)}(U, 0)𝒫)^{−1}, 𝒞(1) = C^{(k)}(… |
+| {#T10.23} | 330 | Q̃, P; Q, Q′; Q_k, Q′_k / Q̃: the linearisation of the chain's average… |
+| {#T10.24-0} | 331 | ∂, ∂*, ∂^η / ∂, PRT1's lattice exterior derivative at U = 1 at the spa… |
+| {#T10.24} | 332 | v, ∂¹, p̂ / §4: v_ν(p) := e^{ip_ν} − 1, the coarse gradient symbol, = … |
+| {#T10.25} | 333 | (L), (N) / the regular factors (L), with bounded Bloch symbols and bou… |
+| {#T10.26} | 334 | 𝒩_U(j), S, 𝒲, H_S, a, a′ (§6) / in Proposition 6.3: HD = 𝒩_U(J) in the… |
+| {#T10.27} | 335 | M′, M(ε₁) / §10: M′ := max(O(1)L, 12)M + R₁M₁, rounded up to a multipl… |
+| {#T10.28} | 336 | c, 𝒩, γ′, c_ε, R′_k (§0) / c := (11/48π²)κ (#B0.6), #T10.17's; 𝒩 := 𝐇D… |
+| {#T10.28-0} | 337 | c (BFWL), other meanings / a bond of T^{(k+1)} with endpoints c_±, in … |
+| {#T10.28-0-1} | 338 | c (BFWL), other meanings, continued / the coupling function of a Wilso… |
+| {#T10.28-1} | 339 | d_j(X), U_k(V) (§0, RG I) / d_j(X), the linear size of X at scale j, t… |
+| {#T10.28-1-0} | 340 | J_k (§0, RG I) / J_k := D^{ξ*}_{U_k}ξ^{−2}π Im ∂U_k, the current of U_… |
+| {#T10.28-1-1} | 341 | (𝐔, 𝐉), U_k(ε₀) (§0, RG I) / (𝐔, 𝐉), the variables replacing (U_j, J_j… |
+| {#T10.28-2} | 342 | CRE's parameters in BFWL §0 / BFWL uses the exponent r and the scales … |
+| {#T10.28-3} | 343 | E₀, B₀, C₁, C₂, q (RG II's constants) / E₀, the constant of RG I's ind… |
+| {#T10.28-3-0} | 344 | α₂ (RG I, RG II) / α₂, RG I's constant of (3.14) (RG I p.272 l.38–41),… |
+| {#T10.28-3-1} | 345 | C₁′ (RG II's constant) / C₁′, the constant RG II prints as C₁ in (1.20… |
+| {#T10.28-3-1-1} | 346 | δ_{RG2} (RG II's constant) / δ_{RG2} := (1 − 2L^{−1})/12, RG II's δ ∈ … |
+| {#T10.28-3-1-2} | 347 | 𝒲(𝔱), 𝔱₀ / 𝒲(𝔱), the configurations W on the bonds of a coarse bond c,… |
+| {#T10.28-3-1-2-1} | 348 | ϕ, F_{C̃}, r_{C̃}, N_{C̃}, K_{C̃} / F_{C̃}(ϕ, W), a fixed function of … |
+| {#T10.28-3-1-3} | 349 | c_{C̃}, h_{C̃}, p_{C̃} (BP_RG2_COMPLEX_B) / c_{C̃} := 2K_{C̃}r_{C̃}^{−… |
+| {#T10.28-3-1-3-1} | 350 | ε_{D̃}, 𝒪_ε, 𝔵, T_Z (BP_RG2_COMPLEX_B) / ε_{D̃} := min{¼r_{C̃}, (16h_{… |
+| {#T10.28-3-1-3-2} | 351 | K_{F₃} (BP_RG2_COMPLEX_B) / the constant of the Cauchy estimate for ∂²… |
+| {#T10.28-3-2} | 352 | M₁, α₄, γ₂, α₆ (RG II's constants) / RG II's, as printed: the cube siz… |
+| {#T10.28-3-3} | 353 | C₃, C₃′ (RG II's constants) / C₃ := 2(L+2)⁴O(1)2E₀C₁α₄^{−1}α₆^{−1}M^q … |
+| {#T10.28-3-4} | 354 | ε₂, ε₃ (RG II's auxiliaries) / RG II p.5 l.23's auxiliary ε₂, the radi… |
+| {#T10.28-3-4-1} | 355 | ε₂ (RG II p.19) / ε₂ := 2E₀ε₁C₁α₄^{−1}α₆^{−1}M^q exp C₂κ₁ (RG II p.19 … |
+| {#T10.28-4} | 356 | C, C^{(j)}, 𝒫, P^{(j)} (RG I) / C, RG I's linear parametrisation of th… |
+| {#T10.28-4-1} | 357 | Q̂ (RG II) / Q̂, BFWL's name for the quadratic form of RG II (1.40) (p… |
+| {#T10.28-4-1-1} | 358 | β (RG I (3.16)) / the enlargement factor in (1 + β)α₀, (1 + β)α₁ of RG… |
+| {#T10.28-4-2} | 359 | B_loc, δB_loc, Z (BP_RG2_COMPLEX_B) / B_loc := Q(ηA) on □₀, the field … |
+| {#T10.28-4-2-1} | 360 | ℬ_t, ℬ_□, B^R (BP_RG2_COMPLEX_B) / ℬ_t := Q_j(ηt𝐇_k(B′)) and ℬ_□ := Q_… |
+| {#T10.28-4-2-1-1} | 361 | w (BP_RG2_COMPLEX_B) / w := u_{k+1}^{−1}v^{−1}, from the gauge transfo… |
+| {#T10.28-4-2-1-2} | 362 | ℬ (BP_RG2_COMPLEX_B) / the argument of 𝐇_j, in (δ/δℬ)𝐇_j, RG I's (δ/δB… |
+| {#T10.28-4-2-2} | 363 | 𝐀 (BP_RG2_COMPLEX_B) / 𝐀 := (tζ̃_□ + t_□ζ_□)𝐇_k(B′), the field of RG I… |
+| {#T10.28-4-3} | 364 | m_X (BP_RG2_COMPLEX_B) / m_X := 2L^jηB₀B₃exp(−½δ₀dist^{(ξ)}(X, □) − ½δ… |
+| {#T10.28-4-4} | 365 | ε₁ (RG I, RG II) / RG I's cutoff of (2.9), χ({abs(B′(b)) < ε₁}) (p.266… |
+| {#T10.28-4-5} | 366 | a₁ (RG I, RG II; BFWL) / RG I's absolute positive constant with 𝐇_k an… |
+| {#T10.28-4-5-1} | 367 | a₁ (BFWL), other meanings / VAR's a₁ (#T3.31) in §10 (#B10.159, #B10.1… |
+| {#T10.29} | 368 | x_k, h_k, c(x), f_K, t (§2 flow) / x_k := g_k^{−2}, with g_j := x_j^{−… |
+| {#T10.30} | 369 | Π, Λ, R_{k+1}, p, χ_q, E(z; q), R(z; q) (§2.2) / Π(x) := ∂²F(U_{k+1}(e… |
+| {#T10.30-1} | 370 | q_th, q′_th (§2.2) / q_th, the constant fixed in Lemma 2.8 and used in… |
+| {#T10.30-2} | 371 | C_Λ (§2.1) / the constant of Proposition 2.4 and Lemma 2.5, abs(Λ(F)) … |
+| {#T10.31} | 372 | Proposition 2.9 (i) / a_{k+1}(h) := lim_{q→∞}½∂_z²R(0; q) (#B2.2.90-1)… |
+| {#T10.31-1} | 373 | S, C_rem (Proposition 2.9 (i)) / S := Σ_{j≥0}4^jq_th²exp(−γ₂4^jq_th²/4… |
+| {#T10.32} | 374 | q_j, C_a, S₄, T_n, C′_rem (Proposition 2.9) / q_j := 2^jq_th for all j… |
+| {#T10.33} | 375 | ρ_γ, ρ̄, ℓ_k, u_k, T_k, ĝ_k, δ′, b, b′, C, β′ (the tube) / ρ_γ := max(… |
+| {#T10.33-1} | 376 | H_k (the tube) / H_k, the set of (x_0, …, x_k) with x_j ∈ T_j (#T10.33… |
+| {#T10.33-2} | 377 | C₀, C_{0,i} (§§2, 8, 10) / C₀, Remark 2.3's constant, the bound 2C of … |
+| {#T10.34} | 378 | the tube's CRE data / R_j^T, the least power of L ≥ (log ĝ_j^{−2})^r, … |
+| {#T10.35} | 379 | C_Σ, θ, ρ, q_*, x̂ (Lemmas 2.10–2.12) / C_Σ := 2^{κ₀/2}(1 + 2/((κ₀−2)c… |
+| {#T10.35-1} | 380 | K_V, C_cen (Lemmas 2.10–2.12) / K_V, the constant with which an R′-inp… |
+| {#T10.35-2} | 381 | C′, C_R, r (Lemmas 2.10–2.12) / r := min(α^T_{0,k+1}, α^T_{1,k+1})/C_c… |
+| {#T10.35-3} | 382 | s, E^{(j)}(s), β_j(s) (Proposition 2.11) / s ∈ ℂ, the multiplier sR^{(… |
+| {#T10.36} | 383 | u_i, P_i, r_i, φ_δ, f_h, m(X, x) (the R-terms of the tube) / u_i(B) :=… |
+| {#T10.36-1} | 384 | φ_b, φ_1 (CRE's bump) / φ_b(B′) := φ_1(abs(B′)/δ^T), with δ^T the cuto… |
+| {#T10.36-2} | 385 | c_lf, c_τ (large fields of the tube) / c_lf > 0, depending on d and L … |
+| {#T10.36-2-1} | 386 | d′, M₀^{LFR2} (large fields of the tube) / d′ := d′_j(Z_j^{(i)}) ≥ 0, … |
+| {#T10.36-3} | 387 | R₁ (CRE), Ω, Γ_n, 𝒩_w / R₁, CRE's absolute constant in R₁g_j^{κ₀}Σ_{n=… |
+| {#T10.36-4} | 388 | σ_H, σ_H(0) / σ_H, UV3's Haar density of one bond, a function on 𝔤 (#T… |
+| {#T10.36-4-3} | 389 | σ_H as UV3's σ / UV3 defines σ by the Haar measure dU′ = σ(A′)dA′ = σ(… |
+| {#T10.36-4-1} | 390 | δ_{rT} / δ_{rT}(B) fixes B on the bonds of the axial-gauge tree rT, bu… |
+| {#T10.36-4-2} | 391 | σ's other meanings / the Cauchy variables σ^ℂ(Δ), RG II's σ(Δ), with Q… |
+| {#T10.36-4-2-1} | 392 | σ in §10 (representations) / a representation of G with factors σ_1, …… |
+| {#T10.36-5} | 393 | λ_T, c_tor, R_ε, 𝓕_ε (torus independence) / λ_T, the torus side in lat… |
+| {#T10.37} | 394 | p_j, C_F, ε_k^F, C_e (Proposition 2.14) / p_j := δ_j^T/g_j (#B2.2.859)… |
+| {#T10.37-1} | 395 | ā_k, e_{k+1}(h) (Proposition 2.14) / ā_k, the statement's coefficients… |
+| {#T10.37-1-1} | 396 | E_k^{(0)}, F^h_j (Proposition 2.14) / E_k^{(0)}, the input of step k o… |
+| {#T10.37-2} | 397 | s, a_{k+1}(s), C′_a (Proposition 2.14) / s ∈ ℂ, the multiplier of Σ_{j… |
+| {#T10.38} | 398 | §3 operators, slice / Y_0 := ker P and D_0 := D restricted to Y_0 (#B3… |
+| {#T10.38-1} | 399 | §3 operators, determinant lemma / K := ker Q and Δ_F := h + DDᵀ (#B3.2… |
+| {#T10.39} | 400 | T_p, 𝒪, T₀, M^{k+1}, λ, h, J^{(k)} (§3) / T_p (#B3.2.44) and 𝒪 := p′ +… |
+| {#T10.40} | 401 | v, a_ρ, I(p), C, Δ^{(k)}, Y, F(U, j) (§4) / v_ν(p) (#B4.4-1) is #T10.2… |
+| {#T10.40-1} | 402 | Θ, F_jj, A₁, R̃, V, C_α (§4) / Θ(U) and F_jj := ∂²_jF(1, 0) (#B4.105),… |
+| {#T10.41} | 403 | c_𝒞, f, A(Γ), S′, 𝐌, G_𝐌, S (§4 proofs) / c_𝒞 := min(γ₀′, 1)/(2dC_{d,L… |
+| {#T10.42} | 404 | ℒ_k, Φ_k, ℰ_k, q (§5) / ℒ_k(B) := Σ_{j=1}^{k}E^{(j)}(0, U_k(e^{iB})) (… |
+| {#T10.42-1} | 405 | b(p), 𝒥_k, m, V*, V_1, U(t) (§5) / b(p) := (Σ_νabs(∂¹_ν(p))²/(Δ₀(p)²φ_… |
+| {#T10.43} | 406 | η, d_εA, ω (§5 alias sums) / η := L^{−k}, L odd (RG I p.251 l.14), so … |
+| {#T10.43-1} | 407 | Q_m, B_m, P_m, P̂_m (§5 alias sums) / (Q_mA)_μ(Y) := abs(B_m)^{−1}Σ_{r… |
+| {#T10.44} | 408 | s(k), N, I(ξ), Σ(ξ), f (§6.1) / s(k) := Σ_μ4sin²(k_μ/2) (#B6.1); N(k, … |
+| {#T10.44-0} | 409 | G, Δ²G, r_s, h_s (§6.1) / G(k, ξ) := N(k, ξ)/(s(k)s(k+ξ)) and Δ²G(k) :… |
+| {#T10.44-1} | 410 | Ñ, M_N, a, u, w, n₀, n₁, n₂ (Lemma 6.1, local) / Ñ, a trigonometric po… |
+| {#T10.45} | 411 | §6.2 / B_tb(U) := −½log det(Hess A(U) + D_UD_Uᵀ) + log det(D_UᵀD_U) (#… |
+| {#T10.45-0} | 412 | §6.2, proof of Proposition 6.3 / H := Hess A(U), D, Π_D := D(DᵀD)^{−1}… |
+| {#T10.45-1} | 413 | D_b, F_b, Δ_v, Δ_gh, V_v¹, V_gh¹ (§6.2) / D_b := ∂ + i ad b, F_b := F(… |
+| {#T10.45-2} | 414 | Λ, X̃, H̃, Ď, M̃, V¹, V² (§6.2 chart) / Λ, a finite torus of the bare … |
+| {#T10.45-2-1} | 415 | φ, T, Ã, Gr, E, E₂ (§6.2 chart change) / φ with e^{ib}e^{iφ(X̃)} = e^{… |
+| {#T10.45-3} | 416 | e_k, b̂, m_ξ, v¹, v² (§6.2 symbols) / e_k, the plane waves, with the p… |
+| {#T10.45-3-1} | 417 | 𝔦, O_U, Ξ, v̌, d̂ (§6.2 parity and symbols) / the point inversion 𝔦, 𝔦… |
+| {#T10.46} | 418 | p̂, 𝐇, J, Q, T, c_𝒩, K, Π_D (§7 setting) / abs(p̂) (#B7.3) is #T10.24'… |
+| {#T10.46-0} | 419 | φ_A, Δ′_π, λ_A, G, H, C_G (§7 setting) / φ_A := (DᵀD)^{−1}DᵀA (#B7.34-… |
+| {#T10.46-1} | 420 | R(U), R_b, G′, ρ_y (§7 setting) / R(U)X := UXU^{−1} and R_b := R(U_b),… |
+| {#T10.47} | 421 | ‖·‖_∞, ‖·‖_2, û, U^L, V^L, K′, m_t, V′, V₀, Φ, F^{com}_p (§7) / ‖X‖_∞ … |
+| {#T10.47-1} | 422 | P_T, Π_V, Δ⁰, V¹, V² (§7) / P_T, the orthogonal projection onto #T10.3… |
+| {#T10.48} | 423 | A(τ), U(τ), β_n, ‖·‖_E, ‖·‖_{E′}, ‖·‖_{E*}, S, S′, P, Λ, M (§7 Lemma 7… |
+| {#T10.49-0} | 424 | Q^{(j)}, Q̃^{(j)}, Q′^{(j)}, Q_{≤j}, Q̃_{≤j} (§7) / the step-j factors… |
+| {#T10.49} | 425 | §7 proofs / X := K′(1, j)Hz (#B7.99), local; B^L_1 := a^{(k)}_1 (#B7.1… |
+| {#T10.49-1} | 426 | θ_j, θ_{j,1}, θ_{j,2}, ℛ_c, Q′_{(i→l)}, C_⊥ (BFWL, local) / θ_j(y, x),… |
+| {#T10.49-1-1} | 427 | C′, b_i, b_i′ (BFWL §10, local) / b_i, b_i′, the per-factor slopes, an… |
+| {#T10.49-1-2} | 428 | Ψ, n, K_N (Lemma 7.3) / Ψ, the analytic function on a complex polydisc… |
+| {#T10.49-1-3} | 429 | c_j^{(2)}, m(d, L), a^{(j)}(t), Ψ̃, K̃₂ (§7) / c_j^{(2)}, the second-o… |
+| {#T10.49-2} | 430 | F₁, F₂, Δ^±F, x_±, x₀ (Lemma 6.1, local) / F₁, F₂, functions of class … |
+| {#T10.50} | 431 | δ₁′, H_i, G_×, Φ, zU (§§9–10) / δ₁′ := min(δ_cx, ½δ₀)/8 (#B9.29-3a-1),… |
+| {#T10.51} | 432 | Proposition 10.3 / μ := max_ic_i/w_i and I := {i : c_i/w_i = μ} (#B10.… |
+| {#T10.51-1} | 433 | Proposition 10.3, continued / b := 2c_iln L − δ′_i, b′ := 2c_iln L + δ… |
+| {#T10.52} | 434 | κ, ψ_l, a(u), ã_i, c_⊗ (§10 actions) / κ := κ_1^N = ⋯ = κ_r^N (#B10.87… |
+| {#T10.52-1} | 435 | c_ã, c_a, λ_i, h_i, A, Ã_i, C, ad_i, J_i, J_c (§10 actions) / c_ã > 0,… |
+| {#T10.53} | 436 | Lemmas 10.8–10.9 / θ := min_ih_i (#B10.125, #B10.200), s_h := θa + Σ_i… |
+| {#T10.53-3} | 437 | A, Δ″, K_C, C_Ad (Lemma 10.10) / A := Σ_ih_i^{1/2}δ_i and Δ″ := ⊕_iΔ′_… |
+| {#T10.53-2} | 438 | J♮_i, a, R, F(p), Δ^{(2)} (Lemmas 10.10–10.11) / J♮_i := J_(i) + (θ/h_… |
+| {#T10.53-0} | 439 | β_max, C_c″ (Lemma 10.9) / β_max := max_{j≤k+1, i}abs(β_{j,i}), the co… |
+| {#T10.53-1} | 440 | 𝔊̂, G_s (Lemma 10.11) / 𝔊̂ := Ĝ₁ − Ĝ₁DRD*Ĝ₁ − Ĥ₁QĜ₁, the formula of PB… |
+| {#T10.54} | 441 | t_j, P₀, X_♭, V, X₀ (Lemma 10.11) / t_j := θ/h_j (#BFP.152); P₀ := D*D… |
+| {#T10.54-1} | 442 | E, Y_♭ (Lemma 10.11, continued) / E := h^{1/2}Ĝh^{−1/2} − P₀^{−1}, of … |
+| {#T10.55} | 443 | Lemma 10.12 / H := h^{−1/2}Ĥh^{1/2} (#BFP.163); Ǧ := h^{−1/2}Ĝ₁𝔓̂*h^{1… |
+| {#T10.55-1} | 444 | Lemma 10.13 / β := h − h′ and b := max_iabs(β_i), and c_bg > 0, depend… |
+| {#T10.55-1-1} | 445 | Lemma 10.13, continued / A* := h^{1/2}δ′ (#B10.171); R₃ and V^A(A) := … |
+| {#T10.56} | 446 | Lemmas 10.14–10.15 / U := U_{h′} and J, RG1's (1.8) at U (#B10.177); 𝒰… |
+| {#T10.56-3} | 447 | θ_0, Δ_ct, U′_t, r_n, f_X (Lemma 10.15) / θ_0 := min_ih^0_i and Δ_ct (… |
+| {#T10.56-0} | 448 | basic operators, Y-part (Lemma 10.14) / the basic operators P₀^{−1}, G… |
+| {#T10.56-1} | 449 | N_σ (Lemma 10.14) / N_σ := (4·5^d + 54)^d, a term of a basic operator … |
+| {#T10.56-1-1} | 450 | δ_σ (Lemma 10.14) / δ_σ := δ₁′/(32N_σ), δ₁′ #T10.50's: δ_σM ≥ κ₁ gives… |
+| {#T10.56-2} | 451 | κ₁ (RG II) / RG II's decoupling parameter, "κ₁ is a sufficiently big p… |
+| {#T10.56-2-1} | 452 | κ₁ (Lemmas 10.14–10.15) / a local choice κ₁ := max(16κ, 18), κ those l… |
+| {#T10.57} | 453 | Lemma 10.16 / 𝐆_h(V) := ½Σ_yΣ_{x≠y}abs(h^{1/2}(1/i)log V(y, x))² and B… |
+| {#T10.57-0} | 454 | 𝐔_t, 𝐉_t, r, c_{𝒞,h} (Lemma 10.16) / 𝐔_t, 𝐉_t (#BFR.211-2a); r (#BFR.2… |
+| {#T10.57-1} | 455 | X_{♭,1}, δ₃ (Lemma 10.16) / X_{♭,1} := QG_{♭,1}Q* = ⊕_iQG₁^{(i)}Q*, wi… |
+| {#T10.58} | 456 | δ_Π, β_i, T, α′ (Lemma 10.17) / δ_Π := ½min(δ₁/2, κ(2M)^{−1}) and β_i … |
+| {#T10.59} | 457 | ϱ, R′, r₀ (two meanings in BFWL) / ϱ: §9's rate ϱ > 0 of (3.187) for δ… |
+| {#T10.59-1} | 458 | a_j(y, x), a₀, …, a_n, d̄, h₀, λ′ (local in BFWL) / ta_j(y, x), the li… |
+| {#TS11} | 460 | ## 11. Source Definitions |
+| {#T11.1} | 462 | The definitions the notes rely on, quoted from the parts files, so tha… |
+| {#T11.2} | 464 | PRT2's bond sets (PRT2 p.224 l.17–19; Lemma 2.4, p.245 l.75–76; (2.97)… |
+| {#T11.3} | 465 | PRT1's Δ_k and σ_k (PRT1 (1.62), p.28 l.24–29; (1.65)–(1.67), p.29 l.3… |
+| {#T11.4} | 466 | CRE (1.17) (CRE p.250 l.1–15). The expressions (1.14)–(1.16), except t… |
+| {#T11.5} | 467 | Lawler–Limic, Random Walk: A Modern Introduction (author draft, D:\Dow… |
+| {#T11.6} | 468 | CMP98's normalisation u (CMP98 (85)–(87), p.31 l.1–18). (85) defines t… |
+| {#T11.6-1} | 469 | CMP98 Proposition 6 (p.043 l.3–10). If U₀ satisfies (52), abs(U(∂p) − … |
+| {#T11.7-0} | 470 | RG I's lattice sets (RG I p.251 l.27–28, p.252 l.8–12). A union of cub… |
+| {#T11.7-0-1} | 471 | RG I's blocks and contours ((0.3), p.252 l.21–32). For y in a lattice … |
+| {#T11.7-0-2} | 472 | RG I's averages M^·(𝐔) (RG I (1.15), p.262 l.49): M^·(𝐔, b) = M^p(𝐔, b… |
+| {#T11.7} | 474 | RG I's U^c_j(X, α₀, α₁, γ₀) (RG I p.262 l.12–55), a union of G^c-orbit… |
+| {#T11.8} | 475 | RG I (1.17) (p.263 l.7–22). (i)–(iii) at α₀′ give abs(∂U_n − 1) < 2B₃α… |
+| {#T11.9} | 476 | Lemma 4's input space U′^c_{k+1}(□₀, (1+2β)α₀, (1+2β)α₁, α₀) (RG I p.2… |
+| {#T11.10} | 477 | CRE's class Ũ^c_j(X, α̃₀, α̃₁) (CRE p.261 l.5–40) is local on X. Its b… |
+| {#T11.11} | 478 | CRE Theorem 2 (CRE p.263 l.10–31). The age-decayed bound (2.43) is sta… |
+| {#T11.12} | 479 | CRE p.276 l.2–16 and (3.43) (p.276 l.26–32). Bałaban repeats Sect. 3 [… |
+| {#T11.12-1} | 480 | The terms of the expansion (I.6.41) with localisation domains Y in Λ_{… |
+| {#T11.12-2} | 481 | The remaining terms, whose domains meet Λ_{k+1} without lying in it an… |
+| {#T11.12-2-1} | 482 | No note uses (3.43)'s A-radius. The notes take these terms on O6's 𝒫_k… |
+| {#T11.12-3} | 483 | CRE does not print that the points of his class lie on □₀ in Lemma 4's… |
+| {#T11.13} | 484 | CRE p.280 l.14–20, the first case. It applies (3.3) and (3.18)–(3.28) … |
+| {#T11.14} | 485 | The Cauchy note's classes. The common polydisc 𝒫_j(X; s) (#C5.5) is th… |
+| {#T11.15} | 486 | Bałaban's complex backgrounds and local functions. RG I p.273 l.39–46:… |
+| {#T11.16} | 487 | Bałaban's determining sets and the 𝐑-step's large-field set. CRE (2.2)… |
+| {#T11.16-1} | 488 | LFR II's new background field (LFR II (1.35), p.365 l.13–16). With V′_… |
+| {#T11.17} | 489 | The Cauchy note's evaluation set (#C5.8). d_j is taken on ℰ_j(X; r) ⊂ … |
+| {#T11.18} | 490 | VAR's R-gauge representative (VAR (145)–(153), p.301). U′_k satisfies … |
+| {#T11.18-1} | 491 | VAR Sect. F's hypotheses (VAR p.300 l.25–26). Sect. F proves "all the … |
+| {#T11.19} | 492 | VAR's spaces and invariance group (VAR (2)–(7), p.278). 𝔘_k({Ω_j}, ε₀)… |
+| {#T11.19-1} | 493 | VAR's [6] is REG, "Spaces of regular gauge field configurations on a l… |
+| {#T11.19-2} | 494 | A set Ω ⊂ T_η also denotes the bonds with at least one end-point in Ω,… |
+| {#T11.20} | 495 | PBG's gauge fixing and G′ (PBG (3.17)–(3.24), pp.393–394; Theorem 3.1,… |
+| {#T11.20-1} | 496 | PBG's covariant supremum norms (PBG (3.39), p.397 l.4–8). The norms ar… |
+| {#T11.20-2} | 497 | PBG's penalty coefficients (PBG (3.24), p.394 l.24–29). ⟨λ, Q′*aQ′λ⟩ =… |
+| {#T11.21} | 498 | VAR (190) (p.308 l.38–48), the response of the representation field. a… |
+| {#T11.21-1} | 499 | VAR's representation of the second variable (VAR (172)–(173), p.305 l.… |
+| {#T11.21-2} | 500 | 𝓗 = 𝒜₁ + H₁B − HD(𝒜₁ + H₁B) (174), 𝒜₁ + 𝔊((δ/δA′)V)(𝒜₁ + H₁B) = 0 (175… |
+| {#T11.22} | 501 | The averaging of gauge transformations (CMP98 (78)–(81), p.30). (\over… |
+| {#T11.22-1} | 502 | CMP98 Proposition 2 (CMP98 p.026 l.46–52). For U with (52), abs(U(∂p) … |
+| {#T11.23} | 503 | Lawler–Limic, *Random Walk: A Modern Introduction*, §6.5 "Capacity, tr… |
+| {#T11.24} | 504 | VAR's R-gauge representative as a Landau minimiser for the line averag… |
+| {#T11.25} | 505 | VAR's problem at a base and PBG's linear problems (VAR Prop. 2, p.281;… |
+| {#T11.25-1} | 506 | VAR Proposition 3 (VAR p.289 l.30–34). The transformation (47) with (4… |
+| {#T11.26} | 507 | Bałaban's logarithm (CMP98 (21)–(25), p.21 l.26–50). log is "an invers… |
+| {#T11.26-1} | 508 | For G ⊂ U(N), log U ∈ i𝔤 for U ∈ G in a G-dependent neighbourhood of 1… |
+| {#T11.27} | 509 | CRE's localised determining sets (CRE p.256 l.55–63, p.257 l.1–26). Fo… |
+| {#T11.27-1} | 510 | The unit of Bałaban's cube sizes (RG I p.257 l.2–4, l.11–12; LFR I p.1… |
+| {#T11.27-2} | 511 | So in #T11.27's (2.14) the M₁-cubes of T_ξ are M₁L^jη-cubes of T_η, ∼ … |
+| {#T11.28} | 512 | V on 𝐁, M_𝐁, and Q_k^{s*} (CRE p.256 l.26–53; (1.3), p.246 l.38–45; p.… |
+| {#T11.29} | 513 | LFR I's Λ, U_{k,Z}, and χ_{k,Λ} (LFR I (1.73)–(1.75), p.192 l.40–55, p… |
+| {#T11.29-0} | 514 | LFR I Proposition 1 (LFR I p.194 l.37–48). For V_k⌈_{Z∩Λ^c} with abs(∂… |
+| {#T11.29-1} | 515 | LFR I's representation of U_0 inside Λ (LFR I p.195 l.14–20, p.197 l.1… |
+| {#T11.29-2} | 516 | U_0 is taken "in the axial gauge in k-blocks" inside Λ (p.197 l.9), an… |
+| {#T11.29-2-1} | 517 | LFR I does not define the "axial gauge in k-blocks"; V_Λ = M^k(U_0) is… |
+| {#T11.29-2-1-1} | 518 | So u = 1 at the corners y of the k-blocks (#T11.33-1), and a contour Γ… |
+| {#T11.29-3} | 519 | (1.86): expanding around the configuration 1 and transforming "to the … |
+| {#T11.30} | 520 | LFR II's U_0 (LFR II (1.3)–(1.4), p.357 l.11–26, l.45–48). U_0 "is a m… |
+| {#T11.30-0} | 521 | LFR II's analytic extension in 𝐔 (p.358 l.23–30, l.39–43). The lower b… |
+| {#T11.30-0-1} | 522 | LFR II's lower bound on the quadratic form (LFR II (1.7)–(1.9), p.358 … |
+| {#T11.30-0-2} | 523 | (1.9): ⟨H_{1,k}B′, Δ₁(ζ₀)H_{1,k}B′⟩ ≥ (γ₀/(2d(100M)⁵))‖B′‖² "for g_k s… |
+| {#T11.30-1} | 524 | LFR II's extension of V_Λ and U_0 (LFR II (1.38)–(1.45), p.366 l.30–43… |
+| {#T11.30-2} | 525 | (1.40) (p.367 l.2–10) has "exactly one solution B′_Λ(B̃′), which is an… |
+| {#T11.30-3} | 526 | (1.44)–(1.45): M^j(U_0(𝐔)) = Ṽ_{j,Z}(M̃^k(U′))M^j(U_0(U)), Ṽ_{j,Z}(V′)… |
+| {#T11.31} | 527 | The localisation representations and their argument bounds. LFR II (1.… |
+| {#T11.32} | 528 | The two-loops note's post-R map (two-loops #39, #124, #133–#134; deriv… |
+| {#T11.33} | 529 | REG's axial gauge relative to U₀, Ax_k(𝔅_k, U₀) (REG (1.16)–(1.20), p.… |
+| {#T11.33-0} | 530 | For a general base U₀ it is not the absolute axial gauge (1.15), p.078… |
+| {#T11.33-1} | 531 | CMP98's blocks (CMP98 (1)–(4), p.017 l.17–33, p.018 l.2–7). Ω^{(j)} = … |
+| {#T11.33-2} | 532 | Derived, not printed: for y ∈ L^jηℤ^d, B^j(y) is ηℤ^d ∩ Π_μ[y_μ, y_μ +… |
+| {#T11.33-2-1} | 533 | By #T11.33-2's nesting, x_n ∈ B(x_{n+1}) iff B^n(x_n) ⊂ B^{n+1}(x_{n+1… |
+| {#T11.34} | 534 | The chain's relative variables and gauge-transformation average (balab… |
+| {#T11.35} | 535 | The chain's axial gauge and norm (BP_REG_DRESSED.md #BR.2, #BR.2-3). A… |
+| {#T11.36} | 536 | CMP98's classes of gauge transformations (CMP98 Sect. F, p.044 l.3–13,… |
+| {#T11.37} | 537 | REG's statements used, recorded as statements (Bałaban's, accepted). L… |
+| {#T11.37-1} | 538 | REG (1.36) and (1.47) (REG p.082 l.44–50, p.084 l.36–45; print lines, … |
+| {#TS12} | 540 | ## 12. Note-Local Symbols |
+| {#T12.1} | 542 | The objects a note defines for one argument, with the tag of the defin… |
+| {#T12.2} | 544 | Two-loops note. Λ^{old} := Λ∖Ω″^{∼2}_{h+1} (#5); W_ms := max_jW_j (#5.… |
+| {#T12.2-1} | 545 | W^×_ren(ε) := E_ε[W_{χ₁}(C₁)W_{χ₂}(C₂)]/(κ^{(K′)}_{C₁}κ^{(K′)}_{C₂}), … |
+| {#T12.2-2} | 546 | e_θ(x) := e^{iθ·x}, u(θ) := Π_μn^{−1}Σ_{k=0}^{n−1}e^{iθ_μk}, S₂(θ) := … |
+| {#T12.2-3} | 547 | P(𝐔) := U^{post}(M(𝐔)) ∈ 𝓜^c (#39-00), where the note's extension is e… |
+| {#T12.2-4} | 548 | r_J(b) := f_nα_{0,k}L^{n−k}(L^nξ)^{−3}, the current's radius (#55), no… |
+| {#T12.2-5} | 549 | B̂_j := R(v_{n+1})B_j and σ^s_n := s_n(·; R(e^{Y_{n+1}})B̂_j) − s_n(·;… |
+| {#T12.2-6} | 550 | B := (1/i)log M(𝐔)M(U)^{−1} (#125); 𝐕 := P_{k+1}(𝐔) (#130.2); d_𝐕 := M… |
+| {#T12.2-7} | 551 | C_T^{(K)} := max(1/ε_H, 64KB₀e^{16κ_s}/((1−β)min(β,1)), C_K^αB₀e^{16κ_… |
+| {#T12.2-8} | 552 | A_k(S) := c_πΣ_{b∈S}sup‖Im ηA_b‖ and c_π := sup{‖dπ(Y)‖ : Y ∈ 𝔤, ‖Y‖ ≤… |
+| {#T12.2-9} | 553 | θ^×(G) := Σ_{W∈𝒲^×(G)}θ(W) (#250); ℐ(D_G) := ∪_{g∈G}ℐ(g) ∪ ∪_Wℐ(W), wi… |
+| {#T12.2-9-1} | 554 | w_n(D) := e^{λ_n(D)ν_rσ(D)}e^{θ(D)}‖D‖, a cross insertion's weight aft… |
+| {#T12.2-10} | 555 | C := C₁ ⊔ C₂, the pair's contour (#332, #368, #467, #505, #609, #909);… |
+| {#T12.2-11} | 556 | N^×_0 := W_{χ₁}(C₁)W_{χ₂}(C₂)ρ₀ (#376) and N^×_k := Σ_ℓχT[𝒲^×_ke^{A_k}… |
+| {#T12.2-12} | 557 | abs(win^{(2)}_𝒞) := 80(M#(𝒞) + 1) (#543) and abs(win^{(2)}_M) := n_{k+… |
+| {#T12.2-12-1} | 558 | H_i(D), the smallest arc of C_i containing ℐ_i(D) (#545); r₀ := 2 (#59… |
+| {#T12.2-13} | 559 | 𝔅^s(g) := 𝔅(g)∖𝔅^×(g) and B_P := ∪_rX′_r ∪ ∪_{X∈P}X^{(λ̂+248)}, X^{(n)… |
+| {#T12.2-13-1} | 560 | A^{cr,R} := 4e^{c_W}C_gr(ℓ₁+ℓ₂)e^{−p₀(ḡ_R)/2}e^{−ν_rD/(1076M)}(1 + 138… |
+| {#T12.2-14} | 561 | B_Q (#814-4-2) is #T12.20-1's; w^Ψ_c := e^{ν_rσ̃(c) + (3/8)ν_e(2Σ_{P∈c… |
+| {#T12.2-17} | 562 | Two-loops note, the domains of a polymer P. dom P, the union of the do… |
+| {#T12.2-17-1} | 563 | (A)_r, the points within ℓ^∞-distance r of A; T⁺_D := (T_D)_{5M} ∪ s_D… |
+| {#T12.2-18} | 564 | Two-loops note, lengths and weights. D_P := Σ_r(d_k(X′_r) + 4R_k + 2λ̂… |
+| {#T12.2-15} | 565 | E* := (C_Σ(χ₁) + C_Σ(χ₂))𝔞̄ + C^{R°}_E + C^×_E + C^{R×}_E (#891), #T4.… |
+| {#T12.2-16} | 566 | Two-loops mixed term, the real base (BP_TL_MIXED_TERM.md #5.10.5-3, th… |
+| {#T12.3} | 567 | Pair Cauchy note. c^n_𝒢, the rest's value at (1, 0), and c^a_𝒢 := c_𝒢 … |
+| {#T12.3-1} | 568 | Pair Cauchy note, the comparisons. k := K − j, run A's steps to the co… |
+| {#T12.3-2} | 569 | Pair Cauchy note, the attached content. a := a°, FV (5.10)'s weight (#… |
+| {#T12.3-3} | 570 | Pair Cauchy note, the marked and wrap differences. ε̂̄^{(2)} := sup_iε… |
+| {#T12.3-3-1} | 571 | Pair Cauchy note, the marked and wrap differences, continued. t_m := 4… |
+| {#T12.3-6} | 572 | Pair Cauchy note, the birth at j₀. ρ^{j₀}_K := max(ρ^{LF,×}_K, C^E_r(k… |
+| {#T12.3-4} | 573 | Pair Cauchy note, the steps. β^cr_K := (8ρ^{LF,×}_K + r̄_K)A^{×,2} + 4… |
+| {#T12.3-5} | 574 | Pair Cauchy note, the result. E^{cr}_{K′} := Σ_{j≤K′}E^×_j + Σ_{N_B<j≤… |
+| {#T12.3-5-1} | 575 | Pair Cauchy note, the wraps' t-step. r°(c) := sup_bΣ_{𝒢∋b}abs(c_𝒢)e^{2… |
+| {#T12.3-5-2} | 576 | Pair Cauchy note, the three gases. δε̂^∨_i := max(δε̂_i, δε̂^{(1)}_i, … |
+| {#T12.3-5-3} | 577 | Pair Cauchy note, the three gases' radius. u₀^∨ := ν_r/(5184Mδε̂^∨_i),… |
+| {#T12.4} | 578 | Pair factorisation note. s_j := 7M for j ≥ 2 and s₁ := 2M_VR₁; K′_{att… |
+| {#T12.4-1} | 579 | Pair factorisation note, §0, the units. ℓ_i^{ph} := p_iL^{−q_i}u, the … |
+| {#T12.4-1-0} | 580 | Pair factorisation note, §§1 and 4, the measures. O_i := 𝒲̂^{(i)}, loo… |
+| {#T12.4-1-1} | 581 | Pair factorisation note, §3, the near and far parts. R^{nf}_k := (DL^{… |
+| {#T12.4-1-1-1} | 582 | e^{(j)}_X is #T12.19-11's (#PF3.2-8d3). ω(Z) is #T12.7-13's, with #T12… |
+| {#T12.4-1-2} | 583 | κ_{th} := η̄/(4C₀ + 4), the rate κ of IT-1 §3i(7), set in §3i(6) (#PF3… |
+| {#T12.4-1-3} | 584 | N^{nr} := A^× + C^×_E + C^{R×}_E + w̄^× + Σ_iw̄^{(i)} + 4(ℓ₁+ℓ₂)(ν̄e^{… |
+| {#T12.4-4} | 585 | Pair factorisation note, §4, the typical action. W^{ℓ₀}_i := W_χ(C_i;U… |
+| {#T12.4-4-1} | 586 | Pair factorisation note, §4, the fields on 𝒱_ty. ε_ty := 3(2NT_ty)^{1/… |
+| {#T12.5} | 587 | Contacts draft (§1). s̄ := max(s, ρ₀), s the fine distance from b to t… |
+| {#T12.6} | 588 | W-δ note. ℒ_ι := H₁𝔡 at Ũ, the Landau part of dι_Y = H₁𝔡 + D_Bγ (#W3.5… |
+| {#T12.6-1} | 589 | W-δ note, §§P–5. a_j := εL^j, the spacing of the shared scale j in run… |
+| {#T12.6-2} | 590 | 𝐀^X(s) := (tζ̃_□ + t_□ζ_□)𝐇^X_k(s) (#W3.8-1); β_□(ℱ, 𝒜) := ⟨χ_AQ₁ℱ, 𝒪^… |
+| {#T12.6-3} | 591 | d̄(x) (#W6.1-1) is #T4.24's; d̄(ω) := sup_{x∈∪X̃_i⁵}d̄(x) and U(t) := … |
+| {#T12.6-4} | 592 | h(t) := cos(½πψ(abs(t))) for 1/3 ≤ abs(t) ≤ 2/3, 1 below and 0 above (… |
+| {#T12.6-5} | 593 | β_I := 2^{−7} (#W8.15) is #T11.13's; c_N (#W8.15-1) is #T3.27's; C_{Q*… |
+| {#T12.6-6} | 594 | S_w (#W8.22-2-1) is #T12.12's at κ_w = ⅛δ_min, not #T4.40's; κ_V (#W8.… |
+| {#T12.6-7} | 595 | β′_□(ℱ, 𝒜) := ⟨χ_AQ′₁ℱ, Δ′^A_aχ_AQ′₁𝒜⟩_A − ⟨ℱ, Δ′^B_a𝒜⟩_B (#W10.2.4); … |
+| {#T12.6-7-1} | 596 | C_df(β), the constant of (Wδ-1), independent of the shell n, the scale… |
+| {#T12.6-8} | 597 | c₃ := 3 + 2/(L − 1) ≤ 5 (#W10.3.20-1), not #T4.46's c₃; c_K := 640e^{2… |
+| {#T12.6-9} | 598 | δ_gf′ (#W10.4.22-4) and δ₀′ and δ_c (#W10.5.23, #W10.5.87-5, #W10.6.19… |
+| {#T12.6-10} | 599 | k_𝒦(ℱ, 𝒜) := ⟨χ_AQ₁ℱ, 𝒦^Aχ_AQ₁𝒜⟩_A − ⟨ℱ, 𝒦^B𝒜⟩_B (#W10.4.51); C_Q := 4… |
+| {#T12.6-11} | 600 | 𝔡v := (dQ_1^{s*}v on Λ₀, v on Λ₁) (#W10.5.5-1, #W10.5.9) and ℒ_ι (#W10… |
+| {#T12.6-12} | 601 | ϱ̄ and α_c := C_cϱ̄ (#W10.5.45-24) are #T3.17's and #T3.18's; ℓ(y) := … |
+| {#T12.6-13} | 602 | ℒg := Ig + Q₁*(Q₁Q₁*)^{−1}(g − Q₁Ig), the global lift (#W11.2); C_ℒ^g … |
+| {#T12.6-14} | 603 | Δ₀ := 𝐀₀^B − ℒ𝐀₀^A (#W11.53, #W11.64-1); A′^X := H₀^XB′ + 𝐀₀^X and σ :… |
+| {#T12.6-15} | 604 | δ_π := min(δ₀′/(54L), δ_Q)/4 (#W11.100-6) and δ_D′ := min(δ_D, ¼δ₀) (#… |
+| {#T12.6-15-1} | 605 | C_D := the O(1) of PRT2 (2.149) and δ_D := ½δ₄, δ₄ the rate printed th… |
+| {#T12.6-16} | 606 | ϑ := δ_w + ϑ_ℒ + C₂L² sup_xL^{−j(x)} (#W11.149-1); C_E := O(1)B₀C₂(C_ℒ… |
+| {#T12.6-16-1} | 607 | W-δ note, §11, the artifact. C_b := O(1)LC_Q′(C_ℒ^g)²(1 + C₀ε₁)(1 + k₂… |
+| {#T12.6-17} | 608 | V₀ := MU^B (#W12.13), U^A_k or U^A_{k,Λ} (#W12.20-1, #W12.203), and (U… |
+| {#T12.6-18} | 609 | N(A) := (δV/δA′)(A + H₁B) (#W12.49) and λ := δJ + N′(A₁)(δA₁ + H₁δB) (… |
+| {#T12.6-19} | 610 | ε₁ := B₅M⁵ε_k, VAR's data parameter for §12's problem (#W12.142-2); ω_… |
+| {#T12.6-19-1} | 611 | W-δ note, §12, the data and (D1). Ŷ := −i log(𝐕V^{−1}), 𝐕 and V the co… |
+| {#T12.6-20} | 612 | C_s := O(1)dM(B₃B₅M⁵ + C_HC_Ŷ) (#W12.175) and C_I := O(1)d³MC_H(B₃B₅M⁶… |
+| {#T12.6-21} | 613 | ΔX_s := 0 on the collar strip (#W12.223-7); d := 𝐆″_k(1 − θ)(1 − Q*_{𝐁… |
+| {#T12.7} | 614 | Cauchy note. ι_XU := U(𝐁_1(X^∼), M^·(Q_1^{s*}U)), Bałaban's local mini… |
+| {#T12.7-1} | 615 | Cauchy note, prologue and §§1–2. κ_s (#C3.10-2, #CK.1-29) is #T3.34-1'… |
+| {#T12.7-2} | 616 | Cauchy note, prologue: the thresholds. ε^*(g) := C_XC_ptC_KPL⁴C^𝐀_α[C_… |
+| {#T12.7-3} | 617 | Cauchy note, prologue: the sums. N′(g) := log_L(MR(g)) + 3, the memory… |
+| {#T12.7-4} | 618 | Cauchy note, the stopping sums. ℓ_K := (log(bK + ḡ^{−2}))^{rd+2p₀}, μ_… |
+| {#T12.7-4-1} | 619 | Cauchy note, the stopping sums, continued. a^{(U)}_K := 2e^{−C_P(K−j(C… |
+| {#T12.7-5} | 620 | Cauchy note, §3. Q₁^{pl}(W) := dM(W), the plain linearised one-step av… |
+| {#T12.7-6} | 621 | Cauchy note, §3: the irrelevant parts. irr(Δ_j) := Δ_j(U) − Δ_j(1) − Π… |
+| {#T12.7-7} | 622 | Cauchy note, §3: the quadratic forms. Φ_P(x) := (1/iε²)log U(∂p_P(x)),… |
+| {#T12.7-7-1} | 623 | Cauchy note, §§9–10: the contours. 𝐆(y, x), RG I's family of shortest … |
+| {#T12.7-7-2} | 624 | Cauchy note, §§9–10: the contours, continued. Γ_{y,x}, PRT1 (1.7)'s ax… |
+| {#T12.7-8} | 625 | Cauchy note, §5: the classes. β′ (#C5.3-2) is #T3.6's; α′_{i,m} := α_{… |
+| {#T12.7-9} | 626 | Cauchy note, §5: the constants. α_{2,m} := c₂α_{0,m} (#C5.36-11, #C5.4… |
+| {#T12.7-10} | 627 | Cauchy note, §5: the pair line. U^A := U^A_k(V), U^B := U^B_{k+1}(V), … |
+| {#T12.7-11} | 628 | Cauchy note, §5: the moves along the pair line. C_Π(j) := C′_Π(8B₃/α_{… |
+| {#T12.7-12} | 629 | Cauchy note, §5: the current constants. C_σ := 64 (#C5.83-2), not #T12… |
+| {#T12.7-13} | 630 | Cauchy note, §6. ω(Z) := exp(C_PP(Z)) on the component Z, 1 on the oth… |
+| {#T12.7-14} | 631 | Cauchy note, §§6.2 and 7.5. σ̂^Λ_{k,j} and C_{yd} (#C6.2.18-7) are #T4… |
+| {#T12.7-15} | 632 | Cauchy note, §8.1–8.2. δΔ^{(k)} := Δ^{(k+1)}_B − Δ^{(k)}_A (#C8.1.1-1)… |
+| {#T12.7-16} | 633 | Cauchy note, §8.2: the frozen terms. F^{nr}_j(A) := irr_□(Δ_j)(c(𝐔̂_z,… |
+| {#T12.7-17} | 634 | Cauchy note, §§8.2–8.5. C_g := (1 − L^{−β′})^{−1}max(C_T′/(2C_T), 1) (… |
+| {#T12.7-18} | 635 | Cauchy note, §8.6. q(V) := ∫dV restricted to Z′ of ρ(Z, V) over the sa… |
+| {#T12.7-18-1} | 636 | Cauchy note, §8.6, the constants. C_n := 2(1 + L^d + 3^d)(4 + C_ψ + C_… |
+| {#T12.7-19} | 637 | Cauchy note, §8.7. θ̃ (#C8.7.1-1) is #T3.8's; m_i := iθ̃^i + w_K (#C8.… |
+| {#T12.7-20} | 638 | Cauchy note, §8.7: C_S″ := C_S[2C_s((1 − L^{−1/3}/θ̃)^{−1} + (1 − L^{−… |
+| {#T12.7-20-1} | 639 | Cauchy note, §8.7: the factor N₀^+(j) of c^B_j = (C^B_{R,1}/C_R)N₀^+(j… |
+| {#T12.7-21} | 640 | Cauchy note, §9.1–9.5. U^A := U_k(V) on T_ε, U^B := U_{k+1}(V) on T_{ε… |
+| {#T12.7-22} | 641 | Cauchy note, §9.5–9.8. c_δ := sup_yΣ_{y′}e^{−δ₀d(y,y′)}, not #T3.27's … |
+| {#T12.7-23} | 642 | Cauchy note, §10.1–10.2. ℓ := εL^{j−1} (#C10.1.1); δ₂ (#C10.1.3-3), #T… |
+| {#T12.7-23-1} | 643 | Cauchy note, §10.1–10.2, continued. w_u := v₁(U₁^u)^{−1}·u/·v₁(U₁), u/… |
+| {#T12.7-24} | 644 | Cauchy note, §10.3. U^A := U^A_j, U^B := U^B_{j+1}, Ũ := Ũ_j, and V :=… |
+| {#T12.7-24-2} | 645 | Cauchy note, §10.3, complex pairs. B₀^{cx} ≥ B₀, a constant of d, L an… |
+| {#T12.7-24-3} | 646 | Cauchy note, §10.3, the transport column. k_G ≥ 2, a constant of G bou… |
+| {#T12.7-24-4} | 647 | Cauchy note, §10.3, the BCH constants. c_B and r_{BCH}, constants of G… |
+| {#T12.7-24-1} | 648 | Cauchy note, §10.3, continued. (Ad(w)λ^B)(c) := Ad(w(c₋))λ^B(c) (#C10.… |
+| {#T12.7-25} | 649 | Cauchy note, §10.3: the constants. c_e := sup_ya^{−d}max(Σ_pη^de^{−½δ₁… |
+| {#T12.7-25-1} | 650 | Cauchy note, §10.3: the constants, continued. δ^μ_i := sup abs(μ′_i − … |
+| {#T12.7-26} | 651 | Cauchy note, §10.4: the forms. U^B := U^B_{j+1} (#C10.4.1); Q₁ := Q̄₁(… |
+| {#T12.7-27} | 652 | Cauchy note, §10.4: the gauge fixing. Y := sZ′_c + tZ_c, local (#C10.4… |
+| {#T12.7-28} | 653 | Cauchy note, §10.4–10.5: the lifts. T_Q := Q₁Q₁* on the coarse bond fi… |
+| {#T12.7-29} | 654 | Cauchy note, §11. ε_a := g_a/(2B₃), the plaquette bound of the block d… |
+| {#T12.7-29-1} | 655 | Cauchy note, §11: the large-field weight. c₀ := O(1) + 1, the constant… |
+| {#T12.7-30} | 656 | Cauchy note, the constants index #CK.1-2–#CK.1-33 (#CK.1-2, #CK.1-3, #… |
+| {#T12.7-31} | 657 | Cauchy note, further definitions. E^A_const := E_const,k = Σ_{j≤k}E°^A… |
+| {#T12.7-31-1} | 658 | Cauchy note, §§6.2 and 8.2–8.6. s_K := s′_K + L^ds^{LF}_K (#C6.2.12-3)… |
+| {#T12.7-32} | 659 | Cauchy note, §8.7: the linear map. (𝒯u)_{i+1} := ε^*[D_i[u] + C_SΣ_{j≤… |
+| {#T12.7-33} | 660 | Cauchy note, §§9–10, further. δ_Q^{pl} := (r_T^{pl})^{−1}log(1/q^{pl})… |
+| {#T12.8} | 661 | Large-field note, preamble and §§0–3. δ_j := (g^B_j)^{−2} − (g^A_j)^{−… |
+| {#T12.8-1} | 662 | Large-field note, the data parameter. ε₁ := max(C max_j(ε_j + ϑ_j), C(… |
+| {#T12.8-2} | 663 | Large-field note, §0, the layer width and the distances. w_* := the le… |
+| {#T12.8-2-1} | 664 | Large-field note, §0, the test fields, the exponents, and the exit rad… |
+| {#T12.9} | 665 | Large-field note, §4 to the alignment at complex points. 𝐁_{1.70} := 𝐁… |
+| {#T12.9-2} | 666 | Large-field note, §4: α₀^{CMP} := 4C₀^{ms}ε₁ (#D.α₀^CMP, #4.53-1.0), C… |
+| {#T12.9-1} | 667 | Large-field note, §4 from the complex points. ‖𝐒‖ := sup_x(a_{j(x)}abs… |
+| {#T12.9-1-1} | 668 | Large-field note, §4, the data angles. C_Λ^δ := #W12.172's C_Λ (#T12.6… |
+| {#T12.9-1-2} | 669 | w := ζ₁/(g″)², the weights at which LFR II (1.70) evaluates A (#4.41, … |
+| {#T12.9-1-3} | 670 | Large-field note, §4, the chain's arguments. C_Ψ, the constant of Bała… |
+| {#T12.9-1-4} | 671 | Large-field note, §4, σ on 𝒟^c. σ^B := the exponent of 𝐓′_k(X, ·) (#4.… |
+| {#T12.9-1-5} | 672 | Large-field note, §4, the data change on the disc. D^δ_z := the data o… |
+| {#T12.9-1-6} | 673 | Large-field note, §4, the room. W^δ_z := e^{iη𝐇^δ_z}U^δ_0, a G^c-gauge… |
+| {#T12.9-1-7} | 674 | Large-field note, §4, the creation of 𝔹. N := N̄(K − k_R), #CP.13's de… |
+| {#T12.9-1-8} | 675 | Large-field note, §4, the recursion. C_{wr}, the constant of the age w… |
+| {#T12.9-1-8-1} | 676 | Large-field note, §4, the recursion's sums. W^♯ := Σ_{r≥1}w_rμ_N(r)L^{… |
+| {#T12.9-1-8-2} | 677 | Large-field note, §4, the age factor's lift. ℒ_ι^W := dι_Y(W^A), the f… |
+| {#T12.9-1-9} | 678 | Large-field note, §4, the fluctuation step. (𝐔(s), 𝐉(s)) := (e^{−isεA}… |
+| {#T12.9-1-9-1} | 679 | Large-field note, §4, the fluctuation step's conditions. M_c^F := (2C_… |
+| {#T12.9-1-9-2} | 680 | Large-field note, §4, the fluctuation step's radius. (i − m)₊ := max(i… |
+| {#T12.9-1-9-3} | 681 | Large-field note, §4, the fluctuation step's constants. C_c′, the cons… |
+| {#T12.9-3} | 682 | Large-field note, §4, the group, the displacements, and the twist. r_e… |
+| {#T12.9-3-1} | 683 | Large-field note, §4, the weights' constants. c_o := 1 + 2B_G(1 + c_𝔠)… |
+| {#T12.9-3-2} | 684 | Large-field note, §4, the Jacobian at the fluctuation step. ω_c := L^{… |
+| {#T12.9-3-2-1} | 685 | Large-field note, §4, the run difference of the Jacobian. C_det := 2C_… |
+| {#T12.9-3-3} | 686 | Large-field note, §4, the twisted data. 𝔭(z) := (e^z − 1)/z, so that (… |
+| {#T12.10} | 687 | Large-field note, §5. m_W := ⌊k/8⌋ (#D.m_W); ‖dπ‖ := sup_{abs(Y)=1}‖dπ… |
+| {#T12.11} | 688 | Large-field note, Appendix A. Z_D, the set of the sites of Λ^c in D, f… |
+| {#T12.11-1} | 689 | Large-field note, Appendix A, the local distance and the weights. y⁺, … |
+| {#T12.11-2} | 690 | Large-field note, Appendix A, the test field, the balls, the gauge gen… |
+| {#T12.11-3} | 691 | Large-field note, Appendix A, the deep region and the scale L. 𝒟_c := … |
+| {#T12.11-3-1} | 692 | Large-field note, Appendix A, the boundary values. λ_∂ := the supremum… |
+| {#T12.12} | 693 | Large-field note, names shared with other rows. (a) Clashes, each a di… |
+| {#T12.12-1} | 694 | Large-field note, names shared within the note. r := min(PBG's O(1)Mα₀… |
+| {#T12.13} | 695 | Step map, coarse transport, coarse step, and gauge (MOSTC, MOMST, MOMG… |
+| {#T12.13-1} | 696 | c_π := sup{‖π_*(Y)‖ : Y ∈ 𝔤, ‖Y‖ ≤ 1}, ‖·‖ the operator norm, a consta… |
+| {#T12.14} | 697 | Step map, D2.0 and D2.1. κ^{(k)} := ∏_{j=1}^kκ_j with κ_j := e^{−δm_jP… |
+| {#T12.15} | 698 | Step map, D2.2. T^{(k+1)} := CRE (3.23)–(3.25)'s sum over S_{k+1} of t… |
+| {#T12.16} | 699 | Step map, D2.3. R_ξ(𝔅) := Σ_{𝒮⊆𝔅}(−1)^{abs(𝔅∖𝒮)}(∏_{W∈𝔅∖𝒮}a_W)A_ξ(𝒮), … |
+| {#T12.17} | 700 | Step map, D2.4. #(Y) := M^{−4}abs(Y) at scale k and (LM)^{−4}abs(Z) at… |
+| {#T12.18} | 701 | Bałaban proof BP_LFR2_REPLACEMENT.md (balaban_proofs/). V^♭ := V on Λ^… |
+| {#T12.18-1} | 702 | In #T12.18, V, V_k′, V_Λ and V″ are the transforms by #160.2's u, U = … |
+| {#T12.19} | 703 | D2.6 closure (WILSON_IT1_D26_CLOSURE_2026_10_24.md, cited by section).… |
+| {#T12.19-1} | 704 | K := C*Δ^{(k)}C, X(ω) := ∪_jX̃_j^5 enlarged by C's range, K_X := Σ_{ω:… |
+| {#T12.19-2} | 705 | w(W) := e^{ν_rσ_j(W)}e^{(3/8)ν_e·ext^{coll}_j(W)}e^{θ(W)}‖Y_W‖, ext^{c… |
+| {#T12.19-2-1} | 706 | δ_m := C_δc̄e^{−(25/8)(ν_e/L)R_{m+1}}, c̄ := e^{(3/8)ν_e}c̄_*sup_mb_m/… |
+| {#T12.19-3} | 707 | c_D^{chg} := 0, the charge of a fixed member (§5.2 (T0)), not the map'… |
+| {#T12.19-4} | 708 | T_i := U₁(r_i), T̂_i := U_ξ(m̂)(r_i), Y_i := π(T̂_i)π(T_i)^{−1} − 1, a… |
+| {#T12.19-4-1} | 709 | ϑ_V, wherever the table writes it, is V4's ϑ := 1/(4c_{\mathrm h}C_H^{… |
+| {#T12.19-5} | 710 | ℓ := LM_VR₁, the side of the aligned ℓ-cubes of CRE (1.10), (1.20) (§6… |
+| {#T12.19-6} | 711 | W_III := e^{2^dν_r} (§6.4), lw_1(Z) := Σ_{near i→Z}Σ_Xe^{ν_rσ(Y_{i,X})… |
+| {#T12.19-7} | 712 | Start(i) := the boxes Δ₀ with Δ̃₀ ∩ 𝓕_{r_i} ≠ ∅, F_i(s) := Y_i with #T… |
+| {#T12.19-8} | 713 | d^Z_1(n) := d(n, 𝔅_Z), a_j := Cc_CC_cM²R_jρ̂_j·3·2^{d−1}, times 205^d … |
+| {#T12.19-8-1} | 714 | C_h := (C′_bdg₀(1+3r)²·2C_mϑ_Vr + Ĉ^δ_bdC_sh′e^{3μ_Hρ_L/20}ϑ_Vg₀r² + C… |
+| {#T12.19-9} | 715 | C_A(j) := a_j + [j ≥ 2]C_Bρ_{t,j}R_j^d + [j = 1](C_{B,1} + (2C_{lw}g₀(… |
+| {#T12.19-9-1} | 716 | C_d′ := d(3(126)^d + 64^d + 2^d) (§7.2 *Linear size and cubes*); m_A :… |
+| {#T12.19-9-2} | 717 | C_{εA}, a constant depending on L, the group and V4's constants, with … |
+| {#T12.19-10} | 718 | Res(X) := (K₁/8)(d₁′(X)+1) and Pol(X) := (K₁ − 2B₁ − K₁/4)(d₁′(X)+1) ≥… |
+| {#T12.19-10-1} | 719 | Per branch of LFR II pp.385–387, Res and Pol are inherited (Res(Z) := … |
+| {#T12.19-11} | 720 | K_{j+1} := ½γ₀A₁²p₀²(g_{j+1})/(2(14)^d), B_{j+1} := O(1)(64)^dM^dL^{d+… |
+| {#T12.19-12} | 721 | V_i^* := M^iU_{k+1} (§8.1), #T12.17's; 𝔹 ∪ 𝔹_j(Ω) := (𝔹 ∩ Ω^{∼−2}) ∪ (… |
+| {#T12.20} | 722 | D2.7 closure (WILSON_IT1_D27_CLOSURE_2026_10_26.md, cited by item). N … |
+| {#T12.20-1} | 723 | Ξ := 1 + Σ_{r≥1}Σ_{{X′_1,…,X′_r}}Π_pF(X′_p) (15.3), not #T12.6's, #T12… |
+| {#T12.20-2} | 724 | span(P) := C when the slots of P cover C, and otherwise the complement… |
+| {#T12.20-3} | 725 | D2.7 15.0 and 15.5(i)–(i-0). For a component K of Z of either class, K… |
+| {#T12.20-3-1} | 726 | D2.7 15.5. η(D) := 2‖D‖e^{ε_D}(e^{x_D} − 1), which bounds a carried in… |
+| {#T12.20-3-2} | 727 | BP_LFR2_LOOP_LOCALISATION.md (BLL), for an object F of D2.7 15.5(i). τ… |
+| {#T12.20-3-2-1} | 728 | BLL's lengths and rate. ℓ_c(F, 𝒦), M^{−1} times the infimum of the tot… |
+| {#T12.20-3-3} | 729 | BLL's counts and sums. N_K := (100R_k + 3)^d (#BLL.1-1) and N⁺ := (104… |
+| {#T12.20-3-4} | 730 | BLL's constants. a := (63/128)δ, x_F := eC_Rq_a/T̂/, and x_K := eC_Rq_… |
+| {#T12.20-3-5} | 731 | BLL's names apart: h₀(F) is not #T2.25's h₀; C_R is not #T12.7-31-1's … |
+| {#T12.20-3-6} | 732 | BLL's collar. U⁰ := U(𝐁_k″(Y₁⁺(F)), d(𝐔)), EP #39-0's configuration fo… |
+| {#T12.20-3-7} | 733 | BLL's interpolation. X_o, the M-cubes of X(F)^{[1]} outside Z; p_Δ, th… |
+| {#T12.20-3-7-1} | 734 | BLL's split. V^z, V with V_𝔟 replaced by e^{iηz_𝔟b_𝔟}U⁰_𝔟, b_𝔟 := (iη)… |
+| {#T12.20-3-8} | 735 | BLL's thresholds and D2.7's collar. r_z := O(1)(1 + λ_R)²C_∂C_Hα_{1,k}… |
+| {#T12.20-3-9} | 736 | BLL's base and D2.7 15.4(i)'s reach. Y′₀ := T̂_Z^{[λ_T]} ∪ X(F)^{[3]} … |
+| {#T12.20-3-9-1} | 737 | D2.7 15.4(i), the size of a polymer P. /P/, the number of MR_k-cubes m… |
+| {#T12.20-4} | 738 | D_g := the contraction of g's tensors T_P, P ∈ g, in loop order over s… |
+| {#T12.20-5} | 739 | κ_k^R := e^{P_{k−1}(C)μ_k^R + 4ζ_k^R}, absorbed into κ_k (15.8); S_R :… |
+| {#T12.21} | 740 | Bałaban proofs BP_COUPLING_PROFILES.md, BP_JOINS_BLOCK_SIZE.md, BP_LAY… |
+| {#T12.21-1} | 741 | δ_* := min(δ₀^{PBG}, δ₀^{(2.43)}) (JOINS #4.20), not #T12.17's δ_*; M′… |
+| {#T12.21-2} | 742 | M := 2LM′ (COVERING #4.7-1-3) and M := 2M′ (COVERING #4.7-1-5-2), loca… |
+| {#T12.22} | 743 | Bałaban proof BP_PBG_3132.md (balaban_proofs/), PBG (3.131)–(3.132). μ… |
+| {#T12.22-0-1} | 744 | BP_PBG_3132.md, continued. c₀ := Σ_{z∈ℤ}e^{−½r abs(z)} (#BQ.5); □^{(n)… |
+| {#T12.22-1} | 745 | v := Q*B, A := tĜv, and Ĝ := Σ_□h_□G_□h_□ (#BQ.10); h̄_□(c) := h_□(c₋)… |
+| {#T12.22-2} | 746 | Δ(y) := B^j(y) for y ∈ Λ_j (PBG p.397 l.30) and j_y, the scale of y (#… |
+| {#T12.23} | 747 | Bałaban proof BP_PBG_DRESSED.md (balaban_proofs/), the dressed average… |
+| {#T12.23-1} | 748 | W := e^{iηX} (#BD.6); c_β := 3(1 + d) (#BD.6-3); κ_l := c₁c_βL^{l−1}η … |
+| {#T12.24} | 749 | Bałaban proof BP_PBG_COMPLEX.md (balaban_proofs/), PBG at complex data… |
+| {#T12.24-0} | 750 | x_b := Ad(u(b₋))A′(b), bch(x, y) := (1/i)log(e^{ix}e^{iy}), and A″(b) … |
+| {#T12.24-1} | 751 | X₀ := Q(𝐔)G_CQ*(𝐔) at (𝐔, 0), G_C := G₀(𝐔), G at 𝐉 = 0, not LFR II's g… |
+| {#T12.24-1-0} | 752 | C_□ at 𝐔, local: T^loc(τ) := W^{−1/2}X_□(e^{iητA″})W^{−1/2} on C_□'s l… |
+| {#T12.24-1-0-1} | 753 | F(𝐔, 𝐉) := 𝒫*Δ^{(k)}𝒫 with ⟨B, Δ^{(k)}B⟩ := ⟨B, (QG₁Q*)^{−1}B⟩ − a⟨B, … |
+| {#T12.24-1-1} | 754 | a_C, a threshold below which Steps 1–3 hold for Mα₀ + α₁ + γ, with Mα₀… |
+| {#T12.24-1-2} | 755 | a_C′ ≤ a_C/8, the threshold of Step 4 for G and of #BX.8–#BX.8-1 (#BX.… |
+| {#T12.24-1-2-1} | 756 | f := Q*(QGQ*)^{−1}(·, y′) (#BX.8) and N_Q := Q*(QG₁Q*)^{−1}Q (#BX.8-2)… |
+| {#T12.24-1-3} | 757 | Schur's test costs N_Q at most ¼δ₁′ once RM ≥ 2(d + 2)log L/δ₁′, and D… |
+| {#T12.24-1-4} | 758 | a_R, the threshold of (d): O(1)LMBα₀ + α₁ + γ₀ ≤ a_R, with a_R ≤ a_cx/… |
+| {#T12.24-2} | 759 | n₀ := ⌊N/ℓ₀⌋, ℓ := N/n₀, φ_z(y) := Π_μmax(0, 1 − abs(y_μ − ℓz_μ)_N/ℓ),… |
+| {#T12.24-2-1} | 760 | F_z := 1_{□_z}(xI + F_U^{(z)})1_{□_z} (#BX.10-3); Γ_z := F_z^{−1}, Γ₀ … |
+| {#T12.25} | 761 | Bałaban proof BP_VAR_189.md (balaban_proofs/), VAR (189). abs(A′)_∞ :=… |
+| {#T12.25-0} | 762 | ρ₀ := 3dL, the reach of a local link (#BV.3), not #T12.8's ρ₀ := C(d)l… |
+| {#T12.25-0-1} | 763 | Lemma D reads PRT2 p.231 l.8–9's condition on the part of a contour in… |
+| {#T12.25-0-2} | 764 | PRT2 does not fix whether a bond with endpoints in two layers counts i… |
+| {#T12.25-1} | 765 | ε̄, the radius fixed in #BV.4 (ε̄ ≤ ¼a₃, VAR's a₃ of Proposition 4), a… |
+| {#T12.25-1-1} | 766 | V₁(X) := Σ_pη⁴½tr(DX)(p)Σ_{b₁≺b₂}i[X″(b₁),X″(b₂)] and 𝒲₁(X) := δV₁/δX … |
+| {#T12.25-2} | 767 | 𝔄^♯ := 𝔄 − H𝔇𝔄, 𝒱′(X)[Y] := (d/dτ)𝒱(X+τY) at 0 (#BV.10), and 𝔈 := (d/d… |
+| {#T12.25-2-1} | 768 | r₀ := 15δ₀/32, r₁ := r₀ − δ₀/128, and r₂ := r₁ − δ₀/128 = 29δ₀/64 (#BV… |
+| {#T12.25-2-2} | 769 | t := abs(A′)_∞, f(ζ) := a_j³((δ²V/δA′²)(ζA′)𝔄)(b) with j = j(b), and C… |
+| {#T12.26} | 770 | Bałaban proof BP_REG_DRESSED.md (balaban_proofs/), REG and CMP98 at dr… |
+| {#T12.26-1} | 771 | A_d (#BR.5), C₀^{ch} and c₂^{CMP98} (#BR.6-3, #BR.6-4), C₁^{ch} (#BR.7… |
+| {#T12.26-2} | 772 | Ṽ′ := (the average of V′V₀)V̄₀^{−1} and β := α₀L^{−2} (#BR.7); a_Γ := … |
+| {#T12.26-2-1} | 773 | Local symbols of BP_REG_DRESSED.md: P, the smallest box containing y a… |
+| {#T12.26-3} | 774 | F(A) := A(e^{iηA}U₀), S := {A : Q_j(U₀, ηA) = B on Λ_j}, N_{u₁} := {λ … |
+| {#T12.27} | 775 | Bałaban proof BP_DERIVED_CONFIGS.md (balaban_proofs/), the derived con… |
+| {#T12.27-1} | 776 | N, with G ⊂ U(N) compact, connected, and semisimple (CMP98 p.020 l.17,… |
+| {#T12.27-1-0} | 777 | BC's thresholds: ε₁^* := min{a₁/max{2(d − 1), 2L²B₃}, c^X/(L²B₃max{1, … |
+| {#T12.27-1-2} | 778 | m^X, the top index of 𝐁^X, the largest index of a point of 𝐁^X, with Ω… |
+| {#T12.27-1-2-0} | 779 | 𝔤^c := 𝔤 ⊗ ℂ = 𝔤 + i𝔤 ⊂ gl(N, ℂ), the sum direct as 𝔤 consists of Herm… |
+| {#T12.27-1-2-1} | 780 | G^c := G·exp(𝔤), 𝔤 of Hermitian matrices, a closed subgroup of GL(N, ℂ… |
+| {#T12.27-1-2-2} | 781 | In CMP98, G = e^{i𝔤} is connected and G^c "may be defined as an image … |
+| {#T12.27-1-3} | 782 | BC's §G pair: r_B := C₁ε₁/2 ≤ log 2 and r_B^X := C₁ε₁^X/2 ≤ log 2, VAR… |
+| {#T12.27-2} | 783 | t(B) := (2B₅/C₁)abs(B), with abs(𝓗(B))_𝐁 ≤ t(B) for abs(B) < r_B (#BC.… |
+| {#T12.27-3} | 784 | The average in BC is the chain's, RG I (0.4)/(0.12) (p.253, p.254 l.2–… |
+| {#T12.27-4} | 785 | T^{(n)} := L^nη(ℤ^d + (½, …, ½)), B^n(y) := Δ(y) ∩ T_η with Δ(y) the c… |
+| {#T12.27-5} | 786 | U_L(V) := e^{iη𝓗(B)}U₀, the Landau-gauge representative (#BC.5-1-1); A… |
+| {#T12.27-6} | 787 | F(V) := U_{p,X}(M_{𝐁^X}(U_L(V))) (#BC.5-1-4-1), not #T12.26-3's F(A); … |
+| {#T12.27-6-0} | 788 | The points x_l, x_n := y, x ∈ B^l(x_l), x_l ∈ B(x_{l+1}), x₀ = x (CMP9… |
+| {#T12.27-6-1} | 789 | ε^{dev} and ε^{dev}_0, the gauge-fixed deviations from 1 (D2.7 15.6(d)… |
+| {#T12.28} | 790 | Bałaban proof BP_PBG_3130.md (balaban_proofs/), PBG's series (3.130) a… |
+| {#T12.28-1} | 791 | C_ser, the constant of the order-n bound B₀(C_serb_X)^n (#BG.8-5); a_s… |
+| {#T12.28-2} | 792 | X₀, an operator of local order −2 with constant κ_X (#BG.1-1), not #T1… |
+| {#T12.28-2-1} | 793 | σ_m := s₁ + ⋯ + s_m, σ* ≥ max_{m<n}abs(σ_n − σ_m), and s₀ ∈ (0, r) of … |
+| {#T12.28-3} | 794 | S := G′RD*, (E_±f)(b) := f(b_±), (R_•B)(b) := R(𝐔_b)B(b), and m(b), th… |
+| {#T12.28-3-1} | 795 | ε, PBG's Hölder exponent of B₀′(ε), is ½ in Step 3 (#BG.8-3); the end … |
+| {#T12.28-4} | 796 | P, DP, PD* and the middle factors Q′*(term of (3.98))Q′ of (Q′G′²Q′*)^… |
+| {#T12.28-5} | 797 | An expansion of Δ^{(2)} or X₀ is a sum of terms, each depending on (𝐔,… |
+| {#T12.29} | 798 | Bałaban proof BP_PF_ACTION_LOWER_BOUND.md (balaban_proofs/), the actio… |
+| {#T12.30} | 799 | Background-iteration closure (WILSON_IT1_BACKGROUND_ITERATION_CLOSURE_… |
+| {#T12.30-1} | 800 | ⟨𝒲⟩_j := Σ_ℓ∫𝒲(V_j)ρ_j^ℓ(V_j)dV_j/Z with Z := Σ_ℓ∫ρ_j^ℓ(V_j)dV_j, the … |
+| {#T12.30-2} | 801 | X_c := π((M^k(e^{iη𝐇_j}U_{j+1}))(c)·(M^kU_{j+1})(c)^{−1}) − 1, the com… |
+| {#T12.30-3} | 802 | E^f_{const,k} := Σ_{i≤k}E°^f_i and N_k := κ_f^{(k)}e^{E^f_{const,k}}∏_… |
+| {#T12.30-4} | 803 | x_k := 8a_dc_hB₃ℓ_Cε_KL^{−(K−k)}, the map's (7)(d) exponent (§3.2), no… |
+| {#T12.30-5} | 804 | 𝐔 := e^{iη(𝐇_j(s,B′_j) + a′)}U_{j+1}, the deformed background of D2.1(… |
+| {#T12.30-6} | 805 | Δ_i := sup‖(M^iU′)(b) − (M^iU)(b)‖ over the scale-i bonds of the two b… |
+| {#T12.30-7} | 806 | N_tube := 4ℓ_C·3·2^{d−1}, the scale-K cubes met by the scale-k tube of… |
+| {#T12.30-8} | 807 | e^{c_C} := exp(4Cℓ_C(ρ_Kε_K + τ_K²) + r^R_K) ((iv-e)), whose c_C is no… |
+| {#T12.30-9} | 808 | The coarse chain at k = 1 (§5.3): c_X = 2099601e^{1+ν_e+5ν_f/L}(1+Ĉ^g)… |
+| {#T12.30-10} | 809 | e^{g,(j+1)}_X := Φ^g_ℓ(X) − Φ^g_{ℓ₀}(X), the coarse #T12.19-11 e^{(k+1… |
+| {#T12.31} | 810 | General-loops note (WILSON_IT1_GENERAL_LOOPS_2026_11_10.md, cited by #… |
+| {#T12.31-0} | 811 | A family 𝒞 = (C₁, …, C_{N_C}), N_C ≥ 1, consists of pairwise vertex-di… |
+| {#T12.31-1} | 812 | Lengths in step-k bonds, each its step-K′ value times L^{K′−k} and wri… |
+| {#T12.31-1-1} | 813 | diam_ph(C) := uL^{−K}diam_0(C) ∈ uL^{−q(C)}ℤ, the physical ℓ^∞-diamete… |
+| {#T12.31-1-2} | 814 | V4's torus conditions of (H3) besides K_μ ≥ 3(n + 2) (#T12.31-1-1 for … |
+| {#T12.31-1-3} | 815 | For general loops, 4n becomes P_c := P_0(C)/L = P^{co}(C)L^{K−1−q(C)},… |
+| {#T12.31-2} | 816 | Λ(C) := sup_{x≠y}d_C(x, y)/abs(x − y)_∞ over the points of C, d_C the … |
+| {#T12.31-3} | 817 | V4's first step at C (§3). c_h(C) := 16Λ̄(C)(1 + R_*), V4's hull const… |
+| {#T12.31-3-1} | 818 | C_net(C) := 8(1 + R_*)(1 + q_*(C) + c_h(C)), β(C) := μ/(1024(1 + c_h(C… |
+| {#T12.31-4} | 819 | A_h(C) := 8Λ̄(C) + 1, #T12.13's A_h = 17 for a square (#GL3.11-2); A_s… |
+| {#T12.31-5} | 820 | κ_C := exp(Σ_σn_σκ_{v_σ} + Σ_{c∈𝒦(C)}ζ_{v_c,w_c}), V4's flat factor at… |
+| {#T12.31-5-1} | 821 | The single-loop chain at C (§§2, 4–5): c_C(C) := 2Λ̄(C), the map's con… |
+| {#T12.31-6} | 822 | C_win(C) := 2Σ_{d≥0}e^{−c_w(d/(10Λ̄(C)) − 1)₊} ≤ 41Λ̄(C)/c_w (#GL4.10-… |
+| {#T12.31-7} | 823 | κ_j := exp(log κ_j(C)), the general form of #T12.14's κ_j (#GL4.1). At… |
+| {#T12.31-8} | 824 | λ_K := P_{K′}(C)‖dπ‖(4C_G(ε₀) + C_Y)ε₁L^{−(1−ε₀)k}, written λ_K(C), #T… |
+| {#T12.31-9} | 825 | r^R_K(C) := (P(C)/r(C))C^R_1R̂_K²(2 + 48R̂_K/c^R_E)e^{−p₀(g_K)/5} (#GL… |
+| {#T12.31-10} | 826 | The continuum normalisation (#GL5.6-1): δm_{k,v} := −κ^{(k)}_v/Π_k, mi… |
+| {#T12.31-11} | 827 | u_𝔏(𝒞) := 2Λ̄(𝒞)u_𝔏 (#GL6.4-2); L₀(𝒞) := 4Λ̄(𝒞)²L₀^× (#GL6.4-3, #GL7.1… |
+| {#T12.31-11-1} | 828 | For general loops C^×_E is #T4.52's with P_Σ/4 for #T4.51's ℓ_Σ, which… |
+| {#T12.31-12} | 829 | C_lift := 6, the constant of the lifting network's non-contour edges (… |
+| {#T12.31-13} | 830 | The pair factorisation for two general loops C₁, C₂ (§8). ℓ̄_i := P_{K… |
+| {#T12.31-14} | 831 | N_lad(C_i), the number of plaquettes in the ladder chain of C_i^{(K′)}… |
+| {#T12.31-15} | 832 | c^𝒦_ty := 1 + 4Lip_χ(1 + 1.06a_dc_hB₃), not #T12.4-4-1's c_ty, gives a… |
+| {#T12.31-16} | 833 | Reflection positivity at level q (§9), with the reflection-positivity … |
+| {#T12.31-16-1} | 834 | 𝔊^{gl}_q := the finite families of pairwise vertex-disjoint loops of 𝒞… |
+| {#T12.31-16-2} | 835 | κ_{C,χ} := κ^{(K′)}_{C,χ} at K′ = K − j_q, with log κ_{C,χ} = Σ_{k≤K′}… |
+| {#T12.31-17} | 836 | Nonvanishing for general loops (#GL9.8), with the nonvanishing note WI… |
+| {#T12.32} | 837 | IT-1 note (WILSON_IT1_LINE_DEFECT_2026_10_21.md, cited by section and … |
+| {#T12.32-1} | 838 | §3e(3.0), repair K: γ_c := γ/2 and h_c := h_+ + γ/2 replace V4's γ = γ… |
+| {#T12.32-2} | 839 | §3e(3.1): r_H := min(r_e, r_iv), not #T12.6-19-1's r_H, is the radius … |
+| {#T12.32-3} | 840 | §3e(3.4)–(3.5): C_Γ := γ_c^{−1/2} + h_cγ_c^{−3/2}/2; s₀ := γ/4; C₃ := … |
+| {#T12.32-4} | 841 | §3e(3.6), repair K′: ρ₀ ∈ (0, 1], of L and the group, is the width of … |
+| {#T12.32-5} | 842 | §3e(3.8)–(3.9): C_q := C·C_BCH, with C the constant of V4's (c4-10-4),… |
+| {#T12.32-6} | 843 | §3e(3.12), the shift at 𝐔: C_δ := C_ee^{μ_xρ_L}(8(2ρ_L + 1)⁴C_m + 1), … |
+| {#T12.32-7} | 844 | §3f(3) M8: C_{DJ} := 13L²m_L ≥ (m_L·164L⁴m_L)^{1/2}, the Schur bound o… |
+| {#T12.32-8} | 845 | Local to §3e: ‖a′‖_∞, ‖a′‖_X, m̂₀ = m̂(U₁), A_n(R), δ*^c_n and a*_n ((… |
+| {#T12.32-9} | 846 | Local to IT-1 §3g(1): E_D(Z) := {b ∈ D : b has an endpoint in Z}, for … |
+| {#T12.32-10} | 847 | §3j(1)–(2), the local shift. ε_s := m_Lσ_H(ℓ_s − ρ_L), the row-sum bou… |
+| {#T12.32-10-1} | 848 | §3j(3): c_ℓ := 4(2ρ_L+1)⁴m_L, with sup_ch(ℓ_Λ(c)) ≤ c_ℓϑ_Vr, and ε_N :… |
+| {#T12.32-11} | 849 | §3j(4), the t-family at m̂: d₀(Y) < s_p for every host of 𝐃₀(Λ), with … |
+| {#T12.32-12} | 850 | §3j(5): N₀ := the least N with 2c_hγ^{−1}N_lat(μ_H)c_ℓe^{μ_Hρ_L/10}e^{… |
+| {#T12.32-12-1} | 851 | §3j(6): N(g₀) := the least N ≥ N₀ with e^{−μ_Hℓ_sN/4} ≤ g₀, and R_t :=… |
+| {#T12.33} | 852 | N-loops note (WILSON_IT1_N_LOOPS_UNIFORM_BOUND_2026_11_05.md, cited by… |
+| {#T12.33-1} | 853 | Tube hulls (#NL1.3-6.1). Let S′ be a connected union of a finite famil… |
+| {#T12.33-2} | 854 | (H1′) (#NL6A.2-1): S_D is the union of a family 𝒫_D of pieces, each of… |
+| {#T12.33-3} | 855 | Step 1 (§9). For a group γ with contacts on C_i, H^i_γ is V4's hull if… |
+| {#T12.33-4} | 856 | K₁, of N_C, L, M, η and V4's constant C of #NL9.6-5-2, is not #T12.19-… |
+| {#T12.33-4-1} | 857 | C^src is V4's, with the rows' derivative constants maximised over χ₁, … |
+| {#T12.33-5} | 858 | N-loops note, the pair's objects for N_C loops, with C := ⊔_iC_i for t… |
+| {#T12.33-6} | 859 | The class (§2). 𝒲^{(N)}_k := Π_iκ^{(k)}_{C_i}·e^{𝓔_k}[Π_if^{(i)}_k + Σ… |
+| {#T12.33-6-1} | 860 | E^{(N)}_const,k := Σ_iE_const,k(C_i, χ_i) + Σ_{j≤k}E^×_j + Σ_{N_B<j≤k}… |
+| {#T12.33-7} | 861 | Cross constants (§5). E^×_{k+1} := log S°(ℓ₀) − Σ_ilog S°_{C_i}(ℓ₀) (#… |
+| {#T12.33-7-0} | 862 | The R-steps (§6B). For A ⊆ {1, …, N_C}, Ξ^c_A is #T12.20-2's Ξ^c for t… |
+| {#T12.33-7-1} | 863 | Step 1 (§9). E^×_ξ := 𝓛 − Σ_i𝓛_i (#NL9.7-2), with 𝓛 and 𝓛_i the connec… |
+| {#T12.33-8} | 864 | Sets of §6A, with #T12.33-1's tube hulls and #T12.33-2's 𝒯(D). The pai… |
+| {#T12.33-8-1} | 865 | For a merged D_G, 𝒫_{D_G} consists of its groups' families (#NL6A.3-1,… |
+| {#T12.33-9} | 866 | Cross vertices (#NL6A.5). A cross vertex v has no window extension: wi… |
+| {#T12.33-9-1} | 867 | For an M-vertex, 𝒫_M consists of the π_{k+1}-cubes of M and the 𝒫_W, W… |
+| {#T12.33-10} | 868 | Constants (§7). C^×_E (#NL7.1-1), E* := Σ_iC_Σ(χ_i)𝔞̄ + C^{R°}_E + C^×… |
+| {#T12.33-10-1} | 869 | C^{R°}_E := N_CC^R_1R̂_{K′}²(2 + 24R̂_{K′}/c^R_E)e^{−p₀(g_{K′})/5} ≤ N… |
+| {#T12.34} | 870 | O4 note (WILSON_IT1_O4_CLOSURE_2026_10_26.md, cited by section). ρ_ω :… |
+| {#T12.34-1} | 871 | ω̃′_t := ω_t + e^{κs_p}((1 + C_ω)τ̄ + τ̂_N) and ω̄̃′ := ω̄ + e^{κs_p}(… |
+| {#T12.35} | 872 | RW1 note (WILSON_IT1_RW1_CLOSURE_2026_10_30.md), §§0–4. ι := ι_{T,1}, … |
+| {#T12.35-1} | 873 | C_w := 4(3LM)⁴C_det + 3⁴/8 (#RW1.4-8), not #T4.22's, #T4.53's, #T12.12… |
+| {#T12.35-2} | 874 | RW1 §5. 𝒫(U₁) := {A′ : abs(A′(b)) < α_{1,1} for every bond b} (#RW1.5-… |
+| {#T12.35-3} | 875 | dμ_{C_{E₀}}(B) and (det H_{E₀})^{1/2} := exp(½tr log H_{E₀}) (#RW1.5b)… |
+| {#T12.35-4} | 876 | ϱ_χ, V4's cutoff radius r(g₀), and p_𝐔(a) := p_{e^{iζ}}(R_{u,*}a) (#RW… |
+| {#T12.35-5} | 877 | RW1 §5(g). c_𝒱, a two-sided comparison of VAR's norm with ‖·‖_op, not … |
 
 ## Definitions of the LF
 
@@ -4852,4 +4860,4 @@ Each definition X := … of the LF carries the tag {#D.X} immediately before X; 
 | {#D.ψ′} | 3266 | ψ′ := Σ_{y∈B}G_B(·, y)σ(y)/(2d), so that Δψ′ = −σ in B and ψ′ = 0 |
 | {#D.h_y} | 3267 | h_y := E^·G(S_{τ_B} − y), τ_B the exit time from B. Theorem 4.3.1  |
 
-Hashes at which the lines above hold: LF 94d3e82675b1, table 50377d2c8c33 (SHA256, first 12).
+Hashes at which the lines above hold: LF 94d3e82675b1, table c571f2502afe (SHA256, first 12).

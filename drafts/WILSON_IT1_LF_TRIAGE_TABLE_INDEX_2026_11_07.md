@@ -3830,3 +3830,12 @@ Relabel → LABELS c73455137f70, table 3e9dd1981ea0, at LF 94d3e82675b1. The def
 - Requested by (4). Round 1 found O1–O2, both repaired; rounds 2 (narrow) and 3 (full) are clean. Map e36778a633e4: all 419 cited tags are present. SHAs sent after. Log: WILSON_IT1_LF_TRIAGE_BG_D26REPOINT_2026_11_10.md.
 
 Relabel → LABELS 16d105361e83, table 50377d2c8c33, at LF 94d3e82675b1. The definition check prints 0 lines on LF, on the pair note, on the general-loops note and on NL. dmarks2 lists the 16 known leftovers. deadcheck and prefcheck show only their known hits. Columns are 10×5, 74×6, and 268×7.
+
+## RW1 aa66652f0d6a: V4's Branch Weight, the δ_M Conditions on M and RW1's Local Symbols, 2026-11-11 02:53
+
+- #T6.22: (TT′) is V4's step-1 branch weight, a bookkeeping change. The RMJ label is split off into #T6.22-1 for length.
+- #T1.5-2 (new, stage 3): V4's δ_M conditions at 4δ_M, for V4's M (#RW1.5bp-2). τ_w is fixed after M and before g₀.
+- #T12.35 to #T12.35-5 (new): RW1's local symbols, by tag, with their clashes. RW1 is now on the standing defcheck list.
+- Requested by ⑂ (3); announced to (4). Rounds 1 and 3 found P1–P3, all repaired; rounds 4 (narrow) and 5 (full) are clean. SHAs sent after. Log: WILSON_IT1_LF_TRIAGE_BG_D26REPOINT_2026_11_10.md.
+
+Relabel → LABELS 8f078eb887ad, table c571f2502afe, at LF 94d3e82675b1. The definition check prints 0 lines on LF, on the pair note, on the general-loops note, on NL and on RW1. dmarks2 lists the 16 known leftovers. deadcheck and prefcheck show only their known hits. Columns are 11×5, 74×6, and 268×7.
