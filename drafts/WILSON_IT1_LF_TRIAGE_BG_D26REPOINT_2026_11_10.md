@@ -297,10 +297,23 @@ Input: (4)'s request on map 3ff093a40ac4 (#MD2.0.5.37 merged into D2.0(5)(f) and
 - Point sent to (4): #NWTOA.1-6 says "at least 200LMR₁", where V4 (H3) says "exceeding 200ℓ". No bound changes.
 - Table 913bbd6cafdd → 712afdf44d4e → 3eb0d406c904 → ae5e18927daf. LABELS c5b80d907958 → d1a595167b1b → 47f839bf72ee → df5691132d30. defcheck on LF, on the pair note, on the general-loops note and on NL: "-- 0 lines" each. dmarks2 16. deadcheck and prefcheck show the known hits only. Columns 10×5, 74×6, 267×7; CR 0.
 
+## TL b734cba1137b, Map 8dfc61443b7f, D26 7a8b3691326a, Continuum e11a4286a383 and General Loops e5868db66fa8: #T4.44, #T12.13, #T12.15, #T12.19-9-2 and #T12.31-12 (Table)
+
+Input: BETA's TL update (TL now BETA's; #290-2 cites #T12.31-1-2) and (4)'s requests on maps 5c5203be2b03 and 8dfc61443b7f (C_box count, field-valued ρ renamed U^{rep}/U^{ax}, C_ε → C_{εA}, dead-route trims).
+- TL: no row changes. #T12.4-1's "two-loops #290" matches #290's N_s = (T_ph/u)L^j. All 130 cited TL tags are present in LABELS_TWO_LOOPS 07b7d5f8e1a3, which covers TL and its BP_TL files.
+- #T4.44: C_box ≥ 74 (#MD2.4.12.7-1-5-2), in the cell and in the references. Re-derived: non-contour edges ≤ (n − m)LM + m(2LM + 8L) ≤ 3LMn for M ≥ 8, and abs(ℋ(W)) ≤ 34LMn (the long case, n_C = 4s), so the traversal is ≤ 74LMn; diam(Q_W) ≤ 38LMn.
+- #T12.13 and #T12.15: U^{rep}_1 (#MOMGD.33-11), h_Γ (#MOMGD.33-13, -26), U^{rep,n} := M^n(U^{rep}_k(V_k)), Δ_n (#MOMGD.33-27), Ū := U^{rep}_k(M^k(𝐔)) and v̂₁ with the transport Ū^{rep}_k(V_k)(Γ^{(k)}) (#MOMGD.33-51, #MD2.2.4.32-3); U^{rep}_k(V_k), D(k)'s representative (#MD2.2.4.28), and U^{ax}_k(V_k) (#MD2.2.4.30), not #T12.6's U^{ax}. The old ρ̄_k was used without a table entry.
+- #T12.19-9-2: C_{εA} (D26 l.396, l.399; map #MD2.0.5.32). No clash clause is needed.
+- #T12.31-12, at table b48fd324ff78: C_lift, V4's C by #GL3.13-2-1, is at most 74, and the non-contour edges alone need at most 6 (#MD2.4.12.7-1-5-1). BETA was told that #GL3.13-2-1 counted ℋ(W) twice and needs only the non-contour constant.
+- Round 1 (narrow) is clean. Round 2 (full) is clean: all 419 cited map tags are present in 8dfc61443b7f, and the cited trimmed lines (#MD2.0.3.32, #MD2.0.3.34-2, #MD2.4.12.30) still carry the cited content.
+- GL e5868db66fa8 then defined C_lift := 6, the non-contour constant (#GL3.13-2-1), and derived diam(Q_W) ≤ 10LMn(W) + 2abs(ℋ(W)) (#GL3.13-3, #GL3.13-3-1). #T12.31-12 now reads: C_lift := 6, from at most 3LMn(W) non-contour bonds, so the traversal is ≤ C_liftLMn(W) + 2abs(ℋ(W)); V4's C covers ℋ(W) too and is ≤ 74 for a square. Re-derived #GL3.13-3-1: 2(R_Q + LM/2) + 3LMn(W) + abs(ℋ(W)) ≤ 5LMn(W) + abs(ℋ(W)), using 2R_Q + LM ≤ 2LM, and the Euclidean diameter is at most twice that at d = 4. Round 3 (narrow) and round 4 (full; all 95 cited #GL tags present) are clean.
+- Map 59bd894c875e (second dead-route sweep) changes no row: all 419 cited map tags are present, and the one trimmed line the table cites, #MD2.2.6.142-19, still gives #T3.42's ȟ_k and ȟ_n.
+- Table ae5e18927daf → b48fd324ff78 → 3e9dd1981ea0. LABELS df5691132d30 → 9f01a712f49c → c73455137f70. defcheck on LF, on the pair note, on the general-loops note and on NL: "-- 0 lines" each. dmarks2 16. deadcheck and prefcheck show the known hits only. Columns 10×5, 74×6, 267×7; CR 0.
+
 ## SHAs
 
-Table: d71e239470ea → eb5a6a505303 → b168c70703ab → 9f6ebf47c805 → 0fa578b35726 → ef03c153b6ad → cc3949e005fb → 77c1b5ec9928 → 18cbd119fc8f → 05cbd40be4db → 7b51b1177ee9 → bb2bbb3fbd08 → 99c0d18618f6 → 7a0f3334905e → ff88007cace7 → 37e1056450c0 → 8c89f561c7cc → 3a5a8b58dbc8 → 98951278d317 → 327e03bf0262 → dbf78d2d6047 → 913bbd6cafdd → 712afdf44d4e → 3eb0d406c904 → ae5e18927daf.
-LABELS: 2d2801629f41 → 146c7b49d22b → d444e40b4233 → 1f2b3fa09b9d → 740b198d7a9d → 58050f8936d3 → 0e94a6174742 → 4c2c66efb348 → 734a37930def → c59773513fd1 → be350896ce4a → 9eeed3a7792e → 7a980dfeec7b → c6814d4faaee → e384dc944732 → 3e685cf2133e → 9a2252417817 → a20c7e0e549b → 75f09f514822 → d34bf3e481da → 7e99abf52604 → c5b80d907958 → d1a595167b1b → 47f839bf72ee → df5691132d30. Background note: 249ae1a46a2a → 8510ab0aebd7 → 7bb5f99918ab → 3047b31464c3 → 22a230556c65 → c7612b0d6f3b → df792ffa33f3.
+Table: d71e239470ea → eb5a6a505303 → b168c70703ab → 9f6ebf47c805 → 0fa578b35726 → ef03c153b6ad → cc3949e005fb → 77c1b5ec9928 → 18cbd119fc8f → 05cbd40be4db → 7b51b1177ee9 → bb2bbb3fbd08 → 99c0d18618f6 → 7a0f3334905e → ff88007cace7 → 37e1056450c0 → 8c89f561c7cc → 3a5a8b58dbc8 → 98951278d317 → 327e03bf0262 → dbf78d2d6047 → 913bbd6cafdd → 712afdf44d4e → 3eb0d406c904 → ae5e18927daf → b48fd324ff78 → 3e9dd1981ea0.
+LABELS: 2d2801629f41 → 146c7b49d22b → d444e40b4233 → 1f2b3fa09b9d → 740b198d7a9d → 58050f8936d3 → 0e94a6174742 → 4c2c66efb348 → 734a37930def → c59773513fd1 → be350896ce4a → 9eeed3a7792e → 7a980dfeec7b → c6814d4faaee → e384dc944732 → 3e685cf2133e → 9a2252417817 → a20c7e0e549b → 75f09f514822 → d34bf3e481da → 7e99abf52604 → c5b80d907958 → d1a595167b1b → 47f839bf72ee → df5691132d30 → 9f01a712f49c → c73455137f70. Background note: 249ae1a46a2a → 8510ab0aebd7 → 7bb5f99918ab → 3047b31464c3 → 22a230556c65 → c7612b0d6f3b → df792ffa33f3.
 
 ## Status
 
@@ -327,3 +340,5 @@ The rows #T12.33-5 to #T12.33-10-1 enter NL's 37 flagged definitions, and #T12.2
 #T12.31-13 follows GL bdbcc51cccba (ℓ̄_i/N_s = ℓ̄_i^{ph}/T_ph), and #T12.31-1-1 follows continuum 24eddcd2e20c (T_ph = 2L^{m_T}u, V4's (H3)). Round 1 found L1, which is repaired. Rounds 2 (narrow) and 3 (full) are clean, so these rows are done at table 913bbd6cafdd.
 
 #T12.14, #T12.19-9 and #T12.30-8 follow map 3ff093a40ac4 (τ̂_n² and τ̂̄² defined once, at #T12.14; #MD2.0.5.37 gone), #T12.19-9-2 records D26's C_ε, #T12.19-5 separates D26's M_V from #T2.12's, and #T12.31-1-2 and #T12.31-1-3 record K_tor(C) and K_tor(𝒞) for continuum d598e46ff20a and GL c7f59b0cb310. Rounds 1 and 2 found N1–N6, all repaired. Rounds 3 (narrow) and 4 (full) are clean, so these rows are done at table ae5e18927daf.
+
+#T4.44 (C_box ≥ 74), #T12.13 and #T12.15 (U^{rep}, U^{ax}) and #T12.19-9-2 (C_{εA}) follow map 8dfc61443b7f and D26 7a8b3691326a, and #T12.31-12 (C_lift := 6) follows GL e5868db66fa8; TL b734cba1137b changes no row. Rounds 1 (narrow) and 2 (full) are clean on the first four, and rounds 3 (narrow) and 4 (full) on #T12.31-12, so these rows are done at table 3e9dd1981ea0.

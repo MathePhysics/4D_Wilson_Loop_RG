@@ -623,8 +623,7 @@
 - {#MD2.0.5.2} *The couplings.* G is compact, connected, and simple (V4 (H1)). RG I Theorem 2 (p.259 l.28–38) is printed for G = SU(2), its proof left to a separate paper; for simple G it is BETA_FUNCTION_WILSON_LOOPS.md Corollary 8.2, which gives, for every small renormalised g and ε = L^{−K}, a bare g₀ with g_K = g and every g_k in ]0, γ_B] (#B8.34–#B8.35; γ_B is RG I's γ, not D2.3(4)'s γ := sup_K g_K), and (0.31) up to an additive constant (#B8.36).
   {#MD2.0.5.2-1} With x_k = g_k^{−2}, Cor. 8.2 supplies the window bound (W), b(n−m) − C ≤ x_m − x_n ≤ b′(n−m) + C for all m ≤ n ≤ K (#B2.5, #B8.31-1–#B8.32).
   {#MD2.0.5.2-2} So CRE (2.6) holds with b′ + C in place of β′, 1/g_k² ≤ 1/g_K² + (b′ + C)(K−k), and g_k ≤ (1+β₀)g_K uniformly in K − k once γ_B is small depending on β₀ (#B8.38–#B8.38-1).
-  {#MD2.0.5.2-3} The upper bound is g_k² ≤ C′/(K−k+1), C′ := 1/min(γ_B^{−2}, b) (#B8.38-3). The exact lower bound of (0.31) is not available at simple G (#B8.38-2), and D2 does not use it.
-  {#MD2.0.5.2-4} The uniform form g_k ≤ (1+β₀)g_K is used by (3)(c)'s bound of α_{0,k}, (c)'s feedback factor (1+β₀)²g_K² and quadratic term, (d)'s factor (1+β₀)⁸L²g_K² ((1+β₀)^{10}L²g_K² against ρ̃_{k+1}, D2.4(6)), (f)'s τ̄², and D2.2(4)'s smallness conditions on g_K.
+  {#MD2.0.5.2-3} The upper bound is g_k² ≤ C′/(K−k+1), C′ := 1/min(γ_B^{−2}, b) (#B8.38-3).  {#MD2.0.5.2-4} The uniform form g_k ≤ (1+β₀)g_K is used by (3)(c)'s bound of α_{0,k}, (c)'s feedback factor (1+β₀)²g_K² and quadratic term, (d)'s factor (1+β₀)⁸L²g_K² ((1+β₀)^{10}L²g_K² against ρ̃_{k+1}, D2.4(6)), (f)'s τ̄², and D2.2(4)'s smallness conditions on g_K.
   {#MD2.0.5.2-5} The D2.6 carry lemma (D2.6 closure §5.0) uses the window bound: its sum S_R = Σ_me^{−(25/8)(ν_e/L)R_{m+1}} is bounded through x_m ≥ x_{m′} + b(m′ − m) − C, so that a window of length b in x holds at most 2 + C/b indices. (b) uses only the uniform form.
 
 - {#MD2.0.5.3} *Convention for the deviation.* δ*_n^{(k)} is the quantity of (3): fine-plaquette deviations near n divided by the fine-plaquette area in step-k units, η_k² = L^{−2k}.
@@ -953,7 +952,6 @@
     - {#MD2.1.4.37} |𝐇_k| < a₁ (RG1 p.266, for the analyticity of u_k in 𝐇_k), which follows from (1.18) if 4B₀e^{16κ_s}ε₃ ≤ a₁;
     - {#MD2.1.4.38} VAR (7), |(∂V)(p′) − 1| < ε₁^{VAR} on 𝔅_k, for V^{(k)}.
       {#MD2.1.4.38-1} This is part of Bałaban's construction as presented: RG1 p.265 applies VAR Sect. G with V₀ = V^{(k)} ("As in Sect. G [15] we write U_k(V′V^{(k)}) = U_k′(V′)U_{k+1}"), VAR Sect. G assumes "V₀ satisfies the condition (7)", and CRE p.267 transfers this to the multi-domain step.
-      {#MD2.1.4.38-2} CRE p.268's regularity of U_{k+1} on Ω_{k+1} (D2.0(2)) alone does not give it on 𝔅_k.
   - {#MD2.1.4.39} *The hypothesis |B′|_Y ≤ ε_H.*
     - {#MD2.1.4.40} At real configurations.
       {#MD2.1.4.40-1} By CRE (3.11) and (3.15), V_k′ = e^{iB′} on B(Γ_{k+1}), so (3.14) gives |B′| < O(1)ε_k there directly; under O(1)ε_k ≤ ε_H this is the hypothesis.
@@ -1666,7 +1664,6 @@
   {#MD2.2.6.31-5} So R(u) acts pointwise and is orthogonal.
   - {#MD2.2.6.32} At real configurations 𝐉 = J_{k+1} = J(U_{k+1}), and J(U^u) = R(u)J(U) (PBG p.395, after (3.30)).
     {#MD2.2.6.32-1} So nothing changes there. 𝐉 is a variable for RG1 p.272's reason: bounds for D*D "do not hold", "and this is the reason why we do not formulate second order regularity conditions, as in (1.9) [14], (2) [15], but we replace the expression J_j by the new variable 𝐉".
-  - {#MD2.2.6.33} ψ_{k+1}'s covariance is not used and is not claimed; for local u it is not available: 𝐇^{(k)} is built from the minimiser V^{(k)}_{Λ^c∩Λ_k}, which is gauge fixed (VAR p.277, "unique up to gauge transformations"; the axial gauge Ax).
     {#MD2.2.6.33-1} CRE p.250 keeps the invariance of the density under gauge transformations of the new field apart from the invariance of the effective action under (1.17), and CRE (3.17)–(3.18) show that the two minimisers differ by u_{k+1,□′} and a small field exp iL^{−1}η𝐇_{k+1,□′}, with 𝐇_{k+1,□′} "bounded by … ≤ 44d²B₃²(1+β₀)exp(−R_k)ε_k on □′^{∼2}" (CRE p.268).
 - {#MD2.2.6.34} *The functions of (𝐔, 𝐉).* RG1 p.272, after (3.12): "we replace J_{k+1} by the variable 𝐉, and in the remaining expressions we replace U_{k+1} by the new variable 𝐔".
   {#MD2.2.6.34-1} RG1 p.273, for the operators: "we replace the configurations U_{k+1}, J_{k+1} occurring in operators there by the configurations 𝐔, 𝐉".
@@ -1831,7 +1828,7 @@
   {#MD2.2.6.86-5} The change of representative that actually occurs, v₁, is not of this kind (*Scope* below).
   {#MD2.2.6.86-6} No integration variable is changed, so no Jacobian and no invariance of the rest of the integrand is used.
   {#MD2.2.6.86-7} The w of (4)(c) at the next step acts on the slot values in the same way, R(w)σ, with the radius bound of (4)(c) and (e) for complex w.
-  {#MOMGD.52} So every change of representative at the later steps acts on the insertions through their slot values, by R(u)^{−1} for the u above and by R(w) for (4)(c)'s w (#MD2.2.4.21), and ψ_{k+1}'s covariance is not needed (#MD2.2.6.33).
+  {#MOMGD.52} So every change of representative at the later steps acts on the insertions through their slot values, by R(u)^{−1} for the u above and by R(w) for (4)(c)'s w (#MD2.2.4.21).
   {#MD2.2.6.86-8} *Scope.* This covers changes of representative by a u that does not depend on the next step's integration variable.
   {#MD2.2.6.86-9} RG1 p.265's first transformation v₁ = U_{k+1}(Γ^{(k)})^{−1}Ū^{rep}_k(V_k)(Γ^{(k)}) depends on B′ exactly when ρ_k's hierarchical transports do; D(k)'s representative is in the hierarchical mean axial gauge, not axial relative to a B′-independent reference ((4)(d′), Step 1), so v₁ depends on B′ and goes through (4)(c)–(e) with w_tot = u_k^{−1}v₁ (#MD2.2.4.43-1).
   {#MD2.2.6.86-10} At a configuration 𝐔 of D(k+1)(iii)'s polydisc that is not the step-k output at its own data (a real point other than the centre, or a general complex point), v₁ = c₀(𝐔)v̂₁ with c₀(𝐔) the B′-independent mismatch between 𝐔 and the minimiser at its averages ((4)(d′), Step 8): c₀ is of this bullet's kind for the output at 𝐔.
@@ -1876,7 +1873,7 @@
   - {#MD2.2.6.110} The sizes: |e^{ε_TδΨ_≥(T)} − 1| through |δΨ_≥(T)| ≤ Σ_{𝒞≁every M∈T}|φ^T(𝒞; 𝐔, 𝐉, ω′) − φ^T(𝒞; 1, 0, 0)|, and |δΨ(M)| likewise over 𝒞 ≁ M.
     - {#MD2.2.6.111} The vacuum-link factors need only the sup bound |e^{±y_𝒞} − 1| ≤ u_𝒞 = |y_𝒞|_sup e^{|y_𝒞|_sup}, |y_𝒞|_sup ≤ 2|φ^T(𝒞)|_sup (D2.4(12)(c)).
     - {#MD2.2.6.112} No per-cluster deviation factor is needed: the deviation factor of the dev species is supplied for Y^d_𝒢 = Y_𝒢 − c_𝒢T_𝐔 as a whole by D2.4(4)'s Cauchy step at the group's support X(𝒢), which contains the link supports, every vacuum-link factor vanishing at the flat point.
-    - {#MD2.2.6.113} The gauge that Cauchy step uses is (LPG′) (D2.4(4), from CRE (3.17) and VAR Theorem 1), not CRE (2.38), which is a domain condition (D2.4(4) #MD2.4.4.24).
+    - {#MD2.2.6.113} The gauge that Cauchy step uses is (LPG′) (D2.4(4), from CRE (3.17) and VAR Theorem 1, #MD2.4.4.24).
   - {#MD2.2.6.114} The bound |Q°| ≤ ∏_Ge^{θ(G)}, θ(G) := Σ_{M∈G}Σ_{𝒞≁M}e^{d(𝒞)}|φ^T(𝒞; 1, 0, 0)|, from the multiplicity bound; under the Kotecký–Preiss form of D2.4(2) θ(G) ≤ c|G|, as in (5)(e), with |G| := Σ_{M∈G}|M|, the number of cubes.
   - {#MD2.2.6.115} The species: dev when the clusters lie in the small-field region and depend on 𝐔 only; att(k+1, ·) when they meet Λ_{k+1}ᶜ or depend on ω′ (D2.6: WILSON_IT1_D26_CLOSURE_2026_10_24.md §2.1–2.2).
   - {#MD2.2.6.116} D2.3 extracts δm_{k+1} and z_{k+1} from the reference gas, whose activities c_𝒢 contain the e^{−Ψ°(M)} and whose interaction contains Q°'s occurrences.
@@ -1970,8 +1967,7 @@
     - {#MD2.2.6.142} *The curvature conditions (2.34)–(2.35).* At the evaluation points e^{iηA″}X₁ the change of curvature against e^{iηa″}U_{k+1} is ≤ C(L^nξ)^{−2}ξ²[(L^nξ)²|∇𝐇| + (L^nξ|𝐇|)² + (L^nξ|𝐇|)(L^nξ|a″|)], with 𝐇 = 𝐇(s, tB′).
       {#MD2.2.6.142-1} It must stay below the curvature margin β2^{−(k+1−n)}α_{0,n}ξ²(L^nξ)^{−2}.
       {#MD2.2.6.142-2} At t = 1 this is an inequality of CRE p.277's margin's type with α_{0,n} in place of α_{1,n}: 8B₀e^{16κ_s}C·O(1)ε_k < (β/2)α_{0,k}, i.e. q₀ > p₀, or q₀ = p₀ with C₀/A₀ large.
-      {#MD2.2.6.142-3} (2.35) for the averaged configurations is derived below, jointly with (2.37) (RMJ, WILSON_IT1_RMJ_CLOSURE_2026_10_30.md), from 𝐁_p(X)'s definition (CRE p.256 l.57–63), q₀ = q₁ and q₀ > p₀, CRE (2.6)–(2.7) (p.255), RG2 p.5's all-norms bound, and the 𝐇-decay (CRE p.267 l.42–44, p.277 l.6–8). (K3) (#MOMGD.5) bounds the averaged curvature absolutely, not its change about a base already near the step-(k+1) threshold, so it does not give (2.35) from this plaquette bound.
-      {#MD2.2.6.142-4} *The change of the averaged configuration.* It depends on 𝐔 only through the block variables, its change is exp(iηℋ(B)) with B the change of the block variables (VAR Proposition 9, p.309), and VAR (190) (p.308) bounds δℋ/δB and ∇δℋ/δB by O(1)(L^jη)^{−1}, O(1)(L^jη)^{−2} times (L^{j′}η)^{−d}e^{−δ₀d(y,y′)/8};
+      {#MD2.2.6.142-3} (2.35) for the averaged configurations is derived below, jointly with (2.37) (RMJ, WILSON_IT1_RMJ_CLOSURE_2026_10_30.md), from 𝐁_p(X)'s definition (CRE p.256 l.57–63), q₀ = q₁ and q₀ > p₀, CRE (2.6)–(2.7) (p.255), RG2 p.5's all-norms bound, and the 𝐇-decay (CRE p.267 l.42–44, p.277 l.6–8).      {#MD2.2.6.142-4} *The change of the averaged configuration.* It depends on 𝐔 only through the block variables, its change is exp(iηℋ(B)) with B the change of the block variables (VAR Proposition 9, p.309), and VAR (190) (p.308) bounds δℋ/δB and ∇δℋ/δB by O(1)(L^jη)^{−1}, O(1)(L^jη)^{−2} times (L^{j′}η)^{−d}e^{−δ₀d(y,y′)/8};
       {#MD2.2.6.142-5} against VAR's block weight (L^{j′}η)^d (VAR p.291) and with PRT2 (2.58)–(2.59) (Σ_{y′∈Λ_{j′}}e^{−αδ₀d(y,y′)} ≤ 6c₀^d(α/2)e^{−(αδ₀RM/4)max(|j−j′|−1,0)}, d of PRT2 (2.46)), this gives a curvature change ≤ C·η²(L^jη)^{−2}Σ_{j′}e^{−(δ₀RM/32)max(|j−j′|−1,0)}sup_{Λ_{j′}}|B| at a point of VAR layer j.
       {#MD2.2.6.142-7} *The averaged configurations U_{p,X}.* CRE (2.2), (2.11)–(2.14) (pp.255–257) define the determining set 𝐁 = ∪Γ_j, the averaging M_𝐁 = M^j on Γ_j, the minimal configuration U_𝐁(V) of A^η under M_𝐁(U) = V (from VAR), and 𝐁_j(Ω), the minimal determining set of Ω (Ω_n unions of L^nξM₁-cubes, ξ = L^{−j}); so U_{p,X} is the VAR minimiser for 𝐁_p(X) ∪ {Γ_i}_{i<p}, and (2.35)'s right side α_{0,n}L^{−2p}(L^nL^{−p})^{−2} is VAR's ε·η²(L^nη)^{−2} at η = L^{−p} for n ≤ p;
       {#MD2.2.6.142-8} which lattice and block scale U_{p,X} carries on the layers n > p is fixed by CRE's definition of 𝐁_j(Ω) at j = p (p.256 l.57–63): the minimal determining set with support in X, on X's maximal sequence X = Ω_0 ⊃ Ω_1 ⊃ … ⊃ Ω_p, Ω_n a union of L^nL^{−p}M₁-cubes at the distance ≥ L^nL^{−p}M₁ from Ω_{n−1}^c. CRE names RG1 (1.11)–(1.16) as the model of its spaces (p.261 l.1–2), and RG1 (iv) builds the U_n on the same sequence (p.262 l.41–43).
@@ -1983,7 +1979,7 @@
       {#MD2.2.6.142-16} (c0) *Exact integration.* The path scales the field argument: 𝐔_t := e^{iη𝐇(s, (t·t_Y)B′)}e^{iηa′}U_{k+1}, t ∈ [0,1] (the path parameter t, distinct from the deformation parameters s, t_Y of (4)(f), which are held fixed), from the base point 𝐔_0 = e^{iηa′}U_{k+1} (𝐇(s, 0) = 0 by RG2 (1.18), |𝐇_k(s(Y_0), B′)| ≤ 4B₀e^{16κ₁}|B′|) to the evaluation point 𝐔_1 = e^{iηA″}X₁.
       {#MD2.2.6.142-17} Since |t·t_Y| ≤ T_Y, every 𝐔_t is itself an evaluation point of (4)(f). ∂_t𝐔_t = iηH_t𝐔_t, where H_t is the derivative of 𝐇(s, (t·t_Y)B′) in t through the differential of the exponential (H_t = ∂_t𝐇 + O(η|𝐇||∂_t𝐇|));
       {#MD2.2.6.142-18} 𝐇 is analytic in B′ for |B′| < ε₃ (RG2 p.6, with (1.18) "and the same bound for all admissible norms"), and the field (t·t_Y)B′ is ≤ 2(T_Y|B′|_Y + sup|B′|) for |t| ≤ 2, which the T_Y condition below (for T_Y|B′|_Y) and sup|B′| = O(1)ε_k with q₀ > p₀ (for sup|B′|) keep ≤ 2(1 + o(1))min(β,1)α_{0,k}/(C′B₀e^{16κ_s}) ≪ ε₃ for g_K small, so Cauchy's estimate on |t| ≤ 2 bounds ∂_t𝐇, in each admissible norm, by twice the bound (1.18) at the field t_YB′; so H_t obeys the deformation's bounds of the opening plaquette bound up to the factor 2;
-      {#MD2.2.6.142-19} ȟ_n is defined by them: L^nη|H_t|, (L^nη)²|∇H_t| ≤ O(1)ȟ_n on layer n (η = L^{−p}, the units of U_t and 𝐔_t, as in the RMJ note §2), with ȟ_k := B₀e^{16κ_s}(T_Y|B′|_Y + sup|B′|) on Ω_k and ȟ_n := O(1)(2θ)^{k−n}h_k^{(0)} on an older layer n < k, the CRE p.277's 𝐇-decay majorant with #MD2.2.6.143's normalisation h_k^{(0)} (B′ vanishes off B(Γ_{k+1}), so a layer-n norm of B′ would not bound the non-local 𝐇 there).
+      {#MD2.2.6.142-19} ȟ_n is defined by them: L^nη|H_t|, (L^nη)²|∇H_t| ≤ O(1)ȟ_n on layer n (η = L^{−p}, the units of U_t and 𝐔_t, as in the RMJ note §2), with ȟ_k := B₀e^{16κ_s}(T_Y|B′|_Y + sup|B′|) on Ω_k and ȟ_n := O(1)(2θ)^{k−n}h_k^{(0)} on an older layer n < k, the CRE p.277's 𝐇-decay majorant with #MD2.2.6.143's normalisation h_k^{(0)}.
       {#MD2.2.6.142-19-1} On Ω_k, ȟ_k ≤ (1 + o(1))min(β,1)α_{0,k}/C′ for g_K small by the T_Y condition below and sup|B′| = O(1)ε_k (q₀ > p₀), and on the older layers CRE p.277's 𝐇-decay gives the bounds with ȟ_n.
       {#MD2.2.6.142-20} U_t := U_{p,X}(M^·(𝐔_t)).
       {#MD2.2.6.142-21} Each 𝐔_t satisfies (2.34) by the opening bound, so its averaged data lie in the domain of VAR Theorem 1 and Proposition 9 (p.278 (7), p.309, ε₂ = B₅ε₁; the complex part |V′ − 1| < C₁^{VAR}ε₁ of VAR (172), p.305, C₁^{VAR} VAR's absolute constant, uses α_{1,n}/α_{0,n} = C₁/C₀ bounded, with CRE (2.28)'s C₁ and q₀ = q₁, #MD2.4.13.19): U_t exists (unique up to gauge at real data, the analytic extension at complex data), depends analytically on t, and is regular in PBG's sense ((3.35) with Mα₀ ≤ a₀; (3.37) with α₁ = B₅ε₁ for complex data).
@@ -2144,7 +2140,6 @@
     {#MD2.2.6.173-3} So D2.1(4)'s conditions, (4)(f)'s margin condition and CRE p.277's margin's entailment hold with O(1) replaced by 2C₁^{RG2}O(1).
     {#MD2.2.6.173-4} These are smallness conditions on g_K under q₁ > p₀; the O6 closure's Cauchy and localisation radii use its (C3), C₁^{RG2}ε_j^♯ < r_{α,j}/2.
   - {#MD2.2.6.174} D(m)(iii)'s ω-clause, m ≥ j+1 (polydiscs): joint analyticity in σ_j on the polydiscs |σ_j − σ_{j,0}| < r^{(m)}_{ω,j} := r_{ω,j}(1/2 + 2^{−(m−j)}) per bond, around real σ_{j,0} in the support.
-    {#MD2.2.6.174-1} A tube |Im σ_j| < r would not control the real shift of R(w)σ off the real support.
     {#MD2.2.6.174-2} At k = 1 this matches the row domain, the polydisc 𝒰_c.
     {#MD2.2.6.174-3} So r^{(j+1)}_{ω,j} = r_{ω,j} at creation (r^{(1)}_{ω,0} = 1 = r_ω^{(1)}), decreasing to r_{ω,j}/2.
     {#MD2.2.6.174-4} These are the powers of 1/2 of CRE (2.36)–(2.39), used in the same way.
@@ -2257,7 +2252,6 @@
         {#MD2.2.6.190-1} D₀ := Ω₁∩Λ₁ᶜ, the set on which U₁(Ω₁∩Λ₁^c, V), and hence 𝐇_{1,Ax}'s background, depends (p.251 l.23 states this for U₁(Ω₁∩Λ₁^c, V), and (1.21), p.251 l.24–31, writes 𝐇_{1,Ax}(Ω₁∩Λ₁^c, ·) at this configuration, its argument restricted to a neighbourhood of ∂Λ₁, p.251 l.32–34), lies in Ω₁∖Ω₂, since Ω₂ ⊆ Λ₁.
         {#MD2.2.6.190-3} At the root k = 1 the real part of (2.34) at n = 1 and (2.38) for U₂ on all of Ω₁∖Ω₂, collar included, come from VAR Theorem 1 (p.279) for U₂ itself, as Bałaban obtains U₁'s existence ("By Theorem 1 [15]", p.248) and U_{k+1}'s regularity (p.267 (3.12): "The restrictions on the fields V_k, V_{k+1} on Ω_{k+1}^∼, and Theorem 1 from [15] imply, that U_{k+1} satisfies the following regularity condition"; "[15]" is the transcription's correction of the printed "[16]"; p.268).
         {#MD2.2.6.190-4} For k ≥ 2 the layer n = 1 is an older layer of the step k → k+1. CRE p.276 l.10–12 states U_{k+1}'s regularity there qualitatively ("on a neighborhood of Ω_n∖Ω_{n+1}" it is "the same as for U_n-configurations"; p.277 l.2: on Ω_{k+1}ᶜ "there is no regularity improvement of the configuration U_{k+1}", l.3–4: the powers of 1/2 as the room for the shifts; #MOMGD.20); *For k ≥ 2* below proves it, bounding the responses to the data changes on Ω_{m+1}, m = 2, …, k, on the layer n = 1 by CRE p.277's 𝐇-decay against the root's margin, the root being this item at k = 1.
-        {#MD2.2.6.190-7} The global Theorem 1 does not give the layer n = 1 at k ≥ 2: its hypothesis (7) takes one ε for all layers, and CRE (2.8) (p.256; ε_n ≤ (1+β₀)(n−m)^{1/2}ε_m for m < n only) bounds 2(1+β₀)max_{n≤k+1}ε_n only by 2(1+β₀)²√k ε₁, so it cannot verify B₃ε^V_k < (1−β)α_{0,1} when g₁ ≪ g_K.
         {#MD2.2.6.190-8} *The problem at k = 1.* U₂ is the critical point of the action with U = V₀ on Ω₁ᶜ and the determining conditions of 𝔅₂ on Ω₁ (the minimal-orbit map (2.12), p.256, with p.266 (3.10); (2.1)–(2.3) on p.255; CRE (1.12) is the step 0 → 1 problem for U₁).
         {#MD2.2.6.190-9} Only plaquettes meeting Ω₁ involve free variables, so it is VAR's problem (5)–(6) on Ω₀^{VAR} := Ω₁^∼ with Λ₀^{VAR} = Ω₁^∼∖Ω₁ carrying the fixed data V₀, Λ₁^{VAR} = Ω₁∖Ω₂ carrying V = V₁ and Λ₂^{VAR} = Ω₂ carrying V₂ (p.279: "B^j(Λ_j) ∪ B^{j+1}(Λ_{j+1}) = Ω_j∖Ω_{j+2}");
         {#MD2.2.6.190-9-1} VAR (1) holds (dist(Ω₁^{∼c}, Ω₁) is one layer of Ω₁'s cubes and dist(Ω₁ᶜ, Ω₂) ≥ 2LMR₁η by (1.20), both above R₁^VM₁ in the layer's units); VAR counts the plaquettes with at least one corner in Ω₀^{VAR}, and the fine plaquettes reaching one spacing beyond Ω₁^∼ are covered by p.248's χ₀ on the cubes □ ⊂ Ω₁^∼, which test p ⊂ □^∼;
@@ -3136,9 +3130,7 @@
   {#MD2.4.4.22} (S) Σ_{𝒢∋n′, t(𝒢)=t}e^{θ_{k+1}(𝒢)}S_𝒢ℓ_{X(𝒢)} ≤ C_Sρ_{k+1}w_t for every t,
   {#MD2.4.4.23} then Σ_{𝒢∋n′}e^{θ_{k+1}(𝒢)}‖Y^d_𝒢‖ ≤ (C_gC_S/c₀)e^{η_w}(ρ_{k+1}/ᾱ_{k+1})δ*^{(k+1)}_{n′}(U_{k+1}) (w_t ≤ e^{η_w}w_{t+1}, η_w = (5/16)η_V).
   {#MD2.4.4.23-1} (S) is the size statement of (7); it holds as (S-w), (13)(d), with the rate comparison of (13)(a).
-- {#MD2.4.4.24} *Why CRE (2.38) and VAR Theorem 1 alone do not give (LPG′).* CRE (2.38) gives L^nξ|A|, (L^nξ)²|∇A| < BCMα_{0,n}: a domain condition (condition (ii) of Ũ^c_j, p.261), not proportional to the deviation.
-  {#MD2.4.4.24-1} VAR Theorem 1 for the global minimiser bounds in the global ε₁ of VAR (7).
-  {#MD2.4.4.24-2} The locality that (LPG′) needs is CRE (3.17): U_{k+1} = (e^{iξ𝐇_𝒬}U_{k+1,𝒬})^{u^{−1}} on 𝒬^{∼2}, with 𝐇_𝒬 exponentially small by (190) and the local minimiser bounded by VAR Theorem 1 in the local ε₁ (SW closure §5).
+- {#MD2.4.4.24} *The locality of (LPG′).* It is CRE (3.17): U_{k+1} = (e^{iξ𝐇_𝒬}U_{k+1,𝒬})^{u^{−1}} on 𝒬^{∼2}, with 𝐇_𝒬 exponentially small by (190) and the local minimiser bounded by VAR Theorem 1 in the local ε₁ (SW closure §5).
 - {#MD2.4.4.25} *At k = 1 (step 1 → 2)* the old dev bound is IT-1's D1(ii), and the sup-only domain of D(1)(iii) needs no gradient bound.
   {#MD2.4.4.25-1} (LPG′) is needed for the groups made at steps k+1 ≥ 2.
 
@@ -3161,11 +3153,10 @@
   {#MD2.4.5.5-1} Dev_{Q^#_W} uses the plaquettes of (Q^#_W)⁺, and these are the comparison box of D2.0(3)'s reclassification rule.
   {#MD2.4.5.5-2} At step 1 (Q^#_W)⁺ := Q_W, so that its plaquettes lie in Λ₁; for a new group Q^#_𝒢 := X(𝒢) of (4).
   {#MD2.4.5.5-3} The reclassification of (6)(ζ) sorts insertions by where Q^#_W lies.
-  {#MD2.4.5.5-4} That needs a bound per insertion, which D(k)(ii)'s per-traversal sum does not give.
+  {#MD2.4.5.5-4} That needs a bound per insertion.
   {#MD2.4.5.5-5} At step 1 the form holds by V4's group bounds (IT-1 note §3a); at step k+1 it is (4)'s, given (LPG′).
 - {#MD2.4.5.6} *Normalisation.* Dev_{Q^#_W}, ℓ_W := ℓ_{Q^#_W} and b_W stay in the normalisation of the step j(W) at which W was made, as θ and σ do for carried att groups (D2.0(3), "Units of carried groups").
   {#MD2.4.5.6-1} Only δ* is converted from step to step ((6)(γ)).
-  {#MD2.4.5.6-2} Converting Dev would not contract: by the bounds of (4), ℓ^{(k)}_Q/ℓ^{(k+1)}_Q lies between L⁴/162 and 162L⁴ for wall-connected Q (a π_{k+1}-cube is L⁴ π_k-cubes), and between L⁴/324 and 324L⁴ for closed-connected X(𝒢), so the best statement is Dev^{(k)}_Q ≤ 162L²Dev^{(k+1)}_Q (324L² for X(𝒢)).
 - {#MD2.4.5.7} *The tail clause (ii-t) (part of D(k)(ii)).* Put β_W := b_Wℓ_Wη_{j(W)}^{−2}, so that b_WDev_{Q^#_W}(𝐔) = β_W·max{δ_p(𝐔) : p in (Q^#_W)⁺}.
   {#MD2.4.5.7-1} Let t^{(k)}(W) be the least t ≥ 1 with (Q^#_W)⁺ contained in the step-k R_t^{(k)}-neighbourhood of n (containment: the Abel step and (6)(ζ) use it), and W_t := Σ_{t′≥t}w_{t′}.
   {#MD2.4.5.7-2} The clause is

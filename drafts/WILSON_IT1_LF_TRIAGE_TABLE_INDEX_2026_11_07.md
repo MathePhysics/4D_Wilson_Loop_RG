@@ -3809,3 +3809,13 @@ Relabel → LABELS c5b80d907958, table 913bbd6cafdd, at LF 94d3e82675b1. The def
 - Rounds 1 and 2 found N1–N6, all repaired. Rounds 3 (narrow) and 4 (full) are clean. Requested by (4) and BETA; SHAs sent after. Log: WILSON_IT1_LF_TRIAGE_BG_D26REPOINT_2026_11_10.md.
 
 Relabel → LABELS df5691132d30, table ae5e18927daf, at LF 94d3e82675b1. The definition check prints 0 lines on LF, on the pair note, on the general-loops note c7f59b0cb310 and on NL. dmarks2 lists the 16 known leftovers. deadcheck and prefcheck show only their known hits. Columns are 10×5, 74×6, and 267×7.
+
+## TL b734cba1137b, Map 8dfc61443b7f, D26 7a8b3691326a and General Loops e5868db66fa8: C_box, U^{rep}, C_{εA} and C_lift, 2026-11-11 02:06
+
+- TL b734cba1137b: no row changes; all 130 cited TL tags are present in LABELS_TWO_LOOPS 07b7d5f8e1a3.
+- #T4.44: V4's requirements hold for C_box ≥ 74 (map #MD2.4.12.7-1-5-2), in place of 38.
+- #T12.13 and #T12.15: the map's field-valued ρ is renamed. U^{rep}_1, U^{rep,n}, Ū := U^{rep}_k(M^k(𝐔)) and the transport Ū^{rep}_k(V_k)(Γ^{(k)}) are in #T12.13; U^{rep}_k(V_k) and U^{ax}_k(V_k), not #T12.6's U^{ax}, are in #T12.15.
+- #T12.19-9-2: C_{εA}, with no clash clause. #T12.31-12: C_lift := 6, the non-contour constant (#GL3.13-2-1); V4's C ≤ 74 for a square.
+- Rounds 1–4 are clean (two on the map rows, two on #T12.31-12). Requested by (4) and BETA; SHAs sent after. Log: WILSON_IT1_LF_TRIAGE_BG_D26REPOINT_2026_11_10.md.
+
+Relabel → LABELS c73455137f70, table 3e9dd1981ea0, at LF 94d3e82675b1. The definition check prints 0 lines on LF, on the pair note, on the general-loops note e5868db66fa8 and on NL. dmarks2 lists the 16 known leftovers. deadcheck and prefcheck show only their known hits. Columns are 10×5, 74×6, and 267×7.

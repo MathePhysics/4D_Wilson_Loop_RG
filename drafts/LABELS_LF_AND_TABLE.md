@@ -3774,7 +3774,7 @@ The items of the LF longer than 5,000 characters are set out in paragraphs at th
 | {#T12.31-10} | 820 | The continuum normalisation (#GL5.6-1): δm_{k,v} := −κ^{(k)}_v/Π_k, mi… |
 | {#T12.31-11} | 821 | u_𝔏(𝒞) := 2Λ̄(𝒞)u_𝔏 (#GL6.4-2); L₀(𝒞) := 4Λ̄(𝒞)²L₀^× (#GL6.4-3, #GL7.1… |
 | {#T12.31-11-1} | 822 | For general loops C^×_E is #T4.52's with P_Σ/4 for #T4.51's ℓ_Σ, which… |
-| {#T12.31-12} | 823 | C_lift is V4's constant C of sec:c4-11-4, covering the lifting network… |
+| {#T12.31-12} | 823 | C_lift := 6, the constant of the lifting network's non-contour edges (… |
 | {#T12.31-13} | 824 | The pair factorisation for two general loops C₁, C₂ (§8). ℓ̄_i := P_{K… |
 | {#T12.31-14} | 825 | N_lad(C_i), the number of plaquettes in the ladder chain of C_i^{(K′)}… |
 | {#T12.31-15} | 826 | c^𝒦_ty := 1 + 4Lip_χ(1 + 1.06a_dc_hB₃), not #T12.4-4-1's c_ty, gives a… |
@@ -4848,4 +4848,4 @@ Each definition X := … of the LF carries the tag {#D.X} immediately before X; 
 | {#D.ψ′} | 3266 | ψ′ := Σ_{y∈B}G_B(·, y)σ(y)/(2d), so that Δψ′ = −σ in B and ψ′ = 0 |
 | {#D.h_y} | 3267 | h_y := E^·G(S_{τ_B} − y), τ_B the exit time from B. Theorem 4.3.1  |
 
-Hashes at which the lines above hold: LF 94d3e82675b1, table b48fd324ff78 (SHA256, first 12).
+Hashes at which the lines above hold: LF 94d3e82675b1, table 3e9dd1981ea0 (SHA256, first 12).

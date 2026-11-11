@@ -1,17 +1,25 @@
 # General-Loops Note: Self-Check and Messages, 10 November 2026
 
-Note: `WILSON_IT1_GENERAL_LOOPS_2026_11_10.md`, owned by the BETA session. SHA c7f59b0cb310 after #GL5.6-0 at 01:44 on 11 November (342 lines, 260 tags, 99322 characters by wc -m). Status: derived, not reviewed. No referee round has been run.
+Note: `WILSON_IT1_GENERAL_LOOPS_2026_11_10.md`, owned by the BETA session. SHA e5868db66fa8 after the C_lift repair at 02:01 on 11 November (343 lines, 261 tags, 99834 characters by wc -m). Status: derived, not reviewed. No referee round has been run.
 
-Earlier SHAs: c56a16196e92 after the #PF0.5 and torus-condition repairs of 01:41; bdbcc51cccba after the alignment with PF's N_s form at 01:35; e552097262de after the c_C rename of 01:04; 6c7f55d1ee64 after the torus repair of 00:53; 3eb2d88200e1 after O1's §9 (00:44), b4b6a5cc0dfe after the table row citation of 00:08, 11df5d85a367 after the NL e2ca5b9e7a82 re-read of 00:06, ebaefc789f80 before it.
+Earlier SHAs: c7f59b0cb310 after #GL5.6-0 at 01:44; c56a16196e92 after the #PF0.5 and torus-condition repairs of 01:41; bdbcc51cccba after the alignment with PF's N_s form at 01:35; e552097262de after the c_C rename of 01:04; 6c7f55d1ee64 after the torus repair of 00:53; 3eb2d88200e1 after O1's §9 (00:44), b4b6a5cc0dfe after the table row citation of 00:08, 11df5d85a367 after the NL e2ca5b9e7a82 re-read of 00:06, ebaefc789f80 before it.
 
 ## Open
 - Nothing open in the note (#GL.3).
-- Dependency, not owned here: #T4.44 identifies V4's C_box with 2916 and records only the map's lower bounds. V4's own requirement (sec:c4-8-4, sec:c4-11-4: C_box covers the lifting constant and the fixed ranges) is not recorded, and the map's comparison-box check #MD2.4.12.7-1 uses only C_box ≥ A_E (table session). My count gives about 48 for squares (message of 22:38). The table session passed it to the step-map session (4), which owns the identification; #T4.44 will cite their check.
-  - Depends on it here: #GL3.13-3's "C_box includes C_lift and these ranges", and #GL8.2-2's numbers through ν_e = ν/5832. #GL3.13-5's C_box ≥ 10 holds whatever the check finds, since it can only raise C_box.
 
 ## Awaiting
-- Step-map session (4): the C_box check (Open).
-- Table session: a row for #GL1.5-3's K_tor(𝒞) (message of 01:42).
+- Nothing. The table session's reply of 02:05: #T12.31-12 follows GL e5868db66fa8 at table 3e9dd1981ea0 (LABELS c73455137f70), with C_lift := 6 the non-contour constant; #T4.44 was already at 74 (table b48fd324ff78), so my "C_box ≥ 38" remark read an older table.
+
+## V4's lifting constant (messages of 01:59 from (4) and 02:00 from the table session; GL repaired by 02:01)
+- (4): map 5c5203be2b03 (snapshotted) bounds V4's lifting constant, #MD2.4.12.7-1-5–#MD2.4.12.7-1-5-2, and lists the enlargement ranges, #MD2.4.12.7-1-4–#MD2.4.12.7-1-4-1. This closes the C_box dependency formerly under Open.
+- Re-derived. With Σ_D N₁(D) ≤ n(W) cubes and m ≤ n(W) components, the domain trees and incompatibility joins have Σ_D(N₁(D) − 1) + Σ_κ(#D_κ − 1) ≤ n(W) − m edges of at most LM bonds, and the m contact paths at most 2LM + 8L bonds each (contact within 2L of its root, site within LM/2 of its cube centre, ℓ∞ to bonds × 4). Total ≤ n(W)LM + m(LM + 8L) ≤ 3LMn(W) by 8L ≤ LM. Nothing here involves the contour's shape: the 2L is a contour-stencil range, which #GL3.13-1 makes contour independent.
+- Table session: V4's C (sec:c4-11-4, "a spanning traversal of length at most CLMn(W)") covers the whole network, so #GL3.13-2-1's "C_lift being V4's constant C" with a separate 2abs(ℋ(W)) counted ℋ(W) twice. True, but C_lift was then ≤ 74 rather than 6. Agreed.
+- Repairs in place: #GL3.13-2-1 states the 3LMn(W) count with the map's pointer and defines C_lift := 6, the constant of the non-contour edges (traversal 2·3LMn(W)).
+  - #GL3.13-3 replaces "C_box includes C_lift and these ranges" by the derivation: every point of Q_W within R_Q = 8M + 4L of a domain or ℋ(W) vertex, domain points within LM/2 of a cube centre, network vertices joined by ≤ 3LMn(W) + abs(ℋ(W)) bonds. With 2R_Q + LM = 16M + 8L + LM ≤ 2LM (LM ≥ 12L + 16M, #MD2.4.12.7-1-4-1, L ≥ 5000 by #T1.3) and n(W) ≥ 1, diam_∞(Q_W) ≤ 5LMn(W) + abs(ℋ(W)), Euclidean ≤ twice that at d = 4.
+  - Split at 662 characters into #GL3.13-3 and #GL3.13-3-1. The bound ends in the same C_boxLMn(W) + 2abs(ℋ(W)) as before, so #GL3.13-5 is unchanged.
+- Pre-check: #GL3.13-2-1 to #GL3.13-5 re-read; C_lift occurs only there. 261 tags, no duplicates; lines ≤ 600 code points except the unchanged #GL1.4-1 (603) and #GL6.1-4-1 (608). 99322 characters before, 99834 after.
+- Table #T4.44 (ae5e18927daf) still says V4's requirements "hold for C_box ≥ 38 (map #MD2.4.12.7-1-5)"; the map now has 74 (#MD2.4.12.7-1-5-2). Sent to the table session.
+- Received: the table's K_tor row, #T12.31-1-2–#T12.31-1-3 (table ae5e18927daf), checked against #GL1.5-3 between 01:50 and 01:55 (TL triage BETA, *The torus hypothesis*).
 
 ## PF's #PF0.5 conditions and the continuum note's torus repair (messages received between 01:36 and 01:41 on 11 November; GL repaired by 01:41)
 - Two-loops session: PF 3137f5cade3e, snapshotted and diffed against PF_a0ac855ab471. Only #PF.1 and #PF0.5 changed. #PF0.5 now carries #PF3.2-9a-1's conditions (D ≥ D_desc, #PF3.2-8d2e-3; K′ ≥ K′_att, #PF3.2-8d2a-3; the two conditions of #PF3.2-8d2e-1) and drops ℓ₁, ℓ₂ ≤ D. My 22:24 finding is closed.
@@ -172,6 +180,7 @@ Earlier SHAs: c56a16196e92 after the #PF0.5 and torus-condition repairs of 01:41
 - 01:42 to the step-map session (4). Continuum 24eddcd2e20c checked; #GL1.5-2 unchanged, new #GL1.5-3, #T12.31-1-1 correct, and the continuum K₀(C) clashes with the table's K₀'s.
 - 01:42 to the table session. K_tor(𝒞) (#GL1.5-3) announced with suggested wording; the continuum K₀(C) unrecorded.
 - 01:45 to the table session and to (4). GL c7f59b0cb310, with #GL5.6-0.
+- 02:02 to the table session. GL e5868db66fa8: C_lift := 6 the non-contour constant, suggested #T12.31-12 wording, and #T4.44's stale "C_box ≥ 38". 02:02 to (4): the re-derivation, the new pointers, and the C_box dependency closed.
 
 ## Withdrawn before sending
 - D2.7 closure 15.8-1(4), "arc term ≤ 4(M + 1)/M ≤ 5" for C₁ ⊔ C₂. It is correct for the pair: a π_k-cube has side M < s_k, so it meets at most two sides of each square, at most four in all. The earlier slip claim (8 sides, c_off ≤ 11ν) is wrong and was not sent. The closure leaves this reason unstated, and the LF session that owns the closure is not live; to be mentioned to it as a remark when it is.
