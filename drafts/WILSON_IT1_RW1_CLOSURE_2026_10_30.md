@@ -4,7 +4,7 @@
   {#RW1.0-1} Consumers (map): the *Base* of (vac)_j (#MD2.3.4.39); the *Step* at k = 1 (#MD2.3.4.38), which receives the non-embedding terms as a summand of (Z-d)'s non-embedding bound (#MD2.3.4.40-9, #MD2.3.4.49).
   {#RW1.0-2} V4 = WILSON_FIRST_RG_STEP_V4.tex, cited by label; the map WILSON_IT1_D2_STEP_MAP_2026_10_22.md by #MD…, the table by #T…. The constants defined here are local to this note: C_det is not #T12.9-3-2-1's and C_w is not #T4.22's or #T4.53's; V4's walk constant (V4 lem:walk-series) is written C_w^{V4}.
   {#RW1.0-3} *Units.* Distances are in fine bonds unless marked. ι := ι_{T,1} = max(0, N_min^{(1)}/4 − ρ_dep/L) is in step-1 units (#MD2.3.4.53-2), so the coincidence radius of *Embeds* is Lι/4 fine bonds. A step-1 position is a step-1 traversal, the root of #MD2.3.4.49. The rate needed is c := 1/(32M) per step-1 unit (#MD2.3.4.57).
-  {#RW1.0-4} *The halo.* ρ_dep := R + ρ_w + h_box (#MD2.3.4.54-3) satisfies ρ_dep/L < MR₁/4 ≤ ι/(384L³) ≤ ι/16. The first inequality is #MD2.3.4.53-3. The second holds since R₁ ≤ (L + 1)max(1, (K − 1)^{β₀})L(log g_min^{−2})^r (#MD2.3.4.44), while (TC) gives ι = L^{K−1}ι_{T,K} ≥ max(1, (K − 1)^{β₀})·96L⁴M(L + 1)(log g_min^{−2})^r (#MD2.3.4.43, #MD2.3.4.53-1, #MD2.3.4.44).
+  {#RW1.0-4} *The halo.* ρ_dep := R + ρ_w + h_box (#MD2.3.4.54-3) satisfies ρ_dep/L < MR₁/4 ≤ ι/(384L³) ≤ ι/16. The first inequality is #MD2.3.4.53-3. The second holds since R₁ ≤ (L + 1)max(1, (K − 1)^{β₀})2L(log g_min^{−2})^r (#MD2.3.4.44), while (TC) gives ι = L^{K−1}ι_{T,K} ≥ max(1, (K − 1)^{β₀})·192L⁴M(L + 1)(log g_min^{−2})^r (#MD2.3.4.43, #MD2.3.4.53-1, #MD2.3.4.44).
 
 ## 1. The Weight on ℓ₀ {#RWS1}
 

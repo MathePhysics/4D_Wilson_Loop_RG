@@ -3850,3 +3850,111 @@ Relabel → LABELS 8f078eb887ad, table c571f2502afe, at LF 94d3e82675b1. The def
 - Requested by (4), ⑂ (3) and BETA; announced to (4). Rounds 1–6 found Q1–Q6, all repaired; rounds 7 (narrow) and 8 (full) are clean. SHAs sent after. Log: WILSON_IT1_LF_TRIAGE_BG_D26REPOINT_2026_11_10.md.
 
 Relabel → LABELS 7087843b4b0b, table 1741a64f26a7, at LF 94d3e82675b1. The definition check prints 0 lines on the standing list, on PROFILES and on LAYER_WIDTHS. dmarks2 lists the 16 known leftovers. deadcheck and prefcheck show only their known hits, with the deadcheck lines after l.229 at +3. Columns are 11×5, 74×6, and 268×7.
+
+## NG 0487ff54209e, PROP4_KERNEL, BV_189 and BD: The Non-Gaussianity Note's Symbols, the Kernel Constants and the Dressed Averages, 2026-11-11 05:10
+
+- #T12.36 to #T12.36-7 (new): NG §§1–6, the witness, the Gaussian charge models, the twist θ and the free field of §4, Lemma C, Lemma E♯, Theorem P and Proposition R, with their clashes.
+- #T12.36-8 to #T12.36-8-4 (new): NG §7, Proposition A: Π, 𝖣, 𝔅, ν_n, 𝗇_C, 𝗓⁰_W, 𝗓_W, Q^𝖣(W), small insertions, 𝗒_C(p), 𝖹_c, 𝖲_v and 𝖾_C.
+- #T12.21-2: COVERING's local M (M′, 2LM′, 2M′) is #T2.12's M_V, not #T2.11's M. #T12.21-3, #T12.21-3-1 (new): PROP4_KERNEL's C_v, C_HD, A^♯, 𝔇₂, C_𝔇, Δ_π, a^V and δ_ch, stated once.
+- #T12.23, #T12.23-0, #T12.23-0-1, #T12.23-0-2 (new): BD's Ψ, K₀, ψ, N ≤ d! (RG1 p.252), δ, ε_δ, c₁, c₂ and the averages Q″ and Q_{m←l}.
+- #T12.25 to #T12.25-1-1: BV_189's 𝔅, ℓ, blocks, s_X, K₀, 𝒱 and 𝒱₁ = #T12.21-3's 𝒱^{(1)}. #T10.36-4-3: only UV3 prints σ₀ = σ(0).
+- Bookkeeping: dead pointers in #T12.12 (d) and #T4.30 replaced; (4)'s BLL repoints in #T4.30, #T12.20-3-2-1, #T12.20-3-3 and #T12.20-3-4.
+- Requested by BETA and (4); announced to (4). The batch found S1–S21 and T1–T14, all repaired; its rounds 7 (narrow) and 8 (full) are clean. SHAs sent after. Log: WILSON_IT1_LF_TRIAGE_BG_D26REPOINT_2026_11_10.md.
+
+Relabel → LABELS 51d297b89db1, table f1dee8f86a8d, at LF c5276e2d3c10. The definition check prints 0 lines on the standing list, now with NG, PROP4_KERNEL and BV_189. tagcheck lists its 21 false positives and dmarks2 the 16 known leftovers. deadcheck and prefcheck show only their known hits. Columns are 11×5, 74×6, and 268×7.
+
+## BV_189 be4123e2eee7 and NG 75f8dadd7bae: Renames, 2026-11-11 05:26
+
+- #T12.25-1-1: BV_189's 𝒱^{(1)} is #T12.21-3's, and BV_189 no longer has 𝒱₁ (bookkeeping, table b7636c596b26).
+- #T12.36-1 to #T12.36-8-4: BETA's NG renames are now in the rows: n_S(𝖱), 𝗐, η, 𝖭_ϑ, 𝗊, ψ, ω_j, i, ν̄_n, y, z, 𝔹, 𝗉, ϱ and 𝔠. ∏ is now the product sign, and the local t and a := a° are gone. Clash marks are added for η, ψ, ω_j, ν̄_n, y, z, 𝔹, ϱ and 𝔠, and the stale ones removed.
+- Bookkeeping, no round; announced to (4); SHAs sent after. Log: WILSON_IT1_LF_TRIAGE_BG_D26REPOINT_2026_11_10.md.
+
+Relabel → LABELS c6c60b7eaade, table bcc27399a0f8. The definition check prints 0 lines on the standing list. Every #NG tag cited by the rows resolves. Columns are unchanged.
+
+## NG f0312af7f14b, NA 93118b233ccf and g_a: The Third Difference, Lemma H, the Non-Abelian Witness and the Stopping-Scale Coupling, 2026-11-11 07:04
+
+- #T12.36-1, #T12.36-3, #T12.36-3-1, #T12.36-7, #T12.36-8, #T12.36-8-3: the witness is the third difference, n(𝔇) = 1, −3, 3, −1, −1, 1 on 𝖱₁, 𝖱₂, 𝖱₃, 𝖱₄, 𝖯₂, 𝖯₃, with D^θ := c^θ_3 − c^θ_2, c^θ(𝗐) and the local z; #NG6.2-1 to #NG6.2-3 are gone.
+- #T12.36-9 to #T12.36-9-2 (new): NG §8, G and 𝔤, the loops 𝖫_{a,b}, X_{a,b}, h^G, 𝖪_{a,b}, Ψ_k, Lemma H with 𝗅 and r_H, (O1c), Δ(V), and the locals of Lemma H's proof.
+- #T12.37 to #T12.37-4 (new): the NA note, d_𝔤, T_a, f_{abc}, C_A, C₂(π), the 𝔤-valued model, c_k, D^𝔤, the scaled witness, the continuum kernels, and §§4–5.
+- #T3.33: g_a, the coupling at #T12.8's stopping scale k_s (Cauchy #CP.21), which five rows used without a definition.
+- Announced to (4); SHAs sent after. NG/NA: N1–N4 and F1 repaired, narrow round 3 and full round 2 clean. g_a: N1 repaired, narrow round 3 and full round 1 clean. Log: WILSON_IT1_LF_TRIAGE_BG_D26REPOINT_2026_11_10.md.
+
+Relabel → LABELS 1a63f9e9e8a2, table a80bf320e6b2, at LF 525b995591c4. The definition check prints 0 lines on the standing list, now with NA. Every #NG, #NA, #T and #MD tag cited by the rows resolves. Columns are unchanged.
+
+## NG 138f3a20b26c, NA e32a4a271f9b and Cauchy c4e7d35d0a98: NA Renames, λ, g_{K′} and Run A's g_a, 2026-11-11 07:10
+
+- #T12.37-1 to #T12.37-4: NA's renames 𝔟(s), ω_C, ϖ(k²), c^ν_k, 𝖿_r, 𝖺, 𝖻 and 𝒦₄, with marks for ϖ, 𝔟 and 𝖺; ω_C is described.
+- #T12.36-9-1: #NG.2-2's λ > 0, the regulariser, and g_{K′}, #T3.33's g_a at #T12.31-0's K′, the coupling of #T12.4-1-0's 𝐏_{ℓ₀}.
+- #T3.33: g_a := g^A_{k_s}, run A's coupling at the stopping scale; run B's is g^B_{k_s+1} (Cauchy #CP.21, #C3.1-2, #C11c.6-1).
+- Announced to (4); SHAs sent after. N1 repaired; narrow round 2 and full round 1 clean. Log: WILSON_IT1_LF_TRIAGE_BG_D26REPOINT_2026_11_10.md.
+
+Relabel → LABELS 677e952a9aca, table b9d4d8aa47f9. The definition check prints 0 lines on the standing list. Every tag cited by the touched rows resolves. Columns are unchanged.
+
+## NA 8018cad134b2: Renames, 2026-11-11 07:12
+
+- #T12.37-2: ϱ_L(k²), marked against the ϱ of other rows, for ϖ(k²). #T12.37-4: 𝖼_T, 𝖼_L, 𝖼_δ and 𝖼_x for 𝖺, 𝖻, α_0 and β_0, whose marks are gone.
+- Bookkeeping, no round; SHAs sent after. Log: WILSON_IT1_LF_TRIAGE_BG_D26REPOINT_2026_11_10.md.
+
+Relabel → LABELS 0f27d75cd241, table fb09458ea8f4. The definition check prints 0 lines on NG and NA. Columns are unchanged.
+
+## Rows over 660 Characters: Continued Parts, 2026-11-11 11:49
+
+- 45 list rows (§§6, 9, 11, 12) gain 272 parts "⟨heading⟩, continued."; 40 pipe rows (§§1–4, 10) gain 109 sub-rows "{#X-0-k} continued"; #TP.1 becomes #TP.1, #TP.1-1 and #TP.1-2. #TP.1-2: a citation of X covers its parts X-0-k, so nothing is repointed.
+- Punctuation-only rewordings at the cuts, #T3.13's Source adds LF #4.532, and #T11.17 moves one clause out of a parenthesis; the list is in the log. Joined back, the table equals fb09458ea8f4. Bookkeeping, no round; announced to (4), SHAs sent after. Log: WILSON_IT1_LF_TRIAGE_BG_D26REPOINT_2026_11_10.md.
+
+Relabel → LABELS df18eaf2613b, table 9b0d10c4fab4. The definition check prints 0 lines on the 12 standing notes. The longest row is 656 characters, and every split pipe row keeps its section's columns.
+
+## JOINS e27cf51c0959: M′ ≥ LR₀M₀ and R′ at #4.24, 2026-11-11 12:02
+
+- #T2.5's max has LR₀M₀, for PBG's Ω₀(□) ⊂ □̃⁵ (JOINS #4.21-0-1; re-derived from PBG p.408 l.20–35, p.409 l.2: L(L − 1) ≥ 2). #T1.5-0-1 follows. #T12.21-1 says that JOINS #4.22's M′ is #T2.5's, no longer "not #T2.5's". #T2.21 cites JOINS #4.24 for R′ = LK_{M′} − 1, and #T2.5 also writes K_{M′}. #T10.59 cites #T2.21 without restating it.
+- W-δ's M′ ≥ R₀M₀ (#W8.18) is no defect: K ≥ 4, a power of L, gives K ≥ L (#W8.11-18). U1–U4 repaired; rounds 4 (narrow) and 5 (full) clean. Log: WILSON_IT1_LF_TRIAGE_BG_D26REPOINT_2026_11_10.md.
+
+Relabel → LABELS 8db7254d8f77, table d69a1c4735b8. The definition check prints 0 lines on the 12 standing notes, and build_packet --check on spec_rc_b_r1 reports 0 conflicts.
+
+## Two-Loops Repoint, q₀ > 25r + 5/2, c_O and π Nontrivial, 2026-11-11 12:17
+
+- Bookkeeping: 30 "two-loops #x" citations in 21 rows now name the BP_TL file holding the tag (EVAL_POINTS, NSTEP_FRAME, GC_TRANSFORMS, MIXED_TERM). #T12.12-0-13 loses the dead #0.1.14-1. Found by a resolver that checks every prefixed citation against its file. Table 73d7231c3a9f.
+- #T1.2-0-1 gains q₀ > 25r + 5/2 for NG's (O1c) (#NG.2-1; work file #O1C.6-6.4, #O1C.7-9.2: 14r + 2 < p_λ < q₀ − 11r − 1/2). #T6.17 no longer restates #T1.2. #T12.36-9-1 has c_O := C₂(π)s²t³/(672e²T_ph⁵) and is split, with part #T12.36-9-1-0-1. W1–W4 repaired; rounds 3 (narrow) and 4 (full) clean.
+- W2 (c_O = 0 for trivial π) was repaired by BETA in NG 7edc6c33d88c (#NG1.1, #O1C.1-0). #T12.36 and #T12.36-9-1 follow; rounds 1 (narrow) and 2 (full) clean. Log: WILSON_IT1_LF_TRIAGE_BG_D26REPOINT_2026_11_10.md.
+
+Relabel → LABELS 695e1eeb30b2, table 4fc638b90c78. The definition check prints 0 lines on the 12 standing notes, and build_packet --check on spec_rc_b_r1 reports 0 conflicts.
+
+## The Table Fork's Review of Every Section, Round 1, 2026-11-11 14:44
+
+- Every row of §§1–12 was read against its sources, then swept for tags, prefixes, pins and possessive citations. Content: #T4.23's c₀(α) ≤ 1 + 2/(αδ₀) (the old 4/(αδ₀) is false for large αδ₀); #T10.28-4's P^{(j)} (RG I p.268); #T10.23-0-3 and #T10.23-0-4 cite BFWL #B9.29-3–#B9.29-4, BP_PBG_DRESSED #BD.1-1 and BP_PBG_COMPLEX #BX.1-1–#BX.1-5, not the dead #B9.68 or READINGS R50; G^c's closedness proved at #T12.27-1-2-1-0-1; the order of κ₁, c₂ and B₃⁺ (#T1.4–#T1.6, #T3.13, #T2.11, #T10.27); §11 rows read against the print; §12 clash lists, RW1's R, N₁ and C_det, NG §8 and the NG work-file symbols.
+- Bookkeeping: #T11.17-0-1 to -0-28 and #T11.24 to -0-3 deleted (restatements, no consumer); Lawler–Limic once at #T11.23; about 20 §12 tag drifts; cell references as tags; pins re-read and attributed; LF's c_ℰ, ϱ_k and t entered. Log: WILSON_IT1_LF_TRIAGE_BG_D26REPOINT_2026_11_10.md.
+- Not done: two consecutive clean rounds by the table fork, the second full, are still to come.
+
+Relabel → LABELS 725b171968a0, table 6115bfa3aeee. The definition check prints 0 lines on the 12 standing notes, build_packet --check on spec_rc_b_r1 reports 0 conflicts, and the pin check finds 0 failures among 654 pins.
+
+## The Table Fork's Review of Every Section, Rounds 2 and 3, 2026-11-11 15:02
+
+- Round 2 (narrow, the changed rows and their consumers) found three minor pointer defects, all repaired: #T3.37's ε′_k now points to #T12.9-1-0-4, #T10.16 cites #T10.1-1-2-1 for δ₀ and δ₁, and #T11.30-0-1 names LFR II's γ₀. Peer inputs, re-derived: #T11.18-0-2 cites REG p.080 l.25–26, and #T12.37-4 follows NA 51caf92af8fd (𝔞_×, K₄, 𝒦₄; σ gone).
+- Round 3 (narrow) is clean. Not done: round 4, a full round by the table fork, is still to come. Log: WILSON_IT1_LF_TRIAGE_BG_D26REPOINT_2026_11_10.md.
+
+Relabel → LABELS 8c63a6985a86, table 299b3fb7dfbb. defcheck prints 0 lines on the 12 standing notes, build_packet --check reports 0 conflicts (from a scratch spec copy at LF 4b6cf10084cc), and the pin check finds 0 failures among 656 pins.
+
+## The Table Fork's Review of Every Section, Round 4, 2026-11-11 17:02
+
+- Round 4 (full) re-read every row of §§1–12 against its sources and found F1–F46, all repaired in place. Content: CMP98's printed c₂ (#T11.22-1), PBG's one-step average (#T11.25-0-3), the Cauchy a(g), w_K, r(Y), s_{i+1}, C_V and C_δ (#T12.7), the LF's C_{1.27}, p_θ, c_s, C_e, C_E(M), η^ℂ_{k_R} and g_K^* (#T12.8–#T12.10), the map's N_j and rate 61/16 (#T12.14), θ_k (#T12.17), A^C(𝔉) (#T12.20-1), a at #T12.26-2-1, plus pins and clash marks.
+- Bookkeeping: abs(·) for absolute values and cardinalities in bullets (#TP.1-2), four new continued parts, and (4)'s renames c_{la}, C_{rD}, C_{rE}, C_{rC}, C_{DW} and the single ε^* (#C8.3.3-2) re-derived and applied. Not done: round 5 (narrow) and round 6 (full) are still to come. Log: WILSON_IT1_LF_TRIAGE_BG_D26REPOINT_2026_11_10.md.
+
+Relabel → LABELS 20570569b58d, table 6df1b69246ca. defcheck prints 0 lines on the 12 standing notes, build_packet --check reports 0 conflicts, and the pin check finds 0 failures among 659 pins.
+
+## The Table Fork's Review of Every Section, Round 5, 2026-11-11 17:24
+
+- Round 5 (narrow) re-read every row changed in round 4 against its sources and found R5-1 to R5-4, all repaired in place. Content:
+  - #T12.7-2 now points to #T12.20-3-1.
+  - #T10.34's N_k^T is now the tube's depth of BETA #B2.2.174.
+  - #T3.41 gains LFR II (1.47)'s need ν_L > p₀ + q₁ + 7r, with N′_k at ĝ_k.
+  - ν_L and q₀ had a circular order of choice. Now ν_L := p₀ + q₁ + 7r + 1 (#T3.41-0-1), and 2q₀ > 3p₁ + p₀ + 7r + 1 (#T1.2-0-2, split from #T1.2-0-1).
+- Waiting: the rows on #CP.13's former R̄ and N̄ (#T2.23, #T4.37-0-1, #T7.7, #T12.9-1-7, #T12.20, #T4.29-9, #T12.8-0-7, #T3.34-1, #T4.52-0-2), #T12.7-2's a(g), and #T12.10-0-2's "which writes C" follow the Cauchy rewrite, then round 6 (narrow) and round 7 (full). Log: WILSON_IT1_LF_TRIAGE_BG_D26REPOINT_2026_11_10.md.
+
+Relabel → LABELS 950ab17d60ee, table c4c5ac132304. defcheck prints 0 lines on the 12 standing notes, build_packet --check reports 0 conflicts, and the pin check finds 0 failures among 660 pins.
+
+- Round 6 (narrow) re-read the round-5 rows and their consumers and found R6-1: #T4.51-0-1's r₀ mark now cites #T1.2, at table ff0cedb9e60c. Relabel waits for the LF's absent #4.50-1.1.0-1.
+- The tube. The R̄ and N̄ rows now carry R_k := R^T_k and N_k := N^T_k, following Cauchy 3bb45fabbd11 (table a9702bec3c37). The LF rows at ĝ follow LF 2a832c50e91c (table aded4cc33112, LABELS afd975e97acc).
+  - Changed: #T12.10-0-1's C_{αε}, #T12.9-1-0-11's C_{αT} and c_{fr}, #T1.3's L ≥ 128(1 + β₀), and #T3.27's r^χ_k bounds.
+  - Sent to (4): W-δ #W8.14-1, and the Cauchy r^χ_k lines (#C8.2.1-6, #CK.1-9, #C10.5.1-2, #C8.2.1-15).
+  - All checks are at baseline, with possessive 13.
+  - Next: round 7 (narrow), then round 8 (full). Log: WILSON_IT1_LF_TRIAGE_BG_D26REPOINT_2026_11_10.md.

@@ -225,6 +225,6 @@ CRE p.277's margin (map #MD2.2.4.74–78, #MOMGD.49): the bracket terms with Y �
 This note's conditions, with c₃ = 2A₁/A₀ + (4dL)²(1 + β₀)B₃ and h_k = max(c_He^{−R_k}ε_k, S_H):
 - (C2) g_k^{3/2} + 7.5h_k ≤ c₃ε_k: the ratio bound 2 (§4–§5), V_act below its parent term, and §6's Gaussian-form step; a smallness condition on g_K, since S_H ≤ g_k^{3/2}/40 and c₃ε_k/g_k^{3/2} → ∞.
 - (C3) C₁^{RG2}ε_k^♯ < r_{α,k}/2, ε_k^♯ = c₃ε_k + g_k^{3/2} + 6h_k: membership in 𝒫_k^m (§4), the consumers' points in 𝒫_k^{3/4} (§5), the closed Cauchy disc of §6 inside 𝒫_k^m, and §9's disc inside 𝒫_k^{3/4}. Under (C2) it follows from 64B₀e^{16κ_s}C₁^{RG2}c₃ε_k < min(β,1)α_{1,k}, a smallness condition on g_K under q₁ > p₀.
-- (C4′) 3h_k ≤ g_k^{3/2}: §6's bracket part at the Cauchy radius g_k^{3/2}; a smallness condition on g_K, since S_H ≤ g_k^{3/2}/40 (map #MD2.2.6.193) and e^{−R_k} is smaller than any power of g_k (R_k ≥ (log g_k^{−2})^r, r > 1, CRE (2.5)).
+- (C4′) 3h_k ≤ g_k^{3/2}: §6's bracket part at the Cauchy radius g_k^{3/2}; a smallness condition on g_K, since S_H ≤ g_k^{3/2}/40 (map #MD2.2.6.193) and e^{−R_k} is smaller than any power of g_k (R_k ≥ (log g_k^{−2})^r, r > 1, CRE (2.5), which the tube's R^T satisfies, BETA_FUNCTION_WILSON_LOOPS.md #B2.2.280).
 - (C5) (1 − 2δ)κ > c + 24a + 1: the count check with the Kotecký–Preiss weight a per M-cube (§8); RG2's "κ sufficiently large".
 - (C7) 2τ_k ≤ 12^{−3/2} and 8(2τ_k)^{1/3}(log(c_σM̄/(C_Bε_k)) + c_*) ≤ log 2 (§5a); a smallness condition on g_K.

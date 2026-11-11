@@ -138,7 +138,7 @@ g_{k-s}^{-2}\geq g_k^{-2}+bs-C_0\;,
 \tag{5}
 $$
 
-with b>0 and C₀ independent of the cutoff. Its stated source is `BETA_FUNCTION_WILSON_LOOPS.md`, Lemma 2.1 with Theorem 8.1 and Corollary 8.2. The applicability of that coupling input to the chosen construction remains a standing assumption here. Choose the small-coupling window so that A_K:=g_k^{-2}-C₀≥A_*>0, uniformly in K, and put p=κ₀/2.
+with b>0 and C₀ independent of the cutoff. Source: the run is the tube construction of its target (`BETA_FUNCTION_WILSON_LOOPS.md`, #B2.2.171–#B2.2.172; map #MD2.0.5.2), whose flow exists with g_K = ḡ by Proposition 2.13 (#B2.2.822–#B2.2.823); (W) holds on its histories (#B2.2.842) with b = 2c ln L − δ′ and C₀ := C_W (#B2.2.165–#B2.2.167), and (W) on the window [k−s, k) (#B2.4–#B2.5) is (5), as g_{k−s}^{-2} − g_k^{-2} = Σ_{j=k−s}^{k−1}β_{j+1}. Choose the small-coupling window so that A_K:=g_k^{-2}-C₀≥A_*>0, uniformly in K, and put p=κ₀/2.
 
 For 1≤m≤k, summing (4) over j≤k−m gives
 
@@ -1803,7 +1803,7 @@ The scalar expectations then have a unique limit. This last implication is eleme
 - `WILSON_IT1_D26_CLOSURE_2026_10_24.md`, §5.0: the pairwise running bound used for the carry estimate.
 - `../Balaban/tex/CRE/parts/p263.tex`, (2.43)–(2.46): the distinct E- and 𝐑-term age bounds; `p264.tex`, (2.47)–(2.50): boundary and partition-function bounds.
 - `../Balaban/tex/CRE/parts/p243.tex`, Introduction after (0.1), and `../Balaban/tex/LFR2/parts/p391.tex`–`p392.tex`, (1.104): R changes the effective densities; the iteration is RT.
-- `BETA_FUNCTION_WILSON_LOOPS.md`, Lemma 2.1, Theorem 8.1 and Corollary 8.2: the stated coupling input.
+- `BETA_FUNCTION_WILSON_LOOPS.md`, (W) (#B2.4–#B2.5), the tube construction (#B2.2.165–#B2.2.172), Proposition 2.13 (#B2.2.822–#B2.2.823) and (W) on the tube (#B2.2.842): the coupling input (5).
 - `WILSON_CAUCHY_ROUTE_DRAFT_2026_10_21.md`, §4.3; `WILSON_CAUCHY_LIPSCHITZ_2026_10_21.md`, §§3–5; `WILSON_CAUCHY_LIP1A_2026_10_21.md`: the earlier classical, Lipschitz and domain-transfer work.
 - `../Balaban/DIFFERENCES_PROOFS.md`, §§1 and 4; `../Balaban/D5_ENERGY.md`: the proposed depth comparison, its energy replacement and the scope of the full-measure assembly.
 - `../Balaban/tex/VAR/parts/p278.tex`–`p279.tex`, Theorem 1 (8)–(9): the scales in the regularity and lift bounds; `../Balaban/tex/PBG/parts/p397.tex`, (3.40): the Hölder seminorm convention.

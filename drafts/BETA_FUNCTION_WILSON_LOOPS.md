@@ -14,7 +14,7 @@
 {#BP.9-1} §10 treats semisimple G: Proposition 10.2 reduces additive actions to
 {#BP.10} the simple factors, Proposition 10.3 treats one bare coupling, and Proposition 10.4 treats factors that a symmetry permutes transitively.
 {#BP.10-1} **Open items.** For semisimple G, RG1's construction on G with a coupling vector for non-additive actions without such a symmetry (§10, *What is OPEN*, #B10.88–#B10.93). For simple G there are none.
-{#BP.10-2} §0's inputs 1, 2, 3, 5, and 6 are statements of Bałaban's papers given there without a complete proof, used as printed; §0 gives, at each input, the page and line of the passages that are not proved (for RG1's own proof of input 3, examples of them). Input 4 is derived in this file, and so is input 3's transfer to CRE's cutoffs δ_j with its changed constants and domains (#B0.37-3), except two changes derived in BP_RG2_COMPLEX_B.md (#B9.60–#B9.61) and BP_RG2_CUBE_COUNT.md (#B9.53–#B9.54), not yet through review.
+{#BP.10-2} §0's inputs 1, 2, 3, 5, and 6 are statements of Bałaban's papers given there without a complete proof, used as printed; §0 gives, at each input, the page and line of the passages that are not proved (for RG1's own proof of input 3, examples of them). Input 4 is derived in this file, and so is input 3's transfer to CRE's cutoffs δ_j with its changed constants and domains (#B0.37-3), except two changes derived in BP_RG2_COMPLEX_B.md (#B9.60–#B9.61) and BP_RG2_CUBE_COUNT.md (#B9.53–#B9.54).
 
 ## 0. The Result {#BS0}
 
@@ -55,9 +55,9 @@
 {#B0.29-1} §9 lists them with the other inputs taken from Bałaban.
 
 {#B0.31} Inputs:
-1. {#B0.32} VAR (189), stated in VAR without proof (VAR p.308 l.30, quoted at #B2.1.38) and proved in VAR's setting in balaban_proofs/BP_VAR_189.md (not yet through review), enters through Lemma 2.5 (sidecar node VAR_189) and, through input 3, wherever RG1 Theorem 3 is used (RG1 p.271 l.33).
+1. {#B0.32} VAR (189), stated in VAR without proof (VAR p.308 l.30, quoted at #B2.1.38) and proved in VAR's setting in balaban_proofs/BP_VAR_189.md, enters through Lemma 2.5 (sidecar node VAR_189) and, through input 3, wherever RG1 Theorem 3 is used (RG1 p.271 l.33).
 2. {#B0.33} RG2's sketches for the terms of P^{(k)}, RG1's part of the exponent from the action and the measure (RG1 p.268 l.19–20), other than its example (1/g_k²)V(H₁B′), V the function (80) of VAR (RG2 p.10 l.5–6) ("it can be done in the same way for all terms in 𝐏^{(k)}", p.11 l.5) and for the term (I.3.21) of RG2 Lemma 1 ("expanded and analyzed in almost the same way as the last term in (I.3.34), so we do not repeat these considerations", p.9 l.28).
-   {#B0.33-1} Both are parts of RG2 Lemmas 1–2, so they enter wherever input 3 uses these lemmas (#B0.37-2), and through it items 2–5; directly, in Proposition 2.6, step 2 (#B2.1.59, #B2.1.88-1), in Lemma 2.7, steps 1–2 (#B2.2.27), and in the complex-B form of these lemmas (#B9.60–#B9.61; balaban_proofs/BP_RG2_COMPLEX_B.md #BH.5-11, #BH.6-0 and #BH.6-5, not yet through review).
+   {#B0.33-1} Both are parts of RG2 Lemmas 1–2, so they enter wherever input 3 uses these lemmas (#B0.37-2), and through it items 2–5; directly, in Proposition 2.6, step 2 (#B2.1.59, #B2.1.88-1), in Lemma 2.7, steps 1–2 (#B2.2.27), and in the complex-B form of these lemmas (#B9.60–#B9.61; balaban_proofs/BP_RG2_COMPLEX_B.md #BH.5-11, #BH.6-0 and #BH.6-5).
 3. {#B0.34} The parts of RG1 Theorem 3 with RG2 that §§2.1–2.2 use (the bound RG1 (1.18), and the analyticity of the step terms
    {#B0.35} in (U, J) on RG1's fixed domains), run with CRE's fluctuation cutoffs δ_j (#B0.5), enter items 2–5:
    {#B0.36} through (P2) and (C) (the remark after Proposition 2.6) and through Proposition 2.9.
@@ -66,19 +66,19 @@
    {#B0.37-0} The chain is the renormalisation steps of RG1, RG2 and CRE, which average with RG1 (0.4) or (0.12) (RG1 pp.253–254, both "equally good", p.254 l.9; CRE p.243 l.24–25).
    {#B0.37-1} RG2's proof applies PBG at the chain's backgrounds: the walk expansion (1.6) of the chain's propagators with the bound (1.7), applied "as (3.108) [13]" (p.3 l.18; "This bound holds for all operator norms in formulations of theorems in [13]", l.23); the bound (1.11) on H(s(Y₀))X (p.5 l.5–16), after which "Similarly the other inequalities and statements of Sect. C [15] hold in this case", with Proposition 4 [15] (p.5 l.38–40); and the walk expansion of C^{(k)}(Z_0), "discussed in [13]" (p.13 l.19), which is PBG Theorem 3.15's by (3.185) (p.432 l.33–40).
    {#B0.37-1a} RG2 p.13 l.19–35 expands (C^{(k)})^{1/2}, which [13] does not cover, through (2.7) and the resolvent 𝒫(xI + 𝒫*Δ^{(k)}𝒫)^{−1}𝒫* (𝒫 is RG1's C, #T10.28-4; RG2 writes Δ^{(k)} as Δ_k, l.24), represented by (3.185) [13] with an added term and G̃_3(x) in place of G̃_2 (l.31–33); "The operator G̃_3(x) has the same properties as G̃_2" (l.34) is not proved there.
-   {#B0.37-1b} For the chain's dressed average, balaban_proofs/BP_PBG_COMPLEX.md (#BX.1-5) proves the analyticity and the bound (3.187), with a rate ϱ > 0 for δ₀, of these resolvents, uniformly in x ∈ [0, γ₁], and convergent expansions with its own localisation cubes, not yet through review. The terms of those expansions are taken at the G-valued factor U of RG1's (i) (#BX.1-5b), so they do not give l.34 in the form RG2 §2 uses, with terms that are functions on the orbits [(𝐔, 𝐉)] (RG1 p.262 l.9–14; (1.19), p.263 l.34–39). RG2's localisation domains around Z_0 (l.15–18) are used as printed.
+   {#B0.37-1b} For the chain's dressed average, balaban_proofs/BP_PBG_COMPLEX.md (#BX.1-5) proves the analyticity and the bound (3.187), with a rate ϱ > 0 for δ₀, of these resolvents, uniformly in x ∈ [0, γ₁], and convergent expansions with its own localisation cubes. The terms of those expansions are taken at the G-valued factor U of RG1's (i) (#BX.1-5b), so they do not give l.34 in the form RG2 §2 uses, with terms that are functions on the orbits [(𝐔, 𝐉)] (RG1 p.262 l.9–14; (1.19), p.263 l.34–39). RG2's localisation domains around Z_0 (l.15–18) are used as printed.
    {#B0.37-1c} The terms other than the last of (I.3.34) are "bounded similarly as in (1.24)" (p.8 l.30–34).
    {#B0.37-2} These, and the bounds RG2 §§1–2 build from them ((1.18)–(1.43), (2.14)–(2.41), Lemmas 1–3), enter at the chain's backgrounds wherever §2 cites RG2; §§3–8 do not cite RG2; §10 cites it in Proposition 10.4 for G as printed, and in Lemmas 10.14–10.16 for the family, with PBG's operators as (P-PBG) (#B9.29-3) and re-running RG2's arguments.
-   {#B0.37-3} They enter as printed, or with the changed constants and domains that #B9.60–#B9.61, Lemmas 2.7–2.8, *Input 3*, Proposition 2.11, steps 3–4, and *The Step with Complex Multiples of the R-Terms* derive, and with RG2's cube count (1.28), (2.30) and p.9 l.23 replaced by #BK.1 of balaban_proofs/BP_RG2_CUBE_COUNT.md, not yet through review (#B2.1.49-1).
+   {#B0.37-3} They enter as printed, or with the changed constants and domains that #B9.60–#B9.61, Lemmas 2.7–2.8, *Input 3*, Proposition 2.11, steps 3–4, and *The Step with Complex Multiples of the R-Terms* derive, and with RG2's cube count (1.28), (2.30) and p.9 l.23 replaced by #BK.1 of balaban_proofs/BP_RG2_CUBE_COUNT.md (#B2.1.49-1).
 4. {#B0.38} The bounds of Proposition 7.1(c) (#B7.82, #B7.84) on the first- and second-order parts in B of (QGQ*)^{−1}(U) and on the
    {#B0.39} first-order part of H(U), at U = U^L, VAR's Landau-gauge form of U_k(e^{iB}), at which F_k is evaluated (#B7.47-1–#B7.47-3), for the operators of §7's Setting, built from the dressed average with the
    {#B0.40} variables (0.11) (#B9.40-3d), are derived in this file from PBG's operators at U = 1 (#B7.81-1–#B7.81-5, #B7.86-1–#B7.86-27, with Lemma 7.3, step 8), with VAR Proposition 9's bound (19) at V₀ = 1 (#B7.79-2, #B7.81-3; #B9.50, input 5).
-   {#B0.40-1} Bałaban applies PBG's theorems to the chain's operators (§9, #B9.29-1–#B9.40-3e), without re-running PBG's proofs for RG1's average, and not to operators with this dressing, which he does not define; so his applications do not supply these bounds as printed. §10's Lemmas 10.11–10.16 use PBG for the chain's dressed average and at complex U as (P-PBG) (#B9.29-3–#B9.29-4), and Lemma 10.12 uses REG's results for the chain's average (#BFP.160-2); these are proved in balaban_proofs/BP_PBG_DRESSED.md, BP_PBG_COMPLEX.md and BP_REG_DRESSED.md, not yet through review.
+   {#B0.40-1} Bałaban applies PBG's theorems to the chain's operators (§9, #B9.29-1–#B9.40-3e), without re-running PBG's proofs for RG1's average, and not to operators with this dressing, which he does not define; so his applications do not supply these bounds as printed. §10's Lemmas 10.11–10.16 use PBG for the chain's dressed average and at complex U as (P-PBG) (#B9.29-3–#B9.29-4), and Lemma 10.12 uses REG's results for the chain's average (#BFP.160-2); these are proved in balaban_proofs/BP_PBG_DRESSED.md, BP_PBG_COMPLEX.md and BP_REG_DRESSED.md.
    {#B0.41-1} Proposition 4.2, and through it 5.3, uses PBG only at U = 1: C^{(k)}(1) is bounded in #B4.147-1–#B4.147-9, and the U-derivatives at 1 of H, G′, and R are written out in #B4.196-1–#B4.197-8. The other uses of PBG are listed in §9 (#B9.29-1–#B9.31).
-5. {#B0.42} VAR Theorem 1 uses REG's sketched Theorem 8 at one step, VAR p.297 l.9–13 (repeated at p.302 l.30), which balaban_proofs/BP_REG_DRESSED.md proves without it, not yet through review (#B9.41).
+5. {#B0.42} VAR Theorem 1 uses REG's sketched Theorem 8 at one step, VAR p.297 l.9–13 (repeated at p.302 l.30), which balaban_proofs/BP_REG_DRESSED.md proves without it (#B9.41).
    {#B0.42-1} VAR Theorem 1 enters, through input 3, wherever RG1 Theorem 3 is used (VAR Thm 1 at RG1 p.260 l.23, VAR Prop. 9 at RG1 p.271 l.33), and it enters §§5 and 7 through the uniqueness of the minimal orbit (VAR Thm 1, VAR p.279 l.15, as RG1 (0.21)–(0.22), p.256, states it: Proposition 5.3, step 1, #B5.74–#B5.75, #B5.89–#B5.91; #B7.47-5), and §§2, 5, and 7 through the analyticity of U_k(V) (VAR Prop. 9; in §2, Lemma 2.5, step 1, and Proposition 2.12(b)).
    {#B0.43} RG1 states VAR's results for its own chain, whose averaging is RG1 (0.4) or (0.12) (#B0.37-0); their uses are listed in §9 (#B9.44–#B9.51-1).
-6. {#B0.43-1} PBG (3.132), stated without proof on PBG p.422 l.15–19 and used as printed, with a proof for G-valued U of PBG's class on sequences with Ω₀ = T, not yet through review, in balaban_proofs/BP_PBG_3132.md, enters at U = 1 as the kernel bound on (QGQ*)^{−1}(1) (#B4.147-9, #B4.197-8, #B4.206–#B4.208, #B4.220, #B7.74–#B7.74-1, #B7.86-9) and through (3.133), which PBG p.422 derives from it with Theorem 3.3 for G (#B9.4–#B9.5, #B9.25–#B9.26).
+6. {#B0.43-1} PBG (3.132), stated without proof on PBG p.422 l.15–19 and used as printed, with a proof for G-valued U of PBG's class on sequences with Ω₀ = T in balaban_proofs/BP_PBG_3132.md, enters at U = 1 as the kernel bound on (QGQ*)^{−1}(1) (#B4.147-9, #B4.197-8, #B4.206–#B4.208, #B4.220, #B7.74–#B7.74-1, #B7.86-9) and through (3.133), which PBG p.422 derives from it with Theorem 3.3 for G (#B9.4–#B9.5, #B9.25–#B9.26).
    {#B0.43-2} Away from U = 1 it enters §§1–8 wherever inputs 1, 3, and 5 do (VAR p.291 l.36 and p.297 l.40, at each of VAR's backgrounds U₀, §G's included, #B9.29-2a; RG2 p.5 l.40, p.6 l.2, and p.13 l.19; #B9.29-2). In §10 it enters at U = 1, in Propositions 10.2–10.4 wherever inputs 1, 3 and 5 enter them (#B9.29-2), and in Lemmas 10.11–10.16 through (P-PBG) (#B9.29-3–#B9.29-3a-2, #B9.29-3d).
 
 {#B0.44} *Scope.* CRE Theorem 1 (CRE p.262) takes the coupling inequalities "(I.0.33)" as its hypothesis: if the sequence {g_k}
@@ -411,7 +411,7 @@
    {#B2.1.37-1} So ‖∂u/∂B_ν(y)‖ ≤ C e^{−δ₀ dist(y,X)} for every site y and direction ν, B_ν(y) the variable on the bond (y, y + e_ν).
    {#B2.1.38} *Input status.* VAR p.308 derives VAR (190) from VAR (189), and VAR (189) is stated without proof ("We do not
    {#B2.1.39} perform these calculations here").
-   {#B2.1.39-1} balaban_proofs/BP_VAR_189.md proves it in VAR's setting (not yet through review; sidecar node
+   {#B2.1.39-1} balaban_proofs/BP_VAR_189.md proves it in VAR's setting (sidecar node
    {#B2.1.40} VAR_189).
    {#B2.1.41} Apply Cauchy's estimate in the single variable B_{ν′}(y′), on a disc of fixed radius, to ∂u/∂B_ν(y).
    {#B2.1.41-1} This gives
@@ -427,7 +427,7 @@
 4. {#B2.1.48} *Sum.* Σ_x |x|² e^{−δ₀ dist(x,X)/2} ≤ C(1 + diam X + dist(0, X))^{d+2}.
    {#B2.1.48-1} The remaining sum over X of
    {#B2.1.49} e^{−κd_{k+1}(X) − δ₀dist(0,X)/2} times this polynomial converges for κ large: diam X ≤ M(2d_{k+1}(X) + 4) (#BK.1), so the polynomial is at most C(M)(1 + d_{k+1}(X))^{d+2}(1 + dist(0, X))^{d+2}; sum first over the X containing a given cube □, the cube of X nearest to 0, by RG2 (1.26), p.008 l.5, and then over □, with dist(0, X) = dist(0, □). ∎
-   {#B2.1.49-1} #BK.1 (balaban_proofs/BP_RG2_CUBE_COUNT.md, not yet through review) is the count M^{−4}|X| ≤ 2⁹(1 + d_j(X)) of the cubes of X ∈ 𝐃_j, in place of RG2's (1.28), p.008 l.19, (2.30), p.018 l.25, and p.009 l.23, which fail at d_j(X) = 0; #BK.6–#BK.7 check RG2's uses of it.
+   {#B2.1.49-1} #BK.1 (balaban_proofs/BP_RG2_CUBE_COUNT.md) is the count M^{−4}|X| ≤ 2⁹(1 + d_j(X)) of the cubes of X ∈ 𝐃_j, in place of RG2's (1.28), p.008 l.19, (2.30), p.018 l.25, and p.009 l.23, which fail at d_j(X) = 0; #BK.6–#BK.7 check RG2's uses of it.
 
 {#B2.1.50} This is the argument behind RG1 p.264 (existence of the limit RG1 (1.21) and boundedness of β).
 {#B2.1.50-1} It is linear in A.
@@ -680,7 +680,7 @@
 {#B2.2.126} In the coupling flow RG1 (2.15) this reads 1/g_{k+1}² = 1/g_k² − b_{k+1} + O(g_k²), uniformly in the history.
 
 {#B2.2.127} *Inputs.*
-- {#B2.2.128} VAR (189), through Lemma 2.5 as in Proposition 2.4, proved in balaban_proofs/BP_VAR_189.md (not yet through review; sidecar node VAR_189).
+- {#B2.2.128} VAR (189), through Lemma 2.5 as in Proposition 2.4, proved in balaban_proofs/BP_VAR_189.md (sidecar node VAR_189).
 - {#B2.2.129} RG2 Lemmas 1–2 and section 2, RG2's sketch on p.11 l.5 (§0, input 2, #B0.33; Lemma 2.7, step 2), RG1 (2.12), and CRE pp.244–246 and (2.4), as cited.
 - {#B2.2.135} The bound RG1 (1.18) and the analyticity of the step terms in (U, J) on RG1's fixed domains, from RG1 Theorem 3
   {#B2.2.136} run with CRE's cutoffs δ_j (#B0.5; the remark after Proposition 2.6; the transfer is derived in §0,
@@ -740,8 +740,9 @@
 
 {#B2.2.171} The tube construction of a tube of the class (for the tube of the target (K, g), the tube construction for (K, g)) is CRE's construction in which every parameter that CRE, LFR1, and LFR2 define from
 {#B2.2.172} a coupling g_j is defined from ĝ_j = u_j^{−1/2} instead:
-- {#B2.2.173} R_j^T is the smallest power of L with R_j^T ≥ (log ĝ_j^{−2})^r, the depth is N_k^T := R_k^T, and k₁ and N₀ are
-  {#B2.2.174} defined from R^T by the formulas of CRE p.270 and LFR1 p.179;
+- {#B2.2.173} R_j^T is the smallest power of L with R_j^T ≥ (log ĝ_j^{−2})^r, k₁ and N₀ are defined from R^T by the formulas of CRE p.270
+  {#B2.2.174} and LFR1 p.179, and the depth is N_k^T := max(N₀ + 1, N′_k), N′_k the least integer with L^{−N′_k} ≤ (log ĝ_k^{−2})^{−ν_L}, ν_L of BP_TL_NSTEP_FRAME #3.2.1.1-1 (not N = R_k, whose L^N is not a power of log g_k^{−2}, as the evaluation points need, #3.2.1.2);
+- {#B2.2.174-1} the plaquette and reference tests are the soft tests χ̄(f/t) of the large-field note (LF #3.16), f a function of the unscaled fields and t its threshold at ĝ_j, and the step-1 domain is V4's Λ (RC #RC.0) with V4's thresholds at ĝ_0;
 - {#B2.2.175} ε_j^T := ĝ_jp₀(ĝ_j), δ_j^T := (A₁/A₀)ε_j^T, the threshold of LFR1 (1.75) is 2ε_k^Tη², and the domains of
   {#B2.2.176} CRE (2.28) are α^T_{0,j} := ĝ_jC^α_0(log ĝ_j^{−2})^{q₀} and α^T_{1,j} := ĝ_jC^α_1(log ĝ_j^{−2})^{q₁}, where C^α_0
   {#B2.2.177} and C^α_1 are the constants that CRE (2.28) prints as C₀ and C₁ (renamed here, since C₀ is the constant of
@@ -875,6 +876,7 @@
 
 {#B2.2.273} The estimates of CRE, LFR1, and LFR2 hold for the tube construction on the histories of H_k, with changed constants,
 {#B2.2.274} and Propositions 2.4, 2.6, and 2.9 hold for RG1's construction run with the cutoffs δ_j^T.
+{#B2.2.274-1} With the soft tests and Λ of #B2.2.174-1 they hold as the large-field note and RC read them for CRE's construction (LF #3.17–#3.35, each soft test lying between the sharp tests at t and (1 + κ_s)t; RC #RC.0–#RC.0-3), with the thresholds at ĝ_j compared with those at g_j by (a) and (e).
 
 {#B2.2.275} *Proof.*
 1. {#B2.2.276} *(a).* x_j ≤ u_j, so ĝ_j ≤ g_j.
@@ -898,20 +900,14 @@
    {#B2.2.289} In both cases R^T_m ≤ (L+1)s^{β₀}R^T_n.
 4. {#B2.2.290} *(d).* LFR1 p.198 requires "N ≤ O(1)(log g_k^{−2})^ν" and N sufficiently large; LFR2 p.363 requires
    {#B2.2.291} N ≥ (ν/log L) log log g_k^{−2}, with a different exponent ν (#B9.63–#B9.64-1).
-   {#B2.2.291-1} With N = R_j both hold for g small (#B9.63),
-   {#B2.2.292} and by (c) they hold for N_k^T = R_k^T, whose upper bound 2L(log g_k^{−2})^r has the form O(1)(log g_k^{−2})^ν once
-   {#B2.2.293} r ≤ ν.
-   {#B2.2.293-1} The exponents admit this: LFR1 p.198 takes ½ν ≤ p₀ − p₁ − 1 and LFR2 p.383 takes 2p₁ − (d+5)r₀ > p₀, with
+   {#B2.2.291-1} BP_TL_NSTEP_FRAME #3.2.1.1-1–#3.2.1.2.1-3 checks these and the other conditions of LFR1–2 on N for N_k^T itself, from (a) and (c): L^{−N_k^T} ≤ (log g_k^{−2})^{−ν_L}, L^{N_k^T} ≤ 16L⁴(L+1)²(log g_k^{−2})^{ν_L}, N_k^T ≤ R^T_k, and N_k^T is nonincreasing in k (#3.2.1.1-2). N_k^T > N₀ by its definition.
+   {#B2.2.293-1} For LFR1 p.198, N_k^T ≤ R^T_k < 2L(log g_k^{−2})^r (#B2.2.280), so its condition holds with any integer ν ≥ r, and the exponents admit one: LFR1 p.198 takes ½ν ≤ p₀ − p₁ − 1 and LFR2 p.383 takes 2p₁ − (d+5)r₀ > p₀, with
    {#B2.2.294} r₀ = r the exponent of R_j (UV3 p.257 writes R = R₁(1 + log g_0^{−1})^{r₀}).
    {#B2.2.294-1} LFR1 p.198 takes ν a positive
    {#B2.2.295} integer, so put ν := ⌈r⌉; then r ≤ ν, and ν ≤ 2(p₀ − p₁ − 1) together with 2p₁ > p₀ + (d+5)r needs
    {#B2.2.296} p₁ ∈ ((p₀ + (d+5)r)/2, p₀ − 1 − ⌈r⌉/2), which is nonempty when p₀ > (d+5)r + ⌈r⌉ + 2.
    {#B2.2.296-1} CRE bounds p₀ only from below
    {#B2.2.297} ("p₀ ≥ 5r", CRE p.246), so p₀ is taken above (d+5)r + ⌈r⌉ + 2 and p₁ in that interval.
-   {#B2.2.297-1} The ν of LFR2 p.363 is a different exponent, with ν ≥ 2p₀ + dr₀; there N ≥ (ν/log L)
-   {#B2.2.298} log log g_k^{−2} holds for N = R^T_k ≥ (log g_k^{−2})^r and g small.
-   {#B2.2.298-1} N₀ satisfies L^{N₀−1} = R^T_{k−N₀+1} ≤ (L+1)(N₀+1)^{β₀}R^T_k (LFR1 p.192 l.18–19,
-   {#B2.2.299} with (c)), so N₀ = O(log R^T_k) < N_k^T for γ small.
 5. {#B2.2.300} *(e).* ε(g) = gA₀(log g^{−2})^{p₀} increases on (0, γ] for γ small, since its logarithmic derivative is
    {#B2.2.301} g^{−1}(1 − 2p₀/log g^{−2}) > 0, so ε_j^T ≤ ε_j by (a).
    {#B2.2.301-1} The ratios follow from (a), since each parameter is ĝ_j or
@@ -1252,7 +1248,8 @@
    - {#B2.2.545} the fluctuation-field functions, whose thresholds act on g_jA_j and on exp(ig_jB_j(b)) (for example
      {#B2.2.546} |exp ig_jB_j(b) − 1| < 2δ′_j in LFR1 (1.59), p.188, and |g_jB_j(b)| < δ′_j for χ′^{(j)}, whose print in LFR1 (1.55)
      {#B2.2.547} has the scaled variable and which the construction places on the unscaled field, *LFR1 (1.55)* before Lemma
-     {#B2.2.548} 2.10), with δ^T_j and δ′^T_j.
+     {#B2.2.548} 2.10), with δ^T_j and δ′^T_j;
+   - {#B2.2.548-1} the soft tests χ̄(f/t) and V4's step-1 tests that define Λ (#B2.2.174-1), whose f are functions of the unscaled fields and whose t are fixed by (K, g).
    {#B2.2.549} The changes of variables of CRE (1.22)–(1.23), pp.251–252, of CRE p.269 at the step k ("the change of variables
    {#B2.2.550} given by the formula (1.22), with 𝐇^{(k)}(b) instead of 𝐇_{1,Ax}(b)", for the bonds of (R^{∼2}_{k+1} ∩ S_{k+1})^{(k)*},
    {#B2.2.551} and the simpler change with g(A′_k(b)) replaced by 1 on the remaining bonds of S^{(k)*}_{k+1}), and of LFR1 p.188
@@ -3338,7 +3335,7 @@
 - {#B9.2} PRT1 (1.31), (1.61)–(1.63), and the alias decomposition of PRT1 p.23 (for Lemma 5.2, whose bounds (1.36) of PRT1 p.24 l.19–20 and
   {#B9.3} γ₀ ≤ Δ₀φ_μ ≤ γ₁ of PRT1 p.28 l.29 are derived there with constants depending only on d), and PRT1 (1.65)–(1.67); PBG Thms
   {#B9.4} 3.1, 3.2, 3.3, 3.12 at U = 1; PBG (3.117)–(3.137) and (3.156), of which (3.132), stated without proof on p.422, is
-  {#B9.5} used as printed, with a proof, not yet through review, in balaban_proofs/BP_PBG_3132.md (#B0.43-1); RG1 (0.28)–(0.30), RG1 (1.8)–(1.9), RG1 pp.262–263
+  {#B9.5} used as printed, with a proof in balaban_proofs/BP_PBG_3132.md (#B0.43-1); RG1 (0.28)–(0.30), RG1 (1.8)–(1.9), RG1 pp.262–263
   {#B9.6} (analyticity domains); VAR Thm 1 and §G.
   {#B9.6-1} PBG (3.105)–(3.106) (#B2.2.777); PBG (3.107)–(3.108) and (3.185), which RG2 applies to the chain's operators (RG2 p.003 l.9, l.18, p.013 l.31, l.33); and PBG Theorem 3.15, through the walk expansion of C^{(k)}(Z₀) that RG2 takes from [13] (§0, input 3, #B0.37-1–#B0.37-1a).
 - {#B9.7} For Proposition 4.2: Bałaban's step form RG1 (1.4)–(1.5), with (2.5), p.266, (2.10)–(2.11), p.267, the replacement
@@ -3374,9 +3371,9 @@
   {#B9.29-2a-1} It uses (3.7) and (3.10), Theorem 3.3 with (3.42), Theorems 3.12 and 3.13, and (3.25), (3.49), (3.69), (3.119)–(3.120), (3.126), (3.132), (3.133), (3.137) and (3.148) (VAR p.283 l.8, p.284 l.37–38, p.285 l.25, p.291 l.36, p.294 l.24, p.295 l.9, p.296 l.22, p.297 l.32 and l.40, p.298 l.27 and l.41–51, p.299 l.3 and l.13, p.306 l.37).
   {#B9.29-2a-2} It also uses PBG's operators at U₀: H(U₀) and its analyticity domain in U₀ (p.287 l.33 and l.36–37); H's kernel bound in (69) (p.288 l.41), by which VAR solves (68) with a Neumann series that PRT2's Lemma 2.1 makes convergent (p.288 l.46–p.289 l.2, l.15); and the projection R(U₀) of the Landau gauge (21) (p.281 l.19). The "additional regularity condition (3.35) in (1.33)" at U₀ is REG's: VAR cites "the result of Sect. F" while applying REG's Theorem 2 (p.280 l.51–52), and REG's Sect. F derives it from U₀ ∈ 𝔘_k (REG p.97 l.29–30; Proposition 6, p.99 l.41).
   {#B9.29-2a-3} Without naming items, VAR takes all of PBG's results at R₁, M₁ (p.277 l.17), "the results of that paper" for the form ½⟨A, ΔA⟩ (p.284 l.37), and the extension of its operators to regular U, with (3.35)–(3.38) for the external U of Proposition 9 (p.309 l.2, l.12). The PBG theorems it names are 3.3 with (3.42), 3.12 and 3.13 (p.285 l.25, p.295 l.9, p.296 l.22, p.297 l.32).
-  {#B9.29-2a-4} For the chain's dressed average, (P-PBG) gives the PBG items VAR names at G-valued configurations, where VAR uses them, (3.42) included at U₀ (#B9.29-3; p.297 l.32–p.298 l.6), and H's analyticity in U₀ (#B9.29-3a); balaban_proofs/BP_REG_DRESSED.md (not yet through review) gives REG's Proposition 6 (#B9.29-3b). For §G's G = (Δ_a − Δ^{(2)})^{−1} at U_k(V₀), VAR transfers (3.42) from Δ_a^{−1} by (3.137) (p.306 l.37–38), as printed for the chain and by balaban_proofs/BP_FAMILY_PBG_VAR.md #BFP.167-0 (not yet through review) for the family.
+  {#B9.29-2a-4} For the chain's dressed average, (P-PBG) gives the PBG items VAR names at G-valued configurations, where VAR uses them, (3.42) included at U₀ (#B9.29-3; p.297 l.32–p.298 l.6), and H's analyticity in U₀ (#B9.29-3a); balaban_proofs/BP_REG_DRESSED.md gives REG's Proposition 6 (#B9.29-3b). For §G's G = (Δ_a − Δ^{(2)})^{−1} at U_k(V₀), VAR transfers (3.42) from Δ_a^{−1} by (3.137) (p.306 l.37–38), as printed for the chain and by balaban_proofs/BP_FAMILY_PBG_VAR.md #BFP.167-0 for the family.
   {#B9.29-2a-5} At complex configurations #B9.29-3a-1 excludes (3.42)'s covariant-Laplacian inequality, so the extension to complex U of p.309 l.2–3 is not covered, and Lemma 10.12 takes Proposition 9 apart from (190) with its operators at G-valued configurations (BP_FAMILY_PBG_VAR.md #BFP.167-0a, #BFP.167-1).
-  {#B9.29-3} Lemmas 10.11–10.16 use PBG for the family per factor group in the following form, called (P-PBG), proved in balaban_proofs/ and not yet through review. At G-valued U of PBG's class for a sequence {Ω_j} with Ω₀ = T, with the chain's dressed average (#B9.40-3d), Q′ being built from the averages (p.393 l.34–40), PBG's Theorems 3.1–3.13, (3.131)–(3.137) and (3.147)–(3.153), and the steps of their proofs, hold as PBG states them, and so do the analogs of CMP98 (143) and (149) these proofs use: BP_PBG_DRESSED.md (#BD.1-1).
+  {#B9.29-3} Lemmas 10.11–10.16 use PBG for the family per factor group in the following form, called (P-PBG), proved in balaban_proofs/. At G-valued U of PBG's class for a sequence {Ω_j} with Ω₀ = T, with the chain's dressed average (#B9.40-3d), Q′ being built from the averages (p.393 l.34–40), PBG's Theorems 3.1–3.13, (3.131)–(3.137) and (3.147)–(3.153), and the steps of their proofs, hold as PBG states them, and so do the analogs of CMP98 (143) and (149) these proofs use: BP_PBG_DRESSED.md (#BD.1-1).
   {#B9.29-3a} At complex configurations, with the chain's dressed average and the current 𝐉 a variable of the domain with the bound γ of #BX.1 (#T12.28), and for M ≥ M₃, the operators of Theorem 3.4 and G, H, G₁, H₁, (QGQ*)^{−1}, (QG₁Q*)^{−1} and 𝔊 := G₁ − G₁DRD*G₁ − G₁Q*(QG₁Q*)^{−1}QG₁ (G₁𝔓* at the real points, (3.153)) extend analytically to PBG's class (3.37) for these sequences with Mα₀ + α₁ + γ ≤ a_cx (#BX.1-2), M₃ and a_cx depending on d, L and G_i, with their bounds and expansions uniformly there.
   {#B9.29-3a-0} On tori of side at least 20M they extend so to RG1's I.(i)–(iii) at scale j with every Ω_n = T, with (1.12) also on the cubes of side 20M and O(1)LMBα₀ + α₁ + γ₀ ≤ a_cx, γ₀ the bound on 𝐉 of RG1 (1.14), p.262 l.37 (#T10.6-2), and on a domain Y the expansions' terms localised in Y are bounded on Y alone (#BX.1-4).
   {#B9.29-3a-1} There Theorem 3.3 holds without the covariant-Laplacian inequality of (3.42) and the fourth of (3.47): for G and G₁ with ⅜δ₀ for δ₀, and for 𝔊 with ½δ₁′ for δ₀ and without the bounds of 𝔊∇*λ for λ only bounded, and (3.132) and (3.133) with δ₁′ := min(δ_cx, ½δ₀)/8 for δ₁, δ_cx ≤ δ₁ the rate of #BX.7-1a: BP_PBG_COMPLEX.md (#BX.1-2–#BX.1-4).
@@ -3409,10 +3406,10 @@
     {#B9.40-3c} RG1 uses a dressed average for the chain without defining its dressing factors: RG1 (3.3), p.270 l.27–32 ("the equality (97) [12]", l.32), and (3.39), p.278 l.17–24 ("Using (97) [12]", l.17), apply CMP98 (97), Ũ₁^j = (\bar{\bar U}₁^j)^{v_j}, as a nonlinear identity: the Q_j of (3.3), in exp iQ_j(η𝐇_k(B′)) (p.270 l.28), is PBG's Q_j(U, ηA) = (1/i)log of the dressed j-step average (PBG (3.13), p.392 l.49). RG1 p.265 l.40–41 also applies CMP98 (106) to the chain, expressing the gauge transformation u_k through 𝐇_k(B′) "by the formula (106) in [12] with U₁ = exp iη𝐇_k".
     {#B9.40-3d} This file supplies the definition: the dressing factors of PBG (3.113) with the variables (0.11) that replace the axial contours (#B9.40-3b). This is the dressed average of §7's Setting (#B7.12-1–#B7.14), and its covariance QD = D̄Q′ and Q(1) = Q_k are proved there (#B7.15–#B7.27-1).
     {#B9.40-3e} CMP98 (97) holds for it: CMP98's proof, (93)–(98), p.32, uses the recursion (68), the definitions (89) and (91), and "the other definitions" (p.032 l.8, l.14, l.36, l.47), in which the dressing factors of (89) (there the averages of R_{0,c±}V₁, here those of #B9.40-3d) enter only algebraically, and the gauge covariance (93) of the undressed average.
-    {#B9.40-3e-1} CMP98 (106), derived in (101)–(105) from (97), (99) and the axial-gauge formulas (77) and (87) for u (p.032 l.65–p.033 l.44), holds for the chain with the variables (0.11) by balaban_proofs/BP_REG_DRESSED.md (#BR.4-1–#BR.4-2), not yet through review.
+    {#B9.40-3e-1} CMP98 (106), derived in (101)–(105) from (97), (99) and the axial-gauge formulas (77) and (87) for u (p.032 l.65–p.033 l.44), holds for the chain with the variables (0.11) by balaban_proofs/BP_REG_DRESSED.md (#BR.4-1–#BR.4-2).
     {#B9.40-3f} (93) holds for RG1 (0.4), since each logarithm in (0.4) is of a loop closed at c₋ (RG1 p.253 l.5–6), so a gauge transformation u multiplies M(𝐔, c) by u(c₋) on the left and u(c₊)^{−1} on the right. It holds for (0.12) because the variables (0.11) are covariant by (0.6) (l.20) (§3.1).
 - {#B9.41} VAR Thm 1 uses REG's Theorem 8, which REG sketches (p.101 l.2–10: "Inspecting the proofs … almost without any changes"), only in its step off the Landau slice, VAR p.297 l.9–13, repeated at p.302 l.30: there VAR solves VAR (125), REG Sect. D with f on the right, to show that its critical configuration is critical without the Landau condition (`D:\University\Oxford PostDoc\Balaban\BALABAN_DEPENDENCE_TREE.md`, D3).
-  {#B9.42} That conclusion follows from REG's Proposition 5 at f = 0, gauge invariance and the surjectivity of RD* along the gauge directions, proved in balaban_proofs/BP_REG_DRESSED.md (#BR.13a–#BR.13a-7, #BR.1-2), not yet through review, for CMP98's averages and for the chain's.
+  {#B9.42} That conclusion follows from REG's Proposition 5 at f = 0, gauge invariance and the surjectivity of RD* along the gauge directions, proved in balaban_proofs/BP_REG_DRESSED.md (#BR.13a–#BR.13a-7, #BR.1-2), for CMP98's averages and for the chain's.
   {#B9.42-1} Where it enters: §0, input 5 (#B0.42).
 - {#B9.44} VAR was written for the averaging of CMP98.
   {#B9.44-1} RG1 states VAR Thm 1's unique regular minimal orbit for its own M^k
@@ -3427,7 +3424,7 @@
   {#B9.51-1} §10 uses VAR Theorem 1 with (2) and (8) for RG1's minimal configuration (Lemma 10.7, #B10.119, #B10.124), VAR (8), (9), (14) and (28) (Lemma 10.14(a), #B10.178; #BFR.211-2a), and VAR §§A–G re-run for the chain's dressed average (Lemma 10.12, #B10.159-1 and BP_FAMILY_PBG_VAR.md #BFP.160–#BFP.167).
 - {#B9.52} VAR (189): §0, input 1 (#B0.32), with RG1 Theorem 3's use of (190) at p.271 l.33 (#B9.46–#B9.47).
 - {#B9.53} From RG1 Theorem 3 with RG2 Lemmas 1–3 and RG2 (2.41): the bound RG1 (1.18) and the analyticity of the step terms in
-  {#B9.54} (U, J) on RG1's fixed domains, for §§2.1–2.2, as printed or with the changes that #B0.37-3 lists, among them RG2's cube count replaced by #BK.1 of balaban_proofs/BP_RG2_CUBE_COUNT.md, not yet through review (#B2.1.49-1).
+  {#B9.54} (U, J) on RG1's fixed domains, for §§2.1–2.2, as printed or with the changes that #B0.37-3 lists, among them RG2's cube count replaced by #BK.1 of balaban_proofs/BP_RG2_CUBE_COUNT.md (#B2.1.49-1).
 - {#B9.55} For the tube construction: CRE's inductive estimates as printed, in particular CRE (2.30)–(2.31), p.260, (2.44) and
   {#B9.56} (2.46), p.263, and the statement that the step output satisfies the inductive assumption (CRE p.279), and the
   {#B9.57} estimates of LFR1 and LFR2, including LFR2 (1.79)–(1.80), pp.383–384, and of UV3, CMP98, REG, and VAR as CRE uses
@@ -3435,14 +3432,14 @@
 - {#B9.59} Inputs whose printed form needs an argument, given here and checked against the print:
   - {#B9.60} The B-set {B : |B| < ε₁g_k^{−1} on Y} of RG2 (1.34), p.9, can be taken as the complex polydisc, with (1.34) read as in #BH.2-1: the functions V′_k and V_k of RG2 Lemmas 1–2, with (1.36) and (1.42)–(1.43), are jointly holomorphic in (𝐔, 𝐉, B) for g^c-valued B there, for α₀, α₁ and ε₁ small with the conditions of #BH.1 (used in Proposition 2.6, step 2, and Lemma 2.7, steps 1–2), and the action terms are holomorphic in a complex coupling z in place of g_k, with z^{−2} for g_k^{−2}, on |z||B| < ε₁, also at z = 0, with the same bounds (#BH.1-1, #BH.1-2; used in Lemma 2.7, step 2).
     {#B9.60-1} The identities (1.33) and (1.41) are used at real B only (#B2.2.8-1).
-    {#B9.61} The proof, which follows RG2 pp.3–11 and checks that each map there is holomorphic in complex B, is balaban_proofs/BP_RG2_COMPLEX_B.md (#BH.1–#BH.6-5-2b), not yet through review.
+    {#B9.61} The proof, which follows RG2 pp.3–11 and checks that each map there is holomorphic in complex B, is balaban_proofs/BP_RG2_COMPLEX_B.md (#BH.1–#BH.6-5-2b).
   - {#B9.62} The threshold on the unit-scale fluctuation A_k at step k is g_k^{−1}δ_k = A₁(log g_k^{−2})^{p₀} (#B0.5, #T10.2).
     {#B9.62-1} Bałaban prints this form twice: CRE (1.18), p.250, has χ({sup|A(b)| < g₀^{−1}δ₀}) at step 0, and (1.19) multiplies it by the factor with exp ig₀A(b).
     {#B9.62-1a} LFR1 (1.9), p.178, writes out CRE's one-step operations ("the formula (2.21) [III]") and has χ({sup|A_j(b)| < g_j^{−1}δ_j}), beside (1.8)'s exp ig_jA_j(b).
     {#B9.62-1b} CRE (3.16), p.268, prints χ({sup|A_k(b)| < δ_k}) for the same field: A_k is unit scale there, since it enters (3.15) as g_kCA_k after the scaling A′_k = g_kA_k (CRE p.267). The factor g_k^{−1} is missing in (3.16), and this file uses the form of (1.18) and LFR1 (1.9) (§0, *Input 3*).
     {#B9.62-2} The neighbouring prints agree with g_k^{−1}δ_k: CRE (3.3), p.265, puts 2δ_k on the field-scale |V_k(V^{(k)}_{□′})^{−1} − 1|, and LFR2's factor exp(−γ₀g_j^{−2}δ_j²(LM₂R_j)^{−d}|R_j|) from χ^{(j−1)c}(R_j) (p.380 l.43–45) carries δ_j/g_j.
-  - {#B9.63} LFR1 p.198 and LFR2 p.363 use two different exponents ν, and with N = R_j both conditions hold for small g
-    {#B9.64} (*CRE's Construction as a Function of the History*; Lemma 2.10, step 4).
+  - {#B9.63} LFR1 p.198 and LFR2 p.363 use two different exponents ν, and with the tube's depth N = N_k^T both conditions hold for small g
+    {#B9.64} (Lemma 2.10, step 4): LFR1's with ν = ⌈r⌉ (#B2.2.293-1), and LFR2's since ν_L > 2p₀ + dr₀ (BP_TL_NSTEP_FRAME #3.2.1.1-1-1).
     {#B9.64-1} LFR1's ν satisfies ½ν ≤ p₀ − p₁ − 1, and LFR2's needs ν ≥ 2p₀ + dr₀. As one number they would give 2p₁ + 2 + dr₀ ≤ 0, while 2p₁ > p₀ + (d+5)r₀ > 0 (LFR2 p.383).
 - {#B9.72} RG2's sketches on p.11 l.5 and p.9 l.28 (§0, input 2, #B0.33).
 
@@ -3657,7 +3654,7 @@
 {#B10.97-1} More than these thresholds changes: A differs from every combination of
 {#B10.98} Wilson actions of representations of G each nontrivial on one ideal only (as for SO(4), by 2 at the plaquette value −1 ∈ SO(4), which every such representation maps to 1), so RG1's form g_k^{−2}A(U_k) of the effective action,
 {#B10.99} the background field as the minimiser of one action, and the large-field bounds have to be restated.
-{#B10.104} **The classical actions for a coupling vector.** For the actions of #B10.93, G is from here on as in Lemma 10.1, connected, with the defining representation G ⊂ U(N), and tr is the normalised trace of RG1 (0.2). Lemmas 10.11–10.17 are not yet through review.
+{#B10.104} **The classical actions for a coupling vector.** For the actions of #B10.93, G is from here on as in Lemma 10.1, connected, with the defining representation G ⊂ U(N), and tr is the normalised trace of RG1 (0.2).
 
 {#B10.105} **Lemma 10.5 (Comparison Actions).** For u ∈ G put a(u) := 1 − Re tr u, and for each simple ideal g_i put ã_i(u) := ν_i(1 − tr_i Ad(u)|_{g_i}), with tr_i the normalised trace on End(g_i) and ν_i > 0 the constant for which a(e^{iX}) and ã_i(e^{iX}) have the same quadratic part for X ∈ g_i. Put c_⊗ := a − Σ_iã_i. Then:
 - {#B10.106} (a) each ã_i is a real class function on G with ã_i ≥ 0, ã_i(u) = 0 if and only if Ad(u)|_{g_i} = 1, and ã_i(e^{iX}) depends on X ∈ g only through its g_i-component X_i;
@@ -3740,7 +3737,7 @@
 
 {#B10.147} *Use (open).* Lemma 10.10 gives, for S(h; ·), the analogues of the properties of Δ, Δ′ and J that PBG §3 states and uses: (3.69) and its difference bound (p.404), the form (3.82) (p.407), the smallness and locality that bound the commutator [Δ″, h_□] with PBG's localisation functions h_□ (p.414 l.2–3), gauge covariance and (3.117) (pp.395–396, 419). PBG's constructions from them, (3.118)–(3.138) (pp.419–423: Δ_π, Δ′_π, Δ^{(2)}, G, H, G₁, H₁) and Theorem 3.12, are Lemma 10.11.
    {#B10.147-1} RG1's Gaussian (2.6)–(2.8), p.266, is ½⟨H₁B′, Δ₁H₁B′⟩ with H_k, H₁ those of the action whose minimal configuration is the background. At RG1's background, A's, H₁ couples the factors through the Hessian of C (for SU(2) × SU(3) on ℂ² ⊗ ℂ³, a(e^{iX}) contains −¼tr X_1² tr X_2²), with a strength bounded only through the ratios h_i/h_j, and (2.7) does not combine A's H with the J of S(h; ·); at S(h^k; ·)'s own minimal configuration both are S(h^k; ·)'s, and Lemma 10.11 applies.
-   {#B10.147-2} That background exists, with VAR's regularity, by Lemma 10.12, and Lemma 10.13 writes its change from step to step, as h^k changes, as the counterterm and C-term of Lemma 10.8(c) plus a second order term R_bg, and Lemma 10.14 localises R_bg into local terms analytic on 𝒰(Y). Lemma 10.15 localises the change of the other terms of RG1 (1.6) with the background, at the rate (1 − 2ϱ)κ. Open: what #B10.199-1, #B10.212-1 and #B10.221 state, and the rest of #B10.131-1. Awaiting review: (P-PBG) (#B9.29-3), and REG's results for the chain's dressed average (#BFP.160-2).
+   {#B10.147-2} That background exists, with VAR's regularity, by Lemma 10.12, and Lemma 10.13 writes its change from step to step, as h^k changes, as the counterterm and C-term of Lemma 10.8(c) plus a second order term R_bg, and Lemma 10.14 localises R_bg into local terms analytic on 𝒰(Y). Lemma 10.15 localises the change of the other terms of RG1 (1.6) with the background, at the rate (1 − 2ϱ)κ. Open: what #B10.199-1, #B10.212-1 and #B10.221 state, and the rest of #B10.131-1.
 
 {#B10.148} **Lemma 10.11 (PBG's Theorem 3.12 for the Family).** Let U be in PBG's class (3.35)–(3.36) for G and a sequence {Ω_j} with Ω₀ = T (#B9.29-3), with M ≥ M₁, M ≥ M₃ for each G_i (#B9.29-3a), M large depending on d, L and G (#B10.148-0a), and Mα₀ small depending on d, L and G (PBG's Theorem 3.1, p.397 l.37–38, and Theorem 3.11, p.416 l.24), and let h^{±1/2} act on g-valued fields by multiplying the g_i-component by h_i^{±1/2}.
    {#B10.148-0} Let Q_j be PBG's averages (3.15)–(3.16) or the chain's dressed average of §7's Setting, built from RG1's (0.4) or (0.12) (#B9.40-3d); for the latter, the definitions below, (a) and (b) rest on (P-PBG) (#B9.29-3).
@@ -3749,14 +3746,14 @@
 - {#B10.149} (a) the term of PBG's (3.127) for S(h; ·), −⟨HC^{(2)}(δ), J⟩ with H and J those of S(h; ·) in the variable δ, equals −½⟨A, Δ^{(2)}A⟩ for A = h^{1/2}δ;
 - {#B10.150} (b) PBG's Theorem 3.12 holds for these operators, and its bounds (Theorems 3.3 and 3.10 for Ĝ, Ĝ₁, with ⅜δ₀ for δ₀, without the covariant-Laplacian inequality of (3.42) and the fourth of (3.47), as there; (3.133) with ½δ₁′ for ½δ₁ and Theorem 3.10 for Ĥ, Ĥ₁; (3.132) with δ₁′ for δ₁ (#T10.50) and Theorem 3.10's expansion for (QĜQ*)^{−1} and (QĜ₁Q*)^{−1}; for 𝔊̂, Theorem 3.3 with ½δ₁′ for δ₀, without those two inequalities and the bounds of 𝔊̂∇*λ for λ only bounded, and an expansion) hold for their conjugates h^{s}Xh^{−s}, s = ±1/2, with constants depending on d, L and G, not on h.
 
-{#B10.151} *Proof.* In balaban_proofs/BP_FAMILY_PBG_VAR.md (#BFP.152–#BFP.157-4), not yet through review.
+{#B10.151} *Proof.* In balaban_proofs/BP_FAMILY_PBG_VAR.md (#BFP.152–#BFP.157-4).
 
 {#B10.158} *Use.* In the variable A the factors couple only through K_C, and the weights θ/h_j enter only as factors ≤ 1, so the constants are independent of the couplings. With the chain's dressed average (#B9.40-3d) this is the input RG1 (2.6)–(2.8) needs at the minimal configuration of S(h^k; ·) (#B10.147-1); it gives nothing at RG1's background, A's, where H and H₁ are A's.
 
 {#B10.159} **Lemma 10.12 (VAR's Theorem 1 for the Family).** VAR's Theorem 1 (p.279) holds with S(h; ·) in place of the action A of VAR (5), with constants a₀, a₁, B₃, B₄(β₀), M(ε₁) depending on d, L and G only (VAR's depend on d and L, #T3.32-2), not on h: for V satisfying VAR (7) on a sequence with Ω₀ = T_η, with ε₁ ≤ a₁, there is a minimal orbit of S(h; ·) in the space VAR (8); it is the unique critical orbit in VAR (6) if B₃ε₁ ≤ ε₀ ≤ a₀; and its configurations satisfy VAR (9)–(10). Its minimal configurations are analytic in V as in VAR §G.
    {#B10.159-1} The averages are VAR's, CMP98's through REG Sect. A (VAR p.278 l.2), or the chain's dressed average (#B9.40-3d), with Lemma 10.11's Q_j accordingly; for the latter, PBG's results hold by (P-PBG) (#B9.29-3–#B9.29-3a-2), and REG's results, which #BFP.160-1 lists, by BP_REG_DRESSED.md (#BFP.160-2).
 
-{#B10.159-2} *Proof.* In balaban_proofs/BP_FAMILY_PBG_VAR.md (#BFP.160–#BFP.167-1), not yet through review.
+{#B10.159-2} *Proof.* In balaban_proofs/BP_FAMILY_PBG_VAR.md (#BFP.160–#BFP.167-1).
 
 {#B10.168} **Lemma 10.13 (Change of Background).** Let h, h′ be coupling vectors with h_i, h′_i ≥ 1, put β := h − h′ and b := max_i|β_i|, and let U_h and U_{h′} be the minimal configurations of S(h; ·) and S(h′; ·) for the same V (Lemma 10.12), with ε₁ ≤ a₁, B₃ε₁ ≤ ε₀ ≤ a₀, B₃ε₁ ≤ x_c′ (Lemma 10.7), and θ^{−1/2}b(B₃ε₁)³ ≤ c_bg, c_bg > 0 depending on d, L and G. With the chain's average the lemma rests on (P-PBG) (#B9.29-3–#B9.29-3a-2) and on Lemma 10.12 (#BFP.160-2). Then:
 - {#B10.169} (a) S(h; U_h) − S(h′; U_{h′}) = Σ_iβ_iÃ_i(U_{h′}) + (θ − θ′)C(U_{h′}) + R_bg, with R_bg := S(h; U_h) − S(h; U_{h′});
@@ -3764,7 +3761,7 @@
 - {#B10.171} (c) U_h = (e^{iηδ*}U_{h′})^u, u the G-valued gauge transformation restoring VAR's axial gauge (p.299 l.26–28), with δ* = δ′ − HD(δ′) (VAR (47)), and A* := h^{1/2}δ′ satisfies |A*|_{(−1)}, |∇A*|_{(−2)} ≤ O(1)θ^{−1/2}b(B₃ε₁)³ in VAR's norms, with the further factor η³ when all of VAR's domains Ω_n are T_η;
    {#B10.171-1} R_bg = −½⟨A*, Δ̂₁A*⟩ + R₃, Δ̂₁ that of S(h; ·) at U_{h′} (Lemma 10.11), where R₃ := V^A(A*) − ⟨A*, (δV^A/δA)(A*)⟩, V^A(A) := V(h^{−1/2}A) for VAR's V (80) of S(h; ·) in δ, and θ^{1/2}V^A has VAR's form (80) and Proposition 4, with constants depending on G (#BFP.175-3); and R_bg is analytic in V.
 
-{#B10.172} *Proof.* In balaban_proofs/BP_FAMILY_PBG_VAR.md (#BFP.173–#BFP.175-3-1), not yet through review.
+{#B10.172} *Proof.* In balaban_proofs/BP_FAMILY_PBG_VAR.md (#BFP.173–#BFP.175-3-1).
 
 {#B10.176} *Use.* With h = h^k and h′ = h^{k+1}, Lemma 10.13 rewrites S(h^k; ·) at its own background, at scale k + 1, as S(h^{k+1}; ·) at its own, plus the counterterm and C-term of Lemma 10.8(c), plus R_bg. As b ≤ β_max (#B10.131) and θ_k ≥ 1, the hypothesis θ^{−1/2}b(B₃ε₁)³ ≤ c_bg holds once β_max(B₃ε₁)³ ≤ c_bg, and R_bg is of second order in b(B₃ε₁)³ and carries θ_k^{−1}, which is O(g_{k,i}²) for the largest g_{k,i}. It is analytic in V but not local; Lemma 10.14 localises it as an activity of RG1 §§3–5.
 
@@ -3777,7 +3774,7 @@
 - {#B10.179} (b) |R_bg(Y, 𝐔, 𝐉)| ≤ C(M, κ)θ^{−1}b²(B₃ε₁)⁶exp(−κd_j(Y)) on 𝒰(Y), with C(M, κ) = O(M^q)exp(O(1)κ), q and O(1) depending on d, L and G;
 - {#B10.180} (c) R_bg(Y, ·, ·) is gauge invariant under the G^c-valued gauge transformations near the G-valued ones, as in RG2's Lemma 2 (p.011 l.27–28).
 
-{#B10.180-1} *Proof.* In balaban_proofs/BP_FAMILY_LOCALISATION.md (#BFL.181–#BFL.187), not yet through review.
+{#B10.180-1} *Proof.* In balaban_proofs/BP_FAMILY_LOCALISATION.md (#BFL.181–#BFL.187).
 
 {#B10.188} *Use.* With h = h^k and h′ = h^{k+1}, R_bg(Y) carries θ_k^{−1} = O(g_{k,i}²) for the largest g_{k,i} and is of sixth order in B₃ε₁; it is local, gauge invariant and analytic on 𝒰(Y), which is smaller than RG2's domain (#B10.199-2). In the form RG1 (1.6) every other term, a counterterm or an E^{(n)}, changes as well when the background moves by e^{iηδ*} (Lemma 10.13(c)); Lemma 10.15 localises these changes.
 
@@ -3788,7 +3785,7 @@
 - {#B10.191} (b) with h^0 the bare coupling vector and θ_0 := min_ih^0_i, the change of the counterterm sums, Δ_ct := Σ_i(h^0_i − h_i)(Ã_i(U_h) − Ã_i(U_{h′})) + (θ_0 − θ)(C(U_h) − C(U_{h′})), equals Σ_{Y∈D_j}R_ct(Y, U, J), with R_ct(Y) as R_bg(Y) in Lemma 10.14(a), (c), and |R_ct(Y)| ≤ C(M, κ)|h^0 − h|θ^{−1}b(1 + θ^{−1}b)(B₃ε₁)⁶η⁶exp(−κd_j(Y)), |h^0 − h| := max_i|h^0_i − h_i| + |θ_0 − θ|;
 - {#B10.192} (c) R_E(Y) and R_ct(Y) vanish to fourth order at (𝐔, 𝐉) = (1, 0); in particular their second derivatives there are 0.
 
-{#B10.193} *Proof.* In balaban_proofs/BP_FAMILY_LOCALISATION.md (#BFL.194–#BFL.198), not yet through review.
+{#B10.193} *Proof.* In balaban_proofs/BP_FAMILY_LOCALISATION.md (#BFL.194–#BFL.198).
 
 {#B10.199} *Use.* With h = h^k and h′ = h^{k+1}, b ≤ β_max and |h^0 − h^k| ≤ 2kβ_max (#B10.131), and kη⁶ ≤ 1, so R_bg, R_E and R_ct are local, gauge invariant and analytic on 𝒰(Y), bounded by C(M, κ, ϱ)θ_k^{−1}(1 + β_max)³(B₃ε₁)³(1 + E₀)exp(−(1 − 2ϱ)κd_j(Y)). By (c), and as R_bg is of sixth order at (1, 0) by the argument of #BFL.198, their second derivatives at 𝐔 = 1 vanish, so they do not change Π_{k+1} (RG1 (1.20)), the second derivative at B = 0 of E^{(k+1)}(U_{k+1}(exp iB)), U_{k+1}(1) = 1 with 𝐉 = 0 there, and so not β_{k+1} ((1.22)).
    {#B10.199-1} Writing the effective action of step k at S(h^{k+1})'s background is thus Lemma 10.13 plus these activities; this is the change of background in the induction of RG1 §§2–5. The rate (1 − 2ϱ)κ is that of RG2's V′_k, the same kind of term (Lemma 1, p.009 l.25–26, (1.36)), which RG2 §2 carries to (1 − 8δ_{RG2})½Lκd_{k+1} by 2d_k(Z) ≥ Ld_{k+1}(Z′) (p.019 l.35, p.020 l.33), at least κd_{k+1}, since (1 − 12δ_{RG2})½L = 1 (#B2.1.16) gives (1 − 8δ_{RG2})½L > 1; so with ϱ = δ_{RG2} the activities enter RG2 §2 with V′_k at its rate.
@@ -3802,7 +3799,7 @@
   {#B10.202-1} Those of 𝐏^{(k)} (p.268 l.19–20) have RG1's bounds with θ^{−1/2} in place of g_k; RG1 bounds the E_k-term in braces through (1.18) for the E^{(j)}, j ≤ k (p.272 l.2–3), which for S(h^j) is open (#B10.93, #B10.199-2).
 - {#B10.203} (c) At U_{k+1}, 𝒫*Δ̂^{(k)}𝒫 ≥ c_{𝒞,h} with c_{𝒞,h} > 0 depending on d, L and G only; and Ĉ^{(k)} := (𝒫*Δ̂^{(k)}𝒫)^{−1}, as a function of (𝐔, 𝐉) on 𝒰_RG1 with J♮(𝐔, 𝐉) of #B10.177-1 for J♮, has the bound (3.187) with a rate δ₃ > 0 for δ₀ and a convergent expansion, taken at the G-valued factor U of RG1's (i), on which its terms depend as well (#BX.1-5b), and so do the resolvents (xI + 𝒫*Δ̂^{(k)}𝒫)^{−1}, 0 ≤ x ≤ γ₁, of RG2 (2.7) (p.013 l.19–35, RG2's γ₁, not PRT1's), with constants depending on d, L and G only, not on h.
 
-{#B10.204} *Proof.* In balaban_proofs/BP_FAMILY_RG1.md (#BFR.205–#BFR.211-3), not yet through review.
+{#B10.204} *Proof.* In balaban_proofs/BP_FAMILY_RG1.md (#BFR.205–#BFR.211-3).
 
 {#B10.212} *Use.* So RG1 (2.12)–(2.14) hold for S(h^k) with dμ_{Ĉ^{(k)}}(B^♮) and the variables h^{−1/2}𝒫B^♮, defining E^{(k+1)} by (2.13); (2.15) becomes h^k = h^{k+1} + β_{k+1} with the C-term of Lemma 10.8(c), the background moving as in Lemmas 10.13–10.15.
 {#B10.212-1} That E^{(k+1)} has the properties (1.18)–(1.19) (RG1 §3, RG2) and is Euclidean invariant as in (5.2), which RG1 assumes for the terms of (1.3) (p.263 l.42–45), is open (#B10.93); RG2 §2's localisation of it (p.013 l.30–34) needs expansions of Ĉ^{(k)} and the resolvents whose terms are functions of (𝐔, 𝐉), which #B10.203 does not give; Lemma 10.17 defines β_{k+1,i} and bounds it for an E with these properties, and its value is open (#B10.221).
@@ -3812,7 +3809,7 @@
 - {#B10.215} (b) Π_i satisfies RG1's (5.6)–(5.9), and (5.10) in the form |Π_i(x)| ≤ C(M, κ)E₀e^{−δ_Π|x|}, δ_Π := ½min(δ₁/2, κ(2M)^{−1}) with δ₁ of PBG (3.132) at U = 1; β_i := Σ_xΠ_{i,μν}(x)x_μx_ν, μ ≠ ν, is independent of μ ≠ ν, and |β_i| ≤ C(M, κ)E₀;
 - {#B10.216} (c) the marginal terms (4.34) of E, and those of the counterterm Σ_iβ_iÃ_i in place of (4.38), split into sums over i of RG1's terms for G_i with Π_i and β_i, and (θ − θ′)C, C having no quadratic part at 1 (Lemma 10.5(b)), contributes only irrelevant terms; so RG1's cancellation of the marginal terms (§5, with (4.42)–(4.44)) holds for each i with β_i.
 
-{#B10.217} *Proof.* In balaban_proofs/BP_FAMILY_RG1.md (#BFR.218–#BFR.220-2), not yet through review.
+{#B10.217} *Proof.* In balaban_proofs/BP_FAMILY_RG1.md (#BFR.218–#BFR.220-2).
 
 {#B10.221} *Use.* Lemma 10.17 applies to the E^{(k+1)} of Lemma 10.16 once E^{(k+1)} has (1.18)–(1.19) and the Euclidean invariance of (5.2), which is open (#B10.212-1). The activities of Lemmas 10.14–10.15 do not change Π (#B10.199), so they leave (a), (b) and β_{k+1,i} unchanged; including them in E for (c) needs their analyticity on RG2's domain, which is open (#B10.199-2).
    {#B10.221-1} Lemma 10.17 then defines β_{k+1,i} per factor with |β_{k+1,i}| ≤ C(M, κ)E₀, which bounds β_max ≥ b (#B10.131), so Lemma 10.14's θ^{−1/2}b ≤ γ holds once θ_k ≥ (C(M, κ)E₀/γ)². The value of β_{k+1,i}, which Theorem 0.1's rates need, is not given by RG1 (p.264 l.32–33) and is open.

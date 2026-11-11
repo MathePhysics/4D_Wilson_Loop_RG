@@ -29,7 +29,7 @@ Register of this note: WILSON_IT1_D2_STEP_MAP_2026_10_22.md ("the map"), WILSON_
   (i) the component lies in a cube of side 100MR_k, and
   (ii) no new large-field region was created inside it in the preceding N steps, and the previous regions satisfy (i) on their scales (p.177).
   Let Z be the union of these class components. Then (1.1) reads 𝐓_k(Z_k) = 𝐓_k(Z_k ∩ Z^c)𝐓_k(Z), and "we do not make any changes in the operation 𝐓_k(Z_k ∩ Z^c)" (p.177).
-- *The number N.* LFR I (1.94), p.198, requires N ≤ O(1)(log g_k^{−2})^ν with ν/2 ≤ p₀ − p₁ − 1, and N "sufficiently large". LFR I p.192 has N₀ = O(log g_k^{−2}), and LFR II (1.80), p.384, is applied "with N = R_j". So N = N_k is a polylog number depending on the step.
+- *The number N.* LFR I (1.94), p.198, requires N ≤ O(1)(log g_k^{−2})^ν with ν/2 ≤ p₀ − p₁ − 1, and N "sufficiently large"; LFR I p.179 l.10 requires N > N₀, and LFR II (1.80), p.384, is applied "with N = R_j". Here N = N_k is the tube's depth at the step, of order log log g_k^{−2} (item 1(b)).
 - *The operation.* It consists of rewritings of 𝐓_k(Z)exp A_k that preserve the density, followed by one operation that changes it. LFR I p.193 l.37–41: "All the above transformations preserve the k-th density ρ_k, they change only the representation". In the last operation "the equality sign is replaced by the equivalence sign, the equivalence means that both sides have equal integrals over the space of fields V_k" (same lines).
   The result is R′ρ_k of (1.100), normalised by ∫dV_k R′ρ_k = ∫dV_k ρ_k ((1.102)). By p.200 l.45–46 the output is "a density, which may not be equal to ρ_k, but is equivalent to it, in the sense that they have equal integrals".
 - *The final form* (LFR II (1.70)–(1.72), pp.377–379). For each class component X, 𝐓′_k(X) is a localised integral operation, the composition of:
@@ -66,14 +66,12 @@ Register of this note: WILSON_IT1_D2_STEP_MAP_2026_10_22.md ("the map"), WILSON_
 The admissible domains of 𝐑′^{(k)} "contain at least one large field region connected with one of the 𝐓′_k-operations" (p.390 l.10–11), so 𝐑′^{(k)} = 0 for such a term. Hence Rρ_k = ρ_k term by term when the class is empty, and likewise for N_k^C.
 
 (b) *The steps k ≤ N_k.* Condition (ii) requires N preceding steps without new large-field regions inside the component. For k ≤ N_k there are fewer than N_k preceding steps. So no component satisfies (ii), the class is empty, and R is the identity on every term. This is the map's case k ≤ N, in which no 𝐑-operation has acted.
-Here N is taken at the step: the 𝐑-operation at scale k has the depth N_k := N̄(K − k), the Cauchy note's choice of LFR I's N at that step (#CP.13). Bałaban states his conditions on N through g_k:
-- N is a power of log g_k^{−2} (LFR I p.198 l.54–57); #CP.14 checks this, with (½log g_k^{−2})^ν ≤ N_k ≤ (2log g_k^{−2})^ν + 1;
-- N ≥ (ν/log L)log log g_k^{−2} (LFR II p.363 l.39–40), which follows from the lower bound for g_k small.
+Here N is taken at the step: the 𝐑-operation at scale k has the tube's depth N_k (the Cauchy note's #CP.13; BETA_FUNCTION_WILSON_LOOPS.md #B2.2.174). It meets every condition of LFR I–II on N (BP_TL_NSTEP_FRAME #3.2.1.1–#3.2.1.2.1-3), with L^{−N_k} ≤ (log g_k^{−2})^{−ν_L}, N_k ≤ log_L C_dep + ν_L log_L log g_k^{−2}, C_dep := 16L⁴(L+1)², and N_k nonincreasing in k (#3.2.1.1-2; Cauchy #CP.14).
 RC Sect. 3's derivation of 𝐑^{(j)} = 0 for j ≤ N holds with N_k in place of N.
 
-(c) *Growth with K.* The map says at #MD2.3.4.16 that N does not grow with K. This holds in the sense that N_k is a function of g_k, which does not depend on K at fixed k. For k < K′, CRE (2.6) at n = K′ and m = k gives g_{K′}² ≤ (1 + g_{K′}²β′_{2.6}(K′ − k))g_k² (p.255 l.44); dividing by g_{K′}²g_k², g_k^{−2} ≤ g_{K′}^{−2} + β′_{2.6}(K′ − k), which holds trivially at k = K′. So N_k ≤ (2log(g_{K′}^{−2} + β′_{2.6}(K′ − k)))^ν + 1 (#CP.14). For the stopping scale K′ (map #MOMGD.30, #MD2.3.4.16–19) this gives:
-- K′ > N_{K′} once K′ > (2log g_{K′}^{−2})^ν + 1, a condition on K′ alone, since g_{K′} is the coupling at the stopping scale;
-- the 𝐑-free initial segment {k ≤ K′ : k ≤ N_k} has at most (2log(g_{K′}^{−2} + β′_{2.6}K′))^ν + 1 steps, and the other steps up to K′ are D2.7 steps.
+(c) *Growth with K.* N_k depends on K − k through ĝ_k, so at fixed k it grows with K, like log log K (map #MD2.3.4.16-1). For k < K′, CRE (2.6) at n = K′ and m = k, which holds along each run's flow with β′_{2.6} := b′ + C_W (Cauchy #CP.14), gives g_{K′}² ≤ (1 + g_{K′}²β′_{2.6}(K′ − k))g_k² (p.255 l.44); dividing by g_{K′}²g_k², g_k^{−2} ≤ g_{K′}^{−2} + β′_{2.6}(K′ − k), which holds trivially at k = K′. So N_k ≤ log_L C_dep + ν_L log_L log(g_{K′}^{−2} + β′_{2.6}(K′ − k)). For the stopping scale K′ (map #MOMGD.30, #MD2.3.4.16–19) this gives:
+- K′ > N_{K′} once K′ > log_L C_dep + ν_L log_L log g_{K′}^{−2}, a condition on K′ alone, since g_{K′} is the coupling at the stopping scale;
+- the 𝐑-free initial segment {k ≤ K′ : k ≤ N_k} has at most log_L C_dep + ν_L log_L log(g_{K′}^{−2} + β′_{2.6}K′) steps, and the other steps up to K′ are D2.7 steps.
 Nothing in D26 depends on the length of this segment. D26 §1 states its bounds "for k+1 ≤ N" and uses them "for the components R does not touch", which item 2 makes precise.
 
 ### 2. The Class and the Exclusions Are Observable-Independent
@@ -295,7 +293,7 @@ Here c^R_n := O(1)e^{−p₀(g_n)/4} is at least twice 15.6(e)'s ĉ₁ charge to
 - The activities are bounded by ĉ₁ ≤ e^{−p₀(g_n)/2} (below).
 - Each is rooted at one of the cube's R_n^d π_n-cubes. At the cubes of a second-class Y_i it is rooted instead at one of the N(Y_i) := 3^d(101R_n)^d + 1 cubes of the layer Y_i⁺∖Y_i, where the polymers with a localisation domain containing Y_i are rooted (`WILSON_IT1_TWO_LOOPS_UNIFORM_BOUND_2026_10_27.md` #808–#810).
 - Each root carries e^{O(1)} M-level shapes (two-loops #637-1).
-- R_n^d, N(Y_i) < p₀(g_n), by p.389 l.18 for κ ≥ 4^d.
+- R_n^d, N(Y_i) < p₀(g_n) for κ ≥ 4^d, by p.389 l.18's condition −(1/4)p₀(g_n) + 1 + 2κ(100R_n)^d ≤ 0, as 3^d101^d < 2κ100^d. It holds for small g_n, as R_n < L(log ĝ_n^{−2})^r ≤ L(log g_n^{−2} + log ρ_γ)^r (Cauchy #CP.13, #CP.14) and p₀ > rd.
 
 So the charge per MR_n-cube is ≤ 2p₀(g_n)e^{O(1)}e^{−p₀(g_n)/2} ≤ ½e^{−p₀(g_n)/4} for small g_n. As p₀ > 1, c^R_n ≤ O(1)g_n², which has C̄_A's form, under the same smallness.
 So (1.95)'s bound, run with the enlarged κ, already contains these masses. Hence e^{2ΣA} is replaced by 1 in every amplitude below. Where e^{2ΣA} is still written, it marks where the masses enter, and it is paid in this way.
@@ -361,7 +359,7 @@ So the groups whose hulls meet a given MR_k-cube sum, with their Kotecký–Prei
 (ii) *Periodicity.* Bałaban's construction is covariant under the translations of the lattice T^{(k)} that preserve the partition into MR_k-cubes and the partitions of the scales j ≤ k entering 𝐓′_k(X). Indeed, the cubes, the trees rT averaged over r, the characteristic functions, and the operations are defined from these partitions. For the terms 𝐑′^{(k)}(X), p.390 l.27 states it: "By their construction it is also clear that they are Euclidean covariant, i.e., they have the property (2.32) [III]".
 So at the flat reference the group activities are periodic along each straight side of C, with period Π^R_k := MR_k in step-k units. They decay exponentially in the group's size.
 
-*The period is common to all the partitions.* Π^R_k is a power of L, since M = L^m (CRE p.245 l.34) and R_j is the smallest power of L with R_j ≥ (log g_j^{−2})^r ((2.5) p.255). The partitions of the scales j < k have side MR_jL^{j−k} in step-k units, and they refine the MR_k-partition:
+*The period is common to all the partitions.* Π^R_k is a power of L, since M = L^m (CRE p.245 l.34) and R_j is the smallest power of L with R_j ≥ (log ĝ_j^{−2})^r (BETA_FUNCTION_WILSON_LOOPS.md #B2.2.173; Cauchy #CP.13). The partitions of the scales j < k have side MR_jL^{j−k} in step-k units, and they refine the MR_k-partition:
 - by CRE (2.9), R_jL^j ≤ (L+1)(k−j)^{β₀}L^{−(k−j)}R_kL^k < 2R_kL^k;
 - R_jL^j is a power of L below 2R_kL^k, so it divides the power R_kL^k.
 
@@ -429,11 +427,11 @@ Hence the rooted sum of these cluster terms through an MR_k-cube of Z^{∼6}, th
 
 15.5(ii)(α) *The bounds.* For every object F, uniformly at #7's evaluation points, Σ_{𝒦(P)=𝒦}|P|e^{3κex(Y_P)} ≤ ‖F‖e^{ε_F}C_R^{|𝒦|}e^{−(63/64)ℓ_c(F,𝒦)} (#BLL.31, with δ = 1 by #BLL.29), Σ_{𝒦≠∅}|F^𝒦| ≤ 2‖F‖e^{ε_F}(e^{x_F} − 1) (#BLL.36-1), and the sets 𝒦 containing a given unit K₀ give at most 2‖F‖e^{ε_F}(e^{x′_F} − 1)e^{−ρ(T̂,K₀)/c_dec}, c_dec := 26112/63 (#BLL.36-2–#BLL.36-3).
 
-15.5(ii)(α-1) Here ‖F‖ is τ_i ≤ 2 for a letter, Π_iτ_i for a home tensor (#BLL.3-0), and D's class bound at #7's points for an insertion, every (s, z)-point of the expansion (#BLL.20-6) being such a point (#BLL.3-0–#BLL.3-1, #BLL.21–#BLL.23-1). ε_F ≤ |X(F)|R_k^{−d/2} for a letter or a home tensor and ε_F ≤ |X(F)|e^{−R_k/2} for an insertion (#BLL.31), and x_F ≤ |X(F)|e^{−63R_k/256} and x′_F ≤ |X(F)|e^{−63R_k/512} (#BLL.36-1, #BLL.36-3).
+15.5(ii)(α-1) Here ‖F‖ is τ_i ≤ 2 for a letter, Π_iτ_i for a home tensor (#BLL.3-0), and D's class bound at #7's points for an insertion, every (s, z)-point of the expansion (#BLL.20-6) being such a point (#BLL.3-0–#BLL.3-1, #BLL.21–#BLL.23-1). ε_F ≤ |X(F)|R_k^{−d/2} for a letter or a home tensor and ε_F ≤ |X(F)|e^{−R_k/2} for an insertion (#BLL.31-0), and x_F ≤ |X(F)|e^{−63R_k/256} and x′_F ≤ |X(F)|e^{−63R_k/512} (#BLL.36-1, #BLL.36-3).
 
 15.5(ii)(β) *The domains.* Y_P ⊂ Y′₀ ∪ ⋃_cc^{[1]}, with the base Y′₀ := T̂_Z^{[λ_T]} ∪ X(F)^{[3]} ∪ ⋃_{K∈𝒦(P)}K^{[λ_K]} and the cores c of P's chain, and ex(Y_P) := |Y_P ∖ Y′₀| ≤ 3^dΣ_c|c| (#BLL.33–#BLL.33-0). Dep(F) ⊂ X(F) ⊂ T̂ := Y₁(F) ∪ T̂_Z ⊂ X(F)^{[1]} ∪ ⋃_{K∈h(F)}K⁺, T̂_Z ⊂ ⋃_{K∈h(F)}K⁺ (#BLL.4-00–#BLL.5-0), and |X(F)^{[3]}| ≤ 7^d|X(F)|.
 
-15.5(ii)(β-0) λ_T ≤ λ̂ := 4⌈R_k/(1024√d)⌉ + 9 and λ_K ≤ λ̂ ≤ R_k/256 + 13 for g small, and λ_T ≤ log R_k + 13 for a letter or a home tensor, as κ₁ − 1 ≥ 48d (#BLL.7-1, #BLL.10, #BLL.28, #BLL.29). So the base lies in X(F)^{[3]} ∪ ⋃_{K∈h(F)∪𝒦(P)}(K⁺)^{[λ̂]}, within one layer of MR_k-cubes of X(F), of the sets K⁺ with K ∈ h(F), and of the units of 𝒦(P).
+15.5(ii)(β-0) λ_T ≤ λ̂ := 4⌈R_k/(1024√d)⌉ + 9 and λ_K ≤ λ̂ ≤ R_k/256 + 13 for g small, and λ_T ≤ log R_k + 13 for a letter or a home tensor, as κ₁ − 1 ≥ 4L ≥ 48d (#BLL.7-1, #BLL.10, #BLL.28, #BLL.29–#BLL.29-0). So the base lies in X(F)^{[3]} ∪ ⋃_{K∈h(F)∪𝒦(P)}(K⁺)^{[λ̂]}, within one layer of MR_k-cubes of X(F), of the sets K⁺ with K ∈ h(F), and of the units of 𝒦(P).
 
 15.5(ii)(β-1) *Locality.* Compatible polymers of 15.3 lie in different components of the union of the domains, so their domains are at d_□ ≥ 2 (#BLL.1-0). As P enters with the domain Y_P^{[1]}, a component of a polymer compatible with P's is a unit of F at d_□ ≥ 3 from Y_P ⊃ G_0 ∪ … ∪ G_3, and P does not depend on its presence (#BLL.33-1–#BLL.33-2). So every activity of 15.3 depends on the components of its polymer and on U^R there, as p.379 l.12–13 states for Bałaban's terms ("All the expressions in the above integral operation are localized in the domain X").
 
@@ -588,7 +586,7 @@ The contribution of the scale-k 𝐑-insertions to the final bound is ≤ C^R_k�
 
 *The numbers that are not contracted.* These are the corner and torus remainders E°_k^R in 𝓔_k. By 15.4(ii), Σ_{k>N_k}|E°_k^R| ≤ C Σ_k MR_ke^{−p₀(g_k)/4}. This sum is finite:
 - MR_k is a polylog in g_k^{−2}, so MR_ke^{−p₀(g_k)/4} ≤ C e^{−p₀(g_k)/8};
-- g_k^{−2} ≥ X_k := g_K^{−2} + b(K−k) − C (BETA_FUNCTION_WILSON_LOOPS.md Cor. 8.2, RG I Thm 2, as D26 §5.0 uses it);
+- g_k^{−2} ≥ X_k := g_K^{−2} + b(K−k) − C_W (BETA_FUNCTION_WILSON_LOOPS.md Lemma 2.1(i) along the tube's flow, #B2.2.823; map #MD2.0.5.2-1);
 - so e^{−p₀(g_k)/8} ≤ X_k^{−2} once A₀(log X_k)^{p₀−1} ≥ 16, which holds for every k when g_K is small, as p₀ > 1; and Σ_kX_k^{−2} < ∞.
 
 *No bridge is needed.* The 𝐑-produced terms in the small-field region are dev and contract, so they need no bridge. Those at large-field regions are att at a region that remains large-field, where D26 §5's bridge applies (15.8(c)).
@@ -614,7 +612,7 @@ Each entry has the form D(k) requires (map D2.0(3)):
 - g_* := sup_{m≤K}g_m ≤ (1+β₀)g_K.
 
 At the continuum note's stopping step K′ < K the range m ≤ K′+1 ≤ K suffices.
-D26 5.0's bound on S_R uses Cor. 8.2's pairwise running u_m ≥ u_{m′} + b(m′−m) − C for all m ≤ m′ ≤ K, which already covers the whole run. So S_R ≤ (2 + C/b)(e^{−(25/8)(ν_e/L)(log g_*^{−2})^r} + g_*²/b) verbatim, and C_δc̄S_R ≤ log 2 is a smallness of g_K.
+D26 5.0's bound on S_R uses the pairwise running u_m ≥ u_{m′} + b(m′−m) − C for all m ≤ m′ ≤ K, the window (W) on the tube's histories with C = C_W (BETA_FUNCTION_WILSON_LOOPS.md #B2.2.842; map #MD2.0.5.2-1), which already covers the whole run. So S_R ≤ (2 + C/b)(e^{−(25/8)(ν_e/L)(log g_*^{−2})^r} + g_*²/b) verbatim, and C_δc̄S_R ≤ log 2 is a smallness of g_K.
 
 *The factors added at the 𝐑-steps.* At the 𝐑-steps the att registers gain two factors:
 - 1 + η(D)/‖D‖ = 1 + 2e^{ε_D}(e^{x_D} − 1) for an insertion with h(D) = ∅ (15.5(i-4)–(i-5));
@@ -776,8 +774,8 @@ Outside X_𝒟, the cubes meeting ⋃_{P∈g}dom^♮P number at most 514100σ(W)
 
 (a) *The localisation expansion.* 15.5 uses Bałaban's localisation expansion (p.372 l.12–28, p.373 l.13–p.376 l.13), applied in BLL to the loop's letters, home tensors, and carried insertions. BLL gives the bounds (α), the domains and locality (β), and the covariance (γ) of the pieces (PBG (3.28)–(3.34), RG2 p.3 l.27–33 and (1.3)–(1.4)).
 
-(b) *The period.* The 𝐑-gas at step k is periodic with period Π^R_k = MR_k in step-k units (15.4(ii)). This is a power of L (CRE (2.5)) and a common period of every partition entering step k. It is commensurate with every admissible loop:
-- MR_{K′}L^{K′} fine bonds divides the fine side length pL^{K−q} of every admissible loop, since L^{q̄(j(C))} ≥ L³MR_{K′} (map #MOMGD.30's q̄ from CRE (2.5), (2.7)) and j(C) − q ≥ q̄(j(C));
+(b) *The period.* The 𝐑-gas at step k is periodic with period Π^R_k = MR_k in step-k units (15.4(ii)). This is a power of L (BETA_FUNCTION_WILSON_LOOPS.md #B2.2.173) and a common period of every partition entering step k. It is commensurate with every admissible loop:
+- MR_{K′}L^{K′} fine bonds divides the fine side length pL^{K−q} of every admissible loop, since L^{q̄(j(C))} ≥ L²MR_{K′−1} ≥ MR_{K′} (map #MD2.3.4.15-4–#MD2.3.4.15-6; R_{K′} ≤ R_{K′−1}, Cauchy #CP.14-1) and j(C) − q ≥ q̄(j(C));
 - MR_kL^k divides MR_{K′}L^{K′} for k ≤ K′ (15.4(ii)).
 
 So the commensurability at every 𝐑-step k ≤ K′ follows from D2.3(4)(Z-g)'s convention (map #MD2.3.4.51: the admissible periods are the multiples of one fixed power of L) and the stopping-scale choice. It imposes no new restriction.
@@ -796,12 +794,12 @@ So the commensurability at every 𝐑-step k ≤ K′ follows from D2.3(4)(Z-g)'
 
 ## Constants
 
-- N = N_k: LFR I p.198 (1.94), N ≤ O(1)(log g_k^{−2})^ν with (1/2)ν ≤ p₀ − p₁ − 1, N large enough; p.192, N₀ = O(log g_k^{−2}); LFR II p.384, (1.80) "with N = R_j". Used in item 1.
-- p₀(g_k) = A₀(log g_k^{−2})^{p₀} (CRE (2.4), with the constant A₀): CRE p.246, p₀ ≥ 5r printed; LFR II p.387 (1.87)–(1.89) and p.389 l.15–19 force −2(1+β₀)^{−1}p₀(g_k) + 1 + 2κ(100R_k)^d ≤ −(3/2)p₀(g_k), i.e. with β₀ = 1/7, (1/4)A₀(log g_k^{−2})^{p₀} ≥ 1 + 2κ100^dR_k^d with R_k ≤ L(log g_k^{−2})^r, hence p₀ > rd at fixed A₀ (or p₀ = rd with A₀ > 8κ100^dL^d; IT-1 §3f(0) records p₀ > 6r). Used in 15.3.
+- N = N_k, the tube's depth (BETA_FUNCTION_WILSON_LOOPS.md #B2.2.174), which meets LFR I p.179 l.10, LFR I p.198 (1.94), and LFR II's conditions on N, with N_k ≤ R_j in place of LFR II p.384's "N = R_j" (BP_TL_NSTEP_FRAME #3.2.1.1–#3.2.1.2.1-3). Used in item 1.
+- p₀(g_k) = A₀(log g_k^{−2})^{p₀} (CRE (2.4), with the constant A₀): CRE p.246, p₀ ≥ 5r printed; LFR II p.387 (1.87)–(1.89) and p.389 l.15–19 force −2(1+β₀)^{−1}p₀(g_k) + 1 + 2κ(100R_k)^d ≤ −(3/2)p₀(g_k), i.e. with β₀ = 1/7, (1/4)A₀(log g_k^{−2})^{p₀} ≥ 1 + 2κ100^dR_k^d with R_k ≤ 2L(log g_k^{−2})^r (Cauchy #CP.14), hence p₀ > rd at fixed A₀ (or p₀ = rd with A₀ > 8κ100^d(2L)^d; IT-1 §3f(0) records p₀ > 6r). Used in 15.3.
 - c₁ = exp(−p₀(g_k)) for localisation domains X′ disjoint from ∪Y_i, c₁ = α^{1/3} for those meeting ∪Y_i: LFR II (1.97), (1.99)–(1.100) pp.389–390; 𝐓′_k(X)1 ≤ exp(−2(1+β₀)^{−1}p₀(g_k)) (1.89) p.387. Used in item 7, 15.3, and 15.8(c).
 - e^{3 sup|σ|} ≤ e^3: LFR II (1.75) p.380 with sup|σ| < 1 by p.379 l.31–32, 36–37. Used in item 5(b).
 - λ = L^{−1}(1+β₀)^8: the map's recursion #MD2.4.6.14 for the dev coefficient C_χ; 15.7 uses it for the 𝐑-produced dev insertions, with 15.7's source C^R_k ≤ C^R(g_k) added to C_new at the 𝐑-steps, sup_kC^R_k ≤ C^R((1+β₀)g_K).
-- Summability in k: the lower bound on the running, g_k^{−2} ≥ g_K^{−2} + b(K − k) − C, is BETA_FUNCTION_WILSON_LOOPS.md Cor. 8.2's (RG I Thm 2). It is used for S_R in 15.8 and for Σ_k|E°_k^R| in 15.7.
+- Summability in k: the lower bound on the running, g_k^{−2} ≥ g_K^{−2} + b(K − k) − C_W, is BETA_FUNCTION_WILSON_LOOPS.md Lemma 2.1(i) along the tube's flow (#B2.2.823; map #MD2.0.5.2-1). It is used for S_R in 15.8 and for Σ_k|E°_k^R| in 15.7.
 - Item 15's amplitudes and smallness conditions, all within "p₀ large, g small":
   - ĉ₁ = e^{3+a_k}e^{−p₀(g_k)} ≤ e^{−p₀(g_k)/2} needs p₀(g_k)/2 ≥ 3 + a_k, which holds for g_k small as a_k ≤ 11/10 (15.5(ii)(β-3-1)). The factor e^{−p₀(g_k)} is (1.95)'s, extracted for a polymer with a slot in both of c₁'s cases (q ≥ 1, c₀ ≤ 1; also where c₁ = α^{1/3}, 15.3);
   - the masses e^{2ΣA} enter no smallness condition, since they are paid from κ in D26 §7.2's enlarged induction (15.3);
@@ -809,7 +807,7 @@ So the commensurability at every 𝐑-step k ≤ K′ follows from D2.3(4)(Z-g)'
   - m_n^R := O(1)e^{−p₀(g_n)/4} ≤ m_n (15.4(iii));
   - 2p₀(g_n)e^{O(1)}e^{−p₀(g_n)/2} ≤ ½e^{−p₀(g_n)/4}, with R_n^d, N(Y_i) < p₀(g_n) (15.3);
   - C^R((1+β₀)g_K) ≪ 1 for small g_K and p₀ > 1 (15.7).
-- Thresholds: LFR I p.183, δ′_j = g_jA₁p₁(g_j), p₁(g_j) = (log g_j^{−2})^{p₁}, p₁ < p₀, the threshold of the functions χ′_j of the 𝐑-construction (1.25) ff.; CRE p.265 l.40, δ_k = g_kA₁/A₀ p₀(g_k), the fluctuation threshold of the main step (3.3), (3.16); the map's δ₁ = A₁g₁(log g₁^{−2})^{p₀} (#MOMST.48) is CRE's. Distinct objects. CRE (3.43)'s A-radius is not used, the radius r^{an}_k being #T4.50's (15.6(d)).
+- Thresholds: LFR I p.183 prints δ′_j = g_jA₁p₁(g_j), p₁(g_j) = (log g_j^{−2})^{p₁}, p₁ < p₀, the threshold of the functions χ′_j of the 𝐑-construction (1.25) ff., in the tube δ′_j = ĝ_jA₁p₁(ĝ_j) (Cauchy #CK.1-20); CRE p.265 l.39 prints δ_k = g_kA₁/A₀ p₀(g_k), the threshold of the main step's configuration test (3.3) (at 2δ_k) and fluctuation cutoff (3.16), in the tube δ_k = ĝ_kA₁/A₀ p₀(ĝ_k) (map #MD2.4.11.2-1); the map's δ₁ (#MOMST.48) is CRE's. Distinct objects. CRE (3.43)'s A-radius is not used, the radius r^{an}_k being #T4.50's (15.6(d)).
 - Geometry: a class component lies in a cube of side 100MR_k (LFR I p.177 (i)); the position count 100^d(MR_k)^{−d} of (1.96) p.389. Used in 15.3–15.5.
 
 ## Sources read
@@ -833,7 +831,7 @@ Bałaban's, accepted (partition-function scope, no loop):
 - the running-coupling inequalities CRE (2.4)–(2.9), the multi-scale minimiser (2.10)–(2.12), the regularity (3.12)–(3.14), and (2.30)–(2.31) for 𝐑^{(j)}.
 
 Derived here, with #7 (the #7 block at the top), its #86, #88.1, and #157 included, for every bound at the 𝐑-step's complex evaluation points:
-- item 1: R is the identity on every term for k ≤ N_k, with N = N_k (the growth of N_k at fixed k with K uses Cor. 8.2's lower bound on the running; p.192's N₀ = k − k₀ is a different number), and the consequences for K′;
+- item 1: R is the identity on every term for k ≤ N_k, with N = N_k (N_k grows at most like log log K at fixed k, by CRE (2.6) along the tube's flow; p.192's N₀ = k − k₀ is a different number), and the consequences for K′;
 - item 2: the class and all exclusions are the same for a term of N_k^C as for the corresponding term of ρ_k, and every D26 bound for a component outside the class holds after R;
 - item 3: ∫dV_k (R′N_k^C) = ∫dV_k N_k^C, hence E[W(C)] = ∫R′N_k^C / ∫R′ρ_k, with no block-law statement, the operation and its proof as corrected in item 3;
 - item 5: the Jensen bound (a), and (1.75)'s bound (b) through #7;

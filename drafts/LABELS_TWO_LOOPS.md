@@ -273,511 +273,512 @@ Each content line of `WILSON_IT1_TWO_LOOPS_UNIFORM_BOUND_2026_10_27.md` and of i
 | {#510} | note | 301 | (H1) A closed-connected set S_D contains X_D ∪ X^{Cov}_D, with diam_ℓ∞… |
 | {#511} | note | 302 | (H2) E_D := X_D ∪ (the π_k-cubes meeting H₁(D) ∪ H₂(D)) is closed-conn… |
 | {#512} | note | 303 | D's domain one step later is the set of π_{k+1}-cubes meeting the 8M-n… |
-| {#513} | note | 304 | The constituents of a class are connected through its joined pairs. |
-| {#514} | note | 305 | Each constituent's domain meets ℐ(𝒢); or it meets X^{Cov}_D for a touc… |
-| {#515} | note | 306 | The linked hulls of the classes are connected by overlaps on one loop … |
-| {#516} | note | 307 | So S_𝒢 is closed-connected, and diam_ℓ∞(S_𝒢) ≤ M#_{k+1}(𝒢) + n_{k+1}(𝒢… |
-| {#517} | note | 308 | So 𝒢 has (H0)–(H2), with S_𝒢 and u = 1. Its Cov domain lies in S_𝒢, si… |
-| {#518} | note | 309 | *𝐑-made insertions.* Let D be the insertion of a group g of the 𝐑-gas:… |
-| {#519} | note | 310 | (H0): D depends on U^R on hull^×(g), on span(g) when g is on one loop,… |
-| {#520} | note | 311 | (H1) holds with u = u_𝔏 and S_D := S_g of (6B), *The count*, for D_g^×… |
-| {#521} | note | 312 | (H2): E_D := X_D ∪ (the π_k-cubes meeting H₁(D) ∪ H₂(D)) ∪ (the π_k-cu… |
-| {#521-1} | note | 313 | *Its size.* Put σ := σ_g for D_g^× and σ := σ̃(D_g) for D_g. X_D has a… |
-| {#521-2} | note | 314 | A cube meeting ∪dom^♮P outside X_D meets (T_W)_{5M} for a W ∈ 𝔅(g), be… |
-| {#521-3} | note | 315 | For a big W, a cube meeting (T_W)_{5M} lies at d_□ ≤ 6 from a cube of … |
-| {#521-4} | note | 316 | With #E_W ≤ 65σ(W) + 160 ≤ (197/3)σ(W) (#561, u_W = 1, σ(W) ≥ 240) and… |
-| {#521-5} | note | 317 | So #E_D ≤ (46080 + 163904 + 1028200)σ_g + 160 for D_g^×, as Σ_{W big}σ… |
-| {#522} | note | 318 | The members need no cubes of their own. A slot member W lies in a slot… |
-| {#523} | note | 319 | T_W is closed-connected, contains X_W and ℐ(W), and lies in X_W ∪ (the… |
-| {#524} | note | 320 | E_D is closed-connected. Each dom^♮P is connected (#630), so the π_k-c… |
-| {#525} | note | 321 | For a cross group the spans in S_g need not lie in H₁(D) ∪ H₂(D), and … |
-| {#526} | note | 322 | *Base.* At step 1 the hypothesis holds by V4's connectivity. |
-| {#527} | note | 323 | *Connectivity* (V4 lem:two-loop-pins(a), its proof): for a component γ… |
-| {#528} | note | 324 | *Support.* Y_W depends on the configuration on X(W), on the coefficien… |
-| {#529} | note | 325 | Put S_W := the closed ℓ∞-neighbourhood of radius 8M fine units of X(W)… |
-| {#530} | note | 326 | *Counts.* #_1(X_W) ≤ n(W), since n(W) counts the π₁-cubes of the roots… |
-| {#531} | note | 327 | *Diameter.* S_W is the union of the 8M-neighbourhoods of the at most n… |
-| {#532} | note | 328 | So the step-1 insertions have the units of *Units with a factor* with … |
-| {#533} | note | 329 | *Vertices on two loops.* For a vertex with intervals on both loops, di… |
-| {#534} | note | 330 | For a W-vertex and a Γ-member with an interval on C_i, map (12)(d)'s b… |
-| {#535} | note | 331 | Put Q_v := M ∪ ∪_{W∈𝔅(M)}S_W ∪ ∪_{𝒱(M)}supp 𝒞. It is closed-connected:… |
-| {#536} | note | 332 | Each int_i(v) contains a point of Q_v: a bond of C_i in a component of… |
-| {#537} | note | 333 | diam_v ≤ diam_ℓ∞(Q_v) ≤ M#(M) + Σ_{W∈𝔅(M)}(diam_ℓ∞(S_W) + 1) + Σ_{𝒱(M)… |
-| {#538} | note | 334 | with diam_ℓ∞(S_W) ≤ u_W(M/L)σ_k(W), u_W the factor of *Units with a fa… |
-| {#539} | note | 335 | The window extends each int_i(v), so /win(v)/ ≤ Σ_i/int_i(v)/ + 80(dia… |
-| {#540} | note | 336 | *Touched W.* A touched W has /win(W)/ ≤ 88u_W(M/L)σ_k(W) + 84 and at m… |
-| {#543} | note | 337 | *Vacuum links.* /win^{(2)}_𝒞/ := 80(M#(𝒞) + 1), so /win^{(2)}_𝒞//M ≤ 8… |
-| {#544} | note | 338 | *Filled hulls.* Let D be an old insertion (a W-vertex, a member of a Γ… |
-| {#545} | note | 339 | H_i(D) := the smallest arc of C_i containing ℐ_i(D). |
-| {#546} | note | 340 | win(D) := the union over i of H_i(D), extended along C_i by 20(diam_D … |
-| {#547} | note | 341 | The positions of D are unchanged: the traversals of ℐ(D) and the cubes… |
-| {#548} | note | 342 | In D's production units, map *Arcs* (#MD2.4.12.22) and the connectedne… |
-| {#549} | note | 343 | *Covering.* The covering lemma's part (2) holds piece by piece. |
-| {#550} | note | 344 | Let the supports of v and D meet or touch at x, and let v have an inte… |
-| {#551} | note | 345 | By part (1) the shorter arc between them has length at most 2(diam_v +… |
-| {#552} | note | 346 | For a member with several pieces on C_i, the joining arc of the pair i… |
-| {#553} | note | 347 | If D has no interval on v's loop, the pair has no arc to cover ((iii))… |
-| {#554} | note | 348 | Part (3) runs per loop. So ℐ(𝒢) ⊆ ∪_vwin(v), and map (12)(c)'s bounds … |
-| {#566} | note | 349 | *Units with a factor.* Let an insertion D have, for a u ≥ 1, n(D) ≤ uM… |
-| {#555} | note | 350 | *Positions.* By *Filled hulls*, in the D2.6 closure's units (5.2 (T0),… |
-| {#568} | note | 351 | A traversal of win(D) is within /H_i(D)/ + 20(diam_D + 1) ≤ 24u((M/L)σ… |
-| {#558} | note | 352 | In (T0)'s condition the window term counts the other vertices whose wi… |
-| {#560} | note | 353 | *The share of D.* E_D is closed-connected ((H2) of *Connectedness*). |
-| {#561} | note | 354 | By *Arc cubes* (map #MD2.4.12.19) it has at most #(X_D) + Σ_i(8/H_i(D)… |
-| {#562} | note | 355 | D's domain one step later, the π_{k+1}-cubes meeting the 8M-neighbourh… |
-| {#563} | note | 356 | So #_{k+1}(X_D) ≤ 16 + 20480/L + 8320uσ_k(D)/L, and /win(D)/ ≤ 88u(M/L… |
-| {#564} | note | 357 | Map (12)(d)'s computation then gives sh(D) ≤ (ν_r/4)σ_k(D) + (ν_e/8 + … |
-| {#569} | note | 358 | The share's conditions are u(8496ν_f + 88ν_e)/L ≤ ν_r/4, which holds f… |
-| {#570} | note | 359 | The factors: u ≤ u₁ = 1 + 4/M + 48/L for the step-1 insertions (*Base*… |
-| {#570-1} | note | 360 | An untouched insertion keeps its production σ and factor (map #MD2.2.4… |
-| {#571} | note | 361 | So u ≤ u_𝔏 for every insertion (u₁ ≤ 2), and #569's conditions hold fo… |
-| {#572} | note | 362 | So (T0)'s condition for all insertions, D2.7's 𝒟(𝒴) apart, is (170u_𝔏 … |
-| {#572-1} | note | 363 | 𝒟(𝒴)'s windows lie within 20(diam X_𝒟 + 1) of its pieces' intervals in… |
-| {#573} | note | 364 | *M-vertices.* D2.2(4)(e) is read per loop: I_i(Y) is the smallest arc … |
-| {#573-1} | note | 365 | *Its insertions.* 𝔅(M) is the set of touched old insertions, those who… |
-| {#573-2} | note | 366 | So Y_G is the contraction along I(G) of the touched insertions and the… |
-| {#574} | note | 367 | *The enlargement.* D2.2(4)(e) enlarges I(Y) at each end to the end of … |
-| {#574-1} | note | 368 | J's owner W has X^{Cov}_W ⊇ ℐ(W) ⊇ J (Cov(k), map #MD2.2.4.3; the touc… |
-| {#575} | note | 369 | Map (12)(d)'s count holds per loop with diam_ℓ∞(S_W) in place of diam_… |
-| {#576} | note | 370 | So n_{k+1}(M) ≤ 40M#(M) + 96(M/L)Σ_{W∈𝔅(M)}u_Wσ_k(W) and /win^{(2)}_M/… |
-| {#577} | note | 371 | Map (12)(d)'s computation of sh(M), with #(X_M) ≤ #(M) + 8n_{k+1}(M)/M… |
-| {#578} | note | 372 | sh(M) ≤ ν_f(282#(M) + 22) + ν_e(441#(M) + 164) + (3ν_f + 9ν_e)(96/L)Σ_… |
-| {#579} | note | 373 | for M ≥ 100, in place of the map's ν_f(142#(M) + 11) + ν_e(221#(M) + 8… |
-| {#580} | note | 374 | A cube of M∖D′ then costs log 64 + log 2 + 2 + 1/8 + 24c + 283ν_f + 44… |
-| {#581} | note | 375 | The constant part, 22ν_f + 164ν_e ≤ 0.045 for ν ≤ 1/1000, is charged t… |
-| {#582} | note | 376 | The window sums of a two-loop vertex have four ends, with C_win^×'s co… |
-| {#583} | note | 377 | The part passed to a touched W is (3ν_f + 9ν_e)(96u_W/L)σ_k(W) + (ν_r/… |
-| {#584} | note | 378 | The transport conditions c_π′α_{1,k+1}·120M ≤ ν_f and u_Wc_π′α_{1,k+1}… |
-| {#585} | note | 379 | The per-piece constants 80c_π′ (the map's 40c_π′) and 84c_π′ of the tr… |
-| {#585-1} | note | 380 | A root traversal fixes its arc I_i(M) with two end offsets. An end bon… |
-| {#586} | note | 381 | (ii) *Long groups.* At k ≥ 1 a long arc is a union of linked hulls wit… |
-| {#587} | note | 382 | (iii) *The linked hull.* As in (3): the covering lemma's part (2) is a… |
-| {#588} | note | 383 | (iv) *Base points.* Each loop's traversals are numbered cyclically fro… |
-| {#589} | note | 384 | (v) *The reference gas.* Its species are C₁- and C₂-groups only (cross… |
-| {#590} | note | 385 | Its Kotecký–Preiss condition is the c-version of the pair's (S-w) (map… |
-| {#591} | note | 386 | The pair enters through the per-position counts of (12)(e)–(f): the tr… |
-| {#592} | note | 387 | (vi) *The range r₀.* r₀ := 2 ((1)). |
-| {#593} | note | 388 | *D2.5.* Covariance is a property of each insertion at the ends of each… |
-| {#594} | note | 389 | For an insertion with intervals I ∈ ℐ(W), Cov(k) (map #MD2.2.4.3) is r… |
-| {#595} | note | 390 | The composition argument (map (4)(c)–(e), #MD2.2.4.13, #MD2.2.4.93) ac… |
-| {#596} | note | 391 | *D2.6.* The attached species, their carry, and their payment are per l… |
-| {#597} | note | 392 | (T3) uses the square geometry of the loop that carries the joining arc… |
-| {#598} | note | 393 | A fixed member D″ with several intervals adds at most 12uσ(D″)/L π_{n+… |
-| {#598-1} | note | 394 | The charge is 12uν_e/L ≤ ν_r/16 for L ≥ 24u_𝔏, implied by L ≥ L₀^×, si… |
-| {#599} | note | 395 | 5.5's share of a fixed member, sh(W) ≤ (ν_r/4)σ(W) + c_W, holds for th… |
-| {#600} | note | 396 | §7.2's payment is per component. The contour-density constant c_C of §… |
-| {#601} | note | 397 | So the D2.6 closure holds for C₁ ⊔ C₂. Attached cross groups need no f… |
-| {#602} | note | 398 | *B^×_LF.* B^×_LF is the continuum note's large-field payment (4.4) (#N… |
-| {#604} | note | 399 | (4.4) holds given D2.7 (continuum note #ND.4.9) and rests on the D2.6 … |
-| {#605} | note | 400 | *D2.7.* (6B). Items 2 (the class and its exclusions do not involve the… |
-| {#607} | note | 402 | (6B) The 𝐑-Steps for the Pair |
-| {#609} | note | 404 | The 𝐑-operation is the identity at the steps k ≤ N_B (D2.7 item 1), wi… |
-| {#610} | note | 405 | *Item 3.* R′'s integral identity holds for every integrable integrand.… |
-| {#611} | note | 406 | *15.0, 15.2, and 15.3.* C ∩ X⁺ is a union of arcs on one or both loops… |
-| {#612} | note | 407 | *15.5.* D2.7 15.5's localisation (BLL) is per object: a far letter, a … |
-| {#613} | note | 408 | 15.5(ii)(β-4) holds for C₁ ⊔ C₂ with eight sides in place of four. F_h… |
-| {#613-1} | note | 409 | A carried insertion D of any species is an object of 15.5(i), with Dep… |
-| {#613-2} | note | 410 | The parts go where 15.5(i-3)–(i-5) send them. A part whose h(D) ∪ 𝒦 co… |
-| {#613-3} | note | 411 | /X(D)/ ≤ 2N_Kσ(D) for g small, N_K of #T12.20-3-3. Indeed, Dep(D) ⊆ X_… |
-| {#613-4} | note | 412 | So 2(ε_D + x_D) ≤ 4/X(D)/e^{−63R_k/256} ≤ 8N_Ke^{−R_k/8}ϑ_k²σ(D) ≤ ϑ_k… |
-| {#613-5} | note | 413 | D's parts total at most ‖D‖e^{ε_D}(1 + 2(e^{x_D} − 1)) ≤ ‖D‖e^{2(ε_D+x… |
-| {#614} | note | 414 | 15.5(ii)(β-5) holds with the bonds of C₁ ⊔ C₂: those with ρ(Y₁(i), X) … |
-| {#617} | note | 415 | For a slot holding a carried insertion D, of any species, this note de… |
-| {#617-0} | note | 416 | This definition is how 15.5(i) joins D to the polymer here, a construc… |
-| {#617-1} | note | 417 | Dep(D) is X_D ∪ X^{Cov}_D, together with Z′ for an att(j, Z′) with Z′ … |
-| {#618} | note | 418 | A carried insertion of a single-loop species in a slot is part of that… |
-| {#619} | note | 419 | A cross member W is evaluated where 15.5 evaluates every insertion: on… |
-| {#620} | note | 420 | *The groups of 15.4.* For the pair, a span is taken only for a polymer… |
-| {#620.1} | note | 421 | A slot's bonds here are those it contributes to ℐ(g) (#617): the bonds… |
-| {#621} | note | 422 | For two polymers with spans this is 15.4's interleaving, so the groups… |
-| {#622} | note | 423 | Such a group's span is span(g) := ∪_{P∈g}span(P), as in 15.4. The span… |
-| {#623} | note | 424 | A polymer without a span needs none: its tensor is contracted on its s… |
-| {#624} | note | 425 | #620's relation puts a slot bond of one polymer in the span of the oth… |
-| {#625} | note | 426 | *15.1 and 15.4(i).* For a group with slots on C_i only, the contractio… |
-| {#626} | note | 427 | *Lengths.* Let P be a polymer of 15.3, X′_1, …, X′_s the localisation … |
-| {#627} | note | 428 | D_P := Σ_r(d_k(X′_r) + 4R_k + 2λ̂ + 498) + 4Σ_{P′}ex(Y_{P′}), |
-| {#628} | note | 429 | with d_k the linear size in M-units (RG I p.257 l.14–16; it equals LFR… |
-| {#628-1} | note | 430 | In (6A) and (6B) a π_k-cube is a block of the partition π_k of the ste… |
-| {#628-1-1} | note | 431 | An MR_k-cube, a block of the MR_k-partition, is a union of π_k-cubes: … |
-| {#628-1-1-1} | note | 432 | Compatibility is Bałaban's set sense, each cube of the coarser partiti… |
-| {#628-1-2} | note | 433 | An MR_k-cube meets a set of sites and bonds in the same block sense, s… |
-| {#628-1-3} | note | 434 | *Cubes.* For a partition into cubes of side s, the closed cubes meetin… |
-| {#628-1-3-1} | note | 435 | An arc of length less than s spans less than s in each coordinate, so … |
-| {#629} | note | 436 | dom P is the union of the domains of P's constituents (15.3), the X′_r… |
-| {#629-00} | note | 437 | With D2.7 15.4(i)'s ℓ_D and s_D, put T⁺_D := (T_D)_{5M} ∪ s_D when ℓ_D… |
-| {#629-0} | note | 438 | *A link's data.* A link X ∈ 𝔏 (D2.7's; #241's links of #247 are anothe… |
-| {#629-0-1} | note | 439 | The 𝐑-operation sums the labels of each component X_c of Z, those on t… |
-| {#629-0-1-1} | note | 440 | A cluster's activities read data only on its dependence set (map #MD2.… |
-| {#629-0-2} | note | 441 | Here LMR_j-cubes are CRE (3.16)'s, the MR_j-cubes of T_{L^{−j}}. The s… |
-| {#629-0-2-1} | note | 442 | For j < k, a point some labelling puts in a step-j label set lies in Λ… |
-| {#629-0-3} | note | 443 | A cutoff cube of a step j ≤ n, an old insertion's too, is an LM₂R_j-cu… |
-| {#629-1} | note | 444 | Its counted domain dom_c P is the set of the π_k-cubes meeting dom P, … |
-| {#629-2} | note | 445 | For n(X) ≥ 2, a link's set X̂ is its network, the union of its groups'… |
-| {#629-2-1} | note | 446 | For n(X) ≥ 2, the constituents' cubes number at most #_n(𝒢) (map #MD2.… |
-| {#629-2-2} | note | 447 | For n(X) = 1, X̂ is the union of the envelopes of X's groups (V3 Lemma… |
-| {#629-2-3} | note | 448 | An 𝐑-step has k ≥ 3 (k > N_B > N₀ ≥ 1, #609), so a π_k-cube is L^{k−1}… |
-| {#629-2-4} | note | 449 | A closed walk along a spanning tree of X̂'s π₁-cubes passes at most 2A… |
-| {#629-2-5} | note | 450 | So with ℓ_P, P's links' counts (table #T4.42), the links of every step… |
-| {#629-3} | note | 451 | Then diam_∞(dom^♮P) ≤ M(D_P + 2ℓ_P) + (43/20)MΣ_{D∈𝔅^{big}(P)}σ(D) in … |
-| {#629-4} | note | 452 | *The links' weights.* Each link pays its terms below from its weight a… |
-| {#629-4-0} | note | 453 | Of that quarter, the links' parts of the weights and extents and of #8… |
-| {#629-4-1} | note | 454 | The other a°(X)/8 = (ν/256)σ_{n(X)}(X) is the link's length decay. A q… |
-| {#629-5} | note | 455 | *The links' units.* A link adds at most 2^{d+2}σ_{n(X)}(X) cubes and, … |
-| {#630} | note | 456 | dom P ∪ ∪_{D∈𝔅(P)}(T_D ∪ s_D) is connected (D2.7 15.4(i), *Why a span … |
-| {#631} | note | 457 | Cover dom^♮P by the following sets: W_r := X′_r ∪ ∪_{K⊆X′_r}K^{(λ̂+248… |
-| {#632} | note | 458 | Each first-class component X of P lies in one X′_r, since X′_0 = ∪_{Y∈… |
-| {#633} | note | 459 | X⁺ widens X by two layers of MR_k-cubes: X^∼ adds one, since ∼ means "… |
-| {#634} | note | 460 | Y_{P′}^{[1]} ⊂ Y′₀^{[1]} ∪ ∪_ee^{[1]}, and Y′₀ ⊂ X(F)^{[3]} ∪ ∪_{K∈h(F… |
-| {#635} | note | 461 | The sets of #631 have diameters at most M(d_k(X′_r) + 4R_k + 2λ̂ + 498… |
-| {#636} | note | 462 | *The free decay.* Put c_F^× := δM/2 = ½ (#728.5). For a polymer P that… |
-| {#637} | note | 463 | d_k(X′_r): the activity of a polymer P with localisation domain X′ car… |
-| {#637-0} | note | 464 | D2.7's gases use e^{−κ(size)} of it, the size counted in MR_k-cubes (1… |
-| {#637-1} | note | 465 | One pays the M-level shapes. From a root M-cube, (1.67)'s tree of leng… |
-| {#639} | note | 466 | 4ex(Y_{P′}): the pieces carry e^{3κex(Y_{P′})} (15.5(ii)(α)), and 15.5… |
-| {#643} | note | 467 | κ and κ₁ here are RG II's. LFR II's κ₁ is that of its localisation exp… |
-| {#644} | note | 468 | κ > 6·2^d. By p.389 l.12, κ ≥ 6·2^d/β, and β < 1: p.376 l.5–6 bounds e… |
-| {#645} | note | 469 | The constants 4R_k + 2λ̂ + 498 and e^{2^{d+1}κ} per X′_r: the exponent… |
-| {#647} | note | 470 | So 15.3's bounds and 15.4's Kotecký–Preiss sums hold for the activitie… |
-| {#648} | note | 471 | *The volume.* (1.95)'s volume factor is βκ/(6·2^d) per π_k-cube of X′∖… |
-| {#649} | note | 472 | *The factor of (1.89) per component.* Each first-class component carri… |
-| {#650} | note | 473 | (1.96)'s sum over the components uses e^{−p₀(g_k)/2} of it, as Bałaban… |
-| {#651} | note | 474 | The rest, c₁ = e^{−p₀(g_k)}, is (1.95)'s factor extracted before the s… |
-| {#652} | note | 475 | *The margin.* The rest, e^{−p₀(g_k)/2+3+2ΣA+2a_k}, has in its exponent… |
-| {#652-1} | note | 476 | Each localisation domain disjoint from ∪_iY_i, and each group of the 𝐑… |
-| {#653} | note | 477 | 15.6(e)'s att charge is paid in D26 7.2's reserve Res(Z), not from (1.… |
-| {#654} | note | 478 | A first-class component X lies in a cube of side 100MR_k: "the compone… |
-| {#655} | note | 479 | p.389's assumption (#649) gives 2κ(100R_k)^d ≤ 2(1+β₀)^{−1}p₀(g_k) − (… |
-| {#656} | note | 480 | *The cross constant of the step.* Let Ξ^c_{12}, Ξ^c_1, and Ξ^c_2 be 15… |
-| {#657} | note | 481 | Since E_k^R(C;ℓ₀) = log(Ξ^c/Ξ) (15.4), #T4.52's E^{R×}_k is log Ξ^c_{1… |
-| {#658} | note | 482 | These gases are 15.4's series at the flat reference: c_g and F(P)/_fla… |
-| {#659} | note | 483 | (a) A cluster with no polymer meeting C₂ has the same polymers, activi… |
-| {#660} | note | 484 | The rest contain a polymer meeting C₁ and one meeting C₂. Their object… |
-| {#660-1} | note | 485 | Hence Σ_P(D_P + 2ℓ_P) ≥ DL^m/M over the cluster's polymers (#311, #629… |
-| {#661} | note | 486 | With *The free decay* and the links' length decay (#629-4-1), the clus… |
-| {#662} | note | 487 | /E^{R×}_k/ ≤ C^×_{KP}(ℓ₁+ℓ₂)L^me^{−p₀(g_k)/2}e^{−ν_rDL^m/(1024M)}, C^×… |
-| {#663} | note | 488 | The rest of 15.4 holds per loop, with μ^R_k and ζ^R_k computed for eac… |
-| {#664} | note | 489 | The term-dependent part E^{R,∂}_k(ℓ) is charged per MR_k-cube to its c… |
-| {#665} | note | 490 | *The sum over the 𝐑-steps.* p₀(g) decreases in g, so e^{−p₀(g_k)/2} ≤ … |
-| {#666} | note | 491 | Σ_{N_B<k≤K′}/E^{R×}_k/ ≤ C^×_{KP}(ℓ₁+ℓ₂)e^{−p₀(ḡ_R)/2}e^{−ν_rD/(1024M)… |
-| {#667} | note | 492 | It is bounded uniformly in K, it decays in D, and it is small when ḡ_R… |
-| {#668} | note | 493 | *15.6–15.7 for the groups on one loop.* As written, per loop: D_g is a… |
-| {#669} | note | 494 | *15.6 for the cross groups of the 𝐑-gas.* Since c_g = 0, every cross g… |
-| {#670} | note | 495 | *The arc set.* D_g^× is the tensor of g's slots, contracted in loop or… |
-| {#670-1} | note | 496 | By the rule of *The groups of 15.4*, no bond of a slot of g lies in th… |
-| {#671} | note | 497 | *The slots of a cross member.* Let a cross member W lie in a polymer P… |
-| {#672} | note | 498 | A single product (arc piece)·W·(arc piece) does not serve. W is covari… |
-| {#673} | note | 499 | Every interval of W inside a first-class X′⁺ lies in a component of P.… |
-| {#674} | note | 500 | The pieces are not arc words of 15.2 on their own: an end of an interv… |
-| {#675} | note | 501 | The slot is invariant under every transformation supported at the fixe… |
-| {#676} | note | 502 | It is covariant under the external transformations at the ends of the … |
-| {#677} | note | 503 | So 15.2(α)–(β) apply to P's tensor T_P, the joint average over the com… |
-| {#678} | note | 504 | 15.6(a)'s covariance holds at the ends of each interval of ℐ(g): 15.2 … |
-| {#678-1} | note | 505 | Its counted domain is hull_c(g) := ∪_{P∈g}dom_c P (*Lengths*); #π_k(hu… |
-| {#679} | note | 506 | D_g^× does not vanish at pure gauge, so (d)'s deviation bound does not… |
-| {#680} | note | 507 | Its bound is (c)'s, ‖D_g^×‖ ≤ B(g), with ‖W‖ for each cross member W i… |
-| {#681} | note | 508 | For every group g of the 𝐑-gas, cross or on one loop, Ψ_g sums the clu… |
-| {#682} | note | 509 | /Ψ_g/ ≤ C_Ψ′e^{−p₀(g_k)/2}(#π_k(hull^× g) + N_sl(g) + Σ_{P∈g with a sp… |
-| {#683} | note | 510 | with C_jn of *The rooted sum*, and /span(P)/ ≤ 4M(D_P + 2ℓ_P + (43/20)… |
-| {#684} | note | 511 | *15.6(e)'s scope rule.* Its first alternative makes a dev term att(k, … |
-| {#685} | note | 512 | The second alternative, a polymer of g meeting a second-class or uncha… |
-| {#685-1} | note | 513 | Its D_g^× has *The count*'s units, which do not use the activities; wh… |
-| {#689} | note | 514 | The other cross groups have no polymer meeting a second-class or uncha… |
-| {#690} | note | 515 | *The count.* For every cross group g of the 𝐑-gas, att ones included, … |
-| {#691} | note | 516 | σ_g := Σ_{W∈𝔅^×(g)}σ(W) + ½Σ_{D∈𝔅^s(g)}σ(D) + Σ_{P∈g}π(P), π(P) := #π_… |
-| {#692} | note | 517 | with 𝔅(P) the carried insertions in P's slots, and σ(D) the production… |
-| {#693} | note | 518 | *The units of the members.* Let D ∈ 𝔅(g) be produced at step j ≤ k, wi… |
-| {#693-1} | note | 519 | When j < k, X_D is D's domain one step later, which contains X^{Cov}_D… |
-| {#693-2} | note | 520 | In both cases X^{Cov}_D ⊆ X_D ∪ ℐ(D), so Dep(D) ⊆ T_D ∪ Z′ (#617-1), a… |
-| {#694} | note | 521 | #_k(X_D) + n_k(D)/M ≤ (21/20)σ(D) + 17 and diam_∞(T_D) ≤ M((21/20)σ(D)… |
-| {#695} | note | 522 | When j = k, u_D = 1, so #_k(X_D) + n_k(D)/M ≤ σ(D) and diam_∞(S_D) ≤ M… |
-| {#696} | note | 523 | When j < k, they come from *The share of D*. At step j + 1, #_{j+1}(X_… |
-| {#696-0} | note | 524 | So the count stays at most 16.1 + 0.23σ(D) for u_D ≤ u_𝔏 and L ≥ L₀^× … |
-| {#696-1} | note | 525 | The intervals lie in the filled hulls, so n_k(D)/M ≤ 8u_Dσ(D)/L + 4/M.… |
-| {#697} | note | 526 | The 17 is the rounding of a small domain to whole cubes: the 8M-neighb… |
-| {#698} | note | 527 | *Big and small members.* Call D big if σ(D) ≥ 240 when j = k, or σ(D) … |
-| {#698-0} | note | 528 | If ℓ_D > 2MR_k, D is big and ℓ_D ≤ (11/10)Mσ(D). Indeed ℓ_D ≤ diam_∞T_… |
-| {#698-1} | note | 529 | A small member has #_k(X_D) < 240, n_k(D) < 240M, and diam_∞(T_D) < 24… |
-| {#698-2} | note | 530 | A small member whose T_D meets X⁺ for a component X of its polymer has… |
-| {#699} | note | 531 | 𝔅(P) holds the carried insertions in P's slots (D2.7 15.5(i)): those i… |
-| {#699-0} | note | 532 | Each X_D lies in dom P (#629), its intervals are in ℐ(g), and D_g^× de… |
-| {#699-1} | note | 533 | Otherwise D is far: T_D lies over 2MR_k from every component K of P, K… |
-| {#699-2} | note | 534 | Then ex(Y_{P′}) ≥ R_k, and so for a letter's piece P′ in P, which has … |
-| {#699-3} | note | 535 | Dep(F) is a bond of C not contained in any K⁺, or lies in T_D, so it l… |
-| {#699-4} | note | 536 | So a quarter of the piece's term 4ex(Y_{P′}) of D_P covers the object … |
-| {#701} | note | 537 | *The rounding.* The rounding is counted per cube, not per member, sinc… |
-| {#703} | note | 538 | The small members of X's slots lie, with their sets (T_D)_{5M}, in X^{… |
-| {#705} | note | 539 | No per-member constant of the slot members 𝔅(g) remains in the uses be… |
-| {#706} | note | 540 | A single-loop insertion D_g made at an 𝐑-step j (D2.7 15.6) is a funct… |
-| {#706-1} | note | 541 | The counted domain X_{D_g} is the set of the π_j-cubes of ∪_{P∈g}dom_c… |
-| {#709} | note | 542 | (H1): S_{D_g} is closed-connected by #524's reasons and contains X_{D_… |
-| {#710} | note | 543 | σ̄(g) := Σ_{P∈g}(#π_j(B_P) + (2^{d+1} + ½)D_P + 2^{d+2}ℓ_P) + /span(g)… |
-| {#713} | note | 544 | A member with intervals on both loops, a cross insertion whose interva… |
-| {#714} | note | 545 | Cubes: #π_k(hull_c g) ≤ Σ_{D big}#_k(X_D) + Σ_P(#π_k(B_P) + (2^{d+1} +… |
-| {#714-1} | note | 546 | The cubes of hull^×(g) outside hull_c(g) number at most 13^d(#_k(X_D) … |
-| {#715} | note | 547 | Traversals: the bonds of ℐ(g) outside the big members' intervals lie i… |
-| {#715-1} | note | 548 | A bond in an X^{(247)} lies in one W_r, of ℓ^∞-diameter ≤ M(d_k(X′_r) … |
-| {#716} | note | 549 | Together, #π_k(hull_c g) + n_k(D_g^×)/M ≤ (21/20)Σ_{D big}σ(D) + Σ_P(#… |
-| {#717} | note | 550 | Diameter: S_g := ∪_{P∈g}dom^♮P ∪ ∪_{P∈g with a span}span(P) is closed-… |
-| {#718} | note | 551 | Each dom^♮P is connected (#630) and contains its slots, and an interle… |
-| {#719} | note | 552 | diam_∞(S_g) is at most #516's sum over its pieces: *Lengths*' pieces o… |
-| {#720} | note | 553 | By #629-3, diam_∞(S_g) ≤ 2MΣ_P(D_P + 2ℓ_P) + (43/20)MΣ_{W∈𝔅^×(g) big}σ… |
-| {#721} | note | 554 | So D_g^× has (T0)'s units with u_𝔏σ_g in place of σ, with counted doma… |
-| {#722} | note | 555 | *The rates.* Take #T4.53's ε^r_k, ϑ_k, and λ_n at the 𝐑-steps. ϑ_k pay… |
-| {#722-1} | note | 556 | The weights of the cross insertions after step n carry the rate λ_n(D)… |
-| {#722-2} | note | 557 | An 𝐑-made insertion has w_k(D_g^×) := e^{λ_k(D_g^×)ν_rσ_g}e^{θ(g)}‖D_g… |
-| {#722-3} | note | 558 | The cross insertions here are all the insertions with intervals on bot… |
-| {#723} | note | 559 | *The payment.* For every group g of the 𝐑-gas, cross or on one loop, t… |
-| {#724} | note | 560 | The polymer part of /Ψ_g/ is at most C_Ψ′e^{−p₀(g_k)/2}(2 + 20M)Σ_P(#π… |
-| {#724-1} | note | 561 | For small g_k this is at most ν_r per unit, and λ_k ≤ 1. The links add… |
-| {#725} | note | 562 | e^{(5/2)ν_r#π_k(X′_r)} is paid by a_V/2 per cube, since (5/2)ν_r ≤ ¼ ≤… |
-| {#726} | note | 563 | e^{(5/2)ν_r#π_k(X^{(λ̂+248)})} ≤ e^{5p₀(g_k)/64} is paid by the margin… |
-| {#727} | note | 564 | e^{(5/2)ν_r2^{d+2}D_P} is paid by e^{(c_F^×/2)D_P}, since 5·2^{d+2}ν_r… |
-| {#728} | note | 565 | δ is at most the rate δ_𝐇 of p.376 l.11–13's factor, which LFR II obta… |
-| {#728-1} | note | 566 | VAR (190) prints that decay as exp(−⅛δ₀d(y,y′)) (p.308 l.42), in the d… |
-| {#728.1} | note | 567 | *Units.* BLL measures lengths by d_□, in M-cubes (#BLL.1-0), at the ra… |
-| {#728.1-1} | note | 568 | δ_α is fixed before M (κ₁ by map #MD2.2.6.163). The 𝐇-rate of #728 and… |
-| {#728.3} | note | 569 | The rate δ of #3.3, #286, #287, (6B)–(6C), and (8) (#917) is δ_α/M. #4… |
-| {#728.4} | note | 570 | The δ of #47, #91, #99, and #209 is LFR I's printed rate at the pages … |
-| {#728.5} | note | 571 | δ_α = 1. D2.7's κ₁ is RG II's (map #MD2.2.6.163, RG II's (1.11)), and … |
-| {#729} | note | 572 | Of the rest of e^{−c_F^×D_P}, e^{−(c_F^×/4)D_P} is a reserve: *The roo… |
-| {#730} | note | 573 | The member part of /Ψ_g/ is at most C_Ψ′e^{−p₀(g_k)/2}Σ_{D∈𝔅(g) big}((… |
-| {#730-1} | note | 574 | By *The units of the members*, #_k(X_D) + n_k(D) ≤ M(21/20)σ(D) for a … |
-| {#732} | note | 575 | A single-loop member D enters D_g^×'s weight with at most e^{(λ_k/2 + … |
-| {#733} | note | 576 | This is within its weight, species by species, since σ(D) is the produ… |
-| {#734} | note | 577 | dev: e^{ν_rσ + ν_e·ext} inside (ii)'s and (iii)'s per-position sums, i… |
-| {#735} | note | 578 | att(j, ·), j ≤ k, att(k, ·) included: the weighted mass e^{ν_rσ_j(W)}e… |
-| {#736} | note | 579 | lw: each piece of an lw slot is counted as a fixed member with its own… |
-| {#737} | note | 580 | wrap(j), j ≥ 2: (S-w) carries e^{θ + ν_rσ_j + ν_e·ext_j} (map #MD2.0.3… |
-| {#737-1} | note | 581 | The D2.6 closure 2.1(e) spends the extent weight on ext_j ≥ N^{(j)}_mi… |
-| {#737-2} | note | 582 | The weight is a fixed factor of each insertion, so the weighted sums g… |
-| {#738} | note | 583 | wrap(1): a group whose Q_W does not lift has ‖Υ⁰_W‖ ≤ 2K_χM^{(ρ)}_Λ(W)… |
-| {#739} | note | 584 | Σ_{W∋n, wrap(1)}e^{θ°(W) + ν_r𝔰(W)}‖Υ⁰_W‖ ≤ 2K_χCρe^{−(3/4)ηN_min/(CLM… |
-| {#740} | note | 585 | since 4 − 1/8 − 1 − 1/8 − 2 = 3/4. This is map #MD2.0.3.18-1's bound C… |
-| {#741} | note | 586 | Its mass stays inside e^{2ΣA} (15.3), as for one loop. |
-| {#742} | note | 587 | *The rooted sum.* For a π_k-cube or a bond □, consider the groups g of… |
-| {#742-1} | note | 588 | The factor e^{−(ϑ_k/4)ν_rσ(D)} pays the sum over D's parts: their tota… |
-| {#742-2} | note | 589 | The sum over these g of the products of these factors is ≤ C_gre^{−p₀(… |
-| {#743} | note | 590 | The members are data of the term, and their norms stay with their own … |
-| {#744} | note | 591 | A single-loop member's norm sits inside the activity's e^{2ΣA} (15.3, … |
-| {#745} | note | 592 | A cross member's factor sits in its own slot of (T0)'s product form (*… |
-| {#746} | note | 593 | The sums of D_g^×'s weights below are read with this convention. It pe… |
-| {#747} | note | 594 | The polymers through a fixed cube are summed by 15.4's Kotecký–Preiss … |
-| {#748} | note | 595 | *Spans.* A polymer P with a span has no cross member (*The groups of 1… |
-| {#749} | note | 596 | The torus period is at least twice each side (#290). Two points of a s… |
-| {#750} | note | 597 | On a square of side s, points on opposite sides are at ℓ^∞-distance ≥ … |
-| {#751} | note | 598 | So span(P) has at most 4δ_P bonds, and diam_∞(span P) ≤ δ_P = diam_∞(d… |
-| {#752} | note | 599 | *Joins.* A polymer P′ joins g at a bond b that is a slot of g in span(… |
-| {#753} | note | 600 | At a bond b of a span in g holding a slot of P′, P′ meets a π_k-cube m… |
-| {#754} | note | 601 | At a slot b of g in span(P′), span(P′) is an arc of at most 4δ_{P′} bo… |
-| {#754-1} | note | 602 | Since 4δ_{P′} ≤ 4M(D_{P′} + 2ℓ_{P′} + (43/20)S_{P′}), the indicator of… |
-| {#755} | note | 603 | So the polymers joining g at b, with their own joins, sum to ≤ C_jne^{… |
-| {#756} | note | 604 | *Join count.* A polymer P of g has at most 16MD_P slot bonds outside i… |
-| {#757} | note | 605 | Several joins can share one position, so a position contributes Σ_{m≥0… |
-| {#758} | note | 606 | The factor e^{20MC_jne^{−p₀(g_k)/2}D_P} of the polymer's part is ≤ e^{… |
-| {#759} | note | 607 | A big member D has n_k(D) ≤ M(21/20)σ(D) slot bonds, and a single-loop… |
-| {#760} | note | 608 | C_gr and C_jn depend on d, M, c_F^×, ν_r, 15.4's C_KP, D(k)(iii)'s bou… |
-| {#761} | note | 609 | *First case: no member of g is a carried cross insertion.* A polymer P… |
-| {#762} | note | 610 | P has no span, so it carries e^{−(c_F^×/8)D_P} for this (#729), its li… |
-| {#763} | note | 611 | The single-loop insertions in g's slots end inside them (15.5 above). … |
-| {#764} | note | 612 | #T4.52's A^R_k sums e^{c_W}w_k(D_g^×) over the first-case groups, with… |
-| {#765} | note | 613 | A^R_k ≤ 4e^{c_W}C_gr(ℓ₁+ℓ₂)L^me^{−p₀(g_k)/2}e^{−ν_rDL^m/(1076M)}. |
-| {#766} | note | 614 | *Second case: g has a carried cross member.* D_g^× is a descendant of … |
-| {#767} | note | 615 | Each member is a slot of one polymer, and each polymer is in one group… |
-| {#769} | note | 616 | D_g^× is #241's D_G with G = {g} (#246), the polymer of W's slot meeti… |
-| {#773} | note | 617 | Steps 1–3 of (T0)'s product form, with the members' factors ≤ w_{k−1},… |
-| {#774} | note | 618 | *The smallness (H^R)* is #T4.53's: S^R ≤ 1/32 and C_yS^R ≤ log 2. |
-| {#775} | note | 619 | Then λ_n ≥ 31/32 for every n, and Π_{N_B<k≤K′}(1 + y^R_k) ≤ e^{C_yS^R}… |
-| {#776} | note | 620 | It is a smallness of g_{K′}, as in 15.7: by Cor. 8.2 of BETA_FUNCTION_… |
-| {#776-1} | note | 621 | R_k ≥ (log u_k)^r ≥ (log u_k)² (CRE (2.5), p.255 l.36–39; r ≥ 2), so e… |
-| {#777} | note | 622 | *The 𝐑-made total.* With (1 + C_δc̄)^m ≤ L^m (#500) and (7)'s sum lemm… |
-| {#778} | note | 623 | Σ_{N_B<k≤K′}(1 + C_δc̄)^{K′−k}A^R_k ≤ A^{cr,R} := 4e^{c_W}C_gr(ℓ₁+ℓ₂)e… |
-| {#779} | note | 624 | *15.8.* The post-R term carries D^×(k)'s species and the cross clause,… |
-| {#780} | note | 625 | One in no slot of a polymer, in no span of a marked group, and in no b… |
-| {#781} | note | 626 | One in a slot of a group that 15.6(e)'s scope rule makes att(k, ·) is … |
-| {#782} | note | 627 | One in the block inside a second-class component Y_i^∼ is a fixed fact… |
-| {#783} | note | 628 | Item 5(a) of D2.7 bounds the block's average by the sup of its word ov… |
-| {#784} | note | 629 | It is then treated as the previous class: its factor stays in the cros… |
-| {#785} | note | 630 | That this sup is ≤ w_{k−1}(W) is #230: the evaluation points of 𝐓′_k(Y… |
-| {#786} | note | 631 | The others are slots of the small-field cross groups, and their descen… |
-| {#787} | note | 632 | One in the span of a marked group on one loop is a member of that grou… |
-| {#789} | note | 634 | (6C) The Attached 𝐑-Groups and the 𝐑-Step's Evaluation Points |
-| {#791} | note | 636 | *The attached groups.* Let g be a group of the 𝐑-gas, a cross group of… |
-| {#793} | note | 638 | *The weights.* A cross group with a cross member carries e^{λ_k(D_g^×)… |
-| {#794} | note | 639 | ext^{coll} is measured from Coll_k, which contains the component's cub… |
-| {#795} | note | 640 | For a cross group, hull^×(g)⁺ adds one layer of MR_k-cubes to a set of… |
-| {#796} | note | 641 | For a group on one loop, ext^{coll} has the bound of *The single loop'… |
-| {#797} | note | 642 | The constants are polylogs of order r < p₀, paid by the margin of (1.8… |
-| {#798} | note | 643 | So the polymer part costs at most (1 + 1/1000)ν_r + ν_r ≤ (5/2)ν_r per… |
-| {#799} | note | 644 | A single-loop member D of a cross group gains (ν_r/1000)·½σ(D) of exte… |
-| {#800} | note | 645 | *First case: no localisation domain of a polymer of g contains a secon… |
-| {#800-0} | note | 646 | For a localisation domain X′ disjoint from ∪_iY_i, (1.95)'s activity c… |
-| {#801} | note | 647 | *The free decay* and *The volume* use only these factors and the facto… |
-| {#803} | note | 648 | *Second case: a localisation domain X′ of a polymer of g contains a se… |
-| {#804} | note | 649 | *Size.* Y_i is a component of Z of the second class (LFR II p.378 l.21… |
-| {#805} | note | 650 | *Distance.* d_k(X′) ≤ d_{k,∪Y}(X′) + dΣ_{Y_i⊆X′}(#π_k(Y_i) + 1) (#805-… |
-| {#806} | note | 651 | *The cost.* Off ∪_iY_i, the polymer part of the weight and the uses of… |
-| {#806-1} | note | 652 | At a q = 0 part of X′ (#812), no first-class component of X′ pays #645… |
-| {#807} | note | 653 | *The roots.* A rooted sum of (6B) through a π_k-cube of Y_i runs over … |
-| {#808} | note | 654 | Those with a localisation domain containing Y_i. Such a domain contain… |
-| {#809} | note | 655 | The others, which have the first case's factors and are summed by the … |
-| {#810} | note | 656 | So the root count at Y_i is at most N(Y_i) := 3^d(101R_k)^d + 1. On a … |
-| {#811} | note | 657 | In Ψ's per-cube bound at the cubes of Y_i the same multiplicity enters… |
-| {#812} | note | 658 | *The clusters with q = 0.* Split each activity F(X′) = Σ_q(…) of (1.91… |
-| {#813} | note | 659 | A q = 0 part's activity carries no word of Y_i, the blocks inside Y_i^… |
-| {#814} | note | 660 | The q = 0 parts have amplitude α^{1/3}, and the part of their weights … |
-| {#814-0} | note | 661 | *The root and the count.* Each Y_i has a π_k-cube r^Y_i off Y_i with a… |
-| {#814-3} | note | 662 | Every q = 0 part (X′, 0) meeting Y_i, a union of V-domains, contains r… |
-| {#814-4} | note | 663 | Rooted at r^Y_i of the first Y_i that they contain, these clusters sum… |
-| {#814-4-1} | note | 664 | The Kotecký–Preiss weights are a(X′) := ½(#π_k(X′∖∪_jY_j) + #{Y_j ⊆ X′… |
-| {#814-4-1-1} | note | 665 | *The shares of /P/_w.* In the sums of #814-4-2-3–#814-4-3 a unit of /P… |
-| {#814-4-1-2} | note | 666 | An insertion D with a piece in P has the other two (D2.7 15.5(i-5-0)):… |
-| {#814-4-1-3} | note | 667 | A walk of at most 2m_D steps through these cubes cuts into at most 2m_… |
-| {#814-4-1-4} | note | 668 | In these sums the activities carry D by its weight: its weight of D2.6… |
-| {#814-4-2} | note | 669 | *The Bałaban polymers at an MR_k-cube.* Those meeting an MR_k-cube Q s… |
-| {#814-4-2-3} | note | 670 | *The groups at an MR_k-cube.* The groups whose hulls meet an MR_k-cube… |
-| {#814-4-2-4} | note | 671 | P∖fixed is then rooted at one of the R_k^d M-cubes of Q′ or of the at … |
-| {#814-4-2-5} | note | 672 | Per root, #637-1's shapes cost e^{O(1)} with its factor e^{−(β/8)κd_k}… |
-| {#814-4-3} | note | 673 | *The criterion.* At a unit of a Bałaban polymer, a π_k-cube c off ∪_jY… |
-| {#814-4-3-1} | note | 674 | A group incompatible with a group g has its hull meeting one of the at… |
-| {#814-4-3-2} | note | 675 | These are α small after d, κ, β and ν (γ small, stage 6 of #T1.9; p.37… |
-| {#815} | note | 676 | So their part of /Ψ(S)/ is at most C_Ψ″ per second-class component, un… |
-| {#815.1} | note | 677 | These insertions are pieces of D2.7 15.8-1(1)'s fixed member at Y_i's … |
-| {#815.2} | note | 678 | 15.8-1(6) and (6-0) pay w^Ψ_c inside #814's Kotecký–Preiss sum, each p… |
-| {#815.2-1} | note | 679 | So #814–#815 hold for these weighted activities: Σ_cw^Ψ_c/d_c/ ≤ 2C_Ψ″… |
-| {#816} | note | 680 | *The size decay.* d_{k,∪Y} gives no decay on the cubes of Y_i, and D2.… |
-| {#816-1} | note | 681 | The q = 0 parts of #814 lie in polymers without slots, since a group w… |
-| {#817} | note | 682 | *The factor per component.* E(Y_i) := N(Y_i)e^{(d+1)(102R_k)^d + 4R_k … |
-| {#817-1} | note | 683 | And log N(Y_i) + 4R_k + 2λ̂ + 498 + 2^{d+1}κ + C_Ψ″ + m^w_Ψ + κ101^d ≤… |
-| {#818} | note | 684 | *Per term.* A localisation domain contains Y_i or is disjoint from it,… |
-| {#819} | note | 685 | *The payment of Π_iE(Y_i).* Y_i satisfies (i), (ii) (LFR I p.177 l.23–… |
-| {#819-1} | note | 686 | The print attaches that branch and Π′ to components "for which some la… |
-| {#820} | note | 687 | D2.7 15.8(c) divides this factor into quarters as D2.6 7.2's small-dom… |
-| {#820-1} | note | 688 | The quarter also pays the factor e^{A_k} ≤ e of the leading word's tra… |
-| {#821} | note | 689 | Y_i's persistent factor exp(−κ_k(Y_i) − 2p₀(g_{j(Y_i)})) (p.384 l.5–6)… |
-| {#822} | note | 690 | So Π_iE(Y_i) is paid on every term of step k by factors of that term. … |
-| {#823} | note | 691 | *The charge.* The rooted mass of D2.7 15.4(iii) through an MR_k-cube o… |
-| {#825} | note | 693 | *The single loop's 𝐑-made groups.* Let g be a group of D2.7 15.6 on on… |
-| {#826} | note | 694 | σ̃(D_g) := Σ_{P∈g}π(P) + ⅓Σ_{D∈𝔅(g)}σ(D) + Σ_{W∈𝒲_g}(½σ(W) + 17), with… |
-| {#827} | note | 695 | the extent e^{ν_e·ext_k(D_g)} when it is dev (map (ii-w)), and the wei… |
-| {#828} | note | 696 | *Units.* By *Spans*, /span(g)//M ≤ Σ_P(4D_P + 8ℓ_P + (43/5)Σ_{D∈𝔅^{big… |
-| {#829} | note | 697 | Hence σ(D_g), diam_∞(S_{D_g})/M and n_k(D_g)/M = /span(g)//M are at mo… |
-| {#830} | note | 698 | So D_g has the units of (6A)(i)'s *Units with a factor* with u = u_𝔏, … |
-| {#832} | note | 699 | *The extent.* hull(g) = ∪_{P∈g}(dom P ∪ span P) lies in ∪_{P∈g}(dom^♮P… |
-| {#833} | note | 700 | D_g's domain and box lie in X(D_g) ∪ hull_𝒲(g)⁺, with hull_𝒲(g) := hul… |
-| {#834} | note | 701 | ext_k(D_g) ≤ 2Σ_P(D_P + 2ℓ_P) + (43/10)Σ_{D∈𝔅(g) big}σ(D) + 2R_k + 1 +… |
-| {#835} | note | 702 | With ν_e = ν_r/(2C_box) ≤ ν_r/5832 (#629-4-0), the polymer part costs … |
-| {#836} | note | 703 | *The attached extent.* When D_g is att(k, ·) (D2.7 15.6(e)–(f)), its l… |
-| {#837} | note | 704 | *The member terms.* For W ∈ 𝒲_g let e_W := ext(W) if W is dev, and oth… |
-| {#838} | note | 705 | Every point of D_g's Y-set is in hull(g)⁺, within R_k π_k-sides of hul… |
-| {#839} | note | 706 | *Case (a): D_g's Y-set meets Coll_k* (D2.6 closure §1). This holds whe… |
-| {#840} | note | 707 | *Case (b): otherwise.* Then D_g is att only through a non-dev member. … |
-| {#840-1} | note | 708 | A cube y₀ of Y_{W₁} has dist(y₀, base) ≤ ext^{base}(W₁), the extent fr… |
-| {#841} | note | 709 | The lineage's growth at the 𝐑-step: D_g's mass is at most B(g)Π_{W∈𝒲_g… |
-| {#841-1} | note | 710 | W₁'s interval is one arc in span(g), so the groups holding W₁ are summ… |
-| {#842} | note | 711 | *Wrap members.* A D_g with a wrap member depends on U^R on that member… |
-| {#842-1} | note | 712 | When W₁ is a single-loop insertion, these D_g add at most ε^r_kw(W₁) a… |
-| {#843} | note | 713 | *The payment.* The parts of (3/8)ν_eΔ_g from diam_∞(hull g)/M and from… |
-| {#843-1} | note | 714 | The term 2max_We_W is taken at one member W. For a dev W it costs (3/4… |
-| {#844} | note | 715 | *The members' weights.* A member W enters σ̃ with ½σ(W) + 17. Its rese… |
-| {#844-1} | note | 716 | So D2.7 15.7's member sum x_g := Σ_{W⊂span(g)}b_WDev_{Q^#_W} runs with… |
-| {#844-2} | note | 717 | An insertion D with h(D) = ∅ ((6B), *15.5*) is untouched on its part D… |
-| {#844-2-1} | note | 718 | So its options together carry at most e^{ν_rσ(D)}‖D‖(1 + (η(D)/‖D‖)e^{… |
-| {#844-4} | note | 719 | In D2.6 closure 5.3 the T-step and the 𝐑-step act in turn, and a two-l… |
-| {#844-4-1} | note | 720 | They are carried by the cross carry lemma's step, without a bridge ((6… |
-| {#844-5} | note | 721 | Each of them, D, has a closed-connected S_D meeting both loops, which … |
-| {#844-6} | note | 722 | They are counted once, at the 𝐑-step k, at this lifetime cap: with P_k… |
-| {#844-7} | note | 723 | At the 𝐑-step k, P grows by the factor 1 + C_ϑϑ_k of the h(D) = ∅ opti… |
-| {#844-8} | note | 724 | In the dev recursion (map #MD2.4.6.14) the carried terms gain the fact… |
-| {#844-9} | note | 725 | The wrap(j) insertions are in neither recursion: they are carried in (… |
-| {#845} | note | 726 | An att or lw member is not in x_g: its mass is in its species' total t… |
-| {#845-1} | note | 727 | The normalisation is applied to every insertion of these species, so t… |
-| {#846} | note | 728 | So ΣA stays a polylog of order r < p₀, as #652 uses. |
-| {#847} | note | 729 | D2.6 7.1–7.3 use A_j(Z) through E_j(Z) := 2A_j(Z) + … ≤ ε_A(d_j′(Z)+1)… |
-| {#848} | note | 730 | A wrap member is not in x_g or in these totals: D_g is then wrap(k) (*… |
-| {#849} | note | 731 | *The payment.* For D_g, #723's rate (5/2)ν_r per unit of Σ_P(#π_k(B_P)… |
-| {#850} | note | 732 | It is paid as in the first case above when no localisation domain of a… |
-| {#853} | note | 733 | *D2.7 15.4(i) and 15.7 over the carried insertions.* D2.7 pays the sin… |
-| {#854} | note | 734 | Joins through a span that runs through D's slots are summed as in (6B)… |
-| {#855} | note | 735 | 15.7's diameter factor diam_k(hull(g)⁺) and the linear factor /span(g)… |
-| {#855-1} | note | 736 | Let n ≤ Σ_PD_P/(4R_k + 2λ̂ + 498) be the number of localisation domain… |
-| {#856} | note | 737 | The exponent x_g, at most /span(g)/e^{17ν_r}C_χρ̃_kδ̄* (#844-1), gains… |
-| {#857} | note | 738 | The polymer parts, 3ν_r/80 per unit of D_P in all, are paid within the… |
-| {#858} | note | 739 | *D's weight.* D ∈ 𝔅(g) pays from its weight e^{ν_rσ(D)}, released at t… |
-| {#861} | note | 741 | *The evaluation points.* |
-| {#862} | note | 742 | *The integration variables are real.* In (1.71), "only the quadratic f… |
-| {#863} | note | 743 | These run over the supports of the 𝐑-step's χ′(X), χ_{h,1/2}((Ω″^∼_{h+… |
-| {#864} | note | 744 | On every class component the pre-R term's indicators are either kept a… |
-| {#865} | note | 745 | *The configuration.* In (1.49) the old terms are evaluated at U_k″ = (… |
-| {#866} | note | 746 | U_k^0's data: off Λ, 𝐁_k″ and V″ coincide with the determining set and… |
-| {#867} | note | 747 | By (1.65), U_k^0 maps Ũ_k^c(Y_4, α̃_0, α̃_1) into Ũ_k″^c(Y_1, α̃_0, α̃… |
-| {#868} | note | 748 | *The insertions.* Each insertion of the term is a function of 15.0's U… |
-| {#868-1} | note | 749 | Bałaban's inclusion is printed with its reason, the old terms being "c… |
-| {#869} | note | 750 | D(k)(iii) asserts no bound at the points of 𝒟_k outside 𝒟^{sub}_k (SW … |
-| {#870} | note | 751 | The insertions' own evaluation point U_k^{(0)} is Bałaban's chain of t… |
-| {#871} | note | 752 | *What this gives.* The analyticity of every insertion and word at the … |
-| {#872} | note | 753 | *What it does not give.* The bounds: e^{2ΣA}, the dev masses, the cros… |
-| {#874} | note | 755 | (7) The Count Check over the Steps |
-| {#876} | note | 757 | *A sum lemma.* For L ≥ 2 and a > 0: Σ_{m≥0}L^me^{−aL^m} ≤ e^{−a}(1 + 6… |
-| {#877} | note | 758 | For m ≥ 1, L^m − 1 ≥ L^m/2. So the terms with m ≥ 1 are ≤ e^{−a}x^pe^{… |
-| {#878} | note | 759 | sup_{y>0}Σ_{m∈ℤ}(yL^m)^pe^{−yL^m} ≤ 3. The terms with yL^m ≤ 1 form a … |
-| {#879} | note | 760 | Hence Σ_{m≥1} ≤ e^{−a}·3(2/a)^p. |
-| {#880} | note | 761 | *The cross constant.* For x ≥ 1 and a > 0, xe^{−ax} ≤ e^{−a}(1 + 1/a).… |
-| {#881} | note | 762 | C^×_E := 4LC_V(1+β₀)⁶C_×𝔞̄(ℓ₁+ℓ₂)e^{−c_×D/M}(1 + M/(c_×D)) + 8C_S′e^{c… |
-| {#882} | note | 763 | The first term is the first step, with x = L^{K′−1}. The second and th… |
-| {#883} | note | 764 | The first two terms decay in D. The third, from the groups long on one… |
-| {#884} | note | 765 | *The 𝐑-steps' remainders.* Each 𝐑-step adds to E_const,k(C_i, χ_i) the… |
-| {#885} | note | 766 | The torus has period N_s in step-K′ units (#334), so N_min^{(k)} = N_s… |
-| {#886} | note | 767 | So, for β₀ ≤ 1/4 and L ≥ 4, the remainders E°^R_k(C_i) over any set of… |
-| {#887} | note | 768 | R̂_{K′} is a constant times a power of log g_{K′}^{−2}, while p₀(g_{K′… |
-| {#888} | note | 769 | Hence the 𝐑-steps add at most |
-| {#889} | note | 770 | C^{R°}_E := 2C^R_1R̂_{K′}²(2 + 24R̂_{K′}/c^R_E)e^{−p₀(g_{K′})/5} ≤ 2e^… |
-| {#890} | note | 771 | D2.3(7)'s C_Σ𝔞̄ is computed from the reference-gas remainders E°_{k+1}… |
-| {#891} | note | 772 | So /E^×_const,k/ ≤ E* := (C_Σ(χ₁) + C_Σ(χ₂))𝔞̄ + C^{R°}_E + C^×_E + C^… |
-| {#892} | note | 773 | *The wrap total.* |
-| {#893} | note | 774 | D(k)(ii)'s wrap terms are ≤ C_wL^{k−j}𝔟̄e^{−c_wN^{(j)}_min/M} per trav… |
-| {#893-1} | note | 775 | At j = 1 the wrap(1) insertions carry the weight e^{ν_r𝔰} ((6B), *The … |
-| {#894} | note | 776 | Summed over j ≤ k and over the 4(ℓ₁+ℓ₂)L^{K′−k} traversals of step k, … |
-| {#895} | note | 777 | This is small under the torus condition (map #MD2.3.4.16), as in the c… |
-| {#896} | note | 778 | *The carried cross total.* (1 + C_δc̄)^m ≤ L^m (#500). Under (H^R), (1… |
-| {#897} | note | 779 | Σ_{j≤n}M^cr_n(j) ≤ 2Σ_{j=1}^{K′}(1 + C_δc̄)^{K′−j}(A^cr_j + A^R_j) ≤ A… |
-| {#898} | note | 780 | A^cr := 4C_cr𝔞̄(ℓ₁+ℓ₂)e^{−ν_×D/M}(1 + 12M²/(ν_×D)²) ≥ 4C_cr𝔞̄(ℓ₁+ℓ₂)Σ_… |
-| {#899} | note | 781 | with A^{cr,R} of (6B). |
-| {#900} | note | 782 | The first inequality uses n − j ≤ K′ − j. |
-| {#901} | note | 783 | A^× is uniform in K, and it decays in D. |
-| {#902} | note | 784 | Each bound is uniform in K. |
-| {#903} | note | 785 | A^cr is linear in 𝔞̄(ℓ₁+ℓ₂). C^×_E is linear in 𝔞̄ and at most a const… |
-| {#904} | note | 786 | C^{R×}_E and A^{cr,R} are linear in e^{−p₀(ḡ_R)/2}(ℓ₁+ℓ₂). C^{R°}_E ≤ … |
-| {#905} | note | 787 | w̄ is linear in 𝔟̄(ℓ₁+ℓ₂). |
-| {#907} | note | 789 | (8) The Pair Identity at the Stopping Scale and the K-Uniform Bound |
-| {#909} | note | 791 | *(8.1) The identity (from (2) and the continuum note's (2) with C := C… |
-| {#910} | note | 792 | On ℓ₀ at K′, f^{(i)}_{K′} = W_{χ_i}(C_i^{(K′)};V_{K′}) + β^{(i)}, with… |
-| {#911} | note | 793 | So f^{(1)}f^{(2)} = W_{χ₁}(C₁^{(K′)})W_{χ₂}(C₂^{(K′)}) + β^×, with /β^… |
-| {#912} | note | 794 | Exactly, |
-| {#913} | note | 795 | W^×_ren(ε) = e^{E^×_const,K′}μ^{[K]}_{ℓ₀}(W_{χ₁}(C₁^{(K′)};·)W_{χ₂}(C₂… |
-| {#914} | note | 796 | r^×_K := e^{E^×_const,K′}μ^{[K]}_{ℓ₀}(β^× + I^×_{K′}) + Σ_{ℓ≠ℓ₀}w_ℓ⟨e^… |
-| {#915} | note | 797 | Here I^× is the insertion sum of the class at K′, cross insertions inc… |
-| {#917} | note | 799 | *(8.2) The K-Uniform Bound (given D^×(K′) on every labelled term, whos… |
-| {#918} | note | 800 | /W^×_ren(ε)/ ≤ e^{E*}[1 + Σ_i8.48(1 + 2κ_s^{LF})a_dc_hB₃ℓ_iε_{K′}Lip_{… |
-| {#919} | note | 801 | is bounded independently of K: ε_{K′}, ρ_{K′}, 𝔞̄, g_{K′}, and ḡ_R dep… |
-| {#920} | note | 802 | C_χ is #345's. B^×_LF is (6A)'s, #602's supremum of LF #3.99-1's B_LF … |
-| {#921} | note | 803 | Proof: |
-| {#922} | note | 804 | /μ_{ℓ₀}(W_{χ₁}W_{χ₂})/ ≤ w_{ℓ₀} ≤ 1. |
-| {#923} | note | 805 | /I^×_{K′}/ ≤ exp(Σ_nν_n + A^×) − 1 over the 4(ℓ₁+ℓ₂) step-K′ traversal… |
-| {#924} | note | 806 | On the large-field terms the cross insertions multiply the words' boun… |
-| {#925} | note | 807 | The constants are (7). |
-| {#934} | note | 809 | *(8.3) Subsequences (as the continuum note's (8.2)).* |
-| {#935} | note | 810 | μ^{[K]}_{ℓ₀}, E^×_const,K′, and r^×_K are bounded uniformly in K. |
-| {#936} | note | 811 | So every sequence of lattice spacings has a subsequence along which th… |
-| {#938} | note | 813 | (9) What the Bound Does Not Give |
-| {#940} | note | 815 | Convergence along the full sequence. `WILSON_IT1_TWO_LOOPS_CAUCHY_2026… |
-| {#941} | note | 816 | Factorisation. A bound on W^×_ren − W_ren(C₁)W_ren(C₂), with both sing… |
-| {#942} | note | 817 | A^×, C^{R×}_E, and the first two terms of C^×_E decay in D. The long-g… |
-| {#943} | note | 818 | μ^{[K]}_{ℓ₀} couples the two coarse loops; the pair factorisation note… |
-| {#944} | note | 819 | Smallness of the cross terms at fixed coupling. A^cr and C^×_E are bou… |
-| {#945} | note | 820 | with q := max(q₁, q₂, q₁₂), ℓ_i = p_iL^{j−q_i} ≤ p_iL^{q−q_i}L^{q̄(j)+… |
-| {#946} | note | 821 | 𝔞̄ ≤ 𝔟̄, and 𝔟̄ is O(g_k(1+2r_k)⁴pl_k) maximised over k (ρ_k, ρ_{ph,k}… |
-| {#947} | note | 822 | so 𝔞̄(ℓ₁+ℓ₂) → 0 there, as ℓ_Cε_{K′} → 0 does in the continuum note's … |
-| {#948} | note | 823 | C^{R×}_E and A^{cr,R} carry the factor e^{−p₀(ḡ_R)/2} ((6B)), so they … |
+| {#512-1} | note | 304 | For a new group 𝒢, X(𝒢) is the union of its constituents' domains and … |
+| {#513} | note | 305 | The constituents of a class are connected through its joined pairs. |
+| {#514} | note | 306 | Each constituent's domain meets ℐ(𝒢); or it meets X^{Cov}_D for a touc… |
+| {#515} | note | 307 | The linked hulls of the classes are connected by overlaps on one loop … |
+| {#516} | note | 308 | So S_𝒢 is closed-connected, and diam_ℓ∞(S_𝒢) ≤ M#_{k+1}(𝒢) + n_{k+1}(𝒢… |
+| {#517} | note | 309 | So 𝒢 has (H0)–(H2), with S_𝒢 and u = 1. Its Cov domain lies in S_𝒢, si… |
+| {#518} | note | 310 | *𝐑-made insertions.* Let D be the insertion of a group g of the 𝐑-gas:… |
+| {#519} | note | 311 | (H0): D depends on U^R on hull^×(g), on span(g) when g is on one loop,… |
+| {#520} | note | 312 | (H1) holds with u = u_𝔏 and S_D := S_g of (6B), *The count*, for D_g^×… |
+| {#521} | note | 313 | (H2): E_D := X_D ∪ (the π_k-cubes meeting H₁(D) ∪ H₂(D)) ∪ (the π_k-cu… |
+| {#521-1} | note | 314 | *Its size.* Put σ := σ_g for D_g^× and σ := σ̃(D_g) for D_g. X_D has a… |
+| {#521-2} | note | 315 | A cube meeting ∪dom^♮P outside X_D meets (T_W)_{5M} for a W ∈ 𝔅(g), be… |
+| {#521-3} | note | 316 | For a big W, a cube meeting (T_W)_{5M} lies at d_□ ≤ 6 from a cube of … |
+| {#521-4} | note | 317 | With #E_W ≤ 65σ(W) + 160 ≤ (197/3)σ(W) (#561, u_W = 1, σ(W) ≥ 240) and… |
+| {#521-5} | note | 318 | So #E_D ≤ (46080 + 163904 + 1028200)σ_g + 160 for D_g^×, as Σ_{W big}σ… |
+| {#522} | note | 319 | The members need no cubes of their own. A slot member W lies in a slot… |
+| {#523} | note | 320 | T_W is closed-connected, contains X_W and ℐ(W), and lies in X_W ∪ (the… |
+| {#524} | note | 321 | E_D is closed-connected. Each dom^♮P is connected (#630), so the π_k-c… |
+| {#525} | note | 322 | For a cross group the spans in S_g need not lie in H₁(D) ∪ H₂(D), and … |
+| {#526} | note | 323 | *Base.* At step 1 the hypothesis holds by V4's connectivity. |
+| {#527} | note | 324 | *Connectivity* (V4 lem:two-loop-pins(a), its proof): for a component γ… |
+| {#528} | note | 325 | *Support.* Y_W depends on the configuration on X(W), on the coefficien… |
+| {#529} | note | 326 | Put S_W := the closed ℓ∞-neighbourhood of radius 8M fine units of X(W)… |
+| {#530} | note | 327 | *Counts.* #_1(X_W) ≤ n(W), since n(W) counts the π₁-cubes of the roots… |
+| {#531} | note | 328 | *Diameter.* S_W is the union of the 8M-neighbourhoods of the at most n… |
+| {#532} | note | 329 | So the step-1 insertions have the units of *Units with a factor* with … |
+| {#533} | note | 330 | *Vertices on two loops.* For a vertex with intervals on both loops, di… |
+| {#534} | note | 331 | For a W-vertex and a Γ-member with an interval on C_i, map (12)(d)'s b… |
+| {#535} | note | 332 | Put Q_v := M ∪ ∪_{W∈𝔅(M)}S_W ∪ ∪_{𝒱(M)}supp 𝒞. It is closed-connected:… |
+| {#536} | note | 333 | Each int_i(v) contains a point of Q_v: a bond of C_i in a component of… |
+| {#537} | note | 334 | diam_v ≤ diam_ℓ∞(Q_v) ≤ M#(M) + Σ_{W∈𝔅(M)}(diam_ℓ∞(S_W) + 1) + Σ_{𝒱(M)… |
+| {#538} | note | 335 | with diam_ℓ∞(S_W) ≤ u_W(M/L)σ_k(W), u_W the factor of *Units with a fa… |
+| {#539} | note | 336 | The window extends each int_i(v), so /win(v)/ ≤ Σ_i/int_i(v)/ + 80(dia… |
+| {#540} | note | 337 | *Touched W.* A touched W has /win(W)/ ≤ 88u_W(M/L)σ_k(W) + 84 and at m… |
+| {#543} | note | 338 | *Vacuum links.* /win^{(2)}_𝒞/ := 80(M#(𝒞) + 1), so /win^{(2)}_𝒞//M ≤ 8… |
+| {#544} | note | 339 | *Filled hulls.* Let D be an old insertion (a W-vertex, a member of a Γ… |
+| {#545} | note | 340 | H_i(D) := the smallest arc of C_i containing ℐ_i(D). |
+| {#546} | note | 341 | win(D) := the union over i of H_i(D), extended along C_i by 20(diam_D … |
+| {#547} | note | 342 | The positions of D are unchanged: the traversals of ℐ(D) and the cubes… |
+| {#548} | note | 343 | In D's production units, map *Arcs* (#MD2.4.12.22) and the connectedne… |
+| {#549} | note | 344 | *Covering.* The covering lemma's part (2) holds piece by piece. |
+| {#550} | note | 345 | Let the supports of v and D meet or touch at x, and let v have an inte… |
+| {#551} | note | 346 | By part (1) the shorter arc between them has length at most 2(diam_v +… |
+| {#552} | note | 347 | For a member with several pieces on C_i, the joining arc of the pair i… |
+| {#553} | note | 348 | If D has no interval on v's loop, the pair has no arc to cover ((iii))… |
+| {#554} | note | 349 | Part (3) runs per loop. So ℐ(𝒢) ⊆ ∪_vwin(v), and map (12)(c)'s bounds … |
+| {#566} | note | 350 | *Units with a factor.* Let an insertion D have, for a u ≥ 1, n(D) ≤ uM… |
+| {#555} | note | 351 | *Positions.* By *Filled hulls*, in the D2.6 closure's units (5.2 (T0),… |
+| {#568} | note | 352 | A traversal of win(D) is within /H_i(D)/ + 20(diam_D + 1) ≤ 24u((M/L)σ… |
+| {#558} | note | 353 | In (T0)'s condition the window term counts the other vertices whose wi… |
+| {#560} | note | 354 | *The share of D.* E_D is closed-connected ((H2) of *Connectedness*). |
+| {#561} | note | 355 | By *Arc cubes* (map #MD2.4.12.19) it has at most #(X_D) + Σ_i(8/H_i(D)… |
+| {#562} | note | 356 | D's domain one step later, the π_{k+1}-cubes meeting the 8M-neighbourh… |
+| {#563} | note | 357 | So #_{k+1}(X_D) ≤ 16 + 20480/L + 8320uσ_k(D)/L, and /win(D)/ ≤ 88u(M/L… |
+| {#564} | note | 358 | Map (12)(d)'s computation then gives sh(D) ≤ (ν_r/4)σ_k(D) + (ν_e/8 + … |
+| {#569} | note | 359 | The share's conditions are u(8496ν_f + 88ν_e)/L ≤ ν_r/4, which holds f… |
+| {#570} | note | 360 | The factors: u ≤ u₁ = 1 + 4/M + 48/L for the step-1 insertions (*Base*… |
+| {#570-1} | note | 361 | An untouched insertion keeps its production σ and factor (map #MD2.2.4… |
+| {#571} | note | 362 | So u ≤ u_𝔏 for every insertion (u₁ ≤ 2), and #569's conditions hold fo… |
+| {#572} | note | 363 | So (T0)'s condition for all insertions, D2.7's 𝒟(𝒴) apart, is (170u_𝔏 … |
+| {#572-1} | note | 364 | 𝒟(𝒴)'s windows lie within 20(diam X_𝒟 + 1) of its pieces' intervals in… |
+| {#573} | note | 365 | *M-vertices.* D2.2(4)(e) is read per loop: I_i(Y) is the smallest arc … |
+| {#573-1} | note | 366 | *Its insertions.* 𝔅(M) is the set of touched old insertions, those who… |
+| {#573-2} | note | 367 | So Y_G is the contraction along I(G) of the touched insertions and the… |
+| {#574} | note | 368 | *The enlargement.* D2.2(4)(e) enlarges I(Y) at each end to the end of … |
+| {#574-1} | note | 369 | J's owner W has X^{Cov}_W ⊇ ℐ(W) ⊇ J (Cov(k), map #MD2.2.4.3; the touc… |
+| {#575} | note | 370 | Map (12)(d)'s count holds per loop with diam_ℓ∞(S_W) in place of diam_… |
+| {#576} | note | 371 | So n_{k+1}(M) ≤ 40M#(M) + 96(M/L)Σ_{W∈𝔅(M)}u_Wσ_k(W) and /win^{(2)}_M/… |
+| {#577} | note | 372 | Map (12)(d)'s computation of sh(M), with #(X_M) ≤ #(M) + 8n_{k+1}(M)/M… |
+| {#578} | note | 373 | sh(M) ≤ ν_f(282#(M) + 22) + ν_e(441#(M) + 164) + (3ν_f + 9ν_e)(96/L)Σ_… |
+| {#579} | note | 374 | for M ≥ 100, in place of the map's ν_f(142#(M) + 11) + ν_e(221#(M) + 8… |
+| {#580} | note | 375 | A cube of M∖D′ then costs log 64 + log 2 + 2 + 1/8 + 24c + 283ν_f + 44… |
+| {#581} | note | 376 | The constant part, 22ν_f + 164ν_e ≤ 0.045 for ν ≤ 1/1000, is charged t… |
+| {#582} | note | 377 | The window sums of a two-loop vertex have four ends, with C_win^×'s co… |
+| {#583} | note | 378 | The part passed to a touched W is (3ν_f + 9ν_e)(96u_W/L)σ_k(W) + (ν_r/… |
+| {#584} | note | 379 | The transport conditions c_π′α_{1,k+1}·120M ≤ ν_f and u_Wc_π′α_{1,k+1}… |
+| {#585} | note | 380 | The per-piece constants 80c_π′ (the map's 40c_π′) and 84c_π′ of the tr… |
+| {#585-1} | note | 381 | A root traversal fixes its arc I_i(M) with two end offsets. An end bon… |
+| {#586} | note | 382 | (ii) *Long groups.* At k ≥ 1 a long arc is a union of linked hulls wit… |
+| {#587} | note | 383 | (iii) *The linked hull.* As in (3): the covering lemma's part (2) is a… |
+| {#588} | note | 384 | (iv) *Base points.* Each loop's traversals are numbered cyclically fro… |
+| {#589} | note | 385 | (v) *The reference gas.* Its species are C₁- and C₂-groups only (cross… |
+| {#590} | note | 386 | Its Kotecký–Preiss condition is the c-version of the pair's (S-w) (map… |
+| {#591} | note | 387 | The pair enters through the per-position counts of (12)(e)–(f): the tr… |
+| {#592} | note | 388 | (vi) *The range r₀.* r₀ := 2 ((1)). |
+| {#593} | note | 389 | *D2.5.* Covariance is a property of each insertion at the ends of each… |
+| {#594} | note | 390 | For an insertion with intervals I ∈ ℐ(W), Cov(k) (map #MD2.2.4.3) is r… |
+| {#595} | note | 391 | The composition argument (map (4)(c)–(e), #MD2.2.4.13, #MD2.2.4.93) ac… |
+| {#596} | note | 392 | *D2.6.* The attached species, their carry, and their payment are per l… |
+| {#597} | note | 393 | (T3) uses the square geometry of the loop that carries the joining arc… |
+| {#598} | note | 394 | A fixed member D″ with several intervals adds at most 12uσ(D″)/L π_{n+… |
+| {#598-1} | note | 395 | The charge is 12uν_e/L ≤ ν_r/16 for L ≥ 24u_𝔏, implied by L ≥ L₀^×, si… |
+| {#599} | note | 396 | 5.5's share of a fixed member, sh(W) ≤ (ν_r/4)σ(W) + c_W, holds for th… |
+| {#600} | note | 397 | §7.2's payment is per component. The contour-density constant c_C of §… |
+| {#601} | note | 398 | So the D2.6 closure holds for C₁ ⊔ C₂. Attached cross groups need no f… |
+| {#602} | note | 399 | *B^×_LF.* B^×_LF is the continuum note's large-field payment (4.4) (#N… |
+| {#604} | note | 400 | (4.4) holds given D2.7 (continuum note #ND.4.9) and rests on the D2.6 … |
+| {#605} | note | 401 | *D2.7.* (6B). Items 2 (the class and its exclusions do not involve the… |
+| {#607} | note | 403 | (6B) The 𝐑-Steps for the Pair |
+| {#609} | note | 405 | The 𝐑-operation is the identity at the steps k ≤ N_B (D2.7 item 1), wi… |
+| {#610} | note | 406 | *Item 3.* R′'s integral identity holds for every integrable integrand.… |
+| {#611} | note | 407 | *15.0, 15.2, and 15.3.* C ∩ X⁺ is a union of arcs on one or both loops… |
+| {#612} | note | 408 | *15.5.* D2.7 15.5's localisation (BLL) is per object: a far letter, a … |
+| {#613} | note | 409 | 15.5(ii)(β-4) holds for C₁ ⊔ C₂ with eight sides in place of four. F_h… |
+| {#613-1} | note | 410 | A carried insertion D of any species is an object of 15.5(i), with Dep… |
+| {#613-2} | note | 411 | The parts go where 15.5(i-3)–(i-5) send them. A part whose h(D) ∪ 𝒦 co… |
+| {#613-3} | note | 412 | /X(D)/ ≤ 2N_Kσ(D) for g small, N_K of #T12.20-3-3. Indeed, Dep(D) ⊆ X_… |
+| {#613-4} | note | 413 | So 2(ε_D + x_D) ≤ 4/X(D)/e^{−63R_k/256} ≤ 8N_Ke^{−R_k/8}ϑ_k²σ(D) ≤ ϑ_k… |
+| {#613-5} | note | 414 | D's parts total at most ‖D‖e^{ε_D}(1 + 2(e^{x_D} − 1)) ≤ ‖D‖e^{2(ε_D+x… |
+| {#614} | note | 415 | 15.5(ii)(β-5) holds with the bonds of C₁ ⊔ C₂: those with ρ(Y₁(i), X) … |
+| {#617} | note | 416 | For a slot holding a carried insertion D, of any species, this note de… |
+| {#617-0} | note | 417 | This definition is how 15.5(i) joins D to the polymer here, a construc… |
+| {#617-1} | note | 418 | Dep(D) is X_D ∪ X^{Cov}_D, together with Z′ for an att(j, Z′) with Z′ … |
+| {#618} | note | 419 | A carried insertion of a single-loop species in a slot is part of that… |
+| {#619} | note | 420 | A cross member W is evaluated where 15.5 evaluates every insertion: on… |
+| {#620} | note | 421 | *The groups of 15.4.* For the pair, a span is taken only for a polymer… |
+| {#620.1} | note | 422 | A slot's bonds here are those it contributes to ℐ(g) (#617): the bonds… |
+| {#621} | note | 423 | For two polymers with spans this is 15.4's interleaving, so the groups… |
+| {#622} | note | 424 | Such a group's span is span(g) := ∪_{P∈g}span(P), as in 15.4. The span… |
+| {#623} | note | 425 | A polymer without a span needs none: its tensor is contracted on its s… |
+| {#624} | note | 426 | #620's relation puts a slot bond of one polymer in the span of the oth… |
+| {#625} | note | 427 | *15.1 and 15.4(i).* For a group with slots on C_i only, the contractio… |
+| {#626} | note | 428 | *Lengths.* Let P be a polymer of 15.3, X′_1, …, X′_s the localisation … |
+| {#627} | note | 429 | D_P := Σ_r(d_k(X′_r) + 4R_k + 2λ̂ + 498) + 4Σ_{P′}ex(Y_{P′}), |
+| {#628} | note | 430 | with d_k the linear size in M-units (RG I p.257 l.14–16; it equals LFR… |
+| {#628-1} | note | 431 | In (6A) and (6B) a π_k-cube is a block of the partition π_k of the ste… |
+| {#628-1-1} | note | 432 | An MR_k-cube, a block of the MR_k-partition, is a union of π_k-cubes: … |
+| {#628-1-1-1} | note | 433 | Compatibility is Bałaban's set sense, each cube of the coarser partiti… |
+| {#628-1-2} | note | 434 | An MR_k-cube meets a set of sites and bonds in the same block sense, s… |
+| {#628-1-3} | note | 435 | *Cubes.* For a partition into cubes of side s, the closed cubes meetin… |
+| {#628-1-3-1} | note | 436 | An arc of length less than s spans less than s in each coordinate, so … |
+| {#629} | note | 437 | dom P is the union of the domains of P's constituents (15.3), the X′_r… |
+| {#629-00} | note | 438 | With D2.7 15.4(i)'s ℓ_D and s_D, put T⁺_D := (T_D)_{5M} ∪ s_D when ℓ_D… |
+| {#629-0} | note | 439 | *A link's data.* A link X ∈ 𝔏 (D2.7's; #241's links of #247 are anothe… |
+| {#629-0-1} | note | 440 | The 𝐑-operation sums the labels of each component X_c of Z, those on t… |
+| {#629-0-1-1} | note | 441 | A cluster's activities read data only on its dependence set (map #MD2.… |
+| {#629-0-2} | note | 442 | Here LMR_j-cubes are CRE (3.16)'s, the MR_j-cubes of T_{L^{−j}}. The s… |
+| {#629-0-2-1} | note | 443 | For j < k, a point some labelling puts in a step-j label set lies in Λ… |
+| {#629-0-3} | note | 444 | A cutoff cube of a step j ≤ n, an old insertion's too, is an LM₂R_j-cu… |
+| {#629-1} | note | 445 | Its counted domain dom_c P is the set of the π_k-cubes meeting dom P, … |
+| {#629-2} | note | 446 | For n(X) ≥ 2, a link's set X̂ is its network, the union of its groups'… |
+| {#629-2-1} | note | 447 | For n(X) ≥ 2, the constituents' cubes number at most #_n(𝒢) (map #MD2.… |
+| {#629-2-2} | note | 448 | For n(X) = 1, X̂ is the union of the envelopes of X's groups (V3 Lemma… |
+| {#629-2-3} | note | 449 | An 𝐑-step has k ≥ 3 (k > N_B > N₀ ≥ 1, #609), so a π_k-cube is L^{k−1}… |
+| {#629-2-4} | note | 450 | A closed walk along a spanning tree of X̂'s π₁-cubes passes at most 2A… |
+| {#629-2-5} | note | 451 | So with ℓ_P, P's links' counts (table #T4.42), the links of every step… |
+| {#629-3} | note | 452 | Then diam_∞(dom^♮P) ≤ M(D_P + 2ℓ_P) + (43/20)MΣ_{D∈𝔅^{big}(P)}σ(D) in … |
+| {#629-4} | note | 453 | *The links' weights.* Each link pays its terms below from its weight a… |
+| {#629-4-0} | note | 454 | Of that quarter, the links' parts of the weights and extents and of #8… |
+| {#629-4-1} | note | 455 | The other a°(X)/8 = (ν/256)σ_{n(X)}(X) is the link's length decay. A q… |
+| {#629-5} | note | 456 | *The links' units.* A link adds at most 2^{d+2}σ_{n(X)}(X) cubes and, … |
+| {#630} | note | 457 | dom P ∪ ∪_{D∈𝔅(P)}(T_D ∪ s_D) is connected (D2.7 15.4(i), *Why a span … |
+| {#631} | note | 458 | Cover dom^♮P by the following sets: W_r := X′_r ∪ ∪_{K⊆X′_r}K^{(λ̂+248… |
+| {#632} | note | 459 | Each first-class component X of P lies in one X′_r, since X′_0 = ∪_{Y∈… |
+| {#633} | note | 460 | X⁺ widens X by two layers of MR_k-cubes: X^∼ adds one, since ∼ means "… |
+| {#634} | note | 461 | Y_{P′}^{[1]} ⊂ Y′₀^{[1]} ∪ ∪_ee^{[1]}, and Y′₀ ⊂ X(F)^{[3]} ∪ ∪_{K∈h(F… |
+| {#635} | note | 462 | The sets of #631 have diameters at most M(d_k(X′_r) + 4R_k + 2λ̂ + 498… |
+| {#636} | note | 463 | *The free decay.* Put c_F^× := δM/2 = ½ (#728.5). For a polymer P that… |
+| {#637} | note | 464 | d_k(X′_r): the activity of a polymer P with localisation domain X′ car… |
+| {#637-0} | note | 465 | D2.7's gases use e^{−κ(size)} of it, the size counted in MR_k-cubes (1… |
+| {#637-1} | note | 466 | One pays the M-level shapes. From a root M-cube, (1.67)'s tree of leng… |
+| {#639} | note | 467 | 4ex(Y_{P′}): the pieces carry e^{3κex(Y_{P′})} (15.5(ii)(α)), and 15.5… |
+| {#643} | note | 468 | κ and κ₁ here are RG II's. LFR II's κ₁ is that of its localisation exp… |
+| {#644} | note | 469 | κ > 6·2^d. By p.389 l.12, κ ≥ 6·2^d/β, and β < 1: p.376 l.5–6 bounds e… |
+| {#645} | note | 470 | The constants 4R_k + 2λ̂ + 498 and e^{2^{d+1}κ} per X′_r: the exponent… |
+| {#647} | note | 471 | So 15.3's bounds and 15.4's Kotecký–Preiss sums hold for the activitie… |
+| {#648} | note | 472 | *The volume.* (1.95)'s volume factor is βκ/(6·2^d) per π_k-cube of X′∖… |
+| {#649} | note | 473 | *The factor of (1.89) per component.* Each first-class component carri… |
+| {#650} | note | 474 | (1.96)'s sum over the components uses e^{−p₀(g_k)/2} of it, as Bałaban… |
+| {#651} | note | 475 | The rest, c₁ = e^{−p₀(g_k)}, is (1.95)'s factor extracted before the s… |
+| {#652} | note | 476 | *The margin.* The rest, e^{−p₀(g_k)/2+3+2ΣA+2a_k}, has in its exponent… |
+| {#652-1} | note | 477 | Each localisation domain disjoint from ∪_iY_i, and each group of the 𝐑… |
+| {#653} | note | 478 | 15.6(e)'s att charge is paid in D26 7.2's reserve Res(Z), not from (1.… |
+| {#654} | note | 479 | A first-class component X lies in a cube of side 100MR_k: "the compone… |
+| {#655} | note | 480 | p.389's assumption (#649) gives 2κ(100R_k)^d ≤ 2(1+β₀)^{−1}p₀(g_k) − (… |
+| {#656} | note | 481 | *The cross constant of the step.* Let Ξ^c_{12}, Ξ^c_1, and Ξ^c_2 be 15… |
+| {#657} | note | 482 | Since E_k^R(C;ℓ₀) = log(Ξ^c/Ξ) (15.4), #T4.52's E^{R×}_k is log Ξ^c_{1… |
+| {#658} | note | 483 | These gases are 15.4's series at the flat reference: c_g and F(P)/_fla… |
+| {#659} | note | 484 | (a) A cluster with no polymer meeting C₂ has the same polymers, activi… |
+| {#660} | note | 485 | The rest contain a polymer meeting C₁ and one meeting C₂. Their object… |
+| {#660-1} | note | 486 | Hence Σ_P(D_P + 2ℓ_P) ≥ DL^m/M over the cluster's polymers (#311, #629… |
+| {#661} | note | 487 | With *The free decay* and the links' length decay (#629-4-1), the clus… |
+| {#662} | note | 488 | /E^{R×}_k/ ≤ C^×_{KP}(ℓ₁+ℓ₂)L^me^{−p₀(g_k)/2}e^{−ν_rDL^m/(1024M)}, C^×… |
+| {#663} | note | 489 | The rest of 15.4 holds per loop, with μ^R_k and ζ^R_k computed for eac… |
+| {#664} | note | 490 | The term-dependent part E^{R,∂}_k(ℓ) is charged per MR_k-cube to its c… |
+| {#665} | note | 491 | *The sum over the 𝐑-steps.* p₀(g) decreases in g, so e^{−p₀(g_k)/2} ≤ … |
+| {#666} | note | 492 | Σ_{N_B<k≤K′}/E^{R×}_k/ ≤ C^×_{KP}(ℓ₁+ℓ₂)e^{−p₀(ḡ_R)/2}e^{−ν_rD/(1024M)… |
+| {#667} | note | 493 | It is bounded uniformly in K, it decays in D, and it is small when ḡ_R… |
+| {#668} | note | 494 | *15.6–15.7 for the groups on one loop.* As written, per loop: D_g is a… |
+| {#669} | note | 495 | *15.6 for the cross groups of the 𝐑-gas.* Since c_g = 0, every cross g… |
+| {#670} | note | 496 | *The arc set.* D_g^× is the tensor of g's slots, contracted in loop or… |
+| {#670-1} | note | 497 | By the rule of *The groups of 15.4*, no bond of a slot of g lies in th… |
+| {#671} | note | 498 | *The slots of a cross member.* Let a cross member W lie in a polymer P… |
+| {#672} | note | 499 | A single product (arc piece)·W·(arc piece) does not serve. W is covari… |
+| {#673} | note | 500 | Every interval of W inside a first-class X′⁺ lies in a component of P.… |
+| {#674} | note | 501 | The pieces are not arc words of 15.2 on their own: an end of an interv… |
+| {#675} | note | 502 | The slot is invariant under every transformation supported at the fixe… |
+| {#676} | note | 503 | It is covariant under the external transformations at the ends of the … |
+| {#677} | note | 504 | So 15.2(α)–(β) apply to P's tensor T_P, the joint average over the com… |
+| {#678} | note | 505 | 15.6(a)'s covariance holds at the ends of each interval of ℐ(g): 15.2 … |
+| {#678-1} | note | 506 | Its counted domain is hull_c(g) := ∪_{P∈g}dom_c P (*Lengths*); #π_k(hu… |
+| {#679} | note | 507 | D_g^× does not vanish at pure gauge, so (d)'s deviation bound does not… |
+| {#680} | note | 508 | Its bound is (c)'s, ‖D_g^×‖ ≤ B(g), with ‖W‖ for each cross member W i… |
+| {#681} | note | 509 | For every group g of the 𝐑-gas, cross or on one loop, Ψ_g sums the clu… |
+| {#682} | note | 510 | /Ψ_g/ ≤ C_Ψ′e^{−p₀(g_k)/2}(#π_k(hull^× g) + N_sl(g) + Σ_{P∈g with a sp… |
+| {#683} | note | 511 | with C_jn of *The rooted sum*, and /span(P)/ ≤ 4M(D_P + 2ℓ_P + (43/20)… |
+| {#684} | note | 512 | *15.6(e)'s scope rule.* Its first alternative makes a dev term att(k, … |
+| {#685} | note | 513 | The second alternative, a polymer of g meeting a second-class or uncha… |
+| {#685-1} | note | 514 | Its D_g^× has *The count*'s units, which do not use the activities; wh… |
+| {#689} | note | 515 | The other cross groups have no polymer meeting a second-class or uncha… |
+| {#690} | note | 516 | *The count.* For every cross group g of the 𝐑-gas, att ones included, … |
+| {#691} | note | 517 | σ_g := Σ_{W∈𝔅^×(g)}σ(W) + ½Σ_{D∈𝔅^s(g)}σ(D) + Σ_{P∈g}π(P), π(P) := #π_… |
+| {#692} | note | 518 | with 𝔅(P) the carried insertions in P's slots, and σ(D) the production… |
+| {#693} | note | 519 | *The units of the members.* Let D ∈ 𝔅(g) be produced at step j ≤ k, wi… |
+| {#693-1} | note | 520 | When j < k, X_D is D's domain one step later, which contains X^{Cov}_D… |
+| {#693-2} | note | 521 | In both cases X^{Cov}_D ⊆ X_D ∪ ℐ(D), so Dep(D) ⊆ T_D ∪ Z′ (#617-1), a… |
+| {#694} | note | 522 | #_k(X_D) + n_k(D)/M ≤ (21/20)σ(D) + 17 and diam_∞(T_D) ≤ M((21/20)σ(D)… |
+| {#695} | note | 523 | When j = k, u_D = 1, so #_k(X_D) + n_k(D)/M ≤ σ(D) and diam_∞(S_D) ≤ M… |
+| {#696} | note | 524 | When j < k, they come from *The share of D*. At step j + 1, #_{j+1}(X_… |
+| {#696-0} | note | 525 | So the count stays at most 16.1 + 0.23σ(D) for u_D ≤ u_𝔏 and L ≥ L₀^× … |
+| {#696-1} | note | 526 | The intervals lie in the filled hulls, so n_k(D)/M ≤ 8u_Dσ(D)/L + 4/M.… |
+| {#697} | note | 527 | The 17 is the rounding of a small domain to whole cubes: the 8M-neighb… |
+| {#698} | note | 528 | *Big and small members.* Call D big if σ(D) ≥ 240 when j = k, or σ(D) … |
+| {#698-0} | note | 529 | If ℓ_D > 2MR_k, D is big and ℓ_D ≤ (11/10)Mσ(D). Indeed ℓ_D ≤ diam_∞T_… |
+| {#698-1} | note | 530 | A small member has #_k(X_D) < 240, n_k(D) < 240M, and diam_∞(T_D) < 24… |
+| {#698-2} | note | 531 | A small member whose T_D meets X⁺ for a component X of its polymer has… |
+| {#699} | note | 532 | 𝔅(P) holds the carried insertions in P's slots (D2.7 15.5(i)): those i… |
+| {#699-0} | note | 533 | Each X_D lies in dom P (#629), its intervals are in ℐ(g), and D_g^× de… |
+| {#699-1} | note | 534 | Otherwise D is far: T_D lies over 2MR_k from every component K of P, K… |
+| {#699-2} | note | 535 | Then ex(Y_{P′}) ≥ R_k, and so for a letter's piece P′ in P, which has … |
+| {#699-3} | note | 536 | Dep(F) is a bond of C not contained in any K⁺, or lies in T_D, so it l… |
+| {#699-4} | note | 537 | So a quarter of the piece's term 4ex(Y_{P′}) of D_P covers the object … |
+| {#701} | note | 538 | *The rounding.* The rounding is counted per cube, not per member, sinc… |
+| {#703} | note | 539 | The small members of X's slots lie, with their sets (T_D)_{5M}, in X^{… |
+| {#705} | note | 540 | No per-member constant of the slot members 𝔅(g) remains in the uses be… |
+| {#706} | note | 541 | A single-loop insertion D_g made at an 𝐑-step j (D2.7 15.6) is a funct… |
+| {#706-1} | note | 542 | The counted domain X_{D_g} is the set of the π_j-cubes of ∪_{P∈g}dom_c… |
+| {#709} | note | 543 | (H1): S_{D_g} is closed-connected by #524's reasons and contains X_{D_… |
+| {#710} | note | 544 | σ̄(g) := Σ_{P∈g}(#π_j(B_P) + (2^{d+1} + ½)D_P + 2^{d+2}ℓ_P) + /span(g)… |
+| {#713} | note | 545 | A member with intervals on both loops, a cross insertion whose interva… |
+| {#714} | note | 546 | Cubes: #π_k(hull_c g) ≤ Σ_{D big}#_k(X_D) + Σ_P(#π_k(B_P) + (2^{d+1} +… |
+| {#714-1} | note | 547 | The cubes of hull^×(g) outside hull_c(g) number at most 13^d(#_k(X_D) … |
+| {#715} | note | 548 | Traversals: the bonds of ℐ(g) outside the big members' intervals lie i… |
+| {#715-1} | note | 549 | A bond in an X^{(247)} lies in one W_r, of ℓ^∞-diameter ≤ M(d_k(X′_r) … |
+| {#716} | note | 550 | Together, #π_k(hull_c g) + n_k(D_g^×)/M ≤ (21/20)Σ_{D big}σ(D) + Σ_P(#… |
+| {#717} | note | 551 | Diameter: S_g := ∪_{P∈g}dom^♮P ∪ ∪_{P∈g with a span}span(P) is closed-… |
+| {#718} | note | 552 | Each dom^♮P is connected (#630) and contains its slots, and an interle… |
+| {#719} | note | 553 | diam_∞(S_g) is at most #516's sum over its pieces: *Lengths*' pieces o… |
+| {#720} | note | 554 | By #629-3, diam_∞(S_g) ≤ 2MΣ_P(D_P + 2ℓ_P) + (43/20)MΣ_{W∈𝔅^×(g) big}σ… |
+| {#721} | note | 555 | So D_g^× has (T0)'s units with u_𝔏σ_g in place of σ, with counted doma… |
+| {#722} | note | 556 | *The rates.* Take #T4.53's ε^r_k, ϑ_k, and λ_n at the 𝐑-steps. ϑ_k pay… |
+| {#722-1} | note | 557 | The weights of the cross insertions after step n carry the rate λ_n(D)… |
+| {#722-2} | note | 558 | An 𝐑-made insertion has w_k(D_g^×) := e^{λ_k(D_g^×)ν_rσ_g}e^{θ(g)}‖D_g… |
+| {#722-3} | note | 559 | The cross insertions here are all the insertions with intervals on bot… |
+| {#723} | note | 560 | *The payment.* For every group g of the 𝐑-gas, cross or on one loop, t… |
+| {#724} | note | 561 | The polymer part of /Ψ_g/ is at most C_Ψ′e^{−p₀(g_k)/2}(2 + 20M)Σ_P(#π… |
+| {#724-1} | note | 562 | For small g_k this is at most ν_r per unit, and λ_k ≤ 1. The links add… |
+| {#725} | note | 563 | e^{(5/2)ν_r#π_k(X′_r)} is paid by a_V/2 per cube, since (5/2)ν_r ≤ ¼ ≤… |
+| {#726} | note | 564 | e^{(5/2)ν_r#π_k(X^{(λ̂+248)})} ≤ e^{5p₀(g_k)/64} is paid by the margin… |
+| {#727} | note | 565 | e^{(5/2)ν_r2^{d+2}D_P} is paid by e^{(c_F^×/2)D_P}, since 5·2^{d+2}ν_r… |
+| {#728} | note | 566 | δ is at most the rate δ_𝐇 of p.376 l.11–13's factor, which LFR II obta… |
+| {#728-1} | note | 567 | VAR (190) prints that decay as exp(−⅛δ₀d(y,y′)) (p.308 l.42), in the d… |
+| {#728.1} | note | 568 | *Units.* BLL measures lengths by d_□, in M-cubes (#BLL.1-0), at the ra… |
+| {#728.1-1} | note | 569 | δ_α is fixed before M (κ₁ by map #MD2.2.6.163). The 𝐇-rate of #728 and… |
+| {#728.3} | note | 570 | The rate δ of #3.3, #286, #287, (6B)–(6C), and (8) (#917) is δ_α/M. #4… |
+| {#728.4} | note | 571 | The δ of #47, #91, #99, and #209 is LFR I's printed rate at the pages … |
+| {#728.5} | note | 572 | δ_α = 1. D2.7's κ₁ is RG II's (map #MD2.2.6.163, RG II's (1.11)), and … |
+| {#729} | note | 573 | Of the rest of e^{−c_F^×D_P}, e^{−(c_F^×/4)D_P} is a reserve: *The roo… |
+| {#730} | note | 574 | The member part of /Ψ_g/ is at most C_Ψ′e^{−p₀(g_k)/2}Σ_{D∈𝔅(g) big}((… |
+| {#730-1} | note | 575 | By *The units of the members*, #_k(X_D) + n_k(D) ≤ M(21/20)σ(D) for a … |
+| {#732} | note | 576 | A single-loop member D enters D_g^×'s weight with at most e^{(λ_k/2 + … |
+| {#733} | note | 577 | This is within its weight, species by species, since σ(D) is the produ… |
+| {#734} | note | 578 | dev: e^{ν_rσ + ν_e·ext} inside (ii)'s and (iii)'s per-position sums, i… |
+| {#735} | note | 579 | att(j, ·), j ≤ k, att(k, ·) included: the weighted mass e^{ν_rσ_j(W)}e… |
+| {#736} | note | 580 | lw: each piece of an lw slot is counted as a fixed member with its own… |
+| {#737} | note | 581 | wrap(j), j ≥ 2: (S-w) carries e^{θ + ν_rσ_j + ν_e·ext_j} (map #MD2.0.3… |
+| {#737-1} | note | 582 | The D2.6 closure 2.1(e) spends the extent weight on ext_j ≥ N^{(j)}_mi… |
+| {#737-2} | note | 583 | The weight is a fixed factor of each insertion, so the weighted sums g… |
+| {#738} | note | 584 | wrap(1): a group whose Q_W does not lift has ‖Υ⁰_W‖ ≤ 2K_χM^{(ρ)}_Λ(W)… |
+| {#739} | note | 585 | Σ_{W∋n, wrap(1)}e^{θ°(W) + ν_r𝔰(W)}‖Υ⁰_W‖ ≤ 2K_χCρe^{−(3/4)ηN_min/(CLM… |
+| {#740} | note | 586 | since 4 − 1/8 − 1 − 1/8 − 2 = 3/4. This is map #MD2.0.3.18-1's bound C… |
+| {#741} | note | 587 | Its mass stays inside e^{2ΣA} (15.3), as for one loop. |
+| {#742} | note | 588 | *The rooted sum.* For a π_k-cube or a bond □, consider the groups g of… |
+| {#742-1} | note | 589 | The factor e^{−(ϑ_k/4)ν_rσ(D)} pays the sum over D's parts: their tota… |
+| {#742-2} | note | 590 | The sum over these g of the products of these factors is ≤ C_gre^{−p₀(… |
+| {#743} | note | 591 | The members are data of the term, and their norms stay with their own … |
+| {#744} | note | 592 | A single-loop member's norm sits inside the activity's e^{2ΣA} (15.3, … |
+| {#745} | note | 593 | A cross member's factor sits in its own slot of (T0)'s product form (*… |
+| {#746} | note | 594 | The sums of D_g^×'s weights below are read with this convention. It pe… |
+| {#747} | note | 595 | The polymers through a fixed cube are summed by 15.4's Kotecký–Preiss … |
+| {#748} | note | 596 | *Spans.* A polymer P with a span has no cross member (*The groups of 1… |
+| {#749} | note | 597 | The torus period is at least twice each side (#290). Two points of a s… |
+| {#750} | note | 598 | On a square of side s, points on opposite sides are at ℓ^∞-distance ≥ … |
+| {#751} | note | 599 | So span(P) has at most 4δ_P bonds, and diam_∞(span P) ≤ δ_P = diam_∞(d… |
+| {#752} | note | 600 | *Joins.* A polymer P′ joins g at a bond b that is a slot of g in span(… |
+| {#753} | note | 601 | At a bond b of a span in g holding a slot of P′, P′ meets a π_k-cube m… |
+| {#754} | note | 602 | At a slot b of g in span(P′), span(P′) is an arc of at most 4δ_{P′} bo… |
+| {#754-1} | note | 603 | Since 4δ_{P′} ≤ 4M(D_{P′} + 2ℓ_{P′} + (43/20)S_{P′}), the indicator of… |
+| {#755} | note | 604 | So the polymers joining g at b, with their own joins, sum to ≤ C_jne^{… |
+| {#756} | note | 605 | *Join count.* A polymer P of g has at most 16MD_P slot bonds outside i… |
+| {#757} | note | 606 | Several joins can share one position, so a position contributes Σ_{m≥0… |
+| {#758} | note | 607 | The factor e^{20MC_jne^{−p₀(g_k)/2}D_P} of the polymer's part is ≤ e^{… |
+| {#759} | note | 608 | A big member D has n_k(D) ≤ M(21/20)σ(D) slot bonds, and a single-loop… |
+| {#760} | note | 609 | C_gr and C_jn depend on d, M, c_F^×, ν_r, 15.4's C_KP, D(k)(iii)'s bou… |
+| {#761} | note | 610 | *First case: no member of g is a carried cross insertion.* A polymer P… |
+| {#762} | note | 611 | P has no span, so it carries e^{−(c_F^×/8)D_P} for this (#729), its li… |
+| {#763} | note | 612 | The single-loop insertions in g's slots end inside them (15.5 above). … |
+| {#764} | note | 613 | #T4.52's A^R_k sums e^{c_W}w_k(D_g^×) over the first-case groups, with… |
+| {#765} | note | 614 | A^R_k ≤ 4e^{c_W}C_gr(ℓ₁+ℓ₂)L^me^{−p₀(g_k)/2}e^{−ν_rDL^m/(1076M)}. |
+| {#766} | note | 615 | *Second case: g has a carried cross member.* D_g^× is a descendant of … |
+| {#767} | note | 616 | Each member is a slot of one polymer, and each polymer is in one group… |
+| {#769} | note | 617 | D_g^× is #241's D_G with G = {g} (#246), the polymer of W's slot meeti… |
+| {#773} | note | 618 | Steps 1–3 of (T0)'s product form, with the members' factors ≤ w_{k−1},… |
+| {#774} | note | 619 | *The smallness (H^R)* is #T4.53's: S^R ≤ 1/32 and C_yS^R ≤ log 2. |
+| {#775} | note | 620 | Then λ_n ≥ 31/32 for every n, and Π_{N_B<k≤K′}(1 + y^R_k) ≤ e^{C_yS^R}… |
+| {#776} | note | 621 | It is a smallness of g_{K′}, as in 15.7: by Cor. 8.2 of BETA_FUNCTION_… |
+| {#776-1} | note | 622 | R_k ≥ (log u_k)^r ≥ (log u_k)² (CRE (2.5), p.255 l.36–39; r ≥ 2), so e… |
+| {#777} | note | 623 | *The 𝐑-made total.* With (1 + C_δc̄)^m ≤ L^m (#500) and (7)'s sum lemm… |
+| {#778} | note | 624 | Σ_{N_B<k≤K′}(1 + C_δc̄)^{K′−k}A^R_k ≤ A^{cr,R} := 4e^{c_W}C_gr(ℓ₁+ℓ₂)e… |
+| {#779} | note | 625 | *15.8.* The post-R term carries D^×(k)'s species and the cross clause,… |
+| {#780} | note | 626 | One in no slot of a polymer, in no span of a marked group, and in no b… |
+| {#781} | note | 627 | One in a slot of a group that 15.6(e)'s scope rule makes att(k, ·) is … |
+| {#782} | note | 628 | One in the block inside a second-class component Y_i^∼ is a fixed fact… |
+| {#783} | note | 629 | Item 5(a) of D2.7 bounds the block's average by the sup of its word ov… |
+| {#784} | note | 630 | It is then treated as the previous class: its factor stays in the cros… |
+| {#785} | note | 631 | That this sup is ≤ w_{k−1}(W) is #230: the evaluation points of 𝐓′_k(Y… |
+| {#786} | note | 632 | The others are slots of the small-field cross groups, and their descen… |
+| {#787} | note | 633 | One in the span of a marked group on one loop is a member of that grou… |
+| {#789} | note | 635 | (6C) The Attached 𝐑-Groups and the 𝐑-Step's Evaluation Points |
+| {#791} | note | 637 | *The attached groups.* Let g be a group of the 𝐑-gas, a cross group of… |
+| {#793} | note | 639 | *The weights.* A cross group with a cross member carries e^{λ_k(D_g^×)… |
+| {#794} | note | 640 | ext^{coll} is measured from Coll_k, which contains the component's cub… |
+| {#795} | note | 641 | For a cross group, hull^×(g)⁺ adds one layer of MR_k-cubes to a set of… |
+| {#796} | note | 642 | For a group on one loop, ext^{coll} has the bound of *The single loop'… |
+| {#797} | note | 643 | The constants are polylogs of order r < p₀, paid by the margin of (1.8… |
+| {#798} | note | 644 | So the polymer part costs at most (1 + 1/1000)ν_r + ν_r ≤ (5/2)ν_r per… |
+| {#799} | note | 645 | A single-loop member D of a cross group gains (ν_r/1000)·½σ(D) of exte… |
+| {#800} | note | 646 | *First case: no localisation domain of a polymer of g contains a secon… |
+| {#800-0} | note | 647 | For a localisation domain X′ disjoint from ∪_iY_i, (1.95)'s activity c… |
+| {#801} | note | 648 | *The free decay* and *The volume* use only these factors and the facto… |
+| {#803} | note | 649 | *Second case: a localisation domain X′ of a polymer of g contains a se… |
+| {#804} | note | 650 | *Size.* Y_i is a component of Z of the second class (LFR II p.378 l.21… |
+| {#805} | note | 651 | *Distance.* d_k(X′) ≤ d_{k,∪Y}(X′) + dΣ_{Y_i⊆X′}(#π_k(Y_i) + 1) (#805-… |
+| {#806} | note | 652 | *The cost.* Off ∪_iY_i, the polymer part of the weight and the uses of… |
+| {#806-1} | note | 653 | At a q = 0 part of X′ (#812), no first-class component of X′ pays #645… |
+| {#807} | note | 654 | *The roots.* A rooted sum of (6B) through a π_k-cube of Y_i runs over … |
+| {#808} | note | 655 | Those with a localisation domain containing Y_i. Such a domain contain… |
+| {#809} | note | 656 | The others, which have the first case's factors and are summed by the … |
+| {#810} | note | 657 | So the root count at Y_i is at most N(Y_i) := 3^d(101R_k)^d + 1. On a … |
+| {#811} | note | 658 | In Ψ's per-cube bound at the cubes of Y_i the same multiplicity enters… |
+| {#812} | note | 659 | *The clusters with q = 0.* Split each activity F(X′) = Σ_q(…) of (1.91… |
+| {#813} | note | 660 | A q = 0 part's activity carries no word of Y_i, the blocks inside Y_i^… |
+| {#814} | note | 661 | The q = 0 parts have amplitude α^{1/3}, and the part of their weights … |
+| {#814-0} | note | 662 | *The root and the count.* Each Y_i has a π_k-cube r^Y_i off Y_i with a… |
+| {#814-3} | note | 663 | Every q = 0 part (X′, 0) meeting Y_i, a union of V-domains, contains r… |
+| {#814-4} | note | 664 | Rooted at r^Y_i of the first Y_i that they contain, these clusters sum… |
+| {#814-4-1} | note | 665 | The Kotecký–Preiss weights are a(X′) := ½(#π_k(X′∖∪_jY_j) + #{Y_j ⊆ X′… |
+| {#814-4-1-1} | note | 666 | *The shares of /P/_w.* In the sums of #814-4-2-3–#814-4-3 a unit of /P… |
+| {#814-4-1-2} | note | 667 | An insertion D with a piece in P has the other two (D2.7 15.5(i-5-0)):… |
+| {#814-4-1-3} | note | 668 | A walk of at most 2m_D steps through these cubes cuts into at most 2m_… |
+| {#814-4-1-4} | note | 669 | In these sums the activities carry D by its weight: its weight of D2.6… |
+| {#814-4-2} | note | 670 | *The Bałaban polymers at an MR_k-cube.* Those meeting an MR_k-cube Q s… |
+| {#814-4-2-3} | note | 671 | *The groups at an MR_k-cube.* The groups whose hulls meet an MR_k-cube… |
+| {#814-4-2-4} | note | 672 | P∖fixed is then rooted at one of the R_k^d M-cubes of Q′ or of the at … |
+| {#814-4-2-5} | note | 673 | Per root, #637-1's shapes cost e^{O(1)} with its factor e^{−(β/8)κd_k}… |
+| {#814-4-3} | note | 674 | *The criterion.* At a unit of a Bałaban polymer, a π_k-cube c off ∪_jY… |
+| {#814-4-3-1} | note | 675 | A group incompatible with a group g has its hull meeting one of the at… |
+| {#814-4-3-2} | note | 676 | These are α small after d, κ, β and ν (γ small, stage 6 of #T1.9; p.37… |
+| {#815} | note | 677 | So their part of /Ψ(S)/ is at most C_Ψ″ per second-class component, un… |
+| {#815.1} | note | 678 | These insertions are pieces of D2.7 15.8-1(1)'s fixed member at Y_i's … |
+| {#815.2} | note | 679 | 15.8-1(6) and (6-0) pay w^Ψ_c inside #814's Kotecký–Preiss sum, each p… |
+| {#815.2-1} | note | 680 | So #814–#815 hold for these weighted activities: Σ_cw^Ψ_c/d_c/ ≤ 2C_Ψ″… |
+| {#816} | note | 681 | *The size decay.* d_{k,∪Y} gives no decay on the cubes of Y_i, and D2.… |
+| {#816-1} | note | 682 | The q = 0 parts of #814 lie in polymers without slots, since a group w… |
+| {#817} | note | 683 | *The factor per component.* E(Y_i) := N(Y_i)e^{(d+1)(102R_k)^d + 4R_k … |
+| {#817-1} | note | 684 | And log N(Y_i) + 4R_k + 2λ̂ + 498 + 2^{d+1}κ + C_Ψ″ + m^w_Ψ + κ101^d ≤… |
+| {#818} | note | 685 | *Per term.* A localisation domain contains Y_i or is disjoint from it,… |
+| {#819} | note | 686 | *The payment of Π_iE(Y_i).* Y_i satisfies (i), (ii) (LFR I p.177 l.23–… |
+| {#819-1} | note | 687 | The print attaches that branch and Π′ to components "for which some la… |
+| {#820} | note | 688 | D2.7 15.8(c) divides this factor into quarters as D2.6 7.2's small-dom… |
+| {#820-1} | note | 689 | The quarter also pays the factor e^{A_k} ≤ e of the leading word's tra… |
+| {#821} | note | 690 | Y_i's persistent factor exp(−κ_k(Y_i) − 2p₀(g_{j(Y_i)})) (p.384 l.5–6)… |
+| {#822} | note | 691 | So Π_iE(Y_i) is paid on every term of step k by factors of that term. … |
+| {#823} | note | 692 | *The charge.* The rooted mass of D2.7 15.4(iii) through an MR_k-cube o… |
+| {#825} | note | 694 | *The single loop's 𝐑-made groups.* Let g be a group of D2.7 15.6 on on… |
+| {#826} | note | 695 | σ̃(D_g) := Σ_{P∈g}π(P) + ⅓Σ_{D∈𝔅(g)}σ(D) + Σ_{W∈𝒲_g}(½σ(W) + 17), with… |
+| {#827} | note | 696 | the extent e^{ν_e·ext_k(D_g)} when it is dev (map (ii-w)), and the wei… |
+| {#828} | note | 697 | *Units.* By *Spans*, /span(g)//M ≤ Σ_P(4D_P + 8ℓ_P + (43/5)Σ_{D∈𝔅^{big… |
+| {#829} | note | 698 | Hence σ(D_g), diam_∞(S_{D_g})/M and n_k(D_g)/M = /span(g)//M are at mo… |
+| {#830} | note | 699 | So D_g has the units of (6A)(i)'s *Units with a factor* with u = u_𝔏, … |
+| {#832} | note | 700 | *The extent.* hull(g) = ∪_{P∈g}(dom P ∪ span P) lies in ∪_{P∈g}(dom^♮P… |
+| {#833} | note | 701 | D_g's domain and box lie in X(D_g) ∪ hull_𝒲(g)⁺, with hull_𝒲(g) := hul… |
+| {#834} | note | 702 | ext_k(D_g) ≤ 2Σ_P(D_P + 2ℓ_P) + (43/10)Σ_{D∈𝔅(g) big}σ(D) + 2R_k + 1 +… |
+| {#835} | note | 703 | With ν_e = ν_r/(2C_box) ≤ ν_r/5832 (#629-4-0), the polymer part costs … |
+| {#836} | note | 704 | *The attached extent.* When D_g is att(k, ·) (D2.7 15.6(e)–(f)), its l… |
+| {#837} | note | 705 | *The member terms.* For W ∈ 𝒲_g let e_W := ext(W) if W is dev, and oth… |
+| {#838} | note | 706 | Every point of D_g's Y-set is in hull(g)⁺, within R_k π_k-sides of hul… |
+| {#839} | note | 707 | *Case (a): D_g's Y-set meets Coll_k* (D2.6 closure §1). This holds whe… |
+| {#840} | note | 708 | *Case (b): otherwise.* Then D_g is att only through a non-dev member. … |
+| {#840-1} | note | 709 | A cube y₀ of Y_{W₁} has dist(y₀, base) ≤ ext^{base}(W₁), the extent fr… |
+| {#841} | note | 710 | The lineage's growth at the 𝐑-step: D_g's mass is at most B(g)Π_{W∈𝒲_g… |
+| {#841-1} | note | 711 | W₁'s interval is one arc in span(g), so the groups holding W₁ are summ… |
+| {#842} | note | 712 | *Wrap members.* A D_g with a wrap member depends on U^R on that member… |
+| {#842-1} | note | 713 | When W₁ is a single-loop insertion, these D_g add at most ε^r_kw(W₁) a… |
+| {#843} | note | 714 | *The payment.* The parts of (3/8)ν_eΔ_g from diam_∞(hull g)/M and from… |
+| {#843-1} | note | 715 | The term 2max_We_W is taken at one member W. For a dev W it costs (3/4… |
+| {#844} | note | 716 | *The members' weights.* A member W enters σ̃ with ½σ(W) + 17. Its rese… |
+| {#844-1} | note | 717 | So D2.7 15.7's member sum x_g := Σ_{W⊂span(g)}b_WDev_{Q^#_W} runs with… |
+| {#844-2} | note | 718 | An insertion D with h(D) = ∅ ((6B), *15.5*) is untouched on its part D… |
+| {#844-2-1} | note | 719 | So its options together carry at most e^{ν_rσ(D)}‖D‖(1 + (η(D)/‖D‖)e^{… |
+| {#844-4} | note | 720 | In D2.6 closure 5.3 the T-step and the 𝐑-step act in turn, and a two-l… |
+| {#844-4-1} | note | 721 | They are carried by the cross carry lemma's step, without a bridge ((6… |
+| {#844-5} | note | 722 | Each of them, D, has a closed-connected S_D meeting both loops, which … |
+| {#844-6} | note | 723 | They are counted once, at the 𝐑-step k, at this lifetime cap: with P_k… |
+| {#844-7} | note | 724 | At the 𝐑-step k, P grows by the factor 1 + C_ϑϑ_k of the h(D) = ∅ opti… |
+| {#844-8} | note | 725 | In the dev recursion (map #MD2.4.6.14) the carried terms gain the fact… |
+| {#844-9} | note | 726 | The wrap(j) insertions are in neither recursion: they are carried in (… |
+| {#845} | note | 727 | An att or lw member is not in x_g: its mass is in its species' total t… |
+| {#845-1} | note | 728 | The normalisation is applied to every insertion of these species, so t… |
+| {#846} | note | 729 | So ΣA stays a polylog of order r < p₀, as #652 uses. |
+| {#847} | note | 730 | D2.6 7.1–7.3 use A_j(Z) through E_j(Z) := 2A_j(Z) + … ≤ ε_A(d_j′(Z)+1)… |
+| {#848} | note | 731 | A wrap member is not in x_g or in these totals: D_g is then wrap(k) (*… |
+| {#849} | note | 732 | *The payment.* For D_g, #723's rate (5/2)ν_r per unit of Σ_P(#π_k(B_P)… |
+| {#850} | note | 733 | It is paid as in the first case above when no localisation domain of a… |
+| {#853} | note | 734 | *D2.7 15.4(i) and 15.7 over the carried insertions.* D2.7 pays the sin… |
+| {#854} | note | 735 | Joins through a span that runs through D's slots are summed as in (6B)… |
+| {#855} | note | 736 | 15.7's diameter factor diam_k(hull(g)⁺) and the linear factor /span(g)… |
+| {#855-1} | note | 737 | Let n ≤ Σ_PD_P/(4R_k + 2λ̂ + 498) be the number of localisation domain… |
+| {#856} | note | 738 | The exponent x_g, at most /span(g)/e^{17ν_r}C_χρ̃_kδ̄* (#844-1), gains… |
+| {#857} | note | 739 | The polymer parts, 3ν_r/80 per unit of D_P in all, are paid within the… |
+| {#858} | note | 740 | *D's weight.* D ∈ 𝔅(g) pays from its weight e^{ν_rσ(D)}, released at t… |
+| {#861} | note | 742 | *The evaluation points.* |
+| {#862} | note | 743 | *The integration variables are real.* In (1.71), "only the quadratic f… |
+| {#863} | note | 744 | These run over the supports of the 𝐑-step's χ′(X), χ_{h,1/2}((Ω″^∼_{h+… |
+| {#864} | note | 745 | On every class component the pre-R term's indicators are either kept a… |
+| {#865} | note | 746 | *The configuration.* In (1.49) the old terms are evaluated at U_k″ = (… |
+| {#866} | note | 747 | U_k^0's data: off Λ, 𝐁_k″ and V″ coincide with the determining set and… |
+| {#867} | note | 748 | By (1.65), U_k^0 maps Ũ_k^c(Y_4, α̃_0, α̃_1) into Ũ_k″^c(Y_1, α̃_0, α̃… |
+| {#868} | note | 749 | *The insertions.* Each insertion of the term is a function of 15.0's U… |
+| {#868-1} | note | 750 | Bałaban's inclusion is printed with its reason, the old terms being "c… |
+| {#869} | note | 751 | D(k)(iii) asserts no bound at the points of 𝒟_k outside 𝒟^{sub}_k (SW … |
+| {#870} | note | 752 | The insertions' own evaluation point U_k^{(0)} is Bałaban's chain of t… |
+| {#871} | note | 753 | *What this gives.* The analyticity of every insertion and word at the … |
+| {#872} | note | 754 | *What it does not give.* The bounds: e^{2ΣA}, the dev masses, the cros… |
+| {#874} | note | 756 | (7) The Count Check over the Steps |
+| {#876} | note | 758 | *A sum lemma.* For L ≥ 2 and a > 0: Σ_{m≥0}L^me^{−aL^m} ≤ e^{−a}(1 + 6… |
+| {#877} | note | 759 | For m ≥ 1, L^m − 1 ≥ L^m/2. So the terms with m ≥ 1 are ≤ e^{−a}x^pe^{… |
+| {#878} | note | 760 | sup_{y>0}Σ_{m∈ℤ}(yL^m)^pe^{−yL^m} ≤ 3. The terms with yL^m ≤ 1 form a … |
+| {#879} | note | 761 | Hence Σ_{m≥1} ≤ e^{−a}·3(2/a)^p. |
+| {#880} | note | 762 | *The cross constant.* For x ≥ 1 and a > 0, xe^{−ax} ≤ e^{−a}(1 + 1/a).… |
+| {#881} | note | 763 | C^×_E := 4LC_V(1+β₀)⁶C_×𝔞̄(ℓ₁+ℓ₂)e^{−c_×D/M}(1 + M/(c_×D)) + 8C_S′e^{c… |
+| {#882} | note | 764 | The first term is the first step, with x = L^{K′−1}. The second and th… |
+| {#883} | note | 765 | The first two terms decay in D. The third, from the groups long on one… |
+| {#884} | note | 766 | *The 𝐑-steps' remainders.* Each 𝐑-step adds to E_const,k(C_i, χ_i) the… |
+| {#885} | note | 767 | The torus has period N_s in step-K′ units (#334), so N_min^{(k)} = N_s… |
+| {#886} | note | 768 | So, for β₀ ≤ 1/4 and L ≥ 4, the remainders E°^R_k(C_i) over any set of… |
+| {#887} | note | 769 | R̂_{K′} is a constant times a power of log g_{K′}^{−2}, while p₀(g_{K′… |
+| {#888} | note | 770 | Hence the 𝐑-steps add at most |
+| {#889} | note | 771 | C^{R°}_E := 2C^R_1R̂_{K′}²(2 + 24R̂_{K′}/c^R_E)e^{−p₀(g_{K′})/5} ≤ 2e^… |
+| {#890} | note | 772 | D2.3(7)'s C_Σ𝔞̄ is computed from the reference-gas remainders E°_{k+1}… |
+| {#891} | note | 773 | So /E^×_const,k/ ≤ E* := (C_Σ(χ₁) + C_Σ(χ₂))𝔞̄ + C^{R°}_E + C^×_E + C^… |
+| {#892} | note | 774 | *The wrap total.* |
+| {#893} | note | 775 | D(k)(ii)'s wrap terms are ≤ C_wL^{k−j}𝔟̄e^{−c_wN^{(j)}_min/M} per trav… |
+| {#893-1} | note | 776 | At j = 1 the wrap(1) insertions carry the weight e^{ν_r𝔰} ((6B), *The … |
+| {#894} | note | 777 | Summed over j ≤ k and over the 4(ℓ₁+ℓ₂)L^{K′−k} traversals of step k, … |
+| {#895} | note | 778 | This is small under the torus condition (map #MD2.3.4.16), as in the c… |
+| {#896} | note | 779 | *The carried cross total.* (1 + C_δc̄)^m ≤ L^m (#500). Under (H^R), (1… |
+| {#897} | note | 780 | Σ_{j≤n}M^cr_n(j) ≤ 2Σ_{j=1}^{K′}(1 + C_δc̄)^{K′−j}(A^cr_j + A^R_j) ≤ A… |
+| {#898} | note | 781 | A^cr := 4C_cr𝔞̄(ℓ₁+ℓ₂)e^{−ν_×D/M}(1 + 12M²/(ν_×D)²) ≥ 4C_cr𝔞̄(ℓ₁+ℓ₂)Σ_… |
+| {#899} | note | 782 | with A^{cr,R} of (6B). |
+| {#900} | note | 783 | The first inequality uses n − j ≤ K′ − j. |
+| {#901} | note | 784 | A^× is uniform in K, and it decays in D. |
+| {#902} | note | 785 | Each bound is uniform in K. |
+| {#903} | note | 786 | A^cr is linear in 𝔞̄(ℓ₁+ℓ₂). C^×_E is linear in 𝔞̄ and at most a const… |
+| {#904} | note | 787 | C^{R×}_E and A^{cr,R} are linear in e^{−p₀(ḡ_R)/2}(ℓ₁+ℓ₂). C^{R°}_E ≤ … |
+| {#905} | note | 788 | w̄ is linear in 𝔟̄(ℓ₁+ℓ₂). |
+| {#907} | note | 790 | (8) The Pair Identity at the Stopping Scale and the K-Uniform Bound |
+| {#909} | note | 792 | *(8.1) The identity (from (2) and the continuum note's (2) with C := C… |
+| {#910} | note | 793 | On ℓ₀ at K′, f^{(i)}_{K′} = W_{χ_i}(C_i^{(K′)};V_{K′}) + β^{(i)}, with… |
+| {#911} | note | 794 | So f^{(1)}f^{(2)} = W_{χ₁}(C₁^{(K′)})W_{χ₂}(C₂^{(K′)}) + β^×, with /β^… |
+| {#912} | note | 795 | Exactly, |
+| {#913} | note | 796 | W^×_ren(ε) = e^{E^×_const,K′}μ^{[K]}_{ℓ₀}(W_{χ₁}(C₁^{(K′)};·)W_{χ₂}(C₂… |
+| {#914} | note | 797 | r^×_K := e^{E^×_const,K′}μ^{[K]}_{ℓ₀}(β^× + I^×_{K′}) + Σ_{ℓ≠ℓ₀}w_ℓ⟨e^… |
+| {#915} | note | 798 | Here I^× is the insertion sum of the class at K′, cross insertions inc… |
+| {#917} | note | 800 | *(8.2) The K-Uniform Bound (given D^×(K′) on every labelled term, whos… |
+| {#918} | note | 801 | /W^×_ren(ε)/ ≤ e^{E*}[1 + Σ_i8.48(1 + 2κ_s^{LF})a_dc_hB₃ℓ_iε_{K′}Lip_{… |
+| {#919} | note | 802 | is bounded independently of K: ε_{K′}, ρ_{K′}, 𝔞̄, g_{K′}, and ḡ_R dep… |
+| {#920} | note | 803 | C_χ is #345's. B^×_LF is (6A)'s, #602's supremum of LF #3.99-1's B_LF … |
+| {#921} | note | 804 | Proof: |
+| {#922} | note | 805 | /μ_{ℓ₀}(W_{χ₁}W_{χ₂})/ ≤ w_{ℓ₀} ≤ 1. |
+| {#923} | note | 806 | /I^×_{K′}/ ≤ exp(Σ_nν_n + A^×) − 1 over the 4(ℓ₁+ℓ₂) step-K′ traversal… |
+| {#924} | note | 807 | On the large-field terms the cross insertions multiply the words' boun… |
+| {#925} | note | 808 | The constants are (7). |
+| {#934} | note | 810 | *(8.3) Subsequences (as the continuum note's (8.2)).* |
+| {#935} | note | 811 | μ^{[K]}_{ℓ₀}, E^×_const,K′, and r^×_K are bounded uniformly in K. |
+| {#936} | note | 812 | So every sequence of lattice spacings has a subsequence along which th… |
+| {#938} | note | 814 | (9) What the Bound Does Not Give |
+| {#940} | note | 816 | Convergence along the full sequence. `WILSON_IT1_TWO_LOOPS_CAUCHY_2026… |
+| {#941} | note | 817 | Factorisation. A bound on W^×_ren − W_ren(C₁)W_ren(C₂), with both sing… |
+| {#942} | note | 818 | A^×, C^{R×}_E, and the first two terms of C^×_E decay in D. The long-g… |
+| {#943} | note | 819 | μ^{[K]}_{ℓ₀} couples the two coarse loops; the pair factorisation note… |
+| {#944} | note | 820 | Smallness of the cross terms at fixed coupling. A^cr and C^×_E are bou… |
+| {#945} | note | 821 | with q := max(q₁, q₂, q₁₂), ℓ_i = p_iL^{j−q_i} ≤ p_iL^{q−q_i}L^{q̄(j)+… |
+| {#946} | note | 822 | 𝔞̄ ≤ 𝔟̄, and 𝔟̄ is O(g_k(1+2r_k)⁴pl_k) maximised over k (ρ_k, ρ_{ph,k}… |
+| {#947} | note | 823 | so 𝔞̄(ℓ₁+ℓ₂) → 0 there, as ℓ_Cε_{K′} → 0 does in the continuum note's … |
+| {#948} | note | 824 | C^{R×}_E and A^{cr,R} carry the factor e^{−p₀(ḡ_R)/2} ((6B)), so they … |
 | {#3.2.1} | BP_TL_NSTEP_FRAME.md | 5 | *The stage blocks and the choice of N (quoted and checked).* The stage… |
 | {#3.2.1-1} | BP_TL_NSTEP_FRAME.md | 6 | LFR I does not fix N: "Conditions on N will be formulated in construct… |
 | {#3.2.1.1} | BP_TL_NSTEP_FRAME.md | 7 | (i) N > N₀ (p.179 l.10). (ii) N ≤ O(1)(log g_k^{−2})^ν with ½ν ≤ p₀ − … |
@@ -947,7 +948,7 @@ Each content line of `WILSON_IT1_TWO_LOOPS_UNIFORM_BOUND_2026_10_27.md` and of i
 | {#6.17.3} | BP_TL_GC_TRANSFORMS.md | 81 | *The case j = 0.* ω₀ lives on Ω₁ ∩ Λ₁ᶜ, the layer 1, with r_{ω,0} = 1 … |
 | {#6.17.3-1} | BP_TL_GC_TRANSFORMS.md | 82 | With the family's phase λ^{(k)}_nwα_{1,k} per fine bond on the layer n… |
 | {#6.17.3-2} | BP_TL_GC_TRANSFORMS.md | 83 | Its left side times 2^{k+1} is at most 8C_od(1 + 2r)λ_wL(2/L)^kα_{1,k}… |
-| {#6.17.3-3} | BP_TL_GC_TRANSFORMS.md | 84 | So D2.6 §5.0's ρ_ω and the O4 note's (§2(e)) contain this sum as the t… |
+| {#6.17.3-3} | BP_TL_GC_TRANSFORMS.md | 84 | So this bound is the O4 note's §2(e)(iii), the term 8C_odL of the gene… |
 | {#13} | BP_TL_EVAL_POINTS.md | 5 | *The constants.* |
 | {#14} | BP_TL_EVAL_POINTS.md | 6 | CRE's C₀ and C₁. CRE (2.28) asks only that C₀ and C₁ be "sufficiently … |
 | {#14-1} | BP_TL_EVAL_POINTS.md | 7 | The current part of K: T_Y carries an α₀-entry with constant C_K^α := … |
@@ -982,7 +983,7 @@ Each content line of `WILSON_IT1_TWO_LOOPS_UNIFORM_BOUND_2026_10_27.md` and of i
 | {#39-6} | BP_TL_EVAL_POINTS.md | 36 | *The sets on the strip.* On the sup-distance-M neighbourhood N of Z^c,… |
 | {#39-6-1} | BP_TL_EVAL_POINTS.md | 37 | So, by (2.14) summed over the layers that ∂Y₁ meets (CRE p.257 l.12–26… |
 | {#39-7} | BP_TL_EVAL_POINTS.md | 38 | *The zero piece.* A localization operation with a set σ of cubes disjo… |
-| {#39-7-0} | BP_TL_EVAL_POINTS.md | 39 | There the localized 𝐇-function, whose argument is supported in Λ̄ (BLL… |
+| {#39-7-0} | BP_TL_EVAL_POINTS.md | 39 | There the localized 𝐇-function, whose arguments lie in Λ, 𝐆″_kJ_{1,2} … |
 | {#39-7-1} | BP_TL_EVAL_POINTS.md | 40 | The cubes outside σ_t lie within the sup-distance M(t_k + 1) of Λ: a c… |
 | {#39-7-2} | BP_TL_EVAL_POINTS.md | 41 | So at the zero piece 𝐇_k″, 𝐇_{𝐁₁} and 𝐇_k vanish on these blocks, and … |
 | {#39-7-3} | BP_TL_EVAL_POINTS.md | 42 | On S₁, 𝐁_k″(Y₁) = 𝐁₁(Y₁), and Y₂ = Y₁ with the same strip (#39-6-1). U… |
@@ -1053,386 +1054,387 @@ Each content line of `WILSON_IT1_TWO_LOOPS_UNIFORM_BOUND_2026_10_27.md` and of i
 | {#71} | BP_TL_EVAL_POINTS.md | 107 | The c₀-rotation charge (map #MD2.4.11.5, *The charge*). The map bounds… |
 | {#71-1} | BP_TL_EVAL_POINTS.md | 108 | The map's condition becomes 32c_GC_{c₀}λ(2/L)^{k−j}α_{1,k}(/σ_{j,0}//r… |
 | {#71-2} | BP_TL_EVAL_POINTS.md | 109 | With c′/L = (1−β)/(2(1+β₀)) ≤ 1/2 and α_{1,k} ≤ (1+β₀)²k^{1/2}α_{1,1},… |
-| {#72} | BP_TL_EVAL_POINTS.md | 110 | *The 𝐑-step lands in the family (from the bullets above, with T₂^{old}… |
-| {#73} | BP_TL_EVAL_POINTS.md | 111 | On a layer n ≤ k₀ the response, apart from T₂^{old}, is at most (C_ΛM⁵… |
-| {#74} | BP_TL_EVAL_POINTS.md | 112 | On k₀ < n ≤ k it is, apart from T₂^{old}, at most (C_ΛM⁵e^{−4δM} + C_{… |
-| {#75} | BP_TL_EVAL_POINTS.md | 113 | The transported part lies in the post-R family with (b3)'s margin. Bef… |
-| {#75-1} | BP_TL_EVAL_POINTS.md | 114 | So the original layering, 𝐁″_k, and 𝐁_k are ordered from older to newe… |
-| {#75-2} | BP_TL_EVAL_POINTS.md | 115 | With the response (at most ¼(1−β)λ^{(k)}_nα_{1,k}L^{−k} by the two bul… |
-| {#76} | BP_TL_EVAL_POINTS.md | 116 | Hence, up to T₂^{old} (#5), Φ(𝐔) obeys 𝒟^λ_k's phase condition (pre-R)… |
-| {#76-1} | BP_TL_EVAL_POINTS.md | 117 | Off Λ's decay range the response, apart from T₂^{old}, is at most C_{m… |
-| {#77} | BP_TL_EVAL_POINTS.md | 118 | *The remaining parts.* |
-| {#78} | BP_TL_EVAL_POINTS.md | 119 | (i) The class's other bounds at the points Φ(𝐔) (on 𝓜^c for the phase … |
-| {#78-1} | BP_TL_EVAL_POINTS.md | 120 | Each is asserted on the family 𝒟^λ_k itself, the carried transports up… |
-| {#78-2} | BP_TL_EVAL_POINTS.md | 121 | The transports are bounded through A_k, a sup over the evaluation poin… |
-| {#78-3} | BP_TL_EVAL_POINTS.md | 122 | The deformations are at most ⅛(1−β)α_{1,k}L^{−k} on every layer ((iii)… |
-| {#78-4} | BP_TL_EVAL_POINTS.md | 123 | So the Λ-response, apart from T₂^{old}, exceeds ¼(1−β)α_{1,k}L^{−k} on… |
-| {#79} | BP_TL_EVAL_POINTS.md | 124 | *The transports.* In that cube Φ(𝐔)'s complex part per fine bond is, a… |
-| {#80} | BP_TL_EVAL_POINTS.md | 125 | *The masses and weights.* The bounds that hold on the family 𝒟^λ_k its… |
-| {#81} | BP_TL_EVAL_POINTS.md | 126 | The dev clause is asserted on 𝒟^λ_k (*The dilated sub-domains*), with … |
-| {#82} | BP_TL_EVAL_POINTS.md | 127 | D2.6's att bounds, and with them the attached masses inside e^{2ΣA}, h… |
-| {#83} | BP_TL_EVAL_POINTS.md | 128 | The cross insertions' weights hold on the family: the cross clause (ii… |
-| {#84} | BP_TL_EVAL_POINTS.md | 129 | *The payment.* The transports' factor is paid by the margin of (1.89) … |
-| {#85} | BP_TL_EVAL_POINTS.md | 130 | (ii) Analyticity on the whole post-R 𝒟_k (given #17's inputs at U_k^0,… |
-| {#86} | BP_TL_EVAL_POINTS.md | 131 | By (1.65), applied at (V̂, J^h(V̂)) (#156), U_k^0 lies in Ũ^{(N)c}, th… |
-| {#86-0} | BP_TL_EVAL_POINTS.md | 132 | The chain starts at U_k″ = (exp iη𝐇_k″(g_kB)U_k^0)^{u_k″^{−1}} ((1.51)… |
-| {#86-0-1} | BP_TL_EVAL_POINTS.md | 133 | The second group's boundary terms, CRE's 𝐁-terms, are invariant only w… |
-| {#86.1} | BP_TL_EVAL_POINTS.md | 134 | *Where B lives.* B is the fluctuation field of V″ = V′V₀, V′ = exp ig_… |
-| {#86.1-1} | BP_TL_EVAL_POINTS.md | 135 | There CRE (3.5) and B^{h+1}(P¹_{h+1}) = (P′^∼_{h+1})^c ∩ (Z′^{∼5}_h)^c… |
-| {#86.1-1-1} | BP_TL_EVAL_POINTS.md | 136 | The upper bound is k: in Z, Ω″_{k₀+1} = Ω^{∼7}_{k₀+1} and Ω″_k = Ω^{∼5… |
-| {#86.2} | BP_TL_EVAL_POINTS.md | 137 | *The B-step.* In the u-free form of #88.1-2 the chain starts at W′_N =… |
-| {#86.2-0} | BP_TL_EVAL_POINTS.md | 138 | The other half gives the exponential: for i < h a contour to 𝐁₀ crosse… |
-| {#86.2-1} | BP_TL_EVAL_POINTS.md | 139 | *The layerings.* Every stage's layering, 𝔹_k″'s included, is at least … |
-| {#86.3} | BP_TL_EVAL_POINTS.md | 140 | *Its share.* Put x_i := β2^{−(k+1−i)}. As at #6.9, a plaquette's curva… |
-| {#86.3-0} | BP_TL_EVAL_POINTS.md | 141 | α_{0,i} ≥ α_{0,k}/((1+β₀)²max(1, √(k−i))) (#53), and δ′_k/α_{0,k} = (A… |
-| {#86.3-1} | BP_TL_EVAL_POINTS.md | 142 | There k + 1 − h = N_k + 1. For g small, L^{N_k} ≤ 2L(log g_k^{−2})^{ν_… |
-| {#86.3-2} | BP_TL_EVAL_POINTS.md | 143 | *The condition on q₀.* q₀ > p₁ + θ_Lν_L is a lower bound on CRE's inte… |
-| {#87} | BP_TL_EVAL_POINTS.md | 144 | If 𝕌 ∈ Ũ^{(n+1)c}, then exp iηℍ^{(n)}𝕌 ∈ Ũ^{(n)c}, with no gauge trans… |
-| {#88} | BP_TL_EVAL_POINTS.md | 145 | So Bałaban's chain, his stages (1.44) continued in the data, applied t… |
-| {#88.1} | BP_TL_EVAL_POINTS.md | 146 | Bałaban's stages are the minimisers U(𝔹_k^{(n)}, ·) of their data, whi… |
-| {#88.1-00} | BP_TL_EVAL_POINTS.md | 147 | The spaces are invariant under G-valued gauge transformations only (CR… |
-| {#88.1.0} | BP_TL_EVAL_POINTS.md | 148 | Step n integrates the variables V_j, j = h + n, on step n's integratio… |
-| {#88.1-0} | BP_TL_EVAL_POINTS.md | 149 | The function that the 𝐑-step integrates is Bałaban's, the normalised c… |
-| {#88.1-1} | BP_TL_EVAL_POINTS.md | 150 | *The printed chain.* Put W_N := U_k^0, which lies in Ũ^{(N)c} by (1.65… |
-| {#88.1-2} | BP_TL_EVAL_POINTS.md | 151 | *The covariance.* For G-valued v, C_{V^v} = R(v)C_VR(v)^{−1}, and like… |
-| {#88.1-2-1} | BP_TL_EVAL_POINTS.md | 152 | By induction from n = N down, W′_n := (𝕌^{(n)})^{w̄_n} is a u-free cha… |
-| {#88.1-3} | BP_TL_EVAL_POINTS.md | 153 | *The comparison.* The u_n, and u_k″, (1.44)'s normalisation for the 𝐇_… |
-| {#88.1-3-0} | BP_TL_EVAL_POINTS.md | 154 | Let W be #88.1-1's printed chain at the real variables B̂_j := R(v_{n+… |
-| {#88.1-3-1} | BP_TL_EVAL_POINTS.md | 155 | The sources lie on the steps' integration sets (#88.1.0), in Ω_h (#86.… |
-| {#88.1-3-1-1} | BP_TL_EVAL_POINTS.md | 156 | 𝕌^{(0)} = (e^{iηa_0}W_0)^{w̄_0^{−1}}. The spaces are G-invariant, and … |
-| {#88.1-3-2} | BP_TL_EVAL_POINTS.md | 157 | So 𝕌^{(0)} obeys (2.34)–(2.37) with the coefficients f_n(1 + x_n/16)² … |
-| {#88.1-4} | BP_TL_EVAL_POINTS.md | 158 | *Propagation along the chain.* Let W and W′ follow #88.1-1's step, wit… |
-| {#88.1-4-1} | BP_TL_EVAL_POINTS.md | 159 | The decay from the sources is kept at the rate δ₀/16 (#T4.32's S_L). W… |
-| {#89} | BP_TL_EVAL_POINTS.md | 160 | At a real post-R minimiser this point equals the transport-form evalua… |
-| {#90} | BP_TL_EVAL_POINTS.md | 161 | (iii) The complex parts of the N preliminary deformations and of 𝐇_k″(… |
-| {#91} | BP_TL_EVAL_POINTS.md | 162 | *Their sources are real.* The source of the n-th factor is the fluctua… |
-| {#91-1} | BP_TL_EVAL_POINTS.md | 163 | (1.45), sup_{B^i(y)} L^iη/ℍ^{(n)}/, sup_{B^i(y)} (L^iη)²/∇_{U_k^{(n+1)… |
-| {#91-1-1} | BP_TL_EVAL_POINTS.md | 164 | The gauge transformations u of (1.44) are kept: each step is followed … |
-| {#92} | BP_TL_EVAL_POINTS.md | 165 | *On the layers k₀ < m ≤ k (on 𝓜^c).* At the points where the next T-st… |
-| {#92-1} | BP_TL_EVAL_POINTS.md | 166 | This uses neither (1.45) on Bałaban's complex spaces nor the stages' m… |
-| {#93} | BP_TL_EVAL_POINTS.md | 167 | *On Z's layers m ≤ k₀: the phase, the gradient, and the current (on 𝓜^… |
-| {#93-1} | BP_TL_EVAL_POINTS.md | 168 | Here i is the layer of the point x, y ∈ Λ_i the block with x ∈ Δ(y), a… |
-| {#94} | BP_TL_EVAL_POINTS.md | 169 | *The printed inputs.* VAR Theorem 1 (p.279) asks (7), /(∂V)(p′) − 1/ <… |
-| {#94-1} | BP_TL_EVAL_POINTS.md | 170 | By Proposition 9 (p.309) and (172) (p.305), U_k(V′V_0) extends analyti… |
-| {#94-1-1} | BP_TL_EVAL_POINTS.md | 171 | On this ball U_k(V′V_0)U_k(V_0)^{−1} in the Landau gauge is exp iη𝓗(B)… |
-| {#95} | BP_TL_EVAL_POINTS.md | 172 | *The stages are VAR minimisers.* LFR I represents its stage configurat… |
-| {#95-1} | BP_TL_EVAL_POINTS.md | 173 | Its complex part comes only from the background 𝕌: through 𝓗's argumen… |
-| {#96} | BP_TL_EVAL_POINTS.md | 174 | *The data.* Fix a real base point U of 𝐔 = e^{iηA′}U. The 𝐑-step's int… |
-| {#97} | BP_TL_EVAL_POINTS.md | 175 | *One step.* Let U₀ be the real stage-(n+1) configuration at U, and wri… |
-| {#97-1} | BP_TL_EVAL_POINTS.md | 176 | The norms are PBG's (3.41), /A/_{(α)} := sup_i sup_{Ω_i∖Ω_{i+1}}(L^iη)… |
-| {#97-2} | BP_TL_EVAL_POINTS.md | 177 | Let d_{n+1} = (Δd_L, B*) be 𝕌's plain block data on 𝔹_k^{(n)} relative… |
-| {#97-3} | BP_TL_EVAL_POINTS.md | 178 | With the stage-n 𝓗 at the base U₀, put F(d, s) := η𝓗(Δd_L, s ⊕ B*) − η… |
-| {#97-3-1} | BP_TL_EVAL_POINTS.md | 179 | The two differ by a gauge transformation, which G of #103–#104 absorbs… |
-| {#97.1} | BP_TL_EVAL_POINTS.md | 180 | *The minimiser at s = 0.* 𝔹_k^{(n)} refines 𝔹_k^{(n+1)} on step n's in… |
-| {#97.1-1} | BP_TL_EVAL_POINTS.md | 181 | It also lies in stage n's space 𝔘_k({Ω_j^{(n)}}, ε₀) (VAR (2), p.278 l… |
-| {#98} | BP_TL_EVAL_POINTS.md | 182 | *The Schwarz bound.* At real integration variables /s/ ≤ 2c_χδ′_j (*χ′… |
-| {#99} | BP_TL_EVAL_POINTS.md | 183 | *S_L is finite.* A fully crossed layer of a stage set or of its locali… |
-| {#99-2} | BP_TL_EVAL_POINTS.md | 184 | This holds, since M₁ = K_{M′}M′ (table #T1.5), with CRE's integer K_{M… |
-| {#100} | BP_TL_EVAL_POINTS.md | 185 | *The gauge representatives.* The words do not depend on the representa… |
-| {#101} | BP_TL_EVAL_POINTS.md | 186 | *The base.* U₀ = U_k(V₀) (#103) is the base of VAR's Sect. G: V₀ meets… |
-| {#102} | BP_TL_EVAL_POINTS.md | 187 | *The Landau representatives.* A configuration V near U₀ is in the Land… |
-| {#102-1} | BP_TL_EVAL_POINTS.md | 188 | REG generates it from the element in the axial gauge Ax_k(𝔅_k, U₀) ((1… |
-| {#102-2} | BP_TL_EVAL_POINTS.md | 189 | With this generator the representative's double-bar averages are the d… |
-| {#103} | BP_TL_EVAL_POINTS.md | 190 | The representatives used here are VAR's. The base U₀ is the real stage… |
-| {#103-1} | BP_TL_EVAL_POINTS.md | 191 | At real data 𝕌 is a critical configuration with the data V ((iii), *Th… |
-| {#104} | BP_TL_EVAL_POINTS.md | 192 | So 𝓗's argument is 𝕌's own plain data, with no conjugation by G. At st… |
-| {#104-1} | BP_TL_EVAL_POINTS.md | 193 | LFR I's stage is that step transformed by the inverse of its normalisa… |
-| {#104-2} | BP_TL_EVAL_POINTS.md | 194 | Here w_n takes the axial element relative to U₀ to LFR I's stage, whic… |
-| {#105} | BP_TL_EVAL_POINTS.md | 195 | *The bound on G.* Write G = e^{iλ̂}. (190) gives /A_L/_{(0)}, /∇A_L/_{… |
-| {#106} | BP_TL_EVAL_POINTS.md | 196 | At the block points. At a block point y of a layer-i block, w(y) = 1, … |
-| {#107} | BP_TL_EVAL_POINTS.md | 197 | The gradient. Bondwise, 𝕎 = 𝕌^{G^{−1}} reads A_L = e^{−i ad λ̂}A_Φ + (… |
-| {#108} | BP_TL_EVAL_POINTS.md | 198 | Off the block points. Every point x of a layer-i block is joined to it… |
-| {#109} | BP_TL_EVAL_POINTS.md | 199 | Continuity. Along 𝐔_t, λ̂ is continuous (u_L is analytic in the config… |
-| {#110} | BP_TL_EVAL_POINTS.md | 200 | *The reduced frame (#116.1's bound on ũ_m carries the factor L^N on th… |
-| {#111} | BP_TL_EVAL_POINTS.md | 201 | The chain is run on 𝕌̃^{(n)}, with the later sources conjugated by the… |
-| {#112} | BP_TL_EVAL_POINTS.md | 202 | The base U of *The data*, and with it each U₀, is held fixed, so the r… |
-| {#113} | BP_TL_EVAL_POINTS.md | 203 | Both words are analytic functions of 𝐔. The u-free chain's words at th… |
-| {#113-1} | BP_TL_EVAL_POINTS.md | 204 | The reduced chain's words are analytic wherever its data stay in VAR's… |
-| {#113-2} | BP_TL_EVAL_POINTS.md | 205 | Along each path P(𝐔_t), t ∈ [0, 1], the data are at most C_GL^{j′}ηε^{… |
-| {#114} | BP_TL_EVAL_POINTS.md | 206 | Each such path in 𝓜^c starts at the real minimiser P(U) ∈ 𝓜. 𝓜 is tota… |
-| {#115} | BP_TL_EVAL_POINTS.md | 207 | At U the same construction gives the chain of the real stages' VAR rep… |
-| {#116} | BP_TL_EVAL_POINTS.md | 208 | The sources. With s := s_n(U), the reduced real source is s^{re} := Ad… |
-| {#116-1} | BP_TL_EVAL_POINTS.md | 209 | So s̃ = g_jC(V_{red})Ad_ũB_j − hD̃(g_jC(V_{red})Ad_ũB_j), with V_{red}… |
-| {#116-2} | BP_TL_EVAL_POINTS.md | 210 | The average part: by #115 the reduced stage at 𝐔 deviates from the rea… |
-| {#116-2-1} | BP_TL_EVAL_POINTS.md | 211 | So /s̃ − s^{re}/ ≤ O(B̄_G)L^NL^jηΣ_{m≥n+1}(ε^{fr}_m + ε^{fr}_{m+1})/s/… |
-| {#116.1} | BP_TL_EVAL_POINTS.md | 212 | The bound on ũ_m. At every point of a layer-j block of step n, ũ_m dif… |
-| {#116.2} | BP_TL_EVAL_POINTS.md | 213 | The size of s̃. With the induction's ε^{fr} ≤ 2ε^{fr}_Φ ≤ 4λα_{1,k}, u… |
-| {#117} | BP_TL_EVAL_POINTS.md | 214 | *One step's deviation.* The factor of step n in the reduced frame is f… |
-| {#117-1} | BP_TL_EVAL_POINTS.md | 215 | The step is bounded in two more norms, with L^kη = 1: γ^{fr}_n, the (−… |
-| {#118} | BP_TL_EVAL_POINTS.md | 216 | (a) η^{−1}/F(d_{n+1}, s̃) − F(0, s̃)/ ≤ O(δ′_j)C_GS_Lε^{fr}_{n+1}, by … |
-| {#119} | BP_TL_EVAL_POINTS.md | 217 | (b) η^{−1}/F(0, s̃) − F(0, s^{re})/ ≤ O(c_χB̄_GL^N + c′_CC_G)S_Lδ′_jΣ_… |
-| {#120} | BP_TL_EVAL_POINTS.md | 218 | (c′) For ν = 0, /X_{BCH}/ + (e^{2/λ̂/} − 1)/X/ ≤ O(c_χ)(C_GS_L + B_G)S… |
-| {#120-1} | BP_TL_EVAL_POINTS.md | 219 | For ν = 1, X_{BCH}'s gradient is bilinear in the values and gradients … |
-| {#120-2} | BP_TL_EVAL_POINTS.md | 220 | For ν = 2, C_n − C_{n+1} = (Ad_G − 1)ΔJ + (ΔJ − ΔJ^{re}) (#146), and t… |
-| {#121} | BP_TL_EVAL_POINTS.md | 221 | Hence dev^ν_n ≤ C_*L^NS_L²δ′_jΣ_{m≥n+1}(ε^{fr}_m + ε^{fr}_{m+1} + [ν =… |
-| {#122} | BP_TL_EVAL_POINTS.md | 222 | *The induction.* 𝕌̃^{(n)} = f e^{iηA_Φ}U₀ and the reduced real chain's… |
-| {#122-1} | BP_TL_EVAL_POINTS.md | 223 | Start from Φ's x^ν_Φ, over 𝐇_k″(g_kB) and the N deformations, and supp… |
-| {#123} | BP_TL_EVAL_POINTS.md | 224 | *The sum.* With τ_N := C_*L^NN^{2+β₀}δ′_kS_L², g_k times a power of lo… |
-| {#123-1} | BP_TL_EVAL_POINTS.md | 225 | ε^{fr}_Φ ≤ (λ + C_ΛM⁵)α_{1,k}(1 + o(1)) ≤ 2λα_{1,k}, from the transpor… |
-| {#123-2} | BP_TL_EVAL_POINTS.md | 226 | So for g small the deformations' part is below ⅛(1−β)α_{1,k}L^{−k} per… |
-| {#123-2-1} | BP_TL_EVAL_POINTS.md | 227 | 𝐇_k″(g_kB) is the step at the stage of U_k^0 with source g_kB, g_k/B/ … |
-| {#124} | BP_TL_EVAL_POINTS.md | 228 | *The scope.* Let 𝓜 := {U^{post}(V): V real} be the real post-R minimis… |
-| {#125} | BP_TL_EVAL_POINTS.md | 229 | Φ(U) = U_k^0(M(U)) and the identities of *The Landau representatives* … |
-| {#126} | BP_TL_EVAL_POINTS.md | 230 | The T-step's points e^{iη𝐇_𝐕(s,tB′)}𝐕, 𝐕 ∈ 𝓜^c_{k+1} (*The M-factored … |
-| {#127} | BP_TL_EVAL_POINTS.md | 231 | An old insertion's post-R function is Bałaban's extension, through the… |
-| {#127-1} | BP_TL_EVAL_POINTS.md | 232 | The zero piece is the word at the u-free chain applied to exp iη𝐇_k″(g… |
-| {#127-2} | BP_TL_EVAL_POINTS.md | 233 | Each piece is taken at (V̂, J^h(V̂)), V̂ the Landau representative of … |
-| {#127-3} | BP_TL_EVAL_POINTS.md | 234 | At real data this is the real piece: at a real post-R background field… |
-| {#128} | BP_TL_EVAL_POINTS.md | 235 | By Proposition 9, P(𝐔)'s complex part in the Landau gauge relative to … |
-| {#128-1} | BP_TL_EVAL_POINTS.md | 236 | K's printed constants depend on d and L: B₃ (VAR Theorem 1, p.279 l.28… |
-| {#129} | BP_TL_EVAL_POINTS.md | 237 | *The M-factored domain.* Let 𝒟^{λ,M}_k be the set of pairs (𝐔, 𝐉) with… |
-| {#129-1} | BP_TL_EVAL_POINTS.md | 238 | Bałaban's T-step is M-factored only inside □₀: "in the interior averag… |
-| {#130} | BP_TL_EVAL_POINTS.md | 239 | The bounds. Every member of the class is taken composed with P: on 𝒟^{… |
-| {#130-1} | BP_TL_EVAL_POINTS.md | 240 | The values at the real s-decoupled points do change. The cluster expan… |
-| {#130-2} | BP_TL_EVAL_POINTS.md | 241 | *Locality.* P is local: U^{post} = U(𝐁_k″(Y₁), ·), with 𝐁_k″(Y₁) = 𝐁(Y… |
-| {#130-3} | BP_TL_EVAL_POINTS.md | 242 | Each member takes the P of its own localization domain. A member that … |
-| {#130-3-1} | BP_TL_EVAL_POINTS.md | 243 | An old insertion's zero piece takes the P of its 𝐑-step domain Y₁ and … |
-| {#130-4} | BP_TL_EVAL_POINTS.md | 244 | Its P (a piece's P_{Y₄}), its determining set S := 𝐁_j″(Ω) (𝐁_j″(Y₄)) … |
-| {#130-5} | BP_TL_EVAL_POINTS.md | 245 | This is how Bałaban's T-step evaluates the old terms, at local minimis… |
-| {#130-6} | BP_TL_EVAL_POINTS.md | 246 | *The identity on minimisers.* A localized minimiser map U(S, ·), pinne… |
-| {#130-7} | BP_TL_EVAL_POINTS.md | 247 | W has U's S′-averages, since the averages are iterated (M_S = M^j on Γ… |
-| {#130-8} | BP_TL_EVAL_POINTS.md | 248 | It covers the 𝐁_k-minimisers, the 𝐁_k″-minimisers (𝐁_k″ is finer than … |
-| {#130-8-1} | BP_TL_EVAL_POINTS.md | 249 | By (2.14) summed over the layers met by the boundaries (CRE p.257 l.12… |
-| {#130-8-1-1} | BP_TL_EVAL_POINTS.md | 250 | The maximal domains increase with the domain (CRE p.256 l.58–61): for … |
-| {#130.1} | BP_TL_EVAL_POINTS.md | 251 | At s ≠ 1, #137's bound 2K sup/𝐇/ holds for each member's own P_Ω on Ω,… |
-| {#130.1-1} | BP_TL_EVAL_POINTS.md | 252 | The fine bonds of the pinned layer differ by at most 2 sup/𝐇/ as well.… |
-| {#130.2} | BP_TL_EVAL_POINTS.md | 253 | At step k+1 the members are Y′∘P_{k+1}, with P_{k+1} the step-(k+1) me… |
-| {#130.3} | BP_TL_EVAL_POINTS.md | 254 | (a) At a localized background (the curvature conditions at the re-proj… |
-| {#130.3-1} | BP_TL_EVAL_POINTS.md | 255 | Bałaban's T-step does not either: it deforms the localized background … |
-| {#130.3-2} | BP_TL_EVAL_POINTS.md | 256 | Each member's P fixes 𝐕. The step-(k+1) set 𝐁_{k+1}″ is Bałaban's 𝐑-op… |
-| {#130.3-3} | BP_TL_EVAL_POINTS.md | 257 | Its preliminary integrations replace parts of Γ_j by their versions at… |
-| {#130.4} | BP_TL_EVAL_POINTS.md | 258 | *The real base.* U_{k+1}, the real base of 𝐕, at a global and at a loc… |
-| {#130.4-1} | BP_TL_EVAL_POINTS.md | 259 | By the nesting of *The identity on minimisers* (above), every real poi… |
-| {#130.4-2} | BP_TL_EVAL_POINTS.md | 260 | M of the point differs from M(𝐕) by the data of 𝐇_𝐕(s,tB′), of sup at … |
-| {#130.4-3} | BP_TL_EVAL_POINTS.md | 261 | By Proposition 9 relative to the real base U_{k+1}, as in *The scope*,… |
-| {#130.4-4} | BP_TL_EVAL_POINTS.md | 262 | So /𝓗/ is at most (1 + O(α_{1,k}))K sup/𝐇/ in 𝒟^λ_k's layer weights, f… |
-| {#130.5} | BP_TL_EVAL_POINTS.md | 263 | *The base near the support.* At a global and at a localized background… |
-| {#130.5-1} | BP_TL_EVAL_POINTS.md | 264 | U^{B′} := U_k(e^{iB′}V) is Bałaban's post-R background at the datum e^… |
-| {#130.5-2} | BP_TL_EVAL_POINTS.md | 265 | At a real base U, δ^{re} is the difference, on Λ ∩ Ω″^{∼2}_{h+1}, betw… |
-| {#130.5-3} | BP_TL_EVAL_POINTS.md | 266 | Along the real segment from the data e^{iB′}V to V, the first term cha… |
-| {#130.5-4} | BP_TL_EVAL_POINTS.md | 267 | The critical extension changes by at most C_{rsp}M⁵sup/B′/, by LFR II … |
-| {#130.5-5} | BP_TL_EVAL_POINTS.md | 268 | So at U_{k+1}, /δ^{re}/ ≤ O(1)(dKM₀ + 1 + KC_{rsp}M⁵C₁^{RG2})ε_k per b… |
-| {#130.6} | BP_TL_EVAL_POINTS.md | 269 | (b) The step-k normalisation (with the conjugation factors of the cova… |
-| {#130.6-1} | BP_TL_EVAL_POINTS.md | 270 | The step-(k+1) representative X := e^{iηa″}U_{k+1} of 𝐕 is generated f… |
-| {#130.6-2} | BP_TL_EVAL_POINTS.md | 271 | The construction is made for each member's own P, with that P's determ… |
-| {#130.6-3} | BP_TL_EVAL_POINTS.md | 272 | *The normalised axial element.* For a configuration U₁ near U₀, real o… |
-| {#130.6-4} | BP_TL_EVAL_POINTS.md | 273 | So exactly one of them has REG's normalisation, u(y) = (\overline{R_{0… |
-| {#130.6-5} | BP_TL_EVAL_POINTS.md | 274 | Let v_{k+1} and v_k be this transformation for U₁ = X, with 𝐕's step-(… |
-| {#130.6-6} | BP_TL_EVAL_POINTS.md | 275 | By (1.70)–(1.71) at both steps, as #106 bounds λ̂ by A_L, /λ_c/ ≤ a_c … |
-| {#130.7} | BP_TL_EVAL_POINTS.md | 276 | The pair. Let h := c at the block points of the member's set, ĥ the ga… |
-| {#130.7-1} | BP_TL_EVAL_POINTS.md | 277 | At every point the member's layer index j is at most 𝐕's (the member's… |
-| {#130.7-2} | BP_TL_EVAL_POINTS.md | 278 | Plain averages transform with the values at the block points (REG p.78… |
-| {#130.8} | BP_TL_EVAL_POINTS.md | 279 | Its representative. M(𝐏) = d_𝐕 ⊕ δ, with d_𝐕 := M(𝐕) and δ the data of… |
-| {#130.8-1} | BP_TL_EVAL_POINTS.md | 280 | (1.62) for the member's set follows from (1.62) for 𝐕's step-(k+1) set… |
-| {#130.8-2} | BP_TL_EVAL_POINTS.md | 281 | It holds for every representative generated with REG's normalisation f… |
-| {#130.8-3} | BP_TL_EVAL_POINTS.md | 282 | Theorem 4's hypotheses hold at 𝐕_X and 𝐔″ as at 𝐕 and 𝐏 (p.82 l.33–36,… |
-| {#130.8-4} | BP_TL_EVAL_POINTS.md | 283 | So VAR's Landau form at the data d_{𝐕_X} is X, 𝓗_S(d_{𝐕_X}) = a″ in pa… |
-| {#130.9} | BP_TL_EVAL_POINTS.md | 284 | At s = 1 at a global background 𝓗^h is 𝐇(s,tB′) up to second order (th… |
-| {#130.10} | BP_TL_EVAL_POINTS.md | 285 | V̂″ meets the Landau condition of every member's set. The condition fo… |
-| {#130.10-1} | BP_TL_EVAL_POINTS.md | 286 | (1.70)–(1.72) bound u″ at every point by V̂″'s field, so /λ_t/ ≤ a_c +… |
-| {#130.11} | BP_TL_EVAL_POINTS.md | 287 | 𝒟^λ_k's current condition is on 𝐉 − J_k (#51), with J_k the real base … |
-| {#130.11-1} | BP_TL_EVAL_POINTS.md | 288 | At a point of its layer n, (1.70)–(1.71) bound each by Σ_{m<n}8dL^{m+1… |
-| {#130.11-2} | BP_TL_EVAL_POINTS.md | 289 | On the other bonds f = 1, since REG (1.70) at a layer-0 point is an em… |
-| {#130.12} | BP_TL_EVAL_POINTS.md | 290 | The step uses B_J → 0 as g → 0, uniformly in k and K, which is not amo… |
-| {#130.12.2} | BP_TL_EVAL_POINTS.md | 291 | A fixed factor L between a bond's and its endpoint's layer index at th… |
-| {#130.13} | BP_TL_EVAL_POINTS.md | 292 | So 𝒟^{λ,M}_k's bound for the member applies at (𝐔″, R(ĥ)𝐉) once V̂″ me… |
-| {#130.14} | BP_TL_EVAL_POINTS.md | 293 | The step-(k+1) member evaluates the step-k member there, with the oute… |
-| {#130.14-1} | BP_TL_EVAL_POINTS.md | 294 | There the old terms, their post-R extensions, and the words take at (𝐔… |
-| {#130.14-2} | BP_TL_EVAL_POINTS.md | 295 | That extension is unique by the identity principle, so the step-(k+1) … |
-| {#130.15} | BP_TL_EVAL_POINTS.md | 296 | A covariant member (D2.6 closure 5.4's transports, and every member wi… |
-| {#130.15-1} | BP_TL_EVAL_POINTS.md | 297 | CRE's B-terms are invariant scalars (CRE (2.41)(iii)), so at real para… |
-| {#130.15-1-1} | BP_TL_EVAL_POINTS.md | 298 | The outer fields' domain absorbs R(ĥ) by #6.17: at ω's bonds ĥ decays … |
-| {#130.15-2} | BP_TL_EVAL_POINTS.md | 299 | The conjugation factor is 1 + O(α_{1,k}), and 1 at real 𝐕. It is paid … |
-| {#130.15.1} | BP_TL_EVAL_POINTS.md | 300 | *The direct transfer.* Let a covariant member be produced at step j ≤ … |
-| {#130.15.1-1} | BP_TL_EVAL_POINTS.md | 301 | Part (b) normalises to S itself at every step: v_k is REG's transforma… |
-| {#130.15.1-2} | BP_TL_EVAL_POINTS.md | 302 | By the nesting (#130.15.2), 𝒟^λ_k ⊆ 𝒟^λ_j for every k ≥ j, and the out… |
-| {#130.15.1-3} | BP_TL_EVAL_POINTS.md | 303 | (1) On the family. The member's sup on 𝒟^{λ,M}_k is at most B_Y at eve… |
-| {#130.15.1-4} | BP_TL_EVAL_POINTS.md | 304 | (2) At part (b)'s pairs. (𝐔″, R(ĥ)𝐉) ∈ 𝒟^{λ,M}_k ⊆ 𝒟^{λ,M}_j, so /Y(𝐔″… |
-| {#130.15.1-5} | BP_TL_EVAL_POINTS.md | 305 | This factor arises only in the T-step's evaluation at step k, once per… |
-| {#130.15.1-6} | BP_TL_EVAL_POINTS.md | 306 | There a_c ≤ C_aα_{1,k} with C_a fixed (#130.6), and α_{1,k} ≤ (1+β₀)α_… |
-| {#130.15.1-7} | BP_TL_EVAL_POINTS.md | 307 | A touched member enters the activity of a new member produced at step … |
-| {#130.15.2} | BP_TL_EVAL_POINTS.md | 308 | *The nesting.* For j ≤ k, m := k − j ≥ 1, 𝒟^{λ,3}_k ⊆ 𝒟^λ_j at every r… |
-| {#130.15.2-1} | BP_TL_EVAL_POINTS.md | 309 | (1) The phase. λ^{(k)}_n ≤ c′^mλ^{(j)}_{n_j}: if λ ≤ c′^{j−n_j} the ri… |
-| {#130.15.2-2} | BP_TL_EVAL_POINTS.md | 310 | At a free bond with the weight w^{(k)} > 1 of #52.1, the step-k room i… |
-| {#130.15.2-3} | BP_TL_EVAL_POINTS.md | 311 | (2) The gradient, in #54's normalisation. The weight (L^{n_j}ξ)² is L^… |
-| {#130.15.2-4} | BP_TL_EVAL_POINTS.md | 312 | (3) The current. The weight (L^{n_j}ξ)³ is L^{−3(n−n_j)} times (L^nξ)³… |
-| {#130.15.2-5} | BP_TL_EVAL_POINTS.md | 313 | (4) 𝒟♮'s conditions (2.34)–(2.37). On a layer kept, n_j = n, the coeff… |
-| {#130.15.2-6} | BP_TL_EVAL_POINTS.md | 314 | On Ω_k a point of 𝒟^{λ,3}_k has the coefficient 3(1 + β/8) (#6.13), an… |
-| {#130.15.2-7} | BP_TL_EVAL_POINTS.md | 315 | These are the rooms. (2.35) and (2.37) constrain U_{p,X}(M·𝐔) and 𝐉_{p… |
-| {#130.15.2-8} | BP_TL_EVAL_POINTS.md | 316 | The T-steps leave them unchanged: the T-step after step i changes only… |
-| {#130.15.2-9} | BP_TL_EVAL_POINTS.md | 317 | That member is then touched, and it is read from the new member's boun… |
-| {#130.15.2-10} | BP_TL_EVAL_POINTS.md | 318 | (5) The real base. The real-U part of (2.34) is /∂U − 1/ < f_nα_{0,n}L… |
-| {#130.15.2-11} | BP_TL_EVAL_POINTS.md | 319 | Such a cube exists. (2.38) at step k is posed on the cubes □ ⊂ Ω_n∖Ω_{… |
-| {#130.15.2-12} | BP_TL_EVAL_POINTS.md | 320 | Every Ω_m is a union of MR_m-cubes of the scale m, from mutually compa… |
-| {#130.15.2-13} | BP_TL_EVAL_POINTS.md | 321 | The post-R layering, on which 𝒟^λ_i is posed, puts all of Z on the lay… |
-| {#130.15.2-14} | BP_TL_EVAL_POINTS.md | 322 | Z is a union of components of Λ_i^c (LFR I p.177 l.17, l.33), and Λ_i … |
-| {#130.15.2-15} | BP_TL_EVAL_POINTS.md | 323 | The distance from Ω_{n+1}^c to Ω_{n+2} is at least ML^{n+1}ξ = La ≥ 8a… |
-| {#130.15.2-16} | BP_TL_EVAL_POINTS.md | 324 | A lattice neighbour of Z outside Z lies in Λ_i ⊂ Ω_i ⊂ Ω_{n+2}. For p … |
-| {#130.15.2-17} | BP_TL_EVAL_POINTS.md | 325 | If n_j < n, the side of □′ is CML^{n_j}ξ ≤ 2a/L; every MR_n-cube of th… |
-| {#130.15.2-18} | BP_TL_EVAL_POINTS.md | 326 | Every point of □ lies within the diameter √d·Ca ≤ 4a of a point of □′ … |
-| {#130.16} | BP_TL_EVAL_POINTS.md | 327 | REG's interpolation between the two normalisations enters through a_c,… |
-| {#130.17} | BP_TL_EVAL_POINTS.md | 328 | SW (b3)–(b4) take a″ := Ad(u)a′ for every a′ in the step-(k+1) domain … |
-| {#130.18} | BP_TL_EVAL_POINTS.md | 329 | The representatives: at s = 1 at a global background the representativ… |
-| {#130.18-1} | BP_TL_EVAL_POINTS.md | 330 | 𝐇's part is put into the step-k gauge as at SW (b3)'s own points (map … |
-| {#130.19} | BP_TL_EVAL_POINTS.md | 331 | 𝐇_𝐕 obeys the bounds that SW (b3) uses for 𝐇 at the complex background… |
-| {#130.19-1} | BP_TL_EVAL_POINTS.md | 332 | So SW (b3)'s computation runs with 𝐇_𝐕 in place of 𝐇. The BCH term bet… |
-| {#131} | BP_TL_EVAL_POINTS.md | 333 | At s = 1. At a global background (a localized one is compared with 𝐕 a… |
-| {#131-1} | BP_TL_EVAL_POINTS.md | 334 | So e^{iη𝐇(1,tB′)}P_{k+1}(𝐔) is the step-k minimiser of the complex dat… |
-| {#132} | BP_TL_EVAL_POINTS.md | 335 | The T-step's U_k is the new background field U_k = U_{𝐁_k}(V) of LFR I… |
-| {#133} | BP_TL_EVAL_POINTS.md | 336 | Nesting. On Y₁⁰, 𝐁_k″(Y₁) equals 𝐁_k″, which equals 𝐁_k on Z^c and is … |
-| {#134} | BP_TL_EVAL_POINTS.md | 337 | Localization. Bałaban prints U_k^0 = U(𝐁_k″(Y₁), M·(U_k^0)) for the 𝐁_… |
-| {#135} | BP_TL_EVAL_POINTS.md | 338 | So every real post-R background field lies in 𝓜, which is the identity… |
-| {#136} | BP_TL_EVAL_POINTS.md | 339 | Hence P of the point is the point, at a global background. SW (b3), ru… |
-| {#136-1} | BP_TL_EVAL_POINTS.md | 340 | K does not enter. Its current J^h lands by the transfer bullet (#54), … |
-| {#137} | BP_TL_EVAL_POINTS.md | 341 | At s ≠ 1. The s-decoupled point is not a minimiser. M of it differs fr… |
-| {#137-1} | BP_TL_EVAL_POINTS.md | 342 | The conditions (2.34)–(2.37) at the point's Landau representative hold… |
-| {#138} | BP_TL_EVAL_POINTS.md | 343 | T_Y reduced by 4K. In map (4)(f), 1/T_Y := max(/B′/_Y/ε_H, 64KB₀e^{16κ… |
-| {#138-1} | BP_TL_EVAL_POINTS.md | 344 | Then, as in map (6)(e) *The complex data*, sup/𝐇(s,tB′)/ ≤ 4B₀e^{16κ_s… |
-| {#138-2} | BP_TL_EVAL_POINTS.md | 345 | The deformation plus the response is at most (1+2K)h_k^{(K)} ≤ (3/16)(… |
-| {#138-3} | BP_TL_EVAL_POINTS.md | 346 | The response 2K sup/𝐇/ is not shown to decay with the layer, so on an … |
-| {#139} | BP_TL_EVAL_POINTS.md | 347 | The cost in D2.4. D2.4(11)(c)(β)'s constant becomes C_T^{(K)} := max(1… |
-| {#139-1} | BP_TL_EVAL_POINTS.md | 348 | It enters θ_k's (β) term 2C_winK_βC_TC₁^{RG2}A₁(log g_k^{−2})^{p₀−q}/m… |
-| {#139-2} | BP_TL_EVAL_POINTS.md | 349 | That comparison covers the 𝐇-part, since h_k^{(K)} ≤ h_k, but not the … |
-| {#145} | BP_TL_EVAL_POINTS.md | 350 | *The current of the deformations (on 𝓜^c).* The current is tracked cov… |
-| {#146} | BP_TL_EVAL_POINTS.md | 351 | Covariance. J^h(V^G) = Ad_GJ^h(V), with Ad_G := Ad_{G(b_−)} at each bo… |
-| {#147} | BP_TL_EVAL_POINTS.md | 352 | The expansion. For a field a, J^h(e^{iηa}U₀) = J(U₀) + D*_{U₀}D_{U₀}a … |
-| {#147-1} | BP_TL_EVAL_POINTS.md | 353 | So D* of it is bounded by its first differences, which are bilinear in… |
-| {#151} | BP_TL_EVAL_POINTS.md | 354 | The starting value. κ^{fr}_Φ is the current deviation of Φ(𝐔). In the … |
-| {#152} | BP_TL_EVAL_POINTS.md | 355 | *The 𝐉 coordinate.* At real data the old terms are evaluated at a conf… |
-| {#152-1} | BP_TL_EVAL_POINTS.md | 356 | It follows the representative by RG1 (1.10), (𝐔, 𝐉)^u = (𝐔^u, R(u)𝐉), … |
-| {#152-2} | BP_TL_EVAL_POINTS.md | 357 | The old terms' own space U^c_j is RG I's, a union of orbits of the G^c… |
-| {#152-3} | BP_TL_EVAL_POINTS.md | 358 | The data's own 𝐉 enters the new terms: "The variable 𝐉 replaces the fu… |
-| {#153} | BP_TL_EVAL_POINTS.md | 359 | The data's 𝐉 is not transported. 𝒟^{λ,M}_k is a set of pairs (𝐔, 𝐉), a… |
-| {#153-1} | BP_TL_EVAL_POINTS.md | 360 | CRE's B-terms are scalars, invariant under G-valued gauge transformati… |
-| {#154} | BP_TL_EVAL_POINTS.md | 361 | At the T-step's points the new 𝐉 lands by the transfer bullet (#54: th… |
-| {#155} | BP_TL_EVAL_POINTS.md | 362 | *The curvature conditions and (2.36) at the evaluation points (quoted)… |
-| {#156} | BP_TL_EVAL_POINTS.md | 363 | LFR II (1.65) (p.375 l.16–20) maps (𝐔, 𝐉) ∈ Ũ_k^c(Y₄) to U_k^0(𝐔, 𝐉) ∈… |
-| {#156-1} | BP_TL_EVAL_POINTS.md | 364 | P(𝐔) is the axial-gauge minimiser (VAR Proposition 9), and its Landau … |
-| {#156-2} | BP_TL_EVAL_POINTS.md | 365 | So (1.65) is applied at (V̂, J^h(V̂)) instead, V̂ the Landau represent… |
-| {#157} | BP_TL_EVAL_POINTS.md | 366 | Along the chain, LFR I p.191 l.39–44: if 𝕌 ∈ Ũ^{(n+1)c}, then exp iηℍ_… |
-| {#157-1} | BP_TL_EVAL_POINTS.md | 367 | *The case n = 0.* There j = h + n = h. LFR I assumes N > N₀ (p.179 l.1… |
-| {#157-2} | BP_TL_EVAL_POINTS.md | 368 | *The coefficients.* So (i) asks, on (Ω_m∖Ω_{m+1}) ∩ X for m < h and on… |
-| {#157-3} | BP_TL_EVAL_POINTS.md | 369 | *The quantities.* (i) and (1.68) bound /∂𝕌 − 1/, /∂U_{p,X}(M·𝕌) − 1/, … |
-| {#158} | BP_TL_EVAL_POINTS.md | 370 | So, where V̂ ∈ 𝒟_k (above), the u-free representatives of the evaluati… |
-| {#159} | BP_TL_EVAL_POINTS.md | 371 | *The starting values γ^{fr}_Φ and κ^{fr}_Φ (at the 𝐑-step's evaluation… |
-| {#159-1} | BP_TL_EVAL_POINTS.md | 372 | The bounds below are derived where the real base is one of Bałaban's p… |
-| {#159-2} | BP_TL_EVAL_POINTS.md | 373 | REG's step-k normalisation is arranged by the choice of pair (part (b)… |
-| {#160} | BP_TL_EVAL_POINTS.md | 374 | The two minimisers. The data of U^{post}(M(𝐔)) and U_k^0(M(𝐔)) agree o… |
-| {#160-1} | BP_TL_EVAL_POINTS.md | 375 | There U_k^0 takes the averages of U_0^{(AL)} (#39-0; #T11.29), and the… |
-| {#160-1-1} | BP_TL_EVAL_POINTS.md | 376 | The real data differ there through V_k′ = exp ig_kB′, with /g_kB′/ < 3… |
-| {#160-2} | BP_TL_EVAL_POINTS.md | 377 | Let δ^{re} be the real data difference there at the real base U, after… |
-| {#160-3} | BP_TL_EVAL_POINTS.md | 378 | At the T-step's real base U_{k+1}, whose data lie within O(ε_k) of the… |
-| {#161} | BP_TL_EVAL_POINTS.md | 379 | The real base. Take U_k^0(M(U)) as its Landau representative relative … |
-| {#161-1} | BP_TL_EVAL_POINTS.md | 380 | By (190), (L^iη)/𝓗^{re}/ ≤ O(S_L)/δ^{re}/ on layer i, which is all tha… |
-| {#162} | BP_TL_EVAL_POINTS.md | 381 | The complex part. Relative to its real base, Φ(𝐔)'s complex part is 𝓗(… |
-| {#163} | BP_TL_EVAL_POINTS.md | 382 | 𝓗(Δd) is 𝐔's own complex part. Only its complex part enters, so its ph… |
-| {#164} | BP_TL_EVAL_POINTS.md | 383 | T₁ is the response to Δd^0 − Δd, which is supported on Λ: −Δd on Λ^{ol… |
-| {#164-1} | BP_TL_EVAL_POINTS.md | 384 | By (190)'s gradient and D*D entries, uniform on the ball, its gradient… |
-| {#165} | BP_TL_EVAL_POINTS.md | 385 | T₂ := ∫₀¹[𝓗′(tΔd ⊕ δ^{re}) − 𝓗′(tΔd)]Δd dt, with 𝓗′ := δ𝓗/δB. #45's Ca… |
-| {#166} | BP_TL_EVAL_POINTS.md | 386 | Landing. On a layer n ≤ k₀, λ^{(k)}_n = λ, since k − n ≥ N₀ and c′^{N₀… |
-| {#166-1} | BP_TL_EVAL_POINTS.md | 387 | On k₀ < n ≤ k, crossing n − k₀ layers of the Ω_m costs at least (n − k… |
-| {#166-2} | BP_TL_EVAL_POINTS.md | 388 | On the layers n ≤ k₀, T₂^{old}'s phase lands in the weighted room λw o… |
-| {#166-3} | BP_TL_EVAL_POINTS.md | 389 | 𝐔's own part at the T-step's points carries (b3)'s margin (*The 𝐑-step… |
-| {#166-4} | BP_TL_EVAL_POINTS.md | 390 | The terms of the current, in units of λ^{(k)}_n times the current room… |
-| {#166-5} | BP_TL_EVAL_POINTS.md | 391 | The total is at most (4/7 + 1/64 + 1/32 + 1/64 + 1/8 + 1/32 + 1/8)(1−β… |
-| {#167} | BP_TL_EVAL_POINTS.md | 392 | (iv) D2.7 15.6(c), (d), and (f)'s extension domain of radius r^{ext}_k… |
-| {#167-1} | BP_TL_EVAL_POINTS.md | 393 | r^{ext}_k := min(r^{an}_k/8, c_{ext}α_{0,k}), with c_{ext} := (1+β₀)/(… |
-| {#167-1-1} | BP_TL_EVAL_POINTS.md | 394 | There the 𝐏^{(k)}-terms obey their printed bounds with the fluctuation… |
-| {#167-2} | BP_TL_EVAL_POINTS.md | 395 | r^{ext}_k ≤ c_{ext}α_{0,k}. The post-R top-layer radii are α_{0,k} = g… |
-| {#167-2-1} | BP_TL_EVAL_POINTS.md | 396 | The real datum's field has g_k sup/B/ ≤ ε_k^♯ (O6 §4), and O6's (C3), … |
-| {#167-3} | BP_TL_EVAL_POINTS.md | 397 | The Cauchy step of 15.6(d) at a real datum V_k⁰ on the support of the … |
-| {#167-4} | BP_TL_EVAL_POINTS.md | 398 | At such a point the configuration is U_k(V_k) = U_{𝐁_k}(V_k), the post… |
-| {#167-5} | BP_TL_EVAL_POINTS.md | 399 | So the configuration's whole deviation from U_k(V_k⁰), real and imagin… |
-| {#167-6} | BP_TL_EVAL_POINTS.md | 400 | The pair's 𝐉 is J^h of the point (*The 𝐉 coordinate*). So the bullets … |
-| {#167-7} | BP_TL_EVAL_POINTS.md | 401 | These points are not part (b)'s pairs, so no conjugation factor arises… |
-| {#167-8} | BP_TL_EVAL_POINTS.md | 402 | 𝒟_k itself at the point's Landau representative V̂, where (1.65) is ap… |
-| {#168} | BP_TL_EVAL_POINTS.md | 403 | *A_k.* D2.7 15.6(c)'s e^{A_k} bounds the transports of the words on sp… |
-| {#169} | BP_TL_EVAL_POINTS.md | 404 | For a set S of loop bonds, A_k(S) := c_π Σ_{b∈S} sup‖Im ηA_b‖, the sup… |
-| {#170} | BP_TL_EVAL_POINTS.md | 405 | π is unitary on G, and the Hermitian part of iηdπ(Re A_b) − ηdπ(Im A_b… |
-| {#171} | BP_TL_EVAL_POINTS.md | 406 | On 𝒟^λ_k the complex part is at most λ_wα_{1,k}L^{−k} per fine bond in… |
-| {#172} | BP_TL_EVAL_POINTS.md | 407 | The evaluation points of 15.6(c) obey 𝒟^λ_k's phase condition: U^R at … |
-| {#172-1} | BP_TL_EVAL_POINTS.md | 408 | The sup is taken at the representative at which 𝒟^λ_k's conditions hol… |
-| {#172-2} | BP_TL_EVAL_POINTS.md | 409 | At U^R the slots' CRE B-terms take (2.42) at the Landau form with no c… |
-| {#173} | BP_TL_EVAL_POINTS.md | 410 | *The real base points (given D(k)(iii)'s pre-R clause (map #MOMGD.11's… |
-| {#173.1} | BP_TL_EVAL_POINTS.md | 411 | *The real base current (the transfer to U_{k+1} given D2.7 item 15.8).… |
-| {#173.1.1} | BP_TL_EVAL_POINTS.md | 412 | On the other bonds that term vanishes: every REG-normalised transforma… |
-| {#173.1.2} | BP_TL_EVAL_POINTS.md | 413 | An 𝐑-operation's region Z is a union of whole components of Λ_k^c (LFR… |
-| {#173.2} | BP_TL_EVAL_POINTS.md | 414 | So every remaining part of ∂Ω_1 has its first-step margin: Ω_1 lies at… |
-| {#173.2.1} | BP_TL_EVAL_POINTS.md | 415 | The variables V_0 and V⌈Γ_1 are not integrated at later steps, so late… |
-| {#173.2.2} | BP_TL_EVAL_POINTS.md | 416 | The restricted problem. The free bonds of 𝐁_k lie in Ω_1, and every pl… |
-| {#173.2.3} | BP_TL_EVAL_POINTS.md | 417 | The sequence Ω ⊃ Ω_1 ⊃ … ⊃ Ω_k meets VAR's geometric conditions (p.277… |
-| {#173.2.4} | BP_TL_EVAL_POINTS.md | 418 | For j ≥ 1 the conditions are those of 𝐁_k's own sequence {Ω_j}, to whi… |
-| {#173.3} | BP_TL_EVAL_POINTS.md | 419 | So U_k on Ω is a minimal configuration of that problem. Its data meet … |
-| {#173.3.1} | BP_TL_EVAL_POINTS.md | 420 | Layer 1: /(∂V)(p′) − 1/ < 2(1 + κ_s^{LF})L²ε_0 by CRE p.246 l.21–22, s… |
-| {#173.3.2} | BP_TL_EVAL_POINTS.md | 421 | Layer j ≥ 2: the four blocks of p′ lie in Ω_{j−1} ⊂ Ω_1, where the rea… |
-| {#173.3.3} | BP_TL_EVAL_POINTS.md | 422 | For g small, ε₁^{JB} ≤ ε₁, the fixed constant of #94. So VAR Theorem 1… |
-| {#173.3.4} | BP_TL_EVAL_POINTS.md | 423 | On U_k's own support, a small neighbourhood of Ω_1 including a layer o… |
-| {#173.4} | BP_TL_EVAL_POINTS.md | 424 | So U_k's orbit is that minimal orbit by BP_DERIVED_CONFIGS.md #BC.1-4-… |
-| {#173.4-1} | BP_TL_EVAL_POINTS.md | 425 | *At part (b)'s base.* Part (b) uses J_k at its real base U_{k+1}, whic… |
-| {#173.4-2} | BP_TL_EVAL_POINTS.md | 426 | U^{B′} is the post-R background U_{𝐁_k}(V) of LFR II (1.35) at the dat… |
-| {#173.5} | BP_TL_EVAL_POINTS.md | 427 | So the new regions are Ω_j′ = Ω_j ∪ Z for 1 ≤ j ≤ k, and Γ_0′ = Ω_1^c … |
-| {#173.6} | BP_TL_EVAL_POINTS.md | 428 | So the derivation above runs at U^{B′} with the post-R term's objects … |
-| {#173.6-1} | BP_TL_EVAL_POINTS.md | 429 | Its bonds are first-step V_0, not integrated by R, every part of ∂Ω_1′… |
-| {#173.6-2} | BP_TL_EVAL_POINTS.md | 430 | The 𝐑-operation acts only at k > N (D2.7 item 13: the 𝐑^{(j)} terms va… |
-| {#173.7} | BP_TL_EVAL_POINTS.md | 431 | Hence B_J ≤ B₃ε₁^{JB} at U^{B′}. U^{B′} equals e^{iη𝐇(1,B′)}U_{k+1} up… |
-| {#173.7-1} | BP_TL_EVAL_POINTS.md | 432 | Bałaban's own instance is the first step: CRE p.248 l.37 applies VAR T… |
-| {#174} | BP_TL_EVAL_POINTS.md | 433 | *The pre-R support.* Before R, D(k)(iii) is posed for real U_k in the … |
-| {#175} | BP_TL_EVAL_POINTS.md | 434 | Its base-point clause there is the T-step's. On a term of the form CRE… |
-| {#175.1} | BP_TL_EVAL_POINTS.md | 435 | An 𝐑-operation keeps the form (2.21) but changes the characteristic fu… |
-| {#176} | BP_TL_EVAL_POINTS.md | 436 | The indicators of the term (1.2) of LFR I are χ_k(Ω_k^{∼4}), the indic… |
-| {#177} | BP_TL_EVAL_POINTS.md | 437 | *The operations keep the support.* Up to (1.75) Bałaban's transformati… |
-| {#178} | BP_TL_EVAL_POINTS.md | 438 | Decompositions of unity 1 = χ + (1 − χ), which multiply the integrand … |
-| {#179} | BP_TL_EVAL_POINTS.md | 439 | Changes of variables, which are bijections at fixed external data: |
-| {#180} | BP_TL_EVAL_POINTS.md | 440 | (1.53), V′_j = V_j(V^{(j)})^{−1}, with the representation (1.44) of U_… |
-| {#181} | BP_TL_EVAL_POINTS.md | 441 | (1.81), V″ = V′V_0 on Λ_0 (p.195), restated in the AL gauge as (1.92); |
-| {#182} | BP_TL_EVAL_POINTS.md | 442 | the change of variables (1.22) [III] with ℍ_Z^{(j)} on the components … |
-| {#183} | BP_TL_EVAL_POINTS.md | 443 | the scaling B′_j = g_jB_j (p.187 l.54); |
-| {#184} | BP_TL_EVAL_POINTS.md | 444 | the integration of the δ-functions of (1.72), which parametrises their… |
-| {#184.1} | BP_TL_EVAL_POINTS.md | 445 | at each preliminary step, the removal of the linearised δ-functions wi… |
-| {#184.2} | BP_TL_EVAL_POINTS.md | 446 | LFR II's V′ = exp ig_kB on 𝐁_0 (LFR II p.360 l.41–42), with the Haar d… |
-| {#185} | BP_TL_EVAL_POINTS.md | 447 | Gauge fixings: the Faddeev–Popov insertions (LFR I p.182 l.43, p.196 l… |
-| {#186} | BP_TL_EVAL_POINTS.md | 448 | The R′-replacement (1.100), (1.102): the integration of V_k over Λ, fo… |
-| {#187} | BP_TL_EVAL_POINTS.md | 449 | Bałaban's exact integrations of the preliminary fluctuation fields, wi… |
-| {#188} | BP_TL_EVAL_POINTS.md | 450 | In the integrand that carries the insertions, the preliminary variable… |
-| {#189} | BP_TL_EVAL_POINTS.md | 451 | Integrating that integrand over (A_j, B_j) gives Bałaban's integrand t… |
-| {#190} | BP_TL_EVAL_POINTS.md | 452 | Removals of a factor that equals 1 on the support of the remaining one… |
-| {#191} | BP_TL_EVAL_POINTS.md | 453 | So every point of the final support corresponds to a point of S, up to… |
-| {#192} | BP_TL_EVAL_POINTS.md | 454 | *Every removal is an implication.* |
-| {#193} | BP_TL_EVAL_POINTS.md | 455 | p.181 l.20–22 and l.33–34: χ_k^{(0)} gives (1.3) for j = h and □ ⊂ (Ω^… |
-| {#194} | BP_TL_EVAL_POINTS.md | 456 | (1.29) (p.183–187), for every n = j − h: on the support of χ_k^{(n+1)}… |
-| {#195} | BP_TL_EVAL_POINTS.md | 457 | *χ′_j and χ′^{(j)}.* Bałaban introduces χ′^{(j)} of (1.55) in the B_j-… |
-| {#196} | BP_TL_EVAL_POINTS.md | 458 | χ′_j = 1 on supp χ′^{(j)}, so its drop is an implication. Both (1.27) … |
-| {#196-1} | BP_TL_EVAL_POINTS.md | 459 | So V_j(V^{(j)})^{−1} = exp ig_jB_j on the * bonds (p.188 l.53), and on… |
-| {#197} | BP_TL_EVAL_POINTS.md | 460 | On all the bonds, the b_0(c) included, V_j(V^{(j)})^{−1} = exp i[g_jCB… |
-| {#197-1} | BP_TL_EVAL_POINTS.md | 461 | Its coefficients depend on V^{(j)} through the whole linear part of Q̃… |
-| {#197-2} | BP_TL_EVAL_POINTS.md | 462 | C's norm and that of its derivative are invariant under G-valued gauge… |
-| {#197-3} | BP_TL_EVAL_POINTS.md | 463 | RG I's averages are CMP98's (its [12], RG I p.299 l.12, applied at p.2… |
-| {#197-4} | BP_TL_EVAL_POINTS.md | 464 | Q′(V_0) is written out (p.35 l.50–52) through the transports R_{0,c_±}… |
-| {#197-5} | BP_TL_EVAL_POINTS.md | 465 | (CMP98's Q(V_0) of (121)–(124) linearises the gauge-changed average V̄… |
-| {#197-5-1} | BP_TL_EVAL_POINTS.md | 466 | So for θ₀(d, L) small the coefficient stays invertible on a neighbourh… |
-| {#197-6} | BP_TL_EVAL_POINTS.md | 467 | D̃ is the unique solution of L Q̃B′ + C̃(B′) = L Q̃B with B′ = B − hD̃… |
-| {#197-7} | BP_TL_EVAL_POINTS.md | 468 | The configurations V^{(j)} on the support lie in S_{θ₀} for g small. A… |
-| {#197-8} | BP_TL_EVAL_POINTS.md | 469 | So /V_j(V^{(j)})^{−1} − 1/ ≤ c_Cδ′_j(1 + O(δ′_j)) on supp χ′^{(j)}, an… |
-| {#198} | BP_TL_EVAL_POINTS.md | 470 | So the functions (1.3), (1.4), (1.5), (1.7), (1.8), and χ_k^{(n)} equa… |
-| {#199} | BP_TL_EVAL_POINTS.md | 471 | (1.89) (p.198–200): on the support of χ_k(Ω_k^{∼4})χ_{k,Λ}χ_{h,1/2}χ′,… |
-| {#200} | BP_TL_EVAL_POINTS.md | 472 | LFR II p.378 l.9–14: on first-class components χ_{k,Λ} and χ equal 1, … |
-| {#201} | BP_TL_EVAL_POINTS.md | 473 | A component excluded by a large-field function is "not changed by the … |
-| {#201.1} | BP_TL_EVAL_POINTS.md | 474 | at step 0, (1.3) for j = h by χ_k^{(0)} (p.181 l.20–23), and (1.4) for… |
-| {#201.2} | BP_TL_EVAL_POINTS.md | 475 | at a (1.29) step, for example before an exclusion by 1 − χ′^{(j)} (p.1… |
-| {#202} | BP_TL_EVAL_POINTS.md | 476 | The factors left only shrink the support. They are: |
-| {#203} | BP_TL_EVAL_POINTS.md | 477 | in 𝐓′_k(X) and (1.100): χ′(X), χ_{h,1/2}, σ(g_kB), δ_{rT}(B), χ(Λ_i), … |
-| {#204} | BP_TL_EVAL_POINTS.md | 478 | on second-class components: χ^c_k(Y_i^{∼−6}), χ_{k,Λ_i}, χ_i, and δ_{G… |
-| {#205} | BP_TL_EVAL_POINTS.md | 479 | for the preliminary variables: χ^{(j)}, χ′^{(j)}, and the densities (1… |
-| {#206} | BP_TL_EVAL_POINTS.md | 480 | Bałaban "combine[s]" χ_k(X_i^{∼−6}) with χ_k(Ω_k^{∼4}) (LFR II p.378 l… |
-| {#206.1} | BP_TL_EVAL_POINTS.md | 481 | With LF's soft tests (LF #3.17 and LF #3.20) the combination is the pr… |
-| {#207} | BP_TL_EVAL_POINTS.md | 482 | *The L₀-weighted layers.* On Z's layers i > k₀ the powers of L₀ weaken… |
-| {#208} | BP_TL_EVAL_POINTS.md | 483 | At step j, (1.3) and (1.4) follow from the last line of (1.24), on Ω_{… |
-| {#209} | BP_TL_EVAL_POINTS.md | 484 | χ_k^{(n)} follows from χ_k^{(n+1)} by (1.48)–(1.52). (1.48) needs δM/M… |
-| {#210} | BP_TL_EVAL_POINTS.md | 485 | χ_k″ follows from (1.89), under its own conditions (#199): β ≤ 1/4 (p.… |
-| {#211} | BP_TL_EVAL_POINTS.md | 486 | So the old functions on those layers equal 1 on the final support. |
-| {#212} | BP_TL_EVAL_POINTS.md | 487 | *Conclusion.* At real external data, at every point of the 𝐑-step's in… |
-| {#212-1} | BP_TL_EVAL_POINTS.md | 488 | CRE's spaces "are invariant with respect to G-valued gauge transformat… |
-| {#213} | BP_TL_EVAL_POINTS.md | 489 | So the bullets of (iii), with #17's inputs, the chain items #86.1–#86.… |
+| {#71-2-1} | BP_TL_EVAL_POINTS.md | 110 | The O4 note's C_ω carries the same bracket, since its tilt entries are… |
+| {#72} | BP_TL_EVAL_POINTS.md | 111 | *The 𝐑-step lands in the family (from the bullets above, with T₂^{old}… |
+| {#73} | BP_TL_EVAL_POINTS.md | 112 | On a layer n ≤ k₀ the response, apart from T₂^{old}, is at most (C_ΛM⁵… |
+| {#74} | BP_TL_EVAL_POINTS.md | 113 | On k₀ < n ≤ k it is, apart from T₂^{old}, at most (C_ΛM⁵e^{−4δM} + C_{… |
+| {#75} | BP_TL_EVAL_POINTS.md | 114 | The transported part lies in the post-R family with (b3)'s margin. Bef… |
+| {#75-1} | BP_TL_EVAL_POINTS.md | 115 | So the original layering, 𝐁″_k, and 𝐁_k are ordered from older to newe… |
+| {#75-2} | BP_TL_EVAL_POINTS.md | 116 | With the response (at most ¼(1−β)λ^{(k)}_nα_{1,k}L^{−k} by the two bul… |
+| {#76} | BP_TL_EVAL_POINTS.md | 117 | Hence, up to T₂^{old} (#5), Φ(𝐔) obeys 𝒟^λ_k's phase condition (pre-R)… |
+| {#76-1} | BP_TL_EVAL_POINTS.md | 118 | Off Λ's decay range the response, apart from T₂^{old}, is at most C_{m… |
+| {#77} | BP_TL_EVAL_POINTS.md | 119 | *The remaining parts.* |
+| {#78} | BP_TL_EVAL_POINTS.md | 120 | (i) The class's other bounds at the points Φ(𝐔) (on 𝓜^c for the phase … |
+| {#78-1} | BP_TL_EVAL_POINTS.md | 121 | Each is asserted on the family 𝒟^λ_k itself, the carried transports up… |
+| {#78-2} | BP_TL_EVAL_POINTS.md | 122 | The transports are bounded through A_k, a sup over the evaluation poin… |
+| {#78-3} | BP_TL_EVAL_POINTS.md | 123 | The deformations are at most ⅛(1−β)α_{1,k}L^{−k} on every layer ((iii)… |
+| {#78-4} | BP_TL_EVAL_POINTS.md | 124 | So the Λ-response, apart from T₂^{old}, exceeds ¼(1−β)α_{1,k}L^{−k} on… |
+| {#79} | BP_TL_EVAL_POINTS.md | 125 | *The transports.* In that cube Φ(𝐔)'s complex part per fine bond is, a… |
+| {#80} | BP_TL_EVAL_POINTS.md | 126 | *The masses and weights.* The bounds that hold on the family 𝒟^λ_k its… |
+| {#81} | BP_TL_EVAL_POINTS.md | 127 | The dev clause is asserted on 𝒟^λ_k (*The dilated sub-domains*), with … |
+| {#82} | BP_TL_EVAL_POINTS.md | 128 | D2.6's att bounds, and with them the attached masses inside e^{2ΣA}, h… |
+| {#83} | BP_TL_EVAL_POINTS.md | 129 | The cross insertions' weights hold on the family: the cross clause (ii… |
+| {#84} | BP_TL_EVAL_POINTS.md | 130 | *The payment.* The transports' factor is paid by the margin of (1.89) … |
+| {#85} | BP_TL_EVAL_POINTS.md | 131 | (ii) Analyticity on the whole post-R 𝒟_k (given #17's inputs at U_k^0,… |
+| {#86} | BP_TL_EVAL_POINTS.md | 132 | By (1.65), applied at (V̂, J^h(V̂)) (#156), U_k^0 lies in Ũ^{(N)c}, th… |
+| {#86-0} | BP_TL_EVAL_POINTS.md | 133 | The chain starts at U_k″ = (exp iη𝐇_k″(g_kB)U_k^0)^{u_k″^{−1}} ((1.51)… |
+| {#86-0-1} | BP_TL_EVAL_POINTS.md | 134 | The second group's boundary terms, CRE's 𝐁-terms, are invariant only w… |
+| {#86.1} | BP_TL_EVAL_POINTS.md | 135 | *Where B lives.* B is the fluctuation field of V″ = V′V₀, V′ = exp ig_… |
+| {#86.1-1} | BP_TL_EVAL_POINTS.md | 136 | There CRE (3.5) and B^{h+1}(P¹_{h+1}) = (P′^∼_{h+1})^c ∩ (Z′^{∼5}_h)^c… |
+| {#86.1-1-1} | BP_TL_EVAL_POINTS.md | 137 | The upper bound is k: in Z, Ω″_{k₀+1} = Ω^{∼7}_{k₀+1} and Ω″_k = Ω^{∼5… |
+| {#86.2} | BP_TL_EVAL_POINTS.md | 138 | *The B-step.* In the u-free form of #88.1-2 the chain starts at W′_N =… |
+| {#86.2-0} | BP_TL_EVAL_POINTS.md | 139 | The other half gives the exponential: for i < h a contour to 𝐁₀ crosse… |
+| {#86.2-1} | BP_TL_EVAL_POINTS.md | 140 | *The layerings.* Every stage's layering, 𝔹_k″'s included, is at least … |
+| {#86.3} | BP_TL_EVAL_POINTS.md | 141 | *Its share.* Put x_i := β2^{−(k+1−i)}. As at #6.9, a plaquette's curva… |
+| {#86.3-0} | BP_TL_EVAL_POINTS.md | 142 | α_{0,i} ≥ α_{0,k}/((1+β₀)²max(1, √(k−i))) (#53), and δ′_k/α_{0,k} = (A… |
+| {#86.3-1} | BP_TL_EVAL_POINTS.md | 143 | There k + 1 − h = N_k + 1. For g small, L^{N_k} ≤ 2L(log g_k^{−2})^{ν_… |
+| {#86.3-2} | BP_TL_EVAL_POINTS.md | 144 | *The condition on q₀.* q₀ > p₁ + θ_Lν_L is a lower bound on CRE's inte… |
+| {#87} | BP_TL_EVAL_POINTS.md | 145 | If 𝕌 ∈ Ũ^{(n+1)c}, then exp iηℍ^{(n)}𝕌 ∈ Ũ^{(n)c}, with no gauge trans… |
+| {#88} | BP_TL_EVAL_POINTS.md | 146 | So Bałaban's chain, his stages (1.44) continued in the data, applied t… |
+| {#88.1} | BP_TL_EVAL_POINTS.md | 147 | Bałaban's stages are the minimisers U(𝔹_k^{(n)}, ·) of their data, whi… |
+| {#88.1-00} | BP_TL_EVAL_POINTS.md | 148 | The spaces are printed as invariant under G-valued gauge transformatio… |
+| {#88.1.0} | BP_TL_EVAL_POINTS.md | 149 | Step n integrates the variables V_j, j = h + n, on step n's integratio… |
+| {#88.1-0} | BP_TL_EVAL_POINTS.md | 150 | The function that the 𝐑-step integrates is Bałaban's, the normalised c… |
+| {#88.1-1} | BP_TL_EVAL_POINTS.md | 151 | *The printed chain.* Put W_N := U_k^0, which lies in Ũ^{(N)c} by (1.65… |
+| {#88.1-2} | BP_TL_EVAL_POINTS.md | 152 | *The covariance.* For G-valued v, C_{V^v} = R(v)C_VR(v)^{−1}, and like… |
+| {#88.1-2-1} | BP_TL_EVAL_POINTS.md | 153 | By induction from n = N down, W′_n := (𝕌^{(n)})^{w̄_n} is a u-free cha… |
+| {#88.1-3} | BP_TL_EVAL_POINTS.md | 154 | *The comparison.* The u_n, and u_k″, (1.44)'s normalisation for the 𝐇_… |
+| {#88.1-3-0} | BP_TL_EVAL_POINTS.md | 155 | Let W be #88.1-1's printed chain at the real variables B̂_j := R(v_{n+… |
+| {#88.1-3-1} | BP_TL_EVAL_POINTS.md | 156 | The sources lie on the steps' integration sets (#88.1.0), in Ω_h (#86.… |
+| {#88.1-3-1-1} | BP_TL_EVAL_POINTS.md | 157 | 𝕌^{(0)} = (e^{iηa_0}W_0)^{w̄_0^{−1}}. The spaces are G-invariant, and … |
+| {#88.1-3-2} | BP_TL_EVAL_POINTS.md | 158 | So 𝕌^{(0)} obeys (2.34)–(2.37) with the coefficients f_n(1 + x_n/16)² … |
+| {#88.1-4} | BP_TL_EVAL_POINTS.md | 159 | *Propagation along the chain.* Let W and W′ follow #88.1-1's step, wit… |
+| {#88.1-4-1} | BP_TL_EVAL_POINTS.md | 160 | The decay from the sources is kept at the rate δ₀/16 (#T4.32's S_L). W… |
+| {#89} | BP_TL_EVAL_POINTS.md | 161 | At a real post-R minimiser this point equals the transport-form evalua… |
+| {#90} | BP_TL_EVAL_POINTS.md | 162 | (iii) The complex parts of the N preliminary deformations and of 𝐇_k″(… |
+| {#91} | BP_TL_EVAL_POINTS.md | 163 | *Their sources are real.* The source of the n-th factor is the fluctua… |
+| {#91-1} | BP_TL_EVAL_POINTS.md | 164 | (1.45), sup_{B^i(y)} L^iη/ℍ^{(n)}/, sup_{B^i(y)} (L^iη)²/∇_{U_k^{(n+1)… |
+| {#91-1-1} | BP_TL_EVAL_POINTS.md | 165 | The gauge transformations u of (1.44) are kept: each step is followed … |
+| {#92} | BP_TL_EVAL_POINTS.md | 166 | *On the layers k₀ < m ≤ k (on 𝓜^c).* At the points where the next T-st… |
+| {#92-1} | BP_TL_EVAL_POINTS.md | 167 | This uses neither (1.45) on Bałaban's complex spaces nor the stages' m… |
+| {#93} | BP_TL_EVAL_POINTS.md | 168 | *On Z's layers m ≤ k₀: the phase, the gradient, and the current (on 𝓜^… |
+| {#93-1} | BP_TL_EVAL_POINTS.md | 169 | Here i is the layer of the point x, y ∈ Λ_i the block with x ∈ Δ(y), a… |
+| {#94} | BP_TL_EVAL_POINTS.md | 170 | *The printed inputs.* VAR Theorem 1 (p.279) asks (7), /(∂V)(p′) − 1/ <… |
+| {#94-1} | BP_TL_EVAL_POINTS.md | 171 | By Proposition 9 (p.309) and (172) (p.305), U_k(V′V_0) extends analyti… |
+| {#94-1-1} | BP_TL_EVAL_POINTS.md | 172 | On this ball U_k(V′V_0)U_k(V_0)^{−1} in the Landau gauge is exp iη𝓗(B)… |
+| {#95} | BP_TL_EVAL_POINTS.md | 173 | *The stages are VAR minimisers.* LFR I represents its stage configurat… |
+| {#95-1} | BP_TL_EVAL_POINTS.md | 174 | Its complex part comes only from the background 𝕌: through 𝓗's argumen… |
+| {#96} | BP_TL_EVAL_POINTS.md | 175 | *The data.* Fix a real base point U of 𝐔 = e^{iηA′}U. The 𝐑-step's int… |
+| {#97} | BP_TL_EVAL_POINTS.md | 176 | *One step.* Let U₀ be the real stage-(n+1) configuration at U, and wri… |
+| {#97-1} | BP_TL_EVAL_POINTS.md | 177 | The norms are PBG's (3.41), /A/_{(α)} := sup_i sup_{Ω_i∖Ω_{i+1}}(L^iη)… |
+| {#97-2} | BP_TL_EVAL_POINTS.md | 178 | Let d_{n+1} = (Δd_L, B*) be 𝕌's plain block data on 𝔹_k^{(n)} relative… |
+| {#97-3} | BP_TL_EVAL_POINTS.md | 179 | With the stage-n 𝓗 at the base U₀, put F(d, s) := η𝓗(Δd_L, s ⊕ B*) − η… |
+| {#97-3-1} | BP_TL_EVAL_POINTS.md | 180 | The two differ by a gauge transformation, which G of #103–#104 absorbs… |
+| {#97.1} | BP_TL_EVAL_POINTS.md | 181 | *The minimiser at s = 0.* 𝔹_k^{(n)} refines 𝔹_k^{(n+1)} on step n's in… |
+| {#97.1-1} | BP_TL_EVAL_POINTS.md | 182 | It also lies in stage n's space 𝔘_k({Ω_j^{(n)}}, ε₀) (VAR (2), p.278 l… |
+| {#98} | BP_TL_EVAL_POINTS.md | 183 | *The Schwarz bound.* At real integration variables /s/ ≤ 2c_χδ′_j (*χ′… |
+| {#99} | BP_TL_EVAL_POINTS.md | 184 | *S_L is finite.* A fully crossed layer of a stage set or of its locali… |
+| {#99-2} | BP_TL_EVAL_POINTS.md | 185 | This holds, since M₁ = K_{M′}M′ (table #T1.5), with CRE's integer K_{M… |
+| {#100} | BP_TL_EVAL_POINTS.md | 186 | *The gauge representatives.* The words do not depend on the representa… |
+| {#101} | BP_TL_EVAL_POINTS.md | 187 | *The base.* U₀ = U_k(V₀) (#103) is the base of VAR's Sect. G: V₀ meets… |
+| {#102} | BP_TL_EVAL_POINTS.md | 188 | *The Landau representatives.* A configuration V near U₀ is in the Land… |
+| {#102-1} | BP_TL_EVAL_POINTS.md | 189 | REG generates it from the element in the axial gauge Ax_k(𝔅_k, U₀) ((1… |
+| {#102-2} | BP_TL_EVAL_POINTS.md | 190 | With this generator the representative's double-bar averages are the d… |
+| {#103} | BP_TL_EVAL_POINTS.md | 191 | The representatives used here are VAR's. The base U₀ is the real stage… |
+| {#103-1} | BP_TL_EVAL_POINTS.md | 192 | At real data 𝕌 is a critical configuration with the data V ((iii), *Th… |
+| {#104} | BP_TL_EVAL_POINTS.md | 193 | So 𝓗's argument is 𝕌's own plain data, with no conjugation by G. At st… |
+| {#104-1} | BP_TL_EVAL_POINTS.md | 194 | LFR I's stage is that step transformed by the inverse of its normalisa… |
+| {#104-2} | BP_TL_EVAL_POINTS.md | 195 | Here w_n takes the axial element relative to U₀ to LFR I's stage, whic… |
+| {#105} | BP_TL_EVAL_POINTS.md | 196 | *The bound on G.* Write G = e^{iλ̂}. (190) gives /A_L/_{(0)}, /∇A_L/_{… |
+| {#106} | BP_TL_EVAL_POINTS.md | 197 | At the block points. At a block point y of a layer-i block, w(y) = 1, … |
+| {#107} | BP_TL_EVAL_POINTS.md | 198 | The gradient. Bondwise, 𝕎 = 𝕌^{G^{−1}} reads A_L = e^{−i ad λ̂}A_Φ + (… |
+| {#108} | BP_TL_EVAL_POINTS.md | 199 | Off the block points. Every point x of a layer-i block is joined to it… |
+| {#109} | BP_TL_EVAL_POINTS.md | 200 | Continuity. Along 𝐔_t, λ̂ is continuous (u_L is analytic in the config… |
+| {#110} | BP_TL_EVAL_POINTS.md | 201 | *The reduced frame (#116.1's bound on ũ_m carries the factor L^N on th… |
+| {#111} | BP_TL_EVAL_POINTS.md | 202 | The chain is run on 𝕌̃^{(n)}, with the later sources conjugated by the… |
+| {#112} | BP_TL_EVAL_POINTS.md | 203 | The base U of *The data*, and with it each U₀, is held fixed, so the r… |
+| {#113} | BP_TL_EVAL_POINTS.md | 204 | Both words are analytic functions of 𝐔. The u-free chain's words at th… |
+| {#113-1} | BP_TL_EVAL_POINTS.md | 205 | The reduced chain's words are analytic wherever its data stay in VAR's… |
+| {#113-2} | BP_TL_EVAL_POINTS.md | 206 | Along each path P(𝐔_t), t ∈ [0, 1], the data are at most C_GL^{j′}ηε^{… |
+| {#114} | BP_TL_EVAL_POINTS.md | 207 | Each such path in 𝓜^c starts at the real minimiser P(U) ∈ 𝓜. 𝓜 is tota… |
+| {#115} | BP_TL_EVAL_POINTS.md | 208 | At U the same construction gives the chain of the real stages' VAR rep… |
+| {#116} | BP_TL_EVAL_POINTS.md | 209 | The sources. With s := s_n(U), the reduced real source is s^{re} := Ad… |
+| {#116-1} | BP_TL_EVAL_POINTS.md | 210 | So s̃ = g_jC(V_{red})Ad_ũB_j − hD̃(g_jC(V_{red})Ad_ũB_j), with V_{red}… |
+| {#116-2} | BP_TL_EVAL_POINTS.md | 211 | The average part: by #115 the reduced stage at 𝐔 deviates from the rea… |
+| {#116-2-1} | BP_TL_EVAL_POINTS.md | 212 | So /s̃ − s^{re}/ ≤ O(B̄_G)L^NL^jηΣ_{m≥n+1}(ε^{fr}_m + ε^{fr}_{m+1})/s/… |
+| {#116.1} | BP_TL_EVAL_POINTS.md | 213 | The bound on ũ_m. At every point of a layer-j block of step n, ũ_m dif… |
+| {#116.2} | BP_TL_EVAL_POINTS.md | 214 | The size of s̃. With the induction's ε^{fr} ≤ 2ε^{fr}_Φ ≤ 4λα_{1,k}, u… |
+| {#117} | BP_TL_EVAL_POINTS.md | 215 | *One step's deviation.* The factor of step n in the reduced frame is f… |
+| {#117-1} | BP_TL_EVAL_POINTS.md | 216 | The step is bounded in two more norms, with L^kη = 1: γ^{fr}_n, the (−… |
+| {#118} | BP_TL_EVAL_POINTS.md | 217 | (a) η^{−1}/F(d_{n+1}, s̃) − F(0, s̃)/ ≤ O(δ′_j)C_GS_Lε^{fr}_{n+1}, by … |
+| {#119} | BP_TL_EVAL_POINTS.md | 218 | (b) η^{−1}/F(0, s̃) − F(0, s^{re})/ ≤ O(c_χB̄_GL^N + c′_CC_G)S_Lδ′_jΣ_… |
+| {#120} | BP_TL_EVAL_POINTS.md | 219 | (c′) For ν = 0, /X_{BCH}/ + (e^{2/λ̂/} − 1)/X/ ≤ O(c_χ)(C_GS_L + B_G)S… |
+| {#120-1} | BP_TL_EVAL_POINTS.md | 220 | For ν = 1, X_{BCH}'s gradient is bilinear in the values and gradients … |
+| {#120-2} | BP_TL_EVAL_POINTS.md | 221 | For ν = 2, C_n − C_{n+1} = (Ad_G − 1)ΔJ + (ΔJ − ΔJ^{re}) (#146), and t… |
+| {#121} | BP_TL_EVAL_POINTS.md | 222 | Hence dev^ν_n ≤ C_*L^NS_L²δ′_jΣ_{m≥n+1}(ε^{fr}_m + ε^{fr}_{m+1} + [ν =… |
+| {#122} | BP_TL_EVAL_POINTS.md | 223 | *The induction.* 𝕌̃^{(n)} = f e^{iηA_Φ}U₀ and the reduced real chain's… |
+| {#122-1} | BP_TL_EVAL_POINTS.md | 224 | Start from Φ's x^ν_Φ, over 𝐇_k″(g_kB) and the N deformations, and supp… |
+| {#123} | BP_TL_EVAL_POINTS.md | 225 | *The sum.* With τ_N := C_*L^NN^{2+β₀}δ′_kS_L², g_k times a power of lo… |
+| {#123-1} | BP_TL_EVAL_POINTS.md | 226 | ε^{fr}_Φ ≤ (λ + C_ΛM⁵)α_{1,k}(1 + o(1)) ≤ 2λα_{1,k}, from the transpor… |
+| {#123-2} | BP_TL_EVAL_POINTS.md | 227 | So for g small the deformations' part is below ⅛(1−β)α_{1,k}L^{−k} per… |
+| {#123-2-1} | BP_TL_EVAL_POINTS.md | 228 | 𝐇_k″(g_kB) is the step at the stage of U_k^0 with source g_kB, g_k/B/ … |
+| {#124} | BP_TL_EVAL_POINTS.md | 229 | *The scope.* Let 𝓜 := {U^{post}(V): V real} be the real post-R minimis… |
+| {#125} | BP_TL_EVAL_POINTS.md | 230 | Φ(U) = U_k^0(M(U)) and the identities of *The Landau representatives* … |
+| {#126} | BP_TL_EVAL_POINTS.md | 231 | The T-step's points e^{iη𝐇_𝐕(s,tB′)}𝐕, 𝐕 ∈ 𝓜^c_{k+1} (*The M-factored … |
+| {#127} | BP_TL_EVAL_POINTS.md | 232 | An old insertion's post-R function is Bałaban's extension, through the… |
+| {#127-1} | BP_TL_EVAL_POINTS.md | 233 | The zero piece is the word at the u-free chain applied to exp iη𝐇_k″(g… |
+| {#127-2} | BP_TL_EVAL_POINTS.md | 234 | Each piece is taken at (V̂, J^h(V̂)), V̂ the Landau representative of … |
+| {#127-3} | BP_TL_EVAL_POINTS.md | 235 | At real data this is the real piece: at a real post-R background field… |
+| {#128} | BP_TL_EVAL_POINTS.md | 236 | By Proposition 9, P(𝐔)'s complex part in the Landau gauge relative to … |
+| {#128-1} | BP_TL_EVAL_POINTS.md | 237 | K's printed constants depend on d and L: B₃ (VAR Theorem 1, p.279 l.28… |
+| {#129} | BP_TL_EVAL_POINTS.md | 238 | *The M-factored domain.* Let 𝒟^{λ,M}_k be the set of pairs (𝐔, 𝐉) with… |
+| {#129-1} | BP_TL_EVAL_POINTS.md | 239 | Bałaban's T-step is M-factored only inside □₀: "in the interior averag… |
+| {#130} | BP_TL_EVAL_POINTS.md | 240 | The bounds. Every member of the class is taken composed with P: on 𝒟^{… |
+| {#130-1} | BP_TL_EVAL_POINTS.md | 241 | The values at the real s-decoupled points do change. The cluster expan… |
+| {#130-2} | BP_TL_EVAL_POINTS.md | 242 | *Locality.* P is local: U^{post} = U(𝐁_k″(Y₁), ·), with 𝐁_k″(Y₁) = 𝐁(Y… |
+| {#130-3} | BP_TL_EVAL_POINTS.md | 243 | Each member takes the P of its own localization domain. A member that … |
+| {#130-3-1} | BP_TL_EVAL_POINTS.md | 244 | An old insertion's zero piece takes the P of its 𝐑-step domain Y₁ and … |
+| {#130-4} | BP_TL_EVAL_POINTS.md | 245 | Its P (a piece's P_{Y₄}), its determining set S := 𝐁_j″(Ω) (𝐁_j″(Y₄)) … |
+| {#130-5} | BP_TL_EVAL_POINTS.md | 246 | This is how Bałaban's T-step evaluates the old terms, at local minimis… |
+| {#130-6} | BP_TL_EVAL_POINTS.md | 247 | *The identity on minimisers.* A localized minimiser map U(S, ·), pinne… |
+| {#130-7} | BP_TL_EVAL_POINTS.md | 248 | W has U's S′-averages, since the averages are iterated (M_S = M^j on Γ… |
+| {#130-8} | BP_TL_EVAL_POINTS.md | 249 | It covers the 𝐁_k-minimisers, the 𝐁_k″-minimisers (𝐁_k″ is finer than … |
+| {#130-8-1} | BP_TL_EVAL_POINTS.md | 250 | By (2.14) summed over the layers met by the boundaries (CRE p.257 l.12… |
+| {#130-8-1-1} | BP_TL_EVAL_POINTS.md | 251 | The maximal domains increase with the domain (CRE p.256 l.58–61): for … |
+| {#130.1} | BP_TL_EVAL_POINTS.md | 252 | At s ≠ 1, #137's bound 2K sup/𝐇/ holds for each member's own P_Ω on Ω,… |
+| {#130.1-1} | BP_TL_EVAL_POINTS.md | 253 | The fine bonds of the pinned layer differ by at most 2 sup/𝐇/ as well.… |
+| {#130.2} | BP_TL_EVAL_POINTS.md | 254 | At step k+1 the members are Y′∘P_{k+1}, with P_{k+1} the step-(k+1) me… |
+| {#130.3} | BP_TL_EVAL_POINTS.md | 255 | (a) At a localized background (the curvature conditions at the re-proj… |
+| {#130.3-1} | BP_TL_EVAL_POINTS.md | 256 | Bałaban's T-step does not either: it deforms the localized background … |
+| {#130.3-2} | BP_TL_EVAL_POINTS.md | 257 | Each member's P fixes 𝐕. The step-(k+1) set 𝐁_{k+1}″ is Bałaban's 𝐑-op… |
+| {#130.3-3} | BP_TL_EVAL_POINTS.md | 258 | Its preliminary integrations replace parts of Γ_j by their versions at… |
+| {#130.4} | BP_TL_EVAL_POINTS.md | 259 | *The real base.* U_{k+1}, the real base of 𝐕, at a global and at a loc… |
+| {#130.4-1} | BP_TL_EVAL_POINTS.md | 260 | By the nesting of *The identity on minimisers* (above), every real poi… |
+| {#130.4-2} | BP_TL_EVAL_POINTS.md | 261 | M of the point differs from M(𝐕) by the data of 𝐇_𝐕(s,tB′), of sup at … |
+| {#130.4-3} | BP_TL_EVAL_POINTS.md | 262 | By Proposition 9 relative to the real base U_{k+1}, as in *The scope*,… |
+| {#130.4-4} | BP_TL_EVAL_POINTS.md | 263 | So /𝓗/ is at most (1 + O(α_{1,k}))K sup/𝐇/ in 𝒟^λ_k's layer weights, f… |
+| {#130.5} | BP_TL_EVAL_POINTS.md | 264 | *The base near the support.* At a global and at a localized background… |
+| {#130.5-1} | BP_TL_EVAL_POINTS.md | 265 | U^{B′} := U_k(e^{iB′}V) is Bałaban's post-R background at the datum e^… |
+| {#130.5-2} | BP_TL_EVAL_POINTS.md | 266 | At a real base U, δ^{re} is the difference, on Λ ∩ Ω″^{∼2}_{h+1}, betw… |
+| {#130.5-3} | BP_TL_EVAL_POINTS.md | 267 | Along the real segment from the data e^{iB′}V to V, the first term cha… |
+| {#130.5-4} | BP_TL_EVAL_POINTS.md | 268 | The critical extension changes by at most C_{rsp}M⁵sup/B′/, by LFR II … |
+| {#130.5-5} | BP_TL_EVAL_POINTS.md | 269 | So at U_{k+1}, /δ^{re}/ ≤ O(1)(dKM₀ + 1 + KC_{rsp}M⁵C₁^{RG2})ε_k per b… |
+| {#130.6} | BP_TL_EVAL_POINTS.md | 270 | (b) The step-k normalisation (with the conjugation factors of the cova… |
+| {#130.6-1} | BP_TL_EVAL_POINTS.md | 271 | The step-(k+1) representative X := e^{iηa″}U_{k+1} of 𝐕 is generated f… |
+| {#130.6-2} | BP_TL_EVAL_POINTS.md | 272 | The construction is made for each member's own P, with that P's determ… |
+| {#130.6-3} | BP_TL_EVAL_POINTS.md | 273 | *The normalised axial element.* For a configuration U₁ near U₀, real o… |
+| {#130.6-4} | BP_TL_EVAL_POINTS.md | 274 | So exactly one of them has REG's normalisation, u(y) = (\overline{R_{0… |
+| {#130.6-5} | BP_TL_EVAL_POINTS.md | 275 | Let v_{k+1} and v_k be this transformation for U₁ = X, with 𝐕's step-(… |
+| {#130.6-6} | BP_TL_EVAL_POINTS.md | 276 | By (1.70)–(1.71) at both steps, as #106 bounds λ̂ by A_L, /λ_c/ ≤ a_c … |
+| {#130.7} | BP_TL_EVAL_POINTS.md | 277 | The pair. Let h := c at the block points of the member's set, ĥ the ga… |
+| {#130.7-1} | BP_TL_EVAL_POINTS.md | 278 | At every point the member's layer index j is at most 𝐕's (the member's… |
+| {#130.7-2} | BP_TL_EVAL_POINTS.md | 279 | Plain averages transform with the values at the block points (REG p.78… |
+| {#130.8} | BP_TL_EVAL_POINTS.md | 280 | Its representative. M(𝐏) = d_𝐕 ⊕ δ, with d_𝐕 := M(𝐕) and δ the data of… |
+| {#130.8-1} | BP_TL_EVAL_POINTS.md | 281 | (1.62) for the member's set follows from (1.62) for 𝐕's step-(k+1) set… |
+| {#130.8-2} | BP_TL_EVAL_POINTS.md | 282 | It holds for every representative generated with REG's normalisation f… |
+| {#130.8-3} | BP_TL_EVAL_POINTS.md | 283 | Theorem 4's hypotheses hold at 𝐕_X and 𝐔″ as at 𝐕 and 𝐏 (p.82 l.33–36,… |
+| {#130.8-4} | BP_TL_EVAL_POINTS.md | 284 | So VAR's Landau form at the data d_{𝐕_X} is X, 𝓗_S(d_{𝐕_X}) = a″ in pa… |
+| {#130.9} | BP_TL_EVAL_POINTS.md | 285 | At s = 1 at a global background 𝓗^h is 𝐇(s,tB′) up to second order (th… |
+| {#130.10} | BP_TL_EVAL_POINTS.md | 286 | V̂″ meets the Landau condition of every member's set. The condition fo… |
+| {#130.10-1} | BP_TL_EVAL_POINTS.md | 287 | (1.70)–(1.72) bound u″ at every point by V̂″'s field, so /λ_t/ ≤ a_c +… |
+| {#130.11} | BP_TL_EVAL_POINTS.md | 288 | 𝒟^λ_k's current condition is on 𝐉 − J_k (#51), with J_k the real base … |
+| {#130.11-1} | BP_TL_EVAL_POINTS.md | 289 | At a point of its layer n, (1.70)–(1.71) bound each by Σ_{m<n}8dL^{m+1… |
+| {#130.11-2} | BP_TL_EVAL_POINTS.md | 290 | On the other bonds f = 1, since REG (1.70) at a layer-0 point is an em… |
+| {#130.12} | BP_TL_EVAL_POINTS.md | 291 | The step uses B_J → 0 as g → 0, uniformly in k and K, which is not amo… |
+| {#130.12.2} | BP_TL_EVAL_POINTS.md | 292 | A fixed factor L between a bond's and its endpoint's layer index at th… |
+| {#130.13} | BP_TL_EVAL_POINTS.md | 293 | So 𝒟^{λ,M}_k's bound for the member applies at (𝐔″, R(ĥ)𝐉) once V̂″ me… |
+| {#130.14} | BP_TL_EVAL_POINTS.md | 294 | The step-(k+1) member evaluates the step-k member there, with the oute… |
+| {#130.14-1} | BP_TL_EVAL_POINTS.md | 295 | There the old terms, their post-R extensions, and the words take at (𝐔… |
+| {#130.14-2} | BP_TL_EVAL_POINTS.md | 296 | That extension is unique by the identity principle, so the step-(k+1) … |
+| {#130.15} | BP_TL_EVAL_POINTS.md | 297 | A covariant member (D2.6 closure 5.4's transports, and every member wi… |
+| {#130.15-1} | BP_TL_EVAL_POINTS.md | 298 | CRE's B-terms are invariant scalars (CRE (2.41)(iii)), so at real para… |
+| {#130.15-1-1} | BP_TL_EVAL_POINTS.md | 299 | The outer fields' domain absorbs R(ĥ) by #6.17: at ω's bonds ĥ decays … |
+| {#130.15-2} | BP_TL_EVAL_POINTS.md | 300 | The conjugation factor is 1 + O(α_{1,k}), and 1 at real 𝐕. It is paid … |
+| {#130.15.1} | BP_TL_EVAL_POINTS.md | 301 | *The direct transfer.* Let a covariant member be produced at step j ≤ … |
+| {#130.15.1-1} | BP_TL_EVAL_POINTS.md | 302 | Part (b) normalises to S itself at every step: v_k is REG's transforma… |
+| {#130.15.1-2} | BP_TL_EVAL_POINTS.md | 303 | By the nesting (#130.15.2), 𝒟^λ_k ⊆ 𝒟^λ_j for every k ≥ j, and the out… |
+| {#130.15.1-3} | BP_TL_EVAL_POINTS.md | 304 | (1) On the family. The member's sup on 𝒟^{λ,M}_k is at most B_Y at eve… |
+| {#130.15.1-4} | BP_TL_EVAL_POINTS.md | 305 | (2) At part (b)'s pairs. (𝐔″, R(ĥ)𝐉) ∈ 𝒟^{λ,M}_k ⊆ 𝒟^{λ,M}_j, so /Y(𝐔″… |
+| {#130.15.1-5} | BP_TL_EVAL_POINTS.md | 306 | This factor arises only in the T-step's evaluation at step k, once per… |
+| {#130.15.1-6} | BP_TL_EVAL_POINTS.md | 307 | There a_c ≤ C_aα_{1,k} with C_a fixed (#130.6), and α_{1,k} ≤ (1+β₀)α_… |
+| {#130.15.1-7} | BP_TL_EVAL_POINTS.md | 308 | A touched member enters the activity of a new member produced at step … |
+| {#130.15.2} | BP_TL_EVAL_POINTS.md | 309 | *The nesting.* For j ≤ k, m := k − j ≥ 1, 𝒟^{λ,3}_k ⊆ 𝒟^λ_j at every r… |
+| {#130.15.2-1} | BP_TL_EVAL_POINTS.md | 310 | (1) The phase. λ^{(k)}_n ≤ c′^mλ^{(j)}_{n_j}: if λ ≤ c′^{j−n_j} the ri… |
+| {#130.15.2-2} | BP_TL_EVAL_POINTS.md | 311 | At a free bond with the weight w^{(k)} > 1 of #52.1, the step-k room i… |
+| {#130.15.2-3} | BP_TL_EVAL_POINTS.md | 312 | (2) The gradient, in #54's normalisation. The weight (L^{n_j}ξ)² is L^… |
+| {#130.15.2-4} | BP_TL_EVAL_POINTS.md | 313 | (3) The current. The weight (L^{n_j}ξ)³ is L^{−3(n−n_j)} times (L^nξ)³… |
+| {#130.15.2-5} | BP_TL_EVAL_POINTS.md | 314 | (4) 𝒟♮'s conditions (2.34)–(2.37). On a layer kept, n_j = n, the coeff… |
+| {#130.15.2-6} | BP_TL_EVAL_POINTS.md | 315 | On Ω_k a point of 𝒟^{λ,3}_k has the coefficient 3(1 + β/8) (#6.13), an… |
+| {#130.15.2-7} | BP_TL_EVAL_POINTS.md | 316 | These are the rooms. (2.35) and (2.37) constrain U_{p,X}(M·𝐔) and 𝐉_{p… |
+| {#130.15.2-8} | BP_TL_EVAL_POINTS.md | 317 | The T-steps leave them unchanged: the T-step after step i changes only… |
+| {#130.15.2-9} | BP_TL_EVAL_POINTS.md | 318 | That member is then touched, and it is read from the new member's boun… |
+| {#130.15.2-10} | BP_TL_EVAL_POINTS.md | 319 | (5) The real base. The real-U part of (2.34) is /∂U − 1/ < f_nα_{0,n}L… |
+| {#130.15.2-11} | BP_TL_EVAL_POINTS.md | 320 | Such a cube exists. (2.38) at step k is posed on the cubes □ ⊂ Ω_n∖Ω_{… |
+| {#130.15.2-12} | BP_TL_EVAL_POINTS.md | 321 | Every Ω_m is a union of MR_m-cubes of the scale m, from mutually compa… |
+| {#130.15.2-13} | BP_TL_EVAL_POINTS.md | 322 | The post-R layering, on which 𝒟^λ_i is posed, puts all of Z on the lay… |
+| {#130.15.2-14} | BP_TL_EVAL_POINTS.md | 323 | Z is a union of components of Λ_i^c (LFR I p.177 l.17, l.33), and Λ_i … |
+| {#130.15.2-15} | BP_TL_EVAL_POINTS.md | 324 | The distance from Ω_{n+1}^c to Ω_{n+2} is at least ML^{n+1}ξ = La ≥ 8a… |
+| {#130.15.2-16} | BP_TL_EVAL_POINTS.md | 325 | A lattice neighbour of Z outside Z lies in Λ_i ⊂ Ω_i ⊂ Ω_{n+2}. For p … |
+| {#130.15.2-17} | BP_TL_EVAL_POINTS.md | 326 | If n_j < n, the side of □′ is CML^{n_j}ξ ≤ 2a/L; every MR_n-cube of th… |
+| {#130.15.2-18} | BP_TL_EVAL_POINTS.md | 327 | Every point of □ lies within the diameter √d·Ca ≤ 4a of a point of □′ … |
+| {#130.16} | BP_TL_EVAL_POINTS.md | 328 | REG's interpolation between the two normalisations enters through a_c,… |
+| {#130.17} | BP_TL_EVAL_POINTS.md | 329 | SW (b3)–(b4) take a″ := Ad(u)a′ for every a′ in the step-(k+1) domain … |
+| {#130.18} | BP_TL_EVAL_POINTS.md | 330 | The representatives: at s = 1 at a global background the representativ… |
+| {#130.18-1} | BP_TL_EVAL_POINTS.md | 331 | 𝐇's part is put into the step-k gauge as at SW (b3)'s own points (map … |
+| {#130.19} | BP_TL_EVAL_POINTS.md | 332 | 𝐇_𝐕 obeys the bounds that SW (b3) uses for 𝐇 at the complex background… |
+| {#130.19-1} | BP_TL_EVAL_POINTS.md | 333 | So SW (b3)'s computation runs with 𝐇_𝐕 in place of 𝐇. The BCH term bet… |
+| {#131} | BP_TL_EVAL_POINTS.md | 334 | At s = 1. At a global background (a localized one is compared with 𝐕 a… |
+| {#131-1} | BP_TL_EVAL_POINTS.md | 335 | So e^{iη𝐇(1,tB′)}P_{k+1}(𝐔) is the step-k minimiser of the complex dat… |
+| {#132} | BP_TL_EVAL_POINTS.md | 336 | The T-step's U_k is the new background field U_k = U_{𝐁_k}(V) of LFR I… |
+| {#133} | BP_TL_EVAL_POINTS.md | 337 | Nesting. On Y₁⁰, 𝐁_k″(Y₁) equals 𝐁_k″, which equals 𝐁_k on Z^c and is … |
+| {#134} | BP_TL_EVAL_POINTS.md | 338 | Localization. Bałaban prints U_k^0 = U(𝐁_k″(Y₁), M·(U_k^0)) for the 𝐁_… |
+| {#135} | BP_TL_EVAL_POINTS.md | 339 | So every real post-R background field lies in 𝓜, which is the identity… |
+| {#136} | BP_TL_EVAL_POINTS.md | 340 | Hence P of the point is the point, at a global background. SW (b3), ru… |
+| {#136-1} | BP_TL_EVAL_POINTS.md | 341 | K does not enter. Its current J^h lands by the transfer bullet (#54), … |
+| {#137} | BP_TL_EVAL_POINTS.md | 342 | At s ≠ 1. The s-decoupled point is not a minimiser. M of it differs fr… |
+| {#137-1} | BP_TL_EVAL_POINTS.md | 343 | The conditions (2.34)–(2.37) at the point's Landau representative hold… |
+| {#138} | BP_TL_EVAL_POINTS.md | 344 | T_Y reduced by 4K. In map (4)(f), 1/T_Y := max(/B′/_Y/ε_H, 64KB₀e^{16κ… |
+| {#138-1} | BP_TL_EVAL_POINTS.md | 345 | Then, as in map (6)(e) *The complex data*, sup/𝐇(s,tB′)/ ≤ 4B₀e^{16κ_s… |
+| {#138-2} | BP_TL_EVAL_POINTS.md | 346 | The deformation plus the response is at most (1+2K)h_k^{(K)} ≤ (3/16)(… |
+| {#138-3} | BP_TL_EVAL_POINTS.md | 347 | The response 2K sup/𝐇/ is not shown to decay with the layer, so on an … |
+| {#139} | BP_TL_EVAL_POINTS.md | 348 | The cost in D2.4. D2.4(11)(c)(β)'s constant becomes C_T^{(K)} := max(1… |
+| {#139-1} | BP_TL_EVAL_POINTS.md | 349 | It enters θ_k's (β) term 2C_winK_βC_TC₁^{RG2}A₁(log g_k^{−2})^{p₀−q}/m… |
+| {#139-2} | BP_TL_EVAL_POINTS.md | 350 | That comparison covers the 𝐇-part, since h_k^{(K)} ≤ h_k, but not the … |
+| {#145} | BP_TL_EVAL_POINTS.md | 351 | *The current of the deformations (on 𝓜^c).* The current is tracked cov… |
+| {#146} | BP_TL_EVAL_POINTS.md | 352 | Covariance. J^h(V^G) = Ad_GJ^h(V), with Ad_G := Ad_{G(b_−)} at each bo… |
+| {#147} | BP_TL_EVAL_POINTS.md | 353 | The expansion. For a field a, J^h(e^{iηa}U₀) = J(U₀) + D*_{U₀}D_{U₀}a … |
+| {#147-1} | BP_TL_EVAL_POINTS.md | 354 | So D* of it is bounded by its first differences, which are bilinear in… |
+| {#151} | BP_TL_EVAL_POINTS.md | 355 | The starting value. κ^{fr}_Φ is the current deviation of Φ(𝐔). In the … |
+| {#152} | BP_TL_EVAL_POINTS.md | 356 | *The 𝐉 coordinate.* At real data the old terms are evaluated at a conf… |
+| {#152-1} | BP_TL_EVAL_POINTS.md | 357 | It follows the representative by RG1 (1.10), (𝐔, 𝐉)^u = (𝐔^u, R(u)𝐉), … |
+| {#152-2} | BP_TL_EVAL_POINTS.md | 358 | The old terms' own space U^c_j is RG I's, a union of orbits of the G^c… |
+| {#152-3} | BP_TL_EVAL_POINTS.md | 359 | The data's own 𝐉 enters the new terms: "The variable 𝐉 replaces the fu… |
+| {#153} | BP_TL_EVAL_POINTS.md | 360 | The data's 𝐉 is not transported. 𝒟^{λ,M}_k is a set of pairs (𝐔, 𝐉), a… |
+| {#153-1} | BP_TL_EVAL_POINTS.md | 361 | CRE's B-terms are scalars, invariant under G-valued gauge transformati… |
+| {#154} | BP_TL_EVAL_POINTS.md | 362 | At the T-step's points the new 𝐉 lands by the transfer bullet (#54: th… |
+| {#155} | BP_TL_EVAL_POINTS.md | 363 | *The curvature conditions and (2.36) at the evaluation points (quoted)… |
+| {#156} | BP_TL_EVAL_POINTS.md | 364 | LFR II (1.65) (p.375 l.16–20) maps (𝐔, 𝐉) ∈ Ũ_k^c(Y₄) to U_k^0(𝐔, 𝐉) ∈… |
+| {#156-1} | BP_TL_EVAL_POINTS.md | 365 | P(𝐔) is the axial-gauge minimiser (VAR Proposition 9), and its Landau … |
+| {#156-2} | BP_TL_EVAL_POINTS.md | 366 | So (1.65) is applied at (V̂, J^h(V̂)) instead, V̂ the Landau represent… |
+| {#157} | BP_TL_EVAL_POINTS.md | 367 | Along the chain, LFR I p.191 l.39–44: if 𝕌 ∈ Ũ^{(n+1)c}, then exp iηℍ_… |
+| {#157-1} | BP_TL_EVAL_POINTS.md | 368 | *The case n = 0.* There j = h + n = h. LFR I assumes N > N₀ (p.179 l.1… |
+| {#157-2} | BP_TL_EVAL_POINTS.md | 369 | *The coefficients.* So (i) asks, on (Ω_m∖Ω_{m+1}) ∩ X for m < h and on… |
+| {#157-3} | BP_TL_EVAL_POINTS.md | 370 | *The quantities.* (i) and (1.68) bound /∂𝕌 − 1/, /∂U_{p,X}(M·𝕌) − 1/, … |
+| {#158} | BP_TL_EVAL_POINTS.md | 371 | So, where V̂ ∈ 𝒟_k (above), the u-free representatives of the evaluati… |
+| {#159} | BP_TL_EVAL_POINTS.md | 372 | *The starting values γ^{fr}_Φ and κ^{fr}_Φ (at the 𝐑-step's evaluation… |
+| {#159-1} | BP_TL_EVAL_POINTS.md | 373 | The bounds below are derived where the real base is one of Bałaban's p… |
+| {#159-2} | BP_TL_EVAL_POINTS.md | 374 | REG's step-k normalisation is arranged by the choice of pair (part (b)… |
+| {#160} | BP_TL_EVAL_POINTS.md | 375 | The two minimisers. The data of U^{post}(M(𝐔)) and U_k^0(M(𝐔)) agree o… |
+| {#160-1} | BP_TL_EVAL_POINTS.md | 376 | There U_k^0 takes the averages of U_0^{(AL)} (#39-0; #T11.29), and the… |
+| {#160-1-1} | BP_TL_EVAL_POINTS.md | 377 | The real data differ there through V_k′ = exp ig_kB′, with /g_kB′/ < 3… |
+| {#160-2} | BP_TL_EVAL_POINTS.md | 378 | Let δ^{re} be the real data difference there at the real base U, after… |
+| {#160-3} | BP_TL_EVAL_POINTS.md | 379 | At the T-step's real base U_{k+1}, whose data lie within O(ε_k) of the… |
+| {#161} | BP_TL_EVAL_POINTS.md | 380 | The real base. Take U_k^0(M(U)) as its Landau representative relative … |
+| {#161-1} | BP_TL_EVAL_POINTS.md | 381 | By (190), (L^iη)/𝓗^{re}/ ≤ O(S_L)/δ^{re}/ on layer i, which is all tha… |
+| {#162} | BP_TL_EVAL_POINTS.md | 382 | The complex part. Relative to its real base, Φ(𝐔)'s complex part is 𝓗(… |
+| {#163} | BP_TL_EVAL_POINTS.md | 383 | 𝓗(Δd) is 𝐔's own complex part. Only its complex part enters, so its ph… |
+| {#164} | BP_TL_EVAL_POINTS.md | 384 | T₁ is the response to Δd^0 − Δd, which is supported on Λ: −Δd on Λ^{ol… |
+| {#164-1} | BP_TL_EVAL_POINTS.md | 385 | By (190)'s gradient and D*D entries, uniform on the ball, its gradient… |
+| {#165} | BP_TL_EVAL_POINTS.md | 386 | T₂ := ∫₀¹[𝓗′(tΔd ⊕ δ^{re}) − 𝓗′(tΔd)]Δd dt, with 𝓗′ := δ𝓗/δB. #45's Ca… |
+| {#166} | BP_TL_EVAL_POINTS.md | 387 | Landing. On a layer n ≤ k₀, λ^{(k)}_n = λ, since k − n ≥ N₀ and c′^{N₀… |
+| {#166-1} | BP_TL_EVAL_POINTS.md | 388 | On k₀ < n ≤ k, crossing n − k₀ layers of the Ω_m costs at least (n − k… |
+| {#166-2} | BP_TL_EVAL_POINTS.md | 389 | On the layers n ≤ k₀, T₂^{old}'s phase lands in the weighted room λw o… |
+| {#166-3} | BP_TL_EVAL_POINTS.md | 390 | 𝐔's own part at the T-step's points carries (b3)'s margin (*The 𝐑-step… |
+| {#166-4} | BP_TL_EVAL_POINTS.md | 391 | The terms of the current, in units of λ^{(k)}_n times the current room… |
+| {#166-5} | BP_TL_EVAL_POINTS.md | 392 | The total is at most (4/7 + 1/64 + 1/32 + 1/64 + 1/8 + 1/32 + 1/8)(1−β… |
+| {#167} | BP_TL_EVAL_POINTS.md | 393 | (iv) D2.7 15.6(c), (d), and (f)'s extension domain of radius r^{ext}_k… |
+| {#167-1} | BP_TL_EVAL_POINTS.md | 394 | r^{ext}_k := min(r^{an}_k/8, c_{ext}α_{0,k}), with c_{ext} := (1+β₀)/(… |
+| {#167-1-1} | BP_TL_EVAL_POINTS.md | 395 | There the 𝐏^{(k)}-terms obey their printed bounds with the fluctuation… |
+| {#167-2} | BP_TL_EVAL_POINTS.md | 396 | r^{ext}_k ≤ c_{ext}α_{0,k}. The post-R top-layer radii are α_{0,k} = g… |
+| {#167-2-1} | BP_TL_EVAL_POINTS.md | 397 | The real datum's field has g_k sup/B/ ≤ ε_k^♯ (O6 §4), and O6's (C3), … |
+| {#167-3} | BP_TL_EVAL_POINTS.md | 398 | The Cauchy step of 15.6(d) at a real datum V_k⁰ on the support of the … |
+| {#167-4} | BP_TL_EVAL_POINTS.md | 399 | At such a point the configuration is U_k(V_k) = U_{𝐁_k}(V_k), the post… |
+| {#167-5} | BP_TL_EVAL_POINTS.md | 400 | So the configuration's whole deviation from U_k(V_k⁰), real and imagin… |
+| {#167-6} | BP_TL_EVAL_POINTS.md | 401 | The pair's 𝐉 is J^h of the point (*The 𝐉 coordinate*). So the bullets … |
+| {#167-7} | BP_TL_EVAL_POINTS.md | 402 | These points are not part (b)'s pairs, so no conjugation factor arises… |
+| {#167-8} | BP_TL_EVAL_POINTS.md | 403 | 𝒟_k itself at the point's Landau representative V̂, where (1.65) is ap… |
+| {#168} | BP_TL_EVAL_POINTS.md | 404 | *A_k.* D2.7 15.6(c)'s e^{A_k} bounds the transports of the words on sp… |
+| {#169} | BP_TL_EVAL_POINTS.md | 405 | For a set S of loop bonds, A_k(S) := c_π Σ_{b∈S} sup‖Im ηA_b‖, the sup… |
+| {#170} | BP_TL_EVAL_POINTS.md | 406 | π is unitary on G, and the Hermitian part of iηdπ(Re A_b) − ηdπ(Im A_b… |
+| {#171} | BP_TL_EVAL_POINTS.md | 407 | On 𝒟^λ_k the complex part is at most λ_wα_{1,k}L^{−k} per fine bond in… |
+| {#172} | BP_TL_EVAL_POINTS.md | 408 | The evaluation points of 15.6(c) obey 𝒟^λ_k's phase condition: U^R at … |
+| {#172-1} | BP_TL_EVAL_POINTS.md | 409 | The sup is taken at the representative at which 𝒟^λ_k's conditions hol… |
+| {#172-2} | BP_TL_EVAL_POINTS.md | 410 | At U^R the slots' CRE B-terms take (2.42) at the Landau form with no c… |
+| {#173} | BP_TL_EVAL_POINTS.md | 411 | *The real base points (given D(k)(iii)'s pre-R clause (map #MOMGD.11's… |
+| {#173.1} | BP_TL_EVAL_POINTS.md | 412 | *The real base current (the transfer to U_{k+1} given D2.7 item 15.8).… |
+| {#173.1.1} | BP_TL_EVAL_POINTS.md | 413 | On the other bonds that term vanishes: every REG-normalised transforma… |
+| {#173.1.2} | BP_TL_EVAL_POINTS.md | 414 | An 𝐑-operation's region Z is a union of whole components of Λ_k^c (LFR… |
+| {#173.2} | BP_TL_EVAL_POINTS.md | 415 | So every remaining part of ∂Ω_1 has its first-step margin: Ω_1 lies at… |
+| {#173.2.1} | BP_TL_EVAL_POINTS.md | 416 | The variables V_0 and V⌈Γ_1 are not integrated at later steps, so late… |
+| {#173.2.2} | BP_TL_EVAL_POINTS.md | 417 | The restricted problem. The free bonds of 𝐁_k lie in Ω_1, and every pl… |
+| {#173.2.3} | BP_TL_EVAL_POINTS.md | 418 | The sequence Ω ⊃ Ω_1 ⊃ … ⊃ Ω_k meets VAR's geometric conditions (p.277… |
+| {#173.2.4} | BP_TL_EVAL_POINTS.md | 419 | For j ≥ 1 the conditions are those of 𝐁_k's own sequence {Ω_j}, to whi… |
+| {#173.3} | BP_TL_EVAL_POINTS.md | 420 | So U_k on Ω is a minimal configuration of that problem. Its data meet … |
+| {#173.3.1} | BP_TL_EVAL_POINTS.md | 421 | Layer 1: /(∂V)(p′) − 1/ < 2(1 + κ_s^{LF})L²ε_0 by CRE p.246 l.21–22, s… |
+| {#173.3.2} | BP_TL_EVAL_POINTS.md | 422 | Layer j ≥ 2: the four blocks of p′ lie in Ω_{j−1} ⊂ Ω_1, where the rea… |
+| {#173.3.3} | BP_TL_EVAL_POINTS.md | 423 | For g small, ε₁^{JB} ≤ ε₁, the fixed constant of #94. So VAR Theorem 1… |
+| {#173.3.4} | BP_TL_EVAL_POINTS.md | 424 | On U_k's own support, a small neighbourhood of Ω_1 including a layer o… |
+| {#173.4} | BP_TL_EVAL_POINTS.md | 425 | So U_k's orbit is that minimal orbit by BP_DERIVED_CONFIGS.md #BC.1-4-… |
+| {#173.4-1} | BP_TL_EVAL_POINTS.md | 426 | *At part (b)'s base.* Part (b) uses J_k at its real base U_{k+1}, whic… |
+| {#173.4-2} | BP_TL_EVAL_POINTS.md | 427 | U^{B′} is the post-R background U_{𝐁_k}(V) of LFR II (1.35) at the dat… |
+| {#173.5} | BP_TL_EVAL_POINTS.md | 428 | So the new regions are Ω_j′ = Ω_j ∪ Z for 1 ≤ j ≤ k, and Γ_0′ = Ω_1^c … |
+| {#173.6} | BP_TL_EVAL_POINTS.md | 429 | So the derivation above runs at U^{B′} with the post-R term's objects … |
+| {#173.6-1} | BP_TL_EVAL_POINTS.md | 430 | Its bonds are first-step V_0, not integrated by R, every part of ∂Ω_1′… |
+| {#173.6-2} | BP_TL_EVAL_POINTS.md | 431 | The 𝐑-operation acts only at k > N (D2.7 item 13: the 𝐑^{(j)} terms va… |
+| {#173.7} | BP_TL_EVAL_POINTS.md | 432 | Hence B_J ≤ B₃ε₁^{JB} at U^{B′}. U^{B′} equals e^{iη𝐇(1,B′)}U_{k+1} up… |
+| {#173.7-1} | BP_TL_EVAL_POINTS.md | 433 | Bałaban's own instance is the first step: CRE p.248 l.37 applies VAR T… |
+| {#174} | BP_TL_EVAL_POINTS.md | 434 | *The pre-R support.* Before R, D(k)(iii) is posed for real U_k in the … |
+| {#175} | BP_TL_EVAL_POINTS.md | 435 | Its base-point clause there is the T-step's. On a term of the form CRE… |
+| {#175.1} | BP_TL_EVAL_POINTS.md | 436 | An 𝐑-operation keeps the form (2.21) but changes the characteristic fu… |
+| {#176} | BP_TL_EVAL_POINTS.md | 437 | The indicators of the term (1.2) of LFR I are χ_k(Ω_k^{∼4}), the indic… |
+| {#177} | BP_TL_EVAL_POINTS.md | 438 | *The operations keep the support.* Up to (1.75) Bałaban's transformati… |
+| {#178} | BP_TL_EVAL_POINTS.md | 439 | Decompositions of unity 1 = χ + (1 − χ), which multiply the integrand … |
+| {#179} | BP_TL_EVAL_POINTS.md | 440 | Changes of variables, which are bijections at fixed external data: |
+| {#180} | BP_TL_EVAL_POINTS.md | 441 | (1.53), V′_j = V_j(V^{(j)})^{−1}, with the representation (1.44) of U_… |
+| {#181} | BP_TL_EVAL_POINTS.md | 442 | (1.81), V″ = V′V_0 on Λ_0 (p.195), restated in the AL gauge as (1.92); |
+| {#182} | BP_TL_EVAL_POINTS.md | 443 | the change of variables (1.22) [III] with ℍ_Z^{(j)} on the components … |
+| {#183} | BP_TL_EVAL_POINTS.md | 444 | the scaling B′_j = g_jB_j (p.187 l.54); |
+| {#184} | BP_TL_EVAL_POINTS.md | 445 | the integration of the δ-functions of (1.72), which parametrises their… |
+| {#184.1} | BP_TL_EVAL_POINTS.md | 446 | at each preliminary step, the removal of the linearised δ-functions wi… |
+| {#184.2} | BP_TL_EVAL_POINTS.md | 447 | LFR II's V′ = exp ig_kB on 𝐁_0 (LFR II p.360 l.41–42), with the Haar d… |
+| {#185} | BP_TL_EVAL_POINTS.md | 448 | Gauge fixings: the Faddeev–Popov insertions (LFR I p.182 l.43, p.196 l… |
+| {#186} | BP_TL_EVAL_POINTS.md | 449 | The R′-replacement (1.100), (1.102): the integration of V_k over Λ, fo… |
+| {#187} | BP_TL_EVAL_POINTS.md | 450 | Bałaban's exact integrations of the preliminary fluctuation fields, wi… |
+| {#188} | BP_TL_EVAL_POINTS.md | 451 | In the integrand that carries the insertions, the preliminary variable… |
+| {#189} | BP_TL_EVAL_POINTS.md | 452 | Integrating that integrand over (A_j, B_j) gives Bałaban's integrand t… |
+| {#190} | BP_TL_EVAL_POINTS.md | 453 | Removals of a factor that equals 1 on the support of the remaining one… |
+| {#191} | BP_TL_EVAL_POINTS.md | 454 | So every point of the final support corresponds to a point of S, up to… |
+| {#192} | BP_TL_EVAL_POINTS.md | 455 | *Every removal is an implication.* |
+| {#193} | BP_TL_EVAL_POINTS.md | 456 | p.181 l.20–22 and l.33–34: χ_k^{(0)} gives (1.3) for j = h and □ ⊂ (Ω^… |
+| {#194} | BP_TL_EVAL_POINTS.md | 457 | (1.29) (p.183–187), for every n = j − h: on the support of χ_k^{(n+1)}… |
+| {#195} | BP_TL_EVAL_POINTS.md | 458 | *χ′_j and χ′^{(j)}.* Bałaban introduces χ′^{(j)} of (1.55) in the B_j-… |
+| {#196} | BP_TL_EVAL_POINTS.md | 459 | χ′_j = 1 on supp χ′^{(j)}, so its drop is an implication. Both (1.27) … |
+| {#196-1} | BP_TL_EVAL_POINTS.md | 460 | So V_j(V^{(j)})^{−1} = exp ig_jB_j on the * bonds (p.188 l.53), and on… |
+| {#197} | BP_TL_EVAL_POINTS.md | 461 | On all the bonds, the b_0(c) included, V_j(V^{(j)})^{−1} = exp i[g_jCB… |
+| {#197-1} | BP_TL_EVAL_POINTS.md | 462 | Its coefficients depend on V^{(j)} through the whole linear part of Q̃… |
+| {#197-2} | BP_TL_EVAL_POINTS.md | 463 | C's norm and that of its derivative are invariant under G-valued gauge… |
+| {#197-3} | BP_TL_EVAL_POINTS.md | 464 | RG I's averages are CMP98's (its [12], RG I p.299 l.12, applied at p.2… |
+| {#197-4} | BP_TL_EVAL_POINTS.md | 465 | Q′(V_0) is written out (p.35 l.50–52) through the transports R_{0,c_±}… |
+| {#197-5} | BP_TL_EVAL_POINTS.md | 466 | (CMP98's Q(V_0) of (121)–(124) linearises the gauge-changed average V̄… |
+| {#197-5-1} | BP_TL_EVAL_POINTS.md | 467 | So for θ₀(d, L) small the coefficient stays invertible on a neighbourh… |
+| {#197-6} | BP_TL_EVAL_POINTS.md | 468 | D̃ is the unique solution of L Q̃B′ + C̃(B′) = L Q̃B with B′ = B − hD̃… |
+| {#197-7} | BP_TL_EVAL_POINTS.md | 469 | The configurations V^{(j)} on the support lie in S_{θ₀} for g small. A… |
+| {#197-8} | BP_TL_EVAL_POINTS.md | 470 | So /V_j(V^{(j)})^{−1} − 1/ ≤ c_Cδ′_j(1 + O(δ′_j)) on supp χ′^{(j)}, an… |
+| {#198} | BP_TL_EVAL_POINTS.md | 471 | So the functions (1.3), (1.4), (1.5), (1.7), (1.8), and χ_k^{(n)} equa… |
+| {#199} | BP_TL_EVAL_POINTS.md | 472 | (1.89) (p.198–200): on the support of χ_k(Ω_k^{∼4})χ_{k,Λ}χ_{h,1/2}χ′,… |
+| {#200} | BP_TL_EVAL_POINTS.md | 473 | LFR II p.378 l.9–14: on first-class components χ_{k,Λ} and χ equal 1, … |
+| {#201} | BP_TL_EVAL_POINTS.md | 474 | A component excluded by a large-field function is "not changed by the … |
+| {#201.1} | BP_TL_EVAL_POINTS.md | 475 | at step 0, (1.3) for j = h by χ_k^{(0)} (p.181 l.20–23), and (1.4) for… |
+| {#201.2} | BP_TL_EVAL_POINTS.md | 476 | at a (1.29) step, for example before an exclusion by 1 − χ′^{(j)} (p.1… |
+| {#202} | BP_TL_EVAL_POINTS.md | 477 | The factors left only shrink the support. They are: |
+| {#203} | BP_TL_EVAL_POINTS.md | 478 | in 𝐓′_k(X) and (1.100): χ′(X), χ_{h,1/2}, σ(g_kB), δ_{rT}(B), χ(Λ_i), … |
+| {#204} | BP_TL_EVAL_POINTS.md | 479 | on second-class components: χ^c_k(Y_i^{∼−6}), χ_{k,Λ_i}, χ_i, and δ_{G… |
+| {#205} | BP_TL_EVAL_POINTS.md | 480 | for the preliminary variables: χ^{(j)}, χ′^{(j)}, and the densities (1… |
+| {#206} | BP_TL_EVAL_POINTS.md | 481 | Bałaban "combine[s]" χ_k(X_i^{∼−6}) with χ_k(Ω_k^{∼4}) (LFR II p.378 l… |
+| {#206.1} | BP_TL_EVAL_POINTS.md | 482 | With LF's soft tests (LF #3.17 and LF #3.20) the combination is the pr… |
+| {#207} | BP_TL_EVAL_POINTS.md | 483 | *The L₀-weighted layers.* On Z's layers i > k₀ the powers of L₀ weaken… |
+| {#208} | BP_TL_EVAL_POINTS.md | 484 | At step j, (1.3) and (1.4) follow from the last line of (1.24), on Ω_{… |
+| {#209} | BP_TL_EVAL_POINTS.md | 485 | χ_k^{(n)} follows from χ_k^{(n+1)} by (1.48)–(1.52). (1.48) needs δM/M… |
+| {#210} | BP_TL_EVAL_POINTS.md | 486 | χ_k″ follows from (1.89), under its own conditions (#199): β ≤ 1/4 (p.… |
+| {#211} | BP_TL_EVAL_POINTS.md | 487 | So the old functions on those layers equal 1 on the final support. |
+| {#212} | BP_TL_EVAL_POINTS.md | 488 | *Conclusion.* At real external data, at every point of the 𝐑-step's in… |
+| {#212-1} | BP_TL_EVAL_POINTS.md | 489 | CRE's spaces "are invariant with respect to G-valued gauge transformat… |
+| {#213} | BP_TL_EVAL_POINTS.md | 490 | So the bullets of (iii), with #17's inputs, the chain items #86.1–#86.… |
 | {#805-1} | BP_TL_SECOND_CLASS.md | 5 | *The distance (#805).* A shortest tree for d_{k,∪Y}(X′) meets every M-… |
 | {#805-1-1} | BP_TL_SECOND_CLASS.md | 6 | If X′∖∪_iY_i is empty, X′ is one Y_i, and the spanning tree of its cub… |
 | {#812-0} | BP_TL_SECOND_CLASS.md | 8 | *The q-parts (#812).* Two parts on one X′ overlap, so (1.90) and its c… |

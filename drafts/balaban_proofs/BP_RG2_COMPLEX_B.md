@@ -1,6 +1,6 @@
 # Bałaban Proof: RG2's Lemmas 1–2 for Complex Fluctuation Fields
 
-Bałaban proof: a proof that RG2 Lemmas 1–2 (pp.9–11) hold, with functions jointly holomorphic in (𝐔, 𝐉, B), for the fluctuation field B complex, g^c-valued with |B| < ε₁g_k^{−1} on Y. Status: not yet through review. Used by BETA_FUNCTION_WILSON_LOOPS.md (#BP.10-2, #B0.33-1, #B2.1.24, #B2.2.22-1–#B2.2.23, #B2.2.28–#B2.2.37, #B4.174-1, #B9.60–#B9.61).
+Bałaban proof: a proof that RG2 Lemmas 1–2 (pp.9–11) hold, with functions jointly holomorphic in (𝐔, 𝐉, B), for the fluctuation field B complex, g^c-valued with |B| < ε₁g_k^{−1} on Y. Used by BETA_FUNCTION_WILSON_LOOPS.md (#BP.10-2, #B0.33-1, #B2.1.24, #B2.2.22-1–#B2.2.23, #B2.2.28–#B2.2.37, #B4.174-1, #B9.60–#B9.61).
 
 RG1 = CMP 109, whose equations RG2 cites as (I.n); RG2 = CMP 116; CMP98 = CMP 98, RG1's [12]; VAR = CMP 102, RG1's [15]. Pins are to Balaban\tex\<paper>\parts\pNNN_corrected.tex. A bound |F| < c on a set is a bound at every bond of it, as in (1.34); the bonds of a set are those that intersect it (RG1 p.251 l.25–28).
 B(y), for y ∈ T^{(k+1)}, is the block of order 1 of y in T^{(k)} (RG1 (0.3), p.252 l.24–27), and b₀(c), for a bond c of T^{(k+1)}, is the bond of T^{(k)} contained in c that joins B(c₋) to B(c₊) (RG1 p.267 l.19–20).

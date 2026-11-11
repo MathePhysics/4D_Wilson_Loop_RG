@@ -36,6 +36,13 @@ Note: `WILSON_IT1_TWO_LOOPS_UNIFORM_BOUND_2026_10_27.md` (TL), with `LABELS_TWO_
 - Changed lines re-read: #290, #290-1, #290-2, and the 22 pin sites. labels_two_loops.py passes (1446 tags, every cross-reference resolves).
 - Lines over 600 characters: #286 (625) and #654 (621), both unchanged and under the 630 the previous owner split at, and five at 602–607. None was touched.
 
+## Map point from session (4), 05:10 (TL b734cba1137b → 8989332fcfa2, labels 36b3aa5fc5af)
+
+- Session (4) repaired map #MD2.4.4.2 (map 2e35d8c5c925): X(𝒢) also holds the cubes meeting the domains of the members of 𝒢's merged old occurrences, because of the hard core #MD2.3.3.6 (#MD2.4.4.2-2), with connectivity #MD2.4.4.3-1-1.
+- TL #512's X(𝒢) for a new group omitted these members, while #416 and #629-2 already put them into the network. #512 was split; the new #512-1 adds the members' domains one step later, citing map #MD2.4.4.2-2 and #MD2.4.3.1 for the count. #514 adds the connectivity: a member's domain one step later is connected and contains ℐ(W) (#512), and ℐ(W) ⊆ ℐ(𝒢) (map #MD2.4.4.3-1, per loop).
+- Consumers: #516's diameter bound uses #_{k+1}(𝒢), which counts the members (map #MD2.4.3.1); #517 and the positions (#475) use S_𝒢 ⊇ X(𝒢). No bound changes.
+- 05:12 to session (4): role confirmed (BETA owns BETA, GL, TL, BP_RG2_COMPLEX_B, the NG note) and the TL repair with SHAs.
+
 ## Messages sent
 - 01:48 to the two-loops session: the transfer, the state taken over, and the request for its queue. 01:49 to the table session: the transfer.
 - 01:56 to the two-loops session and the table session: TL b734cba1137b, LABELS_TWO_LOOPS 07b7d5f8e1a3, with #290-2.
