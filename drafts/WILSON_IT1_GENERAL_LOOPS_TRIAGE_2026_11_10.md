@@ -1,14 +1,22 @@
 # General-Loops Note: Self-Check and Messages, 10 November 2026
 
-Note: `WILSON_IT1_GENERAL_LOOPS_2026_11_10.md`, owned by the BETA session. SHA e5868db66fa8 after the C_lift repair at 02:01 on 11 November (343 lines, 261 tags, 99834 characters by wc -m). Status: derived, not reviewed. No referee round has been run.
+Note: `WILSON_IT1_GENERAL_LOOPS_2026_11_10.md`, owned by the BETA session. SHA b55baaef58e9 after the B_E repair at 02:23 on 11 November (344 lines, 262 tags, 100238 characters by wc -m). Status: derived, not reviewed. No referee round has been run.
 
-Earlier SHAs: c7f59b0cb310 after #GL5.6-0 at 01:44; c56a16196e92 after the #PF0.5 and torus-condition repairs of 01:41; bdbcc51cccba after the alignment with PF's N_s form at 01:35; e552097262de after the c_C rename of 01:04; 6c7f55d1ee64 after the torus repair of 00:53; 3eb2d88200e1 after O1's §9 (00:44), b4b6a5cc0dfe after the table row citation of 00:08, 11df5d85a367 after the NL e2ca5b9e7a82 re-read of 00:06, ebaefc789f80 before it.
+Earlier SHAs: e5868db66fa8 after the C_lift repair at 02:01; c7f59b0cb310 after #GL5.6-0 at 01:44; c56a16196e92 after the #PF0.5 and torus-condition repairs of 01:41; bdbcc51cccba after the alignment with PF's N_s form at 01:35; e552097262de after the c_C rename of 01:04; 6c7f55d1ee64 after the torus repair of 00:53; 3eb2d88200e1 after O1's §9 (00:44), b4b6a5cc0dfe after the table row citation of 00:08, 11df5d85a367 after the NL e2ca5b9e7a82 re-read of 00:06, ebaefc789f80 before it.
 
 ## Open
 - Nothing open in the note (#GL.3).
 
 ## Awaiting
 - Nothing. The table session's reply of 02:05: #T12.31-12 follows GL e5868db66fa8 at table 3e9dd1981ea0 (LABELS c73455137f70), with C_lift := 6 the non-contour constant; #T4.44 was already at 74 (table b48fd324ff78), so my "C_box ≥ 38" remark read an older table.
+
+## B_E's order (found at 02:20 while setting up the non-Gaussianity note; GL repaired by 02:23)
+- Finding: #GL9.8-3 stated B_E = O((log ḡ^{−2})^r), copying #NV.4-3. With B_E = C^E_Σ(C)𝔞̄ + P_{K′}(C)A^R_ES_E (#GL5.6), A^R_E = 16e^{−2}C^R_EL²(R^E)³(c^R_E)^{−2} and R^E = MR̄(j_q) = O((log ḡ^{−2})^r) (Cauchy #CP.13–#CP.14). So A^R_E = O((log ḡ^{−2})^{3r}). S_E ≤ e^{−a_E}(1 + 6/a_E) with 1/a_E ≤ max(L/min(c^T_E, c^Z), 2LR^E/c^R_E) = O((log ḡ^{−2})^r), so B_E = O((log ḡ^{−2})^{5r}).
+  - The sum is of that size: its terms up to L^{m/2} ≈ 1/a_E are undamped. The size comes from Cauchy #C7.6-3-1 dropping D2.7 15.4(ii)'s factor e^{−p₀(g_j)/4} (Cauchy #C7.6-3).
+- Consequence: #NV.4-3's exponent 2B_E + c_C + log δ_LF is O((log ḡ^{−2})^{5r}) − (3/2)p₀(g_a). It needs p₀ > 5r, which #T10.2's p₀ > (d+5)r + ⌈r⌉ + 2 = 22 gives; the p₀ > 4r + 1 of #C11c.7-3 would not.
+- Repair in place: #GL9.8-3 keeps the a_C part; new #GL9.8-3-1 carries B_E's order, the exponent, and #T10.2 (594 code points). E* and A^× in #NV.5-2.1 keep their e^{−p₀} factors and are unaffected.
+- Pre-check: #GL9.8-3, #GL9.8-3-1 re-read; no other GL line states B_E's order (#GL5.6 defines it; #GL9.8-2 uses R ≤ B_E). 262 tags, no duplicates; lines ≤ 600 code points except #GL1.4-1 (603) and #GL6.1-4-1 (608). 99834 characters before, 100238 after.
+- 02:23 to the two-loops session: #NV.4-3's order, the repair route, and notice of the non-Gaussianity note.
 
 ## V4's lifting constant (messages of 01:59 from (4) and 02:00 from the table session; GL repaired by 02:01)
 - (4): map 5c5203be2b03 (snapshotted) bounds V4's lifting constant, #MD2.4.12.7-1-5–#MD2.4.12.7-1-5-2, and lists the enlargement ranges, #MD2.4.12.7-1-4–#MD2.4.12.7-1-4-1. This closes the C_box dependency formerly under Open.
