@@ -3958,3 +3958,12 @@ Relabel → LABELS 950ab17d60ee, table c4c5ac132304. defcheck prints 0 lines on 
   - Sent to (4): W-δ #W8.14-1, and the Cauchy r^χ_k lines (#C8.2.1-6, #CK.1-9, #C10.5.1-2, #C8.2.1-15).
   - All checks are at baseline, with possessive 13.
   - Next: round 7 (narrow), then round 8 (full). Log: WILSON_IT1_LF_TRIAGE_BG_D26REPOINT_2026_11_10.md.
+
+## The Table Fork's Review of Every Section, Rounds 7–9, 2026-11-11 20:33
+
+- Round 7 (narrow) re-read both tube batches with their sources and found R7-1 (#T12.9-1-9-3's P(k) and C_{rF}'s dependences) and R7-2 (#T12.10-0-2's pointer, now LF #4.55-0.1), repaired at table c9fad6da153e. Round 8 (narrow) is clean.
+- Round 9 (full) re-read every row of §§1–12 against its sources and found minor and cosmetic defects only, all repaired in place at table ec9f2c4c2477.
+  - Content: ĝ in #T3.13-0-8, #T4.38-0-8, #T12.7-29, and #T12.9-0-50; δ_k/g_k ≤ r_k (#T3.35); c^{LF}_{ε₁} (#T4.35); #T10.34 split; P(k) (#T12.9-1-9-3); D_g (#T12.20-4); a₁'s dependence on M′ (#T12.27-3); 𝓗′ for κ (#T4.30-0-3, #T12.2-3, #T12.2-6); and the pins CRE p.270 l.49–50 and PBG p.423 l.39, which (4) has also fixed in Cauchy and BP_JOINS.
+  - Not done: round 10 (narrow) and round 11 (full) are still to come. Log: WILSON_IT1_LF_TRIAGE_BG_D26REPOINT_2026_11_10.md.
+
+Relabel → LABELS 3a0bd5263c21, table ec9f2c4c2477. defcheck prints 0 lines on the 12 standing notes, build_packet --check reports 0 conflicts, and the pin check finds 0 failures among 664 pins.

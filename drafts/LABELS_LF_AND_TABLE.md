@@ -3701,7 +3701,7 @@ The items of the LF longer than 5,000 characters are set out in paragraphs at th
 | {#T12.2-12-1} | 741 | H_i(D), the smallest arc of C_i containing ℐ_i(D) (#545); r₀ := 2 (#59… |
 | {#T12.2-13} | 742 | 𝔅^s(g) := 𝔅(g)∖𝔅^×(g) and B_P := ∪_rX′_r ∪ ∪_{X∈P}X^{(λ̂+248)}, X^{(n)… |
 | {#T12.2-13-0-1} | 743 | Two-loops note, continued. u_k := g_k^{−2}, local and not #T10.33's u_… |
-| {#T12.2-13-1} | 744 | A^{cr,R} := 4e^{c_W}C_gr(ℓ₁+ℓ₂)e^{−p₀(ḡ_R)/2}e^{−ν_rD/(1076M)}(1 + 138… |
+| {#T12.2-13-1} | 744 | A^{cr,R} := 4e^{c_W}C_{gr}(ℓ₁+ℓ₂)e^{−p₀(ḡ_R)/2}e^{−ν_rD/(1076M)}(1 + 1… |
 | {#T12.2-14} | 745 | B_Q (#814-4-2) is #T12.20-1's; w^Ψ_c := e^{ν_rσ̃(c) + (3/8)ν_e(2Σ_{P∈c… |
 | {#T12.2-17} | 746 | Two-loops note, the domains of a polymer P. dom P, the union of the do… |
 | {#T12.2-17-1} | 747 | (A)_r, the points within ℓ^∞-distance r of A; T⁺_D := (T_D)_{5M} ∪ s_D… |
@@ -5276,4 +5276,4 @@ Each definition X := … of the LF carries the tag {#D.X} immediately before X; 
 | {#D.ψ′} | 3274 | ψ′ := Σ_{y∈B}G_B(·, y)σ(y)/(2d), so that Δψ′ = −σ in B and ψ′ = 0 |
 | {#D.h_y} | 3275 | h_y := E^·G(S_{τ_B} − y), τ_B the exit time from B. Theorem 4.3.1  |
 
-Hashes at which the lines above hold: LF 697c65ec6aa9, table cc41b08b706e (SHA256, first 12).
+Hashes at which the lines above hold: LF 697c65ec6aa9, table ec9f2c4c2477 (SHA256, first 12).
