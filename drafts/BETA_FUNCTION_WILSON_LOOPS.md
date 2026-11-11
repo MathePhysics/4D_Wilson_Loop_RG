@@ -876,7 +876,7 @@
 
 {#B2.2.273} The estimates of CRE, LFR1, and LFR2 hold for the tube construction on the histories of H_k, with changed constants,
 {#B2.2.274} and Propositions 2.4, 2.6, and 2.9 hold for RG1's construction run with the cutoffs δ_j^T.
-{#B2.2.274-1} With the soft tests and Λ of #B2.2.174-1 they hold as the large-field note and RC read them for CRE's construction (LF #3.17–#3.35, each soft test lying between the sharp tests at t and (1 + κ_s)t; RC #RC.0–#RC.0-3), with the thresholds at ĝ_j compared with those at g_j by (a) and (e).
+{#B2.2.274-1} With the soft tests and Λ of #B2.2.174-1 they hold as the large-field note and RC read them for CRE's construction (LF #3.17–#3.18 and (RS) #3.43–#3.99-1, each soft test lying between the sharp tests at t and (1 + κ_s)t; RC #RC.0–#RC.0-3), with the thresholds at ĝ_j compared with those at g_j by (a) and (e).
 
 {#B2.2.275} *Proof.*
 1. {#B2.2.276} *(a).* x_j ≤ u_j, so ĝ_j ≤ g_j.

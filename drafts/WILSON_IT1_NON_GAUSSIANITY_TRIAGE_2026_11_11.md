@@ -300,3 +300,12 @@ User, after NG: "Continue work on NA!!!! That is the only meaningful answer to w
 - NA f0e3e8e5353e → 424d3115a705 (snapshot NA_f0e3e8e5353e.md): (G2) cites Lemmas NAG13 and NAG14 instead of #NAG5.4.
 - Open: (R1) needs a bound on r with no leading logarithm on 𝒮, where 𝗀²𝔏 is not small; Lemmas NAG5 and NAG11 do not reach it. (R2) = (G3) unchanged.
 - Checks: o1c_check on NAG and NA, CRLF kept (NAG 150 lines, NA 68 lines). No approval needed.
+
+## 2026-11-11 19:50 GMT: NAG §9, multiscale expansion (first part)
+- NAG d4a6e3c13078 → 6d1e68c8f49c (snapshots NAG_d4a6e3c13078.md, NAG_7f734def9a8b.md, NAG_a021de2b7ea0.md).
+- New §9. Lemma NAG15 (#NAG9.1–#NAG9.1-5): exact chord form of 𝔼𝓡^{(η)}, from Σ_eT^eXT^e = (C₂ − kC_A/2)X − Σ_pairs X_{c₁c₂}; contained chords cancel because ad_e is a derivation and Σ_bT^b ⊗ T^b is invariant. This removes the large-field split of §4.
+- Lemma NAG16 and #NAG9.2-1–#NAG9.2-6: peeling in order of increasing length (root C₂, child −C_A/2, and for n ≥ 2 crossing chords kept 1 or removed −(C₂ − nC_A/2)), and W_k as an FV polymer gas whose polymers are link-connected histories. Compatibility means distinct endpoints, and no chord of one polymer crosses an R-chord of the other while in its current set. Kept chords of distinct polymers do not cross, so #NAG6.2 factorises c.
+- Dead route: expanding the pair part into its 2n(n − 1) virtual-line terms (first draft of #NAG9.2) is not absolutely summable when 𝗀²𝔏 ≍ 1. With k chords whose letters lie near one point, chords crossing all of them carry ~2k² options each, giving e^{2k²𝗀²t} against e^{−kt}. Replaced in place by the R-chord form, whose weights are linear in n.
+- Open (#NAG.0-2a): convergence of the #NAG9.2 gas for 𝗀²𝔏 not small, with per-chord charge ≤ C·running charge, then r without a leading logarithm. Needs approval (#NAG.0-2b): the bound needs ln(𝗀^{−2}𝗀_{t_λ}²) ≤ c𝗀_{t_λ}^{−2} besides 𝗀_{t_λ} → 0 (inferred from the two-loop drift, not proved necessary).
+- BFWL 0f0d3401bffd → ba8a3b36f418 (snapshot BFWL_0f0d3401bffd.md): #B2.2.274-1 cites LF #3.17–#3.18 and (RS) #3.43–#3.99-1 instead of #3.17–#3.35, on the 4th handover session's report, checked against LF 697c65ec6aa9 (#3.35 ends the device; (RS) is #3.43; #3.53-1 covers V4's step-1 uses). Re-pointing only.
+- Checks: o1c_check on NAG (168 lines, CRLF 168), no line > 600, no duplicate tags or missing refs; BFWL LF kept.
