@@ -1,6 +1,6 @@
 # The Continuum Limit at the Stopping Scale
 
-{#NP.1} For a loop C on the fixed torus, the renormalised Wilson-loop expectation W_ren(ε) := E_ε[W(C)]/κ^{(K′)} is an exact convex combination over Bałaban's labelled terms at the fixed stopping lattice ((2)). It is bounded uniformly in K ((8.1)), every sequence of lattice spacings has a subsequence along which it converges for every admissible loop ((8.2)–(8.3)), and it converges along the full sequence ((8.4)).
+{#NP.1} For a loop C on the fixed torus, the renormalised Wilson-loop expectation W_ren(ε) = E_ε[W(C)]/κ^{(K′)} of #ND.2.5 is an exact convex combination over Bałaban's labelled terms at the fixed stopping lattice ((2)). It is bounded uniformly in K ((8.1)), every sequence of lattice spacings has a subsequence along which it converges for every admissible loop ((8.2)–(8.3)), and it converges along the full sequence ((8.4)).
 {#NP.2} D(K′) holds on every labelled term: by the map's D2.0–D2.6 with the D2.6 closure, and at the 𝐑-steps K′ > N by the D2.7 closure's 15.8, at the complex evaluation points of its #7 block.
 
 {#NP.3} Map: `WILSON_IT1_D2_STEP_MAP_2026_10_22.md`, cited by tag.
@@ -78,8 +78,8 @@
   {#ND.3.9-1} Nothing else on ℓ₀ is K-independent.
 - {#ND.3.10} *(3.3) Uniform bounds.* Bałaban's bounds hold at every k with constants independent of k and T: CRE Theorem 1 (p.262: ρ_k "satisfies all the inductive assumptions"), Theorem 2 ((2.43)–(2.46), p.263), Corollary 3 ((2.50), p.264), and LFR II Theorem 1 (p.355). So do the constants of D(K′), which are uniform in k, K, the contour size, the torus, and the labelled term (D(k)(iv), map #MD2.0.3.63; D2.3(5)–(7); D2.4(12)(f) with the SW closure's (S-w)). So every term of the identity of (2) is bounded uniformly in K.
 - {#ND.3.12} *(3.4) The limit object.* By (2), W_ren(ε) = e^{E_const,K′}μ^{[K]}_{ℓ₀}(W_χ(C^{(K′)};·)) + r_K.
-  {#ND.3.12-1} The sequence of sub-probability measures μ^{[K]}_{ℓ₀} on the compact space G^{bonds(T^{(K′)})} has weakly convergent subsequences (the space of sub-probability measures on a compact metric space is weakly compact), the sequence E_const,K′ is bounded, and |r_K| is bounded uniformly in K (items (4)–(5); the large-field part by (1 − w_{ℓ₀})B_LF ≤ B_LF); so along a subsequence K_i → ∞ every term converges, and lim_iW_ren(ε_{K_i}) = e^{Ē}μ̄(W_χ(C^{(K′)};·)) + r̄ exists, with μ̄ a sub-probability measure on the fixed space.
-  {#ND.3.12-2} So the limit object is a stopping-scale effective measure μ̄ on G^{bonds(T^{(K′)})} integrated against the fixed coarse loop, plus the limit of the bounded remainders. Along the full sequence the limit exists by (8.4).
+  {#ND.3.12-1} Along a subsequence K_i → ∞ every term converges, and the limit is W^∞_{(K_i)}(C) = e^{Ē}μ̄(W_χ(C^{(K′)};·)) + r̄, with μ̄ a sub-probability measure on the fixed space ((8.2), #ND.8.2–#ND.8.3).
+  {#ND.3.12-2} So the limit object is a stopping-scale effective measure μ̄ on G^{bonds(T^{(K′)})} integrated against the fixed coarse loop, plus the limit of the bounded remainders. Along the full sequence the limit W^∞(C) exists by (8.4).
 
 ### (4) The Large-Field Terms {#NSD.4}
 
@@ -142,7 +142,7 @@
   {#ND.6.7-5} The bounded factor e^{E_const,K′} ∈ [e^{−B_E}, e^{B_E}] is not a divergence and is kept inside the finite part; W_ren′(ε) := W_ren(ε)e^{−E_const,K′} = μ^{[K]}_{ℓ₀}(W_χ(C^{(K′)};·)) + r_Ke^{−E_const,K′} is the form in which the effective measure stands alone.
 - {#ND.6.8} *(6.3) The finite part.* By D(K′) on every labelled term (#NP.2), |W_ren(ε)| ≤ e^{B_E}(1 + 8.48a_dc_hB₃ℓ_Cε_{K′}Lip_χ + e^{4ℓ_C[O(C_χρ_{K′}) + …]} − 1) + (1 − w_{ℓ₀})B_LF uniformly in K ((2), (5.6)), so the renormalised Wilson-loop expectation is bounded in the continuum limit, and its leading part is the stopping-scale effective measure's expectation of the fixed coarse loop, e^{E_const,K′}μ^{[K]}_{ℓ₀}(W_χ(C^{(K′)};·)), which lies in [−e^{B_E},
   {#ND.6.8-1} e^{B_E}] for real χ and is within |r_K| of W_ren(ε).
-  {#ND.6.8-2} The continuum Wilson-loop expectation is W_ren^∞ := lim_{K→∞}W_ren(ε_K), which exists by (8.4) and equals e^{Ē}μ̄(W_χ(C^{(K′)};·)) + r̄ for the limits of (8.2) along every subsequence.
+  {#ND.6.8-2} The continuum Wilson-loop expectation is the limit W^∞(C) of (8.4), which equals W^∞_{(K_i)}(C) = e^{Ē}μ̄(W_χ(C^{(K′)};·)) + r̄ of (8.2) along every subsequence.
 
 ### (7) The Relative Weight of the Large-Field Terms {#NSD.7}
 
@@ -155,14 +155,14 @@
 - {#ND.8.2} *(8.2) Subsequential limits.* W_ren(ε_K) is a bounded real sequence, so every sequence K_i → ∞ has a subsequence along which it converges (Bolzano–Weierstrass).
   {#ND.8.2-1} Along a further subsequence the sub-probability measures μ^{[K]}_{ℓ₀} on the fixed compact metric space G^{bonds(T^{(K′)})} converge weakly to a sub-probability measure μ̄ (the sub-probability measures on a compact metric space form a weakly compact set) of mass μ̄(1) = lim_iw^{[K_i]}_{ℓ₀} ∈ [0, 1] (the mass is the integral of the continuous function 1), μ̄(1) ≥ 1 − sup_Kδ_LF by (7), E_const,K′ → Ē ∈ [−B_E, B_E], g_{K′} → ḡ′ in the window of (1), and r_K → r̄ with |r̄| ≤ (5.6)'s bound.
   {#ND.8.2-2} W_χ(C^{(K′)};·) is one fixed continuous function ((3.2)), so e^{E_const,K′}μ^{[K]}_{ℓ₀}(W_χ(C^{(K′)};·)) → e^{Ē}μ̄(W_χ(C^{(K′)};·)), and
-  {#ND.8.3} W^∞(C) := lim_iW_ren(ε_{K_i}) = e^{Ē}μ̄(W_χ(C^{(K′)};·)) + r̄:
+  {#ND.8.3} W^∞_{(K_i)}(C) := lim_iW_ren(ε_{K_i}) = e^{Ē}μ̄(W_χ(C^{(K′)};·)) + r̄, the subsequential limit:
   {#ND.8.4} a weak limit point of the stopping-scale effective measures tested against the fixed coarse loop, plus a remainder bounded by (5.6), whose large-field part is at most δ_LFB_LF ((7)).
   {#ND.8.4-1} This is the continuum Wilson-loop expectation of (6.3) along the subsequence, with κ^{(K′)} divided out exactly ((6.1)–(6.2)) and nothing else subtracted; r_K as a whole converges along the subsequence by construction.
 - {#ND.8.5} *(8.3) The countable family of loops.* The admissible loops are the squares of #NWTOA.1 on the fixed torus, of physical side pL^{−q}u < T_ph/3 (map #MOMGD.30; the bound is V4's, #NWTOA.1-4–#NWTOA.1-5), a countable family {C_n}.
   {#ND.8.5-1} A subsequence along which W_ren(·; C_1) converges, a sub-subsequence for C_2, and so on, give by the diagonal argument one subsequence along which W_ren(ε_{K_i}; C_n) converges for every n and, for every stopping index j that occurs, the measures μ^{[K]}_{ℓ₀} on G^{bonds(T^{(j)})} converge (one more diagonal over j).
-  {#ND.8.5-2} So one sequence of lattice spacings defines the continuum expectation W^∞(C_n) of every admissible loop at once, normalised loop-wise by (6.2), or by the common stopping index for any finite subfamily, the two differing by (6.2)'s bounded K-dependent factor, which converges along a further subsequence, available by the same diagonal argument.
+  {#ND.8.5-2} So one sequence of lattice spacings defines the subsequential limit W^∞_{(K_i)}(C_n) of every admissible loop at once, normalised loop-wise by (6.2), or by the common stopping index for any finite subfamily, the two differing by (6.2)'s bounded K-dependent factor, which converges along a further subsequence, available by the same diagonal argument.
 - {#ND.8.6} *(8.4) The full sequence.* Under the Cauchy note's conditions (T1), (T2), (T-Λ), and (T-c) (#CP.22–#CP.28), which hold for ḡ small, uniformly in K (#CP.22-3, #CP.26-1, #CP.27-2, #CP.28-1), and with its input (LF), derived in WILSON_IT1_LARGE_FIELD_DEPTH_2026_10_27.md (#CP.2–#CP.2-2), its #C7.1 gives |W_ren(ε_{K+1}; C) − W_ren(ε_K; C)| ≤ a_K with Σ_Ka_K < ∞ (#C7.1-4; W_ren(ε_K) is its F_K, #C7.4-8).
-  {#ND.8.6-1} So W_ren(ε_K; C) is a Cauchy sequence, W^∞(C) := lim_{K→∞}W_ren(ε_K; C) exists for every admissible loop, and every subsequential limit of (8.2) equals it.
+  {#ND.8.6-1} So W_ren(ε_K; C) is a Cauchy sequence, W^∞(C) := lim_{K→∞}W_ren(ε_K; C) exists for every admissible loop, and W^∞_{(K_i)}(C) = W^∞(C) for every subsequence of (8.2).
 
 ## Constants {#NSK}
 

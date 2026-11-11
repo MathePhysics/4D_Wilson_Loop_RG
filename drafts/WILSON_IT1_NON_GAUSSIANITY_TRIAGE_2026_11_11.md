@@ -309,3 +309,11 @@ User, after NG: "Continue work on NA!!!! That is the only meaningful answer to w
 - Open (#NAG.0-2a): convergence of the #NAG9.2 gas for 𝗀²𝔏 not small, with per-chord charge ≤ C·running charge, then r without a leading logarithm. Needs approval (#NAG.0-2b): the bound needs ln(𝗀^{−2}𝗀_{t_λ}²) ≤ c𝗀_{t_λ}^{−2} besides 𝗀_{t_λ} → 0 (inferred from the two-loop drift, not proved necessary).
 - BFWL 0f0d3401bffd → ba8a3b36f418 (snapshot BFWL_0f0d3401bffd.md): #B2.2.274-1 cites LF #3.17–#3.18 and (RS) #3.43–#3.99-1 instead of #3.17–#3.35, on the 4th handover session's report, checked against LF 697c65ec6aa9 (#3.35 ends the device; (RS) is #3.43; #3.53-1 covers V4's step-1 uses). Re-pointing only.
 - Checks: o1c_check on NAG (168 lines, CRLF 168), no line > 600, no duplicate tags or missing refs; BFWL LF kept.
+
+## 2026-11-11 20:46 GMT: NAG, (H_c) withdrawn; Lemma NAG14 with an autonomous speed
+- NAG 947824f65884 → d16d43ed381b (snapshot NAG_pre14gen.md).
+- (H_c) is withdrawn; there is no approval request. At fixed λ and M, 𝗀^{−2} − 𝗀_{t_λ}^{−2} = κt_λ → ∞ as ε → 0. So ln(u/v) ≤ cv along a sequence forces v → ∞: if v ≤ V on a subsequence, then u ≤ Ve^{cV}. A result under (H_c) therefore misses exactly the (G2) sequences, those with a non-vanishing charge at a fixed scale. #NAG.0-2b now states this proof; the "inferred" sentence is deleted.
+- Dead route: a global KP majorant whose running charge Z′ = κZ²(1 + c_ZZ) uses a crude two-loop constant. Its charge diverges once (c_Z/κ)ln(u/v) is of order v, which is the (H_c) regime.
+- Lemma NAG14 is repaired in place (#NAG8.2-1–#NAG8.2-3). It now takes an arbitrary continuous β with |β| ≤ κ/2 and the autonomous characteristics U′ = −(κ + β(U)). The two curves are time translates of each other, so no ∂_u-derivative appears. The bound is ∫|E| along the two curves, with E := ρ − β∂_uF̂. #NAG8.2-4–#NAG8.2-5 now work on [V₀, V₁] and add the error O(sup|β|).
+- #NAG.0-2 now states (R1) in this form, in the regime η → 0 with g_W(λ) → 0, uniformly in 𝗀. #NAG.0-2a gives E = −(C₂D/𝔶̂²)(r̂ − β∂_u𝔶̂), with ∂_u𝔶̂ = −z Re Σn_S⟪|p|⟫/W and the insertion Σ_c((C_A/2)a(c) − β) + Π (Lemma NAG15).
+- Checks: o1c_check on NAG (168 lines, CRLF 168), no line > 600, no duplicate tags or missing refs.
