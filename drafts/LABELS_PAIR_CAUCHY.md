@@ -27,7 +27,7 @@ Each content line of `WILSON_IT1_TWO_LOOPS_CAUCHY_2026_11_05.md` carries a tag {
 | {#PC2.1-6} | 27 | Everything else in its §§2–11 bounds the two runs' densities. |
 | {#PC2.2} | 28 | *(a) for the pair.* Let B^×_W be the supremum over K of the right side… |
 | {#PC2.2-1} | 29 | The bound is assembled from pointwise bounds: /f^{(1)}f^{(2)}/ ≤ 1 (#3… |
-| {#PC2.3} | 30 | *(d) for the pair.* N_s ≥ 2max(ℓ₁, ℓ₂) (#290), and ℓ_i ≥ MR_k for γ sm… |
+| {#PC2.3} | 30 | *(d) for the pair.* N_s ≥ 2max(ℓ₁, ℓ₂), which follows from V4's torus … |
 | {#PC2.4} | 31 | So the Cauchy note's density bounds hold for the pair with B^×_W in pl… |
 | {#PC2.4-1} | 32 | the unmatched set: δ_LFa^{(U)}_KB^×_W (#C6.1.3-1); |
 | {#PC2.4-2} | 33 | the shells of the all-small-field pair: b^{(S)}_KB^×_W (#C3.10-2, #C7.… |
@@ -157,7 +157,7 @@ Each content line of `WILSON_IT1_TWO_LOOPS_CAUCHY_2026_11_05.md` carries a tag {
 | {#PC4.14.4-4.5.4-8} | 161 | Let P^R_k(Z) be the weighted mass of the step-k productions charged to… |
 | {#PC4.14.4-4.5.4-9} | 162 | So P^R_k(Z) ≤ O(1)13^de^{−p₀(g_k)/4}#cubes_k(Z_k), with the multiplici… |
 | {#PC4.14.4-4.5.4-9-1} | 163 | As e^{−p₀(g)/4} ≤ g² for small g (p₀ > 1, as in D2.7 15.4(iii)), C^P(j… |
-| {#PC4.14.4-4.5.5} | 164 | So the register grows at the 𝐑-step k by at most (1 + C_ϑϑ_k)(1 + ε_k)… |
+| {#PC4.14.4-4.5.5} | 164 | So the register grows at the 𝐑-step k by at most (1 + C_ϑϑ_k)(1 + ε^r_… |
 | {#PC4.14.4-4.5.5-1} | 165 | Then Σ_nlog(1 + g_n) ≤ G := C_δc̄S_R + (1 + C_ϑ)S^R, at most #844-7's … |
 | {#PC4.14.4-4.6} | 166 | (γ): /e^{x+y} − e^x/ ≤ /y/e^{/x/+/y/}, x + y a born group 𝒢′'s occurre… |
 | {#PC4.14.4-4.7} | 167 | Summed with N's weights, (γ) is at most ε_c·Σ_Γ/φ^a(Γ)/e^{(3/8)ν_e·ext… |
@@ -223,7 +223,7 @@ Each content line of `WILSON_IT1_TWO_LOOPS_CAUCHY_2026_11_05.md` carries a tag {
 | {#PC4.14-3.2} | 227 | w(W) = e^{λν_rσ(W)}e^{θ(W)}‖Y_W‖, with λ = λ_k(W) ≥ 31/32 for a cross … |
 | {#PC4.14-3.3} | 228 | σe^{−(λ − 1/16)ν_rσ} ≤ 1/(e(λ − 1/16)ν_r) ≤ 32/(29eν_r). So the change… |
 | {#PC4.14-3.4} | 229 | /Q^B(𝔅) − Q^A(𝔅)/ ≤ Π_{W∈𝔅}e^{θ(W)}(e^{q_KΣ_{W∈𝔅}σ(W)} − 1) (map #MD2.… |
-| {#PC4.14-3.5} | 230 | Here M^× := 4(ℓ₁+ℓ₂)O(C_χρ_{K′}) + w̄^× + A^× is the total weighted ma… |
+| {#PC4.14-3.5} | 230 | Here M^× := 4(ℓ₁+ℓ₂)(1 + 2κ_s^{LF})O(C_χρ_{K′}) + w̄^× + A^× is the to… |
 | {#PC4.14-3.6} | 231 | x^Q_K is summable in K: q^{fr}_K is as ρ^{LF,×}_K and x̄_K are (#PC4.9… |
 | {#PC4.14-3a} | 232 | *On the young matched pairs.* LF #5.42's Q-part bound C_Q^Wc̄^W_Kw(W) … |
 | {#PC4.14-3a.1} | 233 | A cross member's weight has the rate λν_r, λ ≥ 31/32 (#374, #496), and… |
@@ -293,7 +293,7 @@ Each content line of `WILSON_IT1_TWO_LOOPS_CAUCHY_2026_11_05.md` carries a tag {
 | {#PC4.14-6.8.1} | 297 | On the young matched pairs the same F enters LF's D^{dev} (LF #5.43), … |
 | {#PC4.14-6.8.1-1} | 298 | LF (W)'s factor is e^{D^{dev}}(e^X − 1) + (e^{D^{dev}} − 1) = e^{D^{de… |
 | {#PC4.14-6.8.1-2} | 299 | The first part integrates as LF (5.2)'s first term, to at most (e²s^W_… |
-| {#PC4.14-6.8.1-3} | 300 | Normalised as in #C6.2.22-3, both parts are at most B_Wδ_LF times (e² … |
+| {#PC4.14-6.8.1-3} | 300 | Normalised as in #C6.2.22-3, both parts are at most B^×_Wδ_LF times (e… |
 | {#PC4.14-6.8.2} | 301 | The pair's D^{dev} bound still tends to 0, so LF #5.54's condition D^{… |
 | {#PCS5} | 303 |  |
 | {#PC5.1} | 305 | E^×_const,K′ = E_const,K′(C₁,χ₁) + E_const,K′(C₂,χ₂) + E^{cr}_{K′}, wi… |

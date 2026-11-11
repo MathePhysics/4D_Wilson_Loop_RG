@@ -3776,3 +3776,11 @@ Relabel → LABELS 3e685cf2133e, table 37e1056450c0, at LF 94d3e82675b1. The def
 - Round 1 found J1–J3, all repaired; rounds 2 (narrow) and 3 (full) are clean. Announced to (4) before the edit and SHAs sent after. Log: WILSON_IT1_LF_TRIAGE_BG_D26REPOINT_2026_11_10.md.
 
 Relabel → LABELS 9a2252417817, table 8c89f561c7cc, at LF 94d3e82675b1. The definition check prints 0 lines on LF, on the pair note and on general-loops note 6c7f55d1ee64. dmarks2 lists the 16 known leftovers. deadcheck and prefcheck show only their known hits. Columns are 10×5, 74×6, and 267×7.
+
+## NL de703f746b46: the 37 Definitions in #T12.33-5 to #T12.33-10-1, and A^{cr,R} in #T12.2-13-1, 2026-11-11 01:23
+
+- NL joins the standing defcheck list (user-approved). New #T12.33-5 to #T12.33-10-1 enter its 37 flagged definitions, mostly N-loop forms of the pair's rows. They are D, Δ_×^{(k)}, 𝒲^{(N)}_k, w(𝔅), 𝓔_k, E^{(N)}_const,k, N^{(N)}_0, B^{(N)}_LF, E^×_{k+1}, κ_{k+1}, E°_{k+1}, Ξ^c_A, E^{R×}_k and E^×_ξ. They also include the ∪𝒯 reading of E_D, E_{D_G} and E_𝒟, and 𝒫_{D_G}, 𝒯(D_G), 𝒯(𝒟), win(v), I(Y), A_M (the map's S_M), ℐ(M), n′, abs(win_M), C^×_E, C^{R°}_E, E*, w̄, A^cr, A^× and the locals.
+- New #T12.2-13-1: A^{cr,R} from two-loops #778, which the table lacked. #T12.2-13 no longer calls it #T4.52's, and #T12.31-11-1 points to the new row. #T12.2-15 gives C_Σ(χ_i) as #T4.37's C^E_Σ.
+- Rounds 1 and 3 found K1–K6, all repaired; rounds 4 (narrow) and 5 (full) are clean. NL's torus rewording (sides below T_ph/3) touches no row. Announced to (4) and ⑂ (3) before the edit; SHAs sent after. Log: WILSON_IT1_LF_TRIAGE_BG_D26REPOINT_2026_11_10.md.
+
+Relabel → LABELS a20c7e0e549b, table 3a5a8b58dbc8, at LF 94d3e82675b1. The definition check prints 0 lines on LF, on the pair note, on general-loops note e552097262de and on NL de703f746b46. dmarks2 lists the 16 known leftovers. deadcheck and prefcheck show only their known hits. Columns are 10×5, 74×6, and 267×7.

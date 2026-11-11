@@ -245,10 +245,33 @@ Input: BETA's message on §9 (reflection positivity) and #GL1.5-2, with rows (a)
 - Rounds 2 (narrow) and 3 (full) are clean, so the rows are done.
 - Table 37e1056450c0 → f2f84535fce4 → be0328776e9a → 3d1e48f03480 → 8c89f561c7cc. LABELS 3e685cf2133e → d7578bcc7615 → 5a44322bde7c → 9bcf40ff20b8 → 9a2252417817. defcheck on LF, on the pair note and on general-loops note 6c7f55d1ee64: "-- 0 lines" each. dmarks2 16; deadcheck and prefcheck known hits only; columns 10×5, 74×6, 267×7.
 
+## NL e2ca5b9e7a82 to de703f746b46: #T12.33-5 to #T12.33-10-1, #T12.2-13-1, #T12.2-13, #T12.2-15 and #T12.31-11-1 (Table)
+
+Input: the user approved adding the N-loops note to the defcheck list and entering its 37 flagged definitions. Entered:
+- #T12.33-5: C, δ_n^{(k)}, D, Δ_×^{(k)}, c_𝒢 and r₀.
+- #T12.33-6 and #T12.33-6-1: 𝒲^{(N)}_k, Q_k(𝔅), w(𝔅), 𝓔_k, E^{(N)}_const,k, N^{(N)}_0, B^{(N)}_LF and λ^{(N)}_K.
+- #T12.33-7 to #T12.33-7-1: E^×_{k+1}, κ_{k+1}, E°_{k+1}, S°, Ξ^c_A, E^{R×}_k, E^×_ξ, 𝓛 and c.
+- #T12.33-8 and #T12.33-8-1: E_D, E_{D_G}, E_𝒟, S_𝒢, 𝒫_{D_G}, 𝒯(D_G), 𝒫_𝒟 and 𝒯(𝒟).
+- #T12.33-9 and #T12.33-9-1: win(v), 𝒫_Y, I(Y), 𝒫_M, A_M, ℐ(M), n′ and abs(win_M).
+- #T12.33-10 and #T12.33-10-1: C^×_E, E*, w̄, A^cr, A^×, C^{R°}_E, and the locals Q, h, z, x, m, m₀ and q.
+The table had no definition of A^{cr,R}: #T12.2-13 called it #T4.52's, but #T4.52 only uses it. It is now #T12.2-13-1, taken from two-loops #778, and #T12.31-11-1 points there.
+- Re-derived: with #T12.20-4's E_k^R = log(Ξ^c/Ξ), E_k^R(C; ℓ₀) − Σ_iE_k^R(C_i; ℓ₀) = log Ξ^c_{[N_C]} − Σ_ilog Ξ^c_{{i}} + (N_C − 1)log Ξ. This is #NL6B.2's E^{R×}_k, and at N_C = 2 it is #T4.52's. At a square P_{K′}(C_i) = 4ℓ_i (#GL1.4-3), so #T12.31-11's w̄ and A^cr at squares are #NL7.1-4's and #NL7.1-5's, and #T12.31-8's λ^{(N)}_K is #NL10.3's. A_M is the map's S_M: both are the union of S′(Y) over the members Y of M's slot groups (#MD2.4.12.22-1, #MD2.4.12.22-3). ⑂ (3) confirmed both readings.
+- Round 1 (narrow) found K1–K5:
+  - K1: #T12.2-13-1 cited C_gr through #T12.2-13, which only points on to #T4.31.
+  - K2: #T12.33-7 used S°(ℓ₀) of C without saying which gas it is (#NL5.1).
+  - K3: C_Σ(χ_i) had no definition in the table (#T12.2-15, #T12.33-10). It is #T4.37's C^E_Σ for C_i and χ_i (#891, D2.3(7)).
+  - K4: "D2.7's E_𝒟" named no item. It is D2.7 15.8-1(2-5-1)'s E_𝒟.
+  - K5: after K2, #T12.33-7 was 670 characters. It is split into #T12.33-7 and #T12.33-7-0, and #T12.33-6-1 now finds E^{R×}_j in #T12.33-7-0.
+- Round 2 (full) is clean. Round 3 (full) found K6: #T12.33-9 had two parentheticals side by side.
+- Bookkeeping: NL changed twice during the rounds, to e32769139348 and then de703f746b46. #NL6A.5-3 now reads "members Y" for "components Y", and #T12.33-9-1 follows it; the union is the same, the map's S_M. The torus condition of #NL10.2, #NL10.7 and #NL12.1 is now "sides below T_ph/3". The table cites none of those lines for that condition.
+- Every #NL tag the table cites is present, and every entered formula occurs verbatim in NL. #T1.3-1, #T12.31-16-1, #T12.31-17, #T12.30-8 and #T12.33-4 cite the changed TL b94da3099515, PC 5b345629598c, RP a780d9fe3ef9 and NV 0c3236ada5f9 lines, and still match them.
+- Rounds 4 (narrow) and 5 (full) are clean, so the rows are done.
+- Table 8c89f561c7cc → fcd30dab65f4 → 86f4c7196e50 → 1edb18c7e001 → 7f4aae5e6f5b → 3a5a8b58dbc8. LABELS 9a2252417817 → 2339bfbca854 → 718b544cce05 → 1fe94b76f7c9 → ed2c8c78a342 → a20c7e0e549b. defcheck on LF, on the pair note, on general-loops note e552097262de and on NL de703f746b46: "-- 0 lines" each. dmarks2 16. deadcheck and prefcheck show the known hits only, one line lower below the new #T12.2-13-1. Columns 10×5, 74×6, 267×7; CR 0; new rows at most 620 characters.
+
 ## SHAs
 
-Table: d71e239470ea → eb5a6a505303 → b168c70703ab → 9f6ebf47c805 → 0fa578b35726 → ef03c153b6ad → cc3949e005fb → 77c1b5ec9928 → 18cbd119fc8f → 05cbd40be4db → 7b51b1177ee9 → bb2bbb3fbd08 → 99c0d18618f6 → 7a0f3334905e → ff88007cace7 → 37e1056450c0 → 8c89f561c7cc.
-LABELS: 2d2801629f41 → 146c7b49d22b → d444e40b4233 → 1f2b3fa09b9d → 740b198d7a9d → 58050f8936d3 → 0e94a6174742 → 4c2c66efb348 → 734a37930def → c59773513fd1 → be350896ce4a → 9eeed3a7792e → 7a980dfeec7b → c6814d4faaee → e384dc944732 → 3e685cf2133e → 9a2252417817. Background note: 249ae1a46a2a → 8510ab0aebd7 → 7bb5f99918ab → 3047b31464c3 → 22a230556c65 → c7612b0d6f3b → df792ffa33f3.
+Table: d71e239470ea → eb5a6a505303 → b168c70703ab → 9f6ebf47c805 → 0fa578b35726 → ef03c153b6ad → cc3949e005fb → 77c1b5ec9928 → 18cbd119fc8f → 05cbd40be4db → 7b51b1177ee9 → bb2bbb3fbd08 → 99c0d18618f6 → 7a0f3334905e → ff88007cace7 → 37e1056450c0 → 8c89f561c7cc → 3a5a8b58dbc8.
+LABELS: 2d2801629f41 → 146c7b49d22b → d444e40b4233 → 1f2b3fa09b9d → 740b198d7a9d → 58050f8936d3 → 0e94a6174742 → 4c2c66efb348 → 734a37930def → c59773513fd1 → be350896ce4a → 9eeed3a7792e → 7a980dfeec7b → c6814d4faaee → e384dc944732 → 3e685cf2133e → 9a2252417817 → a20c7e0e549b. Background note: 249ae1a46a2a → 8510ab0aebd7 → 7bb5f99918ab → 3047b31464c3 → 22a230556c65 → c7612b0d6f3b → df792ffa33f3.
 
 ## Status
 
@@ -267,3 +290,5 @@ The rows #T1.3-1, #T12.31-1, #T12.31-2, #T12.31-4, #T12.31-9 to #T12.31-11 and #
 The rows #T12.19-2, #T12.19-4-1 to #T12.19-8-1, #T12.32-6, #T12.32-8, #T12.32-10 to #T12.32-12-1, #T12.34 and #T12.34-1 follow IT-1 d3aef750d7a9, O4 952a1687d5c4 and D26 45edbc7927d4. Rounds 1–3 found I1–I5, all repaired. Rounds 4 (narrow) and 5 (full) are clean, so the rows are done at table 37e1056450c0.
 
 The rows #T12.31-1-1, #T12.31-5-1, #T12.31-16 to #T12.31-17 and #T12.30-8 follow general-loops note 6c7f55d1ee64, with the reflection-positivity note 42e029b94d78 and the nonvanishing note 5137fb31c48d for the #RP and #NV anchors. Round 1 found J1–J3, all repaired. Rounds 2 (narrow) and 3 (full) are clean, so the rows are done at table 8c89f561c7cc.
+
+The rows #T12.33-5 to #T12.33-10-1 enter NL's 37 flagged definitions, and #T12.2-13-1 defines A^{cr,R}, which the table lacked. They follow NL de703f746b46, two-loops b94da3099515, map 64ec666317fa, general-loops note e552097262de and V4. Rounds 1 and 3 found K1–K6, all repaired. Rounds 4 (narrow) and 5 (full) are clean, so the rows are done at table 3a5a8b58dbc8. NL is now on the standing defcheck list.

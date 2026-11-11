@@ -3802,16 +3802,17 @@ The items of the LF longer than 5,000 characters are set out in paragraphs at th
 | {#T12.33-5} | 848 | N-loops note, the pair's objects for N_C loops, with C := ⊔_iC_i for t… |
 | {#T12.33-6} | 849 | The class (§2). 𝒲^{(N)}_k := Π_iκ^{(k)}_{C_i}·e^{𝓔_k}[Π_if^{(i)}_k + Σ… |
 | {#T12.33-6-1} | 850 | E^{(N)}_const,k := Σ_iE_const,k(C_i, χ_i) + Σ_{j≤k}E^×_j + Σ_{N_B<j≤k}… |
-| {#T12.33-7} | 851 | Cross constants (§5, §6B). E^×_{k+1} := log S°(ℓ₀) − Σ_ilog S°_{C_i}(ℓ… |
-| {#T12.33-7-1} | 852 | Step 1 (§9). E^×_ξ := 𝓛 − Σ_i𝓛_i (#NL9.7-2), with 𝓛 and 𝓛_i the connec… |
-| {#T12.33-8} | 853 | Sets of §6A, with #T12.33-1's tube hulls and #T12.33-2's 𝒯(D). The pai… |
-| {#T12.33-8-1} | 854 | For a merged D_G, 𝒫_{D_G} consists of its groups' families (#NL6A.3-1,… |
-| {#T12.33-9} | 855 | Cross vertices (#NL6A.5). A cross vertex v has no window extension: wi… |
-| {#T12.33-9-1} | 856 | For an M-vertex, 𝒫_M consists of the π_{k+1}-cubes of M and the 𝒫_W, W… |
-| {#T12.33-10} | 857 | Constants (§7). C^×_E (#NL7.1-1), E* := Σ_iC_Σ(χ_i)𝔞̄ + C^{R°}_E + C^×… |
-| {#T12.33-10-1} | 858 | C^{R°}_E := N_CC^R_1R̂_{K′}²(2 + 24R̂_{K′}/c^R_E)e^{−p₀(g_{K′})/5} ≤ N… |
-| {#T12.34} | 859 | O4 note (WILSON_IT1_O4_CLOSURE_2026_10_26.md, cited by section). ρ_ω :… |
-| {#T12.34-1} | 860 | ω̃′_t := ω_t + e^{κs_p}((1 + C_ω)τ̄ + τ̂_N) and ω̄̃′ := ω̄ + e^{κs_p}(… |
+| {#T12.33-7} | 851 | Cross constants (§5). E^×_{k+1} := log S°(ℓ₀) − Σ_ilog S°_{C_i}(ℓ₀) (#… |
+| {#T12.33-7-0} | 852 | The R-steps (§6B). For A ⊆ {1, …, N_C}, Ξ^c_A is #T12.20-2's Ξ^c for t… |
+| {#T12.33-7-1} | 853 | Step 1 (§9). E^×_ξ := 𝓛 − Σ_i𝓛_i (#NL9.7-2), with 𝓛 and 𝓛_i the connec… |
+| {#T12.33-8} | 854 | Sets of §6A, with #T12.33-1's tube hulls and #T12.33-2's 𝒯(D). The pai… |
+| {#T12.33-8-1} | 855 | For a merged D_G, 𝒫_{D_G} consists of its groups' families (#NL6A.3-1,… |
+| {#T12.33-9} | 856 | Cross vertices (#NL6A.5). A cross vertex v has no window extension: wi… |
+| {#T12.33-9-1} | 857 | For an M-vertex, 𝒫_M consists of the π_{k+1}-cubes of M and the 𝒫_W, W… |
+| {#T12.33-10} | 858 | Constants (§7). C^×_E (#NL7.1-1), E* := Σ_iC_Σ(χ_i)𝔞̄ + C^{R°}_E + C^×… |
+| {#T12.33-10-1} | 859 | C^{R°}_E := N_CC^R_1R̂_{K′}²(2 + 24R̂_{K′}/c^R_E)e^{−p₀(g_{K′})/5} ≤ N… |
+| {#T12.34} | 860 | O4 note (WILSON_IT1_O4_CLOSURE_2026_10_26.md, cited by section). ρ_ω :… |
+| {#T12.34-1} | 861 | ω̃′_t := ω_t + e^{κs_p}((1 + C_ω)τ̄ + τ̂_N) and ω̄̃′ := ω̄ + e^{κs_p}(… |
 
 ## Definitions of the LF
 
@@ -4843,4 +4844,4 @@ Each definition X := … of the LF carries the tag {#D.X} immediately before X; 
 | {#D.ψ′} | 3266 | ψ′ := Σ_{y∈B}G_B(·, y)σ(y)/(2d), so that Δψ′ = −σ in B and ψ′ = 0 |
 | {#D.h_y} | 3267 | h_y := E^·G(S_{τ_B} − y), τ_B the exit time from B. Theorem 4.3.1  |
 
-Hashes at which the lines above hold: LF 94d3e82675b1, table 86f4c7196e50 (SHA256, first 12).
+Hashes at which the lines above hold: LF 94d3e82675b1, table 3a5a8b58dbc8 (SHA256, first 12).

@@ -10,7 +10,17 @@ Note: `WILSON_IT1_GENERAL_LOOPS_2026_11_10.md`, owned by the BETA session. SHA e
 ## Awaiting
 - Two-loops session: their decision on the #PF0.5 finding (below).
 - Step-map session (4): the C_box check (Open).
-- Two-loops session: the torus finding (below) for #PC2.3, #PC7.2, #NL10.2, #NL10.7, #RP.6, #RP.6-3, #RP.10-2 and #NV.9. The continuum note's #ND.8.5 and #NWTOA.1 have the same gap; the table session forwarded it to the step-map session (4), which owns that note by the table session's records.
+- Step-map session (4): the torus finding for the continuum note's #ND.8.5 and #NWTOA.1, forwarded by the table session, which records (4) as that note's owner.
+
+## Two-loops session's torus repair (received 01:20 on 11 November; checked by 01:23)
+- Their message: the repair is applied with no tags renumbered, re-derived independently, and logged in WILSON_IT1_TWO_LOOPS_TRIAGE_TORUS_2026_11_11.md. New SHAs: TL b94da3099515 (LABELS_TWO_LOOPS e9023cc9fb4c), PC 5b345629598c, NL de703f746b46, RP a780d9fe3ef9, NV 0c3236ada5f9; PF unchanged (9b4918036466). All six snapshotted, and the hashes match.
+- Diffs against my earlier snapshots read line by line. TL #290 now states V4's hypothesis and its consequence N_s ≥ 2max ℓ_i. New #290-1 is the fixed-torus form, re-derived here: K ≥ j ≥ q_i + 3, since #MOMGD.30's argument is ≥ L³ when log g_min^{−2} ≥ 1, and N_s = (T_ph/u)L^j. #917 lists the hypothesis.
+  - #PC2.3 and #PC7.2, #NL10.2, #NL10.7 and #NL12.1, #RP.6, #RP.6-3 and #RP.10-2, and #NV.9 and #NV.5-2 state sides below T_ph/3. #NV.3 and #NV.3-4 now have L₀^× for L₀^{(N)}, #NV.11-2 assumes 8h ≤ T_ph, and #NV.11-3 drops the n-dependent conditions. #NL6A.5-3's A_M now runs over the members Y of M's slot groups (the map's S_M).
+  - GL needs no change. #GL1.5's pointer (#290, #PC2.3, #NL10.2) for N_s ≥ 2max ℓ_i still holds. #GL7.1-2 replaces #917's and #NL12.1's hypothesis by 3diam_ph < T_ph, and #GL9.2 and #GL9.2-1 replace #RP.6's family and #RP.10-2's side bound. #GL9.8-2's reading of #NV.3-4 holds at L ≥ L₀(𝒞) = 4Λ̄(𝒞)²L₀^× ≥ L₀^×. #GL6.2-0-1 uses #NL6A.5-3-2, which needs only S′(Y) ⊆ A_M, true for the members Y. #NL6A.5-3-0's 2diam and #575's arc length are read with Λ̄ by the primitives of #GL6.1–#GL6.1-2 (distance 2Λ̄(C_i)D for 2D, #GL2.2-4).
+- 01:23 to the two-loops session: the check above, GL e552097262de unchanged.
+
+## Table session's message on e552097262de (received after 01:23; table 3a5a8b58dbc8, LABELS a20c7e0e549b)
+- #T12.31-17 unchanged: its c_C := CP_{K′}(C)(…) is #GL9.8-2's reading of #NV.3's c_C. New rows checked against a snapshot: #T12.2-13-1's A^{cr,R} is TL #778's verbatim (b94da3099515); #T12.31-11-1 takes A^{cr,R} and C^{R×}_E with P_Σ/4 for ℓ_Σ, as #GL6.5-2 does; #T12.33-10's w̄ and A^cr are NL #NL7.1-4 and #NL7.1-5 (de703f746b46), equal to #T12.31-11's at squares, where P_Σ = 4ℓ_Σ (#GL1.4-3). No GL change.
 
 ## Table session's reply (received 01:00 on 11 November; table 8c89f561c7cc, LABELS 9a2252417817)
 - Rows entered: #T12.31-1-1 (diam_ph, #GL1.5-2), #T12.31-16 and #T12.31-16-1 (level q, 𝒞^{gl}_q, 𝔊^{gl}_q, θ, H₋, θ𝔇), #T12.31-16-2 (κ_{C,χ}, (★), the locals of #GL9.5–#GL9.6), and #T12.31-17 (#GL9.8's a_C and c_C). defcheck on the note prints 0 lines. Each row was checked here against the note (snapshot of 8c89f561c7cc) and matches.
