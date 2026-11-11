@@ -1,6 +1,6 @@
 # Bałaban Proof: VAR (189), the Decay of the Second Derivative of V
 
-Bałaban proof: a proof of VAR (189), which VAR states without the calculation (p.308 l.28–30: "We do not perform these calculations here, … let us formulate a final result only"). Not yet through review. Used by BETA_FUNCTION_WILSON_LOOPS.md (#B0.32, #B2.1.38–#B2.1.39-1, #B2.2.128, #B9.52) and BP_VAR_PROP4_KERNEL.md (#4.36-0-4).
+Bałaban proof: a proof of VAR (189), which VAR states without the calculation (p.308 l.28–30: "We do not perform these calculations here, … let us formulate a final result only"). Not yet through review. Used by BETA_FUNCTION_WILSON_LOOPS.md (#B0.32, #B2.1.38–#B2.1.39-1, #B2.2.128, #B9.52) and BP_VAR_PROP4_KERNEL.md (#4.35-2-2, #4.36-0-4).
 The tags {#BV.n} are this file's own. VAR = CMP 102 (1985) 277–309; PBG = CMP 99 (1985) 389–434 (VAR's [5]); PRT2 = CMP 96 (1984) 223–250 (VAR's [3]); PRT1 = CMP 95 (1984) 17–40; RG1 = CMP 109 (1987) 249–301. Pins are to Balaban\tex\<paper>\parts\pNNN_corrected.tex. LF = WILSON_IT1_LARGE_FIELD_DEPTH_2026_10_27.md; a #4.x tag is the LF's or BP_VAR_PROP4_KERNEL.md's.
 
 ## Statement

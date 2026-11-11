@@ -300,7 +300,7 @@ Named steps inside long lines carry semantic tags at their start (below). A refe
 | {#4.40.1-0-1} | 297 | These are the local forms of the bounds sup/ℒg/ ≤ C_ℒsup/g/ and sup/D(… |
 | {#4.40.1-1} | 298 | *D at its local size.* #4.38's bound on HD(A₁*) carries the radius ε₄ … |
 | {#4.40.1-1-0} | 299 | So, for b ∈ Δ(y), /𝔇(A;c,b)/ ≤ C′_𝔇a_j^{1−d}e^{−¼δ₀d(c₋,y)}Σ_{y″}e^{−¼… |
-| {#4.40.1-1-1} | 300 | With D(A,c) = ∫₀¹⟨𝔇(tA;c,·), A⟩dt (BP_VAR_PROP4_KERNEL #4.35) and the … |
+| {#4.40.1-1-1} | 300 | With D(A,c) = ∫₀¹⟨𝔇(tA;c,·), A⟩dt and the pairing Σ_{b∈Δ(y)}η^da_j^{1−… |
 | {#4.40.1-2} | 301 | *H, π-weighted.* At A = A₁*, ‖A₁*‖_y ≤ π(y)/u/_π (#4.37), and by *The … |
 | {#4.40.1-2-1} | 302 | H links c to x at the bound (3.133) (PBG p.422 l.25–29), B_H(L^{j′}η)^… |
 | {#4.40.1-2-2} | 303 | for X = D(A₁*) and X = C^{(2)}(A₁*), each of a_{j(x)}/HX(x)/ and a_{j(… |
@@ -3831,6 +3831,14 @@ The items of the LF longer than 5,000 characters are set out in paragraphs at th
 | {#T12.35-2} | 877 | RW1 §5. 𝒫(U₁) := {A′ : abs(A′(b)) < α_{1,1} for every bond b} (#RW1.5-… |
 | {#T12.35-3} | 878 | dμ_{C_{E₀}}(B) and (det H_{E₀})^{1/2} := exp(½tr log H_{E₀}) (#RW1.5b)… |
 | {#T12.35-4} | 879 | ϱ_χ, V4's cutoff radius r(g₀), and p_𝐔(a) := p_{e^{iζ}}(R_{u,*}a) (#RW… |
+| {#T12.36} | 880 | Non-Gaussianity note (WILSON_IT1_NON_GAUSSIANITY_2026_11_11.md, cited … |
+| {#T12.36-1} | 881 | 𝔇 is one of the five diagrams 𝖱₁ = 𝖨₀, 𝖱₂, 𝖱₄, 𝖯₂ and 𝖯₃, families of … |
+| {#T12.36-2} | 882 | §2. A Gaussian charge model (𝗀, 𝖷, κ) is a charge 𝗀 ∈ ℝ, a real Gaussi… |
+| {#T12.36-3} | 883 | §3. N_ε(𝔇) := E_ε[Π_{C∈𝔇}W_χ(C)] and κ_𝔇 := Π_{C∈𝔇}κ_{C,χ}, with #T12.… |
+| {#T12.36-4} | 884 | §5. Local to Lemma C: ϖ: G → U(n), not #T12.6-1's or #T12.13's ϖ, χ_ϖ … |
+| {#T12.36-5} | 885 | ξ_C := W^{ℓ₀,C} − 1 and ι^{ℓ₀}_C := sup abs(I_{K′}(C; ℓ₀)) over the su… |
+| {#T12.36-6} | 886 | σ_C := (5/4)(h^ng_C)² + ι^{ℓ₀}_C (#NG5.4-4), σ_𝖱 at C = 𝖱 (#NG6.1-1); … |
+| {#T12.36-7} | 887 | §6. 𝖺_𝖱 := 𝐄_{ℓ₀}[W^{ℓ₀,𝖱}], 𝔶^{ℓ₀}_S(ε) := log abs(𝖺_{𝖱₄}𝖺_{𝖱₁}²/𝖺_{𝖱… |
 
 ## Definitions of the LF
 
@@ -3891,7 +3899,7 @@ Each definition X := … of the LF carries the tag {#D.X} immediately before X; 
 | {#D.r_c} | 298 | r_c := the range of VAR's vertices in block units, a constant of d |
 | {#D.C′_𝔇} | 299 | C′_𝔇 := C_𝔇 + C_vLe^{δ₀r_c}, for ε₃ ≤ 1. |
 | {#D.B_H} | 302 | B_H := its O(1), with the rate renamed as in BP_VAR_PROP4_KERNEL # |
-| {#D.C_HX} | 303 | C_{HX} := 2B_HL³c_tot(1/128)max((3/2)dC′_𝔇L³c_tot(1/128)², 4M_vL⁴e^{2 |
+| {#D.C_HX} | 303 | C_{HX} := 2B_HL³c_tot(1/128)max((3/2)dC′_𝔇L³c_tot(1/128)², C_vL⁴e^{2η |
 | {#D.C_hes} | 304 | C_hes := the constant of §9.6's bound on ⟨A, ΔA⟩, which per point of |
 | {#D.C_q} | 305 | C_q := 64C₀^{ms}C_{HX} + C_hesL⁶ + 4C_NLc_tot(1/128). |
 | {#D.C_ℒ^π} | 307 | C_ℒ^π := 4L³C_ℒ^{ker}c_ε, under ε₁ ≤ 1 and ½δ_Q^{pl}RM ≥ 3 log L + 1 |
@@ -4862,4 +4870,4 @@ Each definition X := … of the LF carries the tag {#D.X} immediately before X; 
 | {#D.ψ′} | 3266 | ψ′ := Σ_{y∈B}G_B(·, y)σ(y)/(2d), so that Δψ′ = −σ in B and ψ′ = 0 |
 | {#D.h_y} | 3267 | h_y := E^·G(S_{τ_B} − y), τ_B the exit time from B. Theorem 4.3.1  |
 
-Hashes at which the lines above hold: LF 94d3e82675b1, table 1741a64f26a7 (SHA256, first 12).
+Hashes at which the lines above hold: LF 3a5c8b3ed848, table dc9cffc9b3f8 (SHA256, first 12).
