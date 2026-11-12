@@ -583,6 +583,270 @@ The form $\Delta_k$ vanishes on $\operatorname{ran}\bar D_k$ and is positive def
 The form $\Delta_k \geq 0$ depends on $z$ only modulo $\operatorname{ran}\bar D_k$, so by polarisation it vanishes on $\operatorname{ran}\bar D_k$ and maps the orthogonal complement into itself. If $\langle z, \Delta_kz \rangle = 0$, a minimiser $A$ has $\langle A, hA \rangle = 0$, hence $A = D\omega$, because $h$ is positive definite on $(\operatorname{ran}D)^\perp$ and $hD = 0$, and then $z \in Q_kD\omega + \operatorname{ran}\bar D_k = \bar D_kP_k\omega + \operatorname{ran}\bar D_k = \operatorname{ran}\bar D_k$. Since $\bar D_k\bar D_k^{\mathrm T}$ vanishes on $(\operatorname{ran}\bar D_k)^\perp$ and has the determinant $\det(\bar D_k^{\mathrm T}\bar D_k)$ on $\operatorname{ran}\bar D_k$, $\log\det_\perp\Delta_k = \log\det\mathcal D_k - \log\det(\bar D_k^{\mathrm T}\bar D_k)$, which with \eqref{eq:level-functional} gives \eqref{eq:level-functional-full}.
 \end{proof}
 
+\subsection{Symbols and Their Integrals}\label{sec:symbols}
+
+The identities of Section~\ref{sec:exact-decomposition} hold on finite-dimensional spaces on which the hypotheses \eqref{eq:linear-setting} hold, whereas the coefficients are read off from symbols, which are integrals over momenta in infinite volume. This subsection connects the two and collects the operators and the elementary bounds which the next subsections use.
+
+\emph{The operators.} We work at a level $k$ of the construction in the units of that level, in which the fine spacing is $\eta = L^{-k}$, and in the coordinates $e^{i\eta A}U$ of \cite{BalabanPBG}; the coordinates $Ue^{iX}$ of Section~\ref{sec:exact-decomposition} are carried into these by the bondwise linear map $X = \eta\operatorname{Ad}(U)^{-1}A$, which carries Hessians to Hessians. The Hessian $\mathbf H \coloneqq \operatorname{Hess}A(U)$ of the Wilson action is the form $\Delta$ of \cite[(3.10), p.~392]{BalabanPBG}, its gradient $J \coloneqq \nabla A(U)$ the current of \cite[(3.11)]{BalabanPBG}, $D = D_U$ the covariant derivative, $\Pi_D \coloneqq D(D^{\mathrm T}D)^{-1}D^{\mathrm T}$, and
+\begin{equation}\label{eq:gauge-invariant-hessian}
+    h \coloneqq (1 - \Pi_D)\mathbf H(1 - \Pi_D)\;,
+\end{equation}
+which satisfies the hypotheses on $h$ in \eqref{eq:linear-setting} wherever $D$ is injective and $h$ is positive on $(\operatorname{ran}D)^\perp$. Comparing the terms of first order in $\lambda$ in \cite[(3.117), p.~419]{BalabanPBG} gives
+\begin{equation}\label{eq:hessian-defect}
+    \langle A, \mathbf HD\lambda \rangle = T(J, \lambda, A) \coloneqq \tfrac12\bigl\langle i[\lambda(b_-), A(b)] - i[A(b), \operatorname{Ad}(U_b)\lambda(b_+)],\, J \bigr\rangle\;,
+\end{equation}
+which is linear in $J$, local, and contains no derivative, so that $\abs{T(J, \lambda, A)} \leq c_{\mathcal N}\sum_b\eta^4\abs{J(b)}\abs{A(b)}(\abs{\lambda(b_-)} + \abs{\lambda(b_+)})$ with an absolute constant $c_{\mathcal N}$. With $\varphi_A \coloneqq (D^{\mathrm T}D)^{-1}D^{\mathrm T}A$ the difference $K \coloneqq \mathbf H - h = \Pi_D\mathbf H + \mathbf H\Pi_D - \Pi_D\mathbf H\Pi_D$ is therefore
+\begin{equation}\label{eq:hessian-difference}
+    \langle A', KA \rangle = T(J, \varphi_{A'}, A) + T(J, \varphi_A, A') - T(J, \varphi_A, D\varphi_{A'})\;,
+\end{equation}
+linear in $J$ and nonlocal through $\varphi$. The average $\tilde Q$ of Section~\ref{sec:exact-decomposition} is the linearised $k$-fold average of the construction. Ba{\l}aban's estimates of the propagators use a dressed average instead \cite[p.~392]{BalabanPBG}, \cite[(89)--(92), p.~31]{BalabanCMP98}, and so do we: $Q = Q(U)$ is the linear part of the one-step average of \cite[p.~418]{BalabanPBG}, with the dressing factors \cite[(3.113)]{BalabanPBG} and with the contour variables of \cite[(0.11), p.~253]{BalabanRG1} in place of the contours, composed over the $k$ steps as in \cite[(3.15), p.~393]{BalabanPBG}, and $Q'$ is \cite[(3.19)]{BalabanPBG} with the same replacement, $Q'\lambda(y) = \sum_{x \in B(y)}L^{-d}\operatorname{Ad}(U(y, x))\lambda(x)$, composed over the steps. Then:
+\begin{enumerate}[label=(\roman*)]
+\item $QD = \bar DQ'$, by the derivation of \cite[(3.113)--(3.115), p.~418]{BalabanPBG}, which uses only the covariance of the average at the coarse sites and that of the contour variables \cite[(0.6)]{BalabanRG1};
+\item $Q - \tilde Q$ takes values in $\operatorname{ran}\bar D$: the dressing factors are $1$ at the trivial configuration, so the linear part of one step is $\tilde Q^{(1)}A + \bar D\omega_d(A)$, with $\omega_d(A)$ the linear part of the logarithm of the dressing factor, and over the steps $Q_{\leq j} - \tilde Q_{\leq j} = Q^{(j)}(Q_{\leq j-1} - \tilde Q_{\leq j-1}) + (Q^{(j)} - \tilde Q^{(j)})\tilde Q_{\leq j-1}$ with $Q^{(j)}\bar D = \bar DQ'^{(j)}$. Hence $\{ QA \in z + \operatorname{ran}\bar D \} = \{ \tilde QA \in z + \operatorname{ran}\bar D \}$, and $\Delta_k$ and $F_k$ are the same for $Q$ and for $\tilde Q$;
+\item at $U = 1$, $Q$ is the composite $Q_k$ of the straight averages of \cite[(1.16)--(1.18), p.~20]{BalabanPRT1}, with centred blocks, and $Q'$ is the centred block average \cite[(1.20)]{BalabanPRT1}: at $U = 1$ the contour factors contribute $\omega_d(A)(c_-) - \omega_d(A)(c_+)$ to the linear part, by \cite[(0.8)]{BalabanRG1}, and the dressing contributes the opposite.
+\end{enumerate}
+Further, $N(Q')$, the projection $R$ onto $\Delta^\eta_UN(Q')$, and $G' = (\Delta^\eta_U + Q'^*aQ')^{-1}$ are those of \cite[(3.21)--(3.25), p.~394]{BalabanPBG}, $\Delta_\pi$ is the extension \cite[(3.119), p.~419]{BalabanPBG}, $\Delta'_\pi \coloneqq \mathbf H - \Delta_\pi$ is given by \cite[(3.120)]{BalabanPBG}, every term of which contains $\lambda_A \coloneqq G'RD^*A$, and
+\begin{equation}\label{eq:pbg-propagators}
+    G \coloneqq (\Delta_\pi + DRD^* + aQ^*Q)^{-1}\;,
+    \qquad
+    H \coloneqq GQ^*(QGQ^*)^{-1}\;,
+    \qquad
+    C_G \coloneqq G - GQ^*(QGQ^*)^{-1}QG
+\end{equation}
+\cite[(3.122), (3.126), p.~420]{BalabanPBG}, with $RD^*H = 0$ \cite[(3.124)]{BalabanPBG}. By (iii), at $U = 1$ these are Ba{\l}aban's own operators at the trivial configuration, conjugated by the fixed translation from the blocks of \cite[(2), p.~17]{BalabanCMP98} to the centred blocks of \cite{BalabanRG1}, since Ba{\l}aban's average has the same linear part at $U = 1$ \cite[(124), p.~36]{BalabanCMP98}.
+
+\emph{Cosets.} The hypotheses \eqref{eq:linear-setting} fail on a whole torus near $U = 1$. Indeed, at $U = 1$ the kernel of $D$ consists of the constant $0$-forms, while for a background $U = U_{k}(e^{itB})$ with a plane wave $B = a e^{ip\cdot y} + \mathrm{c.c.}$, $a = e_1w$, $0 \neq w$ in the Lie algebra, and $p_2 \not\equiv 0$, some holonomies are $\exp(sw)$ with $s \neq 0$ small, so that the parallel sections take values in the centraliser of $w$, a proper subspace; $D_U^{\mathrm T}D_U$ then has eigenvalues of order $t^2$, and $\log\det(D_U^{\mathrm T}D_U)$ is unbounded as $t \to 0$. The remedy is to work on one family of momenta at a time. Let $T$ be a torus of side $N$, $p \in (2\pi/N)\mathbb Z^4$ with $p \not\equiv 0 \bmod 2\pi$, and $T_p \coloneqq \{ y \in T \, | \, e^{ip\cdot y} = 1 \}$. Every operator above is a translation-covariant function of the background and so commutes with $T_p$; decomposing the fields into Bloch fibres of quasi-momentum $p' \bmod 2\pi$ under the translations of $T$, the characters which are trivial on $T_p$ are the multiples of $p$, so that every such operator is block-diagonal in the cosets $\mathcal O \coloneqq p' + \mathbb Zp$. We write $X_{\mathcal O}$, $Y_{\mathcal O}$, and so on, for the real fields with quasi-momenta in $\mathcal O \cup (-\mathcal O)$. Let $\mathcal O \neq \mathbb Zp$. On a nonzero fibre at $U = 1$, $D$ and $\bar D$ are injective and $h$ is positive on $(\operatorname{ran}D)^\perp$, since its kernel there consists of harmonic $1$-forms, which are constant. The spaces are finite-dimensional, a $T_p$-invariant background preserves them, and the operators are real-analytic functions of the link variables; so for $T_p$-invariant $U$ near $1$ these properties persist, the hypotheses \eqref{eq:linear-setting} hold on $\mathcal O$ with $Y = Y_{\mathcal O}$, and Proposition~\ref{prop:exact-decomposition}, Corollary~\ref{cor:one-step}, and Lemma~\ref{lem:full-space-form} hold there.
+
+\emph{Symbols.} At $U = 1$ every operator commutes with the translations of the coarse lattice, and its Bloch fibre at quasi-momentum $q$ is its \emph{symbol}; the symbol of a quadratic form is that of its kernel. The second-order Taylor coefficient in the field $B$ of the coarse lattice of a function of $B$ is a quadratic form whose symbol $\Pi(p)$ is the \emph{polarisation}, and the coefficient $\Lambda$ of Paper, \eqref{P-eq:polarisation-coefficient}, is read off from its part of order $\abs{p}^2$ \cite[(1.22), p.~264]{BalabanRG1}. On the coset $\mathcal O \neq \mathbb Zp$ the second-order coefficient in $t$ of each quantity of this section, restricted to $X_{\mathcal O}$, is $\sum_{p' \in \mathcal O \cup (-\mathcal O)}\mathcal M(p', p)$, where $\mathcal M$ is the one-loop integrand of its Bloch form, with internal lines at the quasi-momenta $p'$ and $p' + p$. For $N$ larger than the ranges of the local operators the fibre of each operator at $U = 1$ is its infinite-volume symbol, because inverses, projections, and Schur complements are taken fibrewise. We put $\Pi^N(p) \coloneqq N^{-4}\sum_{p' \notin \mathbb Zp}\mathcal M(p', p)$. The sets $\mathcal O \cup (-\mathcal O)$ with $\mathcal O \neq \mathbb Zp$ partition the $p' \notin \mathbb Zp$, so the identities of Section~\ref{sec:exact-decomposition}, which hold on each of them, hold exactly for $\Pi^N$.
+
+\begin{lemma}[Infinite Volume]\label{lem:infinite-volume}
+Suppose that $\mathcal M(\cdot, p)$ is continuous away from $p' \in \{ 0, -p \} \bmod 2\pi$ and has singularities of degree at most $2$ there, uniformly for $p$ in compact subsets of $\mathbb R^4 \setminus 2\pi\mathbb Z^4$. Then $\Pi^N(p) \to \int_{[-\pi,\pi]^4}\mathcal M(p', p)\,\dd^4p'/(2\pi)^4$ as $N \to \infty$ through the $N$ with $p \in (2\pi/N)\mathbb Z^4$, and the limit is continuous in $p \not\equiv 0$. Consequently every identity between such limits which holds for $p \in \bigcup_N(2\pi/N)\mathbb Z^4$ holds for every $p \not\equiv 0$.
+\end{lemma}
+
+\begin{proof}
+In dimension $4$ the grid points within distance $r$ of a singular point contribute at most $Cr^2$ to $\Pi^N$, uniformly in $N$, because $N^{-4}\#\{ p' \in (2\pi/N)\mathbb Z^4 \, | \, \abs{p'} < r \}\abs{p'}^{-2}$ is a Riemann sum of $\int_{\abs{p'}<r}\abs{p'}^{-2}\,\dd^4p' = \pi^2r^2$. The point $p \in 2\pi\mathbb Q^4$ is fixed along the sequence, so $\mathbb Zp$ consists of a fixed number $m_0$ of points, which apart from $0$ and $-p$ are not singular, and their omission changes the Riemann sum by at most $C_pm_0N^{-4}$. Away from the $r$-neighbourhoods of the singular points the Riemann sums converge to the integral, and $r$ is arbitrary. For $p$ in a compact set avoiding $2\pi\mathbb Z^4$ the integrals of the bounds over the $r$-neighbourhoods are $O(r^2)$ uniformly in $p$, which gives the continuity, and $\bigcup_N(2\pi/N)\mathbb Z^4$ is dense.
+\end{proof}
+
+\emph{Bloch norms.} A field $X$ is a Bloch wave of quasi-momentum $p$ if $X(x + y) = e^{ip\cdot y}X(x)$ for the coarse translations $y$, and matrix elements between Bloch waves are taken per coarse unit cell. We put $\norm{X}_\infty \coloneqq \sup\abs{X}$ and $\norm{X}_2 \coloneqq (\sum_{x \in \mathrm{cell}}\eta^4\abs{X(x)}^2)^{1/2}$, so that $\norm{X}_2 \leq \norm{X}_\infty$; if three Bloch waves have quasi-momenta adding to zero, then $\sum_{\mathrm{cell}}\eta^4\abs{fgh} \leq \norm{f}_\infty\norm{g}_\infty\norm{h}_2$. We write $v_\nu(p) \coloneqq e^{ip_\nu} - 1$, so that the pure gauge fields of the coarse lattice are $B = v(p)\hat\omega e^{ip\cdot y}$, and $\abs{\hat p} \coloneqq \abs{v(p)}$, so that $(2/\pi)\abs{p} \leq \abs{\hat p} \leq \abs{p}$ for $\abs{p_\mu} \leq \pi$. At $U = 1$ the symbol of the fine Laplacian satisfies $\Delta(q) \geq (4/\pi^2)\abs{q}^2$ at every alias $q$ of a coarse momentum $p$, and $\abs{q} \geq \abs{p}$, so that $\norm{(D^{\mathrm T}D)^{-1}} \leq (\pi^2/4)\abs{p}^{-2}$, $\norm{(D^{\mathrm T}D)^{-1}D^{\mathrm T}} \leq (\pi/2)\abs{p}^{-1}$, and $\norm{\Pi_D} \leq 1$ on quasi-momentum $p$. We call these the \emph{singular factors}, of the degrees $2$, $1$, and $0$; a factor of degree $s$ has fibre norm at most $Cd(q)^{-s}$ and $q$-derivative at most $Cd(q)^{-s}(1 + d(q)^{-1})$, uniformly in $\eta$, where $d(q)$ is the distance from $q$ to $2\pi\mathbb Z^4$. A \emph{regular factor} is one whose symbol is bounded with a bounded $q$-derivative, uniformly in $k$.
+
+\begin{lemma}[Second-Order Vanishing]\label{lem:second-order-vanishing}
+Let $T(p)$ be $4 \times 4$ matrices in the vector index, tensored with the identity on the Lie algebra, with $T(p)v(p) = 0$ for all $p$.
+\begin{enumerate}[label=(\alph*)]
+\item If $T$ is $C^2$ on a ball about $p = 0$, with $\norm{D^2T(q)[u, u]} \leq C\abs{u}^2$ there, and covariant under the signed permutations $R$, $T(Rp) = \rho(R, p)T(p)\rho(R, p)^{-1}$ with $\rho(R, \cdot)$ unitary and differentiable and $\rho(R, 0)$ the signed permutation matrix of $R$, then $\norm{T(p)} \leq (C/2)\abs{p}^2$ on that ball.
+\item If $\norm{T(p) - T(0)} \leq M\abs{p}^\gamma$ for all $p$, with $\gamma > 0$, then $T(0) = 0$ and $\norm{T(p)} \leq M\abs{p}^\gamma$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(a) At $p = 0$ covariance says that $T(0)$ commutes with every signed permutation matrix; commuting with the sign changes makes it diagonal, and commuting with the permutations makes it $t\cdot 1$. Differentiating $T(p)v(p) = 0$ at $0$ in the direction $e_\mu$, with $v(0) = 0$ and $\partial_\mu v(0) = ie_\mu$, gives $ite_\mu = 0$, so $t = 0$. Let $a_\varrho \coloneqq \partial_\varrho T(0)$. Differentiating the covariance under the reflection $R_\lambda$ of the $\lambda$-th coordinate at $p = 0$, where $T(0) = 0$ makes the derivatives of $\rho(R_\lambda, \cdot)$ drop out, gives $(a_\varrho)_{\mu\nu} = (-1)^{[\varrho = \lambda] + [\mu = \lambda] + [\nu = \lambda]}(a_\varrho)_{\mu\nu}$ for every $\lambda$. The exponents add up to $3$ over $\lambda = 1, \dots, 4$, so one of them is odd and the entry vanishes; hence $\nabla T(0) = 0$, and Taylor's theorem gives the bound. (b) For $0 < s < 1$, $v(se_\mu) = (e^{is} - 1)e_\mu$ with $e^{is} \neq 1$, so $T(se_\mu)e_\mu = 0$ and $\abs{T(0)e_\mu} = \abs{(T(0) - T(se_\mu))e_\mu} \leq Ms^\gamma$; letting $s \to 0$ gives $T(0) = 0$.
+\end{proof}
+
+\begin{lemma}[A One-Loop Lipschitz Bound]\label{lem:one-loop-lipschitz}
+Let $a, b \geq 0$ with $a + b \leq 2$, and let $f(q, p)$ be defined where $d(q) > 0$ and $d(q + p) > 0$, $2\pi$-periodic in $q$ and continuously differentiable in $p$, with
+\begin{equation}\label{eq:lipschitz-hypotheses}
+    \abs{f(q, p)} \leq Md(q)^{-a}d(q + p)^{-b}\;,
+    \qquad
+    \abs{\partial_pf(q, p)} \leq Md(q)^{-a}d(q + p)^{-b}\bigl(1 + d(q + p)^{-1}\bigr)\;.
+\end{equation}
+Then $I(p) \coloneqq \int_{[-\pi,\pi]^4}f(q, p)\,\dd^4q$ satisfies $\abs{I(p)} \leq C_IM$ for all $p$ and $\abs{I(p) - I(0)} \leq C_IM\abs{p}$ for $\abs{p} \leq \pi$, with an absolute constant $C_I$. For a sum of $n$ such functions, with $(a, b)$ varying, the bounds hold with $nC_I$ in place of $C_I$.
+\end{lemma}
+
+\begin{proof}
+On $[-\pi, \pi]^4$, $d(q) = \abs{q}$, and $\int_{\abs{q}<\varrho}\abs{q}^{-s}\,\dd^4q = 2\pi^2\varrho^{4-s}/(4 - s)$ for $s < 4$; by periodicity the integral of $d(q + p)^{-s}$ over a set on which $d(q + p) < \varrho$ is at most the same. Where $d(q + p) \geq \abs{q}$ the integrand is at most $M\abs{q}^{-a-b}$, and elsewhere at most $Md(q + p)^{-a-b}$, which gives $\abs{I(p)} \leq CM$ since $a + b < 4$. On the region $\abs{q} \geq 2\abs{p}$ we have $d(q + tp) \geq \abs{q}/2$ for $t \in [0, 1]$, so that the mean value theorem gives $\abs{f(q, p) - f(q, 0)} \leq 2^b(2\pi + 2)M\abs{p}\abs{q}^{-a-b-1}$, integrable since $a + b + 1 \leq 3$. On the region $\abs{q} < 2\abs{p}$, $f(q, 0)$ and $f(q, p)$ are bounded as in the first bound, on sets on which $\abs{q}$ or $d(q + p)$ is less than $2\abs{p}$, with integrals at most $CM\abs{p}^{4-a-b} \leq CM\pi^{3-a-b}\abs{p}$, because $4 - a - b \geq 2$ and $\abs{p} \leq \pi$.
+\end{proof}
+
+\subsection{The Terms of the Current}\label{sec:current-terms}
+
+Ba{\l}aban's Gaussian of the step $k + 1$ is taken at the constrained minimiser $U_{k+1}(e^{iB})$, at which $\nabla A$ does not vanish, and its quadratic form contains a term with the current $J$ of \cite[(1.8), p.~261]{BalabanRG1}. The decomposition of Section~\ref{sec:exact-decomposition} is stated for the gauge-invariant form $h$ of \eqref{eq:gauge-invariant-hessian}, which involves no Lagrange multiplier, and we define the \emph{term of the current} of the step $k + 1$ as the difference
+\begin{equation}\label{eq:current-term}
+    \mathcal J^{(k)}(U) \coloneqq \log Z^{(k)}(U) - (F_{k+1} - F_k)(U)\;,
+\end{equation}
+with $Z^{(k)}$ the normalisation \eqref{P-eq:gaussian-normalisation} of the paper. We show that it does not contribute to the coefficient. On the coarse lattice $T^{(k+1)}$ of the step, with $p \in [-\pi, \pi]^4$, let $\Pi^{(k)}_{\mathcal J}(p)$ be the polarisation of $B \mapsto \mathcal J^{(k)}(U_{k+1}(e^{iB}))$.
+
+\begin{proposition}[The Terms of the Current]\label{prop:current-terms}
+There is a constant $C$, depending on $d$, $L$, $G$, and the constants of \cite{BalabanPBG} only, such that $\norm{\Pi^{(k)}_{\mathcal J}(p)} \leq C\abs{p}^3$ for $\abs{p} \leq \pi$ and $\norm{\Pi^{(k)}_{\mathcal J}(p)} \leq C$ for all $p$, for every $k$. In particular $\Lambda(\mathcal J^{(k)}) = 0$.
+\end{proposition}
+
+Every symbol at $U = 1$ which occurs in the proof commutes with the adjoint action on the complexified Lie algebra, by the covariance under constant gauge transformations (step (b) below). The complexification of a compact simple Lie algebra is simple, so its adjoint representation is irreducible, and Schur's lemma gives every such symbol the form $T_0(p) \otimes 1$, as in Lemma~\ref{lem:second-order-vanishing}.
+
+\begin{proof}
+\emph{(a) Ba{\l}aban's form of the step.} In the variable $B'$ of the step, by \cite[(1.5), p.~261]{BalabanRG1} with $j = k$ and \cite[(2.11), p.~267]{BalabanRG1}, the quadratic form of $Z^{(k)}$ is
+\begin{equation}\label{eq:step-form}
+    \langle B', \Delta^{(k)}B' \rangle = \langle H_1B', \Delta_1H_1B' \rangle - 2\langle H_1h_B\tilde C^{(2)}(B'), J \rangle + \mathbf G^{(2)}(B')\;,
+\end{equation}
+where $h_B$ is the operator $h$ of \cite[(2.4), p.~266]{BalabanRG1}, $\tilde C^{(2)}$ the quadratic part of the average of the step, and $\mathbf G^{(2)}$ twice the quadratic part of the axial gauge-fixing term $\mathbf G$ of \cite[(2.5), p.~266]{BalabanRG1}. Eliminating the variables $B'(b_0(c))$ by $\delta(\tilde QB')$ writes $B' = \mathcal PB''$ (Ba{\l}aban's $B' = CB$), $Z^{(k)}(U) = \mathfrak j(U)\det(\mathcal P^*\Delta^{(k)}(U)\mathcal P)^{-1/2}$, and $C^{(k)} = (\mathcal P^*\Delta^{(k)}\mathcal P)^{-1}$ \cite[pp.~267--268]{BalabanRG1}, with $\mathfrak j(U)$ the Jacobian of the elimination, which depends on the background only through $\tilde Q$. Here $H_1$ and $\Delta_1$ are \cite[(3.127)--(3.129), p.~421]{BalabanPBG}, so that $\langle H_1B', \Delta_1H_1B' \rangle = \min\{ \langle A, G_1^{-1}A \rangle \, | \, QA = B' \} - a\abs{B'}^2$, and by \cite[(3.128), (3.120), (3.134)--(3.135)]{BalabanPBG}, with Ba{\l}aban's $\Delta = \mathbf H = h + K$,
+\begin{equation}\label{eq:g-one-inverse}
+    G_1^{-1} = h + DRD^* + aQ^*Q + X(U, J)\;,
+    \qquad
+    X(U, j) \coloneqq K(U, j) - \Delta'_\pi(U, j) - \Delta^{(2)}_\pi(U, j)\;,
+\end{equation}
+where $K(U, j)$, $\Delta'_\pi(U, j)$, and $\Delta^{(2)}_\pi(U, j)$ are \eqref{eq:hessian-difference}, \cite[(3.120)]{BalabanPBG}, and \cite[(3.134)--(3.135)]{BalabanPBG} with an independent fine $1$-form $j$ in place of $J$, each linear in $j$.
+
+\emph{(b) The term as a determinant.} For a fine $1$-form $j$ let $\Delta^{(k)}(U, j)$ be the form \eqref{eq:step-form} with $G_1^{-1}$ replaced by $h + DRD^* + aQ^*Q + X(U, j)$ and $J$ by $j$, and put $\mathcal F(U, j) \coloneqq -\frac12\log\det(\mathcal P^*\Delta^{(k)}(U, j)\mathcal P) + \frac12\log\det(\mathcal P^*\Delta^{(k)}(U, 0)\mathcal P)$. By (a), $\Delta^{(k)}(U, J(U)) = \Delta^{(k)}(U)$. At $j = 0$ the argument of Lemma~\ref{lem:top-representation} below gives $\langle B', \Delta^{(k)}(U, 0)B' \rangle = \langle B', \Delta_kB' \rangle + \mathbf G^{(2)}(B')$. On $\{ \tilde QB' = 0 \}$ the gauge directions of $\Delta_k$ are the $\omega$ which vanish at the sites of $T^{(k+1)}$, by \eqref{eq:covariance-of-average}, and they shift the linear part $\tilde B'(y, x)$ of $(V'V^{(k)})(y, x)V^{(k)}(y, x)^{-1}$ \cite[p.~266]{BalabanRG1} by $-i\operatorname{Ad}(V^{(k)}(y, x))\omega(x)$, which is orthogonal at real $V^{(k)}$; so the Gaussian integral over these directions against $e^{-\frac12\mathbf G^{(2)}}$ is a constant, the axial slice has the Faddeev--Popov determinant one, and the integral $\int\delta(\tilde QB')\exp[-\frac12\langle B', \Delta^{(k)}(U, 0)B' \rangle]\,\dd B'$, which carries the same Jacobian $\mathfrak j(U)$, is $Z^{(k)}[h]$ up to a constant. By Corollary~\ref{cor:one-step}, on each coset $\mathcal O \neq \mathbb Zp$,
+\begin{equation}\label{eq:current-term-determinant}
+    \mathcal J^{(k)}(U) = \mathcal F(U, J(U)) + \mathrm{const}\;,
+    \qquad
+    \mathcal F(U, 0) = 0\;.
+\end{equation}
+Every operator in $X$ and in the term of $J$ in \eqref{eq:step-form} is gauge covariant, the averages by \eqref{eq:covariance-of-average} and (i) above, the step variables transform by the orthogonal maps $\operatorname{Ad}(g)$ at the sites of $T^{(k)}$, $\mathbf G^{(2)}$ is invariant, and $J(U^g) = \operatorname{Ad}(g)J(U)$; hence $\mathcal F(U^g, \operatorname{Ad}(g)j) = \mathcal F(U, j)$ for every fine gauge transformation $g$.
+
+\emph{(c) The second order in $B$.} On $X_{\mathcal O}$, $\mathcal F$ is real-analytic in $(t, j)$ near $(0, 0)$, because the minimum in (b) is a Schur complement of a form which is positive on $\ker Q$ at $(1, 0)$, where it is $G(1)^{-1}$, and $\mathcal P^*\Delta^{(k)}(1, 0)\mathcal P = C^{(k)}(1)^{-1}$ is invertible. Write $\partial_j\mathcal F(U, 0)[j] \eqqcolon \langle j, \Theta(U) \rangle$ and $\mathcal F_{jj} \coloneqq \partial_j^2\mathcal F(1, 0)$; by gauge covariance $\Theta(U^g) = \operatorname{Ad}(g)\Theta(U)$. Expand $J(U_{k+1}(e^{iB})) = j_1(B) + j_2(B) + \dots$. Since $\mathcal F(U, 0) = 0$ and $J(1) = 0$, the part of second order of $\mathcal J^{(k)}$ is $\langle j_2, \Theta(1) \rangle + \langle j_1, \Theta_1B \rangle + \frac12\mathcal F_{jj}[j_1, j_1]$, with $\Theta_1$ the linearisation of $B \mapsto \Theta(U_{k+1}(e^{iB}))$. First, $\Theta(1) = \operatorname{Ad}(u)\Theta(1)$ for every constant $u$, so each $\Theta(1)(b)$ is an invariant vector of the simple Lie algebra, hence zero. Secondly, the linearisation $A_1$ of $U_{k+1}(e^{iB})$ minimises $\norm{\partial A}^2$ on $\{ \tilde Q_{k+1}A = B \}$, so that it has the curvature of $H_{k+1}B$, with $H_{k+1}$ the operator of \cite[(1.65), p.~29]{BalabanPRT1}; on a quasi-momentum $p \not\equiv 0$ a curl-free Bloch wave is a gradient, so $A_1 = H(1)B + \partial\omega'$, and $\Theta_1$ annihilates gradients, being the derivative of $\Theta(1^{e^{it\omega'}}) = \operatorname{Ad}(e^{it\omega'})\Theta(1) = 0$. Hence $\Theta_1B$ is the derivative of $\Theta$ at $1$ in the direction $A_1 \coloneqq H(1)B$, whose kernel decays exponentially \cite[(3.133), p.~422]{BalabanPBG}. Thirdly, $j_1 = \mathbf H(1)A_1 = \partial^{\mathrm T}\partial H_{k+1}B = Q_{k+1}^{\mathrm T}\lambda_B$ for a Lagrange multiplier $\lambda_B$, because $H_{k+1}B$ minimises $\norm{\partial A}^2$ subject to $Q_{k+1}A = B$; then $\langle B, \Delta_{k+1}B \rangle = \norm{\partial H_{k+1}B}^2 = \langle B, \lambda_B \rangle$ \cite[p.~29]{BalabanPRT1}, and polarisation gives $\lambda_B = \Delta_{k+1}B$, so that
+\begin{equation}\label{eq:current-leg}
+    j_1 = Q_{k+1}^{\mathrm T}\Delta_{k+1}B\;,
+    \qquad
+    \norm{\Delta_{k+1}(p)} \leq C\gamma_1\abs{p}^2\;,
+\end{equation}
+by $0 \leq \langle B, \Delta_{k+1}B \rangle \leq \gamma_1\langle\partial^1B, \partial^1B\rangle$ \cite[(1.67), p.~29]{BalabanPRT1} and $\abs{\partial^1_\mu(p)} \leq \abs{p_\mu}$. Hence the part of second order is $\langle\Delta_{k+1}B, \tau B\rangle + \frac12\langle\Delta_{k+1}B, \tilde R\Delta_{k+1}B\rangle$, with $\tau \coloneqq Q_{k+1}\Theta_1$ and $\tilde R \coloneqq Q_{k+1}\mathcal F_{jj}Q_{k+1}^{\mathrm T}$, and
+\begin{equation}\label{eq:current-polarisation-split}
+    \norm{\Pi^{(k)}_{\mathcal J}(p)} \leq \norm{\Delta_{k+1}(p)}\norm{\tau(p)} + \tfrac12\norm{\Delta_{k+1}(p)}^2\norm{\tilde R(p)}\;.
+\end{equation}
+
+\emph{(d) The loop integrals at $U = 1$.} Let $\mathcal C(U) \coloneqq (\mathcal P^*\Delta^{(k)}(U, 0)\mathcal P)^{-1}$ and $H_h(U)$ the minimiser map of the minimum at $j = 0$; at $U = 1$, $\mathcal C(1) = C^{(k)}(1)$ and $H_h(1) = H(1)$. The minimum is stationary at its minimiser, so the part of $\Delta^{(k)}(U, j)$ linear in $j$ is $V(U, j)(B') \coloneqq \langle H_hB', X(U, j)H_hB' \rangle - 2\langle H_hh_B\tilde C^{(2)}(B'), j \rangle$, and
+\begin{equation}\label{eq:theta-trace}
+    \langle j, \Theta(U) \rangle = -\tfrac12\operatorname{Tr}\bigl(\mathcal C(U)\mathcal P^*V(U, j)\mathcal P\bigr)\;,
+    \qquad
+    \tfrac12\mathcal F_{jj}[j, j] = -\tfrac12\operatorname{Tr}(\mathcal C\mathcal P^*V_2(j)\mathcal P) + \tfrac14\operatorname{Tr}\bigl((\mathcal C\mathcal P^*V(1, j)\mathcal P)^2\bigr)\;,
+\end{equation}
+at $U = 1$ for the second, with $V_2(j)$ the part of $\Delta^{(k)}(1, j)$ quadratic in $j$, which the constrained Gaussian gives as $-\langle H(1)B', X(1, j)C_GX(1, j)H(1)B' \rangle$ plus the quadratic part $-2\langle\partial_jH_1[j]h_B\tilde C^{(2)}(B'), j\rangle$ of the term of $j$, with $\partial_jH_1[j] = -C_GX(1, j)H(1)$. In the direction $A_1$ the derivative in $U$ falls on $\mathcal C$, $\mathcal P$, $H_h$, $X$, $h_B$, or $\tilde C^{(2)}$, and $\partial_Uh(1)[A_1] = \partial\mathbf H(1)[A_1] - K(1, \mathbf H(1)A_1)$, since $h = \mathbf H - K(U, J(U))$ and $\partial J(1)[A_1] = \mathbf H(1)A_1$. At $U = 1$ every operator commutes with the translations of $T^{(k+1)}$, and for $B$ of momentum $p$ each trace is $\int_{[-\pi,\pi]^4}\operatorname{Tr}\mathcal M(q, p)\,\dd^4q/(2\pi)^4$ by Lemma~\ref{lem:infinite-volume}, with $\mathcal M(q, p)$ the product of the symbols of its factors, a linear map on the $dL^d\dim G$ step variables of one cell, so that $\abs{\operatorname{Tr}\mathcal M} \leq dL^d\dim G\,\norm{\mathcal M(q, p)}$. The factors are of two kinds.
+\begin{itemize}
+\item \emph{Regular factors:} $\mathcal C(1)$, $\mathcal P$, $H$, $G$, $G'$, $C_G$, $R$, $Q$, $Q^{\mathrm T}$, $A_1$, $\Delta'_\pi$, $\Delta^{(2)}_\pi$, $h_B$, $\tilde C^{(2)}$, $\mathbf G^{(2)}$, the local factors of $T$, and the derivatives at $1$ in the direction $A_1$ of $\mathcal P$, $R$, $Q$, $Q^{\mathrm T}$, $D$, $\operatorname{Ad}(U_b)$, $h_B$, $\tilde C^{(2)}$, $\mathbf G^{(2)}$, $G'$, $H$, $\mathcal C$, $H_h$, and $\partial\mathbf H(1)[A_1]$, once the fine derivatives in $\partial\mathbf H(1)$, $\Delta'_\pi$, $D$, and $D^*$ have been moved onto the adjacent $G'$, $H$, $G$, or $C_G$. Their symbols are bounded with bounded $q$-derivatives uniformly in $k$, by the exponential decay of their kernels and the Schur test: \cite[Theorems~3.1--3.3, 3.12, (3.131)--(3.133), pp.~397--422]{BalabanPBG} at $U = 1$, with the block-to-block bound \cite[(3.46), p.~398]{BalabanPBG} for $\nabla G'\nabla^*$, whose kernel \cite[p.~423]{BalabanPBG} does not bound pointwise; the explicit one-step objects $h_B$, $\tilde C^{(2)}$, $\mathcal P$, $\mathbf G^{(2)}$, which are fixed analytic functions of the $n(d, L)$ bond variables of $V^{(k)}$ on two blocks, with finite range and with Cauchy estimates on a polydisc of radius $r_1(d, L, G)$ about $1$ for their derivatives; and Lemma~\ref{lem:coercive-step} below for $\mathcal C(1)$.
+\item \emph{Singular factors:} $\Pi_D$, $\varphi = (\partial^{\mathrm T}\partial)^{-1}\partial^{\mathrm T}$, $\partial(\partial^{\mathrm T}\partial)^{-1}$, and $(\partial^{\mathrm T}\partial)^{-1}$, of the degrees $0$, $1$, $1$, and $2$.
+\end{itemize}
+Each insertion of $X(1, j)$ has degree at most $1$, since each term of \eqref{eq:hessian-difference} contains one $\varphi$, the third also $D\varphi$ of degree $0$, and $\Delta'_\pi$ and $\Delta^{(2)}_\pi$ are regular. The derivative in $U$ raises the degree by at most $1$: $K(1, \mathbf H(1)A_1)$ has degree at most $1$, and replacing $\varphi_A$ by its derivative $(\partial^{\mathrm T}\partial)^{-1}[D_1^{\mathrm T}(1 - \Pi_D)A - \partial^{\mathrm T}D_1\varphi_A]$, with $D_1\lambda(b) = i[A_1(b), \lambda(b_+)]$, raises the degree of its term by at most $1$. The quantity $\Theta_1$ has one $j$ and one derivative in $U$, and $\mathcal F_{jj}$ has two $j$'s and none, so every integrand has degrees $(a, b)$ at $(q, q + p)$ with $a + b \leq 2$, and its $p$-derivative raises $b$ by at most one or falls on a regular factor. Lemma~\ref{lem:one-loop-lipschitz} gives $\norm{\tau(p) - \tau(0)} \leq C\abs{p}$ for $\abs{p} \leq \pi$ and $\norm{\tau(p)}, \norm{\tilde R(p)} \leq C$ for all $p$.
+
+\emph{(e) Pure gauge.} For $B = \bar D\omega$ the minimum of $\norm{\partial A}^2$ on $\{ \tilde Q_{k+1}A = \bar D\omega \}$ is zero, attained at a gradient by \eqref{eq:covariance-of-average}, so $A_1$ is a gradient for $p \neq 0$, $\Theta_1B = 0$ by (c), and $\tau(p)v(p) = 0$; at $p = 0$, $v(0) = 0$.
+
+\emph{(f) Conclusion.} $\tau$ is $2\pi$-periodic and bounded, so $\norm{\tau(p) - \tau(0)} \leq C\abs{p}$ for all $p$, and by (e) and Lemma~\ref{lem:second-order-vanishing}(b) with $\gamma = 1$, $\norm{\tau(p)} \leq C\abs{p}$. With \eqref{eq:current-leg} and \eqref{eq:current-polarisation-split}, $\norm{\Pi^{(k)}_{\mathcal J}(p)} \leq C\abs{p}^3 + C\abs{p}^4$ for $p \not\equiv 0$, and $\Pi^{(k)}_{\mathcal J}$ vanishes at $p \equiv 0$ by continuity; so $\norm{\Pi^{(k)}_{\mathcal J}(p)} \leq C\abs{p}^3$ for $\abs{p} \leq \pi$ and $\leq C$ for all $p$. The coefficient is determined by the part of order $\abs{p}^2$ \cite[(1.22)]{BalabanRG1}, which vanishes.
+\end{proof}
+
+\begin{lemma}[Coercivity of the Step]\label{lem:coercive-step}
+The symbol of $C^{(k)}(1)$ is bounded with a bounded $q$-derivative, uniformly in $k$.
+\end{lemma}
+
+\begin{proof}
+At $(U, j) = (1, 0)$, $G_1 = G(1)$ with $G(1)^{-1} = \mathbf H(1) + \partial R\partial^* + aQ_k^*Q_k$, so that $\langle B', \Delta^{(k)}(1, 0)B' \rangle = \min\{ \langle A, (\mathbf H(1) + \partial R\partial^*)A \rangle \, | \, Q_kA = B' \} + \mathbf G^{(2)}(B')$. As $R$ is a projection, $\partial R\partial^* \geq 0$; at $J = 0$, $\mathbf H(1) = h(1)$, and $\{ Q_kA = B' \} \subset \{ QA \in B' + \operatorname{ran}\bar D \}$, so the minimum is at least $\langle B', \Delta_kB' \rangle \geq \gamma'_0\norm{\partial^1B'}^2$, by \cite[(1.65), (1.67), p.~29]{BalabanPRT1}, where $\partial^1B'$ is the curvature of $B'$ on the plaquettes of $T^{(k)}$ and $\gamma'_0 > 0$ depends on $d$ and $L$ only. Let $c$ be a bond of $T^{(k+1)}$ and $\mathsf P$ the set of the bonds of $T^{(k)}$ with both ends in $B(c_-) \cup B(c_+)$. The linear map $T_c$ which sends $B'|_{\mathsf P}$ to its curvature on the plaquettes of $\mathsf P$, to $\tilde B'(y, x)$ for $y = c_\pm$, $x \in B(y)$, and to $\tilde QB'(c)$, at $V^{(k)} = 1$, is injective. Indeed, if $T_cB' = 0$, then in each block $B'$ has zero curvature, so $B' = \partial\omega$ there, a cube being simply connected, and since the contours of $\mathbf G(y, x)$ stay in $B(y)$, $\tilde B'(y, x) = i(\omega(x) - \omega(y)) = 0$, so that $B' = 0$ on the bonds inside the blocks; two crossing bonds at neighbouring sites of the common face bound a plaquette whose other two bonds lie inside the blocks, so all $L^{d-1}$ crossing bonds carry the same value $\beta$, each with the coefficient $L^{-d}$ in $\tilde QB'(c)$, so that $\tilde QB'(c) = L^{-1}\beta = 0$. The map $T_c$ is the same for every $c$ and $k$, on a space of dimension at most $n(d, L)\dim G$, so $\abs{B'|_{\mathsf P}}^2 \leq C_{d,L}\abs{T_cB'}^2$, and summing over $c$, with each bond in at least one $\mathsf P$ and each plaquette and block in at most $2d$, gives $\norm{B'}^2 \leq 2dC_{d,L}(\norm{\partial^1B'}^2 + \mathbf G^{(2)}(B') + \norm{\tilde QB'}^2)$. The field $\mathcal PB''$ lies in $\{ \tilde QB' = 0 \}$ and equals $B''$ on the bonds other than the $b_0(c)$, so $\norm{\mathcal PB''} \geq \norm{B''}$, and $C^{(k)}(1)^{-1} = \mathcal P^*\Delta^{(k)}(1, 0)\mathcal P \geq c_{\mathcal C} \coloneqq \min(\gamma'_0, 1)/(2dC_{d,L})$. The symbol of $\mathcal P^*\Delta^{(k)}(1, 0)\mathcal P$ has a bounded $q$-derivative, because $(QG(1)Q^*)^{-1}$ has an exponentially decaying kernel \cite[(3.132), p.~422]{BalabanPBG} and $\mathcal P$ and $\mathbf G^{(2)}$ have finite range, and $\partial_q\hat C = -\hat C(\partial_q\hat C^{-1})\hat C$ is bounded by $C/c_{\mathcal C}^2$.
+\end{proof}
+
+\subsection{The Total of \texorpdfstring{$k$}{k} Steps}\label{sec:k-step-total}
+
+We now pass to the lattice $T^{(k)}$ of the level $k$, on which the coefficient $\Phi_k \coloneqq \sum_{j=1}^kb_j$ is to be read off, and use its units, in which the bare spacing is $\eta_k = L^{-k}$. For a functional $\mathfrak F$ of the field $B$ of this lattice we write $\mathfrak F(e^{iB}) = \mathfrak F(1) + \frac12\langle B, \Pi_{\mathfrak F}B \rangle + O(B^3)$ and call $\Pi_{\mathfrak F}(p)$ its polarisation. The Wilson action of the background satisfies $A(U_k(e^{iB})) = \frac12\langle B, \Delta_kB \rangle + O(B^3)$, where $\Delta_k$ is Ba{\l}aban's operator of \cite[(1.65)--(1.67), p.~29]{BalabanPRT1} (we prove this in Proposition~\ref{prop:current-total}, step~1): its symbol is analytic, it annihilates the pure gauge fields, and
+\begin{equation}\label{eq:coarse-action-bounds}
+    \gamma_0\langle\partial^1B, \partial^1B\rangle \leq \langle B, \Delta_kB \rangle \leq \gamma_1\langle\partial^1B, \partial^1B\rangle\;,
+\end{equation}
+with $\partial^1$ the curl on the unit lattice and $\gamma_0, \gamma_1 > 0$ ``dependent on $d$ only'' \cite[p.~29]{BalabanPRT1}. Let $\mathfrak B_r$ be the complex ball of the fields $B$ of $T^{(k)}$ with $\sup\abs{B} \leq r$ and $\sup\abs{\bar\partial B} \leq r$, where $\bar\partial B \coloneqq (\partial_\mu B_\nu)_{\mu,\nu}$. For $r$ small, $U_k(e^{iB})$ with $B \in \mathfrak B_r$ lies in the spaces $U^c_j(X, \alpha_0, \alpha_1)$ of \cite[(1.11)--(1.16), p.~262]{BalabanRG1} for every $j \leq k$, by \cite[Theorem~1, (181), p.~307]{BalabanVAR}, so that every functional which Ba{\l}aban proves analytic on those spaces is analytic on $\mathfrak B_r$.
+
+\begin{lemma}[Cauchy's Estimate for Polarisations]\label{lem:cauchy-polarisation}
+Let $\mathfrak F$ be analytic on $\mathfrak B_r$, translation covariant, and bounded by $M_{\mathfrak F}$ per unit cube of $T^{(k)}$. Then $\norm{\Pi_{\mathfrak F}(p)} \leq 16M_{\mathfrak F}/r^2$ for all $p$.
+\end{lemma}
+
+\begin{proof}
+For unit vectors $v$, $w$ put $B \coloneqq ve^{ip\cdot Y}$ and $B' \coloneqq we^{-ip\cdot Y}$. For $\abs{s}, \abs{t} \leq r/4$ the field $sB + tB'$ has $\sup\abs{\cdot} \leq r/2$ and $\sup\abs{\bar\partial\,\cdot} \leq r$, since $\abs{e^{i\theta} - 1} \leq 2$, so it lies in $\mathfrak B_r$, where $\abs{\mathfrak F} \leq M_{\mathfrak F}\abs{T}$, with $\abs{T}$ the number of unit cubes. The coefficient of $st$ in $\mathfrak F(sB + tB')$ is $\langle B', \Pi_{\mathfrak F}B \rangle = \abs{T}w^{\mathrm T}\Pi_{\mathfrak F}(p)v$, by translation covariance, and Cauchy's estimate on $\abs{s} = \abs{t} = r/4$ bounds it by $16M_{\mathfrak F}\abs{T}/r^2$.
+\end{proof}
+
+\begin{proposition}[The Total of the Gaussian Factors]\label{prop:gaussian-total}
+Let $\mathcal L_k(B) \coloneqq \sum_{j=1}^k\mathbf E^{(j)}(0, U_k(e^{iB}))$ be the sum of the terms of the steps at zero coupling \cite[(1.6), p.~261]{BalabanRG1}, evaluated at the background of the level $k$. Then
+\begin{equation}\label{eq:gaussian-total}
+    \Pi_{\mathcal L_k}(p) = \Phi_k\Delta_k(p) + \mathcal E_k(p)\;,
+    \qquad
+    \sup_p\norm{\mathcal E_k(p)} \leq C\;,
+\end{equation}
+with $C$ independent of $k$.
+\end{proposition}
+
+\begin{proof}
+By \cite[(0.28), p.~258]{BalabanRG1}, $\mathbf E^{(j)}(U_k) = \beta_jA(U_k) + \sum_{X \in \mathbf D_j}\mathbf V^{(j)}(X, U_k)$, where each $\mathbf V^{(j)}(X, \cdot)$ is analytic on $U^c_j$ and $\abs{\mathbf V^{(j)}(X, U)} \leq O(1)(L^j\eta)^{4+\alpha}e^{-\kappa d_j(X)}$ with $\alpha > 0$ \cite[(0.29)]{BalabanRG1}; these are the results of \cite[Sects.~3--5]{BalabanRG1} in the form summarised on \cite[p.~258]{BalabanRG1}. As in \cite[(0.30)]{BalabanRG1}, the sum over the $X$ which meet a fixed unit cube of $T^{(k)}$ is at most $C(L^j\eta)^\alpha = C(L^{j-k})^\alpha$, so by Lemma~\ref{lem:cauchy-polarisation} the polarisation of $\sum_X\mathbf V^{(j)}$ is at most $C(L^{j-k})^\alpha$, and the sum over $j \leq k$ is at most $C(1 - L^{-\alpha})^{-1}$. At zero coupling $\beta_j = b_j$, and the polarisation of $A(U_k(e^{iB}))$ is $\Delta_k$.
+\end{proof}
+
+The terms of the current, on the other hand, are bounded on the lattice of the step at which they arise, and we have to see them from the lattice $T^{(k)}$. The fine field $H_kB$ which carries a coarse plane wave is a sum over the aliases of its momentum, and the next lemma is the summability we need.
+
+\begin{lemma}[Alias Summability]\label{lem:alias-summability}
+Fix $\alpha \in (0, 1)$. At $U = 1$, for every $k$ and every coarse momentum $p$,
+\begin{equation}\label{eq:alias-summability}
+    \sum_l\abs{(d_\eta H_k)^\wedge(p + l)}\,\abs{p + l}^\alpha \leq C(d, \alpha)\;,
+\end{equation}
+the sum over the aliases $p + l$ of $p$ in the fine Brillouin zone, where $(d_\eta H_k)^\wedge$ is the symbol of $B \mapsto d_\eta(H_kB)$ and $d_\eta$ the lattice curl at the spacing $\eta = L^{-k}$.
+\end{lemma}
+
+A bound of this kind is stated after \cite[(1.63), p.~28]{BalabanPRT1}, with an exponent which is not defined there; we derive it from \cite[(1.63)]{BalabanPRT1} for every $\alpha \in (0, 1)$, together with bounds on the functions $\Delta_0\varphi_\mu$ of \cite[(1.62)]{BalabanPRT1} with constants of $d$ only.
+
+\begin{proof}
+We use the units of \cite{BalabanPRT1}: the coarse lattice has the spacing $1$, $p \in [-\pi, \pi)^d$, and $l_\mu = 2\pi m_\mu$ with $\abs{m_\mu} \leq (L^k - 1)/2$ \cite[p.~23]{BalabanPRT1}. Write $q \coloneqq p + l$, $\Delta(q) = \sum_\mu\abs{\partial_\mu(q)}^2$ with $\partial_\mu(q) = (e^{i\eta q_\mu} - 1)/\eta$, $\Delta_0(p) = \sum_\mu\abs{\partial^1_\mu(p)}^2$ with $\partial^1_\mu(p) = e^{ip_\mu} - 1$, $v_\mu(q) = \partial^1_\mu(p)/\partial_\mu(q)$, and $u(q) = \prod_\mu v_\mu(q)$ \cite[(1.31), (1.61), p.~24]{BalabanPRT1}.
+
+\emph{Elementary bounds.} Since $\abs{e^{ix} - 1} = 2\abs{\sin(x/2)}$ lies between $(2/\pi)\abs{x}$ and $\abs{x}$ for $\abs{x} \leq \pi$, and $\abs{\eta q_\mu} \leq \pi$, we have $(2/\pi)\abs{q_\mu} \leq \abs{\partial_\mu(q)} \leq \abs{q_\mu}$, hence $(4/\pi^2)\abs{q}^2 \leq \Delta(q) \leq \abs{q}^2$, and likewise for $\Delta_0(p)$. Moreover $\abs{\partial^1_\mu(p)} \leq \abs{p_\mu} \leq \abs{q_\mu}$, because $\abs{p_\mu} \leq \pi \leq \abs{p_\mu + l_\mu}$ when $l_\mu \neq 0$; so $\abs{v_\mu(q)} \leq \pi/2$ and $\abs{\partial_\mu(q)}\abs{v_\mu(q)} = \abs{\partial^1_\mu(p)} \leq 2$. Also $\abs{q_\mu} \geq \abs{l_\mu}/2$. If $l_\mu \neq 0$, then $\abs{l_\mu} \geq 2\pi$ and $\abs{v_\mu(q)} \leq (\pi/2)\abs{p_\mu}/\abs{q_\mu} \leq \pi^2/\abs{l_\mu}$, so that in all cases
+\begin{equation}\label{eq:alias-decay}
+    \abs{v_\mu(q)} \leq c_v(1 + \abs{l_\mu})^{-1}\;,
+    \qquad
+    \abs{u(q)} \leq c_v^d\prod_\mu(1 + \abs{l_\mu})^{-1}\;,
+    \qquad
+    c_v \coloneqq \pi^2 + \pi/2\;,
+\end{equation}
+which is \cite[(1.36), p.~24]{BalabanPRT1} with a constant depending on $d$ only; at $q = p$, $\abs{v_\mu(p)} \geq 2/\pi$ and $\abs{u(p)} \geq (2/\pi)^d$. With $\varphi_\mu(p) = \sum_{l'}\abs{u(p + l')}^2\abs{v_\mu(p + l')}^2/\Delta(p + l')$ of \cite[(1.62)]{BalabanPRT1}, the term $l' = 0$ of $\Delta_0(p)\varphi_\mu(p)$ lies between $c_0 \coloneqq (2/\pi)^{2d+4}$ and $(\pi^2/4)(\pi/2)^{2d+2}$, and for $l' \neq 0$, $\Delta_0(p)/\Delta(p + l') \leq d\pi^4/\abs{l'}^2 \leq d\pi^2/4$, so that
+\begin{equation}\label{eq:phi-bounds}
+    c_0 \leq \Delta_0(p)\varphi_\mu(p) \leq c_1 \coloneqq \tfrac{\pi^2}{4}\bigl(\tfrac{\pi}{2}\bigr)^{2d+2} + \tfrac{d\pi^2}{4}c_v^{2d+2}\Bigl(\sum_{m \in \mathbb Z}(1 + 2\pi\abs{m})^{-2}\Bigr)^d\;.
+\end{equation}
+These are bounds of the form $\gamma_0 \leq \Delta_0\varphi_\mu \leq \gamma_1$ of \cite[p.~28]{BalabanPRT1}, with constants depending on $d$ only. Finally $N(p) \coloneqq \sum_{l''}\abs{u(p + l'')}^2\Delta_0(p)^2/\Delta(p + l'')^2 \geq c_N \coloneqq (2/\pi)^{2d}(4/\pi^2)^2$, from its term $l'' = 0$.
+
+\emph{The symbol of $H_k$.} By \cite[(1.63), p.~28]{BalabanPRT1}, $(H_kB)^\wedge_\mu(q) = T_1 + T_2$, both linear in $\hat B(p)$. The first is $T_1 = (\Delta_0(p)/\Delta(q))\bar u(q)\bar v_\mu(q)(\Delta_0(p)\varphi_\mu(p))^{-1}\hat B_\mu(p)$, so $\abs{T_1} \leq (\pi/(2c_0))\Delta_0(p)\abs{u(q)}\Delta(q)^{-1}\abs{\hat B(p)}$. The second is $\partial_\mu(q)\bar u(q)\Delta(q)^{-1}$ times $\sum_{l' \neq l}\abs{u(p + l')}^2\Delta_0(p)^2\Delta(p + l')^{-1}[\abs{v_\mu(p + l')}^2\Delta(q)^{-1} - \abs{v_\mu(q)}^2\Delta(p + l')^{-1}]$, times $N(p)^{-1}(\Delta_0(p)\varphi_\mu(p))^{-1}$ and a factor $b(p)$ with $\abs{b(p)} \leq (c_1\sqrt d/c_0)\abs{\partial^1(p)}\abs{\hat B(p)}$. Extending the two sums of the bracket to all $l'$, they are $\Delta_0(p)^2\varphi_\mu(p)\Delta(q)^{-1} \leq c_1\Delta_0(p)\Delta(q)^{-1}$ and $\abs{v_\mu(q)}^2N(p)$, so that
+\begin{equation}\label{eq:t-two-bound}
+    \abs{T_2} \leq \frac{c_1\sqrt d}{c_0^2}\abs{\partial_\mu(q)}\abs{u(q)}\Delta(q)^{-1}\Bigl[\frac{c_1\Delta_0(p)}{c_N\Delta(q)} + \abs{v_\mu(q)}^2\Bigr]\abs{\partial^1(p)}\abs{\hat B(p)}\;.
+\end{equation}
+
+\emph{The alias $l = 0$.} Here $q = p$, and the factors $\Delta_0(p)/\Delta(p)$, $\abs{\partial_\mu(p)}\abs{\partial^1(p)}/\Delta(p)$, and $\abs{v_\mu(p)}$ are bounded by constants of $d$, so that $\abs{(H_kB)^\wedge(p)} \leq C_1\abs{\hat B(p)}$ and $\abs{(d_\eta H_k)^\wedge(p)}\abs{p}^\alpha \leq 2\abs{\partial(p)}C_1\abs{p}^\alpha \leq C_2$, with $\abs{p} \leq \pi\sqrt d$.
+
+\emph{The aliases $l \neq 0$.} Here $\abs{q} \geq \pi$, and the elementary bounds give $\abs{T_1}, \abs{T_2} \leq C\abs{u(q)}\abs{q}^{-2}\abs{\hat B(p)}$. The curvature has the symbol $\partial_\mu(q)\hat A_\nu(q) - \partial_\nu(q)\hat A_\mu(q)$, and $\sum_{\mu,\nu}\abs{a_\mu b_\nu - a_\nu b_\mu}^2 \leq 4\abs{a}^2\abs{b}^2$, so $\abs{(d_\eta H_k)^\wedge(q)} \leq C\abs{u(q)}\abs{q}^{-1}$ and
+\begin{equation}\label{eq:alias-sum}
+    \sum_{l \neq 0}\abs{(d_\eta H_k)^\wedge(q)}\abs{q}^\alpha \leq C\sum_{l \neq 0}\abs{l}^{\alpha-1}\prod_\mu(1 + \abs{l_\mu})^{-1} \leq C2^{1-\alpha}\Bigl(\sum_{m \in \mathbb Z}(1 + 2\pi\abs{m})^{-1-(1-\alpha)/d}\Bigr)^d\;,
+\end{equation}
+by $\prod_\mu(1 + \abs{l_\mu}) \leq (2\abs{l})^d$, which gives $\abs{l}^{\alpha-1} \leq 2^{1-\alpha}\prod_\mu(1 + \abs{l_\mu})^{(\alpha-1)/d}$ since $\alpha < 1$. The sum is finite and depends on $d$ and $\alpha$ only.
+\end{proof}
+
+\begin{proposition}[The Total of the Terms of the Current]\label{prop:current-total}
+Let $\mathcal J_k(B) \coloneqq \sum_{j=0}^{k-1}\mathcal J^{(j)}(U_k(e^{iB}))$. Then $\sup_p\norm{\Pi_{\mathcal J_k}(p)} \leq C$, uniformly in $k$.
+\end{proposition}
+
+\begin{proof}
+Fix $j$ and put $m \coloneqq j + 1 \leq k$.
+
+\emph{Step 1: reduction to the level $m$.} Let $V^*(B) \coloneqq (U_k(e^{iB}))^{(m)}$ be the average of the level $m$. The configurations $U_k(e^{iB})$ and $U_m(V^*(B))$ agree up to a gauge transformation which is $1$ on $T^{(m)}$: $M^k$ is $M^{k-m}$ after $M^m$, so a minimiser on $\{ M^k(U) = e^{iB} \}$ also minimises on $\{ M^m(U) = V^*(B) \}$, where the minimal orbit is unique \cite[(0.21)--(0.22), p.~256]{BalabanRG1}. The term $\mathcal J^{(j)}$ is invariant under every fine gauge transformation, by \eqref{eq:current-term-determinant} and the covariance of $\mathcal F$ in step (b) of Proposition~\ref{prop:current-terms}, so $\mathcal J^{(j)}(U_k(e^{iB})) = \mathcal J^{(j)}(U_m(V^*(B)))$. Moreover $\mathcal J^{(j)} \circ U_m$ has a vanishing coefficient of first order at the trivial background, by step (c) of that proof. We show below that the first-order part of $V^*(B)$ is $iL^{m-k}Q_mH_kB$ up to a field of the level $m$ of zero curvature, with the straight average $Q_m$ of \eqref{eq:straight-average}. A field of zero curvature is a gradient plus a constant, and the symbol $\Pi^{(j)}_{\mathcal J}$ of Proposition~\ref{prop:current-terms} annihilates it: it is transverse, $\Pi^{(j)}_{\mathcal J}(p')v(p') = 0$, because $\Delta_m(p')v(p') = 0$ and $\tau(p')v(p') = 0$, and it is $O(\abs{p'}^{2+2\alpha})$ for every $\alpha \in (0, \frac12)$, with the constant $C_\alpha \coloneqq C\max(\pi^{1-2\alpha}, \pi^{-2-2\alpha})$, since $\abs{p'}^3 \leq \pi^{1-2\alpha}\abs{p'}^{2+2\alpha}$ for $\abs{p'} \leq \pi$ and $1 \leq \pi^{-2-2\alpha}\abs{p'}^{2+2\alpha}$ for $\abs{p'} \geq \pi$. So the polarisation of $\mathcal J^{(j)}(U_k(e^{iB}))$ on $T^{(k)}$ is $\langle V_1, \Pi^{(j)}_{\mathcal J}V_1 \rangle$ with $V_1 \coloneqq Q_mH_kB$.
+
+\emph{The first-order background.} The configuration $U_k(V)$ lies in the unique regular orbit of minimisers of the Wilson action on $\{ M^k(U) = V \}$ \cite[(0.21)--(0.22), p.~256]{BalabanRG1}; at $V = 1$ the configuration $1$ is such a minimiser, so we may take $U_k(1) = 1$, and then $U_k(e^{itB}) = \exp(it\eta A_1 + O(t^2))$ bondwise, analytic in $t$ \cite[Sect.~G]{BalabanVAR}. Let $\tilde Q_k$ be the first-order part of $M^k$ at $U = 1$; by the computation below with $m = k$, $\tilde Q_kA = Q_kA + \partial\omega_k(A)$ with $\omega_k$ linear, and $\tilde Q_kA_1 = B$. Three facts give $d_\eta A_1 = d_\eta H_kB$. First, $A_1$ minimises $\norm{d_\eta A}^2$ on $\{ \tilde Q_kA = B \}$: for each such $A$ the implicit function theorem gives regular $U_t = \exp(it\eta A + O(t^2))$ with $M^k(U_t) = e^{itB}$, the quadratic part of the Wilson action at $U = 1$ is $\frac12\norm{d_\eta X}^2$ with $U = e^{i\eta X}$, because $1 - \operatorname{Re}\tr e^{iY} = \frac12\tr Y^2 + O(Y^4)$, and minimality gives $t^2\norm{d_\eta A_1}^2 + O(t^3) \leq t^2\norm{d_\eta A}^2 + O(t^3)$. Secondly, the sets $\{ d_\eta A \, | \, \tilde Q_kA = B \}$ and $\{ d_\eta A \, | \, Q_kA = B \}$ coincide: a gauge transformation $A \mapsto A - \partial^\eta\lambda$ changes $Q_kA$ by $-\partial Q'_k\lambda$ \cite[(1.20), p.~20]{BalabanPRT1} and $\tilde Q_kA$ by the gradient of $-\lambda$ on $T^{(k)}$, either change can cancel $\partial\omega_k(A)$, and neither changes $d_\eta A$; the common set is affine, so $\norm{\cdot}^2$ has exactly one minimiser on it. Thirdly, $H_kB$ attains that minimum: \cite[p.~29]{BalabanPRT1} gives $H_kB$ as a minimiser of $\frac12\langle\partial A, \partial A\rangle$ on $\{ Q_kA = B,\ R\partial^*A = 0 \}$, a slice which meets every orbit of the gauge transformations with $Q'_k\lambda = 0$, since $R$ is the projection onto $\Delta N(Q'_k)$ \cite[p.~25]{BalabanPRT1}; the blocks of \cite{BalabanPRT1} are corner blocks \cite[p.~18]{BalabanPRT1} and those of \cite{BalabanRG1} centred, which conjugates $Q_k$, $H_k$, and $R$ by a fixed translation, and minimality and curvature norms are translation invariant. So $A_1 - H_kB$ has zero curvature, and the same three facts give $A(U_k(e^{iB})) = \frac12\langle B, \Delta_kB \rangle + O(B^3)$, since \cite[p.~29]{BalabanPRT1} defines $\langle B, \Delta_kB \rangle$ as $\langle\partial H_kB, \partial H_kB\rangle$.
+
+\emph{The first-order average of the level $m$.} The average of the level $m$ is the $m$-fold iterate of the one-step average \cite[(0.17), (0.19), p.~255]{BalabanRG1}. At $U = 1$, on a coarse bond $c$ with $c_+ = c_- + Le_\mu$, the first-order part of the logarithm in \cite[(0.4), p.~253]{BalabanRG1}, and in \cite[(0.12), p.~254]{BalabanRG1}, whose linear part is the same, is
+\begin{equation}\label{eq:one-step-linear}
+    \sum_{x \in B(c_-)}L^{-d}A([x, x']) + \omega(c_-) - \omega(c_+)\;,
+    \qquad
+    \omega(y) \coloneqq \sum_{x \in B(y)}L^{-d}\abs{\mathbf G(y, x)}^{-1}\sum_{\Gamma \in \mathbf G(y, x)}A(\Gamma)\;,
+\end{equation}
+with $A(\Gamma)$ the sum of the bond logarithms along $\Gamma$: the logarithm of the loop is $A(\Gamma) + A([x, x']) - A(\Gamma') - A(c)$ to first order, the term $-A(c)$ cancels against the factor $U(c)$, and $x \mapsto x' = x + Le_\mu$ maps $B(c_-)$ onto $B(c_+)$. The first term is $L$ times the straight average \cite[(1.11), p.~19]{BalabanPRT1}, and the endpoint terms form a coarse gradient. A straight average of a gradient is the gradient of the block means, and the composition of $m$ straight averages over centred blocks is the straight average over the centred block of side $L^m$ (\cite[(1.16)--(1.18), p.~20]{BalabanPRT1} states this for corner blocks; for corner and centred blocks alike the offsets $sL + t$ run once over $\{ 0, \dots, L^2 - 1 \}$, and for centred blocks the offsets $Lr + o$ run once over the centred block of side $L^2$). So the first-order bond logarithm of the level $m$ is $L^{m-k}Q_mA$ plus a gradient of that level, where
+\begin{equation}\label{eq:straight-average}
+    (Q_mA)_\mu(Y) \coloneqq \abs{B_m}^{-1}\sum_{r \in B_m}L^{-m}\sum_{t=0}^{L^m-1}A_\mu\bigl(\eta(L^mY + r + te_\mu)\bigr)\;,
+    \qquad
+    B_m \coloneqq \bigl\{ -\tfrac{L^m-1}{2}, \dots, \tfrac{L^m-1}{2} \bigr\}^4\;.
+\end{equation}
+
+\emph{Step 2: the change of units.} In the units of $T^{(k)}$ the modes of $V_1$ are $q$ with $\abs{q_\mu} \leq \pi L^{k-m}$, with the momentum $p' = L^{-(k-m)}q$ of the level $m$; a bond of the level $m$ carries $L^{-(k-m)}$ times the amplitude of $T^{(k)}$, and there are $L^{4(k-m)}$ sites of the level $m$ per site of $T^{(k)}$. So, with $\abs{p'}^{2+2\alpha} = L^{-(2+2\alpha)(k-m)}\abs{q}^{2+2\alpha}$,
+\begin{equation}\label{eq:current-units}
+    \abs{\langle V_1, \Pi^{(j)}_{\mathcal J}V_1 \rangle} \leq C_\alpha L^{2(k-m)}\sum_q\abs{p'}^{2+2\alpha}\abs{\hat V_1(q)}^2 = C_\alpha L^{-2\alpha(k-m)}\sum_q\abs{q}^{2\alpha}\abs{q}^2\abs{\hat V_1(q)}^2\;.
+\end{equation}
+
+\emph{Step 3: transversality.} Let $\tilde V_1(q)$ be the component of $\hat V_1(q)$ orthogonal to $v(p')$. As $\Pi^{(j)}_{\mathcal J}(p')$ is Hermitian and annihilates $v(p')$, \eqref{eq:current-units} holds with $\tilde V_1$ in place of $\hat V_1$. The symbol of the difference of the level $m$ in the direction $\mu$ is $L^{k-m}v_\mu(p')$, so Lagrange's identity gives $\abs{(\bar dV_1)^\wedge}^2 = L^{2(k-m)}\abs{v(p')}^2\abs{\tilde V_1}^2$, with $\bar d \coloneqq d_{L^{m-k}}$, and since $L^{k-m}\abs{v_\mu(p')} \geq (2/\pi)\abs{q_\mu}$,
+\begin{equation}\label{eq:current-transverse}
+    \abs{\langle V_1, \Pi^{(j)}_{\mathcal J}V_1 \rangle} \leq \tfrac{\pi^2}{4}C_\alpha L^{-2\alpha(k-m)}\sum_q\abs{q}^{2\alpha}\abs{(\bar dV_1)^\wedge(q)}^2\;.
+\end{equation}
+
+\emph{Step 4: alias summability.} The curl of a straight-path average is the sum of the fine plaquettes in the $L^m \times L^m$ square which the path sweeps out, so that $\bar dQ_mA = P_md_\eta A$, where
+\begin{equation}\label{eq:plaquette-average}
+    (P_mF)_{\mu\nu}(Y) \coloneqq \abs{B_m}^{-1}L^{-2m}\sum_{r \in B_m}\sum_{a,b=0}^{L^m-1}F_{\mu\nu}\bigl(\eta(L^mY + r + ae_\mu + be_\nu)\bigr)
+\end{equation}
+has nonnegative weights which add up to one, so that on a fine plane wave of momentum $p$ it acts by a symbol $\hat P_m(p)$ with $\abs{\hat P_m(p)} \leq 1$, times the character of $p$ on the level $m$. The polarisation is Hermitian, so it suffices to take a single mode $B = \hat B(p)e^{ip\cdot Y}$. At $U = 1$ the field $H_kB$ is then a finite sum of plane waves with the momenta $p_a = p + l_a$ over the aliases of Lemma~\ref{lem:alias-summability}; let $\hat c_{\mu\nu}(a)$ be the coefficient of $(d_\eta H_kB)_{\mu\nu}$ at $p_a$, and let $q(a)$ be $p_a$ reduced componentwise by multiples of $2\pi L^{k-m}$ into $(-\pi L^{k-m}, \pi L^{k-m}]$, which has the same character on the level $m$ and $\abs{q(a)} \leq \abs{p_a}$. Distinct representatives give distinct characters, so the coefficient of $(\bar dV_1)_{\mu\nu}$ at $q$ is $\sum_{a : q(a) = q}\hat P_m(p_a)\hat c_{\mu\nu}(a)$, and by Lemma~\ref{lem:alias-summability}
+\begin{equation}\label{eq:folding}
+    \sum_q\abs{q}^{2\alpha}\norm{(\bar dV_1)^\wedge_{\mu\nu}(q)}^2 \leq \Bigl(\sum_a\abs{p_a}^\alpha\norm{\hat c_{\mu\nu}(a)}\Bigr)^2 \leq C(d, \alpha)^2\norm{\hat B(p)}^2\;,
+\end{equation}
+uniformly in $k$ and $m$; the norms are the invariant norms on the Lie algebra, on whose components $H_k$ acts in the same way at $U = 1$. Summing over the six planes gives $6C(d, \alpha)^2\norm{\hat B(p)}^2$.
+
+\emph{Step 5: the sum.} With \eqref{eq:current-transverse}, $\norm{\Pi_{\mathcal J_k}(p)} \leq \frac{3\pi^2}{2}C_\alpha C(d, \alpha)^2\sum_{m \leq k}L^{-2\alpha(k-m)} \leq \frac{3\pi^2}{2}C_\alpha C(d, \alpha)^2(1 - L^{-2\alpha})^{-1}$.
+\end{proof}
+
 \bibliographystyle{amsplain}
 \bibliography{refs}
 \end{document}
