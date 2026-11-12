@@ -14,6 +14,7 @@
 \newcommand{\dd}{\mathrm{d}}
 \newcommand{\tr}{\operatorname{tr}}
 \newcommand{\id}{\mathbf 1}
+\newcommand{\dist}{\operatorname{dist}}
 \DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
 \DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
 \setlength{\parskip}{0.6em}
@@ -604,6 +605,248 @@ The paper \cite{BalabanRDG} treats the operators $G_k(\varOmega, A) = (-\Delta^{
 \emph{Lemma~2.4.} For the whole lattice the representation \cite[(2.43)--(2.48)]{BalabanRDG} is the solution of a linear equation in the momentum representation, and it holds with the function $u_j$ of \eqref{eq:u-tilted}. The bounds \cite[(2.49)--(2.51)]{BalabanRDG} and the analytic continuation in $p'$ on which the exponential decay rests have not been carried out; the upper bound on $u_j$ used there is replaced by \eqref{eq:u-bound}, and of the lower bound stated there for all $l$, which we have not proved for the tilted $u_j$, only the case $l = 0$ enters \cite[(2.50)]{BalabanRDG}, and this case is \eqref{eq:u-lower}. The identity \cite[(2.34)]{BalabanRDG} is quoted from a paper which is not among our sources.
 
 \emph{Sections~3 to~5.} Not examined.
+
+\section{The Kernel of the Scalar Operator on the Whole Lattice}\label{sec:kernel}
+
+We now carry out, for the tilted run, the part of the proof of \cite[Lemma~2.4]{BalabanRDG} which concerns the whole lattice: the bounds \cite[(2.35), (2.36)]{BalabanRDG} on the kernel of $G'Q'^*_k$, with their exponential decay. Ba{\l}aban obtains the decay by moving the integration over $p'$ into the complex domain, and says of the required bounds on the integrand in a complex neighbourhood that they are ``more troublesome, but equally elementary'' \cite[p.~586]{BalabanRDG}. For the tilted symbols they follow from two observations: $u_k$ is the Fourier transform of a probability measure on the unit cube, which bounds it and its differences in every strip, and its decay in $l$ is read off from the product \eqref{eq:u-tilted} for complex arguments as for real ones.
+
+In this section the fine lattice is the infinite lattice $T_\eta$, $a > 0$, and $G' \coloneqq (-\Delta + aQ'^*_kQ'_k)^{-1}$ on the square-summable functions on $T_\eta$, where $-\Delta = \partial^*\partial$ and the adjoint is taken with the weights $\eta^4$ on $T_\eta$ and $1$ on $\mathbb Z^4$, so that $(Q'^*_kg)(x) = g(y)$ for $x \in B_1(y)$ and $Q'^*_kQ'_k$ is the orthogonal projection onto the functions which are constant on the blocks. The inverse exists: by Lemma~\ref{lem:poincare} with $a = 1$, applied on every block to the difference of a function and its mean, $-\Delta + aQ'^*_kQ'_k \geq \min(C_P^{-1}, a)$. We write $\mathcal K(x, y)$, $x \in T_\eta$, $y \in \mathbb Z^4$, for the kernel of $G'Q'^*_k$, that is, $(G'Q'^*_kg)(x) = \sum_y\mathcal K(x, y)g(y)$.
+
+The symbols extend to entire functions of $p \in \mathbb C^4$: $u_k(p) = \sum_{x \in B_1(0)}\eta^4e^{ip \cdot x}$, and
+\begin{equation}\label{eq:delta-entire}
+    \Delta(p) \coloneqq \eta^{-2}\sum_\nu\bigl(2 - 2\cos(\eta p \cdot e'_\nu)\bigr)\;,
+\end{equation}
+which for real $p$ is the function of \eqref{eq:symbols-basic}; for real $p$, $\overline{u_k(p)} = u_k(-p)$. Both are periodic with respect to $2\pi\eta^{-1}\rho\mathbb Z^4$. For $p \in \mathbb C^4$ we define $q$ from the real part of $p$ as before Lemma~\ref{lem:symbol-bounds}, and $\hat p \in \mathbb R^4$ is the representative of the real part of $p$ modulo $2\pi\eta^{-1}\rho\mathbb Z^4$ with $\abs{\eta\hat p \cdot e'_\nu} \leq \pi$ for every $\nu$.
+
+\begin{lemma}[The Symbols in a Strip]\label{lem:strip}
+Let $10\eta \leq 1$, and let $p \in \mathbb C^4$ with the imaginary part $\tau$, $\abs{\tau_\mu} \leq \frac14$ for every $\mu$.
+\begin{enumerate}[label=(\roman*)]
+\item $\abs{u_k(p)} \leq e^{9/4}\prod_\mu\min(1, \pi/\abs{q_\mu})$.
+\item If $s$ is the real part of $p$, then $\abs{u_k(p) - u_k(s)} \leq 2\sum_\mu\abs{\tau_\mu}$.
+\item $\operatorname{Re}\Delta(p) \geq (4/\pi^2)\abs{\hat p}^2 - 2\abs{\tau}^2$ and $\abs{\Delta(p)} \leq \abs{\hat p}^2 + 2\abs{\tau}^2$; and if the real part $s$ of $p$ satisfies $\abs{\eta s \cdot e'_\nu} \leq \pi$ for every $\nu$, then $\abs{\Delta(p) - \Delta(s)} \leq 2\abs{\tau}^2 + 4\abs{s}\abs{\tau}$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(i) Let $t \coloneqq \frac14$. By \eqref{eq:dirichlet}, $\abs{D^{a,1}_\mu(p)} \leq a\sum_{n<1/a}e^{an\abs{\tau_\mu}} \leq e^{t}$. Further $\abs{e^{ip_\mu} - 1} \leq 1 + e^{t} \leq 2e^{t}$, and for $z = ap_\mu$ with the real part $\varsigma$ and the imaginary part $\vartheta$, $\abs{e^{iz} - 1}^2 = (1 - e^{-\vartheta})^2 + 4e^{-\vartheta}\sin^2(\varsigma/2) \geq e^{-t}(4/\pi^2)(aq_\mu)^2$, because $\varsigma \equiv aq_\mu$ modulo $2\pi$ and $\abs{aq_\mu} \leq \pi$. Hence $\abs{D^{a,1}_\mu(p)} = \abs{e^{ip_\mu} - 1}a/\abs{e^{iap_\mu} - 1} \leq 2e^{t}e^{t/2}\pi/(2\abs{q_\mu})$, and altogether $\abs{D^{a,1}_\mu(p)} \leq e^{2t}\min(1, \pi/\abs{q_\mu})$, for $a = \eta$ and for $a = 5\eta$. Since $\abs{c} < 5\sqrt2$ for $c \in \mathsf C$ and the imaginary part of $\eta(p_2, p_3)$ has the length at most $\sqrt2\,\eta t$, $\abs{\kappa(\eta p_2, \eta p_3)} \leq e^{10\eta t} \leq e^{t}$. The product \eqref{eq:u-tilted} of four factors $D$ and of $\kappa$ gives (i).
+
+(ii) For $x \in B_1(0)$ we have $0 \leq x_\mu < 1$, so that $\abs{\tau \cdot x} \leq \sum_\mu\abs{\tau_\mu} \leq 1$ and $\abs{e^{ip \cdot x} - e^{is \cdot x}} = \abs{e^{-\tau \cdot x} - 1} \leq 2\sum_\mu\abs{\tau_\mu}$, because $e^v - 1 \leq 2v$ for $0 \leq v \leq 1$; and $u_k$ is an average over these $x$.
+
+(iii) By periodicity we may replace the real part of $p$ by $\hat p$. Let $\varsigma \coloneqq \eta\hat p \cdot e'_\nu$ and $\vartheta \coloneqq \eta\tau \cdot e'_\nu$, so that $\abs\varsigma \leq \pi$ and $\abs\vartheta \leq \eta\abs\tau \leq \frac{1}{20}$. Then $2 - 2\cos(\varsigma + i\vartheta) = 2(1 - \cos\varsigma) - 2\cos\varsigma(\cosh\vartheta - 1) + 2i\sin\varsigma\sinh\vartheta$, where $(2/\pi^2)\varsigma^2 \leq 1 - \cos\varsigma \leq \frac12\varsigma^2$, $\cosh\vartheta - 1 \leq \vartheta^2$, and $\abs{\sinh\vartheta} \leq 2\abs\vartheta$. The real part is therefore at least $(4/\pi^2)\varsigma^2 - 2\vartheta^2$, the modulus is $4\sin^2(\varsigma/2) + 4\sinh^2(\vartheta/2) \leq \varsigma^2 + 2\vartheta^2$, and the difference from the value at $\vartheta = 0$ is at most $2\vartheta^2 + 4\abs\varsigma\abs\vartheta$ in modulus. Summing over $\nu$, with $\sum_\nu\varsigma^2 = \eta^2\abs{\hat p}^2$, $\sum_\nu\vartheta^2 = \eta^2\abs\tau^2$, and $\sum_\nu\abs\varsigma\abs\vartheta \leq \eta^2\abs{\hat p}\abs\tau$, and dividing by $\eta^2$ gives (iii).
+\end{proof}
+
+\begin{proposition}[The Kernel of $G'Q'^*_k$]\label{prop:kernel}
+Let $32\eta \leq \frac12$ and $0 < a_- \leq a \leq a_+$. There are constants $\delta_0 > 0$ and $c_0$, and for every $\alpha \in [0, 1)$ a constant $c_\alpha$, which depend on $a_-$ and $a_+$ and not on $k$ and $L$, such that for all $x, x' \in T_\eta$ with $\abs{x - x'} \leq 1$, all $y \in \mathbb Z^4$, and all $\nu$,
+\begin{equation}\label{eq:kernel-bounds}
+\begin{gathered}
+    \abs{\mathcal K(x, y)}\;,\ \abs{(\partial'_\nu\mathcal K)(x, y)} \leq c_0e^{-\delta_0\abs{x - y}}\;,\\
+    \abs{(\partial'_\nu\mathcal K)(x, y) - (\partial'_\nu\mathcal K)(x', y)} \leq c_\alpha\abs{x - x'}^\alpha e^{-\delta_0\min(\abs{x - y}, \abs{x' - y})}\;,
+\end{gathered}
+\end{equation}
+where $\partial'_\nu$ acts on the first argument.
+\end{proposition}
+
+\begin{proof}
+\emph{The representation.} We write a momentum of the fine lattice as $p' + l$ with $p' \in [-\pi, \pi]^4$ and $l$ in the set $\mathfrak L$ of the $\eta^{-4}$ classes of $2\pi\mathbb Z^4$ modulo $2\pi\eta^{-1}\rho\mathbb Z^4$. By Lemma~\ref{lem:symbols}(i), for $f$ on $T_\eta$ and $g$ on $\mathbb Z^4$, $(\widetilde{Q'_kf})(p') = \sum_lu_k(p' + l)\tilde f(p' + l)$ and $(\widetilde{Q'^*_kg})(p' + l) = u_k(-p' - l)\tilde g(p')$. The equation $(-\Delta + aQ'^*_kQ'_k)\phi = Q'^*_kg$ therefore reads $\Delta(p' + l)\tilde\phi(p' + l) + au_k(-p' - l)w(p') = u_k(-p' - l)\tilde g(p')$ with $w(p') \coloneqq \sum_lu_k(p' + l)\tilde\phi(p' + l)$; multiplying by $u_k(p' + l)/\Delta(p' + l)$ and summing over $l$ gives $w = \mathsf T\tilde g/(1 + a\mathsf T)$ with $\mathsf T(p') = \sum_lu_k(p' + l)u_k(-p' - l)/\Delta(p' + l)$, and then, as in \cite[(2.47), (2.48)]{BalabanRDG},
+\begin{equation}\label{eq:kernel-representation}
+    \mathcal K(x, y) = (2\pi)^{-4}\int_{[-\pi,\pi]^4}\Phi(p')\,\dd p'\;,
+    \qquad
+    \Phi(p') \coloneqq \sum_{l \in \mathfrak L}\frac{e^{i(p' + l) \cdot (x - y)}\,u_k(-p' - l)}{\Delta(p' + l)\bigl(1 + a\mathsf T(p')\bigr)}\;.
+\end{equation}
+The function $\Phi$ is periodic with respect to $2\pi\mathbb Z^4$, a translation of $p'$ by an element of $2\pi\mathbb Z^4$ permuting the classes. We single out the class $l = 0$ and put, for $p'$ in the set $U$ of the $p' \in \mathbb C^4$ whose real parts have the coordinates at most $\pi + \frac14$ and whose imaginary parts have the coordinates at most $\frac14$ in modulus,
+\begin{equation}\label{eq:kernel-denominator}
+    \mathsf T_*(p') \coloneqq \sum_{l \neq 0}\frac{u_k(p' + l)u_k(-p' - l)}{\Delta(p' + l)}\;,
+    \qquad
+    \mathcal D(p') \coloneqq \Delta(p')\bigl(1 + a\mathsf T_*(p')\bigr) + au_k(p')u_k(-p')\;,
+\end{equation}
+so that $\Delta(p')(1 + a\mathsf T(p')) = \mathcal D(p')$ and
+\begin{equation}\label{eq:kernel-terms}
+    \Phi(p') = \frac{1}{\mathcal D(p')}\Bigl(e^{ip' \cdot (x - y)}u_k(-p') + \sum_{l \neq 0}e^{i(p' + l) \cdot (x - y)}u_k(-p' - l)\frac{\Delta(p')}{\Delta(p' + l)}\Bigr)\;.
+\end{equation}
+
+\emph{The terms $l \neq 0$ on $U$.} Let $p' \in U$ and $l \neq 0$, and let $\hat p$ be the representative of the real part of $p' + l$. The difference of $\hat p$ and the real part of $p'$ is a nonzero element of $2\pi\mathbb Z^4$, by Lemma~\ref{lem:symbols}(iv), so that one coordinate of $\hat p$ is at least $2\pi - \pi - \frac14$ in modulus, $\abs{\hat p} \geq 2.8$, and by Lemma~\ref{lem:strip}(iii), with $\abs\tau^2 \leq \frac14$,
+\begin{equation}\label{eq:delta-alias}
+    \operatorname{Re}\Delta(p' + l) \geq \frac{4}{\pi^2}\abs{\hat p}^2 - \frac12 \geq \frac{2}{\pi^2}\abs{\hat p}^2\;.
+\end{equation}
+In particular $\mathsf T_*$ and $\mathcal D$ are analytic on $U$. We need three sums over the classes $l \neq 0$, for $\beta \in \{ 0, 1, 1 + \alpha \}$:
+\begin{equation}\label{eq:alias-sums}
+    \Sigma_\beta(p') \coloneqq \sum_{l \neq 0}\abs{\hat p}^{\beta-2}\prod_\mu\min\bigl(1, \pi/\abs{q_\mu}\bigr) \leq C_\beta\;,
+\end{equation}
+with constants $C_0$, $C_1$, and $C_{1+\alpha}$ which depend on nothing, respectively on $\alpha$. To see this, recall that $q$ is of the form $q_\mu = r_\mu + 2\pi n_\mu$ with $r$ the real part of $p'$ and integers $n_\mu$, and that every such $q$ belongs to $25$ classes, one of them central. For the central class $\hat p = q$, the class is not zero only if $n \neq 0$, and then $\abs{q_\mu} \geq 2\pi\abs{n_\mu} - \pi - \frac14 \geq \abs{n_\mu}$ and $\abs{\hat p} \geq \max_\mu\abs{n_\mu}$, so that the central classes contribute at most $\pi^4\sum_{n \neq 0}(\max_\mu\abs{n_\mu})^{\beta-2}\prod_\mu\max(1, \abs{n_\mu})^{-1} \leq \pi^4(\sum_{n \in \mathbb Z}\max(1, \abs n)^{-1-(2-\beta)/4})^4$, which is finite for $\beta < 2$. For the other $24$ classes the plane part of $\hat p$ is $(q_2, q_3) + \frac{2\pi}{5\eta}m$ with a nonzero $m \in \mathbb Z[i]$, and $\abs{(q_2, q_3)} \leq \sqrt2\,\pi/(5\eta)$, so that $\abs{\hat p} \geq (2 - \sqrt2)\pi/(5\eta) \geq 1/(3\eta)$; the number of the values of $n_\mu$ with $\abs{q_\mu} \leq \pi/\eta$ is at most $1/\eta + 2$, and since $\pi/\abs{q_\mu} \leq 2/\abs{n_\mu}$ for $n_\mu \neq 0$, $\sum_{n_\mu}\min(1, \pi/\abs{q_\mu}) \leq 5 + 4\log(2/\eta)$. These classes therefore contribute at most $24(3\eta)^{2-\beta}(5 + 4\log(2/\eta))^4$, which is bounded on $0 < \eta \leq 1$ for every $\beta < 2$. With \eqref{eq:delta-alias}, Lemma~\ref{lem:strip}(i), and $\min(1, \pi/\abs{q_\mu})^2 \leq \min(1, \pi/\abs{q_\mu})$,
+\begin{equation}\label{eq:t-star-bound}
+    \abs{\mathsf T_*(p')} \leq \frac{\pi^2}{2}e^{9/2}\,\Sigma_0(p') \leq C_* \coloneqq \frac{\pi^2}{2}e^{9/2}C_0
+\end{equation}
+for every $p' \in U$.
+
+\emph{The denominator.} Let $s \in [-\pi, \pi]^4$. Then $\Delta(s) \geq 0$, $\mathsf T_*(s) \geq 0$, and $u_k(s)u_k(-s) = \abs{u_k(s)}^2 \geq c_u \coloneqq \frac14(2/\pi)^8$ by \eqref{eq:u-lower}, so that $\mathcal D(s) \geq ac_u$. Let $\tau \in \mathbb R^4$ with $\abs{\tau_\mu} \leq \delta \leq \frac18$. The function $z \mapsto \mathsf T_*(s + z\tau/\delta)$ is analytic and bounded by $C_*$ on the disc $\abs z < \frac14$, so that its derivative is at most $8C_*$ on the disc $\abs z \leq \frac18$, and $\abs{\mathsf T_*(s + i\tau) - \mathsf T_*(s)} \leq 8C_*\delta$. By Lemma~\ref{lem:strip}(ii) and (i), $\abs{u_k(s + i\tau)u_k(-s - i\tau) - \abs{u_k(s)}^2} \leq 8\delta(e^{9/4} + 1)$, and by Lemma~\ref{lem:strip}(iii), with $\abs s \leq 2\pi$ and $\abs\tau \leq 2\delta$, $\abs{\Delta(s + i\tau) - \Delta(s)} \leq 8\delta^2 + 16\pi\delta \leq 52\delta$ and $\Delta(s) \leq 4\pi^2$. Hence
+\begin{equation}\label{eq:denominator-shift}
+    \abs{\mathcal D(s + i\tau) - \mathcal D(s)} \leq \delta\bigl(52(1 + aC_*) + 32\pi^2aC_* + 84a\bigr)\;,
+\end{equation}
+and we let $\delta_0 \leq \frac18$ be so small that the right side with $\delta = \delta_0$ and $a = a_+$ is at most $\frac12a_-c_u$. Then $\abs{\mathcal D(s + i\tau)} \geq \frac12ac_u$ whenever $\abs{\tau_\mu} \leq \delta_0$, the function $\Phi$ is analytic in a neighbourhood of the set of these $s + i\tau$, by \eqref{eq:kernel-terms}, and by its periodicity and Cauchy's theorem in each variable, $\int\Phi(s)\,\dd s = \int\Phi(s + i\tau)\,\dd s$ over $[-\pi, \pi]^4$.
+
+\emph{The bounds.} Let $\tau_\mu \coloneqq \delta_0$ if $x_\mu \geq y_\mu$ and $\tau_\mu \coloneqq -\delta_0$ otherwise, so that $\abs{e^{i(s + i\tau + l) \cdot (x - y)}} = e^{-\delta_0\sum_\mu\abs{x_\mu - y_\mu}} \leq e^{-\delta_0\abs{x - y}}$. For $p' = s + i\tau$ we have $\abs{u_k(-p')} \leq e^{9/4}$, $\abs{\Delta(p')} \leq 4\pi^2 + 1$, and, by \eqref{eq:delta-alias} and Lemma~\ref{lem:strip}(i), the sum over $l \neq 0$ in \eqref{eq:kernel-terms} is at most $(4\pi^2 + 1)\frac{\pi^2}{2}e^{9/4}\Sigma_0e^{-\delta_0\abs{x - y}}$. With \eqref{eq:alias-sums} and the lower bound on $\mathcal D$ this is the first bound of \eqref{eq:kernel-bounds}. The difference operator $\partial'_\nu$ multiplies the term $l$ by $\eta^{-1}(e^{i\eta(p' + l) \cdot e'_\nu} - 1)$, which is at most $2(\abs{\hat p} + 1)$ in modulus because $\abs{e^{iz} - 1} \leq \abs ze^{\abs{\operatorname{Im}z}}$; the term $l = 0$ stays bounded, and the terms $l \neq 0$ are bounded through $\Sigma_1$, which gives the second bound. For the third we may assume $\abs{x' - y} \leq \abs{x - y}$ and choose $\tau$ for the pair $(x', y)$. The difference of the two kernels has the terms of $(\partial'_\nu\mathcal K)(x', y)$ multiplied by $e^{i(p' + l) \cdot (x - x')} - 1$, and for $\abs{x - x'} \leq 1$ this factor is at most $2\min(2, (\abs{\hat p} + 1)\abs{x - x'}) \leq 4(\abs{\hat p} + 1)^\alpha\abs{x - x'}^\alpha$ in modulus. The terms $l \neq 0$ are then bounded through $\Sigma_{1+\alpha}$, with a constant which depends on $\alpha$.
+\end{proof}
+
+The proposition replaces \cite[(2.35), (2.36)]{BalabanRDG} for the whole lattice. On a torus $T_\eta/\Gamma'$ the kernel is the sum of $\mathcal K(x, y + \gamma)$ over $\gamma \in \Gamma'$, which converges by \eqref{eq:kernel-bounds}.
+
+\section{The Equation of the Scales}\label{sec:scales}
+
+The bounds on the scalar operator in the supremum and H\"older norms are obtained in \cite{BalabanRDG} from the identity (2.34) there, which expresses the operator of $k$ steps through those of fewer steps and through operators on the intermediate lattices, and which is quoted from a paper that is not among our sources. We derive it for the tilted run. Let $\ell_j \coloneqq L^{j-k}$, $1 \leq j \leq k$, be the spacings of the lattices of the run in the unit of the last one, let $a > 0$, and put
+\begin{equation}\label{eq:alpha-scales}
+    \frac{1}{\alpha_j} \coloneqq \frac1a\sum_{i=1}^{j}\ell_i^2\;,
+    \qquad
+    P_{(j)} \coloneqq Q'^*_{\ell_j}Q'_{\ell_j}\;,
+    \qquad
+    G_{(j)} \coloneqq \bigl(-\Delta + \alpha_jP_{(j)}\bigr)^{-1}\;,
+\end{equation}
+on the functions on $T_\eta$, or on a torus $T_\eta/\Gamma'$. The adjoints are taken with the weights $\eta^4$ on $T_\eta$ and $\ell_j^4$ on $\ell_j\mathbb Z^4$, so that $Q'_{\ell_j}Q'^*_{\ell_j} = I$ and $P_{(j)}$ is the orthogonal projection onto the functions which are constant on the blocks $B_{\ell_j}(y)$; the inverse exists by Lemma~\ref{lem:poincare} for the scale $\ell_j$, as in Section~\ref{sec:kernel}. In the unit of the lattice $\ell_j\mathbb Z^4$ the constant is $a_j \coloneqq \alpha_j\ell_j^2$, with $1/a_j = a^{-1}\sum_{i=0}^{j-1}L^{-2i}$, so that $a(1 - L^{-2}) \leq a_j \leq a$.
+
+\begin{lemma}[The Equation of the Scales]\label{lem:scales}
+For $1 \leq j \leq k - 1$ let $Q'^{\mathrm{st}} \coloneqq Q'^{\mathrm{st}}_{\ell_j,\ell_{j+1}}$ be Ba{\l}aban's average \eqref{eq:standard-averages} from $\ell_j\mathbb Z^4$ to $\ell_{j+1}\mathbb Z^4$, and let, on the functions on $\ell_j\mathbb Z^4$,
+\begin{equation}\label{eq:unit-operators}
+    \Delta^{(j)} \coloneqq \alpha_j - \alpha_j^2\,Q'_{\ell_j}G_{(j)}Q'^*_{\ell_j}\;,
+    \qquad
+    C^{(j)} \coloneqq \bigl(\Delta^{(j)} + a\ell_{j+1}^{-2}Q'^{\mathrm{st}*}Q'^{\mathrm{st}}\bigr)^{-1}\;.
+\end{equation}
+Then $\Delta^{(j)} \geq 0$, the inverse $C^{(j)}$ exists, and
+\begin{equation}\label{eq:scales}
+    G_{(j+1)} = G_{(j)} + \alpha_j^2\,G_{(j)}Q'^*_{\ell_j}C^{(j)}Q'_{\ell_j}G_{(j)}\;,
+    \qquad
+    G_{(k)} = G_{(1)} + \sum_{j=1}^{k-1}\alpha_j^2\,G_{(j)}Q'^*_{\ell_j}C^{(j)}Q'_{\ell_j}G_{(j)}\;.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Write $\mathsf q \coloneqq Q'_{\ell_j}$, $\Pi \coloneqq Q'^{\mathrm{st}*}Q'^{\mathrm{st}}$, and $\beta \coloneqq a\ell_{j+1}^{-2}$. By Lemma~\ref{lem:composition}, $Q'_{\ell_{j+1}} = Q'^{\mathrm{st}}\mathsf q$, so that $P_{(j+1)} = \mathsf q^*\Pi\mathsf q$, and $\Pi$ is an orthogonal projection. By \eqref{eq:alpha-scales}, $1/\alpha_{j+1} = 1/\alpha_j + 1/\beta$, that is, $\alpha_{j+1} = \alpha_j\beta/(\alpha_j + \beta)$. The operator $\alpha_j - \alpha_j^2(\alpha_j + \beta\Pi)^{-1}$ vanishes on the null space of $\Pi$ and is $\alpha_j - \alpha_j^2/(\alpha_j + \beta) = \alpha_{j+1}$ on its range, so that it is $\alpha_{j+1}\Pi$, and
+\begin{equation}\label{eq:scales-inverse}
+    G_{(j+1)}^{-1} = -\Delta + \alpha_{j+1}\mathsf q^*\Pi\mathsf q = G_{(j)}^{-1} - \alpha_j^2\,\mathsf q^*(\alpha_j + \beta\Pi)^{-1}\mathsf q\;.
+\end{equation}
+For bounded operators $\mathsf M$, $\mathsf K$ with bounded inverses and a bounded operator $\mathsf U$ such that $\mathsf M - \mathsf U\mathsf K\mathsf U^*$ has a bounded inverse, $\mathsf K^{-1} - \mathsf U^*\mathsf M^{-1}\mathsf U$ has the bounded inverse $\mathsf K + \mathsf K\mathsf U^*(\mathsf M - \mathsf U\mathsf K\mathsf U^*)^{-1}\mathsf U\mathsf K$, and $(\mathsf M - \mathsf U\mathsf K\mathsf U^*)^{-1} = \mathsf M^{-1} + \mathsf M^{-1}\mathsf U(\mathsf K^{-1} - \mathsf U^*\mathsf M^{-1}\mathsf U)^{-1}\mathsf U^*\mathsf M^{-1}$, as one checks by multiplication. We apply this with $\mathsf M = G_{(j)}^{-1}$, $\mathsf U = \alpha_j\mathsf q^*$, and $\mathsf K = (\alpha_j + \beta\Pi)^{-1}$, for which $\mathsf M - \mathsf U\mathsf K\mathsf U^* = G_{(j+1)}^{-1}$ by \eqref{eq:scales-inverse} and $\mathsf K^{-1} - \mathsf U^*\mathsf M^{-1}\mathsf U = \alpha_j + \beta\Pi - \alpha_j^2\mathsf qG_{(j)}\mathsf q^* = \Delta^{(j)} + \beta\Pi$. This gives the existence of $C^{(j)}$ and the first identity of \eqref{eq:scales}, and the second follows by adding the first over $j$. Finally $G_{(j)}^{-1} \geq \alpha_j\mathsf q^*\mathsf q$ gives $\langle\mathsf q^*w, G_{(j)}\mathsf q^*w\rangle = \sup_\phi(2\langle w, \mathsf q\phi\rangle - \langle\phi, G_{(j)}^{-1}\phi\rangle) \leq \sup_\phi(2\langle w, \mathsf q\phi\rangle - \alpha_j\norm{\mathsf q\phi}^2) \leq \norm{w}^2/\alpha_j$, hence $\Delta^{(j)} \geq 0$.
+\end{proof}
+
+The second identity of \eqref{eq:scales} is \cite[(2.34)]{BalabanRDG} for the whole lattice or a torus, with $G_{(1)}$ for the operator $C^{(0),\eta}$ there; the factor $(L^j\eta)^{-4}$ of that formula is contained in our adjoints. The operators $G_{(j)}$, $Q'_{\ell_j}$ are those of the tilted run at the scale $\ell_j$, to which Proposition~\ref{prop:kernel} applies after a change of the unit of length, and the operators $C^{(j)}$ act on the lattices $\ell_j\mathbb Z^4$ of the paper.
+
+\section{The Scalar Operator in the Supremum and H\"older Norms}\label{sec:sup-bounds}
+
+With the equation of the scales and the kernel of Section~\ref{sec:kernel} we obtain the bounds of \cite[(1.9), (1.10)]{BalabanRDG} for the whole lattice at the field $A = 0$, by the summation \cite[(2.38), (2.39)]{BalabanRDG}. This replaces Lemma~2.2 of that paper, which concerns a box, by a statement without a boundary; the lattice in this section is $T_\eta$, and the statements hold on a torus $T_\eta/\Gamma'$ with the kernels summed over the periods. Two further inputs are needed, the decay of the kernels of $G_{(1)}$ and of $C^{(j)}$. Ba{\l}aban derives the second from his Proposition~2.3; we use that both are inverses of operators which are bounded below and have kernels of rapid decay.
+
+\begin{lemma}[Inverses of Operators with Decaying Kernels]\label{lem:combes-thomas}
+Let $Y$ be a countable set with a metric $d$, and let $\mathsf M$ be a bounded self-adjoint operator on the square-summable functions on $Y$, with the kernel $\mathsf M(y, y')$, such that $\mathsf M \geq \gamma > 0$ and, for some $\theta > 0$ and every $y$, $\sum_{y'}\abs{\mathsf M(y, y')}(e^{\theta d(y, y')} - 1) \leq \frac12\gamma$. Then $\abs{\mathsf M^{-1}(y, y')} \leq (2/\gamma)e^{-\theta d(y, y')}$ for all $y, y' \in Y$.
+\end{lemma}
+
+\begin{proof}
+Fix $y_0 \in Y$ and $R > 0$, and let $w(y) \coloneqq \min(\theta d(y, y_0), R)$, a bounded function with $\abs{w(y) - w(y')} \leq \theta d(y, y')$. The operator $\mathsf M_w \coloneqq e^w\mathsf Me^{-w}$ has the kernel $e^{w(y) - w(y')}\mathsf M(y, y')$, and the kernel of $\mathsf M_w - \mathsf M$ is at most $\abs{\mathsf M(y, y')}(e^{\theta d(y, y')} - 1)$ in modulus, a bound which is symmetric in $y$ and $y'$; by the hypothesis and Schur's test $\norm{\mathsf M_w - \mathsf M} \leq \frac12\gamma$. Hence $\norm{\mathsf M_w\phi} \geq \frac12\gamma\norm\phi$ for every $\phi$, and the same holds for the adjoint, so that $\mathsf M_w$ is invertible with $\norm{\mathsf M_w^{-1}} \leq 2/\gamma$. Since $e^{\pm w}$ are bounded, $\mathsf M_w^{-1} = e^w\mathsf M^{-1}e^{-w}$, and $\abs{\mathsf M^{-1}(y, y_0)} = e^{-w(y) + w(y_0)}\abs{\mathsf M_w^{-1}(y, y_0)} \leq (2/\gamma)e^{-w(y)}$. Letting $R \to \infty$ gives the claim.
+\end{proof}
+
+\begin{lemma}[The Operators of One Scale]\label{lem:one-scale}
+Let $L \geq 64$ and $a > 0$. There are positive constants $c_1$, $\theta_1$, $c_C$, $\theta_C$, which depend on $a$ and $L$ and not on $k$, such that the kernel $g_1$ of $G_{(1)}$ and the kernels $\mathsf C_j$ of $C^{(j)}$, $1 \leq j \leq k - 1$, with respect to the sums over the points of $T_\eta$ and of $\ell_j\mathbb Z^4$, satisfy
+\begin{equation}\label{eq:one-scale}
+    \abs{g_1(x, x')} \leq c_1\eta^2e^{-\theta_1\abs{x - x'}/\eta}\;,
+    \qquad
+    \abs{\mathsf C_j(y, y')} \leq c_C\ell_j^2e^{-\theta_C\abs{y - y'}/\ell_j}\;.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+For $g_1$, let $\mathsf M \coloneqq \eta^2(-\Delta + \alpha_1P_{(1)})$ on the functions on $T_\eta$, with the metric $d(x, x') \coloneqq \abs{x - x'}/\eta$. Since $\eta^2\alpha_1 = a/L^2$, its kernel with respect to the sum over the points is $8$ on the diagonal and $-1$ for the eight neighbours of a point, plus $(a/L^2)L^{-4}$ for two points of one block $B_{\ell_1}(y)$, whose distance $d$ is at most $2L$. By Lemma~\ref{lem:poincare} for the scale $\ell_1 = L\eta$, $\mathsf M \geq L^{-2}\min(C_P^{-1}, a)$, and $\sum_{x'}\abs{\mathsf M(x, x')}(e^{\theta d(x, x')} - 1) \leq 8(e^\theta - 1) + (a/L^2)(e^{2L\theta} - 1)$, which is at most half this lower bound for $\theta = \theta_1$ small. Lemma~\ref{lem:combes-thomas} and $G_{(1)} = \eta^2\mathsf M^{-1}$ give the first bound.
+
+For $\mathsf C_j$ we take $\ell_j$ as the unit of length. Then $T_\eta$ becomes the fine lattice of the spacing $L^{-j}$, $G_{(j)}$ becomes $\ell_j^2G'$ with the operator $G'$ of Section~\ref{sec:kernel} for the constant $a_j \in [a(1 - L^{-2}), a]$, and $C^{(j)} = \ell_j^2\mathsf M^{-1}$ with $\mathsf M \coloneqq a_j - a_j^2Q'G'Q'^* + (a/L^2)\Pi$ on the functions on $\mathbb Z^4$, where $\Pi$ is the orthogonal projection onto the functions which are constant on the cubes of side $L$. The kernel of $Q'G'Q'^*$ is the average of $\mathcal K(x, y')$ over $x \in B_1(y)$, which by \eqref{eq:kernel-bounds} is at most $c_0e^{2\delta_0}e^{-\delta_0\abs{y - y'}}$ in modulus, and the kernel of $\Pi$ is $L^{-4}$ for two points of one cube. Hence $\sum_{y'}\abs{\mathsf M(y, y')}(e^{\theta\abs{y - y'}} - 1)$ tends to zero with $\theta$, uniformly in $k$ and $j$. For the lower bound we use the momentum representation: $Q'G'Q'^*$ is the multiplication by $\mathsf T(p')/(1 + a_j\mathsf T(p'))$, by the proof of Proposition~\ref{prop:kernel}, so that $a_j - a_j^2Q'G'Q'^*$ is the multiplication by $a_j/(1 + a_j\mathsf T(p'))$, and $\mathsf T \leq C_{\mathsf T}\Delta_0^{-1}$ by Lemma~\ref{lem:scalar-operators}, whose proof applies to the whole lattice. With $\Delta_0 \leq 16$ this gives $a_j - a_j^2Q'G'Q'^* \geq c_\Delta\Delta_0$, $c_\Delta \coloneqq a_j/(16 + a_jC_{\mathsf T})$. The Laplace operator $\Delta_0$ of $\mathbb Z^4$ is at least the sum of those of the cubes of side $L$ with Neumann conditions, each of which is at least $2/L^2$ on the functions of mean zero by the inequality for the cube of the corners in the proof of Lemma~\ref{lem:poincare}. Therefore $\mathsf M \geq L^{-2}\min(2c_\Delta, a)$, and Lemma~\ref{lem:combes-thomas} gives the second bound after the return to the original unit.
+\end{proof}
+
+\begin{proposition}[The Scalar Operator on the Whole Lattice]\label{prop:scalar-sup}
+Let $L \geq 64$, so that $32L^{-j} \leq \frac12$ for every $j \geq 1$, and let $a > 0$. There are constants $\delta > 0$ and $c$, and for every $\alpha \in [0, 1)$ a constant $c'_\alpha$, which depend on $a$ and $L$ and not on $k$, such that for every bounded function $f$ on $T_\eta$, all $x, x' \in T_\eta$ with $\abs{x - x'} \leq 1$, and every $\nu$,
+\begin{equation}\label{eq:scalar-sup}
+\begin{gathered}
+    \abs{(G_{(k)}f)(x)}\;,\ \abs{(\partial'_\nu G_{(k)}f)(x)} \leq c\,e^{-\delta\dist(x, \operatorname{supp}f)}\sup\abs f\;,\\
+    \abs{(\partial'_\nu G_{(k)}f)(x) - (\partial'_\nu G_{(k)}f)(x')} \leq c'_\alpha\abs{x - x'}^\alpha e^{-\delta\dist(\{ x, x' \}, \operatorname{supp}f)}\sup\abs f\;.
+\end{gathered}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+By Lemma~\ref{lem:scales}, $G_{(k)}f = G_{(1)}f + \sum_{j=1}^{k-1}\mathsf T_jf$ with $\mathsf T_j \coloneqq \alpha_j^2G_{(j)}Q'^*_{\ell_j}C^{(j)}Q'_{\ell_j}G_{(j)}$. Let $\mathcal K_j(x, y)$, $x \in T_\eta$, $y \in \ell_j\mathbb Z^4$, be the kernel of $G_{(j)}Q'^*_{\ell_j}$. In the unit $\ell_j$ it is $\ell_j^2$ times the kernel of Proposition~\ref{prop:kernel} for the constant $a_j$ and the fine spacing $L^{-j}$, so that, with the constants of that proposition for $a_- = a(1 - L^{-2})$ and $a_+ = a$,
+\begin{equation}\label{eq:kernel-scaled}
+    \abs{\mathcal K_j(x, y)} \leq c_0\ell_j^2e^{-\delta_0\abs{x - y}/\ell_j}\;,
+    \qquad
+    \abs{(\partial'_\nu\mathcal K_j)(x, y)} \leq c_0\ell_je^{-\delta_0\abs{x - y}/\ell_j}\;,
+\end{equation}
+and $\abs{(\partial'_\nu\mathcal K_j)(x, y) - (\partial'_\nu\mathcal K_j)(x', y)} \leq c_\alpha\ell_j^{1-\alpha}\abs{x - x'}^\alpha e^{-\delta_0\min(\abs{x - y}, \abs{x' - y})/\ell_j}$ for $\abs{x - x'} \leq \ell_j$; for $\ell_j < \abs{x - x'} \leq 1$ the same bound holds with $2c_0$ in place of $c_\alpha$, by the second bound of \eqref{eq:kernel-scaled}. With the weights of the adjoints, $(Q'_{\ell_j}G_{(j)}f)(y') = \ell_j^{-4}\sum_{x'}\eta^4\mathcal K_j(x', y')f(x')$, and therefore
+\begin{equation}\label{eq:scale-term}
+    (\mathsf T_jf)(x) = \alpha_j^2\sum_{y,y'}\mathcal K_j(x, y)\,\mathsf C_j(y, y')\,\ell_j^{-4}\sum_{x'}\eta^4\mathcal K_j(x', y')f(x')\;.
+\end{equation}
+The sums $\sum_{x'}\eta^4e^{-\delta\abs{x' - y'}/\ell_j}$ over $T_\eta$ and $\sum_{y}e^{-\delta\abs{y - y'}/\ell_j}$ over $\ell_j\mathbb Z^4$ are at most a constant, depending on $\delta$, times $\ell_j^4$ and times $1$, because $\eta \leq \ell_j$. Taking half of each exponent for the summations and the other half for the decay, \eqref{eq:kernel-scaled}, \eqref{eq:one-scale}, and $\alpha_j^2 = a_j^2\ell_j^{-4}$ give
+\begin{equation}\label{eq:scale-term-bound}
+    \abs{(\mathsf T_jf)(x)} \leq c''\ell_j^{-4} \cdot \ell_j^2 \cdot \ell_j^2 \cdot \ell_j^{-4}\ell_j^4\ell_j^2\,e^{-\delta\dist(x, \operatorname{supp}f)/\ell_j}\sup\abs f = c''\ell_j^2\,e^{-\delta\dist(x, \operatorname{supp}f)/\ell_j}\sup\abs f
+\end{equation}
+with $\delta \coloneqq \frac12\min(\delta_0, \theta_C)$, and in the same way $\abs{(\partial'_\nu\mathsf T_jf)(x)} \leq c''\ell_je^{-\delta\dist(x, \operatorname{supp}f)/\ell_j}\sup\abs f$ and the H\"older bound with the factor $\ell_j^{1-\alpha}\abs{x - x'}^\alpha$. Since $\ell_j = L^{j-k} \leq 1$, the sums over $j$ of $\ell_j^2$, $\ell_j$, and $\ell_j^{1-\alpha}$ are bounded uniformly in $k$, the last by a constant which depends on $\alpha$. For the first term, \eqref{eq:one-scale} gives $\abs{(G_{(1)}f)(x)} \leq c\eta^2e^{-\theta_1\dist(x, \operatorname{supp}f)/(2\eta)}\sup\abs f$, the bound with $\eta$ in place of $\eta^2$ for its difference quotients, and, because two different points of $T_\eta$ are at least $\eta$ apart, the H\"older bound with the factor $2\eta^{1-\alpha}\abs{x - x'}^\alpha$.
+\end{proof}
+
+The proposition is \cite[(1.9), (1.10)]{BalabanRDG} for the whole lattice and $A = 0$, proved along \cite[(2.38), (2.39)]{BalabanRDG}. The constants depend on $L$, through Lemma~\ref{lem:one-scale}, as Ba{\l}aban expects for the operators $C^{(j)}$ \cite[p.~588]{BalabanRDG}.
+
+The first paper on the propagators also needs the scalar operator applied to a derivative of the source, and, for sources which are H\"older continuous, two derivatives \cite[(1.135)--(1.137), pp.~39--40]{BalabanPRT1}. We write $(\partial'^*_\nu f)(x) \coloneqq \eta^{-1}(f(x - \eta e'_\nu) - f(x))$ for the adjoint of $\partial'_\nu$, and for $0 < \epsilon \leq 1$ we let $\norm{f}_\epsilon$ be the supremum of $\abs{f(x) - f(x')}/\abs{x - x'}^\epsilon$ over the pairs of different points with $\abs{x - x'} \leq 1$, as in \cite[(1.109)]{BalabanPRT1}.
+
+\begin{proposition}[Derivatives of the Source]\label{prop:scalar-second}
+Let $L \geq 64$ and $a > 0$, and let $\delta$ be as in Proposition~\ref{prop:scalar-sup}. For $\alpha \in [0, 1)$ and $\epsilon > 0$ with $\alpha + \epsilon < 1$ there are constants $c$, which depend on $a$, $L$, $\alpha$, and $\epsilon$ and not on $k$, such that for every bounded function $f$ on $T_\eta$, all $x, x' \in T_\eta$ with $\abs{x - x'} \leq 1$, and all $\nu$, $\nu'$, with $D \coloneqq \dist(\{ x, x' \}, \operatorname{supp}f)$,
+\begin{enumerate}[label=(\roman*)]
+\item $\abs{(G_{(k)}\partial'^*_\nu f)(x)} \leq c\,e^{-\delta D}\sup\abs f$ and $\abs{(G_{(k)}\partial'^*_\nu f)(x) - (G_{(k)}\partial'^*_\nu f)(x')} \leq c\abs{x - x'}^\alpha e^{-\delta D}\sup\abs f$;
+\item $\abs{(\partial'_{\nu'}G_{(k)}\partial'^*_\nu f)(x)} \leq c\,e^{-\delta D/2}(\norm{f}_\epsilon + \sup\abs f)$;
+\item $\abs{(\partial'_{\nu'}G_{(k)}\partial'^*_\nu f)(x) - (\partial'_{\nu'}G_{(k)}\partial'^*_\nu f)(x')} \leq c\abs{x - x'}^\alpha e^{-\delta D/2}(\norm{f}_{\alpha+\epsilon} + \sup\abs f)$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+We use the decomposition of the proof of Proposition~\ref{prop:scalar-sup}. By a summation by parts, $\sum_{x'}\eta^4\mathcal K_j(x', y')(\partial'^*_\nu f)(x') = \sum_{x'}\eta^4(\partial'_\nu\mathcal K_j)(x', y')f(x')$, so that $\mathsf T_j\partial'^*_\nu f$ is \eqref{eq:scale-term} with $\partial'_\nu\mathcal K_j$ in place of the last kernel. By \eqref{eq:kernel-scaled} this replaces one factor $\ell_j^2$ of \eqref{eq:scale-term-bound} by $\ell_j$: $\abs{(\mathsf T_j\partial'^*_\nu f)(x)} \leq c''\ell_je^{-\delta D/\ell_j}\sup\abs f$, and the difference of the values at $x$ and $x'$ is at most $c''\min(2\ell_j, \abs{x - x'})e^{-\delta D/\ell_j}\sup\abs f \leq 2c''\ell_j^{1-\alpha}\abs{x - x'}^\alpha e^{-\delta D/\ell_j}\sup\abs f$, by the bound on $\partial'\mathcal K_j$. The sums over $j$ of $\ell_j$ and $\ell_j^{1-\alpha}$ are bounded, which gives (i) for these terms.
+
+For (ii) and (iii), $(\partial'_{\nu'}\mathsf T_j\partial'^*_\nu f)(x) = \sum_{x''}\eta^4k_j(x, x'')f(x'')$ with the kernel
+\begin{equation}\label{eq:second-kernel}
+    k_j(x, x'') \coloneqq \alpha_j^2\ell_j^{-4}\sum_{y,y'}(\partial'_{\nu'}\mathcal K_j)(x, y)\,\mathsf C_j(y, y')\,(\partial'_\nu\mathcal K_j)(x'', y')\;,
+\end{equation}
+for which \eqref{eq:kernel-scaled}, its H\"older counterpart, and \eqref{eq:one-scale} give, as in \eqref{eq:scale-term-bound},
+\begin{equation}\label{eq:second-kernel-bounds}
+\begin{gathered}
+    \abs{k_j(x, x'')} \leq c''\ell_j^{-4}e^{-\delta\abs{x - x''}/\ell_j}\;,\\
+    \abs{k_j(x, x'') - k_j(x', x'')} \leq c''\ell_j^{-4}\Bigl(\frac{\abs{x - x'}}{\ell_j}\Bigr)^{\alpha}e^{-\delta\min(\abs{x - x''}, \abs{x' - x''})/\ell_j}\;,
+\end{gathered}
+\end{equation}
+the second for $\abs{x - x'} \leq \ell_j$. Since $\partial'^*_\nu$ annihilates the constants and the sums converge absolutely, $\sum_{x''}\eta^4k_j(x, x'') = 0$ for every $x$. Hence $(\partial'_{\nu'}\mathsf T_j\partial'^*_\nu f)(x) = \sum_{x''}\eta^4k_j(x, x'')(f(x'') - f(x))$. Here $\abs{f(x'') - f(x)} \leq \norm{f}_\epsilon\abs{x - x''}^\epsilon$ for $\abs{x - x''} \leq 1$ and $\abs{f(x'') - f(x)} \leq 2\sup\abs f$ otherwise, and $\sum_{x''}\eta^4\ell_j^{-4}e^{-\delta\abs{x - x''}/\ell_j}\abs{x - x''}^\epsilon$ is at most a constant times $\ell_j^\epsilon$, as is $e^{-\delta/(2\ell_j)}$. This gives $\abs{(\partial'_{\nu'}\mathsf T_j\partial'^*_\nu f)(x)} \leq c\,\ell_j^\epsilon(\norm{f}_\epsilon + \sup\abs f)$, with a sum over $j$ which is bounded. If $D \geq 1$, then $f$ vanishes at $x$ and the first bound of \eqref{eq:second-kernel-bounds} gives directly $\abs{(\partial'_{\nu'}\mathsf T_j\partial'^*_\nu f)(x)} \leq c\,e^{-\delta D/(2\ell_j)}\sup\abs f$, and $\sum_je^{-\delta D/(2\ell_j)} \leq e^{-\delta D/2}\sum_{i \geq 0}e^{-\delta(L^i - 1)/2}$. The two cases give (ii). For (iii), the vanishing of the sums of $k_j(x, \cdot)$ and of $k_j(x', \cdot)$ gives
+\begin{equation}\label{eq:second-difference-kernel}
+    (\partial'_{\nu'}\mathsf T_j\partial'^*_\nu f)(x) - (\partial'_{\nu'}\mathsf T_j\partial'^*_\nu f)(x') = \sum_{x''}\eta^4\bigl(k_j(x, x'') - k_j(x', x'')\bigr)\bigl(f(x'') - f(x)\bigr)\;.
+\end{equation}
+For $\abs{x - x'} \leq \ell_j$ the second bound of \eqref{eq:second-kernel-bounds} and the estimate of the sum, with $\alpha + \epsilon$ in place of $\epsilon$, bound this by $c(\abs{x - x'}/\ell_j)^\alpha\ell_j^{\alpha+\epsilon}(\norm{f}_{\alpha+\epsilon} + \sup\abs f)$; for $\abs{x - x'} > \ell_j$ the two terms are bounded separately by $c\,\ell_j^{\alpha+\epsilon} \leq c\abs{x - x'}^\alpha\ell_j^\epsilon$ times the same norms. For $D \geq 1$ the decay is obtained as in (ii), with $\sum_i L^{i\alpha}e^{-\delta(L^i - 1)/2} < \infty$.
+
+The term $G_{(1)}$ is treated in the same way with $\eta$ in place of $\ell_j$: by \eqref{eq:one-scale} the kernels of $G_{(1)}\partial'^*_\nu$ and of $\partial'_{\nu'}G_{(1)}\partial'^*_\nu$ with respect to the weights $\eta^4$ are at most a constant times $\eta^{-3}e^{-\theta_1\abs{x - x''}/(2\eta)}$ and $\eta^{-4}e^{-\theta_1\abs{x - x''}/(2\eta)}$, the second has vanishing sums over $x''$, and two different points are at least $\eta$ apart.
+\end{proof}
+
+Statement (ii) is \cite[(1.137)]{BalabanPRT1}, and (i) and (iii) are the corresponding bounds for the scalar operator in \cite[(1.111), (1.113)]{BalabanPRT1}.
+
+\section{The Kernel of the Gauge-Fixing Projection}\label{sec:projection-kernel}
+
+The operator $\Delta_a$ of \cite[(1.69)]{BalabanPRT1} contains the nonlocal term $\partial P\partial^*$, and the passage from $L^2$-bounds to bounds in the supremum norm needs the bounds \cite[(1.126), (1.127)]{BalabanPRT1} on its kernel. Ba{\l}aban refers for them to the representation \cite[(1.44)]{BalabanPRT1}, $P = G'Q'^*_k(Q'_kG'^2Q'^*_k)^{-1}Q'_kG'$, to \cite[Lemma~2.4]{BalabanRDG}, and to the analyticity of the momentum representation \cite[(1.45)]{BalabanPRT1}. In the tilted run the first two are available by Proposition~\ref{prop:kernel}, and for the inverse in the middle we use Lemma~\ref{lem:combes-thomas}.
+
+\begin{lemma}[The Kernel of $\partial P\partial^*$]\label{lem:projection-kernel}
+Let $32\eta \leq \frac12$, let $a > 0$, and let $G'$ and $\mathcal K$ be as in Section~\ref{sec:kernel}. The operator $\mathsf N \coloneqq Q'_kG'^2Q'^*_k$ on the square-summable functions on $\mathbb Z^4$ has a bounded inverse, $P \coloneqq G'Q'^*_k\mathsf N^{-1}Q'_kG'$ is the orthogonal projection onto the orthogonal complement of $\Delta N(Q'_k)$, and for every field $A$ of finite support
+\begin{equation}\label{eq:projection-kernel}
+\begin{gathered}
+    (\partial P\partial^*A)_\nu(x) = \sum_{\nu'}\sum_{x'}\eta^4\varpi_{\nu\nu'}(x, x')A_{\nu'}(x')\;,\\
+    \varpi_{\nu\nu'}(x, x') \coloneqq \sum_{y,y'}(\partial'_\nu\mathcal K)(x, y)\,\mathsf N^{-1}(y, y')\,(\partial'_{\nu'}\mathcal K)(x', y')\;.
+\end{gathered}
+\end{equation}
+There are constants $c_\varpi$ and $\delta_\varpi > 0$, and for $\alpha \in [0, 1)$ a constant $c_{\varpi,\alpha}$, which depend on $a$ and not on $k$ and $L$, such that for $\abs{x - x'} \leq 1$
+\begin{equation}\label{eq:projection-bounds}
+\begin{gathered}
+    \abs{\varpi_{\nu\nu'}(x, x'')} \leq c_\varpi e^{-\delta_\varpi\abs{x - x''}}\;,\\
+    \abs{\varpi_{\nu\nu'}(x, x'') - \varpi_{\nu\nu'}(x', x'')} \leq c_{\varpi,\alpha}\abs{x - x'}^\alpha e^{-\delta_\varpi\min(\abs{x - x''}, \abs{x' - x''})}\;.
+\end{gathered}
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+With the weights of Section~\ref{sec:kernel}, $(Q'_kG'f)(y) = \sum_x\eta^4\mathcal K(x, y)f(x)$, so that $\mathsf N$ has the kernel $\mathsf N(y, y') = \sum_x\eta^4\mathcal K(x, y)\mathcal K(x, y')$, which by \eqref{eq:kernel-bounds} is at most a constant times $e^{-\delta_0\abs{y - y'}/2}$ in modulus. In the momentum representation $\mathsf N$ is the multiplication by $\sum_l\abs{u_k(p' + l)}^2\Delta(p' + l)^{-2}(1 + a\mathsf T(p'))^{-2}$, by the proof of Proposition~\ref{prop:kernel}, and the term $l = 0$ of this sum is $\abs{u_k(p')}^2/\mathcal D(p')^2$ with $\mathcal D$ of \eqref{eq:kernel-denominator}. For real $p' \in [-\pi, \pi]^4$ we have $\mathcal D(p') \leq 4\pi^2(1 + aC_*) + a$ by \eqref{eq:t-star-bound} and $\abs{u_k(p')}^2 \geq c_u$, so that $\mathsf N \geq \gamma_{\mathsf N} \coloneqq c_u(4\pi^2(1 + aC_*) + a)^{-2}$. Lemma~\ref{lem:combes-thomas} gives $\abs{\mathsf N^{-1}(y, y')} \leq (2/\gamma_{\mathsf N})e^{-\theta_{\mathsf N}\abs{y - y'}}$ with a $\theta_{\mathsf N} > 0$ which depends on $a$ only.
+
+The operator $P$ is self-adjoint, and $P^2 = P$ because $Q'_kG'G'Q'^*_k = \mathsf N$. Its range is the range of $G'Q'^*_k$, whose orthogonal complement consists of the $f$ with $Q'_kG'f = 0$, that is, of the $f = (-\Delta + aQ'^*_kQ'_k)\lambda = -\Delta\lambda$ with $Q'_k\lambda = 0$. This is the second assertion, and $P$ is the operator of \cite[(1.38), (1.44)]{BalabanPRT1}. For a field $A$ of finite support, $\partial^*A = \sum_{\nu'}\partial'^*_{\nu'}A_{\nu'}$, and a summation by parts gives $(Q'_kG'\partial^*A)(y') = \sum_{\nu'}\sum_{x'}\eta^4(\partial'_{\nu'}\mathcal K)(x', y')A_{\nu'}(x')$; applying $\mathsf N^{-1}$, then $G'Q'^*_k$ with its kernel $\mathcal K$, and $\partial'_\nu$ gives \eqref{eq:projection-kernel}. The bounds \eqref{eq:projection-bounds} follow from \eqref{eq:kernel-bounds} and the bound on $\mathsf N^{-1}$ by summation over $y$ and $y'$, with $\delta_\varpi \coloneqq \frac12\min(\delta_0, \theta_{\mathsf N})$.
+\end{proof}
+
+The bounds \eqref{eq:projection-bounds} are \cite[(1.126), (1.127)]{BalabanPRT1}. On a torus $T_\eta/\Gamma'$ the kernel is the sum over the periods, and the bounds hold with $\abs{x - x''}$ the distance on the torus and with other constants.
 
 \section{What Is Not Covered}\label{sec:not-covered}
 
