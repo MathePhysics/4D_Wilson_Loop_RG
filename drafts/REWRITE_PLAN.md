@@ -131,6 +131,84 @@ rate comparison, the root sum for (Z), and the difference count 3748–3815.
 
 ## State
 
+- **12 Nov 2026, 22:58 (from `date` 22:56:43 at the last compile). LATEST STATE; RESUME HERE.** Paper 202 pp.
+  `689634a8c24f`, supplement 170 pp. `d3c297f5d58e`, both clean. Done since the entry of 22:46 below (its
+  items (1)–(3)): `sec:carried-complex` moved in (decision (A) taken, reported to the user, not yet answered);
+  `sec:new-deviation` (`prop:new-deviation`: `eq:new-per-insertion`, `eq:new-tail`, constants C_g :=
+  3B₃(2C_box + 5)M, c_an := min(3/4, c_F/(2c_G)); deviation species at k + 1 := one interval and the cubes
+  𝒬_𝔫(𝒢)^{∼5} embedded in the torus; the others are the wrapping species, old text in `sec:assembly`);
+  `sec:contraction` rewritten (`prop:carried-real`, `eq:contraction-first`, `eq:rho-ratio`,
+  `eq:deviation-recursion` with C_new := 4C_gC_{S′}/c_an and a := L^{−1}(1+β₀)⁸, `eq:recursion-fixed-point` with
+  C_χ := max(C^{(1)}_χ, 2C_new)); `cor:production-bound` has the spare factor e^{(7/16)νσ}. θ(W): to be taken
+  as νσ(W)/16 for every group (then it is fixed at production, and for a carried group
+  Σ_{Γ≁{W}}|φ_{k+1}(Γ)| ≤ 81·625(1 + 81u_⋆σ(W)/L)C_{S′}𝔞_{k+1} ≤ νσ(W)/16 for γ_q small): **not yet written into
+  the paper; goes into the assembly.** Third session ("Transcription"): base k = 1 in
+  `FIRST_STEP_BASE_STATE.md` (decided: the paper's X_W, σ := 𝔰, u_⋆ := 11, R_h ≤ 4M from V4 (3.36), (3.75),
+  Lemma E.8; dependence within 8M settled except the Hessian stencils of the root measures); it paused at
+  22:5x for the user's word.
+  **NEXT, IN ORDER:** (4) the analyticity and covariance of the insertions of the groups made at k + 1 on the
+  space of the step k + 1 (hypothesis of `prop:new-deviation`; clause (iii) at k + 1): map D2.2(6)(b) lines
+  1653–1841 ((b4) 1756–1789 the new insertions before integration, (b5) 1790–1802 the integration; (b1)–(b3)
+  the operators, 𝐇(s,·), w(s); (b6)–(b7) outer field and representatives: large-field block) and (e) lines
+  1931–2336 (the background domain; about 100 KB, mostly the terms with large-field regions and the evaluation
+  points — on the term without large-field regions what is needed is: the interpolated configurations lie in
+  the space of the step k (`eq:expansion-condition`, already in the paper), Bałaban's operators and activities
+  are analytic and gauge covariant on his spaces (RG II pp. 3–7, 14–15; RG I (1.19)), the fluctuation measure
+  is invariant under the adjoint action of the gauge transformations of the background, and RG I (1.17) for
+  the inclusion of the pointwise space). (5) The assembly: rewrite `sec:assembly` for the terms without
+  large-field regions: the dressed loop at k + 1 (split, reference gas, Q_{k+1}, 𝓔_{k+1}), clauses (i)–(vii) at
+  k + 1 with θ := νσ/16, citing `cor:production-bound`, `prop:new-deviation`, `prop:carried-real`,
+  `prop:carried-sup`, `lem:group-covering`; the wrapping species (groups whose cube 𝒬^{∼5} does not embed:
+  ext ≥ N_min/(2M) − 6, so e^{−ν_e ext} gives the last term of `eq:insertion-bound` if c_att ≤ ν_e/2: check the
+  table's c_att = #T12.19's c); the cross species in the supremum form with the extent weight (𝖤_k contains
+  them). (6) The base k = 1 (move in the third session's draft when it exists). (7) Large fields (S.9; the
+  split of an old insertion whose comparison region leaves Ω_{k+1}), 𝐑-steps (S.10; the L-condition of F30
+  item 2; `eq:deviation-recursion` is cited there), F26 proper, audits (F30 "to audit"; the paper's c_F vs the
+  supplement's c_F of Lemma 17.22), appendix of constants and conditions (F27–F30 and the constants of
+  `sec:carried-complex`: c_F, ρ₀, c_G, ϰ_m, λ_r, μ_c, c_pl, Ĉ, C_c; L ≥ 20(1+β₀)², L > (1+β₀)⁶; η_w = (5/16)ν),
+  FINDINGS entry F31 for the blocks of 22:46–22:57 (decision (A), the constants, the deleted text), prose
+  passes on all new text, final lint.
+
+- **12 Nov 2026, 22:46 (from `date` 22:42:55 at the last compile). SUPERSEDED BY THE ENTRY ABOVE.** Paper 192 pp.
+  `06117d994581`, supplement 170 pp. `e205777bd372`, both clean. **In the paper, with proofs, on the terms
+  without large-field regions:** the count (`sec:count`: `lem:coarse-cubes`, `lem:group-covering`,
+  `lem:cube-set-sizes`, `lem:tree-bound`, `lem:group-weight`, `prop:rooted-sums`, `thm:size-bound`, with the
+  weight e^{(5/2)νσ + ν_e ext}); `prop:marked-size`; in `sec:small-field-map` the split Y = c·(transport) + Y^d and
+  Corollary `cor:production-bound` with `eq:size-bound` (now this corollary's display; the old display in
+  `sec:contraction` is deleted) and C_{S′} := (3e^{2ν}/ν)(1+β₀)⁶C_α (`eq:size-constant`), then θ ≤ νσ/16 through
+  Lemma `lem:root-bound` (its proof adjusted: positions are the 81σ cubes touching X_𝒢). Conditions and what is
+  derived here: `FINDINGS.md` F30. **The design entry of 22:06 below is carried out, except that the arcs of
+  the components are not filled at all** (groups of components = classes of "touch a common member"; a
+  memberless group is one component), and the tree lemma is applied twice (groups; inside a polymer vertex).
+  **A third session ("Transcription", the branch stopped at 20:45) works in its own files:**
+  `COMPLEX_COVARIANCE_DRAFT.tex` + `COMPLEX_COVARIANCE_STATE.md` (the complex covariance block, drafted, 10 pp.;
+  its state file read in full at 22:44, the draft's lines 49–99 read: the space 𝒮_n(U) of `eq:space-of-step` in
+  fine units — |α| < α_{1,n}L^{−n}, |δ_eα| < α_{1,n}L^{−2n}, |∂(e^{iα}U) − 1| < c_Fα_{0,n}L^{−2n}, |𝐉| < α_{0,n}L^{−3n} —
+  Lemma "space inclusion", constants c_F, ρ₀, c_G with (N1)–(N3), ϰ_m, μ, c_pl, Λ_𝔞, Ĉ, C_c := 1 + (1 + Ĉ)C_{S′},
+  conditions L ≥ 20(1+β₀)², L > (1+β₀)^{10}); and next `FIRST_STEP_BASE_DRAFT.tex` + `FIRST_STEP_BASE_STATE.md`
+  (the base k = 1 of the new clauses). **Its open point O1:** the complex covariance note's averaging bound (K3)
+  is not proved (VAR (172) unchecked for the complex part). Its options: (A) the space of the step is defined
+  by the pointwise conditions (which is what the paper's clause (iii) says already), RG I (1.17) cited as
+  Bałaban's at the production of a new insertion; (B) (2.35), (2.37) in the space, block open. A candidate proof
+  (three-lines theorem between real configurations and VAR Proposition 9) is in its state file. **I proceed
+  with (A) (it follows the rule on Bałaban's claims and leaves nothing open) and report it to the user at the
+  top of the next report.**
+  **NEXT, IN ORDER:** (1) read `COMPLEX_COVARIANCE_DRAFT.tex` in full (376 lines) and move it into the paper as
+  a subsection of Section 6 after `sec:small-field-map` (its hypotheses (a)–(d) against the class; clause (iii)
+  restated with 𝒮_n(U), c_F; O2: θ, σ, ext of a carried group are fixed at production; O3: the current in fine
+  units); FINDINGS entry for its constants. (2) The Cauchy step for the groups made at k + 1 (map D2.4(4), lines
+  3085–3144, re-read in full at 22:43; Supplement Lemma 17.22: 𝒬 a cube of cubes with 𝒬^{∼5} ⊂ Ω_{k+1}, E the
+  largest fine curvature in 𝒬^{∼5}, M_𝒬 half the side of 𝒬^{∼2}, gauge with |A|, |∇A|, |∂*∂A|, |ΔA| ≤ 3B₃M_𝒬E,
+  |R(u)J| ≤ 4B₃M_𝒬E under 2E ≤ min(a₁, c₂), 2M_𝒬E ≤ R₁M₁a₁): f(z) := Y_𝒢(e^{izηA}, zR(u)J) − c_𝒢T, f(0) = 0 by
+  Schur, analytic for |z| < R_X := c₀ᾱ_{k+1}/(3B₃M_𝒬E) with c₀ from the pointwise conditions (c_F, c_G), Schwarz ⇒
+  e^{θ}‖Y^d_𝒢(U_{k+1})‖ ≤ b_𝒢 Dev, b_𝒢 := (C_g/(c₀ᾱ_{k+1}))e^{θ}S_𝒢 with M_𝒬 ≤ C·M·ℓ_𝒢 (ℓ_𝒢 = #(X_𝒢): X_𝒢 ⊂
+  B(𝔫, M#(X_𝒢) + 1), so R_{t_𝔫} ≤ 2C_boxMℓ_𝒢); tail clause from `eq:size-bound` and ext ≥ C_box t for t ≥ 2
+  (ν_eC_box = ν/2 > η_w = (5/16)ν). (3) The carrying of the old insertions ((T-dev), Supplement S.8; map D2.4(5),
+  (6), lines 3145–3272, to re-read) and the recursion of C_χ; delete the old text of `sec:contraction`. (4) The
+  base k = 1 (third session's draft). (5) Large fields (S.9), 𝐑-steps (S.10; the L-condition of F30 item 2),
+  several loops (the cross species in the sup form with the extent weight), F26 proper, audits (F30 "to
+  audit"), appendix of constants and conditions (F27–F30), prose passes on all new text.
+
 - **12 Nov 2026, 22:06 (from `date`). DESIGN OF THE COUNT FOR AN ENSEMBLE, FIXED AFTER READING (all in full):
   the general-loops note §6 (d401d13826f7, lines 227–267), the map's (11)(a)–(f), (12)(a)–(f), (13)(a)
   (9f0d33e406e6, lines 3441–3760), the two-loops note §(2) (lines 147–174), the N-loops note §1 and §6A
