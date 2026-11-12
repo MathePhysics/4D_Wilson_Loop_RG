@@ -131,6 +131,267 @@ rate comparison, the root sum for (Z), and the difference count 3748–3815.
 
 ## State
 
+- **12 Nov 2026, 21:51 (from `date` 21:50:28). LATEST STATE OF THE MANUSCRIPTS: paper 177 pp. `d2646ba2e1e8`,
+  supplement 170 pp. `3b566797fddb`, both clean.** Since the entry "21:55" below (typed; actual about 21:49):
+  the dependence set X^+_W (8M fine units around X_W) is defined in Section 5 and used in (iii), in
+  `sec:localisation-expansion` (touching), and in `sec:groups-of-step` (the domain of a group as a
+  constituent); the comparison region contains it. (H1), (H2) are still to be added to the class with the
+  count. **RESUME HERE: (1) general-loops note §6 (lines 227–267); (2) write the count for an ensemble (outline
+  of "22:04" below, items 2–6), re-reading (12)(e)–(f), (13) (lines 3661–3760) in full; (3) items 7; (4) the
+  complex covariance block and the complex clause of (iii); (5) the base k = 1 / the first-step proof from
+  IT-1; (6) large fields, 𝐑-steps, F26 proper, audits, appendix of conditions (F27–F29), prose passes.** Clock
+  rule: the entries below headed 21:44–22:04 and "21:50", "21:52", "21:55" carry typed times; only times marked
+  "from `date`" are measured.
+
+- **12 Nov 2026, 21:55 (two reads after `date` 21:47:24). Two-loops note (6A)(i) IS NOW READ IN FULL (lines
+  295–372). The resolution of the point about windows on several loops (entry of 21:50), all N for the count
+  written for an ensemble:**
+  *Base at the step 1* (#526–#532): X(W) ∪ π₁(ℋ(W)) is connected (V4 lem:two-loop-pins(a)); Y_W depends on the
+  configuration on X(W), on the halos within 2R_h < 8M fine units, on the stencils within 2L of the traversals,
+  and on the transports of ℐ(W); S_W := the closed 8M-neighbourhood (fine units) of X(W) ∪ ℐ(W) contains the
+  dependence set, is closed-connected, and diam_∞(S_W) ≤ (1 + 4/M + 48/L)M𝔰(W); #₁(X_W) + n₁(W)/M ≤ (1 + 4/M)𝔰(W);
+  so the step-1 insertions have "units with a factor" u ≤ u₁ := 1 + 4/M + 48/L.
+  *Vertices on several loops* (#533–#543): diam_v := max over the loops on which v has an interval of the
+  largest distance from a point of supp v to the intervals of v on that loop. For a polymer vertex put
+  Q_v := M ∪ ∪_{W∈𝔅(M)}S_W ∪ ∪supp 𝒞: it is closed-connected (M connected; each touched W has its dependence set
+  meeting M and inside the connected S_W; each link cluster touches M), each int_i(v) contains a point of Q_v,
+  and supp v ⊂ Q_v, so diam_v ≤ diam_∞(Q_v) ≤ M#(M) + Σ_{W∈𝔅(M)}(diam_∞(S_W) + 1) + Σ(M#(𝒞) + 1), with
+  diam_∞(S_W) ≤ u_W(M/L)σ_k(W). The window extends each int_i(v): |win(v)| ≤ Σ_i|int_i(v)| + 80(diam_v + 1) (four
+  ends for two loops; for N loops the number of ends is twice the number of intervals).
+  *Filled hulls* (#544–#548): for an old insertion D with several intervals, H_i(D) := the smallest arc of C_i
+  containing ℐ_i(D); win(D) := ∪_iH_i(D) extended by 20(diam_D + 1) at each end; |H_i(D)| ≤ 4diam(S_D) ≤ 4uMσ(D),
+  diam_D ≤ uMσ(D) in production units. *Covering* (#549–#554): piece by piece and loop by loop; a pair without a
+  common loop has no arc to cover. *Units with a factor* (#566): an insertion D with n(D) ≤ uMσ(D),
+  diam(S_D) ≤ uMσ(D), #(X_D) + n(D)/M ≤ uσ(D) in production units and (H0)–(H2); u = 1 for the groups made by a
+  step after the first, u ≤ u₁ at the step 1, u ≤ u_𝔏 for the 𝐑-made ones; *the share of D* (#555–#572, read
+  earlier): 170uMσ(D) positions, C^×_win ≤ 196u/c_w, #_{k+1}(X_D) ≤ 16 + 20480/L + 8320uσ_k(D)/L,
+  |win(D)| ≤ 88u(M/L)σ_k(D) + 84, the share conditions u(8496ν_f + 88ν_e)/L ≤ ν_r/4 (L ≥ 4·10⁴u) and
+  u·c′_πα_{1,k+1}·88M/L ≤ ν_r/16.
+  **THEREFORE the class needs, for every group W (to add to Definition `def:dressed-loop`, with the base from
+  V4 and the step from the construction): (H0) Y_W depends on the configuration only within 8M fine units of
+  X_W ∪ (the cubes meeting its intervals); (H1) a closed-connected set S_W containing X_W, the dependence set,
+  and the intervals, with diam_∞(S_W) ≤ uMσ(W) in production units; (H2) the set E_W := X_W ∪ (the cubes meeting
+  the filled hulls) is closed-connected; with u = 1 for the groups made by a step k ≥ 2 on the trivial term,
+  u₁ at the step 1 (and u_𝔏 at the 𝐑-steps).** The clause "Y_W depends on the background only through X_W"
+  written at 21:40 is to be replaced by (H0) (the halos of the step 1 reach 8M fine units beyond the domains).
+  **NEXT: the general-loops note §6 (lines 227–267) for N loops and general loops; then write items 3–6 of the
+  outline for an ensemble with these definitions; (H0)–(H2) into the class in the same edit.**
+
+- **12 Nov 2026, 21:52 (after `date` 21:47:24; two reads since). Two-loops note (ac5f11dda03c) (6A), lines
+  295–322, read in full (#503–#524); lines 323–351 not yet (then #555–#576, read earlier).** Content: (i)
+  *multi-interval arc sets*: the arc set of a group on C_i is the union of the linked hulls of its classes of
+  joined pairs on C_i; a class can have several intervals on one loop (two pieces on C₁ joined only through a
+  piece on C₂ get no joining arc). *Connectedness*, by induction on the step with three hypotheses for every
+  old insertion D: (H0) the set X^{Cov}_D on which D depends lies within 8M fine units of X_D ∪ (the π_k-cubes
+  meeting ℐ(D)); (H1) a closed-connected set S_D ⊃ X_D ∪ X^{Cov}_D with diam_∞(S_D) ≤ u_DMσ(D) in production units
+  (the factor u_D of "Units with a factor"); (H2) E_D := X_D ∪ (the π_k-cubes meeting the arcs H₁(D) ∪ H₂(D) of
+  "Filled hulls") is closed-connected. D's domain one step later := the π_{k+1}-cubes meeting the
+  8M-neighbourhood of E_D. For a new group: X(𝒢) := its constituents' domains and those of the members of its
+  merged occurrences (old ones taken one step later), S_𝒢 := X(𝒢) ∪ ℐ(𝒢) closed-connected with
+  diam_∞(S_𝒢) ≤ Mσ_{k+1}(𝒢), so (H0)–(H2) hold for it with u = 1. The rest of #518–#524 concerns the insertions
+  made by the 𝐑-operation (u = u_𝔏 = 46080 at d = 4, #E_D ≤ 65u_𝔏σ + 160): with the 𝐑-steps block.
+  **CONSEQUENCE FOR THE CLASS:** the paper's domain X_W ("the localisation domains and the cubes containing a
+  fine bond of the intervals") has to satisfy what (H0)–(H2) give: the insertion depends on the configuration
+  on a set within 8M fine units of it (at the step 1 V4's dependence set, the halos), and the set made of the
+  domain and of the cubes along the filled hulls is connected with diameter ≤ uMσ. So Definition
+  `def:dressed-loop` needs, beside the clause "Y_W depends on the background only through X_W" written at 21:40,
+  the precise dependence set and its connectedness with the diameter bound; **to be settled when the count is
+  written for N loops: read lines 323–403 of the two-loops note ((6A) rest: "Units with a factor", "Filled
+  hulls", "Vertices on two loops", "The share of D", #555–#576) and the general-loops note §6.** The clause
+  written at 21:40 may then have to be restated with the 8M-neighbourhood; noted here so that it is not taken
+  as final.
+
+- **12 Nov 2026, 21:50 (after `date` 21:47:24). A POINT FOUND WHILE PREPARING ITEM 3 OF THE COUNT (windows for
+  several loops), to settle before writing it.** The map's window of a vertex is its interval extended by a
+  multiple of diam_v, the largest distance from a point of the support to the vertex's interval; the covering
+  lemma (tied vertices ⇒ an interval of one meets the window of the other; I(𝒢) ⊂ ∪win(v)) uses that a point
+  common to the two supports is within diam of an interval of each **on the loop on which the arc between them
+  is added**. For a vertex with intervals on several loops (a cross member, a marked polymer with groups on two
+  loops) the nearest interval may lie on another loop, and the arc added on the common loop is then not covered
+  by a window defined with the distance to the nearest interval. With diam_v defined loop by loop (the largest
+  distance to the intervals on each loop on which the vertex has one) the lemma holds, but then diam_v is at
+  least of the order of the distance between the loops for such a vertex, and the windows are that long. The
+  two-loops note treats exactly this in (6A)(i) ("Units with a factor", "Filled hulls", "Vertices on two loops",
+  #503–#606, lines 295–403: |win(D)| ≤ |H₁(D)| + |H₂(D)| + 80(diam_D + 1), the factor u ≤ u_𝔏, the conditions
+  L ≥ 4·10⁴u_𝔏), of which only #555–#576 have been read. **So before item 3 is written for an ensemble: read the
+  two-loops note (6A) in full (lines 295–403) and the general-loops note §6 (lines 227–267); then write items
+  3–6 once, for N loops, with the one-loop vertices as the case in which every vertex has its intervals on one
+  loop** (the paper's rule: one argument for N loops). The ties and the vertices themselves are as designed in
+  the outline: polymer vertex (M with the members it touches, the links it carries, and the vacuum occurrences
+  assigned to it), member vertex (an untouched member), occurrence vertex (an old occurrence with its groups).
+
+- **12 Nov 2026, 21:48 (from `date` 21:47:24).** The geometric inputs of the count are already in the paper's
+  Section 2: `def:chord-arc`, `lem:chord-arc`, `lem:arcs-around-set` (smallest arc ≤ 2ΛD or the whole loop),
+  `lem:small-cubes` (a cube of side t < δ(C) meets C in one arc), `lem:cubes-along-arc` (an arc of n traversals
+  meets at most 8n/M′ + 16n/s(C) + 32 cubes of side M′), `lem:long-arcs`, `lem:corner-isolation`,
+  `lem:scale-sums`; and `lem:square-properties` in Section 5. So items 3–4 of the outline cite these and add no
+  geometric lemma. (Use `lem:small-cubes` for the length of a loop in a cube where a sharper constant than
+  4Λ̄M is wanted; `lem:tensor-size` uses 4Λ̄M from `lem:square-properties`(i).)
+
+- **12 Nov 2026, 21:49 (from `date` 21:46:37 two calls ago). Read in full for the count:** the map's D2.4(12)(c)
+  and (d) (lines 3613–3660, no cut) and the general-loops note (d401d13826f7) §2 (lines 35–86). **What the count
+  takes from them, for a general loop:** Λ̄(C) := max(2, Λ(C)), Λ̄(𝒞) := max_iΛ̄(C_i); the shorter arc between two
+  positions a, b has at most Λ(C)|a − b|_∞ traversals, and each of its points is within Λ(C)|a − b|_∞ of both
+  (#GL2.1-2, #GL2.2-5); the smallest arc containing a set of positions of ℓ^∞-diameter D has length ≤ 2Λ̄D, or
+  is the whole loop, of length ≤ 4Λ̄D, and its points are within 2Λ̄D of the set (#GL2.2-4; the paper's Lemma
+  "Arcs around a Set"); the positions in a set of diameter D are at most 2ΛD + 1 (#GL2.3); a cube of side
+  t < δ_k(C) meets at most 2t + 2 bonds of C, in one arc (#GL2.3-2); **an arc of n traversals meets at most
+  8n/M + 16n/s_k(C) + 32 ≤ (8 + 16/L)n/M + 32 cubes of side M when s_k(C) ≥ LM** (#GL2.4: at most n/s_k(C) + 2
+  straight pieces, each of n_i bonds meeting ≤ 8(n_i/M + 2) cubes); check which of these the paper's Section 2
+  already has (Lemmata `lem:arcs-around-set`, `lem:square-properties`, `lem:chord-arc`, `lem:corner-isolation`)
+  and add the arc-cube count there if missing. From (12)(c)–(d) (square constants; multiply the arc constants by
+  Λ̄ as in the general-loops note §4, digest below): the vertices (M-vertex = (M, 𝔅(M), 𝒱(M)) with support
+  M ∪ ∪X_W ∪ ∪supp 𝒞 and interval I(M); W-vertex; Γ-vertex), the weights of the links (2|φ^T(𝒞)|_sup with the
+  choices counted by 2^s ≤ e^{d(𝒞)}; e^{6c#(M)} per M absorbed; a vacuum occurrence ≤ 2e^{d(𝒞)}|φ^T|_sup), #(v),
+  ext_v, diam_v, the window (interval extended by 20(diam_v + 1), general loop 10Λ̄(diam_v + 1), at each end), the
+  three sums σ ≤ Σ(#(v) + |win(v)|/M), ext ≤ Σ(ext_v + |win(v)|/M + 2), #(X(𝒢)) ≤ Σ(#(X_v) + 8|win(v)|/M + 80), the
+  pair relations and the covering lemma, the shares sh(M), sh(W), sh(Γ), sh(𝒞), the polynomial ℓ_X paid per piece
+  (C_pc), the transport parts under c′_πα_{1,k+1}·4096M ≤ ν, the charges b(v), the reserve budget (7/8) and the
+  extent budget of an old member. **NEXT: write item 3 of the outline (vertices, windows, covering lemma) and
+  item 4 (shares, charges) into the paper with the general-loop constants derived from the paper's own
+  geometric lemmata; then (12)(e)–(f), (13) re-read in full (lines 3661–3760) for items 5–6.**
+
+- **12 Nov 2026, 21:46 (from `date`: 21:45:56). CORRECTION OF CLOCK TIMES.** The entries below headed 21:44,
+  21:48, 21:52, 21:55, 21:58, 22:00, and 22:04 were typed without calling `date` and are wrong: all of that
+  reading and writing was done between 21:40 (the compile of `8b8ce24c7cff`) and 21:46. Their content stands.
+  **IN THE PAPER since 21:40:** Lemma `lem:tensor-members` "The Size of a Tensor with Touched Members"
+  (`eq:member-radius`, `eq:tensor-members`), after `lem:tensor-parity`: item 1 of the outline of the count, in
+  the form of a reduction to the suprema of the members' insertions over the interpolated configurations (no
+  clause of the class beyond analyticity is used; r_α := min(β,1)min(α_{0,k}, α_{1,k})/(16c_𝐉B₀e^{16κ₁}), so that
+  `eq:expansion-condition` reads b_k ≤ r_α). Paper 177 pp. `49d18cb050fd`, supplement 170 pp. `3b566797fddb`,
+  both clean. **NEXT: item 2 of the outline (the sizes of the marked polymers), then items 3–7.**
+
+- **12 Nov 2026, 22:04. OUTLINE OF THE NEXT BLOCK, THE COUNT (paper, replacing `sec:contraction`'s count-check
+  text; sources D2.4(11)(c)–(e), (12)(c)–(f), (13)(a)–(b), with the general-loops note §4 for Λ̄; the map's lines
+  3493–3560, 3613–3760; (12)(c) re-read in full at 22:03).** Subsections and statements to write, in this order:
+  1. *The tensors with touched members* (D2.4(11)(c)(β)): Lemma: ‖Y_G‖ ≤ ∏_Y(C_Tb_k/ᾱ_k)e^{−(κ₁−3)#(Y)}·e^{n(G)}·
+     ∏_{W∈𝔅(G)}e^{(ν/16)(σ(W)+1)}sup‖Y_W‖, the supremum over the polydisc points of the chain condition, which lie in
+     the sub-domain of the step k (needs the complex clause of (iii) in the sup form; the constant C_T).
+  2. *The sizes of the marked polymers* (D2.4(11)(d)–(f) with Supplement Lemmata 17.27, 17.28 and the paper's
+     `lem:tensor-size`, `lem:tensor-parity`): Proposition: |H̃(M)| ≤ c_M𝔞·e^{−(κ₁/2)#(G_M)}e^{−¼(L+2)κ(#(M) −
+     81#(D′))/324} with amplitude ρ_{k+1} for the polymers without members and the members' amplitudes otherwise;
+     condition κ₁ ≥ 8 + 2(5 + 3L/2)·81κ + 39366·81A (RG II's κ₁, chosen after κ and before M).
+  3. *Vertices, sizes, windows* (D2.4(12)(c)): M-vertices (M with its touched members and its links), W-vertices
+     (untouched members merged), Γ-vertices (old occurrences), their supports, intervals, #(v), ext_v, diam_v, the
+     window (interval extended by 10Λ̄(diam_v + 1) at each end for a general loop); Lemma (covering): ties ⇒ an
+     interval of one meets the window of the other; I(𝒢) ⊂ ∪win(v); σ_{k+1}(𝒢) ≤ Σ_v(#(v) + |win(v)|/M),
+     ext_{k+1}(𝒢) ≤ Σ_v(ext_v + |win(v)|/M + 2), #(X(𝒢)) ≤ Σ_v(#(X_v) + (8 + 16/L)|win(v)|/M + 32) (general loop).
+  4. *Shares and charges* (D2.4(12)(d)): sh(v), the bounds of sh(M), sh(W), sh(Γ), sh(𝒞); the reserve budget
+     (7/8 used) and the extent budget of an old member; the charges b(v); the polynomial ℓ_{X(𝒢)} paid per piece.
+  5. *Rooted sums and the tree bound* (D2.4(12)(e)–(f)): ε_p at traversal, cube, and window positions; the box
+     reduction (cube positions from traversal positions through the extent weight); the Kotecký–Preiss condition
+     for the linking relation; the weighted interaction clause for the reference gas of the step k; the tree bound
+     T(v) ≤ e^{b(v)/2}; marked sums; the three classes of groups; the marked-polymer sum ε^new ≤ ε^{new,α} + ε^{new,β}.
+  6. *The size bound (S-w)* (D2.4(12)(f), (13)(a)–(b)): Theorem: Σ_{𝒢 at p}e^{θ + νσ + ν_e ext}S_𝒢ℓ_{X(𝒢)} ≤ C′_S𝔞_{k+1};
+     the recursion of the size constant (with Ĉ from the complex-data block); the reference gas (root sum,
+     θ ≤ νσ/16); the rate comparison giving the tail clause for the new groups; the absolute convergence which
+     `prop:regrouping` assumes; `eq:size-bound` replaced by (S-w) and every citation of it updated (Section 7,
+     Lemma `lem:root-bound`; `sec:assembly`).
+  7. Then the Cauchy step (D2.4(4), Lemma 17.22), (T-dev) (S.8), the carrying, the split of an old insertion whose
+     comparison region leaves Ω_{k+1}, the recursion of C_χ; delete the count-check paragraphs of
+     `sec:contraction` (`eq:casimir-contraction`, "the fluctuation parts", `eq:cauchy-cost` if unused) in that edit.
+  Each item: re-read its lines of the map without a cut immediately before writing; derive the general-loop
+  constants from the paper's Lemmata "Square Properties" and "Arcs around a Set"; compile; record.
+
+- **12 Nov 2026, 22:00. Complex covariance note §4–§5 (lines 147–201) read in full: THE WHOLE NOTE IS READ.
+  Digest of §4–§5.** *§4, the carry uniformly in k:* fix a traversal n′ of the step k + 1; the insertions of the
+  generation j meeting n′ meet one of its L^m traversals of the step j; P_j := the production sum (ii-w) per
+  traversal of the step j (weight e^{θ + ν_rσ + ν_e ext}) ≤ N^{(j)}ρ_jpl_j, N^{(j)} ≤ 2C_winC_M + s_{j−1}C^{(j−1)},
+  N^{(1)} := C^{(1)}; the complex-data part is stated with the reserve weight (15/16 − 1/8192)ν_rσ: ν_r/16 pays
+  δ_W (σe^{−(ν_r/16)σ} ≤ 16/(eν_r), so the weighted sum of δ_W = 4ML^{−m}σ_j(W) is ≤ (64M/(eν_r))L^{−m} times the
+  unweighted one) and ν/8192 pays the inverse transport; for δ_W > δ̄₀ the non-covariant bound with
+  e^{−(ν_r/16)σ} ≤ e^{−ν_rδ̄₀L^m/(64M)}; E_j ≤ (1+β₀)²m^{1/2}[1024K₁(M/(eν_rμ))L^{−m} + 48L^{−2m} +
+  4c_nce^{−ν_rδ̄₀L^m/(64M)}]P_j; with ρ_j ≤ (1+β₀)^{6m}ρ_{k+1}, pl_j ≤ (1+β₀)^mpl_{k+1}:
+  Σ_{j≤k}E_j ≤ Ĉ max_{j≤k}N^{(j)}ρ_{k+1}pl_{k+1}, Ĉ := Σ_{m≥1}(1+β₀)^{9m}m^{1/2}[…], finite for L > (1+β₀)⁹.
+  *The recursion of the size constant:* C^{(k+1)} ≤ (1+Ĉ)max_{j≤k+1}N^{(j)} + L^{−1}(1+β₀)^{15}C^{(k)}; with
+  L^{−1}(1+β₀)^{15} ≤ 1/8 and C′_S := max(2(1+Ĉ)C^{(1)}, 8(1+Ĉ)C_winC_M), (1+Ĉ)s̄ ≤ ¼ for g small: C^{(k)} ≤ C′_S for
+  all k. *§5:* per insertion on 𝒟^sub_{k+1}: e^{θ(W)}‖Y_W(𝐔, 𝐉)‖ ≤ (1 + 2c′_πα_{1,k+1}|I_W|)b_WDev_W(U_{k+1}) +
+  e^{θ(W)}ε_W, with Σ_{j≤k}Σ_{W of generation j meeting n′}e^{θ(W)}ε_W ≤ Ĉ max_jN^{(j)}ρ_{k+1}pl_{k+1}: the first
+  term in the per-insertion form, the second in the sup form. Constants added: L ≥ 12(1+β₀)², L > (1+β₀)⁹, μ,
+  δ̄₀, c_nc, m₀, the weight (15/16 − 1/8192)ν_rσ in σ_j(W) (σ_k(W) ≤ σ_j(W)), c′_πα_{1,j}·4096M ≤ ν for every j,
+  B₃ ≥ 1. **This block is to be written (after the count, because Ĉ and C′_S enter the recursion of the size
+  constant of the count): supplement — the averaging bound (K3) as a lemma; paper — a subsection "The Carried
+  Insertions at Complex Data" with Lemmata 1–3, the non-covariant bound, and the sum over the generations; and
+  the complex clause of (iii) in the sup form with the weight (15/16 − 1/8192)νσ.**
+  **STATE OF READING for the inductive step on the terms without large-field regions: everything is read in
+  full except D2.4(12)(c)–(f) and (13) (read once with cuts that lost nothing except six line ends, digests
+  below; to be re-read when written), D2.4(3), (9), D2.2(6)(a)-rest/(b)/(e)/(f) (covariance and analyticity of
+  the output: (b1)–(b3), (b6)–(b7), (e) not read), D2.3(4)–(8) (against the paper's Section 7), the RMJ closure
+  (for the 𝐉-argument at the evaluation points), and the IT-1 note beyond §3a for the base.**
+
+- **12 Nov 2026, 21:58. Complex covariance note §1–§3 (lines 54–146) read in full. Digest.**
+  *Lemma 1 (complexified covariance):* F analytic on an open set 𝒟 of (𝐔, 𝐉) invariant under G-valued gauge
+  transformations, with the covariance law for G-valued v; p ∈ 𝒟, u_t a path in (G^c)^{sites} from 1 with
+  p^{u_t} ∈ 𝒟: then the law holds at u₁ (π extends holomorphically to G^c; G^{sites} is totally real of maximal
+  dimension; identity theorem on the component of {u: p^u ∈ 𝒟} containing 1). Base-point form:
+  Ŷ_W := Y_Wπ(𝐔(I_W))^{−1} satisfies Ŷ_W(𝐔^u, R(u)𝐉) = Ŷ_W(𝐔, 𝐉) for u(x_W) = 1.
+  *Lemma 2 (gauge reduction):* δ_W := 4ML^{−m}σ_j(W) (the side of the smallest cube containing X_W in the units
+  of the step k + 1); for δ_W ≤ δ̄ := min(½, CM/(2L)) there is ω: sites(X_W) → 𝔤^c, ω(x_W) = 0, |ω| ≤ 4α_{1,k+1}δ_W,
+  linear in the position (ω(x) := Σ_μa_μ(x − x_W)_μ, a_μ the value of ηA′ at a fixed bond of direction μ), such
+  that 𝐔^{u_t} = e^{iηA″_t}U for u_t := exp(itω), with |ηA″₁| ≤ K₁aδ_W, |ηA″_t| ≤ 3a, covariant change per fine step
+  ≤ K₂aL^{−(k+1)}; K₁ := 2(1 + 2b̂) + c(α_{1,k+1} + b̂), K₂ := 1 + c(Lb̂ + α_{1,k+1}), b̂ := LBCM max(α_{0,k}, α_{0,k+1});
+  proof in the smooth real gauge of CRE (2.38) on a cube of side CM or CM/L containing X_W ((K1), (K2)), by the
+  Baker–Campbell–Hausdorff formula to second order and the chain of at most 2δ_WL^{k+1} translations between
+  parallel bonds.
+  *Lemma 3 (the carried complex-data excess):* μ := min(1, MC₀/(2C_avC₁)), δ_W ≤ δ̄₀ := min(δ̄, μ),
+  R_A := μϱ_j/(2K₁aδ_W) (ϱ_j := α_{1,j}L^{−j}), R_J := r^{(j)}_J/(6r^{(k+1)}_J), R := min(R_A, R_J) ≥ 2:
+  ‖Y_W(𝐔, 𝐉)‖ ≤ 2(4/R)S_We^{νσ_j(W)/8192} + ‖Y_W(U, J)‖(1 + 2c′_πα_{1,k+1}|I_W|),
+  4/R ≤ (1+β₀)²m^{1/2}L^{−m}(8K₁δ_W/μ + 24L^{−2m}). Proof: (a) Lemma 1 along the path u_t (the path points lie in
+  𝒟_W: sup, per-step change, real base U_{k+1} = U_j(V*_j), the 𝐉-argument, curvature by (K3)); (b) the disc
+  f(z) := Ŷ_W(e^{izηA″₁}U, J + z(R(u)𝐉 − J)), |z| < R, inside 𝒟_W (curvature T₁ + T₂ + T₃ with C_av-weight
+  ≤ (3/4)α_{0,j}L^{−2j}; the choice of μ); the inverse transport at disc points ≤ e^{νσ_j(W)/8192} by
+  c′_πα_{1,j}·4096M ≤ ν; Cauchy: ‖f(1) − f(0)‖ ≤ (4/R)S_We^{νσ/8192}. *The non-covariant bound* (no condition on
+  δ_W): ‖Y_W(𝐔, 𝐉) − Y_W(U, J)‖ ≤ 4c_nc(1+β₀)²m^{1/2}L^{−m}S_W (the disc f(z) := Y_W(e^{izηA′}U, J + z(𝐉 − J)) of
+  radius 2R′ for m ≥ m₀; for m < m₀ the trivial 2S_W through the chain condition); c_nc, m₀ depend on L,
+  C_avC₁/C₀, β₀ only. **STILL TO READ: §4 (the carry, uniformly in k: how these per-insertion bounds are summed
+  with the production (ii-w) sums to give Ĉ and the weight (15/16 − 1/8192)ν_rσ) and §5 (the region), lines
+  147–201.**
+
+- **12 Nov 2026, 21:55. The complex covariance note (f1cbf76fb687), lines 1–53, read in full; §1–§5 (lines
+  54–201) NOT YET READ.** Its claim: the carried deviation insertions satisfy the complex-data bound of the
+  class uniformly in k, with no gauge on the region of SW §6(6c). Inputs: (T-dev); CRE (2.38) for U_{k+1} (SW
+  (6d)); the chain condition D2.2(4)(f); CRE (2.6)–(2.7); the averaging bound (K3); the independence of the dev
+  insertions of the outer variables. Checks: (K1) CRE p. 261 (ii): (2.38) is posed for every cube of the stated
+  size (top-domain cubes of side CM in Ω_{k+1}; layer cubes of side CM/L in Ω_k meeting Ω_{k+1}ᶜ). (K2) every
+  point of Ω_{k+1} is at distance ≥ 8MR_{k+1} > CM/L from Ω_kᶜ (CRE pp. 254–256, (3.5)). (K3) *the averaging
+  bound*: for j ≥ 2, X ⊂ Ω_j, 𝐔 with the real factor U_{k+1}, satisfying (2.39) on X and with (2.34)-curvature
+  < α′ per plaquette on X, C_avα′ ≤ α_{0,j}L^{−2j}: then CRE (2.35) and (2.37) hold for 𝐔 on X ∩ Ω_j;
+  C_av := 2(B₃ + 2c_dB₅); proof from RG I p. 263 (1.17), VAR Theorem 1 and Proposition 9 (ε₂ = B₅ε₁,
+  B₅ = 6B₁B₃C₁^{VAR}), with the dictionary RG I's U_n(M^·(𝐔)) = CRE's U_{p,X}(M^·(𝐔)); the bounds hold up to ∂X; J is
+  a function of 𝐔 alone (RG I (1.15)). **(K3) is a statement of Bałaban's used outside what he prints: it goes
+  into the supplement (new lemma at the END of Section 17, after 17.28), with RG I pp. 262–263, VAR pp. 278–281,
+  296, 305, 309 re-read.** §0 Setting: W a carried dev insertion made at the step j ≤ k, m := k + 1 − j,
+  X_W ⊂ (Q^#_W)⁺ ⊂ Ω_{k+1}; Cov(j); the production domain 𝒟_W and the production size S_W := sup_{𝒟_W}‖Y_W‖
+  (it fixes b_W and β_W); the datum 𝐔 = e^{iηA′}U_{k+1}, |ηA′(b)| ≤ a := α_{1,k+1}L^{−(k+1)} per fine bond, covariant
+  change ≤ aL^{−(k+1)} per fine step, |𝐉 − J| < 2r^{(k+1)}_J, r^{(n)}_J := α_{0,n}(L^nξ)^{−3}. **NEXT: read §1 (Lemma
+  1, complexified covariance), §2 (Lemma 2, gauge reduction of the complex part), §3 (Lemma 3, the carried
+  complex-data excess), §4 (the carry, uniformly in k), §5 (the region); then write (K3) into the supplement
+  and the block into the paper, with the complex clause of (iii).**
+
+- **12 Nov 2026, 21:52. SW closure §6 re-read in full (lines 102–126). The form of the complex-data clause to
+  put into (iii), and one more block that is missing from the manuscripts.** (6a) the Cauchy step gives
+  b_𝒢 = (C_g/(c₀ᾱ_{k+1}))e^{θ}S_𝒢 and C^{(k+1)}_χ := (C_gC_S/c₀)e^{η_w}, C_S = e^{2ν_e}C′_S. (6b) for the new groups,
+  on 𝒟^sub_{k+1}: e^{θ}‖Y^d_𝒢(𝐔, 𝐉)‖ ≤ (e^{θ}S_𝒢/(c₀ᾱ_{k+1}))(C_gDev + ‖a″‖_sub + ‖𝐉 − J‖_sub), ‖a″‖_sub ≤ α_{1,k+1},
+  ‖𝐉 − J‖_sub ≤ 2α_{0,k+1}; summed by (S-w): Σ_{𝒢∋n′}e^{θ}‖Y^d_𝒢(𝐔, 𝐉)‖ ≤ C_χρ̃_{k+1}δ*(U_{k+1}) +
+  (1 + 2C₀/C₁)C_χρ̃_{k+1}α_{1,k+1}Σ_tw_t; **"the clause delivered is in this sup form, which is all its consumers
+  use"**. (6c) carried insertions: the real-point part is (T-dev); the complex-data excess is the complex
+  covariance note's (constant Ĉ, the averaging bound (K3), C_av := 2(B₃ + 2c_dB₅), the reserve weight
+  (15/16 − 1/8192)ν_rσ, conditions L ≥ 12(1+β₀)², L > (1+β₀)⁹, μ := min(1, MC₀/(2C_avC₁))); C′_S :=
+  max(2(1+Ĉ)C^{(1)}, 8(1+Ĉ)C_winC_M). (6d) CRE (2.38) for U_{k+1} from VAR Theorem 1 with the global ε₁. (6e) the
+  conditions. **A grep of the paper and the supplement for "complexified", "averaging bound", "(K3)" finds
+  nothing: the complex covariance argument (`WILSON_IT1_COMPLEX_COVARIANCE_2026_10_29.md`, f1cbf76fb687, 201
+  lines) is not in the manuscripts.** It is needed (the complex-data part of the sums for the carried
+  insertions; it fixes C′_S) and is a further block: read the note in full, then decide paper or supplement
+  (it uses Bałaban's covariances at complex data: probably a section of the paper with a supplement lemma for
+  the complexified covariance). **So the complex clause of (iii) to write is the sup form:** on the sub-domain,
+  Σ_{W∋𝔫}e^{θ(W)+λνσ(W)+ν_e ext(W)}‖Y_W(𝐔, 𝐉)‖ ≤ C_χρ̃_kδ*_𝔫(U_k) + C^c_χρ_k with a rate λ ∈ [15/16, 1] (compare the
+  rates λ_k(W) of the paper's `eq:cross-bound`). **ORDER FROM HERE:** (1) the complex covariance note in full;
+  (2) the complex clause of (iii) with the definition of the sub-domain; (3) D2.4(11)(c)–(e) into the paper;
+  (4) the count (12)(c)–(f), (13) → (S-w), with the proof of the new clauses at k + 1 for the new groups; (5)
+  the Cauchy step, (T-dev), carrying, recursion; (6) the complex covariance block; (7) the base k = 1 with the
+  rewrite of the proof of the first step from IT-1; (8) large fields, 𝐑-steps, several loops, F26 proper, the
+  audits, the appendix of conditions, the prose passes.
+
 - **12 Nov 2026, 21:48. The complex-data clause of the class: read, not yet written.** SW closure §2–§4 re-read
   in full (lines 20–54) and the map's #MD2.4.4.20. For a *new* group the Cauchy step at complex data on the
   sub-domain gives e^{θ}‖Y^d_𝒢(𝐔, 𝐉)‖ ≤ b_𝒢(Dev_{n′}(𝒢) + a*_𝒢 + j*_𝒢) with a*_𝒢 ≤ α_{1,k+1}/C_g, j*_𝒢 ≤ 2α_{0,k+1}/C_g
