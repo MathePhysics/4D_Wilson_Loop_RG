@@ -131,6 +131,142 @@ rate comparison, the root sum for (Z), and the difference count 3748–3815.
 
 ## State
 
+- **12 Nov 2026, 21:48. The complex-data clause of the class: read, not yet written.** SW closure §2–§4 re-read
+  in full (lines 20–54) and the map's #MD2.4.4.20. For a *new* group the Cauchy step at complex data on the
+  sub-domain gives e^{θ}‖Y^d_𝒢(𝐔, 𝐉)‖ ≤ b_𝒢(Dev_{n′}(𝒢) + a*_𝒢 + j*_𝒢) with a*_𝒢 ≤ α_{1,k+1}/C_g, j*_𝒢 ≤ 2α_{0,k+1}/C_g
+  (the function z ↦ Y(e^{izηa″}e^{izηA}, z(R(u)J + (𝐉 − J)), 0) − c_𝒢T, a″ := Ad(u)a′, radius
+  c₀ᾱ_{k+1}/(C_gDev + ‖a″‖_sub + ‖𝐉 − J‖_sub)). The sub-domain 𝒟^sub_k: the points of the polydisc of (iii) with
+  the top-layer radii on every layer (|η_kA′(b)| < f_{k,n}α_{1,k}L^{−k}, (L^kξ)²|∇A′| < f_{k,n}α_{1,k},
+  |𝐉 − J_k| < f_{k,n}α_{0,k}(L^kξ)^{−3}); per traversal a*^{(k)}_𝔫(A′) := η_k^{−1}Σ_t(t+1)e^{−(30/8)η_Vt}max|η_kA′(b)|
+  ≤ S₃₀α_{1,k}, j* ≤ 2S₃₀α_{1,k}; consumers evaluate inside 𝒟^sub_k for L ≥ 2(1+β₀)/(1−β), Lθ ≤ 1,
+  O(1)Lθ·min(β,1) ≤ 1 − β. **For a carried insertion the complex-data bound at later steps is NOT obtained by
+  carrying the per-insertion form** (the complex part of the sums does not close by the recursion): it is the
+  complex covariance note's (f1cbf76fb687, 201 lines; constant Ĉ, the averaging bound (K3)) with SW §6(6c). So
+  the clause is written into (iii) only after reading SW §6 (lines 102–126) and the complex covariance note in
+  full; the supplement's S.9 already speaks of "the subdomain on which the attached bounds are stated", which
+  the paper's definition does not define: it gets its definition with this clause. Clause (iii) of the paper
+  is unchanged so far except for the sentence on X_W. **NEXT: SW §6 and the complex covariance note in full →
+  the complex clause of (iii); then D2.4(11)(c)–(e) into the paper; then the count.**
+
+- **12 Nov 2026, 21:44. THE BASE k = 1 OF THE DEVIATION CLAUSES: what was read and what it needs.** Read in
+  full: the map's #MD2.4.5.8–#MD2.4.5.13 (lines 3170–3200) and the line-defect note IT-1 (1bc8334cfad9) §3a(3)–(6)
+  (lines 101–160). Content: a group W of the step 1 is *good* if its rectangle Q_W (V4: the coordinate
+  rectangle enclosing roots, cluster domains, halos, the hull, and the consulted bonds) lies in Λ₁ and lifts
+  injectively; for a good group 𝔡⁰_W ≤ C_χ𝔰(W)³δ_{Q_W}(U₁)M^{(ρ)}_Λ(W) (phase test passed: from V4's endpoint
+  identities (c4-11-6), the derivative bound along the path, (c4-9-2), diam Q_W ≤ C_boxLMn(W),
+  n(W) + |ℋ(W)| ≤ CLM𝔰(W); phase test failed: the endpoint majorants); "δ_{Q_W}(U₁) is kept, not replaced by
+  its bound Cε₁" — **this per-insertion bound is derived in the IT-1 note, not printed in V4**; other groups:
+  𝔡⁰_W ≤ 2M^{(ρ)}_Λ(W) with 𝔰 ≥ (d(n) − 1)/(C_boxLM) or 𝔰 ≥ N_min/(CLM); the per-traversal form (6) from
+  e^{θ°(W)} ≤ e^{η𝔰/8}, the contour pin Σ_{W∋n}M^{(ρ)}_Λ(W)e^{4η𝔰(W)} ≤ Cρ (V4 (c4-6-5) with Lemma c5-5-8(a)), and
+  the split 𝔰³e^{η𝔰/8} ≤ (j+1)³e^{η/8}e^{−(31/8)ηj}e^{4η𝔰} at j = ⌊𝔰⌋. The map's base: β_W ≤ K_χC_χe^{η𝔰/8}𝔰³M^{(ρ)}_Λ(W),
+  t(W) ≤ max(1, ⌊𝔰⌋), Σ_{W∋n_f, t(W)≥t}β_W ≤ CρW_t; summed over the L fine traversals of a traversal of the step
+  1; ℓ_W := 1, b_W := β_W/L². With the weights: e^{ν_rσ+ν_e ext} ≤ e^{ν/2}e^{(3/2)νσ} and the rate 5/16 left
+  (#MD2.4.12.7-2–.7-5). **In the paper's definitions** the comparison region at the step 1 is the ball
+  B_∞(𝔫, R_{t_𝔫(W)+1}) and contains Q_W (the halos and consulted bonds lie within 8M + 4L fine units of the
+  domains and the hull, less than one step of the radius), and t^{(1)}_𝔫(W) = t_𝔫(W) + 1 ≤ max(1, ⌊𝔰⌋) + 1, so the
+  tail clause holds with a constant larger by e^{η_w} and a power.
+  **CONSEQUENCE FOR THE PLAN: the paper's proof of Theorem "The First Step" is itself a condensation of the
+  IT-1 note (the per-insertion deviation bound, the attached and wrapping parts, the collar marks, D1(ii),
+  D1(iii) are derived there from V4, not printed in V4). It is a seventh condensation site** (add to "Why" and
+  to Order of Work item 1): the proof of `thm:first-step` has to be rewritten from the IT-1 note (lines 1–900,
+  §3a–§3j, §4) with V4's lemmata cited by number (numbers from `..\WILSON_FIRST_RG_STEP_V4.aux`). **NEXT:** read
+  the IT-1 note §3a in full (lines 90–190) and the V4 statements it cites (Lemma c5-5-8, (c4-6-5), Prop.
+  c5-6-def, §c4-8-4, §c4-11-4, §c4-12), get their numbers from the aux file, and write the paragraph "The
+  deviation of a single insertion" of the proof of `thm:first-step` (good groups: `eq:per-insertion` and
+  `eq:tail-clause` at k = 1). Then continue as listed in the entry of 21:41.
+
+- **12 Nov 2026, 21:41 (from `date` 21:40 at the last compile). THE DEVIATION CLAUSES ARE IN THE CLASS** (paper
+  176 pp., `8b8ce24c7cff`, clean; supplement 170 pp., `3b566797fddb`): the paragraph of definitions before
+  Definition `def:dressed-loop` (X_W, ℓ_W, R_t, t_𝔫(W), comparison region = B_∞(𝔫, R_{t_𝔫(W)+1}),
+  `eq:insertion-deviation`, ext(W), t^{(k)}_𝔫(W), `eq:tail-weights`); in (i) the cluster-weight bound; in (ii)
+  `eq:per-insertion` and `eq:tail-clause` (with e^{νσ + ν_e ext}); in (iii) the dependence on X_W; Lemma
+  `lem:tail-to-sum`. Conventions fixed: β_W := b_Wℓ_WL^{2j} (j the step at which W was made); Dev with the factor
+  ℓ_WL^{2j}; the tail clause has the right side C_χρ̃_kL^{2k}W_t; ℓ_W := d_j(X_W) + 1 for j ≥ 2 and 1 for j = 1.
+  **NEXT (in this order):** (1) the base k = 1 of `eq:per-insertion` and `eq:tail-clause`: the map's #MD2.4.5.10
+  (lines 3176–3230: ℓ_W := 1, b_W := β_W/L², from IT-1 §3a(6)) and #MD2.4.12.7 (above, read in full: X(W) ∪ Q_W
+  within C_box(𝔰(W) + 1) cubes of every fine traversal; V4 Lemmata c5-5-8, c4-6-2, c4-6-env); read IT-1 §3a(6)
+  and those V4 lemmata, then write into the proof of Theorem `thm:first-step`. (2) D2.4(11)(c)–(e) into the paper
+  (tensors with touched members; costs; sizes of marked polymers), which needs the complex-data clause of the
+  class (SW closure §3: δ*^c, a*, j*, 𝒟^sub; rates from the D2.6 closure §6.5): add it to (iii) then. (3) The
+  count D2.4(12)(c)–(f), (13) → (S-w); (4) the Cauchy step D2.4(4) with Supplement Lemma 17.22; (T-dev) with S.8;
+  carrying; recursion (D2.4(5)–(6)); remove the count-check text of `sec:contraction` in that edit. (5) Species
+  rules and reclassification with the large-field block.
+
+- **12 Nov 2026, 21:40 (from `date` 21:36 at the last compile). IN THE MANUSCRIPTS since 21:33:** Supplement
+  Lemma 17.28 `lem:parity`; paper Lemma `lem:tensor-parity`. Paper 175 pp. `f8d9d7a2ad3d`, supplement 170 pp.
+  `3b566797fddb`, both clean. `PROGRESS.md` (21:36) has the summary of what is proved and what is still asserted.
+  D2.6 closure (325ff1872afc) §1 and 2.0–2.1 read in full (lines 9–44): the geometry (G1)–(G3), the collar, the
+  dev rule (i)–(iv) (as in the SW digest below), the reach of C and D̃ (one block; confirms the paper's
+  statement on the sets D_G).
+  **DESIGN FOR SECTION 5's CLASS (to implement next; keep the numbering (i)–(vi) and every label, because
+  S.9, S.10 and Sections 7–11 cite them):**
+  (a) *Groups*: add the domain X_W (already used in `sec:localisation-expansion`: the localisation domains and
+  the cubes of π_k containing a fine bond of the intervals) and the extent ext_k(W) (definition: re-read
+  D2.4(12)(a)–(b), lines 3563–3612); replace "compatible if their domains are disjoint" by the compatibility of
+  the construction (intersection of dimension ≤ d − 2) after checking V4's notion at the step 1.
+  (b) *Insertions*: Y_W depends on the background only through X_W; the species (dev, attached to a component,
+  attached to the collar, wrapping, cross) with the rule for a group made at a step (D2.6 closure 2.1 (i)–(iv);
+  inherited species first) and the reclassification of an old dev insertion whose comparison region leaves
+  Ω_{k+1}.
+  (d) *Interactions*: add Σ_{Γ incompatible with W}|φ_k(Γ)| ≤ θ(W) (it is Lemma `lem:root-bound` at the step;
+  used by `eq:old-occurrences`).
+  (ii) *Insertions*: keep `eq:insertion-bound`; add for the deviation species the per-insertion form
+  e^{θ(W)}‖Y_W(U)‖ ≤ b_W Dev_𝔫(W; U) for every traversal 𝔫 of W, with Dev over the comparison region (the ball
+  of radius R_{t_𝔫(W)+1} about 𝔫 in the units of the step at which W was made, t_𝔫(W) the least t with
+  X_W ⊂ B_∞(𝔫, R_t)), the tail clause Σ_{W∋𝔫, t(W)≥t}β_W ≤ C_χρ̃_kη_k^{−2}W_t, and the weights
+  e^{ν_rσ(W) + ν_e ext(W)} inside these sums (the paper has e^{νσ(W)}: check ν_r against ν in the table).
+  (iii) *Analyticity*: keep the polydisc; add the sub-domain 𝒟^sub_k and the quantities δ*^c, a*, j* with the
+  deviation bound at complex data on 𝒟^sub_k only (SW closure §3; rates from the D2.6 closure §6.5).
+  Then: the base k = 1 for each added clause (V4, IT-1 §3a(6): ℓ_W := 1, b_W := β_W/L²), written into the proof
+  of Theorem "The First Step"; and the proofs at k + 1 by the count. **Before writing: re-read in full D2.4(12)(a)–(b)
+  (lines 3561–3612), D2.4(4)–(5) (3085–3230), SW closure §3–§4 (lines 29–54), D2.0(3) #MD2.0.3.9–.32 (lines
+  395–470), and IT-1 §3a(6).**
+
+- **12 Nov 2026, 21:36. D2.4(11), lines 3441–3560, READ IN FULL. Digest (all N; (c)(β) and the ω-parts need
+  the class):**
+  (a) D_i ⊂ the components of G_i with the cubes within the range c_B of RG II (1.19)'s operators (c_B ≤ 1,
+  c_D := (2c_B + 1)⁴ ≤ 81); #_k(D_i) ≤ c_D#(G_i); m(M) ≤ c_D#(G_M); the domains of the touched members are not
+  part of D. (b) On the support |B′|_Y ≤ C₁^{RG2}ϑ_k =: b_k, x_k := ϑ_k/ε₁^{RG2} ≤ ½; all O(g_k(log g_k^{−2})^{p₀}).
+  (c) per-tensor bounds at backgrounds e^{iηa′}U_{k+1} with 20c′_πM‖a′‖_∞ ≤ 1, hull in Ω_k: (α) no member:
+  ‖Y_G‖ ≤ (b_k/ε_H)^{n(G)}e^{−(κ_s−3)#(G)} (the paper's `lem:tensor-size` with the a′-cost e^{#(G)+n(G)}); (β)
+  touched members: ‖Y_G‖ ≤ ∏_Y(1/T_Y)e^{−(κ_s−3)#(Y)}∏_{W∈𝔅(G)}sup_{polydisc}‖Y_W‖, 1/T_Y =
+  max(|B′|_Y/ε_H, 16B₀e^{16κ_s}|B′|_Y/(min(β,1)α_{1,k}), C′B₀e^{16κ_s}|B′|_Y/(min(β,1)α_{0,k})) ≤ C_Tb_k/ᾱ_k; the
+  a′-transports along the gaps to the touched intervals cost e^{#(G)+n(G)}∏_We^{(ν_r/16)(σ_k(W)+1)}, paid from the
+  reserve weight of W (never from e^{θ_k(W)}); the polydisc points lie in the domain of the class at the step k
+  by (4)(f); each touched dev member is bounded there by the class's complex-data clause on 𝒟^sub
+  (e^{θ}‖Y_W‖ ≤ b_W(Dev + a* + j*), size O(ρ_kλ_R·pl)); ω-dependent members (att, lw, wrap): the mismatch c₀
+  and the radii of the ω-polydiscs (large-field block). (d) the exponential costs of Lemma 17.27 against the
+  sizes: e^{243A#(D′)}e^{(5+3λ_L)κ(m−1)}∏e^{n(G_i)}e^{−(κ_s−3)#(G_i)} ≤ e^{−κ_s′#(G_M)},
+  κ_s′ := κ_s − 4 − (5+3λ_L)c_Dκ − 19683c_DA ≥ κ_s/2 once κ_s ≥ 8 + 2(5+3λ_L)c_Dκ + 39366c_DA (a condition on
+  RG II's κ₁ = κ_s, chosen after κ and before M). (e) sizes in powers of g: (β) O(ρ_k(log)^{p₀−q+(q₁−q₀)₊}); (α)
+  with n(G) ≥ 2: O(b_k²) ≤ Cρ_k; several groups: product; **a single group of one component without members:
+  O(b_k) only, a factor 1/g_k short**. (f) *parity* for that case (scope: no outer fluctuation field, Y₀ away
+  from older layers): Y_G = L(B′) + R, ‖L(B′)‖ ≤ S_Y|B′|_Y/ε_H, ‖R‖ ≤ 2S_Y(|B′|_Y/ε_H)², S_Y := e^{−(κ_s−3)#(Y)};
+  B′ = g_kCB − hD̃(g_kCB) with C linear, so the even part of B′ is −[hD̃]_ev, bounded by C_evϑ_k² (D̃ begins
+  with quadratic terms, RG I p. 267; Cauchy's remainder estimate); ‖Y^ev_G‖ ≤ c_evϑ_k²S_Y; the odd part
+  integrates to zero in every term with 𝐃 = ∅ (the density in (X, B) is the exponential of a quadratic form, the
+  test functions are even); for 𝐃 ≠ ∅ the odd part of exp Στ𝐕_k carries |y|e^{|y|}, |y| ≤ y_k#_k(Y₀),
+  y_k := 4α₄x_k(8M⁴r_k² + O(1)) (from RG II (1.36), (1.42)–(1.43), (2.18)–(2.20) by Cauchy's estimates in the
+  scaling of B), giving the factor c_ody_ke^{2A#(Z)}, c_od := L⁴/A, absorbed with 3A in place of A (972A ≤ δλ_Lκ,
+  and e^{243A#(D′)}); product ‖Y^od‖c_ody_k = O(g_k²r_k⁴)S_Y ≤ Cρ_kS_Y. Consequence: every marked polymer of kinds
+  (α), (β) has |H̃(M)| ≤ c_Mρ_{k+1}e^{−(κ_s/2)#(G_M)}e^{−r_κd_{k+1}(M;D′)} (for (β) the amplitude is the touched
+  insertions'). **To write:** (i) supplement: a part (parity) after Lemma 17.27 — needs RG II pp. 9–11 re-read
+  for (1.36), (1.40), (1.42)–(1.43) and RG I p. 267 for D̃; and Lemma 17.27's variant with 3A; (ii) paper: the
+  bound of Y_G with touched members (needs the class at complex data), the costs (d), the sizes (e), citing
+  17.27 and the parity part. **Then Section 5's class.**
+
+- **12 Nov 2026, 21:33 (from `date`). D2.4(10) IS IN THE SUPPLEMENT** (169 pp., `2038f663689f`, clean; paper
+  174 pp., `82c1524c3917`): Lemma 17.25 `lem:contracted-geometry`, Remark 17.26 `rem:rg2-232`, Lemma 17.27
+  `lem:marked-activity`. RG II pp. 15–20 re-read. The paper does not cite 17.27 yet. **NEXT, in this order:**
+  (1) read D2.4(11), lines 3441–3560, in full (the sizes of 𝒳_M: (a) 𝒳_M = ⊗Y_G; (b) the threshold on the
+  support; (c) per-tensor bounds at complex data, kinds (α) no member, (β) touched members; (d) the exponential
+  costs e^{81A#(D′)}, e^{(5+3L/2)κ(m−1)} against the sizes; (e) the size in powers of g; (f) parity); the kind (α)
+  bound is the paper's Lemma `lem:tensor-size`; kind (β) needs the class's bounds at complex data.
+  (2) Write Section 5's class with it (digests below: D2.0(3), SW §3–§4; still to read: D2.6 closure 2.1 for the
+  species tests, V4/IT-1 for the base). (3) Then D2.4(12)–(13): the count and (S-w), replacing the paper's
+  `sec:contraction`; then (4)–(6): the Cauchy step with Lemma 17.22, (T-dev) with S.8, the carrying, the
+  recursion. (4) Audit item from F29.6: the places of the supplement which cite RG II Lemma 3.
+
 - **12 Nov 2026, 21:27 (from `date` 21:24 at the last compile). IN THE MANUSCRIPTS since 21:18:** Supplement
   Lemma 17.24 `lem:vacuum-kp` (D2.4(1)–(2) read in full; κ_vac = 2⁹(1 + 16 log 2) with the supplement's cube
   count, Lemma 17.1); paper Lemma `lem:tensor-size` at the end of `sec:localisation-expansion` (D2.1(4) Claim,

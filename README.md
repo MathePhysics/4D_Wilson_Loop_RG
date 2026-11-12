@@ -52,7 +52,7 @@ Our current progress is as follows.
 
 | Main step | Completion | Details |
 |---|---|---|
-| [First RG step for one loop and two disjoint loops](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf) | **In manuscript** | The stated finite-cutoff theorems and uniform bounds are written. See [Theorem 5.3](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf). |
+| [First RG step for one loop and two disjoint loops](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf) | **In manuscript** | The stated finite-cutoff theorems and uniform bounds are written. See [Theorem 5.4](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf). |
 | [Small-field iteration and large-field insertions](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf) | **In manuscript** | [Section 6](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf). |
 | [R-steps for single and two-loop insertions](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf) | **In manuscript** | [§6.8](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf) and [Proposition 7.10](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf). |
 | [Relative weights of large-field contributions](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf) | **In manuscript** | [Proposition 8.4](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf). |
@@ -114,7 +114,7 @@ Assessment of the manuscript and supporting drafts as of 12 November 2026. The l
 
 | Claim | Completion | Details |
 |---|---|---|
-| First RG step for an admissible Wilson loop | **In manuscript** | Exact normalised decomposition, perimeter and corner extraction, and defect and boundary bounds are supplied. See [Theorem 5.3](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf). |
+| First RG step for an admissible Wilson loop | **In manuscript** | Exact normalised decomposition, perimeter and corner extraction, and defect and boundary bounds are supplied. See [Theorem 5.4](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf). |
 | First-step leading-term bounds and exponential moment | **In manuscript** | The stated estimates retain contour-length dependence; they do not alone give cutoff-uniform control at fixed physical loop size. See [V4](WILSON_FIRST_RG_STEP_V4.pdf). |
 | Inductive class of Wilson loop insertions | **In manuscript** | [Definition 5.2](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf) and [Theorem 6.1](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf). |
 | Small-field RG transformation and contraction of deviation insertions | **In manuscript** | [§6.6](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf) and [§6.7](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf). |
@@ -151,7 +151,7 @@ The continuum-limit results cover two vertex-disjoint admissible loops. The exte
 
 | Claim | Completion | Details |
 |---|---|---|
-| First RG step for the pair expectation | **In manuscript** | Product of the individual perimeter/corner normalisations, mixed contributions and remainder bounds are supplied. See [Theorem 5.3](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf). |
+| First RG step for the pair expectation | **In manuscript** | Product of the individual perimeter/corner normalisations, mixed contributions and remainder bounds are supplied. See [Theorem 5.4](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf). |
 | Separation decay of first-step mixed contributions | **In manuscript** | Exponential separation bounds hold for the stated mixed activities and scalar correction. See [V4's two-loop theorem](WILSON_FIRST_RG_STEP_V4.tex). |
 | [Inductive pair class and propagation of mixed insertions through fluctuation steps](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf) | **In manuscript** | [Definition 5.2](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf) and [Section 6](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf). |
 | [R-steps for the pair](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf) | **In manuscript** | [§6.8](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf) and [Proposition 7.10](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf). |
