@@ -207,22 +207,26 @@ Let $L$, $\Lambda_*$, $\gamma_0$, and $q_\sharp$ be as in Theorem~\ref{thm:main}
 \end{enumerate}
 \end{corollary}
 
-The statement (ii) is positivity for the connected functions. It would be empty if the limits vanished, which is why we prove that they do not.
+The statement (ii) is positivity for the connected functions, and it is not empty: at small coupling the limits do not vanish on the ensembles whose loops are short compared with a length which grows without limit as $\bar g \to 0$ (Proposition~\ref{prop:nonvanishing}), and for a loop $C$ in $H_+$ to which this applies the ensemble $\mathcal D \coloneqq ((C, \chi))$ has $W(\mathcal D \cup \theta\bar{\mathcal D}) \geq \abs{W(\mathcal D)}^2 \geq 1/4$.
 
-\begin{corollary}[Nonvanishing]\label{cor:nonvanishing}
-Let $L$ and $\Lambda_*$ be as in Theorem~\ref{thm:main}, and let $q \geq 0$. There are $\bar g_1 \in (0, \gamma_0]$ and a function $\ell \colon [0, \infty) \times (0, \bar g_1] \to [0, \infty]$, nonincreasing in its first argument and with $\ell(c, \bar g) \to \infty$ as $\bar g \to 0$ for every $c$, which depend only on the constants of the construction, $\Lambda_*$, $q$, and $T/u$, such that the following holds for every $\bar g \in (0, \bar g_1]$. If $\mathcal C$ is a loop ensemble at level $q$ whose loops are admissible and whose lengths satisfy
-\begin{equation}\label{eq:nonvanishing-length}
-    \sum_{i=1}^{n}\Bigl(P_q(C_i)^2 + \frac{P(C_i)}{r(C_i)}\Bigr) \leq \ell(c_{\mathcal C}, \bar g)\;,
-\end{equation}
-then $q \geq q_\sharp(c_{\mathcal C}, \bar g)$, the limit $W(\mathcal C)$ exists, and, for every $K \geq K_0$,
-\begin{equation}\label{eq:nonvanishing-bound}
-    \abs{W_K(\mathcal C)} \geq \frac12\;,
-    \qquad\text{so that}\qquad
-    \abs{W(\mathcal C)} \geq \frac12\;.
-\end{equation}
-\end{corollary}
+Finally we ask whether the limits are new, that is, whether they could be the Wilson-loop functions of a Gaussian field. The question has to be posed with some care, because the normalisation is a convention: a function which differs from $W$ by a factor $\exp(\sum_v\lambda_vN_v(C) + \sum_c\zeta_{v_c,w_c})$ for each loop, where $N_v(C)$ is the total length of the segments of $C$ of orientation $v$, the second sum runs over the corners, and the coefficients do not depend on the loop, is the same object with another normalisation. For an abelian Gaussian field the answer is then contained in a single number. If $\mathsf B$ is a real Gaussian $1$-form and $\mathsf g$ a charge, then $\log\abs{\mathbb E[e^{i\mathsf g\oint_C\mathsf B}]} = -\frac12\mathsf g^2\operatorname{Var}\oint_C\mathsf B$ is a quadratic function of the covariance of $\mathsf B$, a change of normalisation adds to it a function which is linear in the lengths and in the numbers of corners of each type, and a suitable signed combination of these logarithms over a few rectangles and pairs of rectangles annihilates both, whatever the covariance and whatever the normalisation.
 
-The condition \eqref{eq:nonvanishing-length} is a bound on the lengths of the loops by a number which depends on their representations through $c_{\mathcal C}$ and grows without limit as the coupling decreases. Unlike the conditions of Theorem~\ref{thm:main}, it does restrict the representations at a given coupling: since a loop has at least four bonds, it fails whenever $\ell(c_{\mathcal C}, \bar g) < 16$. It involves the number of loops only through the sum. In particular, for a loop $C$ in $H_+$ as in Corollary~\ref{cor:reflection-positivity} for which $\mathcal D \coloneqq ((C, \chi))$ satisfies \eqref{eq:nonvanishing-length}, we have $W(\mathcal D \cup \theta\bar{\mathcal D}) \geq \abs{W(\mathcal D)}^2 \geq 1/4$. For ensembles generated from a fixed one by reflections in coordinate hyperplanes, the condition is needed only for the ensemble from which they are generated, and the limits are bounded below by a product over the copies (Proposition~\ref{prop:reflection-products}).
+To state this precisely, we fix a level $q$, a coordinate plane spanned by $e_\mu$ and $e_\nu$, lengths $t, s \in uL^{-q}\mathbb N$ with $3\max(4t, s) < T$, a point $o \in uL^{-q}\mathbb Z^4$, and a nontrivial irreducible unitary representation $\pi$ of $G$ with the character $\chi$. For $a \in \{ 0, \dots, 3 \}$ and $n \in \{ 1, \dots, 4 \}$ let $I_a$ and $R_n$ be the boundaries of the rectangles $o + [at, (a + 1)t]e_\mu + [0, s]e_\nu$ and $o + [0, nt]e_\mu + [0, s]e_\nu$, traversed in the sense which runs from $e_\mu$ to $e_\nu$, so that $R_1 = I_0$, and let $R^{(1)}_n \coloneqq R_n + te_\mu$ for $n \in \{ 2, 3 \}$. The \emph{eleven diagrams} are the ensembles $((C, \chi))$ of one loop, for $C$ one of the nine rectangles $I_0, \dots, I_3$, $R_2$, $R_3$, $R_4$, $R^{(1)}_2$, $R^{(1)}_3$, and the pairs $P_k \coloneqq ((I_0, \chi), (I_k, \chi))$ for $k \in \{ 2, 3 \}$, whose loops are at distance $(k - 1)t \geq t$; we write $C$ also for the ensemble $((C, \chi))$. They are ensembles at level $q$. For a function $W$ on the eleven diagrams with nonzero values let
+\begin{equation}\label{eq:witness}
+    \mathfrak Y(W) \coloneqq \log\Bigl\lvert\frac{W(R_1)\,W(R_3)^3}{W(R_2)^3\,W(R_4)}\Bigr\rvert - \log\Bigl\lvert\frac{W(P_2)}{W(R_1)^2}\Bigr\rvert + \log\Bigl\lvert\frac{W(P_3)}{W(R_1)^2}\Bigr\rvert\;.
+\end{equation}
+A \emph{Gaussian charge model} is a triple $(\mathsf g, \mathsf X, \kappa)$ of a number $\mathsf g \in \mathbb R$, a real Gaussian vector $\mathsf X = (\mathsf X_0, \dots, \mathsf X_3)$ of any mean and covariance, and a function $\kappa$ on loops with values in $\mathbb C \setminus \{ 0 \}$ such that $\log\abs{\kappa(C)} = \sum_v\lambda_vN_v(C) + \sum_c\zeta_{v_c,w_c}$ with real numbers $\lambda_v$ and $\zeta_{v,w}$ which do not depend on $C$. Its function on the eleven diagrams is $W(\mathcal D) \coloneqq \mathbb E[e^{i\mathsf g\mathsf X(\mathcal D)}]/\prod_{C \in \mathcal D}\kappa(C)$, where $\mathsf X(\mathcal D)$ is the sum of the $\mathsf X_a$ over the indices $a$ for which $I_a$ is one of the rectangles that tile the rectangle $\mathcal D$, or one of the two loops of the pair $\mathcal D$. The models with $\mathsf X_a = \oint_{I_a}\mathsf B$ for a real Gaussian $1$-form $\mathsf B$, on a lattice which contains the rectangles or on the continuum torus, are of this kind, with $\mathsf X(C) = \oint_C\mathsf B$ for each of the nine rectangles, since the interior sides of a tiling are traversed once in each direction.
+
+\begin{theorem}[The Limits Are Not Gaussian]\label{thm:non-gaussian}
+Let $q$, the plane, $t$, $s$, $o$, and $\pi$ be as above, let $\Lambda_* \geq 1 + \max(s/t, 4t/s)$, and let $L$ be as in Theorem~\ref{thm:main}. There is $\bar g_0 > 0$, depending on $q$, $t/u$, $s/u$, $T/u$, $\pi$, and the constants of the construction, such that for every $\bar g \in (0, \bar g_0]$ the following hold.
+\begin{enumerate}[label=(\roman*)]
+\item The limits $W(\mathcal D)$ exist on the eleven diagrams, $\abs{W(\mathcal D)} \geq 1/2$, $W(I_a) = W(I_0)$, and $W(R^{(1)}_n) = W(R_n)$.
+\item $\mathfrak Y(W) \geq \frac12c_O\bar g^2$, with $c_O \coloneqq C_2(\pi)s^2t^3/(672e^2T^5)$ and the Casimir number $C_2(\pi) > 0$ of \eqref{eq:casimir-number}, and $\mathfrak Y(W)$ is the same for the normalisations of every level $q' \geq q$.
+\item No Gaussian charge model has the function $W$ on the eleven diagrams, and $W$ is not the limit on the eleven diagrams of the functions of a sequence of Gaussian charge models.
+\end{enumerate}
+\end{theorem}
+
+The number $\mathfrak Y$ is a third difference in the width of the rectangles, corrected by the two \emph{pair terms} $\log\abs{W(P_k)/W(R_1)^2}$. In an abelian Gaussian model all three are of the order $\mathsf g^2$, and they cancel: the covariances of separated rectangles which make up the third difference also make up the pair terms. In the limits of Yang--Mills theory the pair terms are of the order $\bar g^4$, up to logarithms, because the term of first order of a non-abelian Wilson loop has trace zero, while the third difference is, at the order $\bar g^2$, the number $C_2(\pi)$ times that of the free field, which is positive. The same mechanism makes the theorem silent on Gaussian fields with values in the Lie algebra and path-ordered holonomies, which agree with Yang--Mills theory at the second order (Section~\ref{sec:gaussian-models}).
 
 \subsection{The Argument}\label{sec:argument}
 
@@ -232,7 +236,7 @@ The first difficulty is one of consistency and is independent of the loops. The 
 
 The loops enter in Section~\ref{sec:first-step}, which treats the first step, and in Section~\ref{sec:inductive-class}, which treats the general one. After $k$ steps the contribution of an ensemble to a term of the density is a \emph{dressed loop}: the product of the normalisations $\kappa_1 \cdots \kappa_k$ of its loops, of the exponential of a small local functional, and of the sum of the Wilson loops of the background field and of a series of insertions along the loops, with activities that decay in the size of their supports. The heart of the paper is the statement that this form is reproduced by a step, with constants that do not depend on $k$, including on the terms with large fields and through the $\mathbf R$-operation. The perimeter and corner coefficients are extracted in Section~\ref{sec:flat-part} from the part of the loop's contribution that survives at the trivial background, and it is here that the geometry of a general loop is used: away from its corners a loop cannot be told from a straight line, and near a corner it cannot be told from two perpendicular rays, up to errors that decay exponentially in the corner isolation.
 
-Stopping the induction at the index $K'$ gives the identity and the bound of Section~\ref{sec:stopping-scale}. For the limit we have to compare the dressed loops, and the densities themselves, of the runs with $K$ and $K + 1$ steps on their common lattices. In the regions of small fields this is a comparison of two expansions whose data differ by the one additional step, and the difference decays geometrically in the number of steps that separate a scale from the finest one. The terms with large fields require a different argument, since their test functions are evaluated on different fields in the two runs, and it is for this comparison that the test functions were made continuous. Sections~\ref{sec:large-field-comparison} and~\ref{sec:walk-factor-difference} prove the two inputs of the comparison, and Section~\ref{sec:cauchy} assembles them. Section~\ref{sec:reflection-positivity} derives the three corollaries, Section~\ref{sec:non-gaussianity} shows that the limits are not those of a Gaussian field, and Section~\ref{sec:notes-on-papers} records where our reading of Ba{\l}aban's papers departs from the printed text.
+Stopping the induction at the index $K'$ gives the identity and the bound of Section~\ref{sec:stopping-scale}. For the limit we have to compare the dressed loops, and the densities themselves, of the runs with $K$ and $K + 1$ steps on their common lattices. In the regions of small fields this is a comparison of two expansions whose data differ by the one additional step, and the difference decays geometrically in the number of steps that separate a scale from the finest one. The terms with large fields require a different argument, since their test functions are evaluated on different fields in the two runs, and it is for this comparison that the test functions were made continuous. Sections~\ref{sec:large-field-comparison} and~\ref{sec:walk-factor-difference} prove the two inputs of the comparison, and Section~\ref{sec:cauchy} assembles them. Section~\ref{sec:reflection-positivity} derives the two corollaries and the lower bound on the limits, Section~\ref{sec:non-gaussianity} proves Theorem~\ref{thm:non-gaussian}, and Section~\ref{sec:notes-on-papers} records where our reading of Ba{\l}aban's papers departs from the printed text.
 
 The results of Ba{\l}aban's which we use in the setting in which he proved them are cited by page and equation. Those which we use outside his hypotheses, or of which he printed no proof, are proved again in a supplement to this paper, cited as ``Supplement, Proposition~S.$n$''.
 
@@ -1114,7 +1118,7 @@ the sum over the nonempty families, absolutely convergent, with the objects (a)-
 \begin{equation}\label{eq:insertion-bound}
     \nu^{(k)}_{\mathfrak n} \leq C_\chi\tilde\rho_k\delta^{*}_{\mathfrak n}(U_k) + C\hat\rho_ke^{-c_{\mathrm{att}}d_k(\mathfrak n)/M} + C\rho_{t,k}\,\mathfrak m_k(\mathfrak n) + \sum_{j=1}^{k}CL^{k-j}\hat\rho_je^{-c_{\mathrm{att}}N^{(j)}_{\min}/M}\;,
 \end{equation}
-where $\tilde\rho_k \coloneqq \rho_k/\min(\alpha_{0,k}, \alpha_{1,k})$ for $k \geq 2$ and $\tilde\rho_1 \coloneqq \rho_1$, $\hat\rho_k \coloneqq C\rho_k$, and $\mathfrak m_k(\mathfrak n)$ is the sum of the marks of the large-field data of the step $k$ near the boundary of $Z_k$, weighted by $e^{-c'_*\dist(\cdot, \mathfrak n)/M}$. The groups attached at an earlier step $j < k$ to a component $Z$ of the large-field region of the step $j$ satisfy, summed over all traversals, the bound $C\hat\rho_j\sum_{\mathfrak n_j}e^{-c_{\mathrm{att}}d^Z_j(\mathfrak n_j)/M}$, the sum over the traversals of the step $j$, and the corresponding bound with $\rho_{t,j}$ for those attached to the boundary layer of $Z$.
+where $\tilde\rho_k \coloneqq \rho_k/\min(\alpha_{0,k}, \alpha_{1,k})$ for $k \geq 2$ and $\tilde\rho_1 \coloneqq \rho_1$, $\hat\rho_k \coloneqq C\rho_k$, and $\mathfrak m_k(\mathfrak n)$ is the sum of the marks of the large-field data of the step $k$ near the boundary of $Z_k$, weighted by $e^{-c'_*\dist(\cdot, \mathfrak n)/M}$. The groups attached at an earlier step $j < k$ to a component $Z$ of the large-field region of the step $j$ satisfy, summed over all traversals, the bound $C\hat\rho_j\sum_{\mathfrak n_j}e^{-c_{\mathrm{att}}d^Z_j(\mathfrak n_j)/M}$, the sum over the traversals of the step $j$, and the corresponding bound with $\rho_{t,j}$ for those attached to the boundary layer of $Z$. The groups of the \emph{deviation species}, whose insertions vanish at pure-gauge data on their arcs, satisfy the first term of \eqref{eq:insertion-bound} with weights: $\sum_{W \ni \mathfrak n}e^{\theta(W) + \nu\sigma(W)}\norm{Y_W} \leq C_\chi\tilde\rho_k\delta^{*}_{\mathfrak n}(U_k)$, the sum over these groups, with $\sigma(W)$ the size of $W$ at the step at which it was made.
 \item \emph{Analyticity.} For real $U_k$ in the support of the indicators of the term, the factors which depend on the background extend analytically to $\mathbf U = e^{iL^{-k}A'}U_k$, for complex $A'$ in the polydisc of the radii $(1 - \beta(1 - 2^{-(k-m)}))\alpha_{1,m}L^{-m}$ per fine bond on $\Omega_m \setminus \Omega_{m+1}$ (and on $\Omega_k$ for $m = k$), and for $k \geq 2$ with the gradient condition of \cite[(2.39), p.~261]{BalabanCRE} and in the variable $\mathbf J$ of \cite[(2.36)]{BalabanCRE}; they are covariant under $G$-valued gauge transformations, and \eqref{eq:insertion-bound} holds there with the deviation of $\mathbf U$ from $U_k$ added to $\delta^{*}_{\mathfrak n}$. The same factors are defined, and analytic in the same polydiscs, at the \emph{reference data} of the term, the trivial field $1$ in place of $U_k$, with $\mathbf J = 0$ and the outer variables trivial, whether or not the reference data lie in the support of the indicators.
 \item \emph{Scalar parts.} $Q_k(\mathfrak B)$ and $\mathcal E_k$ are numbers on each labelled term, independent of $V_k$ and of the outer variables, and
 \begin{equation}\label{eq:scalar-bounds}
@@ -1247,7 +1251,7 @@ the quadratic term coming from the contractions of two old insertions. At the st
 \begin{equation}\label{eq:recursion-fixed-point}
     C^{(k+1)}_\chi \leq C_{\mathrm{new}} + aC^* + C_{\mathrm{new}} = (1 - a)C^* + aC^* = C^*\;.
 \end{equation}
-So the constant of the deviation part stays below $C^*$ at every step, which is the first term of \eqref{eq:insertion-bound} at $k + 1$ with constants independent of $k$. The analyticity clause is carried in the same way, by Cauchy estimates on the polydiscs of Definition~\ref{def:dressed-loop}(iii), whose radii are those of Ba{\l}aban's spaces \cite[(2.34)--(2.39), p.~261]{BalabanCRE}; the factor $\tilde\rho_k = \rho_k/\min(\alpha_{0,k}, \alpha_{1,k})$ is the price of the Cauchy estimate which converts the bound on a polydisc into a bound on the deviation. The construction of the groups, the counting of the families against the reference gas by the condition of Koteck\'y and Preiss \cite{KoteckyPreiss}, and the bound $\theta(W) \leq \nu\sigma_{k+1}(W)/16$ of the interactions, are the counts of the step $k + 1$ per traversal and per cube of $\pi_{k+1}$; by Lemma~\ref{lem:square-properties}(i), applied at the scale $k + 1$, a cube of side $s$ meets at most $2\Lambda(C)(s + 1)$ traversals, and by Lemma~\ref{lem:stopping-index} it meets one loop when $s < a_{k+1}$, so these counts are those of a square up to the factor $\Lambda(C)/2$. Their outcome, in the form in which Section~\ref{sec:flat-part} uses it, is the size bound
+So the constant of the deviation part stays below $C^*$ at every step, which is the first term of \eqref{eq:insertion-bound} at $k + 1$ with constants independent of $k$. The same recursion holds for the sums with the weights $e^{\nu\sigma(W)}$ of Definition~\ref{def:dressed-loop}(ii): a carried insertion keeps the size and the weight of the step at which it was made, and the fresh insertions and the deviation parts of the new groups, among them the contractions of old insertions with each other and with the slots, are bounded with these weights by the Cauchy estimate below applied to \eqref{eq:size-bound}, which carries them. The analyticity clause is carried in the same way, by Cauchy estimates on the polydiscs of Definition~\ref{def:dressed-loop}(iii), whose radii are those of Ba{\l}aban's spaces \cite[(2.34)--(2.39), p.~261]{BalabanCRE}; the factor $\tilde\rho_k = \rho_k/\min(\alpha_{0,k}, \alpha_{1,k})$ is the price of the Cauchy estimate which converts the bound on a polydisc into a bound on the deviation. The construction of the groups, the counting of the families against the reference gas by the condition of Koteck\'y and Preiss \cite{KoteckyPreiss}, and the bound $\theta(W) \leq \nu\sigma_{k+1}(W)/16$ of the interactions, are the counts of the step $k + 1$ per traversal and per cube of $\pi_{k+1}$; by Lemma~\ref{lem:square-properties}(i), applied at the scale $k + 1$, a cube of side $s$ meets at most $2\Lambda(C)(s + 1)$ traversals, and by Lemma~\ref{lem:stopping-index} it meets one loop when $s < a_{k+1}$, so these counts are those of a square up to the factor $\Lambda(C)/2$. Their outcome, in the form in which Section~\ref{sec:flat-part} uses it, is the size bound
 \begin{equation}\label{eq:size-bound}
     \sum_{W \text{ at } p}e^{\theta(W) + \nu\sigma_{k+1}(W)}\sup\norm{Y_W} \leq 2C_{S'}\rho_{k+1}
 \end{equation}
@@ -2792,6 +2796,23 @@ and the matrix of the right sides is Hermitian and positive semidefinite by the 
 
 \subsection{Nonvanishing}\label{sec:nonvanishing}
 
+The connected functions of Corollary~\ref{cor:reflection-positivity}(ii), and the logarithms of Theorem~\ref{thm:non-gaussian}, are useful only if the limits do not vanish, and we now show that they do not, on the ensembles whose loops are not too long for the coupling.
+
+\begin{proposition}[Nonvanishing]\label{prop:nonvanishing}
+Let $L$ and $\Lambda_*$ be as in Theorem~\ref{thm:main}, and let $q \geq 0$. There are $\bar g_1 \in (0, \gamma_0]$ and a function $\ell \colon [0, \infty) \times (0, \bar g_1] \to [0, \infty]$, nonincreasing in its first argument and with $\ell(c, \bar g) \to \infty$ as $\bar g \to 0$ for every $c$, which depend only on the constants of the construction, $\Lambda_*$, $q$, and $T/u$, such that the following holds for every $\bar g \in (0, \bar g_1]$. If $\mathcal C$ is a loop ensemble at level $q$ whose loops are admissible and whose lengths satisfy
+\begin{equation}\label{eq:nonvanishing-length}
+    \sum_{i=1}^{n}\Bigl(P_q(C_i)^2 + \frac{P(C_i)}{r(C_i)}\Bigr) \leq \ell(c_{\mathcal C}, \bar g)\;,
+\end{equation}
+then $q \geq q_\sharp(c_{\mathcal C}, \bar g)$, the limit $W(\mathcal C)$ exists, and, for every $K \geq K_0(\mathcal C)$,
+\begin{equation}\label{eq:nonvanishing-bound}
+    \abs{W_K(\mathcal C)} \geq \frac12\;,
+    \qquad\text{so that}\qquad
+    \abs{W(\mathcal C)} \geq \frac12\;.
+\end{equation}
+\end{proposition}
+
+The condition \eqref{eq:nonvanishing-length} bounds the lengths of the loops by a number which depends on their representations through $c_{\mathcal C}$ and grows without limit as the coupling decreases. Unlike the conditions of Theorem~\ref{thm:main}, it does restrict the representations at a given coupling: since a loop has at least four bonds, it fails whenever $\ell(c_{\mathcal C}, \bar g) < 16$. It involves the number of loops only through the sum, and for the ensembles which are generated from a fixed one by reflections in coordinate hyperplanes it is needed only for the ensemble from which they are generated (Proposition~\ref{prop:reflection-products}).
+
 For the lower bound we need that the Wilson loop of a nearly flat field is close to one, with a bound in terms of the length of the loop and the size of a box containing it.
 
 \begin{lemma}[Holonomy of a Nearly Flat Field]\label{lem:flat-holonomy}
@@ -2817,7 +2838,7 @@ At the stopping step we apply the lemma to the background field. For a loop $C$ 
 \end{equation}
 which does not depend on $K$, since $P_{K'}(C)$ and $\varepsilon_{K'}$ do not (Section~\ref{sec:stopping-scale}).
 
-\begin{proof}[Proof of Corollary~\ref{cor:nonvanishing}]
+\begin{proof}[Proof of Proposition~\ref{prop:nonvanishing}]
 We first bound the leading words on $\ell_0$. On the support of $\varrho_{\ell_0}$ every fine plaquette of the background satisfies $\norm{U_{K'}(\partial p) - 1} \leq t \coloneqq 2c_h(1 + 2\kappa_s)B_3\varepsilon_{K'}L^{-2K'}$, as in the proof of Corollary~\ref{cor:background-stopping}. In fine units the loop $C_i$ has $P \coloneqq P_{K'}(C_i)L^{K'}$ bonds, and it lies in a box of side $D \leq P/2$, since a closed path of $P$ bonds has $\ell^\infty$-diameter at most $P/2$; the box embeds in the torus because $3\diam(C_i) < T$. Hence $3DPt \leq 3c_h(1 + 2\kappa_s)B_3P_{K'}(C_i)^2\varepsilon_{K'}$, and Lemma~\ref{lem:flat-holonomy} gives $\abs{f^{(i)}_{K'} - 1} \leq 1.06\,c_{\pi_i} \cdot 3DPt \leq y(C_i)$ whenever $3c_h(1 + 2\kappa_s)B_3P_{K'}(C_i)^2\varepsilon_{K'} \leq \min(1/10, \log(1 + r_G))$. Since $\abs{f^{(i)}_{K'}} \leq 1$, telescoping gives $\abs{\prod_if^{(i)}_{K'} - 1} \leq \sum_iy(C_i)$.
 
 Next we bound the term $\ell_0$ of the identity \eqref{eq:stopping-identity} from below. On $\ell_0$ the normalised dressed loop is $e^{E_{\mathrm{const},K'}}[\prod_if^{(i)}_{K'} + \sum_{\mathfrak B \neq \emptyset}Q_{K'}(\mathfrak B)w_{K'}(\mathfrak B)]$, where $\abs{E_{\mathrm{const},K'}} \leq B_E(\mathcal C)$ by Definition~\ref{def:dressed-loop}(iv) and Corollary~\ref{cor:remainder-sum}, and the sum over the families has modulus at most $e^{I_*(\mathcal C)} - 1$ by Lemma~\ref{lem:term-bound}. Hence
@@ -2862,10 +2883,177 @@ We argue by induction along the generation. For $\mathcal D = \mathcal B$ there 
 \begin{equation}\label{eq:doubling-inequality}
     \abs{\mathbb E_K[W_{\mathcal D}]} = \mathbb E_K[F\,\Theta F] \geq \abs{\mathbb E_K[F]}^2 = \abs{\mathbb E_K[W_{\mathcal D'}]}\,\abs{\mathbb E_K[W_{\theta_{\mu,a}\bar{\mathcal D}'}]}\;.
 \end{equation}
-The normalisation of $\mathcal D$ is the product of those of $\mathcal D'$ and $\theta_{\mu,a}\bar{\mathcal D}'$, and dividing by its modulus gives $\abs{W_K(\mathcal D)} \geq \abs{W_K(\mathcal D')}\abs{W_K(\theta_{\mu,a}\bar{\mathcal D}')}$. By the induction hypothesis $\abs{W_K(\mathcal D')}$ is at least the product over the blocks of $\mathcal D'$; and since $\theta_{\mu,a}\bar{\mathcal D}'$ is generated by reflections from $\theta_{\mu,a}\bar{\mathcal B}$, with the reflections conjugated by $\theta_{\mu,a}$, and has the images of the blocks of $\mathcal D'$ as its blocks, the same holds for it. This proves the first assertion. If $\bar g \leq \bar g_1$ and $\mathcal B$ satisfies \eqref{eq:nonvanishing-length}, then so does every block, so that $\abs{W_K(\mathcal B_i)} \geq 1/2$ for $K \geq K_0(\mathcal B_i)$ by Corollary~\ref{cor:nonvanishing}, and the limit gives $\abs{W(\mathcal D)} \geq 2^{-N}$; the limit exists by Theorem~\ref{thm:main}, because the loops of $\mathcal D$ are admissible and $c_{\mathcal D} = c_{\mathcal B}$, so that $\bar g$ and $q$ are as in Theorem~\ref{thm:main} for $\mathcal D$.
+The normalisation of $\mathcal D$ is the product of those of $\mathcal D'$ and $\theta_{\mu,a}\bar{\mathcal D}'$, and dividing by its modulus gives $\abs{W_K(\mathcal D)} \geq \abs{W_K(\mathcal D')}\abs{W_K(\theta_{\mu,a}\bar{\mathcal D}')}$. By the induction hypothesis $\abs{W_K(\mathcal D')}$ is at least the product over the blocks of $\mathcal D'$; and since $\theta_{\mu,a}\bar{\mathcal D}'$ is generated by reflections from $\theta_{\mu,a}\bar{\mathcal B}$, with the reflections conjugated by $\theta_{\mu,a}$, and has the images of the blocks of $\mathcal D'$ as its blocks, the same holds for it. This proves the first assertion. If $\bar g \leq \bar g_1$ and $\mathcal B$ satisfies \eqref{eq:nonvanishing-length}, then so does every block, so that $\abs{W_K(\mathcal B_i)} \geq 1/2$ for $K \geq K_0(\mathcal B_i)$ by Proposition~\ref{prop:nonvanishing}, and the limit gives $\abs{W(\mathcal D)} \geq 2^{-N}$; the limit exists by Theorem~\ref{thm:main}, because the loops of $\mathcal D$ are admissible and $c_{\mathcal D} = c_{\mathcal B}$, so that $\bar g$ and $q$ are as in Theorem~\ref{thm:main} for $\mathcal D$.
 \end{proof}
 
 The lower bound decays with the number of blocks, but it is positive at a coupling which is fixed once $\mathcal B$ is. The number of loops which can be generated in this way is limited only by the torus: starting from one loop of diameter $h$ and doubling in each direction at a hyperplane at distance $h$ from the current configuration, the extent in the direction $\mu$ after $k_\mu$ doublings is at most $2^{k_\mu}\cdot3h - 2h$, so that of the order of $4\log_2(T/h)$ doublings fit, and the number of loops is of the order of $(T/h)^4$.
+
+\section{Non-Gaussianity}\label{sec:non-gaussianity}
+
+We now prove Theorem~\ref{thm:non-gaussian}. The proof computes the number $\mathfrak Y$ of \eqref{eq:witness} in two ways. For a Gaussian charge model it vanishes identically, by an algebraic cancellation which uses nothing but two facts: $\log\abs{W}$ is a quadratic function of the covariance, and the logarithm of a normalisation is a linear function of the lengths and the corners (Section~\ref{sec:gaussian-models}). For the limits of Yang--Mills theory we compute $\mathfrak Y$ to the order $\bar g^2$ at the stopping scale, where the identity of Theorem~\ref{thm:stopping-identity} expresses $W_K$ through a measure on the fixed lattice $\mathbb T_{j_q}$ which, at small coupling, is concentrated near the flat fields.
+
+Three things have to be shown, and each meets a difficulty of its own. The normalisations have to drop out of $\mathfrak Y$, which they do because $\mathfrak Y$ was built to annihilate every function of the form of Proposition~\ref{prop:normalisation-structure} (Section~\ref{sec:normalisations-drop-out}). The pair terms have to be of the fourth order. Under the measure of the stopping scale the Wilson loop of each of two separated rectangles depends, up to corrections which decay with their distance, on the field near that rectangle only, and its deviation from one has an $L^2$-norm of the order $\bar g^2$ rather than $\bar g$, because its part of first order is a trace of an element of the Lie algebra and vanishes; the covariance of two such deviations is then of the order $\bar g^4$ (Section~\ref{sec:pair-terms}). Finally the third difference of the rectangles has to be bounded below by a positive multiple of $\bar g^2$, and this is the heart of the matter. After the insertions are shown to cancel in the third difference, by the translation invariance which made the coefficients of the normalisation independent of the loop (Section~\ref{sec:shape-term}), the third difference is a combination of the second moments of the fluxes of the background field through the rectangles $I_a$. An integration by parts against the density of the stopping scale identifies these second moments, to the leading order, with the covariances of the fluxes of a free field at the block field closest to a flat one (Section~\ref{sec:flux-moments}), and the third difference of those covariances is computed explicitly (Section~\ref{sec:free-field}).
+
+Throughout the section $q$, the plane spanned by $e_\mu$ and $e_\nu$, $t$, $s$, $o$, and $\pi$ are fixed as in Section~\ref{sec:results}, with $\Lambda_* \geq 1 + \max(s/t, 4t/s)$ and $L$ as in Theorem~\ref{thm:main}, and the eleven diagrams are those defined there. Every requirement in this section that $\bar g$ be small is an upper bound on $\bar g$ in terms of $q$, $t/u$, $s/u$, $T/u$, $\pi$, and the constants of the construction, and $\bar g_0$ in Theorem~\ref{thm:non-gaussian} is the least of these bounds.
+
+\subsection{The Witness}\label{sec:witness}
+
+For an ensemble $\mathcal D$ we write $\abs{\mathcal D}$ for the number of its loops, $N_v(\mathcal D) \coloneqq \sum_{C \in \mathcal D}N_v(C)$ for the total length of its segments of orientation $v \in \mathcal V$, and, for a perpendicular pair $(v, w)$, $K_{v,w}(\mathcal D)$ for the number of the corners $c$ of its loops with $(v_c, w_c) = (v, w)$. The number \eqref{eq:witness} is
+\begin{equation}\label{eq:witness-weights}
+    \mathfrak Y(W) = \sum_{\mathcal D}n_{\mathcal D}\log\abs{W(\mathcal D)} = \mathfrak y_S(W) - \mathfrak y_2(W) + \mathfrak y_3(W)\;,
+\end{equation}
+the sum over the six diagrams $R_1$, $R_2$, $R_3$, $R_4$, $P_2$, $P_3$ with the weights $n_{\mathcal D} = 1, -3, 3, -1, -1, 1$, where $\mathfrak y_S(W) \coloneqq \sum_{n=1}^{4}n_{R_n}\log\abs{W(R_n)}$ is the \emph{shape term} and $\mathfrak y_k(W) \coloneqq \log\abs{W(P_k)/W(R_1)^2}$ are the pair terms. To each diagram we assign the set $\operatorname{ind}(\mathcal D)$ of the indices $a$ of the rectangles $I_a$ which tile it, or which are its loops: $\operatorname{ind}(I_a) \coloneqq \{ a \}$, $\operatorname{ind}(R_n) \coloneqq \{ 0, \dots, n - 1 \}$, $\operatorname{ind}(R^{(1)}_n) \coloneqq \{ 1, \dots, n \}$, and $\operatorname{ind}(P_k) \coloneqq \{ 0, k \}$. The Gaussian models are tested by a second set of weights on all eleven diagrams,
+\begin{equation}\label{eq:symmetric-weights}
+    n^{\mathrm{sym}}_{\mathcal D} \coloneqq
+    \begin{cases}
+        0, 1, 1, -1 & \text{for } \mathcal D = I_0, I_1, I_2, I_3\;,\\
+        -1, -2, 2, 1 & \text{for } \mathcal D = R_2, R^{(1)}_2, R_3, R^{(1)}_3\;,\\
+        -1, -1, 1 & \text{for } \mathcal D = R_4, P_2, P_3\;,
+    \end{cases}
+\end{equation}
+and we put $\mathfrak Y^{\mathrm{sym}}(W) \coloneqq \sum_{\mathcal D}n^{\mathrm{sym}}_{\mathcal D}\log\abs{W(\mathcal D)}$, the sum over the eleven diagrams.
+
+\begin{lemma}[Counts and Index Sums]\label{lem:witness-counts}
+\begin{enumerate}[label=(\roman*)]
+\item A rectangle of width $at$ and height $s$ among the nine has $N_{\pm e_\mu} = at$, $N_{\pm e_\nu} = s$, and $N_v = 0$ for the other $v$, and it has exactly one corner of each of the types $(e_\mu, e_\nu)$, $(e_\nu, -e_\mu)$, $(-e_\mu, -e_\nu)$, $(-e_\nu, e_\mu)$ and no other corner.
+\item Let $f$ be a function on the eleven diagrams such that $f(\mathcal D)$ depends only on $\mathcal D$ through $\abs{\mathcal D}$, the numbers $N_v(\mathcal D)$, and the numbers $K_{v,w}(\mathcal D)$, and linearly. Then $\sum_{\mathcal D}n_{\mathcal D}f(\mathcal D) = 0$, $\sum_nn_{R_n}f(R_n) = 0$, $f(P_k) = 2f(R_1)$, and $\sum_{\mathcal D}n^{\mathrm{sym}}_{\mathcal D}f(\mathcal D) = 0$.
+\item If $f(I_a) = f(I_0)$ for every $a$ and $f(R^{(1)}_n) = f(R_n)$ for $n \in \{ 2, 3 \}$, then $\sum_{\mathcal D}n^{\mathrm{sym}}_{\mathcal D}f(\mathcal D) = \sum_{\mathcal D}n_{\mathcal D}f(\mathcal D)$, the left sum over the eleven diagrams and the right one over the six.
+\item For $0 \leq a \leq b \leq 3$, the sum $\mathsf s(a, b)$ of $n^{\mathrm{sym}}_{\mathcal D}$ over the diagrams with $a, b \in \operatorname{ind}(\mathcal D)$ vanishes.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(i) The rectangle is traversed from its corner of least coordinates in the directions $e_\mu$, $e_\nu$, $-e_\mu$, $-e_\nu$, in this order, which gives the four corners and the lengths.
+
+(iii) The weights $n^{\mathrm{sym}}$ sum to $0 + 1 + 1 - 1 = 1$ over $I_0, \dots, I_3$, to $-1 - 2 = -3$ over $R_2$, $R^{(1)}_2$, and to $2 + 1 = 3$ over $R_3$, $R^{(1)}_3$, which are the weights $n$ of $R_1$, $R_2$, and $R_3$, and they agree with $n$ on $R_4$, $P_2$, $P_3$.
+
+(ii) It suffices to take for $f$ each of the functions $\abs{\mathcal D}$, $N_v(\mathcal D)$, $K_{v,w}(\mathcal D)$. On the six diagrams $R_1, R_2, R_3, R_4, P_2, P_3$, by (i), $\abs{\mathcal D} = 1, 1, 1, 1, 2, 2$, $N_{\pm e_\mu}(\mathcal D) = t, 2t, 3t, 4t, 2t, 2t$, $N_{\pm e_\nu}(\mathcal D) = s, s, s, s, 2s, 2s$, the other $N_v$ vanish, and $K_{v,w}(\mathcal D) = \abs{\mathcal D}$ for the four types of (i) and $0$ for the others. Hence
+\begin{equation}\label{eq:count-sums}
+    \sum_{\mathcal D}n_{\mathcal D}\abs{\mathcal D} = 1 - 3 + 3 - 1 - 2 + 2 = 0\;,
+    \qquad
+    \sum_{\mathcal D}n_{\mathcal D}N_{\pm e_\mu}(\mathcal D) = (1 - 6 + 9 - 4 - 2 + 2)t = 0\;,
+\end{equation}
+and $\sum_{\mathcal D}n_{\mathcal D}N_{\pm e_\nu}(\mathcal D) = (1 - 3 + 3 - 1 - 2 + 2)s = 0$. On the rectangles alone the same sums are $1 - 3 + 3 - 1 = 0$, $(1 - 6 + 9 - 4)t = 0$, and $0$. The loops of $P_k$ have the lengths and the corners of $R_1$, which gives $f(P_k) = 2f(R_1)$. Finally $f$ takes the same value on a rectangle and on its translates, so that (iii) and the first assertion give the last one.
+
+(iv) The diagrams which contain a given pair of indices, with their weights $n^{\mathrm{sym}}$, are: for $(0, 0)$, $I_0$, $R_2$, $R_3$, $R_4$, $P_2$, $P_3$, with $0 - 1 + 2 - 1 - 1 + 1$; for $(1, 1)$, $I_1$, $R_2$, $R^{(1)}_2$, $R_3$, $R^{(1)}_3$, $R_4$, with $1 - 1 - 2 + 2 + 1 - 1$; for $(2, 2)$, $I_2$, $R^{(1)}_2$, $R_3$, $R^{(1)}_3$, $R_4$, $P_2$, with $1 - 2 + 2 + 1 - 1 - 1$; for $(3, 3)$, $I_3$, $R^{(1)}_3$, $R_4$, $P_3$, with $-1 + 1 - 1 + 1$; for $(0, 1)$, $R_2$, $R_3$, $R_4$, with $-1 + 2 - 1$; for $(0, 2)$, $R_3$, $R_4$, $P_2$, with $2 - 1 - 1$; for $(0, 3)$, $R_4$, $P_3$, with $-1 + 1$; for $(1, 2)$, $R^{(1)}_2$, $R_3$, $R^{(1)}_3$, $R_4$, with $-2 + 2 + 1 - 1$; and for $(1, 3)$ and $(2, 3)$, $R^{(1)}_3$, $R_4$, with $1 - 1$. Each sum is zero.
+\end{proof}
+
+\subsection{Gaussian Charge Models}\label{sec:gaussian-models}
+
+The Gaussian charge models of Section~\ref{sec:results} fail the test for an algebraic reason, which the next proposition records.
+
+\begin{proposition}[Gaussian Charge Models]\label{prop:gaussian-models}
+For every Gaussian charge model, its function $W$ does not vanish on the eleven diagrams and $\mathfrak Y^{\mathrm{sym}}(W) = 0$. If $W_m$ are the functions of a sequence of Gaussian charge models, each with its own charge, Gaussian vector, and normalisation, and $W_m(\mathcal D) \to W(\mathcal D) \neq 0$ for each of the eleven diagrams, then $\mathfrak Y^{\mathrm{sym}}(W) = 0$.
+\end{proposition}
+
+\begin{proof}
+For a real Gaussian variable $Z$ we have $\abs{\mathbb E[e^{iZ}]} = e^{-\operatorname{Var}Z/2}$. Hence $W(\mathcal D) \neq 0$ and
+\begin{equation}\label{eq:gaussian-log}
+    \log\abs{W(\mathcal D)} = -\frac{\mathsf g^2}{2}\sum_{a,b \in \operatorname{ind}(\mathcal D)}\operatorname{Cov}(\mathsf X_a, \mathsf X_b) - \sum_{C \in \mathcal D}\log\abs{\kappa(C)}\;.
+\end{equation}
+We multiply by $n^{\mathrm{sym}}_{\mathcal D}$ and sum over the eleven diagrams. In the first term the coefficient of $\operatorname{Cov}(\mathsf X_a, \mathsf X_b)$, $a \leq b$, is $-\frac12\mathsf g^2$ or $-\mathsf g^2$ times $\mathsf s(a, b)$, which vanishes by Lemma~\ref{lem:witness-counts}(iv). The second term is a function of $\mathcal D$ which is linear in the numbers $N_v(\mathcal D)$ and $K_{v,w}(\mathcal D)$, by the definition of a Gaussian charge model, so that its weighted sum vanishes by Lemma~\ref{lem:witness-counts}(ii). Hence $\mathfrak Y^{\mathrm{sym}}(W) = 0$. For the limit, $\mathfrak Y^{\mathrm{sym}}(W) = \lim_m\mathfrak Y^{\mathrm{sym}}(W_m) = 0$, since $\log\abs{\cdot}$ is continuous on $\mathbb C \setminus \{ 0 \}$.
+\end{proof}
+
+The cancellation can be read off in the models whose covariance is invariant under the translation by $te_\mu$, $\operatorname{Cov}(\mathsf X_a, \mathsf X_b) = c^{\mathrm G}_{\abs{a-b}}$. There $\operatorname{Var}\mathsf X(R_n) = nc^{\mathrm G}_0 + 2\sum_{1 \leq k < n}(n - k)c^{\mathrm G}_k$ and $\operatorname{Var}\mathsf X(P_k) = 2c^{\mathrm G}_0 + 2c^{\mathrm G}_k$, so that, the normalisations cancelling by Lemma~\ref{lem:witness-counts}(ii),
+\begin{equation}\label{eq:stationary-gaussian}
+    \mathfrak y_S(W) = \mathsf g^2\bigl(c^{\mathrm G}_3 - c^{\mathrm G}_2\bigr)\;,
+    \qquad
+    \mathfrak y_k(W) = -\mathsf g^2c^{\mathrm G}_k\;,
+    \qquad
+    \mathfrak Y(W) = \mathfrak Y^{\mathrm{sym}}(W) = 0\;:
+\end{equation}
+the covariances of the separated rectangles which make up the shape term also make up the pair terms.
+
+\begin{remark}[Gaussian Fields with Values in the Lie Algebra]\label{rem:lie-gaussian}
+The models of Proposition~\ref{prop:gaussian-models} are abelian, and the number $\mathfrak Y$ does not distinguish Yang--Mills theory from Gaussian fields with values in $\mathfrak g$ and path-ordered holonomies. Let $(T_\alpha)$ be a basis of $\mathfrak g$ which is orthonormal for an $\mathrm{Ad}$-invariant inner product, with $\sum_\alpha\pi_*(T_\alpha)^2 = C\cdot1$, let $B = \sum_\alpha B^\alpha T_\alpha$ on the bonds of a lattice containing the rectangles, with $B^\alpha$ real, centred, and jointly Gaussian, $\operatorname{Cov}(B^\alpha(e), B^\beta(f)) = \delta^{\alpha\beta}G(e, f)$, and $G$ invariant under the translation by $te_\mu$, and let $W(\mathcal D) \coloneqq \mathbb E[\prod_{C \in \mathcal D}\chi(\prod_{e \in C}e^{i\mathsf gB(e)})]$. Expanding the ordered product to the second order in $\mathsf g$, the term of first order of $\chi(\prod_ee^{i\mathsf gB(e)})$ is $i\mathsf g(\dim\pi)^{-1}\operatorname{Tr}\pi_*(\sum_eB(e))$, which vanishes because $\operatorname{Tr}\circ\pi_*$ vanishes on $\mathfrak g$ (Lemma~\ref{lem:near-one} below), the term of second order has the mean $-\frac12\mathsf g^2C\operatorname{Var}\mathsf X^1(C)$ with $\mathsf X^1(C) \coloneqq \sum_{e \in C}B^1(e)$, the terms of odd order have mean zero, and the remainder of fourth order has a finite moment. Hence the pair terms are $O(\mathsf g^4)$ and $\mathfrak Y(W) = \mathsf g^2C(c_3 - c_2) + O(\mathsf g^4)$ with $c_k \coloneqq \operatorname{Cov}(\mathsf X^1(I_0), \mathsf X^1(I_k))$, which for the free covariance is positive by Lemma~\ref{lem:free-field} below. These fields share with Yang--Mills theory the feature on which the theorem rests.
+\end{remark}
+
+\subsection{The Normalisations Drop Out}\label{sec:normalisations-drop-out}
+
+We next show that the limits exist on the eleven diagrams and that $\mathfrak Y(W)$ is the limit of the same number computed from the expectations $N_K(\mathcal D) \coloneqq \mathbb E_K[W_{\mathcal D}]$, in which no normalisation appears.
+
+\begin{proposition}[The Normalisations Drop Out]\label{prop:normalisations-drop-out}
+\begin{enumerate}[label=(\roman*)]
+\item Let $K > j_q$. If $N_K(\mathcal D) \neq 0$ on the six diagrams $R_1, \dots, R_4, P_2, P_3$, then each of $\mathfrak Y$, $\mathfrak y_S$, $\mathfrak y_2$, and $\mathfrak y_3$ takes the same value on $W_K$ and on $N_K$.
+\item There is $\bar g_1' > 0$ such that for $0 < \bar g \leq \bar g_1'$ the limits $W(\mathcal D)$ exist on the eleven diagrams, $\abs{W_K(\mathcal D)} \geq 1/2$ for $K \geq K_0(\mathcal D)$, $\abs{W(\mathcal D)} \geq 1/2$, $W_K(I_a) = W_K(I_0)$ and $W_K(R^{(1)}_n) = W_K(R_n)$ for $K > j_q$, and $W(I_a) = W(I_0)$ and $W(R^{(1)}_n) = W(R_n)$. For these $\bar g$, $\mathfrak Y^{\mathrm{sym}}(W) = \mathfrak Y(W) = \lim_K\mathfrak Y(N_K)$, $\mathfrak y_S(W) = \lim_K\mathfrak y_S(N_K)$, and $\mathfrak y_k(W) = \lim_K\mathfrak y_k(N_K)$.
+\item Let $\bar g \leq \bar g_1'$ and $q' \geq q$. If the limits $W^{(q')}$ of the renormalised expectations with the normalisation of the level $q'$ exist and do not vanish on the six diagrams, then $\mathfrak Y(W^{(q')}) = \mathfrak Y(W)$.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+(i) By Proposition~\ref{prop:normalisation-structure}, $\log\abs{\kappa^{(q)}_K(C, \chi)} = \sum_vN^{(0)}_v(C)\operatorname{Re}m_{v,K} + \sum_{c \in \mathcal K(C)}\operatorname{Re}z_{v_c,w_c,K}$, where $N^{(0)}_v(C) = N_v(C)/\varepsilon_K$ is the number of bonds of $\mathbb T_K$ of orientation $v$ on $C$ and the coefficients do not depend on $C$. Hence $\sum_{C \in \mathcal D}\log\abs{\kappa^{(q)}_K(C, \chi)}$ is a linear function of the numbers $N_v(\mathcal D)$ and $K_{v,w}(\mathcal D)$, and by Lemma~\ref{lem:witness-counts}(ii) its weighted sums with the weights of $\mathfrak Y$ and of $\mathfrak y_S$ vanish, and its value on $P_k$ is twice its value on $R_1$. Since $\log\abs{W_K(\mathcal D)} = \log\abs{N_K(\mathcal D)} - \sum_{C \in \mathcal D}\log\abs{\kappa^{(q)}_K(C, \chi)}$, this is (i).
+
+(ii) Each of the eleven diagrams is an ensemble at level $q$ of at most two rectangles with the representation $\pi$. A rectangle with sides $a \geq b$ has $s(C) = b$, $\delta(C) = b$, and $P(C) = 2(a + b)$, so that $\Lambda(C) \leq \max(2, 1 + a/b)$ by Lemma~\ref{lem:chord-arc}, $r(C) = \min(b/2, b, (a + b)/4) = b/2$, and $P(C)/r(C) = 4(1 + a/b)$; for the nine rectangles $a/b \leq \max(s/t, 4t/s)$, so that they are admissible and $P(C)/r(C) \leq 4\Lambda_*$, and $P_q(C) \leq 2(4t + s)L^q/u$. The left side of \eqref{eq:nonvanishing-length} is therefore at most $\ell_{\mathrm{w}} \coloneqq 8(4t + s)^2L^{2q}/u^2 + 8\Lambda_*$ for each diagram. Let $\bar g_1$ and $\ell$ be those of Proposition~\ref{prop:nonvanishing} at the level $q$, and let $\bar g_1' \leq \bar g_1$ be so small that $\ell(c_\pi, \bar g) \geq \ell_{\mathrm{w}}$ for $\bar g \leq \bar g_1'$, which is possible because $\ell(c_\pi, \bar g) \to \infty$ as $\bar g \to 0$. Proposition~\ref{prop:nonvanishing} then gives $q \geq q_\sharp(c_\pi, \bar g)$, the limits, and the lower bounds. The diagrams $I_a$ and $R^{(1)}_n$ are the images of $I_0$ and $R_n$ under the translations by $ate_\mu$ and $te_\mu$, which belong to $\mathfrak G_q$ because $t \in uL^{-q}\mathbb N$, so that Corollary~\ref{cor:symmetries}(ii) gives the equalities for $W_K$ and for $W$. By the lower bounds $N_K(\mathcal D) \neq 0$ for $K$ large, and (i) together with the continuity of $\log\abs{\cdot}$ on $\mathbb C \setminus \{ 0 \}$ gives the three limits. Finally $\mathfrak Y^{\mathrm{sym}}(W) = \mathfrak Y(W)$ by Lemma~\ref{lem:witness-counts}(iii) applied to $f = \log\abs{W}$.
+
+(iii) By \eqref{eq:level-change} and Proposition~\ref{prop:normalisation-structure} at the level $q'$, $\log\abs{\kappa^{(q')}_K(C, \chi)}$ is again a linear function of the lengths and the corner numbers of $C$ with coefficients independent of $C$, so that (i) holds with $W^{(q')}_K$ in place of $W_K$. Since $W^{(q')}_K(\mathcal D) \to W^{(q')}(\mathcal D) \neq 0$, also $N_K(\mathcal D) \neq 0$ for $K$ large, and $\mathfrak Y(W^{(q')}) = \lim_K\mathfrak Y(N_K) = \mathfrak Y(W)$ by (ii).
+\end{proof}
+
+In other words, $\mathfrak Y(W)$ does not depend on the renormalisation prescription within the class of perimeter and corner normalisations, and in particular not on the level at which the diagrams are read; any change of the masses $m_{v,K}$, of the corner constants, or of a constant factor per loop leaves it unchanged.
+
+\subsection{The Free Field}\label{sec:free-field}
+
+The lower bound on the shape term rests on an explicit computation for the free field. At the stopping scale the field is close to a flat field, whose holonomies around the cycles of the torus need not be trivial, and in the components of the Lie algebra on which these holonomies act diagonally the free field acquires twisted periodicity conditions. We therefore compute the covariance of the fluxes for every twist, and we need a lower bound which is uniform in it.
+
+Let $\eta > 0$ and $\mathsf T \in \eta\mathbb N$, let $\theta \in [0, 1)^4$ be a \emph{twist}, and let $\mathbb T^*_{\eta,\theta}$ be the set of the $(\mathsf T/\eta)^4$ momenta $p = (2\pi/\mathsf T)(n + \theta)$, $n \in \mathbb Z^4$, taken modulo $(2\pi/\eta)\mathbb Z^4$, with the momentum $p = 0$ removed if $\theta = 0$. Put $\hat p_\alpha \coloneqq (2/\eta)\sin(\eta p_\alpha/2)$ and $\hat p^2 \coloneqq \sum_\alpha\hat p_\alpha^2$, which is positive on $\mathbb T^*_{\eta,\theta}$, and define for $z \in \eta\mathbb Z^4$ the kernel
+\begin{equation}\label{eq:flux-kernel}
+    k_\theta(z) \coloneqq \frac{1}{\mathsf T^4}\sum_{p \in \mathbb T^*_{\eta,\theta}}e^{ip\cdot z}\,\frac{\hat p_\mu^2 + \hat p_\nu^2}{\hat p^2}\;.
+\end{equation}
+For a rectangle $\mathsf I$ of plaquettes of the lattice $\eta\mathbb Z^4$ in the plane of $e_\mu$ and $e_\nu$, which we identify with the set of the base points of its plaquettes, and for $\mathsf w \in \eta\mathbb Z$, put
+\begin{equation}\label{eq:flux-covariance}
+    c^\theta(\mathsf w) \coloneqq \eta^4\sum_{x \in \mathsf I}\,\sum_{y \in \mathsf I + \mathsf we_\mu}\operatorname{Re}k_\theta(x - y)\;.
+\end{equation}
+At $\theta = 0$ this is the covariance of the fluxes $\mathsf X(\mathsf I) = \oint_{\partial\mathsf I}\mathsf B$ and $\mathsf X(\mathsf I + \mathsf we_\mu)$ of the free field, the centred Gaussian $1$-form on the periodic lattice of spacing $\eta$ and period $\mathsf T$ with $\mathbb E[\mathsf B_\alpha(x)\mathsf B_\beta(y)] = \delta_{\alpha\beta}\mathsf T^{-4}\sum_{p}e^{ip\cdot(x-y)}/\hat p^2$: by the lattice Stokes formula $\mathsf X(\mathsf I) = \eta^2\sum_{x \in \mathsf I}\mathsf F(x)$ with the field strength $\mathsf F = \partial_\mu\mathsf B_\nu - \partial_\nu\mathsf B_\mu$, and $\mathbb E[\mathsf F(x)\mathsf F(y)] = k_0(x - y)$ because $\abs{e^{i\eta p_\alpha} - 1}^2 = \eta^2\hat p_\alpha^2$.
+
+\begin{lemma}[The Free Field's Third Difference]\label{lem:free-field}
+Let $\mathsf I$ have width $t$ along $e_\mu$ and height $s$ along $e_\nu$, with $t, s \in \eta\mathbb N$, $12t \leq \mathsf T$, $s \leq \mathsf T/2$, and $\eta \leq \mathsf T/4$. Then for every twist $\theta$,
+\begin{equation}\label{eq:free-field}
+    c^\theta(3t) - c^\theta(2t) \geq \frac{s^2t^3}{112\,\mathsf T^5}\;.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+We split the multiplier of \eqref{eq:flux-kernel} as $(\hat p_\mu^2 + \hat p_\nu^2)/\hat p^2 = 1 - \sum_{\alpha \notin \{ \mu, \nu \}}\hat p_\alpha^2/\hat p^2$ and treat the two parts separately.
+
+\emph{The constant part.} For $z \in \eta\mathbb Z^4$ the sum of $e^{ip\cdot z}$ over all the $(\mathsf T/\eta)^4$ momenta $(2\pi/\mathsf T)(n + \theta)$ factorises over the coordinates, and in each coordinate it equals $(\mathsf T/\eta)e^{2\pi i\theta_\alpha z_\alpha/\mathsf T}$ if $z_\alpha \in \mathsf T\mathbb Z$ and $0$ otherwise. We take lifts in which $\mathsf I + \mathsf we_\mu$ is the translate of $\mathsf I$ by $\mathsf we_\mu$, with $t \leq \mathsf w \leq \mathsf T - t$. For $x \in \mathsf I$ and $y \in \mathsf I + \mathsf we_\mu$ we then have $0 < y_\mu - x_\mu < \mathsf w + t \leq \mathsf T$, so that $x - y \notin \mathsf T\mathbb Z^4$, and the constant part contributes $0$ to $k_\theta(x - y)$ if $\theta \neq 0$, and $-\mathsf T^{-4}$, the removed momentum, if $\theta = 0$. Either way its contribution to $c^\theta(\mathsf w)$ does not depend on $\mathsf w$ in this range, which contains $2t$ and $3t$ because $12t \leq \mathsf T$.
+
+\emph{The resolvent in one direction.} In the second part we fix $p_\perp \coloneqq (p_\alpha)_{\alpha \neq \mu}$ with $\sum_{\alpha \notin \{ \mu, \nu \}}\hat p_\alpha^2 > 0$, the other terms vanishing, put $\mathsf m^2 \coloneqq \sum_{\alpha \neq \mu}\hat p_\alpha^2 > 0$, and let $\vartheta > 0$ with $\cosh\vartheta = 1 + \eta^2\mathsf m^2/2$. The sum over $p_\mu$ is then
+\begin{equation}\label{eq:one-direction-resolvent}
+    \mathsf h(z) \coloneqq \frac{1}{\mathsf T}\sum_{p_\mu}\frac{e^{ip_\mu z}}{\hat p_\mu^2 + \mathsf m^2} = \frac{\eta}{2\sinh\vartheta}\sum_{n \in \mathbb Z}e^{2\pi i\theta_\mu n}e^{-\vartheta\abs{z - n\mathsf T}/\eta}\;,
+    \qquad
+    z \in \eta\mathbb Z\;,
+\end{equation}
+the sum over $p_\mu \in (2\pi/\mathsf T)(\mathbb Z + \theta_\mu)$ modulo $2\pi/\eta$. Indeed, both sides satisfy $h(z + \mathsf T) = e^{2\pi i\theta_\mu}h(z)$ and solve $\eta^{-2}(2h(z) - h(z + \eta) - h(z - \eta)) + \mathsf m^2h(z) = \eta^{-1}\sum_ne^{2\pi i\theta_\mu n}\delta_{z,n\mathsf T}$, whose solution in the space of such $h$ is unique because the operator has the eigenvalues $\hat p_\mu^2 + \mathsf m^2 > 0$ there. For the left side this is the sum of $e^{ip_\mu z}$ over the momenta, computed above in one coordinate. For the right side, $g(z) \coloneqq (\eta/(2\sinh\vartheta))e^{-\vartheta\abs{z}/\eta}$ solves the equation with the source $\eta^{-1}\delta_{z,0}$: at $z \neq 0$ because $2\cosh\vartheta = 2 + \eta^2\mathsf m^2$, and at $z = 0$ because $2 - 2e^{-\vartheta} + \eta^2\mathsf m^2 = 2\cosh\vartheta - 2e^{-\vartheta} = 2\sinh\vartheta$; the sum $\sum_ne^{2\pi i\theta_\mu n}g(z - n\mathsf T)$ converges absolutely and has the periodicity and the sources. Since $g$ is real and even, $\mathsf h(-z) = \overline{\mathsf h(z)}$, and $\operatorname{Re}\mathsf h$ is even.
+
+\emph{Monotonicity.} For $0 \leq z \leq \mathsf T$ put $y \coloneqq \vartheta z/\eta$, $\mathsf N \coloneqq \vartheta\mathsf T/\eta$, $\mathsf q \coloneqq e^{-\mathsf N}$, and $\psi \coloneqq 2\pi\theta_\mu$. Summing the two geometric series over $n \leq 0$ and $n \geq 1$,
+\begin{equation}\label{eq:resolvent-real-part}
+    \frac{2\sinh\vartheta}{\eta}\operatorname{Re}\mathsf h(z) = \frac{S(y)}{\abs{1 - \mathsf qe^{i\psi}}^2}\;,
+    \qquad
+    S(y) \coloneqq e^{-y}(1 - \mathsf q\cos\psi) + \mathsf qe^{y}(\cos\psi - \mathsf q)\;.
+\end{equation}
+We claim that $-S'(y) \geq (1 - \mathsf q)e^{-y}(1 - e^{2y - \mathsf N})$ for $0 \leq y \leq \mathsf N/2$. Indeed $-S'(y) = e^{-y}(1 - \mathsf q\cos\psi) - \mathsf qe^{y}(\cos\psi - \mathsf q)$. If $\cos\psi \leq \mathsf q$, the second term is nonnegative and the claim follows from $1 - \mathsf q\cos\psi \geq 1 - \mathsf q$. Otherwise $\cos\psi - \mathsf q \leq 1 - \mathsf q\cos\psi$, the difference being $-(1 - \cos\psi)(1 + \mathsf q)$, and $\mathsf qe^y = e^{2y - \mathsf N}e^{-y}$, so that $-S'(y) \geq e^{-y}(1 - \mathsf q\cos\psi)(1 - e^{2y - \mathsf N})$, which gives the claim. Since $\abs{1 - \mathsf qe^{i\psi}}^2 \leq 4$, for $0 \leq z < z' < \mathsf T/2$,
+\begin{equation}\label{eq:resolvent-decrease}
+    \operatorname{Re}\mathsf h(z) - \operatorname{Re}\mathsf h(z') \geq \frac{\eta(1 - \mathsf q)}{8\sinh\vartheta}\int_{\vartheta z/\eta}^{\vartheta z'/\eta}e^{-y}\bigl(1 - e^{2y - \mathsf N}\bigr)\,\dd y > 0\;,
+\end{equation}
+so that $\operatorname{Re}\mathsf h$ is strictly decreasing on $[0, \mathsf T/2)$, for every twist.
+
+\emph{The difference.} For $x \in \mathsf I$ and $y \in \mathsf I + \mathsf we_\mu$ the coordinates other than $x_\mu$ and $x_\nu$ agree, and the two rectangles have the same rows. The second part of $c^\theta(\mathsf w)$ is therefore $-\mathsf T^{-3}\sum_{p_\perp}\bigl(\sum_{\alpha \notin \{ \mu, \nu \}}\hat p_\alpha^2\bigr)\abs{\eta\sum_{x_\nu}e^{ip_\nu x_\nu}}^2\eta^2\sum_{x_\mu,y_\mu}\operatorname{Re}\mathsf h(x_\mu - y_\mu - \mathsf w)$, with $x_\nu$ over the rows and $x_\mu$, $y_\mu$ over the columns of $\mathsf I$, and by the first step
+\begin{equation}\label{eq:third-difference-sum}
+    c^\theta(3t) - c^\theta(2t) = \frac{1}{\mathsf T^3}\sum_{p_\perp}\Bigl(\sum_{\alpha \notin \{ \mu, \nu \}}\hat p_\alpha^2\Bigr)\Bigl\lvert\eta\sum_{x_\nu}e^{ip_\nu x_\nu}\Bigr\rvert^2\eta^2\sum_{x_\mu,y_\mu}\bigl[\operatorname{Re}\mathsf h(z + 2t) - \operatorname{Re}\mathsf h(z + 3t)\bigr]\;,
+\end{equation}
+with $z \coloneqq y_\mu - x_\mu \in (-t, t)$, where we used that $\operatorname{Re}\mathsf h$ is even. Since $t < z + 2t < z + 3t < 4t \leq \mathsf T/3$, every bracket is positive by \eqref{eq:resolvent-decrease}, and every term of \eqref{eq:third-difference-sum} is nonnegative. We keep one of them. Let $\alpha$ and $\alpha'$ be the directions other than $\mu$ and $\nu$, and choose $p_\nu$, $p_\alpha$, $p_{\alpha'}$ in their classes with $\abs{p_\nu}, \abs{p_{\alpha'}} \leq \pi/\mathsf T$ and $\pi/\mathsf T \leq \abs{p_\alpha} \leq 2\pi/\mathsf T$, which is possible because every class $(2\pi/\mathsf T)(\mathbb Z + \theta_\beta)$ meets both $[-\pi/\mathsf T, \pi/\mathsf T]$ and $\{ \pi/\mathsf T \leq \abs{p} \leq 2\pi/\mathsf T \}$. Since $\eta \leq \mathsf T/4$, these momenta have $\abs{\eta p/2} \leq \pi/4$, and $\sin y \geq (2\sqrt2/\pi)y$ on $[0, \pi/4]$ gives $\hat p_\alpha^2 \geq 8/\mathsf T^2$, $\mathsf m^2 \leq 6\pi^2/\mathsf T^2$ because $\hat p_\beta \leq \abs{p_\beta}$, and, with $s \leq \mathsf T/2$,
+\begin{equation}\label{eq:row-sum}
+    \Bigl\lvert\eta\sum_{x_\nu}e^{ip_\nu x_\nu}\Bigr\rvert = \eta\,\Bigl\lvert\frac{\sin(sp_\nu/2)}{\sin(\eta p_\nu/2)}\Bigr\rvert \geq \frac{2\sqrt2}{\pi}\,s\;,
+\end{equation}
+the left side being $s$ if $p_\nu = 0$.
+
+\emph{The bracket.} Now $\eta\mathsf m \leq \sqrt6\pi/4 < 2$, so that $\vartheta = 2\operatorname{arsinh}(\eta\mathsf m/2) \in [\eta\mathsf m/2, \eta\mathsf m]$, because $y/2 \leq \operatorname{arsinh}y \leq y$ on $[0, 1]$, and $\sinh\vartheta = \eta\mathsf m(1 + \eta^2\mathsf m^2/4)^{1/2} \leq \sqrt2\,\eta\mathsf m$. In \eqref{eq:resolvent-decrease} with $z + 2t$ and $z + 3t$ the interval of integration starts at most at $3\vartheta t/\eta \leq 3\mathsf mt$ and has length $\vartheta t/\eta \geq \mathsf mt/2$; on it $2y - \mathsf N \leq (\vartheta/\eta)(8t - \mathsf T) \leq -\vartheta\mathsf T/(3\eta) \leq -\mathsf m\mathsf T/6$; and $1 - \mathsf q \geq 1 - e^{-\mathsf m\mathsf T/2}$. With $1 - e^{-x} \geq x(1 - x/2)$ for $x \geq 0$, the bracket is at least
+\begin{equation}\label{eq:bracket-lower}
+    \frac{1}{8\sqrt2\,\mathsf m}\bigl(1 - e^{-\mathsf m\mathsf T/2}\bigr)\bigl(1 - e^{-\mathsf m\mathsf T/6}\bigr)e^{-3\mathsf mt}\,\frac{\mathsf mt}{2}\Bigl(1 - \frac{\mathsf mt}{4}\Bigr) \geq \frac{t}{512\sqrt2} \geq \frac{t}{725}\;,
+\end{equation}
+because $2\sqrt2 \leq \mathsf m\mathsf T \leq \sqrt6\pi$ and $\mathsf mt \leq \sqrt6\pi/12$ give $e^{-\mathsf m\mathsf T/2} \leq e^{-\sqrt2} \leq 1/4$, $e^{-\mathsf m\mathsf T/6} \leq e^{-\sqrt2/3} \leq 5/8$, $e^{-3\mathsf mt} \geq e^{-2} \geq 2/15$, and $1 - \mathsf mt/4 \geq 5/6$, and $(3/4)(3/8)(2/15)(5/6) = 1/32$. The kept term of \eqref{eq:third-difference-sum} is therefore at least $\mathsf T^{-3}(8/\mathsf T^2)(8s^2/\pi^2)\,t^2\,t/725 = 64s^2t^3/(725\pi^2\mathsf T^5)$, since the sum over $x_\mu$ and $y_\mu$ has $(t/\eta)^2$ terms, and $64/(725\pi^2) \geq 1/112$.
+\end{proof}
+
+For the free field with the charge $\mathsf g$ the fluxes $\mathsf X_a \coloneqq \oint_{I_a}\mathsf B$ form a Gaussian charge model whose covariance is invariant under the translation by $te_\mu$, with $c^{\mathrm G}_k = c^0(kt)$. By \eqref{eq:stationary-gaussian} its number $\mathfrak Y$ vanishes, while its shape term is $\mathsf g^2(c^0(3t) - c^0(2t)) > 0$ by the lemma: in the abelian theory the positive shape term is cancelled exactly by the pair terms.
 
 \section{Notes on the Papers}\label{sec:notes-on-papers}
 
