@@ -1,0 +1,376 @@
+% !TeX program = pdflatex
+% Draft of the block "The Carried Insertions at Complex Data" for WILSON_LOOPS_CONTINUUM_LIMIT.tex, Section 6.
+% Written by a second session, which edits only this file and COMPLEX_COVARIANCE_STATE.md; the session of the
+% rewrite of the inductive step moves the section into the paper. State, sources, conditions, and what the
+% integrating session has to match: COMPLEX_COVARIANCE_STATE.md.
+% Everything between \begin{document} and \end{document} below the title is the text for the paper; the
+% preamble is the paper's, with xr for the paper's labels (compile the paper first in the same directory).
+\documentclass[11pt]{preprint}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{mathtools}
+\usepackage{mathrsfs}
+\usepackage[a4paper,margin=28mm]{geometry}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{xr-hyper}
+\usepackage[hidelinks]{hyperref}
+\externaldocument[][nocite]{WILSON_LOOPS_CONTINUUM_LIMIT}[../Continuum Limit Manuscript Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf]
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\id}{\mathbf 1}
+\newcommand{\diam}{\operatorname{diam}}
+\newcommand{\dist}{\operatorname{dist}}
+\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
+\DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
+\setlength{\parskip}{0.6em}
+\emergencystretch=3em
+\title{Draft: The Carried Insertions at Complex Data}
+\author{}
+\date{}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\theoremstyle{plain}
+\renewcommand{\qedsymbol}{\textit{q.e.d.}}
+\begin{document}
+\maketitle
+
+\section{The Carried Insertions at Complex Data}\label{sec:carried-complex}
+
+The clause \eqref{eq:sup-clause} of Definition~\ref{def:dressed-loop} bounds the insertions on the whole space of the step, and not only at its real backgrounds. For the groups which a step makes this is part of what the count of that step delivers, in the form \eqref{eq:production-clause}. For a group $W$ which was made at an earlier step $j$ and is carried to the step $k + 1$ the question is of another kind, since its insertion is the function which was bounded at the step $j$, and it has now to be bounded on the space of the step $k + 1$ and summed over the groups at a traversal of that step. The obvious bound fails. In the units of the fine lattice the space of the step $k + 1$ lies in that of the step $j$, so that the supremum $\norm{Y_W}_{(j)}$ of the step $j$ bounds the insertion; but a traversal of the step $k + 1$ consists of $L^m$ traversals of the step $j$, $m \coloneqq k + 1 - j$, each with carried groups of its own, and the sum of these suprema is larger than the bound of the step $j$ by the factor $L^m$. At the real backgrounds this factor is compensated by the contraction of the deviation (Section~\ref{sec:contraction}). At complex data there is no deviation to contract, and the compensation has to come from the size of the complex part: the radii of the space of the step $k + 1$ are smaller than those of the step $j$ by the factor $L^{-m}$, up to the ratio of the couplings, so that Schwarz's lemma on the larger space gains $L^{-m}$ for each insertion. This cancels the number of the traversals and no more, and the sum over the generations $m = 1, \dots, k$ would still grow with $k$.
+
+What removes the growth is gauge covariance at complex gauge transformations. The complex part of a configuration of the space of the step $k + 1$ varies slowly, by the gradient condition of that space, and on a set which is small in the units of the scale $k + 1$ it is therefore, to first order, a complex gauge transformation with a gauge function linear in the position. The dependence set of a carried group is such a set, of diameter $\delta_W$ of the order of $ML^{-m}\sigma(W)$ in these units. Removing the linear part by a gauge transformation which is the identity at the first site of the interval of $W$ leaves a complex part smaller by the factor $\delta_W$, and Schwarz's lemma then gains $L^{-2m}\sigma(W)$, which is summable over the generations; the factor $\sigma(W)$, and the groups whose dependence sets are not small, are paid by a sixteenth of the weight $e^{\nu\sigma(W)}$. This is the reason for the rate $\lambda_c < 1$ in \eqref{eq:sup-clause}. The insertions are covariant under gauge transformations with values in the compact group only, and the first step is to see that the covariance extends.
+
+Throughout this section we work on the labelled term without large-field regions, we fix steps $1 \leq j \leq k$ and put $m \coloneqq k + 1 - j$, and we measure lengths in the units of the fine lattice, so that a traversal of the step $n$ consists of $L^n$ fine bonds and a cube of $\pi_n$ has the side $ML^n$. We write $\mathfrak g$ for the Lie algebra of $G$, $\mathfrak g^c \coloneqq \mathfrak g \otimes \mathbb C$, and $G^c$ for the complexification of $G$, the connected complex Lie group $G\exp(i\mathfrak g)$ of matrices with the Lie algebra $\mathfrak g^c$; a representation $\pi$ of $G$ extends to a holomorphic representation of $G^c$. The norm $\abs{\,\cdot\,}$ is that of Definition~\ref{def:dressed-loop}, on the matrices of the size of $G$, and it is invariant under the conjugation by the elements of $G$.
+
+\subsection{The Spaces of the Steps in Fine Units}\label{sec:spaces-fine-units}
+
+For a configuration $U$ with values in $G$ and a field $\alpha$ on the fine bonds with values in $\mathfrak g^c$ we write $e^{i\alpha}U$ for the configuration $b \mapsto e^{i\alpha(b)}U(b)$, with values in $G^c$. For a bond $b = \langle x, x + e_\mu\rangle$ and a unit vector $e$, one of the $\pm e_\nu$, let $b + e \coloneqq \langle x + e, x + e + e_\mu\rangle$, and let the \emph{covariant difference} of $\alpha$ be
+\begin{equation}\label{eq:covariant-difference}
+    (\delta_e\alpha)(b) \coloneqq U(x, x + e)\,\alpha(b + e)\,U(x, x + e)^{-1} - \alpha(b)\;,
+\end{equation}
+where $U(x, x + e)$ is the value of $U$ on the bond from $x$ to $x + e$. For $n \geq 2$ let $\mathcal S_n(U)$ be the set of the pairs $(e^{i\alpha}U, \mathbf J)$, with fields $\alpha$ and $\mathbf J$ on the fine bonds with values in $\mathfrak g^c$, such that for all bonds $b$, unit vectors $e$, and fine plaquettes $p$
+\begin{equation}\label{eq:space-of-step}
+\begin{gathered}
+    \abs{\alpha(b)} < \alpha_{1,n}L^{-n}\;,
+    \qquad
+    \abs{(\delta_e\alpha)(b)} < \alpha_{1,n}L^{-2n}\;,\\
+    \abs{(e^{i\alpha}U)(\partial p) - 1} < c_F\,\alpha_{0,n}L^{-2n}\;,
+    \qquad
+    \abs{\mathbf J(b)} < \alpha_{0,n}L^{-3n}\;,
+\end{gathered}
+\end{equation}
+with a constant $c_F \in (0, 1]$ of the class; $\mathcal S_1(U)$ is the set of the configurations $e^{i\alpha}U$ with $\abs{\alpha(b)} < \alpha_{1,1}L^{-1}$, without a variable $\mathbf J$. These are the conditions of Definition~\ref{def:dressed-loop}(iii) on the term without large-field regions. Indeed, in the units of the scale $n$ the fine lattice has the spacing $\xi = L^{-n}$, the complex part is written $e^{i\xi A'}$, so that $\alpha = \xi A'$, and the conditions \cite[(2.39), (2.34), (2.36), p.~261]{BalabanCRE} on the top domain read $\abs{A'} < \alpha_{1,n}$, $\abs{\nabla^\xi_UA'} < \alpha_{1,n}$ with $\nabla^\xi_U = \xi^{-1}\delta$, $\abs{\partial\mathbf U - 1} < \alpha_{0,n}\xi^2$, and $\abs{\mathbf J} < \alpha_{0,n}$; a current is of the dimension of the third power of an inverse length \cite[(1.8), p.~261]{BalabanRG1}, whence the factor $L^{-3n}$ in fine units. For a set $X$ of bonds we write $\mathcal S_n(U)|_X$ for the set defined by the same conditions on the bonds of $X$ and on the plaquettes and differences which they contain. This set is open in the space of the pairs of a $G^c$-valued configuration and a $\mathfrak g^c$-valued field on $X$, because $\alpha \mapsto e^{i\alpha}U(b)$ maps a neighbourhood of $0$ in $\mathfrak g^c$ biholomorphically onto a neighbourhood of $U(b)$ in $G^c$, and a gauge transformation $v$ with values in $G$ maps $\mathcal S_n(U)|_X$ onto $\mathcal S_n(U^v)|_X$, by the invariance of the norm.
+
+We use the following properties of the class, for a group $W$ of the deviation species made at the step $j$; it has one interval $I_W$, from a site $x_W$ to a site $x'_W$, which lies in its domain $X_W$.
+\begin{enumerate}[label=(\alph*)]
+\item The insertion $Y_W$ is a function of the restriction of $(\mathbf U, \mathbf J)$ to the dependence set $X^+_W$ (of $\mathbf U$ alone for $j = 1$). It is defined and analytic on the open set
+\begin{equation}\label{eq:production-space}
+    \mathcal D_W \coloneqq \bigcup_U\mathcal S_j(U)|_{X^+_W}\;,
+\end{equation}
+the union over the configurations $U$ which are the trivial configuration, the background $U_j(V_j)$ of a block field $V_j$ in the support of the test functions of the term, or a gauge transform of one of these by a $G$-valued gauge transformation. On $\mathcal D_W$ it is bounded by $\norm{Y_W}_{(j)}$, and for $G$-valued gauge transformations $v$
+\begin{equation}\label{eq:covariance-law}
+    Y_W(\mathbf U^v, R(v)\mathbf J) = \pi(v(x_W))\,Y_W(\mathbf U, \mathbf J)\,\pi(v(x'_W))^{-1}\;,
+\end{equation}
+where $\mathbf U^v(b) = v(b_-)\mathbf U(b)v(b_+)^{-1}$ and $(R(v)\mathbf J)(b) = v(b_-)\mathbf J(b)v(b_-)^{-1}$ \cite[(1.10), p.~262]{BalabanRG1}, and $\pi$ is the representation of the loop of $W$ (Definition~\ref{def:dressed-loop}(iii) and (vii)). At a later step the insertion of $W$ is the same function of the configuration and of the current, both in fine units.
+\item For $V_{k+1}$ in the support of the step $k + 1$ the background $U_{k+1}$ is a background of the step $j$: with $V^*_i \coloneqq M^i(U_{k+1})$ for $j \leq i \leq k$, the block field $V^*_i$ lies in the support of the step $i$ (Supplement, Proposition~S.8, by descending induction on $i$), and $U_i(V^*_i) = U_{k+1}$ by the uniqueness of the minimal orbit (Section~\ref{sec:evaluation-point}). Moreover $\abs{U_{k+1}(\partial p) - 1} < 2B_3\varepsilon_{k+1}L^{-2(k+1)}$ for every fine plaquette $p$ \cite[p.~268]{BalabanCRE}, and the pair of $U_{k+1}$ and its current $J_{k+1}$ is a point of $\mathcal S_{k+1}(U_{k+1})$.
+\item The domain $X_W$ is a connected union of at most $u_\star\sigma(W)$ cubes of $\pi_j$, and $I_W$ has at most $u_\star M\sigma(W)L^j$ fine bonds (Definition~\ref{def:dressed-loop}(vii)).
+\item The radii of two steps $n' < n$ satisfy $\alpha_{i,n} \leq \varkappa_{n-n'}\,\alpha_{i,n'}$ for $i = 0, 1$, with $\varkappa_m \coloneqq (1 + \beta_0)^2m^{1/2}$, by \eqref{eq:tube-two-six} and \eqref{eq:tube-two-seven}, and $\alpha_{1,n} = \lambda_\alpha\alpha_{0,n}$ with $\lambda_\alpha \coloneqq C^\alpha_1/C^\alpha_0$, since $q_1 = q_0$ (Appendix~\ref{app:constants}).
+\end{enumerate}
+We assume
+\begin{equation}\label{eq:carried-blocking-condition}
+    L \geq 20(1 + \beta_0)^2\;,
+\end{equation}
+so that $\varkappa_mL^{-m} \leq (1 + \beta_0)^2L^{-1} \leq \frac{1}{20}$ for every $m \geq 1$, because $m^{1/2}L^{-(m-1)} \leq 1$ for $L \geq 2$.
+
+\begin{lemma}[The Space of a Later Step Lies in That of an Earlier One]\label{lem:space-inclusion}
+Let $U$ be a $G$-valued configuration. Then $\mathcal S_{k+1}(U) \subset \mathcal S_j(U)$.
+\end{lemma}
+
+\begin{proof}
+By (d) and \eqref{eq:carried-blocking-condition}, $\alpha_{i,k+1}L^{-(k+1)} \leq \varkappa_mL^{-m}\alpha_{i,j}L^{-j} \leq \alpha_{i,j}L^{-j}$, and the same holds with the powers $L^{-2(k+1)}$ and $L^{-3(k+1)}$, which are smaller. Each of the four radii of \eqref{eq:space-of-step} at $n = k + 1$ is therefore at most the corresponding radius at $n = j$, and for $j = 1$ only the first condition is posed.
+\end{proof}
+
+\subsection{Complex Gauge Transformations}\label{sec:complex-gauge}
+
+\begin{lemma}[Complexified Covariance]\label{lem:complexified-covariance}
+Let $X$ be a finite set of bonds with the set $S$ of its sites, $x, x' \in S$, $\mathcal D$ an open set of pairs $q = (\mathbf U, \mathbf J)$ of a $G^c$-valued configuration and a $\mathfrak g^c$-valued field on $X$ which is invariant under the $G$-valued gauge transformations, and $F$ a holomorphic function on $\mathcal D$ with values in the linear maps of the space of a representation $\pi$ of $G$, such that $F(q^v) = \pi(v(x))F(q)\pi(v(x'))^{-1}$ for every $q \in \mathcal D$ and every $v \in G^S$, where $q^v \coloneqq (\mathbf U^v, R(v)\mathbf J)$. Let $q \in \mathcal D$ and let $t \mapsto u_t$, $t \in [0, 1]$, be a continuous path in $(G^c)^S$ with $u_0 = 1$ and $q^{u_t} \in \mathcal D$ for every $t$. Then
+\begin{equation}\label{eq:complexified-covariance}
+    F(q^{u_1}) = \pi(u_1(x))\,F(q)\,\pi(u_1(x'))^{-1}\;.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+The map $u \mapsto q^u$ is holomorphic on $(G^c)^S$, so that $\mathcal U \coloneqq \{ u \in (G^c)^S \,|\, q^u \in \mathcal D \}$ is open, and it contains $G^S$ by the invariance of $\mathcal D$. Since $\pi$ is holomorphic on $G^c$, the function
+\[
+    \Psi(u) \coloneqq \pi(u(x))^{-1}F(q^u)\pi(u(x')) - F(q)
+\]
+is holomorphic on $\mathcal U$, and it vanishes on $G^S$ by hypothesis. In the chart $Z \mapsto \exp(Z)$ of $(G^c)^S$ at the identity, with $Z \in (\mathfrak g^c)^S = \mathfrak g^S \oplus i\mathfrak g^S$, the function $\Psi \circ \exp$ is holomorphic near $0$ and vanishes on the real subspace $\mathfrak g^S$, whose complex span is the whole space. All its derivatives at $0$ in the real directions vanish, hence, by complex linearity of the derivatives of a holomorphic function, all its derivatives at $0$, and $\Psi$ vanishes on a neighbourhood of the identity. By the identity theorem it vanishes on the connected component of $\mathcal U$ which contains the identity, and the path $u_t$ lies in this component, because it lies in $\mathcal U$ and starts at the identity. Hence $\Psi(u_1) = 0$, which is \eqref{eq:complexified-covariance}.
+\end{proof}
+
+We use the lemma for the insertion of $W$ with the transport along its interval removed. Let $\mathbf U(I_W)$ be the ordered product of $\mathbf U$ along the fine bonds of $I_W$, from $x_W$ to $x'_W$, an element of $G^c$, and
+\begin{equation}\label{eq:base-point-form}
+    \hat Y_W(\mathbf U, \mathbf J) \coloneqq Y_W(\mathbf U, \mathbf J)\,\pi\bigl(\mathbf U(I_W)\bigr)^{-1}\;.
+\end{equation}
+Since $\mathbf U^v(I_W) = v(x_W)\mathbf U(I_W)v(x'_W)^{-1}$, the function $\hat Y_W$ is holomorphic on $\mathcal D_W$ and satisfies \eqref{eq:covariance-law} with $x_W$ in the place of $x'_W$. By Lemma~\ref{lem:complexified-covariance}, for a path $u_t$ as there with $u_1(x_W) = 1$,
+\begin{equation}\label{eq:base-point-invariance}
+    \hat Y_W(\mathbf U^{u_1}, R(u_1)\mathbf J) = \hat Y_W(\mathbf U, \mathbf J)\;.
+\end{equation}
+
+The gauge transformation which we shall use is built from the following function. Three properties of the norm enter, each with a constant which depends only on $G$ and on the norm; we fix $\rho_0 \in (0, 1]$ and $c_G \geq 1$ such that all three hold.
+\begin{enumerate}[label=(N\arabic*)]
+\item For $X, Q \in \mathfrak g^c$ with $\abs X \leq \rho_0$, $\abs{e^{iX}Qe^{-iX} - Q} \leq c_G\abs X\abs Q$.
+\item For $X, Y, Z, A \in \mathfrak g^c$ of norm less than $\rho_0$ the matrix $e^{iX}e^{iY}e^{iZ}e^{-i(X + A)}e^{-iZ}$ is within the radius of convergence of the logarithm about $1$, and
+\begin{equation}\label{eq:reduction-function}
+    \Phi(X, Y, Z, A) \coloneqq -i\log\bigl(e^{iX}e^{iY}e^{iZ}e^{-i(X + A)}e^{-iZ}\bigr)
+\end{equation}
+is a holomorphic function with values in $\mathfrak g^c$; the function $\Psi \coloneqq \Phi - (Y - A)$ has all its first and second partial derivatives bounded by $c_G$ in norm where the four arguments have norm at most $\rho_0/2$.
+\item Let $U$ be a $G$-valued configuration and $\alpha$ a field with $\abs{\alpha(b)} \leq a_\circ \leq \rho_0$ and $\abs{(\delta_e\alpha)(b)} \leq d_\circ \leq a_\circ$ on the bonds of a fine plaquette $p$. Then
+\begin{equation}\label{eq:complex-curvature}
+    \abs{(e^{i\alpha}U)(\partial p) - 1} \leq c_G\bigl(\abs{U(\partial p) - 1} + d_\circ + a_\circ^2\bigr)\;.
+\end{equation}
+\end{enumerate}
+Such constants exist. (N1) holds because $Q \mapsto e^{iX}Qe^{-iX} - Q$ is holomorphic in $X$ and vanishes at $X = 0$. In (N2) the product is a holomorphic function of the arguments which equals $1$ at the origin, the logarithm of a product of exponentials of small elements of $\mathfrak g^c$ is given by the series of Baker, Campbell, and Hausdorff and lies in $\mathfrak g^c$, and the derivatives are bounded by Cauchy's estimates. For (N3), let $b_1 = \langle x, x + e_\mu\rangle$, $b_2$, $b_3$, $b_4 = \langle x, x + e_\nu\rangle$ be the bonds of $p$ in the order $(\partial p) = b_1b_2b_3^{-1}b_4^{-1}$, $U_i \coloneqq U(b_i)$, $\alpha_i \coloneqq \alpha(b_i)$, and $F \coloneqq U(\partial p)$. Moving the factors $U_i$ to the right we find
+\begin{gather*}
+    (e^{i\alpha}U)(\partial p) = e^{i\alpha_1}e^{i\beta_2}e^{-i\beta_3}e^{-i\beta_4}F\;,\\
+    \beta_2 \coloneqq U_1\alpha_2U_1^{-1}\;,
+    \qquad
+    \beta_3 \coloneqq FU_4\alpha_3U_4^{-1}F^{-1}\;,
+    \qquad
+    \beta_4 \coloneqq F\alpha_4F^{-1}\;.
+\end{gather*}
+Here $U_1\alpha_2U_1^{-1} = \alpha_4 + (\delta_{e_\mu}\alpha)(b_4)$ and $U_4\alpha_3U_4^{-1} = \alpha_1 + (\delta_{e_\nu}\alpha)(b_1)$ by \eqref{eq:covariant-difference}, and the conjugation by $F$ changes an element $Q$ by at most a constant times $\abs{F - 1}\abs Q$. The sum $\alpha_1 + \beta_2 - \beta_3 - \beta_4$ of the exponents is therefore at most $2d_\circ$ plus a constant times $\abs{F - 1}a_\circ$ in norm, the product of the four exponentials differs from $1 + i(\alpha_1 + \beta_2 - \beta_3 - \beta_4)$ by at most a constant times $a_\circ^2$, since its arguments are bounded by $2a_\circ$, and the multiplication by $F$ changes norms by at most a constant factor. This gives \eqref{eq:complex-curvature}.
+
+Two consequences of the definition \eqref{eq:reduction-function} will be used: $\Phi(X, 0, 0, 0) = 0$ for every $X$ and $\Phi(0, 0, Z, 0) = 0$ for every $Z$, and the linear part of $\Phi$ at the origin is $Y - A$. Hence, where the four arguments have norm at most $\rho_0/2$,
+\begin{equation}\label{eq:reduction-remainder}
+\begin{gathered}
+    \abs{\Psi(X, Y, Z, A)} \leq c_G\bigl[(\abs Y + \abs A)(\abs X + \abs Y + \abs Z + \abs A) + \abs X\abs Z\bigr]\;,\\
+    \abs{\partial_X\Psi} \leq c_G(\abs Y + \abs Z + \abs A)\;,
+    \qquad
+    \abs{\partial_Z\Psi} \leq c_G(\abs X + \abs Y + \abs A)\;,\\
+    \abs{\partial_Y\Psi} \leq c_G(\abs X + \abs Y + \abs Z + \abs A)\;.
+\end{gathered}
+\end{equation}
+For the bounds of the derivatives we note that $\partial_X\Psi$ vanishes at $(X, 0, 0, 0)$, $\partial_Z\Psi$ at $(0, 0, Z, 0)$, and $\partial_Y\Psi$ at the origin, and we integrate the second derivatives along the segment from these points. For the first line, $\Psi(X, 0, Z, 0)$ vanishes if $X = 0$ or $Z = 0$, so that it equals the integral of its mixed second derivative over $[0, 1]^2$ along $(sX, tZ)$ and is at most $c_G\abs X\abs Z$; and $\Psi(X, Y, Z, A) - \Psi(X, 0, Z, 0)$ is the integral of the derivative in $(Y, A)$ along $(X, sY, Z, sA)$, which vanishes at the origin and is therefore at most $c_G(\abs X + \abs Y + \abs Z + \abs A)$.
+
+\begin{lemma}[The Gauge Reduction of a Slowly Varying Complex Part]\label{lem:gauge-reduction}
+Let $B$ be a cube of the fine lattice of side $D \geq 1$ and $x_0$ a site of $B$ with $x_0 + e_\mu \in B$ for every $\mu$. Let $U = e^{i\zeta}$ on the bonds of $B$, with a field $\zeta$ with values in $\mathfrak g$, and let $\alpha$ be a field on the bonds of $B$ with values in $\mathfrak g^c$, such that for all bonds $b$ and unit vectors $e$ with $b, b + e$ in $B$
+\begin{equation}\label{eq:reduction-hypotheses}
+    \abs{\alpha(b)} \leq a\;,
+    \qquad
+    \abs{(\delta_e\alpha)(b)} \leq a'\;,
+    \qquad
+    \abs{\zeta(b)} \leq z\;,
+    \qquad
+    \abs{\zeta(b + e) - \zeta(b)} \leq z'\;,
+\end{equation}
+with $a' \leq a$ and $4aD, a, z \leq \rho_0/2$. Put
+\begin{equation}\label{eq:gauge-function}
+    \omega(x) \coloneqq \sum_\mu a_\mu\,(x - x_0)_\mu\;,
+    \qquad
+    a_\mu \coloneqq \alpha(\langle x_0, x_0 + e_\mu\rangle)\;,
+    \qquad
+    u_t \coloneqq e^{it\omega}\;,
+\end{equation}
+for the sites $x$ of $B$ and $t \in [0, 1]$. Then $u_t(x_0) = 1$, $\abs{\omega} \leq 4aD$, and $(e^{i\alpha}U)^{u_t} = e^{i\alpha_t}U$ on the bonds of $B$, with fields $\alpha_t$ with values in $\mathfrak g^c$ which satisfy, with $a'' \coloneqq a' + c_Gza$ and $r \coloneqq c_G[2a(4aD + 2a + z) + 4aDz]$,
+\begin{equation}\label{eq:reduced-phase}
+    \abs{\alpha_1(b)} \leq 4Da'' + r\;,
+    \qquad
+    \abs{\alpha_t(b)} \leq 2a + r\;,
+\end{equation}
+\begin{equation}\label{eq:reduced-difference}
+    \abs{(\delta_e\alpha_t)(b)} \leq a'' + c_Gz(2a + r) + c_G\bigl[(2a + z)a + (4aD + 2a + z)a'' + (4aD + 2a)z'\bigr]\;.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+The value $\omega(x_0) = 0$ and the bound on $\omega$ are immediate from \eqref{eq:gauge-function}, since $\abs{a_\mu} \leq a$ and $\sum_\mu\abs{(x - x_0)_\mu} \leq 4D$. For a bond $b = \langle x, x + e_\mu\rangle$ of $B$ we have $\omega(x + e_\mu) = \omega(x) + a_\mu$, and therefore
+\begin{gather*}
+    (e^{i\alpha}U)^{u_t}(b) = e^{it\omega(x)}e^{i\alpha(b)}e^{i\zeta(b)}e^{-i(t\omega(x) + ta_\mu)} = e^{i\alpha_t(b)}e^{i\zeta(b)}\;,\\
+    \alpha_t(b) \coloneqq \Phi\bigl(t\omega(x), \alpha(b), \zeta(b), ta_\mu\bigr)\;,
+\end{gather*}
+by the definition \eqref{eq:reduction-function}; the arguments have norm at most $\rho_0/2$ by hypothesis, and $\alpha_t$ has values in $\mathfrak g^c$ by (N2).
+
+\emph{The plain differences of $\alpha$.} For $b, b + e$ in $B$, with $b = \langle x, x + e_\mu\rangle$, the value of $U$ on the bond from $x$ to $x + e$ is $e^{\pm i\zeta}$ with the value of $\zeta$ on that bond, so that by \eqref{eq:covariant-difference}, (N1), and \eqref{eq:reduction-hypotheses}
+\[
+    \abs{\alpha(b + e) - \alpha(b)} \leq \abs{(\delta_e\alpha)(b)} + c_Gz\,\abs{\alpha(b + e)} \leq a' + c_Gza = a''\;.
+\]
+Two bonds of the direction $\mu$ in $B$ are joined by a chain of at most $4D$ translations by unit vectors which stays in $B$, one coordinate after the other, because $B$ is a cube. Hence $\abs{\alpha(b) - a_\mu} \leq 4Da''$ for every bond $b$ of the direction $\mu$ in $B$.
+
+\emph{The bounds \eqref{eq:reduced-phase}.} By (N2), $\alpha_t(b) = \alpha(b) - ta_\mu + \Psi(t\omega(x), \alpha(b), \zeta(b), ta_\mu)$, and by the first line of \eqref{eq:reduction-remainder}, with $\abs{t\omega} \leq 4aD$, the last term is at most $r$ in norm. For $t = 1$ the first two terms are at most $4Da''$ together, and for general $t$ at most $2a$.
+
+\emph{The bound \eqref{eq:reduced-difference}.} By \eqref{eq:covariant-difference} and (N1), $\abs{(\delta_e\alpha_t)(b)} \leq \abs{\alpha_t(b + e) - \alpha_t(b)} + c_Gz(2a + r)$. The arguments of $\Phi$ at $b + e$ are $t\omega(x) + ta_e$, with $a_e \coloneqq \pm a_\nu$ for $e = \pm e_\nu$, then $\alpha(b + e)$, $\zeta(b + e)$, and the same $ta_\mu$. The difference of the linear parts is $\alpha(b + e) - \alpha(b)$, at most $a''$, and by the second line of \eqref{eq:reduction-remainder} the difference of the values of $\Psi$ is at most $c_G(2a + z)\abs{a_e} + c_G(4aD + 2a + z)a'' + c_G(4aD + 2a)z'$, the three terms being the changes of the first, the second, and the third argument, each multiplied by the bound of the corresponding derivative in \eqref{eq:reduction-remainder}.
+\end{proof}
+
+\subsection{One Carried Insertion}\label{sec:one-carried-insertion}
+
+Let $W$ be a group of the deviation species made at the step $j$. We fix a point of the space of the step $k + 1$,
+\begin{equation}\label{eq:carried-datum}
+    (\mathbf U, \mathbf J) = (e^{i\alpha}U, \mathbf J) \in \mathcal S_{k+1}(U)\;,
+\end{equation}
+around a real configuration $U$ which is either $U_{k+1}$, for a block field $V_{k+1}$ in the support, with the current $J \coloneqq J_{k+1}$, or the trivial configuration, with $J \coloneqq 0$; in both cases $(U, J) \in \mathcal S_{k+1}(U)$ and, by (b), $U$ is one of the configurations of \eqref{eq:production-space}. By Lemma~\ref{lem:space-inclusion} and (a), both $(\mathbf U, \mathbf J)$ and $(U, J)$ lie in $\mathcal D_W$. We write
+\begin{equation}\label{eq:carried-sizes}
+\begin{gathered}
+    a \coloneqq \alpha_{1,k+1}L^{-(k+1)}\;,
+    \qquad
+    \varrho_j \coloneqq \alpha_{1,j}L^{-j}\;,\\
+    D_W \coloneqq 2u_\star M\sigma(W)L^j\;,
+    \qquad
+    \delta_W \coloneqq D_WL^{-(k+1)} = 2u_\star ML^{-m}\sigma(W)\;.
+\end{gathered}
+\end{equation}
+By (c) the $\ell^\infty$-diameter of $X_W$ is at most $u_\star\sigma(W)ML^j$, and that of the dependence set $X^+_W$ exceeds it by at most $16M \leq ML^j$; hence $X^+_W$ lies in a cube $B_W$ of the fine lattice of side $D_W$, and $\delta_W$ is its side in the units of the scale $k + 1$. The interval has at most $D_W/2$ fine bonds, and $\delta_W \geq 2ML^{-m}$ because $\sigma(W) \geq 1$.
+
+\begin{proposition}[One Carried Insertion]\label{prop:one-carried}
+Let $\gamma$ be sufficiently small. With the notation above the following hold.
+\begin{enumerate}[label=(\roman*)]
+\item For every $W$,
+\begin{equation}\label{eq:excess-plain}
+    \norm{Y_W(\mathbf U, \mathbf J) - Y_W(U, J)} \leq c_{\mathrm{pl}}\,\varkappa_mL^{-m}\,\norm{Y_W}_{(j)}\;,
+    \qquad
+    c_{\mathrm{pl}} \coloneqq \max\Bigl(2,\ \frac{8c_G\lambda_\alpha}{c_FL}\Bigr)\;.
+\end{equation}
+\item Let $\mu \coloneqq \min\bigl(\frac12, c_FM/(c_G\lambda_\alpha)\bigr)$. If $\delta_W \leq \mu$, then
+\begin{equation}\label{eq:excess-covariant}
+    \norm{Y_W(\mathbf U, \mathbf J)} \leq 2\norm{Y_W(U, J)} + \varkappa_mL^{-m}\Bigl(\frac{40\,\delta_W}{\mu} + 14L^{-2m}\Bigr)e^{\nu\sigma(W)/8192}\,\norm{Y_W}_{(j)}\;.
+\end{equation}
+\end{enumerate}
+\end{proposition}
+
+The first bound is the gain of the radii alone and holds for every group; the second has the further factor $\delta_W \leq 2u_\star ML^{-m}\sigma(W)$ and is the one which is summable over the generations.
+
+\begin{proof}
+We write $r^{(n)} \coloneqq \alpha_{0,n}L^{-3n}$ for the radius of the current in \eqref{eq:space-of-step} and $a_2 \coloneqq \alpha_{1,k+1}L^{-2(k+1)} = aL^{-(k+1)}$ for that of the covariant differences at the step $k + 1$. By (d) and \eqref{eq:carried-blocking-condition},
+\begin{equation}\label{eq:carried-ratios}
+    \frac{a}{\varrho_j} \leq \varkappa_mL^{-m} \leq \frac{1}{20}\;,
+    \qquad
+    \frac{a_2}{\alpha_{1,j}L^{-2j}} \leq \varkappa_mL^{-2m}\;,
+    \qquad
+    \frac{r^{(k+1)}}{r^{(j)}} \leq \varkappa_mL^{-3m} \leq \frac{1}{20L^2}\;.
+\end{equation}
+The curvature of the real configuration is $f \coloneqq \max_p\abs{U(\partial p) - 1} \leq 2B_3\varepsilon_{k+1}L^{-2(k+1)}$ by (b), and $f = 0$ for the trivial configuration. Since $\varepsilon_{k+1}/\alpha_{0,k+1}$ and $\alpha_{1,n}$ tend to zero with $\gamma$, uniformly in the steps (Appendix~\ref{app:constants}, $q_0 > p_0$), we may and do assume that
+\begin{equation}\label{eq:carried-smallness}
+    c_Gf \leq \tfrac14c_F\,\alpha_{0,j}L^{-2j}\;,
+    \qquad
+    c_G\,\alpha_{1,n}^2 \leq \tfrac14c_F\,\alpha_{0,n}\;,
+    \qquad
+    \alpha_{1,n} \leq \rho_0
+\end{equation}
+for all steps $n$; the first uses $\alpha_{0,k+1} \leq \varkappa_m\alpha_{0,j}$ and $\varkappa_mL^{-2m} \leq 1$.
+
+\emph{(i).} For $j \geq 2$ put
+\[
+    R' \coloneqq \min\Bigl(\frac{\varrho_j}{2a},\ \frac{c_F\,\alpha_{0,j}L^{-2j}}{8c_G\,a_2},\ \frac14\Bigl(\frac{r^{(j)}}{r^{(k+1)}} - 1\Bigr)\Bigr)\;,
+\]
+and for $j = 1$ let $R'$ be the first of the three numbers. If $2R' \leq 1$, the left side of \eqref{eq:excess-plain} is at most $2\norm{Y_W}_{(j)} \leq \norm{Y_W}_{(j)}/R'$, because both points lie in $\mathcal D_W$. Let $2R' > 1$. For $\abs z < 2R'$ the pair $(e^{iz\alpha}U, J + z(\mathbf J - J))$ lies in $\mathcal S_j(U)$: the complex part $z\alpha$ has norm less than $2R'a \leq \varrho_j$ and covariant differences less than $2R'a_2 \leq \varrho_jL^{-(k+1)} \leq \alpha_{1,j}L^{-2j}$; by \eqref{eq:complex-curvature} with $a_\circ = \varrho_j \leq \rho_0$ and $d_\circ = 2R'a_2$, and by \eqref{eq:carried-smallness} and the second entry of $R'$, its curvature is at most $c_Gf + 2c_GR'a_2 + c_G\varrho_j^2 \leq \frac34c_F\alpha_{0,j}L^{-2j}$; and the current has norm less than $r^{(k+1)} + 4R'r^{(k+1)} \leq r^{(j)}$, by the third entry. The function $g(z) \coloneqq Y_W(e^{iz\alpha}U, J + z(\mathbf J - J)) - Y_W(U, J)$ is therefore holomorphic on the disc of radius $2R' > 1$, it is at most $2\norm{Y_W}_{(j)}$ in norm there, and $g(0) = 0$, so that by Schwarz's lemma, applied to the matrix elements, $\norm{g(1)} \leq \norm{Y_W}_{(j)}/R'$. In both cases the left side of \eqref{eq:excess-plain} is at most $\norm{Y_W}_{(j)}/R'$, and by \eqref{eq:carried-ratios} the reciprocals of the three entries of $R'$ are at most $2\varkappa_mL^{-m}$, $(8c_G\lambda_\alpha/c_F)\varkappa_mL^{-2m}$, and $4 \cdot \frac{20}{19}\varkappa_mL^{-3m}$, each of which is at most $c_{\mathrm{pl}}\varkappa_mL^{-m}$.
+
+\emph{(ii), the gauge.} The conditions \eqref{eq:space-of-step} are invariant under the $G$-valued gauge transformations, which conjugate $\alpha$ and $\mathbf J$, and so are the norms in \eqref{eq:excess-covariant}, by \eqref{eq:covariance-law} and because $\pi$ is unitary on $G$. For $U = U_{k+1}$ we apply Supplement, Lemma~17.22, to a cube $\mathcal Q$ of $2^4$ cubes of $\pi_{k+1}$ which contains $B_W$; such a cube exists because $\delta_W \leq \frac12$ is less than the side $M$ of these cubes. Its hypotheses hold for $\gamma$ small, because the local curvature is $E \leq 2B_3\varepsilon_{k+1}$ by (b) and $M_{\mathcal Q} \leq 4M$. It gives a $G$-valued gauge transformation after which $U = e^{i\zeta}$ on $B_W$ with, in fine units,
+\[
+    \abs{\zeta(b)} \leq z \coloneqq \hat bL^{-(k+1)}\;,
+    \qquad
+    \abs{\zeta(b + e) - \zeta(b)} \leq z' \coloneqq \hat bL^{-2(k+1)}\;,
+    \qquad
+    \hat b \coloneqq 24B_3^2M\varepsilon_{k+1}\;,
+\]
+and for the trivial configuration $\zeta = 0$. We work in this gauge and apply Lemma~\ref{lem:gauge-reduction} to the cube $B_W$, with $D = D_W$, $x_0 = x_W$, the radii $a$ and $a' = a_2$ of \eqref{eq:carried-datum}, and these $z$, $z'$; its hypotheses hold because $4aD_W = 4\alpha_{1,k+1}\delta_W \leq 2\alpha_{1,k+1}$ and $z$ are small. In the bounds of that lemma, $a_2D_W = a\delta_W$, $zaD_W = \hat b\,a\delta_W$, $a^2 = \alpha_{1,k+1}L^{-(k+1)}a \leq \alpha_{1,k+1}a\delta_W$, and $za = \hat b\,a_2$, so that every term is a multiple of $a\delta_W$, or of $a$, or of $a_2$, with a coefficient which is $4$, respectively $2$, respectively $1$, up to terms which vanish with $\alpha_{1,k+1}$ and $\hat b$. For $\gamma$ small we therefore have, for $t \in [0, 1]$ and on the bonds of $B_W$,
+\begin{equation}\label{eq:reduced-datum}
+    \abs{\alpha_1} \leq 5a\delta_W\;,
+    \qquad
+    \abs{\alpha_t} \leq 3a\;,
+    \qquad
+    \abs{\delta_e\alpha_t} \leq 2a_2\;,
+    \qquad
+    \abs\omega \leq 4\alpha_{1,k+1}\delta_W\;.
+\end{equation}
+
+\emph{(ii), the path.} We claim that $(\mathbf U^{u_t}, R(u_t)\mathbf J) \in \mathcal S_j(U)|_{X^+_W}$ for $t \in [0, 1]$. By Lemma~\ref{lem:gauge-reduction}, $\mathbf U^{u_t} = e^{i\alpha_t}U$, and by \eqref{eq:reduced-datum} and \eqref{eq:carried-ratios} the complex part satisfies $\abs{\alpha_t} \leq 3a < \varrho_j$ and $\abs{\delta_e\alpha_t} \leq 2a_2 \leq 2\varkappa_mL^{-2m}\alpha_{1,j}L^{-2j} < \alpha_{1,j}L^{-2j}$. For the curvature we use that $\delta_W \leq \mu$ and $\delta_W \geq 2ML^{-m}$ give $L^{-m} \leq \mu/(2M)$, so that $2a_2 \leq 2\varkappa_mL^{-m} \cdot L^{-m}\lambda_\alpha\alpha_{0,j}L^{-2j} \leq (\mu\lambda_\alpha/(20M))\alpha_{0,j}L^{-2j} \leq (c_F/(20c_G))\alpha_{0,j}L^{-2j}$ by the definition of $\mu$; with \eqref{eq:complex-curvature} for $a_\circ = 3a \leq \varrho_j$ and \eqref{eq:carried-smallness} the curvature is less than $c_F\alpha_{0,j}L^{-2j}$. Finally $\abs{R(u_t)\mathbf J} \leq (1 + c_G\abs\omega)\abs{\mathbf J} \leq 2r^{(k+1)} < r^{(j)}$ by (N1). For $j = 1$ only the first of these conditions is posed. Since $u_1(x_W) = 1$, \eqref{eq:base-point-invariance} and \eqref{eq:base-point-form} give
+\begin{equation}\label{eq:carried-identity}
+    Y_W(\mathbf U, \mathbf J) = \hat Y_W(\mathbf U^{u_1}, R(u_1)\mathbf J)\,\pi\bigl(\mathbf U(I_W)\bigr)\;.
+\end{equation}
+
+\emph{(ii), the disc.} Put
+\[
+    R_A \coloneqq \frac{\mu\varrho_j}{10\,a\delta_W}\;,
+    \qquad
+    R_J \coloneqq \frac13\Bigl(\frac{r^{(j)}}{r^{(k+1)}} - 1\Bigr)\;,
+    \qquad
+    R \coloneqq \min(R_A, R_J)\;,
+\]
+with $R \coloneqq R_A$ for $j = 1$, and $f(z) \coloneqq \hat Y_W(e^{iz\alpha_1}U, J + z(R(u_1)\mathbf J - J))$ for $\abs z < R$, so that $f(1)$ is the first factor of \eqref{eq:carried-identity} and $f(0) = \hat Y_W(U, J)$. Since $\delta_W \leq \mu$, we have $R_A \geq \varrho_j/(10a) \geq 2$ and $R_J \geq 2$ by \eqref{eq:carried-ratios}. For $\abs z < R$ the pair in the argument of $f$ lies in $\mathcal S_j(U)|_{X^+_W}$: by \eqref{eq:reduced-datum} the complex part $z\alpha_1$ has norm less than $5R_Aa\delta_W = \mu\varrho_j/2$; its covariant differences are less than $2R_Aa_2 = \mu\varrho_jL^{-(k+1)}/(5\delta_W) \leq \mu\,\alpha_{1,j}L^{-2j}/(10M)$, because $\delta_W \geq 2ML^{-m}$; by \eqref{eq:complex-curvature}, \eqref{eq:carried-smallness}, and the definition of $\mu$ its curvature is at most
+\[
+    c_Gf + \frac{c_G\mu\lambda_\alpha}{10M}\alpha_{0,j}L^{-2j} + c_G\varrho_j^2 \leq \Bigl(\frac14 + \frac{1}{10} + \frac14\Bigr)c_F\,\alpha_{0,j}L^{-2j}\;;
+\]
+and the current has norm less than $r^{(k+1)} + 3R_Jr^{(k+1)} = r^{(j)}$, because $\abs{R(u_1)\mathbf J} \leq 2r^{(k+1)}$. Hence $f$ is holomorphic on the disc of radius $R$. Along the interval the transport of $e^{iz\alpha_1}U$ is a product of at most $D_W/2$ factors $e^{iz\alpha_1(b)}U(b)$, with $\pi(U(b))$ unitary and $\norm{\pi(e^{iX})} \leq e^{c'_\pi\abs X}$ (Section~\ref{sec:localisation-expansion}), so that by \eqref{eq:base-point-form} and (a)
+\begin{align*}
+    \norm{f(z)} &\leq \norm{Y_W}_{(j)}\exp\bigl(c'_\pi\tfrac12\mu\varrho_j \cdot \tfrac12D_W\bigr) = \norm{Y_W}_{(j)}\exp\bigl(\tfrac12c'_\pi\mu u_\star M\alpha_{1,j}\,\sigma(W)\bigr)\\
+    &\leq e^{\nu\sigma(W)/8192}\,\norm{Y_W}_{(j)}\;,
+\end{align*}
+the last for $\gamma$ so small that $4096\,c'_\pi u_\star M\alpha_{1,n} \leq \nu$ for all $n$. By Schwarz's lemma for $f - f(0)$, which is at most twice this bound on the disc, $\norm{f(1) - f(0)} \leq (2/R)e^{\nu\sigma(W)/8192}\norm{Y_W}_{(j)}$. In the same way $\norm{\pi(\mathbf U(I_W))} \leq \exp(c'_\pi a D_W/2) = \exp(\frac12c'_\pi\alpha_{1,k+1}\delta_W) \leq 2$, and $\norm{f(0)} = \norm{Y_W(U, J)}$ because $\pi(U(I_W))$ is unitary. By \eqref{eq:carried-identity},
+\[
+    \norm{Y_W(\mathbf U, \mathbf J)} \leq 2\bigl(\norm{f(0)} + \norm{f(1) - f(0)}\bigr) \leq 2\norm{Y_W(U, J)} + \frac4R\,e^{\nu\sigma(W)/8192}\norm{Y_W}_{(j)}\;,
+\]
+and $4/R \leq 4/R_A + 4/R_J \leq 40\varkappa_mL^{-m}\delta_W/\mu + 12 \cdot \frac{20}{19}\varkappa_mL^{-3m}$ by \eqref{eq:carried-ratios}, which is \eqref{eq:excess-covariant}.
+\end{proof}
+
+\subsection{The Sum over the Generations}\label{sec:generation-sum}
+
+\begin{proposition}[The Carried Groups in the Supremum Clause]\label{prop:carried-sup}
+Let the ensemble be dressed at the steps $1, \dots, k$, and suppose that on the term without large-field regions of the step $k + 1$ the groups carried from these steps satisfy \eqref{eq:per-insertion} and \eqref{eq:tail-clause} at the step $k + 1$, at every real background of the term, and vanish at its reference data. Let $\gamma$ be sufficiently small and $L > \Lambda_{\mathfrak a} \coloneqq (1 + \beta_0)^{10}$. Then, for every traversal $\mathfrak n'$ of the step $k + 1$,
+\begin{equation}\label{eq:carried-sup}
+    \sum_{W \ni \mathfrak n'}e^{\theta(W) + \lambda_c\nu\sigma(W) + \nu_e\operatorname{ext}(W)}\norm{Y_W}_{(k+1)} \leq 2C_\chi\tilde\rho_{k+1}\bar\delta^*_{\mathfrak n'} + \hat C\,C_{S'}\,\mathfrak a_{k+1}\;,
+\end{equation}
+the sum over the groups of the deviation species made at the steps $j \leq k$ with $\mathfrak n'$ in the interval, where $\bar\delta^*_{\mathfrak n'}$ is the expression \eqref{eq:deviation-quantity} of the step $k + 1$ with each maximum replaced by its supremum over the real backgrounds of the term, and
+\begin{equation}\label{eq:generation-constant}
+    \hat C \coloneqq \sum_{m \geq 1}\Lambda_{\mathfrak a}^m\,\varkappa_m\Bigl[L^{-m}\Bigl(\frac{1280\,u_\star M}{e\,\nu\mu} + 14L^{-m}\Bigr) + c_{\mathrm{pl}}\exp\Bigl(-\frac{\nu\mu L^m}{32u_\star M}\Bigr)\Bigr]\;.
+\end{equation}
+Here $\theta(W)$, $\sigma(W)$, and $\operatorname{ext}(W)$ are the numbers fixed when $W$ was made, as in \eqref{eq:production-clause}.
+\end{proposition}
+
+The constant $\hat C$ is finite because $L > \Lambda_{\mathfrak a}$, and it depends on $L$, $M$, $\nu$, $\beta_0$, $u_\star$, $c_F$, $c_G$, and $\lambda_\alpha$, and not on $k$ or on the coupling. The first term of \eqref{eq:carried-sup} is at most $2C_\chi\tilde\rho_{k+1} \cdot 2c_\sigma B_3\varepsilon_{k+1}W_1$, because the bound \eqref{eq:deviation-scaling} holds for each maximum and at every real background, and this is less than $\mathfrak a_{k+1}$ for $\gamma$ small, since $\tilde\rho_{k+1}\varepsilon_{k+1} = \rho_{k+1}\varepsilon_{k+1}/\min(\alpha_{0,k+1}, \alpha_{1,k+1})$ and $q_0 > p_0$. With \eqref{eq:production-clause} at the step $k + 1$, in which $\ell_W \geq 1$, $S_W \geq \norm{Y_W}_{(k+1)}$, and $\lambda_c \leq 1$, the proposition therefore gives \eqref{eq:sup-clause} at the step $k + 1$ with
+\begin{equation}\label{eq:sup-constant}
+    C_c \coloneqq 1 + (1 + \hat C)\,C_{S'}\;.
+\end{equation}
+The constant does not come from a recursion: the bound of the carried groups uses the production clauses of the earlier steps and no supremum clause.
+
+\begin{proof}
+\emph{The amplitudes of two steps.} We first show that $\mathfrak a_n \leq \Lambda_{\mathfrak a}\mathfrak a_{n+1}$ for $1 \leq n \leq k$, so that $\mathfrak a_j \leq \Lambda_{\mathfrak a}^m\mathfrak a_{k+1}$. By \eqref{eq:tube-two-six} and \eqref{eq:tube-two-seven}, $g_n \leq (1 + \beta_0)g_{n+1}$ and, for $\gamma$ small, $(1 + \beta_0)^{-1}r_{n+1} \leq r_n \leq (1 + \beta_0)r_{n+1}$ for the radii $r_n = A_1(\log g_n^{-2})^{p_0}$ of \eqref{eq:class-parameters}. Hence $\rho_n \leq (1 + \beta_0)^6\rho_{n+1}$ and $g_n(1 + r_n)^3 \leq (1 + \beta_0)^4g_{n+1}(1 + r_{n+1})^3$, while $e^{-c_\tau r_n^2} \leq e^{-c_\tau r_{n+1}^2/(1 + \beta_0)^2} \leq \beta_0g_{n+1}$ for $\gamma$ small, because $r_{n+1}^2$ is a multiple of the power $2p_0 > 1$ of $\log g_{n+1}^{-2}$. Therefore $\tau_n \leq ((1 + \beta_0)^4 + \beta_0)\tau_{n+1} \leq (1 + \beta_0)^5\tau_{n+1}$, and the claim follows from \eqref{eq:amplitude}.
+
+\emph{The real points.} Let $W$ be a group of the sum, made at the step $j$, and \eqref{eq:carried-datum} a point of the space of the step $k + 1$, around $U$. We apply Proposition~\ref{prop:one-carried}(ii) if $\delta_W \leq \mu$ and (i) otherwise, and in both cases
+\[
+    \norm{Y_W(\mathbf U, \mathbf J)} \leq 2\norm{Y_W(U, J)} + \epsilon_W\;,
+\]
+with $\epsilon_W$ the second term of \eqref{eq:excess-covariant}, respectively the right side of \eqref{eq:excess-plain}; it does not depend on the point. If $U$ is the trivial configuration, the first term vanishes by hypothesis. If $U = U_{k+1}$, let $\mathfrak n_j \subset \mathfrak n'$ be a traversal of the step $j$ in the interval of $W$ and $t \coloneqq t^{(k+1)}_{\mathfrak n'}(W)$. As in the proof of Lemma~\ref{lem:tail-to-sum}, the comparison region of $W$ at $\mathfrak n_j$ lies within the distance $R_t$ of $\mathfrak n'$ in the units of the scale $k + 1$, so that by \eqref{eq:per-insertion} and \eqref{eq:insertion-deviation} $e^{\theta(W)}\norm{Y_W(U, J)} \leq \beta_W\bar m_t$, where $\bar m_t$ is the supremum over the real backgrounds of the maximum of $\abs{U(\partial p) - 1}$ over $p \in \mathcal P_t(\mathfrak n')$. Taking the supremum over the points we obtain
+\begin{equation}\label{eq:carried-pointwise}
+    e^{\theta(W)}\norm{Y_W}_{(k+1)} \leq 2\beta_W\,\bar m_{t^{(k+1)}_{\mathfrak n'}(W)} + e^{\theta(W)}\epsilon_W\;.
+\end{equation}
+The numbers $\bar m_t$ are nondecreasing in $t$, and the summation by parts of the proof of Lemma~\ref{lem:tail-to-sum}, with \eqref{eq:tail-clause} at the step $k + 1$ and $\lambda_c \leq 1$, bounds the weighted sum of the first terms of \eqref{eq:carried-pointwise} over the groups of the sum by $2C_\chi\tilde\rho_{k+1}\bar\delta^*_{\mathfrak n'}$.
+
+\emph{The excess of one generation.} Fix $j \leq k$ and consider the groups of the sum which were made at the step $j$. Each of them has a traversal of the step $j$ in its interval which is contained in $\mathfrak n'$, namely the one which contains a fine bond common to $\mathfrak n'$ and the interval, and $\mathfrak n'$ contains $L^m$ traversals of the step $j$. By \eqref{eq:production-clause} at the step $j$, with $\ell_W \geq 1$ and $S_W \geq \norm{Y_W}_{(j)}$,
+\begin{equation}\label{eq:generation-production}
+    \sum_We^{\theta(W) + \nu\sigma(W) + \nu_e\operatorname{ext}(W)}\norm{Y_W}_{(j)} \leq L^mC_{S'}\,\mathfrak a_j\;,
+\end{equation}
+the sum over these groups. For those with $\delta_W \leq \mu$ we have $\lambda_c\nu + \nu/8192 = \frac{15}{16}\nu$ and, by \eqref{eq:carried-sizes} and $te^{-\nu t/16} \leq 16/(e\nu)$,
+\begin{align*}
+    e^{\lambda_c\nu\sigma(W)}\epsilon_W &\leq e^{\nu\sigma(W)}\varkappa_mL^{-m}\Bigl(\frac{80u_\star ML^{-m}}{\mu}\sigma(W)e^{-\nu\sigma(W)/16} + 14L^{-2m}\Bigr)\norm{Y_W}_{(j)}\\
+    &\leq e^{\nu\sigma(W)}\varkappa_mL^{-2m}\Bigl(\frac{1280\,u_\star M}{e\,\nu\mu} + 14L^{-m}\Bigr)\norm{Y_W}_{(j)}\;.
+\end{align*}
+For those with $\delta_W > \mu$ we have $\sigma(W) > \mu L^m/(2u_\star M)$, so that $e^{\lambda_c\nu\sigma(W)} \leq e^{\nu\sigma(W)}e^{-\nu\sigma(W)/16} \leq e^{\nu\sigma(W)}\exp(-\nu\mu L^m/(32u_\star M))$ and
+\[
+    e^{\lambda_c\nu\sigma(W)}\epsilon_W \leq e^{\nu\sigma(W)}c_{\mathrm{pl}}\,\varkappa_mL^{-m}\exp\Bigl(-\frac{\nu\mu L^m}{32u_\star M}\Bigr)\norm{Y_W}_{(j)}\;.
+\]
+Multiplying by $e^{\theta(W) + \nu_e\operatorname{ext}(W)}$ and summing with \eqref{eq:generation-production}, we find that the weighted sum of the $\epsilon_W$ over the groups made at the step $j$ is at most the $m$-th term of \eqref{eq:generation-constant} without the factor $\Lambda_{\mathfrak a}^m$, times $C_{S'}\mathfrak a_j$, and $\mathfrak a_j \leq \Lambda_{\mathfrak a}^m\mathfrak a_{k+1}$.
+
+\emph{The sum.} Summing the excesses over $j \leq k$, that is, over $m \geq 1$, and adding the first terms of \eqref{eq:carried-pointwise}, we obtain \eqref{eq:carried-sup}.
+\end{proof}
+
+\bibliographystyle{amsplain}
+\bibliography{refs}
+
+\end{document}
