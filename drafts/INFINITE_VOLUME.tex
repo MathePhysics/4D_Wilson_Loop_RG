@@ -1,0 +1,241 @@
+% !TeX program = pdflatex
+\documentclass[11pt]{preprint}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{mathtools}
+\usepackage{mathrsfs}
+\usepackage[a4paper,margin=28mm]{geometry}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{xr-hyper}
+\usepackage[hidelinks]{hyperref}
+\externaldocument[P-]{WILSON_LOOPS_CONTINUUM_LIMIT}[../Continuum Limit Manuscript Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf]
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\id}{\mathbf 1}
+\newcommand{\diam}{\operatorname{diam}}
+\newcommand{\dist}{\operatorname{dist}}
+\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
+\DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
+\setlength{\parskip}{0.6em}
+\emergencystretch=3em
+\title{Subsequential Infinite-Volume Limits of the Wilson Loop Functions}
+\author{}
+\date{}
+
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\theoremstyle{plain}
+\renewcommand{\qedsymbol}{\textit{q.e.d.}}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+The limits of the renormalised Wilson loop expectations constructed in the paper live on a four-dimensional torus, and the bound on which their existence rests grows exponentially with the volume of the torus. We show that a chessboard estimate, which uses nothing but the reflection positivity of the lattice measures, replaces this bound by one which does not depend on the period of the torus. As a consequence the limits converge along a subsequence of periods, for every ensemble of admissible loops in $\mathbb R^4$ at once, and the limiting functions are bounded, reflection positive, and covariant under the symmetries which the paper establishes on the torus.
+\end{abstract}
+
+\section{The Result}\label{sec:result}
+
+Everything in the paper takes place on the torus $(\mathbb R/T\mathbb Z)^4$ of the period $T = 2L^{m_T}u$, and we ask what happens as $m_T \to \infty$. Most of the construction does not see the period. The bare coupling $g_0(K, \bar g)$ of Paper, Theorem~\ref{P-thm:coupling-flow}, is determined by the coefficients $\beta_{k+1}$ of Paper, \eqref{P-eq:beta-definition}, which are defined on the infinite lattice \cite[(1.20)--(1.22), p.~264]{BalabanRG1}, so that the map from the bare coupling to the running couplings, and with it the bare coupling for a target $(K, \bar g)$, may be chosen the same for all periods; we make this choice. The step factors, and therefore the normalisations, depend neither on the loop nor on the torus (Paper, Proposition~\ref{P-prop:normalisation-structure}), and the threshold $\gamma_0$ and the function $q_\sharp$ of Paper, Theorem~\ref{P-thm:main}, depend only on the constants of the construction and on $\Lambda_*$. Of the three quantities which enter the uniform bound of Paper, Theorem~\ref{P-thm:uniform-bound}, the sum $B_E(\mathcal C)$ of the remainders does not involve the torus, and the insertion total $I_*(\mathcal C)$ decreases as the torus grows. The third one grows, however: the bound $\bar\delta_{\mathrm{LF}}$ on the weight of the large-field terms (Paper, Proposition~\ref{P-prop:large-field-weight}) contains the factor $e^{2C_K}$ with $C_K = C_{\mathrm{fs}}N_q^4(1 + \log g_{K'}^{-1})$, where $N_q$ is the number of sites per side of the lattice at the stopping scale (Paper, \eqref{P-eq:stopping-sites}). This factor is the price of comparing whole integrals over that lattice, and it makes the bound of Paper, Theorem~\ref{P-thm:uniform-bound}, exponential in the volume.
+
+Reflection positivity turns a cost which is extensive in the volume into a cost per block. If the torus is cut into $\abs{\Lambda}$ congruent blocks and an ensemble is placed in one of them, the chessboard estimate bounds the $\abs{\Lambda}$-th power of its expectation by the expectation of the ensemble obtained by reflecting it into every block. The uniform bound of the paper, applied to this larger ensemble, contains the factor $e^{2C_K}$ only once, so that its $\abs{\Lambda}$-th root is a number of the block alone, while the costs of the loops, which are sums over the loops, are divided back to those of one copy. The chessboard estimate is due to Fr\"ohlich, Israel, Lieb, and Simon \cite{FILS}; we prove the form which we need, from the reflection positivity of the lattice measures in Paper, Lemma~\ref{P-lem:lattice-reflection-positivity}, in Section~\ref{sec:chessboard}.
+
+Throughout, $L$, $u$, $\Lambda_*$, $\gamma_0$, and $q_\sharp$ are as in Paper, Theorem~\ref{P-thm:main}, and $\bar g \in (0, \gamma_0]$ is fixed. For an integer $s \geq 0$ we write $T_s \coloneqq 2L^su$ and $\mathbb T^{(s)} \coloneqq (\mathbb R/T_s\mathbb Z)^4$, which is the torus of the paper with $m_T = s$, and a superscript $(s)$ marks the objects of the paper on it, such as $\mathbb E^{(s)}_K$, $W^{(s)}_K$, and $W^{(s)}$. The limit in the volume concerns loops in $\mathbb R^4$, which we now define.
+
+\begin{definition}[Ensembles in $\mathbb R^4$]\label{def:ensembles-plane}
+Let $q \geq 0$ be an integer. A \emph{loop at level $q$ in $\mathbb R^4$} is a closed path of bonds of the lattice $uL^{-q}\mathbb Z^4$ which visits no site twice, with its orientation, and a \emph{loop ensemble at level $q$ in $\mathbb R^4$} is a finite family $\mathcal C = ((C_1, \chi_1), \dots, (C_n, \chi_n))$ of pairwise vertex-disjoint loops at level $q$ in $\mathbb R^4$, each with the character $\chi_i$ of an irreducible unitary representation of $G$. The \emph{extent} $E(\mathcal C)$ is the largest of the four numbers $\max x_\mu - \min x_\mu$, the maximum and the minimum being taken over the sites $x$ of the loops of $\mathcal C$. We put $b_q(\mathcal C) \coloneqq uL^{n_q(\mathcal C)}$, where $n_q(\mathcal C)$ is the least integer $n \geq -q$ with $uL^n \geq E(\mathcal C) + 2uL^{-q}$, and $s_q(\mathcal C) \coloneqq \max(0, n_q(\mathcal C) + 1)$. Finally $\mathfrak E$ denotes the set of the pairs $(\mathcal C, q)$ of an integer $q \geq 0$ and a loop ensemble $\mathcal C$ at level $q$ in $\mathbb R^4$ whose loops are admissible in the sense of Paper, Definition~\ref{P-def:admissible}, and for which $q \geq q_\sharp(c_{\mathcal C}, \bar g)$.
+\end{definition}
+
+Let $(\mathcal C, q) \in \mathfrak E$ and $s \geq s_q(\mathcal C)$, and let $\pi_s \colon \mathbb R^4 \to \mathbb T^{(s)}$ be the covering map. The sites of $\mathcal C$ lie in a closed box of side $E(\mathcal C) < b_q(\mathcal C)$, and $\pi_s$ is injective on every box of side less than $T_s = 2uL^s \geq 2Lb_q(\mathcal C)$. The family $\pi_s\mathcal C$ of the images, with the same characters, is therefore a loop ensemble at level $q$ on $\mathbb T^{(s)}$ in the sense of Paper, Definition~\ref{P-def:loop-ensemble}, the condition $3\diam(\pi_sC_i) < T_s$ holding because $\diam(C_i) \leq E(\mathcal C) < b_q(\mathcal C)$; and its loops have the chord--arc constants, the ratios $P/r$, and the numbers $P_q$ of the loops of $\mathcal C$, since these are computed in a lift. We write $W^{(s)}(\mathcal C)$ for the limit of Paper, Theorem~\ref{P-thm:main}, of the ensemble $\pi_s\mathcal C$ with the normalisation of the level $q$.
+
+Two numbers enter the bound. The first is the number $B_E(\mathcal C)$ of Paper, \eqref{P-eq:remainder-sum}, which is defined without reference to the torus and bounds the sum of the remainders on every torus. The second replaces the insertion total of Paper, \eqref{P-eq:insertion-total}, which involves the torus only through its last factor $S_{\mathrm{wr}}(c_{\mathrm{att}}N_q/M)$; since $S_{\mathrm{wr}}(b) = \sum_{i \geq 0}L^ie^{-bL^i}$ decreases in $b$ and $N_q = 2L^{m_T+j_q} \geq 2$, the insertion total is at most
+\begin{equation}\label{eq:insertion-total-volume}
+    I^\flat_*(\mathcal C) \coloneqq P_{K'}(\mathcal C)\Bigl[\frac{2c_\sigma C_\chi(1 + 2\kappa_s)B_3S_w\,\bar\rho\,\varepsilon_{K'}}{\min(\alpha_{0,K'}, \alpha_{1,K'})} + C^2\bar\rho\,S_{\mathrm{wr}}\Bigl(\frac{2c_{\mathrm{att}}}{M}\Bigr)\Bigr]\;,
+\end{equation}
+with the constants of Paper, \eqref{P-eq:insertion-total}. For a length $b > 0$ we put, with the constants of Paper, Proposition~\ref{P-prop:large-field-weight}, and with $\hat g_{K'}^{-2} = \bar g^{-2} + b'j_q + C_W$ (Paper, \eqref{P-eq:tube-couplings}),
+\begin{equation}\label{eq:block-cost}
+    \Gamma_q(b, \bar g) \coloneqq \Bigl(\frac{bL^{j_q}}{u}\Bigr)^4\Bigl[2C_{\mathrm{fs}}\Bigl(1 + \frac12\log\hat g_{K'}^{-2}\Bigr) + \frac{2}{(MR_{K'})^4}\exp\bigl(-c_{\mathrm{LF}}\,p_0((1 + \beta_0)\bar g)\bigr)\Bigr]\;.
+\end{equation}
+The numbers $P_{K'}(\mathcal C) = P_q(\mathcal C)L^3MR_{K'-1}$, $\varepsilon_{K'}$, $\alpha_{0,K'}$, $\alpha_{1,K'}$, $R_{K'}$, and $\hat g_{K'}$ are functions of $q$, $\bar g$, and the constants of the construction (Paper, Section~\ref{P-sec:stopping-scale}), and the constants in \eqref{eq:insertion-total-volume} and \eqref{eq:block-cost} do not depend on the torus (Paper, Definition~\ref{P-def:dressed-loop}, uniformity, and \eqref{P-eq:final-scale-constant}). Hence neither $I^\flat_*(\mathcal C)$ nor $\Gamma_q(b, \bar g)$ depends on the period or on $K$; the first is a sum over the loops of $\mathcal C$, and so is $B_E(\mathcal C)$.
+
+The theorem says that the limits on the tori converge along one subsequence of periods for all ensembles at once, and that the limits keep the bound and the structure which the paper proves on each torus.
+
+\begin{theorem}[Subsequential Infinite-Volume Limits]\label{thm:infinite-volume}
+There is a strictly increasing sequence $(s_k)_{k \geq 1}$ of integers such that, for every $(\mathcal C, q) \in \mathfrak E$, the limit
+\begin{equation}\label{eq:infinite-volume-limit}
+    W^\infty(\mathcal C) \coloneqq \lim_{k \to \infty}W^{(s_k)}(\mathcal C)
+\end{equation}
+exists, the level being that of the pair. For every level $q$ and all ensembles $\mathcal C$, $g\mathcal C$, $h\mathcal C$, $\mathcal D_a$ below which form pairs of $\mathfrak E$ with this level, the limits have the following properties.
+\begin{enumerate}[label=(\roman*)]
+\item $\abs{W^\infty(\mathcal C)} \leq \exp\bigl(B_E(\mathcal C) + I^\flat_*(\mathcal C) + \Gamma_q(b_q(\mathcal C), \bar g)\bigr)$.
+\item $W^\infty(\mathcal C)$ does not depend on the order of the loops of $\mathcal C$; $W^\infty(g\mathcal C) = W^\infty(\mathcal C)$ for every map $g(x) = Ox + v$ of $\mathbb R^4$ with a diagonal matrix $O$ with entries $\pm1$ and $v \in uL^{-q}\mathbb Z^4$; $W^\infty(\bar{\mathcal C}) = \overline{W^\infty(\mathcal C)}$, and $W^\infty(\mathcal C)$ does not change if a loop $C_i$ is replaced by $C_i^{-1}$ and its character by $\bar\chi_i$; and $W^\infty(h\mathcal C) = W^\infty(\mathcal C)$ for every map $h(x) = Ox + v$ with a signed permutation matrix $O$ and $v \in uL^{-q}\mathbb Z^4$ for which there are maps $g_1, \dots, g_n$ of the previous kind with $hC_i = g_iC_i$ for every $i$.
+\item Let $\mu \in \{ 0, \dots, 3 \}$ and $a \in uL^{-q}\mathbb Z$, let $\theta$ be the reflection of $\mathbb R^4$ which replaces $x_\mu$ by $2a - x_\mu$, and let $\mathcal D_1, \dots, \mathcal D_m$ be loop ensembles at level $q$ in $\mathbb R^4$, possibly empty, whose loops are admissible and lie in $\{ x_\mu > a \}$, with $q \geq q_\sharp(c, \bar g)$ for the largest number $c$ of the form $c_\pi$ among their representations. Then, with $\mathcal D_0 \coloneqq \emptyset$ and $W^\infty(\emptyset) \coloneqq 1$, the matrices
+\begin{equation}\label{eq:infinite-volume-positivity}
+    \bigl(W^\infty(\mathcal D_a \cup \theta\bar{\mathcal D}_b)\bigr)_{1 \leq a, b \leq m}
+    \qquad\text{and}\qquad
+    \bigl(W^\infty(\mathcal D_a \cup \theta\bar{\mathcal D}_b) - W^\infty(\mathcal D_a)\overline{W^\infty(\mathcal D_b)}\bigr)_{1 \leq a, b \leq m}
+\end{equation}
+are Hermitian and positive semidefinite, and $W^\infty(\theta\bar{\mathcal D}_a) = \overline{W^\infty(\mathcal D_a)}$ for every $a$.
+\end{enumerate}
+\end{theorem}
+
+The bound (i) is the one which the compactness argument needs, a number of the ensemble which does not depend on the period. It is not a product over the loops, since it contains the fourth power of the extent of the whole ensemble through $b_q(\mathcal C)$, and Remark~\ref{rem:not-asserted} says what the theorem leaves open.
+
+\section{The Chessboard Estimate}\label{sec:chessboard}
+
+The estimate rests on one Cauchy--Schwarz inequality for each reflection, and on an argument which shows that these inequalities, applied repeatedly, spread one function over all the blocks. We first set up the blocks and the maps which move a function from one block to another.
+
+Let $s \geq 0$, $q \geq 0$, and $K \geq q$ be integers, let $n$ be an integer with $-q \leq n \leq s$, and put $b \coloneqq uL^n$ and $m \coloneqq L^{s-n}$, so that $T_s = 2mb$ and $b \in uL^{-q}\mathbb Z$. Let $\Lambda \coloneqq (\mathbb Z/2m\mathbb Z)^4$. For $j \in \mathbb Z/2m\mathbb Z$ and $y \in \mathbb R/T_s\mathbb Z$ put $\psi_j(y) \coloneqq y + jb$ if $j$ is even and $\psi_j(y) \coloneqq (j + 1)b - y$ if $j$ is odd; this is well defined, because $T_s = 2mb$ and the parity of $j$ is defined modulo $2m$. For $t \in \Lambda$ let $\varphi_t(x) \coloneqq (\psi_{t_0}(x_0), \dots, \psi_{t_3}(x_3))$ and $\abs{t} \coloneqq t_0 + \dots + t_3$ modulo $2$. The map $\varphi_t$ is the composition of a translation by a vector of $b\mathbb Z^4 \subset uL^{-q}\mathbb Z^4$ with reflections $\theta_\mu$, so it belongs to the group $\mathfrak G_q$ of Paper, Section~\ref{P-sec:results}, and it maps the open block $B^\circ_0 \coloneqq (0, b)^4$ onto the open block $B^\circ_t \coloneqq \prod_\mu(t_\mu b, (t_\mu + 1)b)$.
+
+For $\mu \in \{ 0, \dots, 3 \}$ and $k \in \mathbb Z$ the reflection $\theta_{\mu,kb}$ is a reflection of level $q$, since $kb \in uL^{-q}\mathbb Z$. For $t \in \Lambda$ let $\hat\theta_kt$ be obtained from $t$ by replacing $t_\mu$ by $2k - 1 - t_\mu$. Then
+\begin{equation}\label{eq:reflected-block-map}
+    \theta_{\mu,kb} \circ \varphi_t = \varphi_{\hat\theta_kt}\;,
+    \qquad
+    \abs{\hat\theta_kt} \neq \abs{t}\;.
+\end{equation}
+Indeed, only the coordinate $\mu$ changes, and $\theta_{\mu,kb}$ replaces $y$ by $2kb - y$: for even $j = t_\mu$ we get $2kb - jb - y = (2k - j)b - y = \psi_{2k-1-j}(y)$, since $2k - 1 - j$ is odd, and for odd $j$ we get $2kb - (j + 1)b + y = \psi_{2k-1-j}(y)$, since $2k - 1 - j$ is even.
+
+The maps act on functions of the gauge field on $\mathbb T^{(s)}_K$ as in Paper, Section~\ref{P-sec:lattice-reflection-positivity}: $(F \circ h)(U) = F(hU)$ with $(hU)(b) = U(hb)$. Since $(h(h'U))(b) = (h'U)(hb) = U(h'hb)$, we have $h(h'U) = (h'h)U$ and
+\begin{equation}\label{eq:composition-rule}
+    (F \circ h) \circ h' = F \circ (h'h)\;,
+\end{equation}
+and if $F$ depends only on the values of $U$ on the bonds with both ends in a set $X$ of sites, then $F \circ h$ depends only on those with both ends in $hX$. For a bounded measurable function $F$ and $t \in \Lambda$ we put $\vartheta_tF \coloneqq F \circ \varphi_t$ if $\abs{t}$ is even and $\vartheta_tF \coloneqq \overline{F \circ \varphi_t}$ if $\abs{t}$ is odd. Since $(\Theta_{\mu,kb}F)(U) = \overline{F(\theta_{\mu,kb}U)}$, so that $\Theta_{\mu,kb}F = \overline{F \circ \theta_{\mu,kb}}$, the rules \eqref{eq:composition-rule} and \eqref{eq:reflected-block-map} give
+\begin{equation}\label{eq:reflected-block}
+    \Theta_{\mu,kb}\vartheta_tF = \vartheta_{\hat\theta_kt}F\;:
+\end{equation}
+for even $\abs{t}$ the left side is $\overline{F \circ (\theta_{\mu,kb}\varphi_t)} = \overline{F \circ \varphi_{\hat\theta_kt}}$, with $\abs{\hat\theta_kt}$ odd, and for odd $\abs{t}$ it is $F \circ \varphi_{\hat\theta_kt}$, with $\abs{\hat\theta_kt}$ even.
+
+We first spread a function over the slabs of one direction. For $\mu \in \{ 0, \dots, 3 \}$ and $j \in \mathbb Z/2m\mathbb Z$ we write $\vartheta^\mu_j \coloneqq \vartheta_{je_\mu}$, which maps the open slab $\{ 0 < x_\mu < b \}$ onto the open slab $\{ jb < x_\mu < (j + 1)b \}$.
+
+\begin{lemma}[One Direction]\label{lem:one-direction}
+Let $\mu \in \{ 0, \dots, 3 \}$, and let $G$ be a bounded measurable function of the gauge field on $\mathbb T^{(s)}_K$ which depends only on the values of $U$ on the bonds with both ends in the open slab $\{ 0 < x_\mu < b \}$. Then
+\begin{equation}\label{eq:one-direction}
+    \mathbb E^{(s)}_K\Bigl[\prod_{j \in \mathbb Z/2m\mathbb Z}\vartheta^\mu_jG\Bigr] \geq 0
+    \qquad\text{and}\qquad
+    \bigl\lvert\mathbb E^{(s)}_K[G]\bigr\rvert^{2m} \leq \mathbb E^{(s)}_K\Bigl[\prod_{j \in \mathbb Z/2m\mathbb Z}\vartheta^\mu_jG\Bigr]\;.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+For $S \subset \mathbb Z/2m\mathbb Z$ put $Z(S) \coloneqq \mathbb E^{(s)}_K[\prod_{j \in S}\vartheta^\mu_jG]$, so that $Z(\emptyset) = 1$ and $Z(\{ 0 \}) = \mathbb E^{(s)}_K[G]$. For $k \in \mathbb Z/2m\mathbb Z$ let $H^+_k \coloneqq \{ k, k + 1, \dots, k + m - 1 \}$, let $H^-_k$ be its complement, and let $\theta_k$ also denote the involution $j \mapsto 2k - 1 - j$ of $\mathbb Z/2m\mathbb Z$, which maps $H^+_k$ onto $H^-_k$.
+
+We first show that, for every $S$ and every $k$,
+\begin{equation}\label{eq:one-reflection}
+    \abs{Z(S)}^2 \leq Z(S^+_k)\,Z(S^-_k)\;,
+    \qquad
+    S^\pm_k \coloneqq (S \cap H^\pm_k) \cup \theta_k(S \cap H^\pm_k)\;.
+\end{equation}
+The open half-torus $H_{\mu,kb} = \{ kb < x_\mu < kb + mb \}$ of the reflection $\theta_{\mu,kb}$ contains the slabs $\{ jb < x_\mu < (j + 1)b \}$ with $j \in H^+_k$, because $T_s/2 = mb$. The functions
+\begin{equation}\label{eq:half-products}
+    A \coloneqq \prod_{j \in S \cap H^+_k}\vartheta^\mu_jG\;,
+    \qquad
+    B \coloneqq \prod_{j \in \theta_k(S \cap H^-_k)}\vartheta^\mu_jG
+\end{equation}
+therefore depend only on the values of $U$ on bonds with both ends in $H_{\mu,kb}$, which belong to the set $E_+$ of Paper, Section~\ref{P-sec:lattice-reflection-positivity}, so that $A$ and $B$ lie in $\mathcal A_+$. Since $\Theta_{\mu,kb}$ is multiplicative, \eqref{eq:reflected-block} gives $\Theta_{\mu,kb}B = \prod_{j \in S \cap H^-_k}\vartheta^\mu_jG$ and $\Theta_{\mu,kb}A = \prod_{j \in \theta_k(S \cap H^+_k)}\vartheta^\mu_jG$, so that
+\begin{equation}\label{eq:reflection-pairings}
+    Z(S) = \mathbb E^{(s)}_K[A\,\Theta_{\mu,kb}B]\;,
+    \qquad
+    Z(S^+_k) = \mathbb E^{(s)}_K[A\,\Theta_{\mu,kb}A]\;,
+    \qquad
+    Z(S^-_k) = \mathbb E^{(s)}_K[B\,\Theta_{\mu,kb}B]\;.
+\end{equation}
+By Paper, Lemma~\ref{P-lem:lattice-reflection-positivity}, $\langle F, F'\rangle \coloneqq \mathbb E^{(s)}_K[F\,\Theta_{\mu,kb}F']$ is a positive semidefinite sesquilinear form on $\mathcal A_+$, and \eqref{eq:one-reflection} is its Cauchy--Schwarz inequality $\abs{\langle A, B\rangle}^2 \leq \langle A, A\rangle\langle B, B\rangle$. In particular $Z(S^+_k) = \langle A, A\rangle \geq 0$ for every $S$, and for $S = \mathbb Z/2m\mathbb Z$, for which $S^+_k = \mathbb Z/2m\mathbb Z$, this is the first assertion of \eqref{eq:one-direction}.
+
+For the second assertion we fix $\epsilon > 0$, put $\zeta \coloneqq Z(\mathbb Z/2m\mathbb Z) + \epsilon > 0$, and let $\rho(S) \coloneqq \abs{Z(S)}\zeta^{-\abs{S}/(2m)}$. Since $\abs{S^+_k} + \abs{S^-_k} = 2\abs{S}$, the inequality \eqref{eq:one-reflection} gives
+\begin{equation}\label{eq:ratio-reflection}
+    \rho(S)^2 \leq \rho(S^+_k)\,\rho(S^-_k)
+\end{equation}
+for every $S$ and every $k$. Let $\rho_*$ be the largest of the finitely many numbers $\rho(S)$, so that $\rho_* \geq \rho(\emptyset) = 1$. If $\rho(S) = \rho_*$, then \eqref{eq:ratio-reflection} and $\rho(S^\pm_k) \leq \rho_*$ force $\rho(S^+_k) = \rho(S^-_k) = \rho_*$ for every $k$. Among the sets with $\rho(S) = \rho_*$ we choose one, $S$, of the largest cardinality. Then $\abs{S^\pm_k} \leq \abs{S}$ for every $k$, and since the two cardinalities add up to $2\abs{S}$, both are equal to $\abs{S}$, that is, $\abs{S \cap H^+_k} = \abs{S}/2$ for every $k$. Comparing this for $k$ and $k + 1$ gives $\id_S(k + m) = \id_S(k)$, so that $S$ is invariant under the shift $j \mapsto j + m$, which maps $H^+_k$ onto $H^-_k$. The set $S^+_k$ maximises $\rho$ and has $\abs{S}$ elements as well, so it is invariant under the same shift; since $S^+_k \cap H^+_k = S \cap H^+_k$ and $S^+_k \cap H^-_k = \theta_k(S \cap H^+_k)$, this means that $(S \cap H^+_k) + m = \theta_k(S \cap H^+_k)$, while the invariance of $S$ gives $(S \cap H^+_k) + m = S \cap H^-_k$. Hence $\theta_k(S \cap H^+_k) = S \cap H^-_k$, that is, $\theta_kS = S$, for every $k$. The involutions $\theta_k$ generate a group which acts transitively on $\mathbb Z/2m\mathbb Z$, because $\theta_{k+1}\theta_k$ is the shift by $2$ and $\theta_0$ maps $0$ to $-1$; so $S$ is either empty or all of $\mathbb Z/2m\mathbb Z$, and $\rho_* = \rho(S)$ is either $1$ or $Z(\mathbb Z/2m\mathbb Z)/\zeta < 1$. Thus $\rho(\{ 0 \}) \leq 1$, that is, $\abs{\mathbb E^{(s)}_K[G]} \leq (Z(\mathbb Z/2m\mathbb Z) + \epsilon)^{1/(2m)}$, and letting $\epsilon \to 0$ gives the second assertion.
+\end{proof}
+
+Applied in the four directions in turn, the lemma spreads a function of one block over all the blocks.
+
+\begin{lemma}[Chessboard Estimate]\label{lem:chessboard}
+Let $F$ be a bounded measurable function of the gauge field on $\mathbb T^{(s)}_K$ which depends only on the values of $U$ on the bonds with both ends in $B^\circ_0$. Then
+\begin{equation}\label{eq:chessboard}
+    \mathbb E^{(s)}_K\Bigl[\prod_{t \in \Lambda}\vartheta_tF\Bigr] \geq 0
+    \qquad\text{and}\qquad
+    \bigl\lvert\mathbb E^{(s)}_K[F]\bigr\rvert^{\abs{\Lambda}} \leq \mathbb E^{(s)}_K\Bigl[\prod_{t \in \Lambda}\vartheta_tF\Bigr]\;.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Put $G_0 \coloneqq F$ and $G_{\nu+1} \coloneqq \prod_{j \in \mathbb Z/2m\mathbb Z}\vartheta^\nu_jG_\nu$ for $\nu = 0, 1, 2, 3$, and let $\Lambda_\nu$ be the set of the $t \in \Lambda$ with $t_{\nu'} = 0$ for every $\nu' \geq \nu$. We claim that $G_\nu = \prod_{t \in \Lambda_\nu}\vartheta_tF$. This holds for $\nu = 0$. If it holds for $\nu$, then, since $\vartheta^\nu_j$ is multiplicative and commutes with complex conjugation, it suffices to see that $\vartheta^\nu_j\vartheta_tF = \vartheta_{t+je_\nu}F$ for $t \in \Lambda_\nu$; and indeed $(F \circ \varphi_t) \circ \varphi_{je_\nu} = F \circ (\varphi_{je_\nu}\varphi_t)$ by \eqref{eq:composition-rule}, where $\varphi_{je_\nu}\varphi_t = \varphi_{t+je_\nu}$ because the two maps change different coordinates and $\psi_0$ is the identity, while the numbers of complex conjugations add up to $\abs{t} + j = \abs{t + je_\nu}$ modulo $2$. The maps $\varphi_t$ with $t \in \Lambda_\nu$ change only the coordinates $x_{\nu'}$ with $\nu' < \nu$ and map $B^\circ_0$ into $\{ 0 < x_\nu < b \}$, so that $G_\nu$ depends only on the values of $U$ on the bonds with both ends in this slab, and Lemma~\ref{lem:one-direction} with $\mu = \nu$ and $G = G_\nu$ gives $\mathbb E^{(s)}_K[G_{\nu+1}] \geq 0$ and $\abs{\mathbb E^{(s)}_K[G_\nu]}^{2m} \leq \mathbb E^{(s)}_K[G_{\nu+1}]$. Since $G_4 = \prod_{t \in \Lambda}\vartheta_tF$ and $\abs{\Lambda} = (2m)^4$, the chain
+\begin{equation}\label{eq:chessboard-chain}
+    \bigl\lvert\mathbb E^{(s)}_K[F]\bigr\rvert^{(2m)^4} \leq \mathbb E^{(s)}_K[G_1]^{(2m)^3} \leq \mathbb E^{(s)}_K[G_2]^{(2m)^2} \leq \mathbb E^{(s)}_K[G_3]^{2m} \leq \mathbb E^{(s)}_K[G_4]
+\end{equation}
+proves \eqref{eq:chessboard}.
+\end{proof}
+
+\section{The Bound Uniform in the Volume}\label{sec:volume-bound}
+
+We now apply the chessboard estimate to a Wilson loop insertion. The reflected copies of an ensemble form an ensemble of the same kind, its normalisation is the product of the normalisations of the copies up to complex conjugation, and the uniform bound of the paper applies to it.
+
+\begin{proposition}[Bound Uniform in the Volume]\label{prop:volume-bound}
+Let $s \geq 0$, let $\mathcal C$ be a loop ensemble at level $q$ on $\mathbb T^{(s)}$ whose loops are admissible, with $\bar g$ and $q$ as in Paper, Theorem~\ref{P-thm:main}, for $\mathcal C$, let $n$ be an integer with $-q \leq n \leq s$, and put $b \coloneqq uL^n$. Assume that there is $v \in uL^{-q}\mathbb Z^4$ such that every site of $\mathcal C$ lies in the image in $\mathbb T^{(s)}$ of the open box $v + (0, b)^4$. Then
+\begin{equation}\label{eq:volume-bound}
+    \abs{W^{(s)}(\mathcal C)} \leq \exp\bigl(B_E(\mathcal C) + I^\flat_*(\mathcal C) + \Gamma_q(b, \bar g)\bigr)\;.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+By Paper, Corollary~\ref{P-cor:symmetries}(ii), which holds for $W^{(s)}_K$ at every $K > j_q$, the renormalised expectations do not change when $\mathcal C$ is translated by $-v \in uL^{-q}\mathbb Z^4$, and the translate has the same numbers $B_E$ and $I^\flat_*$; we may therefore assume $v = 0$. We use the notation of Section~\ref{sec:chessboard} with these $s$, $q$, $n$, and $K > j_q$.
+
+\emph{The reflected ensemble.} For $t \in \Lambda$ let $\vartheta_t\mathcal C$ be the ensemble $\varphi_t\mathcal C$ of the images of the loops of $\mathcal C$ with the image orientations, with the characters of $\mathcal C$ if $\abs{t}$ is even and with the conjugate characters if $\abs{t}$ is odd. Since $\varphi_t \in \mathfrak G_q$, each $\vartheta_t\mathcal C$ is an ensemble at level $q$ whose loops have the chord--arc constants, ratios $P/r$, and numbers $P_q$ of those of $\mathcal C$, and $c_{\bar\pi} = c_\pi$ for every representation. The loops of $\vartheta_t\mathcal C$ lie in the open block $B^\circ_t$, and these blocks are disjoint, so that the concatenation $\mathcal D$ of the ensembles $\vartheta_t\mathcal C$, $t \in \Lambda$, is a loop ensemble at level $q$ with $\abs{\Lambda}n$ admissible loops and $c_{\mathcal D} = c_{\mathcal C}$; hence $\bar g$ and $q$ are as in Paper, Theorem~\ref{P-thm:main}, for $\mathcal D$ as well, the function $q_\sharp$ depending on the ensemble only through $c_{\mathcal D}$.
+
+\emph{The chessboard estimate.} The observable $F \coloneqq W_{\mathcal C}$ depends only on the values of $U$ on the bonds of the loops of $\mathcal C$, which have both ends in the convex set $B^\circ_0$. By Paper, Section~\ref{P-sec:lattice-reflection-positivity}, $W_\chi(C) \circ \varphi_t = W_\chi(\varphi_tC)$, and $\overline{W_\chi(C')} = W_{\bar\chi}(C')$ for every loop $C'$, as in Paper, \eqref{P-eq:reflected-loop}; by multiplicativity, $\vartheta_tW_{\mathcal C} = W_{\vartheta_t\mathcal C}$ and $\prod_{t \in \Lambda}\vartheta_tW_{\mathcal C} = W_{\mathcal D}$. Lemma~\ref{lem:chessboard} therefore gives
+\begin{equation}\label{eq:chessboard-loops}
+    \bigl\lvert\mathbb E^{(s)}_K[W_{\mathcal C}]\bigr\rvert^{\abs{\Lambda}} \leq \mathbb E^{(s)}_K[W_{\mathcal D}]\;.
+\end{equation}
+
+\emph{The normalisations.} By Paper, Proposition~\ref{P-prop:reflection-normalisation}, $\kappa^{(q)}_K(\varphi_tC_i, \chi) = \kappa^{(q)}_K(C_i, \chi)$ since $\varphi_t \in \mathfrak G_q$, and $\kappa^{(q)}_K(C_i, \bar\chi_i) = \overline{\kappa^{(q)}_K(C_i, \chi_i)}$. The normalisation of $\mathcal D$ is therefore the product over $t \in \Lambda$ of $\prod_i\kappa^{(q)}_K(C_i, \chi_i)$ or of its complex conjugate, and its modulus is $\abs{\prod_i\kappa^{(q)}_K(C_i, \chi_i)}^{\abs{\Lambda}}$, which is not zero because the step factors are not (Paper, Section~\ref{P-sec:results}). Dividing \eqref{eq:chessboard-loops} by it gives
+\begin{equation}\label{eq:chessboard-renormalised}
+    \abs{W^{(s)}_K(\mathcal C)}^{\abs{\Lambda}} \leq \abs{W^{(s)}_K(\mathcal D)}\;.
+\end{equation}
+
+\emph{The uniform bound for $\mathcal D$.} The requirements on $\bar g$ in Paper, Theorem~\ref{P-thm:uniform-bound}, \eqref{P-eq:chart-stopping} and the hypothesis of Paper, Proposition~\ref{P-prop:large-field-weight}, involve no representation and are among those which define $\gamma_0$, and the requirement \eqref{P-eq:attached-condition} on $\gamma_q$ is among those which define $q_\sharp$ (Paper, Section~\ref{P-sec:results}). That theorem gives, for $K \geq K_0(\mathcal D)$,
+\begin{equation}\label{eq:uniform-bound-copies}
+    \abs{W^{(s)}_K(\mathcal D)} \leq e^{B_E(\mathcal D) + I_*(\mathcal D)}\bigl(1 + \bar\delta_{\mathrm{LF}}\bigr)\;.
+\end{equation}
+The number $B_E(\mathcal D)$ of Paper, \eqref{P-eq:remainder-sum}, is a sum over the loops of $\mathcal D$ of numbers which depend only on $P/r$, $P_q$, and $c_{\mathcal D} = c_{\mathcal C}$, so that $B_E(\mathcal D) = \abs{\Lambda}B_E(\mathcal C)$; and $I_*(\mathcal D) \leq I^\flat_*(\mathcal D) = \abs{\Lambda}I^\flat_*(\mathcal C)$, because $P_{K'}(\mathcal D) = \abs{\Lambda}P_{K'}(\mathcal C)$. By Paper, Proposition~\ref{P-prop:large-field-weight}, $\bar\delta_{\mathrm{LF}} = e^{2\bar C_K}(e^{\bar s_{\mathrm{LF}}} - 1)$ with $\bar C_K \coloneqq C_{\mathrm{fs}}N_q^4(1 + \frac12\log\hat g_{K'}^{-2})$ and $\bar s_{\mathrm{LF}} \coloneqq 2N_q^4(MR_{K'})^{-4}\exp(-c_{\mathrm{LF}}\,p_0((1 + \beta_0)\bar g))$, so that $1 + \bar\delta_{\mathrm{LF}} \leq e^{2\bar C_K}e^{\bar s_{\mathrm{LF}}}$, because $e^{2\bar C_K} \geq 1$. Since $N_q = T_sL^{j_q}/u = 2mbL^{j_q}/u$ by Paper, \eqref{P-eq:stopping-sites}, we have $N_q^4 = \abs{\Lambda}(bL^{j_q}/u)^4$, and comparison with \eqref{eq:block-cost} gives $2\bar C_K + \bar s_{\mathrm{LF}} = \abs{\Lambda}\Gamma_q(b, \bar g)$. Altogether,
+\begin{equation}\label{eq:copies-bound}
+    \abs{W^{(s)}_K(\mathcal D)} \leq \exp\Bigl(\abs{\Lambda}\bigl(B_E(\mathcal C) + I^\flat_*(\mathcal C) + \Gamma_q(b, \bar g)\bigr)\Bigr)\;.
+\end{equation}
+
+\emph{Conclusion.} By \eqref{eq:chessboard-renormalised} and \eqref{eq:copies-bound}, $\abs{W^{(s)}_K(\mathcal C)} \leq \exp(B_E(\mathcal C) + I^\flat_*(\mathcal C) + \Gamma_q(b, \bar g))$ for every $K \geq \max(K_0(\mathcal C), K_0(\mathcal D))$, and the limit $K \to \infty$, which exists by Paper, Theorem~\ref{P-thm:main}, gives \eqref{eq:volume-bound}.
+\end{proof}
+
+\section{Proof of the Theorem}\label{sec:proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:infinite-volume}]
+\emph{The set $\mathfrak E$ is countable.} For each $q$ the loops at level $q$ in $\mathbb R^4$ are finite paths in a countable lattice. The compact group $G$ has countably many classes of irreducible unitary representations, by the Peter--Weyl theorem, since $L^2(G)$ is separable and the matrix coefficients of inequivalent irreducible representations are orthogonal, and distinct classes have distinct characters. A countable union of sets of finite families of elements of countable sets is countable.
+
+\emph{A bound uniform in $s$.} Let $(\mathcal C, q) \in \mathfrak E$ and $s \geq s_q(\mathcal C)$. Put $n \coloneqq n_q(\mathcal C)$, so that $-q \leq n \leq s - 1$ and $b \coloneqq uL^n = b_q(\mathcal C)$, and let $v_\mu$ be the least coordinate $x_\mu$ of a site of $\mathcal C$ minus $uL^{-q}$, so that $v \in uL^{-q}\mathbb Z^4$. Every site of $\mathcal C$ lies in $v + [uL^{-q}, uL^{-q} + E(\mathcal C)]^4 \subset v + (0, b)^4$, because $uL^{-q} + E(\mathcal C) < b$. The ensemble $\pi_s\mathcal C$ has admissible loops and $c_{\pi_s\mathcal C} = c_{\mathcal C}$, so that $\bar g$ and $q$ are as in Paper, Theorem~\ref{P-thm:main}, for it, because $\gamma_0$ and $q_\sharp$ do not depend on the torus; and $B_E$ and $I^\flat_*$ take the same values on $\pi_s\mathcal C$ and on $\mathcal C$. Proposition~\ref{prop:volume-bound} gives
+\begin{equation}\label{eq:bound-in-s}
+    \abs{W^{(s)}(\mathcal C)} \leq \beta(\mathcal C) \coloneqq \exp\bigl(B_E(\mathcal C) + I^\flat_*(\mathcal C) + \Gamma_q(b_q(\mathcal C), \bar g)\bigr)
+\end{equation}
+for every $s \geq s_q(\mathcal C)$.
+
+\emph{The subsequence.} Let $e_1, e_2, \dots$ be an enumeration of $\mathfrak E$, and let $\sigma_i$ be the number $s_q(\mathcal C)$ of $e_i = (\mathcal C, q)$. By \eqref{eq:bound-in-s} and the Bolzano--Weierstrass theorem we choose infinite sets $\mathbb N \supset N_1 \supset N_2 \supset \dots$ with $N_i \subset [\sigma_i, \infty)$ along which $W^{(s)}(e_i)$ converges, and then integers $s_1 < s_2 < \dots$ with $s_k \in N_k$. For every $i$ the sequence $(s_k)_{k \geq i}$ lies in $N_i$, so that \eqref{eq:infinite-volume-limit} exists for $e_i$, and (i) follows from \eqref{eq:bound-in-s}.
+
+\emph{The symmetries.} Let $g(x) = Ox + v$ be as in (ii), and for every $s$ let $g_s$ be the map $x \mapsto Ox + v$ of $\mathbb T^{(s)}$, which belongs to the group $\mathfrak G_q$ of $\mathbb T^{(s)}$ and satisfies $\pi_s \circ g = g_s \circ \pi_s$, so that $\pi_s(g\mathcal C) = g_s\pi_s\mathcal C$. For $s \geq \max(s_q(\mathcal C), s_q(g\mathcal C))$, Paper, Corollary~\ref{P-cor:symmetries}(ii), gives $W^{(s)}(g\mathcal C) = W^{(s)}(\mathcal C)$, and the limit along $(s_k)$ gives $W^\infty(g\mathcal C) = W^\infty(\mathcal C)$. The other three statements of (ii) follow in the same way from Paper, Corollary~\ref{P-cor:symmetries}(i), (iii), and (iv), the maps $h$ and $g_i$ being replaced by the maps of $\mathbb T^{(s)}$ with the same formulae, which are symmetries of the level $q$ of $\mathbb T^{(s)}$.
+
+\emph{Reflection positivity.} Let $\mu$, $a$, $\theta$, and $\mathcal D_1, \dots, \mathcal D_m$ be as in (iii). The ensembles $\mathcal D_a \cup \theta\bar{\mathcal D}_b$ are ensembles at level $q$ in $\mathbb R^4$, since $\theta$ maps $uL^{-q}\mathbb Z^4$ onto itself and the loops of $\theta\bar{\mathcal D}_b$ lie in $\{ x_\mu < a \}$; their loops are admissible, and $c_{\mathcal D_a \cup \theta\bar{\mathcal D}_b} \leq c$, since $c_{\bar\pi} = c_\pi$, so that they form pairs of $\mathfrak E$ with the level $q$, because $q_\sharp$ is nondecreasing in its first argument. Let $s$ be so large that $s$ exceeds the numbers $s_q$ of all these ensembles and that $T_s/2 > x_\mu - a$ for every site $x$ of every $\mathcal D_a$. Then $\pi_s$ maps the sites of every $\mathcal D_a$ into the open half-torus $\{ a < x_\mu < a + T_s/2 \}$ of the reflection $\theta_{\mu,a}$ of $\mathbb T^{(s)}$, which is a reflection of level $q$, and $\pi_s \circ \theta = \theta_{\mu,a} \circ \pi_s$, so that $\pi_s(\mathcal D_a \cup \theta\bar{\mathcal D}_b) = \pi_s\mathcal D_a \cup \theta_{\mu,a}\overline{\pi_s\mathcal D_b}$. Paper, Corollary~\ref{P-cor:reflection-positivity}, applied on $\mathbb T^{(s)}$ to $\pi_s\mathcal D_1, \dots, \pi_s\mathcal D_m$, says that the matrices \eqref{eq:infinite-volume-positivity} with $W^{(s)}$ in place of $W^\infty$ are Hermitian and positive semidefinite, and that $W^{(s)}(\theta\bar{\mathcal D}_a) = \overline{W^{(s)}(\mathcal D_a)}$. These are closed conditions on finitely many numbers, and they pass to the limit along $(s_k)$.
+\end{proof}
+
+\begin{remark}[What the Theorem Does Not Assert]\label{rem:not-asserted}
+The theorem gives no lower bound, and the lower bound of the paper does not pass to the limit: its proof, Paper, Proposition~\ref{P-prop:nonvanishing}, uses $w_{\ell_0} \geq 1 - \bar\delta_{\mathrm{LF}}$ with a threshold $\bar g_1$ chosen so that $\bar\delta_{\mathrm{LF}} \leq 1/20$, and $\bar\delta_{\mathrm{LF}}$ grows with $N_q$, while a chessboard estimate bounds expectations from above only. The theorem therefore does not exclude that $W^\infty$ vanishes on every nonempty ensemble, and Paper, Theorem~\ref{P-thm:non-gaussian}, whose threshold $\bar g_0$ depends on $T/u$, has no counterpart here. The limits may depend on the subsequence.
+\end{remark}
+
+\bibliographystyle{amsplain}
+\bibliography{refs}
+
+\end{document}
