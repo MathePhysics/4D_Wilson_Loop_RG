@@ -371,8 +371,8 @@
     - {#575} Map (12)(d)'s count holds per loop with diam_ℓ∞(S_W) in place of diam_W + |int(W)|: S_M^{(i)}, the bonds of C_i in ∪_YS′(Y) (map #MD2.4.12.22-3's S_M on C_i), has diam_ℓ∞(S_M^{(i)}) ≤ M#(M) + 2max_Wdiam_ℓ∞(S_W), since each of its bonds lies in M or in S_W for a touched W, and S_W meets M; and n^{(i)}_{k+1}(M) ≤ 4(5diam_ℓ∞(S_M^{(i)}) + 2max_W(piece of ℐ_i(W))) ≤ 20M#(M) + 48(M/L)Σ_Wu_Wσ_k(W), over the touched W with an interval on C_i. A piece has at most n_k(W)/L ≤ u_W(M/L)σ_k(W) step bonds, and the map's allowance for the enlargement is kept as slack.
     - {#576} So n_{k+1}(M) ≤ 40M#(M) + 96(M/L)Σ_{W∈𝔅(M)}u_Wσ_k(W) and |win^{(2)}_M| := n_{k+1}(M) + 80(M#(M) + 1), the M-part of the window bound in *Vertices on two loops*.
     - {#577} Map (12)(d)'s computation of sh(M), with #(X_M) ≤ #(M) + 8n_{k+1}(M)/M + 161 (arc cubes on two loops) and ext_M bounded by the same plus the touched boxes, gives
-      {#578} sh(M) ≤ ν_f(282#(M) + 22) + ν_e(441#(M) + 164) + (3ν_f + 9ν_e)(96/L)Σ_{W∈𝔅(M)}u_Wσ_k(W) + ν_eΣ_{W∈𝔅(M)}(ext_k(W)/L + 1) + c_π′α_{1,k+1}|win_M|
-      {#579} for M ≥ 100, in place of the map's ν_f(142#(M) + 11) + ν_e(221#(M) + 84) and 48/L.
+      {#578} sh(M) ≤ ν_f(282#(M) + 22) + ν_e(441#(M) + 164) + (3ν_f + 9ν_e)(96/L)Σ_{W∈𝔅(M)}u_Wσ_k(W) + ν_eΣ_{W∈𝔅(M)}(ext_k(W)/L + 1) + c_π′α_{1,k+1}|win^{(2)}_M|
+      {#579} for M ≥ 100, in place of the map's ν_f(142#(M) + 11) + ν_e(221#(M) + 84), 48/L, and |win_M| (the window's M-part on two loops, #539, #576).
     - {#580} A cube of M∖D′ then costs log 64 + log 2 + 2 + 1/8 + 24c + 283ν_f + 441ν_e ≤ 7.6 for ν ≤ 1/1000 and the vacuum constant c ≤ 1/100 (map #MD2.4.12.1), against r/648 ≥ 8. The bracket of a component cube stays within κ_s^{(12)}'s constant 9.
     - {#581} The constant part, 22ν_f + 164ν_e ≤ 0.045 for ν ≤ 1/1000, is charged to one π_k-cube of the components (#(G_M) ≥ 1). That cube's cost then has log 4 + 1 + 1/8 + 0.045 ≤ 2.6 outside the bracket, within the constant 4 of κ_s^{(12)}/4.
     - {#582} The window sums of a two-loop vertex have four ends, with C_win^×'s constant (*Positions*).
