@@ -1,0 +1,300 @@
+% !TeX program = pdflatex
+\documentclass[11pt]{preprint}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{mathtools}
+\usepackage{mathrsfs}
+\usepackage[a4paper,margin=28mm]{geometry}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{xr-hyper}
+\usepackage[hidelinks]{hyperref}
+\externaldocument[P-]{WILSON_LOOPS_CONTINUUM_LIMIT}[../Continuum Limit Manuscript Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf]
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\id}{\mathbf 1}
+\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
+\DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
+\setlength{\parskip}{0.6em}
+\emergencystretch=3em
+\title{Two Orientations of the Lattice and the Rotation Invariance of the Wilson Loop Functions}
+\author{}
+\date{}
+
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\theoremstyle{plain}
+\renewcommand{\qedsymbol}{\textit{q.e.d.}}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+The limits of the renormalised Wilson loop expectations constructed in the paper are covariant under the symmetries of the lattice, and nothing is known about the rotations which are not among them. We study the smallest instance in which the invariance under such a rotation is a statement about the limits: two parallel planar loops whose separation $(5, 0)$ is turned into $(3, 4)$. On a torus whose periods are tilted against the lattice, the reflection which exchanges the two configurations is an isometry of the torus and maps the lattice to a second lattice. We show that the expectation of the first configuration on the one lattice equals that of the second on the other at every cutoff, so that the invariance is equivalent to the independence of the limit of the choice between two lattices on one torus. If the blocking factor is a multiple of $5$, the lattices of the two families lie in each other alternately, and they can be compared through one renormalisation step whose blocks are tilted against the fine lattice. We define the blocks and the linear average of this step, determine the symmetries which the two lattices have in common, and show that these leave three invariant quadratic forms of the field strength where the symmetries of one lattice leave one. The comparison itself is not carried out, and the last section says what it requires.
+\end{abstract}
+
+\section{Introduction}\label{sec:introduction}
+
+The paper constructs, for every ensemble $\mathcal C$ of admissible loops on the torus $(\mathbb R/T\mathbb Z)^4$, the limit $W(\mathcal C)$ of the renormalised expectations $W_K(\mathcal C)$ as the lattice spacing $\varepsilon_K = uL^{-K}$ tends to zero (Paper, Theorem~\ref{P-thm:main}), and it shows that the limits are covariant under the translations by vectors of the lattice of the loops and under the reflections in coordinate hyperplanes (Paper, Corollary~\ref{P-cor:symmetries}). One expects more. The lattice breaks the invariance of the continuum theory under rotations, and the limit in which the lattice is removed should restore it, as far as the torus permits. We ask whether this can be proved for the limits of the paper.
+
+For most ensembles the question cannot be posed within the construction: a rotation which is not a symmetry of the lattice maps a path of the lattice to a path which is not one, and the limits are defined for paths of the lattice only. There is one family of ensembles for which it can. Let the loops lie in planes parallel to $e_0$ and $e_1$, and let the rotation turn the plane of $e_2$ and $e_3$ and fix the other two coordinates. It then maps each loop to a translate of itself, and it maps the ensemble to an ensemble of the lattice whenever it maps the positions of the planes to points of the lattice. This happens for rotations which are not symmetries of the lattice, because a circle around a point of the square lattice may pass through points which the symmetries of the lattice do not relate: $5^2 = 3^2 + 4^2$. The smallest instance is a loop $C$ with a parallel copy, and the question is whether
+\begin{equation}\label{eq:target}
+    W\bigl(C, C + 5\varepsilon_qe_2\bigr) = W\bigl(C, C + 3\varepsilon_qe_2 + 4\varepsilon_qe_3\bigr)\;,
+\end{equation}
+where $\varepsilon_q$ is the spacing of the lattice of the loops. The two sides are two numbers of one lattice theory, and none of the properties which we know relates them. Nor could these properties relate them: the kernel $(d_2, d_3) \mapsto e^{-\abs{d_2} - \abs{d_3}}$ is continuous, it is invariant under the symmetries of the square lattice, and it is reflection positive in both coordinate directions, since $e^{-(x_2 + y_2)}$ is a product and $e^{-\abs{x_3 - y_3}}$ is a positive definite kernel, and it takes different values at $(5, 0)$ and $(3, 4)$.
+
+The first difficulty is the torus. The rotation which turns $(5, 0)$ into $(3, 4)$ is not an isometry of $(\mathbb R/T\mathbb Z)^4$, and on this torus the two configurations are not congruent, so that there is no reason for \eqref{eq:target} to hold there. We therefore change the torus. Writing $z = x_2 + ix_3$, the reflection $\rho \colon z \mapsto \frac{3 + 4i}{5}\bar z$ of the plane maps $5$ to $3 + 4i$, and it is an isometry of the torus whose periods in this plane are $T(2 + i)$ and $iT(2 + i)$, a torus which the lattices of the paper fit as well. On this torus $\rho$ maps the lattice $\Lambda_K$ of spacing $\varepsilon_K$ to a second lattice $\rho\Lambda_K$, tilted against the first, and it maps the lattice theory on the one to the lattice theory on the other. The expectation of the configuration $(5, 0)$ on $\Lambda_K$ is therefore equal to the expectation of the configuration $(3, 4)$ on $\rho\Lambda_K$, at every $K$ and every coupling (Proposition~\ref{prop:reduction}). The configuration $(3, 4)$ consists of paths of both lattices, and \eqref{eq:target} becomes the statement that the limit of its renormalised expectations is the same along the two families of lattices: the independence of the continuum limit of the orientation of the lattice, in the one case in which the two orientations share an observable.
+
+A comparison of two lattice theories is what the paper does when it proves that the limit exists. It compares the construction on $\Lambda_K$ with that on $\Lambda_{K+1}$, two runs of the renormalisation group which share every lattice but the finest (Paper, Section~\ref{P-sec:two-runs}). The lattices $\Lambda_K$ and $\rho\Lambda_K$ share nothing, but if the blocking factor $L$ is a multiple of $5$, then $\rho\Lambda_K$ is a sublattice of $\Lambda_{K+1}$ (Lemma~\ref{lem:lattices}). A run which starts on $\Lambda_{K+1}$, passes to $\rho\Lambda_K$ by one renormalisation step, and continues on the lattices $\rho\Lambda_{K-1}, \rho\Lambda_{K-2}, \dots$ then shares every lattice but the finest with the run of the paper carried by $\rho$, and the two are in the position of the two runs of the paper. The price is the first step of the first run. Its blocks are not cubes of the fine lattice, a bond of its coarse lattice is not a straight path of fine bonds, and it has fewer symmetries than a step of the paper.
+
+We carry out the part of this which is exact. Section~\ref{sec:two-lattices} contains the arithmetic of the two lattices, Section~\ref{sec:torus} the torus, and Section~\ref{sec:identity} the identity between the expectations and the reduction of \eqref{eq:target}. Section~\ref{sec:symmetries} determines the symmetries which the two lattices have in common and the quadratic forms of the field strength which they leave invariant: there are three, where the symmetries of one lattice leave one. Section~\ref{sec:tilted-step} defines the blocks of the tilted step and its linear average. The comparison of the two runs is not carried out, and Section~\ref{sec:not-proved} lists what it requires.
+
+Throughout, $G$, $L$, $u$, $m_T$, $T = 2L^{m_T}u$, and $\varepsilon_K = uL^{-K}$ are as in Paper, Section~\ref{P-sec:lattice-theory}; in particular $L$ is odd.
+
+\section{The Two Lattices}\label{sec:two-lattices}
+
+We identify the plane of the coordinates $x_2$ and $x_3$ with $\mathbb C$ through $z = x_2 + ix_3$, and we write a point of $\mathbb R^4$ as $(x_0, x_1, z)$. The points of this plane with integer coordinates are the Gaussian integers $\mathbb Z[i] = \mathbb Z + i\mathbb Z$. We put
+\begin{equation}\label{eq:omega}
+    \omega \coloneqq \frac{3 + 4i}{5} = \frac{(2 + i)^2}{5} = \frac{2 + i}{2 - i}\;,
+    \qquad
+    \rho(x_0, x_1, z) \coloneqq (x_0, x_1, \omega\bar z)\;.
+\end{equation}
+Since $\abs{\omega} = 1$ and $\omega\,\overline{\omega\bar z} = z$, the map $\rho$ is a linear isometry of $\mathbb R^4$ with $\rho^2 = 1$. It fixes $e_0$ and $e_1$, it fixes $2 + i$ because $\omega(2 - i) = 2 + i$, and it maps $i(2 + i)$ to $\omega(-i)(2 - i) = -i(2 + i)$; it is therefore the reflection in the hyperplane spanned by $e_0$, $e_1$, and $2e_2 + e_3$. In the coordinates $x_2$, $x_3$,
+\begin{equation}\label{eq:rho-vectors}
+    \rho e_2 = \tfrac15(3e_2 + 4e_3)\;,
+    \qquad
+    \rho e_3 = \tfrac15(4e_2 - 3e_3)\;,
+\end{equation}
+because $\omega\bar 1 = \omega$ and $\omega\bar i = -i\omega = (4 - 3i)/5$. In particular $\rho(5e_2) = 3e_2 + 4e_3$.
+
+\begin{lemma}[Gaussian Integers]\label{lem:gaussian}
+\begin{enumerate}[label=(\roman*)]
+\item For $w \in \mathbb Z[i]$, $\omega w \in \mathbb Z[i]$ if and only if $w \in (2 - i)\mathbb Z[i]$. Consequently $\mathbb Z[i] \cap \omega\mathbb Z[i] = (2 + i)\mathbb Z[i]$.
+\item The group $(2 + i)\mathbb Z[i]$ has the index $5$ in $\mathbb Z[i]$ and in $\omega\mathbb Z[i]$.
+\item $\omega\,\overline{(2 + i)\mathbb Z[i]} = (2 + i)\mathbb Z[i]$.
+\item $\omega\mathbb Z[i] \subset \frac15\mathbb Z[i]$ and $\mathbb Z[i] \subset \frac15\omega\mathbb Z[i]$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(i) Let $w = a + bi$ with integers $a$, $b$. Then $5\omega w = (3a - 4b) + (4a + 3b)i$, and $\omega w \in \mathbb Z[i]$ if and only if $3a \equiv 4b$ and $4a \equiv -3b$ modulo $5$. Multiplying the first congruence by $2$ and the second by $4$, each of them is equivalent to $a \equiv 3b$, that is, to $a + 2b \equiv 0$ modulo $5$. On the other hand $(2 - i)(m + ni) = (2m + n) + (2n - m)i$, for which $a + 2b = 5n$; and if $a + 2b = 5n$, then $m \coloneqq 2n - b$ satisfies $2m + n = 5n - 2b = a$, so that $w = (2 - i)(m + ni)$. This is the first assertion. For such $w = (2 - i)w'$ we have $\omega w = (2 + i)w'$, so that the elements of $\omega\mathbb Z[i]$ which lie in $\mathbb Z[i]$ are those of $(2 + i)\mathbb Z[i]$.
+
+(ii) The multiplication by $2 + i$ is the linear map of $\mathbb Z^2$ with the columns $(2, 1)$ and $(-1, 2)$, of determinant $5$, so that its image has the index $5$ in $\mathbb Z[i]$. The multiplication by $\omega^{-1}$ maps $\omega\mathbb Z[i]$ onto $\mathbb Z[i]$ and $(2 + i)\mathbb Z[i]$ onto $(2 - i)\mathbb Z[i]$, which has the index $5$ in $\mathbb Z[i]$ for the same reason.
+
+(iii) Complex conjugation maps $\mathbb Z[i]$ onto itself, so that $\omega\,\overline{(2 + i)\mathbb Z[i]} = \omega(2 - i)\mathbb Z[i] = (2 + i)\mathbb Z[i]$.
+
+(iv) $5\omega = 3 + 4i \in \mathbb Z[i]$ gives the first inclusion. Since $\omega\bar\omega = 1$ and $5\bar\omega = 3 - 4i \in \mathbb Z[i]$, we have $\mathbb Z[i] = \omega\bar\omega\mathbb Z[i] \subset \frac15\omega\mathbb Z[i]$.
+\end{proof}
+
+For an integer $K \geq 0$ we consider the two lattices in $\mathbb R^4$
+\begin{equation}\label{eq:lattices}
+    \Lambda_K \coloneqq \varepsilon_K\mathbb Z^4 = \varepsilon_K\bigl(\mathbb Z^2 \times \mathbb Z[i]\bigr)\;,
+    \qquad
+    \Lambda'_K \coloneqq \rho\Lambda_K = \varepsilon_K\bigl(\mathbb Z^2 \times \omega\mathbb Z[i]\bigr)\;.
+\end{equation}
+The lattice $\Lambda_K$ is the lattice of the paper before the periods are divided out, and $\Lambda'_K$ is a lattice of the same spacing whose axes are $e_0$, $e_1$, $\rho e_2$, and $\rho e_3$.
+
+\begin{lemma}[The Two Families of Lattices]\label{lem:lattices}
+\begin{enumerate}[label=(\roman*)]
+\item $\Lambda_K \cap \Lambda'_K = \varepsilon_K(\mathbb Z^2 \times (2 + i)\mathbb Z[i])$, a sublattice of the index $5$ in $\Lambda_K$ and in $\Lambda'_K$, and $\rho$ maps it onto itself.
+\item If $L$ is a multiple of $5$, then $\Lambda'_K \subset \Lambda_{K+1}$ and $\Lambda_K \subset \Lambda'_{K+1}$, each with the index $L^4$. With $l \coloneqq L/5$,
+\begin{equation}\label{eq:coarse-in-fine}
+    \Lambda'_K = \varepsilon_{K+1}\bigl(L\mathbb Z^2 \times l(3 + 4i)\mathbb Z[i]\bigr)\;.
+\end{equation}
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(i) is Lemma~\ref{lem:gaussian}(i)--(iii). (ii) Since $\varepsilon_K = L\varepsilon_{K+1}$ and $\varepsilon_K\omega = l\varepsilon_{K+1}(3 + 4i)$, the definition \eqref{eq:lattices} gives \eqref{eq:coarse-in-fine}, and the right side is contained in $\varepsilon_{K+1}(\mathbb Z^2 \times \mathbb Z[i]) = \Lambda_{K+1}$. The index is the determinant of the map which multiplies the first two coordinates by $L$ and the plane by $l(3 + 4i)$, that is, $L^2 \cdot 25l^2 = L^4$. Applying $\rho$ to $\Lambda'_K \subset \Lambda_{K+1}$ gives $\Lambda_K \subset \Lambda'_{K+1}$ with the same index.
+\end{proof}
+
+Thus, for $L$ a multiple of $5$, the two families form one chain $\dots \supset \Lambda_{K+1} \supset \Lambda'_K \supset \Lambda_{K-1} \supset \Lambda'_{K-2} \supset \dots$, each lattice of the index $L^4$ in the one before, while no lattice of one family contains a lattice of the same index of the other.
+
+\section{One Torus for Both Lattices}\label{sec:torus}
+
+The torus $(\mathbb R/T\mathbb Z)^4$ of the paper is of no use for our question: $\rho(Te_2) = \frac15T(3e_2 + 4e_3)$ is not a period, so that $\rho$ does not act on it. We need a group of periods which $\rho$ preserves and which lies in both lattices, and Lemma~\ref{lem:lattices}(i) provides one.
+
+\begin{definition}[The Tilted Torus]\label{def:tilted-torus}
+Let
+\begin{equation}\label{eq:periods}
+    \Gamma \coloneqq T\bigl(\mathbb Z^2 \times (2 + i)\mathbb Z[i]\bigr)\;,
+    \qquad
+    \mathbb T_\Gamma \coloneqq \mathbb R^4/\Gamma\;.
+\end{equation}
+\end{definition}
+
+The periods of $\mathbb T_\Gamma$ are $Te_0$, $Te_1$, and the two vectors $T(2e_2 + e_3)$ and $T(-e_2 + 2e_3)$ of the plane, which are orthogonal and of the length $\sqrt5\,T$.
+
+\begin{lemma}[The Torus and the Lattices]\label{lem:torus}
+\begin{enumerate}[label=(\roman*)]
+\item $\Gamma \subset \Lambda_K \cap \Lambda'_K$ for every $K \geq 0$, and the quotients $\Lambda_K/\Gamma$ and $\Lambda'_K/\Gamma$ have $5(T/\varepsilon_K)^4$ elements each.
+\item $\rho\Gamma = \Gamma$, so that $\rho$ induces an isometry of $\mathbb T_\Gamma$, which maps $\Lambda_K/\Gamma$ onto $\Lambda'_K/\Gamma$.
+\item $\Gamma$ has the index $5$ in $T\mathbb Z^4$, so that $\mathbb T_\Gamma$ covers the torus of the paper five times.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(i) The number $T/\varepsilon_K = 2L^{m_T+K}$ is an integer, so that $\Gamma \subset \varepsilon_K(\mathbb Z^2 \times (2 + i)\mathbb Z[i])$, which is $\Lambda_K \cap \Lambda'_K$ by Lemma~\ref{lem:lattices}(i). The index of $\Gamma$ in this group is $(T/\varepsilon_K)^4$, and the index of this group in each of the two lattices is $5$. (ii) is Lemma~\ref{lem:gaussian}(iii), and $\rho\Lambda_K = \Lambda'_K$ by definition. (iii) is Lemma~\ref{lem:gaussian}(ii).
+\end{proof}
+
+\section{The Identity between the Two Lattice Theories}\label{sec:identity}
+
+We now define the lattice theory on $\mathbb T_\Gamma$ for each of the two lattices and show that $\rho$ carries the one to the other. Let $\Xi$ be $\Lambda_K$ or $\Lambda'_K$. A \emph{bond} of $\Xi$ is an ordered pair $b = (x, y)$ of points of $\Xi$ at the distance $\varepsilon_K$, with the reversed bond $b^{-1} = (y, x)$; the bonds from $x$ are the eight pairs $(x, x \pm \varepsilon_Ke_\mu)$ for $\Xi = \Lambda_K$ and $(x, x \pm \varepsilon_K\rho e_\mu)$ for $\Xi = \Lambda'_K$. A \emph{plaquette} of $\Xi$ is a square of side $\varepsilon_K$ with corners in $\Xi$, and $\partial p$ is its boundary, a closed path of four bonds. The group $\Gamma \subset \Xi$ acts on the bonds and on the plaquettes by translations, and a translation by $\gamma \neq 0$ fixes no bond and no plaquette and reverses no bond. A \emph{gauge field} on $(\Xi, \Gamma)$ is a map $U$ from the bonds of $\Xi$ to $G$ with $U(b^{-1}) = U(b)^{-1}$ and $U(b + \gamma) = U(b)$ for every $\gamma \in \Gamma$. The lattice theory at the coupling $g_0 > 0$ is the probability measure
+\begin{equation}\label{eq:measure}
+    \dd\mu^{\Xi}_{\Gamma,g_0}(U) \coloneqq \frac{1}{Z^\Xi_{\Gamma,g_0}}\exp\Bigl(-\frac{1}{g_0^2}\sum_{p}\bigl(1 - \operatorname{Re}\tr U(\partial p)\bigr)\Bigr)\,\dd U\;,
+\end{equation}
+where the sum runs over one plaquette from each orbit of $\Gamma$ on the unoriented plaquettes of $\Xi$ and $\dd U$ is the product of the normalised Haar measures over one bond from each orbit of $\Gamma$ on the unoriented bonds. Neither depends on the choices, because $U$ is periodic, $\operatorname{Re}\tr$ is invariant under conjugation and, on unitary matrices, under inversion, and the Haar measure is invariant under inversion. This is the measure of Paper, \eqref{P-eq:lattice-measure}, with the group of periods $\Gamma$ in place of $T\mathbb Z^4$ and, for $\Xi = \Lambda'_K$, with the lattice turned by $\rho$. We write $\mathbb E^\Xi_{\Gamma,g_0}$ for its expectation. For a closed path $C$ of bonds of $\Xi$ in $\mathbb R^4$ and a character $\chi$ we put $W_\chi(C; U) \coloneqq \chi(U(C))$, where $U(C)$ is the ordered product of $U$ over the bonds of $C$, and for a finite family $\mathcal C = ((C_1, \chi_1), \dots, (C_n, \chi_n))$ of such paths with characters, $W_{\mathcal C} \coloneqq \prod_iW_{\chi_i}(C_i)$. For a linear map $O$ we write $O\mathcal C$ for the family of the images $OC_i$ with the same characters.
+
+\begin{lemma}[Transport]\label{lem:transport}
+Let $\Xi$ be $\Lambda_K$ or $\Lambda'_K$, and let $O$ be a linear isometry of $\mathbb R^4$ with $O\Gamma = \Gamma$ for which $O\Xi$ is again one of the two lattices. Then, for every family $\mathcal C$ of closed paths of bonds of $\Xi$ with characters and every $g_0 > 0$,
+\begin{equation}\label{eq:transport}
+    \mathbb E^{O\Xi}_{\Gamma,g_0}[W_{O\mathcal C}] = \mathbb E^{\Xi}_{\Gamma,g_0}[W_{\mathcal C}]\;.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+The map $O$ is a bijection from the points of $\Xi$ onto those of $O\Xi$ which preserves distances, so that it maps bonds to bonds, reversed bonds to reversed bonds, and plaquettes to plaquettes with their boundaries; and since $O(b + \gamma) = Ob + O\gamma$ with $O\Gamma = \Gamma$, it maps the orbits of $\Gamma$ on the bonds and on the plaquettes of $\Xi$ bijectively onto those of $O\Xi$. For a gauge field $U$ on $(\Xi, \Gamma)$ put $(O_*U)(b) \coloneqq U(O^{-1}b)$ for the bonds $b$ of $O\Xi$. Then $O_*U$ is a gauge field on $(O\Xi, \Gamma)$, the map $O_*$ is a bijection between the two spaces of gauge fields which carries the product of the Haar measures of the one to that of the other, and $(O_*U)(O\gamma) = U(\gamma)$ for every path $\gamma$ of bonds of $\Xi$. In particular $(O_*U)(\partial(Op)) = U(\partial p)$ for every plaquette $p$ of $\Xi$, so that the sums in \eqref{eq:measure} for $O_*U$ on $O\Xi$ and for $U$ on $\Xi$ agree, and $O_*$ carries $\mu^\Xi_{\Gamma,g_0}$ to $\mu^{O\Xi}_{\Gamma,g_0}$. Since $W_{O\mathcal C}(O_*U) = W_{\mathcal C}(U)$, this gives \eqref{eq:transport}.
+\end{proof}
+
+We apply the lemma to $O = \rho$ and to the ensembles for which the question of the introduction can be posed. Let $q \geq 0$, and let $C_1, \dots, C_n$ be closed paths of bonds of $\Lambda_q$ in the plane $\{ z = 0 \}$, so that all their bonds are parallel to $e_0$ or $e_1$. For $d = (d_1, \dots, d_n)$ with $d_j \in \varepsilon_q\mathbb Z[i]$ we write
+\begin{equation}\label{eq:planar-ensemble}
+    \mathcal C_d \coloneqq \bigl((C_1 + d_1, \chi_1), \dots, (C_n + d_n, \chi_n)\bigr)\;,
+    \qquad
+    \rho d \coloneqq (\omega\bar d_1, \dots, \omega\bar d_n)\;,
+\end{equation}
+where $C_j + d_j$ is the translate of $C_j$ to the plane $\{ z = d_j \}$. Since $\rho$ fixes the plane $\{ z = 0 \}$ pointwise and is linear, $\rho(C_j + d_j) = C_j + \omega\bar d_j$, that is, $\rho\mathcal C_d = \mathcal C_{\rho d}$.
+
+\begin{proposition}[Reduction]\label{prop:reduction}
+Let $q \geq 0$, let $C_1, \dots, C_n$ and $\mathcal C_d$ be as above, and let $d_j \in \varepsilon_q(2 + i)\mathbb Z[i]$ for every $j$. Then $\rho d_j \in \varepsilon_q(2 + i)\mathbb Z[i]$ for every $j$, the families $\mathcal C_d$ and $\mathcal C_{\rho d}$ consist of closed paths of bonds of both $\Lambda_K$ and $\Lambda'_K$ for every $K \geq q$, and for every $K \geq q$ and every $g_0 > 0$,
+\begin{equation}\label{eq:reduction}
+    \mathbb E^{\Lambda_K}_{\Gamma,g_0}[W_{\mathcal C_d}] = \mathbb E^{\Lambda'_K}_{\Gamma,g_0}[W_{\mathcal C_{\rho d}}]\;.
+\end{equation}
+Consequently
+\begin{equation}\label{eq:defect}
+    \mathbb E^{\Lambda_K}_{\Gamma,g_0}[W_{\mathcal C_{\rho d}}] - \mathbb E^{\Lambda_K}_{\Gamma,g_0}[W_{\mathcal C_d}] = \mathbb E^{\Lambda_K}_{\Gamma,g_0}[W_{\mathcal C_{\rho d}}] - \mathbb E^{\Lambda'_K}_{\Gamma,g_0}[W_{\mathcal C_{\rho d}}]\;.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+By Lemma~\ref{lem:gaussian}(iii), $\rho d_j = \omega\bar d_j \in \varepsilon_q(2 + i)\mathbb Z[i]$. The sites of $C_j + d_j$ are the points $(x_0, x_1, d_j)$ with $(x_0, x_1, 0)$ a site of $C_j$; they lie in $\varepsilon_q(\mathbb Z^2 \times (2 + i)\mathbb Z[i]) = \Lambda_q \cap \Lambda'_q$, and the bonds of $C_j + d_j$ are parallel to $e_0 = \rho e_0$ or $e_1 = \rho e_1$ and of the length $\varepsilon_q$. A straight path of the length $\varepsilon_q$ between two points of $\Lambda_q$, or of $\Lambda'_q$, along one of its axes is a path of $L^{K-q}$ bonds of $\Lambda_K$, or of $\Lambda'_K$; so $C_j + d_j$ is a closed path of bonds of both lattices, and the same holds for $C_j + \rho d_j$. Lemma~\ref{lem:transport} with $\Xi = \Lambda_K$ and $O = \rho$, for which $O\Gamma = \Gamma$ by Lemma~\ref{lem:torus}(ii) and $O\Xi = \Lambda'_K$, gives \eqref{eq:reduction} because $\rho\mathcal C_d = \mathcal C_{\rho d}$, and \eqref{eq:defect} follows by subtracting both sides of \eqref{eq:reduction} from $\mathbb E^{\Lambda_K}_{\Gamma,g_0}[W_{\mathcal C_{\rho d}}]$.
+\end{proof}
+
+The left side of \eqref{eq:defect} measures how far the lattice theory on $\Lambda_K$ is from being invariant under $\rho$ on this ensemble, and the right side how much the expectation of one ensemble differs between the two lattices. The first instance in which $\mathcal C_{\rho d}$ is not the image of $\mathcal C_d$ under a symmetry of $\Lambda_q$ is $n = 2$, $d_1 = 0$, and $d_2 = 5\varepsilon_q = (2 + i)(2 - i)\varepsilon_q$, for which $\rho d_2 = (3 + 4i)\varepsilon_q$; this is \eqref{eq:target}. The step factors of the paper do not depend on the position of a loop (Paper, Proposition~\ref{P-prop:normalisation-structure}), so that $C_j + d_j$ and $C_j + \rho d_j$ have the same normalisation on $\Lambda_K$, and \eqref{eq:target} is the statement that the left side of \eqref{eq:defect}, divided by this normalisation, tends to zero as $K \to \infty$ along the couplings of the paper.
+
+\section{The Common Symmetries}\label{sec:symmetries}
+
+A run of the renormalisation group whose fine lattice is $\Lambda_{K+1}$ and whose coarser lattices are $\Lambda'_K, \Lambda'_{K-1}, \dots$ has only those symmetries which preserve the lattices of both families. We determine them, and what they leave of the argument by which a single coupling describes the leading term of an effective action.
+
+\begin{lemma}[The Common Symmetries]\label{lem:common-symmetries}
+Let $\mathfrak G_0$ be the group of the linear isometries $O$ of $\mathbb R^4$ with $O\mathbb Z^4 = \mathbb Z^4$ and $O\rho\mathbb Z^4 = \rho\mathbb Z^4$. Its elements are the maps
+\begin{equation}\label{eq:common-symmetries}
+    (x_0, x_1, z) \mapsto \bigl(A(x_0, x_1), i^kz\bigr)\;,
+\end{equation}
+with $A$ one of the eight signed permutation matrices of the first two coordinates and $k \in \{ 0, 1, 2, 3 \}$. It has $32$ elements, it contains the reflections in the hyperplanes $\{ x_0 = 0 \}$ and $\{ x_1 = 0 \}$, and it contains no reflection of the plane of $x_2$ and $x_3$.
+\end{lemma}
+
+\begin{proof}
+An isometry $O$ with $O\mathbb Z^4 = \mathbb Z^4$ permutes the eight vectors $\pm e_\mu$, the elements of $\mathbb Z^4$ of the length $1$, and an isometry with $O\rho\mathbb Z^4 = \rho\mathbb Z^4$ permutes the eight vectors $\pm e_0$, $\pm e_1$, $\pm\rho e_2$, $\pm\rho e_3$. By \eqref{eq:rho-vectors} the only vectors common to the two sets are $\pm e_0$ and $\pm e_1$. For $O \in \mathfrak G_0$ the vector $Oe_0$ belongs to the first set; if it were $\pm e_2$ or $\pm e_3$, then $O^{-1}$ would map an element of the first set which is not in the second to an element of the second, although $O^{-1}$ maps the complement of the second set in the unit sphere to itself. Hence $Oe_0, Oe_1 \in \{ \pm e_0, \pm e_1 \}$, the map $O$ preserves the plane of $e_0$ and $e_1$ and its orthogonal complement, and it acts on the first as a signed permutation matrix $A$ and on the second as a signed permutation matrix of $e_2$ and $e_3$, that is, as $z \mapsto i^kz$ or as $z \mapsto i^k\bar z$. Every such map preserves $\mathbb Z^4$, and it preserves $\rho\mathbb Z^4 = \mathbb Z^2 \times \omega\mathbb Z[i]$ if and only if its second part preserves $\omega\mathbb Z[i]$. The maps $z \mapsto i^kz$ do. The maps $z \mapsto i^k\bar z$ send $\omega\mathbb Z[i]$ to $\bar\omega\mathbb Z[i]$, which is equal to $\omega\mathbb Z[i]$ only if $\omega^2 \in \mathbb Z[i]$, and $\omega^2 = (-7 + 24i)/25$. This gives \eqref{eq:common-symmetries} and the count $8 \cdot 4$. The reflections named are the cases $A = \operatorname{diag}(-1, 1)$ and $A = \operatorname{diag}(1, -1)$ with $k = 0$.
+\end{proof}
+
+The group of all symmetries of $\mathbb Z^4$, the signed permutation matrices, has $384$ elements and exchanges any two coordinate planes. The group $\mathfrak G_0$ does not, and this has the following consequence. Let $F = (F_{\mu\nu})$ be an antisymmetric tensor, on which an isometry $O$ acts by $(OF)_{\mu\nu} = \sum_{\kappa,\lambda}O_{\mu\kappa}O_{\nu\lambda}F_{\kappa\lambda}$.
+
+\begin{lemma}[Invariant Quadratic Forms]\label{lem:invariant-forms}
+The real quadratic forms of the antisymmetric tensors $F$ which are invariant under $\mathfrak G_0$ are the combinations
+\begin{equation}\label{eq:invariant-forms}
+    \alpha F_{01}^2 + \beta F_{23}^2 + \lambda\sum_{a \in \{ 0, 1 \}}\sum_{j \in \{ 2, 3 \}}F_{aj}^2
+\end{equation}
+with real $\alpha$, $\beta$, $\lambda$, a space of dimension three. Those which are invariant under all signed permutation matrices are the multiples of $\sum_{\mu<\nu}F_{\mu\nu}^2$.
+\end{lemma}
+
+\begin{proof}
+Let $\mathsf q$ be an invariant quadratic form, a combination of the products of two of the six components $F_{01}$, $F_{23}$, $F_{aj}$. The three elements $\theta_0$, $\theta_1$, and $\sigma$ of $\mathfrak G_0$ which change the sign of $x_0$, of $x_1$, and of $z$ multiply each component by a sign: $F_{01}$ by $(-, -, +)$, $F_{23}$ by $(+, +, +)$, $F_{0j}$ by $(-, +, -)$, and $F_{1j}$ by $(+, -, -)$. A product of two components is invariant under the three only if the two have the same signs, so that
+\begin{equation}\label{eq:form-reduced}
+    \mathsf q(F) = \alpha F_{01}^2 + \beta F_{23}^2 + \sum_{j,j'}\bigl(m^0_{jj'}F_{0j}F_{0j'} + m^1_{jj'}F_{1j}F_{1j'}\bigr)
+\end{equation}
+with symmetric matrices $m^0$ and $m^1$. The element of $\mathfrak G_0$ which exchanges $x_0$ and $x_1$ exchanges $F_{0j}$ and $F_{1j}$, so that $m^0 = m^1 \eqqcolon m$. The element $z \mapsto iz$ maps $e_2$ to $e_3$ and $e_3$ to $-e_2$, so that it replaces the vector $(F_{a2}, F_{a3})$ by $(-F_{a3}, F_{a2})$; the invariance of \eqref{eq:form-reduced} then requires $m_{22} = m_{33}$ and $m_{23} = -m_{23}$, that is, $m = \lambda\id$. This is \eqref{eq:invariant-forms}. Conversely each of the three forms is invariant: an element \eqref{eq:common-symmetries} multiplies $F_{01}$ by $\det A = \pm1$, fixes $F_{23}$, because $z \mapsto i^kz$ has the determinant $1$, and replaces the matrix $(F_{aj})$ by its product with $A$ on one side and with a rotation matrix on the other, which preserves the sum of the squares of its entries. Finally a signed permutation matrix which exchanges the planes of two pairs of coordinates exchanges the corresponding components up to signs, so that the invariance under all of them forces $\alpha = \beta = \lambda$.
+\end{proof}
+
+The lemma bears on the renormalisation of the coupling. Ba{\l}aban defines the coefficient $\beta_{j+1}$ of the flow of the coupling as a second derivative of the Fourier transform of the vacuum polarisation $\Pi_{j+1,\mu\nu}$ of a step, for one pair $\mu \neq \nu$, and the definition does not depend on the pair because the vacuum polarisation is covariant under the rotations which leave the lattice invariant \cite[(1.20)--(1.22), p.~264]{BalabanRG1}. For the steps of a run whose fine lattice is tilted against the others, only the covariance under $\mathfrak G_0$ is available, and by Lemma~\ref{lem:invariant-forms} it leaves three coefficients, one for each of the forms \eqref{eq:invariant-forms}, where the covariance under the symmetries of one lattice leaves one. We do not know whether the three agree.
+
+\section{The Tilted Step}\label{sec:tilted-step}
+
+Let $L$ be a multiple of $5$ and $l \coloneqq L/5$. The step which leads from $\Lambda_{K+1}$ to $\Lambda'_K$ needs blocks of $L^4$ points of the fine lattice, one for each point of the coarse lattice, and for each bond of the coarse lattice a path of fine bonds. We define them here, together with the average of a real field, the tilted counterpart of \cite[(1.6)--(1.8), pp.~18--19]{BalabanPRT1}. In this section the unit of length is $\varepsilon_{K+1}$, so that by \eqref{eq:coarse-in-fine} the fine lattice is $\mathbb Z^4 = \mathbb Z^2 \times \mathbb Z[i]$ and the coarse lattice is
+\begin{equation}\label{eq:coarse-lattice}
+    Y \coloneqq L\mathbb Z^2 \times l(3 + 4i)\mathbb Z[i]\;,
+\end{equation}
+with the axes $e'_\mu \coloneqq \rho e_\mu$ of \eqref{eq:rho-vectors} and the bonds $\langle y, y \pm Le'_\mu\rangle$, $y \in Y$. In Ba{\l}aban's step the coarse lattice is $L\mathbb Z^4$, the block of $y$ is the cube $\{ x \, | \, y_\mu \leq x_\mu < y_\mu + L \}$ \cite[(1.6), p.~18]{BalabanPRT1}, and the path of the bond $\langle y, y + Le_\mu\rangle$ from a point $x$ of the block is the straight segment $[x, x + Le_\mu]$ \cite[(1.8), p.~19]{BalabanPRT1}. Here neither is available in the plane of $x_2$ and $x_3$: a square of side $L$ with the sides $Le'_2$ and $Le'_3$ is not a union of cells of the fine lattice, and the vector $Le'_2 = l(3e_2 + 4e_3)$ is not a multiple of a vector of the basis.
+
+\begin{definition}[Blocks and Staircases]\label{def:blocks}
+\begin{enumerate}[label=(\roman*)]
+\item Let $D$ be the set of the $z \in \mathbb Z[i]$ of the form $z = l(3 + 4i)(s + it)$ with real $0 \leq s, t < 1$. The \emph{block} of $y \in Y$ is $B(y) \coloneqq y + \{ 0, \dots, L - 1 \}^2 \times D$.
+\item For a point $x$ of the fine lattice, the \emph{staircases} from $x$ are the following paths of fine bonds: $\sigma_0(x)$ and $\sigma_1(x)$ are the straight paths of $L$ bonds in the directions $e_0$ and $e_1$; $\sigma_2(x)$ repeats $l$ times the seven steps $e_3, e_2, e_3, e_2, e_3, e_2, e_3$; and $\sigma_3(x)$ repeats $l$ times the seven steps $e_2, -e_3, e_2, -e_3, e_2, -e_3, e_2$.
+\end{enumerate}
+\end{definition}
+
+\begin{lemma}[Blocks and Staircases]\label{lem:blocks}
+\begin{enumerate}[label=(\roman*)]
+\item The blocks $B(y)$, $y \in Y$, are pairwise disjoint, their union is $\mathbb Z^4$, each has $L^4$ points, and $B(y + w) = B(y) + w$ for $w \in Y$.
+\item The staircase $\sigma_\mu(x)$ ends at $x + Le'_\mu$, it has $L$ bonds for $\mu \in \{ 0, 1 \}$ and $7l$ bonds for $\mu \in \{ 2, 3 \}$, each of its sites is at a distance of at most $\frac35$ from the segment $[x, x + Le'_\mu]$, and the reversed path is the path from $x + Le'_\mu$ with the same sequence of steps, each with the opposite sign.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(i) Every complex number is $l(3 + 4i)(w + p)$ for exactly one pair of a $w \in \mathbb Z[i]$ and a $p = s + it$ with $0 \leq s, t < 1$. If the number is a Gaussian integer $z$, then $z - l(3 + 4i)w = l(3 + 4i)p$ is one as well, hence an element of $D$; so $\mathbb Z[i]$ is the disjoint union of the sets $l(3 + 4i)w + D$, $w \in \mathbb Z[i]$, and $D$ has as many elements as the index of $l(3 + 4i)\mathbb Z[i]$ in $\mathbb Z[i]$, which is $25l^2 = L^2$. In the same way $\mathbb Z^2$ is the disjoint union of the translates of $\{ 0, \dots, L - 1 \}^2$ by $L\mathbb Z^2$. The last assertion is the definition.
+
+(ii) Seven steps of $\sigma_2$ add up to $3e_2 + 4e_3$ and seven steps of $\sigma_3$ to $4e_2 - 3e_3$, and $l(3e_2 + 4e_3) = Le'_2$, $l(4e_2 - 3e_3) = Le'_3$ by \eqref{eq:rho-vectors}. The distance of a point $ae_2 + be_3$ from the line through the origin in the direction $3e_2 + 4e_3$ is $\abs{4a - 3b}/5$; after one to seven steps of $\sigma_2$ from the origin the pair $(a, b)$ is $(0, 1)$, $(1, 1)$, $(1, 2)$, $(2, 2)$, $(2, 3)$, $(3, 3)$, $(3, 4)$, with $\abs{4a - 3b} = 3, 1, 2, 2, 1, 3, 0$, and the foot of the perpendicular lies on the segment between the origin and $3e_2 + 4e_3$ in each case. Since the eighth site lies on the line, the same holds for every period of seven steps. For $\sigma_3$ the pairs are $(1, 0)$, $(1, -1)$, $(2, -1)$, $(2, -2)$, $(3, -2)$, $(3, -3)$, $(4, -3)$, and the distance from the line in the direction $4e_2 - 3e_3$ is $\abs{3a + 4b}/5$, with the same values. Both sequences of seven steps read the same from either end, which gives the assertion on the reversed path.
+\end{proof}
+
+A real field is a function $A$ on the bonds of the fine lattice with $A(b^{-1}) = -A(b)$, and $A(\gamma) \coloneqq \sum_{b \in \gamma}A(b)$ for a path $\gamma$. For the average we need, as in \cite[(1.7), p.~18]{BalabanPRT1}, a path from the corner of each block to each of its points. We call a \emph{system of contours} a choice, for every $y \in Y$ and every $x \in B(y)$, of a path $\Gamma_{y,x}$ of fine bonds from $y$ to $x$ such that $\Gamma_{y+w,x+w} = \Gamma_{y,x} + w$ for every $w \in Y$; what follows holds for every such system.
+
+\begin{definition}[The Linear Average]\label{def:linear-average}
+For a real field $A$ and a bond $c = \langle y, y + Le'_\mu\rangle$ of $Y$,
+\begin{equation}\label{eq:linear-average}
+    (QA)(c) \coloneqq L^{-5}\sum_{x \in B(y)}\Bigl(A(\Gamma_{y,x}) + A(\sigma_\mu(x)) - A(\Gamma_{y+Le'_\mu,\,x+Le'_\mu})\Bigr)\;,
+\end{equation}
+and $(QA)(c^{-1}) \coloneqq -(QA)(c)$.
+\end{definition}
+
+For each $x$ the three paths form one path from $y$ through $x$ and $x + Le'_\mu$ to $y + Le'_\mu$, the last piece traversed backwards, and $x + Le'_\mu$ is a point of $B(y + Le'_\mu)$ by Lemma~\ref{lem:blocks}(i). With cubes for the blocks and straight segments for the staircases, \eqref{eq:linear-average} is \cite[(1.8), p.~19]{BalabanPRT1} in dimension four.
+
+\begin{lemma}[First Properties of the Average]\label{lem:average}
+\begin{enumerate}[label=(\roman*)]
+\item For a function $\lambda$ on $\mathbb Z^4$ and the field $(\partial\lambda)(b) \coloneqq \lambda(b_+) - \lambda(b_-)$, $b = \langle b_-, b_+\rangle$, we have $(Q\partial\lambda)(c) = L^{-1}(\lambda(c_+) - \lambda(c_-))$ for every bond $c = \langle c_-, c_+\rangle$ of $Y$.
+\item For $a \in \mathbb R^4$ and the constant field $A(b) \coloneqq a \cdot (b_+ - b_-)$, we have $(QA)(\langle y, y + Le'_\mu\rangle) = a \cdot e'_\mu$.
+\item $Q$ commutes with the translations by the vectors of $Y$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+For a path $\gamma$ from $x$ to $x'$ we have $(\partial\lambda)(\gamma) = \lambda(x') - \lambda(x)$ and, for the constant field, $A(\gamma) = a \cdot (x' - x)$. (i) The three terms of \eqref{eq:linear-average} are $\lambda(x) - \lambda(y)$, $\lambda(x + Le'_\mu) - \lambda(x)$, and $-(\lambda(x + Le'_\mu) - \lambda(y + Le'_\mu))$, with the sum $\lambda(y + Le'_\mu) - \lambda(y)$ for each of the $L^4$ points $x$. (ii) The three terms are $a \cdot (x - y)$, $a \cdot Le'_\mu$, and $-a \cdot (x - y)$. (iii) holds because the blocks, the staircases, and the contours are carried to each other by these translations.
+\end{proof}
+
+Statement (i) is the gauge covariance of the average, as in \cite[(1.9), p.~19]{BalabanPRT1}, and statement (ii) says that the average of a constant field is the same constant field, read in the axes of the coarse lattice.
+
+\section{What Is Not Proved}\label{sec:not-proved}
+
+The equality \eqref{eq:target} is not proved. By Proposition~\ref{prop:reduction} it concerns the lattice theories of the two lattices $\Lambda_K$ and $\Lambda'_K$ on the torus $\mathbb T_\Gamma$, and the route described in the introduction requires the following, none of which is available.
+
+\emph{The construction on the tilted torus.} The paper is written for the torus $(\mathbb R/T\mathbb Z)^4$. The existence of the limits on $\mathbb T_\Gamma$, with the normalisations of the paper, requires each of its steps in which the torus enters to be carried out for the periods $\Gamma$, which are not multiples of the vectors of the basis.
+
+\emph{The run with the tilted step.} Let $L$ be a multiple of $5$. The run to be compared with the construction of the paper on $\Lambda'_K$, which is the construction on $\Lambda_K$ carried by $\rho$, starts from the lattice theory on $\Lambda_{K+1}$, passes to $\Lambda'_K$ by the step of Section~\ref{sec:tilted-step}, and continues on $\Lambda'_{K-1}, \Lambda'_{K-2}, \dots$ with the steps of the paper. For this run one needs the average of Section~\ref{sec:tilted-step} for fields with values in $G$, with the properties of Ba{\l}aban's averaging operations \cite{BalabanAVG}, and then his description of the densities after $k$ steps \cite[Theorem~1, p.~262]{BalabanCRE}. Every background field, propagator, and gauge fixing of this run, at every step, is defined on $\Lambda_{K+1}$ under the constraints of an iterated average whose first factor is the tilted one, so that the results on which that description rests \cite{BalabanPRT1, BalabanPRT2, BalabanREG, BalabanPBG, BalabanVAR} are needed for such averages; they are proved for cubes and straight segments.
+
+\emph{The coupling.} By Lemma~\ref{lem:invariant-forms} the symmetries of this run leave three coefficients where Ba{\l}aban's definition of $\beta_{j+1}$ uses one. If the three do not agree, the description of the densities must carry them, and so must the choice of the bare coupling of the paper (Paper, Theorem~\ref{P-thm:coupling-flow}).
+
+\emph{The loops in the tilted step.} The first step of the paper with a loop ensemble (Paper, Theorem~\ref{P-thm:first-step}) is needed for the tilted step. The loops of Proposition~\ref{prop:reduction} run along $e_0$ and $e_1$, which are axes of both lattices, but the blocks which they cross are tilted in the other two directions.
+
+\emph{The comparison.} The two runs share every lattice but the finest, as the two runs of Paper, Section~\ref{P-sec:two-runs}, and the identities of Paper, Lemma~\ref{P-lem:galerkin}, use of the passage between the two fine lattices only a linear map with a right inverse. The bounds on the defect (Paper, Proposition~\ref{P-prop:local-defect}), on the minimisers, and on the large-field terms are proved in the paper for two fine lattices of which one is the lattice of the cubes of the other, and they are needed for $\Lambda_{K+1}$ and $\Lambda'_K$.
+
+\emph{The normalisation.} The normalisation of the run with the tilted step is a product of its own step factors. Since $\rho$ fixes a loop in the plane $\{ z = 0 \}$, the comparison for a single loop relates the two normalisations whenever the limit for this loop is not zero, which the paper proves for loops which are short for the coupling (Paper, Proposition~\ref{P-prop:nonvanishing}) on its own torus.
+
+\bibliographystyle{amsplain}
+\bibliography{refs}
+
+\end{document}
