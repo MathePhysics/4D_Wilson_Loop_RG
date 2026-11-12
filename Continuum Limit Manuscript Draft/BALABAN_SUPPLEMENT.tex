@@ -898,7 +898,10 @@ because $1/s = 1/\abs{\cdot}^2 + h_s$. By the calculus $F_r \in \mathrm{DC}(-1)$
 \end{equation}
 and, with $\abs{\ell \pm \xi}^2 = a \pm 2u + w$, a direct computation, collecting the coefficients of $n_0$, $n_1$, and $n_2$ separately, gives the identity
 \begin{equation}\label{eq:second-difference-identity}
-    \Delta^2f - 2f_2 = \frac{2\bigl[n_0(a^2w^2 + aw^3 - 12awu^2 - 4w^2u^2 + 16u^4) + 2n_1ua(2aw + w^2 - 4u^2) + n_2(-a^3w - a^2w^2 + 4a^2u^2)\bigr]}{a^4\abs{\ell + \xi}^2\abs{\ell - \xi}^2}\;,
+    \Delta^2f - 2f_2 = \frac{2\left[\begin{gathered}
+        n_0(a^2w^2 + aw^3 - 12awu^2 - 4w^2u^2 + 16u^4)\\
+        {}+ 2n_1ua(2aw + w^2 - 4u^2) + n_2(-a^3w - a^2w^2 + 4a^2u^2)
+    \end{gathered}\right]}{a^4\abs{\ell + \xi}^2\abs{\ell - \xi}^2}\;,
 \end{equation}
 so that $\abs{\Delta^2f - 2f_2} \leq C\abs{\xi}^4\abs{\ell}^{-6}$, with an integral $O(\abs{\xi}^2)$ over the annulus. Finally $f_2(\cdot, \xi)$ is homogeneous of degree $-4$, so that in polar coordinates $\int_{2\abs{\xi}<\abs{\ell}<\pi/2}f_2\,\dd^4\ell = \ln(\pi/(4\abs{\xi}))\int_{S^3}f_2(\omega, \xi)\,\dd\sigma(\omega)$, and $\Sigma(\xi) = O(\abs{\xi}^2)$. The annulus thus contributes $\Sigma(\xi)\ln(1/\abs{\xi}) + O(\abs{\xi}^2)$, and the three regions together give \eqref{eq:infrared-expansion}. The last assertion holds because $1/s$ is integrable in four dimensions and $\tilde N$ is smooth in $\xi$.
 \end{proof}
@@ -1186,11 +1189,13 @@ The paper carries a loop ensemble through the first step on labelled terms of a 
 
 Throughout this section lengths are measured in fine units, the cubes are those of side $\ell \coloneqq LMR_1$ of which $\Omega_1$ and $\Lambda_1$ are unions, and the operation $\sim$ adds one layer of these cubes. We fix a term of the decomposition of the first step with the domains $\Omega_1$ and $\Lambda_1$ of \cite[(1.10), p.~248; (1.20), p.~251]{BalabanCRE}. Let $\Omega_1^*$ be the set of the free bonds of $\Omega_1$, and $I \subset \Omega_1^*$ the set of the bonds over which Ba{\l}aban's conditional integral at $\Lambda_1$ runs, both in the variables of \cite[Section~3]{WilsonFirstStep}. In these variables the quadratic form $\langle A, C^*\Delta_1CA\rangle$ of \cite[(1.15), p.~249]{BalabanCRE} is $\langle A, HA\rangle$ with a symmetric operator $H$ on $\Omega_1^*$, whose entries vanish between bonds at a distance greater than $\rho_L \coloneqq 4L$, and whose principal restrictions to subsets of $I$ satisfy $\gamma_L/2 \leq H \leq m_L$, with constants $\gamma_L$ and $m_L$ which depend on $L$ and $G$ \cite[Section~9.1, (I1)--(I3)]{WilsonFirstStep}. For a union $\Lambda \subset \Lambda_1$ of cubes, the \emph{carrier}, the \emph{exterior}, and the \emph{collar} of $\Lambda$ are
 \begin{equation}\label{eq:carrier}
-    D(\Lambda) \coloneqq \{ b \in I \,|\, b \text{ has an endpoint in } \Lambda \}\;,
-    \qquad
-    J(\Lambda) \coloneqq \Omega_1^* \setminus D(\Lambda)\;,
-    \qquad
-    J_{\mathrm{col}}(\Lambda) \coloneqq \{ e \in J(\Lambda) \,|\, \dist(e, D(\Lambda)) \leq \rho_L \}\;,
+    \begin{gathered}
+        D(\Lambda) \coloneqq \{ b \in I \,|\, b \text{ has an endpoint in } \Lambda \}\;,
+        \\
+        J(\Lambda) \coloneqq \Omega_1^* \setminus D(\Lambda)\;,
+        \\
+        J_{\mathrm{col}}(\Lambda) \coloneqq \{ e \in J(\Lambda) \,|\, \dist(e, D(\Lambda)) \leq \rho_L \}\;,
+    \end{gathered}
 \end{equation}
 the distance of two bonds being that of their initial sites \cite[Section~9.3.2]{WilsonFirstStep}. The cutoff radius of the fluctuation field in the construction of the paper is $t_0 \coloneqq \vartheta_0/g_0$ (Paper, Definition~\ref{P-def:construction}(ii)). A collar bond $e$ is \emph{bad} if $\abs{A(e)}_\sigma \geq \vartheta_Vt_0$ and \emph{good} otherwise, where $\abs{\cdot}_\sigma$ is the norm on $\mathfrak g$ of \cite[Section~9.1]{WilsonFirstStep} and $\vartheta_V \leq 1/16$ is the constant of \cite[Remark~9.3]{WilsonFirstStep}.
 
@@ -1547,11 +1552,13 @@ and at an $\mathbf R$-step the recursion of Paper, \eqref{P-eq:deviation-recursi
 
 The weight of the large-field terms at the stopping step (Paper, Proposition~\ref{P-prop:large-field-weight}) is bounded by comparing whole integrals, and the comparison has a price: every point of the history of a component, at every scale, costs a factor $e^{c_n + C_P}$ with $c_n$ of the order of $\log g_n^{-2}$, which is more than the cost $O(1)M^dR_n^{d+1}d'_n$ per step that Ba{\l}aban's induction \cite[(1.80)--(1.88), pp.~384--387]{BalabanLFR2} pays. We pay it by raising the cost of each step and setting aside half of the gain of every new region, and we show that the induction survives both changes. Ba{\l}aban's numbers $\kappa_j(Z)$ are defined by \cite[(1.83), (1.85)]{BalabanLFR2} from the factors of \cite[(1.79), p.~383]{BalabanLFR2}, with one exception: for $Z = S(Z_0)$, $Z_0$ satisfying the conditions (i), (ii) of \cite[p.~177]{BalabanLFR1} and a new large field in the preparatory operations, he puts $\kappa_{j+1}(Z) \coloneqq p_0(g_j) - O(1)M^dR_{j+1}^{d+1}d'_{j+1}(Z)$ \cite[p.~386]{BalabanLFR2}, discarding $\kappa_j(Z_0) \geq 0$. We let $\kappa^{\mathrm{tr}}_j(Z)$ be the exact exponent of the factor of $Z$, defined by the same recursion with $\kappa^{\mathrm{tr}}_j(Z_0)$ kept in this case, so that $\kappa^{\mathrm{tr}}_{j+1}(Z) = \kappa^{\mathrm{tr}}_j(Z_0) + p_0(g_j) - O(1)M^dR_{j+1}^{d+1}d'_{j+1}(Z)$ there. In the construction of the paper the gain of a new region $Z'$ created at the step $j' \geq 2$ is at least $\frac13\gamma_0A_1^2p_0^2(g_{j'})(d'_{j'}(Z') + 1)$, and the terms $2p_0$ and the preparatory factor $p_0(g_j)$ are $(2/\rho)p_0$ and $p_0(g_j)/\rho$ (Paper, Proposition~\ref{P-prop:construction-admissible}), while a region of the first step has the gain $\frac12c_4\vartheta_V^2A_1^2(\log g_1^{-2})^{2p_0}(d'_1(Z') + 1)$ of Proposition~\ref{prop:retreated-first-step}(iii). With the numbers $\Upsilon_{j'}$ of Paper, \eqref{P-eq:history-quantities}, which are half of these gains per unit of $d' + 1$, and with $d = 4$, put, for a component $Z$ of $Z_j$,
 \begin{equation}\label{eq:gain-cost-split}
-    G_j(Z) \coloneqq \sum_{Z'}\Upsilon_{j'}\bigl(d'_{j'}(Z') + 1\bigr)\;,
-    \qquad
-    H_j(Z) \coloneqq \sum_{n \leq j}\lambda_n\sum_{Z''}M^dR_n^{d+1}d'_n(Z'')\;,
-    \qquad
-    \lambda_n \coloneqq 1 + 3 \cdot 2^{d-1}L^dC_\lambda\bigl(1 + \log g_n^{-2}\bigr)\;,
+    \begin{gathered}
+        G_j(Z) \coloneqq \sum_{Z'}\Upsilon_{j'}\bigl(d'_{j'}(Z') + 1\bigr)\;,
+        \\
+        H_j(Z) \coloneqq \sum_{n \leq j}\lambda_n\sum_{Z''}M^dR_n^{d+1}d'_n(Z'')\;,
+        \\
+        \lambda_n \coloneqq 1 + 3 \cdot 2^{d-1}L^dC_\lambda\bigl(1 + \log g_n^{-2}\bigr)\;,
+    \end{gathered}
 \end{equation}
 the first sum over the new regions merged into $Z$ during its history, the second over the components $Z''$ of $Z_n$ inside $Z$, with the constant $C_\lambda$ of Paper, \eqref{P-eq:constant-difference}.
 
