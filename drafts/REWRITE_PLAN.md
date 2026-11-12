@@ -131,7 +131,47 @@ rate comparison, the root sum for (Z), and the difference count 3748–3815.
 
 ## State
 
-- **12 Nov 2026, 22:58 (from `date` 22:56:43 at the last compile). LATEST STATE; RESUME HERE.** Paper 202 pp.
+- **12 Nov 2026, 23:08 (from `date` 23:07:23). ONE SESSION FOR THE MANUSCRIPT FROM NOW ON.** The user, 23:06
+  (verbatim): "Transcription ⑂ Solely works on the rotation, you solely work the manuscript. The third station
+  won't do anything anymore". The session which wrote the entries below (20:45–23:03) has stopped; the session
+  which wrote `COMPLEX_COVARIANCE_*` and `FIRST_STEP_BASE_STATE.md` (the "third session" of the entries below)
+  now owns the paper, the supplement, `PROGRESS.md`, `FINDINGS.md`, and this file, and continues at "NEXT, IN
+  ORDER" of the entry of 23:03, item (a). `ListAgents` at 23:07: no other session busy on the folder. Builds:
+  the session's scratchpad was withdrawn; compile in a directory made by `mktemp -d` outside the project.
+  `COMPLEX_COVARIANCE_DRAFT.tex` is the source of `sec:carried-complex` and is no longer maintained; the
+  three-lines lemma (O1 of `COMPLEX_COVARIANCE_STATE.md`) is a candidate replacement for the citation of RG I
+  (1.17) (F31) and goes to the supplement when written.
+
+- **12 Nov 2026, 23:03 (from `date` 23:00:46 at the last compile). LATEST STATE; RESUME HERE.** Paper 204 pp.
+  `fa0bfccd5d4f`, supplement 170 pp. `d3c297f5d58e`, both clean. Items (4) and (5) of the entry of 22:58 below
+  are done: `lem:new-insertions` (in `sec:small-field-map`, before "The flat parts"); the paragraph "Assembly"
+  of `sec:assembly` (clause by clause, θ := νσ/16, order of the constants C_α, C_{S′}, C_c, C_new, C_χ).
+  `FINDINGS.md` F30 (count) and F31 (space of a step, constants, what is not covered) are written.
+  **Section 6 now, in order:** `sec:evaluation-point`, `sec:step-identity`, `sec:localisation-expansion`,
+  `sec:marked-polymers` (with `prop:marked-size`), `sec:groups-of-step`, `sec:count`, `sec:small-field-map`
+  (`lem:new-insertions`, flat parts, `cor:production-bound`), `sec:new-deviation`, `sec:contraction`
+  (`prop:carried-real`, recursion), `sec:carried-complex`, `sec:large-field-step` (OLD TEXT),
+  `sec:assembly` (cross species, torus: OLD TEXT; "Assembly": new).
+  **NEXT, IN ORDER:** (a) the base k = 1 of the new clauses: `eq:per-insertion`, `eq:tail-clause`, clause (iii)
+  in the form of `eq:space-of-step`/`eq:production-space`/`eq:covariance-law` at j = 1, clause (vii) (X_W
+  connected, u_⋆ = 11, incompatible ⇒ common point, `eq:sup-clause`, `eq:production-clause` with ρ₁), θ := νσ/16;
+  the third session's `FIRST_STEP_BASE_STATE.md` has the readings of V4 (Lemma E.8 with its proof, (3.36),
+  (3.75), Section E.10.4) and IT-1 §3a; it is paused; if it does not continue, read that state file and write
+  the base into the proof of Theorem `thm:first-step` (which also has to be rewritten from IT-1: the seventh
+  condensation site). (b) The wrapping species on the term without large-field regions (a group with one
+  interval whose cube 𝒬^{∼5} does not embed: ext ≥ N_min/(2M) − 6; from `eq:size-bound` with the extent weight;
+  table constant c_att) and the cross species in the supremum form with the extent weight (new cross groups:
+  `thm:size-bound` holds for them in the projective norm, and a cross group contains a chain of cubes between
+  two loops, so σ ≥ a_{k+1}/M; carried cross groups: the complex block for tensors with several intervals, or a
+  bound by the production suprema with the growth 2^{k−j}): rewrite the first paragraphs of `sec:assembly` and
+  the cross clause `eq:cross-bound` accordingly (two-loops note (6), lines 250–294, and N-loops note §6 to read).
+  (c) Large fields (S.9, D2.6 closure; the split of an old insertion; map D2.2(6)(b3), (b6)–(b7), (e)).
+  (d) 𝐑-steps (S.10, D2.7 closure; L-condition of F30). (e) F26 proper. (f) Appendix A and C (constants and
+  conditions of F27–F31; η_w; c_F clash with Supplement Lemma 17.22), "Status", "Notes on the Papers" (RG I
+  (1.17); RG II (2.32)), audits (F30 "to audit"; other condensation sites), prose passes (`math-prose`,
+  `deslop-maths`) on Sections 5–6 new text, final lint.
+
+- **12 Nov 2026, 22:58 (from `date` 22:56:43 at the last compile). SUPERSEDED BY THE ENTRY ABOVE.** Paper 202 pp.
   `689634a8c24f`, supplement 170 pp. `d3c297f5d58e`, both clean. Done since the entry of 22:46 below (its
   items (1)–(3)): `sec:carried-complex` moved in (decision (A) taken, reported to the user, not yet answered);
   `sec:new-deviation` (`prop:new-deviation`: `eq:new-per-insertion`, `eq:new-tail`, constants C_g :=
