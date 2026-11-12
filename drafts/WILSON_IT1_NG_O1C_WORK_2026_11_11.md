@@ -22,7 +22,7 @@
 
 ## 3 The Fluctuation Part Decays
 
-{#O1C.3} This section bounds 𝔣_r of #O1C.2-5 at flat backgrounds. 𝖨₀ and 𝖨_k, k ≥ 2, are at ℓ^∞-distance (k − 1)t_b ≥ t_b ≥ L³MR_{K′} (#NG5.2-3), R_{K′} CRE's radius (#T2.23).
+{#O1C.3} This section bounds 𝔣_r of #O1C.2-5 at flat backgrounds. 𝖨₀ and 𝖨_k, k ≥ 2, are at ℓ^∞-distance (k − 1)t_b ≥ t_b ≥ L³MR_{K′} (#NG5.2-3), R_{K′} of #T2.23.
 {#O1C.3-1} *Units.* Lengths are in step-K′ blocks; the fine spacing is then η = L^{−K′} ≤ 1/16 for K′ ≥ 2. t_b and s_b denote the sides t and s of 𝖨₀ in these units, so s_b/t_b = s/t. The pairings of #O1C.2-4 are invariant under this rescaling in d = 4, as χ_𝖨 scales like length^{−2} and ⟨·,·⟩ like length⁴.
 {#O1C.3-3} *Twisted flat backgrounds (cited).* PBG works on the torus with a background U satisfying (3.35): on every cube of its class there is a gauge u with U^u = e^{iηA}, A small (p.396). Flat backgrounds satisfy it, and (3.36), with A = 0 whatever their holonomies around the cycles, the cubes being of size O(1)ML^jη ≪ T_ph. Theorem 3.1 (p.397–398) bounds G′(U) with constants depending on d and L only, Theorem 3.3 (p.399) gives G(U) the same bounds (3.42)–(3.47), and (3.132) and (3.133) (p.422) bound (QGQ^*)^{−1} by O(1)e^{−δ₁d(y,y′)} and H by O(1)e^{−(1/2)δ₁d(y,y′)}.
 {#O1C.3-4} *The constrained covariance (cited).* Write ∂_U for PBG's covariant derivative of 0-forms ((3.8), p.392) and D for the linearised curvature of #O1C.2-3; PBG writes D for both ((3.8)–(3.10)). PBG's 𝔊 is the covariance of the Gaussian measure ∝ dA δ(QA)δ_R(R∂_U^*A)exp[−½⟨A, (Δ_π + Δ_π^{(2)})A⟩] ((3.148), p.425, whose J is the generating source), and 𝔊 = G₁ − G₁∂_UR∂_U^*G₁ − G₁Q^*(QG₁Q^*)^{−1}QG₁ = 𝔓G₁ = G₁𝔓^* ((3.153), p.426), 𝔓 the projection onto S := {QA = 0, R∂_U^*A = 0}.

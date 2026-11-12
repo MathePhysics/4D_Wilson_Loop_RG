@@ -160,7 +160,7 @@ Owner: BETA session. Note: `WILSON_IT1_NON_GAUSSIANITY_2026_11_11.md`.
 
 ## For the user
 
-- Route: 𝔜 compares with abelian Gaussian charge models and their limits (#NG2.3); it does not exclude 𝔤-valued Gaussian fields (#NA1.5). The candidate non-abelian witness is the running rate 𝔄_Δ (NA note §§3–5), open on both sides.
+- Route: Theorem N (#NG.1) is the result. 𝔜^sym compares with the Gaussian charge models of any covariance and their limits (#NG2.2), which contain the Wilson-loop functions of real Gaussian 1-forms; it does not test 𝔤-valued Gaussian fields with path-ordered holonomies (#NG2.3-1). The NA and NAG notes are abandoned (user, 12 Nov 2026).
 - Referee rounds for GL, TL and NG need the user's go.
 - (O1a) is proved (Proposition A). (O1b) reduces to (O1c) by Lemma H, and (O1c) is proved from cited bounds (work file Theorem E, #O1C.8, and #O1C.8-11.1). So (O1) holds and 𝔜(W) ≥ c_Oḡ²/2 > 0 (#NG6.3); the complex-data readings are printed or re-derived (#O1C.0-4).
 - Approved by the user: (★) needs q₀ > 25r + 5/2 (#O1C.7-9.2), a lower bound beyond #T1.2's; sent to the table fork.
@@ -337,3 +337,16 @@ User, after NG: "Continue work on NA!!!! That is the only meaningful answer to w
 - Self-review fixes before the checks: K^∨(X; 0) = K(X; 0) stated; G(0, 0) = 0 by continuity; j₀ ≤ j_* added to Lemma NAG35; θ_L pointer.
 - Approval requested: state (R1)/(G2) on the band regime (weak side), as #NAG.0-2d shows that g_W(λ) → 0 does not exclude perimeter- or area-law sequences.
 - Checks: NAG 347 lines, CRLF 347, longest 602, no duplicate tags or dangling references; NA 69 lines, CRLF 69, none > 600.
+
+## 2026-11-12 02:55 GMT: NG finished as Theorem N; NA and NAG abandoned
+- User, 12 Nov 2026: finish NG, abandon NA. No further work on NA (7409369150dd) or NAG (a56409c95934); both files are left in place, unedited.
+- NG 670a717698fe (snapshot NG_pre_finish_670a717698fe.md) → ef223510a700; work file cff5e5fb5eff (snapshot O1C_pre_finish_cff5e5fb5eff.md) → acc21c562b85.
+- Foreign edit found: the two-loops session's change to R_j := R^T_j (handover, 11 Nov 2026 17:45) rewrote #NG5.2-3–#NG5.2-4 to R_{K′} ≥ (log ḡ^{−2})^r and left four consumers at the old 2(log ḡ^{−2})^r. Repaired: #NG7.1-2 (𝖣 ≥ (2/9)L³M(log ḡ^{−2})^r), #NG7.7-1 (exponents /18 and /1152), #O1C.3-9.1 and #O1C.4-5.2 (t_b ≥ L³M(log ḡ^{−2})^r). Only constants change. #NG5.2-3 now cites LF #4.50-1.1.1 with its prefix, declared in #NG.0-1 with #NP…; #NG5.2-4 cites #T4.52-0-2 for R̂ in place of the undeclared #886; #O1C.3 cites #T2.23's R_{K′} without "CRE's radius".
+- Stationarity removed from the Gaussian class. New #NG1.4–#NG1.4-3: the translates 𝖨₁, 𝖨₂, 𝖨₃, 𝖱₂^{(1)}, 𝖱₃^{(1)} (eleven diagrams), ind(𝔇), the weights n^sym, 𝔜^sym, and the ten index sums 𝗌(a, b) = 0. #NG2.1: a Gaussian charge model has any covariance, and is stationary if Cov(𝖷_a, 𝖷_b) = c^G_{abs(a−b)}; new #NG2.1-0 holds 𝖷(𝔇), κ(𝔇), W(𝔇), moved from #NG2.1 and #NG2.2-1.
+- Proposition G (#NG2.2–#NG2.2-2): 𝔜^sym = 0 on every Gaussian charge model and limit, 𝔜 = 𝔜^sym = 0 on the stationary ones. #NG2.3 keeps the stationary formulas; #NG2.3-2 re-pointed to them. New #NG3.4: W_ren(τ𝔇; ε) = W_ren(𝔇; ε), so 𝔜^sym(W) = 𝔜(W) for Yang–Mills with no new hypothesis; #NG5.5-1 cites it; #NG4.3 says stationary.
+- #NG.1–#NG.1-2 are now Theorem N, with hypotheses #GL7.1's conditions for the six diagrams and q₀ > 25r + 5/2, and #NG6.3–#NG6.3-1 its proof (the former target line, with (O1b) by Lemma H and (O1c)).
+- Work file: the unused §5 lines (#O1C.5–#O1C.5-2, #O1C.5-3–#O1C.5-6.1) deleted, §5 retitled "The Parameter λ" and keeping #O1C.5-2.1; #O1C.0 and #O1C.4-4 no longer mention them; #O1C.7-9's last sentence gives the reason for DHλ(K + λ)^{−1}u = P_rDHu.
+- Re-derived before writing: the ten index sums; the class sums 1, −3, 3; 𝔶_S = 𝗀²(c^G_3 − c^G_2) and 𝔶_k = −𝗀²c^G_k in a stationary model; c_dx ≥ νL³(log ḡ^{−2})^r/(64A_d); the two exponents of #NG7.7-1. The 143 external lines cited by NG and the work file outside PF were re-read against their uses.
+- Checks: NG 161 lines, CRLF 161, none over 600 characters, no duplicate tags, every tag resolves; work file 178 lines, LF, none over 600, no duplicate tags, every tag resolves (#BPA.5 and #BPA.6 in balaban_proofs/BP_PF_ACTION_LOWER_BOUND.md).
+- Messages sent at 02:58: table session (yang mills 4 handover (2) ⑂ (2); rows #T12.36-1, #T12.36-2, #T12.36-2-1, #T12.36-10-0-1, #T12.37–#T12.37-4), two-loops session (yang mills 4 handover ⑂ (3); the four consumers), and yang mills 4 handover (4) (NA and NAG abandoned).
+- Peer note (two-loops session, after 02:58): it re-checked the four repaired consumers and the two re-pointed citations and agrees; it will message before editing NG or the work file again.
