@@ -337,6 +337,40 @@ The attached insertions themselves differ by the carry (D) of S.14(f), unchanged
   - Compile: paper 161 pp. (`2b5b0e754fa4`), supplement 156 pp. (`170045337da2`), bibtex run for the supplement
     (new citation of Friedli–Velenik there), no errors, no undefined references, 9 overfull boxes each (old).
   - `F26_SECTION_DRAFT.tex` is now a stub listing what is still to write.
+- **20:06. Structure (see `STRUCTURE.md`, proposal of 20:05): the counting goes into the body of the paper**
+  (definitions in Section 5 before the class; a new section after Section 6 for the counting; only the free
+  factors of LFR II (1.89), (1.93)–(1.97) into S.10). The paper also had "every group on one loop is split" in
+  "The flat parts" (Section 6); corrected at 19:59 (paper `19d7c448179d`).
+  **Sources for the step-map part, located:** the map `WILSON_IT1_D2_STEP_MAP_2026_10_22.md` (9f0d33e406e6,
+  3815 lines): #MD2.4.3.1 (line 3051) the definition D2.4(12)(a) of n_{k+1}(𝒢), #_{k+1}(𝒢); #MD2.2.4.3 (line
+  1149) Cov(k), the domain X_W of an insertion; D2.4(12) proper at lines 3563–3700: (a) the size σ_{k+1}
+  (#MD2.4.12.1, line 3563), the reserve ν_r := ν, the extent weight ν_e := ν/(2C_box), ext_k(W) (#MD2.4.12.6,
+  line 3577); (b) vertices: W-, M-, Γ-vertices, vacuum links 𝒞 (#MD2.4.12.17, line 3613), sizes (#MD2.4.12.19,
+  line 3618); (c) links, pair relations, and the covering lemma (#MD2.4.12.20, line 3623); (d) shares, charges,
+  and the budgets (#MD2.4.12.21–.26, lines 3634–3650; ν_f := 17ν/16); (e) the rooted sums and the
+  Kotecký–Preiss condition (#MD2.4.12.28–.33, lines 3661–3673; C_win ≤ 82/c_w); the weighted interaction clause
+  (#MD2.4.12.38, line 3681). Then the two-loops note (6A)(i) (lines 295–403) for several intervals and the unit
+  factor u, and (6B), (6C) for the 𝐑-steps. Read (12)(a)–(b) first and draft the definitions for Section 5.
+- **20:10. Read the map's (12)(a)–(b) (lines 3051–3056, 3563–3582). The paper's class is not the map's class.**
+  - σ_{k+1}(𝒢) := #_{k+1}(𝒢) + n_{k+1}(𝒢)/M, #_{k+1} the number of π_{k+1}-cubes of the constituents' domains
+    (marked vacuum domains, slot supports, supports of the vacuum-link clusters, the domains of the old groups
+    and of the members of the merged old occurrences, with multiplicity; an old group or member contributes
+    #_{k+1}(X_W), its domain as a set), n_{k+1} the number of step-(k+1) traversals in I(𝒢) (#MD2.4.3.1–.2,
+    #MD2.4.12.2–.3-2). At k = 1, V4's 𝔰(W) = n(W) + |ℋ(W)|/(LM).
+  - The map's clause (ii-w) (#MD2.4.12.5–.6): Σ_{W∋n}e^{θ(W)}e^{ν_rσ_k(W) + ν_e ext_k(W)}(size of W) ≤
+    C_χρ̃_k(the right side of (ii)/(iii) at n), with the reserve ν_r := ν, **the extent weight ν_e := ν/(2C_box)**,
+    C_box ≥ 4A_E, and ext_k(W) := the least R ≥ 0 such that X(W) ∪ Q^#_W lies in the ℓ^∞-ball of radius R cube
+    sides of π_k about every traversal of the interval of W (in the units of the step of production for a carried
+    insertion); traversal positions only, the cube positions recovered by the box reduction ((12)(e)); stated for
+    the deviation parts only, since the boxes of the wraps do not lift.
+  - **The paper's Definition "Dressed Loops"(ii) has the reserve e^{νσ(W)} for the deviation species and no extent
+    weight** (the extent weight appears only in the supplement's S.9 for the attached species,
+    `eq:weighted-mass`). The map's shares (12)(d) pay the extent of a new group from the extent weights of its
+    members, and the box reduction (12)(e) uses ext_k. So the counting cannot be ported onto the paper's class as
+    it stands: the class has to be stated as the map states it (D2.0(3) with (ii-w), (ii′), the units of carried
+    groups), and Sections 5–6 rewritten from the map. **Next: read the map's D2.0(3) (the definition of D(k),
+    around lines 440–560; #MD2.0.3.16, .25, .32, .46, .50, .56, .62, .64) against the paper's Definition "Dressed
+    Loops", list every clause the paper drops or simplifies, and only then write.**
 - Earlier state line (superseded): nothing written in the TeX. `FINDINGS.md` F26, `PROGRESS.md` (19:20), `SESSION_HANDOVER.md` (19:20)
   record the open item. Next: read S.9 (`prop:attached`, line 1494), S.10 (`prop:r-operation`, line 1558), and
   S.16(i) (lines 2135–2177) of the supplement; the paper's large-field step (`sec:large-field-step`) for the
