@@ -39,7 +39,7 @@
 \maketitle
 
 \begin{abstract}
-The limits of the renormalised Wilson loop expectations constructed in the paper live on a four-dimensional torus, and the bound on which their existence rests grows exponentially with the volume of the torus. We show that a chessboard estimate, which uses nothing but the reflection positivity of the lattice measures, replaces this bound by one which does not depend on the period of the torus. As a consequence the limits converge along a subsequence of periods, for every ensemble of admissible loops in $\mathbb R^4$ at once, and the limiting functions are bounded, reflection positive, and covariant under the symmetries which the paper establishes on the torus. Their average over the permutations of the axes is, in addition, covariant under the whole hypercubic group, and it remains bounded and reflection positive.
+The limits of the renormalised Wilson loop expectations constructed in the paper live on a four-dimensional torus, and the bound on which their existence rests grows exponentially with the volume of the torus. We show that a chessboard estimate, which uses nothing but the reflection positivity of the lattice measures, replaces this bound by one which does not depend on the period of the torus. As a consequence the limits converge along a subsequence of periods, for every ensemble of admissible loops in $\mathbb R^4$ at once, and the limiting functions are bounded, reflection positive, and covariant under the symmetries which the paper establishes on the torus. Their average over the permutations of the axes is, in addition, covariant under the whole hypercubic group, and it remains bounded and reflection positive. Finally, for two parts of an ensemble on the two sides of a coordinate hyperplane, the limits are locally Lipschitz functions of the distance by which the parts are moved apart along its normal, on each of the two classes of distances which the lattices distinguish.
 \end{abstract}
 
 \section{The Result}\label{sec:result}
@@ -114,6 +114,18 @@ For every level $q$ and all ensembles $\mathcal C$, $\mathcal D_a$ below which f
 
 With the convention \eqref{eq:translate-convention} the reflection in (iii) may be taken in any hyperplane $\{ x_\mu = y \}$, $y \in \mathbb R$, for the translates $\mathcal D_a + w$ by one vector $w$ with $y - w_\mu \in uL^{-q}\mathbb Z$: writing $\theta_0$ for the reflection which replaces $x_\mu$ by $2(y - w_\mu) - x_\mu$, we have $\theta(x + w) = \theta_0x + w$, so that $(\mathcal D_a + w) \cup \theta(\bar{\mathcal D}_b + w) = (\mathcal D_a \cup \theta_0\bar{\mathcal D}_b) + w$, and the matrices of the translated family are those of the family $\mathcal D_1, \dots, \mathcal D_m$ for the reflection $\theta_0$.
 
+The convention extends from the translations to all isometries of $\mathbb R^4$, with one exception. An isometry $g$ which is not a symmetry of the lattice maps a loop at level $q$ to a path which is not a path of the lattice, and before we can speak of the invariance under $g$ we must say what the function is on the image. The construction on the lattices $g(uL^{-K}\mathbb Z^4)$ gives the image the value of the original ensemble. This is consistent only if the limits agree on any two ensembles of the lattice which are images of each other under an isometry, and for most ensembles the only such isometries are symmetries of the lattice. We call a loop ensemble $\mathcal C$ at level $q$ in $\mathbb R^4$ \emph{exceptional} if there are two vectors $e_\alpha$, $e_\beta$ of the basis to which all the segments of its loops are parallel, and its loops do not all lie in one plane.
+
+\begin{corollary}[Euclidean Covariance]\label{cor:euclidean}
+Let $(\mathcal C, q) \in \mathfrak E$, and let $g$ be an isometry of $\mathbb R^4$ such that $g\mathcal C$ is a loop ensemble at level $q$ in $\mathbb R^4$. If $\mathcal C$ is not exceptional, then $g\mathcal C = h\mathcal C$ for a map $h(x) = Ox + v$ with a signed permutation matrix $O$ and $v \in uL^{-q}\mathbb Z^4$, and $W^{\mathrm{hc}}(g\mathcal C) = W^{\mathrm{hc}}(\mathcal C)$. Consequently
+\begin{equation}\label{eq:euclidean-convention}
+    W^{\mathrm{hc}}(g\mathcal C) \coloneqq W^{\mathrm{hc}}(\mathcal C)\;,
+\end{equation}
+the level being $q$, defines $W^{\mathrm{hc}}$ without ambiguity on the images under all isometries $g$ of $\mathbb R^4$ of the ensembles $\mathcal C$ with $(\mathcal C, q) \in \mathfrak E$ which are not exceptional, and the function so defined is invariant under every isometry of $\mathbb R^4$.
+\end{corollary}
+
+The corollary contains no information on the limits beyond Corollary~\ref{cor:hypercubic}: it says that the lattice has no isometries between its ensembles other than its symmetries, so that the invariance under the others is a matter of moving the lattice with the ensemble. The exceptional ensembles are the first place where the invariance under a rotation is a statement about the limits. For a loop $C$ at level $q$ in a plane parallel to $e_0$ and $e_1$, and with $\varepsilon_q \coloneqq uL^{-q}$, the ensembles $(C, C + 5\varepsilon_qe_2)$ and $(C, C + 3\varepsilon_qe_2 + 4\varepsilon_qe_3)$ are images of each other under a rotation which fixes the plane of $C$ and is not a symmetry of the lattice, and we do not know whether $W^{\mathrm{hc}}$ takes the same value on them.
+
 \section{The Chessboard Estimate}\label{sec:chessboard}
 
 The estimate rests on one Cauchy--Schwarz inequality for each reflection, and on an argument which shows that these inequalities, applied repeatedly, spread one function over all the blocks. We first set up the blocks and the maps which move a function from one block to another.
@@ -141,12 +153,13 @@ for even $\abs{t}$ the left side is $\overline{F \circ (\theta_{\mu,kb}\varphi_t
 We first spread a function over the slabs of one direction. For $\mu \in \{ 0, \dots, 3 \}$ and $j \in \mathbb Z/2m\mathbb Z$ we write $\vartheta^\mu_j \coloneqq \vartheta_{je_\mu}$, which maps the open slab $\{ 0 < x_\mu < b \}$ onto the open slab $\{ jb < x_\mu < (j + 1)b \}$.
 
 \begin{lemma}[One Direction]\label{lem:one-direction}
-Let $\mu \in \{ 0, \dots, 3 \}$, and let $G$ be a bounded measurable function of the gauge field on $\mathbb T^{(s)}_K$ which depends only on the values of $U$ on the bonds with both ends in the open slab $\{ 0 < x_\mu < b \}$. Then
+Let $\mu \in \{ 0, \dots, 3 \}$, and let $G$ be a bounded measurable function of the gauge field on $\mathbb T^{(s)}_K$ which depends only on the values of $U$ on the bonds with both ends in the open slab $\{ 0 < x_\mu < b \}$. Then, for every $S \subset \mathbb Z/2m\mathbb Z$,
 \begin{equation}\label{eq:one-direction}
     \mathbb E^{(s)}_K\Bigl[\prod_{j \in \mathbb Z/2m\mathbb Z}\vartheta^\mu_jG\Bigr] \geq 0
     \qquad\text{and}\qquad
-    \bigl\lvert\mathbb E^{(s)}_K[G]\bigr\rvert^{2m} \leq \mathbb E^{(s)}_K\Bigl[\prod_{j \in \mathbb Z/2m\mathbb Z}\vartheta^\mu_jG\Bigr]\;.
+    \Bigl\lvert\mathbb E^{(s)}_K\Bigl[\prod_{j \in S}\vartheta^\mu_jG\Bigr]\Bigr\rvert^{2m} \leq \mathbb E^{(s)}_K\Bigl[\prod_{j \in \mathbb Z/2m\mathbb Z}\vartheta^\mu_jG\Bigr]^{\abs{S}}\;.
 \end{equation}
+In particular $\abs{\mathbb E^{(s)}_K[G]}^{2m} \leq \mathbb E^{(s)}_K[\prod_{j \in \mathbb Z/2m\mathbb Z}\vartheta^\mu_jG]$.
 \end{lemma}
 
 \begin{proof}
@@ -178,7 +191,7 @@ For the second assertion we fix $\epsilon > 0$, put $\zeta \coloneqq Z(\mathbb Z
 \begin{equation}\label{eq:ratio-reflection}
     \rho(S)^2 \leq \rho(S^+_k)\,\rho(S^-_k)
 \end{equation}
-for every $S$ and every $k$. Let $\rho_*$ be the largest of the finitely many numbers $\rho(S)$, so that $\rho_* \geq \rho(\emptyset) = 1$. If $\rho(S) = \rho_*$, then \eqref{eq:ratio-reflection} and $\rho(S^\pm_k) \leq \rho_*$ force $\rho(S^+_k) = \rho(S^-_k) = \rho_*$ for every $k$. Among the sets with $\rho(S) = \rho_*$ we choose one, $S$, of the largest cardinality. Then $\abs{S^\pm_k} \leq \abs{S}$ for every $k$, and since the two cardinalities add up to $2\abs{S}$, both are equal to $\abs{S}$, that is, $\abs{S \cap H^+_k} = \abs{S}/2$ for every $k$. Comparing this for $k$ and $k + 1$ gives $\id_S(k + m) = \id_S(k)$, so that $S$ is invariant under the shift $j \mapsto j + m$, which maps $H^+_k$ onto $H^-_k$. The set $S^+_k$ maximises $\rho$ and has $\abs{S}$ elements as well, so it is invariant under the same shift; since $S^+_k \cap H^+_k = S \cap H^+_k$ and $S^+_k \cap H^-_k = \theta_k(S \cap H^+_k)$, this means that $(S \cap H^+_k) + m = \theta_k(S \cap H^+_k)$, while the invariance of $S$ gives $(S \cap H^+_k) + m = S \cap H^-_k$. Hence $\theta_k(S \cap H^+_k) = S \cap H^-_k$, that is, $\theta_kS = S$, for every $k$. The involutions $\theta_k$ generate a group which acts transitively on $\mathbb Z/2m\mathbb Z$, because $\theta_{k+1}\theta_k$ is the shift by $2$ and $\theta_0$ maps $0$ to $-1$; so $S$ is either empty or all of $\mathbb Z/2m\mathbb Z$, and $\rho_* = \rho(S)$ is either $1$ or $Z(\mathbb Z/2m\mathbb Z)/\zeta < 1$. Thus $\rho(\{ 0 \}) \leq 1$, that is, $\abs{\mathbb E^{(s)}_K[G]} \leq (Z(\mathbb Z/2m\mathbb Z) + \epsilon)^{1/(2m)}$, and letting $\epsilon \to 0$ gives the second assertion.
+for every $S$ and every $k$. Let $\rho_*$ be the largest of the finitely many numbers $\rho(S)$, so that $\rho_* \geq \rho(\emptyset) = 1$. If $\rho(S) = \rho_*$, then \eqref{eq:ratio-reflection} and $\rho(S^\pm_k) \leq \rho_*$ force $\rho(S^+_k) = \rho(S^-_k) = \rho_*$ for every $k$. Among the sets with $\rho(S) = \rho_*$ we choose one, $S$, of the largest cardinality. Then $\abs{S^\pm_k} \leq \abs{S}$ for every $k$, and since the two cardinalities add up to $2\abs{S}$, both are equal to $\abs{S}$, that is, $\abs{S \cap H^+_k} = \abs{S}/2$ for every $k$. Comparing this for $k$ and $k + 1$ gives $\id_S(k + m) = \id_S(k)$, so that $S$ is invariant under the shift $j \mapsto j + m$, which maps $H^+_k$ onto $H^-_k$. The set $S^+_k$ maximises $\rho$ and has $\abs{S}$ elements as well, so it is invariant under the same shift; since $S^+_k \cap H^+_k = S \cap H^+_k$ and $S^+_k \cap H^-_k = \theta_k(S \cap H^+_k)$, this means that $(S \cap H^+_k) + m = \theta_k(S \cap H^+_k)$, while the invariance of $S$ gives $(S \cap H^+_k) + m = S \cap H^-_k$. Hence $\theta_k(S \cap H^+_k) = S \cap H^-_k$, that is, $\theta_kS = S$, for every $k$. The involutions $\theta_k$ generate a group which acts transitively on $\mathbb Z/2m\mathbb Z$, because $\theta_{k+1}\theta_k$ is the shift by $2$ and $\theta_0$ maps $0$ to $-1$; so $S$ is either empty or all of $\mathbb Z/2m\mathbb Z$, and $\rho_* = \rho(S)$ is either $1$ or $Z(\mathbb Z/2m\mathbb Z)/\zeta < 1$. Since $\rho_* \geq 1$, we have $\rho_* = 1$, so that $\rho(S') \leq 1$, that is, $\abs{Z(S')} \leq (Z(\mathbb Z/2m\mathbb Z) + \epsilon)^{\abs{S'}/(2m)}$, for every $S' \subset \mathbb Z/2m\mathbb Z$. Letting $\epsilon \to 0$ gives the second assertion, and $S' = \{ 0 \}$ gives the last one.
 \end{proof}
 
 Applied in the four directions in turn, the lemma spreads a function of one block over all the blocks.
@@ -198,6 +211,19 @@ Put $G_0 \coloneqq F$ and $G_{\nu+1} \coloneqq \prod_{j \in \mathbb Z/2m\mathbb 
     \bigl\lvert\mathbb E^{(s)}_K[F]\bigr\rvert^{(2m)^4} \leq \mathbb E^{(s)}_K[G_1]^{(2m)^3} \leq \mathbb E^{(s)}_K[G_2]^{(2m)^2} \leq \mathbb E^{(s)}_K[G_3]^{2m} \leq \mathbb E^{(s)}_K[G_4]
 \end{equation}
 proves \eqref{eq:chessboard}.
+\end{proof}
+
+The first step of this chain may be replaced by the stronger assertion of Lemma~\ref{lem:one-direction} for a set of slabs, which gives a bound for copies of $F$ in some of the blocks of one row.
+
+\begin{corollary}[Blocks of One Row]\label{cor:one-row}
+Let $F$ be as in Lemma~\ref{lem:chessboard}, let $\mu \in \{ 0, \dots, 3 \}$, and let $S \subset \mathbb Z/2m\mathbb Z$. Then
+\begin{equation}\label{eq:one-row}
+    \Bigl\lvert\mathbb E^{(s)}_K\Bigl[\prod_{j \in S}\vartheta^\mu_jF\Bigr]\Bigr\rvert^{\abs{\Lambda}} \leq \mathbb E^{(s)}_K\Bigl[\prod_{t \in \Lambda}\vartheta_tF\Bigr]^{\abs{S}}\;.
+\end{equation}
+\end{corollary}
+
+\begin{proof}
+The proof of Lemma~\ref{lem:chessboard} does not use the order in which the four directions are taken, and we take $\mu$ first. With $G'_1 \coloneqq \prod_{j \in \mathbb Z/2m\mathbb Z}\vartheta^\mu_jF$ it gives $\mathbb E^{(s)}_K[G'_1] \geq 0$ and, by the last three steps of the chain \eqref{eq:chessboard-chain}, $\mathbb E^{(s)}_K[G'_1]^{(2m)^3} \leq \mathbb E^{(s)}_K[\prod_{t \in \Lambda}\vartheta_tF]$. Lemma~\ref{lem:one-direction} with $G = F$ gives $\abs{\mathbb E^{(s)}_K[\prod_{j \in S}\vartheta^\mu_jF]}^{2m} \leq \mathbb E^{(s)}_K[G'_1]^{\abs{S}}$, and raising this to the power $(2m)^3$ gives \eqref{eq:one-row}, because $\abs{\Lambda} = (2m)^4$.
 \end{proof}
 
 \section{The Bound Uniform in the Volume}\label{sec:volume-bound}
@@ -280,6 +306,142 @@ The first sum is an average of matrices which are Hermitian and positive semidef
 
 \begin{remark}[What the Theorem Does Not Assert]\label{rem:not-asserted}
 The theorem gives no lower bound, and the lower bound of the paper does not pass to the limit: its proof, Paper, Proposition~\ref{P-prop:nonvanishing}, uses $w_{\ell_0} \geq 1 - \bar\delta_{\mathrm{LF}}$ with a threshold $\bar g_1$ chosen so that $\bar\delta_{\mathrm{LF}} \leq 1/20$, and $\bar\delta_{\mathrm{LF}}$ grows with $N_q$, while a chessboard estimate bounds expectations from above only. The theorem therefore does not exclude that $W^\infty$ vanishes on every nonempty ensemble, and Paper, Theorem~\ref{P-thm:non-gaussian}, whose threshold $\bar g_0$ depends on $T/u$, has no counterpart here. The limits may depend on the subsequence.
+\end{remark}
+
+\section{The Dependence on the Separation}\label{sec:separation}
+
+The limits of Theorem~\ref{thm:infinite-volume} are functions of ensembles in a lattice, and nothing said so far relates their values on two ensembles of which one is obtained from the other by moving some of its loops. Reflection positivity and the invariance under translations give such a relation for the simplest relative motion, in which two parts of an ensemble on the two sides of a coordinate hyperplane are moved apart along its normal. The mechanism is that of a transfer matrix: the translation along the normal is symmetric for the form of reflection positivity, the chessboard estimate bounds an ensemble and its mirror image uniformly in their distance, and a symmetric map whose powers stay bounded is a contraction, whose even powers decrease, and decrease ever more slowly. We carry this out on the matrices of Theorem~\ref{thm:infinite-volume}(iii), without introducing a Hilbert space. The result is an estimate on each lattice, Theorem~\ref{thm:separation}, and, since the estimate holds at every level and the functions of two levels are proportional, the Lipschitz continuity of the limits in the separation, Theorem~\ref{thm:separation-continuity}. Motions parallel to the hyperplane and deformations of the loops are not covered, and Remark~\ref{rem:positions-open} says what is missing.
+
+Throughout this section $q \geq 0$ and $\mu \in \{ 0, \dots, 3 \}$ are fixed, $\varepsilon_q \coloneqq uL^{-q}$ is the spacing of the lattice of the level $q$, $y \in \varepsilon_q\mathbb Z$, and $\theta$ is the reflection of $\mathbb R^4$ which replaces $x_\mu$ by $2y - x_\mu$. For a loop ensemble $\mathcal D$ at level $q$ in $\mathbb R^4$ and an integer $r$ we write $\mathcal D_r \coloneqq \mathcal D + r\varepsilon_qe_\mu$, and $\theta\bar{\mathcal D}_r$ for the mirror image $\theta\overline{\mathcal D_r}$ of $\mathcal D_r$.
+
+\begin{lemma}[Bounded Logarithmically Convex Sequences]\label{lem:log-convex}
+Let $(a_r)_{r \geq 0}$ be nonnegative numbers with $a_r^2 \leq a_{r-1}a_{r+1}$ for every $r \geq 1$ and $\liminf_{r \to \infty}a_r < \infty$. Then $a_{r+1} \leq a_r$ for every $r \geq 0$.
+\end{lemma}
+
+\begin{proof}
+Every tail $(a_{r_0+r})_{r \geq 0}$ satisfies the hypotheses, so it suffices to show that $a_1 \leq a_0$. Suppose that $a_1 > a_0$. Then $a_1 > 0$, and $a_1^2 \leq a_0a_2$ gives $a_0 > 0$. If $a_{r-1}$ and $a_r$ are positive and $a_r/a_{r-1} \geq a_1/a_0$, then $a_{r+1} \geq a_r^2/a_{r-1} \geq a_ra_1/a_0 > 0$; by induction $a_r \geq a_0(a_1/a_0)^r$ for every $r$, which tends to infinity and contradicts the hypothesis on the lower limit.
+\end{proof}
+
+\begin{proposition}[An Ensemble and Its Mirror Image]\label{prop:mirror-pairs}
+Let $(\mathcal D, q) \in \mathfrak E$, let the loops of $\mathcal D$ lie in $\{ x_\mu > y \}$, and put $M_r \coloneqq W^\infty(\mathcal D_r \cup \theta\bar{\mathcal D}_r)$ for integers $r \geq 0$. Then $M_r \geq 0$ and $M_{r+1} \leq M_r$ for every $r \geq 0$, $M_r^2 \leq M_{r-1}M_{r+1}$ for every $r \geq 1$, and, for every $r \geq 2b_q(\mathcal D)/\varepsilon_q$,
+\begin{equation}\label{eq:mirror-bound}
+    M_r \leq \exp\Bigl(2\bigl(B_E(\mathcal D) + I^\flat_*(\mathcal D) + \Gamma_q(b_q(\mathcal D), \bar g)\bigr)\Bigr)\;.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+The ensembles $\mathcal D_r$, $r \geq 0$, are ensembles at level $q$ whose loops are admissible and lie in $\{ x_\mu > y \}$, with the characters of $\mathcal D$, so that Theorem~\ref{thm:infinite-volume}(iii) applies to every finite family of them.
+
+\emph{Positivity and convexity.} Since $\theta(x + r'\varepsilon_qe_\mu) = \theta x - r'\varepsilon_qe_\mu$, the translation by $r'\varepsilon_qe_\mu$ maps $\theta\bar{\mathcal D}_{r'}$ to $\theta\bar{\mathcal D}$ and $\mathcal D_r$ to $\mathcal D_{r+r'}$, so that, by Theorem~\ref{thm:infinite-volume}(ii),
+\begin{equation}\label{eq:hankel}
+    W^\infty(\mathcal D_r \cup \theta\bar{\mathcal D}_{r'}) = W^\infty(\mathcal D_{r+r'} \cup \theta\bar{\mathcal D})
+\end{equation}
+for all $r, r' \geq 0$, a number which depends only on $r + r'$. Theorem~\ref{thm:infinite-volume}(iii) for the single ensemble $\mathcal D_r$ gives $M_r \geq 0$. For the two ensembles $\mathcal D_{r-1}$ and $\mathcal D_{r+1}$, $r \geq 1$, it gives a positive semidefinite Hermitian matrix with the diagonal entries $M_{r-1}$ and $M_{r+1}$ and, by \eqref{eq:hankel}, with both other entries equal to $W^\infty(\mathcal D_{2r} \cup \theta\bar{\mathcal D}) = M_r$; its determinant is nonnegative, which is $M_r^2 \leq M_{r-1}M_{r+1}$.
+
+\emph{The bound for special $r$.} Put $n \coloneqq n_q(\mathcal D)$ and $b \coloneqq uL^n = b_q(\mathcal D)$, so that $b \in \varepsilon_q\mathbb Z$ and $b \geq E(\mathcal D) + 2\varepsilon_q$, and let $d \geq \varepsilon_q$ be the least value of $x_\mu - y$ on the sites of $\mathcal D$. Let $j \geq 0$ be an even integer with $jb + \varepsilon_q \geq d$, and put $r \coloneqq (jb + \varepsilon_q - d)/\varepsilon_q$, an integer which is not negative. Let $o \in \varepsilon_q\mathbb Z^4$ be the point with $o_\mu = y$ whose other coordinates $o_\nu$ are the least values of $x_\nu$ on the sites of $\mathcal D$, minus $\varepsilon_q$. By Theorem~\ref{thm:infinite-volume}(ii), $M_r$ does not change if $\mathcal D$ is translated by $-o$ and $y$ is replaced by $0$, and we assume $o = 0$. The sites of $\mathcal D_r$ then have $x_\mu \in [jb + \varepsilon_q, jb + \varepsilon_q + E(\mathcal D)]$ and $x_\nu \in [\varepsilon_q, \varepsilon_q + E(\mathcal D)]$ for $\nu \neq \mu$, and since $\varepsilon_q + E(\mathcal D) < b$, the sites of $\mathcal D^\flat \coloneqq \mathcal D_r - jbe_\mu$ lie in $(0, b)^4$.
+
+Let $s \geq s_q(\mathcal D_r \cup \theta\bar{\mathcal D}_r)$, so that $n \leq s$, let $K > j_q$, and use the notation of Section~\ref{sec:chessboard} with these $s$, $q$, $n$, and $K$, writing the ensembles for their images under $\pi_s$. The function $F \coloneqq W_{\mathcal D^\flat}$ depends only on the values of $U$ on the bonds with both ends in $B^\circ_0$, and $\vartheta_tF = W_{\vartheta_t\mathcal D^\flat}$ for every $t \in \Lambda$, as in the proof of Proposition~\ref{prop:volume-bound}. For $t = je_\mu$ the map $\varphi_t$ is the translation by $jbe_\mu$, because $j$ is even, so that $\vartheta^\mu_jF = W_{\mathcal D_r}$. For $t = (-1 - j)e_\mu$ the map $\varphi_t$ replaces $x_\mu$ by $\psi_{-1-j}(x_\mu) = -jb - x_\mu$, which is the composition of the translation by $jbe_\mu$ with $\theta$, and $\abs{t}$ is odd, so that $\vartheta^\mu_{-1-j}F = W_{\theta\bar{\mathcal D}_r}$. The two indices $j$ and $-1 - j$ are different modulo $2m$, their difference being odd, and Corollary~\ref{cor:one-row} with $S = \{ j, -1 - j \}$ gives
+\begin{equation}\label{eq:mirror-chessboard}
+    \bigl\lvert\mathbb E^{(s)}_K[W_{\mathcal D_r}W_{\theta\bar{\mathcal D}_r}]\bigr\rvert^{\abs{\Lambda}} \leq \mathbb E^{(s)}_K[W_{\mathcal D^\sharp}]^2\;,
+\end{equation}
+where $\mathcal D^\sharp$ is the concatenation of the ensembles $\vartheta_t\mathcal D^\flat$, $t \in \Lambda$. Let $\kappa$ be the product of the normalisations $\kappa^{(q)}_K$ of the loops of $\mathcal D$. By Paper, Proposition~\ref{P-prop:reflection-normalisation}, the normalisation of $\mathcal D_r \cup \theta\bar{\mathcal D}_r$ is $\kappa\bar\kappa$, and the modulus of that of $\mathcal D^\sharp$ is $\abs{\kappa}^{\abs{\Lambda}}$, as in the proof of Proposition~\ref{prop:volume-bound}. Dividing \eqref{eq:mirror-chessboard} by $\abs{\kappa}^{2\abs{\Lambda}}$ and using the bound \eqref{eq:copies-bound} for $\mathcal D^\sharp$, which was proved for the copies of every ensemble with sites in $B^\circ_0$ and in which $B_E$ and $I^\flat_*$ take the same values on $\mathcal D^\flat$ as on $\mathcal D$, we obtain, for $K$ large,
+\begin{equation}\label{eq:mirror-torus}
+    \abs{W^{(s)}_K(\mathcal D_r \cup \theta\bar{\mathcal D}_r)}^{\abs{\Lambda}} \leq \abs{W^{(s)}_K(\mathcal D^\sharp)}^2 \leq \exp\Bigl(2\abs{\Lambda}\bigl(B_E(\mathcal D) + I^\flat_*(\mathcal D) + \Gamma_q(b, \bar g)\bigr)\Bigr)\;.
+\end{equation}
+Taking the root, letting $K \to \infty$, and then $s \to \infty$ along $(s_k)$, we obtain \eqref{eq:mirror-bound} for this $r$.
+
+\emph{Monotonicity.} The numbers $r$ of the last step form an infinite set, so that $\liminf_rM_r < \infty$, and Lemma~\ref{lem:log-convex} gives $M_{r+1} \leq M_r$ for every $r \geq 0$. The least even $j \geq 0$ with $jb \geq d - \varepsilon_q$ is less than $(d - \varepsilon_q)/b + 2$, so that the least of these numbers $r$ is less than $2b/\varepsilon_q$, and \eqref{eq:mirror-bound} holds for every $r \geq 2b/\varepsilon_q$ by the monotonicity.
+\end{proof}
+
+The bound \eqref{eq:mirror-bound} contains the cost $\Gamma_q$ of the block of one copy, whatever the distance between the two copies, whereas Theorem~\ref{thm:infinite-volume}(i) for the same ensemble contains the cost of a block which holds both. The monotonicity is the statement that the translation along $e_\mu$ is a contraction for the form of reflection positivity, and the next theorem is its consequence for two different ensembles.
+
+\begin{theorem}[Variation in the Separation]\label{thm:separation}
+Let $\mathcal A$ and $\mathcal B$ be loop ensembles at level $q$ in $\mathbb R^4$ whose loops are admissible, those of $\mathcal A$ in $\{ x_\mu < y \}$ and those of $\mathcal B$ in $\{ x_\mu > y \}$, and let $q \geq q_\sharp(c, \bar g)$ for $c \coloneqq \max(c_{\mathcal A}, c_{\mathcal B})$. For integers $r \geq 0$ put
+\begin{equation}\label{eq:separation-function}
+    f(r) \coloneqq W^\infty(\mathcal A \cup \mathcal B_r)\;,
+    \qquad
+    N \coloneqq \bigl[W^\infty(\mathcal A \cup \theta\bar{\mathcal A})\,W^\infty(\mathcal B \cup \theta\bar{\mathcal B})\bigr]^{1/2}\;.
+\end{equation}
+Then, for every $r \geq 0$,
+\begin{equation}\label{eq:separation-bounds}
+    \abs{f(r)} \leq N\;,
+    \qquad
+    \abs{f(r + 2) - f(r)} \leq \frac{N}{\lfloor r/2\rfloor + 1}\;,
+    \qquad
+    \sum_{k \geq 0}\abs{f(r + 2k + 2) - f(r + 2k)} \leq N\;.
+\end{equation}
+In particular $\lim_{k \to \infty}f(r + 2k)$ exists. The same holds with $W^{\mathrm{hc}}$ in place of $W^\infty$ in both definitions of \eqref{eq:separation-function}.
+\end{theorem}
+
+\begin{proof}
+Put $\mathcal D^1 \coloneqq \mathcal B$ and $\mathcal D^2 \coloneqq \theta\bar{\mathcal A}$. Both are ensembles at level $q$ with admissible loops in $\{ x_\mu > y \}$ and with $c_{\mathcal D^i} \leq c$, and $\theta\bar{\mathcal D}^2 = \mathcal A$. For $i, i' \in \{ 1, 2 \}$ and integers $n \geq 0$ put $h_{ii'}(n) \coloneqq W^\infty(\mathcal D^i_n \cup \theta\bar{\mathcal D}^{i'})$. As in \eqref{eq:hankel}, $W^\infty(\mathcal D^i_r \cup \theta\bar{\mathcal D}^{i'}_{r'}) = h_{ii'}(r + r')$ for all $r, r' \geq 0$, and $f(n) = h_{12}(n)$. By Theorem~\ref{thm:infinite-volume}(iii), for every finite set $R$ of nonnegative integers the matrix with the entries $h_{ii'}(r + r')$, indexed by the pairs $(i, r)$ and $(i', r')$ with $r, r' \in R$, is Hermitian and positive semidefinite; we write $\langle u, v\rangle_R \coloneqq \sum u_{i,r}\bar v_{i',r'}h_{ii'}(r + r')$ for the corresponding form on the vectors $u = (u_{i,r})$.
+
+Fix $\xi \in \mathbb C^2$, and for $k \geq 0$ put $a_k \coloneqq \sum_{i,i'}\xi_i\bar\xi_{i'}h_{ii'}(2k)$. With $R = \{ k \}$ and $u_{i,k} = \xi_i$ we get $a_k = \langle u, u\rangle_R \geq 0$. With $R = \{ k - 1, k + 1 \}$, $u_{i,k-1} = \xi_i$, $u_{i,k+1} = 0$, $v_{i,k-1} = 0$, and $v_{i,k+1} = \xi_i$ we get $\langle u, u\rangle_R = a_{k-1}$, $\langle v, v\rangle_R = a_{k+1}$, and $\langle u, v\rangle_R = a_k$, so that the Cauchy--Schwarz inequality gives $a_k^2 \leq a_{k-1}a_{k+1}$. With $R = \{ k, k + 2 \}$ and $w_{i,k} = \xi_i$, $w_{i,k+2} = -\xi_i$ we get
+\begin{equation}\label{eq:second-difference}
+    a_k - 2a_{k+1} + a_{k+2} = \langle w, w\rangle_R \geq 0\;.
+\end{equation}
+The sequence is bounded: the matrix $(h_{ii'}(2k))_{i,i'}$ is positive semidefinite, so that $\abs{h_{12}(2k)}^2 \leq h_{11}(2k)h_{22}(2k)$, and $h_{ii}(2k) = W^\infty(\mathcal D^i_k \cup \theta\bar{\mathcal D}^i_k)$ is the number $M_k$ of Proposition~\ref{prop:mirror-pairs} for $\mathcal D^i$, which we denote by $M^i_k$ and which is at most $M^i_0$; hence $a_k \leq (\abs{\xi_1}(M^1_0)^{1/2} + \abs{\xi_2}(M^2_0)^{1/2})^2$. Lemma~\ref{lem:log-convex} therefore gives $a_{k+1} \leq a_k$, and with \eqref{eq:second-difference} the differences $d_k \coloneqq a_k - a_{k+1}$ satisfy $d_k \geq d_{k+1} \geq 0$. Consequently
+\begin{equation}\label{eq:difference-sums}
+    (k + 1)d_k \leq \sum_{l=0}^{k}d_l = a_0 - a_{k+1} \leq a_0\;,
+    \qquad
+    \sum_{l \geq 0}d_l \leq a_0\;.
+\end{equation}
+
+Since $d_k \geq 0$ for every $\xi$, the Hermitian matrix $(h_{ii'}(2k) - h_{ii'}(2k + 2))_{i,i'}$ is positive semidefinite. Its diagonal entries are $\delta^i_k \coloneqq M^i_k - M^i_{k+1}$, the numbers $d_k$ of the two unit vectors $\xi$, and its other entries are $f(2k) - f(2k + 2)$ and its conjugate, so that $\abs{f(2k) - f(2k + 2)}^2 \leq \delta^1_k\delta^2_k$. By \eqref{eq:difference-sums} for the unit vectors, $(k + 1)\delta^i_k \leq M^i_0$ and $\sum_l\delta^i_l \leq M^i_0$, and $M^1_0M^2_0 = N^2$ because $\mathcal D^2 \cup \theta\bar{\mathcal D}^2 = \theta\bar{\mathcal A} \cup \mathcal A$. Hence
+\begin{equation}\label{eq:even-differences}
+    \abs{f(2k + 2) - f(2k)} \leq \frac{N}{k + 1}\;,
+    \qquad
+    \sum_{l \geq 0}\abs{f(2l + 2) - f(2l)} \leq \Bigl(\sum_l\delta^1_l\Bigr)^{1/2}\Bigl(\sum_l\delta^2_l\Bigr)^{1/2} \leq N\;,
+\end{equation}
+and $\abs{f(2k)}^2 \leq M^1_kM^2_k \leq N^2$. This is \eqref{eq:separation-bounds} for even $r$. For odd $r$ we apply the result to $\mathcal B_1$ in place of $\mathcal B$, for which $f$ is replaced by $r \mapsto f(r + 1)$ and $N$ by $[W^\infty(\mathcal A \cup \theta\bar{\mathcal A})M^1_1]^{1/2} \leq N$. The series in \eqref{eq:separation-bounds} is a tail of one of these two, and its convergence gives the limit.
+
+For the last assertion, let $f^\sigma$ and $N^\sigma$ be the function and the number \eqref{eq:separation-function} of the ensembles $P_\sigma\mathcal A$ and $P_\sigma\mathcal B$, the direction $\sigma(\mu)$, and the same $y$, for a permutation $\sigma$. Then $P_\sigma(\mathcal A \cup \mathcal B_r) = P_\sigma\mathcal A \cup (P_\sigma\mathcal B + r\varepsilon_qe_{\sigma(\mu)})$, so that $W^{\mathrm{hc}}(\mathcal A \cup \mathcal B_r) = \frac{1}{24}\sum_\sigma f^\sigma(r)$, and each $f^\sigma$ satisfies \eqref{eq:separation-bounds} with $N^\sigma$. By the Cauchy--Schwarz inequality and \eqref{eq:averaged-gram}, $\frac{1}{24}\sum_\sigma N^\sigma \leq [W^{\mathrm{hc}}(\mathcal A \cup \theta\bar{\mathcal A})\,W^{\mathrm{hc}}(\mathcal B \cup \theta\bar{\mathcal B})]^{1/2}$.
+\end{proof}
+
+The theorem compares positions which differ by two steps of the lattice of the level $q$, at a distance of $r$ steps, and its bound is the ratio of the two. The same ensembles are ensembles at every level $q' \geq q$, where the step is $\varepsilon_{q'} = uL^{-q'}$ and the ratio is smaller, but where the functions are normalised differently. The change of the normalisation is a factor which does not depend on the positions, and this turns the estimates of the single levels into a statement of continuity. We write $W^\infty_{q'}(\mathcal C)$ for the limit \eqref{eq:infinite-volume-limit} of the pair $(\mathcal C, q')$, and $\mathbb D \coloneqq \bigcup_{q' \geq q}\varepsilon_{q'}\mathbb Z$, a dense subgroup of $\mathbb R$. Since $L$ is odd, $2\mathbb D \neq \mathbb D$, and $\mathbb D$ is the union of the two dense sets $2\mathbb D$ and $\varepsilon_q + 2\mathbb D$.
+
+\begin{theorem}[Continuity in the Separation]\label{thm:separation-continuity}
+Let $\mathcal A$, $\mathcal B$, $c$, and $N$ be as in Theorem~\ref{thm:separation}. There are numbers $c_{q'} \in \mathbb C \setminus \{ 0 \}$, $q' \geq q$, with $c_q = 1$, and a function $f$ on $\mathbb D \cap [0, \infty)$ such that
+\begin{equation}\label{eq:level-proportionality}
+    W^\infty_{q'}\bigl(\mathcal A \cup (\mathcal B + te_\mu)\bigr) = c_{q'}f(t)
+\end{equation}
+for every $q' \geq q$ and every $t \in \varepsilon_{q'}\mathbb Z$ with $t \geq 0$, and such that
+\begin{equation}\label{eq:separation-lipschitz}
+    \abs{f(t') - f(t)} \leq N\,\frac{t' - t}{t}
+\end{equation}
+for all $t, t' \in \mathbb D$ with $0 < t < t'$ and $t' - t \in 2\mathbb D$. Consequently the restriction of $f$ to each of the sets $2\mathbb D \cap (0, \infty)$ and $(\varepsilon_q + 2\mathbb D) \cap (0, \infty)$ extends to a continuous function on $(0, \infty)$, which satisfies \eqref{eq:separation-lipschitz} for all real $0 < t < t'$.
+\end{theorem}
+
+\begin{proof}
+\emph{The constants.} For $q' \geq q$ and $K > j_{q'}$ let $\nu^{q'}_K$ be the product of the normalisations $\kappa^{(q')}_K(C, \chi)$ of the loops of $\mathcal A$ and $\mathcal B$, which are loops at level $q'$, and put $p^{q'}_K \coloneqq \nu^q_K/\nu^{q'}_K$. The stopping index is nondecreasing in the level, because $j_{q'} \geq q' + \bar q(j_{q'}) \geq q + \bar q(j_{q'})$ and $j_q$ is the least integer with this property (Paper, Definition~\ref{P-def:stopping-index}); by Paper, \eqref{P-eq:normalisation-product}, $p^{q'}_K$ is therefore the product over the loops of the step factors $\kappa_k(C, \chi)$ with $K - j_{q'} < k \leq K - j_q$. By Paper, \eqref{P-eq:step-factor}, and the bounds of Paper, Lemma~\ref{P-lem:coefficients}, and Proposition~\ref{P-prop:normalisation-structure}, on its coefficients, for $k \geq 2$,
+\begin{equation}\label{eq:step-factor-bound}
+    \abs{\log\kappa_k(C, \chi)} \leq P_{k-1}(C)\bigl(C_{S'}\mathfrak a_k + C^R_E\bigr) + \abs{\mathcal K(C)}\bigl(C_\zeta\mathfrak a_k + C^R_E\bigr)\;,
+\end{equation}
+where $P_{k-1}(C) = \sum_vN^{(k-1)}_v(C)$ is the number of bonds of $C$ on the lattice of the step $k - 1$. For $k > K - j_{q'}$ this number is $P_q(C)L^{K-q-(k-1)} \leq P_q(C)L^{j_{q'}-q}$, by Paper, Lemma~\ref{P-lem:stopping-index}, and $\mathfrak a_k$ is bounded uniformly in $K$ by Paper, \eqref{P-eq:amplitude-bound}. The numbers $\log p^{q'}_K$, sums of $j_{q'} - j_q$ terms \eqref{eq:step-factor-bound} for each loop, are therefore bounded uniformly in $K$, and $p^{q'}_K$ stays in a compact subset of $\mathbb C \setminus \{ 0 \}$. By a diagonal choice there are integers $K_1 < K_2 < \dots$ along which $p^{q'}_K$ converges for every $q' \geq q$, and we let $c_{q'} \neq 0$ be the limit; $c_q = 1$ because $p^q_K = 1$.
+
+\emph{Two levels.} Let $q \leq q' \leq q''$ and $t \in \varepsilon_{q'}\mathbb Z$, $t \geq 0$, and put $\mathcal C_t \coloneqq \mathcal A \cup (\mathcal B + te_\mu)$, an ensemble at the levels $q'$ and $q''$ with admissible loops. On a torus $\mathbb T^{(s)}$ with $s$ large, the translation by $te_\mu$ belongs to the groups $\mathfrak G_{q'}$ and $\mathfrak G_{q''}$, so that the normalisations of $\mathcal C_t$ at the two levels are $\nu^{q'}_K$ and $\nu^{q''}_K$, by Paper, Proposition~\ref{P-prop:reflection-normalisation}. Hence, for $K > j_{q''}$, the renormalised expectations at the two levels satisfy
+\begin{equation}\label{eq:two-levels}
+    W^{(s)}_{K,q''}(\mathcal C_t) = \frac{p^{q''}_K}{p^{q'}_K}\,W^{(s)}_{K,q'}(\mathcal C_t)\;.
+\end{equation}
+Both renormalised expectations converge as $K \to \infty$, by Paper, Theorem~\ref{P-thm:main}; letting $K \to \infty$ along $(K_i)$ and then $s \to \infty$ along $(s_k)$ gives $W^\infty_{q''}(\mathcal C_t) = (c_{q''}/c_{q'})W^\infty_{q'}(\mathcal C_t)$. The number $f(t) \coloneqq W^\infty_{q'}(\mathcal C_t)/c_{q'}$ therefore does not depend on the level $q'$ with $t \in \varepsilon_{q'}\mathbb Z$, which is \eqref{eq:level-proportionality}. In the same way, the normalisation of $\mathcal A \cup \theta\bar{\mathcal A}$ at the level $q'$ is the product of that of $\mathcal A$ with its complex conjugate, by Paper, Proposition~\ref{P-prop:reflection-normalisation}, and likewise for $\mathcal B$, so that the product of the renormalised expectations of $\mathcal A \cup \theta\bar{\mathcal A}$ and of $\mathcal B \cup \theta\bar{\mathcal B}$ at the level $q'$ is $\abs{p^{q'}_K}^2$ times that at the level $q$; in the limit, the number $N$ of the level $q'$ is $\abs{c_{q'}}N$.
+
+\emph{The estimate.} Let $t, t' \in \mathbb D$ with $0 < t < t'$ and $t' - t \in 2\mathbb D$, and choose $q' \geq q$ with $t = r\varepsilon_{q'}$ and $t' = (r + 2l)\varepsilon_{q'}$ for integers $r, l \geq 1$. Theorem~\ref{thm:separation} at the level $q'$, whose hypotheses hold because $y \in \varepsilon_{q'}\mathbb Z$ and $q' \geq q_\sharp(c, \bar g)$, gives after division by $\abs{c_{q'}}$
+\begin{equation}\label{eq:lipschitz-sum}
+    \abs{f(t') - f(t)} \leq \sum_{i=0}^{l-1}\frac{N}{\lfloor(r + 2i)/2\rfloor + 1} \leq \frac{lN}{\lfloor r/2\rfloor + 1} \leq \frac{2lN}{r} = N\,\frac{t' - t}{t}\;.
+\end{equation}
+On each of the two sets, which are dense in $(0, \infty)$ and any two points of which differ by an element of $2\mathbb D$, the function $f$ is therefore Lipschitz continuous on $[t_0, \infty)$ with the constant $N/t_0$, for every $t_0 > 0$, and it has a unique continuous extension to $(0, \infty)$, to which \eqref{eq:separation-lipschitz} passes.
+\end{proof}
+
+The constants $c_{q'}$ are the limits of the factors by which the normalisations of two levels differ, a finite renormalisation of the perimeter and corner terms as in Paper, \eqref{P-eq:level-change}. They are limits along the whole sequence of the cutoffs whenever the limit $W^{(s)}(\mathcal A \cup \mathcal B_r)$ of the level $q$ is not zero for one torus and one $r$, since $p^{q'}_K$ is then the quotient of two convergent sequences by \eqref{eq:two-levels}, the second of which has a limit different from zero; otherwise we know them only as limits along a subsequence.
+
+\begin{remark}[What Is Not Proved about the Positions]\label{rem:positions-open}
+The two theorems concern one relative motion, along the normal of a coordinate hyperplane which separates the two parts, and three questions remain.
+
+The two extensions of $f$ in Theorem~\ref{thm:separation-continuity}, from $2\mathbb D$ and from $\varepsilon_q + 2\mathbb D$, are not shown to agree. The estimates compare positions which differ by two steps of a lattice, because the translation by one step is symmetric for the form of reflection positivity but is not shown to be positive. What is missing is the reflection positivity of the lattice measures for the reflections in the hyperplanes midway between two neighbouring hyperplanes of sites, which Paper, Lemma~\ref{P-lem:lattice-reflection-positivity}, does not treat; with it the argument of this section applies to single steps.
+
+For a motion of $\mathcal B$ parallel to the hyperplane, the translation preserves the form of reflection positivity instead of being symmetric for it, and positivity gives no estimate. The theorems apply to such a motion only if a second coordinate hyperplane, orthogonal to the motion, separates the two parts as well, and they do not apply to ensembles whose parts no coordinate hyperplane separates, such as two linked loops.
+
+A deformation of a loop changes its normalisation. If it creates corners, the normalisation acquires the factor $\exp z_{v,w,K}$ of Paper, \eqref{P-eq:normalisation-structure}, for each of them, and the limits for the two loops are limits of expectations divided by different numbers, which nothing in the construction compares; perturbation theory attaches a divergent factor of its own to each corner \cite{Polyakov,BrandtNeriSato}, so that we do not expect the limits to be continuous under such deformations for a normalisation fixed at one scale. A deformation which moves a segment of a loop parallel to itself keeps the corners. It is a motion of one part of a loop with respect to another, and the argument of this section would require the positivity for loops which cross the hyperplane and a bound on the limits which is exponential in the length of a loop, whereas $\Gamma_q(b_q(\mathcal C), \bar g)$ grows like the fourth power of the extent. We have not carried this out.
 \end{remark}
 
 \bibliographystyle{amsplain}
