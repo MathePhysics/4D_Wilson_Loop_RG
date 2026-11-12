@@ -131,6 +131,27 @@ rate comparison, the root sum for (Z), and the difference count 3748–3815.
 
 ## State
 
+- **12 Nov 2026, 21:10 (from `date`). IN THE MANUSCRIPTS (paper 169 pp. `642ff135d070`, supplement 162 pp.
+  `ca8edd2b9322`, both compile clean):** Supplement Lemmata 17.22 (`lem:local-gauge`) and 17.23
+  (`lem:boundary-change`, D2.2(6)(a) with V4 Lemma 3.8; F28); paper subsections `sec:step-identity`
+  (Proposition `prop:step-identity`, D2.2(1)–(2)), `sec:localisation-expansion` (Lemma `lem:word-expansion`,
+  D2.1(2)–(4), D2.2(4)(e)–(f), two-loops #573–#574; on the term without large-field regions; condition
+  `eq:expansion-condition`), `sec:marked-polymers` (Proposition `prop:marked-polymers`, D2.2(5)); removed
+  `eq:slot-expansion` and the slot language; note "The sections of [I]" in the paper's notes. Details and what
+  was derived here: `PROGRESS.md`, entry of 21:10. `REWRITE_DRAFT.tex` is emptied to a list of what is pending.
+  **Decisions taken while writing (for the later blocks):** (1) the construction is written first on the term of
+  ϱ_k without large-field regions; components meeting Ω_kᶜ, outer variables, the gauge transformation w(s)
+  (D2.2(4)(d), (d′), lines 1195–1351, read to line 1262) and the representative go with the large-field block.
+  (2) The identity of the step is proved for all terms, with the background in a gauge fixed by conditions
+  inside the blocks (no restoring transformation is needed for block-constant gauge transformations).
+  (3) D2.2(3) (the retreated step-1 domain at the later steps) is not needed in Section 6 beyond Supplement S.7;
+  to audit with S.7. (4) The parity remark (first-order part odd) is moved to the subsection on the sizes of the
+  marked activities, after D2.4(11)(f) is read; note that B′ is not an odd function of A_k beyond first order
+  (the term hD̃), so the symmetry has to be the one the map uses, to be read there.
+  **NEXT:** (C) the groups of the step: D2.2(6)(c)–(d) (lines 1842–1930) and D2.3(3) (lines 2429–2486) in full,
+  written as a subsection replacing the paragraph "The groups of the step"; then D2.4(1)–(2) (lines 2909–3048)
+  for the bounds of the vacuum gas; then Section 5's class; then D2.4(10)–(13) with (4)–(6).
+
 - **12 Nov 2026, 20:45 (from `date`). What the cut readings lost (checked by line length against each cut).**
   The digests below say "tags cut at N characters". Measured: D2.1(2)–(5) lost 12 characters of line 937 ("in a
   cube of side M (D2.0(5)(f))."); D2.2(4)(a)–(c), (e), D2.3(2)–(3), D2.4(12) and (13)(a), the general-loops note
