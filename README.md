@@ -39,9 +39,11 @@ F_K(C_1,\ldots,C_n)
 .
 $$
 
-The statement holds for every finite number of disjoint loops, the correlation functions are [nonzero](drafts/WILSON_IT1_PAIR_NONVANISHING_2026_11_10.md#the-theorems) and [reflection positive](drafts/WILSON_IT1_PAIR_REFLECTION_POSITIVITY_2026_11_10.md#finite-products). The RG parameters, coupling threshold and bounds may depend on the family, its characters and the torus. 
+The statement holds for every finite number of disjoint loops, the correlation functions are [nonzero](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf) and [reflection positive](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf), with [torus covariance](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf). The RG parameters and the coupling threshold for convergence depend on the loops only through their shape, independently of their lengths and number.
 
-The proof is written in the [single-loop Cauchy draft](drafts/WILSON_IT1_CAUCHY_ESTIMATE_2026_10_27.md), §7, the [pair Cauchy draft](drafts/WILSON_IT1_TWO_LOOPS_CAUCHY_2026_11_05.md), §§6–7, and the [multiloop draft](drafts/WILSON_IT1_N_LOOPS_UNIFORM_BOUND_2026_11_05.md), §§8–10.
+We also establish [non-Gaussianity](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf), in the sense that our correlation functions cannot be obtained from free, i.e. Abelian, Yang–Mills theory.
+
+Theorem 1.5 and Sections 8–11 give the continuum-limit argument in the [manuscript](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf). Supporting estimates are collected in the [Bałaban supplement](Continuum%20Limit%20Manuscript%20Draft/BALABAN_SUPPLEMENT.pdf).
 
 ## Progress of the Construction
 
@@ -50,21 +52,26 @@ Our current progress is as follows.
 
 | Main step | Completion | Details |
 |---|---|---|
-| [First RG step for one loop and two disjoint loops](WILSON_FIRST_RG_STEP_V4.tex) | **Complete** | The stated finite-cutoff theorems and uniform bounds are written. |
-| [Small-field iteration and large-field insertions](drafts/WILSON_IT1_D26_CLOSURE_2026_10_24.md) | **Written** | — |
-| [R-steps for single and two-loop insertions](drafts/WILSON_IT1_D27_CLOSURE_2026_10_26.md) | **Written** | — |
-| [Relative weights of large-field contributions](drafts/WILSON_IT1_CAUCHY_ESTIMATE_2026_10_27.md) | **Written** | — |
-| [Cutoff-uniform bounds and subsequential limits](drafts/WILSON_IT1_TWO_LOOPS_UNIFORM_BOUND_2026_10_27.md) | **Written** | Subsequential convergence follows from cutoff-uniform boundedness and compactness. |
-| [Comparison of successive ultraviolet cutoffs](drafts/WILSON_IT1_CAUCHY_ESTIMATE_2026_10_27.md) | **Written** | — |
-| [Full-sequence continuum limits](drafts/WILSON_IT1_CAUCHY_ESTIMATE_2026_10_27.md) | **Written** | See the [pair Cauchy extension](drafts/WILSON_IT1_TWO_LOOPS_CAUCHY_2026_11_05.md) and the [finite-family extension](drafts/WILSON_IT1_N_LOOPS_UNIFORM_BOUND_2026_11_05.md). |
-| Correlation functions of arbitrarily many disjoint Wilson loops | **Written** | A first-step extension, cutoff-uniform bound and full-sequence argument are written for each fixed finite family of disjoint squares in coordinate planes. See the [multiloop draft](drafts/WILSON_IT1_N_LOOPS_UNIFORM_BOUND_2026_11_05.md). |
+| [First RG step for one loop and two disjoint loops](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf) | **In manuscript** | The stated finite-cutoff theorems and uniform bounds are written. See [Theorem 5.2](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf). |
+| [Small-field iteration and large-field insertions](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf) | **In manuscript** | [Section 6](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf). |
+| [R-steps for single and two-loop insertions](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf) | **In manuscript** | [§6.4](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf) and [Proposition 7.10](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf). |
+| [Relative weights of large-field contributions](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf) | **In manuscript** | [Proposition 8.4](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf). |
+| [Cutoff-uniform bounds and subsequential limits](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf) | **In manuscript** | [Theorem 8.6](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf) gives the bound. Subsequential convergence follows by compactness. |
+| [Comparison of successive ultraviolet cutoffs](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf) | **In manuscript** | [Theorem 11.1](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf). |
+| [Full-sequence continuum limits](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf) | **In manuscript** | [Theorem 1.5](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf) and [Section 11](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf). |
+| Correlation functions of arbitrarily many disjoint Wilson loops | **In manuscript** | Every finite family of pairwise vertex-disjoint admissible loops, with RG parameters and convergence threshold depending only on loop shape, independently of loop lengths and number. See [Theorem 1.5](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf). |
 | [Decay of connected two-loop correlations](drafts/WILSON_IT1_PAIR_FACTORISATION_2026_11_05.md) | **Partial** | A cutoff-uniform bound is derived. The bound retains terms independent of separation. |
 
 
-We are currently working on consolidating the markdown files which contain the proofs into a single LaTeX manuscript.
+The continuum-limit proof and its supporting estimates are collected in the [Continuum Limit Manuscript Draft folder](Continuum%20Limit%20Manuscript%20Draft/).
 
 
 ## Current Manuscripts
+
+- **Continuum-limit manuscript draft.** [PDF](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf) and [LaTeX source](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.tex).
+- **Bałaban supplement.** [PDF](Continuum%20Limit%20Manuscript%20Draft/BALABAN_SUPPLEMENT.pdf) and [LaTeX source](Continuum%20Limit%20Manuscript%20Draft/BALABAN_SUPPLEMENT.tex).
+
+The manuscript folder includes the shared [bibliography](Continuum%20Limit%20Manuscript%20Draft/refs.bib) and [preprint class](Continuum%20Limit%20Manuscript%20Draft/preprint.cls).
 
 - **Updated V4:** [PDF](WILSON_FIRST_RG_STEP_V4.pdf) and [LaTeX source](WILSON_FIRST_RG_STEP_V4.tex).
 
@@ -75,7 +82,7 @@ The [Manuscripts under Construction folder](Manuscripts%20under%20Construction/)
 - **V5:** [PDF](Manuscripts%20under%20Construction/WILSON_FIRST_RG_STEP_V5.pdf), [LaTeX source](Manuscripts%20under%20Construction/WILSON_FIRST_RG_STEP_V5.tex), and [bibliography](Manuscripts%20under%20Construction/WILSON_FIRST_RG_STEP_V5.bib).
 - **Pedagogical summary (V4 companion):** [PDF](Manuscripts%20under%20Construction/V4_Pedagogical_Summary_2026_10_22.pdf) and [LaTeX source](Manuscripts%20under%20Construction/V4_Pedagogical_Summary_2026_10_22.tex).
 
-The summary gives a notation guide and explanations of the construction, estimates and two-loop result. V4 is the current reference manuscript; V5 remains under construction.
+The summary gives a notation guide and explanations of the construction, estimates and two-loop result. V4 is the reference for the first RG step. V5 remains under construction.
 
 ## Research Programme
 
@@ -99,64 +106,72 @@ The [Bałaban paper-label dictionary](drafts/BALABAN_PAPER_LABELS.md) gives offi
 
 ## Detailed Breakdown of Current Progress
 
-Assessment of the working drafts as of 10 November 2026. The linked drafts are included in this repository.
+Assessment of the manuscript and supporting drafts as of 12 November 2026. The linked drafts are included in this repository.
 
-**In manuscript** means a theorem and proof are present under their stated assumptions. **Written** means the derivation exists. **Partial** means that part of the argument is written and further estimates remain to be derived.
+**In manuscript** means a theorem and proof are present under their stated assumptions. **Partial** means that part of the argument is written and further estimates remain to be derived.
 
 ### Single-Loop RG Construction
 
 | Claim | Completion | Details |
 |---|---|---|
-| First RG step for a square Wilson loop | **In manuscript** | Exact normalised decomposition, perimeter and corner extraction, and defect and boundary bounds are supplied. See [V4's main theorem](WILSON_FIRST_RG_STEP_V4.tex). |
-| First-step leading-term bounds and exponential moment | **In manuscript** | The stated estimates retain contour-length dependence; they do not alone give cutoff-uniform control at fixed physical loop size. |
-| Inductive class of Wilson loop insertions | **Written** | — |
-| Small-field RG transformation and contraction of deviation insertions | **Written** | See the [step map](drafts/WILSON_IT1_D2_STEP_MAP_2026_10_22.md), [complex covariance](drafts/WILSON_IT1_COMPLEX_COVARIANCE_2026_10_29.md) and [averaged current](drafts/WILSON_IT1_RMJ_CLOSURE_2026_10_30.md). |
-| D2.6: production, propagation and payment of large-field insertions | **Written** | See [D2.6](drafts/WILSON_IT1_D26_CLOSURE_2026_10_24.md). |
-| Analytic representation of shifted insertions | **Written** | See [O4](drafts/WILSON_IT1_O4_CLOSURE_2026_10_26.md) and [complex covariance](drafts/WILSON_IT1_COMPLEX_COVARIANCE_2026_10_29.md). |
-| Perimeter and corner extraction at subsequent steps | **Written** | D2.3 and D2.7 specify the scalar extraction. |
-| Preservation of the insertion class through arbitrary R-steps | **Written** | D2.7 item 15.8 supplies the gas-link payment and post-R acceptance derivations. See [D2.7](drafts/WILSON_IT1_D27_CLOSURE_2026_10_26.md) and the [evaluation estimates](drafts/WILSON_IT1_TWO_LOOPS_UNIFORM_BOUND_2026_10_27.md). |
-| Cutoff-uniform bound on the renormalised single-loop expectation | **Written** | — |
-| Subsequential convergence of single-loop expectations | **Written** | Bounded-sequence compactness and diagonal extraction supply the result. No separate RG estimate is needed. See the [continuum note, §8](drafts/WILSON_IT1_CONTINUUM_LIMIT_CLOSURE_2026_10_26.md). |
+| First RG step for an admissible Wilson loop | **In manuscript** | Exact normalised decomposition, perimeter and corner extraction, and defect and boundary bounds are supplied. See [Theorem 5.2](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf). |
+| First-step leading-term bounds and exponential moment | **In manuscript** | The stated estimates retain contour-length dependence; they do not alone give cutoff-uniform control at fixed physical loop size. See [V4](WILSON_FIRST_RG_STEP_V4.pdf). |
+| Inductive class of Wilson loop insertions | **In manuscript** | [Definition 5.1](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf) and [Theorem 6.1](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf). |
+| Small-field RG transformation and contraction of deviation insertions | **In manuscript** | [§6.2](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf) and [§6.3](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf). |
+| D2.6: production, propagation and payment of large-field insertions | **In manuscript** | [§6.4](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf) and the [Bałaban supplement](Continuum%20Limit%20Manuscript%20Draft/BALABAN_SUPPLEMENT.pdf). |
+| Analytic representation of shifted insertions | **In manuscript** | [§6.1](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf) and [§6.2](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf). |
+| Perimeter and corner extraction at subsequent steps | **In manuscript** | [Section 7](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf). |
+| Preservation of the insertion class through arbitrary R-steps | **In manuscript** | [Theorem 6.1](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf) and [§6.4](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf). |
+| Cutoff-uniform bound on the renormalised single-loop expectation | **In manuscript** | [Theorem 8.6](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf). The bound retains loop-length dependence. |
+| Subsequential convergence of single-loop expectations | **In manuscript** | Follows from [Theorem 1.5](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf). |
 
 ### Ultraviolet Cutoff Comparison and the Continuum Limit
 
 | Claim | Completion | Details |
 |---|---|---|
-| Exact normalised comparison of consecutive cutoffs | **Written** | The matched decomposition and normalised difference retain the physical denominator and perimeter/corner normalisations. See the [Cauchy draft, §§2–3 and 7](drafts/WILSON_IT1_CAUCHY_ESTIMATE_2026_10_27.md). |
-| Extra-generation contribution and old-scale tails | **Written** | Geometric decay for regular terms and polynomial decay for R-terms use the running-coupling bounds. See the [Cauchy draft, §4](drafts/WILSON_IT1_CAUCHY_ESTIMATE_2026_10_27.md) and the [beta-function derivations](drafts/BETA_FUNCTION_WILSON_LOOPS.md), with their construction and source assumptions. |
-| Classical action and minimiser comparison at regular real backgrounds | **Written** | The real-background derivation has been reviewed under its stated hypotheses. See the [Cauchy draft, §9](drafts/WILSON_IT1_CAUCHY_ESTIMATE_2026_10_27.md) and the [review record](drafts/WILSON_IT1_LF_TRIAGE_P10_R35_2026_11_05.md). |
-| Gaussian covariance and quadratic-form comparison | **Written** | Localised operator, shell and nonlinear fixed-point comparisons are derived in the [walk-factor note, §§10–12](drafts/WILSON_IT1_WALK_FACTOR_DIFFERENCE_2026_10_28.md). |
-| Localised lift between the fine lattices | **Written** | — |
-| Complex-domain admissibility of lifted configurations | **Written** | Complex fluctuation data, composite configurations, finer-layer crossings and the complex R-term class bound have derivations. See the [Cauchy draft, §§5 and 10.5](drafts/WILSON_IT1_CAUCHY_ESTIMATE_2026_10_27.md). |
-| Quadratic moment of the lifted activity sum | **Written** | The full quadratic tensor is retained; Euclidean covariance of the lifted sum is not assumed. |
-| Relative weights of large-field contributions at the stopping scale | **Written** | See the [Cauchy draft, §11](drafts/WILSON_IT1_CAUCHY_ESTIMATE_2026_10_27.md). |
-| Differences of characteristic functions and cutoff functions | **Written** | — |
-| [Individual localised propagators and walk-factor differences](drafts/WILSON_IT1_WALK_FACTOR_DIFFERENCE_2026_10_28.md) | **Written** | Wδ-1–Wδ-3 and the collar comparison Wδ-4 are derived. |
-| [Differences of large-field integrands and loop dressings](drafts/WILSON_IT1_LARGE_FIELD_DEPTH_2026_10_27.md) | **Written** | — |
-| [Interface cancellations and multiplier comparison](drafts/WILSON_IT1_LARGE_FIELD_DEPTH_2026_10_27.md) | **Written** | The multiscale alignment, interface π-part and twist estimates are derived in the [large-field note, §4(d)](drafts/WILSON_IT1_LARGE_FIELD_DEPTH_2026_10_27.md). |
-| [Marked component sums and connected exponentiation](drafts/WILSON_IT1_CAUCHY_ESTIMATE_2026_10_27.md) | **Written** | See the [Cauchy draft, §§8.5–8.6](drafts/WILSON_IT1_CAUCHY_ESTIMATE_2026_10_27.md). |
-| Coupled recursion for activity, R-term and coupling differences | **Written** | The recursion and its weighted-norm solution are derived in the [Cauchy draft, §§8.3–8.7](drafts/WILSON_IT1_CAUCHY_ESTIMATE_2026_10_27.md). |
-| Summable Cauchy estimate and full-sequence continuum limit | **Written** | For one loop, §7 includes the leading word, scalar constants, transports and wraps in the normalised comparison and its summability. See the [Cauchy draft, §7](drafts/WILSON_IT1_CAUCHY_ESTIMATE_2026_10_27.md). |
+| Exact normalised comparison of consecutive cutoffs | **In manuscript** | The matched decomposition and normalised difference retain the physical denominator and perimeter/corner normalisations. See [§10.1](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf) and [§11.1](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf). |
+| Extra-generation contribution and old-scale tails | **In manuscript** | Geometric decay for regular terms and polynomial decay for R-terms use the running-coupling bounds. See [§11.2](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf) and [Section 4](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf). |
+| Classical action and minimiser comparison at regular real backgrounds | **In manuscript** | [Proposition 10.6](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf) and [§11.1](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf). |
+| Gaussian covariance and quadratic-form comparison | **In manuscript** | Localised operator, shell and nonlinear fixed-point comparisons are derived in [Section 9](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf) and the [Bałaban supplement](Continuum%20Limit%20Manuscript%20Draft/BALABAN_SUPPLEMENT.pdf). |
+| Localised lift between the fine lattices | **In manuscript** | [§9.3](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf), [§10.3](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf) and the [Bałaban supplement](Continuum%20Limit%20Manuscript%20Draft/BALABAN_SUPPLEMENT.pdf). |
+| Complex-domain admissibility of lifted configurations | **In manuscript** | Complex fluctuation data, composite configurations, finer-layer crossings and the complex R-term class bound have derivations. See [§10.3](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf) and the [Bałaban supplement](Continuum%20Limit%20Manuscript%20Draft/BALABAN_SUPPLEMENT.pdf). |
+| Quadratic moment of the lifted activity sum | **In manuscript** | The full quadratic tensor is retained. See [§11.1](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf). |
+| Relative weights of large-field contributions at the stopping scale | **In manuscript** | [§8.3](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf). |
+| Differences of the test functions | **In manuscript** | [§10.2](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf). |
+| [Individual localised propagators and walk-factor differences](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf) | **In manuscript** | [Section 9](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf) and the [Bałaban supplement](Continuum%20Limit%20Manuscript%20Draft/BALABAN_SUPPLEMENT.pdf). |
+| [Differences of large-field integrands and loop dressings](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf) | **In manuscript** | [Section 10](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf) and the [Bałaban supplement](Continuum%20Limit%20Manuscript%20Draft/BALABAN_SUPPLEMENT.pdf). |
+| [Interface cancellations and multiplier comparison](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf) | **In manuscript** | The multiscale alignment, interface π-part and twist estimates are derived in [§10.3](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf) and the [Bałaban supplement](Continuum%20Limit%20Manuscript%20Draft/BALABAN_SUPPLEMENT.pdf). |
+| [Marked component sums and connected exponentiation](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf) | **In manuscript** | [§11.3](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf) and [§11.4](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf). |
+| Coupled recursion for activity, R-term and coupling differences | **In manuscript** | The recursion and its weighted-norm solution are derived in [§11.4](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf) and [Proposition 11.7](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf). |
+| Summable Cauchy estimate and full-sequence continuum limit | **In manuscript** | [Theorem 11.1](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf) and [Theorem 1.5](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf). |
 
 ### Two Wilson Loops
 
-The pair results concern two vertex-disjoint squares. The extension to any finite family of pairwise disjoint loops is listed separately.
+The continuum-limit results cover two vertex-disjoint admissible loops. The extension to any finite family of pairwise disjoint loops is listed separately.
 
 | Claim | Completion | Details |
 |---|---|---|
-| First RG step for the pair expectation | **In manuscript** | Product of the individual perimeter/corner normalisations, mixed contributions and remainder bounds are supplied. See [V4's two-loop theorem](WILSON_FIRST_RG_STEP_V4.tex). |
-| Separation decay of first-step mixed contributions | **In manuscript** | Exponential separation bounds hold for the stated mixed activities and scalar correction. |
-| [Inductive pair class and propagation of mixed insertions through fluctuation steps](drafts/WILSON_IT1_TWO_LOOPS_UNIFORM_BOUND_2026_10_27.md) | **Written** | The pair class, fluctuation-step production, carry and two-component count are derived in §§2–6A. |
-| [R-steps for the pair](drafts/WILSON_IT1_TWO_LOOPS_UNIFORM_BOUND_2026_10_27.md) | **Written** | — |
-| [Cutoff-uniform bound on the renormalised pair expectation](drafts/WILSON_IT1_TWO_LOOPS_UNIFORM_BOUND_2026_10_27.md) | **Written** | — |
-| Subsequential convergence of pair expectations | **Written** | Compactness supplies subsequences; no separate substantive RG estimate is required. |
-| Full-sequence continuum limit of the pair expectation | **Written** | The normalised comparison and summability are derived in §§3–7. See the [pair Cauchy draft](drafts/WILSON_IT1_TWO_LOOPS_CAUCHY_2026_11_05.md). |
+| First RG step for the pair expectation | **In manuscript** | Product of the individual perimeter/corner normalisations, mixed contributions and remainder bounds are supplied. See [Theorem 5.2](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf). |
+| Separation decay of first-step mixed contributions | **In manuscript** | Exponential separation bounds hold for the stated mixed activities and scalar correction. See [V4's two-loop theorem](WILSON_FIRST_RG_STEP_V4.tex). |
+| [Inductive pair class and propagation of mixed insertions through fluctuation steps](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf) | **In manuscript** | [Definition 5.1](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf) and [Section 6](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf). |
+| [R-steps for the pair](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf) | **In manuscript** | [§6.4](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf) and [Proposition 7.10](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf). |
+| [Cutoff-uniform bound on the renormalised pair expectation](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf) | **In manuscript** | [Theorem 8.6](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf). The bound retains loop-length dependence. |
+| Subsequential convergence of pair expectations | **In manuscript** | Follows from [Theorem 1.5](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf). |
+| Full-sequence continuum limit of the pair expectation | **In manuscript** | [Theorem 1.5](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf) and [§11.8](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf). |
 | [Decay of the connected two-loop correlation and factorisation at large separation](drafts/WILSON_IT1_PAIR_FACTORISATION_2026_11_05.md) | **Partial** | The far-component cluster tails and stopping-scale covariance are bounded in §§3–4. The resulting cutoff-uniform bound retains terms independent of separation. |
-| Correlation functions of arbitrarily many disjoint Wilson loops | **Written** | The scope is each fixed finite family of vertex-disjoint squares in coordinate planes, with constants and coupling thresholds depending on the number of loops. See the [multiloop draft](drafts/WILSON_IT1_N_LOOPS_UNIFORM_BOUND_2026_11_05.md). |
+| Correlation functions of arbitrarily many disjoint Wilson loops | **In manuscript** | Every finite family of pairwise vertex-disjoint admissible loops, with RG parameters and convergence threshold depending only on loop shape, independently of loop lengths and number. See [Theorem 1.5](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf). |
 
 ## Build
 
-Use a recent TeX Live or MiKTeX installation with pdfLaTeX, BibTeX and latexmk. For V5:
+Use a recent TeX Live or MiKTeX installation with pdfLaTeX, BibTeX and latexmk. Build the continuum-limit manuscript before the supplement so that its external references resolve.
+
+```sh
+cd "Continuum Limit Manuscript Draft"
+latexmk -pdf -interaction=nonstopmode -halt-on-error WILSON_LOOPS_CONTINUUM_LIMIT.tex
+latexmk -pdf -interaction=nonstopmode -halt-on-error BALABAN_SUPPLEMENT.tex
+```
+
+For V5:
 
 ```sh
 cd "Manuscripts under Construction"
