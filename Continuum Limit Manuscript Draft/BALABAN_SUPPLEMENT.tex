@@ -335,13 +335,15 @@ The expansion of \cite[Sect.~2]{BalabanRG2} uses the potentials only through \ci
 \end{proof}
 
 \begin{lemma}[Threshold Differences]\label{lem:threshold-differences}
-There is a number $q_{\mathrm{th}}$, depending on $\varepsilon^*$, $\kappa$, $M$, and the constants of \cite{BalabanRG2}, such that the following holds. Let $q_{\mathrm{th}} \leq q' < q'' \leq 2q'$ and $\abs{z}q'' < \varepsilon^*$. Then $E(z; q'') - E(z; q') = \sum_X\Delta(X; z)$, where each $\Delta(X; z)$ is analytic in $z$ and in the configuration on $U^c_{k+1}(X, \alpha_0, \alpha_1)$, and
+There is a number $q_{\mathrm{th}}$, depending on $\varepsilon^*$, $\kappa$, $M$, and the constants of \cite{BalabanRG2}, such that the following holds. Let $q_{\mathrm{th}} \leq q' < q'' \leq 2q'$ and $\abs{z}q'' < \varepsilon^*$. Then $E(z; q'') - E(z; q') = \sum_X\Delta(X; z)$, where each $\Delta(X; z)$ is analytic in $z$ and in the configuration on $U^c_{k+1}(X, \alpha_0, \alpha_1)$, and, for every $q \geq q_{\mathrm{th}}$,
 \begin{equation}\label{eq:threshold-difference}
-    \abs{\Delta(X; z)} \leq C_4\exp(-\tfrac14\gamma_2q'^2)\exp(-\kappa d_{k+1}(X))\;,
-    \qquad
-    \abs{E(X; 0, q)} \leq C_5\exp(-\tfrac{1}{20}\gamma_2q^2)\exp(-\kappa d_{k+1}(X))
+    \begin{gathered}
+        \abs{\Delta(X; z)} \leq C_4\exp(-\tfrac14\gamma_2q'^2)\exp(-\kappa d_{k+1}(X))\;,
+        \\
+        \abs{E(X; 0, q)} \leq C_5\exp(-\tfrac{1}{20}\gamma_2q^2)\exp(-\kappa d_{k+1}(X))\;,
+    \end{gathered}
 \end{equation}
-for $q \geq q_{\mathrm{th}}$, with constants $C_4$, $C_5$ which do not depend on $k$, the history, $q'$, $q''$, $q$, or $z$, and with the constant $\gamma_2$ of \cite[(2.22)]{BalabanRG2}.
+with constants $C_4$, $C_5$ which do not depend on $k$, the history, $q'$, $q''$, $q$, or $z$, and with the constant $\gamma_2$ of \cite[(2.22)]{BalabanRG2}.
 \end{lemma}
 
 \begin{proof}
@@ -599,7 +601,11 @@ which satisfies the hypotheses on $h$ in \eqref{eq:linear-setting} wherever $D$ 
 \begin{equation}\label{eq:hessian-defect}
     \langle A, \mathbf HD\lambda \rangle = T(J, \lambda, A) \coloneqq \tfrac12\bigl\langle i[\lambda(b_-), A(b)] - i[A(b), \operatorname{Ad}(U_b)\lambda(b_+)],\, J \bigr\rangle\;,
 \end{equation}
-which is linear in $J$, local, and contains no derivative, so that $\abs{T(J, \lambda, A)} \leq c_{\mathcal N}\sum_b\eta^4\abs{J(b)}\abs{A(b)}(\abs{\lambda(b_-)} + \abs{\lambda(b_+)})$ with an absolute constant $c_{\mathcal N}$. With $\varphi_A \coloneqq (D^{\mathrm T}D)^{-1}D^{\mathrm T}A$ the difference $K \coloneqq \mathbf H - h = \Pi_D\mathbf H + \mathbf H\Pi_D - \Pi_D\mathbf H\Pi_D$ is therefore
+which is linear in $J$, local, and contains no derivative, so that, with an absolute constant $c_{\mathcal N}$,
+\[
+    \abs{T(J, \lambda, A)} \leq c_{\mathcal N}\sum_b\eta^4\abs{J(b)}\abs{A(b)}\bigl(\abs{\lambda(b_-)} + \abs{\lambda(b_+)}\bigr)\;.
+\]
+With $\varphi_A \coloneqq (D^{\mathrm T}D)^{-1}D^{\mathrm T}A$ the difference $K \coloneqq \mathbf H - h$, which equals $\Pi_D\mathbf H + \mathbf H\Pi_D - \Pi_D\mathbf H\Pi_D$, is therefore
 \begin{equation}\label{eq:hessian-difference}
     \langle A', KA \rangle = T(J, \varphi_{A'}, A) + T(J, \varphi_A, A') - T(J, \varphi_A, D\varphi_{A'})\;,
 \end{equation}
@@ -876,9 +882,11 @@ Let $G(\ell, \xi) \coloneqq N(\ell, \xi)/(s(\ell)s(\ell + \xi))$ and $\Delta^2G(
 
 \emph{A calculus of second differences.} On a region $\{ 0 < \abs{\ell} \leq R,\ \abs{\xi} \leq \abs{\ell}/2 \}$ we say that $F \in \mathrm{DC}(m)$ if $\abs{F} \leq C\abs{\ell}^m$, $\abs{F(\ell, \xi) - F(\ell, 0)} \leq C\abs{\xi}\abs{\ell}^{m-1}$, and $\abs{\Delta^2F} \leq C\abs{\xi}^2\abs{\ell}^{m-2}$. If $\abs{\xi} \leq \abs{\ell}/2$, every point of the segments above has norm $\abs{\ell}$, so that $N \in \mathrm{DC}(2)$ and $N_r \in \mathrm{DC}(3)$ on $\{ 0 < \abs{\ell} \leq \pi/2 \}$, and $N \in \mathrm{DC}(0)$ on the outer region $\{ \abs{\ell} \geq \pi/2 \}$. The classes are stable under sums; under products, by
 \begin{equation}\label{eq:product-difference}
-    \Delta^2(F_1F_2) = \Delta^2F_1\cdot F_2(\ell, 0) + F_1(\ell, 0)\cdot\Delta^2F_2 + \Delta^+F_1\Delta^+F_2 + \Delta^-F_1\Delta^-F_2\;,
-    \qquad
-    \Delta^\pm F \coloneqq F(\ell, \pm\xi) - F(\ell, 0)\;;
+    \begin{gathered}
+        \Delta^2(F_1F_2) = \Delta^2F_1\cdot F_2(\ell, 0) + F_1(\ell, 0)\cdot\Delta^2F_2 + \Delta^+F_1\Delta^+F_2 + \Delta^-F_1\Delta^-F_2\;,
+        \\
+        \Delta^\pm F \coloneqq F(\ell, \pm\xi) - F(\ell, 0)\;;
+    \end{gathered}
 \end{equation}
 and under reciprocals of functions with $\abs{F} \geq c\abs{\ell}^m$, which go into $\mathrm{DC}(-m)$, by $1/x_+ + 1/x_- - 2/x_0 = (-x_0(x_+ + x_- - 2x_0) - 2(x_+ - x_0)(x_- - x_0))/(x_+x_-x_0)$ with $x_\pm \coloneqq F(\ell, \pm\xi)$ and $x_0 \coloneqq F(\ell, 0)$. On bounded regions $\mathrm{DC}(m) \subset \mathrm{DC}(m')$ for $m' \leq m$. From $\cos(\ell \pm \xi) = \cos\ell\cos\xi \mp \sin\ell\sin\xi$, $\abs{x - \sin x} \leq 2\abs{x}^3$, and $\abs{2 - 2\cos y - y^2} \leq 5y^4$ one obtains $\abs{\ell + \xi}^2, s(\ell + \xi) \in \mathrm{DC}(2)$ and $r_s(\ell + \xi) \in \mathrm{DC}(4)$, with $r_s(p) \coloneqq \abs{p}^2 - s(p)$; since $s(p) \geq (36/25\pi^2)\abs{p}^2$ when all $\abs{p_\mu} \leq 5\pi/4$, $h_s(p) \coloneqq 1/s(p) - 1/\abs{p}^2 = r_s(p)/(s(p)\abs{p}^2)$ satisfies $h_s(\ell + \xi) \in \mathrm{DC}(0)$.
 
@@ -1312,7 +1320,7 @@ A term whose domain $X$ satisfies $\tilde X^5 \subset \Lambda$ coincides with th
 \]
 where $\tilde I_1$ is the normalised integral with the outer field and $\tilde I_0$ the same at $A_J = 0$; this replaces the first expression of \cite[(3.28)]{BalabanCRE} at $k = 0$. To write it as a sum of local terms we replace the shift $m$ by the local shift $m^{\mathrm{loc}} \coloneqq -\sum_{\abs{\omega} \leq \rho_2}C_\omega\ell_\Lambda$, the walk expansion of $C^{(0)}(\Lambda)$ \cite[(3.107), p.~416]{BalabanPBG} truncated at $\rho_2 \coloneqq (2/\delta_{\mathrm{tl}})\log(K_{\mathrm{tl}}m_Lt_0^3)$ steps, $K_{\mathrm{tl}}$ and $\delta_{\mathrm{tl}}$ being the constants of \cite[(3.108)]{BalabanPBG}. Then $\abs{m - m^{\mathrm{loc}}} \leq 1/(m_Lt_0^2)$, the function $m^{\mathrm{loc}}$ is supported in the collar $\mathcal K_3 \coloneqq \{ b \in D \,|\, \dist(b, J) \leq R_U \}$ with $R_U = O(\log t_0)$, and $m^{\mathrm{loc}}(b)$ depends on the configuration within $R_U$ of $b$ only. At a real configuration, \cite[Lemma~B.5]{WilsonFirstStep} on a rectangle of side $2R_U + 3$ gives a gauge in which the configuration is close to the identity, and in it the bound $\abs{m(b)}_\sigma \leq t_0/4$ holds with the local data alone; so $\abs{m^{\mathrm{loc}}(b)}_\sigma \leq t_0/2$.
 
-With $A = A'' + m^{\mathrm{loc}}$ the integral becomes the expectation, in the Gaussian measure of covariance $C^{(0)}(\Lambda)$, of $e^{-\langle A'', w\rangle}\chi^{(0)}(A'' + m^{\mathrm{loc}})e^{\mathbf V^{(0)}(A_J, A'' + m^{\mathrm{loc}})}$, times $e^{\frac12\langle\ell_\Lambda, C^{(0)}(\Lambda)\ell_\Lambda\rangle - \frac12\langle m^{\mathrm{loc}} - m, H_{DD}(m^{\mathrm{loc}} - m)\rangle}$, where $w \coloneqq H_{DD}(m^{\mathrm{loc}} - m)$ satisfies $\abs{w} \leq 2/t_0^2$. The construction of \cite[(2.1)--(2.13), pp.~12--14]{BalabanRG2} is run on this expectation with two changes. The linear factor is the product over the cubes $\Delta$ of side $LM$ of single-cube potentials $W(\Delta) = -\sum_{b \in \Delta}\langle A''(b), w(b)\rangle$, of size $\abs{W(\Delta)} \leq 4n_\Delta/t_0$, which enter the Mayer expansion of \cite[(2.1)]{BalabanRG2} as potentials of their own. On the bonds of $\mathcal K_3$ which the expansion keeps, the shifted cutoff is written $\chi(A''(b) + m^{\mathrm{loc}}(b)) = \id\{\abs{A''(b)}_\sigma < t_0/2\} + \Delta_b$, where $\Delta_b$ vanishes unless $\abs{A''(b)}_\sigma \geq t_0/2$, since $\abs{m^{\mathrm{loc}}(b)}_\sigma \leq t_0/2$. On the bonds where the cutoff fails, the penalty
+With $A = A'' + m^{\mathrm{loc}}$ the integral becomes the expectation, in the Gaussian measure of covariance $C^{(0)}(\Lambda)$, of $e^{-\langle A'', w\rangle}\chi^{(0)}(A'' + m^{\mathrm{loc}})e^{\mathbf V^{(0)}(A_J, A'' + m^{\mathrm{loc}})}$, times $\exp(\frac12\langle\ell_\Lambda, C^{(0)}(\Lambda)\ell_\Lambda\rangle - \frac12\langle m^{\mathrm{loc}} - m, H_{DD}(m^{\mathrm{loc}} - m)\rangle)$, where $w \coloneqq H_{DD}(m^{\mathrm{loc}} - m)$ satisfies $\abs{w} \leq 2/t_0^2$. The construction of \cite[(2.1)--(2.13), pp.~12--14]{BalabanRG2} is run on this expectation with two changes. The linear factor is the product over the cubes $\Delta$ of side $LM$ of single-cube potentials $W(\Delta) = -\sum_{b \in \Delta}\langle A''(b), w(b)\rangle$, of size $\abs{W(\Delta)} \leq 4n_\Delta/t_0$, which enter the Mayer expansion of \cite[(2.1)]{BalabanRG2} as potentials of their own. On the bonds of $\mathcal K_3$ which the expansion keeps, the shifted cutoff is written $\chi(A''(b) + m^{\mathrm{loc}}(b)) = \id\{\abs{A''(b)}_\sigma < t_0/2\} + \Delta_b$, where $\Delta_b$ vanishes unless $\abs{A''(b)}_\sigma \geq t_0/2$, since $\abs{m^{\mathrm{loc}}(b)}_\sigma \leq t_0/2$. On the bonds where the cutoff fails, the penalty
 \[
     \id\{\abs{x + a}_\sigma \geq t_0\} \leq e^{-\frac12\gamma_2\nu_p^2t_0^2}e^{\frac12\gamma_2\abs{x}_\sigma^2}\;,
     \qquad
@@ -1599,13 +1607,15 @@ Paper, Section~\ref{P-sec:walk-factor-difference}, compares the terms of one wal
 \begin{proposition}[The Propagators on Two Fine Lattices]\label{prop:two-lattices}
 Let $\beta \in [\frac34, 1)$, let $R_0M_0$ satisfy
 \begin{equation}\label{eq:shell-conditions}
-    \tfrac16\delta R_0M_0 > 2d\log c_0(\tfrac16) + 1\;,
-    \qquad
-    4\delta R_0M_0 \geq 3(1 + \beta)\log L\;,
-    \qquad
-    R_0M_0 \geq L\;,
-    \qquad
-    \delta_QR_0M_0 \geq 12\log L\;,
+    \begin{gathered}
+        \tfrac16\delta R_0M_0 > 2d\log c_0(\tfrac16) + 1\;,
+        \qquad
+        4\delta R_0M_0 \geq 3(1 + \beta)\log L\;,
+        \\
+        R_0M_0 \geq L\;,
+        \qquad
+        \delta_QR_0M_0 \geq 12\log L\;,
+    \end{gathered}
 \end{equation}
 with $\delta \in \{\delta_0, \delta'_0\}$, $\delta'_0 \coloneqq \min(\delta_0, \frac14\delta_Q, \frac14\delta_1, \frac14\delta_c)$, the rates $\delta_Q$ of the inverse of $Q_1Q_1^*$, $\delta_1$ of the operator $G_1$ of \cite[(3.128)]{BalabanPBG}, $\delta_c \coloneqq \frac{1}{16}\min(\delta_V, \delta_0, \delta_1)$, $c_0$ the constant of \cite[(2.58)]{BalabanPRT2}, and let $K \geq 2$ in $M = KR_0M_0$. At aligned backgrounds on the complex domain of \cite[(3.37), p.~396]{BalabanPBG} the following hold, with constants independent of $j$, $k$, $K$, $\varepsilon$, the torus, the block, and the field.
 \begin{enumerate}[label=(\alph*)]
@@ -1675,11 +1685,13 @@ the fine field strengths transported to a corner of $p$; $c_9$ bounds the consta
 
 \emph{(b), the first variation.} The same expansion gives the first variation of $b$ at $W$ in the direction $e^{i(\varepsilon/L)\delta\mathcal A}W$, in weak form,
 \begin{equation}\label{eq:artefact-variation}
-    \delta b(W)[\delta\mathcal A] = \sum_{p'}(\varepsilon/L)^4\langle r_1(p'), (D\delta\mathcal A)(p')\rangle + \sum_{b'}(\varepsilon/L)^4\langle r_0(b'), \delta\mathcal A(b')\rangle\;,
-    \qquad
-    \abs{r_1} \leq C_r\frac{\varepsilon\varepsilon_1}{a^3}\;,
-    \quad
-    \abs{r_0} \leq C_r\frac{\varepsilon\varepsilon_1^2}{a^4}\;,
+    \begin{gathered}
+        \delta b(W)[\delta\mathcal A] = \sum_{p'}(\varepsilon/L)^4\langle r_1(p'), (D\delta\mathcal A)(p')\rangle + \sum_{b'}(\varepsilon/L)^4\langle r_0(b'), \delta\mathcal A(b')\rangle\;,
+        \\
+        \abs{r_1} \leq C_r\frac{\varepsilon\varepsilon_1}{a^3}\;,
+        \qquad
+        \abs{r_0} \leq C_r\frac{\varepsilon\varepsilon_1^2}{a^4}\;,
+    \end{gathered}
 \end{equation}
 with $C_r \coloneqq 8c_9C_0(1 + C_0)$: the fine side is exact, the term $\langle\theta, [\theta, \delta\mathcal A]\rangle$ of the commutator vanishing because $\operatorname{tr}X[X, Y] = 0$; the coarse side pairs $\bar F_p$ with the linearised average of the curl, a weighted average of the fine curls over the plaquettes within $2\varepsilon$, with nonnegative weights $w_{p,p'}$ which sum to $1$ over $p'$ and to $L^{-4}$ over $p$; and the difference $\tilde F_{p'} - F_{p'}$, $\tilde F_{p'} \coloneqq \sum_pL^4w_{p,p'}\bar F_p$, is at most $6\varepsilon\abs{\nabla F}(1 + O(\varepsilon\abs A))$. Only $\nabla F$ enters.
 
@@ -1826,7 +1838,11 @@ where $\iota_G(Y) \leq \iota(Y)$ bounds the terms in which the insertion is conn
 
 \emph{(e).} Substituting (c) and the bound on $\abs{\delta_i}$ into (b) gives $d \leq \mathcal Td + s$, with
 \begin{equation}\label{eq:recursion-operator}
-    (\mathcal Tu)_{i+1} \coloneqq \varepsilon^*\Bigl[D_i[u] + C_S\sum_{j \leq i}c_j\bigl(\mathcal D'_{[j]}[u] + D_{j-1}[u]\bigr) + C_S\sum_{j \leq i}c^B_j\mathcal D^{*\prime}_j[u] + C_S\sum_{j \leq i}c^V_j\mathcal D^{V\prime}_j[u]\Bigr] + C_g\varepsilon^*g_i^2C_\beta\sum_{l>i}u_l\;,
+    \begin{split}
+        (\mathcal Tu)_{i+1} &\coloneqq \varepsilon^*\Bigl[D_i[u] + C_S\sum_{j \leq i}c_j\bigl(\mathcal D'_{[j]}[u] + D_{j-1}[u]\bigr) + C_S\sum_{j \leq i}c^B_j\mathcal D^{*\prime}_j[u] + C_S\sum_{j \leq i}c^V_j\mathcal D^{V\prime}_j[u]\Bigr]
+        \\
+        &\quad + C_g\varepsilon^*g_i^2C_\beta\sum_{l>i}u_l\;,
+    \end{split}
 \end{equation}
 positive, monotone, and positively homogeneous, and a source built from the $e_i$, the $h_i$, and $C_\nu w_K$, with $s_1 \coloneqq 2$. In the weighted norm: $\sum_{j \leq i}L^{-\beta'(i-j)}m_j \leq (1 - L^{-\beta'}/\tilde\theta)^{-1}m_i$ since $\tilde\theta > L^{-\beta'}$; $\sum_{j \leq i}q^{i-j}m_j \leq (1 - L^{-1/3}/\tilde\theta)^{-1}m_i$ since $q < L^{-1/3} < \tilde\theta$; $g_i^2\sum_{l>i}m_l \leq (2(1 - \tilde\theta)^{-2} + b^{-1})m_{i+1}$, because $\sum_{l>i}l\tilde\theta^l \leq 2(1 - \tilde\theta)^{-2}(i + 1)\tilde\theta^{i+1}$ and $g_i^2(K - i) \leq b^{-1}$; $\sum_{j \leq i}c_jm_j \leq C_mm_{i+1}$, $C_m \coloneqq C_\Sigma + C''_\mu$, the fine scales $j \leq K/2$ paying with $c_j \leq C_R\ell_K(\bar g^{-2} + bK/2 - C)^{-\kappa_0/2}$ and the coarse ones with $\tilde\theta^j$, which together give at most $C''_\mu\mu_K \leq C''_\mu w_K$; the coupling part of $\mathcal D'$ gives $C'_m$ in the same way, using $\sum_jc_j(K - j + 1) < \infty$ for $\kappa_0 > 4$; and the maxima are bounded by their values at the scale $j$, since $e^{-C_P/2} < \frac12 \leq \tilde\theta$ and, for the maxima over $k_s/8 - 1 \leq l \leq j$, $l\tilde\theta^l \leq C_\mu(k_s + 1)\tilde\theta^{k_s/8} \leq C_\mu w_K$ with $C_\mu \coloneqq \tilde\theta^{-1}\max(1, (e\log(1/\tilde\theta))^{-1})$, and $C_* \coloneqq (1 - L^{-\beta'}/\tilde\theta)^{-1} + 2C_\beta(2(1 - \tilde\theta)^{-2} + b^{-1} + 1) + 1$. Since $m_i \leq \tilde\theta^{-1}m_{i+1}$, every component of $\mathcal Tu$ is bounded by $\varepsilon^*C_{\mathcal T}\norm u_mm_{i+1}$, and $C_{\mathcal T} \geq \tilde\theta^{-1}(1 - L^{-\beta'}/\tilde\theta)^{-1} = (\tilde\theta - L^{-\beta'})^{-1} > (1 - L^{-\beta'})^{-1}$. Under the first condition of Paper, \eqref{P-eq:t-one}, $\norm{\mathcal T}_m \leq \frac14$; the system is finite, so $\norm d_m < \infty$ and $\norm d_m \leq \frac43\norm s_m \leq 2C_s$ with $C_s \coloneqq \max(2/\tilde\theta, C_e + \varepsilon^*C_S((C_e + C_h)C_m + C_e(C^B_{R,1}/C_R)C^N_\Sigma + C^B_V(C_e + C_h)(C^V_R/C_R)C_\Sigma + C_\nu))$. The depth sources are bounded by Paper, Propositions~\ref{P-prop:classical-depth} and the Gaussian depth \eqref{P-eq:gaussian-depth}, at the steps $k \geq k_0(\varepsilon_0)$, and at the finitely many earlier steps both runs' outputs satisfy the bounds of their classes, so $d_{k+1} \leq 2$ there; since $\tilde\theta > L^{-1}$, $2 \leq 2L^{k_0(\varepsilon_0)}\tilde\theta^{k+1}$ for $k + 1 \leq k_0(\varepsilon_0)$, so $e_i \leq C_e\tilde\theta^i$ at every $i$ with $C_e \geq 2L^{k_0(\varepsilon_0)}$. The bounds on $S_i$ and $\abs{\delta_i}$ follow from (c) and (b), and \eqref{P-eq:stopping-differences} with $C_a \coloneqq 2C_s(1 - L^{-\beta'}/\tilde\theta)^{-1} + C''_S + C_e + 4C_sC_\beta(1 - \tilde\theta)^{-2}C\sup_{g \leq (1+\beta_0)\gamma}g^2p_0(g)^2$.
 
@@ -1834,7 +1850,7 @@ positive, monotone, and positively homogeneous, and a source built from the $e_i
 
 \emph{(g).} The wrapping insertions of age $m$, born at the step $K' + 1 - m$, have total weighted mass at most $A_wL^me^{-a_wL^m}$ in each run, because their mass decays in the smallest period of the torus at their scale, $N^{(j)}_{\min} \geq c(T/u)L^{K'-j+j_q}$, and those of age at least $m^w_K$, the least $m$ with $a_wL^m \geq 3\log(K + 2)$, have total mass at most $\tau^w_K \coloneqq 2A_w\max(L, 3L\log(K + 2)/a_w)(K + 2)^{-3}$, since $\sum_{m \geq m_0}L^me^{-a_wL^m} \leq L^{m_0}e^{-a_wL^{m_0}}(1 + 1/(a_w(L - 1)L^{m_0-1}))$. The younger ones are compared at their birth by the interpolation of (h), with the relative difference $8\rho^{\mathrm{LF}}_K$ at the enlarged amplitudes, and are then carried, by evaluation at the new background and merging, with a difference which grows by at most $2L$ per step, since a wrap grows by at most $L$ per step and the difference of a product replaces one factor at a time; over at most $m^w_K$ steps this gives $x^w_K \coloneqq 2\tau^w_K + (m^w_K + 1)(2L)^{m^w_K}[\bar r_KA_wS_w + 12\rho^{\mathrm{LF}}_KA^{w,2}S^{(2)}_w + 4e^{-C_PK'/4}A_wS_w]$, summable in $K$ because $(2L)^{m^w_K}$ is a power of $\log K$ and $\bar r_K$, $\rho^{\mathrm{LF}}_K$ decay faster than any power of $\log K$ after summation. The weights $Q_{K'}(\mathfrak B)$ are cluster activities of the reference gas of the stopping step, numbers given the labels, and the marked-cluster bound of (a) at the reference point gives $\sum_{\Gamma \ni W}\abs{\varphi^B(\Gamma) - \varphi^A(\Gamma)} \leq 2C_{\mathrm{pt}}C_XC_{\mathrm{KP}}\bar c\,\theta(W)$, $\bar c$ the relative difference of the activities, which is $x^Q_K$ after the weights of the families are summed with $\theta(W) \leq \nu\sigma(W)/16$.
 
-\emph{(h).} The per-step terms of $E_{\mathrm{const}}$ of age $m$ are at most $A_EL^{m/2}e^{-a_EL^{m/2}}$ by the proof of Paper, Corollary~\ref{P-cor:remainder-sum}; those of age at least $m^E_K$ are bounded by $\tau^E_K$ in each run as in (g). For the younger ones, every constituent $x$ of the step is replaced by $x^\varsigma \coloneqq x^A + \varsigma(x^B - x^A)$, after the components born before the scale $K' - m$ have been multiplied by a parameter $\mathfrak z$ with $\abs{\mathfrak z} \leq e^{C_PK'/4}$; for $\abs\varsigma \leq 1/(2\rho^E_K)$ each constituent is at most twice its bound, since its relative difference is at most $\rho^E_K$, the polymer activities within $2e^{\kappa_Id(X)}$ of theirs, so the cluster expansion of the step converges at the enlarged amplitudes and the lowered decay $\kappa - \kappa_I$, and the per-step term is analytic in $\varsigma$ with the bound $A^{E,2}L^{m/2}e^{-a^{E,2}L^{m/2}}$. Cauchy's estimate on the disc of radius $1/(2\rho^E_K) \geq 2$ gives Paper, \eqref{P-eq:loop-constant-difference}; Cauchy's estimate in $\mathfrak z$ on $\abs{\mathfrak z} \leq e^{C_PK'/4}$ gives the cost $2e^{-C_PK'/4}A_EL^{m/2}e^{-a_EL^{m/2}}$ of the old components; and $\sum_{m \geq 1}\Lambda^me^{-a\Lambda^m} \leq e^{-a}(1 + 6/a)$ for $\Lambda \geq 2$ sums the ages. Each run's constant is at most $B_E(\mathcal C)$, which gives the second entry of the minimum.
+\emph{(h).} The per-step terms $E_j$ of $E_{\mathrm{const}}$ of age $m$, among them the cross constants $E^{\mathbf R\times}_j$ of Proposition~\ref{prop:r-operation}(iv)(c), are at most $A_EL^{m/2}e^{-a_EL^{m/2}}$ by Paper, Section~\ref{P-sec:trivial-pair}, ``The loop constant''; those of age at least $m^E_K$ are bounded by $\tau^E_K$ in each run as in (g). For the younger ones, every constituent $x$ of the step is replaced by $x^\varsigma \coloneqq x^A + \varsigma(x^B - x^A)$, after the components born before the scale $K' - m$ have been multiplied by a parameter $\mathfrak z$ with $\abs{\mathfrak z} \leq e^{C_PK'/4}$; for $\abs\varsigma \leq 1/(2\rho^E_K)$ each constituent is at most twice its bound, since its relative difference is at most $\rho^E_K$, the polymer activities within $2e^{\kappa_Id(X)}$ of theirs, so the cluster expansion of the step converges at the enlarged amplitudes and the lowered decay $\kappa - \kappa_I$, and the per-step term is analytic in $\varsigma$ with the bound $A^{E,2}L^{m/2}e^{-a^{E,2}L^{m/2}}$. Cauchy's estimate on the disc of radius $1/(2\rho^E_K) \geq 2$ gives Paper, \eqref{P-eq:loop-constant-difference}; Cauchy's estimate in $\mathfrak z$ on $\abs{\mathfrak z} \leq e^{C_PK'/4}$ gives the cost $2e^{-C_PK'/4}A_EL^{m/2}e^{-a_EL^{m/2}}$ of the old components; and $\sum_{m \geq 1}\Lambda^me^{-a\Lambda^m} \leq e^{-a}(1 + 6/a)$ for $\Lambda \geq 2$ sums the ages. Each run's constant is at most $B_E(\mathcal C)$, which gives the second entry of the minimum.
 
 \emph{(i).} A cross group contains insertions on two loops and is produced by the same fluctuation integrals as the groups of one loop; the recursion of (f) does not distinguish the species of a group, and the interpolation of (g) and (h) acts on the constituents of a step whatever their species. The only new constants are the counts of the positions of a cross group, the number of ways to place its two anchoring insertions on the two loops at a given scale; since two loops are at distance at least $a_k$ at the scale $k$ (Paper, Lemma~\ref{P-lem:stopping-index}), a cube of side less than $a_k$ meets one loop, and the positions are counted by the perimeters, which gives the counts of one loop with the total perimeter.
 \end{proof}

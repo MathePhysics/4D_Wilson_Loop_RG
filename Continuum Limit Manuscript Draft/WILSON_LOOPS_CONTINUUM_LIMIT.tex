@@ -2544,9 +2544,9 @@ because every factor has modulus at most one and $L^{K'}(\varepsilon/a_{K'})^{2-
 
 \emph{The wrap insertions and the interaction weights.} The insertions which wrap around the torus have no deviation bound and are not contracted by the recursion, but their mass decays as $e^{-cN^{(j)}_{\min}/M}$ in the smallest period of the torus at their scale, $N^{(j)}_{\min} \geq c(T/u)L^{K'-j+j_q}$. Those of age at least $m^w_K$, the least $m$ with $a_wL^m \geq 3\log(K + 2)$, are not compared and have total mass at most $\tau^w_K \coloneqq 2A_w\max(L, 3L\log(K + 2)/a_w)(K + 2)^{-3}$ in each run; the younger ones are compared at their birth, by the interpolation of the constituents of their step described below for the loop constant, and then carried, with a difference which grows by at most $2L$ per step. This gives a change of the normalised dressed loop of at most $x^w_K\mathfrak b(\mathcal C)$, with $x^w_K$ summable in $K$; the interaction weights $Q_{K'}(\mathfrak B)$ of the families, cluster activities of the reference gas of the stopping step, are compared in the same way, with a change at most $x^Q_K\mathfrak b(\mathcal C)$. Both are Supplement, Proposition~S.16(g).
 
-\emph{The loop constant.} The constant $E_{\mathrm{const}} = \sum_{j \leq K'}E^\circ_j$ of the dressed loop is a sum of per-step terms, which we index by the age $m \coloneqq K' + 1 - j$ in run~A and $m \coloneqq K' + 2 - j$ in run~B, so that the two terms of the same shared scale have the same $m$; each is at most $A_EL^{m/2}e^{-a_EL^{m/2}}$, by the proof of Corollary~\ref{cor:remainder-sum}, with constants $A_E$ and $a_E$ which do not depend on $K$. The terms of age $m \geq m^E_K$, the least $m$ with $a_EL^{m/2} \geq 2\log(K + 2)$, are not compared; their sum is at most $\tau^E_K \coloneqq 2A_E\max(L^{1/2}, 2L^{1/2}\log(K + 2)/a_E)(K + 2)^{-2}$ in each run, and for $K \geq K_1$ the extra step of run~B is among them. For the younger terms, which are produced at $\mathbf R$-steps of both runs, we interpolate: every constituent $x$ of the step, an activity of the effective action, a marked activity of the loop, a factor $V(Y)$, or the operation of a young component, is replaced by $x^\varsigma \coloneqq x^A + \varsigma(x^B - x^A)$, $\varsigma \in \mathbb C$, after the components born before the scale $K' - m$ have been removed by multiplying their operations by a parameter $\mathfrak z$ with $\abs{\mathfrak z} \leq e^{C_PK'/4}$. The relative differences of the constituents are at most $\rho^E_K$, a quantity built from \eqref{eq:recursion-solution}, from Theorem~\ref{thm:lf-comparison}, and from the shells, which tends to zero; for $\abs{\varsigma} \leq 1/(2\rho^E_K)$ the constituents are at most twice their bounds, the cluster expansion of the step converges, and the per-step term is analytic in $\varsigma$ with the bound $A^{E,2}L^{m/2}e^{-a^{E,2}L^{m/2}}$ at the enlarged amplitudes and the lowered decay. Cauchy's estimate on the disc of radius $1/(2\rho^E_K) \geq 2$ gives
+\emph{The loop constant.} The constant of the dressed ensemble is $E_{\mathrm{const}} = \sum_{j \leq K'}E_j$, where $E_j \coloneqq E_{\mathrm{const},j} - E_{\mathrm{const},j-1}$ collects, by \eqref{eq:step-identity}, the flat remainders of the loops and the cross term of the step $j$, and at an $\mathbf R$-step also the remainders $E^{\circ,\mathbf R}_j(C_i, T)$ and the cross constant $E^{\mathbf R\times}_j$. We index these terms by the age $m \coloneqq K' + 1 - j$ in run~A and $m \coloneqq K' + 2 - j$ in run~B, so that the two terms of the same shared scale have the same $m$. Each $E_j$ is at most $\epsilon_j(\mathcal C, T)$ of \eqref{eq:step-remainder}, and each of the five parts of $\epsilon_j(\mathcal C, T)$ is at most $A_EL^{m/2}e^{-a_EL^{m/2}}$, with constants $A_E$ and $a_E$ which do not depend on $K$. Indeed, in the first three parts the lengths are those of the stopping step multiplied by $L^m$, as in the proof of Corollary~\ref{cor:remainder-sum}, and $te^{-ct} \leq (2/c)e^{-ct/2}$ for $t \geq 0$. In the two parts of the $\mathbf R$-steps the lengths $r_j(C_i)$, $\iota_{T,j}$, and $a_j$ are at least $a_j/2$, by \eqref{eq:lengths-at-step} and the proof of Lemma~\ref{lem:torus-condition}, and $a_j = a_{K'}L^{m-1} \geq L^{m+2}MR_{K'}$; since $R_{K'} \geq (\log\hat g_{K'}^{-2})^r$, $R_j < L(\log\hat g_j^{-2})^r$ by Lemma~\ref{lem:tube-cubes}(i), and $\log\hat g_j^{-2} = \log(\hat g_{K'}^{-2} + b'(m - 1)) \leq (1 + \log(1 + b'm))\log\hat g_{K'}^{-2}$, we get $a_j/(MR_j) \geq L^{m+1}(1 + \log(1 + b^*m))^{-r} \geq c_LL^{m/2}$, with $c_L > 0$ a constant of $L$, $r$, and $b^*$. Since moreover $MR_je^{-p_0(g_j)/4}$ is bounded uniformly in $j$, and $P_j(C_i) = P_q(C_i)a_j$, the bound $te^{-ct} \leq (2/c)e^{-ct/2}$ with $t = a_j/(MR_j)$ gives the claim for these parts as well. The terms of age $m \geq m^E_K$, the least $m$ with $a_EL^{m/2} \geq 2\log(K + 2)$, are not compared; their sum is at most $\tau^E_K \coloneqq 2A_E\max(L^{1/2}, 2L^{1/2}\log(K + 2)/a_E)(K + 2)^{-2}$ in each run, and for $K \geq K_1$ the extra step of run~B is among them. For the younger terms, which are produced at $\mathbf R$-steps of both runs, we interpolate: every constituent $x$ of the step, an activity of the effective action, a marked activity of the loop, a factor $V(Y)$, or the operation of a young component, is replaced by $x^\varsigma \coloneqq x^A + \varsigma(x^B - x^A)$, $\varsigma \in \mathbb C$, after the components born before the scale $K' - m$ have been removed by multiplying their operations by a parameter $\mathfrak z$ with $\abs{\mathfrak z} \leq e^{C_PK'/4}$. The relative differences of the constituents are at most $\rho^E_K$, a quantity built from \eqref{eq:recursion-solution}, from Theorem~\ref{thm:lf-comparison}, and from the shells, which tends to zero; for $\abs{\varsigma} \leq 1/(2\rho^E_K)$ the constituents are at most twice their bounds, the cluster expansion of the step converges, and the per-step term is analytic in $\varsigma$ with the bound $A^{E,2}L^{m/2}e^{-a^{E,2}L^{m/2}}$ at the enlarged amplitudes and the lowered decay; for the cross constant this holds for each of the cluster expansions, of the gas linked to $\mathcal C$ and of the gases linked to the single loops $C_i$, whose constants it subtracts. Cauchy's estimate on the disc of radius $1/(2\rho^E_K) \geq 2$ gives
 \begin{equation}\label{eq:loop-constant-difference}
-    \abs{E^\circ_j(1) - E^\circ_j(0)} \leq 4\rho^E_KA^{E,2}L^{m/2}e^{-a^{E,2}L^{m/2}}\;,
+    \abs{E_j(1) - E_j(0)} \leq 4\rho^E_KA^{E,2}L^{m/2}e^{-a^{E,2}L^{m/2}}\;,
 \end{equation}
 and the old components cost at most $2e^{-C_PK'/4}A_EL^{m/2}e^{-a_EL^{m/2}}$ in each run, by Cauchy's estimate in $\mathfrak z$. Summing over $m$ with $\sum_{m \geq 1}\Lambda^me^{-a\Lambda^m} \leq e^{-a}(1 + 6/a)$ for $\Lambda \geq 2$, we obtain $\abs{E^B_{\mathrm{const}} - E^A_{\mathrm{const}}} \leq \Delta E_K$, with $\Delta E_K \leq \min(2\tau^E_K + \Delta^E_K, 2B_E(\mathcal C))$ summable in $K$. The details are Supplement, Proposition~S.16(h).
 
@@ -2696,11 +2696,13 @@ Let $T' \in \mathfrak T$, let $C$ be a loop at level $q$ on $T'$ with the charac
 \end{equation}
 where $E_{\mathrm{const},j}(C, \chi; T')$ is the constant of the scalar exponent of the step $j$ on the trivial term, and
 \begin{equation}\label{eq:flat-value-symmetries}
-    \widehat{\mathcal W}_j(\theta_\mu C, \chi; T') = \widehat{\mathcal W}_j(C, \chi; T')\;,
-    \qquad
-    \widehat{\mathcal W}_j(C, \bar\chi; T') = \overline{\widehat{\mathcal W}_j(C, \chi; T')}\;,
-    \qquad
-    \widehat{\mathcal W}_j(C^{-1}, \chi; T') = \widehat{\mathcal W}_j(C, \bar\chi; T')\;,
+    \begin{gathered}
+        \widehat{\mathcal W}_j(\theta_\mu C, \chi; T') = \widehat{\mathcal W}_j(C, \chi; T')\;,
+        \qquad
+        \widehat{\mathcal W}_j(C, \bar\chi; T') = \overline{\widehat{\mathcal W}_j(C, \chi; T')}\;,
+        \\
+        \widehat{\mathcal W}_j(C^{-1}, \chi; T') = \widehat{\mathcal W}_j(C, \bar\chi; T')\;,
+    \end{gathered}
 \end{equation}
 each identity holding whenever the single-loop ensembles which occur in it are dressed at the steps $1, \dots, j$.
 \end{lemma}
@@ -3555,13 +3557,15 @@ We now compute $\Psi_3 - \Psi_2$ to the order $\bar g^2$. Near the fields of sma
 
 We fix an exponent $p_\lambda$ with $14r + 2 < p_\lambda < q_0 - 11r - \frac12$, an interval which is not empty because $q_0 > 25r + \frac52$ (Appendix~\ref{app:constants}), and we put
 \begin{equation}\label{eq:regularisation}
-    \lambda \coloneqq N_q^{-2}\bigl(\log\bar g^{-2}\bigr)^{-p_\lambda}\;,
-    \qquad
-    F_\alpha \coloneqq \zeta X^\alpha\;,
-    \qquad
-    w_\alpha \coloneqq (\Delta(V) + \lambda)^{-1}\nabla\Xi_\alpha\;,
-    \qquad
-    \mathfrak e_\alpha \coloneqq \langle w_\alpha, \nabla\mathsf A\rangle - \Xi_\alpha\;,
+    \begin{gathered}
+        \lambda \coloneqq N_q^{-2}\bigl(\log\bar g^{-2}\bigr)^{-p_\lambda}\;,
+        \qquad
+        F_\alpha \coloneqq \zeta X^\alpha\;,
+        \\
+        w_\alpha \coloneqq (\Delta(V) + \lambda)^{-1}\nabla\Xi_\alpha\;,
+        \qquad
+        \mathfrak e_\alpha \coloneqq \langle w_\alpha, \nabla\mathsf A\rangle - \Xi_\alpha\;,
+    \end{gathered}
 \end{equation}
 the last two at the fields at which $\Delta(V) + \lambda$ is invertible. The sizes are those collected in the proof of Lemma~\ref{lem:stopping-sizes}: for $\bar g$ small and $K \geq K_{\mathrm w}$, $N_q$ and $P \coloneqq P_{K'}(R_4) = 2(4t_{\mathrm b} + s_{\mathrm b}) \leq 2N_q$ are at most $C(\log\bar g^{-2})^r$, $T_{\mathrm{ng}} \leq C(\log\bar g^{-2})^{4r+1}$, and $h^G \leq C\bar g(\log\bar g^{-2})^{4r+1/2}$; moreover $\bar g^2/2 \leq \hat g_{K'}^2 \leq g^2 \leq (1 + \beta_0)^2\bar g^2$, because $\hat g_{K'}^{-2} = \bar g^{-2} + b'j_q + C_W$, $t_{\mathrm b} \geq a_{K'} \geq (\log\bar g^{-2})^r$, and the reduced radii $r_{i,K'} \coloneqq \alpha_{i,K'}/(8B_3)$ of Supplement, Section~15, satisfy $r_{i,K'} \geq c\,\bar g(\log\bar g^{-2})^{q_0}$ by Definition~\ref{def:tube-parameters}. Here and below $C$, $c$, and $m$ are positive constants which depend on $q$, $t/u$, $s/u$, $T/u$, $\pi$, $p_\lambda$, and the constants of the construction, and we write $X \preceq \bar g^a$ if $\abs X \leq C\bar g^a(\log\bar g^{-2})^m$; if $X \preceq \bar g^{a+b}$ with $b > 0$, then $\abs X \leq \bar g^{a+b/2}$ for $\bar g$ small.
 
@@ -3756,7 +3760,11 @@ by Proposition~\ref{prop:near-flat}(v), $\gamma_A \preceq \bar g$, and $1/\lambd
 
 \emph{The term of the regularisation.} We compare it with its value at the flat field. Writing $R_s - (K + \lambda)^{-1} = -(K + \lambda)^{-1}(\Delta(V_s) - K)R_s$,
 \begin{equation}\label{eq:lambda-term-split}
-    \lambda\langle u_{\mathrm H}, w_s\rangle = \lambda\bigl\langle(K + \lambda)^{-1}u_{\mathrm H}, \nabla\Xi_\alpha(W')\bigr\rangle - \lambda\bigl\langle(K + \lambda)^{-1}u_{\mathrm H}, (\Delta(V_s) - K)w_s\bigr\rangle + \lambda\bigl\langle(K + \lambda)^{-1}u_{\mathrm H}, \nabla\Xi_\alpha(V_s) - \nabla\Xi_\alpha(W')\bigr\rangle\;.
+    \begin{split}
+        \lambda\langle u_{\mathrm H}, w_s\rangle &= \lambda\bigl\langle(K + \lambda)^{-1}u_{\mathrm H}, \nabla\Xi_\alpha(W')\bigr\rangle - \lambda\bigl\langle(K + \lambda)^{-1}u_{\mathrm H}, (\Delta(V_s) - K)w_s\bigr\rangle
+        \\
+        &\quad + \lambda\bigl\langle(K + \lambda)^{-1}u_{\mathrm H}, \nabla\Xi_\alpha(V_s) - \nabla\Xi_\alpha(W')\bigr\rangle\;.
+    \end{split}
 \end{equation}
 Since $u_{\mathrm H} \perp \ker K$ and $K \geq \varkappa$ there, $\norm{\lambda(K + \lambda)^{-1}u_{\mathrm H}} \leq (\lambda/\varkappa)\norm{u_{\mathrm H}}$. By Proposition~\ref{prop:near-flat}(iii), $\norm{\Delta(V_s) - K} \leq C_\Delta N_q^4\delta_*$, and Lemma~\ref{lem:flux-derivatives}(i) along the fields $e^{i\sigma u'_s}W'$, which lie in $\mathcal R'$, gives $\norm{\nabla\Xi_\alpha(V_s) - \nabla\Xi_\alpha(W')} \leq C_\Xi P^2\delta_*$; so the last two terms of \eqref{eq:lambda-term-split} are at most
 \begin{equation}\label{eq:lambda-term-rest}
@@ -3764,7 +3772,11 @@ Since $u_{\mathrm H} \perp \ker K$ and $K \geq \varkappa$ there, $\norm{\lambda(
 \end{equation}
 by Proposition~\ref{prop:near-flat}(i) and (v). In the first term we use $\nabla\Xi_\alpha(W') = H^*D^*((\chi_3 - \chi_2) \otimes t_\alpha)$ (Lemma~\ref{lem:flat-fields}(iv)) and Proposition~\ref{prop:flat-covariance}(ii), which give $\lambda\langle(K + \lambda)^{-1}u_{\mathrm H}, \nabla\Xi_\alpha(W')\rangle = \langle P_\lambda DHu_{\mathrm H}, (\chi_3 - \chi_2) \otimes t_\alpha\rangle$, where $P_\lambda$ denotes the operator $P$ of that proposition. We expand $t_\alpha = \sum_ra_rE_r$ in the basis of the components, with $\sum_r\abs{a_r}^2 = 1$; the operators $D$, $H$, $P_\lambda$ act on each component, so \eqref{eq:lambda-term-flat} and the Cauchy--Schwarz inequality over $r$ give
 \begin{equation}\label{eq:lambda-term-main}
-    \abs{\langle P_\lambda DHu_{\mathrm H}, (\chi_3 - \chi_2) \otimes t_\alpha\rangle} \leq 2\pi t_{\mathrm b}\bigl(\lambda C_V(s_{\mathrm b} + 2)(t_{\mathrm b} + 2)\bigr)^{1/2}\norm{DHu_{\mathrm H}} \leq 2\pi(6C_VT_{\mathrm{ng}})^{1/2}N_qg\bigl(\log\bar g^{-2}\bigr)^{-p_\lambda/2}\;,
+    \begin{split}
+        \abs{\langle P_\lambda DHu_{\mathrm H}, (\chi_3 - \chi_2) \otimes t_\alpha\rangle} &\leq 2\pi t_{\mathrm b}\bigl(\lambda C_V(s_{\mathrm b} + 2)(t_{\mathrm b} + 2)\bigr)^{1/2}\norm{DHu_{\mathrm H}}
+        \\
+        &\leq 2\pi(6C_VT_{\mathrm{ng}})^{1/2}N_qg\bigl(\log\bar g^{-2}\bigr)^{-p_\lambda/2}\;,
+    \end{split}
 \end{equation}
 because $\norm{DHu_{\mathrm H}}^2 = \langle u_{\mathrm H}, Ku_{\mathrm H}\rangle \leq 3\mathsf A(V) \leq 6T_{\mathrm{ng}}g^2$ by Proposition~\ref{prop:near-flat}(iii), $t_{\mathrm b} \leq N_q$, $(s_{\mathrm b} + 2)(t_{\mathrm b} + 2) \leq N_q^2$, and $\lambda^{1/2} = N_q^{-1}(\log\bar g^{-2})^{-p_\lambda/2}$.
 
@@ -3825,7 +3837,7 @@ Here $\abs{r_H} \leq 512\,\mathsf l^3 + 16\bar g^8$ with $\mathsf l = 1.05c_\pi 
 
 For a level $q' \geq q$ the eleven diagrams are ensembles at the level $q'$, with admissible loops, and $q' \geq q \geq q_\sharp(c_\pi, \bar g)$, so that Theorem~\ref{thm:main} gives the limits $W^{(q')}(\mathcal D)$. By \eqref{eq:level-change}, $W^{(q')}_K(\mathcal D)/W_K(\mathcal D)$ is a product of the $j_{q'} - j_q$ step factors $\kappa_k(C, \chi)$, $K - j_{q'} < k \leq K - j_q$, of the at most two loops of $\mathcal D$. By Definition~\ref{def:step-factor}, the exponent of such a factor is bounded by $\sum_vN^{(k-1)}_v(C)\abs{\kappa^{(k)}_v/\Pi_k + \mathbf 1_{\mathbf R}(k)\mu^{\mathbf R}_{k,v}} + \abs{\mathcal K(C)}\max_{v,w}\abs{\zeta^{(k)}_{v,w} + \mathbf 1_{\mathbf R}(k)\zeta^{\mathbf R}_{k,v,w}}$, where the coefficients are bounded by $C_{S'}\bar{\mathfrak a} + C^R_E$ and $C_\zeta\bar{\mathfrak a} + C^R_E$, by the proof of Proposition~\ref{prop:normalisation-structure}, and $N^{(k-1)}_v(C) \leq P_q(C)a_{K'}L^{K'-k+1} \leq P_q(C)a_{K'}L^{j_{q'}-j_q}$, which does not depend on $K$. So $\abs{W^{(q')}_K(\mathcal D)} \geq e^{-C'}\abs{W_K(\mathcal D)}$ with $C'$ independent of $K$, and $W^{(q')}(\mathcal D) \neq 0$ by (i). Proposition~\ref{prop:normalisations-drop-out}(iii) gives $\mathfrak Y(W^{(q')}) = \mathfrak Y(W)$.
 
-(iii) By Proposition~\ref{prop:normalisations-drop-out}(ii) and (ii), $\mathfrak Y^{\mathrm{sym}}(W) = \mathfrak Y(W) > 0$, and $W$ does not vanish on the eleven diagrams by (i). If a Gaussian charge model had the function $W$, or if $W$ were the limit of the functions of a sequence of Gaussian charge models, Proposition~\ref{prop:gaussian-models} would give $\mathfrak Y^{\mathrm{sym}}(W) = 0$.
+(iii) By Proposition~\ref{prop:normalisations-drop-out}(ii) and part (ii), $\mathfrak Y^{\mathrm{sym}}(W) = \mathfrak Y(W) > 0$, and $W$ does not vanish on the eleven diagrams by (i). Proposition~\ref{prop:gaussian-models}, on the other hand, gives $\mathfrak Y^{\mathrm{sym}} = 0$ for the function of every Gaussian charge model and for every limit of such functions which does not vanish on the eleven diagrams, so $W$ is neither.
 \end{proof}
 
 \section{Notes on the Papers}\label{sec:notes-on-papers}
