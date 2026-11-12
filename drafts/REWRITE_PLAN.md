@@ -131,6 +131,62 @@ rate comparison, the root sum for (Z), and the difference count 3748–3815.
 
 ## State
 
+- **12 Nov 2026, 21:27 (from `date` 21:24 at the last compile). IN THE MANUSCRIPTS since 21:18:** Supplement
+  Lemma 17.24 `lem:vacuum-kp` (D2.4(1)–(2) read in full; κ_vac = 2⁹(1 + 16 log 2) with the supplement's cube
+  count, Lemma 17.1); paper Lemma `lem:tensor-size` at the end of `sec:localisation-expansion` (D2.1(4) Claim,
+  lines 916–994 re-read in full; `eq:epsilon-h`). Paper 174 pp. `82c1524c3917`, supplement 164 pp.
+  `7719b59943c3`, both clean. `FINDINGS.md` F29 = running list of new or changed conditions (5 items).
+  A second session ("the rotation proof") writes `LATTICE_ORIENTATION.*` and appends to `..\SESSION_HANDOVER.md`;
+  this session does not touch those files; append handover lines at the end after a fresh Read of the last lines.
+  **Read at 21:26, D2.4(10)(a)–(d) beginning, lines 3340–3385 (in full).** The bound of a marked activity is a
+  re-derivation of RG II Lemma 3 with the factor 𝒳_M: **it belongs in the supplement** (new lemma at the END of
+  Section 17, after 17.24), and the paper cites it. Content so far: (a) the object: M a linked union of
+  connected Z ∈ 𝐃_{k+1} with groups; D := D^# ∩ M, m(M) the number of its wall-connected components; H̃(M) = the
+  sum over (𝐃, P, Z₀) with Y₀ = ∪Y ∪ D, of the terms RG II (2.14) with 𝒳_M in the B-integrand; ‖𝒳_M‖_sup := the
+  sup over real B with |B(b)| < t_k := ϑ_k/g_k on the bonds of D and over (𝐔, 𝐉) in the domain; RG II's
+  threshold ε₁/g_k replaced by t_k (conditions (1/20)γ₂t_k² ≥ 18κ, e^{−γ₂t_k²/20} ≤ ε₂); the *contracted linear
+  size* d(X; D) := a^{−1} inf|G∖D| over unions G of segments in X meeting every cube of X with G ∪ D connected;
+  D′ := the π_{k+1}-hull of D with its touching π_k-cubes, #_{k+1}(D′) ≤ 81#_k(D). (b) Result: with
+  λ_L := L/max(2, 1 + 486/L), r_κ := (1 − 5δ)λ_Lκ, A an absolute constant made small,
+  |H̃(M)| ≤ ‖𝒳_M‖_sup e^{81A#_{k+1}(D′)}e^{(5+3λ_L)κ(m(M)−1)}exp(−r_κd_{k+1}(M; D′)); no smallness factor for the
+  term 𝐃 = ∅, P = ∅, M = D′ (the conditioned Gaussian expectation of 𝒳_M); every other term has the factor
+  ϑ := max(e^{−20δκ}, e^{−γ₂t_k²/20}, e^{−Lκ/2}). (c) per-term bound: RG II (2.14)–(2.26) with ‖𝒳_M‖_sup in
+  front. (d) geometry in contracted form: (2.27′) Σ_{Y∈𝐃_i}d_k(Y) ≥ d_k(Y_i; D_i) − 5(|𝐃_i| + m_i − 1); (2.32′)
+  Σ_jd_k(Y_j; D_j) + 18#_k(Z_i∖Y₀) ≥ d_k(Z_i; D_i); **RG II (2.32) as printed is false** (one cube with eight
+  rods on its walls), it holds with 18 in place of 4. **D2.4(10) read in full to line 3440 at 21:29.** Rest of (d): the
+  counterexample to (2.32) in detail (rods of n cubes: d_k(Z₀) ≥ Σd_k(Y_i) + 8); (2.36′) for marked components:
+  L·d_{k+1}(Z_i′; D_i′) ≤ (1 + 486/L)d_k(Z_i; D_i) (stubs of length ≤ 2M to the π_{k+1}-cubes, 243 cubes per
+  piece length LM); for vacuum components RG II (2.36) as printed; *coarse assembly*
+  d_{k+1}(Z; D′) ≤ Σ_id_{k+1}(Z_i′; D_i′) + 3#_{k+1}(Z∖Z₀′) + 3(n_v + m′ − 1); *counting*
+  #(X) ≤ 81#(D) + 324d(X; D). (e) the resummation: each Y-factor split as [α₆e^{−δκd_k(Y)}]·[ε₂e^{−(1−4δ)κd_k(Y)}],
+  each P-factor into twentieths (18κ per cube of Z₀∖Y₀ from one twentieth, three spare ones ≤ ε₂ each); decay
+  part: per Y-component by (2.27′) (each non-root Y pays its edge with ε₂e^{5κ} ≤ 1), per component of Z₀ by
+  (2.32′), to the scale k + 1 by (2.36)/(2.36′), coarse assembly (vacuum pieces pay with ε₂e^{3(1−4δ)λ_Lκ} ≤ 1,
+  cubes of Z∖Z₀′ with half of e^{−(κ₁−1)}), giving decay ≤ e^{(5+3λ_L)κ(m−1)}e^{−(1−4δ)λ_Lκd_{k+1}(Z;D′)}
+  e^{−½(κ₁−1)#_{k+1}(Z∖Z₀′)}; entropy part: the unconstrained sum over 𝐃 and P in Z₀′, at most
+  exp[(O_{(1.26)}α₆ + 4M⁴e^{−γ₂t_k²/10})#_k(Z₀′)] (needs neither (2.29) nor (2.34)); the sum over Z₀′ ⊂ Z; the
+  absorption e^{A#(Z)} ≤ e^{81A#(D′)}e^{δλ_Lκd(Z;D′)} for 324A ≤ δλ_Lκ; the smallness ϑ ≤ e^{−2κ/3} of every term
+  except (∅, ∅, D, D′). (f) scope: the factor enters through ‖𝒳_M‖_sup only; no decay inside D′; cost e^{81A}
+  per cube of D′ and e^{(5+3λ_L)κ} per component of D beyond the first, to be paid by the sizes of the tensors
+  ((11)(d)); #_{k+1}(M) ≤ 81#_{k+1}(D′) + 324d_{k+1}(M; D′). Conditions: (1/20)γ₂t_k² ≥ 18κ; ε₂e^{max(5,3λ_L)κ} ≤ 1;
+  ½(κ₁ − 1) ≥ 2Lκ; 324A ≤ δλ_Lκ; those of Lemma 3. **NEXT: read (11), lines 3441–3560, in full; re-read RG II
+  pp. 15–20 in the corrected transcription; check the supplement's
+  Lemma 17.1 and Lemma 17.15 against the false (2.32) (does the supplement's statement "Lemmata 1–3 hold with
+  the count of Lemma 17.1" survive it? it must be amended with the constant 18 and the conditions
+  (1/20)γ₂t_k² ≥ 18κ and ½(κ₁ − 1) ≥ 9Lκ); then write the supplement lemma on the marked activities.**
+
+- **12 Nov 2026, 21:18 (from `date`). (C) IS IN THE PAPER** (173 pp., `7d86a3894fa1`; supplement unchanged):
+  `sec:groups-of-step`, Definition `def:groups-of-step`, Proposition `prop:regrouping`, on the terms without
+  large-field regions of ϱ_k and ϱ_{k+1}. Read in full for it: D2.2(6)(c)–(d), D2.3(3). Conventions fixed there
+  for the later blocks: *compatible* unions of cubes = intersection of dimension ≤ d − 2; a component *touches*
+  a member if its interior meets X_W; a *link* is a pair (T, 𝒞), carried by the first member of T, with factor
+  u_λ = exp((−1)^{|T|}y_𝒞) − 1; vacuum occurrences v_𝒞; old occurrences with (−1)^m/m! per group; constituents =
+  marked polymers, members of 𝔅, groups of old occurrences; two groups of old occurrences of different groups
+  need not be compatible. The proposition assumes absolute convergence of the sum over the terms: to be
+  discharged by the count. **NEXT:** D2.4(1)–(2) (lines 2909–3048) → supplement (the bound of the vacuum
+  activities and the Kotecký–Preiss form), cited from `sec:marked-polymers`; then Section 5's class (needs the
+  SW closure §3–§4 digests below, D2.6 closure 2.1, D2.4(7)–(8), V4/IT-1 for the base); then D2.4(10)–(13), (4)–(6).
+
 - **12 Nov 2026, 21:10 (from `date`). IN THE MANUSCRIPTS (paper 169 pp. `642ff135d070`, supplement 162 pp.
   `ca8edd2b9322`, both compile clean):** Supplement Lemmata 17.22 (`lem:local-gauge`) and 17.23
   (`lem:boundary-change`, D2.2(6)(a) with V4 Lemma 3.8; F28); paper subsections `sec:step-identity`
