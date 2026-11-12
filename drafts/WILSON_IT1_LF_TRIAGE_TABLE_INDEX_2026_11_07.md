@@ -3983,3 +3983,24 @@ Relabel → LABELS 1f2d22af7f71, table 90a8ede1cabe (LF ada99ead6f26). build_pac
   - Not done: round 12 (full) and, if it is not clean, further rounds until two consecutive clean rounds, the second full. Log: WILSON_IT1_LF_TRIAGE_BG_D26REPOINT_2026_11_10.md.
 
 Relabel → LABELS af5e255b6597, table 235e36f006f6 (LF ada99ead6f26). build_packet --check reports 0 conflicts, and the pin check finds 0 failures among 665 pins.
+
+## The Table Fork's Review of Every Section, Rounds 12 and 13, 2026-11-12 00:20
+
+- Round 12 was narrow, not the full round planned above: the six rows repaired in round 11, with their consumers. It is clean, the first clean round.
+- Round 13 (full) re-read every row against its sources. It found R13-1 to R13-44, all minor or cosmetic, so it is not clean. All are repaired in place.
+  - Content: PRT2's mass bonds (#T11.2-0-1, #T11.2-0-2), VAR's C₁ in §4(c) (#T12.9-0-8, #T12.9-0-11), BFWL's α₀ (#T10.4), and γ := sup_Kg_K, now defined once at #T3.33. Also CRE (2.35)'s determining sets (#T11.10), the Cauchy norm class 𝒫_j(X; r) (#T11.14-0-2), and RG I's centred blocks (#T11.35).
+  - Also: pointers to the defining lines, names-apart clauses whose cited row lacked the symbol, N-loops' ℐ(M) and m₀ (#T12.33-9-1, #T12.33-10-1), and Oxford commas.
+  - Not done: round 14 (narrow: the repaired rows and their consumers), then round 15 (full). Log: WILSON_IT1_LF_TRIAGE_BG_D26REPOINT_2026_11_10.md.
+
+Relabel → LABELS 989e4500a921, table ce713050291e (LF ada99ead6f26). build_packet --check reports 0 conflicts (3 allowed), and the pin check finds 0 failures among 673 pins.
+
+## The Table Fork's Review of Every Section, Rounds 14–16, 2026-11-12 00:27
+
+- Round 14 (narrow) re-read every round-13 row with its consumers. It found R14-1 to R14-3, all repaired in place, so it is not clean.
+  - R14-1: #T12.33-10-1's m₀ does not bound m + 1.
+  - R14-2: #T11.10 restated #T6.11-1's U_{p,X} and now cites it.
+  - R14-3: #T12.27's (#BC.6) is placed next to the Θ(x) definition.
+- Round 15 (narrow) found R15-1: #T12.33-10-1's sum over m is #NL6B.1-3's bound of D27's (β-5-0) sum over the letters i, not D27's own index, so it is not clean. Round 16 (narrow) is clean, the first clean round.
+  - Not done: round 17 (full), the second clean round if it is clean. Log: WILSON_IT1_LF_TRIAGE_BG_D26REPOINT_2026_11_10.md.
+
+Relabel → LABELS 506c09a75707, table 58ecfa826d01 (LF ada99ead6f26). build_packet --check reports 0 conflicts (3 allowed), and the pin check finds 0 failures among 673 pins.

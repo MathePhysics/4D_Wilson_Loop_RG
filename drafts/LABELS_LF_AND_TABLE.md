@@ -5293,4 +5293,4 @@ Each definition X := … of the LF carries the tag {#D.X} immediately before X; 
 | {#D.ψ′} | 3274 | ψ′ := Σ_{y∈B}G_B(·, y)σ(y)/(2d), so that Δψ′ = −σ in B and ψ′ = 0 |
 | {#D.h_y} | 3275 | h_y := E^·G(S_{τ_B} − y), τ_B the exit time from B. Theorem 4.3.1  |
 
-Hashes at which the lines above hold: LF ada99ead6f26, table ce713050291e (SHA256, first 12).
+Hashes at which the lines above hold: LF ada99ead6f26, table 58ecfa826d01 (SHA256, first 12).
