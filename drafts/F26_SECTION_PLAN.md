@@ -244,6 +244,99 @@ The attached insertions themselves differ by the carry (D) of S.14(f), unchanged
     "in a pair with k − j₀ < m_W every 𝐑-operation is at a step > k − m_W". The supplement's S.14(f) has the
     resulting term 2C_ptC_X(C_KP + C″_Ψ)L^d b̄_K/C_M; C″_Ψ is not defined there (the notes: m^w_Ψ := 2C″_Ψe^{2C″_Ψ},
     #T4.43).
+- **19:58. The draft now also has Lemma `lem:r-activities-content` (the activities of an 𝐑-step), proved from
+  S.10's definitions and `lem:loop-localisation`(ii); test compile of the draft alone: 5 pages, no errors.
+  New finding F26 item 7: the 𝐑-made insertions D_g have no size σ and no weight e^{νσ} in the paper or the
+  supplement (grep: none), although the class requires weighted sums and later steps spend the reserve of a
+  member. This is a prerequisite of "the attached members at the 𝐑-steps" and concerns T1–T3 as well.**
+- **Revised order of work:**
+  0. *The sizes and weights of the 𝐑-made insertions* (new subsection of the draft, or an addition to S.10(v)).
+     Sources in the two-loops note (ac5f11dda03c): #691–#692 (line 518: π(P), σ_g), "The count" (#690–#721, lines
+     517–556), "The rates" (#722–, line 557: ε^r_k, ϑ_k, λ_n; #722-1 weights of the cross insertions with
+     λ_n(D)ν_r), "The payment" (#729–#732, lines 574–577), "The rooted sum" (#742–#759, lines 589–606),
+     #825–#844 (lines 695–727: σ̃(D_g), units with the factor u_𝔏, the extent, cases (a)/(b), wrap members,
+     the members' weights, the register's growth (1 + C_ϑϑ_k)(1 + ε^r_k)(1 + C_att y^R_k)); the conditions
+     #284–#287 (lines 72–75: (H^R), R_k ≥ max(40/ν_r, 63C_box, 253^d), 5·2^{d+3}ν_r ≤ 1). Supplement side: S.10's
+     units are the cubes of side MR_k and the sizes |P| (line 1556), the three thirds of e^{−κ|P|} (proof, "(iv),
+     the entropy of the groups" and "(v), the source"), the amplitude ĉ₁ ≤ e^{−p₀(g_k)/2}, the root counts
+     R_k^d, 3^d(101R_k)^d + 1 < p₀(g_k). **Open question to settle first:** in which units the size of D_g is
+     counted so that (i) e^{νσ(D_g)} is paid by the polymers of g (a count in cubes of π_k costs νR_k^d per cube of
+     side MR_k, which the rate κ per such cube does not pay; the amplitude e^{−p₀(g_k)/4} per first-class
+     component pays e^{cR_k^d} since p₀ > rd), and (ii) a later step can count the roots of D_g as a member by
+     81Mσ(D_g) or by a fixed multiple of it. Read how the note does (i): #729, #835, #843.
+     **Answer found at 20:02 (two-loops note lines 557–577, "The rates", "The payment"):** the note pays the
+     weight of an 𝐑-made insertion piece by piece, with a decomposition of each polymer which S.10 does not have:
+     "the polymer part of its weight, with the polymer parts of its extent and of e^{|Ψ_g|}, costs at most
+     (5/2)ν_r per unit of Σ_P(#π_k(B_P) + 2^{d+2}D_P)" (#723); e^{(5/2)ν_r#π_k(X′_r)} is paid by a_V/2 per cube
+     ("The volume", #725); e^{(5/2)ν_r#π_k(X^{(λ̂+248)})} ≤ e^{5p₀(g_k)/64} by the margin of LFR II (1.89) (#726);
+     e^{(5/2)ν_r2^{d+2}D_P} by e^{(c^×_F/2)D_P}, c^×_F = ½ (#727); the links by their own share (#629-4); a
+     single-loop member D enters with e^{(λ_k/2 + ε^r_k/2)ν_rσ(D)}‖D‖ and pays in all at most e^{ν_rσ(D)}‖D‖
+     (#732); lengths are in step-k units at the rate δ = δ_α/M, δ_α = 1 (#728.1–#728.5). So the objects B_P
+     (a box of P), X′_r, D_P (a length), ℓ_P (links), "big" and "small" members, and the constants a_V, c^×_F,
+     λ_𝔏, u_𝔏 have to be read first: "The count" (#690–#721), the polymer structure around #600–#690 (lines
+     ~400–516), "The volume", "Lengths", "Joins", "Spans", and the lemma file the note calls BLL. **This is the
+     two-loops note's blocks (6B) and (6C), about 300 long lines; S.10 of the supplement is a summary of them
+     without the weights. Porting them is a section of its own (estimate: ten pages or more).**
+     **Digest of the two-loops note, lines 404–481 (read 20:08). To be re-read in LFR II pp. 376, 378, 388–389
+     before any of it is written as a citation.**
+     - Polymer data (#626–#629): X′_1, …, X′_s the localisation domains of LFR II (1.90) in P; P′ its pieces with
+       domains Y_{P′}, bases Y′₀, excess ex(Y_{P′}) := |Y_{P′} ∖ Y′₀|;
+       D_P := Σ_r(d_k(X′_r) + 4R_k + 2λ̂ + 498) + 4Σ_{P′}ex(Y_{P′}), d_k the linear size in M-units (RG I p. 257;
+       = LFR II's d_{k,∪Y_i}(X′_r) of (1.67), (1.93) when X′_r ∩ ∪Y_i = ∅); λ̂ ≤ R_k/256 + 13; a tree of length ℓ
+       meets at most 2^{d+1}(ℓ/s + 1) cubes of side s (#628-1-3).
+     - *The free decay* (#636–#647): c^×_F := δM/2 = ½; of (1.95)'s e^{−(1+β)κd_{k,∪Y_i}(X′)}, the gases use
+       e^{−κ(size)} with the size in MR_k-cubes (size ≤ d_k + 2^{d+1}); of the rest e^{−βκd_k}, one factor
+       e^{−(β/8)κd_k} pays the M-level shapes and another gives (β/8)κ ≥ 1 per M-unit free (1 ≤ βκ/(6·2^d),
+       LFR II p. 389 l. 12; κ > 6·2^d since β < 1 by p. 376 l. 5–6); the pieces leave one κ per cube of the excess;
+       the constants per X′_r are polylogs of order r < p₀ paid by the margin. So the Kotecký–Preiss sums hold for
+       the activities multiplied by e^{c^×_FD_P}, with amplitude e^{−p₀(g_k)/2}.
+     - *The volume* (#648): (1.95)'s volume factor is βκ/(6·2^d) per π_k-cube of X′ ∖ ∪Y_i; (1.96) uses
+       e^{−p₀(g_k)/2}100^dR_k^{−d} of it per cube (p. 389 l. 30–41); the rest a_V ≥ βκ/(12·2^d) ≥ ½ per π_k-cube is
+       unused ((1.97) drops it, p. 389 l. 41). It pays a weight e^{(5/2)ν#π_k(X′_r)}.
+     - *The factor of (1.89) per first-class component* (#649–#652): e^{−2(1+β₀)^{−1}p₀(g_k)+1} with the volume term
+       e^{2κ(100R_k)^d} is ≤ e^{−(3/2)p₀(g_k)} (p. 389 l. 13–18); (1.96)'s sum uses e^{−p₀/2}; c₁ = e^{−p₀} is
+       extracted with the loop factor e^{3+2ΣA+2a_k}; the amplitude takes e^{−p₀/2} of it; *the margin*
+       e^{−p₀/2+3+2ΣA+2a_k} pays e^{5p₀/64} for the cubes of X^{(λ̂+248)} (at most (105R_k)^d cubes of π_k, since a
+       first-class component lies in a cube of side 100MR_k, LFR I p. 177; 2ν#π_k ≤ p₀/16 from 2κ(100R_k)^d < p₀/2
+       and 8(1.05)^dν ≤ κ) and factors e^{polylog of order < p₀} once per X′_r and once per group. Every
+       localisation domain disjoint from ∪Y_i and every group of the 𝐑-gas has a first-class component (#652-1).
+     - Parts of a carried insertion D (#613-1–#613-5): D^∅ = D(U^R) if D has no home; a part whose home or units
+       contain a first-class component is a slot of the polymer containing it; a part with home or units but no
+       first-class component is a member att(k, Y) at the first second-class Y; D's parts total at most
+       ‖D‖e^{2(ε_D+x_D)} ≤ e^{(ϑ_k/4)νσ(D)}‖D‖ (4ϑ_k ≤ ν).
+     - Design consequence: the size of an 𝐑-made insertion is a *nominal* size σ̃ smaller than its geometric
+       counts (σ̃(D_g) := Σ_Pπ(P) + ⅓Σ_{D∈𝔅(g)}σ(D) + Σ_{W∈𝒲_g}(½σ(W) + 17)), the geometric counts being at most
+       u_𝔏σ̃ ("units with a factor", (6A)(i)); so the counts of roots at later steps (81Mσ in Paper, Lemma "Root
+       Bound and Tail") take the factor u_𝔏 for such members. Read next: "The count" #690–#721, "The units of the
+       members" #693, "Big and small members" #698, "The rounding" #701 (lines 517–556), and (6A)(i) "Units with
+       a factor", "𝐑-made insertions" (search in lines 295–403).
+     **Digest of lines 517–530 (read 20:12), "The count", "The units of the members", "Big and small members":**
+     B_P := ∪_rX′_r ∪ ∪_{X∈P}X^{(λ̂+248)} (X^{(n)} = X⁺ widened by n layers of cubes of π_k);
+     σ_g := Σ_{W∈𝔅^×(g)}σ(W) + ½Σ_{D∈𝔅^s(g)}σ(D) + Σ_{P∈g}π(P), π(P) := #π_k(B_P) + 2^{d+2}D_P + λ_𝔏ℓ_P; a
+     single-loop member counts half, the other half of its weight pays the joins across its domain; for a carried
+     insertion D made at the step j ≤ k, with the factor u_D ≤ u_𝔏 of its units: T_D := S_D ∪ Q(D) if j = k, := X_D
+     (its domain at the step k) if j < k; #_k(X_D) + n_k(D)/M ≤ (21/20)σ(D) + 17 and diam_∞(T_D) ≤
+     M((21/20)σ(D) + 17) (#694), from "The share of D" (#_{j+1}(X_D) ≤ 16 + 20480/L + 8320u_Dσ(D)/L), "Filled
+     hulls" (|H_i(D)| ≤ 4u_D(M/L)σ(D) + 2), the domain one step later (≤ 16 + 128N/L), and L ≥ L₀^× with
+     8320u_𝔏/L₀^× ≤ 0.21, u_𝔏 ≥ 640·16 (so L > 10⁶ in the note); big member: σ(D) ≥ 240 (j = k) or ≥ 32 (j < k).
+     **The framework behind this is (6A)(i) of the note (#503–#606, lines 295–403): the hypotheses (H0)–(H2) on
+     the domain of a carried insertion (#509–#512), "Units with a factor" (#570–#571), "The share of D", "Filled
+     hulls", "Connectedness". The paper has one sentence for it ("a carried insertion keeps the size and the weight
+     of the step at which it was made", line 1287) and the count 81Mσ in Lemma "Root Bound and Tail". So the units
+     of the carried insertions at later steps are also not derived in the paper. Check the paper's condition on L
+     against the note's L₀^×.**
+  1. The attached members (as before), 2. the masses of a young pair, 3. Proposition S.19.
+- **19:56 (from `date`; the times "20:02"–"20:12" written above were estimates and are wrong, everything above was
+  done before 19:55). On the user's instruction ("Why aren't you updating the paper?") what is proved went into
+  the manuscripts:**
+  - Paper, Section "The Reference Gas": "We also put c_𝒢 := 0 for an attached group ..." with the definition of
+    an attached group and the citation "Supplement, Lemma 18.2".
+  - Supplement: new **Section 18** (`sec:weights-large-fields`, short title "The Activities of the Reference
+    Gases"), Lemma 18.1 `lem:first-order`, Lemma 18.2 `lem:activities-content`, Lemma 18.3
+    `lem:r-activities-content`; proof of S.9(iii): one sentence on the use of the convention.
+  - Compile: paper 161 pp. (`2b5b0e754fa4`), supplement 156 pp. (`170045337da2`), bibtex run for the supplement
+    (new citation of Friedli–Velenik there), no errors, no undefined references, 9 overfull boxes each (old).
+  - `F26_SECTION_DRAFT.tex` is now a stub listing what is still to write.
 - Earlier state line (superseded): nothing written in the TeX. `FINDINGS.md` F26, `PROGRESS.md` (19:20), `SESSION_HANDOVER.md` (19:20)
   record the open item. Next: read S.9 (`prop:attached`, line 1494), S.10 (`prop:r-operation`, line 1558), and
   S.16(i) (lines 2135–2177) of the supplement; the paper's large-field step (`sec:large-field-step`) for the

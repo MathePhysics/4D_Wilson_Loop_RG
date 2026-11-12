@@ -1,120 +1,14 @@
-% Draft of the new Section 18 of BALABAN_SUPPLEMENT.tex (FINDINGS.md F26). Not compiled into the supplement.
-% It is moved into the supplement, after Section 17, when every statement in it is proved.
-% State and plan: F26_SECTION_PLAN.md.
-
-\section{The Cluster Weights of Two Runs on the Terms with Large Fields}\label{sec:weights-large-fields}
-
-The interactions $Q_k(\mathfrak B)$ and the local terms of the exponent $\mathcal E_k$ of a dressed loop are numbers on each labelled term (Paper, Definition~\ref{P-def:dressed-loop}(iv)): they are cluster terms of the reference gases of the steps, and they depend on the run only through the activities of these gases. On the trivial term Proposition~\ref{prop:recursion-differences}(i) compares the activities of the two runs and, through them, the weights. On a term with large fields there is a difficulty which the trivial term does not have. The insertions attached to a large-field region are compared between the two runs only in total, over the history of their component, because they are carried as functions which are never summed over the loop (Paper, Section~\ref{P-sec:large-field-step}); the difference of two such insertions has a part which is small relative to their bound and a part, the difference of the old wrapping insertions which they have taken in, which is small only in its total. Neither statement is a bound on the difference of a single activity, and a cluster series whose activities contained attached insertions could not be compared term by term. We show in this section that the activities contain none, compare the weights and the local terms of the two runs on a young matched pair, and give the numbers $s^W_K$ and $s^{W,0}_K$ of Proposition~\ref{prop:large-field-integrands}(f) with all of their constants.
-
-\subsection{First-Order Bounds for a Reference Gas}
-
-We begin with two estimates for the cluster series of a hard-core gas, which bound the change of the cluster weights under a change of the activities by the size of that change. They use the criterion of Koteck\'y and Preiss in the form in which Paper, Lemma~\ref{P-lem:root-bound}, uses it, and nothing else. We fix a step, a labelled term, and the groups of the reference gas of that step, with the compatibility relation of Paper, Section~\ref{P-sec:reference-gas}, the sizes $\sigma(\mathcal G)$, and the weights $a^\circ(\mathcal G) = (\nu/32)\sigma(\mathcal G)$ of Paper, Definition~\ref{P-def:amplitude}; for a family $x$ of complex numbers indexed by the groups, $\Phi^\circ(\Gamma; x) \coloneqq \phi^{\mathrm U}(\Gamma)\prod_{\mathcal G \in \Gamma}x_{\mathcal G}$ is the weight of a cluster $\Gamma$, the product taken with the multiplicities. A \emph{root} is a traversal of the step or a cube of its partition $\pi$, and a group is \emph{at} a root if the root is a traversal in its arc or a cube which meets one of its domains or one of the clusters merged into it. For a family $x \geq 0$ put
-\begin{equation}\label{eq:root-norm}
-    \norm{x}_\circ \coloneqq \sup_r\sum_{\mathcal G \text{ at } r}x_{\mathcal G}\,e^{2a^\circ(\mathcal G)}\;,
-\end{equation}
-the supremum over the roots. An \emph{object} $W$ is a finite set of roots, $n(W)$ in number, and a cluster \emph{meets} $W$ if one of its groups is at a root of $W$. By the count in the proof of Paper, Lemma~\ref{P-lem:root-bound}, the groups which are incompatible with a group $\mathcal G$ are at one of at most $81M\sigma(\mathcal G)$ roots, the traversals of the arc of $\mathcal G$ and the cubes adjacent or equal to the cubes of its domains and of its merged clusters; we write $W(\mathcal G)$ for this object, so that $n(W(\mathcal G)) \leq 81M\sigma(\mathcal G)$ and every cluster which contains $\mathcal G$ meets $W(\mathcal G)$.
-
-\begin{lemma}[First-Order Bounds]\label{lem:first-order}
-Let $c$ and $c'$ be two families of complex activities, $\bar c$ a family of numbers with $\abs{c_{\mathcal G}} \leq \bar c_{\mathcal G}$ and $\abs{c'_{\mathcal G}} \leq \bar c_{\mathcal G}$ for every group, and $\delta c \coloneqq c' - c$. Suppose that
-\begin{equation}\label{eq:first-order-room}
-    \norm{\bar c}_\circ \leq \frac{\nu}{5184M}\;.
-\end{equation}
-\begin{enumerate}[label=(\alph*)]
-\item For every object $W$,
-\begin{equation}\label{eq:first-order-root}
-    \sum_{\Gamma \text{ meets } W}\abs{\Phi^\circ(\Gamma; c') - \Phi^\circ(\Gamma; c)}\,e^{a^\circ(\Gamma)} \leq 2n(W)\norm{\delta c}_\circ\;,
-\end{equation}
-and in particular the left side is at most $162M\sigma(\mathcal G)\norm{\delta c}_\circ$ for $W = W(\mathcal G)$.
-\item Summed over all clusters,
-\begin{equation}\label{eq:first-order-sum}
-    \sum_\Gamma\abs{\Phi^\circ(\Gamma; c') - \Phi^\circ(\Gamma; c)} \leq 162M\sum_{\mathcal G}\abs{\delta c_{\mathcal G}}\,\sigma(\mathcal G)\,e^{2a^\circ(\mathcal G)}\;.
-\end{equation}
-\item Let $c_0$ and $c'_0$ be two further families with $\abs{c_{0,\mathcal G}} \leq \bar c_{\mathcal G}$ and $\abs{c'_{0,\mathcal G}} \leq \bar c_{\mathcal G}$, and put $d \coloneqq c - c_0$, $d' \coloneqq c' - c'_0$, $\bar d_{\mathcal G} \coloneqq \max(\abs{d_{\mathcal G}}, \abs{d'_{\mathcal G}})$, and $\bar\delta_{\mathcal G} \coloneqq \max(\abs{c'_{\mathcal G} - c_{\mathcal G}}, \abs{c'_{0,\mathcal G} - c_{0,\mathcal G}})$. Then
-\begin{equation}\label{eq:second-difference}
-\begin{aligned}
-    &\sum_\Gamma\Bigl\lvert\bigl[\Phi^\circ(\Gamma; c') - \Phi^\circ(\Gamma; c'_0)\bigr] - \bigl[\Phi^\circ(\Gamma; c) - \Phi^\circ(\Gamma; c_0)\bigr]\Bigr\rvert\\
-    &\qquad \leq 162M\sum_{\mathcal G}\abs{d'_{\mathcal G} - d_{\mathcal G}}\,\sigma(\mathcal G)\,e^{2a^\circ(\mathcal G)} + C_{\mathrm{II}}\norm{\bar\delta}_\circ\sum_{\mathcal G}\bar d_{\mathcal G}\,\sigma(\mathcal G)\,e^{2a^\circ(\mathcal G)}\;,
-\end{aligned}
-\end{equation}
-with $C_{\mathrm{II}} \coloneqq 2^{9}\cdot 3^{8}M^2/\nu$.
-\end{enumerate}
-\end{lemma}
-
-\begin{proof}
-We first recall the bound which the criterion gives. Let $x \geq 0$ be a family with $\norm{x}_\circ \leq \nu/(2592M)$. The groups incompatible with a group $\mathcal G$ are at the roots of $W(\mathcal G)$, so that
-\[
-    \sum_{\mathcal G' \not\sim \mathcal G}x_{\mathcal G'}\,e^{2a^\circ(\mathcal G')} \leq 81M\sigma(\mathcal G)\norm{x}_\circ \leq \frac{\nu}{32}\sigma(\mathcal G) = a^\circ(\mathcal G)\;,
-\]
-which is the condition \eqref{P-eq:kp-condition} of the paper for the activities $x$. As in the proof of Paper, Lemma~\ref{P-lem:root-bound}, \cite[Theorem~5.4]{FriedliVelenik} with the functions $a = a^\circ$ and $d = a^\circ$ then bounds the clusters which are incompatible with an external polymer by the sum of $x_{\mathcal G}e^{2a^\circ(\mathcal G)}$ over the groups incompatible with it; with an object $W$ as the external polymer, incompatible with the groups at its roots,
-\begin{equation}\label{eq:kp-object}
-    \sum_{\Gamma \text{ meets } W}\abs{\Phi^\circ(\Gamma; x)}\,e^{a^\circ(\Gamma)} \leq \sum_{r \in W}\sum_{\mathcal G \text{ at } r}x_{\mathcal G}\,e^{2a^\circ(\mathcal G)} \leq n(W)\norm{x}_\circ\;.
-\end{equation}
-
-\emph{(a).} If $\norm{\delta c}_\circ = 0$ there is nothing to prove, so let it be positive. For $t \in [0, 1]$ the family $c^t \coloneqq c + t\delta c = (1 - t)c + tc'$ satisfies $\abs{c^t_{\mathcal G}} \leq \bar c_{\mathcal G}$. The weight of a cluster is a monomial in the activities, and differentiating it along $c^t$ replaces one factor at a time, so that, with $m_\Gamma(\mathcal G)$ the multiplicity of $\mathcal G$ in $\Gamma$ and $\Gamma \setminus \mathcal G$ the multiset $\Gamma$ with one copy of $\mathcal G$ removed,
-\begin{equation}\label{eq:first-order-derivative}
-    \abs{\Phi^\circ(\Gamma; c') - \Phi^\circ(\Gamma; c)} \leq \abs{\phi^{\mathrm U}(\Gamma)}\sum_{\mathcal G \in \Gamma}m_\Gamma(\mathcal G)\abs{\delta c_{\mathcal G}}\prod_{\mathcal G' \in \Gamma \setminus \mathcal G}\bar c_{\mathcal G'}\;,
-\end{equation}
-the sum over the distinct groups of $\Gamma$. The right side is the coefficient of $u$ in the polynomial $p_\Gamma(u) \coloneqq \abs{\phi^{\mathrm U}(\Gamma)}\prod_{\mathcal G \in \Gamma}(\bar c_{\mathcal G} + u\abs{\delta c_{\mathcal G}})$. The coefficients of $p_\Gamma$ are nonnegative, so that for every $u_0 > 0$ this coefficient is at most $p_\Gamma(u_0)/u_0$, and $p_\Gamma(u_0) = \abs{\Phi^\circ(\Gamma; x)}$ for the family $x \coloneqq \bar c + u_0\abs{\delta c}$. We take $u_0 \coloneqq \nu/(5184M\norm{\delta c}_\circ)$; then $\norm{x}_\circ \leq \norm{\bar c}_\circ + u_0\norm{\delta c}_\circ \leq \nu/(2592M)$ by \eqref{eq:first-order-room}, and \eqref{eq:kp-object} gives
-\[
-    \sum_{\Gamma \text{ meets } W}\abs{\Phi^\circ(\Gamma; c') - \Phi^\circ(\Gamma; c)}\,e^{a^\circ(\Gamma)} \leq \frac{1}{u_0}\,n(W)\,\frac{\nu}{2592M} = 2n(W)\norm{\delta c}_\circ\;.
-\]
-
-\emph{(b).} Fix a group $\mathcal G_0$ and let $D_{\mathcal G_0} \coloneqq \sum_\Gamma\abs{\phi^{\mathrm U}(\Gamma)}m_\Gamma(\mathcal G_0)\prod_{\mathcal G' \in \Gamma \setminus \mathcal G_0}\bar c_{\mathcal G'}$, the sum over the clusters which contain $\mathcal G_0$. This is the coefficient of $u$ in the sum of $\abs{\Phi^\circ(\Gamma; x^u)}$ over these clusters, for the family $x^u \coloneqq \bar c + u\mathbf 1_{\mathcal G_0}$, in which only the activity of $\mathcal G_0$ is changed. The group $\mathcal G_0$ contributes $ue^{2a^\circ(\mathcal G_0)}$ to the sums \eqref{eq:root-norm} at its roots and nothing at the others, so that with $u_0 \coloneqq \nu e^{-2a^\circ(\mathcal G_0)}/(5184M)$ we have $\norm{x^{u_0}}_\circ \leq \nu/(2592M)$. Every cluster which contains $\mathcal G_0$ meets $W(\mathcal G_0)$, and \eqref{eq:kp-object} gives, as in (a),
-\begin{equation}\label{eq:single-group}
-    D_{\mathcal G_0} \leq \frac{1}{u_0}\,81M\sigma(\mathcal G_0)\,\frac{\nu}{2592M} = 162M\sigma(\mathcal G_0)\,e^{2a^\circ(\mathcal G_0)}\;.
-\end{equation}
-Summing \eqref{eq:first-order-derivative} over all clusters and exchanging the sums gives $\sum_\Gamma\abs{\Phi^\circ(\Gamma; c') - \Phi^\circ(\Gamma; c)} \leq \sum_{\mathcal G}\abs{\delta c_{\mathcal G}}D_{\mathcal G}$, which with \eqref{eq:single-group} is \eqref{eq:first-order-sum}.
-
-\emph{(c).} For $s, t \in [0, 1]$ put $c^t \coloneqq (1 - t)c + tc'$, $c^t_0 \coloneqq (1 - t)c_0 + tc'_0$, $d^t \coloneqq c^t - c^t_0 = (1 - t)d + td'$, and $F_\Gamma(s, t) \coloneqq \Phi^\circ(\Gamma; c^t_0 + sd^t)$. The expression inside the modulus on the left of \eqref{eq:second-difference} is $F_\Gamma(1, 1) - F_\Gamma(0, 1) - F_\Gamma(1, 0) + F_\Gamma(0, 0) = \int_0^1\int_0^1\partial_s\partial_tF_\Gamma\,\dd s\,\dd t$. The family $c^t_0 + sd^t = (1 - s)c^t_0 + sc^t$ is a convex combination of the four families and is bounded by $\bar c$; its derivative in $s$ is $d^t$, with $\abs{d^t_{\mathcal G}} \leq \bar d_{\mathcal G}$, its derivative in $t$ is $(1 - s)(c'_0 - c_0) + s(c' - c)$, bounded by $\bar\delta_{\mathcal G}$, and its mixed derivative is $d' - d$. Differentiating the monomial twice therefore gives
-\begin{align*}
-    \abs{\partial_s\partial_tF_\Gamma} \leq{}& \abs{\phi^{\mathrm U}(\Gamma)}\sum_{\mathcal G \in \Gamma}m_\Gamma(\mathcal G)\abs{d'_{\mathcal G} - d_{\mathcal G}}\prod_{\mathcal G'' \in \Gamma \setminus \mathcal G}\bar c_{\mathcal G''}\\
-    &+ \abs{\phi^{\mathrm U}(\Gamma)}\sum_{(\mathcal G, \mathcal G')}\bar d_{\mathcal G}\,\bar\delta_{\mathcal G'}\prod_{\mathcal G'' \in \Gamma \setminus \{\mathcal G, \mathcal G'\}}\bar c_{\mathcal G''}\;,
-\end{align*}
-the second sum over the ordered pairs of distinct entries of the multiset. Summed over the clusters, the first term is bounded as in (b), which gives the first term of \eqref{eq:second-difference}. In the second we fix the group $\mathcal G_0$ of the first entry: the sum over the clusters and over the second entry is the coefficient of $uv$ in the sum of $\abs{\Phi^\circ(\Gamma; x^{u,v})}$ over the clusters which contain $\mathcal G_0$, for $x^{u,v} \coloneqq \bar c + u\mathbf 1_{\mathcal G_0} + v\bar\delta$, a polynomial in $u$ and $v$ with nonnegative coefficients. With $u_0 \coloneqq \nu e^{-2a^\circ(\mathcal G_0)}/(10368M)$ and $v_0 \coloneqq \nu/(10368M\norm{\bar\delta}_\circ)$ we have $\norm{x^{u_0,v_0}}_\circ \leq \nu/(2592M)$, and \eqref{eq:kp-object} bounds this coefficient by
-\[
-    \frac{1}{u_0v_0}\,81M\sigma(\mathcal G_0)\,\frac{\nu}{2592M} = \frac{10368^2M^2}{32\nu}\,\sigma(\mathcal G_0)\,e^{2a^\circ(\mathcal G_0)}\norm{\bar\delta}_\circ\;,
-\]
-and $10368^2/32 = 2^{9}\cdot 3^{8}$. Multiplying by $\bar d_{\mathcal G_0}$ and summing over $\mathcal G_0$ gives the second term.
-\end{proof}
-
-The bound (a) is the estimate by which the proof of Proposition~\ref{prop:recursion-differences}(i) passes from the activities to the cluster occurrences, and (b), (c) are its forms for a sum over all clusters and for the difference of two such sums, which the local terms require: the local term of a step on a labelled term $\ell$ is the difference of the logarithms of the reference gases of $\ell$ and of the trivial term (Proposition~\ref{prop:attached}(iii)), so that its difference between two runs is a second difference of the kind bounded in (c), with $d$ and $d'$ supported on the groups whose activities on $\ell$ differ from those on the trivial term.
-
-\subsection{The Activities Contain No Attached Insertion}
-
-At a step of the step map the insertion $Y_{\mathcal G}$ of a new group is written as $Y^{\mathrm d}_{\mathcal G} + c_{\mathcal G}\,\mathrm{id}$, the words are expanded in the two terms, and the scalars $c_{\mathcal G}$ are resummed into the reference gas, whose cluster series gives the interactions and the local terms of the new step (Paper, Section~\ref{P-sec:reference-gas}). The expansion and the resummation are identities for every choice of the numbers $c_{\mathcal G}$, one for each group: they use only that $c_{\mathcal G}\,\mathrm{id}$ commutes with every factor of a word and that the compatibility of two groups does not depend on these numbers. The choice matters for the bounds alone. For a group of the deviation species $c_{\mathcal G}$ has to be the value of $Y_{\mathcal G}$ at the reference data, since the deviation bound of $Y^{\mathrm d}_{\mathcal G}$ rests on its vanishing at pure-gauge data (Paper, Section~\ref{P-sec:small-field-map}). Call a group \emph{attached} if it is attached to a large-field region of its step or contains a part of an insertion of an attached species; by Section~\ref{sec:attached} such a group belongs to the species of that insertion, and the name does not depend on how a group with parents of several species is counted. For the cross groups and for the attached groups the paper takes $c_{\mathcal G} \coloneqq 0$, so that these groups are carried whole and are never split. We recall that a group which contains an insertion with intervals on two loops has intervals on two loops and is a cross group.
-
-No bound of the class rests on the subtraction of a scalar from an attached group. The proof of Proposition~\ref{prop:attached}(i) bounds the attached insertions of a step by the second term of Paper, \eqref{P-eq:insertion-bound}; that of Proposition~\ref{prop:attached}(ii) uses of a carried attached insertion its supremum on the subdomain on which its bound is stated, in the evaluation at the new background, in Cauchy's estimate for the touched parts, and in the bound of the merged parts; and none of the three uses a value at the reference data. In Proposition~\ref{prop:attached}(iii) the choice is used: the statement that a cluster which meets neither the large-field region nor the cutoffs on its boundary layer has the same weight on $\ell$ and on the trivial term holds because the groups which exist on $\ell$ alone, those which contain a touched or a merged part of an attached insertion and which reach into the small-field region with it, have the activity $0$.
-
-\begin{lemma}[The Activities of a Step of the Step Map]\label{lem:activities-content}
-Fix a labelled term and a step $n \to n + 1$ of the step map, and let $\mathcal G$ be a group of this step on one loop which is not attached. Its activity $c_{\mathcal G}$ is the value at the reference data of the term of a function which is multilinear in the insertions of the members of $\mathcal G$, each of which has its intervals on that loop, is not attached, and is therefore of the deviation species or of the wrapping species, and linear in the factor
-\begin{equation}\label{eq:occurrence-factor}
-    \sum_{m \geq 0}\frac{(-1)^m}{m!}\prod_{j=1}^{m}\Phi^\circ(\Gamma_j)
-\end{equation}
-of the clusters $\Gamma_j$ of the reference gas of the step $n$ which meet its members, and whose other constituents are those of the step $n + 1$ on the domains of $\mathcal G$. The clusters in \eqref{eq:occurrence-factor} consist of groups of the step $n$ on one loop which are not attached. Consequently, by induction on the steps of the step map, no activity of a reference gas depends on an attached insertion or on an insertion with intervals on two loops.
-\end{lemma}
-
-\begin{proof}
-A member of $\mathcal G$ is an insertion of an earlier step which the step touches or merges into $\mathcal G$. If a member were attached, $\mathcal G$ would contain a part of an insertion of an attached species and would be attached; if a member had intervals on two loops, so would $\mathcal G$. Hence every member is an insertion on the loop of $\mathcal G$ which is not attached, and the species of such an insertion are the deviation species and the wrapping species (Paper, Definition~\ref{P-def:dressed-loop}(ii)). The insertion of $\mathcal G$ is the integral over the fluctuation field of the step of a product, in the order of the loop, of the slots and transports of the step, of the insertions of the members, and of the factors of the clusters of the step $n$ which are merged into $\mathcal G$ when the interactions of the step $n$ are expanded (Paper, Section~\ref{P-sec:reference-gas}); it is therefore multilinear in the insertions of the members and linear in the factor \eqref{eq:occurrence-factor}, which is the term of the exponential series of these clusters, and $c_{\mathcal G}$ is its value at the reference data. A cluster of the reference gas of the step $n$ has a nonzero weight only if each of its groups has a nonzero activity, and then each of them is a group on one loop which is not attached. The last statement follows by induction: the activities of the step $n + 1$ depend on the insertions of members which are neither attached nor on two loops, on the constituents of the step, and on the activities of the step $n$, and an insertion which is not attached contains, by the definition of an attached group, no part of an attached insertion.
-\end{proof}
-
-At an $\mathbf R$-step the scalars are the activities $\mathfrak a_g$ of the eligible groups of Proposition~\ref{prop:r-operation}(iv), and here no choice has to be made, because the construction of the polymers already keeps the data of the components which survive the step out of every activity.
-
-\begin{lemma}[The Activities of an $\mathbf R$-Step]\label{lem:r-activities-content}
-Fix an $\mathbf R$-step $k$ and a term as in Proposition~\ref{prop:r-operation}. The activity $F(P)$ of a polymer which does not meet the ensemble involves no letter of a loop. The tensor $T_P$ of a polymer of an eligible group $g$ and the scalar activity $\mathfrak a_g$ are functions of the operations $\mathbf T'_k(X)$ of the first-class components $X$ of the polymers of $g$, of the factors $V(Y)$ of \cite[(1.91)]{BalabanLFR2}, and of the pieces of the letters in the slots; every one of these pieces is a function of the external data and of the data of first-class components of its polymer. In particular none of them is a piece of an insertion whose set $\hat T$ contains a second-class or an unchanged component, and none depends on a unit of these two classes. Consequently the numbers $E^{\mathbf R}_k(C; \ell_0)$, $E^{\mathbf R\times}_k$, $E^{\mathbf R,\partial}_k(\ell)$, and $\Psi(S)$ depend on the insertions of the term only through the pieces, in the slots of eligible groups and at first-class components, of insertions on one loop.
-\end{lemma}
-
-\begin{proof}
-A polymer is a connected union of class components, of localisation domains, and of the domains of the pieces of the letters which it holds, and by Lemma~\ref{lem:loop-localisation}(ii) the domain of a piece of $F^{\mathcal K}$ contains the components of $\hat T$ and the units of $\mathcal K$, of which the piece is a function. A group is eligible only if none of its polymers meets a second-class or an unchanged component (Proposition~\ref{prop:r-operation}(iv)). A polymer meets the ensemble if its activity carries a slot (Section~\ref{sec:r-operation}), so that the activity of a polymer which does not meet it is the expression \cite[(1.91)]{BalabanLFR2} without letters. The polymers of an eligible group contain first-class components only, and the pieces in their slots have only such components in their domains. The tensor $T_P$ is the expression \cite[(1.91)]{BalabanLFR2} with these pieces in loop order, in which the operations are local, ``All the expressions in the above integral operation are localized in the domain $X$'', and ``the terms $V(Y,U_k)$ depend on the sequence $\{\Omega_j^c,Z_j\}$ restricted to the components of $Z$ contained in $Y$'' \cite[p.~379]{BalabanLFR2}; and $\mathfrak a_g$ is the contraction of the tensors $T_P$, $P \in g$, with the transports $1$ of the flat reference. This is the statement for $T_P$ and $\mathfrak a_g$. An insertion one of whose components in $\hat T$ is of the second class or unchanged has no piece without that component in its domain, and a piece with a unit of these classes has that unit in its domain, so neither occurs in an eligible group; this agrees with the proof of Proposition~\ref{prop:r-operation}(iii), by which the letters in the slots of the second-class and of the unchanged components, and the pieces all of whose units are of these classes, enter no activity. A group which holds, in a slot, an insertion with intervals on two loops has slots on two loops and is a cross group, with $\mathfrak a_g = 0$. The four numbers are cluster terms of the gas $\Xi^\flat$, whose activities are the $F(P)$ and the $\mathfrak a_g$, and of the gas $\Xi$, which gives the last statement.
-\end{proof}
-
-The members of a group, the insertions of the term whose intervals lie in its span and in none of its slots, are not part of its scalar activity: by the proof of Proposition~\ref{prop:r-operation}(v), $D_g$ is the contraction with the members on their intervals, less $\mathfrak a_g$ times the small-field word with the same members.
-
-% ---------------------------------------------------------------------------------------------------------------
-% NOT YET WRITTEN (see F26_SECTION_PLAN.md):
-%   18.2b An eligible group with a member attached to a surviving component: it continues the lineage of its
-%         first attached member; the groups holding a given member are summed from one traversal of its interval
-%         (entropy bound, e^{-p_0(g_k)/4}); the weight of the new insertion; the factor of the R-step in the carry
-%         of S.9(ii). Missing in S.10(v) and S.9(ii) (FINDINGS F26, item 6(b)).
-%   18.3  The masses of a young pair: P(X), \bar Y_X, \bar\varepsilon_A, M^\times, enlarged amplitudes.
-%   18.4  Proposition S.19: activities, weights, local terms, attached insertions, the rates, summability.
-% ---------------------------------------------------------------------------------------------------------------
+% Working file for FINDINGS.md F26. State and plan: F26_SECTION_PLAN.md.
+%
+% 12 Nov 2026, 19:55: the three lemmata drafted here (First-Order Bounds; The Activities of a Step of the Step Map;
+% The Activities of an R-Step) were moved into BALABAN_SUPPLEMENT.tex as Section 18 (Lemmata 18.1-18.3,
+% label sec:weights-large-fields), and the paper's Section "The Reference Gas" now gives the attached groups the
+% activity 0. This file holds only what is drafted and not yet proved; at present nothing.
+%
+% Still to write (each goes into the supplement when it is proved):
+%   (0) The sizes and weights of the insertions which the R-operation makes (FINDINGS F26, item 7).
+%   (1) An eligible group with a member attached to a surviving component (item 6(b)); the factor of the R-step
+%       in the carry of S.9(ii).
+%   (2) The masses of a young pair: P(X), \bar Y_X, \bar\varepsilon_A, M^\times, the enlarged amplitudes.
+%   (3) Proposition S.19: activities, weights, local terms, attached insertions, the rates, summability; then the
+%       corrected S.14(f).
