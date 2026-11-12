@@ -384,3 +384,9 @@ User, after NG: "Continue work on NA!!!! That is the only meaningful answer to w
 - Pre-check: every changed line re-read; consumers of the changed lines checked (#NG5.5-1 uses #NG3.4's W_ren(𝖨_k) = W_ren(𝖨₀); #NG5.5-8 and #NG6.3 use Proposition K; the work file cites no changed tag and uses no limit across cutoffs); no E_ε, N_ε, #GL6.6-1, or bare #GL9.8 is left in NG outside #NG1.6-3.1's identification. NG 181 lines, CRLF 181, none over 600, no duplicate tags, every tag resolves; the paper's 32 labels and the supplement's two were checked to exist.
 - For other sessions: table row #T12.36-3 still restates the former §3 (N_ε, W := lim_KW_ren); #T3.33 can record that ḡ is the paper's ḡ (#NG1.6-3.1). Messages sent at 03:47 to the table session (yang mills 4 handover (2) ⑂ (2)) and to yang mills 4 handover (4).
 - Standing of the inputs: Theorem N now also rests on the paper's thm:main, cor:nonvanishing, prop:normalisation-structure, and thm:coupling-flow, and on the identity of the two constructions (#NG1.6-1–#NG1.6-3), which is derived here and not refereed.
+
+## 2026-11-12 10:44 GMT: table session's round-17 notice
+
+- Received from the table session (yang mills 4 handover (2) ⑂ (2)): a repair pass on the table (58ecfa826d01) is starting. Rows that touch this session's files: #T10.28-4-1-1 and #T12.38-0-2 (wording that separates their β from the β of other rows), the NG rows #T12.36-x, and the removal of #T12.37. The notice states that no bound changes; the new table SHA is to follow.
+- Checked at 10:44: NG 36416d0d761d, GL d401d13826f7, and O1C acc21c562b85 are the hashes the notice quotes; NG is unchanged since the re-base. No edit to NG, GL, or O1C follows from the notice.
+- When the new table SHA arrives: re-read the rewritten rows #T12.36–#T12.36-9-2 against NG's §§1, 3 (in particular #T12.36-3 against #NG3.1–#NG3.4) and the two β rows against #NG1.6-4.
