@@ -326,3 +326,14 @@ User, after NG: "Continue work on NA!!!! That is the only meaningful answer to w
 - NA 424d3115a705 (snapshot NA_pre_NAG32.md) → 6c0d6965f94c: (G2) at #NA5.1 cites Theorem NAG32 and #NAG.0-2c.
 - Approvals requested: (G2) restricted to π with 𝒱 = ℝπ_* (G stays general); the band-regime statement of (R1); L_𝔄^Δ ∈ ℕ; the profile (ii); κ > 0 not used.
 - Checks: NAG 326 lines, CRLF 326, longest 602, no duplicate tags or dangling references; NA 69 lines, CRLF 69, none > 600.
+
+## 2026-11-12 02:14 GMT: parity, cubic flow, Theorem NAG36; the weak side
+- NAG a76bee1186eb (snapshot NAG_pre_NAG33.md) → a56409c95934; NA 6c0d6965f94c → 7409369150dd.
+- #NAG10.21 (K^∨, K^±) and Lemma NAG33 (#NAG10.21-1–3): (V, K) ↦ (−V, K^∨) commutes with the step, with S, s, ω, E unchanged, V′ ↦ −V′ and K_{j+1} ↦ K_{j+1}^∨. Proof: T_A(−V; g) = T_A(V; −g), and ζ̃_j has the law of −ζ̃_j.
+- Lemma NAG34 (#NAG10.22–#NAG10.22-6): on the state (zV, wK^+ + zK^−), V′ − zV is odd in z. The proof uses separate analyticity (Theorem NAG25(iv)), continuity from Cauchy's estimate, a(w) = ∂_zF(0, w) analytic by Fubini and Morera, and the kernels (z²(z² − 1))^{−1} and (w(w − 1))^{−1}. It gives ‖V′ − V‖ ≤ C_Lε_− + u_♭ε_+/(2ε_L) + u_♭³/6, and the same for the odd part of K_{j+1}, with leading term 28ε_−/L.
+- Lemma NAG35 (#NAG10.23–-4): the induction ‖K_j^+‖ ≤ C_+v_j², ‖K_j^−‖ ≤ C_−v_j³ gives |v_{j+1} − v_j| ≤ C_♭v_j³, so v_j^{−2} moves by at most 3C_♭ per step. Constants: C_+ = 10C_L and C_− = 80C_+/(v_Lε_L) + 320/(3v_L³), chosen so that 0.7 + 0.1 ≤ 0.8 ≤ 0.93³ and 8.6C_L = 10C_L·0.86. Inequalities used: (1 + x)^{−2} ≥ 1 − 2x, and (1 − x)^{−2} ≤ 1 + 3x on [0, 0.07].
+- Theorem NAG36 (#NAG10.24–-2): the band regime contains every sequence with 𝗀 ≥ 2η^{θ_L} and 𝗀^{−2} − C_♯ln(1/η) → ∞, C_♯ = 2C_♭c_π²/ln L, e.g. 𝗀²ln(1/η) = c ∈ (0, 1/C_♯).
+- New #NAG.0-2d: a perimeter or area law gives 𝔶_S → 0 (P(𝖱_n) and the area nts are affine in n, Σn_S = Σn_Sn = 0). So g_W(λ) → 0 alone does not force weak coupling, and the band regime is the weak-coupling part of (R1). #NAG.0-1a, #NAG.0-2 (split into #NAG.0-2-1 at 663 characters), #NAG.0-2c and NA (G2) were reworded accordingly.
+- Self-review fixes before the checks: K^∨(X; 0) = K(X; 0) stated; G(0, 0) = 0 by continuity; j₀ ≤ j_* added to Lemma NAG35; θ_L pointer.
+- Approval requested: state (R1)/(G2) on the band regime (weak side), as #NAG.0-2d shows that g_W(λ) → 0 does not exclude perimeter- or area-law sequences.
+- Checks: NAG 347 lines, CRLF 347, longest 602, no duplicate tags or dangling references; NA 69 lines, CRLF 69, none > 600.

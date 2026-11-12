@@ -60,7 +60,7 @@
 
 {#NA5.1} Gaussian side.
 - (G2) Continuum limits: when 𝖼_δ + 𝖼_x ≠ 0, a limit ε → 0 with a non-trivial 𝔶_S needs 𝗀² ≍ 1/log ε^{−1}, outside Theorem NAG12's range 𝗀²ln(λ/ε) → 0. The work file proves an exact Callan–Symanzik equation for 𝔶_S with the charge flow 𝗀_t^{−2} = 𝗀^{−2} − C_A𝔞_×t, and reduces the leading-logarithm regime to a bound on its remainder along the characteristics, (R1) (Lemmas NAG13 and NAG14, #NAG.0-2). At 𝖼_L = 3𝖼_T the logarithm vanishes.
-  Theorem NAG32 proves the limit, with g_W(λ) → 0, on the band regime of the work file's §10: π whose covariant Hermitian maps 𝔤 → End V_π are the real multiples of π_*, couplings of the band renormalisation group tending to 0, and last coupling at least η^{θ_L}. Open is that every leading-logarithm sequence lies in it (#NAG.0-2c).
+  Theorem NAG32 proves the limit, with g_W(λ) → 0, on the band regime of the work file's §10: π whose covariant Hermitian maps 𝔤 → End V_π are the real multiples of π_*, couplings of the band renormalisation group tending to 0, and last coupling at least η^{θ_L}. By Theorem NAG36 this regime contains every sequence with 𝗀 ≥ 2η^{θ_L} and 𝗀^{−2} − C_♯ln(1/η) → ∞, among them 𝗀²ln(1/η) = c fixed in (0, 1/C_♯). g_W(λ) → 0 alone does not force weak coupling, as a perimeter or area law gives 𝔶_S → 0 (#NAG.0-2d); open is a description of the band regime by (η, 𝗀) (#NAG.0-2c).
 - (G3) The 𝔤-valued case with a general ν and #NA4.1's longitudinal part.
 {#NA5.2} Yang–Mills side.
 - (Y1) A two-sided (O1b) at each scale λ with the stopping-scale coupling: 𝔶_S(W; λ) = ϰC₂g²_{K′(λ)}D^θ_λ(1 + O(g_{K′(λ)}·polylog)), ϰ the normalisation of (Y4).
