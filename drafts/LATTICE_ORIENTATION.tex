@@ -18,7 +18,7 @@
 \DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
 \setlength{\parskip}{0.6em}
 \emergencystretch=3em
-\title{Two Orientations of the Lattice and the Rotation Invariance of the Wilson Loop Functions}
+\title{The Wilson Loop Functions on Two Orientations of the Lattice}
 \author{}
 \date{}
 
@@ -325,13 +325,14 @@ Ba{\l}aban's bounds on the operators built from $Q_k$, $Q'_k$, and the Laplace o
 
 For $p \in \mathbb R^4$ we write $e_p(x) \coloneqq e^{ip \cdot x}$, and for a number $a > 0$
 \begin{equation}\label{eq:symbols-basic}
+\begin{gathered}
     \partial^a_\mu(p) \coloneqq \frac{e^{iap_\mu} - 1}{a}\;,
     \qquad
-    \partial'_\nu(p) \coloneqq \frac{e^{i\eta p \cdot e'_\nu} - 1}{\eta}\;,
-    \qquad
+    \partial'_\nu(p) \coloneqq \frac{e^{i\eta p \cdot e'_\nu} - 1}{\eta}\;,\\
     \Delta(p) \coloneqq \sum_\nu\abs{\partial'_\nu(p)}^2\;,
     \qquad
     \Delta_0(p) \coloneqq \sum_\mu\abs{\partial^1_\mu(p)}^2\;.
+\end{gathered}
 \end{equation}
 The functions $\partial'_\nu$ and $\Delta$ are the symbols of the difference operators and of the Laplace operator of $T_\eta$, and $\partial^1_\mu$ and $\Delta_0$ those of the unit lattice, as in \cite[(1.31), p.~23, and p.~24]{BalabanPRT1}. For numbers $a$ and $a'$ with $a'/a$ an integer we put
 \begin{equation}\label{eq:dirichlet}
@@ -432,7 +433,7 @@ The quadratic form is $\sum_l\abs{u_k(p' + l)}^2\Delta_0(p')\Delta(p' + l)^{-1}\
 For the upper bound, $\abs{V(p)^*w} \leq \frac85\abs{w}$ by Lemma~\ref{lem:symbol-bounds}(ii). Let $\hat p$ be the representative of $p' + l$ with $\abs{\eta\hat p \cdot e'_\nu} \leq \pi$ for every $\nu$. Then $\Delta(p' + l) = \Delta(\hat p) \geq (4/\pi^2)\abs{\hat p}^2$, and $\Delta_0(p') \leq \abs{p'}^2$. For $l = 0$ we have $\hat p = p'$ and the term is at most $(\pi^2/4)(8/5)^2\abs{w}^2$. For $l \neq 0$ the difference $\hat p - p'$ is a nonzero element of $2\pi\mathbb Z^4$ by Lemma~\ref{lem:symbols}(iv), so that one coordinate of $\hat p$ is at least $\pi$ in modulus, and $\Delta_0(p')/\Delta(p' + l) \leq (\pi^2/4)\abs{p'}^2/\pi^2 \leq \pi^2$. By \eqref{eq:u-bound}, $\abs{u_k(p' + l)} \leq \prod_\mu\min(1, \pi/\abs{q_\mu})$, since $\abs{\partial^1_\mu} \leq 2$, and each value of $q$, which is of the form $q_\mu = p'_\mu + 2\pi n_\mu$ with integers $n_\mu$, belongs to at most $25$ classes of $l$. Hence the terms with $l \neq 0$ add up to at most $25\pi^2(8/5)^2\prod_\mu\sum_{n \in \mathbb Z}\min(1, \pi/\abs{p'_\mu + 2\pi n})^2\abs{w}^2 \leq 25\pi^2(8/5)^2(1 + \pi^2/4)^4\abs{w}^2$, because $\abs{p'_\mu + 2\pi n} \geq \pi(2\abs{n} - 1)$ for $n \neq 0$ and $\sum_{n \geq 1}(2n - 1)^{-2} = \pi^2/8$.
 \end{proof}
 
-\section[Propagators and Renormalization Transformations. I]{The Modifications in ``Propagators and Renormalization Transformations. I''}\label{sec:prt1}
+\section{The Modifications in the First Paper on the Propagators}\label{sec:prt1}
 
 We go through \cite{BalabanPRT1} in its order. The paper treats the Gaussian theory of one real field, with the action $\frac12\langle\partial A, \partial A\rangle$ on the fine lattice, and it derives the propagators of the later papers from the averages. In the tilted run its fine lattice is $T_\eta$ of \eqref{eq:fine-lattice}, on a torus $T_\eta/\Gamma'$ with a group of periods $\Gamma' \subset \mathbb Z^4$ in place of the box of \cite[p.~17]{BalabanPRT1}; the operators $\partial$, $\partial^*$, and $\Delta$ are those of this lattice, whose bonds have the directions $e'_\nu$, and a field has the components $A_\nu$ in these directions, while the fields $B$ and the multipliers $\omega$ on the unit lattice have the components in the directions $e_\mu$.
 
