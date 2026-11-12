@@ -916,6 +916,105 @@ which is \cite[(1.133)]{BalabanPRT1} with the same constant $a$ in both operator
 
 The proposition has the content of \cite[(1.110)--(1.113)]{BalabanPRT1}, with pointwise conditions on the supports in place of the cubes $\tilde\Delta(y)$ and the functions $\zeta$ there, and with constants which depend on $L$. With it, Proposition~\ref{prop:l2-bounds}, and Lemma~\ref{lem:l2-decay}, the results of \cite{BalabanPRT1} on the operator $G$ hold in the tilted run, except the bounds \cite[(1.114)]{BalabanPRT1} on the second derivatives in $L^2$ with their decay, which we have not written out.
 
+\section{The Remaining Statements of the First Paper}\label{sec:prt1-rest}
+
+Three statements of \cite{BalabanPRT1} were left aside in Section~\ref{sec:prt1}: the bounds on the minimiser $H_k$, the second derivatives in \cite[(1.114)]{BalabanPRT1}, and the commutators of the averages with functions, from which Ba{\l}aban builds his expansions. The second paper on the propagators uses all three, and we settle them here. For the first, Ba{\l}aban writes $Q_kGQ_k^*$ in the form \cite[(1.99)]{BalabanPRT1} and reads its bounds off from the components \cite[(1.101)]{BalabanPRT1}, which are not available for the matrices of the tilted run. We use instead that the inverse of $Q_kGQ_k^*$ is the action $\Delta_k$ plus a constant, a fact which follows from the two variational problems defining these operators and does not involve the momentum representation.
+
+The setting is that of Section~\ref{sec:proposition-one-two}: a torus $T_\eta/\Gamma'$, $L \geq 64$, $a > 0$, and $G = \Delta_a^{-1}$. For a positive bond $c = \langle y, y + e_\mu\rangle$ of the unit lattice we write $c_- \coloneqq y$ and $d(c, c') \coloneqq d(c_-, c'_-)$, we let $\delta_c$ be the field which is $1$ at $c$ and $0$ at the other positive bonds, and we put $J_c \coloneqq Q_k^*\delta_c$. The kernel of an operator $\mathsf M$ on the fields of the unit lattice is $\mathsf M(c, c') \coloneqq \langle\delta_c, \mathsf M\delta_{c'}\rangle$. By \eqref{eq:vector-average} and the weights of the adjoint, the value of $J_c$ at a positive bond $b$ of $T_\eta$ is $\eta$ times the number of the points $x \in B_1(c_-)$ whose staircase $\sigma^1_\mu(x)$ contains $b$, minus the number of those whose staircase contains $b^{-1}$. Hence
+\begin{equation}\label{eq:source-of-bond}
+    \sup\abs{J_c} \leq \tfrac75\;,
+    \qquad
+    \norm{J_c}^2 \leq 2\;,
+\end{equation}
+by the count in the proof of Lemma~\ref{lem:four-inequalities} and by part (i) of that lemma, and $J_c$ vanishes at the bonds which start at a distance of $4$ or more from $c_-$.
+
+\begin{lemma}[The Operator $Q_kGQ_k^*$]\label{lem:qgq}
+Let $\gamma_0$ and $\gamma_\phi$ be the constants of Proposition~\ref{prop:l2-bounds}.
+\begin{enumerate}[label=(\roman*)]
+\item $Q_k$ maps the fields on $T_\eta/\Gamma'$ onto the fields on the unit lattice, $Q_kGQ_k^*$ is invertible, and $(Q_kGQ_k^*)^{-1} = \Delta_k + a$. The minimiser is $H_k = GQ_k^*(\Delta_k + a)$.
+\item $(a + 24\gamma_\phi^{-1})^{-1} \leq Q_kGQ_k^* \leq a^{-1}$ and $Q_kQ_k^* \geq c_Q \coloneqq \gamma_0(a + 24\gamma_\phi^{-1})^{-1}$.
+\item There are constants $C$ and $\theta > 0$, which depend on $a$ and not on $k$, $L$, and the torus, such that $\abs{(Q_kGQ_k^*)(c, c')} \leq Ce^{-\theta d(c, c')}$ and $\abs{(\Delta_k + a)(c, c')} \leq Ce^{-\theta d(c, c')}$ for all positive bonds $c$, $c'$ of the unit lattice.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(i) For every field $B$ on the unit lattice the last part of the proof of Proposition~\ref{prop:l2-bounds} exhibits a field $A$ with $Q_kA = B$, so that $Q_k$ is onto and $Q_k^*$ is injective; since $G$ is positive definite, so is $Q_kGQ_k^*$. Fix $B$ and consider the minimum of $\langle A, \Delta_aA\rangle$ over the fields with $Q_kA = B$. It is attained at one field $A_0$, and $\Delta_aA_0$ is orthogonal to the null space of $Q_k$, hence of the form $Q_k^*\omega$. Then $A_0 = GQ_k^*\omega$, the constraint gives $\omega = (Q_kGQ_k^*)^{-1}B$, and the minimum is $\langle A_0, \Delta_aA_0\rangle = \langle\omega, Q_kGQ_k^*\omega\rangle = \langle B, (Q_kGQ_k^*)^{-1}B\rangle$. On the other hand, $\langle A, \Delta_aA\rangle = \norm{\partial A}^2 + \norm{R\partial^*A}^2 + a\norm{B}^2$ on these fields, and by the gauge transformation in the proof of Proposition~\ref{prop:l2-bounds} every such field has a companion $A_s$ with $Q_kA_s = B$, $\partial A_s = \partial A$, and $R\partial^*A_s = 0$. The minimum is therefore $a\norm{B}^2$ plus the minimum of $\norm{\partial A}^2$ over the fields with $Q_kA = B$, which is $\langle B, \Delta_kB\rangle$ by the same proof, and it is attained at a field with $R\partial^*A = 0$, that is, at $H_kB$. Two quadratic forms which agree define the same operator.
+
+(ii) By \eqref{eq:action-bounds}, $0 \leq \langle B, \Delta_kB\rangle \leq \gamma_\phi^{-1}\norm{\partial_1B}^2$, and $\norm{\partial_1B}^2 \leq 24\norm{B}^2$, because the value of $\partial_1B$ at a plaquette is a signed sum of four values of $B$ and a bond lies in six plaquettes. With (i) this gives the bounds on $Q_kGQ_k^*$. By \eqref{eq:l2-lower}, $G \leq \gamma_0^{-1}$, so that $(a + 24\gamma_\phi^{-1})^{-1}\norm\omega^2 \leq \langle Q_k^*\omega, GQ_k^*\omega\rangle \leq \gamma_0^{-1}\norm{Q_k^*\omega}^2$.
+
+(iii) We have $(Q_kGQ_k^*)(c, c') = \langle J_c, GJ_{c'}\rangle$. A point at a distance of less than $4$ from $c_-$ lies in a block $\Delta(y'')$ with $d(y'', c_-) \leq 6$, and there are at most $13^4$ such blocks. Let $J_{c,y''}$ be the restriction of $J_c$ to the bonds which start in $\Delta(y'')$, so that $J_c$ is the sum of these restrictions and $\norm{J_{c,y''}}^2 \leq 2$ by \eqref{eq:source-of-bond}. Lemma~\ref{lem:l2-decay} gives $\abs{\langle J_{c,y''}, GJ_{c',y'''}\rangle} \leq 2C_0e^{-\theta_0d(y'', y''')}$ with the constant $C_0$ of that lemma, and $d(y'', y''') \geq d(c, c') - 12$; summing over the pairs of blocks we obtain the first bound, with $\theta = \theta_0$. For the second we apply Lemma~\ref{lem:combes-thomas} to $\mathsf M \coloneqq Q_kGQ_k^*$ on the set of the positive bonds of the unit lattice with the function $d(c, c')$, which vanishes for different bonds with the same starting point; the proof of that lemma uses only the triangle inequality. By (ii), $\mathsf M \geq \gamma \coloneqq (a + 24\gamma_\phi^{-1})^{-1}$, and by the first bound $\sum_{c'}\abs{\mathsf M(c, c')}(e^{\theta d(c, c')} - 1)$ is at most a constant times $\sum_{y \in \mathbb Z^4}e^{-\theta_0\abs y}(e^{\theta\abs y} - 1)$, which is at most $\frac12\gamma$ for $\theta$ small. The lemma and (i) give the second bound.
+\end{proof}
+
+The identity (i) replaces \cite[(1.99)]{BalabanPRT1}, the bounds (ii) are \cite[(1.100)]{BalabanPRT1} with the conclusion drawn there from \cite[(1.101)]{BalabanPRT1}, and the representation of $H_k$ is \cite[(1.103)]{BalabanPRT1}. The bounds on $H_k$ now follow from those on $G$.
+
+\begin{corollary}[The Minimiser]\label{cor:minimiser}
+For $\alpha \in [0, 1)$ there are constants $c$ and $\delta > 0$, which depend on $a$, $L$, and $\alpha$ and not on $k$ and the torus, such that for every field $B$ on the unit lattice and all points $x$, $x'$ of $T_\eta/\Gamma'$ with $d(x, x') \leq 1$,
+\begin{equation}\label{eq:minimiser-bounds}
+\begin{gathered}
+    \abs{(H_kB)(x)}\;,\ \abs{(\nabla H_kB)(x)} \leq c\sum_{c'}e^{-\delta d(x, c'_-)}\abs{B(c')}\;,\\
+    \abs{(\nabla H_kB)(x) - (\nabla H_kB)(x')} \leq c\,d(x, x')^\alpha\sum_{c'}e^{-\delta d(\{ x, x' \}, c'_-)}\abs{B(c')}\;.
+\end{gathered}
+\end{equation}
+\end{corollary}
+
+\begin{proof}
+By Lemma~\ref{lem:qgq}(i), $H_kB = \sum_c((\Delta_k + a)B)(c)\,GJ_c$. By \eqref{eq:source-of-bond} and Proposition~\ref{prop:one-two}(i) and (ii), $GJ_c$ and $\nabla GJ_c$ are at most $\frac75c\,e^{4\delta_G}e^{-\delta_Gd(x, c_-)}$ in modulus at $x$, with the corresponding bound for the differences of $\nabla GJ_c$, and by Lemma~\ref{lem:qgq}(iii), $\abs{((\Delta_k + a)B)(c)} \leq C\sum_{c'}e^{-\theta d(c, c')}\abs{B(c')}$. The sum over $c$ of the product of the two exponentials is at most a constant times $e^{-\delta d(x, c'_-)}$ with $\delta \coloneqq \frac12\min(\delta_G, \theta)$.
+\end{proof}
+
+We turn to the second derivatives. The decay of Lemma~\ref{lem:l2-decay} was obtained with a weight which is Lipschitz continuous, and such a weight does not commute with the Laplace operator up to a bounded error. The second derivatives are therefore localised afterwards, with a cutoff which has two bounded derivatives. We write $\nabla\nabla A \coloneqq (\partial'_\nu\partial'_{\nu'}A)_{\nu,\nu'}$, and $\nabla^*\nabla^*J \coloneqq \sum_{\nu,\nu'}\partial'^*_{\nu'}\partial'^*_\nu J_{\nu\nu'}$ for a family $J = (J_{\nu\nu'})$ of fields.
+
+\begin{lemma}[Second Derivatives in $L^2$]\label{lem:l2-second}
+Let $a > 0$. There are constants $\theta_2 > 0$ and $C$, which depend on $a$ and not on $k$, $L$, and the torus, such that for all $y, y' \in \mathbb Z^4$ and every field $J$, or family of fields $J$, supported in the bonds starting in $\{ x \, | \, d(x, y') \leq 2 \}$,
+\begin{equation}\label{eq:l2-second}
+    \norm{\nabla\nabla GJ}_{\Delta(y)} \leq Ce^{-\theta_2d(y, y')}\norm{J}\;,
+    \qquad
+    \norm{G\nabla^*\nabla^*J}_{\Delta(y)} \leq Ce^{-\theta_2d(y, y')}\norm{J}\;.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Let $F \coloneqq GJ$, regarded as a periodic field on $T_\eta$, and let $\chi(t) \coloneqq \prod_\mu\psi(t_\mu - y_\mu - \frac12)$ for $t \in \mathbb R^4$, with a fixed twice continuously differentiable function $\psi$ on $\mathbb R$ with values in $[0, 1]$ which is $1$ on $[-\frac32, \frac32]$ and $0$ outside $[-\frac52, \frac52]$. Then $\chi F$ has a finite support, and for a field $A$ of finite support on $T_\eta$ we have $\norm{\nabla\nabla A} = \norm{\Delta A}$, because the operators $\partial'_\nu$ commute with each other and with their adjoints. The points which enter $\partial'_\nu\partial'_{\nu'}F$ at a point of $\Delta(y)$ have coordinates within $2\eta$ of the cube $y + [0, 1)^4$, where $\chi = 1$, so that $\norm{\nabla\nabla F}_{\Delta(y)} \leq \norm{\Delta(\chi F)}$. For a point $x$ and each component of $F$,
+\begin{equation}\label{eq:leibniz}
+\begin{split}
+    \bigl(\Delta(\chi F) - \chi\Delta F\bigr)(x) = -\eta^{-2}\sum_\nu\sum_{\pm}\bigl(\chi(x \pm \eta e'_\nu) - \chi(x)\bigr)\bigl(F(x \pm \eta e'_\nu) - F(x)\bigr)\\
+    {} - \eta^{-2}\sum_\nu\bigl(\chi(x + \eta e'_\nu) + \chi(x - \eta e'_\nu) - 2\chi(x)\bigr)F(x)\;,
+\end{split}
+\end{equation}
+as one sees by writing out the two second differences. The first differences of $\chi$ are at most $\varkappa\eta$ and the second ones at most $\varkappa_2\eta^2$ in modulus, with constants which depend on $\psi$ only, so that the right side is at most $\varkappa\sum_\nu(\abs{(\partial'_\nu F)(x)} + \abs{(\partial'_\nu F)(x - \eta e'_\nu)}) + 4\varkappa_2\abs{F(x)}$. The support of $\chi$ is contained in the union of the blocks $\Delta(y'')$ with $y'' - y \in \{ -2, \dots, 2 \}^4$, each of which is mapped injectively to the torus. Hence $\norm{\Delta(\chi F)}$ is at most a constant times the sum, over the $y''$ with $y'' - y \in \{ -3, \dots, 3 \}^4$, of $\norm{\Delta F}_{\Delta(y'')} + \norm{\nabla F}_{\Delta(y'')} + \norm{F}_{\Delta(y'')}$, the norms being those of the torus.
+
+By Lemma~\ref{lem:l2-decay} the last two norms are at most $C_0e^{-\theta_0d(y'', y')}\norm{J}$. For the first we use $\Delta F = J + \partial P\partial^*F - aQ_k^*Q_kF$. The norm of $J$ over $\Delta(y'')$ is at most $\norm J$, and it vanishes unless $d(y'', y') \leq 4$. By \eqref{eq:local-projection} and Lemma~\ref{lem:l2-decay}, $\norm{\partial P\partial^*F}_{\Delta(y'')} \leq 2\sup_{\Delta(y'')}\abs{\partial P\partial^*F} \leq 2c\sum_{y'''}e^{-\delta_\varpi\abs{y'' - y'''}}C_0e^{-\theta_0d(y''', y')}\norm{J}$, and by the estimates in the proof of \eqref{eq:local-average}, $\norm{Q_k^*Q_kF}_{\Delta(y'')} \leq 4\norm{F}_{X_{y''}}$, where $X_{y''}$ is contained in the blocks whose corners are at a distance of at most $11$ from $y''$. Since $d(y'', y) \leq 6$, all these terms are at most a constant times $e^{-\theta_2d(y, y')}\norm{J}$ with $\theta_2 \coloneqq \frac12\min(\theta_0, \delta_\varpi)$, which is the first bound of \eqref{eq:l2-second}.
+
+For the second, let $\Phi$ be a field supported in the bonds starting in $\Delta(y)$. Since $G$ is symmetric, $\langle\Phi, G\nabla^*\nabla^*J\rangle = \langle\nabla\nabla G\Phi, J\rangle$, and the support of $J$ lies in the blocks $\Delta(y'')$ with $d(y'', y') \leq 4$. The first bound, with $y$ and $y''$ exchanged, bounds this by a constant times $e^{-\theta_2d(y, y')}\norm\Phi\norm{J}$.
+\end{proof}
+
+With Lemma~\ref{lem:l2-decay} this is \cite[(1.114)]{BalabanPRT1}: for a function $\zeta$ supported in $\Delta(y)$ the norms there are at most $\sup\abs\zeta$ times the norms over $\Delta(y)$.
+
+It remains to describe the commutators. For a function $h$ on the torus and fields $A$ on $T_\eta/\Gamma'$ and $B$ on the unit lattice we write $(hA)(b) \coloneqq h(b_-)A(b)$ and $(hB)(c) \coloneqq h(c_-)B(c)$ for positive bonds. Ba{\l}aban defines the commutator of $Q_k$ with $h$ through the contours and the segments of his average \cite[(1.120)]{BalabanPRT1}. The sums of $\partial h$ over paths which occur there are differences of the values of $h$, so that the definition does not depend on the paths, and it can be stated for any average.
+
+\begin{lemma}[Commutators with a Function]\label{lem:commutators}
+Let $h$ be a function on $T_\eta/\Gamma'$ with $\abs{h(x) - h(x')} \leq \varkappa\,d(x, x')$ for all $x$, $x'$ and $\abs{h(x + \eta e'_\nu) + h(x - \eta e'_\nu) - 2h(x)} \leq \varkappa_2\eta^2$ for all $x$ and $\nu$, and put
+\begin{equation}\label{eq:commutators}
+    S(h) \coloneqq Q_kh - hQ_k\;,
+    \qquad
+    P_1(h) \coloneqq h\,\partial P\partial^* - \partial P\partial^*h\;.
+\end{equation}
+\begin{enumerate}[label=(\roman*)]
+\item $Q_k^*Q_kh = hQ_k^*Q_k - S(h)^*Q_k + Q_k^*S(h)$, and $\Delta_ah = h\Delta_a - K(h)$ with
+\begin{equation}\label{eq:commutator-k}
+    K(h) \coloneqq (h\Delta - \Delta h) + aS(h)^*Q_k - aQ_k^*S(h) - P_1(h)\;.
+\end{equation}
+\item $\abs{(S(h)A)(c)} \leq \frac{28}{5}\varkappa\sup\abs A$, the supremum over the bonds which start at a distance of less than $4$ from $c_-$, and $\norm{S(h)A} \leq 6\varkappa\norm{A}$.
+\item $P_1(h)$ has the kernel $(h(x) - h(x'))\varpi_{\nu\nu'}(x, x')$, which is at most $\varkappa c_\varpi\abs{x - x'}e^{-\delta_\varpi\abs{x - x'}}$ in modulus.
+\item $\abs{((h\Delta - \Delta h)A)(x)} \leq \varkappa\sum_\nu(\abs{(\partial'_\nu A)(x)} + \abs{(\partial'_\nu A)(x - \eta e'_\nu)}) + 4\varkappa_2\abs{A(x)}$ for each component of $A$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(i) By the definition, $Q_kh = hQ_k + S(h)$, and taking adjoints, $hQ_k^* = Q_k^*h + S(h)^*$. Hence $Q_k^*Q_kh = Q_k^*hQ_k + Q_k^*S(h) = hQ_k^*Q_k - S(h)^*Q_k + Q_k^*S(h)$, and the formula for $K(h)$ follows from $\Delta_a = \Delta - \partial P\partial^* + aQ_k^*Q_k$. (ii) By \eqref{eq:vector-average}, $(S(h)A)(c)$ is the average at $c$ of the field $(h - h(c_-))A$. The bonds which enter it start at a distance of less than $4$ from $c_-$, where $\abs{h - h(c_-)} \leq 4\varkappa$, and the two bounds follow from the proof of Lemma~\ref{lem:four-inequalities}(i), in which the average of a field is at most $\frac75$ times its supremum, and its square is bounded by a sum over its own bonds. (iii) is \eqref{eq:projection-kernel} and \eqref{eq:projection-bounds}, and (iv) is \eqref{eq:leibniz} with $h$ in place of $\chi$.
+\end{proof}
+
+Statement (i) is \cite[(1.120), (1.121)]{BalabanPRT1}. For the functions $h_z$ of \cite[(1.118)]{BalabanPRT1}, which are products of functions of the coordinates $x_\mu/M_0$, the constants are $\varkappa = O(M_0^{-1})$ and $\varkappa_2 = O(M_0^{-2})$, and (ii)--(iv) give the bound \cite[(1.128)]{BalabanPRT1} on $h_{z_1}K(h_{z_2})$ as in the text. The expansion \cite[(1.119)--(1.123)]{BalabanPRT1} with its estimates \cite[(1.124)--(1.131)]{BalabanPRT1} is therefore available in the tilted run, although we have proved Proposition~\ref{prop:one-two} without it.
+
 \section{What Is Not Covered}\label{sec:not-covered}
 
 The equality \eqref{eq:target} is not proved. By Proposition~\ref{prop:reduction} it is equivalent to a comparison of the construction of the paper on $\Lambda_K$, on the torus $\mathbb T_\Gamma$, with the tilted run, and for this comparison the following has not been examined.
