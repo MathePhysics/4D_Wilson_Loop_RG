@@ -131,6 +131,33 @@ rate comparison, the root sum for (Z), and the difference count 3748–3815.
 
 ## State
 
+- **12 Nov 2026, 20:45 (from `date`). What the cut readings lost (checked by line length against each cut).**
+  The digests below say "tags cut at N characters". Measured: D2.1(2)–(5) lost 12 characters of line 937 ("in a
+  cube of side M (D2.0(5)(f))."); D2.2(4)(a)–(c), (e), D2.3(2)–(3), D2.4(12) and (13)(a), the general-loops note
+  §4, and the SW closure lost nothing (no line exceeds the cut); D2.2(6)(c)–(d) lost the ends of lines 1856 and
+  1858, and D2.4(13)(b)–(c) the ends of lines 3767, 3770, 3788, 3796, all six read now; D2.2(5) was cut at 520
+  and has been re-read in full (20:36), with RG II pp. 11–15 ((1.41)–(1.43), (2.1)–(2.15)) in the corrected
+  transcription. So those digests are digests of full readings. Not read in full: D2.4(10)–(11) (headed items
+  only), D2.2(4)(d) after line 1232, D2.2(4)(f), D2.2(6)(a), (b1)–(b3), (b6)–(b7), (e), (f), D2.4(1)–(3), (7)–(8),
+  the D2.6 and D2.7 closures, the two-loops note (6), (6A)–(6C) apart from #384–#409 and #555–#576.
+  **Method from here on:** `sed -n` without a cut, or with a cut above the longest line of the range.
+  Also recorded: `FINDINGS.md` F27 (the conditions of Supplement, Lemma 17.22 against the table: the bound on a₁
+  is a factor 4 below the note's; (C-H) has no row in the table).
+- **Members with several intervals in the expansion of a word (two-loops note #573–#574, read in full 20:37;
+  D2.2(4)(e) read in full, longest line 379 characters).** (1) Cov(k): the domain X_W of an insertion contains
+  its intervals (map #MD2.2.4.3). (2) A member W is *touched* by a term if a component meets X_W; S′(Y) holds all
+  the intervals of each member touched by Y. (3) *The enlargement adds nothing*: an interval J cut by the smallest
+  arc containing S′_i(Y) would contain an end bond b of that arc; the touched intervals lie inside the arc and
+  the intervals are pairwise disjoint, so b is a bond of C_i in Y; then X_W ⊇ J meets Y, W is touched, and J lies
+  in the arc. So the draft's "enlarged at each end" is deleted. (4) An untouched member with an interval inside
+  I(G) does not depend on the parameters (its domain meets no component) and stays outside Y_G, evaluated at
+  U_{k+1}; Y_G is the contraction along I(G) of the touched members and the transports between them, with the
+  intervals of the untouched members left open, so that its arc set is I(G) minus those intervals; the word is
+  the contraction, by multilinearity. (For one loop the map's #MD2.2.4.55 puts these untouched members inside
+  Y_G; the two forms differ by a regrouping of an ordered product, and the second form is the one which is
+  defined for members with intervals on several loops. The step-(k+1) group collects them later by the arc
+  rule.) The draft lemma is rewritten in this form.
+
 - **12 Nov 2026, 20:34 (from `date`: 20:32 two calls ago).** Read D2.2(6)(b4)–(b5) (lines 1756–1802): the
   argument 𝐉′ for k ≥ 2 is RG I (3.10)–(3.13)'s (the draft now has it); covariance of 𝐉′, of Y_G, of the marked
   activities H̃(M) (changes of variables B ↦ R(u)B, X ↦ R(u)X with Jacobian 1; RG II Lemma 2's last statement,

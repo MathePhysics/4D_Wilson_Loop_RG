@@ -2832,6 +2832,114 @@ once $36c_F\xi B_3M_{\mathcal Q}E \leq 1$, which follows from $2M_{\mathcal Q}E 
 
 When the hypothesis \eqref{eq:local-gauge-hypothesis} fails, $E$ or $M_{\mathcal Q}E$ is bounded below by a constant which does not depend on the coupling, and the paper then uses no gauge: a bound by the curvature holds trivially when the curvature is of order one in these units.
 
+The last statement of this section concerns the change of variables by which Ba{\l}aban removes the dependence of the test functions of the set $S_{k+1}$ on the new field \cite[p.~269]{BalabanCRE}. He makes the substitution inside an integral, and for the density only the equality of the integrals before and after it matters. When a further factor is carried through the step, the substitution has to be a change of variables in the proper sense, a diffeomorphism between the domains of the old and of the new variables, with which that factor can be composed. For the first step this is \cite[Lemma~3.8]{WilsonFirstStep}. We prove it here for the later steps by the argument of that lemma; the difference is that the comparison of $V^{(k)}$ with its local approximations, which at the first step holds with the tolerance of the test function, is available at the later steps only with the constant of \cite[(3.13), p.~267]{BalabanCRE}, which is not small, so that the numerical constants of the argument become functions of that constant.
+
+\emph{The setting.} We fix a step $k + 1 \geq 2$ and a labelled term, with the sets $\Omega_{k+1}$ and $R_{k+1}$ and the sets $\Lambda_{k+1}$ and $S_{k+1}$ of \cite[(3.20), p.~269]{BalabanCRE}, and we work in the units of the step $k$. For a set $X$ which is a union of blocks, $X^{(k)*}$ is the set of the bonds of the scale $k$ with at least one end in $X$, without the bonds $b_0(c)$ of the bonds $c$ of the scale $k + 1$ which have an end in $X$ \cite[p.~247]{BalabanCRE}. The fluctuation variable of the step is the field $A_k$ of the integral \cite[(3.15), pp.~267--268]{BalabanCRE}, in which $V_k = e^{iB'}V^{(k)}$ with $B' = g_kCA_k - h\tilde D(g_kCA_k)$. The function $h\tilde D$ ``is equal to $0$ everywhere, except the set $\{ b_0(c) : c \in T^{(k+1)} \}$'' \cite[p.~267]{BalabanRG1}, and $C$ expresses the variables of those bonds, which the $\delta$-functions eliminate, through the remaining ones \cite[p.~268]{BalabanRG1}; these are statements for one domain, and \cite[p.~267]{BalabanCRE} transfers them to the operators of a sequence of domains. Hence
+\begin{equation}\label{eq:bond-form}
+    V_k(b) = e^{ig_kA_k(b)}V^{(k)}(b)
+\end{equation}
+for every bond $b$ which carries a variable $A_k(b)$ and is not a bond $b_0(c)$. Let $\mathcal B$ be the set of the bonds of $S_{k+1}^{(k)*}$ which carry a variable of that integral. No bond $b \in \mathcal B$ is a bond $b_0(c)$: if $b = b_0(c)$, the ends of $b$ lie in the blocks of the ends of $c$; the end of $b$ in $S_{k+1}$ lies in a block which is contained in $S_{k+1}$, because $S_{k+1}$ is a union of cubes of a partition which is ``compatible with all the other partitions'' \cite[p.~265]{BalabanCRE}; so $c$ has an end in $S_{k+1}$, which the definition of $S_{k+1}^{(k)*}$ excludes. Therefore \eqref{eq:bond-form} holds on $\mathcal B$.
+
+\emph{Norms and charts.} We write $\abs{\,\cdot\,}$ for the norm of the test functions, on the Lie algebra $\mathfrak g$ and on matrices, with $G \subset U(N)$, and we use the chart of \cite[Section~3]{WilsonFirstStep}: the chart ball, an open neighbourhood of $0$ in $\mathfrak g$ on which $X \mapsto e^{iX}$ is a diffeomorphism onto the chart domain in $G$, the chart logarithm $\log$, which is its inverse, and the constant $r_G \in (0, 1]$ of \cite[Appendix~B]{WilsonFirstStep}. The following facts are listed, with their reasons, at the beginning of the proof of \cite[Lemma~3.8]{WilsonFirstStep}.
+\begin{enumerate}[label=(N\arabic*)]
+\item The chart ball contains every $X \in \mathfrak g$ with $\abs X < \pi/\sqrt N$, and $\norm{X}_{\mathrm{op}} < \pi$ for every $X$ in it.
+\item For Hermitian $X$ with $\norm{X}_{\mathrm{op}} \leq \pi$, $\abs{e^{iX} - 1} \leq \abs X \leq \frac{\pi}{2}\abs{e^{iX} - 1}$.
+\item $\abs{UY} = \abs{YU} = \abs Y$ for unitary $U$, so that $\abs{UU' - 1} \leq \abs{U - 1} + \abs{U' - 1}$ for unitary $U$ and $U'$.
+\item An element $U$ of $G$ with $\abs{U - 1} \leq r_G/\sqrt N$ lies in the chart domain.
+\item If $e^{iX} = 1 + iX + R(X)$, the differential of $R$ at $X$ has norm at most $e^{\norm{X}_{\mathrm{op}}} - 1 \leq e^{\sqrt N\abs X} - 1$ with respect to $\abs{\,\cdot\,}$. Consequently, if $e^{\sqrt N\varrho} - 1 \leq \frac12$, then $\abs{e^{iX} - e^{iX'}} \geq \frac12\abs{X - X'}$ for all Hermitian $X$, $X'$ with $\abs X, \abs{X'} \leq \varrho$, by the mean value inequality on the segment from $X'$ to $X$.
+\end{enumerate}
+
+\emph{The maps.} For $b \in \mathcal B$ put $H_b \coloneqq \mathbf H^{(k)}(b)$, with the field $\mathbf H^{(k)}$ of \cite[(3.22), p.~269]{BalabanCRE}, and let $\omega_b$ be the bump function of Definition~\ref{def:bump-functions} at the pair $(g_k, \vartheta_k)$ if $b \in (R_{k+1}^{\sim2} \cap S_{k+1})^{(k)*}$, and $\omega_b \coloneqq 1$ otherwise. In the variable $x = g_kA'$ the bump function is $\tilde\omega(x) = \varphi_1(\abs x/\vartheta_k)$, so that, with $c_\varphi \coloneqq \sup\abs{\varphi_1'}$,
+\begin{equation}\label{eq:bump-lipschitz}
+    \abs{\tilde\omega(x) - \tilde\omega(x')} \leq \frac{c_\varphi}{\vartheta_k}\abs{x - x'}\;,
+\end{equation}
+by the mean value theorem for $\varphi_1$ and the triangle inequality for the norm; for $\omega_b = 1$ the left side vanishes. The change of variables of \cite[p.~269]{BalabanCRE}, which is \cite[(1.22), p.~251]{BalabanCRE} ``with $\mathbf H^{(k)}(b)$ instead of $\mathbf H_{1,\mathrm{Ax}}(b)$'' on the bonds of $(R_{k+1}^{\sim2} \cap S_{k+1})^{(k)*}$ and ``the simpler change of variables with the function $g(A_k'(b))$ replaced by $1$'' on the remaining bonds, is $A_k(b) = \psi_b(A'(b))$ with
+\begin{equation}\label{eq:boundary-change-map}
+    \psi_b(A') \coloneqq \frac{1}{g_k}\log\Bigl(e^{ig_kA'}e^{-i\omega_b(A')H_b}\Bigr)\;,
+\end{equation}
+which is a $C^\infty$ map on the open set $\mathcal W_b$ of the $A' \in \mathfrak g$ for which $g_kA'$ lies in the chart ball and the argument of the logarithm lies in the chart domain. For $b \in \mathcal B$ let $\square'(b) \subset S_{k+1}$ be a cube of side $L^2M_2R_{k+1}$, of the partition of \cite[p.~265]{BalabanCRE}, which contains an end of $b$. One exists, because $S_{k+1} = (\Omega_{k+1} \setminus \Omega_{k+1}^{\sim-1}) \cup R_{k+1}$ is a union of such cubes: the layer by the compatibility of the partitions, and $R_{k+1}$ by \cite[(3.16), p.~268]{BalabanCRE}. With the configuration $V^{(k)}_{\square'}$ of \cite[(3.4), p.~265]{BalabanCRE} and the width $\kappa_s$ of the soft test functions, put
+\begin{equation}\label{eq:boundary-change-constants}
+\begin{gathered}
+    Z_b \coloneqq V^{(k)}(b)\bigl(V^{(k)}_{\square'(b)}(b)\bigr)^{-1}\;,
+    \qquad
+    C_Z \coloneqq (1 + \kappa_s)(4dL)^2(1 + \beta_0)B_3\frac{A_0}{A_1}\;,\\
+    c_s \coloneqq 2(1 + \kappa_s) + C_Z\;,
+    \qquad
+    r_y \coloneqq \frac{\pi}{2}c_s\;,
+    \qquad
+    r_K \coloneqq r_y + 1\;,\\
+    r_F \coloneqq \frac{\pi}{2}\Bigl(r_K + \frac{1}{40}\Bigr)\;,
+    \qquad
+    h_\varphi \coloneqq \max(40,\, 7c_\varphi)\;,
+\end{gathered}
+\end{equation}
+and let
+\begin{equation}\label{eq:boundary-change-test-set}
+    \mathcal T_b \coloneqq \bigl\{ A \in \mathfrak g \,\big|\, g_kA \text{ lies in the chart ball and } \abs{e^{ig_kA}Z_b - 1} < 2(1 + \kappa_s)\vartheta_k \bigr\}\;,
+\end{equation}
+an open subset of $\mathfrak g$. All these constants are fixed before the coupling.
+
+\begin{lemma}[The Change of Variables on the Bonds of $S_{k+1}$]\label{lem:boundary-change}
+Suppose that
+\begin{equation}\label{eq:boundary-change-hypotheses}
+    \vartheta_k \leq \min\Bigl(\frac{\log(3/2)}{\sqrt N\,r_F},\ \frac{r_G}{\sqrt N\,(r_K + \frac{1}{40})}\Bigr)
+    \qquad\text{and}\qquad
+    \max_{b \in \mathcal B}\abs{H_b} \leq \frac{\vartheta_k}{h_\varphi}\;.
+\end{equation}
+Then, for every bond $b \in \mathcal B$:
+\begin{enumerate}[label=(\alph*)]
+\item $A_k(b) \in \mathcal T_b$ at every point of the support of the test functions of the term;
+\item $\mathcal T_b \subset \psi_b(\mathcal W_b)$;
+\item $\psi_b$ is injective on $\psi_b^{-1}(\mathcal T_b)$, and its differential is invertible at every point of that set.
+\end{enumerate}
+Consequently the map $\Psi_{k+1}$ which acts as $\psi_b$ on the variable of each bond $b \in \mathcal B$ and as the identity on the variables of the other bonds, whose set we call $\mathcal B'$, is a $C^\infty$ diffeomorphism of the open set $\prod_{b \in \mathcal B}\psi_b^{-1}(\mathcal T_b) \times \mathfrak g^{\mathcal B'}$ onto the open set $\prod_{b \in \mathcal B}\mathcal T_b \times \mathfrak g^{\mathcal B'}$. The second set contains the support of the test functions of the term in the variables $A_k$, and for every Borel function $G$ of these variables which vanishes off that support and every bounded Borel function $F$ on it,
+\begin{equation}\label{eq:boundary-change-identity}
+    \int G(A)\,F(A)\,\dd A = \int G(\Psi_{k+1}A')\,F(\Psi_{k+1}A')\,\abs{\det D\Psi_{k+1}(A')}\,\dd A'\;,
+\end{equation}
+whenever one of the two integrals converges absolutely.
+\end{lemma}
+
+Both hypotheses hold in the construction of the paper when $\gamma$ is small. The first does because $\vartheta_k = (A_1/A_0)\hat g_kp_0(\hat g_k)$ tends to zero with the coupling, uniformly in $k$. For the second, $\mathbf H^{(k)}$ is ``bounded on the set $S_{k+1}$ by $O(1)\varepsilon_k\exp(-R_k)$'' \cite[p.~269]{BalabanCRE}, the bonds of a set being those which meet it \cite[p.~251]{BalabanRG1}, so that the bound holds on $\mathcal B$; since $\varepsilon_k = (A_0/A_1)\vartheta_k$, it gives $\abs{H_b} \leq \vartheta_k/h_\varphi$ as soon as $e^{R_k} \geq h_\varphi\,O(1)A_0/A_1$, and $R_k \geq (\log\hat g_k^{-2})^r$.
+
+\begin{proof}
+We prove (a), (b), and (c) for a fixed bond $b \in \mathcal B$, in the variable $x = g_kA'$ of the group, and then deduce the statements on $\Psi_{k+1}$. Write $H \coloneqq H_b$, $W(x) \coloneqq e^{-i\tilde\omega(x)H}$, where $\tilde\omega$ is the bump function in the variable $x$ or the constant $1$, and
+\[
+    F(x) \coloneqq \log\bigl(e^{ix}W(x)\bigr)\;,
+\]
+so that $\psi_b(A') = g_k^{-1}F(g_kA')$ on $\mathfrak B_b \coloneqq g_k\mathcal W_b$. By (N2) and the second hypothesis, $\abs{W(x) - 1} \leq \abs H \leq \vartheta_k/40$ for every $x$.
+
+\emph{The size of $Z_b$.} By \cite[(3.13), p.~267]{BalabanCRE}, $\abs{V^{(k)} - V^{(k)}_{\square'}} < (4dL)^2(1 + \beta_0)B_3\varepsilon_k$ on $\square'^{\sim}$ for every cube $\square' \subset \Omega_{k+1}$, a bound drawn from passed test functions of the plaquettes, which for the soft test functions holds with the factor $1 + \kappa_s$ (Proposition~\ref{prop:soft-tests}(b)). The bond $b$ has an end in $\square'(b)$, so that it lies in $\square'(b)^{\sim}$, and by (N3) and $\varepsilon_k = (A_0/A_1)\vartheta_k$
+\begin{equation}\label{eq:boundary-change-z}
+    \abs{Z_b - 1} = \bigl\lvert V^{(k)}(b) - V^{(k)}_{\square'(b)}(b)\bigr\rvert < C_Z\vartheta_k\;.
+\end{equation}
+
+\emph{(a).} Let $A = A_k(b)$ at a point of the support and $y \coloneqq g_kA$. The factor of the cube $\square'(b)$ in the test function $\chi_k'(S_{k+1})$ of \cite[(3.21), p.~269]{BalabanCRE} is the passed test function of the reference configuration \cite[(3.3), p.~265]{BalabanCRE}, and $b \in (\square'(b)^{\sim2})^{(k)*}$, since $b$ has an end in $\square'(b)$ and is not a bond $b_0(c)$. On the support of the soft test function its quantity is below $(1 + \kappa_s)$ times the threshold $2\vartheta_k$ (Paper, Lemma~\ref{P-lem:soft-decomposition}(ii)), and with \eqref{eq:bond-form} this reads
+\[
+    \abs{e^{iy}Z_b - 1} = \bigl\lvert V_k(b)\bigl(V^{(k)}_{\square'(b)}(b)\bigr)^{-1} - 1\bigr\rvert < 2(1 + \kappa_s)\vartheta_k\;.
+\]
+By (N3) and \eqref{eq:boundary-change-z}, $\abs{e^{iy} - 1} \leq \abs{e^{iy}Z_b - 1} + \abs{Z_b^{-1} - 1} < c_s\vartheta_k$, which is \cite[(3.14), p.~267]{BalabanCRE} with the constants of the soft test functions. Since $c_s \leq r_K + \frac{1}{40}$, the first hypothesis gives $c_s\vartheta_k \leq r_G/\sqrt N$, so that $V_k(b)V^{(k)}(b)^{-1} = e^{iy}$ lies in the chart domain by (N4), and $y$, which is its logarithm $A_k' = (1/i)\log V_k'$ of \cite[p.~267]{BalabanCRE}, lies in the chart ball. Hence $A \in \mathcal T_b$.
+
+\emph{(b).} Let $A \in \mathcal T_b$ and $y \coloneqq g_kA$. As in (a), $\abs{e^{iy} - 1} < c_s\vartheta_k$, and $\norm{y}_{\mathrm{op}} < \pi$ by (N1), so that $\abs y \leq r_y\vartheta_k$ by (N2). Let
+\[
+    K \coloneqq \{ x \in \mathfrak g \,|\, \abs x \leq r_K\vartheta_k \}\;,
+\]
+a compact convex set. It is contained in $\mathfrak B_b$: for $x \in K$ we have $\abs x \leq r_K\vartheta_k < \pi/\sqrt N$ by the first hypothesis and $r_G \leq 1$, so that $x$ lies in the chart ball by (N1), and $\abs{e^{ix}W(x) - 1} \leq \abs x + \abs H \leq (r_K + \frac{1}{40})\vartheta_k \leq r_G/\sqrt N$ by (N2) and (N3), so that $e^{ix}W(x)$ lies in the chart domain by (N4). For $x \in K$ the identity $e^{iF(x)} = e^{ix}W(x)$ and (N3) give $\abs{e^{iF(x)} - e^{ix}} = \abs{W(x) - 1} \leq \abs H$ and $\abs{e^{iF(x)} - 1} \leq (r_K + \frac{1}{40})\vartheta_k$; since $F(x)$ lies in the chart ball, (N1) and (N2) give $\abs{F(x)} \leq r_F\vartheta_k$. Both $x$ and $F(x)$ therefore lie in the ball of radius $\varrho \coloneqq r_F\vartheta_k$, on which $e^{\sqrt N\varrho} - 1 \leq \frac12$ by the first hypothesis, and (N5) gives
+\begin{equation}\label{eq:boundary-change-shift}
+    \abs{F(x) - x} \leq 2\abs{e^{iF(x)} - e^{ix}} \leq 2\abs H \leq \frac{\vartheta_k}{20}\;.
+\end{equation}
+The map $T(x) \coloneqq x - F(x) + y$ is continuous on $K$, and $\abs{T(x)} \leq \vartheta_k/20 + r_y\vartheta_k < r_K\vartheta_k$ by \eqref{eq:boundary-change-shift}, so that $T$ maps $K$ into itself. By Brouwer's fixed point theorem it has a fixed point $x \in K$, which satisfies $F(x) = y$. Then $A' \coloneqq x/g_k \in \mathcal W_b$ and $\psi_b(A') = A$.
+
+\emph{(c).} Let $x, x' \in \mathfrak B_b$ with $F(x) = F(x') = y$ and $y/g_k \in \mathcal T_b$. From $e^{ix} = e^{iy}W(x)^{-1}$, (N3), and the bound $\abs{e^{iy} - 1} < c_s\vartheta_k$ of (b) we get $\abs{e^{ix} - 1} < (c_s + \frac{1}{40})\vartheta_k$, hence $\abs x \leq \frac{\pi}{2}(c_s + \frac{1}{40})\vartheta_k \leq r_K\vartheta_k$ by (N1) and (N2); likewise for $x'$. So both points lie in $K$, and in the ball of radius $r_F\vartheta_k$ of (b). From $e^{ix}W(x) = e^{ix'}W(x')$ we get $e^{ix} - e^{ix'} = e^{ix'}\bigl(W(x')W(x)^{-1} - 1\bigr)$ with $W(x')W(x)^{-1} = e^{i(\tilde\omega(x) - \tilde\omega(x'))H}$, and therefore, by (N3), (N2), \eqref{eq:bump-lipschitz}, and the second hypothesis,
+\[
+    \abs{e^{ix} - e^{ix'}} \leq \abs{\tilde\omega(x) - \tilde\omega(x')}\,\abs H \leq \frac{c_\varphi}{\vartheta_k}\abs{x - x'}\,\frac{\vartheta_k}{7c_\varphi} = \frac17\abs{x - x'}\;,
+\]
+while $\abs{e^{ix} - e^{ix'}} \geq \frac12\abs{x - x'}$ by (N5). Hence $x = x'$. For the differential at such a point $x$, write $P(x) \coloneqq e^{ix}W(x)$, so that $F = \log \circ P$; the differential of the chart logarithm is invertible on the chart domain, and it suffices that $DP(x)$ be injective. Now $DP(x)[v] = D(e^{i\,\cdot})(x)[v]\,W(x) + e^{ix}\,DW(x)[v]$, where the second term has norm $\abs{D\tilde\omega(x)[v]}\,\abs H \leq \frac17\abs v$ by \eqref{eq:bump-lipschitz}, and the first has norm $\abs{iv + DR(x)[v]} \geq \frac12\abs v$ by (N3) and (N5). So $DP(x)[v] = 0$ only for $v = 0$.
+
+\emph{The map $\Psi_{k+1}$.} The sets $\mathcal T_b$ are open, the maps $\psi_b$ are $C^\infty$ on the open sets $\mathcal W_b$, and $\Psi_{k+1}$ acts bond by bond. By (b), $\psi_b$ maps $\psi_b^{-1}(\mathcal T_b)$ onto $\mathcal T_b$; by (c) it is injective there with invertible differential, so that, by the inverse function theorem, it is a $C^\infty$ diffeomorphism of $\psi_b^{-1}(\mathcal T_b)$ onto $\mathcal T_b$. The product of these maps with the identity of $\mathfrak g^{\mathcal B'}$ is the asserted diffeomorphism. By (a) the support of the test functions lies in $\prod_b\mathcal T_b \times \mathfrak g^{\mathcal B'}$, and \eqref{eq:boundary-change-identity} is the formula for the change of variables under a $C^\infty$ diffeomorphism of open subsets of a Euclidean space, applied to the function $GF$, which vanishes off that support.
+\end{proof}
+
+In \eqref{eq:boundary-change-identity} the function $G(\Psi_{k+1}A')\abs{\det D\Psi_{k+1}(A')}$ is Ba{\l}aban's integrand in the new variables: he writes the Jacobian and the change of the action as the term $V^{(k)}(S_{k+1}, A_k, \mathbf H^{(k)})$ \cite[p.~269]{BalabanCRE}, and the test functions in the new variables are those of Proposition~\ref{prop:soft-tests}(c). The lemma adds that a further factor $F$ is carried by composition with $\Psi_{k+1}$.
+
 \section[The Activities of the Reference Gases]{The Activities of the Reference Gases and First-Order Bounds for Their Cluster Weights}\label{sec:weights-large-fields}
 
 The interactions $Q_k(\mathfrak B)$ and the local terms of the exponent $\mathcal E_k$ of a dressed loop are numbers on each labelled term (Paper, Definition~\ref{P-def:dressed-loop}(iv)): they are cluster terms of the reference gases of the steps, and they depend on the run only through the activities of these gases. On the trivial term Proposition~\ref{prop:recursion-differences}(i) compares the activities of the two runs and, through them, the weights. On a term with large fields there is a difficulty which the trivial term does not have. The insertions attached to a large-field region are compared between the two runs only in total, over the history of their component, because they are carried as functions which are never summed over the loop (Paper, Section~\ref{P-sec:large-field-step}); the difference of two such insertions has a part which is small relative to their bound and a part, the difference of the old wrapping insertions which they have taken in, which is small only in its total. Neither statement is a bound on the difference of a single activity, and a cluster series whose activities contained attached insertions could not be compared term by term. This section contains the two facts on which a comparison of the weights on such terms rests: the bounds which pass from a change of the activities to the change of the cluster weights, and the statement that the activities contain no attached insertion.
