@@ -114,18 +114,6 @@ For every level $q$ and all ensembles $\mathcal C$, $\mathcal D_a$ below which f
 
 With the convention \eqref{eq:translate-convention} the reflection in (iii) may be taken in any hyperplane $\{ x_\mu = y \}$, $y \in \mathbb R$, for the translates $\mathcal D_a + w$ by one vector $w$ with $y - w_\mu \in uL^{-q}\mathbb Z$: writing $\theta_0$ for the reflection which replaces $x_\mu$ by $2(y - w_\mu) - x_\mu$, we have $\theta(x + w) = \theta_0x + w$, so that $(\mathcal D_a + w) \cup \theta(\bar{\mathcal D}_b + w) = (\mathcal D_a \cup \theta_0\bar{\mathcal D}_b) + w$, and the matrices of the translated family are those of the family $\mathcal D_1, \dots, \mathcal D_m$ for the reflection $\theta_0$.
 
-The convention extends from the translations to all isometries of $\mathbb R^4$, with one exception. An isometry $g$ which is not a symmetry of the lattice maps a loop at level $q$ to a path which is not a path of the lattice, and before we can speak of the invariance under $g$ we must say what the function is on the image. The construction on the lattices $g(uL^{-K}\mathbb Z^4)$ gives the image the value of the original ensemble. This is consistent only if the limits agree on any two ensembles of the lattice which are images of each other under an isometry, and for most ensembles the only such isometries are symmetries of the lattice. We call a loop ensemble $\mathcal C$ at level $q$ in $\mathbb R^4$ \emph{exceptional} if there are two vectors $e_\alpha$, $e_\beta$ of the basis to which all the segments of its loops are parallel, and its loops do not all lie in one plane.
-
-\begin{corollary}[Euclidean Covariance]\label{cor:euclidean}
-Let $(\mathcal C, q) \in \mathfrak E$, and let $g$ be an isometry of $\mathbb R^4$ such that $g\mathcal C$ is a loop ensemble at level $q$ in $\mathbb R^4$. If $\mathcal C$ is not exceptional, then $g\mathcal C = h\mathcal C$ for a map $h(x) = Ox + v$ with a signed permutation matrix $O$ and $v \in uL^{-q}\mathbb Z^4$, and $W^{\mathrm{hc}}(g\mathcal C) = W^{\mathrm{hc}}(\mathcal C)$. Consequently
-\begin{equation}\label{eq:euclidean-convention}
-    W^{\mathrm{hc}}(g\mathcal C) \coloneqq W^{\mathrm{hc}}(\mathcal C)\;,
-\end{equation}
-the level being $q$, defines $W^{\mathrm{hc}}$ without ambiguity on the images under all isometries $g$ of $\mathbb R^4$ of the ensembles $\mathcal C$ with $(\mathcal C, q) \in \mathfrak E$ which are not exceptional, and the function so defined is invariant under every isometry of $\mathbb R^4$.
-\end{corollary}
-
-The corollary contains no information on the limits beyond Corollary~\ref{cor:hypercubic}: it says that the lattice has no isometries between its ensembles other than its symmetries, so that the invariance under the others is a matter of moving the lattice with the ensemble. The exceptional ensembles are the first place where the invariance under a rotation is a statement about the limits. For a loop $C$ at level $q$ in a plane parallel to $e_0$ and $e_1$, and with $\varepsilon_q \coloneqq uL^{-q}$, the ensembles $(C, C + 5\varepsilon_qe_2)$ and $(C, C + 3\varepsilon_qe_2 + 4\varepsilon_qe_3)$ are images of each other under a rotation which fixes the plane of $C$ and is not a symmetry of the lattice, and we do not know whether $W^{\mathrm{hc}}$ takes the same value on them.
-
 \section{The Chessboard Estimate}\label{sec:chessboard}
 
 The estimate rests on one Cauchy--Schwarz inequality for each reflection, and on an argument which shows that these inequalities, applied repeatedly, spread one function over all the blocks. We first set up the blocks and the maps which move a function from one block to another.
