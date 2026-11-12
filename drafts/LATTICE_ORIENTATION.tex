@@ -37,7 +37,7 @@
 \maketitle
 
 \begin{abstract}
-The limits of the renormalised Wilson loop expectations constructed in the paper are covariant under the symmetries of the lattice, and nothing is known about the rotations which are not among them. We study the smallest instance in which the invariance under such a rotation is a statement about the limits: two parallel planar loops whose separation $(5, 0)$ is turned into $(3, 4)$. On a torus whose periods are tilted against the lattice, the reflection which exchanges the two configurations is an isometry of the torus and maps the lattice to a second lattice. We show that the expectation of the first configuration on the one lattice equals that of the second on the other at every cutoff, so that the invariance is equivalent to the independence of the limit of the choice between two lattices on one torus. If the blocking factor is a multiple of $5$, the lattices of the two families lie in each other alternately, and they can be compared through one renormalisation step whose blocks are tilted against the fine lattice. We define the blocks and the linear average of this step, determine the symmetries which the two lattices have in common, and show that these leave three invariant quadratic forms of the field strength where the symmetries of one lattice leave one. The comparison itself is not carried out, and the last section says what it requires.
+The limits of the renormalised Wilson loop expectations constructed in the paper are covariant under the symmetries of the lattice, and nothing is known about the rotations which are not among them. The smallest instance in which the invariance under such a rotation is a statement about the limits is that of two parallel planar loops whose separation $(5, 0)$ is turned into $(3, 4)$. On a torus whose periods are tilted against the lattice, the reflection which exchanges the two configurations maps the lattice to a second lattice, and we show that the invariance is equivalent to the independence of the limit of the choice between these two lattices. If the blocking factor is a multiple of $5$, the construction of the paper can be compared with a run of the renormalisation group which has the same lattices, cubes, and expansions and differs from it in one respect: its fine lattice is turned. We record, in the order of the proofs, the modifications which Ba{\l}aban's proofs require for this run. The present text contains the setting, the symmetries which the run retains, its averaging operations, their momentum representation, and the modifications of the algebraic part of the first paper on the propagators; the last section lists the proofs which have not been examined.
 \end{abstract}
 
 \section{Introduction}\label{sec:introduction}
@@ -50,11 +50,11 @@ For most ensembles the question cannot be posed within the construction: a rotat
 \end{equation}
 where $\varepsilon_q$ is the spacing of the lattice of the loops. The two sides are two numbers of one lattice theory, and none of the properties which we know relates them. Nor could these properties relate them: the kernel $(d_2, d_3) \mapsto e^{-\abs{d_2} - \abs{d_3}}$ is continuous, it is invariant under the symmetries of the square lattice, and it is reflection positive in both coordinate directions, since $e^{-(x_2 + y_2)}$ is a product and $e^{-\abs{x_3 - y_3}}$ is a positive definite kernel, and it takes different values at $(5, 0)$ and $(3, 4)$.
 
-The first difficulty is the torus. The rotation which turns $(5, 0)$ into $(3, 4)$ is not an isometry of $(\mathbb R/T\mathbb Z)^4$, and on this torus the two configurations are not congruent, so that there is no reason for \eqref{eq:target} to hold there. We therefore change the torus. Writing $z = x_2 + ix_3$, the reflection $\rho \colon z \mapsto \frac{3 + 4i}{5}\bar z$ of the plane maps $5$ to $3 + 4i$, and it is an isometry of the torus whose periods in this plane are $T(2 + i)$ and $iT(2 + i)$, a torus which the lattices of the paper fit as well. On this torus $\rho$ maps the lattice $\Lambda_K$ of spacing $\varepsilon_K$ to a second lattice $\rho\Lambda_K$, tilted against the first, and it maps the lattice theory on the one to the lattice theory on the other. The expectation of the configuration $(5, 0)$ on $\Lambda_K$ is therefore equal to the expectation of the configuration $(3, 4)$ on $\rho\Lambda_K$, at every $K$ and every coupling (Proposition~\ref{prop:reduction}). The configuration $(3, 4)$ consists of paths of both lattices, and \eqref{eq:target} becomes the statement that the limit of its renormalised expectations is the same along the two families of lattices: the independence of the continuum limit of the orientation of the lattice, in the one case in which the two orientations share an observable.
+The first difficulty is the torus. The rotation which turns $(5, 0)$ into $(3, 4)$ is not an isometry of $(\mathbb R/T\mathbb Z)^4$, and on this torus the two configurations are not congruent, so that there is no reason for \eqref{eq:target} to hold there. We therefore change the torus. Writing $z = x_2 + ix_3$, the reflection $\rho \colon z \mapsto \frac{3 + 4i}{5}\bar z$ of the plane maps $5$ to $3 + 4i$, and it is an isometry of the torus whose periods in this plane are $T(2 + i)$ and $iT(2 + i)$, a torus which the lattices of the paper fit as well. On this torus $\rho$ maps the lattice $\Lambda_K$ of spacing $\varepsilon_K$ to a second lattice $\Lambda'_K = \rho\Lambda_K$, tilted against the first, and it maps the lattice theory on the one to the lattice theory on the other. The expectation of the configuration $(5, 0)$ on $\Lambda_K$ is therefore equal to the expectation of the configuration $(3, 4)$ on $\Lambda'_K$, at every $K$ and every coupling (Proposition~\ref{prop:reduction}). The configuration $(3, 4)$ consists of paths of both lattices, and \eqref{eq:target} becomes the statement that the limit of its renormalised expectations is the same along the two families of lattices: the independence of the continuum limit of the orientation of the lattice, in the one case in which the two orientations share an observable.
 
-A comparison of two lattice theories is what the paper does when it proves that the limit exists. It compares the construction on $\Lambda_K$ with that on $\Lambda_{K+1}$, two runs of the renormalisation group which share every lattice but the finest (Paper, Section~\ref{P-sec:two-runs}). The lattices $\Lambda_K$ and $\rho\Lambda_K$ share nothing, but if the blocking factor $L$ is a multiple of $5$, then $\rho\Lambda_K$ is a sublattice of $\Lambda_{K+1}$ (Lemma~\ref{lem:lattices}). A run which starts on $\Lambda_{K+1}$, passes to $\rho\Lambda_K$ by one renormalisation step, and continues on the lattices $\rho\Lambda_{K-1}, \rho\Lambda_{K-2}, \dots$ then shares every lattice but the finest with the run of the paper carried by $\rho$, and the two are in the position of the two runs of the paper. The price is the first step of the first run. Its blocks are not cubes of the fine lattice, a bond of its coarse lattice is not a straight path of fine bonds, and it has fewer symmetries than a step of the paper.
+A comparison of two lattice theories is what the paper does when it proves that the limit exists. It compares the construction on $\Lambda_K$ with that on $\Lambda_{K+1}$, two runs of the renormalisation group which share every lattice but the finest (Paper, Section~\ref{P-sec:two-runs}). The lattices $\Lambda_K$ and $\Lambda'_K$ share nothing, but if the blocking factor $L$ is a multiple of $5$, then $\Lambda_K$ is a sublattice of $\Lambda'_{K+1}$ (Lemma~\ref{lem:lattices}). A run which starts from the lattice theory on the tilted lattice $\Lambda'_{K+1}$ and passes, by one renormalisation step, to the lattice $\Lambda_K$ of the paper, and from there to $\Lambda_{K-1}, \Lambda_{K-2}, \dots$, shares every lattice but the finest with the construction of the paper on $\Lambda_K$. Its coarse lattices, its cubes, its localisations, and its expansions are those of the paper. What differs is the fine lattice, on which every background field and every propagator of the run is defined: it is turned by $\rho$ against everything else.
 
-We carry out the part of this which is exact. Section~\ref{sec:two-lattices} contains the arithmetic of the two lattices, Section~\ref{sec:torus} the torus, and Section~\ref{sec:identity} the identity between the expectations and the reduction of \eqref{eq:target}. Section~\ref{sec:symmetries} determines the symmetries which the two lattices have in common and the quadratic forms of the field strength which they leave invariant: there are three, where the symmetries of one lattice leave one. Section~\ref{sec:tilted-step} defines the blocks of the tilted step and its linear average. The comparison of the two runs is not carried out, and Section~\ref{sec:not-proved} lists what it requires.
+The proofs of Ba{\l}aban on which the paper rests are written for a fine lattice of which the coarser lattices are sublattices spanned by multiples of the same basis. Our aim is to record what changes in them when the fine lattice is turned, and only that: each statement which is used is assigned to one of three classes, those which hold with the same proof, those which hold after a modification, which we state and prove, and those which we have not examined. We proceed in the order of the proofs. Sections~\ref{sec:two-lattices}--\ref{sec:identity} contain the setting: the arithmetic of the two lattices, the torus, and the identity between the expectations which reduces \eqref{eq:target} to a comparison of two runs. Section~\ref{sec:symmetries} determines the symmetries which the tilted run retains; they leave three invariant quadratic forms of the field strength where the symmetries of one lattice leave one, which affects the definition of the running coupling. Section~\ref{sec:averages} defines the averaging operations of the tilted run and proves the properties which replace those of \cite[Sections~A and B]{BalabanPRT1}, and Section~\ref{sec:momentum} gives their momentum representation, in which the turned lattice appears as one fixed trigonometric polynomial multiplying Ba{\l}aban's symbols and as a matrix in place of a scalar. Section~\ref{sec:prt1} goes through \cite{BalabanPRT1} formula by formula, and Section~\ref{sec:not-covered} lists what remains.
 
 Throughout, $G$, $L$, $u$, $m_T$, $T = 2L^{m_T}u$, and $\varepsilon_K = uL^{-K}$ are as in Paper, Section~\ref{P-sec:lattice-theory}; in particular $L$ is odd.
 
@@ -66,20 +66,24 @@ We identify the plane of the coordinates $x_2$ and $x_3$ with $\mathbb C$ throug
     \qquad
     \rho(x_0, x_1, z) \coloneqq (x_0, x_1, \omega\bar z)\;.
 \end{equation}
-Since $\abs{\omega} = 1$ and $\omega\,\overline{\omega\bar z} = z$, the map $\rho$ is a linear isometry of $\mathbb R^4$ with $\rho^2 = 1$. It fixes $e_0$ and $e_1$, it fixes $2 + i$ because $\omega(2 - i) = 2 + i$, and it maps $i(2 + i)$ to $\omega(-i)(2 - i) = -i(2 + i)$; it is therefore the reflection in the hyperplane spanned by $e_0$, $e_1$, and $2e_2 + e_3$. In the coordinates $x_2$, $x_3$,
+Since $\abs{\omega} = 1$ and $\omega\,\overline{\omega\bar z} = z$, the map $\rho$ is a linear isometry of $\mathbb R^4$ with $\rho^2 = 1$. It fixes $e_0$ and $e_1$, it fixes $2 + i$ because $\omega(2 - i) = 2 + i$, and it maps $i(2 + i)$ to $\omega(-i)(2 - i) = -i(2 + i)$; it is therefore the reflection in the hyperplane spanned by $e_0$, $e_1$, and $2e_2 + e_3$. We write $e'_\nu \coloneqq \rho e_\nu$, so that $e'_0 = e_0$, $e'_1 = e_1$, and, because $\omega\bar 1 = \omega$ and $\omega\bar i = (4 - 3i)/5$,
 \begin{equation}\label{eq:rho-vectors}
-    \rho e_2 = \tfrac15(3e_2 + 4e_3)\;,
+    e'_2 = \tfrac15(3e_2 + 4e_3)\;,
+    \quad
+    e'_3 = \tfrac15(4e_2 - 3e_3)\;,
     \qquad
-    \rho e_3 = \tfrac15(4e_2 - 3e_3)\;,
+    e_2 = \tfrac15(3e'_2 + 4e'_3)\;,
+    \quad
+    e_3 = \tfrac15(4e'_2 - 3e'_3)\;,
 \end{equation}
-because $\omega\bar 1 = \omega$ and $\omega\bar i = -i\omega = (4 - 3i)/5$. In particular $\rho(5e_2) = 3e_2 + 4e_3$.
+the last two by applying $\rho$ to the first two. In particular $\rho(5e_2) = 3e_2 + 4e_3$.
 
 \begin{lemma}[Gaussian Integers]\label{lem:gaussian}
 \begin{enumerate}[label=(\roman*)]
 \item For $w \in \mathbb Z[i]$, $\omega w \in \mathbb Z[i]$ if and only if $w \in (2 - i)\mathbb Z[i]$. Consequently $\mathbb Z[i] \cap \omega\mathbb Z[i] = (2 + i)\mathbb Z[i]$.
 \item The group $(2 + i)\mathbb Z[i]$ has the index $5$ in $\mathbb Z[i]$ and in $\omega\mathbb Z[i]$.
 \item $\omega\,\overline{(2 + i)\mathbb Z[i]} = (2 + i)\mathbb Z[i]$.
-\item $\omega\mathbb Z[i] \subset \frac15\mathbb Z[i]$ and $\mathbb Z[i] \subset \frac15\omega\mathbb Z[i]$.
+\item $5\omega\mathbb Z[i] \subset \mathbb Z[i]$ and $5\mathbb Z[i] \subset \omega\mathbb Z[i]$, each with the index $25$.
 \end{enumerate}
 \end{lemma}
 
@@ -90,7 +94,7 @@ because $\omega\bar 1 = \omega$ and $\omega\bar i = -i\omega = (4 - 3i)/5$. In p
 
 (iii) Complex conjugation maps $\mathbb Z[i]$ onto itself, so that $\omega\,\overline{(2 + i)\mathbb Z[i]} = \omega(2 - i)\mathbb Z[i] = (2 + i)\mathbb Z[i]$.
 
-(iv) $5\omega = 3 + 4i \in \mathbb Z[i]$ gives the first inclusion. Since $\omega\bar\omega = 1$ and $5\bar\omega = 3 - 4i \in \mathbb Z[i]$, we have $\mathbb Z[i] = \omega\bar\omega\mathbb Z[i] \subset \frac15\omega\mathbb Z[i]$.
+(iv) $5\omega = 3 + 4i \in \mathbb Z[i]$ gives the first inclusion, and the multiplication by $3 + 4i$ has the determinant $25$. Since $\omega\bar\omega = 1$ and $5\bar\omega = 3 - 4i \in \mathbb Z[i]$, we have $5\mathbb Z[i] = \omega(5\bar\omega)\mathbb Z[i] \subset \omega\mathbb Z[i]$, with the index of $(3 - 4i)\mathbb Z[i]$ in $\mathbb Z[i]$, which is $25$.
 \end{proof}
 
 For an integer $K \geq 0$ we consider the two lattices in $\mathbb R^4$
@@ -99,23 +103,20 @@ For an integer $K \geq 0$ we consider the two lattices in $\mathbb R^4$
     \qquad
     \Lambda'_K \coloneqq \rho\Lambda_K = \varepsilon_K\bigl(\mathbb Z^2 \times \omega\mathbb Z[i]\bigr)\;.
 \end{equation}
-The lattice $\Lambda_K$ is the lattice of the paper before the periods are divided out, and $\Lambda'_K$ is a lattice of the same spacing whose axes are $e_0$, $e_1$, $\rho e_2$, and $\rho e_3$.
+The lattice $\Lambda_K$ is the lattice of the paper before the periods are divided out, and $\Lambda'_K$ is a lattice of the same spacing whose axes are the vectors $e'_\nu$.
 
 \begin{lemma}[The Two Families of Lattices]\label{lem:lattices}
 \begin{enumerate}[label=(\roman*)]
 \item $\Lambda_K \cap \Lambda'_K = \varepsilon_K(\mathbb Z^2 \times (2 + i)\mathbb Z[i])$, a sublattice of the index $5$ in $\Lambda_K$ and in $\Lambda'_K$, and $\rho$ maps it onto itself.
-\item If $L$ is a multiple of $5$, then $\Lambda'_K \subset \Lambda_{K+1}$ and $\Lambda_K \subset \Lambda'_{K+1}$, each with the index $L^4$. With $l \coloneqq L/5$,
-\begin{equation}\label{eq:coarse-in-fine}
-    \Lambda'_K = \varepsilon_{K+1}\bigl(L\mathbb Z^2 \times l(3 + 4i)\mathbb Z[i]\bigr)\;.
-\end{equation}
+\item If $L$ is a multiple of $5$, then $\Lambda_K \subset \Lambda'_{K+1}$ and $\Lambda'_K \subset \Lambda_{K+1}$, each with the index $L^4$.
 \end{enumerate}
 \end{lemma}
 
 \begin{proof}
-(i) is Lemma~\ref{lem:gaussian}(i)--(iii). (ii) Since $\varepsilon_K = L\varepsilon_{K+1}$ and $\varepsilon_K\omega = l\varepsilon_{K+1}(3 + 4i)$, the definition \eqref{eq:lattices} gives \eqref{eq:coarse-in-fine}, and the right side is contained in $\varepsilon_{K+1}(\mathbb Z^2 \times \mathbb Z[i]) = \Lambda_{K+1}$. The index is the determinant of the map which multiplies the first two coordinates by $L$ and the plane by $l(3 + 4i)$, that is, $L^2 \cdot 25l^2 = L^4$. Applying $\rho$ to $\Lambda'_K \subset \Lambda_{K+1}$ gives $\Lambda_K \subset \Lambda'_{K+1}$ with the same index.
+(i) is Lemma~\ref{lem:gaussian}(i)--(iii). (ii) Since $\varepsilon_K = L\varepsilon_{K+1}$ and $L\mathbb Z[i] \subset 5\mathbb Z[i] \subset \omega\mathbb Z[i]$ by Lemma~\ref{lem:gaussian}(iv), the definition \eqref{eq:lattices} gives $\Lambda_K = \varepsilon_{K+1}(L\mathbb Z^2 \times L\mathbb Z[i]) \subset \Lambda'_{K+1}$. Both are lattices of rank four, and $\rho$ preserves volumes, so that the index is the quotient $\varepsilon_K^4/\varepsilon_{K+1}^4 = L^4$ of the volumes of their cells. Applying $\rho$ gives $\Lambda'_K \subset \Lambda_{K+1}$ with the same index.
 \end{proof}
 
-Thus, for $L$ a multiple of $5$, the two families form one chain $\dots \supset \Lambda_{K+1} \supset \Lambda'_K \supset \Lambda_{K-1} \supset \Lambda'_{K-2} \supset \dots$, each lattice of the index $L^4$ in the one before, while no lattice of one family contains a lattice of the same index of the other.
+Thus, for $L$ a multiple of $5$, the two families form one chain $\dots \supset \Lambda'_{K+1} \supset \Lambda_K \supset \Lambda'_{K-1} \supset \Lambda_{K-2} \supset \dots$, each lattice of the index $L^4$ in the one before, while no lattice of one family contains a lattice of the same index of the other.
 
 \section{One Torus for Both Lattices}\label{sec:torus}
 
@@ -146,7 +147,7 @@ The periods of $\mathbb T_\Gamma$ are $Te_0$, $Te_1$, and the two vectors $T(2e_
 
 \section{The Identity between the Two Lattice Theories}\label{sec:identity}
 
-We now define the lattice theory on $\mathbb T_\Gamma$ for each of the two lattices and show that $\rho$ carries the one to the other. Let $\Xi$ be $\Lambda_K$ or $\Lambda'_K$. A \emph{bond} of $\Xi$ is an ordered pair $b = (x, y)$ of points of $\Xi$ at the distance $\varepsilon_K$, with the reversed bond $b^{-1} = (y, x)$; the bonds from $x$ are the eight pairs $(x, x \pm \varepsilon_Ke_\mu)$ for $\Xi = \Lambda_K$ and $(x, x \pm \varepsilon_K\rho e_\mu)$ for $\Xi = \Lambda'_K$. A \emph{plaquette} of $\Xi$ is a square of side $\varepsilon_K$ with corners in $\Xi$, and $\partial p$ is its boundary, a closed path of four bonds. The group $\Gamma \subset \Xi$ acts on the bonds and on the plaquettes by translations, and a translation by $\gamma \neq 0$ fixes no bond and no plaquette and reverses no bond. A \emph{gauge field} on $(\Xi, \Gamma)$ is a map $U$ from the bonds of $\Xi$ to $G$ with $U(b^{-1}) = U(b)^{-1}$ and $U(b + \gamma) = U(b)$ for every $\gamma \in \Gamma$. The lattice theory at the coupling $g_0 > 0$ is the probability measure
+We now define the lattice theory on $\mathbb T_\Gamma$ for each of the two lattices and show that $\rho$ carries the one to the other. Let $\Xi$ be $\Lambda_K$ or $\Lambda'_K$. A \emph{bond} of $\Xi$ is an ordered pair $b = (x, y)$ of points of $\Xi$ at the distance $\varepsilon_K$, with the reversed bond $b^{-1} = (y, x)$; the bonds from $x$ are the eight pairs $(x, x \pm \varepsilon_Ke_\mu)$ for $\Xi = \Lambda_K$ and $(x, x \pm \varepsilon_Ke'_\mu)$ for $\Xi = \Lambda'_K$. A \emph{plaquette} of $\Xi$ is a square of side $\varepsilon_K$ with corners in $\Xi$, and $\partial p$ is its boundary, a closed path of four bonds. The group $\Gamma \subset \Xi$ acts on the bonds and on the plaquettes by translations, and a translation by $\gamma \neq 0$ fixes no bond and no plaquette and reverses no bond. A \emph{gauge field} on $(\Xi, \Gamma)$ is a map $U$ from the bonds of $\Xi$ to $G$ with $U(b^{-1}) = U(b)^{-1}$ and $U(b + \gamma) = U(b)$ for every $\gamma \in \Gamma$. The lattice theory at the coupling $g_0 > 0$ is the probability measure
 \begin{equation}\label{eq:measure}
     \dd\mu^{\Xi}_{\Gamma,g_0}(U) \coloneqq \frac{1}{Z^\Xi_{\Gamma,g_0}}\exp\Bigl(-\frac{1}{g_0^2}\sum_{p}\bigl(1 - \operatorname{Re}\tr U(\partial p)\bigr)\Bigr)\,\dd U\;,
 \end{equation}
@@ -183,14 +184,14 @@ Consequently
 \end{proposition}
 
 \begin{proof}
-By Lemma~\ref{lem:gaussian}(iii), $\rho d_j = \omega\bar d_j \in \varepsilon_q(2 + i)\mathbb Z[i]$. The sites of $C_j + d_j$ are the points $(x_0, x_1, d_j)$ with $(x_0, x_1, 0)$ a site of $C_j$; they lie in $\varepsilon_q(\mathbb Z^2 \times (2 + i)\mathbb Z[i]) = \Lambda_q \cap \Lambda'_q$, and the bonds of $C_j + d_j$ are parallel to $e_0 = \rho e_0$ or $e_1 = \rho e_1$ and of the length $\varepsilon_q$. A straight path of the length $\varepsilon_q$ between two points of $\Lambda_q$, or of $\Lambda'_q$, along one of its axes is a path of $L^{K-q}$ bonds of $\Lambda_K$, or of $\Lambda'_K$; so $C_j + d_j$ is a closed path of bonds of both lattices, and the same holds for $C_j + \rho d_j$. Lemma~\ref{lem:transport} with $\Xi = \Lambda_K$ and $O = \rho$, for which $O\Gamma = \Gamma$ by Lemma~\ref{lem:torus}(ii) and $O\Xi = \Lambda'_K$, gives \eqref{eq:reduction} because $\rho\mathcal C_d = \mathcal C_{\rho d}$, and \eqref{eq:defect} follows by subtracting both sides of \eqref{eq:reduction} from $\mathbb E^{\Lambda_K}_{\Gamma,g_0}[W_{\mathcal C_{\rho d}}]$.
+By Lemma~\ref{lem:gaussian}(iii), $\rho d_j = \omega\bar d_j \in \varepsilon_q(2 + i)\mathbb Z[i]$. The sites of $C_j + d_j$ are the points $(x_0, x_1, d_j)$ with $(x_0, x_1, 0)$ a site of $C_j$; they lie in $\varepsilon_q(\mathbb Z^2 \times (2 + i)\mathbb Z[i]) = \Lambda_q \cap \Lambda'_q$, and the bonds of $C_j + d_j$ are parallel to $e_0 = e'_0$ or $e_1 = e'_1$ and of the length $\varepsilon_q$. A straight path of the length $\varepsilon_q$ between two points of $\Lambda_q$, or of $\Lambda'_q$, along one of its axes is a path of $L^{K-q}$ bonds of $\Lambda_K$, or of $\Lambda'_K$; so $C_j + d_j$ is a closed path of bonds of both lattices, and the same holds for $C_j + \rho d_j$. Lemma~\ref{lem:transport} with $\Xi = \Lambda_K$ and $O = \rho$, for which $O\Gamma = \Gamma$ by Lemma~\ref{lem:torus}(ii) and $O\Xi = \Lambda'_K$, gives \eqref{eq:reduction} because $\rho\mathcal C_d = \mathcal C_{\rho d}$, and \eqref{eq:defect} follows by subtracting both sides of \eqref{eq:reduction} from $\mathbb E^{\Lambda_K}_{\Gamma,g_0}[W_{\mathcal C_{\rho d}}]$.
 \end{proof}
 
-The left side of \eqref{eq:defect} measures how far the lattice theory on $\Lambda_K$ is from being invariant under $\rho$ on this ensemble, and the right side how much the expectation of one ensemble differs between the two lattices. The first instance in which $\mathcal C_{\rho d}$ is not the image of $\mathcal C_d$ under a symmetry of $\Lambda_q$ is $n = 2$, $d_1 = 0$, and $d_2 = 5\varepsilon_q = (2 + i)(2 - i)\varepsilon_q$, for which $\rho d_2 = (3 + 4i)\varepsilon_q$; this is \eqref{eq:target}. The step factors of the paper do not depend on the position of a loop (Paper, Proposition~\ref{P-prop:normalisation-structure}), so that $C_j + d_j$ and $C_j + \rho d_j$ have the same normalisation on $\Lambda_K$, and \eqref{eq:target} is the statement that the left side of \eqref{eq:defect}, divided by this normalisation, tends to zero as $K \to \infty$ along the couplings of the paper.
+The left side of \eqref{eq:defect} measures how far the lattice theory on $\Lambda_K$ is from being invariant under $\rho$ on this ensemble, and the right side how much the expectation of one ensemble differs between the two lattices. The first instance in which $\mathcal C_{\rho d}$ is not the image of $\mathcal C_d$ under a symmetry of $\Lambda_q$ is $n = 2$, $d_1 = 0$, and $d_2 = 5\varepsilon_q = (2 + i)(2 - i)\varepsilon_q$, for which $\rho d_2 = (3 + 4i)\varepsilon_q$; this is \eqref{eq:target}. The step factors of the paper do not depend on the position of a loop (Paper, Proposition~\ref{P-prop:normalisation-structure}), so that $C_j + d_j$ and $C_j + \rho d_j$ have the same normalisation on $\Lambda_K$, and \eqref{eq:target} is the statement that the left side of \eqref{eq:defect}, divided by this normalisation, tends to zero as $K \to \infty$ along the couplings of the paper. On the right side, the first term is the object of the construction of the paper on $\Lambda_K$, carried out on the torus $\mathbb T_\Gamma$, and the second, read at $K + 1$, is the object of the tilted run of the introduction.
 
-\section{The Common Symmetries}\label{sec:symmetries}
+\section{The Symmetries of the Tilted Run}\label{sec:symmetries}
 
-A run of the renormalisation group whose fine lattice is $\Lambda_{K+1}$ and whose coarser lattices are $\Lambda'_K, \Lambda'_{K-1}, \dots$ has only those symmetries which preserve the lattices of both families. We determine them, and what they leave of the argument by which a single coupling describes the leading term of an effective action.
+The tilted run has only those symmetries which preserve the lattices of both families. We determine them, and what they leave of the argument by which a single coupling describes the leading term of an effective action.
 
 \begin{lemma}[The Common Symmetries]\label{lem:common-symmetries}
 Let $\mathfrak G_0$ be the group of the linear isometries $O$ of $\mathbb R^4$ with $O\mathbb Z^4 = \mathbb Z^4$ and $O\rho\mathbb Z^4 = \rho\mathbb Z^4$. Its elements are the maps
@@ -201,7 +202,7 @@ with $A$ one of the eight signed permutation matrices of the first two coordinat
 \end{lemma}
 
 \begin{proof}
-An isometry $O$ with $O\mathbb Z^4 = \mathbb Z^4$ permutes the eight vectors $\pm e_\mu$, the elements of $\mathbb Z^4$ of the length $1$, and an isometry with $O\rho\mathbb Z^4 = \rho\mathbb Z^4$ permutes the eight vectors $\pm e_0$, $\pm e_1$, $\pm\rho e_2$, $\pm\rho e_3$. By \eqref{eq:rho-vectors} the only vectors common to the two sets are $\pm e_0$ and $\pm e_1$. For $O \in \mathfrak G_0$ the vector $Oe_0$ belongs to the first set; if it were $\pm e_2$ or $\pm e_3$, then $O^{-1}$ would map an element of the first set which is not in the second to an element of the second, although $O^{-1}$ maps the complement of the second set in the unit sphere to itself. Hence $Oe_0, Oe_1 \in \{ \pm e_0, \pm e_1 \}$, the map $O$ preserves the plane of $e_0$ and $e_1$ and its orthogonal complement, and it acts on the first as a signed permutation matrix $A$ and on the second as a signed permutation matrix of $e_2$ and $e_3$, that is, as $z \mapsto i^kz$ or as $z \mapsto i^k\bar z$. Every such map preserves $\mathbb Z^4$, and it preserves $\rho\mathbb Z^4 = \mathbb Z^2 \times \omega\mathbb Z[i]$ if and only if its second part preserves $\omega\mathbb Z[i]$. The maps $z \mapsto i^kz$ do. The maps $z \mapsto i^k\bar z$ send $\omega\mathbb Z[i]$ to $\bar\omega\mathbb Z[i]$, which is equal to $\omega\mathbb Z[i]$ only if $\omega^2 \in \mathbb Z[i]$, and $\omega^2 = (-7 + 24i)/25$. This gives \eqref{eq:common-symmetries} and the count $8 \cdot 4$. The reflections named are the cases $A = \operatorname{diag}(-1, 1)$ and $A = \operatorname{diag}(1, -1)$ with $k = 0$.
+An isometry $O$ with $O\mathbb Z^4 = \mathbb Z^4$ permutes the eight vectors $\pm e_\mu$, the elements of $\mathbb Z^4$ of the length $1$, and an isometry with $O\rho\mathbb Z^4 = \rho\mathbb Z^4$ permutes the eight vectors $\pm e'_\nu$. By \eqref{eq:rho-vectors} the only vectors common to the two sets are $\pm e_0$ and $\pm e_1$. An element $O$ of $\mathfrak G_0$ permutes both sets, hence their intersection, so that $Oe_0, Oe_1 \in \{ \pm e_0, \pm e_1 \}$; the map $O$ therefore preserves the plane of $e_0$ and $e_1$ and its orthogonal complement, and it acts on the first as a signed permutation matrix $A$ and on the second as a signed permutation matrix of $e_2$ and $e_3$, that is, as $z \mapsto i^kz$ or as $z \mapsto i^k\bar z$. Every such map preserves $\mathbb Z^4$, and it preserves $\rho\mathbb Z^4 = \mathbb Z^2 \times \omega\mathbb Z[i]$ if and only if its second part preserves $\omega\mathbb Z[i]$. The maps $z \mapsto i^kz$ do. The maps $z \mapsto i^k\bar z$ send $\omega\mathbb Z[i]$ to $\bar\omega\mathbb Z[i]$, which is equal to $\omega\mathbb Z[i]$ only if $\omega^2 \in \mathbb Z[i]$, and $\omega^2 = (-7 + 24i)/25$. This gives \eqref{eq:common-symmetries} and the count $8 \cdot 4$. The reflections named are the cases $A = \operatorname{diag}(-1, 1)$ and $A = \operatorname{diag}(1, -1)$ with $k = 0$.
 \end{proof}
 
 The group of all symmetries of $\mathbb Z^4$, the signed permutation matrices, has $384$ elements and exchanges any two coordinate planes. The group $\mathfrak G_0$ does not, and this has the following consequence. Let $F = (F_{\mu\nu})$ be an antisymmetric tensor, on which an isometry $O$ acts by $(OF)_{\mu\nu} = \sum_{\kappa,\lambda}O_{\mu\kappa}O_{\nu\lambda}F_{\kappa\lambda}$.
@@ -222,77 +223,242 @@ Let $\mathsf q$ be an invariant quadratic form, a combination of the products of
 with symmetric matrices $m^0$ and $m^1$. The element of $\mathfrak G_0$ which exchanges $x_0$ and $x_1$ exchanges $F_{0j}$ and $F_{1j}$, so that $m^0 = m^1 \eqqcolon m$. The element $z \mapsto iz$ maps $e_2$ to $e_3$ and $e_3$ to $-e_2$, so that it replaces the vector $(F_{a2}, F_{a3})$ by $(-F_{a3}, F_{a2})$; the invariance of \eqref{eq:form-reduced} then requires $m_{22} = m_{33}$ and $m_{23} = -m_{23}$, that is, $m = \lambda\id$. This is \eqref{eq:invariant-forms}. Conversely each of the three forms is invariant: an element \eqref{eq:common-symmetries} multiplies $F_{01}$ by $\det A = \pm1$, fixes $F_{23}$, because $z \mapsto i^kz$ has the determinant $1$, and replaces the matrix $(F_{aj})$ by its product with $A$ on one side and with a rotation matrix on the other, which preserves the sum of the squares of its entries. Finally a signed permutation matrix which exchanges the planes of two pairs of coordinates exchanges the corresponding components up to signs, so that the invariance under all of them forces $\alpha = \beta = \lambda$.
 \end{proof}
 
-The lemma bears on the renormalisation of the coupling. Ba{\l}aban defines the coefficient $\beta_{j+1}$ of the flow of the coupling as a second derivative of the Fourier transform of the vacuum polarisation $\Pi_{j+1,\mu\nu}$ of a step, for one pair $\mu \neq \nu$, and the definition does not depend on the pair because the vacuum polarisation is covariant under the rotations which leave the lattice invariant \cite[(1.20)--(1.22), p.~264]{BalabanRG1}. For the steps of a run whose fine lattice is tilted against the others, only the covariance under $\mathfrak G_0$ is available, and by Lemma~\ref{lem:invariant-forms} it leaves three coefficients, one for each of the forms \eqref{eq:invariant-forms}, where the covariance under the symmetries of one lattice leaves one. We do not know whether the three agree.
+\emph{Modification of \cite[(1.20)--(1.22), p.~264]{BalabanRG1}.} Ba{\l}aban defines the coefficient $\beta_{j+1}$ of the flow of the coupling as a second derivative of the Fourier transform of the vacuum polarisation $\Pi_{j+1,\mu\nu}$ of a step, for one pair $\mu \neq \nu$, and the definition does not depend on the pair because, by his (1.21), the vacuum polarisation is covariant under the rotations which leave the lattice invariant. In the tilted run the covariance holds for the elements of $\mathfrak G_0$ only, and by Lemma~\ref{lem:invariant-forms} the second derivatives define three numbers, one for each of the forms \eqref{eq:invariant-forms}: those of the pair $(0, 1)$, of the pair $(2, 3)$, and of the four pairs $(a, j)$. We do not know whether the three agree, and the consequences for the inductive description of the densities have not been examined.
 
-\section{The Tilted Step}\label{sec:tilted-step}
+\section{The Averages of the Tilted Run}\label{sec:averages}
 
-Let $L$ be a multiple of $5$ and $l \coloneqq L/5$. The step which leads from $\Lambda_{K+1}$ to $\Lambda'_K$ needs blocks of $L^4$ points of the fine lattice, one for each point of the coarse lattice, and for each bond of the coarse lattice a path of fine bonds. We define them here, together with the average of a real field, the tilted counterpart of \cite[(1.6)--(1.8), pp.~18--19]{BalabanPRT1}. In this section the unit of length is $\varepsilon_{K+1}$, so that by \eqref{eq:coarse-in-fine} the fine lattice is $\mathbb Z^4 = \mathbb Z^2 \times \mathbb Z[i]$ and the coarse lattice is
-\begin{equation}\label{eq:coarse-lattice}
-    Y \coloneqq L\mathbb Z^2 \times l(3 + 4i)\mathbb Z[i]\;,
+From here on $L$ is a multiple of $5$. After $k \geq 1$ steps of the tilted run, and in the unit of the lattice which it has reached, the situation is that of \cite[Section~B]{BalabanPRT1} with one change: the unit lattice is $\mathbb Z^4$ and the lattices of the intermediate steps are $L^{-j}\mathbb Z^4$, $1 \leq j \leq k - 1$, as there, but the fine lattice is
+\begin{equation}\label{eq:fine-lattice}
+    T_\eta \coloneqq \eta\rho\mathbb Z^4 = \eta\bigl(\mathbb Z^2 \times \omega\mathbb Z[i]\bigr)\;,
+    \qquad
+    \eta = L^{-k}\;,
 \end{equation}
-with the axes $e'_\mu \coloneqq \rho e_\mu$ of \eqref{eq:rho-vectors} and the bonds $\langle y, y \pm Le'_\mu\rangle$, $y \in Y$. In Ba{\l}aban's step the coarse lattice is $L\mathbb Z^4$, the block of $y$ is the cube $\{ x \, | \, y_\mu \leq x_\mu < y_\mu + L \}$ \cite[(1.6), p.~18]{BalabanPRT1}, and the path of the bond $\langle y, y + Le_\mu\rangle$ from a point $x$ of the block is the straight segment $[x, x + Le_\mu]$ \cite[(1.8), p.~19]{BalabanPRT1}. Here neither is available in the plane of $x_2$ and $x_3$: a square of side $L$ with the sides $Le'_2$ and $Le'_3$ is not a union of cells of the fine lattice, and the vector $Le'_2 = l(3e_2 + 4e_3)$ is not a multiple of a vector of the basis.
+in place of $\eta\mathbb Z^4$. Its bonds are the pairs $\langle x, x \pm \eta e'_\nu\rangle$. We call a number $a$ a \emph{scale} if $a/(5\eta)$ and $1/a$ are integers; the numbers $L^{-j}$, $0 \leq j \leq k - 1$, are scales, and so is $5\eta$. For a scale $a$ we have $a\mathbb Z^4 \subset T_\eta$, because $a/\eta$ is a multiple of $5$ and $5\mathbb Z[i] \subset \omega\mathbb Z[i]$ by Lemma~\ref{lem:gaussian}(iv). A real field is a function $A$ on the bonds of $T_\eta$ with $A(b^{-1}) = -A(b)$, and $A(\gamma) \coloneqq \sum_{b \in \gamma}A(b)$ for a path $\gamma$ of bonds. We consider infinite lattices in this section and the next; all the operations commute with the translations by $\mathbb Z^4$ and therefore act on the fields which are periodic with respect to a subgroup of $\mathbb Z^4$.
 
-\begin{definition}[Blocks and Staircases]\label{def:blocks}
+Ba{\l}aban's averages are sums, over the points $x$ of a cube of the fine lattice, of the values of a function at $x$ or of the sums of a field over the straight segment $[x, x(b)]$ from $x$ to its translate by a bond $b$ of the coarse lattice \cite[(1.6), (1.11), (1.18), pp.~18--20]{BalabanPRT1}. In the tilted run the cubes keep their meaning, as the sets of the points of $T_\eta$ in a cube of the coarse lattice, but for the directions $e_2$ and $e_3$ the segment does not consist of bonds of $T_\eta$, and we replace it by a path which follows it.
+
+\begin{definition}[Blocks, Staircases, and Averages]\label{def:averages}
+Let $a$ be a scale.
 \begin{enumerate}[label=(\roman*)]
-\item Let $D$ be the set of the $z \in \mathbb Z[i]$ of the form $z = l(3 + 4i)(s + it)$ with real $0 \leq s, t < 1$. The \emph{block} of $y \in Y$ is $B(y) \coloneqq y + \{ 0, \dots, L - 1 \}^2 \times D$.
-\item For a point $x$ of the fine lattice, the \emph{staircases} from $x$ are the following paths of fine bonds: $\sigma_0(x)$ and $\sigma_1(x)$ are the straight paths of $L$ bonds in the directions $e_0$ and $e_1$; $\sigma_2(x)$ repeats $l$ times the seven steps $e_3, e_2, e_3, e_2, e_3, e_2, e_3$; and $\sigma_3(x)$ repeats $l$ times the seven steps $e_2, -e_3, e_2, -e_3, e_2, -e_3, e_2$.
+\item The \emph{block} of $y \in a\mathbb Z^4$ is $B_a(y) \coloneqq \{ x \in T_\eta \, | \, y_\mu \leq x_\mu < y_\mu + a,\ \mu = 0, \dots, 3 \}$.
+\item For $x \in T_\eta$ the \emph{staircases} from $x$ are the following paths of bonds of $T_\eta$. For $\mu \in \{ 0, 1 \}$, $\sigma^a_\mu(x)$ is the straight path of $a/\eta$ bonds in the direction $e_\mu$. The path $\sigma^a_2(x)$ repeats $a/(5\eta)$ times the seven steps $\eta e'_3, \eta e'_2, \eta e'_3, \eta e'_2, \eta e'_3, \eta e'_2, \eta e'_3$, and $\sigma^a_3(x)$ repeats $a/(5\eta)$ times the seven steps $\eta e'_2, -\eta e'_3, \eta e'_2, -\eta e'_3, \eta e'_2, -\eta e'_3, \eta e'_2$.
+\item For a function $\lambda$ on $T_\eta$ and $y \in a\mathbb Z^4$,
+\begin{equation}\label{eq:scalar-average}
+    (Q'_a\lambda)(y) \coloneqq \Bigl(\frac{\eta}{a}\Bigr)^4\sum_{x \in B_a(y)}\lambda(x)\;.
+\end{equation}
+\item For a real field $A$ and a bond $b = \langle y, y + ae_\mu\rangle$ of $a\mathbb Z^4$,
+\begin{equation}\label{eq:vector-average}
+    (Q_aA)(b) \coloneqq \Bigl(\frac{\eta}{a}\Bigr)^5\sum_{x \in B_a(y)}A\bigl(\sigma^a_\mu(x)\bigr)\;,
+\end{equation}
+and $(Q_aA)(b^{-1}) \coloneqq -(Q_aA)(b)$.
 \end{enumerate}
+We write $Q'_k \coloneqq Q'_1$ and $Q_k \coloneqq Q_1$.
 \end{definition}
+
+For $a = 1$ these are the operators $Q'_k$ of \cite[p.~20]{BalabanPRT1} and $Q_k$ of \cite[(1.18), p.~20]{BalabanPRT1}, with $T_\eta$ turned and with $\sigma^1_\mu(x)$ in place of $[x, x(b)]$, and for the directions $e_0$ and $e_1$ nothing has changed. For two scales $a$ and $a'$ with $a'/a$ an integer we also need Ba{\l}aban's own averages between the lattices $a\mathbb Z^4$ and $a'\mathbb Z^4$, which we denote by
+\begin{equation}\label{eq:standard-averages}
+    (Q'^{\mathrm{st}}_{a,a'}\lambda)(y) \coloneqq \Bigl(\frac{a}{a'}\Bigr)^4\sum_{z}\lambda(z)\;,
+    \qquad
+    (Q^{\mathrm{st}}_{a,a'}B)(\langle y, y + a'e_\mu\rangle) \coloneqq \Bigl(\frac{a}{a'}\Bigr)^5\sum_{z}B\bigl([z, z + a'e_\mu]\bigr)\;,
+\end{equation}
+the sums over the points $z \in a\mathbb Z^4$ with $y_\mu \leq z_\mu < y_\mu + a'$ for every $\mu$, for functions $\lambda$ and fields $B$ on $a\mathbb Z^4$.
 
 \begin{lemma}[Blocks and Staircases]\label{lem:blocks}
+Let $a$ and $a'$ be scales with $a'/a$ an integer.
 \begin{enumerate}[label=(\roman*)]
-\item The blocks $B(y)$, $y \in Y$, are pairwise disjoint, their union is $\mathbb Z^4$, each has $L^4$ points, and $B(y + w) = B(y) + w$ for $w \in Y$.
-\item The staircase $\sigma_\mu(x)$ ends at $x + Le'_\mu$, it has $L$ bonds for $\mu \in \{ 0, 1 \}$ and $7l$ bonds for $\mu \in \{ 2, 3 \}$, each of its sites is at a distance of at most $\frac35$ from the segment $[x, x + Le'_\mu]$, and the reversed path is the path from $x + Le'_\mu$ with the same sequence of steps, each with the opposite sign.
+\item The blocks $B_a(y)$, $y \in a\mathbb Z^4$, are pairwise disjoint, their union is $T_\eta$, each has $(a/\eta)^4$ points, and $B_a(y + w) = B_a(y) + w$ for $w \in a\mathbb Z^4$. The block $B_{a'}(y)$ is the union of the blocks $B_a(z)$ over the points $z \in a\mathbb Z^4$ with $y_\mu \leq z_\mu < y_\mu + a'$.
+\item The staircase $\sigma^a_\mu(x)$ ends at $x + ae_\mu$, and $\sigma^{a'}_\mu(x)$ is the concatenation of the staircases $\sigma^a_\mu(x + nae_\mu)$, $0 \leq n < a'/a$. Each site of $\sigma^a_\mu(x)$ is at a distance of at most $\frac35\eta$ from the segment $[x, x + ae_\mu]$.
 \end{enumerate}
 \end{lemma}
 
 \begin{proof}
-(i) Every complex number is $l(3 + 4i)(w + p)$ for exactly one pair of a $w \in \mathbb Z[i]$ and a $p = s + it$ with $0 \leq s, t < 1$. If the number is a Gaussian integer $z$, then $z - l(3 + 4i)w = l(3 + 4i)p$ is one as well, hence an element of $D$; so $\mathbb Z[i]$ is the disjoint union of the sets $l(3 + 4i)w + D$, $w \in \mathbb Z[i]$, and $D$ has as many elements as the index of $l(3 + 4i)\mathbb Z[i]$ in $\mathbb Z[i]$, which is $25l^2 = L^2$. In the same way $\mathbb Z^2$ is the disjoint union of the translates of $\{ 0, \dots, L - 1 \}^2$ by $L\mathbb Z^2$. The last assertion is the definition.
+(i) Since $a\mathbb Z^4$ is a subgroup of $T_\eta$ and the cube $y + [0, a)^4$ contains exactly one point of every class of $\mathbb R^4$ modulo $a\mathbb Z^4$, the block $B_a(y)$ contains exactly one point of every class of $T_\eta$ modulo $a\mathbb Z^4$. The number of these classes is the quotient $a^4/\eta^4$ of the volumes of the cells of the two lattices, because $\rho$ preserves volumes. The remaining assertions follow from the corresponding ones for the cubes.
 
-(ii) Seven steps of $\sigma_2$ add up to $3e_2 + 4e_3$ and seven steps of $\sigma_3$ to $4e_2 - 3e_3$, and $l(3e_2 + 4e_3) = Le'_2$, $l(4e_2 - 3e_3) = Le'_3$ by \eqref{eq:rho-vectors}. The distance of a point $ae_2 + be_3$ from the line through the origin in the direction $3e_2 + 4e_3$ is $\abs{4a - 3b}/5$; after one to seven steps of $\sigma_2$ from the origin the pair $(a, b)$ is $(0, 1)$, $(1, 1)$, $(1, 2)$, $(2, 2)$, $(2, 3)$, $(3, 3)$, $(3, 4)$, with $\abs{4a - 3b} = 3, 1, 2, 2, 1, 3, 0$, and the foot of the perpendicular lies on the segment between the origin and $3e_2 + 4e_3$ in each case. Since the eighth site lies on the line, the same holds for every period of seven steps. For $\sigma_3$ the pairs are $(1, 0)$, $(1, -1)$, $(2, -1)$, $(2, -2)$, $(3, -2)$, $(3, -3)$, $(4, -3)$, and the distance from the line in the direction $4e_2 - 3e_3$ is $\abs{3a + 4b}/5$, with the same values. Both sequences of seven steps read the same from either end, which gives the assertion on the reversed path.
+(ii) For $\mu \in \{ 0, 1 \}$ there is nothing to prove. By \eqref{eq:rho-vectors}, seven steps of $\sigma^a_2$ add up to $\eta(3e'_2 + 4e'_3) = 5\eta e_2$ and seven steps of $\sigma^a_3$ to $\eta(4e'_2 - 3e'_3) = 5\eta e_3$, which gives the end point and the concatenation. The distance of a point $\eta(ne'_2 + n'e'_3)$ from the line through the origin in the direction $3e'_2 + 4e'_3$ is $\eta\abs{4n - 3n'}/5$. After one to seven steps of $\sigma^a_2$ from the origin the pair $(n, n')$ is $(0, 1)$, $(1, 1)$, $(1, 2)$, $(2, 2)$, $(2, 3)$, $(3, 3)$, $(3, 4)$, with $\abs{4n - 3n'} = 3, 1, 2, 2, 1, 3, 0$, and the foot of the perpendicular lies between the origin and $5\eta e_2$ in each case; the eighth site lies on the line, so that the same holds in every period. For $\sigma^a_3$ the pairs are $(1, 0)$, $(1, -1)$, $(2, -1)$, $(2, -2)$, $(3, -2)$, $(3, -3)$, $(4, -3)$, and the distance from the line in the direction $4e'_2 - 3e'_3$ is $\eta\abs{3n + 4n'}/5$, with the same values.
 \end{proof}
 
-A real field is a function $A$ on the bonds of the fine lattice with $A(b^{-1}) = -A(b)$, and $A(\gamma) \coloneqq \sum_{b \in \gamma}A(b)$ for a path $\gamma$. For the average we need, as in \cite[(1.7), p.~18]{BalabanPRT1}, a path from the corner of each block to each of its points. We call a \emph{system of contours} a choice, for every $y \in Y$ and every $x \in B(y)$, of a path $\Gamma_{y,x}$ of fine bonds from $y$ to $x$ such that $\Gamma_{y+w,x+w} = \Gamma_{y,x} + w$ for every $w \in Y$; what follows holds for every such system.
+The next lemma replaces the calculation \cite[(1.16)--(1.18), p.~20]{BalabanPRT1} by which a composition of averages is an average, and it contains a second statement which has no counterpart there: the tilted average is one of Ba{\l}aban's averages, preceded by an average over cells of $5^4$ points which is the same at every step.
 
-\begin{definition}[The Linear Average]\label{def:linear-average}
-For a real field $A$ and a bond $c = \langle y, y + Le'_\mu\rangle$ of $Y$,
-\begin{equation}\label{eq:linear-average}
-    (QA)(c) \coloneqq L^{-5}\sum_{x \in B(y)}\Bigl(A(\Gamma_{y,x}) + A(\sigma_\mu(x)) - A(\Gamma_{y+Le'_\mu,\,x+Le'_\mu})\Bigr)\;,
+\begin{lemma}[Composition]\label{lem:composition}
+For scales $a$ and $a'$ with $a'/a$ an integer,
+\begin{equation}\label{eq:composition}
+    Q_{a'} = Q^{\mathrm{st}}_{a,a'}Q_a\;,
+    \qquad
+    Q'_{a'} = Q'^{\mathrm{st}}_{a,a'}Q'_a\;.
 \end{equation}
-and $(QA)(c^{-1}) \coloneqq -(QA)(c)$.
-\end{definition}
+In particular $Q_k = Q^{\mathrm{st}}_{L^{-1},1}Q_{L^{-1}}$ and $Q_k = Q^{\mathrm{st}}_{5\eta,1}Q_{5\eta}$, and likewise for $Q'_k$.
+\end{lemma}
 
-For each $x$ the three paths form one path from $y$ through $x$ and $x + Le'_\mu$ to $y + Le'_\mu$, the last piece traversed backwards, and $x + Le'_\mu$ is a point of $B(y + Le'_\mu)$ by Lemma~\ref{lem:blocks}(i). With cubes for the blocks and straight segments for the staircases, \eqref{eq:linear-average} is \cite[(1.8), p.~19]{BalabanPRT1} in dimension four.
+\begin{proof}
+Let $b = \langle y, y + a'e_\mu\rangle$, and let $z$ run over the points of $a\mathbb Z^4$ with $y_\nu \leq z_\nu < y_\nu + a'$. The segment $[z, z + a'e_\mu]$ consists of the $a'/a$ bonds $\langle z + nae_\mu, z + (n + 1)ae_\mu\rangle$ of $a\mathbb Z^4$, so that by \eqref{eq:standard-averages} and \eqref{eq:vector-average}
+\begin{equation}\label{eq:composition-proof}
+\begin{split}
+    (Q^{\mathrm{st}}_{a,a'}Q_aA)(b) &= \Bigl(\frac{a}{a'}\Bigr)^5\Bigl(\frac{\eta}{a}\Bigr)^5\sum_z\sum_{n=0}^{a'/a-1}\sum_{x \in B_a(z + nae_\mu)}A\bigl(\sigma^a_\mu(x)\bigr)\\
+    &= \Bigl(\frac{\eta}{a'}\Bigr)^5\sum_z\sum_{x \in B_a(z)}\sum_{n=0}^{a'/a-1}A\bigl(\sigma^a_\mu(x + nae_\mu)\bigr)\;,
+\end{split}
+\end{equation}
+where we have used $B_a(z + nae_\mu) = B_a(z) + nae_\mu$. By Lemma~\ref{lem:blocks}(ii) the inner sum is $A(\sigma^{a'}_\mu(x))$, and by Lemma~\ref{lem:blocks}(i) the points $x$ run over $B_{a'}(y)$; this is $(Q_{a'}A)(b)$. The proof for $Q'$ is the last assertion of Lemma~\ref{lem:blocks}(i).
+\end{proof}
 
-\begin{lemma}[First Properties of the Average]\label{lem:average}
+\begin{lemma}[The Identities of the Averages]\label{lem:identities}
+Let $a$ be a scale, and write $(\partial^\eta\lambda)(b) \coloneqq \eta^{-1}(\lambda(b_+) - \lambda(b_-))$ for a function $\lambda$ on $T_\eta$ and a bond $b = \langle b_-, b_+\rangle$ of $T_\eta$, and $\partial^a$ for the same operation on $a\mathbb Z^4$.
 \begin{enumerate}[label=(\roman*)]
-\item For a function $\lambda$ on $\mathbb Z^4$ and the field $(\partial\lambda)(b) \coloneqq \lambda(b_+) - \lambda(b_-)$, $b = \langle b_-, b_+\rangle$, we have $(Q\partial\lambda)(c) = L^{-1}(\lambda(c_+) - \lambda(c_-))$ for every bond $c = \langle c_-, c_+\rangle$ of $Y$.
-\item For $a \in \mathbb R^4$ and the constant field $A(b) \coloneqq a \cdot (b_+ - b_-)$, we have $(QA)(\langle y, y + Le'_\mu\rangle) = a \cdot e'_\mu$.
-\item $Q$ commutes with the translations by the vectors of $Y$.
+\item $Q_a\partial^\eta = \partial^aQ'_a$.
+\item $Q'_a$ maps the constant function $1$ to $1$, and so does its adjoint. For $v \in \mathbb R^4$, $Q_a$ maps the constant field $A(\langle x, x + \eta e'_\nu\rangle) \coloneqq v \cdot e'_\nu$ on $T_\eta$ to the constant field $B(\langle y, y + ae_\mu\rangle) \coloneqq v \cdot e_\mu$ on $a\mathbb Z^4$, and its adjoint maps $B$ to $A$. Here the adjoints are taken with respect to the sums over the points, or the positive bonds, with the weights $\eta^4$ on $T_\eta$ and $a^4$ on $a\mathbb Z^4$.
+\item $Q_a$ and $Q'_a$ commute with the translations by the vectors of $a\mathbb Z^4$.
 \end{enumerate}
 \end{lemma}
 
 \begin{proof}
-For a path $\gamma$ from $x$ to $x'$ we have $(\partial\lambda)(\gamma) = \lambda(x') - \lambda(x)$ and, for the constant field, $A(\gamma) = a \cdot (x' - x)$. (i) The three terms of \eqref{eq:linear-average} are $\lambda(x) - \lambda(y)$, $\lambda(x + Le'_\mu) - \lambda(x)$, and $-(\lambda(x + Le'_\mu) - \lambda(y + Le'_\mu))$, with the sum $\lambda(y + Le'_\mu) - \lambda(y)$ for each of the $L^4$ points $x$. (ii) The three terms are $a \cdot (x - y)$, $a \cdot Le'_\mu$, and $-a \cdot (x - y)$. (iii) holds because the blocks, the staircases, and the contours are carried to each other by these translations.
+(i) The sum of $\partial^\eta\lambda$ over a path from $x$ to $x'$ is $\eta^{-1}(\lambda(x') - \lambda(x))$, so that $(Q_a\partial^\eta\lambda)(\langle y, y + ae_\mu\rangle) = (\eta/a)^5\eta^{-1}\sum_{x \in B_a(y)}(\lambda(x + ae_\mu) - \lambda(x))$ by Lemma~\ref{lem:blocks}(ii). Since $x \mapsto x + ae_\mu$ maps $B_a(y)$ onto $B_a(y + ae_\mu)$, this is $a^{-1}((Q'_a\lambda)(y + ae_\mu) - (Q'_a\lambda)(y))$.
+
+(ii) $Q'_a1 = 1$ is the count of Lemma~\ref{lem:blocks}(i), and $(Q'^*_a\omega)(x) = \omega(y)$ for $x \in B_a(y)$, because every point lies in one block. The sum of the constant field $A$ over a path from $x$ to $x'$ is $\eta^{-1}v \cdot (x' - x)$, so that every term of \eqref{eq:vector-average} is $\eta^{-1}av \cdot e_\mu$, and $(\eta/a)^5(a/\eta)^4\eta^{-1}a = 1$. For the adjoint we count the staircases through a bond. By \eqref{eq:vector-average} and the weights, $(Q_a^*B)(b') = (\eta/a)\sum_\mu\sum_{x}\pm B(\langle y(x), y(x) + ae_\mu\rangle)$ for a positive bond $b'$ of $T_\eta$, the inner sum over the points $x \in T_\eta$ whose staircase $\sigma^a_\mu(x)$ contains $b'$ or its reverse, with the sign $-$ in the second case, and with $y(x)$ the corner of the block of $x$. A bond in the direction $e_0$ or $e_1$ lies on $a/\eta$ staircases of that direction and on no other. Each period of $\sigma^a_2$ has three steps $\eta e'_2$ and four steps $\eta e'_3$, and each period of $\sigma^a_3$ has four steps $\eta e'_2$ and three steps $-\eta e'_3$; since every translate of a staircase by a vector of $T_\eta$ is a staircase, a bond in the direction $e'_2$ lies on $3a/(5\eta)$ staircases $\sigma^a_2$ and on $4a/(5\eta)$ staircases $\sigma^a_3$, and a bond in the direction $e'_3$ on $4a/(5\eta)$ staircases $\sigma^a_2$ and, reversed, on $3a/(5\eta)$ staircases $\sigma^a_3$. For the constant field $B$ this gives the values $\frac15(3v \cdot e_2 + 4v \cdot e_3) = v \cdot e'_2$ and $\frac15(4v \cdot e_2 - 3v \cdot e_3) = v \cdot e'_3$ by \eqref{eq:rho-vectors}.
+
+(iii) The blocks and the staircases are carried to each other by these translations.
 \end{proof}
 
-Statement (i) is the gauge covariance of the average, as in \cite[(1.9), p.~19]{BalabanPRT1}, and statement (ii) says that the average of a constant field is the same constant field, read in the axes of the coarse lattice.
+Statement (i) is \cite[(1.55), p.~27]{BalabanPRT1}, and with it \cite[(1.9), (1.13), (1.20)]{BalabanPRT1}. Statement (ii) says that the average of a constant field is the same constant vector, with its components in the basis $e'_\nu$ replaced by those in the basis $e_\mu$. On the constant fields $Q_a$ is therefore an isometry with $Q_a^*Q_a = 1$, where Ba{\l}aban's average is the identity, and $Q_a$ and $Q'_a$ map the orthogonal complements of the constants to the orthogonal complements of the constants.
 
-\section{What Is Not Proved}\label{sec:not-proved}
+\section{The Momentum Representation}\label{sec:momentum}
 
-The equality \eqref{eq:target} is not proved. By Proposition~\ref{prop:reduction} it concerns the lattice theories of the two lattices $\Lambda_K$ and $\Lambda'_K$ on the torus $\mathbb T_\Gamma$, and the route described in the introduction requires the following, none of which is available.
+Ba{\l}aban's bounds on the operators built from $Q_k$, $Q'_k$, and the Laplace operator of the fine lattice are read off from their momentum representation, in which $Q'_k$ is the multiplication by the function $u_k$ of \cite[(1.31), p.~23]{BalabanPRT1} and $Q_k$ the multiplication of the component $\mu$ by $u_kv_\mu$ \cite[(1.61), p.~28]{BalabanPRT1}. Both are products of quotients of sines, and their properties are evident from this form. For the tilted averages the factorisation $Q_k = Q^{\mathrm{st}}_{5\eta,1}Q_{5\eta}$ of Lemma~\ref{lem:composition} gives the corresponding form: Ba{\l}aban's functions for the lattice of the spacing $5\eta$, multiplied by one trigonometric polynomial of $25$ terms for the cell, and with a matrix of polynomials of at most four terms in place of the scalar $v_\mu$ in the two turned directions.
 
-\emph{The construction on the tilted torus.} The paper is written for the torus $(\mathbb R/T\mathbb Z)^4$. The existence of the limits on $\mathbb T_\Gamma$, with the normalisations of the paper, requires each of its steps in which the torus enters to be carried out for the periods $\Gamma$, which are not multiples of the vectors of the basis.
+For $p \in \mathbb R^4$ we write $e_p(x) \coloneqq e^{ip \cdot x}$, and for a number $a > 0$
+\begin{equation}\label{eq:symbols-basic}
+    \partial^a_\mu(p) \coloneqq \frac{e^{iap_\mu} - 1}{a}\;,
+    \qquad
+    \partial'_\nu(p) \coloneqq \frac{e^{i\eta p \cdot e'_\nu} - 1}{\eta}\;,
+    \qquad
+    \Delta(p) \coloneqq \sum_\nu\abs{\partial'_\nu(p)}^2\;,
+    \qquad
+    \Delta_0(p) \coloneqq \sum_\mu\abs{\partial^1_\mu(p)}^2\;.
+\end{equation}
+The functions $\partial'_\nu$ and $\Delta$ are the symbols of the difference operators and of the Laplace operator of $T_\eta$, and $\partial^1_\mu$ and $\Delta_0$ those of the unit lattice, as in \cite[(1.31), p.~23, and p.~24]{BalabanPRT1}. For numbers $a$ and $a'$ with $a'/a$ an integer we put
+\begin{equation}\label{eq:dirichlet}
+    D^{a,a'}_\mu(p) \coloneqq \frac{a}{a'}\sum_{n=0}^{a'/a-1}e^{ianp_\mu}\;,
+\end{equation}
+which is $\partial^{a'}_\mu(p)/\partial^a_\mu(p)$ wherever $\partial^a_\mu(p) \neq 0$ and satisfies $D^{a,a''}_\mu = D^{a,a'}_\mu D^{a',a''}_\mu$. Ba{\l}aban's functions are $u_k = \prod_\mu D^{\eta,1}_\mu$ and $v_\mu = D^{\eta,1}_\mu$. The cell enters through the set $\mathsf C \coloneqq \{ c \in \omega\mathbb Z[i] \, | \, 0 \leq \operatorname{Re}c < 5,\ 0 \leq \operatorname{Im}c < 5 \}$, which has $25$ elements by Lemma~\ref{lem:blocks}(i) for $a = 5\eta$, and through the functions of $\theta = (\theta_2, \theta_3)$
+\begin{equation}\label{eq:cell-symbols}
+\begin{gathered}
+    \kappa(\theta) \coloneqq \frac{1}{25}\sum_{c \in \mathsf C}e^{i\theta \cdot c}\;,\\
+    s_{22}(\theta) \coloneqq e^{i\theta \cdot e'_3} + e^{i\theta \cdot (e'_2 + 2e'_3)} + e^{i\theta \cdot (2e'_2 + 3e'_3)}\;,\\
+    s_{23}(\theta) \coloneqq 1 + e^{i\theta \cdot (e'_2 + e'_3)} + e^{i\theta \cdot (2e'_2 + 2e'_3)} + e^{i\theta \cdot (3e'_2 + 3e'_3)}\;,\\
+    s_{32}(\theta) \coloneqq 1 + e^{i\theta \cdot (e'_2 - e'_3)} + e^{i\theta \cdot (2e'_2 - 2e'_3)} + e^{i\theta \cdot (3e'_2 - 3e'_3)}\;,\\
+    s_{33}(\theta) \coloneqq -e^{i\theta \cdot (e'_2 - e'_3)} - e^{i\theta \cdot (2e'_2 - 2e'_3)} - e^{i\theta \cdot (3e'_2 - 3e'_3)}\;,
+\end{gathered}
+\end{equation}
+where $c$ is read as the vector $(\operatorname{Re}c, \operatorname{Im}c)$ and $\theta \cdot e'_\nu$ is the product with the components of $e'_\nu$ in the plane.
 
-\emph{The run with the tilted step.} Let $L$ be a multiple of $5$. The run to be compared with the construction of the paper on $\Lambda'_K$, which is the construction on $\Lambda_K$ carried by $\rho$, starts from the lattice theory on $\Lambda_{K+1}$, passes to $\Lambda'_K$ by the step of Section~\ref{sec:tilted-step}, and continues on $\Lambda'_{K-1}, \Lambda'_{K-2}, \dots$ with the steps of the paper. For this run one needs the average of Section~\ref{sec:tilted-step} for fields with values in $G$, with the properties of Ba{\l}aban's averaging operations \cite{BalabanAVG}, and then his description of the densities after $k$ steps \cite[Theorem~1, p.~262]{BalabanCRE}. Every background field, propagator, and gauge fixing of this run, at every step, is defined on $\Lambda_{K+1}$ under the constraints of an iterated average whose first factor is the tilted one, so that the results on which that description rests \cite{BalabanPRT1, BalabanPRT2, BalabanREG, BalabanPBG, BalabanVAR} are needed for such averages; they are proved for cubes and straight segments.
+\begin{lemma}[The Symbols of the Tilted Averages]\label{lem:symbols}
+Let $p \in \mathbb R^4$.
+\begin{enumerate}[label=(\roman*)]
+\item $Q'_ke_p = u_k(p)\,e_p$ on $\mathbb Z^4$, with
+\begin{equation}\label{eq:u-tilted}
+\begin{split}
+    u_k(p) &\coloneqq \sum_{x \in B_1(0)}\eta^4e^{ip \cdot x}\\
+    &= D^{\eta,1}_0(p)\,D^{\eta,1}_1(p)\,D^{5\eta,1}_2(p)\,D^{5\eta,1}_3(p)\,\kappa(\eta p_2, \eta p_3)\;.
+\end{split}
+\end{equation}
+\item For $w = (w_\nu) \in \mathbb C^4$ and the field $A(\langle x, x + \eta e'_\nu\rangle) \coloneqq w_\nu e^{ip \cdot x}$, we have $(Q_kA)(\langle y, y + e_\mu\rangle) = u_k(p)\sum_\nu V_{\mu\nu}(p)w_\nu\,e^{ip \cdot y}$, where $V_{\mu\mu}(p) \coloneqq D^{\eta,1}_\mu(p)$ for $\mu \in \{ 0, 1 \}$,
+\begin{equation}\label{eq:v-tilted}
+    V_{\mu\nu}(p) \coloneqq \tfrac15D^{5\eta,1}_\mu(p)\,s_{\mu\nu}(\eta p_2, \eta p_3)
+\end{equation}
+for $\mu, \nu \in \{ 2, 3 \}$, and $V_{\mu\nu} \coloneqq 0$ for the other pairs.
+\item $\sum_\nu V_{\mu\nu}(p)\,\partial'_\nu(p) = \partial^1_\mu(p)$ for every $\mu$.
+\item $u_k$ and $V$ are periodic with respect to $2\pi\eta^{-1}\rho\mathbb Z^4$, which is a subgroup of $2\pi\mathbb Z^4$; $u_k(0) = 1$; $u_k(l) = 0$ for every $l \in 2\pi\mathbb Z^4$ which does not lie in $2\pi\eta^{-1}\rho\mathbb Z^4$; and $V_{\mu\nu}(0) = e_\mu \cdot e'_\nu$.
+\end{enumerate}
+\end{lemma}
 
-\emph{The coupling.} By Lemma~\ref{lem:invariant-forms} the symmetries of this run leave three coefficients where Ba{\l}aban's definition of $\beta_{j+1}$ uses one. If the three do not agree, the description of the densities must carry them, and so must the choice of the bare coupling of the paper (Paper, Theorem~\ref{P-thm:coupling-flow}).
+\begin{proof}
+(i) By \eqref{eq:scalar-average}, $(Q'_ke_p)(y) = \sum_{x \in B_1(0)}\eta^4e^{ip \cdot (y + x)}$, which is the first equality. By Lemma~\ref{lem:blocks}(i), $B_1(0)$ is the disjoint union of the sets $z + B_{5\eta}(0)$ over the $z \in 5\eta\mathbb Z^4$ with $0 \leq z_\mu < 1$, and $B_{5\eta}(0)$ is the set of the points $\eta(n_0, n_1, c)$ with $n_0, n_1 \in \{ 0, \dots, 4 \}$ and $c \in \mathsf C$. Hence
+\begin{equation}\label{eq:u-proof}
+\begin{split}
+    u_k(p) &= \Bigl(\sum_z(5\eta)^4e^{ip \cdot z}\Bigr)\Bigl(\frac{1}{5^4}\sum_{n_0,n_1=0}^{4}\sum_{c \in \mathsf C}e^{i\eta(n_0p_0 + n_1p_1)}e^{i\eta(p_2, p_3) \cdot c}\Bigr)\\
+    &= \prod_{\mu=0}^{3}D^{5\eta,1}_\mu(p) \cdot D^{\eta,5\eta}_0(p)\,D^{\eta,5\eta}_1(p)\,\kappa(\eta p_2, \eta p_3)\;,
+\end{split}
+\end{equation}
+and $D^{\eta,5\eta}_\mu D^{5\eta,1}_\mu = D^{\eta,1}_\mu$.
 
-\emph{The loops in the tilted step.} The first step of the paper with a loop ensemble (Paper, Theorem~\ref{P-thm:first-step}) is needed for the tilted step. The loops of Proposition~\ref{prop:reduction} run along $e_0$ and $e_1$, which are axes of both lattices, but the blocks which they cross are tilted in the other two directions.
+(ii) For $\mu \in \{ 0, 1 \}$ the sum of $A$ over $\sigma^1_\mu(x)$ is $w_\mu e^{ip \cdot x}\sum_{n<1/\eta}e^{i\eta np_\mu} = \eta^{-1}D^{\eta,1}_\mu(p)w_\mu e^{ip \cdot x}$, and \eqref{eq:vector-average} with (i) gives the assertion. For $\mu = 2$, the bonds of the first period of $\sigma^1_2(x)$ start at the points $x + \eta c$ with $c = 0$, $e'_3$, $e'_2 + e'_3$, $e'_2 + 2e'_3$, $2e'_2 + 2e'_3$, $2e'_2 + 3e'_3$, $3e'_2 + 3e'_3$, and they have the directions $e'_3, e'_2, e'_3, e'_2, e'_3, e'_2, e'_3$; the sum of $A$ over them is $e^{ip \cdot x}(s_{22}(\eta p)w_2 + s_{23}(\eta p)w_3)$. The $n$-th period is the translate of the first by $5\eta ne_2$, so that the sum of $A$ over $\sigma^1_2(x)$ is this number multiplied by $\sum_{n<1/(5\eta)}e^{5i\eta np_2} = (5\eta)^{-1}D^{5\eta,1}_2(p)$. For $\mu = 3$ the steps in the direction $e'_2$ start at the points $x + \eta j(e'_2 - e'_3)$, $j = 0, \dots, 3$, and a step $-\eta e'_3$ from $x + \eta c$ is the reversed bond $\langle x + \eta(c - e'_3), x + \eta c\rangle$, on which $A$ takes the value $-w_3e^{ip \cdot (x + \eta(c - e'_3))}$; the three such steps end at $x + \eta j(e'_2 - e'_3)$, $j = 1, 2, 3$. This gives $s_{32}$ and $s_{33}$.
 
-\emph{The comparison.} The two runs share every lattice but the finest, as the two runs of Paper, Section~\ref{P-sec:two-runs}, and the identities of Paper, Lemma~\ref{P-lem:galerkin}, use of the passage between the two fine lattices only a linear map with a right inverse. The bounds on the defect (Paper, Proposition~\ref{P-prop:local-defect}), on the minimisers, and on the large-field terms are proved in the paper for two fine lattices of which one is the lattice of the cubes of the other, and they are needed for $\Lambda_{K+1}$ and $\Lambda'_K$.
+(iii) Multiply each term of $s_{\mu\nu}(\theta)$ by $e^{i\theta \cdot e'_\nu} - 1$ and add: each step of a period from $c$ to $c'$ contributes $e^{i\theta \cdot c'} - e^{i\theta \cdot c}$, a step $-\eta e'_3$ included, since $-(e^{i\theta \cdot e'_3} - 1)e^{i\theta \cdot (c - e'_3)} = e^{i\theta \cdot (c - e'_3)} - e^{i\theta \cdot c}$. The sum over a period telescopes to $e^{5i\theta_\mu} - 1$, because the period ends at $5e_\mu$. Hence $\sum_\nu V_{\mu\nu}\partial'_\nu = \frac15D^{5\eta,1}_\mu(p)\eta^{-1}(e^{5i\eta p_\mu} - 1) = D^{5\eta,1}_\mu(p)\,\partial^{5\eta}_\mu(p) = \partial^1_\mu(p)$ for $\mu \in \{ 2, 3 \}$, and for $\mu \in \{ 0, 1 \}$ it is $D^{\eta,1}_\mu\partial^\eta_\mu = \partial^1_\mu$.
 
-\emph{The normalisation.} The normalisation of the run with the tilted step is a product of its own step factors. Since $\rho$ fixes a loop in the plane $\{ z = 0 \}$, the comparison for a single loop relates the two normalisations whenever the limit for this loop is not zero, which the paper proves for loops which are short for the coupling (Paper, Proposition~\ref{P-prop:nonvanishing}) on its own torus.
+(iv) For $n \in \mathbb Z^4$ and $x \in T_\eta$ the product $2\pi\eta^{-1}\rho n \cdot x$ is a multiple of $2\pi$, because $\rho$ is an isometry and $\rho x \in \eta\mathbb Z^4$; this gives the periodicity of $u_k$, and that of $V$ follows in the same way from the positions of the bonds. The inclusion holds because $\eta^{-1}\omega\mathbb Z[i] \subset \mathbb Z[i]$ by Lemma~\ref{lem:gaussian}(iv). The value $u_k(0) = 1$ is the count of Lemma~\ref{lem:blocks}(i). For $l \in 2\pi\mathbb Z^4$ the function $x \mapsto e^{il \cdot x}$ is a character of the group $T_\eta$ which is trivial on $\mathbb Z^4$, and $B_1(0)$ contains one point of every class of $T_\eta$ modulo $\mathbb Z^4$; the sum of a nontrivial character over a finite group vanishes, and the character is trivial only if $l \cdot x \in 2\pi\mathbb Z$ for every $x \in T_\eta$, that is, $l \in 2\pi\eta^{-1}\rho\mathbb Z^4$. Finally $s_{22}(0) = 3$, $s_{23}(0) = 4$, $s_{32}(0) = 4$, $s_{33}(0) = -3$, which are the numbers $5e_\mu \cdot e'_\nu$ of \eqref{eq:rho-vectors}.
+\end{proof}
+
+Statement (iii) is the identity $Q_k\partial = \partial_1Q'_k$ in the momentum representation, and (iv) contains the two properties of $u_k$ which Ba{\l}aban uses after \cite[(1.33), p.~23]{BalabanPRT1}. In his setting a momentum $p$ of the fine lattice is written as $p = p' + l$ with $p'$ in the dual of the unit lattice and $l \in 2\pi\mathbb Z^4$, the classes of $l$ being taken modulo $2\pi\eta^{-1}\mathbb Z^4$. Here they are taken modulo $2\pi\eta^{-1}\rho\mathbb Z^4$, and the number of the classes is again $\eta^{-4}$.
+
+The bounds on $u_k$ are those of \cite[(1.36), p.~24]{BalabanPRT1} with one change. For $p \in \mathbb R^4$ let $q_\mu$, for $\mu \in \{ 0, 1 \}$, be the number with $q_\mu \equiv p_\mu$ modulo $2\pi/\eta$ and $-\pi/\eta < q_\mu \leq \pi/\eta$, and for $\mu \in \{ 2, 3 \}$ the number with $q_\mu \equiv p_\mu$ modulo $2\pi/(5\eta)$ and $-\pi/(5\eta) < q_\mu \leq \pi/(5\eta)$, so that $(p_2, p_3) = (q_2, q_3) + \frac{2\pi}{5\eta}m$ with $m \in \mathbb Z[i]$. We call $p$ \emph{central} if $m \in (3 + 4i)\mathbb Z[i]$.
+
+\begin{lemma}[Bounds on the Symbols]\label{lem:symbol-bounds}
+\begin{enumerate}[label=(\roman*)]
+\item $\kappa(0) = 1$; $\kappa(\theta + \frac{2\pi}{5}m) = \kappa(\theta)$ for $m \in (3 + 4i)\mathbb Z[i]$; $\kappa(\frac{2\pi}{5}m) = 0$ for $m \in \mathbb Z[i] \setminus (3 + 4i)\mathbb Z[i]$; and $\abs{\kappa(\theta) - \kappa(\theta')} \leq 5\sqrt2\abs{\theta - \theta'}$.
+\item For every $p \in \mathbb R^4$, with $q$ as above,
+\begin{equation}\label{eq:u-bound}
+    \abs{u_k(p)} \leq \prod_{\mu=0}^{3}\min\Bigl(1, \frac{\pi\abs{\partial^1_\mu(p)}}{2\abs{q_\mu}}\Bigr) \cdot \begin{cases} 1 & \text{if } p \text{ is central,}\\ \min\bigl(1, 5\sqrt2\,\eta\abs{(q_2, q_3)}\bigr) & \text{otherwise,} \end{cases}
+\end{equation}
+and $\abs{V_{\mu\nu}(p)} \leq \frac45\min(1, \pi\abs{\partial^1_\mu(p)}/(2\abs{q_\mu}))$ for $\mu, \nu \in \{ 2, 3 \}$; a quotient with $q_\mu = 0$ is read as $\infty$.
+\item For $p \in [-\pi, \pi]^4$,
+\begin{equation}\label{eq:u-lower}
+    \abs{u_k(p)} \geq \Bigl(\frac{2}{\pi}\Bigr)^4(1 - 10\pi\eta)\;,
+\end{equation}
+and the matrix $V^{\mathrm{pl}}(p) \coloneqq (V_{\mu\nu}(p))_{\mu,\nu \in \{ 2, 3 \}}$ satisfies $\abs{V^{\mathrm{pl}}(p)w} \geq \frac{2}{\pi}(1 - 32\eta)\abs{w}$ for every $w \in \mathbb C^2$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(i) $\kappa(0) = 1$ because $\mathsf C$ has $25$ elements. For $m \in \mathbb Z[i]$ the function $c \mapsto e^{i\frac{2\pi}{5}m \cdot c}$ is a character of the group $\omega\mathbb Z[i]$, trivial on $5\mathbb Z[i]$, since $m \cdot c \in 5\mathbb Z$ for $c \in 5\mathbb Z[i]$; and $\mathsf C$ contains one element of every class of $\omega\mathbb Z[i]$ modulo $5\mathbb Z[i]$. The character is trivial on $\omega\mathbb Z[i]$ if and only if $m \cdot \omega w \in 5\mathbb Z$ for every $w \in \mathbb Z[i]$, that is, since $m \cdot \omega w = \operatorname{Re}(\bar\omega m\bar w)$, if and only if $\bar\omega m \in 5\mathbb Z[i]$, which means $m \in 5\omega\mathbb Z[i] = (3 + 4i)\mathbb Z[i]$. If it is trivial, multiplying the terms of $\kappa$ by it changes nothing, which is the periodicity; if it is not, its sum over the classes vanishes. The last assertion holds because $\abs{c} < 5\sqrt2$ for $c \in \mathsf C$.
+
+(ii) For a number $a$ with $1/a$ an integer and a real $t$ with $\abs{at} \leq \pi$ we have $\abs{e^{iat} - 1}/a = 2\abs{\sin(at/2)}/a \geq 2\abs{t}/\pi$, so that $\abs{D^{a,1}_\mu(p)} = \abs{\partial^1_\mu(p)}/\abs{\partial^a_\mu(q)} \leq \pi\abs{\partial^1_\mu(p)}/(2\abs{q_\mu})$ for $a = \eta$, $\mu \in \{ 0, 1 \}$, and for $a = 5\eta$, $\mu \in \{ 2, 3 \}$, because $\partial^a_\mu$ has the period $2\pi/a$ in $p_\mu$; and $\abs{D^{a,1}_\mu} \leq 1$ by \eqref{eq:dirichlet}. Further $\abs\kappa \leq 1$, and if $p$ is not central, then $\kappa(\eta(p_2, p_3)) = \kappa(\eta(q_2, q_3) + \frac{2\pi}{5}m) - \kappa(\frac{2\pi}{5}m)$ by (i), which is at most $5\sqrt2\,\eta\abs{(q_2, q_3)}$ in modulus. With \eqref{eq:u-tilted} this is \eqref{eq:u-bound}, and the bound on $V$ follows from \eqref{eq:v-tilted} and $\abs{s_{\mu\nu}} \leq 4$.
+
+(iii) For $\abs{t} \leq \pi$ and $a \leq 1$ we have $\abs{e^{it} - 1} = 2\abs{\sin(t/2)} \geq 2\abs{t}/\pi$ and $\abs{e^{iat} - 1}/a \leq \abs{t}$, so that $\abs{D^{a,1}_\mu(p)} \geq 2/\pi$; and $\abs{\kappa(\eta(p_2, p_3)) - 1} \leq 5\sqrt2\,\eta\abs{(p_2, p_3)} \leq 10\pi\eta$ by (i). This gives \eqref{eq:u-lower}. Let $R_0$ be the matrix with the entries $\frac15s_{\mu\nu}(0) = e_\mu \cdot e'_\nu$, which is orthogonal by \eqref{eq:rho-vectors}. Each $s_{\mu\nu}$ has at most four terms $\pm e^{i\theta \cdot c}$ with $\abs{c} \leq 3\sqrt2$, so that $\abs{\frac15s_{\mu\nu}(\theta) - \frac15s_{\mu\nu}(0)} \leq \frac{12\sqrt2}{5}\abs\theta$, and the norm of the matrix of these differences is at most twice this number. For $\theta = \eta(p_2, p_3)$, $\abs\theta \leq \sqrt2\,\pi\eta$, this is at most $\frac{48\pi}{5}\eta \leq 32\eta$. Since $V^{\mathrm{pl}}(p)$ is the product of the diagonal matrix of the numbers $D^{5\eta,1}_\mu(p)$, of modulus at least $2/\pi$, with the matrix $\frac15s(\theta)$, the assertion follows.
+\end{proof}
+
+The first product in \eqref{eq:u-bound} is Ba{\l}aban's bound $\prod_\mu\abs{p'_\mu}/\abs{p'_\mu + l_\mu}$, with the difference that in the turned directions $q_\mu$ is the representative of $p_\mu$ in an interval of the length $2\pi/(5\eta)$ rather than $2\pi/\eta$. Each value of $q$ therefore belongs to $25$ of the classes of $l$; one of them is central, and on the other $24$ the symbol carries the additional factor $\eta\abs{q}$, while $\Delta(p)$ is of the order of $\eta^{-2}$ there.
+
+As a first application we give the bound on the operator $\phi = Q_k\Delta^{-1}Q_k^*$ of \cite[(1.58), (1.62), pp.~27--28]{BalabanPRT1}, which in the tilted run is a matrix in the turned directions. For $p'$ in the dual of the unit lattice let
+\begin{equation}\label{eq:phi-matrix}
+    \phi_{\mu\mu'}(p') \coloneqq \sum_l\frac{\abs{u_k(p' + l)}^2}{\Delta(p' + l)}\sum_\nu V_{\mu\nu}(p' + l)\,\overline{V_{\mu'\nu}(p' + l)}\;,
+\end{equation}
+the sum over the classes of $l \in 2\pi\mathbb Z^4$ modulo $2\pi\eta^{-1}\rho\mathbb Z^4$. By Lemma~\ref{lem:symbols}(i) and (ii) this is the momentum representation of $\phi$: $(\widetilde{\phi\omega})_\mu(p') = \sum_{\mu'}\phi_{\mu\mu'}(p')\tilde\omega_{\mu'}(p')$. It is diagonal for $\mu \in \{ 0, 1 \}$, where it is the function $\phi_\mu$ of \cite[(1.62)]{BalabanPRT1} with the tilted $u_k$, and a Hermitian matrix on the indices $\{ 2, 3 \}$.
+
+\begin{lemma}[The Matrix $\phi$]\label{lem:phi}
+Let $32\eta \leq \frac12$. There are constants $0 < \gamma_0 \leq \gamma_1$, which do not depend on $k$ and $L$, such that $\gamma_0\abs{w}^2 \leq \Delta_0(p')\sum_{\mu,\mu'}\bar w_\mu\phi_{\mu\mu'}(p')w_{\mu'} \leq \gamma_1\abs{w}^2$ for every $p' \in [-\pi, \pi]^4$, $p' \neq 0$, and every $w \in \mathbb C^4$.
+\end{lemma}
+
+\begin{proof}
+The quadratic form is $\sum_l\abs{u_k(p' + l)}^2\Delta_0(p')\Delta(p' + l)^{-1}\abs{V(p' + l)^*w}^2$, a sum of nonnegative terms. For the lower bound we keep the term $l = 0$. Since $\abs{e^{it} - 1} \leq \abs{t}$, we have $\Delta(p') \leq \sum_\nu\abs{p' \cdot e'_\nu}^2 = \abs{p'}^2$, and $\Delta_0(p') \geq (4/\pi^2)\abs{p'}^2$ because $\abs{e^{it} - 1} \geq 2\abs{t}/\pi$ for $\abs{t} \leq \pi$. With Lemma~\ref{lem:symbol-bounds}(iii), applied to $V^{\mathrm{pl}}$ and to the adjoint of this invertible matrix, and with $\abs{D^{\eta,1}_\mu(p')} \geq 2/\pi$ for $\mu \in \{ 0, 1 \}$, the term is at least $(4/\pi^2)(2/\pi)^8(1 - 10\pi\eta)^2(2/\pi)^2(1 - 32\eta)^2\abs{w}^2$, and $10\pi\eta \leq 32\eta \leq \frac12$.
+
+For the upper bound, $\abs{V(p)^*w} \leq \frac85\abs{w}$ by Lemma~\ref{lem:symbol-bounds}(ii). Let $\hat p$ be the representative of $p' + l$ with $\abs{\eta\hat p \cdot e'_\nu} \leq \pi$ for every $\nu$. Then $\Delta(p' + l) = \Delta(\hat p) \geq (4/\pi^2)\abs{\hat p}^2$, and $\Delta_0(p') \leq \abs{p'}^2$. For $l = 0$ we have $\hat p = p'$ and the term is at most $(\pi^2/4)(8/5)^2\abs{w}^2$. For $l \neq 0$ the difference $\hat p - p'$ is a nonzero element of $2\pi\mathbb Z^4$ by Lemma~\ref{lem:symbols}(iv), so that one coordinate of $\hat p$ is at least $\pi$ in modulus, and $\Delta_0(p')/\Delta(p' + l) \leq (\pi^2/4)\abs{p'}^2/\pi^2 \leq \pi^2$. By \eqref{eq:u-bound}, $\abs{u_k(p' + l)} \leq \prod_\mu\min(1, \pi/\abs{q_\mu})$, since $\abs{\partial^1_\mu} \leq 2$, and each value of $q$, which is of the form $q_\mu = p'_\mu + 2\pi n_\mu$ with integers $n_\mu$, belongs to at most $25$ classes of $l$. Hence the terms with $l \neq 0$ add up to at most $25\pi^2(8/5)^2\prod_\mu\sum_{n \in \mathbb Z}\min(1, \pi/\abs{p'_\mu + 2\pi n})^2\abs{w}^2 \leq 25\pi^2(8/5)^2(1 + \pi^2/4)^4\abs{w}^2$, because $\abs{p'_\mu + 2\pi n} \geq \pi(2\abs{n} - 1)$ for $n \neq 0$ and $\sum_{n \geq 1}(2n - 1)^{-2} = \pi^2/8$.
+\end{proof}
+
+\section[Propagators and Renormalization Transformations. I]{The Modifications in ``Propagators and Renormalization Transformations. I''}\label{sec:prt1}
+
+We go through \cite{BalabanPRT1} in its order. The paper treats the Gaussian theory of one real field, with the action $\frac12\langle\partial A, \partial A\rangle$ on the fine lattice, and it derives the propagators of the later papers from the averages. In the tilted run its fine lattice is $T_\eta$ of \eqref{eq:fine-lattice}, on a torus $T_\eta/\Gamma'$ with a group of periods $\Gamma' \subset \mathbb Z^4$ in place of the box of \cite[p.~17]{BalabanPRT1}; the operators $\partial$, $\partial^*$, and $\Delta$ are those of this lattice, whose bonds have the directions $e'_\nu$, and a field has the components $A_\nu$ in these directions, while the fields $B$ and the multipliers $\omega$ on the unit lattice have the components in the directions $e_\mu$.
+
+\emph{Section A, (1.1)--(1.15).} The action \cite[(1.3), (1.5)]{BalabanPRT1} and its gauge invariance \cite[(1.4)]{BalabanPRT1} concern the fine lattice alone and are unchanged. The blocks \cite[(1.6)]{BalabanPRT1} are those of Definition~\ref{def:averages}(i), and the average \cite[(1.8), (1.11)]{BalabanPRT1} is replaced by Definition~\ref{def:averages}(iv); the transformation laws \cite[(1.9), (1.13)]{BalabanPRT1} are Lemma~\ref{lem:identities}(i). The contours \cite[(1.7)]{BalabanPRT1} enter the axial gauge condition \cite[(1.10)]{BalabanPRT1}, which requires for every point $x$ of a block a path of fine bonds from the corner $y$ to $x$; we take the path which changes the coordinates of $x - y$ in the basis $\eta e'_\nu$ in the order $\nu = 3, 2, 1, 0$. Such a path may leave the block, by less than its side, which is of no consequence in \cite[(1.10)--(1.15)]{BalabanPRT1}: these use only that the conditions $A(\Gamma_{y,x}) = 0$ fix the gauge transformations which vanish at the corners, one condition for each point $x \neq y$.
+
+\emph{Section B, (1.16)--(1.20).} The computation \cite[(1.16)]{BalabanPRT1} of a composition is Lemma~\ref{lem:composition}: the average of the first step of the tilted run is $Q_{L^{-1}}$ in the unit of the lattice reached after $k$ steps, the later ones are Ba{\l}aban's, and the composition is $Q_k$. The formula \cite[(1.20)]{BalabanPRT1} is Lemma~\ref{lem:identities}(i).
+
+\emph{Sections C to E, the operator identities.} The derivations of \cite[(1.21)--(1.28), (1.38)--(1.44), (1.46)--(1.60), (1.64), (1.65), (1.68)--(1.82), (1.91)--(1.107)]{BalabanPRT1} are calculations with the operators $\partial$, $\partial^*$, $\Delta$ of the fine lattice, with $Q_k$, $Q'_k$, their adjoints, and with $\partial_1$ on the unit lattice. They use the following properties and no others: the decomposition \cite[(1.21)]{BalabanPRT1} of the action, which holds on every lattice with four orthogonal directions of bonds and hence on $T_\eta$; the identity \cite[(1.55)]{BalabanPRT1}, which is Lemma~\ref{lem:identities}(i); that $Q'_k$ maps constants to constants and their orthogonal complement to the orthogonal complement; and, in \cite[(1.57)--(1.59), (1.74), (1.82)]{BalabanPRT1}, that $Q_k$ and $Q_k^*$ map the constant fields to the constant fields with $Q_k^*Q_k = 1$ on them. The last two properties are Lemma~\ref{lem:identities}(ii). These derivations therefore hold without change, and so do their results in operator form: the projection $R$ \cite[(1.38), (1.44)]{BalabanPRT1}, the operator $H_k$ \cite[(1.60), (1.103)]{BalabanPRT1}, the action $\Delta_k$ \cite[(1.65)]{BalabanPRT1}, the operator $G$ \cite[(1.81), (1.82)]{BalabanPRT1}, and the identities \cite[(1.95), (1.97), (1.99), (1.107)]{BalabanPRT1}.
+
+\emph{The momentum representation, (1.29)--(1.37) and (1.45).} The Fourier transform \cite[(1.29)]{BalabanPRT1} is that of the finite group $T_\eta/\Gamma'$, whose dual consists of the classes modulo $2\pi\eta^{-1}\rho\mathbb Z^4$ of the $p$ with $p \cdot \gamma \in 2\pi\mathbb Z$ for $\gamma \in \Gamma'$, and the decomposition $p = p' + l$ is as described after Lemma~\ref{lem:symbols}. The symbols \cite[(1.31)]{BalabanPRT1} are replaced by \eqref{eq:symbols-basic} and \eqref{eq:u-tilted}. The solution \cite[(1.32)--(1.35), (1.37)]{BalabanPRT1} uses of $u_k$ only that $u_k(l) = 0$ for the classes $l \neq 0$ and $u_k(0) = 1$, which is Lemma~\ref{lem:symbols}(iv), and it holds without change. The bound $\Delta_0(p')/\Delta(p' + l) \leq O(1)(1 + \abs{l}^2)^{-1}$ holds with $l$ replaced by $\hat l \coloneqq \hat p - p'$ for the representative $\hat p$ of the proof of Lemma~\ref{lem:phi}: by the estimates given there the quotient is at most $\pi^4/\abs{\hat p}^2$, and $\abs{\hat p} \geq \max(\pi, \abs{\hat l} - 2\pi)$ for $\hat l \neq 0$. The bound \cite[(1.36)]{BalabanPRT1} is replaced by \eqref{eq:u-bound}. The formula \cite[(1.45)]{BalabanPRT1} and the bounds on it are taken from \cite{BalabanRDG}, which we have not examined.
+
+\emph{The momentum representation, (1.61)--(1.63), (1.66), (1.67), (1.83)--(1.88), and (1.101).} The representation \cite[(1.61)]{BalabanPRT1} of $Q_k$ is replaced by Lemma~\ref{lem:symbols}(ii): the scalar $v_\mu$ becomes the matrix $V$. The function $\phi_\mu$ of \cite[(1.62)]{BalabanPRT1} becomes the matrix \eqref{eq:phi-matrix}, and the bounds $\gamma_0 \leq \Delta_0\phi_\mu \leq \gamma_1$ stated there are Lemma~\ref{lem:phi}. The formulae \cite[(1.63), (1.66), (1.83)--(1.88), (1.101)]{BalabanPRT1} are the operator formulae \cite[(1.60), (1.65), (1.81), (1.99)]{BalabanPRT1} written in components under the assumption that $\phi$ is diagonal. In the tilted run they have to be written with the matrices $V$ and $\phi$ on the indices $\{ 2, 3 \}$, in which products such as $\overline{v_\mu}\phi_\mu^{-1}$ become $V^*\phi^{-1}$ and the function $\phi_\mu$ of \cite[(1.84)]{BalabanPRT1} becomes $\id + a\phi$. We have not carried out the bounds which Ba{\l}aban reads off from these formulae: the bound on the sum over $l$ stated after \cite[(1.63)]{BalabanPRT1}, the inequality \cite[(1.67)]{BalabanPRT1}, and Proposition~1.1 \cite[(1.89), (1.90)]{BalabanPRT1}. Each of them is a sum over $l$ of the kind estimated in the proof of Lemma~\ref{lem:phi}, with the cancellations of the terms $l' = l$ displayed in \cite[(1.87), (1.88)]{BalabanPRT1}, and the inputs which they require are Lemmata~\ref{lem:symbols} and~\ref{lem:symbol-bounds}.
+
+\emph{Section F, Proposition~1.2.} Not examined. Its proof uses a partition of unity over cubes of the size $M_0$ and the commutators \cite[(1.120), (1.121)]{BalabanPRT1} of the averages with the multiplication by a function, in which the segments $[x, x^{(k)}]$ and the contours enter, the bounds \cite[(1.126), (1.127)]{BalabanPRT1} on $\partial P\partial^*$, and the reduction \cite[(1.132)--(1.137)]{BalabanPRT1} to the operator $G'$ of \cite{BalabanRDG}.
+
+\section{What Is Not Covered}\label{sec:not-covered}
+
+The equality \eqref{eq:target} is not proved. By Proposition~\ref{prop:reduction} it is equivalent to a comparison of the construction of the paper on $\Lambda_K$, on the torus $\mathbb T_\Gamma$, with the tilted run, and for this comparison the following has not been examined.
+
+\emph{In \cite{BalabanPRT1}:} the bounds named in Section~\ref{sec:prt1}, and its Section~F.
+
+\emph{The other papers on the linear theory.} The scalar operators of \cite{BalabanRDG}, on which \cite{BalabanPRT1} rests; the averaging operations for fields with values in $G$ \cite{BalabanAVG}; and \cite{BalabanPRT2, BalabanREG, BalabanPBG, BalabanVAR}. Every background field, propagator, and gauge fixing of the tilted run, at every step, is defined on the turned fine lattice under the constraints of the averages of Section~\ref{sec:averages}.
+
+\emph{The coupling.} The consequences of the modification stated at the end of Section~\ref{sec:symmetries} for the description of the densities after $k$ steps \cite[Theorem~1, p.~262]{BalabanCRE} and for the choice of the bare coupling (Paper, Theorem~\ref{P-thm:coupling-flow}).
+
+\emph{The paper.} Its construction on the torus $\mathbb T_\Gamma$, whose periods are not multiples of the vectors of the basis; the first step with a loop ensemble (Paper, Theorem~\ref{P-thm:first-step}) for the tilted run; and the comparison of two runs, in which the identities of Paper, Lemma~\ref{P-lem:galerkin}, use of the passage between the two fine lattices only a linear map with a right inverse, while the bounds on the defect (Paper, Proposition~\ref{P-prop:local-defect}), on the minimisers, and on the large-field terms are proved for two fine lattices of which one is the lattice of the cubes of the other. The normalisation of the tilted run is a product of its own step factors; since $\rho$ fixes a loop in the plane $\{ z = 0 \}$, the comparison for a single loop relates it to that of the paper whenever the limit for this loop is not zero.
 
 \bibliographystyle{amsplain}
 \bibliography{refs}
