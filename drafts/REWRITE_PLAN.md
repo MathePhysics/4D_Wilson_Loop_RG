@@ -131,6 +131,53 @@ rate comparison, the root sum for (Z), and the difference count 3748–3815.
 
 ## State
 
+- **12 Nov 2026, 22:06 (from `date`). DESIGN OF THE COUNT FOR AN ENSEMBLE, FIXED AFTER READING (all in full):
+  the general-loops note §6 (d401d13826f7, lines 227–267), the map's (11)(a)–(f), (12)(a)–(f), (13)(a)
+  (9f0d33e406e6, lines 3441–3760), the two-loops note §(2) (lines 147–174), the N-loops note §1 and §6A
+  (2f8558cd2e50, lines 10–34, 75–111). NOTHING WRITTEN INTO THE MANUSCRIPTS SINCE 21:50; WRITE NOW, BLOCK BY
+  BLOCK, IN THIS ORDER.**
+  *A defect of the definitions written at 21:18–21:50, for three or more loops:* the arc `I_i(Y)` of a component
+  (filled on every loop) and the arc set of Definition `def:groups-of-step` (an arc between every tied pair on
+  every common loop) can be longer than a constant times the sizes of the constituents when a constituent has
+  pieces on many loops (the N-loops note avoids this: #NL6A.5, "a cross vertex is joined only into cross groups,
+  which have no joining arcs", and tube hulls). **Corrections (D1)–(D4), block 1:** (D1) the arc of an active
+  component Y is filled only if S′(Y) lies on one loop; otherwise I(Y) := S′(Y) (the dichotomy for intervals
+  holds trivially; then |I(G)| ≤ 4Λ̄M#(G) for every G without members). (D2) A marked polymer all of whose arcs
+  lie on one loop has the one piece I_i(M); otherwise its pieces are the maximal arcs of the union of the arcs
+  of its groups. (D3) Ties star-shaped, so that tied constituents have domains in contact: (ii) a marked
+  polymer of the set T of a link is tied to the carrier of the link; a marked polymer incompatible with a
+  vacuum occurrence is tied to the marked polymer to which the occurrence is *assigned* (the first one
+  incompatible with it); (v) two *incompatible* groups of one old occurrence. (D4) Joining arcs only between two
+  tied constituents each of which has all its pieces on the same single loop. A group with all intervals on
+  one loop still has one interval.
+  *The class (Section 5), block 1:* compatibility of groups is a relation given with the groups, with the
+  property that incompatible groups have domains X_W which share a point; X_W := domains ∪ cubes of π_j which
+  *meet* a fine bond of the intervals; X_W is connected (cubes sharing points) and #_j(X_W) + n_j(W)/M ≤ u_⋆σ(W);
+  ℓ_W := #_j(X_W) (replaces d_j(X_W) + 1: X_W need not be wall-connected); every group has σ(W) ≥ 1. New
+  clauses: (S_k) the production bound of the groups made at the step k (sup norm S_W over the space of the
+  step, weight e^{θ + νσ + ν_e ext}, factor ℓ_W, right side C′_S𝔞_k, per traversal and per cube of π_k), and the
+  sup form for all groups present, per traversal, with the weight λ_cν, λ_c := 15/16 − 1/8192 (its proof for
+  carried groups is the complex covariance block).
+  *The count, blocks 2–5 (my own bookkeeping, simpler than the map's; to be recorded in FINDINGS F30 with its
+  conditions):* cube positions only. For a constituent c let K(c) be the set of the cubes of π_{k+1} which meet
+  its domain (group: X^+_W; marked polymer: M, the supports of its links and assigned vacuum occurrences, its
+  pieces) and, if c has all its pieces on one loop, its window (the piece extended at each end by
+  Λ̄(2 diam + 2)). Facts: tied ⇒ K's share a cube; X_𝒢 ⊂ ∪K(c), X_𝒢 connected; σ_{k+1}(𝒢) := #(X_𝒢) + n/M ≤
+  (1 + 4Λ̄)Σ_c|K(c)| (a cube meets ≤ 4Λ̄M traversals); ext_{k+1}(𝒢) ≤ #(X_𝒢) + 3C_box; ℓ_𝒢 = #(X_𝒢); a connected
+  union of n cubes of π_j meets ≤ 81 + 625n/L cubes of π_{k+1}; so |K(W)| ≤ 146 + (50625 + 108Λ̄)u_⋆σ(W)/L.
+  Vertices: polymer vertex (M with 𝔊(M), touched members, links carried, vacuum occurrences assigned), member
+  vertex (untouched member), occurrence vertex (Γ with multiplicity n, weight |φ_k(Γ)|ⁿ/n!). Linking: K(v) and
+  K(v′) contain equal or touching cubes. Tree lemma: Σ_{v′~v}w(v′)e^{b(v′)} ≤ ηb(v), η ≤ 1 ⇒ the sum over the
+  connected sets S ∋ v₀ of Π_{v≠v₀}w(v) is ≤ e^{ηb(v₀)}, and over those with |S| ≥ 2 it is ≤ ηb(v₀)e^{b(v₀)}.
+  Old cube sums from the traversal sums by the extent weight (box reduction, constant K_box); occurrence
+  vertices by Kotecký–Preiss for the gas of the step k with the activities multiplied by a constant;
+  ε^new ≤ C_M𝔞_{k+1} + K_β(b_k/r_α)E^old. Result: Σ_{𝒢 at Δ}e^{(17/16)νσ + ν_e ext}S_𝒢ℓ_𝒢 ≤ C_new𝔞_{k+1} + ηK·E^old.
+  Then θ ≤ νσ/16 by Kotecký–Preiss for the gas of the step k + 1, the tail clause by ext ≥ C_box t − 2, and
+  the absolute convergence for `prop:regrouping`.
+  *For the 𝐑-steps block:* with these constants the share of an 𝐑-made insertion (u_⋆ = 2Λ̄u_𝔏) needs
+  L ≥ CΛ̄³u_𝔏 with a larger C than `eq:blocking-factor-condition` provides; sharpen the constants there or
+  record the changed condition.
+
 - **12 Nov 2026, 21:51 (from `date` 21:50:28). LATEST STATE OF THE MANUSCRIPTS: paper 177 pp. `d2646ba2e1e8`,
   supplement 170 pp. `3b566797fddb`, both clean.** Since the entry "21:55" below (typed; actual about 21:49):
   the dependence set X^+_W (8M fine units around X_W) is defined in Section 5 and used in (iii), in
