@@ -131,7 +131,20 @@ rate comparison, the root sum for (Z), and the difference count 3748–3815.
 
 ## State
 
-- **13 Nov 2026, 12:41 (from `date`; updated after reading ll. 1913–2340, no amendment). RESUME HERE: ITEM 8
+- **13 Nov 2026, 13:06 (from `date`). RESUME HERE: THE STYLE ITEMS (a)–(c) OF THE `PROGRESS.md` ENTRY OF
+  13:06 (unbraced fractions, 347 + 543; formula–punctuation–formula; two `\qquad\text{for every}`), THEN THE
+  REREAD OF THE WHOLE PAPER.** Paper 250 pp. `c500bd2e5a47`, supplement 192 pp. `0129c8f88f47`, clean, PDF
+  copied back. Mechanical lint passed except for these items; four stale hard-coded citations of the supplement
+  corrected (Section 15 → 13 three times, Definition 3.5 → 3.6).
+
+- **13 Nov 2026, 12:57 (superseded; from `date`). ITEM 8 (iv) IS DONE FOR SECTION 6. THEN: THE REREAD OF THE WHOLE
+  PAPER IN ONE GO (lint of `proof-exposition` Pass 4, opener count of `math-prose`), FROM SECTION 1.** Paper
+  250 pp. `e48561362b80`, supplement 192 pp. `0129c8f88f47`, clean, PDFs copied back. Section 6 read to its end
+  with every inequality re-computed; five amendments of wording and of definitions, no change of a constant or
+  of a condition (FINDINGS F43; `PROGRESS.md` entry of 12:57): the polymer vertex, the flat parts, θ(W) :=
+  νσ(W)/16 at every step, the atoms, clause (viii) in the assembly.
+
+- **13 Nov 2026, 12:41 (superseded; from `date`; updated after reading ll. 1913–2340, no amendment). ITEM 8
   (iv) INSIDE `sec:count` AT `lem:group-weight`, l. 2342 OF THE PAPER AT `dabf320ed8ef`, THEN
   `prop:rooted-sums`, `thm:size-bound`, `sec:small-field-map` (l. 2499) AND ON.** Paper
   250 pp. `dabf320ed8ef`, supplement 192 pp. `0129c8f88f47`, clean, PDFs copied back. The exposition passes
