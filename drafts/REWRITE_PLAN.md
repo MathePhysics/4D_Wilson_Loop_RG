@@ -131,9 +131,9 @@ rate comparison, the root sum for (Z), and the difference count 3748–3815.
 
 ## State
 
-- **13 Nov 2026, 12:41 (from `date`; updated after reading ll. 1913–2245, no amendment). RESUME HERE: ITEM 8
-  (iv) INSIDE `sec:count` AT `lem:cube-set-sizes`, l. 2249 OF THE PAPER AT `dabf320ed8ef`, THEN
-  `sec:small-field-map` (l. 2499) AND ON.** Paper
+- **13 Nov 2026, 12:41 (from `date`; updated after reading ll. 1913–2340, no amendment). RESUME HERE: ITEM 8
+  (iv) INSIDE `sec:count` AT `lem:group-weight`, l. 2342 OF THE PAPER AT `dabf320ed8ef`, THEN
+  `prop:rooted-sums`, `thm:size-bound`, `sec:small-field-map` (l. 2499) AND ON.** Paper
   250 pp. `dabf320ed8ef`, supplement 192 pp. `0129c8f88f47`, clean, PDFs copied back. The exposition passes
   on Section 6 are done for its opening, `sec:evaluation-point`, and `sec:step-identity` (two amendments for
   the centres and the attached groups, `PROGRESS.md` entry of 12:41); fourteen subsections remain, in the
