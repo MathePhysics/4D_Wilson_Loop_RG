@@ -131,6 +131,25 @@ rate comparison, the root sum for (Z), and the difference count 3748–3815.
 
 ## State
 
+- **13 Nov 2026, 11:56 (from `date`). RESUME HERE. BLOCK (a′) IS FINISHED; THE TWO ENTRIES BELOW (11:10 AND
+  10:54) ARE SUPERSEDED IN THEIR PLANS FOR (C)–(G).** Paper 250 pp. `71e25efe40d9`, supplement 189 pp.
+  `e3e50edd53a0`, both compile without error or undefined reference; PDFs copied back. What was done and why
+  is in `FINDINGS.md` F41 and in `PROGRESS.md` (entry of 11:56). In one paragraph: the translation vector of
+  the first step on a term with large-field regions is a *parameter* (a centre 𝔠, real, supported within R_t of
+  J₁(Λ)), not a function of the data; the tilt H𝔠 + ℓ_Λ is in the potentials; the expansion holds at every
+  admissible centre and the local shift is one; interior groups (footprint farther than R_at from Λᶜ) do not
+  depend on the centre and are groups of ℓ₀; the other groups and one link group per bond near Λᶜ are atoms
+  of the species (1, Z), holomorphic in (𝐔, ω) on polydiscs about real points
+  (`prop:first-step-atoms`), with A₁(Z) ≤ C_A(1)(d′₁(Z) + 1) (`prop:first-step-masses`); the reference gas of
+  a term is the gas of its interior groups, so S°_Λ = S°e^{E^∂₁} (`lem:first-step-scalar`); the class has the
+  new clause (viii) and `sec:old-regions` the centred attached space. Removed: the marks of the first step,
+  the link pieces, the second-order sizes on these terms. **Notation fixed by this block:** 𝔠, δ_𝔠, τ(𝔠),
+  τ_* = g₀^{1/4}, ω̂, C_tilt, R_at, X^t_W, Υ^t_W, Y_W = Υ¹_Wπ(P¹_W), Y_r, Ȳ, C_far, 𝒫(U, ω₀), μ₁, A₁(Z), C_A(1),
+  E^∂₁. **Next:** (e) F26 (the masses of a young pair, Supplement S.19, S.14(f)); then (f) the appendix of
+  constants and conditions with F27–F41, "Status", "What Is Not Proved", "Notes on the Papers", the audits
+  (reconcile `sec:reference-gas`, which puts c_𝒢 := 0 for every attached group, with `sec:old-regions`, which
+  splits every interior group), the prose passes on the text written since 12 Nov, the final lint.
+
 - **13 Nov 2026, 11:10 (typed; after `date` 10:53:53). A STRUCTURAL POINT FOR (G), FOUND ON READING THE O4
   CLOSURE (952a1687d5c4, ll. 1–77, in full) AND THE PAPER'S `sec:first-step-complex`, `sec:old-regions`
   (in full). To be entered as FINDINGS F41 when (G) is written.** (1) *The centre.* The local shift m̂ of
