@@ -196,6 +196,23 @@ rate comparison, the root sum for (Z), and the difference count 3748–3815.
     a polydisc of relative radius O(h_k). Without it only real localisation parameters are available, and the
     bound of a component by Cauchy's estimate in s is lost. (3) Closure §8 is Supplement S.8's content.
     (4) `r` of `sec:count` renamed `r_κ` (clash with the exponent of R_j). Paper `8c53e0a1f174`.
+  - **Written, 00:22 (13 Nov, from `date`), paper `48c02591bfac`, 222 pp.:** `sec:new-region` (case (A):
+    the earlier steps have no large-field region): interior groups = groups of ℓ₀ (`lem:interior-constituents`,
+    `prop:interior-groups`), collar occurrences `eq:collar-occurrences`, `prop:region-attached`. **Next block,
+    the collar (still case (A)):** (1) sizes: `prop:marked-size` for marked polymers with a cube in 𝒩_{k+1}:
+    amplitude b_k/ε_H per component, no parity (Supplement Lemma 17.28 fails with an outer field); the bound of
+    Lemma 17.27 on such polymers rests on Bałaban's generalisation (boundary potentials O(ε_k) by CRE p. 277,
+    the conditional Gaussian with the outer field); |B′| ≤ b_k holds on every bond of Ω_{k+1} (the form of CRE
+    (3.14) with r_y). (2) Count: polymer vertices with a cube in 𝒩 get 𝔞_v = b_k/ε_H and one more factor for
+    the collar occurrences (sets of clusters ≁ M, factor |z_𝒞| ≤ 2φ̄e^{2φ̄}, sum ≤ exp(4e·c#(M)); the margin
+    "7c + 1/800 ≤ 1" of `prop:rooted-sums` becomes (6e + 1)c + 1/800 ≤ 1); `thm:size-bound` with
+    E_α + E′_α, E′_α ∝ b_k; this proves the convergence for `prop:regrouping` on the present term. (3) Groups
+    at the collar: every one has a cube of 𝒩 in X_𝒢, so ext ≥ dist(𝔫, 𝒩)/M: the collar term of
+    `eq:insertion-bound` with amplitude b_k ≤ Cρ_{t,k+1}. (4) Analyticity in σ_k (O6 closure §3–§9, unread
+    from §3) for the later steps. **Then case (B), old regions:** the expansion with members which depend on
+    outer fields (map D2.2(4)(c)–(f) read; (6)(b3), (b6), (b7), (e) from l. 1990 unread), the count with fixed
+    roots (closure §5 read), the payment (closure §7 read), the first step (closure §6 unread; IT-1 §3a(4)–(8),
+    §3d, §3i, §3j unread).
   - *Plan of the text:* a new subsection of Section 6 "The Step on a Term with Large-Field Regions" with
     (1) the setting and the collar, (2) which statements of Sections 6.3–6.8 hold as they stand for the groups
     passing the tests (locality), (3) the attached groups: production, (4) the carry, (5) the payment; S.9
