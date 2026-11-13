@@ -131,15 +131,16 @@ rate comparison, the root sum for (Z), and the difference count 3748–3815.
 
 ## State
 
-- **13 Nov 2026, 01:40 (from `date`). RESUME HERE.** Paper 230 pp. `5b2d0b3b481a`, supplement 173 pp.
-  `bf05c5ecee8a`. (c) large fields is written: `sec:regions`, `sec:new-region`, `sec:collar-groups`,
+- **13 Nov 2026, 01:40 (from `date`). RESUME HERE.** Paper 230 pp. `5b2d0b3b481a` (at 01:45, after two
+  entries in "Notes on the Papers" and the appendix line on the new constants: `eeb9bbb6c7dc`), supplement
+  173 pp. `bf05c5ecee8a`. (c) large fields is written: `sec:regions`, `sec:new-region`, `sec:collar-groups`,
   `sec:old-regions` (`prop:old-regions`), payment paragraph and `lem:term-bound` on `eq:carry-product`;
   Supplement S.9 redone ((ii) in the paper's count; (vi) gauge transformation; (vii) complex outer field).
   Left over from (c), to do with the audits: the first step's atoms in detail (closure §6, IT-1 §3a, §3e),
   S.9(iv) against LFR II pp. 384–389, S.9(v) (cross species; only S.10 and the Cauchy part still cite it).
   **Next: (d)** 𝐑-steps (S.10 from the D2.7 closure; F30's L-condition), **(e)** F26, **(f)** appendix,
   "Status", "What Is Not Proved", "Notes on the Papers", audits, lint. FINDINGS F36.
-  *(d), what is to do (01:45):* S.10 (`prop:r-operation`, supplement ll. 1595–1683) has (i)–(vii) with proofs;
+  *(d), what is to do (13 Nov, 01:45 from `date`; paper `eeb9bbb6c7dc`):* S.10 (`prop:r-operation`, supplement ll. 1595–1683) has (i)–(vii) with proofs;
   its (v) gives the 𝐑-made deviation insertions only in the old form (sum per traversal ≤ C^𝐑ρ̃δ*). Needed for
   the class as rewritten: for an 𝐑-made group its domain, size, extent, the geometry (vii) with the unit
   constant, `eq:per-insertion` with b_W, `eq:tail-clause`, `eq:sup-clause`, `eq:production-clause`, clause
@@ -148,6 +149,76 @@ rate comparison, the root sum for (Z), and the difference count 3748–3815.
   σ̃(D̂_g) = Σ_P(#π_k(B_P) + 2^{d+2}D_P + λ_𝔏ℓ_P) + ⅓Σσ(D), unit u_𝔏 = 640(2^{d+2} + 8), L ≥ 4·10⁴u); the
   two-loops note (6A)–(6C) (#518–#524, #561–#569, #629, #698–#751, #803–#832). The paper's `u_\star` and the
   conditions `eq:count-conditions` on L change with u_𝔏 (F30 item 2): record in FINDINGS.
+  *(d), read so far:* D2.7 15.6 (ll. 463–552) and the two-loops note (ac5f11dda03c) (6B) #690–#747,
+  #761–#778, (6C) #826–#844. Findings: (1) the paper has `u_\star := 11` (l. 1306) and S.10 says nothing of
+  the geometry clause (vii) for the groups which the 𝐑-operation makes; the notes give them the unit
+  u_𝔏 = 640(2^{d+2} + 8) = 46080 (#829), so `u_\star := u_𝔏` is needed, and `eq:blocking-factor-condition`
+  already covers L ≥ 6·10⁶Λ̄u_𝔏 (2^{52} for Λ̄ ≤ 1.6·10⁴, 4Λ̄²L₀^× beyond). (2) The size is not the volume of
+  the hull: σ_g = Σ_{cross members}σ + ½Σ_{single-loop members}σ + Σ_Pπ(P), π(P) = #π_k(B_P) + 2^{d+2}D_P +
+  λ_𝔏ℓ_P (#691), domain = the counted cubes hull_c(g) (#714), dependence in the 8M-neighbourhood of hull_c(g)
+  and of the cubes meeting span(g) (D2.7 15.8-1(1-2)); B_P, D_P, ℓ_P are defined in (6B) *Lengths*, *Cubes*,
+  *A link's data* (#626–#629-5), not yet read. (3) Per-insertion bound: b_g = e^{|Ψ_g|}B(g)·C·diam(hull⁺)/r^ext
+  (D2.7 15.6(d)); extent #834; rooted sum Σ_{g ∋ □} ≤ C_gr e^{−p₀(g_k)/2} with the weights (#742-2); payment
+  (5/2)ν per unit of Σ_P(#π_k(B_P) + 2^{d+2}D_P) (#723). **To write:** S.10 new item with these definitions and
+  the clauses (vii) (geometry, `eq:production-clause`), `eq:per-insertion`, `eq:tail-clause`, `eq:sup-clause`
+  for the 𝐑-made groups; set `u_\star := u_𝔏` in the paper and re-check where 11 is used (`eq:first-step-units`
+  stays, as 11 ≤ u_𝔏).
+  *(d), definitions read (two-loops (6B) #626–#653; LFR II p. 389 (1.94)–(1.97) re-read in the corrected
+  transcription):* a polymer P of the 𝐑-gas has Bałaban's
+  localisation domains X′_1..X′_s (unions of cubes of π_k; LFR II (1.90)), pieces P′ of the letters, home
+  tensors, and carried insertions with domains Y_{P′}, bases Y′₀, excess ex = |Y_{P′}∖Y′₀|, and links (clusters
+  of earlier reference gases, numbers e^{e_X} − 1) with count ℓ_P = Σσ_{n(X)}(X).
+  D_P := Σ_r(d_k(X′_r) + 4R_k + 2λ̂ + 498) + 4Σ_{P′}ex(Y_{P′}) (d_k in M-units, RG I p. 257);
+  B_P := ∪_rX′_r ∪ ∪_{X first-class in P}X^{(λ̂+248)}; π(P) := #π_k(B_P) + 2^{d+2}D_P + λ_𝔏ℓ_P, λ_𝔏 = 1/640.
+  What pays: e^{−βκd_k} of (1.95) leaves c_F^× = ½ per unit of D_P (#636–#647); the volume factor of (1.95)
+  leaves a_V ≥ ½ per cube of X′_r (#648); the factor of (1.89) of a first-class component leaves
+  e^{−p₀/2 + polylog} (the margin, #652), which pays e^{5p₀/64} for X^{(λ̂+248)} and the constants; links pay
+  from a°(X) = (ν/32)σ (#629-4). Rooted sum: Σ_{g: polymer ∋ □}(weights) ≤ C_gr e^{−p₀(g_k)/2} (#742-2).
+  Supplement S.10 setup (ll. 1597–1605) and `lem:loop-localisation` (l. 2689) read: the supplement measures a
+  polymer by |P| (cubes of side MR_k) and its localisation lemma has pieces with cores but states neither the
+  domain of a piece, nor its base, nor the weight e^{3κ·ex} (D2.7 15.5(ii)(α), (β): base
+  Y′₀ ⊂ X(F)^{[3]} ∪ ⋃_{K ∈ h(F) ∪ 𝒦}(K⁺)^{[λ̂]}, λ̂ = 4⌈R_k/(1024√d)⌉ + 9, ex ≤ 3^dΣ_c|c|).
+  **(d-2), first part DONE, 13 Nov 01:52 (from `date`), supplement `db9ed8ccc3e6`, 175 pp., clean:** S.10
+  setup: paragraph "The local terms of the exponent" (links: definition, set X̂ = union of the domains of the
+  groups of the cluster, #_n(X) cubes, reads labels within M, meets X_c^∼; weight from the second bound of
+  `eq:exposed-bound`); polymers and |P| include the links; proof paragraph "(iii), the links" (per first-class
+  component the links cost ≤ e^{2 mass(X_c)} ≤ e^{Res(X_c)/2}, paid from the reserve). **Still to write in
+  (d-2):** the sums over the polymers with links through a cube in (iv), (v) (D2.7 15.8 "The sum over P through
+  a traversal": attachment cubes, polynomial factors), and the new item on sizes and weights.
+  **(d-1) DONE, 13 Nov 01:47 (from `date`), supplement `4bfdbffbcc83`, 173 pp., clean:**
+  `lem:loop-localisation`(vi) (λ̂ := ⌈R_k/(128√d)⌉ + 31, base, cores, excess ≤ 3^dΣ|c|, weight e^{3κ·ex} from
+  the unused half of e^{−(κ₁−1)|c|}; new condition L ≥ (3/2)3^d, covered). **Now (d-2):** read the two-loops
+  note #698–#721 (big and small members, T_D, the cube and span counts #714, #715, #748–#760) and D2.7 15.4(i)
+  (spans, ℓ_D, s_D), then write the definitions and S.10(viii).
+  *(d-2), read (two-loops #698–#721):* a member D of a polymer is *big* if σ(D) ≥ 240 (made at k) or ≥ 32
+  (made before), else small; big: #_k(X_D) + n_k(D)/M ≤ (21/20)σ(D), diam of its set T⁺_D ≤ (43/20)Mσ(D);
+  small members in the slots of a component X lie with their 5M-neighbourhoods in X^{(247)} ⊂ B_P; a far letter
+  or far small member has a piece with ex ≥ R_k (#699-2, #699-3), a quarter of 4ex covers it (#699-4). Counted
+  domain X_g := the cubes of π_k of ∪_P dom_c P (dom_c P: cubes meeting dom P, #629-1), σ(D_g) :=
+  #_k(X_g) + |span(g)|/M. Bounds: #_k(hull_c g) ≤ Σ_{big}#_k(X_D) + Σ_P(#_k(B_P) + (2^{d+1} + ½)D_P +
+  2^{d+2}ℓ_P) (#714); |ℐ(g)| ≤ Σ_{big}n_k(D) + 16MΣ_PD_P (#715-1); sum ≤ u_𝔏σ_g (#716); diam(S_g) ≤
+  2MΣ_P(D_P + 2ℓ_P) + (43/10)MΣ_{big}σ(D) ≤ u_𝔏Mσ_g (#720); extent #834. Not yet read: #748–#760 (spans,
+  joins), D2.7 15.4(i) (ℓ_D, s_D, why a span lies within |P| layers), D2.7 15.7 (the surviving sums).
+  **Checked (01:48 from `date`):** the supplement's S.10 has no "links" (the local terms e_X of E^∂ as
+  constituents of the polymers); D2.7 15.8 "The links in the gas" (ll. 676–695) has them and their payment:
+  expand e^{e_X} = 1 + (e^{e_X} − 1); a term reading the labels of a first-class X_c meets X_c^∼ ⊂ the
+  localisation domain of X_c; polymer = connected union of Bałaban's X′_a and link sets X̂; a°(X) = (ν/32)σ
+  split ½ (root sum), ⅛ (attachment cubes), ¼ (weights, 15.8-1(6)), ⅛ (polynomial factors); links at a
+  second-class Y_i paid by Res(Y_i). To be added to S.10(iii). FINDINGS F37. LFR II p. 377 (localisation
+  domains contain the components of Z^∼ which they meet), p. 378 (𝐓′_k(X) sums the labels {Ω_j^c ∩ X, Z_j ∩ X}),
+  p. 379 (1.72) (𝐓′_k(Y_i) outside the bracket) re-read in the corrected transcription. **Subtlety for the
+  paper's definitions:** in `sec:old-regions` a cluster is in the reference gas of a term iff its groups are
+  interior, and interior/regular read the labels also through the comparison regions of the members
+  (Ω_m ⊃ comparison region), not only within one cube of the domains; so the set of a link, where it reads
+  labels, must contain these comparison regions (diameter bounded by size plus extent, paid by e^{ν_e·ext}),
+  or the reference gas must be defined by the domains alone (then a group with a reclassified member stays in
+  the gas; check `prop:old-regions`(ii) and S.9(iii)). Decide when writing the links paragraph of S.10.
+  **Order of work for (d):** (d-1) add to `lem:loop-localisation` a part on the domain, the base, and the
+  excess of a piece, with the weighted bound, from its own proof (cores, factor e^{−(κ₁−1)|c|}); (d-2) S.10:
+  definitions D_P, B_P, π(P), σ(g), counted domain, and a new item (viii) with the units (u_𝔏), the payment,
+  the rooted sum, and the clauses of the class for the groups which the operation makes; (d-3) paper:
+  `u_\star := u_𝔏` at l. 1306 (now "u_⋆ := 11"), the paragraph "The 𝐑-operation" of `sec:large-field-step`,
+  appendix; FINDINGS entry.
 
 - **12 Nov 2026, 23:53 (from `date`). (c) begun; superseded by the entry above.** Paper 216 pp. `0c2b21f592e9`, supplement `d3c297f5d58e`.
   Done of "NEXT, IN ORDER" (entry of 23:03): (a) the base k = 1 and (b) the wrapping and the cross species, both
