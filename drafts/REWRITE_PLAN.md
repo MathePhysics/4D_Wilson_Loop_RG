@@ -131,7 +131,28 @@ rate comparison, the root sum for (Z), and the difference count 3748–3815.
 
 ## State
 
-- **13 Nov 2026, 11:56 (from `date`). RESUME HERE. BLOCK (a′) IS FINISHED; THE TWO ENTRIES BELOW (11:10 AND
+- **13 Nov 2026, 12:19 (from `date`). RESUME HERE. BLOCKS (a′) AND (e) ARE FINISHED; NEXT IS BLOCK (f).**
+  Paper 250 pp. `c0a2311eee4b`, supplement 192 pp. `f6d47691d76d`, both compile clean, PDFs copied back.
+  Since the entry below: the alignment path and the carry of the differences are written out in S.14(f), and
+  c″_𝒦 is removed (F42, addendum). Block (f), in this order: (1) appendices of constants and conditions with
+  F27–F42; (2) "Status", "What Is Not Proved", "Notes on the Papers" brought to the present state; (3) audits:
+  labels of `sec:first-step-regions` cited later, u_⋆ in q_K of S.16(i), the citation of S.16(g) for x^Q_K in
+  Paper `sec:trivial-pair`; (4) prose passes on the text written since 12 Nov; (5) final lint.
+
+- **13 Nov 2026, 12:15 (from `date`). BLOCK (e): F26 ITEMS 1–3 AND 6(c) ARE WRITTEN (FINDINGS
+  F42); ONE PART OF S.14(f) IS STILL ASSERTED (DONE AT 12:19, SEE ABOVE).** Paper 250 pp. `c0a2311eee4b`, supplement 191 pp.
+  `511e5e3b796f`, both compile clean, PDFs copied back. Done: one convention for the reference gas of a term
+  (c_𝒢 := 0 exactly for cross groups and groups which are not interior; Lemma 18.2 restated: the gas of a term
+  is a part of the gas of ℓ₀); Supplement Proposition S.19 (`prop:young-pair-weights`: activities d^c_K,
+  interactions q̂_K and C_Q, local terms c_E, summability); S.14(f) with the new rates. **Next, in this
+  order:** (1) write out in the proof of S.14(f) the carry of the differences of the attached species
+  (c̄^W_K := 4(m_W + 1)(r̄_K + 8ρ^LF_K), 24(m_W + 1)τ^w_K) and the bound r̄_K of the change along the alignment
+  path, from LF (ada99ead6f26) #5.13–#5.41 and S.9(ii); they are one sentence each now. (2) Block (f): the
+  appendix of constants and conditions with F27–F42; "Status", "What Is Not Proved", "Notes on the Papers";
+  the audits (labels of `sec:first-step-regions` cited later; u_⋆ in q_K of S.16(i)); the prose passes
+  (`math-prose`, `proof-exposition`, `deslop-maths`) on everything written since 12 Nov; the final lint.
+
+- **13 Nov 2026, 11:56 (from `date`). BLOCK (a′) IS FINISHED; THE TWO ENTRIES BELOW (11:10 AND
   10:54) ARE SUPERSEDED IN THEIR PLANS FOR (C)–(G).** Paper 250 pp. `71e25efe40d9`, supplement 189 pp.
   `e3e50edd53a0`, both compile without error or undefined reference; PDFs copied back. What was done and why
   is in `FINDINGS.md` F41 and in `PROGRESS.md` (entry of 11:56). In one paragraph: the translation vector of
