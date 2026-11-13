@@ -131,13 +131,93 @@ rate comparison, the root sum for (Z), and the difference count 3748–3815.
 
 ## State
 
-- **13 Nov 2026, 09:02 (from `date`). RESUME HERE.** Paper 231 pp. `809f141acc7d`, supplement 184 pp.
-  `f4a7afbe0c66`. (d) is written for the free groups: S.10 with links, sizes, (viii), (ix), and the cluster
-  terms split at the flat reference (FINDINGS F38, F39; `PROGRESS.md`, entry of 13 Nov 09:02). Open inside
-  (d): the groups at second-class and unchanged components made at an 𝐑-step: a size for polymers and
-  clusters which are not free, the unit bound, the weighted masses per component, and the clause (i) there
-  (the part of Ψ of amplitude α^{1/3}); S.10(vi), (ix) pay them "as in (vi)" without weights. Then: leftovers
-  of (c) (first step's atoms, S.9(iv) against LFR II pp. 384–389, S.9(v)), (e), (f).
+- **13 Nov 2026, 09:42 (from `date`). RESUME HERE.** Paper 235 pp. `f682d4abd876`, supplement 188 pp.
+  `bf198958e69c`. Block (a′) (F40) begun: `sec:first-step-regions` with `lem:local-shift` is in the paper
+  (labels: `eq:hessian-decay`, `eq:linear-term-bound`, `eq:mean-shift-decay`, `eq:shift-range`,
+  `eq:local-shift-sizes`, `eq:local-shift-identity`, `eq:parametrix`, `eq:parametrix-identity`,
+  `eq:parametrix-rows`, `eq:truncation-error`, `eq:local-shift`, `eq:tilt-size`, `eq:bump-bound`; notation:
+  r := t₀, ϑ_V, A^Λ, ℓ_Λ, J_1(Λ), m, m̂, δ̂, boxes Δ, Δ̃, Δ̂, N_nb = 7⁴, q_s, ℓ_s, N₀, N, R_t, μ_x = μ_H/20,
+  C_m, C_δ). Next: part (A′) of the list in `PROGRESS.md` (entry of 09:42): read V4 Lemma 9.15 (ll. 2757–
+  2797), Lemma 9.17 (2798–2814), §9.6 (2815–3130) at the places which note §3j(4), (5) names, and write the
+  statement "V4's Sections 9.5–9.7 hold at m̂" as a lemma with the changes of constants; then (B)–(G). The
+  entry below is the reading record for all of this.
+- 13 Nov 2026, 09:34 (from `date`). Paper 232 pp. `0cea572ef7a7`, supplement 188 pp.
+  `bf198958e69c`. Done since 09:30: S.9(iv) against LFR II pp. 384–387 with the 𝐑-step costs, S.9(v), the
+  six-layer condition in the paper's definition of interior groups. Next: the first step's atoms. Read, in
+  this order: `WILSON_FIRST_RG_STEP_V4.tex` Section 9.4 (labelled terms; Lemmata 9.21, 9.24; what is bounded
+  on which terms), D2.6 closure (325ff1872afc) §5.6, §6.1–§6.5, §7.1; compare with the paper's
+  `sec:first-step-proof` (Assembly), `sec:old-regions` (outer field of the first step, r^{(n)}_0), Supplement
+  `sec:retreated-region` and S.9(i), "(ii), the first step". Missing in the paper as far as seen: the
+  transports of the words near the region of integration as attached insertions (the closure's three classes
+  of contour bonds), their pieces with sizes and weights (closure 6.4(b)), and the bound of the weighted masses
+  per component (closure 6.3, 7.1) on the polydisc of the outer field. Then (e), (f).
+  **Scope found at 09:36 (block (a′), the first step on the labelled terms with large-field regions;
+  FINDINGS F40 lists its parts (A)–(G); `date` at the end of the reading: 09:37).** Also read: note §3j complete (ll. 1316–1400): the local shift m̂ := λm̃ with the
+  parametrix P, K = Σ_ΔK_Δ, HP = 1 − K, boxes of sides in [ℓ_s, 2ℓ_s), m̃ := −PΣ_{n≤N}Kⁿℓ_Λ, the tilt
+  δ̂ = Hm̂ + ℓ_Λ, R_N = 5ℓ_s(N + 2) + 2ρ_L, N(g₀) least N ≥ N₀ with e^{−μ_Hℓ_sN/4} ≤ g₀, the tilt in the host
+  potentials W̃_t, C₀ → C₀ + C_τ, μ′ → μ̂′ = min(μ_x/4, ν/(2C_FLM)), μ_x = μ_H/20. Note §3i(4) read (box
+  walk expansion of the inverse of a principal restriction: G_Δ, χ_Δ, 𝒢, K_Δ, H𝒢 = 1 − K, range 5ℓ₀(n + 1)).
+  V4 §9.5.1 read (ll. 2713–2756: B = a − tm, χ^t_b, 𝐖_t, (c5-4-2), Lemma c5-4-1). More numbers: (c5-4-1) =
+  (9.11), (c5-4-4) = (9.12), (c5-4-2) = (9.13), (c5-4-3) = (9.14), (c5-4-T) = (9.15), (c5-5-1) = (9.18);
+  Lemma c5-1-1 = 9.1, c5-1-2 = 9.2, Remark c5-1-3 = 9.3, c5-4-1 = L. 9.14, c5-5-4 = L. 9.22, c4-7-1 = L. E.13,
+  c2-domain-geometry = L. B.1; (part1-potential-host) = (3.36), (c-probe-host) = (3.75); sections: c5-0 =
+  §9.1, c5-1 = §9.2, c5-3 = §9.4, c5-4 = §9.5, c5-4-2 = §9.5.1, c5-5 = §9.6, c5-5R = §9.7, c5-7 = §9.9,
+  probe-kernels = §3.7, thresholds = §B.8. Decided: the new text goes into the paper as a subsection
+  `sec:first-step-regions` after `sec:first-step-complex`, written lemma by lemma (first the local shift),
+  and the paragraph "Assembly" of the proof of `thm:first-step` is changed when all parts are in.
+  V4 (0f859f2d3652) §9.4 "The Labelled History Sum" proves the first step in averaged form: the expansion
+  (c5-6-2) of F^Λ(1) holds on the covered event A^fin_cov only, the boundary term 𝓑^Λ and the uncovered
+  terms are bounded inside the history average (Proposition c5-6-4), and nothing is of the form of the class
+  there. `thm:first-step` asserts "dressed at the step 1" on every labelled term and its proof cites V4 "and
+  its form on the labelled terms" for clause (ii); FINDINGS F32 lists this as not covered. The derivation is
+  in the line-defect note (1bc8334cfad9): §3c (assembly at the step 1, choice (P), ll. 301–605), §3d (uncovered
+  labelled terms and the closed contour, ll. 606–716), §3g, §3i (thin form of E^∂), §3j (carrier dependence of
+  the t > 0 species), with §3e (analyticity) and §3f (bad-cube factor; in the supplement as S.7), and in the
+  D2.6 closure §5.6, §6, §7.1 and the O4 closure (the centre of the expansion). To write: in the paper, a
+  subsection after `sec:first-step-complex` "The First Step on a Term with Large-Field Regions" (the exact
+  identity on a labelled term with the shift, the three classes of contour bonds and the transports as
+  attached insertions, the t-family and the marks, E^∂ at the step 1, clauses (i)–(iv), (vii) of the class and
+  the weighted masses A_1(Z) on the attached space of the step 1); in the supplement, what concerns the
+  conditional Gaussian at the retreated carrier (shift, tilt, parametrix) next to S.7. Read §3c first.
+  Read so far: §3c ll. 301–360 (identification with CRE label by label; placements of constants),
+  §3d complete (ll. 606–716): the identity F^Λ(1) = κ_Ce^{E^∂ + E°}[f_ξ(m) + Σ q°(𝔅)tr(…)] on every labelled
+  term; where V4 uses the covered event and why it is not needed, item by item ((2)(a)–(i)); D1(ii) on every
+  term with the distance d^Λ(n) to E(B_ξ) ∪ (I∖D(Λ)) and ρ̂ = max(ρ, ρ_ph) ((4)); the count of the exposed
+  segments ((5)). D2.6 closure §5.6, §6.1–6.5 read (the three classes of contour bonds, Y_i, the pieces
+  Y_{i,X}, W_I, W_III, lw_1(Z)). V4 labels → printed numbers (from its aux): c5-3-0 = L. 9.9, c5-3-1 = 9.10,
+  sec c5-3-4 = §9.4.2, c5-4-0 = 9.13, c5-4-2 = 9.15, c5-4-3 = Cor. 9.16, c5-4-4 = 9.17, sec c5-5-0 = §9.6.1,
+  c5-5-1 = 9.19, c5-5-2 = 9.20, c5-5-3 = 9.21, c5-5-5 = 9.23, c5-5-6 = 9.24, c5-5-7z = 9.25, c5-5-7 = 9.26,
+  c5-5-8 = 9.27, c5-5-9 = Prop. 9.28, c5-5-10 = Cor. 9.29, c5-5R-1 = 9.31, c5-5R-2 = 9.32, c5-5R-3 = 9.33,
+  c5-5R-4 = Prop. 9.34, c5-6-1 = 9.36, c5-6-2 = 9.37, c5-6-3 = 9.38, c5-6-4 = Prop. 9.39, c5-6-def =
+  Prop. 9.40, c5-7-1 = 9.42, c5-7-2 = Cor. 9.43, charts = L. 3.6, collar-coverage = L. 3.11,
+  centred-expectation = Prop. 3.23, grouped-source = L. 3.25, covered = L. 3.28,
+  regional-square-extraction = Prop. 7.3; row-locality = L. 3.5; (convex-response-operands) = (3.46);
+  (c5-5-2) = (9.19); (c5-5-T) = (9.20); (c5-5-8) = (9.26); (c5-5-9) = (9.27); (c5-5R-T) = (9.29);
+  Rem. c5-5-11 = 9.30; (c5-6-1) = (9.31); (c5-6-2) = (9.32); (c5-7-T) = (9.39); Rem. c5-6-5 = 9.41;
+  Rem. c5-7-5 = 9.48; §c4-10-4 = §E.9.4; §c4-11-4 = §E.10.4; (c4-11-6) = (E.71); §regional-square-scalar
+  = §7.4. Verified in V4's text: §9.6.1 places the whole of Section 9.6 on the covered event; the
+  preamble of Lemma 9.25 uses it as §3d(2)(d) says; Lemma 3.6 is stated "on every branch" for the rows
+  within 2R_c + 2L of I, with the inclusion of a + tΨ_ξ(A_e) in the row polydiscs; Lemma 9.33 is stated on
+  the covered event; the paragraph after (3.46) has "it is not interpolated" and "is constant in a
+  otherwise"; Lemmata 9.21 and 9.26 have "links off Ω₁ equal to their background value". The paper's Def.
+  `def:dressed-loop`(c) lets the transports "contain outer variables" on a large-field region crossed by a
+  loop; but the contour links of the first step differ from U₁ also on bonds of Ω₁ within R_t + 2L + 1 of
+  the complement of the region of integration (the shift m̂ and the exterior inputs; closure 6.1, class
+  (I)), so the paper needs the closure's attached insertions Y_i = π(T̂_i)π(T_i)^{−1} − 1 with their pieces,
+  sizes, and weights (closure 6.1–6.5) as atoms of the first step, and §3d for the groups.
+  Next: read the paper's `sec:first-step-proof` (ll. 1264–1332) and
+  `sec:first-step-complex`, then V4 Lemma 9.25 (preamble), Lemma 3.6, §9.6.1, Lemma 9.33, Lemma 9.42 at the
+  places §3d names, then write the paragraph "The labelled terms with large-field regions" of the proof of
+  `thm:first-step` and the supplement part.
+- 13 Nov 2026, 09:30 (from `date`). Paper 231 pp. `1a65e546e23e`, supplement 188 pp.
+  `eead3a2062f8`. (d) is written: S.10 with links, sizes, (viii), (ix), (x), the cluster terms split at the
+  flat reference for interior objects only, bound pieces, one block per class of second-class components
+  (FINDINGS F38, F39; `PROGRESS.md`, entries of 13 Nov 09:02 and 09:30). Next, in order: leftovers of (c)
+  (first step's atoms; S.9(iv) against LFR II pp. 384–389, now also with the costs log b_k and
+  C^𝐑_Ae^{−p₀/4}R_k^d(d′+1) of the 𝐑-steps; S.9(v)); (e) F26; (f).
+- 13 Nov 2026, 09:02 (from `date`). Paper 231 pp. `809f141acc7d`, supplement 184 pp.
+  `f4a7afbe0c66`. (d) written for the free groups (links, sizes, (viii), (ix), cluster terms split at the
+  flat reference).
 - 13 Nov 2026, 01:40 (from `date`). Paper 230 pp. `5b2d0b3b481a` (at 01:45, after two
   entries in "Notes on the Papers" and the appendix line on the new constants: `eeb9bbb6c7dc`), supplement
   173 pp. `bf05c5ecee8a`. (c) large fields is written: `sec:regions`, `sec:new-region`, `sec:collar-groups`,
