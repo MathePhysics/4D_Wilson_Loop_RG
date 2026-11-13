@@ -142,9 +142,20 @@ rate comparison, the root sum for (Z), and the difference count 3748–3815.
   and marks at k = 1 (IT-1 §3a(7), §3e (3.9), (3.12)). Then (d), (e), (f). The user (23:40): prose pass by
   `proof-exposition` only, not `math-prose` or `deslop-maths`; keep the status updates coming.
 
-  **(c), reading record and design (00:20, 13 Nov).** D2.6 closure read in full: §1–§5 (ll. 1–270). Not read:
-  §6 (lw slots, ll. 272–352), §7 (payment, 353–447), §8 (band, 448–522). What the closure does, in the paper's
-  terms:
+  **(c), reading record and design (13 Nov 2026, 00:00 from `date`).** D2.6 closure read in full: §1–§5
+  (ll. 1–270) and §7 (payment, ll. 353–447). Not read: §6 (lw slots, ll. 272–352), §8 (band, 448–522).
+  CRE pp. 264–265, 269–272, 276–278 (corrected) re-read. Map D2.2(4) read to l. 1212 only. **In the paper
+  (217 pp., `c0230008055f`):** new subsection `sec:regions` with Lemma `lem:regions` (Λ_{j+1} ⊂ Ω_{j+1} ⊂ Λ_j;
+  8 layers from CRE (3.5); the collar Coll_j and its distance ≥ 7LMR_{n+1} from Ω_{n+1}), before the old
+  text of `sec:large-field-step`, which is unchanged. Also found: `prop:marked-polymers` is already stated
+  for the measure CRE (3.27) with arbitrary Ω_{k+1}, Λ_{k+1}, S_{k+1}; `prop:marked-size` and everything from
+  `sec:groups-of-step` on is for the term of ϱ_{k+1} without large-field regions. Bałaban's own treatment of
+  the general term (CRE pp. 276–278) is a sketch ("or rather its appropriate generalization", "treated as
+  above"); it is accepted as his and goes into "Notes on the Papers". In the paper's terms the tests for a
+  group made at k + 1 reduce to two: (S1) the bodies of its constituents do not meet the one-layer
+  neighbourhood of Λ_{k+1}^c (this implies the closure's (ii) for polymers and (iii)); (S2) its comparison
+  regions lie in Ω_{k+1}; and a group with an attached member is attached. What the closure does, in the
+  paper's terms:
   - *What the main theorems need of a term with large-field regions:* the exact form (dressed loop with the
     same normalisation κ) and a bound which may lose e^{C·#cubes} per large-field component
     (`lem:term-bound`, `eq:attached-condition` allows L⁴(MR_n)⁴ per cube). No smallness per group near large
@@ -174,6 +185,17 @@ rate comparison, the root sum for (Z), and the difference count 3748–3815.
     clause needs analyticity and a supremum bound on a domain in (𝐔, 𝐉, ω) which contains the later evaluation
     points (SW closure §3's 𝒟^sub; map D2.2(4)(c)–(f), (6)(e); O6 closure for σ_k complex). **Still to read:**
     these, and the closure §6–§8.
+  - *Read after 00:00 (13 Nov), for the next window:* (1) O6 closure to §2: the outer field σ_k is the
+    restriction of the one fluctuation field A_k of CRE (3.15) to Ω_{k+1} ∩ Λ_{k+1}^c; every term of the
+    actions of CRE (3.27), (3.29) depends on it through the composite field B′ (RG II (1.19)) and through entire
+    quadratic forms, so the localised terms are analytic jointly in (σ_k, A) where RG II §1 has them analytic
+    in B′. (2) Map D2.2(4)(c)–(d′): at the shifted block field the old insertions are evaluated at
+    (e^{iη𝐇_k(B′)}U_{k+1}, R(w)ω), w = u_k^{−1}v₁ block-local and analytic in 𝐇_k, |log w| ≤ (C_w + 3d)sup|𝐇_k|;
+    the rotation cannot be moved to the configuration (w jumps between blocks, the change per fine bond would
+    be O(h_k), not O(L^{−k}h_k)), so members which depend on outer fields need analyticity in those fields on
+    a polydisc of relative radius O(h_k). Without it only real localisation parameters are available, and the
+    bound of a component by Cauchy's estimate in s is lost. (3) Closure §8 is Supplement S.8's content.
+    (4) `r` of `sec:count` renamed `r_κ` (clash with the exponent of R_j). Paper `8c53e0a1f174`.
   - *Plan of the text:* a new subsection of Section 6 "The Step on a Term with Large-Field Regions" with
     (1) the setting and the collar, (2) which statements of Sections 6.3–6.8 hold as they stand for the groups
     passing the tests (locality), (3) the attached groups: production, (4) the carry, (5) the payment; S.9

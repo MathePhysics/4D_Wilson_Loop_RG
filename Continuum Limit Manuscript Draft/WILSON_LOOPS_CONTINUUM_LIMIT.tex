@@ -1924,14 +1924,14 @@ It remains to compare the sums of the lemma with these numbers. For $S \in \math
     \bar\xi(\mathcal C) \coloneqq 2e^{d(\mathcal C)}\bar\varphi(\mathcal C)\;,\\
     \kappa' \coloneqq \kappa_1 - 2 - c_\kappa\;,
     \qquad
-    r \coloneqq \frac{(L + 2)\kappa}{1296}\;,
+    r_\kappa \coloneqq \frac{(L + 2)\kappa}{1296}\;,
     \qquad
     \varpi_k \coloneqq \frac{b_k}{\min(\varepsilon_H, r_\alpha)}\;.
 \end{gathered}
 \end{equation}
 The activity of the polymer vertex $v$ is
 \begin{equation}\label{eq:polymer-activity}
-    \operatorname{act}(v) \coloneqq \mathfrak a_v\,e^{c\#(M)}\,e^{-\kappa'\#(\mathfrak Y_v)}\,e^{-r\#(M)}\prod_{W \in \mathfrak B_v}\norm{Y_W}_{(k)}\prod_{\mathcal C \in \mathcal K_v}\xi(\mathcal C)\;,
+    \operatorname{act}(v) \coloneqq \mathfrak a_v\,e^{c\#(M)}\,e^{-\kappa'\#(\mathfrak Y_v)}\,e^{-r_\kappa\#(M)}\prod_{W \in \mathfrak B_v}\norm{Y_W}_{(k)}\prod_{\mathcal C \in \mathcal K_v}\xi(\mathcal C)\;,
 \end{equation}
 where $c = \frac{9}{64}e^{-4\kappa}$, $\#(\mathfrak Y_v)$ is the total number of the cubes of the members of $\mathfrak Y_v$, and $\mathfrak a_v \coloneqq c_a\rho_k$ if $\mathfrak B_v = \emptyset$ and $\mathfrak a_v \coloneqq \varpi_k$ otherwise, with the constant $c_a$ of Proposition~\ref{prop:marked-size}. For every vertex $v$ we put
 \begin{equation}\label{eq:vertex-weights}
@@ -1999,7 +1999,7 @@ Suppose that the hypotheses of Lemma~\ref{lem:group-weight} hold, and moreover
     \qquad
     L \geq 6 \cdot 10^6\,\bar\Lambda u_\star\;,
     \qquad
-    r \geq 10\;,
+    r_\kappa \geq 10\;,
     \qquad
     L^4e^{-\kappa'} \leq \frac{\nu}{1.6 \cdot 10^5\,u_\star}\;.
 \end{equation}
@@ -2050,7 +2050,7 @@ is at least $c_p(t - 1)_+$. There are at most $8(2t + 1)^3$ cubes $\Delta_0$ for
 \end{equation}
 In the sum on the right we sum first over $\mathcal K_v$ and $\mathfrak Y_v$. By the two displays and \eqref{eq:polymer-activity},
 \[
-    w(v)e^{2b(v) + g(v)} \leq e^{198\nu}\,\mathfrak a_v\,e^{-(r - c - \frac{1}{800})\#(M)}\,e^{-\kappa'\#(\mathfrak Y_v)}\prod_{\mathcal C \in \mathcal K_v}\xi(\mathcal C)e^{N(\mathcal C)/800}\prod_{W \in \mathfrak B_v}\omega(W)\;,
+    w(v)e^{2b(v) + g(v)} \leq e^{198\nu}\,\mathfrak a_v\,e^{-(r_\kappa - c - \frac{1}{800})\#(M)}\,e^{-\kappa'\#(\mathfrak Y_v)}\prod_{\mathcal C \in \mathcal K_v}\xi(\mathcal C)e^{N(\mathcal C)/800}\prod_{W \in \mathfrak B_v}\omega(W)\;,
 \]
 where $\omega(W) \coloneqq \norm{Y_W}_{(k)}\exp(\frac{1}{60} + \frac{1}{64}\nu + \frac{3}{64}\nu\sigma(W))$.
 The sum over the sets $\mathcal K_v$ of clusters incompatible with $M$ of the product of the numbers $\xi(\mathcal C)e^{N(\mathcal C)/800} \leq 2e\,\bar\varphi(\mathcal C)e^{d(\mathcal C) + N(\mathcal C)}$ is at most $\exp(2e\,c\,\#(M))$, by Supplement, Lemma~17.24(iv). The sets $\mathfrak Y_v$ are determined by the sets of their cubes, nonempty subsets of the $L^4\#(M)$ cubes of $\pi_k$ in $M$, and
@@ -2059,11 +2059,11 @@ The sum over the sets $\mathcal K_v$ of clusters incompatible with $M$ of the pr
 \]
 by the last condition of \eqref{eq:count-conditions}; if $M$ has several connected components and each of them is to contain a member of $\mathfrak Y_v$, the same bound holds with one factor $L^4e^{-\kappa'}$ for each component. Since $7c + \frac{1}{800} \leq 1$, each connected component $P$ of $M$ is thus left with the factor
 \[
-    \omega(P) \coloneqq L^4e^{-\kappa'}e^{-(r - 3)\#(P)}\;,
+    \omega(P) \coloneqq L^4e^{-\kappa'}e^{-(r_\kappa - 3)\#(P)}\;,
     \qquad
-    \sum_{P \ni \Delta_0}\omega(P)e^{2\#(P)} \leq L^4e^{-\kappa'}\sum_{n \geq 1}64^{n-1}e^{-(r - 5)n} \leq L^4e^{-\kappa'}\;,
+    \sum_{P \ni \Delta_0}\omega(P)e^{2\#(P)} \leq L^4e^{-\kappa'}\sum_{n \geq 1}64^{n-1}e^{-(r_\kappa - 5)n} \leq L^4e^{-\kappa'}\;,
 \]
-the sum over the connected unions $P \in \mathbf D_{k+1}$ of cubes which contain $\Delta_0$, of which there are at most $64^{n-1}$ with $n$ cubes (Supplement, proof of Lemma~17.24); the last step uses $r \geq 10$.
+the sum over the connected unions $P \in \mathbf D_{k+1}$ of cubes which contain $\Delta_0$, of which there are at most $64^{n-1}$ with $n$ cubes (Supplement, proof of Lemma~17.24); the last step uses $r_\kappa \geq 10$.
 
 For (iv), $M$ is connected and $\mathfrak a_v = c_a\rho_k$, and the three bounds give the claim with $e^{198\nu} \leq 2$.
 
@@ -2531,6 +2531,27 @@ Multiplying by $e^{\theta(W) + \nu_e\operatorname{ext}(W)}$ and summing with \eq
 
 \emph{The sum.} Summing the excesses over $j \leq k$, that is, over $m \geq 1$, and adding the first terms of \eqref{eq:carried-pointwise}, we obtain \eqref{eq:carried-sup}.
 \end{proof}
+
+\subsection{The Regions of a Term and the Collar}\label{sec:regions}
+
+On a term with large-field regions the step meets two things which the term without them does not have: fields which it does not integrate, and insertions which earlier steps have made near such fields. Both are confined to a neighbourhood of the large-field regions, and what makes them harmless is a matter of distances: ``the fluctuation field is localized in $\Omega_{k+1}$'' \cite[p.~276]{BalabanCRE}, the small-field region of the step, and Ba{\l}aban's construction keeps this region far from every earlier large-field region, in the units of the step. We collect these distances first. A labelled term of $\varrho_{k+1}$ has the domains $\Omega_1 \supset \Lambda_1 \supset \Omega_2 \supset \dots \supset \Omega_{k+1} \supset \Lambda_{k+1}$ of its steps, and $Z_j \coloneqq \Lambda_j^c$ is the large-field region of the step $j$ \cite[p.~264]{BalabanCRE}.
+
+\begin{lemma}[The Regions of a Term]\label{lem:regions}
+Consider a labelled term of $\varrho_{k+1}$, and let $1 \leq j \leq k$.
+\begin{enumerate}[label=(\roman*)]
+\item $\Lambda_{j+1} \subset \Omega_{j+1} \subset \Lambda_j$.
+\item In the units of the scale $j$, every point whose $\ell^\infty$-distance from $\Lambda_j^c$ is less than $8LMR_{j+1}$ lies in $\Omega_{j+1}^c$.
+\item Let the \emph{collar} $\mathrm{Coll}_j$ be the union of the cubes of $\pi_j$ whose $\ell^\infty$-distance from $\Lambda_j^c$ is at most $6M$ in the units of the scale $j$, the cubes of $\Lambda_j^c$ included. Then, for every $n$ with $j \leq n \leq k$, the collar $\mathrm{Coll}_j$ lies in $\Omega_{n+1}^c$, and its $\ell^\infty$-distance from $\Omega_{n+1}$ is at least $7LMR_{n+1}$ in the units of the scale $n$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+All three statements are read from the two formulae by which Ba{\l}aban defines the regions of a step, here the step $j \to j + 1$. The first is \cite[(3.5), p.~265]{BalabanCRE}: with $Z'_j$ the union of the cubes of side $LMR_{j+1}$ of the partition which meet $Z_j$, the set $B^{j+1}(P^1_{j+1})$ is contained in $(Z_j'^{\sim5})^c$, and $\Omega_{j+1} = (Q_{j+1}'^{\sim2} \cup (B^{j+1}(P^1_{j+1})^c)^{\sim3})^c$, where the operation $\sim$ adds a layer of these cubes. Hence $\Omega_{j+1}^c \supset (Z_j'^{\sim5})^{\sim3} = Z_j'^{\sim8}$. The set $Z_j'^{\sim8}$ contains every point at a distance less than $8LMR_{j+1}$ from $Z'_j$, since such a point lies in a cube of the partition which is joined to a cube of $Z'_j$ by a chain of at most eight further cubes, consecutive ones having a point in common. With $Z'_j \supset Z_j = \Lambda_j^c$ this proves (ii), and the second inclusion of (i). The second formula is \cite[(3.20), p.~269]{BalabanCRE}, $\Lambda_{j+1} = \Omega_{j+1}^{\sim-2} \cap (R_{j+1}'^{\sim})^c$, after which the components of $\Lambda_{j+1}^c$ which are contained in a cube of the size $100LMR_{j+1}$ are replaced by parallelepipeds which contain them; both operations give a subset of $\Omega_{j+1}$, which is the first inclusion of (i).
+
+(iii) A point of $\mathrm{Coll}_j$ is at a distance of at most $6M + M$ from $\Lambda_j^c$ in the units of the scale $j$, that is, of at most $7ML^{-(n-j)}$ in the units of the scale $n$, and $\Lambda_j^c \subset \Lambda_n^c$ by (i). By (ii) at the step $n$, a point of $\Omega_{n+1}$ is at a distance of at least $8LMR_{n+1}$ from $\Lambda_n^c$. The distance between the two sets is therefore at least $8LMR_{n+1} - 7M \geq 7LMR_{n+1}$, because $LR_{n+1} \geq 7$, and in particular they are disjoint.
+\end{proof}
+
+In the sides of the cubes of $\pi_n$ the distance of (iii) is $7LR_{n+1}$, a number which tends to infinity as the coupling tends to zero, since $R_{n+1} \geq (\log\hat g_{n+1}^{-2})^r$ (Definition~\ref{def:tube-parameters}). This is the distance which a polymer of the step $n \to n + 1$ has to cross if it is to connect an insertion made in the collar of an earlier step with the field which that step integrates.
 
 \subsection{Large Fields and the \texorpdfstring{$\mathbf R$}{R}-Operation}\label{sec:large-field-step}
 
@@ -5240,7 +5261,7 @@ For a level $q' \geq q$ the eleven diagrams are ensembles at the level $q'$, wit
 
 We record the places at which Ba{\l}aban's papers sketch or defer an argument which we use, the places at which we read a printed formula otherwise than it is printed, and the conventions in which our notation differs from his.
 
-\emph{Deferred and sketched arguments.} The asymptotic behaviour of the couplings, \cite[Theorem~2, (0.31), p.~259]{BalabanRG1}, is stated with the remark that ``a proof of this theorem, based on perturbative calculations, will be given in a separate paper''; the bounds \cite[(2.6), (2.7), p.~255]{BalabanCRE} on the running couplings are stated to ``follow from the renormalization group equations (0.20) [I]''. We do not use these statements: Section~\ref{sec:coupling-flow} proves what we need for the construction of this paper. The bounds on the walk factors of the propagators are given ``rather briefly'' \cite[p.~409]{BalabanPBG}, and the bounds on the factors of the walk expansions are stated up to powers of the constants \cite[p.~413]{BalabanPBG}; we use them as printed, and the comparison of two fine lattices in Section~\ref{sec:walk-factor-difference} is proved in Supplement, Proposition~S.12. Ba{\l}aban sketches a second proof of \cite[Theorem~2]{BalabanCRE} by gauge invariance \cite[pp.~283--284]{BalabanCRE}; we use the first.
+\emph{Deferred and sketched arguments.} The asymptotic behaviour of the couplings, \cite[Theorem~2, (0.31), p.~259]{BalabanRG1}, is stated with the remark that ``a proof of this theorem, based on perturbative calculations, will be given in a separate paper''; the bounds \cite[(2.6), (2.7), p.~255]{BalabanCRE} on the running couplings are stated to ``follow from the renormalization group equations (0.20) [I]''. We do not use these statements: Section~\ref{sec:coupling-flow} proves what we need for the construction of this paper. The bounds on the walk factors of the propagators are given ``rather briefly'' \cite[p.~409]{BalabanPBG}, and the bounds on the factors of the walk expansions are stated up to powers of the constants \cite[p.~413]{BalabanPBG}; we use them as printed, and the comparison of two fine lattices in Section~\ref{sec:walk-factor-difference} is proved in Supplement, Proposition~S.12. Ba{\l}aban sketches a second proof of \cite[Theorem~2]{BalabanCRE} by gauge invariance \cite[pp.~283--284]{BalabanCRE}; we use the first. That the configurations which satisfy pointwise conditions belong to the spaces $U^c_j(X, \alpha_0, \alpha_1)$ of the regular terms is stated in \cite[p.~263]{BalabanRG1}: for the configurations which satisfy the conditions (i)--(iii) of the definition of these spaces with smaller constants $\alpha_0'$, $\alpha_1'$, the bounds \cite[(1.17)]{BalabanRG1} on the configurations built from their averages are obtained ``from Proposition~9 [15]'', which is \cite[Proposition~9, p.~309]{BalabanVAR}, and ``for $\alpha_0'$ sufficiently small the above estimates imply the condition (iv)''. The application of that proposition to the averages of a complex configuration is not carried out there. We use the statement as it is printed: it is the reason for the constant $c_F$ in \eqref{eq:space-of-step}, and Lemma~\ref{lem:new-insertions} depends on it.
 
 \emph{Formulae read otherwise than printed.} At a few places a printed reference or formula cannot be meant as it stands, because it contradicts another printed line or the computation into which it enters. At each of them exactly one reading agrees with the rest of the text, and we use that reading; for each we give the printed text, the lines which exclude it, and the place at which our argument depends on it.
 
