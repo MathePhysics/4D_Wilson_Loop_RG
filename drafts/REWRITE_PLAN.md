@@ -131,7 +131,65 @@ rate comparison, the root sum for (Z), and the difference count 3748–3815.
 
 ## State
 
-- **13 Nov 2026, 09:46 (from `date`). RESUME HERE.** Paper 236 pp. `adcb89b98fbf`, supplement 188 pp.
+- **13 Nov 2026, 11:10 (typed; after `date` 10:53:53). A STRUCTURAL POINT FOR (G), FOUND ON READING THE O4
+  CLOSURE (952a1687d5c4, ll. 1–77, in full) AND THE PAPER'S `sec:first-step-complex`, `sec:old-regions`
+  (in full). To be entered as FINDINGS F41 when (G) is written.** (1) *The centre.* The local shift m̂ of
+  `lem:local-shift` depends on the background (through the Hessian) and on the exterior variable; at a
+  complex background it would be complex, and the real variable of integration can be translated by a real
+  vector only (the cutoffs are indicators of B + tm̂). So the species of the first step on a term with
+  regions are defined for a *centre*: a real background U₀ and real exterior data ω₀,₀ of the term, with
+  m̂₀ := m̂(U₀, ω₀,₀); at (𝐔, ω) in the polydisc about the centre the linear term is −t⟨B, δ^{𝐔,ω}⟩ with
+  δ^{𝐔,ω} := H_𝐔m̂₀ + ℓ_{𝐔,ω} = δ̂ + (H_𝐔 − H_{U₀})m̂₀ + (H_𝐔 − H_{U₀})_{DJ}A(ω₀,₀) + H_{𝐔,DJ}(A(ω) − A(ω₀,₀)), all in
+  the host potentials. Each centre gives an exact expansion of the same function at every real point of its
+  polydisc, holomorphic on the polydisc, with bounds uniform in the centre; the single species are NOT one
+  function on the union of the polydiscs (only their sum is). The paper's class (clause (iii): one
+  holomorphic function on 𝒟_W; `sec:old-regions`: "holomorphic on the attached space") has to say, for the
+  atoms of the first step and the groups which contain them: a family indexed by the centres, each member
+  holomorphic on the part of the attached space about its centre, the norms ‖·‖_{[n]} being suprema over the
+  centres; a step k → k + 1 at the external field V_{k+1} uses the centre (U_{k+1}, ω₀), which does not depend
+  on the fluctuation of the step, and all its evaluation points lie in the polydisc of that centre (O4
+  §2(b): complex part ≤ 3ϱ₁/8, real deformations of the later steps ≤ 3ϱ₁/16; needs the decay of 𝐇 across
+  the layers, CRE p. 277). (2) *The radius of the outer field of the step 0.* With a frozen centre the last
+  term of δ is of the size of |ω − ω₀,₀|, and the host bound needs r·|ω − ω₀,₀| small: the paper's
+  `eq:outer-radii` has r^{(n)}_0 = ½ + 2^{−n}, which is too large for the bounds; take r^{(n)}_0 :=
+  g₀^{1/2}(½ + 2^{−n}), as for j ≥ 1 (the symbol r^{(n)}_0 occurs only at its definition, l. 2955 of the paper at
+  `31bfb2048db2`; `eq:outer-condition` then holds for j = 0 as for j ≥ 1). (3) The paper's
+  `prop:first-step-complex` (Steps 1–9) is the complex extension on ℓ₀; on a term its Steps 2–7 apply at the
+  carrier D with the fixed real cutoffs χ̂ at m̂₀ and the tilted hosts.
+
+- **13 Nov 2026, 10:54 (from `date`). RESUME HERE.** Paper 241 pp. `31bfb2048db2`, supplement 188 pp.
+  `bf198958e69c`. Block (a′), `sec:first-step-regions`, now has in this order: opening; `lem:local-shift`;
+  `lem:tilted-potentials`; "The polymer expansion at the local shift" (`eq:tilted-threshold`,
+  `eq:tilted-expansion`); "The loops on an arbitrary term" (`eq:first-step-expectation`);
+  `lem:links-arbitrary-term`; the objects (`eq:first-step-insertion`); `prop:first-step-expansion` (i)–(iv)
+  (`eq:first-step-identity`, `eq:first-step-sizes`, `eq:first-step-pins-term`, `eq:first-step-marks`,
+  `eq:first-step-mark-weights`); a closing paragraph naming the three points still to settle. Notation fixed
+  there: U^Λ(a), 𝓕_r (:= ∅ off Ω₁), f, F^Λ, L_r(a), 𝖫_Z, marked domains, groups W of V4 Def. 3.24 at the carrier
+  D with 𝒜(W), ℋ(W); T^t_W, P^t_W, Υ^t_W, ν̂^t_Z, ŵ^t(W), a^Λ_W, M_Λ, M^ph_Λ, ρ_t, ρ_ph, S°_Λ, q°_Λ, Φ°_Λ, 𝖴_j,
+  I_{ℋ(W)}, marks 𝔪̂_b, 𝔪̂_Y, 𝔐̂_Λ(Z), constants C_V, C_bd (with C₀ + C_τ), C′_bd, C^δ_bd, K_χ, C′_χ, C_pin, C_ph.
+  **What the paper's framework needs from the first step on a term with large-field regions** (read at 10:45
+  in the paper's `sec:old-regions`, `sec:large-field-step`): the groups are regular (interior: "not attached
+  to the large-field region of the first step in the sense of Definition (ii)") or attached; an attached
+  atom of the species (1, Z) has the weighted mass μ_1(W) = e^{c_sh}e^{θ + νσ + (3/8)ν_e ext_c}‖Y_W‖_{[1]} with
+  the supremum over the attached space of the step 1 (complex part of the background at the radius of the
+  top layer, outer field of the step 0 in the polydisc of radius r^{(1)}_0 = 1); A_1(Z) := Σμ_1 over the atoms
+  must satisfy `eq:attached-total` A_1(Z) ≤ C_A(d′_1(Z) + 1); the regular groups must be groups of ℓ₀ with the
+  same insertions; E^∂_1(ℓ) local terms (Supplement S.9(iii)).
+  **Plan of the rest of (a′):** (C) link insertions: classes (I) r ∈ Ω₁ with row within 2R_c + 2L of I: T̂ =
+  e^{iΦ}T, Y = e^{iπ(Φ)} − 1, ‖Y‖ ≤ C″_I g₀(r + 1); (II) r ∉ Ω₁: Y = 0 (needs U₁ = V₀ off Ω₁, CRE (1.12) p. 248
+  to re-read); (III) r ∈ Ω₁, far row: inputs in J only, ‖Y‖ ≤ C_III, within 2L of Λ₁ᶜ; support d(i, Z₁) ≤
+  R_t + 2L + 1; pieces Y_{i,X} by interpolation m̂(s) (K(s) := Σs_ΔK_Δ, R₀ := 1 + 2N_adj²e^{2^d+1}, N_adj ≤ 13^d,
+  ‖Y_{i,X}‖ ≤ Ȳ(R₀ − 1)^{−|X|}, σ(Y_{i,X}) ≤ 2^d(1 + N_adj + |X|), W_I := 2C_ste^{(2^d+1)(N_adj+1)}, needs
+  LM ≥ 4ℓ_s + 4ρ_L and R₀q_s ≤ ½); subset expansion Π(1 + Y_i)π(T_i). The class's compatibility must allow a
+  link group to sit in the interval of no other group and to interact with nothing (θ := 0): check
+  Definition (a), (d) (clusters "incompatible with a member of 𝔅": a link group must be compatible with the
+  groups of the reference gas whose intervals do not contain its bond; inside the interval of a V4 group
+  there is no link group, the word P¹_W being part of the insertion). (D) species of the V4 groups on a
+  term; (E) S°_Λ; (F) A_1(Z); (G) complex; Assembly. Sources still to read for (D)–(G): V4 Proposition 9.40
+  with proof (ll. 3336–3380), §E.10 (ll. 5666–5720), Lemma 9.42, Cor. 9.43 (ll. 3385–3420), Proposition 7.3;
+  note §3a(3)–(7), §3b, §3e, §3g(1)(c)–(2), §3i; closure §5.6, §7.1; the paper's `sec:first-step-complex`.
+
+- **13 Nov 2026, 09:46 (from `date`). SUPERSEDED BY THE ENTRY ABOVE.** Paper 236 pp. `adcb89b98fbf`, supplement 188 pp.
   `bf198958e69c`. Since 09:45: the paragraph "The polymer expansion at the local shift" (V4 Lemmata 9.14,
   9.15, Cor. 9.16 at (χ̂, W̃_t) under `eq:tilted-threshold` ω̂_t ≤ ω_*/2; the three properties used were read in
   V4's proofs, ll. 2754, 2772–2783, 2795). Still to do of "the consequences": V4 §9.6–§9.7 (Lemmata 9.20,
