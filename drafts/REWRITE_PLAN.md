@@ -131,6 +131,55 @@ rate comparison, the root sum for (Z), and the difference count 3748–3815.
 
 ## State
 
+- **12 Nov 2026, 23:53 (from `date`). RESUME HERE.** Paper 216 pp. `0c2b21f592e9`, supplement `d3c297f5d58e`.
+  Done of "NEXT, IN ORDER" (entry of 23:03): (a) the base k = 1 and (b) the wrapping and the cross species, both
+  on the term without large-field regions (PROGRESS 23:17, 23:26, 23:51; FINDINGS F32–F34). **Now: (c) large
+  fields.** Supplement S.9 (`prop:attached`, ll. 1478–1544) and the paper's `sec:large-field-step` are the old
+  text: S.9's proof speaks of "touched parts", "merged parts", a "bridge", and cites a bound of the paper which
+  no longer exists. To do: read the D2.6 closure (325ff1872afc) in full, §1–§8; extend Sections 6.2–6.8 of the
+  paper (identity, expansion, marked polymers, groups, count) from the term without large-field regions to all
+  terms, or state exactly which of their statements hold verbatim there; rewrite S.9 on it; the attached parts
+  and marks at k = 1 (IT-1 §3a(7), §3e (3.9), (3.12)). Then (d), (e), (f). The user (23:40): prose pass by
+  `proof-exposition` only, not `math-prose` or `deslop-maths`; keep the status updates coming.
+
+  **(c), reading record and design (00:20, 13 Nov).** D2.6 closure read in full: §1–§5 (ll. 1–270). Not read:
+  §6 (lw slots, ll. 272–352), §7 (payment, 353–447), §8 (band, 448–522). What the closure does, in the paper's
+  terms:
+  - *What the main theorems need of a term with large-field regions:* the exact form (dressed loop with the
+    same normalisation κ) and a bound which may lose e^{C·#cubes} per large-field component
+    (`lem:term-bound`, `eq:attached-condition` allows L⁴(MR_n)⁴ per cube). No smallness per group near large
+    fields, only summability.
+  - *Scope notes in the paper:* `sec:localisation-expansion` (l. ~1538) takes the term of ϱ_k without
+    large-field regions and arbitrary Ω_{k+1}, Λ_{k+1}, S_{k+1}; `sec:groups-of-step` onwards takes the term of
+    ϱ_{k+1} without large-field regions. So two extensions: (A) new regions at the step k + 1 (outer variable
+    σ_k = A_k on Ω_{k+1} ∩ Λ_{k+1}^c, boundary potentials, the measure CRE (3.27) at σ_k ≠ 0, CRE pp. 270–277);
+    (B) old regions (propagators of a sequence of domains, CRE p. 267, p. 276; 𝐇 decays into the old layers,
+    CRE p. 277; members which depend on outer variables).
+  - *Species tests* (closure 2.1): a group made at k + 1 is of a small-field species iff (i) no polymer
+    component and no member's domain meets the one-layer neighbourhood of Λ_{k+1}^c, (ii) its components and
+    arc lie in Ω_k, (iii) no boundary-type potential, (iv) its comparison region lies in Ω_{k+1}. Otherwise
+    attached: to the component Z of Λ_{k+1}^c ((iv) fails alone; amplitude ρ, decay in d^Z from the extent
+    weight) or to the collar Coll_{k+1} (the cubes of π_{k+1} within 6 layers of Λ_{k+1}^c; amplitude
+    b_k = O(δ_k), no parity gain). A group with an attached member takes that member's species. Old deviation
+    groups whose comparison region meets Ω_k∖Ω_{k+1} are reclassified (closure §3).
+  - *The count with attached members* (closure §5): attached members are not summed in the
+    Kotecký–Preiss condition (a traversal of the step n holds L^{n−j} of them); they are fixed roots, each roots
+    at most one group per term, the group's mass is ≤ δ_n times the member's, δ_n = 2c̄e^{−(25/8)(ν_e/L)R_{n+1}},
+    because a polymer which touches the member must reach supp B′ ⊂ Ω_{n+1}, at distance ≥ 5R_{n+1} sides of π_n
+    from Coll_j (CRE (3.5), (3.20)); Σ_nδ_n ≤ log 2 by the coupling flow. In the paper's count this means: the
+    tree bound `lem:tree-bound` rooted at an attached member, attached members excluded from 𝖤_k and from
+    E_o; product form ∏_D(1 + w(D)∏(1 + δ_m)).
+  - *Complex outer variables* arise only from complex localisation parameters s (the gauge transformation
+    w(s) rotates the outer fields); the interpolation in s is ours to choose, real for real s. The attached
+    clause needs analyticity and a supremum bound on a domain in (𝐔, 𝐉, ω) which contains the later evaluation
+    points (SW closure §3's 𝒟^sub; map D2.2(4)(c)–(f), (6)(e); O6 closure for σ_k complex). **Still to read:**
+    these, and the closure §6–§8.
+  - *Plan of the text:* a new subsection of Section 6 "The Step on a Term with Large-Field Regions" with
+    (1) the setting and the collar, (2) which statements of Sections 6.3–6.8 hold as they stand for the groups
+    passing the tests (locality), (3) the attached groups: production, (4) the carry, (5) the payment; S.9
+    rewritten as the supplement's statements on Bałaban's text which (1)–(5) use (CRE pp. 270–277 at σ_k ≠ 0,
+    the 𝐇-decay, LFR II pp. 384–389 with the enlarged summand).
+
 - **12 Nov 2026, 23:08 (from `date` 23:07:23). ONE SESSION FOR THE MANUSCRIPT FROM NOW ON.** The user, 23:06
   (verbatim): "Transcription ⑂ Solely works on the rotation, you solely work the manuscript. The third station
   won't do anything anymore". The session which wrote the entries below (20:45–23:03) has stopped; the session
