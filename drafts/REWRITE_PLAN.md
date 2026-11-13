@@ -131,7 +131,14 @@ rate comparison, the root sum for (Z), and the difference count 3748–3815.
 
 ## State
 
-- **13 Nov 2026, 01:40 (from `date`). RESUME HERE.** Paper 230 pp. `5b2d0b3b481a` (at 01:45, after two
+- **13 Nov 2026, 09:02 (from `date`). RESUME HERE.** Paper 231 pp. `809f141acc7d`, supplement 184 pp.
+  `f4a7afbe0c66`. (d) is written for the free groups: S.10 with links, sizes, (viii), (ix), and the cluster
+  terms split at the flat reference (FINDINGS F38, F39; `PROGRESS.md`, entry of 13 Nov 09:02). Open inside
+  (d): the groups at second-class and unchanged components made at an 𝐑-step: a size for polymers and
+  clusters which are not free, the unit bound, the weighted masses per component, and the clause (i) there
+  (the part of Ψ of amplitude α^{1/3}); S.10(vi), (ix) pay them "as in (vi)" without weights. Then: leftovers
+  of (c) (first step's atoms, S.9(iv) against LFR II pp. 384–389, S.9(v)), (e), (f).
+- 13 Nov 2026, 01:40 (from `date`). Paper 230 pp. `5b2d0b3b481a` (at 01:45, after two
   entries in "Notes on the Papers" and the appendix line on the new constants: `eeb9bbb6c7dc`), supplement
   173 pp. `bf05c5ecee8a`. (c) large fields is written: `sec:regions`, `sec:new-region`, `sec:collar-groups`,
   `sec:old-regions` (`prop:old-regions`), payment paragraph and `lem:term-bound` on `eq:carry-product`;
