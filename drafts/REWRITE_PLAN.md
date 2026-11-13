@@ -131,7 +131,21 @@ rate comparison, the root sum for (Z), and the difference count 3748–3815.
 
 ## State
 
-- **13 Nov 2026, 09:42 (from `date`). RESUME HERE.** Paper 235 pp. `f682d4abd876`, supplement 188 pp.
+- **13 Nov 2026, 09:46 (from `date`). RESUME HERE.** Paper 236 pp. `adcb89b98fbf`, supplement 188 pp.
+  `bf198958e69c`. Since 09:45: the paragraph "The polymer expansion at the local shift" (V4 Lemmata 9.14,
+  9.15, Cor. 9.16 at (χ̂, W̃_t) under `eq:tilted-threshold` ω̂_t ≤ ω_*/2; the three properties used were read in
+  V4's proofs, ll. 2754, 2772–2783, 2795). Still to do of "the consequences": V4 §9.6–§9.7 (Lemmata 9.20,
+  9.22–9.27, 9.31–9.34, E.13), then (B)–(G). Added at 09:45, after `lem:local-shift`: the recall of V4's objects of its §9.5 and
+  `lem:tilted-potentials` (χ̂^t_b, Θ̂^t_E, W̃_t; the identity `eq:tilted-measure`; the bound `eq:tilted-bound`
+  with ω̂_t := (C₀ + C_τ)g₀(1 + 2r)³, C_τ := 5120M⁴m_Lϑ_Ve^{255κ}; locality within R_t). Verified in V4 for
+  it: §9.5 opening and Lemma 9.13 (ll. 2693–2710), §9.5.1, §9.6.3 opening (the probe term L_Y(λ, ·) has the
+  properties (i)–(iii) of the proof of Lemma 9.14), Lemma B.1(1) and §B.1 (a cube meets at most 8M⁴ bonds).
+  **Next: the consequences**, as a lemma or a paragraph: V4's Lemmata 9.14, 9.15, Cor. 9.16, 9.20, 9.22–9.27,
+  9.31–9.34, E.13 with (m̂, W̃_t, ω̂_t) in the places of (m, 𝐖_t, ω_t); the note (§3j(4)(a)–(e), (5)) lists the
+  five uses of the host potentials and the three kinds of uses of the shift; read V4 Lemma 9.15 (ll. 2757–
+  2797), 9.20 (2864–2896), 9.24 (2945–2977), 9.32 (3178–3197) for the exact hypotheses before writing; then
+  (B)–(G). The entry below continues to hold as the record of block (a′) up to 09:42.
+- 13 Nov 2026, 09:42 (from `date`). Paper 235 pp. `f682d4abd876`, supplement 188 pp.
   `bf198958e69c`. Block (a′) (F40) begun: `sec:first-step-regions` with `lem:local-shift` is in the paper
   (labels: `eq:hessian-decay`, `eq:linear-term-bound`, `eq:mean-shift-decay`, `eq:shift-range`,
   `eq:local-shift-sizes`, `eq:local-shift-identity`, `eq:parametrix`, `eq:parametrix-identity`,

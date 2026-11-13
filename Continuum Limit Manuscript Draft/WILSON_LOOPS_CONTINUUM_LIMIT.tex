@@ -1553,6 +1553,57 @@ We let $N_0$ be the least integer with $c_{\mathrm h}C^{\mathrm{near}}_He^{3\mu_
 \emph{The identity.} Since $H$ is symmetric, $\frac12\langle a, Ha\rangle = \frac12\langle B, HB\rangle + t\langle B, H\hat m\rangle + \frac12t^2\langle\hat m, H\hat m\rangle$ and $t\langle a, \ell_\Lambda\rangle = t\langle B, \ell_\Lambda\rangle + t^2\langle\hat m, \ell_\Lambda\rangle$; adding the two and using $H\hat m + \ell_\Lambda = \hat\delta$ gives \eqref{eq:local-shift-identity}.
 \end{proof}
 
+The expansion of the first-step paper is made in the variable $B = a - tm$, in which the conditional density of the term is a Gaussian with the covariance $H^{-1}$, restricted by the cutoffs and perturbed by local potentials. We now make it in the variable $B = a - t\hat m$. By \eqref{eq:local-shift-identity} the density then keeps the linear term $-t\langle B, \hat\delta\rangle$, and we add this term to the potentials. Let us recall the objects. On a labelled term, and for the exterior data in its support, the conditional density of $a \in \mathfrak g^D$ is $K^\Lambda_t(a) = \mathbf 1\{ \abs{a_b}_\sigma < r \text{ for all } b \in D \}\exp[-\frac12\langle a, Ha\rangle - t\langle a, \ell_\Lambda\rangle + P^\Lambda_t(a)]$, for $t \in [0, 1]$, where $P^\Lambda_t(a) = \sum_Y\mathbf V^\Lambda_t(Y, a)$ is a sum over the \emph{hosts} $Y \in \mathbf D_0(\Lambda)$, boxes of cubes of side $M$ with at most four cubes along each side; the potential $\mathbf V^\Lambda_t(Y, \cdot)$ depends on $a$ on the set $E(Y)$ of the bonds of $D$ which meet $Y$, and $\abs{\mathbf V^\Lambda_t(Y, a)} \leq \omega_te^{-\kappa d_0(Y)}$ with $\omega_t \coloneqq C_0g_0(1 + 2r)^3$ when $\abs{a_b}_\sigma < r$ on $E(Y)$, where $d_0(Y)$ is the tree length of $Y$ in units of $M$ \cite[Section~9.5 and (9.12)]{WilsonFirstStep}. Every bond $b \in D$ has a \emph{probe host} $Y_b \in \mathbf D_0(\Lambda)$, with $b \in E(Y_b)$ \cite[Lemma~9.13(d)]{WilsonFirstStep}. The conditional measure is $\dd\nu^\Lambda_t \coloneqq K^\Lambda_t\,\dd a/\int K^\Lambda_t\,\dd a$.
+
+\begin{lemma}[The Conditional Measure at the Local Shift]\label{lem:tilted-potentials}
+On a labelled term of the first step, with the vectors $\hat m$ and $\hat\delta$ of Lemma~\ref{lem:local-shift}, put for $b \in D$, $Y \in \mathbf D_0(\Lambda)$, $t \in [0, 1]$, and $B \in \mathfrak g^D$
+\begin{equation}\label{eq:tilted-potentials}
+\begin{gathered}
+    \hat\chi^t_b(B) \coloneqq \mathbf 1\{ \abs{B_b + t\hat m_b}_\sigma < r \}\;,
+    \qquad
+    \hat\Theta^t_E \coloneqq \prod_{b \in E}\hat\chi^t_b\;,\\
+    \tilde W_t(Y, B) \coloneqq \mathbf V^\Lambda_t(Y, B + t\hat m) - t\,\hat\Theta^t_{E(Y)}(B)\sum_{b \,:\, Y_b = Y}\langle\hat\delta(b), B_b\rangle\;,
+\end{gathered}
+\end{equation}
+where $\mathbf V^\Lambda_t(Y, \cdot)$ is zero unless $\hat\Theta^t_{E(Y)} = 1$.
+\begin{enumerate}[label=(\roman*)]
+\item For every bounded Borel function $F$ on $\mathfrak g^D$,
+\begin{equation}\label{eq:tilted-measure}
+    \int F\,\dd\nu^\Lambda_t = \frac{\int F(B + t\hat m)\,\hat\Theta^t_D(B)\exp\bigl[-\frac12\langle B, HB\rangle + \sum_Y\tilde W_t(Y, B)\bigr]\,\dd B}{\int\hat\Theta^t_D(B)\exp\bigl[-\frac12\langle B, HB\rangle + \sum_Y\tilde W_t(Y, B)\bigr]\,\dd B}\;.
+\end{equation}
+\item The function $\tilde W_t(Y, \cdot)$ depends on $B$ on $E(Y)$ only, it vanishes unless $\hat\Theta^t_{E(Y)}(B) = 1$, and
+\begin{equation}\label{eq:tilted-bound}
+\begin{gathered}
+    \abs{\tilde W_t(Y, B)} \leq \hat\omega_t\,e^{-\kappa d_0(Y)}\;,\\
+    \hat\omega_t \coloneqq (C_0 + C_\tau)\,g_0(1 + 2r)^3\;,
+    \qquad
+    C_\tau \coloneqq 5120\,M^4m_L\vartheta_Ve^{255\kappa}\;.
+\end{gathered}
+\end{equation}
+\item The linear part of $\tilde W_t(Y, \cdot)$ vanishes unless $Y$ contains a point within the distance $R_t + \rho_L + 1$ of $J_1(\Lambda)$, and both parts are functions of the labels of the term and of its exterior variable within the distance $R_t$ of $Y$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(i) Put $a = B + t\hat m$. The cutoff of $K^\Lambda_t$ becomes $\hat\Theta^t_D(B)$, and by \eqref{eq:local-shift-identity} the quadratic and the linear term become $-\frac12\langle B, HB\rangle - t\langle B, \hat\delta\rangle$ plus a number which does not depend on $B$. Where $\hat\Theta^t_D(B) = 1$, the first parts of the functions $\tilde W_t(Y, B)$ sum to $P^\Lambda_t(B + t\hat m)$. Their second parts sum to $-t\langle B, \hat\delta\rangle$ there, because $\hat\delta$ is supported in $D$, every bond of $D$ has exactly one probe host, and $\hat\Theta^t_{E(Y)} = 1$ for every $Y$. By the invariance of the Lebesgue measure under translations, the integral of $F K^\Lambda_t$ is therefore the numerator of \eqref{eq:tilted-measure} times that number, and with $F = 1$ the same holds for the denominator.
+
+(ii) The first two statements hold for both parts of $\tilde W_t$, because $Y_b = Y$ implies $b \in E(Y)$. Where $\hat\Theta^t_{E(Y)}(B) = 1$, the argument $B + t\hat m$ satisfies the condition of the bound of $\mathbf V^\Lambda_t$, which gives $\omega_te^{-\kappa d_0(Y)}$ for the first part. For the second, $\abs{B_b}_\sigma < r + \abs{\hat m_b}_\sigma \leq \frac54r$ on $E(Y)$ by \eqref{eq:local-shift-sizes}, and $\abs{\langle\hat\delta(b), B_b\rangle} \leq h(\hat\delta(b))h(B_b) \leq 2m_L\vartheta_Vr\,g_0^2 \cdot \frac54r$, by the Cauchy--Schwarz inequality for the inner product of $\mathfrak g$, whose norm is $h$, by $h \leq \abs{\cdot}_\sigma$, and by Lemma~\ref{lem:local-shift}(ii). A host has at most $4^4$ cubes of side $M$, each of which meets at most $8M^4$ bonds \cite[Section~B.1]{WilsonFirstStep}, so that the second part is at most $2048M^4 \cdot \frac52m_L\vartheta_Vr^2g_0^2$ in modulus. The tree length of a host is at most the number of its cubes minus one \cite[Lemma~B.1(1)]{WilsonFirstStep}, hence at most $255$. Since $r^2g_0^2 \leq g_0(1 + 2r)^3$ for $g_0 \leq 1$, the second part is at most $C_\tau g_0(1 + 2r)^3e^{-\kappa d_0(Y)}$.
+
+(iii) This is Lemma~\ref{lem:local-shift}(i), together with the fact that a potential $\mathbf V^\Lambda_t(Y, \cdot)$ reads the exterior variable on the inputs of its primitives, which lie in $Y$ \cite[Lemma~9.13(d)]{WilsonFirstStep}.
+\end{proof}
+
+\emph{The polymer expansion at the local shift.} The first-step paper writes the normaliser of the conditional measure as a polymer gas and bounds its activities \cite[Lemmata~9.14 and~9.15, Corollary~9.16]{WilsonFirstStep}. The proofs use the shift and the potentials through three properties only. Each cutoff is a function of one bond variable with values in $\{0, 1\}$. Each potential depends on $B$ on $E(Y)$, and where the cutoffs of $E(Y)$ do not vanish it is at most $\omega_*e^{-\kappa d_0(Y)}$ in modulus, with the constant $\omega_* \leq \frac12$ of that paper. And $\abs{m_b}_\sigma \leq r/4$, which enters through the inequality $\mathbf 1\{ \abs{B_b + tm_b}_\sigma \geq r \} \leq \mathbf 1\{ \abs{B_b}_\sigma \geq \frac34r \}$ for the bonds at which a cutoff fails \cite[proofs of Lemmata~9.14 and~9.15]{WilsonFirstStep}. By Lemma~\ref{lem:local-shift}(ii) and Lemma~\ref{lem:tilted-potentials}(ii), the cutoffs $\hat\chi^t_b$ and the potentials $\tilde W_t$ have these properties as soon as
+\begin{equation}\label{eq:tilted-threshold}
+    \hat\omega_t = (C_0 + C_\tau)\,g_0(1 + 2r)^3 \leq \tfrac12\omega_*\;,
+\end{equation}
+a smallness condition on the coupling, which takes the place of the conditions \cite[(9.15) and (9.20)(ii)]{WilsonFirstStep} on $\omega_t$. Under it the three statements hold on every labelled term with $\hat\chi^t_b$ and $\tilde W_t$ in the places of the cutoffs and the potentials of that paper, with the same constants: the denominator of \eqref{eq:tilted-measure} is a Gaussian normalisation times a polymer gas of final domains, whose activities satisfy the bounds of \cite[Corollary~9.16]{WilsonFirstStep} uniformly in $t$, in the exterior data, and in the labels. A probe host which carries no potential in that paper carries here the linear part alone, with the same bound.
+
+The same holds for the measures through which the first-step paper expands the conditional expectation of a function of the variable of integration \cite[Lemma~9.20]{WilsonFirstStep}. Its part (c), the comparison which bounds the total variation of these measures by the weights of the final domains, is stated there for all potentials which are at most $\frac12\omega_*e^{-\kappa d_0(Y)}$ in modulus on the support of the cutoffs of their host, and this is \eqref{eq:tilted-bound} with \eqref{eq:tilted-threshold}. Its parts (a) and (b) rest on the polymer representation and on the bound of the activities, with the three properties above, and the supports of the measures lie in the box $\abs{B_b}_\sigma \leq \frac54r$ because $\abs{t\hat m_b}_\sigma \leq r/4$. Its part (d), the expansion itself, is an identity between measures with the same Laplace transform, for which the family of the potentials with a further linear term has to have the same three properties; the functions $\tilde W_t$ have them with any further linear term, since they differ from the potentials of that paper by a linear term of the same kind \cite[Section~9.6.3]{WilsonFirstStep}. Hence, for every bounded Borel function $F$ on $\mathfrak g^D$ and on every labelled term,
+\begin{equation}\label{eq:tilted-expansion}
+    \int F\,\dd\nu^\Lambda_t = F(t\hat m) + \sum_{\mathcal A \neq \emptyset}\hat q^t_\Lambda(\mathcal A)\,\hat{\mathfrak Q}^t_\Lambda\bigl(\mathcal A; F(\cdot + t\hat m)\bigr)\;,
+\end{equation}
+the sum over the nonempty compatible families $\mathcal A$ of final domains, where $\hat q^t_\Lambda$ and $\hat{\mathfrak Q}^t_\Lambda$ are the ratios of polymer gases and the integrals against the centred measures of \cite[Lemma~9.20(d)]{WilsonFirstStep}, formed with $\hat\chi^t_b$ and $\tilde W_t$. This identity does not involve the loops.
+
 \section{The Inductive Step}\label{sec:inductive-class}
 
 We now show that a renormalisation step maps a dressed loop of the step $k$ to one of the step $k + 1$, with the same constants. The difficulty is one of counting. A loop has $P_k(C)$ traversals at the step $k$, and $P_k(C) = P_q(C)a_k$ grows like $L^{K-k}$, so that every quantity which a step contributes in proportion to the perimeter is, summed over the loop, unbounded as $K \to \infty$, even when it is of order $g_k^2$ per traversal. Such quantities can therefore be neither estimated nor neglected; each of them has to be either absorbed exactly into the step factor $\kappa_{k+1}$, or carried along without ever being summed in absolute value over the loop. The deviation parts of the insertions are of the second kind, and what keeps them under control is a contraction: a traversal of the step $k + 1$ consists of $L$ traversals of the step $k$, while the deviation of the background, measured in units of the scale $k + 1$, is $L^2$ times the same deviation measured in units of the scale $k$, so that with the normalisation $\rho_k\delta^*$ of \eqref{eq:insertion-bound} an old insertion contributes to the new bound with a factor of order $L \cdot L^{-2} = L^{-1}$.
