@@ -131,7 +131,58 @@ rate comparison, the root sum for (Z), and the difference count 3748–3815.
 
 ## State
 
-- **13 Nov 2026, 13:06 (from `date`). RESUME HERE: THE STYLE ITEMS (a)–(c) OF THE `PROGRESS.md` ENTRY OF
+- **13 Nov 2026, 20:59 (from `date`). RESUME HERE. Paper `941d2f0c45a6` (260 pp.), supplement `e2f1459a665f`
+  (210 pp.). S.16(b)(3)–(5), S.15, S.14(c) are rewritten on Supplement Lemmata 18.4–18.10. What is left is in
+  `S16_FAR_PLAN.md` §4, "Still to do"; what the new text rests on is in FINDINGS F45 (addendum 20:54).**
+- **13 Nov 2026, 20:26 (from `date`). RESUME HERE: `S16_FAR_PLAN.md` (plan, transfer, done list). Supplement
+  `3be7441ff5ca` (199 pp.) has the new Lemmata 18.4 and 18.5; the next steps are in §4 of that file.**
+- **13 Nov 2026, 20:17 (from `date`). RESUME HERE. S.16 FAR TERMS (F45): the core chain of the LF note is read
+  (ll. 936–1080, 1449–1483; digest in the addendum of F45); nothing is written into the supplement yet. Finding:
+  S.14(c), S.15 (evaluation sets), and S.16(b)(5) were written from the note at `696b636c3a57` and are all behind
+  it. Next: read #4.275–#4.281, #4.243–#4.244, #4.280, #4.291–#4.293, #4.433–#4.437, #4.473–#4.501, #4.550–#4.560 at
+  `ada99ead6f26`; then rewrite the three places (joint two-constants line; formal currents of RG I (3.13); the
+  domain 𝒟^c with its induction; the split of the generations at k/2 for S.16), with the correction of the D*D
+  entry (reviewer's §18) as the corrected argument.**
+- **13 Nov 2026, 20:14 (from `date`). NEW TASK FROM THE USER: S.16 FAR TERMS (F45).** The user: "The repair is
+  already in the notes, as has been verified in OAI Comparison". The reviewer's `STATUS.txt` (20:12) and
+  `s16_current_repair.txt` §§17–18 (20:11) locate the far comparison in the LF note
+  (`WILSON_IT1_LARGE_FIELD_DEPTH_2026_10_27.md`, now `ada99ead6f26`; MAP.md has the stale `696b636c3a57`): #4.434.3–8
+  (ll. 1455–1483), #4.284.1–19 (ll. 946–1022), #4.285 (l. 1023), #4.287–4.290 (ll. 1039–1080, the domain D^c),
+  #4.282–283 (ll. 941–945, the joint complex line). Their own verdict at 20:12: located, one local correction
+  written (§18: D*D𝐀 is not an entry of RG I (3.14); use the Hölder bound at β_o and the two-constants line, exponent
+  2β_o/3 unchanged), "not yet certified closed", four checks listed. To do: read these tags, compare with
+  Supplement S.15/S.16(b)(5), write the far argument into the supplement, update F45.
+- **13 Nov 2026, 20:08 (from `date`). RESUME HERE. Paper `2aa82c5cf117` (260 pp.), supplement `e2f6a9331e89`
+  (197 pp.), compiled without errors.** The outer fields at the 𝐑-steps are written (FINDINGS F49): anchors of the
+  second-class components, `lem:anchor-extension`, the inner attached space, Lemma 17.19(vii), S.10(ix), (x)(d).
+  Paused on the user's instruction. Next: the user's reading of the five points at the end of F49; F45 (S.16) is
+  untouched and is the user's decision; then the reread of the whole paper. The entries below are history.
+- **13 Nov 2026, 19:23 (from `date`). Paper `e7fa684d0fdf` (255 pp., compiled without errors), supplement
+  `9dc1f1632660`.** `sec:old-regions` is in the scheme of F44 again (a variant with the configuration transformed by
+  w(s)^{−1} was tried and rejected, FINDINGS F48, addendum). The 𝐑-steps are not closed: (R1), (R2) of that
+  addendum. The entry below still gives the next step; LFR II pp. 370–373 were re-read for the gauge
+  transformations u of (1.51)–(1.61).
+- **13 Nov 2026, 18:51 (from `date`). RESUME HERE: THE 𝐑-STEPS WITH THE NEW OUTER FIELDS, FINDINGS F48: READ
+  LFR I (1.55)–(1.102), pp. 188–201, THEN THE NEW CLAUSE OF SUPPLEMENT LEMMA `lem:loop-localisation` AND THE OUTER
+  FIELDS OF THE GROUPS BOUND TO SECOND-CLASS COMPONENTS (`PROGRESS.md` ENTRY OF 18:51).** Paper 255 pp.
+  `95e29517eff3`, supplement 194 pp. `9dc1f1632660`, clean. F47 settled (RG II (1.4) against VAR (180); "Notes on
+  the Papers"). The user: nothing on S.16 for now (F45 stays open, untouched).
+
+- **13 Nov 2026, 17:47 (superseded; from `date`). THEN: (1) THE 𝐑-STEPS WITH THE NEW OUTER FIELDS (FINDINGS F44, LAST
+  PART; `PROGRESS.md` ENTRY OF 17:47, NEXT LITERAL STEP); (2) THE USER'S DECISION ON F45 (S.16(b)(5), OPEN);
+  (3) THE REREAD OF THE WHOLE PAPER.** Paper 255 pp. `4ab5cfc5defd`, supplement 194 pp. `9dc1f1632660`, clean,
+  PDFs copied back, lint clean. The external review's Gap 2 (outer field) is repaired for the steps of the step
+  map: paper `lem:outer-conditional`, `lem:outer-transport`, `eq:slot-values`, `eq:outer-evaluation`,
+  `eq:outer-condition` (two lines), `eq:parameter-decay`; supplement S.9(vi), (vii). New conditions, none in the
+  table: δ₁M ≥ 2κ₁; the transport condition; `eq:outer-source-condition`. Gap 1 (S.16) is open and untouched.
+  Audit items 3 and 4 done (F46).
+
+- **13 Nov 2026, 15:38 (superseded; from `date`). THEN: THE REREAD OF THE WHOLE PAPER IN ONE GO FROM SECTION 1.**
+  Paper 250 pp. `2424413f555b`, supplement 192 pp. `42b4ca2ce8f5`, clean, PDFs copied back. The mechanical
+  style items are done (braced fractions, formulae separated by punctuation, conditions out of displays;
+  `PROGRESS.md` entry of 15:38); the lint is clean in both files.
+
+- **13 Nov 2026, 13:06 (superseded; from `date`). THEN: THE STYLE ITEMS (a)–(c) OF THE `PROGRESS.md` ENTRY OF
   13:06 (unbraced fractions, 347 + 543; formula–punctuation–formula; two `\qquad\text{for every}`), THEN THE
   REREAD OF THE WHOLE PAPER.** Paper 250 pp. `c500bd2e5a47`, supplement 192 pp. `0129c8f88f47`, clean, PDF
   copied back. Mechanical lint passed except for these items; four stale hard-coded citations of the supplement
