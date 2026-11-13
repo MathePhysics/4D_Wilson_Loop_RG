@@ -131,7 +131,40 @@ rate comparison, the root sum for (Z), and the difference count 3748–3815.
 
 ## State
 
-- **13 Nov 2026, 12:19 (from `date`). RESUME HERE. BLOCKS (a′) AND (e) ARE FINISHED; NEXT IS BLOCK (f).**
+- **13 Nov 2026, 12:41 (from `date`; updated after reading ll. 1913–2245, no amendment). RESUME HERE: ITEM 8
+  (iv) INSIDE `sec:count` AT `lem:cube-set-sizes`, l. 2249 OF THE PAPER AT `dabf320ed8ef`, THEN
+  `sec:small-field-map` (l. 2499) AND ON.** Paper
+  250 pp. `dabf320ed8ef`, supplement 192 pp. `0129c8f88f47`, clean, PDFs copied back. The exposition passes
+  on Section 6 are done for its opening, `sec:evaluation-point`, and `sec:step-identity` (two amendments for
+  the centres and the attached groups, `PROGRESS.md` entry of 12:41); fourteen subsections remain, in the
+  order of the entry of 12:40, then the reread of the whole paper.
+
+- **13 Nov 2026, 12:40 (from `date`). ITEM 8 (i)–(iii) OF "ORDER OF WORK" ARE DONE; (iv) IS
+  NEXT.** Paper 250 pp. `7ae582ae3d61`, supplement 192 pp. `0129c8f88f47`, both compile clean, PDFs copied
+  back. (iii): every subsection of Paper Section 11 read against the Supplement statement it cites; two
+  amendments (the 𝐑-bounds of `prop:theorem-two-difference`; the constant of the local terms renamed C_lt,
+  C′_lt). Next: (iv) the `proof-exposition` passes 1–3 on Paper Section 6, subsection by subsection in the
+  order of the file (list with line numbers in `PROGRESS.md`, entry of 12:40), then `math-prose` and
+  `deslop-maths` on each, then the reread of the whole paper. Not done by any audit so far: re-derivation of
+  the proofs of Supplement S.11–S.15, S.16(a)–(f), S.17.
+
+- **13 Nov 2026, 12:32 (from `date`). BLOCK (f): APPENDICES, THREE AUDITS, SCANNER-LEVEL PROSE
+  PASS, AND LINT ARE DONE; ITEM 8 OF "ORDER OF WORK" IS NEXT.** Paper 250 pp. `372dbdc72d63`, supplement
+  192 pp. `a15e7a80d090`, both compile clean, PDFs copied back. Details in `PROGRESS.md`, entry of 12:32.
+  Next, in this order: (i) audit Paper `lem:term-bound` with its proof against Sections 5.4, 6.11, 6.12
+  (**done 12:35**, paper `141ae24b5d4f`: C_A(1) at n = 1; the local terms by the cube form of S.9(iii));
+  (ii) audit `prop:torus-consistency` and clause (vi) (**done 12:35**, not affected); (iii) audit Paper
+  Section 11 with Supplement S.11–S.17 sentence by sentence, starting at `sec:exponent-difference`
+  (ll. 4315–4540) (**done to `eq:recursion`, 12:39**, paper `7ae582ae3d61`, supplement `0129c8f88f47`: the
+  𝐑-bounds in `prop:theorem-two-difference` stated as in S.15(b), (c); the constant of the local terms renamed
+  C_lt because C_e is the constant of the depth sources; **continue at `eq:recursion`, l. 4484, to
+  `prop:recursion-solution`**); (iv) `proof-exposition` passes on Section 6 and the reread of the whole
+  paper.
+  Decisions of today which later work must respect: the centre of the first step is a parameter (F41); the
+  reference gas of a term is the gas of its interior groups, a part of the gas of ℓ₀ (F42); a link group is
+  one bond; the marks are 0 or 1; the atoms of the first step are bounded through A₁(Z) only.
+
+- **13 Nov 2026, 12:19 (from `date`). BLOCKS (a′) AND (e) ARE FINISHED; NEXT IS BLOCK (f).**
   Paper 250 pp. `c0a2311eee4b`, supplement 192 pp. `f6d47691d76d`, both compile clean, PDFs copied back.
   Since the entry below: the alignment path and the carry of the differences are written out in S.14(f), and
   c″_𝒦 is removed (F42, addendum). Block (f), in this order: (1) appendices of constants and conditions with
