@@ -131,7 +131,25 @@ rate comparison, the root sum for (Z), and the difference count 3748–3815.
 
 ## State
 
-- **12 Nov 2026, 23:53 (from `date`). RESUME HERE.** Paper 216 pp. `0c2b21f592e9`, supplement `d3c297f5d58e`.
+- **13 Nov 2026, 01:40 (from `date`). RESUME HERE.** Paper 230 pp. `5b2d0b3b481a`, supplement 173 pp.
+  `bf05c5ecee8a`. (c) large fields is written: `sec:regions`, `sec:new-region`, `sec:collar-groups`,
+  `sec:old-regions` (`prop:old-regions`), payment paragraph and `lem:term-bound` on `eq:carry-product`;
+  Supplement S.9 redone ((ii) in the paper's count; (vi) gauge transformation; (vii) complex outer field).
+  Left over from (c), to do with the audits: the first step's atoms in detail (closure §6, IT-1 §3a, §3e),
+  S.9(iv) against LFR II pp. 384–389, S.9(v) (cross species; only S.10 and the Cauchy part still cite it).
+  **Next: (d)** 𝐑-steps (S.10 from the D2.7 closure; F30's L-condition), **(e)** F26, **(f)** appendix,
+  "Status", "What Is Not Proved", "Notes on the Papers", audits, lint. FINDINGS F36.
+  *(d), what is to do (01:45):* S.10 (`prop:r-operation`, supplement ll. 1595–1683) has (i)–(vii) with proofs;
+  its (v) gives the 𝐑-made deviation insertions only in the old form (sum per traversal ≤ C^𝐑ρ̃δ*). Needed for
+  the class as rewritten: for an 𝐑-made group its domain, size, extent, the geometry (vii) with the unit
+  constant, `eq:per-insertion` with b_W, `eq:tail-clause`, `eq:sup-clause`, `eq:production-clause`, clause
+  (iii) on the space of the step; members (regular, attached) inside 𝐑-groups. Sources: D2.7 closure
+  (ab6c80ebce1b) 15.6 (ll. 463–552), 15.7, 15.8 (594–696), 15.8-1 (697–794: counted domain hull_c(g), size
+  σ̃(D̂_g) = Σ_P(#π_k(B_P) + 2^{d+2}D_P + λ_𝔏ℓ_P) + ⅓Σσ(D), unit u_𝔏 = 640(2^{d+2} + 8), L ≥ 4·10⁴u); the
+  two-loops note (6A)–(6C) (#518–#524, #561–#569, #629, #698–#751, #803–#832). The paper's `u_\star` and the
+  conditions `eq:count-conditions` on L change with u_𝔏 (F30 item 2): record in FINDINGS.
+
+- **12 Nov 2026, 23:53 (from `date`). (c) begun; superseded by the entry above.** Paper 216 pp. `0c2b21f592e9`, supplement `d3c297f5d58e`.
   Done of "NEXT, IN ORDER" (entry of 23:03): (a) the base k = 1 and (b) the wrapping and the cross species, both
   on the term without large-field regions (PROGRESS 23:17, 23:26, 23:51; FINDINGS F32–F34). **Now: (c) large
   fields.** Supplement S.9 (`prop:attached`, ll. 1478–1544) and the paper's `sec:large-field-step` are the old
