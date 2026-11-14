@@ -4011,3 +4011,41 @@ Log referee_cli_20261105-112149_scope_pairCauchy_PC2.json. All eleven PC1 findin
   - Checked L^{m_K} ≤ max(1, 3L log(K + 2)/a_*) from the definition.
   - Every cited tag resolves (grep).
 - Notes: pair Cauchy 7169747b6de2. Next: PC7 (re-round on #PC4.2-2, #PC4.4, #PC4.6-2, #PC4.8-5, #PC4.12, #PC5.3, #PC6.4, #PC8.1, #PC.1-1; the cosmetics).
+
+## (PC) Packet PC, Round PC7 (Re-Round): 0 ERROR, 2 MINOR (5 November, 14:57)
+
+- PC7.1 MINOR, confirmed. Old cross differences that pass into other species were not paid. Sources: #468 together with map #MD2.0.3.26-2 (step ascending), and #278: "A D_g with a wrap member is wrap(k)".
+  - (a) An att(j₁, Z) member merged with an old cross(j₂) insertion, j₁ < j₂, gives an attached descendant. Its old cross difference sits in LF's D_i. Repair: #PC4.2-2 adds 24(m_W + 1)τ^cr_K to s^{W,0}_K, carried as LF #5.40-1–#5.40-2 carry the old wraps.
+  - (b) A young wrap(k) can take in young or old cross insertions. Repair: new #PC4.13-6, D^{cr,w}_K := 1024(m_K + 1)(2L)^{m_K}[(8ρ^{LF,×}_K + r̄_K)A^{×,2} + 4e^{−C_Pk/4}A^× + 6τ^cr_K], which is part of D^w_K. The factors: cross carry 4·3^n ≤ 4(2L)^n before the pass; after it, 2L per step and doubled R-step factors at most 16² = 256, since these bounds contain no #893 factor.
+  - #PC4.13-2 and #PC6.4 cite the summability (τ^cr_K times k, #PC4.6-2).
+- PC7.2 MINOR, confirmed. η is chosen after κ (map #MD2.4.3.10, #MD2.4.3.12-1). Repair: #PC4.8-5 now argues that κ − κ_I bounds the interpolated activities and does not re-choose κ. So V3's upper bound on η holds as before, and the conditions used at the lowered decay are lower bounds on κ.
+- Pre-check:
+  - Quoted #250, #278, #468, #848, map #MD2.0.3.26-2, #MD2.4.3.10, #MD2.4.3.12 and #MD2.4.3.12-1.
+  - Factors: (H^R) gives y^R ≤ 1, so 1 + 2y^R ≤ 3. 4·3^n·256(2L)^{m_K−n} ≤ 1024(2L)^{m_K} for L ≥ 2.
+  - Every use of D^w_K (#PC4.2-2, #PC4.13-2, #PC6.2, #PC6.3-2) picks up D^{cr,w}_K through its definition, and every #PC tag resolves.
+- Notes: pair Cauchy 729260115f4e. Next: PC8 (re-round on #PC4.2-2, #PC4.8-5, #PC4.13-1, #PC4.13-2, #PC4.13-6, #PC6.4).
+
+## Pair Cauchy Note, Rounds PC8 and PC9 (5 November 2026, 15:36)
+
+- PC8 (re-round): CLEAN. Count 1.
+- PC9 (full, referee_cli_20261105-151320_scope_pairCauchy_PC9.json): 1 ERROR and 1 MINOR. Count reset to 0.
+- PC9.1 ERROR, confirmed. The interaction weights Q(𝔅) = exp(−Σφ(Γ)) of the words differ between the runs, since each run computes its reference-gas clusters at its own coupling (LF #5.13, #5.42), and no line compared them. Checked:
+  - The Cauchy note has no Q or φ. #C7.5-7 uses only the majorant Π(1 + ‖Y_b‖), and #C7.4-2 compares the dev insertions, the transports and the wraps.
+  - LF #5.42 compares the Q-part for attached and wrap members on the matched pairs, and puts the dev members' Q-part "in D^{dev}".
+- Repair: new #PC4.14–#PC4.14-4.
+  - #PC4.14-1 and #PC4.14-1a: at the young steps the φ are the marked part of the expansion whose constant part #PC5.4-1 compares. The 𝔷-disc, the interpolation at 1/(2ρ^{E,×}_K), (G′)'s ς-independent majorants and a Cauchy estimate per cluster give a per-member difference ≤ q_Kθ(W), with q_K := 8C_ptC_X(C^{(2)}_KPρ^{E,×}_K + C_KPe^{−C_Pk/4}).
+  - #PC4.14-2: the old occurrences go with the old members (τ, old differences taken in) or with the dev recursion.
+  - #PC4.14-3: the words at K′ on ℓ₀ change by at most x^Q_KB^×_W, with x^Q_K := e^{C_Q^×q_KM^×} − 1, C_Q^× := ν/(8eν_r), for K ≥ K_Q.
+  - #PC4.14-3a: on the matched pairs, s^{W,0}_K gains C_Q^Wc̄^W_KA^× (also in #PC4.2-2).
+  - #PC4.14-4: the occurrences merged at a young birth are constituents (also added to #PC4.8-1's list).
+  - x^Q_K is entered in #PC6.2, #PC6.3-2 and #PC6.4, K ≥ K_Q in #PC8.1, and "the interaction weights Q" in #PC.1-2 and #PC2.5. The n-loop note's #NL10.4 transfers it (M^× over all N_C loops).
+- PC9.2 MINOR, confirmed. #PC.1-2 and #PC2.1-2 now list the Cauchy note's transports (#C7.5) and wraps (#C7.8) among its comparisons of the words.
+- Pre-check:
+  - Quoted LF #5.13, #5.42 and #5.53, and #C7.4-2, #C7.5-7 and #C8.3.3-4.
+  - |Q^B − Q^A| ≤ |Q^A|(e^{Σ|Δφ|} − 1).
+  - e^{θ}(e^{qθ} − 1)‖Y‖ ≤ q(ν/16)σe^{−ν_rσ/2}w ≤ qν/(8eν_r)w, using θ ≤ νσ/16 and qν/16 ≤ ν_r/2.
+  - Cauchy: 4ρ·2C_ptC_XC^{(2)}_KP = 8C_ptC_XC^{(2)}_KPρ. For the old parts, 2·2e^{−C_Pk/4}·2C_ptC_XC_KP = 8C_ptC_XC_KPe^{−C_Pk/4}.
+  - Every #PC citation in both notes resolves.
+  - LF moved to cb837216d36b (peer's §4 repairs). The cited §5 lines are unchanged, and the pin is updated.
+- Open, for the peer (owner): the single-loop chain (#C7.4-2) compares no Q_{K′} on ℓ₀, and LF #5.42's "dev Q-part in D^{dev}" relies on #C8.3.3-4 covering Q, which the Cauchy note does not state.
+- Notes: pair Cauchy c2e519a59318, n-loops 98428e3d801f. Next: PC10 (re-round on #PC4.14–#PC4.14-4, #PC4.8-1, #PC4.2-2, #PC6.2–#PC6.4, #PC.1-2, #PC2.1-2, #PC8.1).
