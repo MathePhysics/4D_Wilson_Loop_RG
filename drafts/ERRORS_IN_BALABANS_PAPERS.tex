@@ -1,0 +1,33 @@
+% !TeX program = pdflatex
+\documentclass[11pt]{preprint}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{mathtools}
+\usepackage{mathrsfs}
+\usepackage[a4paper,margin=28mm]{geometry}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
+\DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
+\setlength{\parskip}{0.6em}
+\emergencystretch=3em
+\title{Errors in Ba{\l}aban's Papers}
+\author{}
+\date{}
+
+\numberwithin{equation}{section}
+\begin{document}
+\maketitle
+
+\section{The Bound of the Covariant Laplacian of the Localised Functions}
+
+The far domains of a step read the terms at the pairs \cite[(3.13)]{BalabanRG1}, whose current variable contains the covariant Laplacian of a field, and such a pair lies in the class of the old term only if this Laplacian is bounded at every point; this is the fourth of the bounds \cite[(3.14)]{BalabanRG1}. Ba{\l}aban asserts it for the localised functions \cite[p.~273]{BalabanRG1} and does not prove it, and it does not follow from the bounds of the operators: the theorem on the propagator with the vertex $\Delta'_\pi$ holds ``with the exception of the inequality involving the covariant Laplace operator'' \cite[p.~422]{BalabanPBG}, and \cite[(137)--(139), p.~298]{BalabanVAR} obtains the Laplacian of $H$ from the gauge condition $RD^*H = 0$, which is available at $s = 1$ and at the current of the configuration only. Lemma~18.6(a) of the supplement proves the bound for pairs which have more regularity than the conditions of the class require. The current variable of the class is bounded and otherwise arbitrary, and to such a variable the vertex $\Delta'_\pi(\mathbf J)$ applies an operator of the form $\nabla G'\nabla^*$, which \cite[(3.44)]{BalabanPBG} bounds on H\"older continuous fields and not on bounded ones. The restriction is not a defect of that bound. On a sequence of domains with $k$ scales, at a configuration with the regularity \cite[(3.35)]{BalabanPBG}, every bounded field $w$ satisfies
+\begin{equation}\label{eq:log-norm}
+    \sup\abs{\nabla G'\nabla^*w} \leq \bigl(2dB_0 + 2B_0^2L\,k\bigr)\sup\abs w\;,
+\end{equation}
+with the constant $B_0$ of \cite[Theorem~3.1]{BalabanPBG}, and the linear growth in $k$ is attained. For the upper bound let $G'_{(i)}$, $0 \leq i \leq k$, be the operator of the sequence $\Omega_0 \supset \dots \supset \Omega_i$ cut off after the scale $i$, in which all of $\Omega_i$ is the layer $i$. The constants of the theorem do not depend on the sequence \cite[p.~399]{BalabanPBG}, and $G'_{(k)} = G'$. The forms \cite[(3.24)]{BalabanPBG} of two consecutive sequences differ on $\Omega_{i+1}$ only, by an operator $\mathcal V_i$ with $\abs{\mathcal V_i\lambda} \leq 2(L^i\eta)^{-2}\sup\abs\lambda$, the numbers $a_j$ of (3.24) being at most one, and $G'_{(i+1)} - G'_{(i)} = G'_{(i+1)}\mathcal V_iG'_{(i)}$. By the global inequalities \cite[(3.47)]{BalabanPBG} for the two sequences, $\abs{G'_{(i)}\nabla^*w} \leq B_0L^i\eta\sup\abs w$ on $\Omega_{i+1}$, which belongs to the layer $i$ of the first, and $\sup\abs{\nabla G'_{(i+1)}f} \leq B_0L^{i+1}\eta\sup\abs f$ for a function $f$ supported in $\Omega_{i+1}$, the layer $i + 1$ of the second. Each of the $k$ differences therefore contributes at most $2B_0^2L\sup\abs w$, and $\sup\abs{\nabla G'_{(0)}\nabla^*w} \leq B_0\eta\sup\abs{\nabla^*w} \leq 2dB_0\sup\abs w$. For the lower bound take the trivial configuration, a point $x_0$ such that the cube of the side $\ell_k \coloneqq L^k\eta$ about it lies in the last layer, coordinates centred at $x_0$, and the function $u(x) \coloneqq \frac{1}{2}x_1x_2\log((\abs x^2 + \eta^2)/\ell_k^2)$. Its lattice Laplacian $g$ is bounded by a constant of $d$, because $\sum_\mu\partial_\mu^2u = x_1x_2((d + 4)(\abs x^2 + \eta^2) - 2\abs x^2)(\abs x^2 + \eta^2)^{-2}$ and the fourth derivatives of $u$ are at most a constant times $(\abs x^2 + \eta^2)^{-1}$; and since $u$ vanishes on the coordinate hyperplanes $x_1 = 0$ and $x_2 = 0$, its mixed difference at the origin is $\eta^{-2}u(\eta, \eta, 0, \dots, 0) = \log(\eta/\ell_k) + \frac{1}{2}\log3$. Put $v \coloneqq \partial_1u$, and let $\chi$ be a smooth function which equals one for $\abs x \leq \frac{1}{4}\ell_k$ and is supported in the cube. Then $\Delta v$ is a difference of $g$ in the first direction, hence the divergence of a field $w$ with $\sup\abs w \leq \sup\abs g$, and $(\Delta + Q'^*aQ')(\chi v) = \nabla^*(\chi w) + f$ with $\abs f \leq C\ell_k^{-1}$, where $f$ collects $Q'^*aQ'(\chi v)$, which is at most $\ell_k^{-2}\sup\abs{\chi v} \leq C\ell_k^{-1}$, and the terms in which a difference falls on $\chi$; the latter are supported where $\abs x \geq \frac{1}{4}\ell_k$, and there $v$ and its first differences are at most $C\ell_k$ and $C$. Hence $\nabla G'\nabla^*(\chi w) = \nabla(\chi v) - \nabla G'f$ with $\abs{\nabla G'f} \leq B_0\ell_k\sup\abs f \leq C$, and the second component at $x_0$ is at least $k\log L - C$ in absolute value. So the vertex applies to a bounded current variable an operator whose norm grows with the number of scales, and the regularity of the current is what a bound of the Laplacian at a point requires. For a current variable which is bounded and otherwise arbitrary, as the spaces of \cite{BalabanRG1} allow, the argument of the supplement does not give the bound, and the paper does not use it.
+
+\bibliographystyle{amsplain}
+\bibliography{refs}
+\end{document}

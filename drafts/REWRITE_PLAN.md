@@ -131,9 +131,68 @@ rate comparison, the root sum for (Z), and the difference count 3748–3815.
 
 ## State
 
-- **14 Nov 2026, 04:46 (from `date`). RESUME HERE. Paper `dceb2a591127` (265 pp.), supplement `fe9657cdc106`
-  (257 pp.), both compile without errors or undefined references, PDFs copied; hard-coded numbers 17.10, 17.17,
-  18.12, 18.21, 18.26, S.12 verified in the `.aux`.** The two items left by the audit are done (F59,
+- **14 Nov 2026, 14:04 (from `date`). RESUME HERE. Paper `7a9f647cc9bb` (267 pp.), supplement `66f033244cfc`
+  (268 pp.), `ERRORS_IN_BALABANS_PAPERS.tex` `178c0f01153d` (2 pp.), all compile without errors or undefined
+  references, PDFs copied, hard-coded numbers verified.** F63: the readings of Bałaban's print were audited
+  against the transcriptions; CRE (2.35) is now used as printed (on X) and only (2.37) is read on X^{∼−2}, with
+  the printed lines which exclude the other reading (paper, Section 14, new item; supplement before Lemma
+  18.25); three readings which had no note are noted (CRE "Sect. 3.7 [I]", VAR (89), "Theorem 1 [16]" and LFR II
+  "(2.36) [11]"). The NEXT list of the 12:12 entry stands. PENDING THE USER'S ANSWER: whether to move the
+  misprint items of Section 14 and the counterexample of Supplement Remark 17.26 into the errors file.
+- 14 Nov 2026, 13:10 (from `date`). Paper `25d8aaa18f15` (266 pp.), supplement `1379b326d9b1`
+  (267 pp.), `ERRORS_IN_BALABANS_PAPERS.tex` `178c0f01153d` (2 pp.), all compile without errors or undefined
+  references, PDFs copied, hard-coded numbers verified. On the user's instruction the estimate `eq:log-norm`
+  and the sentence on the bounded current variable were cut out of the supplement and the paper and put into
+  the new file "Errors in Bałaban's Papers"; nothing else changed since the entry below, whose NEXT list stands
+  (item (2) only if the user asks for it).
+- 14 Nov 2026, 12:12 (from `date`). Paper `568c4c854c02` (266 pp.), supplement `3c13788a430c`
+  (268 pp.), both compile without errors or undefined references, PDFs copied, hard-coded numbers verified.
+  F62: the checks (2)--(4) left by F61 are done. Check (2) found a defect in step (E) of Lemma 18.6: PBG (3.45)
+  loses a part of the Hölder exponent at every vertex, so the class of the regular pairs was not preserved along
+  the chain of reading terms. Repaired: an admissible field has three parts and an exponent β_ad
+  (`eq:admissible-field`: Hölder of the exponent 2β_ad, bounded with bounded divergence, gradient of a function
+  with Hölder first differences of the exponent β_ad); the third part passes through a vertex without ∇G′∇*;
+  the lift to the finer lattice halves β_ad (Lemma 18.14), so β_ad = ½β_c in run A, ¼β_c in run B. Symbols
+  renamed (list in F62; F60/F61 use the old names). New before Lemma 18.6: `eq:log-norm`, the norm of ∇G′∇* on
+  bounded fields grows linearly with the number of scales, bound from above and example from below. OPEN (about
+  Bałaban's paper, not an input of ours): whether the fourth bound of RG I (3.14) fails at some pair of his full
+  space; a route in three steps is recorded in F62 and is not carried out. NEXT: (1) independent review of step
+  (E) as rewritten and of the lift in Lemma 18.14; (2) if wanted, write out the route of F62 against VAR
+  pp.283--290; (3) `MAP.md`; (4) prose passes on Lemmata 18.6, 18.25, 18.26.
+- 14 Nov 2026, 11:20 (from `date`). Superseded by the entry above. Paper `0c021382c476` (266 pp.), supplement `6c2e28ecf1cc`
+  (266 pp.), both compile without errors or undefined references, PDFs copied, hard-coded numbers verified.
+  F61: the fourth bound of RG I (3.14) for the localised functions (the Laplacian of the fields of the far terms),
+  which Bałaban asserts without proof, is derived in the supplement for the pairs which the paper reads:
+  Lemma 18.6 now has part (a) (`eq:laplacian-bound`, regular pairs: Hölder plaquette field, admissible current,
+  `eq:admissible-field`) and step (E) in its proof; base pairs of 𝒟^c_j are regular; the pointwise part of δ has
+  the sharp threshold; the second kind of the evaluation set requires an admissible Laplacian; Lemma 18.14, the
+  polarisation lemma (S 3.1, second form), and Lemma 18.16(c) are adjusted; paper: a note in "Notes on the
+  Papers" and the condition C_ΔB₃c₂ ≤ ¼ in the appendix. NOT PROVED AND NOT USED: Bałaban's statement for an
+  arbitrary bounded current variable (F61, item (b)). NEXT: (1) independent review of step (E), in particular
+  the covariance of the dressed average at a non-zero field (derived from CMP98 (89), (93), (105)) and the
+  admissibility of the block sources; (2) re-read S.13--S.16 and the paper's Cauchy section line by line for the
+  regularity of every pair at which a term is evaluated; (3) table rows for C_Δ, C_□, C_g, C′_lay and the
+  conditions 2CMs ≤ s_□, C_ΔB₃c₂ ≤ ¼; (4) `MAP.md`; (5) prose passes on Lemmata 18.6, 18.25, 18.26.
+- 14 Nov 2026, 11:04. Superseded by the entry above: F61 was first recorded as open with three routes.
+- **14 Nov 2026, 07:00 (from `date`). RESUME HERE. Paper `415630f779b9` (265 pp.), supplement `90edb6823845`
+  (262 pp.), both compile without errors or undefined references, PDFs copied; hard-coded numbers 17.5, 17.10,
+  17.17, 18.7, 18.12, 18.14, 18.21--18.26 verified in the `.aux`.** The review
+  `OAI Comparison\manuscript_review_20261114` (four findings, all valid) is answered in the manuscripts; record in
+  F60. Finding 1: Lemma 18.26 restated with the radii of the layers only (hypotheses (1)--(3), cubes □⁺ of side
+  (CM + 4LM₁)a_n, constant C_g of `eq:cube-constant`); Lemma 18.25 has a second part (gauges on cubes from layered
+  plaquette bounds, `eq:cube-gauge`); definition of 𝒫_j for boundary terms and the one-scale justification of the
+  larger cubes changed accordingly; Lemma 18.22(2) with C_g. Finding 2: `eq:laplacian-of-e` by the form of Δ;
+  Lemma 18.12 inverse identities at s = 1 only; Lemma 18.6 proof rewritten in steps (A)--(D)
+  (`eq:endpoint-identity`, `eq:laplacian-of-field`, `eq:local-ward`, `eq:gauge-function-form`), statement extended
+  to the decoupled operators. Finding 3: `eq:far-common-bound`. Finding 4: n factors at strictly decreasing
+  scales. **Flagged, not proved here (Bałaban's statement, RG I p.273):** the pointwise bound of the Laplacian of
+  the decoupled functions at the unperturbed pair, which by `eq:laplacian-of-field` contains the gradient of
+  RD*Y; see F60 item 2. NEXT: (1) the user's decision on that flag; (2) new conditions without table rows:
+  2CMs_{0,n} ≤ s_□, the neighbourhood X^{∼8}, constants C_□, C_g, C′_lay; (3) `MAP.md` rows and hashes;
+  (4) prose passes on the new text of Lemmata 18.6, 18.25, 18.26; (5) watch the reviewer's folder.
+- 14 Nov 2026, 04:46 (from `date`). Paper `dceb2a591127` (265 pp.), supplement `fe9657cdc106`
+  (257 pp.), both compiled without errors or undefined references; hard-coded numbers 17.10, 17.17,
+  18.12, 18.21, 18.26, S.12 verified in the `.aux`. The two items left by the audit are done (F59,
   `HYPOTHESIS_AUDIT.md` "Follow-Up"). S.12(c): identity without K₂₂⁻¹, full proof, rate δ₀/27, constant C_C(β);
   new second statement on the local inverses D_□ = (QG_□Q*)⁻¹ (`eq:block-inverse-defect`, rate δ′₀/12, C_D(β)).
   S.12(d): gauge-fixing part proved in full with the weighted norm at δ_gf = δ₀/81 (paper
