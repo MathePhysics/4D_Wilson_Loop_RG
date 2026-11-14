@@ -131,7 +131,124 @@ rate comparison, the root sum for (Z), and the difference count 3748–3815.
 
 ## State
 
-- **13 Nov 2026, 20:59 (from `date`). RESUME HERE. Paper `941d2f0c45a6` (260 pp.), supplement `e2f1459a665f`
+- **14 Nov 2026, 00:27 (from `date`). RESUME HERE. F51 CLOSED IN THE MANUSCRIPTS BY ROUTE 2 (user's decision);
+  supplement `52919d04c38c` (240 pp.), paper `dbbc0163ff2e` (261 pp.), both compile, PDFs copied.** (Added at
+  00:27: Lemma 18.24(a) also places the members in the sets at (8/9)r of the older 𝐑-terms, under the new
+  condition δ_V·L·M₁ ≥ 32 log 2.) Section 18
+  of the supplement now ends with: 18.18 `lem:lift-criterion`, 18.19 `lem:real-points`, 18.20
+  `lem:real-members`, 18.21 `lem:lift-of-move` (a)–(c), 18.22 `lem:lift-of-class`, 18.23 `lem:points-of-step`,
+  18.24 `lem:members-class`; the paper cites 18.19, 18.20, 18.22, 18.24 by number. Definition of 𝒫_j changed
+  (run A on X^∼ at s; lift in run B at C_lf·s), B_♯ := e^{2β_I}C_lf·B₃ in all reduced radii, λ_Q :=
+  2^{13}B_♯²L³C_{Q*}, outputs of an 𝐑-operation normed at (8/9)r. Details, accepted inputs, new conditions, and
+  six weak points to review: FINDINGS F51, "Route 2 implemented". **Next literal steps:** (1) re-read S.15(b),
+  S.16(c), S.14(d) line by line against the (8/9)r convention and the multiscale classes; (2) write the proof
+  of the multiscale form of Lemma 18.22 (now a remark); (3) prose passes (math-prose, proof-exposition,
+  deslop-maths) on `sec:evaluation-points`; (4) `MAP.md` rows and hashes (LF `ada99ead6f26`, W-δ `27210707d749`,
+  Cauchy `d0d7e56a9d2f`); (5) the table's rows for B₃/α′/r, λ_Q, C_mem, #T3.27 belong to another session: the
+  changes are recorded in FINDINGS only.
+- **13 Nov 2026, 23:49 (from `date`). Superseded by the entry above. F51: (C), (D) open; two routes recorded in FINDINGS F51
+  ("Two routes for (C) and (D)"); the user has been asked which. Default if no answer: Route 1 (the notes'), next
+  literal step = read LF {#SA} ll. 2819–3278 and #0.1 ll. 2710–2818, PRT2 pp. 224–250, PRT1 pp. 29–35, then write
+  the subsection "The Members at Complex Points" in `sec:evaluation-points`.** Files: supplement `0adc00fea2b7`
+  (235 pp.), paper `4055500086d9` (260 pp.), both compile.
+- **13 Nov 2026, 23:39 (from `date`). F51: (A2), (B) in the supplement `0adc00fea2b7` (235 pp.);
+  S.16(b) now fixes the radius of analyticity in the fluctuation field, m_k := α_{2,k}/(4C_fl), α_{2,k} = c₂r_{0,k},
+  8L³c₂ ≤ λ_*c_𝔫, and cites Lemma 18.22 for the far-domain points over a real minimiser; the paper's appendix of
+  conditions lists the new conditions.**
+  New: Lemma 18.21 `lem:lift-of-move` (lift of e^{iεA}U for real regular U and small complex A: orbit contains
+  e^{ih𝐒}ι(U), N(𝐒; x) ≤ C_𝔉 n_A(x), gauge ‖Ad g^{±1}‖ ≤ e^{C_𝔉 n_A}; (b) the tail of ι_X at such points), Lemma
+  18.22 `lem:near-real` (real minimiser or member plus complex part ≤ c_𝔫 r_{*,m} per layer ⇒ in 𝒫_j(X; r);
+  W := real c^B, the complex part goes into 𝐒); new condition `eq:tail-condition-complex` on M₁.
+  **What the remaining parts need (worked out, not yet written):**
+  1. The radius of analyticity in the fluctuation field of S.16(b) (`μ_k = (ρ/r)²`) must be fixed as a small
+     fraction c_fl of r_{*,k}, so that the complex fluctuation data fall under Lemma 18.22.
+  2. Composites U_j(□₀, exp i(τB + B′)) of RG I (3.30)–(3.31), Lemma 4 (3.53): local minimisers on the cube □₀
+     at small data about the trivial configuration. Own conditions in each run: Bałaban's Lemma 4 in that run
+     (accepted), at the SAME data in both runs (Mι = id). Lift half: compare ι_X(c^A(D)) with run B's c^B(D) at
+     the same complex data D = D_R + iD_I: real points by S.13(b) + flow (move ≤ C(ε/a_j)^{1−ε₀}·size), disc by
+     Lemma 18.21, two constants at z = i ⇒ move ≤ C L^{−15(1−ε₀)j/16}(size of D); small for j ≥ j₀ at any D_I
+     of the order of r, and for j < j₀ only if D_I ≤ c·r. Needs Lemma 18.21 for the local lift ι_Y of a cube
+     (moves which do not vanish at the collar: cut off, the collar part is a tail). Notes: Cauchy #C5.22–#C5.34,
+     #C5.61–#C5.66.
+  3. (D), members at complex points of full radius: no room at equal scales, the lift amplifies complex parts
+     by a constant > 1; the notes use radii r⁺ = (9/8)r, d⁺ = max(d, 2) and the weighted-norm construction LF
+     #0.1 (ll. 2572–2818) with appendix (ll. 2819–3278), where the member map has norm o(L). Only #0.1.1–#0.1.10
+     read. This is the largest remaining piece.
+  4. Then: S.14(c) "On the class…" sentence, S.14(e), the 𝐑-terms' class (CRE (2.34)–(2.39)), the paper's
+     appendix (C_M ≥ D_Λ/(2C₁^{VAR}), λ_Q, `eq:tail-condition-complex`, c_fl), FINDINGS F51 update, MAP hashes.
+- **13 Nov 2026, 23:18 (from `date`). F51 (A2) DONE; next literal step: (B).** Supplement
+  `d3390fc2deec` (231 pp., compiles): Lemma 18.20 `lem:real-members` (real members U_k, U_{k,Λ}, U_1, U⁰_k, U″_k
+  of a young pair with finest layer ν ≥ ν_ev, generations ν/2 ≤ j ≤ k, X ⊂ Z^c; own conditions of U_k, U⁰_k, U″_k
+  accepted from Bałaban at α/λ_Q, those of U_{k,Λ}, U_1 derived from LFR II (1.57)–(1.58) with VAR (190);
+  `eq:plaquette-move`, `eq:current-move`, `eq:member-lift` σ_ν, `eq:member-tail`, `eq:member-ratio` C_♯,
+  `eq:member-conclusion` ϰ(ν)). S.14(c) restated and its proof now in four parts citing the lemma (class norm
+  only at generations m/2 < j ≤ m; older ones by age; ι_X → ι_Y by the tails with ϰ_T). New requirement:
+  C_M ≥ D_Λ/(2C₁^{VAR}) (to enter the paper's appendix and FINDINGS). The sentence "On the class the same
+  argument runs…" in S.14(c) is still unproved. Next: (B) the complex points on the line z ↦ (𝐔(z), 𝐉(z)) of
+  the supplement's Section 14 (LF #4.503–#4.521: own conditions on the class, the flow on the disc |z| < 25
+  with the bootstrap ‖𝐒‖ < 2𝔯, the tail, two constants at z = i), then (C), (D), then S.14(c) "on the class",
+  S.14(e), the 𝐑-terms' class, the paper's appendix of conditions.
+- **13 Nov 2026, 22:45 (from `date`). F51 PARTLY CLOSED; next literal step: part (A2) of F51's
+  "Still open" list** (the real members of a chain), then (B), (C), (D) in that order; each note tag to read is
+  listed there. Written: Supplement `sec:evaluation-points`, Lemmata 18.18 `lem:lift-criterion` and 18.19
+  `lem:real-points`; new condition `eq:tail-condition` (in the paper's appendix of conditions since 22:48). Supplement
+  `7494d471b2aa` (227 pp.), paper `dfc2816fd00b` (260 pp.); both compile, PDFs copied. As long as (A2)–(D) are
+  open, the bounds by the class norms at the members of the 𝐑-operations and at complex points rest on an
+  unverified membership, and the paper's sections "Status" and "What Is Not Proved" do not say so.
+- 13 Nov 2026, 22:35 (from `date`). OPEN: FINDINGS F51. The large-field readings of the class
+  norm were checked: the manuscripts never verify that the points read lie in 𝒫_j(X; r) (the lift half; C_mem
+  undefined), and S.14(c), (e) claim on the complex class what the notes prove only at their literal points
+  plus the construction LF #0.1, which is not in the supplement. Next literal step: write Supplement
+  proposition "The Points of the Evaluation Sets", parts (A)–(D) of F51 item 6, in that order, from Cauchy
+  #C5.47–#C5.66, #C5.28, #C5.8-27 and LF #4.313–#4.331, #4.460–#4.473, #4.503–#4.554, #0.1 with #A.8–#A.11
+  (check the hashes `d0d7e56a9d2f`, `ada99ead6f26` first); then restate S.14(c)–(e) and the definition of the
+  first kind. Paper `5ed2d1fba85e` (260 pp.; the second definition of γ_H in `eq:gaussian-depth` removed),
+  supplement `1952df76c887` (225 pp.); both compile, PDFs copied.
+- 13 Nov 2026, 22:29 (from `date`). Supplement `1952df76c887` (225 pp., compiles, PDF copied);
+  paper unchanged, `39447f991cb4`. The reviewer's finding 4 (evaluation sets against the Cauchy note's R3)
+  checked. Result: the sets of S.15 are narrower than R3 in two respects (the field has all four entries of
+  RG I (3.14), not two; the current is the formal one, determined by the field), and this is what Bałaban's
+  proofs read: the far domains at RG I (3.13)–(3.14) and the Taylor coefficients at (4.4), p. 281, both with the
+  four entries. Callers checked by reading: S.15(a) (first kind; far points; the points (4.4) over the trivial
+  pair), S.15(c) (class bound of run B's term, no class norm of the difference), S.15(e) (minimisers of complex
+  data), S.16(a), (b) (points of either kind as bases; far points over them). **Defect found the other way
+  round:** the definition admits arbitrary fields with the four bounds, while the proof of `lem:far-terms`(b)
+  used the regularity of generated fields only. Closed: new Lemma 18.13 `lem:four-entries` (a field with the
+  four bounds has Hölder continuous first differences, from ζ𝐀 = G_□f and PBG (3.43); this is where the fourth
+  entry is used), cited in `lem:far-terms`(b); the definition in S.15 now says that the field is arbitrary and
+  names the two kinds of readers. The lemmata of `sec:far-terms` are now 18.13–18.17. **Not checked:** the
+  readings of the class norm in the large-field comparison (Paper ll. 4627, 4686; the configurations of
+  Proposition `prop:large-field-integrands`, which S.15(a) places in the reduced spaces by the constant C_mem)
+  against the first kind of the evaluation sets.
+- 13 Nov 2026, 22:22 (from `date`). Supplement `dabd9bae1e15` (224 pp., compiles, PDF copied);
+  paper unchanged, `39447f991cb4`. After reading the reviewer's two files of 21:49
+  (`s16_existing_repairs_review_20261113.txt`, `s16_two_points_recheck_20261113.txt`, written against the old
+  hashes): (1) Lemma 18.6: the formal current contains (Δ + DRD*)𝐀 (RG I p. 272; D*D = Δ − Δ′), and
+  (Δ + DRD*)HX = Δ′_πHX + Q*(·), (Δ + DRD*)GX = X − (Q*aQ − Δ^{(2)})GX hold without the gauge condition; the
+  passage with χ = RD*Y written at 22:17 is removed as unnecessary; this answers their finding 1 in all three
+  parts (Landau identity, the term DRD*GX, the two Laplacians). (2) Lemma 18.14 (`lem:current-residual`): b′(𝐔)
+  is along the global lift ι, b′(U′) along ι_X; at B′ = 0 the right side is the lift tail, not zero (their
+  finding 3). Their finding 2 was answered at 22:17 by `eq:pair-action`. **Their finding 4 stands and is not
+  addressed:** the evaluation sets of S.15 (second kind: recursively generated formal-current pairs with all
+  four entries of RG I (3.14)) are narrower than the set R3 of the Cauchy note (field controlled in value and
+  first differences, independently bounded current increment); whether every caller is covered is not checked.
+- 13 Nov 2026, 22:17 (from `date`). Paper `39447f991cb4` (260 pp.), supplement `e3f41bef86fa`
+  (224 pp.); both compile without errors or undefined references, lint clean, PDFs copied. The four condensed
+  proofs are expanded, and a gap found on the way is closed (FINDINGS F50). In the supplement: new subsection
+  "The Vertices Which Contain the Current" (`sec:current-vertices`, Lemmata 18.7–18.12: local relations, scalar
+  operators, the divergence of a bounded field, the vertices Δ′_π and Δ^{(2)}, the operators with vertices);
+  Lemma 18.13 `lem:field-difference` rewritten in full (pairs and pair lifts, `eq:pair-action`,
+  `eq:functional-difference` with two further terms, all sources bounded, the artefact by Cauchy's formula and the
+  two-constants line); Lemma 18.15 `lem:far-terms`: (a) the t_□ part by min(u, v) ≤ u^{11/12}v^{1/12} (no weighted
+  rerun; κ_w = δ₀/24; ϑ_H^{11/12} in `eq:far-rate`; c_far := ½min(11/12(γ_H − 2β_c) − 2β_c, ⅔β_o − 2β_c) ≥ 1/120),
+  (b) the projection difference written out with Lemmata 18.7, 18.8; Lemma 18.16 `lem:r-terms-current` rewritten
+  (where 𝐉 stands in LFR II (1.61)–(1.64); (1.65) taken from Bałaban, his proof deferred to LFR I (1.89)); Lemma
+  18.6 patched (RD*H ≠ 0 at a general pair); S.12(h) statement and proof, S.16(b) three lines. In the paper:
+  `thm:walk-difference` (new `eq:vertex-defect`, γ_H := β³/((1+β)(4+β)), β ≥ 19/20), its last proof paragraph, the
+  appendix of conditions. **New conditions: β ≥ 19/20; α_J so small that the vertex series converge with ratio
+  1/4.** Not done: MAP.md rows and hashes; the prose passes on Section 18; the table row #T4.21 (γ_H) is another
+  session's file, the change is in F50; the reread of the whole paper.
+- 13 Nov 2026, 20:59 (from `date`). Paper `941d2f0c45a6` (260 pp.), supplement `e2f1459a665f`
   (210 pp.). S.16(b)(3)–(5), S.15, S.14(c) are rewritten on Supplement Lemmata 18.4–18.10. What is left is in
   `S16_FAR_PLAN.md` §4, "Still to do"; what the new text rests on is in FINDINGS F45 (addendum 20:54).**
 - **13 Nov 2026, 20:26 (from `date`). RESUME HERE: `S16_FAR_PLAN.md` (plan, transfer, done list). Supplement
