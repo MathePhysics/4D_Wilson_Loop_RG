@@ -131,6 +131,56 @@ rate comparison, the root sum for (Z), and the difference count 3748–3815.
 
 ## State
 
+- **14 Nov 2026, 04:46 (from `date`). RESUME HERE. Paper `dceb2a591127` (265 pp.), supplement `fe9657cdc106`
+  (257 pp.), both compile without errors or undefined references, PDFs copied; hard-coded numbers 17.10, 17.17,
+  18.12, 18.21, 18.26, S.12 verified in the `.aux`.** The two items left by the audit are done (F59,
+  `HYPOTHESIS_AUDIT.md` "Follow-Up"). S.12(c): identity without K₂₂⁻¹, full proof, rate δ₀/27, constant C_C(β);
+  new second statement on the local inverses D_□ = (QG_□Q*)⁻¹ (`eq:block-inverse-defect`, rate δ′₀/12, C_D(β)).
+  S.12(d): gauge-fixing part proved in full with the weighted norm at δ_gf = δ₀/81 (paper
+  `eq:weighted-shell-norm` changed from δ₀/486), so G_□ has the rate δ′₀/12 in all parts. S.12(h):
+  δ_T := δ′₀/54, ρ := δ′₀/(54δ₀) (`eq:composite-rate`), decay in the distances of the local sequences, tree
+  inequality in ℓ¹ (`eq:tree-inequality`), new condition M ≥ 16N_D M₁. S.12 conditions: δ′₀R₀M₀ ≥ 6(2 + β) log L
+  replaces 3(1 + β) log L; δ₁ := δ′₁ of Lemma 17.10(b), whose statement now includes the local inverses. Lemma
+  18.7(b): transposed form added. Lemma 18.21(d): complex bases; 18.24(b) and S.14(d) cite it. Paper:
+  `prop:local-defect` has items (i)–(iii) (Hölder clause removed); `lem:shell-reduction` has the weighted and the
+  general-shell extensions (`eq:shell-reduction-general`); `thm:walk-difference` says in which distances its rate
+  holds and lists D_□ among the factors; appendix (stage 3) has the new conditions. A new hard-coded citation
+  "Supplement, Lemma 17.10" in the proof of the theorem. **Differences from the table, for the user:** ρ is not
+  the table's δ_min/δ₀; δ_gf, the strengthened R₀M₀ condition, M ≥ 16N_D M₁, C_C, C_D, C_gf have no rows. NEXT:
+  (1) `MAP.md` rows and hashes for S.12 and the new statements; (2) prose passes on the new text of S.12 and of
+  Section "The Comparison of Two Cutoffs"; (3) independent review of F51–F59 (the user's to launch); (4) the
+  reviewer's folder `OAI Comparison\analytic_gap_repairs_20261113\` was unchanged at 04:42 (last file 13 Nov
+  21:49).
+- 14 Nov 2026, 03:48 (from `date`). Paper `ec5f0539b61d` (264 pp.), supplement `f20289425979`
+  (250 pp.), both compile without errors or undefined references, PDFs copied (after 03:45: U₁ added to the
+  list of S.13(d) and of the paper's `prop:minimiser-distance`, with its sentence in the proof, so that Lemma
+  18.20 cites the statement; the new hypothesis of Lemma 18.14 reads ε₁a_j/a_m ≤ C_ε α_{0,j}, and the setting
+  before Lemma 18.16 verifies it at all real points of the classes with C_ε = c_M(1 + β₀)², the data being
+  averages of a configuration of the class, AVG Proposition 2, (54), p.26, re-read). The user's request "Look for the
+  same pattern in both files in full" (hypotheses stated and verified nowhere; statements used outside their
+  scope) is carried out: `HYPOTHESIS_AUDIT.md` (method, defects, verdict tables, what is not covered), findings
+  F54–F58, all repaired in the manuscripts:
+  - F54: Supplement Lemma 18.14, the oscillation of the curvature of the lift is now derived
+    (`eq:lift-oscillation`), not assumed; setting before 18.16 verifies the structure.
+  - F55: Lemma 3.1 has a second form after RG I (4.2)–(4.5); S.15(e) and the paper's coefficient difference use it
+    (the bound of the difference is known on the evaluation sets only). C^•_β, C^♯_β changed.
+  - F56: paper Lemma `lem:shell-reduction` has a second form for lifts with exponential tails (`eq:lift-tails`);
+    Theorem `thm:walk-difference` now has the rate δ₀′/54 (was δ₀/6, which its proof did not give; the W-δ note
+    #W3.4-1 has δ₀′/54); S.12 has `eq:shell-conditions-tails` (two new conditions on R₀M₀), derives `eq:lift-tails`
+    in (e), defines ρ and δ_g in (h).
+  - F57: paper, new paragraph "The hypotheses of the statements of this section" before the Assembly of the
+    inductive step; Stage 0 row of p₀ (p₀ > (d + 5)r + ⌈r⌉ + 2); new paragraph "Further conditions on the constants
+    of the stages" in the appendix of conditions; the last paragraph of that appendix keeps only coupling
+    conditions; the constant of the data parameter is C_dat in both files.
+  - F58: Lemma 17.17 states LM (not M) for the widths; references for the hypotheses of `lem:coupling-shells` and
+    `lem:first-step-scalar`.
+  Hard-coded supplement numbers unchanged (17.17, 17.22, 17.27, 18.19–18.26, S.16 checked in the `.aux`).
+  Not covered by the audit, see its last section: the proofs themselves, the first-step paper, the rates of
+  S.12(c), (d). NEXT: `MAP.md` rows and hashes (W-δ note `27210707d749`, Cauchy `d0d7e56a9d2f`, LF
+  `ada99ead6f26`, table `b12a50019d16`); constants table has no rows for the new constants and conditions of
+  F51–F58 (other sessions own the table: list in FINDINGS); prose passes on Section 18 and on the new paragraphs;
+  independent review of F51–F58 is the user's to launch. Reviewer's folder
+  `OAI Comparison\analytic_gap_repairs_20261113\` unchanged since 13 Nov 21:49 (checked 03:42).
 - **14 Nov 2026, 02:46 (from `date`): supplement now `c54f9b5a9add` (247 pp., compiles): in S.14(d) the
   alignment of the configurations of the `t`-integrand is taken from Proposition S.13(b) (minimisers of the two
   runs at the same data on any determining set), not from its part (d), which is stated for the configurations
