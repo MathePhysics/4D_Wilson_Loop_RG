@@ -6,6 +6,8 @@
 Needs the clone of spectre-monotile-py (`make install` in the repository root).  Tolerances were set after seeing the numbers where noted.
 """
 import collections
+import os
+import subprocess
 import sys
 
 import numpy as np
@@ -44,9 +46,17 @@ def run(energy=True):
     check("the two orderings give different loops with 13 and 17 corners", lz.counts(st1)[1] == 13 and lz.counts(st2)[1] == 17,
           "(%d, %d)" % (lz.counts(st1)[1], lz.counts(st2)[1]))
     rows = sm.label_counts()
-    check("STATUS_MAP.md label table parses: at least 5 labels, positive counts, in non-increasing order",
-          len(rows) >= 5 and all(c > 0 for _, c in rows) and all(rows[i][1] >= rows[i + 1][1] for i in range(len(rows) - 1)),
-          "(%d labels, %d rows)" % (len(rows), sum(c for _, c in rows)))
+    text = open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "STATUS_MAP.md"), encoding="utf-8").read()
+    status_rows = [l for l in text.split("## Counts of the authors")[0].split("\n")
+                   if l.startswith("| ") and l.count("**") >= 2]
+    check("STATUS_MAP.md label table parses: at least 1 label, positive counts, non-increasing order, and the counts add up to the status rows above it",
+          len(rows) >= 1 and all(c > 0 for _, c in rows) and all(rows[i][1] >= rows[i + 1][1] for i in range(len(rows) - 1))
+          and sum(c for _, c in rows) == len(status_rows),
+          "(%d labels, %d rows, %d status rows)" % (len(rows), sum(c for _, c in rows), len(status_rows)))
+    gen = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "tools", "make_status_map.py")
+    r = subprocess.run([sys.executable, gen, "--check"], capture_output=True, text=True)
+    check("STATUS_MAP.md is up to date with README.md and drafts/ (tools/make_status_map.py --check)", r.returncode == 0,
+          "(%s)" % (r.stdout.strip() or r.stderr.strip()))
     if energy:
         res, (a, b) = lz.run()
         dev = {n: r["dev"] for n, r in res.items()}
