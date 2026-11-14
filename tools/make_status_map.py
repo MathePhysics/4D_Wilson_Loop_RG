@@ -6,8 +6,9 @@ labels are the authors' own), and the open-item index lists, for each label, the
 drafts that mention it.  Nothing here assesses the mathematics.
 
     python3 tools/make_status_map.py          # writes STATUS_MAP.md
+    python3 tools/make_status_map.py --check  # writes nothing; exit 1 if STATUS_MAP.md is out of date
 """
-import os, re, collections, datetime
+import os, re, sys, collections, datetime
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 README = open(os.path.join(ROOT, 'README.md'), encoding='utf-8').read()
@@ -83,7 +84,16 @@ def main():
         more = f'; … and {len(hits) - 6} more' if len(hits) > 6 else ''
         out.append(f'| `{lab}` | {cell}{more} |')
     out += ['', f'*Generated from README.md and {len(drafts)} files in drafts/.*', '']
-    open(os.path.join(ROOT, 'STATUS_MAP.md'), 'w', encoding='utf-8').write('\n'.join(out))
+    text = '\n'.join(out)
+    path = os.path.join(ROOT, 'STATUS_MAP.md')
+    if '--check' in sys.argv:
+        current = open(path, encoding='utf-8').read() if os.path.exists(path) else ''
+        if current == text:
+            print('STATUS_MAP.md is up to date')
+            return
+        print('STATUS_MAP.md is out of date: rerun  python3 tools/make_status_map.py')
+        sys.exit(1)
+    open(path, 'w', encoding='utf-8').write(text)
     print('wrote STATUS_MAP.md:', len(allrows), 'table rows,', len(drafts), 'drafts scanned')
 
 
