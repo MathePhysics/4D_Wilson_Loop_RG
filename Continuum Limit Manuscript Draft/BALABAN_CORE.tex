@@ -1,0 +1,931 @@
+% !TeX program = pdflatex
+\documentclass[11pt]{preprint}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{mathtools}
+\usepackage{mathrsfs}
+\usepackage[a4paper,margin=28mm]{geometry}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\id}{\mathbf 1}
+\newcommand{\re}{\operatorname{Re}}
+\newcommand{\im}{\operatorname{Im}}
+\newcommand{\diam}{\operatorname{diam}}
+\newcommand{\dist}{\operatorname{dist}}
+\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
+\DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
+\DeclarePairedDelimiter{\floor}{\lfloor}{\rfloor}
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+\setlength{\parskip}{0.6em}
+\emergencystretch=3em
+\title{The Renormalisation Group for Four-Dimensional Lattice Gauge Theories: A Self-Contained Account of the Results Used for the Continuum Limit of Wilson Loops}
+\author{}
+\date{}
+
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\theoremstyle{plain}
+\renewcommand{\qedsymbol}{\textit{q.e.d.}}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We give an account of the part of Ba{\l}aban's renormalisation group for lattice gauge theories in four dimensions on which the construction of the continuum limit of Wilson loops rests: the averaging operations, the propagators in a background field, the gauge conditions, the variational problem for the background field, the renormalisation step for small fields, the complete step with large-field regions, and the $\mathbf R$-operation. Each object is defined once, at the generality in which it is used, every constant is named, and no step of a proof is delegated to the original papers, which are cited for attribution only.
+\end{abstract}
+
+\setcounter{tocdepth}{2}
+{\setlength{\parskip}{0pt}\tableofcontents}
+
+\setcounter{section}{-1}
+\section{Introduction}\label{sec:introduction}
+
+Ba{\l}aban's construction of the effective densities of four-dimensional lattice gauge theories is contained in a series of papers written over six years, from the regularity of lattice Green's functions \cite{BalabanRDG} to the renormalisation of the large fields \cite{BalabanLFR1,BalabanLFR2}. A reader who wants to use the construction, and not only its final theorems, meets two difficulties. The first is that the series was not written as one text. The averaging operation which defines the renormalisation transformation is changed between the papers on the linear theory and those on the renormalisation group, because the earlier one ``is not symmetric with respect to lattice Euclidean transformations'' \cite[p.~252]{BalabanRG1}, and the symbol $\abs X$ denotes the operator norm of a matrix in one paper \cite[(19), p.~21]{BalabanAVG} and the Hilbert--Schmidt norm in another \cite[p.~390]{BalabanPBG}. The second difficulty is that many steps are taken over by a reference, to an earlier paper of the series, to the three-dimensional theory \cite{BalabanUV3}, or to papers on other models, with the remark that the argument is the same.
+
+The paper \emph{The Continuum Limit of the Correlation Functions of Wilson Loops in Four-Dimensional Lattice Yang--Mills Theory}, which we call the main paper, uses the inside of the construction throughout. It inserts loops into the densities and follows them through every operation of a step, it compares the expansions of the propagators term by term on two lattices, and it runs the construction with parameters and test functions of its own. For such a use the original statements do not suffice, since what is needed at each place is a definition, an identity, or the dependence of a term on the fields in a region, and these are found in the proofs. The purpose of the present account is to state and to prove what the main paper and its supplement use, in one notation and in the order of the logic, so that neither of them has to be read with the original papers at hand.
+
+Two principles decide what is included. A statement appears here only if a proof in the main paper, in its supplement, or later in this account uses it. Furthermore, every object is defined once, at the widest generality in which it is used: the dimension is four; there is one averaging operation, that of \cite[(0.4), p.~253]{BalabanRG1}; configurations take their values in the complexified group from the start, the gauge fields being the special case; and the parameters, the test functions, and the depth of the $\mathbf R$-operation are those of the construction of the main paper. As a consequence, a result which the original papers prove for real fields and for the earlier average, and which is then needed for complex fields and for the later one, is proved here once, in the form in which it is needed. We do not aim at reproducing the original statements. What a statement has to deliver is fixed by the proofs of the main paper which use it, and where a definition or a bound of the papers can be replaced by one which is simpler to state or to prove and which serves those proofs equally, we use the simpler one.
+
+The statements are written so that they can be used without their proofs. For each object we give its definition, the identities which it satisfies, the set of variables on which it depends, the domain on which it is analytic, and its bounds, in this order and as separate clauses. Every constant has a name and a place in an order of choices, a constant being allowed to depend only on those chosen before it. A statement which holds ``for sufficiently small'' values of a parameter names the threshold.
+
+\emph{The state of this version.} This version contains Section~\ref{sec:setting}, which fixes the lattices, the fields, the norms, and the geometry of the domains, and Section~\ref{sec:averaging}, on the average and the relative average. In Section~\ref{sec:setting}, Lemmata~\ref{lem:norms}, \ref{lem:action}, \ref{lem:covariance}, \ref{lem:distance}, and~\ref{lem:cube-count} are proved, and Lemma~\ref{lem:lie-algebra}, the first inequality of Lemma~\ref{lem:summation}, and Lemma~\ref{lem:contracted-geometry} are stated without proof. The statements of Section~\ref{sec:averaging} are given without proofs. Section~\ref{sec:propagators} contains the definitions of the operators of a sequence of domains and of the regular pairs, the bounds of the four basic operators, and the walk expansion of the scalar operator with the first approximations of the other two, all without proofs. It also contains the operators of the Landau gauge at a pair, the propagator of the fluctuation, and the dependence of the operators on the sequence of domains, with their bounds and identities. Not yet stated are the base of the linear theory at the trivial background (Section~3), the expansions of the block inverse and of the operators on $1$-forms into walks of local operators, and the covariance of the unit lattice.
+
+\section{Lattices, Fields, Norms, and Domains}\label{sec:setting}
+
+Nothing in this section is an estimate of the field theory. We fix the group and the norms on its algebra, the lattices of the scales which a renormalisation step relates, the fields on them with the action and the covariant difference operators, and then the two geometric structures in terms of which every later bound is stated: the sequences of domains on which the field lives at different scales, with their weighted distance, and the localisation domains with their linear size.
+
+\subsection{The Gauge Group}\label{sec:group}
+
+Throughout, $N \geq 1$ is an integer, $M_N(\mathbb C)$ is the algebra of the complex $N \times N$ matrices, with unit $\id$, and $G$ is a compact connected Lie subgroup of the unitary group $U(N)$. We follow \cite[Sect.~A]{BalabanAVG} in writing the elements of the group near the unit as $e^{iA}$ with a Hermitian matrix $A$, so that the Lie algebra consists of Hermitian matrices and its bracket is $(A, B) \mapsto i[A, B]$.
+
+\begin{definition}[Algebra, Complexification, and Norms]\label{def:group}
+\begin{enumerate}[label=(\roman*)]
+\item The \emph{Lie algebra} of $G$ is $\mathfrak g \coloneqq \{ A \in M_N(\mathbb C) \,|\, A^* = A \text{ and } e^{itA} \in G \text{ for all } t \in \mathbb R \}$, and $\mathfrak g^c \coloneqq \{ A + iB \,|\, A, B \in \mathfrak g \}$ is its \emph{complexification}. The \emph{complexified group} $G^c$ is the subgroup of $GL(N, \mathbb C)$ generated by the matrices $e^{iA}$ with $A \in \mathfrak g^c$.
+\item The \emph{normalised trace} is $\tr X \coloneqq N^{-1}\Tr X$. On $M_N(\mathbb C)$ we use the scalar product $\langle X, Y\rangle \coloneqq \tr X^*Y$, the \emph{Hilbert norm} $h(X) \coloneqq (\tr X^*X)^{1/2}$, and the operator norm $\norm X$ with respect to the Euclidean norm of $\mathbb C^N$. The \emph{bond norm} $\abs X$ is one of these two norms, chosen once and for all.
+\item $\pi$ is the orthogonal projection of $M_N(\mathbb C)$ onto $\mathfrak g^c$ with respect to $\langle\cdot, \cdot\rangle$.
+\item For an invertible matrix $\mathbf U$ and $X \in M_N(\mathbb C)$ we write $R(\mathbf U)X \coloneqq \mathbf UX\mathbf U^{-1}$.
+\end{enumerate}
+\end{definition}
+
+The bond norm is the norm in which the fields are compared with their thresholds, and we do not decide between its two candidates: every statement of this account holds for either choice, the constants being allowed to depend on $N$. What makes this possible is that the two norms differ by the factor $\sqrt N$ at most and share the properties of Lemma~\ref{lem:norms}, which are the only ones that the proofs use. The Hilbert norm is the norm of the action, by \eqref{eq:plaquette-norm} below, and of the scalar products of fields. We need the following facts about the algebra.
+
+\begin{lemma}[The Lie Algebra]\label{lem:lie-algebra}
+The set $\mathfrak g$ is a real linear subspace of $M_N(\mathbb C)$, and $i[A, B] \in \mathfrak g$ for all $A, B \in \mathfrak g$. Consequently $\mathfrak g^c$ is a complex linear subspace of $M_N(\mathbb C)$ which is closed under the commutator and under $X \mapsto X^*$, and $\mathfrak g \cap i\mathfrak g = \{ 0 \}$.
+\end{lemma}
+
+\begin{lemma}[Norms and the Adjoint Action]\label{lem:norms}
+Let $X, Y \in M_N(\mathbb C)$ and $U, V \in U(N)$.
+\begin{enumerate}[label=(\roman*)]
+\item $\abs{\tr X} \leq h(X) \leq \abs X \leq \norm X \leq \sqrt N\,h(X)$. Each of the three norms $\mathcal N \in \{ h, \abs\cdot, \norm\cdot \}$ satisfies $\mathcal N(XY) \leq \norm X\,\mathcal N(Y)$, $\mathcal N(XY) \leq \mathcal N(X)\norm Y$, and $\mathcal N(X^*) = \mathcal N(X)$.
+\item $\mathcal N(UXV) = \mathcal N(X)$ for each of the three norms, and
+\begin{equation}\label{eq:plaquette-norm}
+    1 - \re\tr U = \frac{1}{2}h(U - \id)^2\;.
+\end{equation}
+\item For $\mathbf U \in G^c$ the map $R(\mathbf U)$ maps $\mathfrak g^c$ onto itself and commutes with $\pi$. For $U \in G$ it maps $\mathfrak g$ onto itself and preserves the three norms.
+\item $\pi$ is complex linear, $h(\pi X) \leq h(X)$, $\abs{\pi X} \leq \sqrt N\abs X$, and $\pi(X^*) = (\pi X)^*$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(i) Let $s_1, \dots, s_N$ be the singular values of $X$. Then $h(X)^2 = N^{-1}\sum_is_i^2$ and $\norm X = \max_is_i$, which gives $h(X) \leq \norm X \leq \sqrt N\,h(X)$, and the bond norm is one of $h$ and $\norm\cdot$. Since $h(\id) = 1$, the Cauchy--Schwarz inequality gives $\abs{\tr X} = \abs{\langle\id, X\rangle} \leq h(X)$. Next, $X^*X \leq \norm X^2\id$ as Hermitian matrices, so that $h(XY)^2 = \tr Y^*X^*XY \leq \norm X^2\tr Y^*Y$, while the operator norm is submultiplicative; this is the first product inequality for $h$ and for $\norm\cdot$, hence for the bond norm. The matrices $Z$ and $Z^*$ have the same singular values, so that the three norms are invariant under the adjoint, and the second product inequality is the first applied to $Y^*X^*$.
+
+(ii) The trace is cyclic and $U^*U = V^*V = \id$, so that $\tr (UXV)^*UXV = \tr X^*X$, and the operator norm is invariant because $U$ and $V$ are isometries of $\mathbb C^N$. Finally $h(U - \id)^2 = \tr(2\id - U - U^*) = 2 - 2\re\tr U$.
+
+(iii) For $A \in \mathfrak g^c$ the map $R(e^{iA})$ is the exponential $\sum_n(n!)^{-1}(i\operatorname{ad}A)^n$ of the map $\operatorname{ad}A \colon X \mapsto [A, X]$, which preserves the finite-dimensional space $\mathfrak g^c$ by Lemma~\ref{lem:lie-algebra}. Hence $R(e^{iA})\mathfrak g^c \subset \mathfrak g^c$, the same holds for products of such matrices and for their inverses, and so $R(\mathbf U)\mathfrak g^c = \mathfrak g^c$ for all $\mathbf U \in G^c$. To see that $R(\mathbf U)$ commutes with $\pi$, let $\mathfrak n$ be the orthogonal complement of $\mathfrak g^c$. Since $\mathfrak g^c$ is closed under the adjoint, a matrix $Y$ lies in $\mathfrak n$ if and only if $\tr ZY = 0$ for all $Z \in \mathfrak g^c$. The bilinear form $(Z, Y) \mapsto \tr ZY$ is invariant under $R(\mathbf U)$, and $R(\mathbf U)^{-1} = R(\mathbf U^{-1})$ maps $\mathfrak g^c$ onto itself, so that $R(\mathbf U)\mathfrak n \subset \mathfrak n$. A linear map which preserves both $\mathfrak g^c$ and $\mathfrak n$ commutes with the projection onto the first along the second. For $U \in G$ and $A \in \mathfrak g$ the matrix $UAU^{-1}$ is Hermitian and $e^{itUAU^{-1}} = Ue^{itA}U^{-1} \in G$, so that $R(U)\mathfrak g \subset \mathfrak g$, with equality because the same holds for $U^{-1}$; the norms are preserved by (ii).
+
+(iv) An orthogonal projection onto a complex subspace is complex linear and does not increase the norm of the scalar product, which is $h$; with (i), $\abs{\pi X} \leq \sqrt N\,h(\pi X) \leq \sqrt N\,h(X) \leq \sqrt N\abs X$. If $Y \in \mathfrak n$, then $\tr ZY^* = \overline{\tr YZ^*} = 0$ for all $Z \in \mathfrak g^c$, because $Z^* \in \mathfrak g^c$, so that $Y^* \in \mathfrak n$ by the criterion in the proof of (iii). Writing $X = \pi X + Y$ with $Y \in \mathfrak n$, we obtain $X^* = (\pi X)^* + Y^*$ with $(\pi X)^* \in \mathfrak g^c$ and $Y^* \in \mathfrak n$, which is the last assertion.
+\end{proof}
+
+\subsection{The Lattices of a Step}\label{sec:lattices}
+
+A renormalisation step relates fields on lattices whose spacings differ by powers of a fixed odd integer. We describe all of them inside one torus, in the units of \cite[pp.~251--252]{BalabanRG1}, in which the coarsest lattice has the spacing one. The only difference from that description is the position of the sites, which we place at the points of the lattices $a\mathbb Z^4$ and not at the centres of their cells; since the spacings differ by odd factors, the lattices are nested in both descriptions, and a site of a coarse lattice is the centre of its block of finer sites.
+
+\begin{definition}[Lattices and Blocks]\label{def:lattices}
+Let $L \geq 3$ be an odd integer and let $k \geq 0$ and $m_{\mathbb T} \geq 1$ be integers. We put
+\begin{equation}\label{eq:spacings}
+    \eta \coloneqq L^{-k}\;,
+    \qquad
+    a_j \coloneqq L^j\eta \quad (0 \leq j \leq k)\;,
+    \qquad
+    \ell_{\mathbb T} \coloneqq 2L^{m_{\mathbb T}}\;.
+\end{equation}
+\begin{enumerate}[label=(\roman*)]
+\item The \emph{torus} is $\mathbb T \coloneqq (\mathbb R/\ell_{\mathbb T}\mathbb Z)^4$, with the coordinate unit vectors $e_0, \dots, e_3$. For $z \in \mathbb T$ we write $\abs z_\infty$ and $\abs z_1$ for the smallest value of the $\ell^\infty$-norm and of the $\ell^1$-norm on the representatives of $z$ in $\mathbb R^4$, and distances of points and of sets are taken with respect to $\abs\cdot_\infty$ unless another norm is named.
+\item The \emph{lattice of the scale $j$} is $T^{(j)} \coloneqq (a_j\mathbb Z/\ell_{\mathbb T}\mathbb Z)^4 \subset \mathbb T$, for $0 \leq j \leq k$, and $T_\eta \coloneqq T^{(0)}$ is the \emph{fine lattice}. A length \emph{in the units of the scale $j$} is a length divided by $a_j$.
+\item For a number $s$ of the form $L^ra_j$ with integers $0 \leq j \leq k$ and $r \geq 0$ and with $s \leq L^{m_{\mathbb T}}$, the \emph{grid of side $s$} is the family of the closed cubes $\{ z \in \mathbb T \,|\, \abs{z - c}_\infty \leq s/2 \}$ with centres $c \in (s\mathbb Z/\ell_{\mathbb T}\mathbb Z)^4$. The cube of the grid of side $a_j$ with the centre $y \in T^{(j)}$ is denoted by $\Delta_j(y)$.
+\item For $y \in T^{(j)}$ and $0 \leq n \leq j$ the \emph{block of order $n$} of $y$ is $B^n(y) \coloneqq \Delta_j(y) \cap T^{(j-n)}$, and $B(y) \coloneqq B^1(y)$.
+\end{enumerate}
+\end{definition}
+
+Since $L$ is odd, $T^{(j)} \subset T^{(j-1)}$, every cube of the grid of side $Ls$ is the union of $L^4$ cubes of the grid of side $s$, no point of a lattice $T^{(i)}$ lies on the boundary of a cube $\Delta_j(y)$ with $j \geq i$, and
+\begin{equation}\label{eq:block}
+    B^n(y) = \bigl\{ y + a_{j-n}\textstyle\sum_\mu n_\mu e_\mu \,\big|\, n_\mu \in \mathbb Z,\ \abs{n_\mu} \leq \frac{1}{2}(L^n - 1) \bigr\}\;,
+\end{equation}
+a set of $L^{4n}$ points, which is the block of \cite[(0.3), p.~252]{BalabanRG1}. The blocks $B^n(y)$, $y \in T^{(j)}$, form a partition of $T^{(j-n)}$. The condition $m_{\mathbb T} \geq 1$ ensures that each lattice has at least six sites in every direction.
+
+\begin{definition}[Bonds, Paths, and Plaquettes]\label{def:bonds}
+Let $0 \leq j \leq k$ and $a \coloneqq a_j$.
+\begin{enumerate}[label=(\roman*)]
+\item A \emph{bond} of $T^{(j)}$ is an ordered pair $b = (b_-, b_+)$ of sites with $b_+ = b_- + ae_\mu$ or $b_+ = b_- - ae_\mu$ for some $\mu$; in the first case it is \emph{positive}. The \emph{reversed bond} is $b^{-1} \coloneqq (b_+, b_-)$.
+\item A \emph{path} is a finite sequence $\gamma = (b_1, \dots, b_n)$ of bonds with $(b_i)_+ = (b_{i+1})_-$ for $1 \leq i < n$; it leads from $(b_1)_-$ to $(b_n)_+$, its \emph{length} is $na$, and its reverse is $\gamma^{-1} \coloneqq (b_n^{-1}, \dots, b_1^{-1})$. A path from $x$ to $x'$ is \emph{shortest} if its length is $\abs{x - x'}_1$.
+\item For $x \in T^{(j)}$ and $\mu \neq \nu$ the \emph{plaquette} $p_{\mu\nu}(x)$ is the closed path
+\[
+    \partial p_{\mu\nu}(x) \coloneqq \bigl((x, x + ae_\mu),\ (x + ae_\mu, x + ae_\mu + ae_\nu),\ (x + ae_\mu + ae_\nu, x + ae_\nu),\ (x + ae_\nu, x)\bigr)\;,
+\]
+which is \emph{positive} if $\mu < \nu$. The path $\partial p_{\nu\mu}(x)$ is the reverse of $\partial p_{\mu\nu}(x)$.
+\item For a set $S \subset \mathbb T$ we write $S^{(j)} \coloneqq S \cap T^{(j)}$. The \emph{bonds of $S$ of the scale $j$} are the bonds of $T^{(j)}$ with at least one end in $S$, and the \emph{plaquettes of $S$ of the scale $j$} are the plaquettes with at least one corner in $S$.
+\end{enumerate}
+\end{definition}
+
+The convention (iv) is that of \cite[p.~224]{BalabanPRT2} and \cite[p.~277]{BalabanVAR}.
+
+\subsection{Configurations and the Action}\label{sec:configurations}
+
+The fields of the theory are functions on the bonds with values in the group. All later analyticity statements concern their extension to the complexified group, and so we define the objects for it at once.
+
+\begin{definition}[Configurations and Forms]\label{def:configurations}
+Let $0 \leq j \leq k$.
+\begin{enumerate}[label=(\roman*)]
+\item A \emph{configuration} on $T^{(j)}$ is a map $\mathbf U$ from the bonds of $T^{(j)}$ to $G^c$ with $\mathbf U(b^{-1}) = \mathbf U(b)^{-1}$. It is a \emph{gauge field} if its values lie in $G$; gauge fields are denoted by $U$, $V$. For a path $\gamma = (b_1, \dots, b_n)$ we put $\mathbf U(\gamma) \coloneqq \mathbf U(b_1)\cdots\mathbf U(b_n)$.
+\item A \emph{gauge transformation} is a map $u \colon T^{(j)} \to G^c$. It acts on configurations by
+\begin{equation}\label{eq:gauge-transformation}
+    \mathbf U^u(b) \coloneqq u(b_-)\mathbf U(b)u(b_+)^{-1}\;,
+\end{equation}
+so that $\mathbf U^u(\gamma) = u(x)\mathbf U(\gamma)u(x')^{-1}$ for a path $\gamma$ from $x$ to $x'$.
+\item A \emph{$0$-form} is a map $\lambda \colon T^{(j)} \to M_N(\mathbb C)$; a \emph{$1$-form} is a family $A = (A_\mu)_{0 \leq \mu \leq 3}$ of $0$-forms, and $A(b) \coloneqq A_\mu(x)$ for the positive bond $b = (x, x + a_je_\mu)$; a \emph{$2$-form} is a family $F = (F_{\mu\nu})_{\mu \neq \nu}$ of $0$-forms with $F_{\nu\mu} = -F_{\mu\nu}$. For a gauge transformation $u$ and a form $f$ we write $R(u)f$ for the form with the components $x \mapsto R(u(x))f(x)$.
+\item For two forms of the same degree,
+\begin{equation}\label{eq:pairing}
+    \langle\lambda, \lambda'\rangle \coloneqq \sum_xa_j^4\tr\lambda(x)\lambda'(x)\;,
+    \qquad
+    \langle A, A'\rangle \coloneqq \sum_\mu\langle A_\mu, A'_\mu\rangle\;,
+    \qquad
+    \langle F, F'\rangle \coloneqq \sum_{\mu < \nu}\langle F_{\mu\nu}, F'_{\mu\nu}\rangle\;,
+\end{equation}
+and $\norm f^2 \coloneqq \sum_xa_j^4\sum h(f(x))^2$, the inner sum over the components $f_\mu$ of a $1$-form and $f_{\mu\nu}$, $\mu < \nu$, of a $2$-form.
+\end{enumerate}
+\end{definition}
+
+The pairing \eqref{eq:pairing} is bilinear and not sesquilinear, as in \cite[(3.11), p.~392]{BalabanPBG}. On forms with Hermitian values it is the real scalar product whose norm is $\norm\cdot$, and it is the form with respect to which adjoints are holomorphic in the configuration.
+
+\begin{definition}[The Action]\label{def:action}
+For a configuration $\mathbf U$ on $T^{(j)}$ and a plaquette $p$ let
+\begin{equation}\label{eq:real-imaginary}
+    \re\mathbf U(\partial p) \coloneqq \frac{1}{2}\bigl(\mathbf U(\partial p) + \mathbf U(\partial p)^{-1}\bigr)\;,
+    \qquad
+    \im\mathbf U(\partial p) \coloneqq \frac{1}{2i}\bigl(\mathbf U(\partial p) - \mathbf U(\partial p)^{-1}\bigr)\;.
+\end{equation}
+The \emph{action} of $\mathbf U$ is
+\begin{equation}\label{eq:action}
+    A(\mathbf U) \coloneqq \sum_p\bigl(1 - \tr\re\mathbf U(\partial p)\bigr)\;,
+\end{equation}
+the sum over the positive plaquettes of $T^{(j)}$.
+\end{definition}
+
+This is the action \cite[(0.2), p.~252]{BalabanRG1} in dimension four, where it carries no power of the lattice spacing, with the extension to the complexified group of \cite[p.~391]{BalabanPBG}.
+
+\begin{lemma}[The Action]\label{lem:action}
+\begin{enumerate}[label=(\roman*)]
+\item For a gauge field $U$, $A(U) = \sum_p(1 - \re\tr U(\partial p)) = \frac{1}{2}\sum_ph(U(\partial p) - \id)^2 \geq 0$.
+\item $A(\mathbf U^u) = A(\mathbf U)$ for every configuration $\mathbf U$ and every gauge transformation $u$ with values in $G^c$, and $\im\mathbf U^u(\partial p_{\mu\nu}(x)) = R(u(x))\im\mathbf U(\partial p_{\mu\nu}(x))$.
+\item The summand of \eqref{eq:action} for $p$ is a polynomial in the entries of the matrices $\mathbf U(b)$ and $\mathbf U(b)^{-1}$ for the four bonds $b$ of $\partial p$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+For a unitary matrix $W$ we have $W^{-1} = W^*$, so that $\tr\re W = \re\tr W$, and (i) follows from \eqref{eq:plaquette-norm}. By \eqref{eq:gauge-transformation}, $\mathbf U^u(\partial p_{\mu\nu}(x)) = u(x)\mathbf U(\partial p_{\mu\nu}(x))u(x)^{-1}$, and the same holds for the inverse, which gives the second assertion of (ii); the first follows because the trace is invariant under conjugation. Finally (iii) is the definition, since $\mathbf U(\partial p)^{-1}$ is the product of the inverses in the reverse order.
+\end{proof}
+
+\subsection{Covariant Differences and the Current}\label{sec:differences}
+
+The quadratic forms of the linear theory and the regularity conditions on the fields are written with difference operators which are covariant with respect to a configuration. We fix a scale $j$, write $a \coloneqq a_j$, and let $\mathbf U$ be a configuration on $T^{(j)}$.
+
+\begin{definition}[Covariant Differences]\label{def:differences}
+For a $0$-form $\lambda$ and $0 \leq \mu \leq 3$,
+\begin{align}
+    (D_{\mathbf U,\mu}\lambda)(x) &\coloneqq a^{-1}\bigl(R(\mathbf U(x, x + ae_\mu))\lambda(x + ae_\mu) - \lambda(x)\bigr)\;,\label{eq:forward-difference}\\
+    (D^*_{\mathbf U,\mu}\lambda)(x) &\coloneqq a^{-1}\bigl(R(\mathbf U(x, x - ae_\mu))\lambda(x - ae_\mu) - \lambda(x)\bigr)\;.\label{eq:backward-difference}
+\end{align}
+With these we define, for a $0$-form $\lambda$, a $1$-form $A$, and a $2$-form $F$:
+\begin{enumerate}[label=(\roman*)]
+\item the $1$-form $D_{\mathbf U}\lambda$ with the components $D_{\mathbf U,\mu}\lambda$, and the $0$-form $D^*_{\mathbf U}A \coloneqq \sum_\mu D^*_{\mathbf U,\mu}A_\mu$;
+\item the $2$-form $D_{\mathbf U}A$ with the components $(D_{\mathbf U}A)_{\mu\nu} \coloneqq D_{\mathbf U,\mu}A_\nu - D_{\mathbf U,\nu}A_\mu$, and the $1$-form $D^*_{\mathbf U}F$ with the components $(D^*_{\mathbf U}F)_\mu \coloneqq \sum_{\nu \neq \mu}D^*_{\mathbf U,\nu}F_{\nu\mu}$;
+\item the \emph{covariant gradient} $\nabla_{\mathbf U}A$, the family of the sixteen $0$-forms $(\nabla_{\mathbf U}A)_{\mu\nu} \coloneqq D_{\mathbf U,\mu}A_\nu$, and likewise $\nabla_{\mathbf U}\lambda \coloneqq D_{\mathbf U}\lambda$;
+\item the \emph{covariant Laplacian} $\Delta_{\mathbf U} \coloneqq \sum_\mu D^*_{\mathbf U,\mu}D_{\mathbf U,\mu}$, which acts on $0$-forms and, component by component, on $1$-forms.
+\end{enumerate}
+\end{definition}
+
+These are the operators of \cite[(3.3), (3.4), (3.8), (3.9), pp.~390--392, and (3.23), p.~394]{BalabanPBG}. In that paper a $1$-form is extended to the negative bonds by $A(b^{-1}) = -A(b)$, and the difference of a $1$-form on a plaquette $p_{\mu\nu}(x)$ is written as a sum over its four bonds \cite[(3.4)]{BalabanPBG}; with the transports to the corner $x$ which that formula contains, the sum is the component $(D_{\mathbf U}A)_{\mu\nu}(x)$ above.
+
+\begin{lemma}[Adjoints and Covariance]\label{lem:covariance}
+Let $\mathbf U$ be a configuration on $T^{(j)}$ and $u$ a gauge transformation, both with values in $G^c$.
+\begin{enumerate}[label=(\roman*)]
+\item For $0$-forms $\lambda$, $\lambda'$, a $1$-form $A$, and a $2$-form $F$,
+\[
+    \langle D_{\mathbf U,\mu}\lambda, \lambda'\rangle = \langle\lambda, D^*_{\mathbf U,\mu}\lambda'\rangle\;,
+    \qquad
+    \langle D_{\mathbf U}\lambda, A\rangle = \langle\lambda, D^*_{\mathbf U}A\rangle\;,
+    \qquad
+    \langle D_{\mathbf U}A, F\rangle = \langle A, D^*_{\mathbf U}F\rangle\;.
+\]
+\item $D_{\mathbf U^u,\mu}R(u)\lambda = R(u)D_{\mathbf U,\mu}\lambda$ and $D^*_{\mathbf U^u,\mu}R(u)\lambda = R(u)D^*_{\mathbf U,\mu}\lambda$, and consequently each of the operators $\mathcal D$ of Definition~\ref{def:differences} satisfies $\mathcal D_{\mathbf U^u}R(u) = R(u)\mathcal D_{\mathbf U}$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(i) Write $W \coloneqq \mathbf U(x, x + ae_\mu)$. By the cyclicity of the trace, $\tr(W\lambda(x + ae_\mu)W^{-1}\lambda'(x)) = \tr(\lambda(x + ae_\mu)R(W^{-1})\lambda'(x))$, and $W^{-1} = \mathbf U(x + ae_\mu, x)$. Summing over $x$ and shifting the variable by $ae_\mu$ in this term, we obtain
+\[
+    \sum_x\tr\bigl((D_{\mathbf U,\mu}\lambda)(x)\lambda'(x)\bigr) = a^{-1}\sum_x\tr\Bigl(\lambda(x)\bigl(R(\mathbf U(x, x - ae_\mu))\lambda'(x - ae_\mu) - \lambda'(x)\bigr)\Bigr)\;,
+\]
+which is the first identity. The second is its sum over $\mu$ with $\lambda' = A_\mu$. For the third, the first identity gives
+\[
+    \langle D_{\mathbf U}A, F\rangle = \sum_{\mu < \nu}\bigl(\langle A_\nu, D^*_{\mathbf U,\mu}F_{\mu\nu}\rangle - \langle A_\mu, D^*_{\mathbf U,\nu}F_{\mu\nu}\rangle\bigr)\;.
+\]
+In the first sum we exchange the names of $\mu$ and $\nu$, and in the second we write $F_{\mu\nu} = -F_{\nu\mu}$. The result is $\sum_\mu\langle A_\mu, \sum_{\nu > \mu}D^*_{\mathbf U,\nu}F_{\nu\mu} + \sum_{\nu < \mu}D^*_{\mathbf U,\nu}F_{\nu\mu}\rangle = \langle A, D^*_{\mathbf U}F\rangle$.
+
+(ii) Since $R$ is multiplicative, $R(\mathbf U^u(x, x + ae_\mu))R(u(x + ae_\mu)) = R(u(x))R(\mathbf U(x, x + ae_\mu))$ by \eqref{eq:gauge-transformation}, and therefore $(D_{\mathbf U^u,\mu}R(u)\lambda)(x) = a^{-1}R(u(x))(R(\mathbf U(x, x + ae_\mu))\lambda(x + ae_\mu) - \lambda(x))$. The same computation with $-e_\mu$ gives the identity for $D^*_{\mathbf U,\mu}$, and the operators of Definition~\ref{def:differences} are sums of products of these two.
+\end{proof}
+
+The part of the action which is linear in a fluctuation of the field is the pairing of the fluctuation with a $1$-form built from the plaquettes, and the regularity conditions of the later sections bound this $1$-form separately. For this reason the terms of the effective actions are regarded as functions of a configuration and of an independent variable in the place of this $1$-form \cite[p.~261]{BalabanRG1}.
+
+\begin{definition}[Curvature, Current, and Pairs]\label{def:current}
+Let $\mathbf U$ be a configuration on $T^{(j)}$ and $a \coloneqq a_j$.
+\begin{enumerate}[label=(\roman*)]
+\item The \emph{curvature} of $\mathbf U$ is the $2$-form $F(\mathbf U)$ with the components $F(\mathbf U)_{\mu\nu}(x) \coloneqq a^{-2}\pi\im\mathbf U(\partial p_{\mu\nu}(x))$, and the \emph{current} of $\mathbf U$ is the $1$-form
+\begin{equation}\label{eq:current}
+    J(\mathbf U) \coloneqq D^*_{\mathbf U}F(\mathbf U)\;.
+\end{equation}
+\item A \emph{pair} on a set of bonds is a pair $(\mathbf U, \mathbf J)$ of a configuration $\mathbf U$ and a $1$-form $\mathbf J$ with values in $\mathfrak g^c$, both restricted to the set. A gauge transformation acts on pairs by $(\mathbf U, \mathbf J)^u \coloneqq (\mathbf U^u, R(u)\mathbf J)$.
+\end{enumerate}
+\end{definition}
+
+The family $F(\mathbf U)$ is a $2$-form because $\partial p_{\nu\mu}(x)$ is the reverse of $\partial p_{\mu\nu}(x)$, so that the two matrices $\im\mathbf U(\partial p)$ differ by the sign. Its values lie in $\mathfrak g^c$, and in $\mathfrak g$ if $\mathbf U$ is a gauge field, by Lemma~\ref{lem:norms}(iv). The current \eqref{eq:current} is \cite[(1.8), p.~261]{BalabanRG1}, and the action on pairs is \cite[(1.10), p.~262]{BalabanRG1}. By Lemma~\ref{lem:action}(ii), Lemma~\ref{lem:norms}(iii), and Lemma~\ref{lem:covariance}(ii),
+\begin{equation}\label{eq:current-covariance}
+    F(\mathbf U^u) = R(u)F(\mathbf U)\;,
+    \qquad
+    J(\mathbf U^u) = R(u)J(\mathbf U)\;,
+\end{equation}
+for every gauge transformation $u$ with values in $G^c$, so that $(\mathbf U, J(\mathbf U))^u = (\mathbf U^u, J(\mathbf U^u))$.
+
+\subsection{Sequences of Domains and the Weighted Distance}\label{sec:sequences}
+
+After several steps the field is an integration variable on lattices of different scales in different regions of the torus, the coarser lattices in the regions in which more steps could be performed. The regions are described by a decreasing sequence of domains, and all bounds on propagators decay in a distance which measures a length in each region in the units of its scale.
+
+\begin{definition}[Sequences of Domains]\label{def:sequence}
+Let $M$ be a power of $L$ with $M \leq L^{m_{\mathbb T}}$ and let $R \geq 1$ be an integer. A \emph{sequence of domains with the block size $M$ and the separation $R$} is a sequence of subsets
+\begin{equation}\label{eq:sequence}
+    \mathbb T = \Omega_0 \supset \Omega_1 \supset \dots \supset \Omega_k\;,
+    \qquad
+    \Omega_{k+1} \coloneqq \emptyset\;,
+\end{equation}
+of the torus such that, for $1 \leq j \leq k$, the set $\Omega_j$ is a union of cubes of the grid of side $Ma_j$, and
+\begin{equation}\label{eq:separation}
+    \dist(\Omega_j^c, \Omega_{j+1}) > RMa_j
+\end{equation}
+for all $1 \leq j < k$ for which neither $\Omega_j^c$ nor $\Omega_{j+1}$ is empty. Its \emph{layers} are the sets
+\begin{equation}\label{eq:layers}
+    \Gamma_j \coloneqq \Omega_j^{(j)} \setminus \Omega_{j+1} \subset T^{(j)}\;,
+    \qquad
+    0 \leq j \leq k\;,
+\end{equation}
+and its \emph{determining set} is the disjoint union $\mathbf B \coloneqq \bigsqcup_{j=0}^{k}\Gamma_j$. For $y \in \Gamma_j$ we call $j(y) \coloneqq j$ the \emph{scale} of $y$, and we put
+\begin{equation}\label{eq:cells}
+    \Delta(y) \coloneqq B^j(y)\;,
+    \qquad
+    \tilde\Delta(y) \coloneqq \{ x \in T_\eta \,|\, \abs{x - y}_\infty < a_j \}\;.
+\end{equation}
+\end{definition}
+
+The domains may be empty or equal to the torus, and the inclusions need not be strict. The sets $\Omega_j \setminus \Omega_{j+1}$ are pairwise disjoint and cover the torus. Both $\Omega_j$ and $\Omega_{j+1}$ are unions of cubes of the grid of side $a_j$, whose boundaries contain no point of the fine lattice, so that the fine points of $\Omega_j \setminus \Omega_{j+1}$ are those of the blocks $B^j(y)$ with $y \in \Gamma_j$. Hence the blocks $\Delta(y)$, $y \in \mathbf B$, form a partition of the fine lattice. For $x \in T_\eta$ we write $y(x)$ for the point of $\mathbf B$ with $x \in \Delta(y(x))$ and $j(x) \coloneqq j(y(x))$. This is the setting of \cite[(2.1)--(2.4), p.~224]{BalabanPRT2} and \cite[p.~277]{BalabanVAR}, with the sequence starting at $\Omega_0 = \mathbb T$, and with the names of \cite[(2.2), p.~255]{BalabanCRE}, which writes $\Gamma_j$ for the layers and $\mathbf B$ for the determining set. The condition \eqref{eq:separation} is imposed in the $\ell^\infty$-distance, which is the smaller one, so that a sequence in our sense satisfies the condition of the papers cited.
+
+The distance in which the propagators decay is defined in \cite[(2.46), p.~231]{BalabanPRT2} as the smallest length of a contour between two points, the part of the contour in a layer being composed of bonds of the scale of that layer and counted in its units. At the surface between two layers a bond of the finer scale does not end at a site of the coarser one, and so we define the distance by paths in the torus instead of lattice contours. The two properties which the later sections use, the cost of crossing a layer and the summability of the exponentials, are Lemma~\ref{lem:distance} and Lemma~\ref{lem:summation}.
+
+\begin{definition}[The Weighted Distance]\label{def:distance}
+Let a sequence of domains be given. For $z \in \mathbb T$ let $j(z)$ be the largest $j$ with $z \in \Omega_j$. The \emph{weighted length} of a Lipschitz path $\gamma \colon [0, 1] \to \mathbb T$ is
+\begin{equation}\label{eq:weighted-length}
+    \ell(\gamma) \coloneqq \int_0^1\frac{\abs{\dot\gamma(t)}_1}{a_{j(\gamma(t))}}\,\dd t\;,
+\end{equation}
+and the \emph{weighted distance} $d(z, z')$ of two points of the torus is the infimum of $\ell(\gamma)$ over the Lipschitz paths from $z$ to $z'$.
+\end{definition}
+
+The function $z \mapsto j(z)$ is upper semicontinuous, because the domains are closed, so that the integrand of \eqref{eq:weighted-length} is measurable. For a point $x$ of the fine lattice, $j(x)$ is the scale of the block which contains $x$, in agreement with the notation introduced above.
+
+\begin{lemma}[The Weighted Distance]\label{lem:distance}
+For every sequence of domains with the block size $M$ and the separation $R$:
+\begin{enumerate}[label=(\roman*)]
+\item $d$ is a metric on $\mathbb T$, and $\abs{z - z'}_1 \leq d(z, z') \leq \eta^{-1}\abs{z - z'}_1$;
+\item if $z \in \Omega_j \setminus \Omega_{j+1}$ and $z' \in \Omega_{j'} \setminus \Omega_{j'+1}$, then $d(z, z') \geq RM\max\{ \abs{j - j'} - 1, 0 \}$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(i) The weights satisfy $\eta = a_0 \leq a_{j(z)} \leq a_k = 1$. Hence $\ell(\gamma)$ lies between the $\ell^1$-length of $\gamma$ and $\eta^{-1}$ times that length, and the $\ell^1$-length of a path from $z$ to $z'$ is at least $\abs{z - z'}_1$, with equality for a suitable path. This gives the two inequalities, and with them $d(z, z') > 0$ for $z \neq z'$. The symmetry of $d$ follows by reversing the paths, and the triangle inequality by concatenating them.
+
+(ii) We may assume $j' \geq j + 2$. Let $\gamma$ be a Lipschitz path from $z$ to $z'$ and let $j < i < j'$. Then $\gamma(0) = z \notin \Omega_i$, because $\Omega_i \subset \Omega_{j+1}$, and $\gamma(1) = z' \in \Omega_{i+1}$, because $\Omega_{j'} \subset \Omega_{i+1}$. Let $t_1$ be the smallest $t$ with $\gamma(t) \in \Omega_{i+1}$, which exists since $\Omega_{i+1}$ is closed, and let $t_0$ be the supremum of the $t < t_1$ with $\gamma(t) \notin \Omega_i$. Then $\gamma(t_0)$ lies in the closure of $\Omega_i^c$, and $\gamma(t) \in \Omega_i \setminus \Omega_{i+1}$ for $t_0 < t < t_1$, so that $j(\gamma(t)) = i$ on this interval. The $\ell^1$-length of the arc $\gamma|_{[t_0, t_1]}$ is at least $\abs{\gamma(t_1) - \gamma(t_0)}_\infty$, which is at least the distance of $\Omega_{i+1}$ from the closure of $\Omega_i^c$, and this distance is greater than $RMa_i$ by \eqref{eq:separation}. The weighted length of the arc is therefore greater than $RM$. The intervals $(t_0, t_1)$ which belong to different $i$ are disjoint, since $j(\gamma(t))$ takes different values on them, and there are $j' - j - 1$ of them. Hence $\ell(\gamma) > RM(j' - j - 1)$.
+\end{proof}
+
+The second property is the summability of the exponentials of the distance over the determining set, uniformly in the sequence and in the number of the scales. It is \cite[Lemma~2.1, p.~234]{BalabanPRT2}, stated here for an arbitrary rate $\delta$, since the lemma is applied with the decay rates of several operators.
+
+\begin{lemma}[Summation over the Determining Set]\label{lem:summation}
+For every $\delta > 0$ and every $0 < \alpha < 1$ there are numbers $r_1(\alpha, \delta) \geq 1$ and $c_1(\alpha, \delta) \geq 1$, which depend on $\alpha$ and $\delta$ only, with the following property. Let $L$, $k$, and $m_{\mathbb T}$ be as in Definition~\ref{def:lattices} and let a sequence of domains with the block size $M$ and the separation $R$ be given, with $RM \geq r_1(\alpha, \delta)$. Then
+\begin{equation}\label{eq:summation}
+    \sup_{y \in \mathbf B}\sum_{y' \in \mathbf B}e^{-\alpha\delta d(y, y')} \leq c_1(\alpha, \delta)\;,
+\end{equation}
+and for every $n \geq 1$ and all $y_0, y_n \in \mathbf B$,
+\begin{equation}\label{eq:chain-summation}
+    \sum_{y_1, \dots, y_{n-1} \in \mathbf B}\prod_{i=1}^{n}e^{-\delta d(y_{i-1}, y_i)} \leq c_1(\alpha, \delta)^{n-1}e^{-(1 - \alpha)\delta d(y_0, y_n)}\;.
+\end{equation}
+\end{lemma}
+
+\begin{proof}[Proof of \eqref{eq:chain-summation} from \eqref{eq:summation}]
+By the triangle inequality of Lemma~\ref{lem:distance}(i), $\sum_{i=1}^{n}d(y_{i-1}, y_i) \geq d(y_0, y_n)$, so that the product in \eqref{eq:chain-summation} is at most $e^{-(1 - \alpha)\delta d(y_0, y_n)}\prod_{i=1}^{n}e^{-\alpha\delta d(y_{i-1}, y_i)}$. We bound the factor with $i = n$ by one and sum over $y_{n-1}, y_{n-2}, \dots, y_1$ in this order, each sum being at most $c_1(\alpha, \delta)$ by \eqref{eq:summation}.
+\end{proof}
+
+\subsection{Norms of Fields}\label{sec:norms}
+
+The bounds of the linear theory are stated in supremum norms, in H\"older norms, in norms which weight a field by a power of the spacing of the layer, and in $L^2$-norms. They are the norms of \cite[(1.108), (1.109), p.~35]{BalabanPRT1} and \cite[(3.39)--(3.41), p.~397]{BalabanPBG}.
+
+\begin{definition}[Norms]\label{def:norms}
+Let a sequence of domains be given, let $\mathbf U$ be a configuration on $T_\eta$, and let $f$ be a $0$-form on $T_\eta$, or a family of $0$-forms such as a $1$-form or the gradient of one.
+\begin{enumerate}[label=(\roman*)]
+\item The \emph{supremum norm} $\abs f$ is the supremum of $\abs{f_\iota(x)}$ over the sites $x$ and the components $f_\iota$ of $f$; for a subset $S$ of the torus, $\abs f_S$ is the same supremum over $x \in S^{(0)}$.
+\item For $0 \leq \beta \leq 1$ and $0 \leq j \leq k$ the \emph{H\"older norm at the scale $j$} is
+\begin{equation}\label{eq:holder}
+    \norm f_\beta^{(j)} \coloneqq \sup\Bigl(\frac{\abs{x - x'}_1}{a_j}\Bigr)^{-\beta}\abs{R(\mathbf U(\gamma))f_\iota(x') - f_\iota(x)}\;,
+\end{equation}
+the supremum over the components, over the pairs of sites $x \neq x'$ of $T_\eta$ with $\abs{x - x'}_1 \leq a_j$, and over the shortest paths $\gamma$ from $x$ to $x'$. We write $\norm f_\beta \coloneqq \norm f_\beta^{(k)}$, and $\norm A_{1,\beta} \coloneqq \norm{\nabla_{\mathbf U}A}_\beta$ for a $1$-form $A$.
+\item For a real number $\alpha$ the \emph{weighted norm} is
+\begin{equation}\label{eq:weighted-norm}
+    \abs f_{(\alpha)} \coloneqq \sup_{x \in T_\eta}a_{j(x)}^{-\alpha}\max_\iota\abs{f_\iota(x)}\;.
+\end{equation}
+\end{enumerate}
+\end{definition}
+
+In the papers cited the H\"older norm $\norm\cdot_\beta$ is taken ``in the $\eta$-scale'', which is our scale $k$, and a superscript $\xi = L^{-j}$ indicates that ``functions and distances are on the $\xi$-lattice'' \cite[p.~397]{BalabanPBG}, which is \eqref{eq:holder}. The norm \eqref{eq:holder} depends on the configuration through the transport along $\gamma$, and on scalar functions, for which we use it as well, it does not.
+
+\subsection{Localisation Domains}\label{sec:localisation-domains}
+
+The terms of the effective actions are indexed by connected unions of large cubes, and they decay exponentially in the linear size of the union. We define these notions for the cubes of an arbitrary grid, together with a variant of the linear size in which a part of the domain is not counted, which is needed when a term has a prescribed support.
+
+\begin{definition}[Unions of Cubes and Their Linear Size]\label{def:localisation}
+Let $s$ be the side of a grid in the sense of Definition~\ref{def:lattices}(iii).
+\begin{enumerate}[label=(\roman*)]
+\item Two cubes of the grid \emph{touch} if they have a point in common, and they \emph{share a wall} if their intersection is a three-dimensional cube. A union $X$ of cubes of the grid is \emph{connected} if any two of its cubes are joined by a chain of cubes of $X$ in which consecutive cubes share a wall. The number of the cubes of $X$ is denoted by $\#(X)$.
+\item For a union $X$ of cubes, $X^\sim$ is the union of $X$ and of the cubes of the grid which touch a cube of $X$; $X^{\sim n}$ is the result of $n$ such operations; and $X^{\sim-n} \coloneqq ((X^c)^{\sim n})^c$, where $X^c$ denotes the union of the cubes of the grid which are not in $X$.
+\item For a connected union $X$ of cubes and a union $D \subset X$ of cubes, possibly empty, the \emph{linear size of $X$ relative to $D$} is
+\begin{equation}\label{eq:contracted-size}
+    d(X; D) \coloneqq \frac{1}{s}\inf\abs{G \setminus D}\;,
+\end{equation}
+the infimum of the one-dimensional measure, with respect to the Euclidean length, over the finite unions $G$ of segments and points with $G \subset X$ such that $G$ meets every cube of $X$ and $G \cup D$ is connected. For a union $X$ of cubes with the connected components $X^i$ we put $d(X; D) \coloneqq \sum_id(X^i; D \cap X^i)$. The \emph{linear size} of $X$ is $d(X) \coloneqq d(X; \emptyset)$.
+\item Let $M$ be a power of $L$ with $M \leq L^{m_{\mathbb T}}$. For $0 \leq j \leq k$ the family $\pi_j$ is the grid of side $Ma_j$, a \emph{localisation domain} of the scale $j$ is a connected union of cubes of $\pi_j$, the class of these domains is $\mathbf D_j$, and $d_j(X)$ and $d_j(X; D)$ denote the linear sizes \eqref{eq:contracted-size} for the grid $\pi_j$.
+\end{enumerate}
+\end{definition}
+
+The domains of $\mathbf D_j$ and the size $d_j(X)$ are those of \cite[p.~257]{BalabanRG1}, where the size is the length of a shortest tree graph in $X$ which meets all its cubes, divided by the side. In the papers the number of the cubes of a domain is bounded by a multiple of its linear size \cite[(1.28), p.~8]{BalabanRG2}, which fails for a single cube, whose linear size is zero. The following count holds for every domain.
+
+\begin{lemma}[The Cubes of a Localisation Domain]\label{lem:cube-count}
+Let $X$ be a connected union of cubes of a grid of side $s$. Then
+\begin{equation}\label{eq:cube-count}
+    \#(X) \leq 2^8(2 + d(X)) \leq 2^9(1 + d(X))\;,
+    \qquad
+    \diam X \leq s(2d(X) + 4)\;,
+\end{equation}
+with the diameter in the Euclidean distance. Moreover, for every $\kappa \geq 2^9(6\log 2 + 1)$ and every cube $\square$ of the grid,
+\begin{equation}\label{eq:domain-sum}
+    \sum_{X \supset \square}e^{-\kappa d(X)} \leq 2^{6 \cdot 2^{10}} + 1\;,
+\end{equation}
+the sum over the connected unions of cubes of the grid which contain $\square$.
+\end{lemma}
+
+\begin{proof}
+Let $G$ be a set which is admissible in \eqref{eq:contracted-size} for $D = \emptyset$, that is, a connected finite union of segments in $X$ which meets every cube of $X$, and let $\lambda$ be the sum of the $\ell^\infty$-lengths of its segments, which is at most its Euclidean length. We first cover $G$ by few boxes. Regard $G$ as a connected graph whose arcs are segments, and double every arc. All degrees of the resulting graph are even, so that it has a closed walk which traverses every arc once, and parametrising this walk by the $\ell^\infty$-length we obtain a map $\gamma \colon [0, 2\lambda] \to G$ onto $G$ with $\abs{\gamma(t) - \gamma(t')}_\infty \leq \abs{t - t'}$. Let $n \coloneqq \ceil{\lambda/s}$ and $t_i \coloneqq \min(2is, 2\lambda)$ for $0 \leq i \leq n$. Every $t \in [0, 2\lambda]$ lies within $s$ of some $t_i$, so that every point of $G$ lies within the $\ell^\infty$-distance $s$ of one of the $n + 1 \leq \lambda/s + 2$ points $\gamma(t_i)$.
+
+Next we count the cubes near one of these points. The cubes of the grid are the products of intervals $[c_\nu - s/2, c_\nu + s/2]$ with $c_\nu \in s\mathbb Z$, and such an interval meets $[q_\nu - s, q_\nu + s]$ only if $c_\nu$ lies in an interval of length $3s$, which contains at most four points of $s\mathbb Z$. A box $\{ z \,|\, \abs{z - q}_\infty \leq s \}$ therefore meets at most $4^4 = 2^8$ cubes of the grid. Every cube of $X$ contains a point of $G$ and hence meets one of the $n + 1$ boxes around the points $\gamma(t_i)$, so that $\#(X) \leq 2^8(2 + \lambda/s)$, and the infimum over $G$ gives the first bound of \eqref{eq:cube-count}. The second inequality there is $2 + d \leq 2(1 + d)$.
+
+For the diameter, let $z, z' \in X$. They lie in cubes of $X$ which contain points $q$, $q'$ of $G$, and the Euclidean diameter of a cube of side $s$ in four dimensions is $2s$. Since $G$ is connected, $\abs{q - q'}_\infty \leq \lambda$, and the Euclidean distance is at most twice the $\ell^\infty$-distance. Hence $\abs{z - z'} \leq 4s + 2\lambda$, and the infimum over $G$ gives the bound.
+
+For \eqref{eq:domain-sum}, a connected union of $n$ cubes which contains $\square$ has a spanning tree with respect to the relation of sharing a wall, and a closed walk from $\square$ along this tree which traverses every edge twice has $2(n - 1)$ steps, each of which goes to one of the eight cubes which share a wall with the present one. The union is determined by the walk, so that there are at most $8^{2(n-1)} = 2^{6(n-1)}$ such unions. For $n \geq 2^{10}$ the first bound of \eqref{eq:cube-count} gives $d(X) \geq 2^{-8}n - 2 \geq 2^{-9}n$, and then $e^{-\kappa d(X)} \leq 2^{-6n}e^{-n}$ by the assumption on $\kappa$. The sum is therefore at most $\sum_{n=1}^{2^{10}-1}2^{6(n-1)} + \sum_{n \geq 2^{10}}e^{-n}$, in which the first sum is less than $2^{6 \cdot 2^{10}}$ and the second less than one.
+\end{proof}
+
+The cluster expansions of the later sections use five inequalities which relate the linear sizes of a domain, of the parts into which it is decomposed, and of the domain of the next scale which covers it. For $D = \emptyset$ the first is \cite[(2.27), p.~18]{BalabanRG2}, with $3$ in the place of $5$, and the second is \cite[(2.32), p.~18]{BalabanRG2} with the constant $18$ in the place of the printed $4$. With $4$ the inequality fails: if $Z$ consists of one cube and of eight rods of $n \geq 2$ cubes each, one attached to each wall of the cube, and the rods are the sets $Y_i$, then $d_k(Y_i) = n - 2$, while a connected set which meets all the cubes of $Z$ has length at least $(n - 1)Ma_k$ beyond each of the eight walls, so that $d_k(Z) \geq \sum_id_k(Y_i) + 8$. For a union $X$ of cubes of $\pi_k$ we write $X'$ for the smallest union of cubes of the grid of side $LMa_k$ which contains $X^\sim$, as in \cite[p.~13]{BalabanRG2}, and we write $d_k$ and $d'$ for the linear sizes \eqref{eq:contracted-size} of the grids of the sides $Ma_k$ and $LMa_k$.
+
+\begin{lemma}[Five Geometric Inequalities]\label{lem:contracted-geometry}
+Let $M$ be a power of $L$ with $LM \leq L^{m_{\mathbb T}}$.
+\begin{enumerate}[label=(\roman*)]
+\item Let $Y_0$ be a connected union of cubes of $\pi_k$, $\mathbf D$ a finite family of connected unions $Y \subset Y_0$ of cubes, and $D \subset Y_0$ a union of cubes with $n_D \geq 0$ connected components, such that $Y_0 = \bigcup_{Y \in \mathbf D}Y \cup D$. Then $\sum_{Y \in \mathbf D}d_k(Y) \geq d_k(Y_0; D) - 3(\abs{\mathbf D} + n_D - 1)$.
+\item Let $Z$ be a connected union of cubes of $\pi_k$, let $Y_1, \dots, Y_n \subset Z$ be connected unions of cubes no two of which have a cube in common or contain two cubes which share a wall, and let $D \subset \bigcup_iY_i$ be a union of cubes. Then $\sum_id_k(Y_i; D \cap Y_i) + 18\,\#(Z \setminus \bigcup_iY_i) \geq d_k(Z; D)$.
+\item Let $Z$ be a connected union of cubes of $\pi_k$ and let $D \subset Z$ be a nonempty union of cubes. Then $L\,d'(Z'; D') \leq (1 + 486/L)\,d_k(Z; D)$.
+\item Let $Z$ be a connected union of cubes of the grid of side $LMa_k$, let $Z_1, \dots, Z_n \subset Z$ be connected unions of cubes and $D_i \subset Z_i$ unions of cubes, of which $n' \geq 1$ are nonempty and $n_\emptyset$ are empty, and put $Z_0 \coloneqq \bigcup_iZ_i$ and $D \coloneqq \bigcup_iD_i$. Then $d'(Z; D) \leq \sum_id'(Z_i; D_i) + 3\,\#(Z \setminus Z_0) + 3(n_\emptyset + n' - 1)$.
+\item Let $X$ be a connected union of cubes of a grid and $D \subset X$ a nonempty union of cubes. Then $\#(X) \leq 81\,\#(D) + 324\,d(X; D)$.
+\end{enumerate}
+\end{lemma}
+
+\section{The Averaging Operations}\label{sec:averaging}
+
+A renormalisation step replaces a gauge field on a lattice by its average on the lattice whose spacing is $L$ times larger. Two operations are needed. The first is the average itself, a map between gauge fields which commutes with the gauge transformations and with the symmetries of the lattice. The second arises when the field is written as a fluctuation times a background: the average of the product is then the average of the background, multiplied by a function of the fluctuation whose linear part enters every quadratic form of the later sections. We define both, and we state for each what the later sections use: on which bonds it depends, how it transforms, where it is analytic, and how large it is.
+
+\subsection{The Chart of the Group}\label{sec:chart}
+
+The averages are exponentials of means of logarithms, so that we first have to say which logarithm is meant. A Hermitian logarithm of an element of $G$ need not lie in $\mathfrak g$, and for this reason the logarithm on the group is defined as the inverse of the exponential on a ball of the algebra, and not through the spectrum.
+
+\begin{definition}[The Chart]\label{def:chart}
+Let $\varrho_G \coloneqq \pi/\sqrt N$. The \emph{chart domain} is $N_G \coloneqq \{ e^{iA} \,|\, A \in \mathfrak g,\ h(A) < \varrho_G \}$, and the \emph{chart} $\log \colon N_G \to i\mathfrak g$ is defined by $\log e^{iA} \coloneqq iA$ for $A \in \mathfrak g$ with $h(A) < \varrho_G$. For a matrix $W$ with $\norm{W - \id} < 1$ we put $\operatorname{Log}W \coloneqq \sum_{n \geq 1}(-1)^{n+1}n^{-1}(W - \id)^n$.
+\end{definition}
+
+\begin{lemma}[The Chart]\label{lem:chart}
+\begin{enumerate}[label=(\roman*)]
+\item The map $A \mapsto e^{iA}$ is injective on $\{ A \in \mathfrak g \,|\, h(A) < \varrho_G \}$, so that the chart is well defined, and $\norm A < \pi$ there. The chart domain is invariant under $W \mapsto W^{-1}$ and under conjugation by elements of $G$, with $\log W^{-1} = -\log W$ and $\log(uWu^{-1}) = R(u)\log W$.
+\item There is a number $r_G \in (0, 1)$, which depends on $G$ only, such that every $W \in G$ with $\norm{W - \id} \leq r_G$ lies in $N_G$ and satisfies $\log W = \operatorname{Log}W$.
+\item For a Hermitian matrix $X$ with $\norm X \leq \pi$ and each of the three norms $\mathcal N$ of Lemma~\ref{lem:norms}, $\mathcal N(e^{iX} - \id) \leq \mathcal N(X) \leq \frac{\pi}{2}\mathcal N(e^{iX} - \id)$.
+\item The function $\operatorname{Log}$ is holomorphic on $\{ \norm{W - \id} < 1 \}$, $e^{\operatorname{Log}W} = W$, $\operatorname{Log}(\mathbf uW\mathbf u^{-1}) = R(\mathbf u)\operatorname{Log}W$ for every invertible $\mathbf u$ with $\norm{\mathbf uW\mathbf u^{-1} - \id} < 1$, and $\operatorname{Log}W \in i\mathfrak g^c$ if $W = e^{iX}$ with $X \in \mathfrak g^c$ and $\norm X < \log 2$.
+\end{enumerate}
+\end{lemma}
+
+\subsection{The Average of One Step}\label{sec:average}
+
+We fix a scale $1 \leq j \leq k$ and write $a \coloneqq a_{j-1}$ for the spacing of the finer lattice $T^{(j-1)}$. The average of a bond $c$ of $T^{(j)}$ is built from the fine paths which join the block of $c_-$ to the block of $c_+$ \cite[p.~252, (0.4), p.~253]{BalabanRG1}.
+
+\begin{definition}[The Paths of a Coarse Bond]\label{def:block-paths}
+\begin{enumerate}[label=(\roman*)]
+\item For $y \in T^{(j)}$ and $x \in B(y)$, write $x - y = a\sum_\mu n_\mu e_\mu$ with $\abs{n_\mu} \leq \frac{1}{2}(L - 1)$. The family $\mathbf G(y, x)$ consists of the paths of $T^{(j-1)}$ from $y$ to $x$ which traverse the coordinates $\mu$ with $n_\mu \neq 0$ one after the other, $\abs{n_\mu}$ bonds in the direction of the sign of $n_\mu$ for each, one path for every ordering of these coordinates. For $x = y$ it consists of the empty path.
+\item For a bond $c$ of $T^{(j)}$ and $x \in B(c_-)$ let $x' \coloneqq x + (c_+ - c_-) \in B(c_+)$, and let $[x, x']$ be the straight path of $L$ bonds of $T^{(j-1)}$ from $x$ to $x'$; in particular $[c] \coloneqq [c_-, c_+]$.
+\item For $x \in B(c_-)$, $\Gamma \in \mathbf G(c_-, x)$, and $\Gamma' \in \mathbf G(c_+, x')$, the \emph{loop} $\ell_c(x, \Gamma, \Gamma')$ is the closed path which consists of $\Gamma$, then $[x, x']$, then $\Gamma'^{-1}$, then $[c]^{-1}$. It begins and ends at $c_-$.
+\end{enumerate}
+\end{definition}
+
+All these paths run through sites of $B(c_-) \cup B(c_+)$.
+
+\begin{definition}[The Average]\label{def:average}
+Let $U$ be a gauge field on $T^{(j-1)}$ and $c$ a bond of $T^{(j)}$. Let $\mathcal O_c$ be the set of the gauge fields for which $U(\ell_c(x, \Gamma, \Gamma')) \in N_G$ for all loops of $c$, and for $U \in \mathcal O_c$ let
+\begin{equation}\label{eq:average-exponent}
+    \beta_c(U) \coloneqq \frac{1}{L^4}\sum_{x \in B(c_-)}\frac{1}{\abs{\mathbf G(c_-, x)}\abs{\mathbf G(c_+, x')}}\sum_{\Gamma, \Gamma'}\frac{1}{i}\log U(\ell_c(x, \Gamma, \Gamma'))\;.
+\end{equation}
+The \emph{average} of $U$ is the gauge field $M(U)$ on $T^{(j)}$ with
+\begin{equation}\label{eq:average}
+    M(U)(c) \coloneqq
+    \begin{cases}
+        e^{i\beta_c(U)}U([c]) & \text{if } U \in \mathcal O_c\;,\\
+        U([c]) & \text{otherwise}\;.
+    \end{cases}
+\end{equation}
+The \emph{average of order $n$} is the $n$-fold iterate $M^n$, which maps gauge fields on $T^{(j)}$ to gauge fields on $T^{(j+n)}$.
+\end{definition}
+
+On $\mathcal O_c$ this is \cite[(0.4), p.~253]{BalabanRG1}: the straight transport along $c$ is multiplied by the exponential of a mean, with weights which are positive and sum to one, of the logarithms of the holonomies around the loops of $c$. The second line of \eqref{eq:average} makes the average a map on all gauge fields, which the definition of the renormalisation transformation requires, and it plays no role in any estimate, since every estimate concerns fields in the set of the following lemma. The iterates are those of \cite[(43), p.~24]{BalabanAVG}.
+
+\begin{lemma}[Properties of the Average]\label{lem:average}
+\begin{enumerate}[label=(\roman*)]
+\item \emph{Consistency.} $\mathcal O_{c^{-1}} = \mathcal O_c$ and $M(U)(c^{-1}) = M(U)(c)^{-1}$, so that $M(U)$ is a gauge field, and $\beta_c(U) \in \mathfrak g$.
+\item \emph{Locality.} $M(U)(c)$ depends only on the values of $U$ on the bonds of $T^{(j-1)}$ with both ends in $B(c_-) \cup B(c_+)$.
+\item \emph{Covariance.} For every gauge transformation $u \colon T^{(j-1)} \to G$, the set $\mathcal O_c$ is invariant and $M(U^u)(c) = u(c_-)M(U)(c)u(c_+)^{-1}$.
+\item \emph{Symmetry.} Let $\theta$ be a translation of the torus by a point of $T^{(j)}$, a reflection $x_\mu \mapsto -x_\mu$, or a permutation of the coordinates, and let $(\theta U)(b) \coloneqq U(\theta^{-1}b)$. Then $M(\theta U) = \theta M(U)$.
+\item \emph{The domain.} There are numbers $\alpha_M > 0$ and $C_M$, which depend on $L$ and $G$ only, such that if $\abs{U(\partial p) - \id} \leq \alpha \leq \alpha_M$ for all plaquettes $p$ of $T^{(j-1)}$ whose corners lie in $B(c_-) \cup B(c_+)$, then $U \in \mathcal O_c$, every loop of $c$ satisfies $\norm{U(\ell) - \id} \leq r_G$, and $\abs{\beta_c(U)} \leq C_M\alpha$.
+\item \emph{Analyticity.} There is a number $r_M > 0$, which depends on $L$ and $G$ only, with the following property. Let $U$ be as in \emph{(v)}, and let $A$ be a $1$-form with values in $\mathfrak g^c$ on the bonds of $B(c_-) \cup B(c_+)$ with $\abs{aA} < r_M$. Then \eqref{eq:average-exponent} and the first line of \eqref{eq:average}, with $\operatorname{Log}$ in the place of $\log$, define a holomorphic function $A \mapsto M(e^{iaA}U)(c)$ with values in $G^c$, which is the average of the gauge field $e^{iaA}U$ when $A$ has values in $\mathfrak g$, and which has the properties \emph{(i)}--\emph{(iv)}, the covariance for gauge transformations with values in $G^c$ which map the configuration into the domain.
+\end{enumerate}
+\end{lemma}
+
+By (vi) the average, and with it every iterate, is defined for the configurations $e^{iaA}U$ of that statement, and we use the notation $M(\mathbf U)$ for them.
+
+The first quantitative property is that the average of a field with small plaquettes has small plaquettes, in the units of the coarser lattice, and that this is a local statement. It is \cite[Propositions~1, 2, pp.~26]{BalabanAVG}, in the form which the test functions of the construction need, with an arbitrary bound in the place of a fixed threshold.
+
+\begin{proposition}[Averages of Regular Fields]\label{prop:regular-averages}
+There are numbers $C_0 \geq 1$ and $c_2 \in (0, \alpha_M]$, which depend on $L$ and $G$ only, with the following properties.
+\begin{enumerate}[label=(\roman*)]
+\item Let $U$ be a gauge field on $T^{(j-1)}$ and $p'$ a plaquette of $T^{(j)}$ with the first corner $y_0$, and suppose that $\abs{U(\partial p) - \id} \leq \alpha \leq c_2L^{-2}$ for all plaquettes $p$ of $T^{(j-1)}$ whose corners lie in the blocks of the four corners of $p'$. Then
+\begin{equation}\label{eq:averaged-plaquette}
+    \abs{M(U)(\partial p') - \id} \leq \frac{1}{L^4}\sum_{x \in B(y_0)}\sum_{p \subset p'_x}\abs{U(\partial p) - \id} + C_0L^4\alpha^2 \leq L^2\alpha + C_0L^4\alpha^2\;,
+\end{equation}
+where $p'_x$ is the translate of $p'$ by $x - y_0$ and the inner sum runs over the $L^2$ plaquettes of $T^{(j-1)}$ which it contains.
+\item Let $0 \leq i < j \leq k$, let $U$ be a gauge field on $T^{(i)}$ and $p'$ a plaquette of $T^{(j)}$, and suppose that $\abs{U(\partial p) - \id} \leq \alpha(a_i/a_j)^2$ with $\alpha \leq c_2$ for all plaquettes $p$ of $T^{(i)}$ whose corners lie in the blocks of order $j - i$ of the four corners of $p'$. Then $\abs{M^{j-i}(U)(\partial p') - \id} \leq \alpha + 2C_0\alpha^2 \leq 2\alpha$.
+\end{enumerate}
+\end{proposition}
+
+\subsection{The Average Relative to a Background}\label{sec:relative-average}
+
+Let the field be $e^{iaA}\mathbf U$, with a background $\mathbf U$ and a fluctuation $A$. We want to write its average as a function of the fluctuation times the average of the background. The quotient $M(e^{iaA}\mathbf U)(c)M(\mathbf U)(c)^{-1}$ does this, but it is not the function which the linear theory uses: under a gauge transformation of the fluctuation which is trivial at the coarse sites it changes, through the paths $\Gamma$ and $\Gamma'$ which join the coarse sites to the points of their blocks. The function used instead is obtained by first transforming the fluctuation, at each coarse site, to the gauge in which the mean of its transports to the points of the block is trivial \cite[pp.~26--31]{BalabanAVG}, \cite[p.~418]{BalabanPBG}. The transports are taken along all the paths of $\mathbf G(y, x)$ at once, through a mean of group elements \cite[(0.5)--(0.11), p.~253]{BalabanRG1}.
+
+\begin{definition}[The Mean of Group Elements and the Transports of a Block]\label{def:group-mean}
+\begin{enumerate}[label=(\roman*)]
+\item Let $\mathbf W_1, \dots, \mathbf W_n \in G^c$ with $\norm{\mathbf W_i\mathbf W_1^{-1} - \id} \leq \frac{1}{4}r_G$ for all $i$. Their \emph{mean} $\mathsf m(\{ \mathbf W_i \})$ is the element $\mathbf W \in G^c$ with $\norm{\mathbf W\mathbf W_1^{-1} - \id} \leq \frac{1}{2}r_G$ and
+\begin{equation}\label{eq:group-mean}
+    \sum_{i=1}^{n}\operatorname{Log}(\mathbf W_i\mathbf W^{-1}) = 0\;.
+\end{equation}
+\item For a configuration $\mathbf U$ on $T^{(j-1)}$, a site $y \in T^{(j)}$, and $x \in B(y)$, the \emph{transport} from $y$ to $x$ is $\mathbf U(y, x) \coloneqq \mathsf m(\{ \mathbf U(\Gamma) \}_{\Gamma \in \mathbf G(y, x)})$, whenever the mean is defined.
+\end{enumerate}
+\end{definition}
+
+\begin{lemma}[The Mean of Group Elements]\label{lem:group-mean}
+Under the condition of Definition~\ref{def:group-mean}(i) the equation \eqref{eq:group-mean} has exactly one solution with $\norm{\mathbf W\mathbf W_1^{-1} - \id} \leq \frac{1}{2}r_G$. It does not depend on the order of the elements, it is a holomorphic function of them, and
+\[
+    \mathsf m(\{ \mathbf u\mathbf W_i\mathbf v \}) = \mathbf u\,\mathsf m(\{ \mathbf W_i \})\,\mathbf v\;,
+    \qquad
+    \mathsf m(\{ \mathbf W_i^{-1} \}) = \mathsf m(\{ \mathbf W_i \})^{-1}\;,
+\]
+for $\mathbf u, \mathbf v \in G^c$ for which both sides are defined. If all $\mathbf W_i$ lie in $G$, then so does the mean. If $\mathbf W_i = e^{iX_i}$ with $X_i \in \mathfrak g^c$ and $\norm{X_i} \leq \varrho$ for a sufficiently small $\varrho$, which depends on $G$ only, then $\norm{\frac{1}{i}\operatorname{Log}\mathsf m(\{ \mathbf W_i \}) - \frac{1}{n}\sum_iX_i} \leq C_{\mathsf m}\varrho^2$ with a constant $C_{\mathsf m}$ which depends on $G$ only.
+\end{lemma}
+
+These are the properties \cite[(0.5)--(0.9), p.~253]{BalabanRG1} of the mean \cite[(0.10)]{BalabanRG1}. By the covariance, $\mathbf U^u(y, x) = u(y)\mathbf U(y, x)u(x)^{-1}$.
+
+\begin{definition}[The Relative Average]\label{def:relative-average}
+Let $\mathbf U$ be a configuration on $T^{(j-1)}$ and $A$ a $1$-form on $T^{(j-1)}$ with values in $\mathfrak g^c$, and write $\mathbf U_A \coloneqq e^{iaA}\mathbf U$ for the configuration with $\mathbf U_A(b) = e^{iaA(b)}\mathbf U(b)$ on the positive bonds.
+\begin{enumerate}[label=(\roman*)]
+\item The \emph{site factor} of the fluctuation at $y \in T^{(j)}$ is
+\begin{equation}\label{eq:site-factor}
+    v_{\mathbf U}(A)(y) \coloneqq \exp\Bigl(\frac{1}{L^4}\sum_{x \in B(y)}\operatorname{Log}\bigl(\mathbf U_A(y, x)\mathbf U(y, x)^{-1}\bigr)\Bigr)\;.
+\end{equation}
+\item The \emph{relative average} of the fluctuation on a bond $c$ of $T^{(j)}$ is
+\begin{equation}\label{eq:relative-average}
+    \mathcal M_{\mathbf U}(A)(c) \coloneqq v_{\mathbf U}(A)(c_-)^{-1}\,M(\mathbf U_A)(c)\,v_{\mathbf U}(A)(c_+)\,M(\mathbf U)(c)^{-1}\;,
+\end{equation}
+so that
+\begin{equation}\label{eq:average-of-product}
+    M(e^{iaA}\mathbf U)(c) = v_{\mathbf U}(A)(c_-)\,\mathcal M_{\mathbf U}(A)(c)\,M(\mathbf U)(c)\,v_{\mathbf U}(A)(c_+)^{-1}\;.
+\end{equation}
+\item The \emph{linear part} $Q(\mathbf U)$ and the \emph{remainder} $C(\mathbf U; \cdot)$ of the relative average are defined by
+\begin{equation}\label{eq:linear-part}
+    \frac{1}{i}\operatorname{Log}\mathcal M_{\mathbf U}(A)(c) = La\bigl(Q(\mathbf U)A\bigr)(c) + C(\mathbf U; aA)(c)\;,
+\end{equation}
+where $Q(\mathbf U)$ is linear in $A$ and $C(\mathbf U; \cdot)$ vanishes to the second order at zero. The \emph{linear part of the average} is the linear map $Q^{\mathrm{pl}}(\mathbf U)$ with $\frac{1}{i}\operatorname{Log}(M(e^{iaA}\mathbf U)(c)M(\mathbf U)(c)^{-1}) = La(Q^{\mathrm{pl}}(\mathbf U)A)(c) + O(A^2)$.
+\item For a $0$-form $\lambda$ on $T^{(j-1)}$, the \emph{block average} is the $0$-form on $T^{(j)}$
+\begin{equation}\label{eq:block-average}
+    \bigl(Q'(\mathbf U)\lambda\bigr)(y) \coloneqq \frac{1}{L^4}\sum_{x \in B(y)}R(\mathbf U(y, x))\lambda(x)\;.
+\end{equation}
+\end{enumerate}
+\end{definition}
+
+The identity \eqref{eq:average-of-product} is \cite[(3.113), p.~418]{BalabanPBG} with the transports of Definition~\ref{def:group-mean}, and $Q'$ is \cite[(3.19), p.~393]{BalabanPBG}. The factor $La$ in \eqref{eq:linear-part} is the spacing of the coarse lattice, so that $Q(\mathbf U)$ maps $1$-forms to $1$-forms without a change of their dimension.
+
+\begin{proposition}[The Relative Average of One Step]\label{prop:relative-average}
+There are numbers $c_4 \in (0, \alpha_M]$, $C_1$, $C_2$, and $C_3$, which depend on $L$ and $G$ only, with the following properties. Let $U$ be a gauge field on $T^{(j-1)}$ with $\abs{U(\partial p) - \id} \leq \alpha_0 \leq c_4$ on the plaquettes with corners in $B(c_-) \cup B(c_+)$, let $A'$ and $A$ be $1$-forms with values in $\mathfrak g^c$ on the bonds of $B(c_-) \cup B(c_+)$ with $\abs{aA'} \leq \alpha_1 \leq c_4$ and $\abs{aA} < c_4$, and let $\mathbf U \coloneqq e^{iaA'}U$.
+\begin{enumerate}[label=(\roman*)]
+\item \emph{Analyticity and locality.} The transports, the site factors at $c_\pm$, and $\mathcal M_{\mathbf U}(A)(c)$ are defined, they are holomorphic functions of $(A', A)$, and they depend only on the values of $U$, $A'$, and $A$ on the bonds with both ends in $B(c_-) \cup B(c_+)$, the site factor at $y$ only on those in $B(y)$. For $A' = 0$ and $A$ with values in $\mathfrak g$ their values lie in $G$.
+\item \emph{Covariance.} For a gauge transformation $u$ of $T^{(j-1)}$ with values in $G$,
+\[
+    v_{\mathbf U^u}(R(u)A)(y) = u(y)v_{\mathbf U}(A)(y)u(y)^{-1}\;,
+    \qquad
+    \mathcal M_{\mathbf U^u}(R(u)A)(c) = u(c_-)\mathcal M_{\mathbf U}(A)(c)u(c_-)^{-1}\;,
+\]
+so that $Q(\mathbf U^u)R(u) = R(u)Q(\mathbf U)$ and $Q'(\mathbf U^u)R(u) = R(u)Q'(\mathbf U)$, with $R(u)$ on the right sides taken at the sites of $T^{(j)}$. The same holds for $u$ with values in $G^c$ near $G$, as long as $\mathbf U^u$ is of the form assumed.
+\item \emph{The two linear parts.} Let $\Lambda(\mathbf U)A$ be the $0$-form on $T^{(j)}$ which is the linear part in $A$ of $\frac{1}{i}\operatorname{Log}v_{\mathbf U}(A)$. Then $Q^{\mathrm{pl}}(\mathbf U) = Q(\mathbf U) - D_{M(\mathbf U)}\Lambda(\mathbf U)$, with the covariant difference of the lattice $T^{(j)}$ at the configuration $M(\mathbf U)$.
+\item \emph{Gauge directions.} For a $0$-form $\lambda$ on $T^{(j-1)}$ with values in $\mathfrak g^c$,
+\begin{gather*}
+    Q(\mathbf U)D_{\mathbf U}\lambda = D_{M(\mathbf U)}Q'(\mathbf U)\lambda\;,
+    \qquad
+    \Lambda(\mathbf U)D_{\mathbf U}\lambda = Q'(\mathbf U)\lambda - \lambda|_{T^{(j)}}\;,\\
+    Q^{\mathrm{pl}}(\mathbf U)D_{\mathbf U}\lambda = D_{M(\mathbf U)}\bigl(\lambda|_{T^{(j)}}\bigr)\;.
+\end{gather*}
+\item \emph{The form of the linear part.} For a bond $b$ of a line $[x, x']$ and $\Gamma \in \mathbf G(c_-, x)$ let $\Gamma_b$ be the path which consists of $\Gamma$ and of the part of the line from $x$ to $b_-$, and let
+\begin{equation}\label{eq:straight-average}
+    \bigl(Q_0(\mathbf U)A\bigr)(c) \coloneqq \frac{1}{L^5}\sum_{x \in B(c_-)}\sum_{b \in [x, x']}\frac{1}{\abs{\mathbf G(c_-, x)}}\sum_{\Gamma}R(\mathbf U(\Gamma_b))A(b)\;,
+\end{equation}
+the mean of the values of $A$ on the lines of $c$, transported to $c_-$. Then $Q(\id) = Q_0(\id)$, and $\abs{((Q(\mathbf U) - Q_0(\mathbf U))A)(c)} \leq C_1(\alpha_0 + \alpha_1)\abs A$, the supremum of $A$ being taken over the bonds with both ends in $B(c_-) \cup B(c_+)$.
+\item \emph{The remainder.} $\abs{C(\mathbf U; aA)(c)} \leq C_2\abs{aA}^2$, and the derivative of $A \mapsto C(\mathbf U; aA)(c)$ in a direction $\delta A$ is at most $C_3\abs{aA}\abs{a\,\delta A}$, the norms of $A$ and $\delta A$ being suprema over the bonds of $B(c_-) \cup B(c_+)$.
+\item \emph{Dependence on the background.} The maps $Q(\mathbf U)$, $Q'(\mathbf U)$, and $C(\mathbf U; \cdot)$ are holomorphic in $A'$, and $\norm{Q(e^{iaA'_1}U) - Q(e^{iaA'_2}U)} \leq C_1\abs{a(A'_1 - A'_2)}$ in the norms of \emph{(v)}, and likewise for $Q'$.
+\item \emph{One function for all scales.} Identify the bonds with both ends in $B(c_-) \cup B(c_+)$ with those of a reference bond by the translation and the symmetry of Lemma~\ref{lem:average}\emph{(iv)} which map $c$ to it. Then $\mathcal M_{\mathbf U}(A)(c)$, $v_{\mathbf U}(A)(c_\pm)$, and $M(\mathbf U)(c)$ are the values of functions of the matrices $\mathbf U(b)$ and $aA(b)$ on these bonds which do not depend on $c$, on the scale $j$, on $k$, or on the torus.
+\end{enumerate}
+\end{proposition}
+
+The parts (v)--(vii) are \cite[Propositions~3--7, (121)--(125)]{BalabanAVG} for the relative average of this section, and (iii), (iv) are the relations \cite[(3.114), (3.115), p.~418]{BalabanPBG}; the last identity of (iv) is the derivative of the covariance of the average, Lemma~\ref{lem:average}(iii). At the trivial configuration the operator \eqref{eq:straight-average} is the average over the straight lines of \cite[(1.18), p.~20]{BalabanPRT1}, with centred blocks. It does not increase the $\ell^1$-, the $\ell^2$-, and the supremum norm of a $1$-form, each taken with the weight of its lattice, because every bond of $T^{(j-1)}$ lies on exactly $L$ of the lines $[x, x']$ of the bonds $c$ of one direction.
+
+The averages of higher order are compositions, and so are their relative versions: the background of the step $l + 1$ is the average of order $l$ of the background \cite[(90), (91), p.~31]{BalabanAVG}, \cite[(3.15), p.~393]{BalabanPBG}.
+
+\begin{definition}[Relative Averages of Higher Order]\label{def:relative-average-order}
+Let $0 \leq i < j \leq k$, $n \coloneqq j - i$, let $\mathbf U$ be a configuration on $T^{(i)}$ and $A$ a $1$-form on $T^{(i)}$ with values in $\mathfrak g^c$. Put $\mathbf U^{(l)} \coloneqq M^l(\mathbf U)$, $A^{(0)} \coloneqq A$, and, for $0 \leq l < n$,
+\[
+    a_{i+l+1}A^{(l+1)} \coloneqq \frac{1}{i}\operatorname{Log}\mathcal M_{\mathbf U^{(l)}}(A^{(l)})\;.
+\]
+The \emph{linear part} and the \emph{remainder of order $n$} are defined by $A^{(n)} = Q_n(\mathbf U)A + a_j^{-1}C_n(\mathbf U; a_jA)$ with $Q_n(\mathbf U)$ linear and $C_n(\mathbf U; \cdot)$ vanishing to the second order, so that
+\begin{equation}\label{eq:composite-linear-part}
+    Q_n(\mathbf U) = Q(\mathbf U^{(n-1)})\cdots Q(\mathbf U^{(1)})Q(\mathbf U^{(0)})\;,
+\end{equation}
+and $Q'_n(\mathbf U) \coloneqq Q'(\mathbf U^{(n-1)})\cdots Q'(\mathbf U^{(0)})$.
+\end{definition}
+
+\begin{proposition}[Relative Averages of Higher Order]\label{prop:relative-average-order}
+There are numbers $c'_4 \in (0, c_4]$, $C'_2$, and $C'_3$, which depend on $L$ and $G$ only, with the following properties. Let $0 \leq i < j \leq k$ and $n = j - i$, let $c$ be a bond of $T^{(j)}$, and let $\mathsf B_c$ be the set of the bonds of $T^{(i)}$ with both ends in $B^n(c_-) \cup B^n(c_+)$. Let $U$ be a gauge field on $T^{(i)}$ with $\abs{U(\partial p) - \id} \leq \alpha_0(a_i/a_j)^2$ on the plaquettes with corners in $B^n(c_-) \cup B^n(c_+)$, let $A'$ and $A$ be $1$-forms with values in $\mathfrak g^c$ on $\mathsf B_c$ with $\abs{a_jA'} \leq \alpha_1$ and $\abs{a_jA} < c'_4$, where $\alpha_0, \alpha_1 \leq c'_4$, and let $\mathbf U \coloneqq e^{ia_iA'}U$.
+\begin{enumerate}[label=(\roman*)]
+\item The averages $M^l(e^{ia_iA}\mathbf U)$, $l \leq n$, on the bonds between the blocks concerned, and the forms $A^{(l)}$ are defined, they are holomorphic in $(A', A)$, and they depend only on $U$, $A'$, and $A$ on $\mathsf B_c$. There are gauge transformations $v_n(A)$ of $T^{(j)}$, holomorphic and local in the same sense, with $v_n(0) = \id$, such that
+\begin{equation}\label{eq:average-of-product-order}
+\begin{aligned}
+    M^n(e^{ia_iA}\mathbf U)(c) &= v_n(A)(c_-)\,e^{iX_n(c)}\,M^n(\mathbf U)(c)\,v_n(A)(c_+)^{-1}\;,\\
+    X_n(c) &\coloneqq a_j\bigl(Q_n(\mathbf U)A\bigr)(c) + C_n(\mathbf U; a_jA)(c)\;.
+\end{aligned}
+\end{equation}
+\item $\abs{(Q_n(\mathbf U)A)(c)} \leq (1 + C'_2(\alpha_0 + \alpha_1))\abs A_{\mathsf B_c}$ and $\abs{(Q'_n(\mathbf U)\lambda)(y)} \leq (1 + C'_2(\alpha_0 + \alpha_1))\abs\lambda_{B^n(y)}$.
+\item $\abs{C_n(\mathbf U; a_jA)(c)} \leq C'_2\abs{a_jA}^2$, and its derivative in a direction $\delta A$ is at most $C'_3\abs{a_jA}\abs{a_j\,\delta A}$, with the suprema over $\mathsf B_c$.
+\item $\abs{\frac{1}{i}\operatorname{Log}v_n(A)(y)} \leq C'_2\abs{a_jA}_{B^n(y)}$.
+\item The covariance of Proposition~\ref{prop:relative-average}\emph{(ii)} and the relation $Q_n(\mathbf U)D_{\mathbf U} = D_{M^n(\mathbf U)}Q'_n(\mathbf U)$ hold, and $Q_n$, $Q'_n$, and $C_n$ are Lipschitz continuous in $a_jA'$ with a constant $C'_3$ in the norms of \emph{(ii)} and \emph{(iii)}.
+\item $\abs{M^n(e^{ia_iA}\mathbf U)(c)M^n(\mathbf U)(c)^{-1} - \id} \leq C'_3\abs{a_jA}_{\mathsf B_c}$.
+\end{enumerate}
+The constants do not depend on $n$.
+\end{proposition}
+
+This is \cite[Propositions~4--7, pp.~38--43]{BalabanAVG} with \cite[(88), (92), (97), (99), pp.~31--32]{BalabanAVG} for the factors $v_n$. The point of the statement is the uniformity in the order $n$. The plaquettes of the averages $M^l(U)$ and the fields $A^{(l)}$ are measured in the units of their scales, in which the hypotheses reproduce themselves from one step to the next by Proposition~\ref{prop:regular-averages} and by (iii), and the complex part of the background is carried along as a second fluctuation: by \eqref{eq:average-of-product-order} for the pair $(U, A')$, each $M^l(\mathbf U)$ is a gauge transform of $e^{ia_{i+l}A'_l}M^l(U)$ with $\abs{a_{i+l}A'_l}$ of the order $\alpha_1a_{i+l}/a_j$. No bound on the differences of $A'$ is assumed.
+
+The gauge transformation which takes a field to the axial gauge of a background \cite[(106), p.~33]{BalabanAVG} and the averages of gauge transformations \cite[Sect.~F]{BalabanAVG} are built from the site factors $v_n$. They are stated in Section~5 together with the gauge conditions, since their statements refer to a sequence of domains.
+
+\setcounter{section}{3}
+\section{Propagators in a Background Field}\label{sec:propagators}
+
+The fluctuation integral of a renormalisation step is Gaussian to leading order. Its quadratic form is the second variation of the action at the background, to which the constraints on the averages and a gauge-fixing term are added, and everything which the later sections compute is expressed through the inverses of a small number of operators built in this way. This section defines the operators, on a sequence of domains and at a pair of a complex configuration and a current, and states their properties: their analyticity and covariance, the decay and the regularity of their kernels, and their expansions into sums over walks of local operators. The expansions are part of the statements and not only of the proofs, because the main paper compares them term by term on two lattices.
+
+\subsection{The Forms and the Operators}\label{sec:forms}
+
+Throughout this section a sequence of domains with the block size $M$ and the separation $R$ is given, with its layers $\Gamma_j$ and its determining set $\mathbf B$, and $\mathbf U$ is a configuration on the fine lattice $T_\eta$ for which the averages $\mathbf U^{(j)} \coloneqq M^j(\mathbf U)$ and the operators $Q_j(\mathbf U)$, $Q'_j(\mathbf U)$ of Definition~\ref{def:relative-average-order} are defined on the bonds and sites concerned. Forms are forms on $T_\eta$ with values in $\mathfrak g^c$, and $D$, $D^*$, $\nabla$, and the covariant Laplacian carry the index $\mathbf U$ unless another configuration is named. In addition a \emph{Dirichlet domain} $\Omega_\mathrm D \subset \mathbb T$ is given, which is either the torus or a union of cubes of the grid of side $M\eta$ which contains $\Omega_1$; forms are then required to vanish at the sites and bonds outside $\Omega_\mathrm D$, and an operator $\mathcal A$ is replaced by its compression $\chi\mathcal A\chi$ with the indicator $\chi$ of $\Omega_\mathrm D$, which we do not write. The case of a proper subset is needed for the local operators of Section~\ref{sec:walks}.
+
+\begin{definition}[The Second Variation of the Action]\label{def:hessian}
+The operator $\Delta(\mathbf U)$ on $1$-forms is the operator which is symmetric with respect to the pairing \eqref{eq:pairing} and satisfies
+\begin{equation}\label{eq:action-expansion}
+    A(e^{i\eta A}\mathbf U) = A(\mathbf U) + \langle A, J(\mathbf U)\rangle + \frac{1}{2}\langle A, \Delta(\mathbf U)A\rangle + O(A^3)
+\end{equation}
+for $1$-forms $A$ with values in $\mathfrak g^c$, where $e^{i\eta A}\mathbf U$ is the configuration with the values $e^{i\eta A(b)}\mathbf U(b)$ on the positive bonds.
+\end{definition}
+
+The expansion \eqref{eq:action-expansion} is \cite[(3.7), (3.12), pp.~391--392]{BalabanPBG}. Its linear term is the pairing with the current \eqref{eq:current}: the first variation of a plaquette term pairs $D_{\mathbf U}A$ with $\eta^{-2}\im\mathbf U(\partial p)$, and since $A$ has values in $\mathfrak g^c$ only the projection $\pi$ of the latter contributes.
+
+\begin{definition}[The Operators of a Sequence]\label{def:operators}
+Let $\mathsf a > 0$, and let $\mathsf a_0 \coloneqq \mathsf a_1 \coloneqq \mathsf a$ and $\mathsf a_{j+1} \coloneqq \mathsf a\mathsf a_j/(\mathsf aL^{-2} + \mathsf a_j)$.
+\begin{enumerate}[label=(\roman*)]
+\item The \emph{averages of the sequence} are the maps $Q$, from $1$-forms on $T_\eta$ to functions on the bonds of the layers, and $Q'$, from $0$-forms on $T_\eta$ to functions on $\mathbf B$, with
+\[
+    (QA)(c) \coloneqq \bigl(Q_j(\mathbf U)A\bigr)(c) \text{ for a bond } c \text{ of } \Gamma_j\;,
+    \qquad
+    (Q'\lambda)(y) \coloneqq \bigl(Q'_j(\mathbf U)\lambda\bigr)(y) \text{ for } y \in \Gamma_j\;,
+\]
+where $Q_0$ and $Q'_0$ are the identity. The \emph{constraint forms} are
+\begin{equation}\label{eq:constraint-forms}
+\begin{aligned}
+    \langle A, Q^*\mathsf aQA\rangle &\coloneqq \mathsf a\sum_{j=0}^{k}\sum_{c}a_j^2\tr\bigl((QA)(c)\bigr)^2\;,\\
+    \langle\lambda, Q'^*\mathsf aQ'\lambda\rangle &\coloneqq \sum_{j=0}^{k}\mathsf a_j\sum_{y \in \Gamma_j}a_j^2\tr\bigl((Q'\lambda)(y)\bigr)^2\;,
+\end{aligned}
+\end{equation}
+the inner sum of the first over the positive bonds of $\Gamma_j$, and $Q^*\mathsf aQ$, $Q'^*\mathsf aQ'$ are the symmetric operators of these forms.
+\item $\Delta'_{\mathsf a} \coloneqq \Delta_{\mathbf U} + Q'^*\mathsf aQ'$ on $0$-forms, and $G' \coloneqq (\Delta'_{\mathsf a})^{-1}$.
+\item $R \coloneqq I - G'Q'^*(Q'G'^2Q'^*)^{-1}Q'G'$ and $P \coloneqq I - R$, operators on $0$-forms, where $Q'^*$ is the transpose of $Q'$ with respect to the pairing \eqref{eq:pairing} and the pairing $\sum_{y \in \mathbf B}a_{j(y)}^4\tr\mu(y)\mu'(y)$ of functions on $\mathbf B$.
+\item $\Delta_{\mathsf a} \coloneqq \Delta(\mathbf U) + DRD^* + Q^*\mathsf aQ$ on $1$-forms, and $G \coloneqq (\Delta_{\mathsf a})^{-1}$.
+\end{enumerate}
+The inverses are taken on the forms which vanish outside the Dirichlet domain, and each operator is defined whenever the inverses in its definition exist.
+\end{definition}
+
+These are the operators \cite[(3.16), (3.18)--(3.27), pp.~393--395]{BalabanPBG}. For a gauge field the pairings are real scalar products, $R$ is the orthogonal projection onto the image of the kernel of $Q'$ under the covariant Laplacian \cite[(3.21), (3.25)]{BalabanPBG}, and $DRD^*$ is the quadratic form of the gauge-fixing term. For a complex configuration the formulae are the definitions.
+
+\begin{definition}[Regular Pairs]\label{def:regular-pairs}
+\begin{enumerate}[label=(\roman*)]
+\item A \emph{cube of the class} of the sequence, of the index $j$, is a cube $\square$ which is a union of cubes of the grid of side $Ma_j$, has a side $s_\square$ with $10Ma_j \leq s_\square \leq 20Ma_j$, is contained in $\Omega_j \setminus \Omega_{j+2}$, and meets $\Omega_j \setminus \Omega_{j+1}$.
+\item A gauge field $U$ on $T_\eta$ is \emph{regular with the constant $\alpha_0$} if for every cube $\square$ of the class, of the index $j$, there is a gauge transformation $u$ on $\square$ with values in $G$ such that $U^u = e^{i\eta A}$ on the bonds of $\square$ with a $1$-form $A$ with values in $\mathfrak g$ and
+\begin{equation}\label{eq:regular}
+    \abs A \leq \frac{s_\square}{a_j}\,\alpha_0a_j^{-1}\;,
+    \qquad
+    \abs{\nabla_{\id}A} \leq \frac{s_\square}{a_j}\,\alpha_0a_j^{-2}
+\end{equation}
+on $\square$. It is \emph{regular to the second order} if in addition $\abs{D^*_{\id}D_{\id}A} \leq (s_\square/a_j)\alpha_0a_j^{-3}$ on $\square$.
+\item A configuration $\mathbf U$ on $T_\eta$ is \emph{regular with the constants $(\alpha_0, \alpha_1)$} if $\mathbf U = e^{i\eta A'}U$ with a gauge field $U$ which is regular with the constant $\alpha_0$ and a $1$-form $A'$ with values in $\mathfrak g^c$ such that
+\begin{equation}\label{eq:regular-complex}
+    \abs{A'(b)} \leq \alpha_1a_j^{-1}\;,
+    \qquad
+    \abs{(\nabla_UA')(x)} \leq \alpha_1a_j^{-2}
+\end{equation}
+for the bonds $b$ and the sites $x$ of $\Omega_j$, $0 \leq j \leq k$. It is \emph{regular to the second order} if $U$ is and $\abs{D^*_UD_UA'} \leq \alpha_1a_j^{-3}$ on $\Omega_j$.
+\item A pair $(\mathbf U, \mathbf J)$ is \emph{regular with the constants $(\alpha_0, \alpha_1, \gamma)$} if $\mathbf U$ is regular with $(\alpha_0, \alpha_1)$ and $\abs{\mathbf J(b)} \leq \gamma a_j^{-3}$ for the bonds $b$ of $\Omega_j$, $0 \leq j \leq k$.
+\end{enumerate}
+\end{definition}
+
+These are the conditions \cite[(3.35)--(3.38), p.~396]{BalabanPBG}; the operators of this subsection do not involve the current, which enters with the operators of the Landau gauge.
+
+\subsection{Decay and Regularity}\label{sec:propagator-bounds}
+
+\begin{theorem}[The Operators $G'$, $(Q'G'^2Q'^*)^{-1}$, $P$, and $G$]\label{thm:propagators}
+Let $\mathsf a = 1$. There are numbers $M_1$, $R_1$, $\delta_0 > 0$, $a_0 > 0$, and $B_0$, and numbers $B_0(\beta)$ for $0 \leq \beta < 1$ and $B'_0(\epsilon, \beta)$ for $0 < \epsilon \leq 1$ and $0 \leq \beta < 1$, all depending on $L$ and $G$ only, with the following properties. Let a sequence of domains with $M \geq M_1$ and $R \geq R_1$ be given, with a Dirichlet domain, and let $\mathbf U = e^{i\eta A'}U$ be regular with constants $(\alpha_0, \alpha_1)$ such that $M\alpha_0 + \alpha_1 \leq a_0$.
+\begin{enumerate}[label=(\roman*)]
+\item \emph{Existence.} The operators $\Delta'_{\mathsf a}$, $Q'G'^2Q'^*$, and $\Delta_{\mathsf a}$ are invertible, so that $G'$, $R$, $P$, and $G$ are defined. For a gauge field, $\Delta'_{\mathsf a}$, $G'$, $Q'G'^2Q'^*$, $\Delta_{\mathsf a}$, and $G$ are symmetric and positive definite with respect to the scalar products of the forms with values in $\mathfrak g$.
+\item \emph{Analyticity.} For a fixed regular gauge field $U$ the four operators are holomorphic functions of $A'$ on the set \eqref{eq:regular-complex}.
+\item \emph{Covariance.} For a gauge transformation $u$ of $T_\eta$ with values in $G$, $G'(\mathbf U^u) = R(u)G'(\mathbf U)R(u)^{-1}$, and the same holds for $R$, $P$, $\Delta_{\mathsf a}$, and $G$; the kernel of $(Q'G'^2Q'^*)^{-1}$ is conjugated by the values of $u$ at the points of $\mathbf B$. All the bounds below are invariant under these transformations.
+\item \emph{Pointwise bounds.} Let $y \in \Gamma_j$, $y' \in \Gamma_{j'}$, $x \in \Delta(y)$, and let $\lambda$ be a $0$-form supported in $\Delta(y')$. Then
+\begin{equation}\label{eq:propagator-bound}
+    \abs{(G'\lambda)(x)} \leq B_0a_j^2e^{-\delta_0d(y, y')}\abs\lambda\;,
+    \qquad
+    \abs{(\nabla G'\lambda)(x)},\ \abs{(G'\nabla^*\lambda)(x)} \leq B_0a_je^{-\delta_0d(y, y')}\abs\lambda\;,
+\end{equation}
+and $\abs{(\Delta_{\mathbf U}G'\lambda)(x)} \leq B_0e^{-\delta_0d(y, y')}\abs\lambda$.
+\item \emph{H\"older bounds.} Let $0 \leq \beta \leq \beta_0 < 1$ and $0 < \epsilon \leq 1$, let $\zeta$ be a real function supported in $\tilde\Delta(y)$, and let $\lambda$ be supported in $\tilde\Delta(y')$. Then
+\begin{align}
+    \norm{\zeta\nabla G'\lambda}_\beta,\ \norm{\zeta G'\nabla^*\lambda}_\beta &\leq B_0(\beta_0)a_j^{1-\beta}\bigl(\norm\zeta_\beta^{(j)} + \abs\zeta\bigr)e^{-\delta_0d(y, y')}\abs\lambda\;,\label{eq:propagator-holder}\\
+    \abs{(\nabla G'\nabla^*\lambda)(x)} &\leq B'_0(\epsilon, 0)e^{-\delta_0d(y, y')}\bigl(\norm\lambda_\epsilon^{(j')} + \abs\lambda\bigr)\;,\label{eq:propagator-second}\\
+    \norm{\zeta\nabla G'\nabla^*\lambda}_\beta &\leq B'_0(\epsilon, \beta_0)a_j^{-\beta}\bigl(\norm\zeta_\beta^{(j)} + \abs\zeta\bigr)e^{-\delta_0d(y, y')}\bigl(\norm\lambda_{\beta+\epsilon}^{(j')} + \abs\lambda\bigr)\;,\label{eq:propagator-second-holder}
+\end{align}
+the last for $\beta + \epsilon \leq 1$.
+\item \emph{Bounds in $L^2$.} For a function $h$ supported in $\Delta(y)$ and $\lambda$ supported in $\Delta(y')$, the $L^2$-norms of $hG'\lambda$, of $h\nabla G'\lambda$ and $hG'\nabla^*\lambda$, and of $h\nabla\nabla G'\lambda$, $h\nabla G'\nabla^*\lambda$, and $hG'\nabla^*\nabla^*\lambda$ are at most $B_0\abs he^{-\delta_0d(y, y')}\norm\lambda$ times $a_j^2$, $a_j$, and $1$, respectively.
+\item \emph{The block inverse and the projection.} For $y \in \Gamma_j$ and $y' \in \Gamma_{j'}$ the kernel of $(Q'G'^2Q'^*)^{-1}$ with respect to the pairing of Definition~\ref{def:operators}\emph{(iii)} satisfies
+\begin{equation}\label{eq:block-inverse-bound}
+    \abs{(Q'G'^2Q'^*)^{-1}(y, y')} \leq B_0a_j^{-4}a_{j'}^{-4}e^{-\delta_0d(y, y')}\;,
+\end{equation}
+and for $x \in \Delta(y)$, $x' \in \Delta(y')$ the kernels of $P$, $\nabla P$, $P\nabla^*$, and $\nabla P\nabla^*$ with respect to \eqref{eq:pairing} are at most $B_0a_{j'}^{-4}e^{-\frac{1}{2}\delta_0d(y, y')}$ times $1$, $a_j^{-1}$, $a_j^{-1}$, and $a_j^{-2}$, respectively.
+\item \emph{The operator $G$.} The bounds \emph{(iv)}--\emph{(vi)} hold for $G$ in the place of $G'$ and $1$-forms $J$ with values in $\mathfrak g^c$ in the place of $\lambda$, the gradients being those of Definition~\ref{def:differences}\emph{(iii)}.
+\end{enumerate}
+In \emph{(iv)}--\emph{(viii)} the norm of a kernel or of a value is the bond norm of the matrix, or the norm of the linear map of $\mathfrak g^c$ which it defines, and $d$ is the weighted distance of the sequence.
+\end{theorem}
+
+This combines \cite[Theorems~3.1--3.4, Corollaries~3.5, 3.6, pp.~397--408]{BalabanPBG} with \cite[(3.48), (3.49)]{BalabanPBG}; at the trivial configuration it contains \cite[Propositions~2.2, 2.3, 2.6]{BalabanPRT2}. The constants do not depend on the sequence, on the Dirichlet domain, on $k$, or on the torus, so that the theorem applies to the local sequences of the cubes in Section~\ref{sec:walks} and to sequences with a block size other than that of the localisation domains. A power of the spacing in a bound may be divided between the two points: by Lemma~\ref{lem:distance}(ii), $a_j^\sigma e^{-\delta d(y, y')}$ is at most a constant times $a_{j'}^\sigma e^{-\delta'd(y, y')}$ for every $\delta' < \delta$ once $RM$ is large, depending on $\sigma$, $\delta - \delta'$, and $L$.
+
+\subsection{Walks}\label{sec:walks}
+
+The bounds of Theorem~\ref{thm:propagators} are obtained from the same bounds for operators on single cubes, where the background can be made small by a gauge transformation, and the passage from the cubes to the lattice is an expansion of each inverse into a sum over walks through overlapping cubes \cite[Sect.~C]{BalabanPBG}. We describe the cubes, the operators attached to them, and the expansions. In this subsection the Dirichlet domain of the given sequence is the torus.
+
+\begin{definition}[The Cubes of the Walks and Their Local Sequences]\label{def:walk-cubes}
+Let $R_0$ and $M_0$ be powers of $L$, and let $M = KR_0M_0$ with a positive integer $K$ which is a power of $L$.
+\begin{enumerate}[label=(\roman*)]
+\item For $0 \leq j \leq k$ the family $\mathscr D_j$ consists of the closed cubes of side $2Ma_j$ whose centre is a corner of a cube of the grid of side $Ma_j$, which are contained in $\Omega_j$, and which contain a cube of that grid which is not contained in $\Omega_{j+1}$. We put $\mathscr D \coloneqq \bigcup_j\mathscr D_j$, and for $\square \in \mathscr D_j$ and $n \geq 1$ we write $\tilde\square^n$ for the cube of side $(2 + 2n)Ma_j$ with the centre of $\square$.
+\item The \emph{local sequence} of $\square \in \mathscr D_j$ is the sequence of domains $\Omega_0(\square) \supset \dots \supset \Omega_{j+1}(\square)$, and $\Omega_n(\square) \coloneqq \emptyset$ for $n > j + 1$, with
+\[
+    \Omega_{j+1}(\square) \coloneqq \tilde\square^3 \cap \Omega_{j+1}\;,
+    \qquad
+    \Omega_j(\square) \coloneqq \tilde\square^4\;,
+\]
+and, for $0 \leq n < j$, with $\Omega_n(\square)$ the cube with the centre of $\square$ for which
+\begin{equation}\label{eq:local-sequence}
+    \dist\bigl(\Omega_n(\square)^c, \Omega_{n+1}(\square)\bigr) = 2R_0M_0a_n\;.
+\end{equation}
+It is a sequence of domains with the block size $M_0$ and the separation $R_0$, and its Dirichlet domain is $\Omega_0(\square)$, which is contained in $\tilde\square^5$.
+\item The \emph{local operators} $G'_\square$, $C_\square \coloneqq (Q'G'^2_\square Q'^*)^{-1}$, $P_\square \coloneqq G'_\square Q'^*C_\square Q'G'_\square$, and $G_\square$ are the operators of Definition~\ref{def:operators} for the local sequence of $\square$, at the same configuration $\mathbf U$.
+\end{enumerate}
+\end{definition}
+
+By \eqref{eq:local-sequence}, $\dist(\Omega_n(\square)^c, \tilde\square^4) = 2R_0M_0a_n(L^{j-n} - 1)/(L - 1) < 2R_0M_0a_j \leq 2Ma_j$, which gives $\Omega_0(\square) \subset \tilde\square^5$, and the boundaries of the cubes $\Omega_n(\square)$ lie on the boundaries of cubes of the grid of side $M_0a_n$, because $M/M_0$ and $L$ are odd. The cubes of $\mathscr D$ cover the torus: a point of $\Omega_j \setminus \Omega_{j+1}$ lies in a cube of side $2Ma_j$ centred at a corner of the grid at the distance at least $Ma_j$ from $\Omega_j^c$, which is contained in $\Omega_j$. A cube of $\mathscr D_j$ may reach into $\Omega_{j+1}$, by one cube of the grid, and it does not meet $\Omega_{j+2}$ once $R \geq 2$. On such a cube the layers of the local sequence are therefore those of the given one, $\square \cap \Omega_{j+1}(\square) = \square \cap \Omega_{j+1}$ and $\square \subset \Omega_j(\square)$, so that the averages of the two sequences coincide on the forms supported in $\square$. The local sequences are those of \cite[p.~408]{BalabanPBG}, and the local operators are controlled by Theorem~\ref{thm:propagators} for these sequences.
+
+\begin{lemma}[A Partition of Unity]\label{lem:partition-of-unity}
+For every sequence of domains there are functions $h_\square \colon \mathbb T \to [0, 1]$, $\square \in \mathscr D$, with the following properties.
+\begin{enumerate}[label=(\roman*)]
+\item $\sum_{\square \in \mathscr D}h_\square^2 = 1$, and $h_\square$ vanishes outside the cube with the centre of $\square$ and the side $\frac{4}{3}Ma_j$, for $\square \in \mathscr D_j$.
+\item $h_\square$ is constant on each cube of the grid of side $a_0$, and $\abs{h_\square(x) - h_\square(x')} \leq C_h\abs{x - x'}_\infty(Ma_j)^{-1}$ with an absolute constant $C_h$, with the corresponding bounds $C_h(Ma_j)^{-2}$ for its second differences.
+\item $h_\square$ is determined by the domains of the sequence inside $\tilde\square^2$, and the family is covariant under the translations, reflections, and permutations of the coordinates which map every grid to itself: if $\theta$ maps the sequence $\{ \Omega_j \}$ to $\{ \theta\Omega_j \}$, then the functions of the latter are $h_{\theta\square} = h_\square \circ \theta^{-1}$.
+\end{enumerate}
+\end{lemma}
+
+\begin{definition}[Commutators with the Partition of Unity]\label{def:commutators}
+For a function $h$ on $T_\eta$, regarded as a multiplication operator on forms, and on functions on $\mathbf B$ through its values at the points of $\mathbf B$,
+\begin{gather*}
+    K'(h) \coloneqq [h, \Delta'_{\mathsf a}]\;,
+    \qquad
+    K(h) \coloneqq [h, \Delta(\mathbf U) + DD^* + Q^*\mathsf aQ]\;,\\
+    P_1(h) \coloneqq [DPD^*, h]\;,
+    \qquad
+    P_{\square,1}(h) \coloneqq [DP_\square D^*, h]\;.
+\end{gather*}
+\end{definition}
+
+So $\Delta'_{\mathsf a}h = h\Delta'_{\mathsf a} - K'(h)$ and $\Delta_{\mathsf a}h = h\Delta_{\mathsf a} - K(h) - P_1(h)$, which are \cite[(3.88), (3.104)]{BalabanPBG}. The operators $K'(h_\square)$ and $K(h_\square)$ are sums of difference operators of the first order with coefficients which are differences of $h_\square$ and of operators which couple the points of a block.
+
+\begin{theorem}[The Walk Expansions]\label{thm:walks}
+There are numbers $R_0$, $M_0$, $K_1$, and $C_{\mathrm w}$, which depend on $L$ and $G$ only, such that for $M = KR_0M_0$ with $K \geq K_1$, for every sequence of domains with the block size $M$, the separation $R \geq R_1$, and the torus as its Dirichlet domain, and for every configuration $\mathbf U$ as in Theorem~\ref{thm:propagators}, the following holds, with the constants $\delta_0$ and $B_0$ of that theorem.
+\begin{enumerate}[label=(\roman*)]
+\item \emph{The first approximations.} Let $G'_0 \coloneqq \sum_\square h_\square G'_\square h_\square$, $C_0 \coloneqq \sum_\square h_\square C_\square h_\square$, and $G_0 \coloneqq \sum_\square h_\square G_\square h_\square$, the sums over $\square \in \mathscr D$. Then
+\begin{align}
+    \Delta'_{\mathsf a}G'_0 &= I - R'\;, & R' &\coloneqq \sum_\square K'(h_\square)G'_\square h_\square\;,\label{eq:first-remainder-scalar}\\
+    Q'G'^2Q'^*C_0 &= I - R_C\;, & R_C &\coloneqq -\sum_\square\Bigl(Q'(G'^2 - G'^2_\square)Q'^*h_\square + [Q'G'^2_\square Q'^*, h_\square]\Bigr)C_\square h_\square\;,\label{eq:first-remainder-block}\\
+    \Delta_{\mathsf a}G_0 &= I - R_G\;, & R_G &\coloneqq \sum_\square\Bigl(K(h_\square) + (DPD^* - DP_\square D^*)h_\square + P_{\square,1}(h_\square)\Bigr)G_\square h_\square\;.\label{eq:first-remainder}
+\end{align}
+\item \emph{The series.} $G' = G'_0\sum_{n \geq 0}R'^n$, $(Q'G'^2Q'^*)^{-1} = C_0\sum_{n \geq 0}R_C^n$, and $G = G_0\sum_{n \geq 0}R_G^n$, each series converging in the norms of the bounds of Theorem~\ref{thm:propagators} for its operator.
+\item \emph{The walks of $G'$.} For a sequence $\omega = (\square_0, \dots, \square_n)$ of cubes of $\mathscr D$ with $\square_{i-1} \cap \square_i \neq \emptyset$, of the length $\abs\omega \coloneqq n$, let
+\begin{equation}\label{eq:walk-term}
+    G'_\omega \coloneqq h_{\square_0}G'_{\square_0}h_{\square_0}\prod_{i=1}^{n}K'(h_{\square_i})G'_{\square_i}h_{\square_i}\;.
+\end{equation}
+Then $G' = \sum_\omega G'_\omega$. Each $G'_\omega$ is a holomorphic function of the configuration which depends only on its values on the bonds of $\tilde\square_0^5 \cup \dots \cup \tilde\square_n^5$, and it is covariant under gauge transformations as $G'$ is.
+\item \emph{The bound of a factor and of a walk.} For $\square \in \mathscr D_j$, $y, y' \in \square \cap \mathbf B$, $x \in \Delta(y)$, and $\lambda$ supported in $\Delta(y')$,
+\begin{equation}\label{eq:walk-factor-bound}
+    \abs{(K'(h_\square)G'_\square h_\square\lambda)(x)} \leq C_{\mathrm w}M^{-1}e^{-\delta_0\abs{y - y'}_1/a_j}\abs\lambda\;,
+\end{equation}
+and for a walk $\omega$, $y \in \square_0 \cap \Gamma_j$, $y' \in \square_n \cap \mathbf B$, $x \in \Delta(y)$, and $\lambda$ supported in $\Delta(y')$,
+\begin{equation}\label{eq:walk-bound}
+    \abs{(G'_\omega\lambda)(x)} \leq B_0a_j^2\bigl(C_{\mathrm w}M^{-1}\bigr)^{\abs\omega}e^{-\frac{1}{2}\delta_0d(\omega, y, y')}\abs\lambda\;,
+\end{equation}
+where $d(\omega, y, y')$ is the infimum of $d(y, y_1) + d(y_1, y_2) + \dots + d(y_n, y')$ over the points $y_i \in \square_i \cap \mathbf B$. The corresponding bounds hold in the other norms of Theorem~\ref{thm:propagators}\emph{(iv)}--\emph{(vi)}.
+\item \emph{The remainders.} The kernels of $R'$ and of $R_G$ are bounded by $C_{\mathrm w}M^{-1}e^{-\frac{1}{2}\delta_0d(y, y')}$ in the sense of \eqref{eq:walk-factor-bound}, and that of $R_C$ by $C_{\mathrm w}M^{-1}a_{j'}^{-4}e^{-\frac{1}{2}\delta_0d(y, y')}$ for $y \in \Gamma_j$, $y' \in \Gamma_{j'}$.
+\end{enumerate}
+\end{theorem}
+
+The parts (i)--(iv) are \cite[(3.87)--(3.96), (3.104)--(3.106), Theorem~3.7, Corollary~3.8]{BalabanPBG}. The remainders $R_C$ and $R_G$ are written here in a form in which the cancellation between the given operators and the local ones is visible; they equal those of \cite[(3.95), (3.105)]{BalabanPBG}, which insert the indicator of $\tilde\square^1$ and the function $\zeta_\square$ in order to separate the terms with a small factor from an overall decay from those with a small commutator. The identities \eqref{eq:first-remainder-scalar}--\eqref{eq:first-remainder} use that the given operators and the local ones coincide on forms supported in $\square$, apart from the projections: for example $h_\square\Delta_{\mathsf a}G_\square h_\square = h_\square^2 - h_\square(DPD^* - DP_\square D^*)G_\square h_\square$, since $\Delta_{\mathsf a}$ and the local operator differ by $D(P_\square - P)D^*$ there.
+
+The remainders $R_C$ and $R_G$ still contain the operators $G'$ and $P$ of the whole lattice. The expansions of the block inverse and of $G$ into walks whose terms are products of local operators only, \cite[Theorems~3.9, 3.10]{BalabanPBG}, are obtained by inserting the walk expansion of $G'$ into them.
+
+\subsection{The Operators of the Landau Gauge}\label{sec:landau-operators}
+
+The background field of a step is the minimiser of the action with prescribed averages, and to second order the problem is linear: one minimises $\frac{1}{2}\langle A, \Delta(\mathbf U)A\rangle$ among the $1$-forms with $QA = B$. The functional and the constraint are invariant under the gauge transformations $A \mapsto A - D\lambda$ with $Q'\lambda = 0$, by Proposition~\ref{prop:relative-average-order}(v), but only up to terms which contain the current, and the gauge is fixed by the condition $RD^*A = 0$. The solution operator of this problem and of a variant of it, in which the constraint is corrected to the second order, are the operators through which the background field and the covariance of the fluctuation are written in the later sections \cite[Sect.~D]{BalabanPBG}. In the formulae the current of the configuration appears explicitly, and following \cite[p.~261]{BalabanRG1} we define the operators at a pair, with the variable $\mathbf J$ in its place.
+
+\begin{definition}[The Operators at a Pair]\label{def:landau-operators}
+Let $(\mathbf U, \mathbf J)$ be a pair on $T_\eta$ for which the operators of Definition~\ref{def:operators} exist. For a $1$-form $A$ let $\lambda_A \coloneqq G'RD^*A$ and $\mathcal PA \coloneqq A - D\lambda_A$.
+\begin{enumerate}[label=(\roman*)]
+\item $\Delta'_\pi = \Delta'_\pi(\mathbf U, \mathbf J)$ is the symmetric operator on $1$-forms with $\langle A, \Delta'_\pi A\rangle = \langle X(A), \mathbf J\rangle$, where $X(A)$ is the $1$-form with
+\begin{equation}\label{eq:gauge-defect}
+    X(A)(b) \coloneqq i[\lambda_A(b_-), A(b)] - i[A(b), R(\mathbf U(b))\lambda_A(b_+)] - i[\lambda_A(b_-), (D\lambda_A)(b)]
+\end{equation}
+on the positive bonds $b$.
+\item $G_\pi \coloneqq (\Delta_{\mathsf a} - \Delta'_\pi)^{-1}$ and $H \coloneqq G_\pi Q^*(QG_\pi Q^*)^{-1}$, where $Q^*$ is the transpose of $Q$ with respect to \eqref{eq:pairing} and the pairing $\sum_ca_{j(c)}^4\tr\mu(c)\mu'(c)$ of functions on the positive bonds $c$ of the layers.
+\item For a $1$-form $A$ let $\mathsf C^{(2)}(A)$ be the function on the bonds of the layers which on a bond $c$ of $\Gamma_j$ equals $a_j^{-1}$ times the part of the second order in $A$ of the remainder $C_j(\mathbf U; a_jA)(c)$ of Definition~\ref{def:relative-average-order}. Then $\Delta^{(2)} = \Delta^{(2)}(\mathbf U, \mathbf J)$ is the symmetric operator with $\langle A, \Delta^{(2)}A\rangle = 2\langle H\mathsf C^{(2)}(A), \mathbf J\rangle$, and $\Delta^{(2)}_\pi \coloneqq \mathcal P^T\Delta^{(2)}\mathcal P$, with the transpose $\mathcal P^T = I - DRG'D^*$.
+\item $G_1 \coloneqq (\Delta_{\mathsf a} - \Delta'_\pi - \Delta^{(2)}_\pi)^{-1}$ and $H_1 \coloneqq G_1Q^*(QG_1Q^*)^{-1}$.
+\end{enumerate}
+\end{definition}
+
+These are \cite[(3.119)--(3.129), (3.134), (3.135)]{BalabanPBG} with $\mathbf J$ in the place of the current. The map $\mathcal P$ takes a $1$-form to the gauge $RD^*A = 0$ by a transformation with $Q'\lambda = 0$: indeed $Q'G'R = 0$ and $R^2 = R$ by the definition of $R$, so that $Q'\lambda_A = 0$, $\Delta_{\mathbf U}\lambda_A = RD^*A$, and $RD^*\mathcal PA = 0$.
+
+\begin{theorem}[The Operators of the Landau Gauge]\label{thm:landau-operators}
+Let $\mathsf a = 1$. There are numbers $a_2 > 0$, $\delta_1 > 0$, $B_1$, and $B_1(\beta)$, $B'_1(\epsilon, \beta)$ as in Theorem~\ref{thm:propagators}, which depend on $L$ and $G$ only, such that for every sequence of domains with $M \geq M_1$ and $R \geq R_1$ and every regular pair $(\mathbf U, \mathbf J)$ with constants $M\alpha_0 + \alpha_1 + \gamma \leq a_2$ the following holds.
+\begin{enumerate}[label=(\roman*)]
+\item \emph{Existence and analyticity.} The operators of Definition~\ref{def:landau-operators} exist, they are holomorphic in $(A', \mathbf J)$ for a fixed regular gauge field $U$, and
+\begin{equation}\label{eq:landau-series}
+    G_\pi = \sum_{n \geq 0}G(\Delta'_\pi G)^n\;,
+    \qquad
+    G_1 = \sum_{n \geq 0}G\bigl((\Delta'_\pi + \Delta^{(2)}_\pi)G\bigr)^n\;,
+\end{equation}
+with the operator $G$ of Definition~\ref{def:operators}, the series converging in the norms of \emph{(iii)}.
+\item \emph{The vertices.} For $1$-forms $A_1$ supported in $\Delta(y)$, $y \in \Gamma_j$, and $A_2$ supported in $\Delta(y')$, $y' \in \Gamma_{j'}$,
+\begin{equation}\label{eq:vertex-bound}
+    \abs{\langle A_1, \Delta'_\pi A_2\rangle} \leq B_1\gamma\bigl(\norm{D^*A_1}_{L^1} + a_j^{-1}\norm{A_1}_{L^1}\bigr)e^{-\frac{1}{2}\delta_0d(y, y')}\bigl(\abs{D^*A_2} + a_{j'}^{-1}\abs{A_2}\bigr)\;,
+\end{equation}
+where $\norm f_{L^1} \coloneqq \sum_x\eta^4\abs{f(x)}$, and for a bond $b$ of $\Delta(y)$, $\abs{(\Delta^{(2)}A)(b)} \leq B_1\gamma a_j^{-2}\abs A$ with the supremum of $A$ over the blocks $\Delta(y'')$ with $d(y, y'') \leq 2$.
+\item \emph{Bounds.} The operators $G_\pi$ and $G_1$ satisfy the bounds \emph{(iv)}--\emph{(vi)} of Theorem~\ref{thm:propagators} for $1$-forms, with the constants $B_1$, $B_1(\beta)$, $B'_1(\epsilon, \beta)$, and $\delta_1$, except the bound of the covariant Laplacian. For bonds $c$ of $\Gamma_j$ and $c'$ of $\Gamma_{j'}$,
+\begin{equation}\label{eq:block-form-inverse}
+    \abs{(QG_\pi Q^*)^{-1}(c, c')} \leq B_1a_j^{-2}a_{j'}^{-4}e^{-\delta_1d(c_-, c'_-)}\;,
+\end{equation}
+and the same holds with $G_1$. For $x \in \Delta(y)$, $y \in \Gamma_j$, a bond $c'$ of $\Gamma_{j'}$, a real function $\zeta$ supported in $\tilde\Delta(y)$, and $0 \leq \beta \leq \beta_0 < 1$, the kernels of $H$ and of $H_1$ satisfy
+\begin{equation}\label{eq:minimiser-kernel}
+\begin{aligned}
+    \abs{H(x, c')} + a_j\abs{\nabla H(x, c')} &\leq B_1a_{j'}^{-4}e^{-\frac{1}{2}\delta_1d(y, c'_-)}\;,\\
+    \norm{\zeta\nabla H(\cdot, c')}_\beta &\leq B_1(\beta_0)a_j^{-1-\beta}\bigl(\norm\zeta_\beta^{(j)} + \abs\zeta\bigr)a_{j'}^{-4}e^{-\frac{1}{2}\delta_1d(y, c'_-)}\;.
+\end{aligned}
+\end{equation}
+\item \emph{The current of the configuration.} If $\mathbf J = J(\mathbf U)$, then $\Delta(\mathbf U) - \Delta'_\pi = \mathcal P^T\Delta(\mathbf U)\mathcal P$, the form $\langle A, (\Delta(\mathbf U) - \Delta'_\pi)A\rangle$ is invariant under $A \mapsto A - D\lambda$ for $Q'\lambda = 0$, and
+\begin{equation}\label{eq:landau-identity}
+    RD^*G_\pi Q^* = 0\;,
+    \qquad
+    QG_\pi DR = 0\;,
+\end{equation}
+so that $QH = I$ and $RD^*H = 0$; the same identities hold for $G_1$ and $H_1$. If moreover $\mathbf U$ is a gauge field, then $G_\pi$, $G_1$, $QG_\pi Q^*$, and $QG_1Q^*$ are symmetric and positive definite, and $HB$ is the unique minimiser of $\frac{1}{2}\langle A, \Delta(\mathbf U)A\rangle$ among the $1$-forms with values in $\mathfrak g$ which satisfy $QA = B$ and $RD^*A = 0$.
+\end{enumerate}
+\end{theorem}
+
+This is \cite[Theorem~3.12]{BalabanPBG} with \cite[(3.124), (3.126), (3.130)--(3.138)]{BalabanPBG}. The identities \eqref{eq:landau-identity} rest on the gauge invariance of the action and do not hold at a pair whose second entry is not the current of the first. The bound \eqref{eq:block-form-inverse} is \cite[(3.132)]{BalabanPBG}, which is printed there without a proof.
+
+\subsection{The Propagator of the Fluctuation}\label{sec:fluctuation-propagator}
+
+After the background field has been split off, the fluctuation is a $1$-form with vanishing averages in the gauge $RD^*A = 0$, and its Gaussian measure has the quadratic form $\Delta(\mathbf U) - \Delta'_\pi - \Delta^{(2)}_\pi$ on this subspace. Its covariance is expressed through $G_1$ \cite[(3.139)--(3.153)]{BalabanPBG}.
+
+\begin{definition}[The Projection and the Covariance of the Constrained Fluctuation]\label{def:fluctuation-propagator}
+At a pair $(\mathbf U, \mathbf J)$ for which the operators of Definition~\ref{def:landau-operators} exist,
+\begin{equation}\label{eq:fluctuation-propagator}
+    \mathfrak P \coloneqq I - G_1Q^*(QG_1Q^*)^{-1}Q - G_1DRD^*\;,
+    \qquad
+    \mathfrak G \coloneqq G_1 - G_1DRD^*G_1 - G_1Q^*(QG_1Q^*)^{-1}QG_1\;.
+\end{equation}
+\end{definition}
+
+\begin{theorem}[The Propagator of the Fluctuation]\label{thm:fluctuation-propagator}
+Under the hypotheses of Theorem~\ref{thm:landau-operators}:
+\begin{enumerate}[label=(\roman*)]
+\item $\mathfrak P$ and $\mathfrak G$ are holomorphic in $(A', \mathbf J)$, and $\mathfrak G$ satisfies the bounds \emph{(iv)}--\emph{(vi)} of Theorem~\ref{thm:propagators} for $1$-forms, except that of the covariant Laplacian, with the constants of Theorem~\ref{thm:landau-operators}.
+\item If $\mathbf J = J(\mathbf U)$, then
+\begin{equation}\label{eq:gauge-fixing-identities}
+    RD^*G_1 = RG'D^*\;,
+    \qquad
+    G_1DR = DG'R\;,
+    \qquad
+    RD^*G_1DR = R\;,
+\end{equation}
+and consequently $Q\mathfrak P = 0$, $RD^*\mathfrak P = 0$, $\mathfrak P^2 = \mathfrak P$, $\mathfrak P A = A$ for every $A$ with $QA = 0$ and $RD^*A = 0$, and $\mathfrak G = \mathfrak PG_1 = G_1\mathfrak P^T$.
+\item If moreover $\mathbf U$ is a gauge field, then $\mathfrak G$ is symmetric and positive semidefinite, its range is the space $\mathcal S$ of the $1$-forms with values in $\mathfrak g$ which satisfy $QA = 0$ and $RD^*A = 0$, and for every $1$-form $J$ with values in $\mathfrak g$,
+\begin{equation}\label{eq:fluctuation-covariance}
+    \int_{\mathcal S}e^{\langle A, J\rangle}\,\dd\mu(A) = e^{\frac{1}{2}\langle J, \mathfrak GJ\rangle}\;,
+\end{equation}
+where $\mu$ is the Gaussian probability measure on $\mathcal S$ with the density proportional to $\exp(-\frac{1}{2}\langle A, (\Delta(U) - \Delta'_\pi - \Delta^{(2)}_\pi)A\rangle)$ with respect to the Lebesgue measure of $\mathcal S$.
+\end{enumerate}
+\end{theorem}
+
+This is \cite[Theorem~3.13]{BalabanPBG} with \cite[(3.147)--(3.153)]{BalabanPBG}. In (iii) the quadratic form is positive definite on $\mathcal S$ because on $\mathcal S$ it equals $\langle A, G_1^{-1}A\rangle$.
+
+\subsection{The Dependence on the Sequence}\label{sec:change-of-sequence}
+
+A term of the density is computed with the operators of its own sequence of domains, and different terms have different sequences. Where two sequences agree, their operators agree up to an error which decays in the distance to the region in which the sequences differ \cite[Theorem~3.14, pp.~426--427]{BalabanPBG}. We state this for two sequences which agree on a region of any shape, which is the form in which the localisation of the later sections uses it.
+
+\begin{theorem}[Change of the Sequence]\label{thm:change-of-sequence}
+Let $\{ \Omega_j \}$ and $\{ \Omega'_j \}$ be two sequences of domains with the same block size and separation, as in Theorem~\ref{thm:landau-operators}, and let $W \subset \mathbb T$ be a union of cubes of the grid of side $M\eta$ such that $\Omega_j \cap W = \Omega'_j \cap W$ for all $j$. Let $(\mathbf U, \mathbf J)$ be a pair which is regular with the constants of Theorem~\ref{thm:landau-operators} for both sequences. Let $\mathcal A$ and $\mathcal A'$ be the operators of one of the kinds $G'$, $(Q'G'^2Q'^*)^{-1}$, $P$, $G$, $G_\pi$, $G_1$, $(QG_\pi Q^*)^{-1}$, $(QG_1Q^*)^{-1}$, $H$, $H_1$, $\mathfrak G$ for the two sequences. Then, for points $y$, $y'$ of the determining sets which lie in $W$, the difference $\mathcal A - \mathcal A'$ satisfies every bound which Theorems~\ref{thm:propagators}, \ref{thm:landau-operators}, and~\ref{thm:fluctuation-propagator} state for $\mathcal A$ at the localisations $y$, $y'$, with a constant which depends on $L$ and $G$ only in the place of the constant of the bound, with half the decay rate, and with the additional factor
+\begin{equation}\label{eq:change-of-sequence}
+    \exp\Bigl(-\frac{1}{2}\delta_1\bigl(d(y, W^c) + d(y', W^c)\bigr)\Bigr)\;,
+\end{equation}
+where $d(y, W^c)$ is the infimum of the weighted distance of $y$ from the points of the complement of $W$, which is the same for both sequences.
+\end{theorem}
+
+For $W = \Omega_k \cap \Omega'_k$ and points of the lattice $T^{(k)}$ this is \cite[Theorem~3.14]{BalabanPBG}, whose factor \cite[(3.154)]{BalabanPBG} is the exponential of the smallest length of a path from $y$ to $y'$ through the complement of $W$. A path from a point of $W$ which leaves $W$ and stays in $W$ until then has the same weighted length for both sequences, so that $d(y, W^c)$ is well defined.
+
+\bibliographystyle{amsplain}
+\bibliography{refs}
+
+\end{document}

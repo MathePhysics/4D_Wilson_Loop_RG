@@ -131,7 +131,106 @@ rate comparison, the root sum for (Z), and the difference count 3748–3815.
 
 ## State
 
-- **14 Nov 2026, 00:27 (from `date`). RESUME HERE. F51 CLOSED IN THE MANUSCRIPTS BY ROUTE 2 (user's decision);
+- **14 Nov 2026, 02:46 (from `date`): supplement now `c54f9b5a9add` (247 pp., compiles): in S.14(d) the
+  alignment of the configurations of the `t`-integrand is taken from Proposition S.13(b) (minimisers of the two
+  runs at the same data on any determining set), not from its part (d), which is stated for the configurations
+  of an 𝐑-operation; `d̄_c` carries the constant `max(C_U, 2C_G(ε_0))`.**
+- **14 Nov 2026, 02:45 (from `date`). RESUME HERE. Supplement `f6b14d2626f8` (247 pp.), paper `d2ca81142e19`
+  (261 pp.), both compile, PDFs copied.** The hypothesis of Lemma 18.26 on the gauges of run B's minimiser,
+  introduced at 02:38 and checked nowhere, is now derived in the proof (VAR Theorem 1 (9) on a cube of VAR's
+  class of the index `n` or `n − 1`; layers at least `LM` wide; new choice `C ≤ 2` of the integer of the cubes
+  of CRE (2.38), LFR I p.191, entered in the paper's appendix) and removed from the statement and from the
+  definition of the set. `FINDINGS.md` F52, entry of 02:45, lists where every hypothesis of Lemmata 18.25 and
+  18.26 is met. Next literal steps unchanged: `MAP.md` rows and hashes, prose passes on Section 18, reread of
+  the whole paper; independent review is the user's to launch.
+- **14 Nov 2026, 02:38 (from `date`). Supplement was `ffbfd8bd194e` (247 pp.), paper `21875800593b`
+  (261 pp.), both compile without errors or undefined references, PDFs copied; Lemma numbers 18.19–18.26 as
+  before.** The three points left at 02:29 were checked (`FINDINGS.md` F52, entry of 02:38): (1) the standing
+  condition of VAR for the localised determining set is derived (layers at least `LM_1` wide); in doing so an
+  error of the 02:24 version was found (the bootstrap failed in the boundary strips of `X` with cubes of side
+  `M`) and corrected by localising to the cubes of the determining set; conditions now `M ≥ 9L²M_1` and
+  `2^{12}dL⁴c_MB_ℋM_1e^{−δ_VM_1/8} ≤ 1`; (2) the new conditions fit the table's order of choices (stage 3); the
+  table still has no rows for them; (3) line-by-line re-reading of Lemmata 18.25, 18.26: the gauges of run B's
+  minimiser on the cubes of CRE (2.38) are now a stated hypothesis of Lemma 18.26 (VAR (9) does not cover cubes
+  at a layer boundary), met by Bałaban's accepted statement in run B. **Next literal steps:** `MAP.md` rows and
+  hashes for Section 18, `BP_DERIVED_CONFIGS.md` `c4ae6b59f3dc`, V4 `0f859f2d3652`, table `b12a50019d16`; prose
+  passes (`math-prose`, `proof-exposition`, `deslop-maths`) on the new text of Section 18; the reread of the
+  whole paper. The independent review of F51–F53 is the user's to launch.
+- **14 Nov 2026, 02:29 (from `date`): supplement was `0b076ed4cde1` (246 pp., compiles): the argument of Lemma
+  17.18(b), (c) for the pair `(𝐁^X, 𝐁^Q)` is written out inside the proof of Lemma 18.25, and VAR p.279 was
+  re-read: its constants depend on `d` and `L` (and on its fixed `R_1`, `M_1`), not on the cube size `M` of the
+  localisation, so the second condition of `eq:derived-condition` is a lower bound on `M`. These two items of
+  the list "still resting on a reference" below are therefore done.**
+- **14 Nov 2026, 02:28 (from `date`). RESUME HERE. Supplement `fafd0da446e8` (246 pp.), paper `702ea2b8d06a`
+  (261 pp.), both compile without errors or undefined references, PDFs copied; Lemma numbers 18.19–18.24
+  unchanged, 18.25 and 18.26 new.** Since 02:10: (1) F53, the norm convention of V4 restored in the paper
+  (Appendix B and the two sections which introduced `c_h`): Bałaban's `|·|` is the operator norm (CMP98 p.21)
+  or the Hilbert–Schmidt norm of the normalised trace (PBG p.390), `c_h = √N`. (2) F52: the step of Lemma 18.25
+  which was unverified at 02:10 is rewritten and checked in the text: localisation to a domain `Q` of `M`-cubes
+  with Bałaban's determining set `𝐁^Q`, the two statements of Lemma 17.18(a) for `(𝐁^X, 𝐁^Q)` derived from the
+  monotonicity of the maximal sequences, one generalised axial gauge of the common data, no relative gauge;
+  conditions now `M ≥ 4L²M_1` and `2^{10}dL⁶c_MB_ℋMe^{−δ_VM/(32L²)} ≤ 1`. (3) Derived instead of asserted: the
+  form of the pairs at which the boundary terms are read (before Lemma 18.26); `C_S` from `eq:member-lift` and
+  `eq:member-tail`; in S.14(d) that the two runs' configurations of the `t`-integrand are minimisers at equal
+  data, so that the three steps of Lemma 18.24(b) apply; in the paragraph on RG I (3.40) the bound of the gauge
+  from RG I (3.26)–(3.27) and the membership of the members in the regular subclass. **Still resting on a
+  reference rather than on a derivation written here** (`FINDINGS.md` F52, update of 02:24): that the proofs of
+  Lemma 17.18(b)–(e) carry over to `(𝐁^X, 𝐁^Q)` (read, not rewritten); Lemma 17.x "every layer at least `M`
+  wide", stated for `𝐁''_k`; the constants of VAR (190) uniform in the determining set and not growing with `M`;
+  the constants table (another session's file) has no rows for the new constants and conditions. **Next literal
+  steps:** write out the proof of Lemma 17.18(b) for the pair `(𝐁^X, 𝐁^Q)` as a remark after that lemma; check
+  the dependence of the constant of VAR (190) on `M` in VAR Sect. G; `MAP.md` rows and hashes
+  (`BP_DERIVED_CONFIGS.md` `c4ae6b59f3dc`, V4 `0f859f2d3652`); prose passes on Section 18; the reread of the
+  whole paper. `BALABAN_CORE.tex` (another session, modified 02:14) leaves the two norms undecided at its line 81.
+- **14 Nov 2026, 02:10 (from `date`). Superseded by the entry above. At this time F52 was not closed: the proof of Supplement Lemma 18.25 has an
+  unverified step (the localisation of the determining set to the cube `Q`); Lemma 18.26 and S.14(d) rest on
+  it. Supplement `0729c4ea4fda` (245 pp.), paper `0510b5a973d2` (261 pp.), both compile, PDFs copied.** The
+  entry of 02:02 below overstated the state. **Next literal step:** rewrite the steps "The localisation" and "The
+  gauges" of the proof of Lemma 18.25 on Bałaban's cubes `□_0 = □̃⁵` (RG I p.273): identity RG I (3.18),
+  generalised axial gauge and bounds RG I (3.26)–(3.27) in the scale of the spacing (CRE p.276), comparison of
+  the local minimisers of the data of the derived configuration and of `W` by VAR (190), the data differing in
+  the boundary layers of `□_0` only; count with VAR (1) the layers which `□_0` meets and use the finer scale
+  where it meets a finer layer; the condition becomes a lower bound on `M`. **Then** derive, not assert:
+  (a) that the pairs at which the boundary terms are read have a real minimiser as real part; (b) the constant
+  `C_S` of Lemma 18.26 from `eq:member-tail`; (c) in S.14(d) the alignment of the configurations of the
+  `t`-integrand (LF #4.608–#4.611); (d) in the paragraph on RG I (3.40) the bound of the gauge on the regular
+  subclass and the membership of the members (Cauchy #C5.26). Full list in `FINDINGS.md` F52, status line.
+- **14 Nov 2026, 02:02 (from `date`). Superseded by the entry above. F52 was recorded here as closed in the manuscripts (new mathematics, unreviewed);
+  supplement `655b98c52e41` (245 pp.), paper `0510b5a973d2` (261 pp.), both compile without errors or undefined
+  references, PDFs copied; Lemma numbers 18.19–18.24 unchanged, new Lemmata 18.25, 18.26 at the end of Section
+  18.** After the user's "Close all the gaps": Lemma 18.25 (derived configurations of a regular configuration:
+  (2.35), (2.37) from the plaquette variables, one run), Lemma 18.26 (lift of a pair over a real minimiser on
+  several layers), the evaluation sets of the boundary terms, S.14(d) with the pairing by the lift and every
+  constant defined, RG I (3.40) for the inputs of Lemma 4 (after Lemma 18.23), "on `X^∼`" in Lemma 18.20, the
+  cubes of side `CM + 4M_1` in the definition. New conditions: `2^{19}d²L^{14}B_ℋM_1²e^{−δ_VM_1/8} ≤ 1` (paper's
+  appendix, done) and `12(1 + c_cur)B_ℋc_2 ≤ β_I` (supplement only; the paper's appendix speaks of "the smallness
+  of `c_2`"). Weak points: `FINDINGS.md` F52, seven items. **Next literal steps:** (1) re-read the proof of Lemma
+  17.18 for the localisation to the cube `Q` used in Lemma 18.25; (2) check "on `X^∼`" in Lemma 18.19; (3) write
+  out, in S.14(d), the alignment of the configurations of the `t`-integrand instead of the reference to the proof
+  of Lemma 18.24(b); (4) `MAP.md` rows and hashes for Section 18 and for `BP_DERIVED_CONFIGS.md`; (5) prose
+  passes on Section 18; (6) reread of the whole paper. Reviewer's folder unchanged since 13 Nov 21:49.
+- **14 Nov 2026, 01:48 (from `date`). Superseded by the entry above (F52 was open at this time: the boundary terms of the
+  two runs). Supplement `ba4c7756ea62` (241 pp., as of 01:49, after the citation fix VAR (8) with (2) in
+  Lemmata 18.21, 18.22, which is therefore no longer pending below), paper `e6c5daec9b17` (261 pp.), both compile without errors or
+  undefined references, PDFs copied; Lemma numbers 18.19, 18.20, 18.22, 18.24 as the paper cites them.** Review
+  asked by the user ("Is everything closed? Review everything especially the weak points"), then "Have you
+  checked whether the notes deal with a similar problem?". Result: (1) Route 2 (F51) holds for the one-scale
+  spaces `U^c_j(X)`, which are those of the 𝐄-terms and of the 𝐑-terms (CRE p.260, ll.18–22); fixes of the review
+  in Lemmata 18.21, 18.22 are in. (2) The several-layer case concerns the boundary terms only; the lemma written
+  for it at 01:10 was removed, and the manuscripts no longer claim a lift half there. (3) OPEN, `FINDINGS.md` F52:
+  S.14(d) does not define how the arguments of the two runs' boundary terms are paired, and uses `C_mv`, `d̄_c`
+  undefined; the notes' own step for the derived configurations along a path of non-minimisers (LF #4.612,
+  #4.462) is not confirmed. Sources found for it: `balaban_proofs\BP_DERIVED_CONFIGS.md` (= Supplement Lemma
+  17.18), LF #4.572–#4.666, Cauchy #C5.11–#C5.12, #C5.26–#C5.27, #C5.58.
+  **Next literal step:** read LF #4.572–#4.666 and the Cauchy note's §8.2 norm for the 𝐁-terms in full; decide
+  between the pairing at equal data (all points minimisers, Lemma 17.18 gives (2.35), (2.37)) and the notes' path;
+  rewrite S.14(d) with every object defined; then add the item to the paper's "What Is Not Proved" if it is not
+  closed. **Then, still pending from the review:** VAR (8) with (2) in place of "(9)" for the plaquette bounds of
+  lifts (Lemmata 18.21, 18.22 and Section 18); RG I (3.40) for the input of Lemma 4 in S.16(b) and Lemma 18.24(a)
+  with the smallness of `c_2` against the response constant; "on `X^∼`" in Lemmata 18.19, 18.20; the cubes of
+  side `CM + 4M_1` (derived from Bałaban's cubes only for minimisers). Reviewer's folder
+  `OAI Comparison\analytic_gap_repairs_20261113\` unchanged since 13 Nov 21:49.
+- **14 Nov 2026, 00:27 (from `date`). Superseded as the resume point by the entry above. F51 CLOSED IN THE MANUSCRIPTS BY ROUTE 2 (user's decision);
   supplement `52919d04c38c` (240 pp.), paper `dbbc0163ff2e` (261 pp.), both compile, PDFs copied.** (Added at
   00:27: Lemma 18.24(a) also places the members in the sets at (8/9)r of the older 𝐑-terms, under the new
   condition δ_V·L·M₁ ≥ 32 log 2.) Section 18
