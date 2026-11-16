@@ -163,12 +163,13 @@ The continuum-limit results cover two vertex-disjoint admissible loops. The exte
 
 ## Build
 
-Use a recent TeX Live or MiKTeX installation with pdfLaTeX, BibTeX and latexmk. Build the continuum-limit manuscript before the supplement so that its external references resolve.
+Use a recent TeX Live or MiKTeX installation with pdfLaTeX, BibTeX and latexmk. Build the continuum-limit manuscript before the supplement, then rebuild the manuscript to resolve their mutual references.
 
 ```sh
 cd "Continuum Limit Manuscript Draft"
 latexmk -pdf -interaction=nonstopmode -halt-on-error WILSON_LOOPS_CONTINUUM_LIMIT.tex
 latexmk -pdf -interaction=nonstopmode -halt-on-error BALABAN_SUPPLEMENT.tex
+latexmk -pdf -interaction=nonstopmode -halt-on-error WILSON_LOOPS_CONTINUUM_LIMIT.tex
 ```
 
 For V5:
