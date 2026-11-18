@@ -1,0 +1,887 @@
+% DRAFT, not part of the supplement. Steps 1 and 2 of the proof of the statement (R) of FINDINGS F126.
+% Written 17 Nov 2026. Labels refer to BALABAN_SUPPLEMENT.tex (hash 05faf1754766).
+% Status of each statement is given before it. Nothing here is in the manuscripts.
+
+% ---------------------------------------------------------------------------------------------
+% STEP 1. STATUS: proved here from the proof of Lemma lem:local-relations(e). Not reviewed.
+% ---------------------------------------------------------------------------------------------
+
+\begin{lemma}[The First Differences of a Lifted Field]\label{lem:lift-holder}
+Let $0 < \beta_c < \beta < 1$.
+\begin{enumerate}[label=(\alph*)]
+\item Let $A$ be a field of run~A which vanishes within the distance $2\varepsilon$ of the collar, and let $b$ and $b'$ be bonds of run~B within the distance $a_j$ of a point of a layer $j$. Then, with the transport $\tau_{b,b'}$ of the lifted configuration along a shortest path and with a constant $c'_e(\beta)$ of $d$, $L$, $G$, and $\beta$,
+\[
+    a_j^2\bigl\lvert(\nabla\mathcal LA)(b) - \tau_{b,b'}(\nabla\mathcal LA)(b')\bigr\rvert \leq c'_e(\beta)\Bigl(\frac{\max(\abs{b - b'}, \varepsilon)}{a_j}\Bigr)^\beta\sup_{c'}e^{-\delta'_0d_\varepsilon(b,c')}N_\beta(A; c')\;.
+\]
+Since two bonds of run~B are at a distance of at least $\varepsilon/L$, the H\"older quotient of the exponent $\beta$ of $\nabla\mathcal LA$ in the unit $a_j$ is at most $L^\beta c'_e(\beta)$ times the supremum on the right, uniformly in the cutoff.
+\item Let $K$ be a field on a lattice with $\sup\abs K \leq s$ and with the H\"older seminorm of the exponent $\beta$ at most $H$, in the units of a layer. Then its H\"older seminorm of the exponent $\beta_c$ in the same units is at most $2s^{1-\beta_c/\beta}H^{\beta_c/\beta}$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+\emph{(a).} The proof of Lemma~\ref{lem:local-relations}(e) writes $\mathcal LA = u - (1 - \mathcal LQ_1)u + \mathcal Lw$, where $u(b)$ is the transport to $b$ of the polynomial of the first degree of $A$ about the bond $c(b)$ of run~A whose tube contains $b$. It shows that $\nabla u$ differs from the transport of $(\nabla A)(c(\cdot))$ by at most $C_1L(\varepsilon/a_j)^\beta a_j^{-2}N_\beta$, and that the first differences of the second and of the third term are at most a constant times $(\varepsilon/a_j)^\beta a_j^{-2}N_\beta$, the supremum of $N_\beta$ being weighted as in the statement. Hence, at every bond $b$ of run~B,
+\[
+    (\nabla\mathcal LA)(b) = \tau\bigl[(\nabla A)(c(b))\bigr] + R(b)\;,
+    \qquad
+    a_j^2\abs{R(b)} \leq C\Bigl(\frac{\varepsilon}{a_j}\Bigr)^\beta\sup N_\beta\;.
+\]
+The bonds $c(b)$ and $c(b')$ are at a distance of at most $\abs{b - b'} + 2d\varepsilon$, so that the transported values of $\nabla A$ at them differ by at most $a_j^{-2}((\abs{b - b'} + 2d\varepsilon)/a_j)^\beta N_\beta$, by the definition of $N_\beta$; the transports along two paths between the same bonds differ by a commutator with the curvature over the surface between them, which is of the second order in the separation. Adding the three bounds gives (a) with $c'_e \coloneqq 2C + (1 + 2d)^\beta + 1$.
+
+\emph{(b).} Let $r_0 \coloneqq (s/H)^{1/\beta}$ in the unit of the layer. For two points at a distance $r \leq r_0$, $\abs{K(x) - \tau K(y)} \leq Hr^\beta = Hr^{\beta-\beta_c}r^{\beta_c} \leq Hr_0^{\beta-\beta_c}r^{\beta_c} = s^{1-\beta_c/\beta}H^{\beta_c/\beta}r^{\beta_c}$. For $r > r_0$, $\abs{K(x) - \tau K(y)} \leq 2s \leq 2sr_0^{-\beta_c}r^{\beta_c} = 2s^{1-\beta_c/\beta}H^{\beta_c/\beta}r^{\beta_c}$.
+\end{proof}
+
+% Use. In the comparison of the second entries of two pairs of the two runs (proof of Lemma
+% lem:far-terms(b)) the current of the divergence form has K = D z, with z the field between the two
+% configurations, whose part with the slow rate is H^B - L_iota H^A. The first differences of H^B are
+% Hoelder continuous with the exponent beta in the unit of the layer, with a norm of at most a constant
+% times the bound rho of the function (PBG (3.43), (3.45), (3.133)), and those of L_iota H^A by (a) with
+% N_beta(H^A) <= C rho. So [grad z]_beta <= C rho uniformly in the cutoff, and if sup|grad z| <= d rho
+% with a rate d <= 1, then by (b)
+%     [grad z]_{beta_c} <= 2 C d^{1 - beta_c/beta} rho ,
+% in the place of the crude bound eq:crude-holder, 2 (a_j/h)^{beta_c} d rho. With beta >= 19/20 and
+% beta_c <= 1/60 the exponent 1 - beta_c/beta is at least 56/57.
+% The other parts of z (the nonlinear part N of the lift, of the size (eps/a_j) times a square; the field
+% S_0 between the backgrounds, of the size (eps/a_j)^{1-eps_0}) carry powers of eps/a_j which pay the crude
+% bound three times over: 3 beta_c <= 1/20 < 1 - eps_0.
+% Count for three nested links, k <= 2 nu, gamma_H >= 1/12, j_* >= 7 nu/8 - 1: the rate of one function is
+% L^{beta_c k} L^{-gamma_H j_*} <= C L^{-nu/26}; after two further links it is raised to the power
+% (56/57)^2, which leaves L^{-nu/27}.
+
+% ---------------------------------------------------------------------------------------------
+% STEP 2, FIRST HALF. STATUS: proof by inspection of the proof of Proposition
+% prop:localisation-functions; each property of the base which that proof uses is listed and
+% verified for the new base. Not reviewed. This is also the sentence missing in the third part of the
+% proof of Proposition prop:large-field-integrands(c) (FINDINGS F128, caveat).
+% ---------------------------------------------------------------------------------------------
+
+\begin{lemma}[The Function of a Link at the Value of the Link Before]\label{lem:link-function-base}
+In the setting of Proposition~\ref{prop:localisation-functions}, at a real point, let the base of the function $\mathbf H_{\mathbf B_1}$ of run~A be, in the place of the member $U_{k,\Lambda}$, the value $c$ of the first link on $Y_3$ at parameters of its localisation in their polydisc (Section~\ref{sec:chain-links}), in the representative $c = e^{ih\mathfrak y}m$ of Lemma~\ref{lem:collar-flow}(a) over the member $m = U_{k,\Lambda}$, with its second entry of Lemma~\ref{lem:chain-entry}; and let the base of $\mathbf H''_k$ be, in the place of $U_{1,2}$, the configuration glued in the same way from the value of the second link on $Y_2$ and from $U_2$. Let run~B's function be formed at the lift of run~A's pair. Then \eqref{eq:localisation-functions} and \eqref{eq:localisation-gauge} hold, with a constant $C_{\mathrm{loc}}$ which does not depend on the parameters, and with $\varrho$ a bound also of $N(\mathfrak y)$ and of the H\"older quotients of $\nabla\mathfrak y$ in the units of the layers of the step.
+\end{lemma}
+
+\begin{proof}
+The proof of Proposition~\ref{prop:localisation-functions} uses the following properties of the base, and no other.
+
+\emph{(1) The pair is regular, with sizes at most one.} For the value of a link with the second entry of Lemma~\ref{lem:chain-entry} this is Lemma~\ref{lem:chain-regular} on the domains disjoint from $Z$. On the rest of the domain of the function the value is the member moved by the field $\mathfrak y$: the data of the link differ from the plain averages of the member on the boundary layer and at the blocks next to it only, so that Lemma~\ref{lem:collar-flow} applies with $W_0 = m$, with $\mathcal A$ the field between the two moved configurations of the boundary layer, cut off beyond the blocks next to it, and with the function $E$ of the proof of Lemma~\ref{lem:chain-room}. By its part (a), $N(\mathfrak y; x) \leq C_{\mathrm{fl}}(n_{\mathcal A}(x) + e_E(x))$ in the unit of the layer of the step, and by its part (b) the first differences of $\mathfrak y$ are H\"older continuous in that unit, because those of $\mathcal A$ are: $\mathcal A$ is composed of the fields of the link at two values of the parameters, which have H\"older continuous first differences: the bound \cite[(1.18), p.~6]{BalabanRG2} holds ``for all admissible norms'', which are ``all norms of Theorems 3.1.--3.10'' of \cite{BalabanPBG} \cite[p.~5]{BalabanRG2}, and among these are the H\"older norms \cite[(3.40), p.~397]{BalabanPBG} of the first differences, with every exponent below one \cite[(3.43), p.~398]{BalabanPBG}. The plaquette field of $c$ is that of $m$ plus the covariant curl of $\mathfrak y$ plus terms of the second order, hence H\"older continuous in the units of the layers of the step, on the boundary layer as inside.
+
+\emph{(2) The bound \eqref{eq:lift-oscillation} at the real points.} For the member this is shown in the proof of the proposition. The factor $e^{ih\mathfrak y}$ is added as the factor $e^{-i\eta\mathbf H''_k}$ is added there: in the Landau gauge about the lift of $m$ the lift of $c$ is $e^{ih(\mathcal L_\iota A + \mathsf N(A))}\iota(m)$ with $\varepsilon A = h\mathfrak y$, and by Lemma~\ref{lem:local-relations}(e) the first differences of $\mathcal L_\iota A$ oscillate at a bond of a layer $j$ by at most $c_e(\beta)(\varepsilon/a_j)^\beta a_j^{-2}$ times the weighted supremum of the H\"older norms of $A$ in the unit $a_j$. These are bounded by (1) at every point, on the boundary layer also, where the set of the link is finer than that of the step but the bounds of Lemma~\ref{lem:collar-flow} are in the unit of the layer of the step.
+
+\emph{(3) For $\mathbf H''_k$: the conclusions of Lemma~\ref{lem:glued-configuration}.} The cut lies in $\Lambda$, at the distance at least $(2R_k - 1)Ma_k$ from the boundary layers (proof of Lemma~\ref{lem:loop-localisation}, ``The points of evaluation''). There $n_{\mathcal A} + e_E$ carries the decay of the weight $e^{-\delta_\star d}$ over this distance, so that the value of the second link is $U_1$ moved by a field whose norm $N$ and whose quantity $b^3\abs{D^*D\mathfrak y}$ are at most a constant times $e^{-\delta_\star(2R_k-1)M}$ times the bound of the fields of the links, in the units of the blocks of $\mathbf B_1$ (Lemma~\ref{lem:collar-flow}(a)). For $\gamma$ small the plaquette variables and the current of the glued configuration at the cut therefore satisfy the bounds of Lemma~\ref{lem:glued-configuration} with $2L^3B_3\varepsilon_U$ in the place of $L^3B_3\varepsilon_U$; on the bonds within one bond of the cut the value is the trivial configuration as $U_1$ is, the data of the collar being one in both.
+
+\emph{(4) The base is, where the truncated functions read it, a configuration at which the operators of the set of the function have their bounds.} This is (1) with \cite[Theorem~3.4, p.~400]{BalabanPBG} and Lemma~\ref{lem:pbg-complex}.
+
+The functions are defined at these pairs by the equations of Lemma~\ref{lem:field-difference-111}, formed with the operators at the pair; at the members they are the functions of the proposition. With (1)--(4) the three paragraphs of its proof apply word for word.
+\end{proof}
+
+% The three points which were open in the proof of Lemma lem:link-function-base, now checked (17 Nov):
+%  (i)  CHECKED. Regularity of the pair inside Z does not need Lemma lem:chain-regular (which concerns the
+%       radii of the classes on the domains disjoint from Z). The second entry is admissible on all of Y' by
+%       Lemma lem:chain-entry(c): the previous second entry is carried without a cut-off, the formal terms
+%       of the field of the link are admissible by Lemma lem:current-domain(a), and on the support of
+%       1 - chi the difference J(c) - J(c^natural) of the currents of two minimisers of the joined set has
+%       the divergence zero and is bounded (statement re-read; proof of lem:chain-regular, last sentences).
+%       To be written into (1) of the proof in the place of the citation of lem:chain-regular.
+%  (ii) CHECKED 17 Nov in the transcriptions: RG2 p.5 l.16 ("in all norms of Theorems 3.1.-3.10 [13]"),
+%       p.6 (1.18) ("the same bound for all admissible norms"); PBG p.397 (3.40) (the Hoelder norms of A and
+%       of grad A), p.398 (3.43) (Hoelder norms of grad G', exponents 0 <= beta <= beta_0 < 1). (1.20) of RG2
+%       is the bound of B' and was a wrong citation; removed. For the functions of the sets of an operation
+%       the same norms: PBG (3.133), Theorems 3.12, 3.13, as cited in the proof of the proposition.
+%  (iii) CHECKED. LFR2 (1.62), p.374 (transcription re-read tonight): the data of U_1 on the joined set
+%       B_1(Y_2) are "1 on Z''_k cap Omega''~_{h+1}", the same as those of B_1 on its collar (1.53). On the
+%       outermost band of that collar the data are the bonds, and a configuration with these data has these
+%       bonds (Lemma lem:chain-entry(a), first sentence of its proof). So the value of the second link is
+%       the trivial configuration on the bonds within one bond of the cut, as U_1 is.
+
+% ---------------------------------------------------------------------------------------------
+% STEP 3, PART (a). STATUS: read off the proof of Proposition prop:localisation-functions ("The function
+% H_{B_1}") and of Corollary cor:joined-set-function; the only change is the place of the point. Not reviewed.
+% ---------------------------------------------------------------------------------------------
+
+\begin{lemma}[The Function of a Joined Set at the Coarse Layers of a Collar]\label{lem:joined-set-collar}
+In the setting of Corollary~\ref{cor:joined-set-function}, let $n$ be the layer of $\mathbf B$ at a collar of $\mathbf B'$, let $n - \lfloor n/8\rfloor \leq m < n$, and let the walks which meet the layers of the collar of the indices below $m$ be truncated. Then, at every point $x$ of a layer $n' \geq m + 1$ of the collar, and at every point outside the collars,
+\[
+    N(\mathscr H^B - \mathcal L_\iota\mathscr H^A; x) \leq C_{\mathrm{loc}}\bigl(L^{-\nu/26}\varrho + L^{-4(n'-m-1)}\varrho + \sup\abs{B^B - B^A}\bigr)\;,
+\]
+with $n' = n$ outside the collars, where the supremum is over the blocks outside the collars and over the blocks of the layers of the collars of the indices at least $m$; and the gauge transformations \cite[(106)]{BalabanAVG} of the two functions differ by at most the same number at the sites of run~A in the blocks of these layers.
+\end{lemma}
+
+\begin{proof}
+The proof of Proposition~\ref{prop:localisation-functions} for $\mathbf H_{\mathbf B_1}$ compares the truncated functions on the whole complement of the truncated layers, by Lemma~\ref{lem:collar-two-runs}(b) and the proof of Lemma~\ref{lem:field-difference}; the layers which the truncated walks reach lie at the shared scales at least $m - 1 \geq \frac{7}{8}\nu - 2$, which gives the first term as there. In each run the complete function differs from the truncated one by at most $C_{\mathsf p}\,\mathsf p(y)\varrho$ at a point $y$, with $\mathsf p(y) \leq L^{-4(n''-m)}$ at a point of a layer $n'' \geq m$ of the collar (Lemmata~\ref{lem:collar-two-runs}(c) and~\ref{lem:function-truncation}). The lift of run~A's difference at $x$ reads it with a kernel which decays at the rate $\delta'_0$ in the units of $\varepsilon$; a point of a layer $n'' \leq n' - 2$ lies at the distance at least $LM_1L^{n'-1}\varepsilon$ from $x$, the layer $n' - 1$ being that wide, and the decay over this distance pays the factor $L^{4(n'-n'')}$ as in the proof of the proposition, for $\nu \geq \nu_{\mathrm{loc}}$. So the lift is bounded by a constant times $L^{-4(n'-m-1)}\varrho$, and the three bounds give the claim. The gauge transformations are compared by Lemma~\ref{lem:gauge-transformations-runs} on the blocks of these layers, which lie at shared scales.
+\end{proof}
+
+% Use: thresholds m_1 < m_2 < m_3 < n with gaps of floor(n/32) for the three links and the read:
+% the data of a link are needed at the collar layers >= m_i, they come from the fields of the link before at
+% the layers >= m_{i-1} + floor(n/32), where the extra term is L^{-4 floor(n/32) + 4} <= L^8 L^{-nu/8}.
+
+% =============================================================================================
+% THE COVARIANT ROUTE (decision of 17 Nov, R3 draft 3s, 3t). The statements below this line and above
+% the line "DISCARDED" are the ones in use. No gauge transformation between the two runs is assumed
+% or guessed: the two minimisers are each a definite function of their data, covariant under the gauge
+% transformations of the data (VAR (181)), and the comparison is made at the level of the data.
+% =============================================================================================
+
+% STATUS of Lemma lem:link-values: complete proof from the statements cited; two of them are used in a
+% form which their PROOFS give and their statements do not yet say, marked (S1), (S2) at the end.
+% Not reviewed.
+
+\begin{lemma}[The Values of a Link in the Two Runs]\label{lem:link-values}
+On a young matched pair, at a real point, let $\mathbf B^A$ and $\mathbf B^B$ be the sets of the two runs for a joined set or for one of the sets of an operation, on a domain $Y'$, let $\mathbf B^\sharp$ and $\mathfrak b$ be the set and the band of the proof of Proposition~\ref{prop:minimisers}(d), formed at every collar, and for an integer $m \geq 2$ let $\mathfrak N_m$ be the set of the blocks of $\mathbf B^\sharp$ in the layers of the collars of the indices below $m$, with their neighbours. Let $U^A$ and $U^B$ be real minimisers of the two runs on a determining set at shared scales, on a domain which contains $Y'$, every block of $\mathbf B^X$ lying in a block of that set of at least its index, so that $U^X$ is in its orbit the minimiser of $\mathbf B^X$ at its own data (Lemma~\ref{lem:collar-critical}), with
+\[
+    U^A = e^{i\varepsilon a_0}MU^B\;,
+    \qquad
+    a_{j(x)}\abs{a_0(x)} + a_{j(x)}^2\abs{\nabla a_0(x)} \leq \eta_0
+\]
+at every point. Let $D^A$ and $D^B$ be real plain data of the two sets, regular with a parameter $\varepsilon_{\mathrm r}$ and in the balls \cite[(172)]{BalabanVAR} about the plain averages of $U^A$ and of $U^B$, and let $c^X$ be the minimiser of run $X$ with the plain averages $D^X$ in the axial gauge relative to $U^X$. Suppose that on every block bond $c$ of $\mathbf B^\sharp$ outside $\mathfrak N_m$, which is a block bond of both runs,
+\[
+    D^A(c) = e^{i\gamma(c)}D^B(c)\;,
+    \qquad
+    \abs{\gamma(c)} \leq \eta\;.
+\]
+Then, for $\varepsilon_{\mathrm r}$, $\eta$, and $\eta_0$ small, there are a real field $a$ and a gauge transformation $v$ of the lattice of run~A with values in $G$ such that $c^A = (e^{i\varepsilon a}Mc^B)^v$ and, at every point $x$ of a block of the spacing $b$ of $\mathbf B^\sharp$, in the unit $b$ and with the covariant differences at $Mc^B$,
+\[
+    b\abs{a(x)} + b^2\abs{\nabla a(x)} + \abs{v(x) - 1} \leq C_{\mathrm{lv}}\Bigl[\eta + \eta_0 + \Bigl(\frac{\varepsilon}{b}\Bigr)^{1-\varepsilon_0}\varepsilon_{\mathrm r} + \varepsilon_{\mathrm r}\,e^{-2\delta_\star d(x,\mathfrak N_m)}\Bigr]\;,
+\]
+with a constant $C_{\mathrm{lv}}$ which does not depend on $k$, $K$, $\varepsilon$, the coupling, the torus, or $m$.
+\end{lemma}
+
+\begin{proof}
+The proof compares four configurations of run~A, each a minimiser of $\mathbf B^\sharp$ in a named gauge, and at no point uses a statement which holds only up to a gauge transformation.
+
+\emph{The average of run~B's minimiser.} Let $\tilde c \coloneqq Mc^B$. Its data on $\mathbf B^\sharp$ are $D^B$ on the blocks of the spacings at least $L\varepsilon$, because $M^nM = M^{n+1}$, and on the bonds of $Y' \setminus \Omega^B_2$ they are its own bonds, which on $\Omega^B_1 \setminus \Omega^B_2$ are the data of run~B on its blocks of the spacing $\varepsilon$ (proof of Proposition~\ref{prop:minimisers}(d), ``the two runs at equal data'', second step). The configuration $c^B$ is in the axial gauge relative to $U^B$, that is, the two have the same transports along the contours of the blocks, level by level \cite[(1.19), (1.20), p.~79]{BalabanREG}. The levels of run~A are the levels of run~B from the second on, formed from the one-step average \cite[(90), (91), p.~31]{BalabanAVG}, so that $\tilde c$ is in the axial gauge relative to $MU^B$ on the blocks of $\mathbf B^\sharp$.
+
+\emph{Run~A's minimiser at the data of $\tilde c$.} Let $V$ be the minimiser of $\mathbf B^\sharp$ with the plain averages of $\tilde c$, in the axial gauge relative to $\tilde c$. The proof of Proposition~\ref{prop:minimisers}(d), second step, as it is extended to the joined sets in the proof of Lemma~\ref{lem:chain-runs} (``The coarse region: from $V$ to $M_1c^B$''), takes $\tilde c$ as the reference configuration of \cite[Proposition~5, p.~294]{BalabanVAR}, at which the datum \cite[(20)]{BalabanVAR} vanishes, and gives the minimiser in the form $e^{i\varepsilon A''}\tilde c$ with $b\abs{A''} + b^2\abs{\nabla A''} \leq 2C_G(\varepsilon_0)(\varepsilon/b)^{1-\varepsilon_0}\varepsilon_{\mathrm r}$ at the points of the spacing $b$. This is an identity between configurations: the field $A''$ is the fixed point of the equation of that proposition, in the Landau gauge about $\tilde c$. The datum \cite[(20)]{BalabanVAR} of a configuration relative to a base is the ratio of the plain averages, transformed at the block points by the transformation \cite[(106), p.~33]{BalabanAVG} of the fluctuation, and that transformation carries the fluctuation to the axial gauge relative to the base \cite[(64)--(72), p.~29]{BalabanAVG} (proof of Lemma~\ref{lem:collar-flow}, ``The averages''). Since the datum vanishes, the transform of $e^{i\varepsilon A''}\tilde c$ by the transformation $u''$ of the field $A''$ has the plain averages of $\tilde c$ and is in the axial gauge relative to $\tilde c$; that is, it is $V$. Hence
+\[
+    V = \bigl(e^{i\varepsilon A''}\tilde c\bigr)^{u''}\;,
+    \qquad
+    \abs{u'' - 1} \leq c_ub\sup\abs{A''} \leq 2c_uC_G(\varepsilon_0)\Bigl(\frac{\varepsilon}{b}\Bigr)^{1-\varepsilon_0}\varepsilon_{\mathrm r}
+\]
+on a block of the spacing $b$ (Section~\ref{sec:chain-links}).
+
+\emph{Run~A's minimiser at its own data, in the gauge of $V$.} By Lemma~\ref{lem:collar-critical}, $c^A$ is in its orbit the minimiser of $\mathbf B^\sharp$ at its own data $D^\sharp$, which are $D^A$ on the blocks which the two sets share and the bonds of $c^A$ on the strip $S$. Let $c'$ be the minimiser of $\mathbf B^\sharp$ with the plain averages $D^\sharp$ in the axial gauge relative to $V$. The data of $V$ and $D^\sharp$ differ by $e^{i\gamma}$, with $\abs\gamma \leq \eta$, on the block bonds outside $\mathfrak N_m$, by hypothesis. On the block bonds of $\mathfrak N_m$ both are data of regular configurations in the balls about the plain averages of $U^A$ and of $MU^B$, which differ by at most $c_M\eta_0$, so that their logarithms relative to each other are at most a constant times $\varepsilon_{\mathrm r} + \eta_0$. We pass from the data of $V$ to $D^\sharp$ in two steps, first on the block bonds of $\mathfrak N_m$ and then on the others, and apply Lemma~\ref{lem:collar-far} twice, with the base $V$, which is a real minimiser of $\mathbf B^\sharp$ at its own data: the first time with the set $\mathfrak N_m$ and $\varpi \leq C(\varepsilon_{\mathrm r} + \eta_0)$, the second time with the set of all the blocks and $\varpi \leq \eta$. By (S1) below,
+\[
+    c' = \bigl(e^{i\varepsilon\mathfrak v}V\bigr)^w\;,
+    \qquad
+    b\abs{\mathfrak v} + b^2\abs{\nabla\mathfrak v} + \abs{w - 1} \leq C\bigl(\eta + (\varepsilon_{\mathrm r} + \eta_0)e^{-3\delta_\star d(x,\mathfrak N_m)}\bigr)\;.
+\]
+
+\emph{The two axial gauges.} The configurations $c^A$ and $c'$ are minimisers of $\mathbf B^\sharp$ with the same plain averages, so that $c^A = c'^{g_2}$ with a gauge transformation $g_2$ which is one at the block points \cite[(1.13), (1.14), p.~78]{BalabanREG}. The first is in the axial gauge relative to $U^A$. The second is in the axial gauge relative to $V$, hence relative to $\tilde c$, hence relative to $MU^B$, the relation being transitive. A configuration is in the axial gauge relative to a base exactly when its averaged transports along the contours $\Gamma_{x_{n+1},x_n}$ of the levels $n$ below that of the block equal those of the base \cite[(1.19), (1.20)]{BalabanREG}. With the covariance of the averages \cite[(70), p.~29]{BalabanAVG}, for a site $x = x_0$ of a block with the block point $y = x_J$ and the sites $x_n \in B(x_{n+1})$,
+\[
+    g_2(x_n) = \overline{U^A}^{\,n}(\Gamma_{x_{n+1},x_n})^{-1}\,g_2(x_{n+1})\,\overline{MU^B}^{\,n}(\Gamma_{x_{n+1},x_n})\;.
+\]
+The contour of the level $n$ has at most $dL$ bonds of the spacing $L^n\varepsilon$, and the averaged transports of $U^A = e^{i\varepsilon a_0}MU^B$ and of $MU^B$ along it differ by at most $dLc_ML^n\varepsilon\sup\abs{a_0}$, the transports of a real configuration being unitary. Starting from $g_2(y) = 1$ and summing over $n < J$,
+\[
+    \abs{g_2(x) - 1} \leq 2dLc_M\,b\sup\abs{a_0} \leq 2dLc_M\,\eta_0
+\]
+on a block of the spacing $b \leq a_{j(x)}$.
+
+\emph{The composition.} Together,
+\[
+    c^A = \Bigl(\bigl(e^{i\varepsilon\mathfrak v}(e^{i\varepsilon A''}\tilde c)^{u''}\bigr)^w\Bigr)^{g_2} = \bigl(e^{i\varepsilon a}\tilde c\bigr)^v\;,
+\]
+where $v$ is the composition of $u''$, $w$, and $g_2$, and $e^{i\varepsilon a} = e^{i\varepsilon\mathfrak v'}e^{i\varepsilon A''}$ on every bond with $\mathfrak v'$ the field $\mathfrak v$ rotated by $u''$ at the first end of the bond. The covariant differences of $\mathfrak v$ at $V$ are those of $\mathfrak v'$ at $e^{i\varepsilon A''}\tilde c$ rotated, and the composition of two fields is bounded as in the proof of Proposition~\ref{prop:minimisers}(d), with the constant $c_\circ$. The three bounds give the claim, with the rate $2\delta_\star$ in the place of $3\delta_\star$ to absorb the constants.
+
+\emph{(S1).} Lemma~\ref{lem:collar-far} states that the orbit of the second minimiser contains $e^{ih\mathfrak v}c^1$, its transform by a gauge transformation $g'$ with $\abs{g' - g} \leq C_{\mathrm{dis}}\vartheta$. Its proof shows more: with the notation there, $g' = g(u^1_L)^{-1}u^2_L$, where $u^i_L$ is the transformation \cite[(106)]{BalabanAVG} of the field $\mathscr H(B^i)$ on the blocks. This transformation is an analytic function of the field on the block, within $c_ub$ times its supremum of one, hence Lipschitz continuous in the field with the constant $2c_ub$ for small fields, and the proof bounds $b\abs{\mathscr H(B^2) - \mathscr H(B^1)}$ at $x$ by a constant times $\varpi e^{-3\delta_\star d(x,\mathfrak N)}$. So $\abs{g'(x) - g(x)} \leq C\varpi e^{-3\delta_\star d(x,\mathfrak N)}$, and the second minimiser, in the axial gauge relative to the base, is the transform of $e^{ih\mathfrak v}c^1$ by the inverse of $g'$. This is what the third step uses, with $g = 1$ in the first application.
+
+\emph{(S2).} The second step uses the proof of Proposition~\ref{prop:minimisers}(d), second step, for the minimiser $c^B$ of a joined set at data which are not those of run~A; that proof concerns the pair $(V, c^B)$ alone, the minimisers of the two runs at the same data on $\mathbf B^\sharp$ and on run~B's set, and it is used in this way in the proof of Lemma~\ref{lem:chain-runs}.
+\end{proof}
+
+% What Lemma lem:link-values gives and what it does not:
+% - It is in the units of the BLOCKS of B^sharp. At the points where the set has the spacing of the step
+%   (off the collars) this is the unit of the step. At a collar layer of the spacing b it converts to the
+%   unit a_n of the step with the factor (a_n/b)^2 for the first differences.
+% - The term (eps/b)^{1-eps_0} eps_r is not small at the fine layers; there the frames come from the moved
+%   configuration (lem:collar-flow(a), (b), one run), not from this lemma.
+% - The anchor is the hypothesis on the data: it is a statement in given frames (the averages of the
+%   arguments, which are related as fields; the equal variables on Lambda; the boundary-layer data of the
+%   link before, by this lemma at that link).
+% STILL TO WRITE: (1) the induction over the three links (data of a link from the value of the link before
+% and the VALUES of its field on the boundary layer; thresholds m_1 < m_2 < m_3 and the conversion of
+% units); (2) run B's function at its own base (covariance for v, analytic move by a, second entries with
+% lem:lift-holder); (3) the read on X(F)^{[2]}; (4) rule (K6) at the real points, and the scope question of
+% R3 draft 3r item 4.
+
+% STATUS of Lemma lem:link-data: complete; elementary (covariance of the plain averages and of the
+% transformation (106), and the first-order bound of an average). Not reviewed.
+
+\begin{lemma}[The Data of a Link on Its Boundary Layer]\label{lem:link-data}
+In the setting of Lemma~\ref{lem:link-values}, let $W^A$ and $W^B$ be the previous configurations of a link in the two runs, with $W^A = (e^{i\varepsilon a_p}MW^B)^{v_p}$, let $\mathbf H^X$ be the field of the link in run $X$, formed at the pair of $W^X$, with $N(\mathbf H^X) \leq \varrho$, and let $u^X$ be its transformation \cite[(106)]{BalabanAVG} on the blocks of the joined set, so that the data of the link on the boundary layer are the plain averages of $(e^{ih_X\mathbf H^X}W^X)^{(u^X)^{-1}}$ (Section~\ref{sec:chain-links}). Let $c = \langle y, y'\rangle$ be a block bond of the boundary layer at a shared spacing $b$, and suppose that on the bonds and at the sites of run~A in the two blocks of $c$
+\[
+    b\abs{a_p} + \abs{v_p - 1} \leq \eta_p\;,
+    \qquad
+    b\,\bigl\lvert Q^{\mathrm{pl}}_1\mathbf H^B - \operatorname{Ad}(v_p^{-1})\mathbf H^A\bigr\rvert \leq \eta_H\;.
+\]
+Then $D^A(c) = e^{i\gamma(c)}D^B(c)$ with $\abs{\gamma(c)} \leq C_{\mathrm{ld}}\bigl(\eta_p + \eta_H + \min(\varepsilon/b, b/a_n)\varrho + (\varepsilon/a_n)\varrho^2\bigr)$, $a_n$ being the unit of the step at $c$.
+\end{lemma}
+
+\begin{proof}
+The plain averages are covariant, $M^\cdot(X^g)(c) = g(y)M^\cdot(X)(c)g(y')^{-1}$ \cite[(1.13), p.~78]{BalabanREG}, and a factor $e^{i\varepsilon f}$ changes the average over $c$ by $e^{i\beta}$ with $\abs\beta \leq c_Mb\sup\abs f$ over the two blocks (first step of the proof of Lemma~\ref{lem:derived-regular}). The field of a link and its transformation are covariant under the gauge transformations of the base: with $\hat W \coloneqq e^{i\varepsilon a_p}MW^B$ and $\hat{\mathbf H} \coloneqq \operatorname{Ad}(v_p^{-1})\mathbf H^A$, the transformation \cite[(106)]{BalabanAVG} of $\hat{\mathbf H}$ about $\hat W$ is $\hat u = v_p^{-1}u^Av_p$, and
+\[
+    \bigl(e^{i\varepsilon\mathbf H^A}W^A\bigr)^{(u^A)^{-1}} = \bigl(e^{i\varepsilon\hat{\mathbf H}}\hat W\bigr)^{\hat u^{-1}v_p}\;.
+\]
+The averages of run~B over the blocks at shared spacings are those of run~A applied to the one-step average, and $M(e^{ih\mathbf H^B}W^B) = e^{i\varepsilon(Q^{\mathrm{pl}}_1\mathbf H^B + \mathsf n)}MW^B$ with $\abs{\mathsf n} \leq C(\varepsilon/L)\sup\abs{\mathbf H^B}^2$, by the definition of the plain linearised average and the analyticity of the average. Hence $D^A(c)$ and $D^B(c)$ are the averages over $c$ of
+\[
+    \bigl(e^{i\varepsilon\hat{\mathbf H}}e^{i\varepsilon a_p}MW^B\bigr)^{\hat u^{-1}v_p}
+    \qquad\text{and}\qquad
+    \bigl(e^{i\varepsilon(Q^{\mathrm{pl}}_1\mathbf H^B + \mathsf n)}MW^B\bigr)^{(u^B)^{-1}}\;.
+\]
+The two fields differ by at most $\sup\abs{a_p} + \sup\abs{\hat{\mathbf H} - Q^{\mathrm{pl}}_1\mathbf H^B} + \abs{\mathsf n}$ up to commutators, which gives the first two terms and the last. The transformations at $y$ and $y'$ differ from each other by $\abs{v_p - 1} \leq \eta_p$ and by $\abs{\hat u - u^B}$. Each of $\hat u$ and $u^B$ is within $c_ub\varrho/a_n$ of one, and on a block at a shared spacing their difference is at most $C_u(\eta_H/\varrho + \varepsilon/b)\varrho$ by the proof of Lemma~\ref{lem:gauge-transformations-runs}, in which the two fields are compared through their values along the contours of the block; the smaller of the two bounds is the third term.
+\end{proof}
+
+% STATUS of Lemma lem:link-field-runs: the three steps are complete given the two readings (S3), (S4) of
+% existing proofs listed at the end; (S3) has a precedent in the supplement (proof of lem:chain-moved,
+% "by the second and the third line of eq:induced-perturbation, for the field of a link formed at a moved
+% pair over a regular base"). Not reviewed.
+
+\begin{lemma}[The Field of a Link at the Bases of the Two Runs]\label{lem:link-field-runs}
+In the setting of Lemma~\ref{lem:link-function-base}, at a real point, let $P^A = (W^A, \mathbb J^A)$ and $P^B = (W^B, \mathbb J^B)$ be the previous pairs of a link in the two runs, and let $\mathbf H^X$ be the field of the link formed at $P^X$ at a datum $B^X$, at parameters in a fifth of their polydisc, the same in the two runs. Suppose that there are a gauge transformation $v_p$ of the lattice of run~A with values in $G$, a representative $W'$ of the lift of $\hat W^A \coloneqq (W^A)^{v_p^{-1}}$, a field $\mathfrak z_p$, and a current $\delta_p = D^*_{W'}K + D_{W'}\psi + p$ such that, on the domain of the field,
+\[
+    W^B = e^{ih\mathfrak z_p}W'\;,
+    \qquad
+    \mathbb J^B = Q^{\mathrm{pl}}_1(W')^*\operatorname{Ad}(v_p^{-1})\mathbb J^A + \delta_p\;,
+\]
+with $\mathfrak z_p$ and $\delta_p$ satisfying the two inequalities of \eqref{eq:current-domain} with $\eta_p\tau_\ell$ on the right, $\eta_p \leq c$, and that the pair $(\hat W^A, \operatorname{Ad}(v_p^{-1})\mathbb J^A)$ has the properties (1)--(4) of the proof of Lemma~\ref{lem:link-function-base}. No bound is assumed of $v_p$. Then, at the points $x$ at which \eqref{eq:localisation-functions} holds, with $\hat{\mathbf H}^A \coloneqq \operatorname{Ad}(v_p^{-1})\mathbf H^A$ and $\hat B^A \coloneqq \operatorname{Ad}(v_p^{-1})B^A$, the adjoint actions being those at the first ends of the bonds and at the block points,
+\[
+    N\bigl(\mathbf H^B - \mathcal L_\iota\hat{\mathbf H}^A; x\bigr) \leq C_{\mathrm{lf}}\bigl(L^{-\nu/26}\varrho + \sup\abs{B^B - \hat B^A} + \alpha_{0,k}\,\eta_p\,\varrho\bigr)\;,
+\]
+and on a block of the spacing $b$ of the boundary layer, at the bonds of run~A,
+\[
+    b\,\bigl\lvert Q^{\mathrm{pl}}_1\mathbf H^B - \hat{\mathbf H}^A\bigr\rvert \leq \frac{b}{a_n}\Bigl[C_{\mathrm{lf}}\bigl(L^{-\nu/26}\varrho + \sup\abs{B^B - \hat B^A} + \alpha_{0,k}\,\eta_p\,\varrho\bigr) + C\frac{\varepsilon}{a_n}\varrho\Bigr]\;.
+\]
+\end{lemma}
+
+\begin{proof}
+\emph{Covariance.} The field of a link is formed from its pair and its datum by operators and equations which are covariant under the gauge transformations of the pair with values in $G$, the datum being transformed at the block points \cite[(181), p.~307]{BalabanVAR}, \cite[p.~262, (iv)]{BalabanRG1}. Hence $\hat{\mathbf H}^A$ is the field of the link formed at the pair $\hat P^A \coloneqq (\hat W^A, \operatorname{Ad}(v_p^{-1})\mathbb J^A)$ at the datum $\hat B^A$. This step is an identity, and it is the only place where $v_p$ occurs.
+
+\emph{Run~B at the lift.} The pair lift of $\hat P^A$ is $\ell(\hat P^A) = (W', Q^{\mathrm{pl}}_1(W')^*\operatorname{Ad}(v_p^{-1})\mathbb J^A)$. By Lemma~\ref{lem:link-function-base}, whose hypotheses on the base are the properties (1)--(4), the field $\mathbf H^B_\ell$ of run~B formed at $\ell(\hat P^A)$ at the datum $B^B$ satisfies $N(\mathbf H^B_\ell - \mathcal L_\iota\hat{\mathbf H}^A; x) \leq C_{\mathrm{loc}}(L^{-\nu/26}\varrho + \sup\abs{B^B - \hat B^A})$.
+
+\emph{Run~B from the lift to its own pair.} The pair $P^B$ is the moved pair $(e^{ih\mathfrak z_p}W', \ell(\hat P^A)_2 + \delta_p)$ over the base $\ell(\hat P^A)$, which is regular because $\hat P^A$ is. By (S3) the field of the link at the moved pairs $(e^{iuh\mathfrak z_p}W', \ell(\hat P^A)_2 + u\delta_p)$ is analytic in $u$ for $\abs u \leq c/\eta_p$, and on this disc it differs from $\mathbf H^B_\ell$ by at most $C_{\mathrm{ind}}\alpha_{0,k}\,c\,\varrho$ in the norm $N$; by Schwarz's lemma the difference at $u = 1$ is at most $C_{\mathrm{ind}}\alpha_{0,k}\eta_p\varrho$. This gives the first bound.
+
+\emph{The averaged form.} On the fields of run~A which vanish near the collar, $Q_1\mathcal L_\iota = 1$ and $Q^{\mathrm{pl}}_1 = Q_1 - \bar D\Lambda_1$ with $\abs{\bar D\Lambda_1v} \leq d\operatorname{osc}(v) + c_e\bar\vartheta\abs v$ (Lemma~\ref{lem:local-relations}(a), (c)), so that $Q^{\mathrm{pl}}_1\mathbf H^B - \hat{\mathbf H}^A = Q^{\mathrm{pl}}_1(\mathbf H^B - \mathcal L_\iota\hat{\mathbf H}^A) - \bar D\Lambda_1\mathcal L_\iota\hat{\mathbf H}^A$, and the last term is at most a constant times $(\varepsilon/a_n)\varrho/a_n$ by Lemma~\ref{lem:local-relations}(d). Multiplying by $b$ gives the second bound.
+
+\emph{(S3).} The second and third lines of \eqref{eq:induced-perturbation} and its first line are proved, in the steps (A)--(D) of the proof of Lemma~\ref{lem:current-domain}, for a field \cite[(179), (180)]{BalabanVAR} formed at a moved pair over a regular base, walk by walk; the factor $q_j$ of the set $\mathcal D^c_j$ enters that proof through the old terms which a term reads, and not through the field. For the field of a link, which reads no old term, the first paragraph of that proof requires of the moved pair only that the functionals of $\delta$ be at most a quarter of their bounds and that the configuration move by at most $3\tau_\ell$, which holds for sizes up to $c\,\tau_\ell$. TO VERIFY against the proof: that no step of (A)--(D) uses $q_j < 1$; and the same steps for the operators $G_1$, $H_1$, $\mathfrak G$ of the form \eqref{eq:form-111} of the third link, whose series \eqref{eq:series-g1} has the same factors and the vertex $\Delta^{(2)}_\pi$.
+
+CORRECTION, 17 Nov (read: \eqref{eq:source-155} and the statement of Lemma~\ref{lem:field-difference-111}): for the third link the source $\mathscr S = \mathbf G''_k(1 - \theta)Q^*_{\mathbf B_1}\theta_1H^*_{\mathbf B_1}J_1 + \mathbf G''_k\theta J_{1,2}$ is LINEAR in the second entry of the pair. A move $\delta_p$ of the second entry therefore changes the function by $\mathbf G''_k\theta\delta_p$ and $\mathbf G''_k(1 - \theta)Q^*\theta_1H^*\delta_p$, which are bounded by a constant $C_{\mathscr S}$ times the size of $\delta_p$ in the divergence form (Lemma~\ref{lem:divergence-template}; \cite[(3.42), (3.44)]{BalabanPBG}), WITHOUT the factor $\alpha_{0,k}$. For the third link the two bounds of the statement hold with $(\alpha_{0,k}\varrho + C_{\mathscr S})\eta_p$ in the place of $\alpha_{0,k}\eta_p\varrho$, where $\eta_p$ bounds $\delta_p$ in the units of $\tau_\ell$; the rates still add from link to link, with a constant.
+
+\emph{(S4).} CHECKED 17 Nov: the source is formed from the pair with the scalar functions $\theta$, $\theta_1$ of the points of the torus, the same in the two runs, and with operators of the sets, which are covariant; so the function of the third link, defined by the form \eqref{eq:form-111} with the source \eqref{eq:source-155}, is covariant under the gauge transformations of its pair with values in $G$.
+\end{proof}
+
+% =============================================================================================
+% THE SCHEME IN THE UNIT OF THE STEP (R3 draft 3u, 3v, 3w). Written 17 Nov, 01:00 to 01:38 and after.
+% =============================================================================================
+
+% STATUS of Lemma lem:weighted-minimiser: complete, from VAR (73), (189), PBG Theorem 3.13, and
+% eq:collar-sums. VAR (189) is stated by Balaban without the computation ("We do not perform these
+% calculations here", VAR p.308); it is accepted, and the supplement uses its consequence (190) already.
+% The lemma also supplies the step which the paragraph "(b), several layers" of the proof of
+% prop:minimisers passes over (the pointwise bound of the fixed point). Not reviewed.
+
+\begin{lemma}[Weighted Bounds of the Minimiser About a Reference Configuration]\label{lem:weighted-minimiser}
+Let $\mathbf B$ be a determining set whose layers below the top one are at least $LM_1$ wide in their own units, with the distance $d$ of \cite[(2.46)]{BalabanPRT2}, the spacing $b(y)$ of a block $y$, the norm $\norm{\mathfrak v}_y$ of the proof of Proposition~\ref{prop:minimisers}(d), and the constants $\delta_\star$, $N_\star$ of \eqref{eq:collar-condition}, \eqref{eq:collar-sums}. Let $U_0$ be a reference configuration of \cite[Proposition~5, p.~294]{BalabanVAR} at which the datum \cite[(20)]{BalabanVAR} vanishes, let $A_1^*$ be the solution of \cite[(111)]{BalabanVAR} in the space \cite[(115)]{BalabanVAR} with $\varepsilon_4 \leq a_4$, and $A'_* = A_1^* - HD(A_1^*)$ the field of the minimiser \cite[(112)]{BalabanVAR}. Let $w$ be a positive function on the blocks with
+\[
+    \frac{w(y)}{w(y')} \leq C_w\,e^{\delta_\star d(y,y')}\Bigl(\frac{b(y)}{b(y')} + \frac{b(y')}{b(y)}\Bigr)^3
+\]
+for all blocks $y$, $y'$. There is a constant $a_w > 0$, depending on $C_w$, $N_\star$, $d$, $L$, and the constants of \cite[(73), (189)]{BalabanVAR} and \cite[Theorem~3.13]{BalabanPBG}, such that for $\varepsilon_4 \leq a_w$
+\[
+    \sup_yw(y)\norm{A'_*}_y \leq 4\sup_yw(y)\norm{\mathfrak GJ}_y\;.
+\]
+\end{lemma}
+
+\begin{proof}
+The fixed point satisfies $A_1^* = -\mathfrak GJ - \mathfrak G\mathcal N(A_1^*)$ with $\mathcal N \coloneqq \delta V/\delta A'$ \cite[(111)]{BalabanVAR}, the datum being zero. Ba{\l}aban's estimates of the second term \cite[(117), (120)]{BalabanVAR} are in the norms $\abs\cdot_{(-1)}$, $\abs{\nabla\cdot}_{(-2)}$, which are suprema over the whole set, and do not show where the term is small. We use instead that $\mathcal N$ is pseudo-local. The functional $V$ consists of terms of at least the third order \cite[(80)]{BalabanVAR}, so that $\mathcal N(0) = 0$ and
+\[
+    \mathcal N(A_1^*) = \int_0^1\Bigl(\frac{\delta^2V}{\delta A'^2}\Bigr)(tA_1^*)\,A_1^*\,dt\;,
+\]
+the configurations $tA_1^*$ satisfying \cite[(77)]{BalabanVAR} with $\varepsilon_3 = \varepsilon_4$. Let $(\chi_{y'})$ be a partition of unity on the bonds, $\chi_{y'}$ supported in the enlarged block $\tilde\Delta(y')$ with $\abs{\partial\chi_{y'}} \leq c/b(y')$, so that $\chi_{y'}A_1^*$ has the norm $\max(\abs\cdot_{(-1)}, \abs{\nabla\cdot}_{(-2)})$ at most $c'\abs{A_1^*}_{y'}$, where $\abs\cdot_{y'}$ is the largest of the numbers $L^2\norm\cdot_{y''}$ over the blocks $y''$ which meet $\tilde\Delta(y')$. By \cite[(189), p.~308]{BalabanVAR}, applied to each $\chi_{y'}A_1^*$, at a block $y$
+\[
+    b(y)^3\abs{\mathcal N(A_1^*)}_{\Delta(y)} \leq O(1)\varepsilon_4c'\sum_{y'}e^{-\frac{1}{4}\delta_0d(y,y')}\abs{A_1^*}_{y'}\;.
+\]
+The kernel of $\mathfrak G$ and of its first differences decays at the rate $\delta_0$ with the bounds \cite[(3.42)--(3.44)]{BalabanPBG}, by \cite[Theorem~3.13]{BalabanPBG}, so that $\norm{\mathfrak Gf}_x \leq B_0\sum_ye^{-\delta_0d(x,y)}(b(x)/b(y) + b(y)/b(x))^3b(y)^3\abs f_{\Delta(y)}$, the powers of the ratio of the spacings being those of \eqref{eq:collar-sums}. Since $4\delta_\star$ is at most the rate $\frac{1}{8}\delta_0$ of \cite[(190)]{BalabanVAR}, both rates are at least $8\delta_\star$, and with $d(x, y') \leq d(x, y) + d(y, y')$, the hypothesis on $w$, and \eqref{eq:collar-sums} twice,
+\[
+    w(x)\norm{\mathfrak G\mathcal N(A_1^*)}_x \leq O(1)B_0c'C_w'N_\star^4\,\varepsilon_4\,\sup_{y'}w(y')\norm{A_1^*}_{y'}\;,
+\]
+where $C_w'$ is $C_w$ times the constant by which the weights of the blocks which meet one enlarged block differ. Here the ratio of the spacings of $x$ and $y'$ is at most the product of those of $x$, $y$ and of $y$, $y'$; each term of the sum \eqref{eq:collar-sums} is at most $N_\star$, which bounds the cube of a ratio times $e^{-\delta_\star d}$; and the decay which remains, at a rate of at least $5\delta_\star$ in each of the two distances, is summed by \eqref{eq:collar-sums}. For $\varepsilon_4$ small the factor before the supremum is at most $\frac{1}{2}$, and since the lattice is finite the suprema are finite, so that $\sup w\norm{A_1^*} \leq 2\sup w\norm{\mathfrak GJ}$.
+
+The field of the minimiser differs from $A_1^*$ by $HD(A_1^*)$. The function $D$ vanishes at zero with its first derivative \cite[(55), (56)]{BalabanVAR}, so that $D(A_1^*)(c) = \int_0^1\langle\mathfrak D(tA_1^*; c, \cdot), A_1^*\rangle\,dt$, and by \cite[(73), p.~289]{BalabanVAR} the kernel $\mathfrak D(A'; c, b)$ is at most $O(1)C_3\varepsilon_4b(y)^{-d+1}e^{-\frac{1}{2}\delta_0d(c,y)}$ for $b$ in the block $y$; hence $\abs{D(A_1^*)(c)} \leq O(1)C_3\varepsilon_4\sum_ye^{-\frac{1}{2}\delta_0d(c,y)}\norm{A_1^*}_y$. The kernel of $H$ and of its first differences decays at the rate $\delta_0$ \cite[(3.132), (3.133)]{BalabanPBG}. As before, $w(x)\norm{HD(A_1^*)}_x \leq O(1)\varepsilon_4\sup w\norm{A_1^*}$, which for $\varepsilon_4$ small is at most $\sup w\norm{A_1^*}$. Together, $\sup w\norm{A'_*} \leq 2\sup w\norm{A_1^*} \leq 4\sup w\norm{\mathfrak GJ}$.
+\end{proof}
+
+% Use 1 (repair of prop:minimisers(b), "several layers"): w(y) = (b(y)/eps)^{1-eps_0}; the residual is
+% bounded there by (eps/b(y))^{1-eps_0} eps_1 C_G/2 at the block y; the lemma gives the pointwise bound
+% 2 rho-bar(x) of the minimiser's field, which that paragraph states.
+% Use 2: Lemma lem:equal-data-step below.
+
+% STATUS of Lemma lem:equal-data-step: complete given (i) Lemma lem:weighted-minimiser and (ii) the reading
+% (S5) of the proofs of prop:minimisers(a), (b), stated at the end. Not reviewed.
+
+\begin{lemma}[The Two Runs at Equal Data, in the Unit of the Step]\label{lem:equal-data-step}
+In the setting of the proof of Proposition~\ref{prop:minimisers}(d), ``the two runs at equal data'', extended to the joined sets as in the proof of Lemma~\ref{lem:chain-runs}, let $c^B$ be the real minimiser of run~B's set $\mathbf B^B$ on a domain $Y'$ at regular data, and suppose that its plaquette field $F$ satisfies, at the plaquettes $p$ of a layer $n$ of the step and for the plaquettes $p'$ within the distance $a_n$ of $p$, with the transport $\tau$ of $c^B$ along a shortest path and an exponent $\beta \in (\varepsilon_0, 1)$,
+\[
+    a_n^2\abs{F(p)} \leq t\;,
+    \qquad
+    a_n^2\abs{F(p) - \tau F(p')} \leq t\Bigl(\frac{\abs{p - p'}}{a_n}\Bigr)^\beta\;.
+\]
+Let $\tilde c \coloneqq Mc^B$ and let $V$ be the minimiser of $\mathbf B^\sharp$ with the plain averages of $\tilde c$, in the axial gauge relative to $\tilde c$. Then, for $t$ small, $V = (e^{i\varepsilon A''}\tilde c)^{u''}$ with a real field $A''$ and its transformation $u''$ of \cite[(106)]{BalabanAVG} such that, at a point $x$ of a block of the spacing $b$ in a layer $n$ of the step,
+\[
+    b\abs{A''} + b^2\abs{\nabla A''} \leq C_\gamma\Bigl(\frac{b}{a_n}\Bigr)^2\Bigl(\frac{\varepsilon}{a_n}\Bigr)^{\beta-\varepsilon_0}t\;,
+    \qquad
+    \abs{u'' - 1} \leq c_uC_\gamma\Bigl(\frac{b}{a_n}\Bigr)^2\Bigl(\frac{\varepsilon}{a_n}\Bigr)^{\beta-\varepsilon_0}t\;,
+\]
+with the covariant differences at $\tilde c$. In particular $N(A''; x) \leq 2C_\gamma(\varepsilon/a_n)^{\beta-\varepsilon_0}t$ in the unit of the step at every point of $Y'$, on the collar as inside. The constant $C_\gamma$ depends on $\varepsilon_0$, $\beta$, $d$, $L$, $G$, and the constants of \cite{BalabanVAR, BalabanPBG}.
+\end{lemma}
+
+\begin{proof}
+The proof is that of Proposition~\ref{prop:minimisers}(b) and of the second step of ``the two runs at equal data'', with one change: the first variation of the blocking artefact is bounded through the oscillation of the plaquette field at the unit of the step, and not through its first differences at the spacing of the blocks.
+
+\emph{The residual.} By (S5), the fields of \eqref{eq:artefact-variation} at $W = c^B$ satisfy, at a point of a layer $n$ of the step,
+\[
+    \abs{r_1} \leq C_r'\Bigl(\frac{\varepsilon}{a_n}\Bigr)^\beta\frac{t}{a_n^2}\;,
+    \qquad
+    \abs{r_0} \leq C_r'\,\frac{\varepsilon\,t^2}{a_n^4}\;.
+\]
+The identity \eqref{eq:current-variation} holds with the restricted right inverse $\mathcal L$ of the second step of ``the two runs at equal data'', $c^B$ being critical for the constraints of run~B, so that the residual of the fixed-point equation at $\tilde c$ is $\mathfrak GJ = \mathfrak G\mathcal L^*(D^*r_1 + r_0)$. The bounds of that proof, at a point $x$ of the spacing $b$, are $b\abs{\mathfrak G\mathcal L^*D^*r_1} \leq c_{\mathcal K}B_0b^2\sup\abs{r_1}$, $b^2\abs{\nabla\mathfrak G\mathcal L^*D^*r_1} \leq 2c_{\mathcal K}B'_0(\varepsilon_0)b^2(b/\varepsilon)^{\varepsilon_0}\sup\abs{r_1}$, and $b\abs{\mathfrak G\mathcal L^*r_0} + b^2\abs{\nabla\mathfrak G\mathcal L^*r_0} \leq 2c_{\mathcal K}B_0b^3\sup\abs{r_0}$, the suprema being taken with the decay of the kernels, which pays for the ratios of the units $a_n$ of different layers of the step as it pays for those of the spacings (``(b), several layers''). Since $\varepsilon \leq b \leq a_n$,
+\[
+    \norm{\mathfrak GJ}_x \leq C\Bigl(\frac{b}{a_n}\Bigr)^2\Bigl[\Bigl(\frac{b}{\varepsilon}\Bigr)^{\varepsilon_0}\Bigl(\frac{\varepsilon}{a_n}\Bigr)^\beta t + \frac{b}{a_n}\cdot\frac{\varepsilon}{a_n}\,t^2\Bigr] \leq 2C\Bigl(\frac{b}{a_n}\Bigr)^2\Bigl(\frac{\varepsilon}{a_n}\Bigr)^{\beta-\varepsilon_0}t\;.
+\]
+
+\emph{The fixed point.} The configuration $\tilde c$ is a reference configuration of \cite[Proposition~5]{BalabanVAR} for the problem of $\mathbf B^\sharp$ with vanishing datum, as in that proof: its plaquette variables are within a constant times $(b/a_n)^2t$ of one at the spacing $b$, by \eqref{eq:averaged-plaquette}. We apply Lemma~\ref{lem:weighted-minimiser} with the weight $w(y) \coloneqq (a_n/b(y))^2(a_n/\varepsilon)^{\beta-\varepsilon_0}$, $n$ the layer of the step at $y$. The weight satisfies the hypothesis of that lemma: the ratio of the factors $(a_n/b)^2$ at two blocks of one layer of the step is the square of the ratio of their spacings, and two blocks in the layers $n \neq n'$ of the step are separated by $\abs{n - n'} - 1$ layers of the step, each at least $M$ wide in its own unit and hence in the units of the blocks, so that $e^{\delta_\star d(y,y')}$ pays for $(a_n/a_{n'})^3$ by \eqref{eq:collar-condition} and $M \geq LM_1$. Hence $\norm{A''}_x \leq 8C(b/a_n)^2(\varepsilon/a_n)^{\beta-\varepsilon_0}t$, which is the first bound with $C_\gamma \coloneqq 8C$. The identification of $(e^{i\varepsilon A''}\tilde c)^{u''}$ with $V$ and the bound $\abs{u'' - 1} \leq c_ub\sup\abs{A''}$ are those of the proof of Lemma~\ref{lem:link-values}, second step. In the unit of the step, $a_n\abs{A''} + a_n^2\abs{\nabla A''} \leq (a_n/b)^2\norm{A''}_x$.
+
+\emph{(S5).} The proofs of Proposition~\ref{prop:minimisers}(a) and of \eqref{eq:artefact-variation} use the first differences of $F$ in three places, and in each as a bound of the difference of transported values of $F$ at two plaquettes at a distance of at most $3\varepsilon$: the corrections of two opposite bonds of a coarse plaquette, which are fluxes through surfaces translated by one coarse spacing; the mismatch $\abs{\bar F_p}^2 - L^{-4}\sum\abs{F_{p'}}^2$, in which all values lie within $2\varepsilon$ of each other; and the difference $\tilde F_{p'} - F_{p'}$ of a weighted average over the plaquettes within $2\varepsilon$. Under the hypothesis each of these differences is at most $(3\varepsilon/a_n)^\beta t/a_n^2$, in the place of $3\varepsilon\abs{\nabla F}$, and $\abs F \leq t/a_n^2$ in the place of $C_0\varepsilon_1/a^2$; the terms of the second order, which gave $\varepsilon^2\abs F^2$ in $r_1$ and $\varepsilon\abs F^2$ in $r_0$, give $(\varepsilon/a_n)^2t^2/a_n^2$ and $\varepsilon t^2/a_n^4$. The quantities are formed with the transports of $c^B$ and do not depend on a gauge. TO VERIFY line by line when the lemma is moved to the supplement: the derivation of \eqref{eq:artefact-variation} is given there in six lines, and the constant $C_r'$ is to be tracked as $C_r$ is.
+\end{proof}
+
+% STATUS of Lemma lem:strip: complete; the comparison of the bonds in the axial gauge is elementary and
+% is proved in the text. Uses lem:collar-flow(a), (b) on run A's own set and lem:collar-far on B^sharp.
+% Not reviewed.
+
+\begin{lemma}[The Strip on Which the Collars of the Two Runs Differ]\label{lem:strip}
+Let $\mathbf B'^A$ be the joined set of a link in run~A, $S$ the strip of the proof of Proposition~\ref{prop:minimisers}(d), on which $\mathbf B'^A$ has the spacing $L\varepsilon$ and $\mathbf B^\sharp$ has the bonds of run~A as data, and let $n$ be the layer of the step at a point of $S$. At a real point let $W_0$, $\mathcal A$, $E$ be as in Lemma~\ref{lem:collar-flow}(b), with the bound $\varrho$ of $\sup(n_\beta + e'_E)$ and the regularity $t$ of the real configuration under $W_0$, let $X \coloneqq e^{i\varepsilon\mathcal A}W_0$, let $c^A$ be the minimiser of $\mathbf B'^A$ with the plain averages $D = e^{iE}M^\cdot(X)$, and $c^A_{\mathrm{fl}} = e^{i\varepsilon\mathfrak y}W_0$ its representative of Lemma~\ref{lem:collar-flow}(a). Let $V_S$ be the minimiser of $\mathbf B^\sharp$ at the data of $X$: the plain averages $D$ on its blocks and the bonds of $X$ on $Y' \setminus \Omega^B_2$. Then the orbit of $V_S$ contains $e^{i\varepsilon\mathfrak v}c^A_{\mathrm{fl}}$, its transform by a gauge transformation $g_S$, with
+\[
+    N(\mathfrak v; x) \leq C_S\,\omega_S\,e^{-3\delta_\star d(x,S)}\;,
+    \qquad
+    \abs{g_S - g_0} \leq C_S\Bigl(\frac{\varepsilon}{a_n}\Bigr)^2\omega_S\;,
+    \qquad
+    \omega_S \coloneqq \Bigl(\frac{L\varepsilon}{a_n}\Bigr)^\beta\varrho + \frac{L\varepsilon}{a_n}\,\varrho\,t\;,
+\]
+at every point $x$ of $Y'$, in the unit of the step, where $g_0$ is the gauge transformation which carries the minimiser of $\mathbf B^\sharp$ at its own data named in the proof to $c^A_{\mathrm{fl}}$, the distance being that of $\mathbf B^\sharp$.
+\end{lemma}
+
+\begin{proof}
+\emph{The bonds on the strip.} On $S$ the configuration $c^A$ has the same plain averages over the blocks of the side $L\varepsilon$ as $X$, and $c^A = (c^A_{\mathrm{fl}})^{g^{-1}}$ with $\abs{g - 1} \leq c_g(L\varepsilon/a_n)\varrho$ on these blocks (Lemma~\ref{lem:collar-flow}(a)), while $c^A_{\mathrm{fl}} = e^{i\varepsilon\mathfrak w}X$ with $N(\mathfrak w; x) \leq 2C_{\mathrm{fl}}(L\varepsilon/a_n)^\beta\varrho$ on $S$, $\mathfrak w$ being the composition of $\mathfrak y$ and $-\mathcal A$ (\eqref{eq:collar-closeness} at the spacing $L\varepsilon$). Let $\ell$ be a closed path of at most $2dL + 1$ bonds in two adjacent blocks of $S$, based at the block point $y$ of one of them; it is spanned by at most $dL^2$ plaquettes. The plaquette variables of $e^{i\varepsilon\mathfrak w}X$ differ from those of $X$ by at most $\varepsilon^2(\abs{D_X\mathfrak w} + C\abs{\mathfrak w}^2 + C\varepsilon\abs{\mathfrak w}\abs{\nabla\mathfrak w}) \leq 3C_{\mathrm{fl}}(\varepsilon/a_n)^2(L\varepsilon/a_n)^\beta\varrho$, and the transports by which they are carried to $y$ differ by at most $2dL\varepsilon\abs{\mathfrak w}$, which multiplies a plaquette variable within $(\varepsilon/a_n)^2t$ of one. Writing the transport around $\ell$ as the ordered product of the transported plaquette variables, and conjugating with $g(y)$, which moves a matrix $h$ by at most $2\abs{g(y) - 1}\abs{h - 1}$,
+\[
+    \abs{c^A(\ell) - X(\ell)} \leq \delta_{\mathrm{hol}} \coloneqq C(L)\Bigl(\frac{\varepsilon}{a_n}\Bigr)^2\omega_S\;.
+\]
+Let $\lambda$ be the gauge transformation which is one at the block points and carries $c^A$ on $S$ to the axial gauge relative to $X$ in these blocks \cite[(1.19), p.~79]{BalabanREG}, so that the two have the same transports along the paths $\Gamma_{y,x}$ of the gauge. For a bond $b = \langle x, x'\rangle$ of one block, $(c^A)^\lambda(b)X(b)^{-1}$ is conjugate, by the common transport along $\Gamma_{y,x}$, to $c^A(\ell)X(\ell)^{-1}$ for the closed path $\ell$ made of $\Gamma_{y,x}$, $b$, and $\Gamma_{y,x'}$ reversed. For a bond which joins two blocks, with the block points $y$ and $y'$, the same holds up to the ratio of the transports along the straight path from $y$ to $y'$; the plain averages over the block bond are equal, and the average \cite[(0.4), p.~253]{BalabanRG1} is this straight transport times the exponential of a convex combination of logarithms of transports around closed paths of the kind above, so that the ratio is within $2\delta_{\mathrm{hol}}$ of one. Hence, on every bond of $S$,
+\[
+    \bigl\lvert(c^A)^\lambda(b)X(b)^{-1} - 1\bigr\rvert \leq 3\delta_{\mathrm{hol}}\;.
+\]
+\emph{The two minimisers.} The transformation $\lambda$ is one at the block points of $\mathbf B'^A$, so that $(c^A)^\lambda$ has the plain averages $D$. By Lemma~\ref{lem:collar-critical} it is, in its orbit, the minimiser of $\mathbf B^\sharp$ at its own data $D^1$: the averages $D$ on the blocks, the bonds of $X$ on $Y' \setminus \Omega^A_1$, where the bonds are data of $\mathbf B'^A$ as well, and its own bonds on $S$. The data $D^2$ of $V_S$ differ from $D^1$ on the bonds of $S$ only, and there by at most $\varpi \leq 3\delta_{\mathrm{hol}}$ in the logarithm. We apply Lemma~\ref{lem:collar-far} on the set $\mathbf B^\sharp$, with the real minimiser $U \coloneqq (c^A)^\lambda$ at the data $D^1$, with $\mathfrak N$ the set of the unit cubes of $S$ and of their neighbours, and with $c^1 \coloneqq c^A_{\mathrm{fl}}$, a base which is the transform of $U$ by $g_0 \coloneqq g\lambda^{-1}$; the transformation $\lambda$ is within a constant times $(L\varepsilon/a_n)(\varrho + t)$ of one, by its definition through the transports of $c^A$ and of $X$ along paths of at most $dL$ bonds, so that $g_0$ is within $\frac{1}{10}$ of one. The orbit of $V_S$ then contains $e^{i\varepsilon\mathfrak v}c^A_{\mathrm{fl}}$ with $b\abs{\mathfrak v} + b^2\abs{\nabla\mathfrak v} \leq C_{\mathrm{dis}}\varpi e^{-3\delta_\star d(x,\mathfrak N)}$ at a point of the spacing $b$, and with a gauge transformation $g_S$ such that $\abs{g_S - g_0} \leq C\varpi$ (the proof of Lemma~\ref{lem:collar-far}, in the form (S1) of Lemma~\ref{lem:link-values}). In the unit of the step, $N(\mathfrak v; x) \leq (a_n/b)^2(b\abs{\mathfrak v} + b^2\abs{\nabla\mathfrak v}) \leq (a_n/\varepsilon)^2C_{\mathrm{dis}}\varpi e^{-3\delta_\star d(x,\mathfrak N)}$, since $b \geq \varepsilon$, which is the claim with $C_S \coloneqq 3C(L)C_{\mathrm{dis}}$. Only the values and the first differences are converted; the other entries of \eqref{eq:collar-far} are not used.
+\end{proof}
+
+% STATUS of Lemma lem:data-analytic: a corollary of the analyticity asserted in lem:collar-flow(a).
+% TO VERIFY when moved: that the proof of lem:collar-flow(a) admits complex A and E (its first step
+% cites VAR Proposition 9 for complex data in the ball (172); the continuity argument in s is for norms).
+
+\begin{lemma}[Two Values from One Base]\label{lem:data-analytic}
+In the setting of Lemma~\ref{lem:collar-flow}(a), let $(\mathcal A_0, E_0)$ and $(\mathcal A_1, E_1)$ be two pairs of data on the same base $W_0$, with $\sup_x(n_{\mathcal A_i}(x) + e_{E_i}(x)) \leq \frac{1}{2}\vartheta_{\mathrm{col}}$, and let $\Delta \coloneqq \sup_x(n_{\mathcal A_1 - \mathcal A_0}(x) + e_{E_1 - E_0}(x))$. Then the fields and the gauge transformations of that lemma satisfy, at every point $x$, of a spacing $b$ at a layer $n$,
+\[
+    N(\mathfrak y_1 - \mathfrak y_0; x) \leq 4C_{\mathrm{fl}}\,\Delta\;,
+    \qquad
+    \abs{g_1(x) - g_0(x)} \leq 4c_g\,\frac{b}{a_n}\,\Delta\;.
+\]
+\end{lemma}
+
+\begin{proof}
+For a complex number $\sigma$ with $\abs\sigma \leq r \coloneqq \vartheta_{\mathrm{col}}/(2\Delta)$ the data $(\mathcal A_0 + \sigma(\mathcal A_1 - \mathcal A_0), E_0 + \sigma(E_1 - E_0))$ satisfy the hypothesis of Lemma~\ref{lem:collar-flow}(a), since $n$ and $e$ are seminorms. The field $\mathfrak y_\sigma$ and the transformation $g_\sigma$ are analytic in $\sigma$ on this disc, by the last sentence of that part, and they satisfy $N(\mathfrak y_\sigma; x) \leq C_{\mathrm{fl}}\vartheta_{\mathrm{col}}$ and $\abs{g_\sigma - 1} \leq c_g(b/a_n)\vartheta_{\mathrm{col}}$ there. The quantity $N(\,\cdot\,; x)$ is a sum of two norms of values at $x$, linear functionals of the field composed with a norm, so that Schwarz's lemma applies to $\mathfrak y_\sigma - \mathfrak y_0$ and to $g_\sigma - g_0$, which vanish at $\sigma = 0$ and are at most $2C_{\mathrm{fl}}\vartheta_{\mathrm{col}}$ and $2c_g(b/a_n)\vartheta_{\mathrm{col}}$ on the disc: at $\sigma = 1$ they are at most these numbers divided by $r$.
+\end{proof}
+
+% STATUS of Proposition prop:link-step: assembled from the four lemmata above and lem:link-field-runs;
+% every gauge transformation is named and is near one. The two inputs marked (S6), (S7) are to be
+% verified. Not reviewed.
+
+\begin{proposition}[One Link in the Two Runs, in the Unit of the Step]\label{prop:link-step}
+At a real point of a young matched pair, with run~B at the lifted argument, consider a link with the joined sets $\mathbf B'^A$, $\mathbf B'^B$ on $Y'$. Let the previous values $W^A$, $W^B$ be bases which are in their orbits minimisers of the joined sets at their own data, and suppose that
+\[
+    W^B = e^{ih\mathfrak z_p}W'\;,
+    \qquad
+    MW' = \hat W^A \coloneqq (W^A)^{v_p^{-1}}\;,
+    \qquad
+    N(\mathfrak z_p) \leq \eta_p\;,
+\]
+with $W'$ in the orbit of the lift of $\hat W^A$ under the gauge transformations which are one at the sites of run~A, and $v_p$ a gauge transformation of the lattice of run~A with values in $G$, of which no bound is assumed. Let the data of the link be $D^X = e^{iE^X}M^\cdot(e^{ih_X\mathcal A^X}W^X)$ on the blocks, with $\mathcal A^X$ and $E^X$ as in Lemma~\ref{lem:collar-flow}(b), bounded by $\varrho$, and suppose that
+\[
+    N\bigl(\mathcal A^B - \mathcal L_\iota\operatorname{Ad}(v_p^{-1})\mathcal A^A\bigr) \leq \eta_{\mathcal A}\;,
+    \qquad
+    \sup\abs{E^B - \operatorname{Ad}(v_p^{-1})E^A} \leq \eta_{\mathcal A}\;.
+\]
+Let $c^X$ be the minimiser of $\mathbf B'^X$ with the plain averages $D^X$ in the axial gauge relative to $W^X$. Then, for the numbers $\eta_p$, $\eta_{\mathcal A}$, $\varrho$, and $t$ small, $c^A = (e^{i\varepsilon a}Mc^B)^v$ with a gauge transformation $v$ of values in $G$ and, at every point $x$ of $Y'$, of a layer $n$ of the step, and at every block point $y$ of $\mathbf B^\sharp$,
+\[
+    N(a; x) \leq \eta' \coloneqq C_{\mathrm{ls}}\Bigl[\eta_p + \eta_{\mathcal A} + \Bigl(\frac{\varepsilon}{a_n}\Bigr)^{\beta-\varepsilon_0}(\varrho + t)\Bigr]\;,
+    \qquad
+    \abs{v(y) - v_p(y)} \leq \eta'\;,
+\]
+with the covariant differences at $Mc^B$ and a constant $C_{\mathrm{ls}}$ which does not depend on $k$, $K$, $\varepsilon$, or $M$. The transformation $v_p$ enters the proof through the covariance of the minimisers and of the norms alone.
+\end{proposition}
+
+\begin{proof}
+All configurations of the proof are minimisers in named gauges, and every gauge transformation which relates two of them is exhibited.
+
+\emph{The moved configuration of run~B, averaged.} Let $\hat{\mathcal A} \coloneqq \operatorname{Ad}(v_p^{-1})\mathcal A^A$ and $\hat X \coloneqq e^{i\varepsilon\hat{\mathcal A}}\hat W^A = (e^{i\varepsilon\mathcal A^A}W^A)^{v_p^{-1}}$. In the Landau gauge about $W'$ the lift of $\hat X$ is $e^{ih(\mathcal L_\iota\hat{\mathcal A} + \mathsf N(\hat{\mathcal A}))}W'$, with the nonlinear part $\mathsf N$ of the lift (proof of Proposition~\ref{prop:localisation-functions}), and its one-step average is $\hat X$, the transformations of the orbit being one at the sites of run~A. Hence $e^{ih\mathcal A^B}W^B = e^{ih\mathfrak d}Y$ with $Y \coloneqq e^{ih(\mathcal L_\iota\hat{\mathcal A} + \mathsf N)}W'$, $MY = \hat X$, and $\mathfrak d$ composed of $\mathcal A^B - \mathcal L_\iota\hat{\mathcal A}$, of $-\mathsf N$, and of $\mathfrak z_p$ rotated by the exponential of a field of the size $\varrho$, so that $N(\mathfrak d) \leq 2(\eta_{\mathcal A} + \eta_p) + C(\varepsilon/a_n)\varrho^2$. By (S6), $M(e^{ih\mathfrak d}Y) = e^{i\varepsilon\mathfrak s}\hat X$ with $N(\mathfrak s) \leq C_M'N(\mathfrak d)$. So
+\[
+    \Xi \coloneqq M\bigl(e^{ih\mathcal A^B}W^B\bigr) = e^{i\varepsilon\mathfrak s}\hat X\;,
+    \qquad
+    \Xi^{v_p} = e^{i\varepsilon\mathcal A_V}W^A\;,
+    \qquad
+    \mathcal A_V \coloneqq \operatorname{Ad}(v_p)\bigl[\mathfrak s \circ \hat{\mathcal A}\bigr]\;,
+\]
+where $\circ$ is the composition of the exponentials, and $N(\mathcal A_V - \mathcal A^A) \leq 2C_M'N(\mathfrak d)$ with the covariant differences at $W^A$, the rotation by $v_p$ being that of the configuration.
+
+\emph{Run~A's minimiser at run~B's data.} The data of $Mc^B$ on $\mathbf B^\sharp$ are $e^{iE^B}M^\cdot(\Xi)$ on the blocks and the bonds of $\Xi$ on $Y' \setminus \Omega^B_2$ (second step of the proof of Lemma~\ref{lem:link-values}). Let $V$ be the minimiser of $\mathbf B^\sharp$ at these data in the axial gauge relative to $Mc^B$. The plaquette field of $c^B$ is bounded and H\"older continuous at the units of the layers of the step, with a constant times $\varrho + t$, on the collar as inside (Lemma~\ref{lem:collar-flow}(a), (b), as in (1) of the proof of Lemma~\ref{lem:link-function-base}). By Lemma~\ref{lem:equal-data-step},
+\[
+    V = \bigl(e^{i\varepsilon A''}Mc^B\bigr)^{u''}\;,
+    \qquad
+    N(A''; x) + \abs{u''(x) - 1} \leq C\Bigl(\frac{\varepsilon}{a_n}\Bigr)^{\beta-\varepsilon_0}(\varrho + t)\;.
+\]
+
+\emph{The same minimiser from the base of run~A.} The data of $V$, transformed at the block points and at the sites of $Y' \setminus \Omega^B_2$ by $v_p$, are $e^{iE'}M^\cdot(e^{i\varepsilon\mathcal A_V}W^A)$ with $E' \coloneqq \operatorname{Ad}(v_p)E^B$, by the covariance of the plain averages. Let $P_V$ be the minimiser of $\mathbf B^\sharp$ with these plain averages in the axial gauge relative to $W^A$, and $P_S$ the one with the plain averages $e^{iE^A}M^\cdot(e^{i\varepsilon\mathcal A^A}W^A)$, which is the configuration $V_S$ of Lemma~\ref{lem:strip} in this gauge. The base $W^A$ is in its orbit the minimiser of $\mathbf B^\sharp$ at its own data (Lemma~\ref{lem:collar-critical}), and Lemma~\ref{lem:collar-flow}(a) on the set $\mathbf B^\sharp$ gives $P_V = (e^{i\varepsilon\mathfrak y_V}W^A)^{g_V^{-1}}$ and $P_S = (e^{i\varepsilon\mathfrak y_S}W^A)^{g_{\mathrm S}^{-1}}$. By Lemma~\ref{lem:data-analytic},
+\[
+    N(\mathfrak y_S - \mathfrak y_V; x) + \abs{g_{\mathrm S}(x) - g_V(x)} \leq C\bigl(\eta_p + \eta_{\mathcal A} + (\varepsilon/a_n)\varrho^2\bigr)\;.
+\]
+By \cite[(181)]{BalabanVAR}, $P_V = (V^{\bar\upsilon})^k$, where $\bar\upsilon$ is constant on the blocks and equal to $v_p$ at the block points, and $k$ is one at the block points and carries the axial gauge relative to $(Mc^B)^{\bar\upsilon}$ to that relative to $W^A$.
+
+\emph{Run~A's own minimiser.} By Lemma~\ref{lem:strip}, with $c^A_{\mathrm{fl}} = e^{i\varepsilon\mathfrak y^A}W^A$ the representative of $c^A$ on its own set, the orbit of $P_S$ contains $e^{i\varepsilon\mathfrak v}c^A_{\mathrm{fl}}$ with $N(\mathfrak v) \leq C_S\omega_S$, and $\omega_S \leq 2L(\varepsilon/a_n)^\beta\varrho$.
+
+\emph{The field.} The four relations give
+\[
+    c^A_{\mathrm{fl}} = e^{-i\varepsilon\mathfrak v}\bigl(e^{i\varepsilon\mathfrak y_S}W^A\bigr)^{\kappa_1}\;,
+    \qquad
+    e^{i\varepsilon\mathfrak y_S}W^A = e^{i\varepsilon(\mathfrak y_S \circ (-\mathfrak y_V))}\bigl(e^{i\varepsilon\mathfrak y_V}W^A\bigr)\;,
+    \qquad
+    e^{i\varepsilon\mathfrak y_V}W^A = \Bigl(\bigl(e^{i\varepsilon A''}Mc^B\bigr)^{u''\bar\upsilon k}\Bigr)^{g_V}\;,
+\]
+with $\kappa_1$ the transformation between the two representatives of the orbit of $P_S$. Since a field which is small in the norm $N$ at a configuration is, rotated, small in the norm $N$ at the transformed configuration, the composition of the three fields, each rotated by the transformations which stand between it and $Mc^B$, is a field $a$ with $c^A = (e^{i\varepsilon a}Mc^B)^v$ and $N(a) \leq 2(N(\mathfrak v) + N(\mathfrak y_S - \mathfrak y_V) + N(A''))$, for small fields. This is the bound of $N(a)$. No bound of a gauge transformation has been used for it.
+
+\emph{The transformation at the block points.} Let $g_A$ be the transformation of Lemma~\ref{lem:collar-flow}(a) with $c^A_{\mathrm{fl}} = (c^A)^{g_A}$. By Lemma~\ref{lem:strip}, $P_S$ is the transform of $e^{i\varepsilon\mathfrak v}c^A_{\mathrm{fl}}$ by the inverse of $g_S$, and $g_S$ is within $C_S(\varepsilon/a_n)^2\omega_S$ of $g_0 = g_A\lambda^{-1}$, where $\lambda$ is one at the block points and within a constant times $(L\varepsilon/a_n)(\varrho + t)$ of one elsewhere; so $c^A$ is the transform of $e^{-i\varepsilon\mathfrak v'}P_S$, with $\mathfrak v'$ a rotation of $\mathfrak v$, by a transformation which is within $\eta'$ of one at every site. Next, $P_S$ is the transform of a field times $P_V$ by $g_V$ composed with the inverse of $g_{\mathrm S}$, which is within $\eta'$ of one by Lemma~\ref{lem:data-analytic}. Then $P_V = (V^{\bar\upsilon})^k$ with $\bar\upsilon(y) = v_p(y)$ and $k(y) = 1$ at the block points, and $V$ is the transform of $e^{i\varepsilon A''}Mc^B$ by $u''$, within $\eta'$ of one. The transformation $v$ is the composition of these, in this order; at a block point $y$ it is therefore the product of $v_p(y)$ and of three matrices within $\eta'$ of one, which gives the second bound with a larger $C_{\mathrm{ls}}$. (S7): the order of the factors is to be written out with the convention $(U^g)^h = U^{hg}$ when the proposition is moved.
+
+\emph{(S6).} The one-step average of a moved configuration: for a configuration $Y$ of run~B which is regular at the units of the layers of the step and a field $\mathfrak d$ with $N(\mathfrak d)$ small, $M(e^{ih\mathfrak d}Y) = e^{i\varepsilon\mathfrak s}MY$ with $N(\mathfrak s) \leq C_M'N(\mathfrak d)$. By \cite[(0.4), p.~253]{BalabanRG1}, $M(\mathbf U, c)$ is the transport $\mathbf U(c)$ along the $L$ fine bonds of $c$ times the exponential of the average, over the sites $x$ of the block of $c_-$ and over the contours $\Gamma \in \mathbf G(c_-, x)$, $\Gamma' \in \mathbf G(c_+, x')$, of the logarithms of the transports around the closed paths $\Gamma \cup [x, x'] \cup (-\Gamma') \cup (-c)$. For $\mathbf U = e^{ih\mathfrak d}Y$ the logarithm of such a transport is that of $Y$ plus $h$ times the sum of the transported values of $\mathfrak d$ around the path, up to terms of the second order, and the sum over $-c$ cancels against the change of $\mathbf U(c)$. To the first order, therefore, $\varepsilon\mathfrak s(c)$ is $h$ times the average over $x$ of the sums of $\mathfrak d$ along the translates $[x, x']$ of $c$, which is $\varepsilon(Q_1\mathfrak d)(c)$, plus $(\Lambda\mathfrak d)(c_-) - (\Lambda\mathfrak d)(c_+)$, where $\Lambda\mathfrak d$ at a block is $h$ times the average of the sums of $\mathfrak d$ along its contours; this is $\varepsilon Q^{\mathrm{pl}}_1\mathfrak d = \varepsilon(Q_1 - \bar D\Lambda_1)\mathfrak d$. The values of $Q_1\mathfrak d$ and its differences over one coarse spacing are averages of those of $\mathfrak d$, up to commutators with the curvature. The contours of two adjacent blocks are translates of each other, so that $\abs{\bar D\Lambda_1\mathfrak d} \leq dL\,\varepsilon\sup\abs{\nabla\mathfrak d}$, and the first differences of this term are at most $2/\varepsilon$ times its values, hence at most $2dL\sup\abs{\nabla\mathfrak d}$. The terms of the second order are at most a constant times $\abs{\mathfrak d}(\varepsilon\abs{\mathfrak d} + (\varepsilon/a_n)^2t/\varepsilon)$ in the field, and their first differences at most $2/\varepsilon$ times as much. In the unit $a_n$ this gives $N(\mathfrak s) \leq C_M'(1 + N(\mathfrak d) + t)N(\mathfrak d)$. CHECKED 17 Nov against the transcription of \cite[p.~253]{BalabanRG1}; the translation covariance of the families $\mathbf G$ is to be cited from \cite{BalabanRG1} when the lemma is moved.
+\end{proof}
+
+% (S7) CHECKED 17 Nov, with U^g(b) = g(x) U(b) g(x')^{-1}, (U^g)^h = U^{hg}, (e^{i eps a} U)^g =
+% e^{i eps Ad(g) a} U^g:
+%   c^A = (c^A_fl)^{g_A^{-1}};  e^{i eps v} c^A_fl = (P_S)^{g_S},  g_S ~ g_0 = g_A lambda^{-1};
+%   e^{i eps y_S} W^A = (P_S)^{g_S'},  e^{i eps y_V} W^A = (P_V)^{g_V}  (g_S' the flow gauge of P_S);
+%   P_V = V^{k upsilon-bar};  V = (e^{i eps A''} M c^B)^{u''}.
+%   Hence c^A = (e^{i eps a} M c^B)^v with v = [g_A^{-1} g_S][g_S'^{-1} g_V] k upsilon-bar u'', the leftmost
+%   acting last; at a block point k = 1, the two brackets and u'' are within the rate of one, and
+%   v(y) ~ v_p(y). In lem:link-frames: W^X = (c_t^X)^{g_X} gives v_p = g_A v_t g_B^{-1}; the data of the link
+%   are those over W^X transformed by upsilon_X = u_X^{-1} g_X^{-1}; c_new^X = (P^X)^{k_X upsilon-bar_X};
+%   so v_new(y) = upsilon_A v upsilon_B^{-1} = u_A^{-1} g_A^{-1} (g_A v_t g_B^{-1}) g_B u_B = u_A^{-1} v_t u_B.
+% (S8) CHECKED 17 Nov: L_iota is defined in prop:two-lattices as H_1 of the one-step problem at the
+% background U^B of run B; in prop:localisation-functions run B's function is formed "at the lift of that
+% pair", so L_iota there is formed at the lifted base of the function, as prop:link-step uses it.
+
+% STATUS of Lemma lem:link-frames: the algebra of the gauge transformations of one link; complete given
+% prop:link-step and the comparison of the transformations (106). Not reviewed.
+
+\begin{lemma}[The Frames of the Values of the Links]\label{lem:link-frames}
+In the setting of Proposition~\ref{prop:link-step}, let $c^X_{\mathrm t}$ be the previous values in the axial gauge relative to the real minimisers $U^X$ under the arguments, with $U^B$ the lift of $U^A$, let $W^X = (c^X_{\mathrm t})^{g_X}$ be their representatives of Lemma~\ref{lem:collar-flow}(a), and suppose that $c^A_{\mathrm t} = (e^{i\varepsilon a_{\mathrm t}}Mc^B_{\mathrm t})^{v_{\mathrm t}}$ with $N(a_{\mathrm t}) \leq \eta_{\mathrm t}$ and $\abs{v_{\mathrm t} - 1} \leq \eta_{\mathrm t}$ at every site of run~A. Let $\mathbf H^X$ be the field of the link, formed at the pair of $c^X_{\mathrm t}$, and $u^X$ its transformation \cite[(106)]{BalabanAVG}, with $\abs{u^B - u^A} \leq \eta_u$ at the sites of run~A in the blocks of the boundary layer. Let $c^X_{\mathrm{new}}$ be the values of the link in the axial gauge relative to $U^X$. Then $c^A_{\mathrm{new}} = (e^{i\varepsilon a}Mc^B_{\mathrm{new}})^{v_{\mathrm{new}}}$ with $N(a) \leq \eta'$, the number of Proposition~\ref{prop:link-step} with $\eta_p \leq C\eta_{\mathrm t}$, and
+\[
+    \abs{v_{\mathrm{new}}(x) - 1} \leq C_{\mathrm{fr}}\bigl(\eta' + \eta_{\mathrm t} + \eta_u\bigr)
+\]
+at every site $x$ of run~A in a block of $\mathbf B'^A$ which is a block of $\mathbf B'^B$ as well, that is, in $Y'$ outside the strip $S$ and the band of bonds, and at the block points of $\mathbf B'^A$ in $S$. The hypothesis on $v_{\mathrm t}$ is needed at these sites only; on the strip the two runs have different blocks, and the proof of Proposition~\ref{prop:link-step} uses there the fields and the covariance, and no frame.
+\end{lemma}
+
+\begin{proof}
+\emph{The data in terms of the bases.} The field and its transformation are covariant, so that $(e^{ih\mathbf H^X}c^X_{\mathrm t})^{(u^X)^{-1}}$ is the transform of $e^{ih\mathcal A^X}W^X$, $\mathcal A^X \coloneqq \operatorname{Ad}(g_X)\mathbf H^X$ the field of the link formed at $W^X$, by a gauge transformation which at a block point $y$ is $\upsilon_X(y) \coloneqq (u^X)^{-1}(y)g_X(y)^{-1}$, in the order in which they act. On the blocks of $Y'^0$ the data are the plain averages of the argument, which are those of $c^X_{\mathrm t}$, hence those of $W^X$ transformed by $g_X^{-1}$ at the block points. So the data of the link are the data $D^X_{\mathrm{fl}} = e^{iE^X}M^\cdot(e^{ih\mathcal A^X}W^X)$ of Proposition~\ref{prop:link-step}, transformed at the block points by $\upsilon_X$, with $u^X$ replaced by one off the boundary layer and $E^X$ the function of the proof of Lemma~\ref{lem:chain-room} at the blocks next to it. By \cite[(181)]{BalabanVAR}, $c^X_{\mathrm{new}} = (P^X)^{k_X\bar\upsilon_X}$, where $P^X$ is the minimiser with the plain averages $D^X_{\mathrm{fl}}$ in the axial gauge relative to $W^X$, $\bar\upsilon_X$ is constant on the blocks, and $k_X$ is one at the block points.
+
+\emph{The bases.} From $c^A_{\mathrm t} = (e^{i\varepsilon a_{\mathrm t}}Mc^B_{\mathrm t})^{v_{\mathrm t}}$ and the covariance of the one-step average under the gauge transformations at the sites of run~A, $W^A = (e^{i\varepsilon a'}MW^B)^{v_p}$ with $v_p = g_Av_{\mathrm t}g_B^{-1}$ at the sites of run~A, in the order in which they act, and $a'$ a rotation of $a_{\mathrm t}$. Lemma~\ref{lem:link-lift} below puts this into the form of the hypothesis of Proposition~\ref{prop:link-step}, with $\eta_p \leq C\eta_{\mathrm t}$ and with $v_p$ changed by a factor within $C\eta_{\mathrm t}$ of one.
+
+\emph{The product.} By Proposition~\ref{prop:link-step}, $P^A = (e^{i\varepsilon a}MP^B)^v$ with $\abs{v(y) - v_p(y)} \leq \eta'$ at the block points. Hence, at a block point $y$, where $k_X = 1$, the transformation between $c^A_{\mathrm{new}}$ and $Mc^B_{\mathrm{new}}$ is, in the order of action from $Mc^B_{\mathrm{new}}$,
+\[
+    v_{\mathrm{new}}(y) = \upsilon_A(y)\,v(y)\,\upsilon_B(y)^{-1} = u^A(y)^{-1}g_A(y)^{-1}\cdot v(y)\cdot g_B(y)u^B(y)\;,
+\]
+and with $v(y) = g_A(y)v_{\mathrm t}(y)g_B(y)^{-1}$ up to $\eta' + C\eta_{\mathrm t}$ this is $u^A(y)^{-1}v_{\mathrm t}(y)u^B(y)$ up to the same number, the matrices being unitary; so $\abs{v_{\mathrm{new}}(y) - 1} \leq \eta' + (C + 1)\eta_{\mathrm t} + \eta_u$. The transformations $g_A$ and $g_B$, which are not close to each other at the rate, have cancelled.
+
+\emph{Inside the blocks.} Both $c^A_{\mathrm{new}}$ and $Mc^B_{\mathrm{new}}$ are in the axial gauges relative to $U^A$ and to $MU^B = U^A$. By the fourth step of the proof of Lemma~\ref{lem:link-values}, with $a_0 = 0$, $v_{\mathrm{new}}$ at a site of a block is the transport by $U^A$ of its value at the block point, up to $2dLc_Mb\sup\abs a \leq 2dLc_M\eta'$; the transport of a matrix within $\delta$ of one is within $\delta$ of one.
+\end{proof}
+
+% STATUS of Lemma lem:link-lift: from lem:lift-of-move(a) and lem:collar-flow(a), (b) on the one-step set.
+% TO VERIFY on moving: that the one-step set on a neighbourhood of Y' (spacing eps on the bonds of run A,
+% the bonds of run B on the collar of the neighbourhood) is a set to which lem:collar-flow applies with the
+% base iota(U^A), and the hypothesis of lem:lift-of-move(a) on the regularity of Mc^B and of its lift.
+
+\begin{lemma}[From the Averages to the Lifts]\label{lem:link-lift}
+In the setting of Proposition~\ref{prop:link-step}, let $c^A = (e^{i\varepsilon a}Mc^B)^v$ on a neighbourhood of $Y'$, with $N(a) \leq \eta$ and $c^B = e^{ih\mathfrak y^B}U^B$ a base of run~B over the lift $U^B$ of $U^A$, with $N(\mathfrak y^B) \leq \varrho$ and H\"older continuous first differences in the units of the layers of the step. Then there are a configuration $W'$ in the orbit of the lift of $(c^A)^{v'^{-1}}$ under the gauge transformations which are one at the sites of run~A, a field $\mathfrak z$, and a gauge transformation $v'$ of run~A such that
+\[
+    c^B = e^{ih\mathfrak z}W'\;,
+    \qquad
+    MW' = (c^A)^{v'^{-1}}\;,
+    \qquad
+    N(\mathfrak z; x) \leq C_{\mathrm{ll}}\bigl(\eta + (\varepsilon/a_n)^\beta\varrho\bigr)\;,
+    \qquad
+    \abs{v' - v} \leq C_{\mathrm{ll}}(\varepsilon/a_n)\varrho\;.
+\]
+\end{lemma}
+
+\begin{proof}
+\emph{The lift of the average of $c^B$.} The one-step set, with the spacing $\varepsilon$ on the bonds of run~A, is a determining set of run~B of which $U^B$ is the minimiser at its own data, and the plain one-step averages of $c^B$ are $M(e^{ih\mathfrak y^B}U^B)$. By Lemma~\ref{lem:collar-flow}(a), (b) on this set, with $W_0 = U^B$, $\mathcal A = \mathfrak y^B$, $E = 0$, and the spacing $b = \varepsilon$ at every point, the minimiser with the one-step averages of $c^B$, taken in the axial gauge relative to $U^B$, is the transform by the inverse of a transformation $g_\iota$ of $e^{ih\mathfrak y_\iota}U^B$, with $N(\mathfrak y_\iota - \mathfrak y^B; x) \leq C_{\mathrm{fl}}(\varepsilon/a_n)^\beta\varrho$ and $\abs{g_\iota - 1} \leq c_g(\varepsilon/a_n)\varrho$. That minimiser is a representative $W_1$ of the lift of $Mc^B$, with $MW_1 = Mc^B$, and $c^B = e^{ih\mathfrak q}(W_1)^{g_\iota}$ with $\mathfrak q$ the composition of $\mathfrak y^B$ and $-\mathfrak y_\iota$.
+
+\emph{The lift of the moved average.} The hypothesis of Lemma~\ref{lem:lift-of-move}(a) on the first differences of the plaquette field holds for the minimiser $U^A$ and not for $Mc^B$ on the collar, so that we apply that lemma with the base $U^A$. By (S6), $Mc^B = e^{i\varepsilon\mathfrak s_B}U^A$ with $N(\mathfrak s_B) \leq C_M'\varrho$, and $e^{i\varepsilon a}Mc^B = e^{i\varepsilon\mathfrak s_1}U^A$ with $\mathfrak s_1$ the composition of $a$ and $\mathfrak s_B$. On the family $\mathfrak s_B + \sigma(\mathfrak s_1 - \mathfrak s_B)$, $\abs\sigma \leq \vartheta_\iota/(2n_{\mathfrak s_1 - \mathfrak s_B})$, the field $\mathbf S_\sigma$ of Lemma~\ref{lem:lift-of-move}(a) and its gauge transformation are analytic and bounded, and Schwarz's lemma, as in the proof of Lemma~\ref{lem:data-analytic}, shows that the orbit of the lift of $e^{i\varepsilon a}Mc^B$ contains $e^{ih\mathbf S}W_1$ with $N(\mathbf S; x) \leq 4C_{\mathfrak F}n_a$, through a gauge transformation which at the sites of run~A is within a constant times $n_a$ of one; we include it in $v$. (READ 17 Nov: Lemma~\ref{lem:lift-of-move}(d) states the analyticity for the family $A_R + zA_I$, $\abs z < 25$, with $\mathbf S(z)$ analytic in $z$ and real for real $z$; with $A_R = \mathfrak s_B$ and $A_I$ a multiple of $\mathfrak s_1 - \mathfrak s_B$ of the size $\vartheta_\iota/50$ this is the family needed, and the proof of Lemma~\ref{lem:chain-runs} uses the global lift along such a family in the same way. TO VERIFY on moving: the analyticity of the gauge transformation of part (a) along the family, and that its representative at $z = 0$ may be taken to be $W_1$.) Put $W'' \coloneqq e^{ih\mathbf S}W_1$; then $MW'' = e^{i\varepsilon a}Mc^B = (c^A)^{v^{-1}}$, and $c^B = e^{ih\mathfrak q}(e^{-ih\mathbf S}W'')^{g_\iota} = e^{ih\mathfrak z}(W'')^{g_\iota}$ with $\mathfrak z$ composed of $\mathfrak q$ and of a rotation of $-\mathbf S$. The configuration $W' \coloneqq (W'')^{g_\iota}$ has the average $((c^A)^{v^{-1}})^{g_\iota} = (c^A)^{v'^{-1}}$ with $v'^{-1} \coloneqq g_\iota v^{-1}$ at the sites of run~A, and it is in the orbit of the lift of this average, the lift being covariant under the gauge transformations of run~B.
+\end{proof}
+
+% STATUS of Lemma lem:link-currents: the identity is eq:artefact-variation read without criticality.
+% TO VERIFY on moving: eq:artefact-variation as an identity between currents (units, the pairing of run B),
+% and the lift of a divergence-form field of run A to run B (proof of lem:field-difference).
+
+\begin{lemma}[The Currents of Two Aligned Configurations]\label{lem:link-currents}
+Let $c^B$ be a real configuration of run~B whose plaquette field satisfies the hypothesis of Lemma~\ref{lem:equal-data-step}, and let $c^A = (e^{i\varepsilon a}Mc^B)^v$ be a real configuration of run~A with $N(a) \leq \eta \leq 1$, whose plaquette field satisfies the same hypothesis on the lattice of run~A. Then
+\[
+    J(c^B) = Q^{\mathrm{pl}*}_1\operatorname{Ad}(v^{-1})J(c^A) + D^*K + p\;,
+\]
+with the operations at $c^B$, and with fields $K$ and $p$ of run~B such that, in the units of a layer $n$ of the step and for $\beta_c < \beta$,
+\[
+    a_n^2\abs K \leq C(\eta + (\varepsilon/a_n)^\beta t)\;,
+    \qquad
+    a_n^{2+\beta_c}[K]_{\beta_c} \leq C(\eta + (\varepsilon/a_n)^{\beta-\beta_c}t)^{1-\beta_c/\beta}\,t^{\beta_c/\beta}\;,
+    \qquad
+    a_n^3\abs p \leq C(\eta + \varepsilon/a_n)\,t\;.
+\]
+\end{lemma}
+
+\begin{proof}
+For every field $\delta\mathcal A$ of run~B, $dA_{\varepsilon/L}(c^B)[\delta\mathcal A] = d(A_\varepsilon \circ M)(c^B)[\delta\mathcal A] - db(c^B)[\delta\mathcal A]$, by the definition of the blocking artefact $b$. The first term on the right is $\langle Q^{\mathrm{pl}}_1\delta\mathcal A, J(Mc^B)\rangle$, and the second is given by \eqref{eq:artefact-variation}, whose derivation does not use that the configuration is critical. Hence $J(c^B) = Q^{\mathrm{pl}*}_1J(Mc^B) - D^*r_1 - r_0$, with the bounds of (S5) for $r_1$ and $r_0$. The current is covariant, and by \eqref{eq:current-move} at the configuration $Mc^B$ with the field $a$,
+\[
+    \operatorname{Ad}(v^{-1})J(c^A) = J(e^{i\varepsilon a}Mc^B) = J(Mc^B) + D^*Da + \rho\;,
+    \qquad
+    a_n^3\abs\rho \leq c_{\mathrm{cur}}(\eta\,t + \eta^2)\;.
+\]
+So $J(c^B) - Q^{\mathrm{pl}*}_1\operatorname{Ad}(v^{-1})J(c^A) = -Q^{\mathrm{pl}*}_1D^*_A(Da) - Q^{\mathrm{pl}*}_1\rho - D^*r_1 - r_0$. By Lemma~\ref{lem:local-relations}(a), $Q^{\mathrm{pl}*}_1D_A^*\mathfrak m = D_B^*\mathsf r^*\mathfrak m$ for a field on the plaquettes of run~A, up to the terms which that lemma and the proof of Lemma~\ref{lem:field-difference} put into the pointwise part; so $K \coloneqq -\mathsf r^*(Da) - r_1$ and $p$ collects $-Q^{\mathrm{pl}*}_1\rho$, $-r_0$, and those terms. The supremum of $K$ is bounded by $N(a)$ and by the bound of $r_1$. The field $Da$ is the difference of the plaquette fields of $e^{i\varepsilon a}Mc^B$ and of $Mc^B$ up to terms of the second order in $a$, hence H\"older continuous with the exponent $\beta$ and a seminorm of at most a constant times $t$, by the hypotheses on the two plaquette fields and \eqref{eq:averaged-plaquette}; Lemma~\ref{lem:lift-holder}(b) gives its seminorm of the exponent $\beta_c$, and the map $\mathsf r^*$ preserves these bounds at the distances from $\varepsilon$ on. For $r_1$, which is only bounded, the seminorm of the exponent $\beta_c$ is at most $2(a_n/h)^{\beta_c}$ times the supremum, by \eqref{eq:crude-holder}, which the factor $(\varepsilon/a_n)^\beta$ pays up to $L^{\beta_c}(\varepsilon/a_n)^{\beta-\beta_c}$.
+\end{proof}
+
+% =============================================================================================
+% THE INDUCTION OVER THE LINKS AND THE READ. STATUS: statement and the order of the proof, with the lemma
+% used at each step; steps 4 (the cut) and 6 (left factors) are NOT yet proofs. Written 17 Nov after 01:38.
+% =============================================================================================
+
+\begin{proposition}[The Field of a Read on Two Fine Lattices, at the Lifted Argument]\label{prop:read-runs}
+On a young matched pair with the finest layer $\nu$ large, consider an $\mathbf R$-operation of a step $k$ at a real point of its region of integration, at equal values of the variables and of the parameters of the two runs, and a piece of an $F$ whose set $X(F)^{[2]}$ meets no component. Let run~A be taken at a pair $(\mathbf U, \mathbf J)$ of the third kind over the real minimiser $U^A$, and run~B at the pair lift of this pair. Then, with the field $\mathfrak f^X$ and the transformation $u^X$ of \eqref{eq:transport-point} in run $X$, at the points and at the sites of run~A in $X(F)^{[2]}$,
+\[
+    N(\mathfrak f^B - \mathcal L_\iota\mathfrak f^A; x) + \abs{u^B(x) - u^A(x)} \leq \kappa^{\mathbf R}_k\,\alpha_{0,k}\;,
+    \qquad
+    \kappa^{\mathbf R}_k \coloneqq C_{\mathbf R}\,\nu^{p}L^{-\nu/40}\;,
+\]
+with an integer $p$. The bound does not carry the factor $\tau_{\mathfrak f}$ of the fields of the read in one run: the lattice artefacts of the values of the links enter the datum of the read at their own size.
+\end{proposition}
+
+\begin{proof}[Proof, written out; the comment block after it is the earlier plan]
+Throughout, $\varrho$ bounds the fields of the three links in the norm $N$ with the H\"older quotients of their first differences, $t$ the regularity of the real minimisers, $d_{\mathbf H} \coloneqq C_{\mathrm{loc}}L^{-\nu/26}$, and $\mathrm{art} \coloneqq (\varepsilon/a_j)^{\beta-\varepsilon_0}$ with $j \geq \nu/2$ the least layer of the step on the domains of the links; the numbers $\eta_1 \leq \eta_2 \leq \eta_3$ defined below are each at most a constant times a power $\nu^pL^{-\nu/40}$ times $\varrho + t$.
+
+\emph{The first link.} Its field is $\mathbf H_k$ at the argument pair, and run~B is at the pair lift, which is the setting of Proposition~\ref{prop:localisation-functions}: $N(\mathbf H^B_k - \mathcal L_\iota\mathbf H^A_k; x) \leq d_{\mathbf H}\varrho + C(\varepsilon/a_k)^{(1-\varepsilon_0)/3}\varepsilon_1$ at the points of its boundary layer, which lie in no collar of $\mathbf B_k$, and the transformations $u_{k,\Lambda}$ differ by as much. The data of the link are those of the proof of Lemma~\ref{lem:chain-room} over the base $\mathbf U^X_0$, the minimiser under the argument, with $\mathbf U^B_0$ the lift of $\mathbf U^A_0$: the field is $\mathfrak A^X$ composed with the cut-off field which carries the argument to $e^{ih\mathbf H_k}$ times it, and at the pair lift $\mathfrak A^B = \mathcal L_\iota\mathfrak A^A + \mathsf N(\mathfrak A^A)$ in the Landau gauge about $\mathbf U^B_0$; on $\Lambda^+$ the given data are equal in the two runs and are ratios on blocks of the step, which go into $E^X$. So the hypotheses of Proposition~\ref{prop:link-step} hold with $v_p = 1$, $\mathfrak z_p = 0$, and $\eta_{\mathcal A} \leq C(d_{\mathbf H}\varrho + (\varepsilon/a_j)\varrho^2 + (\varepsilon/a_k)^{(1-\varepsilon_0)/3}\varepsilon_1)$, and it gives the pair $(a_1, v_1)$ of the values $c^X_1$ with $N(a_1) \leq \eta_1 \coloneqq C_{\mathrm{ls}}(\eta_{\mathcal A} + \mathrm{art}(\varrho + t))$. By Lemma~\ref{lem:link-frames} with $v_{\mathrm t} = 1$, in the true frames $\abs{v_1 - 1} \leq C\eta_1$ at the sites which that lemma names. By Lemma~\ref{lem:link-currents}, applied to $c^X_1$ and to the minimisers $c^{\natural,X}_1$ at the averages of the arguments, for which Proposition~\ref{prop:link-step} holds with the fields zero, and by the comparison of the formal terms of the field of the link in the proof of Lemma~\ref{lem:far-terms}(b), the second entries of Lemma~\ref{lem:chain-entry} of the two runs differ by a current of the divergence form of the size $\eta_1^{56/57}(\varrho + t)^{1/57}$, the cut-off $\chi$ acting as in the proof of Lemma~\ref{lem:chain-entry}(c).
+
+\emph{The second link.} By Lemma~\ref{lem:link-lift} the pair of $c^B_1$ is the lift of that of $c^A_1$, transformed, moved by a field and a current of the size $C\eta_1^{56/57}(\varrho + t)^{1/57}$. By Lemma~\ref{lem:link-function-base} for run~B at the lift and by Lemma~\ref{lem:link-field-runs} for the move, the fields $\mathbf H_{\mathbf B_1}$ of the two runs at their own pairs differ, after the rotation, by at most $d_{\mathbf H}\varrho + C\alpha_{0,k}\eta_1^{56/57}(\varrho + t)^{1/57}\varrho$ plus the difference of their data on $\Lambda$, which are equal. With this number as $\eta_{\mathcal A}$, Proposition~\ref{prop:link-step} over the representatives of $c^X_1$ gives the values without the data of the collar along $\Gamma$, Lemma~\ref{lem:link-frames} their frames, and Lemma~\ref{lem:link-cut} the values $c^X_2$ with these data: the pair $(a_2, v_2)$ with $N(a_2) \leq \eta_2$ off the fine layers of the collar along $\Gamma$, where $\eta_2$ is the bound of that lemma. The second entries are compared as for the first link.
+
+\emph{The third link.} Its field is $\mathbf H''_k$ at the pair of the configuration glued from $c_2$ and $U_2$, and its domain $Y_1$ contains no part of $\Lambda$, so that the blocks of $\mathbf B''_k(Y_1)$ lie in blocks of the set of the second link and the representative of $c^X_2$ is a base of the link. As before, with the correction for the source \eqref{eq:source-155}, which is linear in the second entry, the fields of the two runs on the boundary layer of $Y_1$ differ by at most $\eta_3 \coloneqq d_{\mathbf H}\varrho + C_{\mathscr S}\eta_2^{56/57}(\varrho + t)^{1/57}$, the function being truncated at the fine layers of the collar along $\Gamma$ in both runs (Lemma~\ref{lem:link-function-base}, (3)), where the bases are not compared.
+
+\emph{The field of the read.} The configuration $c^X_\emptyset$ is the value of a link on $\mathbf B''_k(Y_1)$ with the fields zero over the base $\mathbf U^X_0$, so that Proposition~\ref{prop:link-step} and Lemmata~\ref{lem:link-frames} and~\ref{lem:link-lift} hold for it with $\eta_{\mathcal A} = C(\varepsilon/a_j)\varrho^2$. The datum $E^X$ of the read is supported on the boundary layer of $Y_1$, and on a block bond of a layer of the index at least $n - \lfloor n/8\rfloor$, which the two runs share, it is the logarithm of the ratio of the averages of $(e^{ih\mathbf H''_k}c_2)^{(u^0_k)^{-1}}$ and of $c_\emptyset$; by Lemma~\ref{lem:link-data} with the frames of $c_2$ and of $c_\emptyset$, $\abs{E^B - E^A} \leq C(\eta_2 + \eta_3 + (\varepsilon/a_j)^{1/2}\varrho)$ there. By Corollary~\ref{cor:joined-set-function} about $c_\emptyset$, with the move of the base as in Lemma~\ref{lem:link-field-runs}, at the points of $X(F)^{[2]}$, which lie in no collar,
+\[
+    N(\mathfrak e^B - \mathcal L_\iota\mathfrak e^A; x) \leq C\bigl(d_{\mathbf H}\varrho_{\mathfrak e} + \eta_2 + \eta_3 + (\varepsilon/a_j)^{1/2}\varrho\bigr)\;,
+\]
+and the transformations \cite[(106)]{BalabanAVG} of the two fields differ by as much at the sites of run~A. The fields of the left factors are the three functions of the links at the bonds of $X(F)^{[2]}$ \cite[(1.59), (1.60), p.~372]{BalabanLFR2}, and they are compared as the fields of the links are, at points which lie in no collar. The interpolation multiplies the fields by the same function in the two runs, with $\abs{z(\Delta)} \leq R_z$; the factor $R_z$ multiplies fields which in each run carry the decay $e^{-\frac{1}{4}\delta_0M(2R_k-1)}$, and for the difference it multiplies the bound above, so that the constant $C_{\mathbf R}$ contains $R_z = e^{(\delta_0/128)MR_k}$. The number $R_z$ depends on the coupling through $R_k$, and a constant of the statement may not. It is removed by the bound of one run: the difference $\mathfrak e^B - \mathcal L_\iota\mathfrak e^A$ is at most the number $\kappa'\alpha_{0,k}$ just shown, and it is also at most $2B_{\mathscr H}Ce^{-\frac{1}{4}\delta_0M(2R_k-1)}$, each of the two fields being that small (``The points of evaluation'', third remark). Since $\min(x, y) \leq x^{49/50}y^{1/50}$,
+\[
+    R_z\,N(\mathfrak e^B - \mathcal L_\iota\mathfrak e^A; x) \leq C\,(\kappa'\alpha_{0,k})^{49/50}\,e^{(\delta_0/128)MR_k - \frac{1}{200}\delta_0M(2R_k-1)} \leq (\kappa')^{49/50}\alpha_{0,k}
+\]
+for $\gamma$ small, because $\frac{1}{200}(2R_k - 1) - \frac{1}{128}R_k \geq \frac{1}{500}R_k$ for $R_k \geq 50$ and $e^{-\frac{1}{500}\delta_0MR_k}$ is below every power of the coupling, $R_k \geq (\log g_k^{-2})^r$ \cite[(2.5), p.~255]{BalabanCRE}. With $\varrho + t \leq C\alpha_{0,k}$ in the units of $a_k$ this is the claim, with $\kappa^{\mathbf R}_k \coloneqq (\kappa')^{49/50}$. (CHECKED 17 Nov: $r \geq 2$ \cite[pp.~245--246]{BalabanCRE}, so that the exponential is below $\alpha_{0,k}^{1/50}$ for $\gamma$ small.)
+\end{proof}
+
+% ORDER OF THE PROOF (each step with its lemma; rates: d_H := C_loc L^{-nu/26}, art := (eps/a_n)^{beta-eps_0}):
+% 1. H_k at the argument pairs: prop:localisation-functions as stated (run B at the lift); eq:localisation-gauge
+%    for u_{k,Lambda}. Rate d_H rho + (eps/a_k)^{(1-eps_0)/3} eps_1.
+% 2. Link 1 (set B_k(Y_3) cup B_k). Base U_0^X, U_0^B the lift of U_0^A, so v_p = 1, z_p = 0. Data as in the
+%    proof of lem:chain-room: field frak A composed with chi' H_k; at the lifted argument
+%    frak A^B = L_iota frak A^A + N(frak A^A) exactly. On Lambda^+ the given data are equal and go into E.
+%    prop:link-step: c_1^A = (e^{i eps a_1} M c_1^B)^{v_1}, N(a_1) <= eta_1 := C(d_H rho + art (rho + t)).
+%    lem:link-frames with v_t = 1: v_1 - 1 at the rate at the common block points and inside shared blocks.
+%    lem:link-currents and the formal terms (proof of lem:far-terms(b)): delta_1 of the divergence form,
+%    Hoelder norm by lem:lift-holder(b): size eta_1^{56/57} rho^{1/57}.
+% 3. H_{B_1} at the pair of c_1: lem:link-lift (B-form), lem:link-function-base (run B at the lift),
+%    lem:link-field-runs (own base). Rate d_H rho + alpha eta_1^{56/57}.
+% 4. Link 2 (set B_1(Y_2) cup B_1), bases the flow representatives of c_1. Without the data of the collar
+%    along Gamma: prop:link-step, lem:link-frames. With them: R3 draft 3x (Landau gauge about the
+%    backgrounds, three zones of the collar of L', q = nu/250, g = nu/100). NOT YET A PROOF.
+% 5. H''_k at the glued base U_{1,2}: as step 3, with (3) of the proof of lem:link-function-base at the cut and
+%    the truncation at the fine layers of the collar along Gamma.
+% 6. The datum E^X of the read on the boundary layer of Y_1: lem:link-data (values and frames at the blocks of
+%    the layers >= n - n/8). c_emptyset: prop:link-step with the fields zero, lem:link-lift.
+%    cor:joined-set-function about c_emptyset (run B at the lift), and the move of the base as in
+%    lem:link-field-runs. Left factors: READ 17 Nov, LFR2 p.372, (1.59), (1.60): they are the factors
+%    exp(i eta H''_k(g_k B)) on U^0_k (and, in the repetitions p.373 ll.1-6, those of (1.57), (1.58) with
+%    H_{B_1}, H_k), that is, the SAME three functions, read at the bonds of the domain of the term and not on
+%    a boundary layer. So their two-run comparison on X(F)^{[2]} is that of steps 1, 3, 5 at points which
+%    lie in no collar (prop:localisation-functions, lem:link-function-base, lem:link-field-runs), not that of
+%    lem:far-terms. TO CHECK against the supplement's "The four operations" (proof of lem:loop-localisation):
+%    at which base the supplement forms them ("about e^{ih frak e} c_emptyset").
+% 7. u: lem:gauge-transformations-runs on the blocks of X(F)^{[2]}, which lie in no collar.
+% 8. The factor tau_f: every field of the read carries the decay from the sources over (2R_k - 1)M.
+% Then: the inherited part (R3 draft 3o (1)), the complex points (family of lem:chain-runs, power 15/16),
+% and the rule (K6).
+
+% STATUS of Lemma lem:link-cut (step 4 of the order above): proof from prop:link-step, lem:link-frames,
+% lem:link-lift, lem:link-field-runs, cor:joined-set-function, lem:joined-set-collar, lem:collar-far.
+% TO VERIFY on moving: (S9) that cor:joined-set-function and lem:joined-set-collar apply to the function of
+% VAR Proposition 9 about the base c^1 with a datum supported on the blocks at the cut (their statements
+% are for a datum B and a base which is a minimiser of the joined set at its own data: c^1 is one), and
+% the move of the base as in lem:link-field-runs (S3). Not reviewed.
+
+\begin{lemma}[The Second Link with Its Data on the Collar Along the Cut]\label{lem:link-cut}
+In the setting of Proposition~\ref{prop:link-step} for the second link, let $\mathfrak N$ be the set of the blocks of $\mathbf B'$ within the distance $5LM_1a_h$ of $\Gamma$, let $D^X$ be the data of the link in the true frames, and let $D^{\mathrm g,X}$ be these data with those on the block bonds of $\mathfrak N$ replaced by the plain averages of the previous value $c^X_{\mathrm t}$. Let $c^{1,X}$ and $c^X$ be the minimisers with the plain averages $D^{\mathrm g,X}$ and $D^X$ in the axial gauge relative to $U^X$, let $n$ be the layer of the step at the boundary layer of $Y_2$, and let $q \coloneqq \lceil\nu/250\rceil$ and $g \coloneqq \lceil\nu/100\rceil$. Suppose that Proposition~\ref{prop:link-step} and Lemma~\ref{lem:link-frames} hold for $c^{1,X}$ with a number $\eta'$. Then $c^A = (e^{i\varepsilon a}Mc^B)^v$, and at every point $x$ of $Y_2$ which lies in no layer of the collar along $\Gamma$ of an index below that of Proposition~\ref{prop:localisation-functions}, in the unit of the step,
+\[
+    N(a; x) \leq C_\Gamma\bigl(\eta' + L^{2q}(C_{\mathrm{loc}}L^{-\nu/26} + L^{-4g})\varpi_\Gamma + L^{-5q}\varpi_\Gamma\bigr)\;,
+\]
+where $\varpi_\Gamma \leq c_M(2\varrho_\Lambda + C_\Lambda(r_{0,k} + r_{1,k}))$ bounds the logarithms of the data of the cut relative to $D^{\mathrm g}$; and $\abs{v - 1}$ is at most the same number at the sites of run~A in the blocks which the two runs share and which lie in the layers of the collar of $Y_2$ of the indices at least $n - q$ or in no collar.
+\end{lemma}
+
+\begin{proof}
+\emph{The data without the cut.} The data $D^{\mathrm g,X}$ are, transformed at the block points as in the proof of Lemma~\ref{lem:link-frames}, of the form $e^{iE^X}M^\cdot(e^{ih\mathcal A^X}W^X)$ over the representative $W^X$ of the previous value, with $\mathcal A^X$ the field of the link on the boundary layer of $Y_2$, cut off, and zero on the blocks of $\mathfrak N$, on whose outermost band the data are the bonds of the previous value. Over $W^X$ the data of the cut themselves are not of this form with a field which the two runs share: they are the trivial configuration in the true frames, and the frames of the two runs at the sites inside a block of the step differ by transformations which are near one in the supremum only. This is why they are separated.
+
+\emph{The field of the cut.} The configuration $c^{1,X}$ is a real minimiser of $\mathbf B'$ at its own data. By \cite[Proposition~9]{BalabanVAR} about it, as in the proof of Lemma~\ref{lem:collar-far} with $U = c^{1,X}$ and $B^1 = 0$, $c^X = (e^{ih_X\hat{\mathfrak v}^X}c^{1,X})^{(u^X_\Gamma)^{-1}}$ with $\hat{\mathfrak v}^X = \mathscr H^X(B^{\Gamma,X})$, the function of the joined set about $c^{1,X}$ at the datum $B^{\Gamma,X}$ of $D^X$ relative to the averages of $c^{1,X}$, which is supported on the blocks of $\mathfrak N$ and their neighbours, and $u^X_\Gamma$ the transformation \cite[(106)]{BalabanAVG} of this field. By \eqref{eq:collar-far} and \eqref{eq:collar-far-layer}, in each run and in the unit of the step, $N(\hat{\mathfrak v}^X; x) \leq C'_{\mathrm{dis}}(b/a_n)^5\varpi_\Gamma$ at a point of the spacing $b$ of the collar of $Y_2$, which sees the cut through the layers of that collar.
+
+\emph{The data of the cut in the two runs.} On a block bond $c = \langle y, y'\rangle$ of $\mathfrak N$ which the two runs share, the given data are equal, and the averages of $c^{1,A} = (e^{i\varepsilon a_{\mathrm g}}Mc^{1,B})^{v_{\mathrm g}}$ and of $Mc^{1,B}$ differ by the conjugation with $v_{\mathrm g}(y)$, $v_{\mathrm g}(y')$ and by a factor within $c_Mb\sup\abs{a_{\mathrm g}}$ of one. With Lemma~\ref{lem:link-frames} at the block points and Lemma~\ref{lem:gauge-transformations-runs} for the transformations \cite[(106)]{BalabanAVG}, $\abs{B^{\Gamma,B} - \operatorname{Ad}(v_{\mathrm g}^{-1})B^{\Gamma,A}} \leq C\eta'$ on these block bonds.
+
+\emph{The function of the joined set.} By Lemma~\ref{lem:link-lift} the configuration $c^{1,B}$ is the lift of $(c^{1,A})^{v'^{-1}}$ moved by a field of the size $C\eta'$, and by the covariance of the function of the joined set, by Corollary~\ref{cor:joined-set-function} and Lemma~\ref{lem:joined-set-collar} for run~B at the lift, and by the move of the base as in Lemma~\ref{lem:link-field-runs} (S9),
+\[
+    N\bigl(\hat{\mathfrak v}^B - \mathcal L_\iota\operatorname{Ad}(v'^{-1})\hat{\mathfrak v}^A; x\bigr) \leq C\bigl(C_{\mathrm{loc}}L^{-\nu/26} + L^{-4(n'-m-1)}\bigr)\varpi_\Gamma + C\eta'
+\]
+at a point $x$ in no collar, and at a point of a layer $n' \geq m + 1$ of the collar of $Y_2$ in the unit of the block, with the truncation index $m \coloneqq n - q - g$.
+
+\emph{The three zones of the collar of $Y_2$.} At a point of a layer $n' \geq n - q$ the unit of the block is at least $L^{-q}a_n$, the conversion to the unit of the step costs at most $L^{2q}$, and $n' - m - 1 \geq g - 1$. At a point of a layer $n' < n - q$ the two fields are each at most $C'_{\mathrm{dis}}L^{-5q}\varpi_\Gamma$ in the unit of the step, and so is the lift of run~A's, the kernel of the lift decaying at the scale $\varepsilon$; here no comparison is made, and a rotation of the field by a gauge transformation does not change the bound. At the points in no collar the comparison holds as it stands. This gives, at every point of the statement,
+\[
+    N\bigl(\hat{\mathfrak v}^B - \mathcal L_\iota\operatorname{Ad}(v'^{-1})\hat{\mathfrak v}^A; x\bigr) \leq C\bigl(\eta' + L^{2q}(C_{\mathrm{loc}}L^{-\nu/26} + L^{-4(g-1)})\varpi_\Gamma + L^{-5q}\varpi_\Gamma\bigr)\;.
+\]
+
+\emph{The composition.} From $c^A = (e^{i\varepsilon\hat{\mathfrak v}^A}c^{1,A})^{(u^A_\Gamma)^{-1}}$ and $c^{1,A} = (e^{i\varepsilon a_{\mathrm g}}Mc^{1,B})^{v_{\mathrm g}}$, the field $\hat{\mathfrak v}^A$, rotated by $v_{\mathrm g}^{-1}$, is a field at the configuration $e^{i\varepsilon a_{\mathrm g}}Mc^{1,B}$ with the same norms, the covariant differences being covariant. The one-step average of $e^{ih\hat{\mathfrak v}^B}c^{1,B}$ is $Mc^{1,B}$ moved by a field which differs from the rotated $\hat{\mathfrak v}^A$ by the bound just shown, by (S6) and the first step of the proof of Proposition~\ref{prop:link-step}, the transformations $v'$ and $v_{\mathrm g}$ differing by a factor within $C\eta'$ of one, which changes the values by $C\eta'\varpi_\Gamma$ and, where the comparison is made, the first differences by as much, since there this factor is covariantly constant up to fields of the size $\eta'$ (it relates two configurations which are both within such fields of $Mc^{1,B}$). The transformations $u^X_\Gamma$ are compared by Lemma~\ref{lem:gauge-transformations-runs} at the blocks which the runs share in the layers where the fields are compared, and are within $c_ub\sup\abs{\hat{\mathfrak v}}$ of one elsewhere. Composing gives the pair $(a, v)$ with the bounds of the statement.
+\end{proof}
+
+% STATUS of Lemma lem:read-inherited: Schwarz's lemma on a family of arguments of lem:chain-moved.
+% TO VERIFY on moving: that the bound of the field of a read ("The points of evaluation", third remark)
+% holds at every pair of the family with one constant (it uses the bounds of the fields of the links with
+% the decay from their sources, lem:current-domain(b) along the family, and lem:chain-moved(c)). Not reviewed.
+
+\begin{lemma}[The Field of a Read as a Function of the Argument]\label{lem:read-inherited}
+In one run, let $(\mathbf U_\varsigma, \mathbf J_\varsigma)$, $\abs\varsigma \leq R_\varsigma$, be a family of arguments of Lemma~\ref{lem:chain-moved} of the size $z + s$, with $R_\varsigma = \vartheta_{\mathrm{fam}}/((z + s)\tau_k)$, and let $\mathfrak f_\varsigma$ and $u_\varsigma$ be the field and the transformation of \eqref{eq:transport-point} of a piece of an $F$ whose set $X(F)^{[2]}$ meets no component, at the pair of $\varsigma$, at fixed variables and parameters. Suppose that at every pair of the family $N(\mathfrak f_\varsigma; x) \leq \tau_{\mathfrak f}\alpha_{0,k}$ and $\abs{u_\varsigma(x) - 1} \leq \tau_{\mathfrak f}\alpha_{0,k}$ on $X(F)^{[2]}$. Then
+\[
+    N(\mathfrak f_1 - \mathfrak f_0; x) + \abs{u_1(x) - u_0(x)} \leq \frac{4\tau_{\mathfrak f}\alpha_{0,k}}{\vartheta_{\mathrm{fam}}}\,(z + s)\,\tau_k\;.
+\]
+\end{lemma}
+
+\begin{proof}
+The field $\mathfrak f_\varsigma$ is composed of the function of the joined set at the datum of the read and of the fields of the left factors, which are analytic in the pair at which they are formed and in their data (Lemma~\ref{lem:current-domain}(b); \cite[Proposition~9]{BalabanVAR}), and the pairs and the data depend analytically on $\varsigma$ (Lemma~\ref{lem:chain-moved}); the transformation \cite[(106)]{BalabanAVG} is analytic in its field. So $\mathfrak f_\varsigma - \mathfrak f_0$ and $u_\varsigma - u_0$ are analytic on the disc, vanish at $\varsigma = 0$, and are bounded there by $2\tau_{\mathfrak f}\alpha_{0,k}$ in the seminorms $N(\,\cdot\,; x)$ and in the norm of the matrices. Schwarz's lemma gives at $\varsigma = 1$ these bounds divided by $R_\varsigma$.
+\end{proof}
+
+% Use: run B at its own argument against run B at the pair lift of run A's argument. On a corresponding
+% pair of the rate kappa the move (frak z, delta) has the size (z + s) tau_k <= C kappa q_k tau_k in the
+% units of the rule (TO READ: the normalisation of the rate in sec:corresponding-pairs, rules (K1)-(K5)),
+% so that the inherited part is at most (4 C tau_f / theta_fam) kappa times the unit of the rule: the
+% coefficient C tau_f of (R), without a loss q_k^{-1}, because the radius of the family is proportional
+% to the inverse of its size.
+% The complex points: the family through the argument of the proof of lem:chain-runs ("The family"),
+% analytic in z, real at real z; frak f^B - L_iota frak f^A is analytic in z and bounded by 2 tau_f alpha
+% on |z| < 25; lem:two-constants gives at z = i the power 15/16 of the bound at the real points:
+% kappa^R -> (kappa^R)^{15/16} (2 tau_f alpha)^{1/16}: L^{-nu/52} becomes L^{-nu/56}, still below L^{-nu/60}.
+
+% =============================================================================================
+% THE RULE (K6), as it will stand in sec:corresponding-pairs (statement; read 17 Nov: the rules (K1)-(K5),
+% eq:pair-rate, lem:corresponding-pairs (a)-(c): the rate of a pair is kappa_j alpha_{0,j} in
+% eq:current-domain; for a pair of the young kind of a step k it is (kappa_k + C e^{-2 delta'_0 M L^j})
+% alpha_{0,k} in the units of a_k).
+% =============================================================================================
+%
+% (K6) Reads of an R-operation. Let (q^A, q^B) in K_k(X') be a pair of the young kind of a step k, or a pair
+% obtained from one by the rules (K3)-(K6), with the real pair (U^A, U^B); let F be a letter or a carried
+% insertion of the term whose set X(F)^{[2]} meets no component of the class and lies in X', and let the
+% variables of the operation of the step k be equal and real in the two runs, with the parameters
+% s(Delta), z(Delta) of a piece equal and within a fifth of their radii. Then the pair of the transport
+% points eq:transport-point of the two runs, each formed in its run at its own pair, restricted to
+% X(F)^{[1],~}, belongs to K_k(X(F)^{[1]}). Its real pair is (U^A, U^B), and its coordinates are those of
+% (q^A, q^B) together with the parameters. The value of a piece is conjugated by pi(u^X) (F127).
+%
+% What lem:corresponding-pairs has to state of such a pair, and where each part comes from:
+% (a) spaces: "The points of evaluation", third remark (one run; the margin delta^alpha_k).
+% (b) evaluation sets: the pair is of the third kind (its second entry is J + J(e^{ih f}U) - J(U));
+%     at the real values of the coordinates the field f is real.
+% (c) nearness: z' = z composed with (f^B - L_iota f^A), delta' = delta + the difference of the changes of
+%     the currents, which is of the divergence form with K = D(f^B - L_iota f^A) (lem:link-currents,
+%     lem:lift-holder(b)). Rate: kappa_k (1 + 4 tau_f alpha/theta_fam) + kappa^R_k tau_f, from
+%     lem:read-inherited (run B at its own argument against run B at the pair lift), prop:read-runs (run B at
+%     the pair lift against run A), and the family of lem:chain-runs at the complex points.
+%     The conjugations: |u^B - u^A| at the sites of run A by the same three statements.
+% (d) the rate of the rule in the recursion: prop:recursion-differences(f) reads a pair of (K6) like a pair
+%     of (K4); kappa^R_k <= C nu^p L^{-nu/40} is below L^{-k/120} for k <= 2 nu, which is what the division
+%     by q of (f)(1) needs.
+
+% =============================================================================================
+% DISCARDED (kept for the record; not in use): lem:collar-flow-runs, lem:two-currents-collar below.
+% =============================================================================================
+
+% ---------------------------------------------------------------------------------------------
+% STEP 3, PART (b). STATUS: STATEMENT AND PROOF IN OUTLINE; the estimates (E1)-(E5) below are each
+% identified with the place in the supplement from which they come, but the Gronwall argument is not
+% yet written out line by line. NOT a proof yet. Proof of Lemma lem:collar-flow re-read in full, 17 Nov.
+% ---------------------------------------------------------------------------------------------
+%
+% Correction to the plan of R3 draft 3o (1): run B's chain cannot be taken "at the lifted argument" with a
+% base which is a minimiser: iota(U^A) minimises run B's action at the given one-step average, a finer
+% constraint than the data of run B's sets, so it is NOT a minimiser of run B's sets (the two differ by
+% the field A'_* of Proposition prop:minimisers(b)). Run B's flows start at run B's own minimiser U^B,
+% and U^B = e^{ih S_0} iota(U^A) with N(S_0) <= C (eps/a_j)^{1-eps_0} eps_1 at a layer j (rule (K2)); the
+% lifted pair is a moved pair over run B's own (as the proof of Proposition prop:large-field-integrands(c),
+% fourth part, already says for the terms of the action).
+
+\begin{lemma}[The Value Along a Path of Data on Two Fine Lattices]\label{lem:collar-flow-runs}
+On a young matched pair with the finest layer $\nu$, let $\mathbf B'$ be one of the sets of an operation or a joined set, in the two runs, and let the hypotheses of Lemma~\ref{lem:collar-flow}(b) hold in each run, with bases $W_0^X = e^{ih_X\mathbf S_0^X}U^X$ over real minimisers $U^X$ of a determining set at shared scales, with fields $\mathcal A^X$ and functions $E^X$, and with $\vartheta$ a bound of $n_\beta + e'_E$ in both runs. Suppose that, with a number $\eta \leq 1$ and in the units of the layers of the step,
+\[
+    W_0^B = e^{ih\mathfrak s_0}W'\;,\quad W' \in \iota(W_0^A)\;,\quad N(\mathfrak s_0; x) \leq \eta\,\vartheta\;,
+    \qquad
+    N(\mathcal A^B - \mathcal L_\iota\mathcal A^A; x) \leq \eta\,\vartheta\;,
+    \qquad
+    \abs{E^B - E^A} \leq \eta\,\vartheta
+\]
+at every point and on every block bond of $Y'^0$. Let $\mathfrak y^X$ and $g^X$ be the field and the gauge transformation of Lemma~\ref{lem:collar-flow}(a) in run $X$. Then there are a constant $C_{\mathrm{fr}}$ and a number $c_{\mathrm{fl}} > 0$, independent of $k$, $K$, $\varepsilon$, the coupling, and the torus, such that at every point $x$ of $Y'$
+\[
+    N(\mathfrak y^B - \mathcal L_\iota\mathfrak y^A; x) \leq C_{\mathrm{fr}}\bigl(\eta + L^{-c_{\mathrm{fl}}\nu}\bigr)\vartheta\;,
+\]
+and $\abs{g^B(x) - g^A(x)}$ is at most the same number at every site $x$ of run~A.
+\end{lemma}
+
+% PROOF, in outline. Let b_* = L^{-t} a_n with t = ceil(c_1 nu), c_1 fixed at the end.
+%
+% Fine points, b(x) <= b_*. By eq:collar-closeness in each run, y^X = A^X composed with S^X_1,
+% N(S^X_1; y) <= C_fl (b(y)/a_n)^beta theta. The lift of S^A_1 at a point of the spacing b reads it at
+% points of spacings at most 4 L^2 b + (decay at the scale eps) (proof of lem:chain-runs, "The fine
+% region"). Hence N(y^B - L y^A; x) <= eta theta + C L^{-beta t} theta. The transformations g^X are each
+% within c_g (b/a_n) theta of one (lem:collar-flow(a), sharpened statement).
+%
+% Coarse points, b(x) > b_*. Let Delta_s := y^B_s - L y^A_s and gamma_s := sup over the block points y of
+% |g^B_s(y) - g^A_s(y)| / (b(y)/a_n). By eq:collar-datum in each run,
+%   delta^B_s - L delta^A_s
+%     = (R^B[W^B_s] - R^B[W'_s]) (A^B + rho^B_s)                      (E1) base, W'_s in iota(W^A_s)
+%     + (R^B[W'_s] L - L R^A[W^A_s]) (A^A + rho^A_s)                  (E2) operators at a pair and its lift
+%     + R^B[W'_s] (A^B - L A^A + rho^B_s - L rho^A_s)                 (E3) inputs
+%     + the same three terms with H_1 (1 + Xi) and E + r''_s.         (E4)
+% (E1): the operators are analytic in the base (lem:pbg-complex), and W^B_s = e^{ih(s_0 + Delta_s + ...)}W'_s
+%   by the formula for the lift of a move with the field y^A_s, which is N-bounded in the unit of the step
+%   (lem:collar-flow(a)); Cauchy gives C N(Delta_s + s_0) theta, with the weights of lem:collar-response.
+% (E2): R = H_1 Q and Q^B L = Q^A on the blocks at shared spacings, so the term is (H_1^B - L H_1^A)(Q^A c):
+%   lem:polarised-operators(a) with the truncation of lem:collar-two-runs. In the units of a block of the
+%   spacing b it gives the rate d(b) = L^{beta_c k}(C L^{-gamma_H n'} + L^{-n'}) at the layer n' of the block
+%   plus the truncation term; the datum Q^A c is at most (b/a_n) N(c); in the unit a_n the first differences
+%   cost (a_n/b)^2 (b/a_n) = a_n/b <= L^t. So (E2) <= C L^t d(b_*) theta.
+% (E3): last bound of lem:collar-response, N(R c; x) <= C'_R n_c(x). The differences of rho and r'' are
+%   bounded through eq:collar-datum-sizes by C theta (gamma_s + sup N(Delta_s)) + C eta theta: they are
+%   bilinear in (lambda tilde, S_s) and (A, E), the partition of unity is the same in the two runs at the
+%   shared spacings, and at the finer blocks each term carries b/a_n <= L^{-t}.
+% (E5), the gauge equation eq:collar-gauge-equation: nu is a linear functional of the field on the block,
+%   bounded by c_u b sup|field|; nu^B(L f) - nu^A(f) at a block point of run A is at most
+%   C (eps/b) b sup|f| (proof of lem:gauge-transformations-runs). So
+%   d/ds |g^B_s - g^A_s|(y) <= C b sup|delta^B_s - L delta^A_s| + C (eps/b)(b/a_n) theta + (the term k_s, the same).
+% Gronwall for Phi_s := sup_y [N(Delta_s; y)/m(y)] + gamma_s/..., with the majorant
+%   m(y) := eta + min( L^{t} d(b_*) , (b(y)/a_n)^beta ) + L^{-beta t}, which satisfies eq:collar-majorant:
+%   Phi_s <= C + C theta int_0^s Phi, so Phi_1 <= 2C for theta small.
+% Choice of t: L^t d(b_*) with d <= C L^{-nu/26} at the layers >= 7 nu/8, against L^{-beta t}:
+%   t = nu/(26 (1 + beta)) gives both <= C L^{-nu/55}; so c_fl = 1/55 (to be recomputed with the constants).
+%
+% FOUND WHILE WRITING OUT (E1), 17 Nov, after re-reading the statements of lem:collar-response,
+% lem:polarised-operators, lem:collar-two-runs, lem:gauge-transformations-runs, lem:function-truncation:
+%
+% (*) The interpolation of Lemma lem:lift-holder CANNOT be used inside the Gronwall argument. The operators
+%     R[W_s], H_1[W_s] contain the current of their base (vertices Delta'_pi(J), Delta^(2)_pi). If the current
+%     of run B's base is compared with the lifted current of run A's through the divergence form
+%     D^* D Delta_s, its Hoelder norm enters, and interpolation gives a feedback of the power theta < 1:
+%         d/ds x <= a + c x^theta ,  x(0) = 0 ,
+%     whose solution is not small with a: it is at least of the order (c (1 - theta) s)^{1/(1-theta)}, a
+%     constant which does not depend on the cutoff. Interpolation is admissible for a finite nesting (the
+%     three links), where it costs the power theta each time, and not in a loop.
+% (**) The way out, and why it is available: W_s = c_s^{g_s} is a gauge transform of a MINIMISER, so its
+%     current is the current of a minimiser, and for two minimisers of the two runs whose configurations are
+%     aligned in the first-order norm, Proposition prop:two-currents bounds the difference of the currents
+%     AT EVERY POINT, linearly in that norm; the base pair of run B is then joined to the aligned pair by the
+%     path of Proposition prop:two-lattices(g), and Cauchy's estimate along it is linear in N(Delta_s). The
+%     feedback is linear and Gronwall closes.
+% (***) Consequence: Proposition prop:two-currents is needed for the minimisers of a JOINED set (a set with a
+%     collar), where it is not stated (it is stated "on the determining set" at shared scales). My note in
+%     R3 draft 3p that it is not needed was wrong for this lemma; it remains true for the second entries of
+%     the pairs of the links in the finite nesting. NEXT: read the proof of prop:two-currents and extend it
+%     to the sets B^sharp of the proof of prop:minimisers(d), as lem:chain-runs extends prop:minimisers(b).
+%
+% (****) Proof of Proposition prop:two-currents re-read in full, 17 Nov. It uses that the two runs have one
+%     set at shared scales in ONE place, the chain rule Q^B(U^B) = Q(U~) Q^pl_1(U^B), which gives
+%     J(U^B) = Q^pl_1(U^B)^* J'. On a joined set: run A's minimiser is the minimiser of B^sharp at its own data,
+%     and the chain rule holds with B^sharp on the blocks of the spacings >= eps; it fails on run B's band b
+%     (data = single bonds of run B). The alignment hypothesis eq:alignment-hypothesis is in the units of the
+%     LAYERS OF THE SET (blocks), with a profile which is at least (eps/b) eps_1; the conclusion is in the
+%     same units, b^3 |J(U^A) - J'| <= x_J d(x). A path of bases in the unit of the step needs
+%     b^3 |D^* D d| <= tau b/a_n, that is (eps/b) eps_1 <= tau b/a_n, which holds only where b^2 >> eps a_n.
+%     Resolution: at the coarse points the operators are replaced by their truncations (lem:collar-two-runs(b)),
+%     whose walks do not meet the collar layers below m and which therefore read the base on the layers >= m
+%     only; there (eps a_n/b^2) eps_1 <= L^{2(n-m)} (eps/a_n) eps_1, small. The truncation errors
+%     L^{-4(n'-m)} are sources of the Gronwall argument. On the band b nothing is compared.
+%     STILL TO DO for (****): the statement and proof of prop:two-currents on B^sharp off the band (the sums
+%     of its proof over the bonds near the band, bounded by constants with the decay of the kernels;
+%     lem:adjoint-multiscale and lem:multipliers hold for any set with the widths of lem:layer-widths).
+%
+% (E3), the terms rho and r'': worked out. With gamma := g^B (g^A)^{-1} at the block points of run A, the
+%     relation "plain averages of W_s = g_s e^{isE} M(Gamma_s) g_s^{-1}" in the two runs and
+%     M(e^{ihP} W') = e^{i eps (Q^pl P + O(h P^2))} M(W') give, on a block bond of the spacing b,
+%         |gamma(y) - transported gamma(y')| <= C b sup|Delta_s| + C b eta theta/a_n + C |E^B - E^A|
+%                                               + C (t + tau)(b/a_n) sup|gamma - 1| ,
+%     and then, as eq:collar-datum-sizes is obtained,
+%         N(rho^B_s - L rho^A_s) <= C theta [ sup|gamma - 1| + sup N(Delta_s) + eta ] ,
+%     the term with E occurring only where a_n/b <= L. Linear, with the small coefficient theta.
+%
+% TO BE CHECKED before this is a proof: (i) lem:polarised-operators(a) for the operator H_1 of a JOINED set
+% with the truncation, at the collar layers n' with a_{n'} >= b_* (its statement is for the sets of
+% lem:field-difference-111); (ii) the formula for the lift of a move with the field y^A_s on a collar,
+% where the unit of the step and the spacing of the set differ (lem:lift-of-move is stated with the norm N
+% in the unit of the layer; proof of lem:chain-runs, "The coarse region: the lifts", applies it on a
+% union of cubes of the collar); (iii) the majorant property of m; (iv) that the functions E^X of the two
+% runs are compared where they live (blocks next to the boundary layer, at shared spacings).
+
+% ---------------------------------------------------------------------------------------------
+% STEP 3, PART (c). STATUS: statement, and the three changes to the proof of Proposition
+% prop:two-currents, each located in that proof (re-read in full 17 Nov). The changes are worked out;
+% the constants are not recomputed. Not reviewed.
+% ---------------------------------------------------------------------------------------------
+
+\begin{lemma}[The Currents of Two Minimisers of a Set with a Collar]\label{lem:two-currents-collar}
+Let $\mathbf B^A$ and $\mathbf B^B$ be the sets of the two runs for a joined set or for one of the sets $\mathbf B_k(Z)$, $\mathbf B_1$ of an operation, with a collar along the boundary of a domain $\Omega$, and let $\mathfrak b = \Omega \setminus \Omega^B_1$, $\mathbf B^\sharp$, and the domains $\Omega^X_m$ be those of the proof of Proposition~\ref{prop:minimisers}(d). Let $c^A$ and $c^B$ be minimisers of the two runs on these sets, in any gauges, at real data which satisfy \cite[(7)]{BalabanVAR} with a parameter $\varepsilon_1 \leq \varepsilon^J_1(C_{\mathsf d})$, let $\tilde c \coloneqq Mc^B$, and suppose that $c^A = e^{i\varepsilon A}\tilde c$ with \eqref{eq:alignment-hypothesis} at every point, in the units of the layers of $\mathbf B^\sharp$ and for a profile $\mathsf d$ of $\mathbf B^\sharp$ with the constant $C_{\mathsf d}$. Let $\mathfrak N$ be the set of the unit cubes of $\mathbf B^\sharp$ within the distance $2L\varepsilon$ of $\mathfrak b$. Then there is a real field $J'$ on the bonds of run~A in $\Omega^B_1$ such that $J(c^B) = Q^{\mathrm{pl}}_1(c^B)^*J'$ on the bonds of run~B in $\Omega^B_2$, such that \eqref{eq:intermediate-identity} holds for the fields $X$ of run~A which vanish within the distance $2L\varepsilon$ of $\mathfrak b$, with the lift $\mathcal L$ restricted as in the proof of Proposition~\ref{prop:minimisers}(d), and such that, at every bond $x$ of run~A in $\Omega^A_2$,
+\[
+    b(x)^3\abs{J(c^A)(x) - J'(x)} \leq \hat x'_J\bigl(\mathsf d(x) + \varepsilon_1e^{-2\delta_\star d(x,\mathfrak N)}\bigr)\;,
+    \qquad
+    b(x)^3\abs{J'(x)} \leq \bar B''_J\,\varepsilon_1\;,
+\]
+with constants $\hat x'_J$ and $\bar B''_J$ of the kind of $\hat x_J$ and $\bar B'_J$.
+\end{lemma}
+
+\begin{proof}
+By Lemma~\ref{lem:collar-critical}, $c^A$ is the minimiser of $\mathbf B^\sharp$ at its own data, so that $J(c^A) = \mathcal Q^\sharp(c^A)^*\lambda^A$ with a multiplier $\lambda^A$ on the data of $\mathbf B^\sharp$ which satisfies the divergence condition (Lemma~\ref{lem:multipliers}(a)). We follow the proof of Proposition~\ref{prop:two-currents} with $\mathbf B^\sharp$ as the set of run~A. It uses that the two runs have one set at the shared scales in one place, the chain rule for the data, and three changes are needed.
+
+\emph{The intermediate current.} The data of $\mathbf B^B$ are the bonds of run~B in $\mathfrak b$ and, elsewhere, the data of $\mathbf B^\sharp$ outside $\mathfrak b$ composed with the one-step average: on $\Omega^B_1 \setminus \Omega^B_2$ the blocks of run~B have the spacing $\varepsilon$ and their plain averages are the bonds of run~A, and from the spacing $L\varepsilon$ on the layers are those of $\mathbf B^\sharp$ (proof of Proposition~\ref{prop:minimisers}(d), ``the collars of the two runs''). Hence the multiplier of $c^B$ consists of a datum $\lambda^B_{\mathrm{off}}$ on the data of $\mathbf B^\sharp$ outside $\mathfrak b$ and of a field $\lambda^B_{\mathfrak b}$ on the bonds of run~B in $\mathfrak b$, and
+\[
+    J(c^B) = Q^{\mathrm{pl}}_1(c^B)^*J' + \lambda^B_{\mathfrak b}\;,
+    \qquad
+    J' \coloneqq \mathcal Q^\sharp(\tilde c)^*\mu\;,
+\]
+where $\mu$ is $\lambda^B_{\mathrm{off}}$ continued by zero to the bonds of run~A in $\mathfrak b$. The field $\lambda^B_{\mathfrak b}$ vanishes outside $\mathfrak b$, which gives the first statement. For a field $X$ of run~A which vanishes within $2L\varepsilon$ of $\mathfrak b$ the lift $\mathcal LX$ vanishes on $\mathfrak b$ and $Q^{\mathrm{pl}}_1\mathcal LX = X$ (proof of Proposition~\ref{prop:minimisers}(d)), so that $\langle J', X\rangle = \langle J(c^B) - \lambda^B_{\mathfrak b}, \mathcal LX\rangle = dA_{\varepsilon/L}(c^B)[\mathcal LX]$, and \eqref{eq:intermediate-identity} follows as there.
+
+\emph{The multiplier without the divergence condition near the band.} The datum $\mu$ satisfies the divergence condition of $\tilde c$ at the sites whose condition does not contain a bond of $\mathfrak b$, that is, outside $\mathfrak N$. For a datum $Y$ and a right inverse $R$ of $Q^\sharp(\tilde c)$ the first lines of the proof of Lemma~\ref{lem:multipliers}(b) give
+\[
+    \langle\mu, Y\rangle = \langle J', X_Y\rangle + \langle D^*_{\tilde c}J', \nu_{X_Y}\rangle\;,
+    \qquad
+    X_Y = R(1 + \Xi)Y\;,
+\]
+and the second term, which vanished there, is now a sum over the sites of $\mathfrak N$. Let $\chi$ be the characteristic function of the bonds of run~A at a distance of more than $2L\varepsilon$ from $\mathfrak b$. For $Y = e_y$ we use \eqref{eq:intermediate-identity} for $\chi X_y$ and bound the rest directly: by \eqref{eq:lifted-unit} the field $X_y$ and the function $\nu_{X_y}$ are at most $2B_Xe^{-4\delta_\star d(z,y)}$ at the bonds and the sites $z$ of $\mathfrak N$, and $J'$ and $D^*_{\tilde c}J'$ are there at most a constant times $\varepsilon_1\varepsilon^{-3}$ and $\varepsilon_1\varepsilon^{-4}$, by the bound of the multiplier of a minimiser at the spacing of its layer \cite[Theorem~1, (9), (10)]{BalabanVAR}. Summing over $\mathfrak N$ with \eqref{eq:collar-sums}, the two contributions to $\langle\mu, e_y\rangle$ are at most a constant times $a_{j(y)}^{d-3}\varepsilon_1e^{-2\delta_\star d(y,\mathfrak N)}$. The cut-off changes the three terms of \eqref{eq:multiplier-difference} by terms of the same kind. This gives \eqref{eq:multiplier-bounds} with $\mathsf d(y) + \varepsilon_1e^{-2\delta_\star d(y,\mathfrak N)}$ in the place of $\mathsf d(y)$.
+
+\emph{The currents.} Lemma~\ref{lem:adjoint-multiscale} bounds the adjoint of the plain average at a bond $b$ of a layer $n$ through the datum on the layers of the indices at least $n - 1$ near $b$, and it uses the divergence condition at the sites of these layers. At a bond of $\Omega^A_2$ these are sites outside $\mathfrak N$, where $\mu$ satisfies the condition, so that the last paragraph of the proof of Proposition~\ref{prop:two-currents} applies unchanged.
+
+The other steps, the regularity, the two variations, the right inverse at $\tilde c$ with the operator $E$, and the twists, concern the set $\mathbf B^\sharp$, whose layers have the widths of Lemma~\ref{lem:layer-widths}, and the hypothesis on $A$, and they hold as they stand.
+\end{proof}
+
+% What Lemma lem:link-function-base does NOT give: run B's function at run B's OWN base. Run B's value
+% of the link before is not the lift of run A's. The step from the lift to run B's own base needs the
+% two values compared as fields (step 3). For the terms of the action this step is the fourth part of
+% the proof of Proposition prop:large-field-integrands(c), where a statement up to gauge suffices.
