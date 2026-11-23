@@ -1,0 +1,11 @@
+name = "PeterWeyl"
+version = "0.1.0"
+defaultTargets = ["PeterWeyl"]
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4.git"
+rev = "8d52ea9a145a9255c4d301c0d1a1b8bf6e59305a"
+
+[[lean_lib]]
+name = "PeterWeyl"

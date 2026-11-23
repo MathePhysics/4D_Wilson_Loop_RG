@@ -54,7 +54,7 @@ Our current progress is as follows.
 |---|---|---|
 | [First RG step for one loop and two disjoint loops](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf) | **In manuscript** | The stated finite-cutoff theorems and uniform bounds are written. See [Theorem 5.4](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf). |
 | [Small-field iteration and large-field insertions](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf) | **In manuscript** | [Section 6](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf). |
-| [R-steps for single and two-loop insertions](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf) | **In manuscript** | [§6.15](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf) and [Proposition 7.11](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf). |
+| [R-steps for single and two-loop insertions](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf) | **In manuscript** | [§6.15](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf) and [Proposition 7.13](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf). |
 | [Relative weights of large-field contributions](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf) | **In manuscript** | [Proposition 8.4](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf). |
 | [Cutoff-uniform bounds and subsequential limits](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf) | **In manuscript** | [Theorem 8.7](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf) gives the bound. Subsequential convergence follows by compactness. |
 | [Comparison of successive ultraviolet cutoffs](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf) | **In manuscript** | [Theorem 11.1](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf). |
@@ -74,6 +74,8 @@ The continuum-limit proof and its supporting estimates are collected in the [Con
 The manuscript folder includes the shared [bibliography](Continuum%20Limit%20Manuscript%20Draft/refs.bib) and [preprint class](Continuum%20Limit%20Manuscript%20Draft/preprint.cls).
 
 - **Updated V4:** [PDF](WILSON_FIRST_RG_STEP_V4.pdf) and [LaTeX source](WILSON_FIRST_RG_STEP_V4.tex).
+
+The [Lean formalisation](LEAN/) includes CoreLean and supporting libraries.
 
 ## Manuscripts under Construction
 
@@ -154,7 +156,7 @@ The continuum-limit results cover two vertex-disjoint admissible loops. The exte
 | First RG step for the pair expectation | **In manuscript** | Product of the individual perimeter/corner normalisations, mixed contributions and remainder bounds are supplied. See [Theorem 5.4](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf). |
 | Separation decay of first-step mixed contributions | **In manuscript** | Exponential separation bounds hold for the stated mixed activities and scalar correction. See [V4's two-loop theorem](WILSON_FIRST_RG_STEP_V4.tex). |
 | [Inductive pair class and propagation of mixed insertions through fluctuation steps](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf) | **In manuscript** | [Definition 5.2](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf) and [Section 6](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf). |
-| [R-steps for the pair](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf) | **In manuscript** | [§6.15](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf) and [Proposition 7.11](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf). |
+| [R-steps for the pair](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf) | **In manuscript** | [§6.15](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf) and [Proposition 7.13](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf). |
 | [Cutoff-uniform bound on the renormalised pair expectation](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf) | **In manuscript** | [Theorem 8.7](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf). The bound retains loop-length dependence. |
 | Subsequential convergence of pair expectations | **In manuscript** | Follows from [Theorem 1.5](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf). |
 | Full-sequence continuum limit of the pair expectation | **In manuscript** | [Theorem 1.5](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf) and [§11.9](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf). |

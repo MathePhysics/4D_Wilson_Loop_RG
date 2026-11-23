@@ -1,0 +1,283 @@
+% !TeX program = pdflatex
+% Draft section for WILSON_FIRST_RG_STEP_V4.tex: a closed straight line around the torus.
+% Notation and labels are those of WILSON_FIRST_RG_STEP_V4.tex (SHA-256 prefix 0f859f2d3652), which is not changed.
+% Everything between \maketitle and \end{document} is the text of the section; the preamble is that of V4, with
+% xr-hyper for its labels (compile V4 first in the same directory, so that its .aux is there).
+% What was read in V4 for each statement about its proofs, what was located by a search only, and what the
+% section does not contain: WILSON_V4_CLOSED_LINE_DRAFT_NOTES.md.
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{mathtools}
+\usepackage{mathrsfs}
+\usepackage[a4paper,margin=28mm]{geometry}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{xr-hyper}
+\usepackage[hidelinks]{hyperref}
+\externaldocument[V4-][nocite]{../WILSON_FIRST_RG_STEP_V4}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\Hol}{\operatorname{Hol}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\id}{\mathbf 1}
+\makeatletter
+\newcommand*{\bigcdot}{}
+\DeclareRobustCommand*{\bigcdot}{%
+  \mathbin{\mathpalette\bigcdot@{}}%
+}
+\newcommand*{\bigcdot@scalefactor}{.7}
+\newcommand*{\bigcdot@widthfactor}{1.15}
+\newcommand*{\bigcdot@}[2]{%
+  \sbox0{$#1\vcenter{}$}%
+  \sbox2{$#1\cdot\m@th$}%
+  \hbox to \bigcdot@widthfactor\wd2{%
+    \hss
+    \raise\ht0\hbox{%
+      \scalebox{\bigcdot@scalefactor}{%
+        \lower\ht0\hbox{$#1\bullet\m@th$}%
+      }%
+    }%
+    \hss
+  }%
+}
+\makeatother
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.6em}
+\emergencystretch=3em
+\title{Draft: A Closed Line around the Torus}
+\author{}
+\date{}
+
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\theoremstyle{plain}
+\renewcommand{\qedsymbol}{\textit{q.e.d.}}
+% The section number W belongs to this standalone file only: it keeps the numbers of the draft apart from the
+% numbers of V4, which the references to V4 print.
+\renewcommand{\thesection}{W}
+\begin{document}
+\maketitle
+
+\section{A Closed Line around the Torus}\label{sec:closed-line}
+
+The square-fit condition $K_{\mu}\geqslant 3(n+2)$ of Section~\ref{V4-sec:extent-weights} keeps the contour inside a fundamental domain of the torus, and thereby excludes every contour which winds around it. In this section we treat the simplest contour of that kind, a closed straight line $C_{\mathrm{cl}}$ along a coordinate direction, and we extract its scalar from the regional reference integral as Proposition~\ref{V4-prop:regional-square-extraction} does for a square.
+
+Two things change. The comparison in Proposition~\ref{V4-prop:regional-square-extraction} passes through the copy of the square on $\mathbb Z^4$, whose connected sum $F_{\square,\infty}(n)$ is then expanded into the coefficients of the sides and of the corners. A closed line has no such copy, because its lift to $\mathbb Z^4$ is an infinite line. We therefore compare the density of the torus gas with the line density $\kappa_v$ of \eqref{V4-eq:marginal-full-perimeter} for each coarse segment separately: a cluster rooted in the segment whose network is shorter than a quarter of the shortest period lifts to a cluster of the infinite line with the same labels, intervals, and closed sources, so that only its covariance marginals differ, while every longer cluster is paid by its extent. The second change is a simplification. Since the closed line has no corners, its scalar is $e^{-\delta m_v^{\sigma}P(C_{\mathrm{cl}})}$ with the coefficient of the single orientation $v$, and the error has no term $(n+1)e^{-cn}$.
+
+The gas itself is that of Section~\ref{V4-sec:marginal-perimeter}, which uses the square through the bound of a contact interval by the spatial extent. This bound, the count of the cubes along an interval, and the count of the traversals near a point, which Lemmas~\ref{V4-lem:c4-6-env} and~\ref{V4-lem:c4-8-2} take from the square, hold for the closed line with smaller constants (Lemma~\ref{lem:closed-line-geometry}). What replaces the unique lift of the square is the description of the preimage of $C_{\mathrm{cl}}$ in $\mathbb Z^4$ as a family of parallel lines, any two of which are at least a period apart.
+
+\subsection{Setting}\label{sec:closed-line-setting}
+
+We use fine-lattice units. Let $T=\prod_{\mu=1}^4(\mathbb Z/N_{\mu}\mathbb Z)$ have compatible even fine periods $N_{\mu}= LK_{\mu}$ in the sense of Section~\ref{V4-sec:c4-9-2}, and let the standing conditions \eqref{V4-eq:c-standing-conditions} and the collar conditions \eqref{V4-eq:regional-collar-sizes} hold, while the condition $K_{\mu}\geqslant 3(n+2)$ is not imposed. Then $N_{\min}\geqslant 2LMR_1$ by \eqref{V4-eq:c4-9-3} and $LMR_1>4R_0+8$ by \eqref{V4-eq:regional-collar-sizes}, with the range $R_0=4(1+R_*+R_H+L)$ of Section~\ref{V4-sec:regional-identification}, so that
+\begin{equation}\label{eq:closed-line-period}
+    N_{\min}>8R_0+16\;.
+\end{equation}
+We write $\pi_T \colon \mathbb Z^4\to T$ for the projection and call the elements of $\bigoplus_{\mu}N_{\mu}\mathbb Ze_{\mu}$ period vectors, so that a nonzero period vector has maximum norm at least $N_{\min}$.
+
+Fix an orientation $v\in\{ e_1,-e_1\}$ and a coarse centre $y\in T^{(1)}$, and put $N= N_1$. The \emph{closed line} $C_{\mathrm{cl}}$ is the closed contour whose traversals are
+\begin{equation}\label{eq:closed-line-traversals}
+    b_a=\bigl(y+av,\,y+(a+1)v\bigr)\;,
+\end{equation}
+indexed by $a\in\mathbb Z/N\mathbb Z$ and read from the base point $y$ in the cyclic order of the index. For $v=-e_1$ these are reversed bonds, which carry the inverse links as on the line of orientation $-e_1$ in Section~\ref{V4-sec:marginal-perimeter}. The contour has $n_C= N$ traversals and the physical length $P(C_{\mathrm{cl}})= N\varepsilon$. Its coarse segments are indexed by $j\in\mathbb Z/K_1\mathbb Z$, the segment $j$ consisting of the traversals $jL,\ldots,(j+1)L-1$, and $d_C$ denotes the cyclic distance on $\mathbb Z/N\mathbb Z$. The Wilson function is $W_{\chi}(C_{\mathrm{cl}};U)=\chi(\Hol_UC_{\mathrm{cl}})$. A closed line along another coordinate direction is carried to one of these by a permutation of the coordinate axes, with the periods permuted accordingly, which is a symmetry of the fine lattice, of the Wilson measure, and of every hypothesis on the periods, as for the squares in Section~\ref{V4-sec:extent-weights}.
+
+Fix a lift $\tilde y\in L\mathbb Z^4$ of $y$. For a period vector $t$ with $t_1=0$ let $\widetilde{\mathcal C}_t$ be the oriented line $\tilde y+t+\mathbb Zv$ of $\mathbb Z^4$, with the traversals $(\tilde y+t+\tilde av,\,\tilde y+t+(\tilde a+1)v)$, $\tilde a\in\mathbb Z$, and the coarse segments $\tilde\jmath\in\mathbb Z$ of the traversals $\tilde\jmath L,\ldots,(\tilde\jmath+1)L-1$. We write $\widetilde{\mathcal C}=\widetilde{\mathcal C}_0$ and $N_{\perp}=\min_{\mu\neq1}N_{\mu}\geqslant N_{\min}$. The line $\widetilde{\mathcal C}$ is the translate by $\tilde y\in L\mathbb Z^4$ of the line through the coarse origin in the orientation $v$ on which the weights $\Phi_v$ and the coefficient $\kappa_v$ of \eqref{V4-eq:marginal-full-perimeter} are defined. The translations by $L\mathbb Z^4$ preserve the block grid, from which the infinite-lattice covariance, the primitives and the stencils are built, and with it the reference construction (Section~\ref{V4-sec:marginal-perimeter}: translation by one coarse segment preserves the reference construction, and every local primitive is translated by a multiple of $L$). The gas of $\widetilde{\mathcal C}$ is therefore the translate of the gas of that line, and it has the weights $\Phi_v$.
+
+\begin{lemma}[Geometry of the Closed Line]\label{lem:closed-line-geometry}
+\begin{enumerate}[label=(\alph*)]
+    \item For $a,a'\in\mathbb Z/N\mathbb Z$ the periodic maximum-norm distance of the sites $y+av$ and $y+a'v$ is $d_C(a,a')$.
+    \item Let $S\subseteq\mathbb Z/N\mathbb Z$ be nonempty and let $\delta_S$ be the largest cyclic distance of two of its elements. If $3\delta_S< N$, then $S$ lies in a cyclic interval of $\delta_S+1$ positions; otherwise $N\leqslant 3\delta_S$. In both cases the hull of $S$ in the sense of Section~\ref{V4-sec:joint-extraction} has at most $3\delta_S+2$ positions.
+    \item Let $\mathcal H$ be a cyclic interval of traversals of $C_{\mathrm{cl}}$ or the whole contour. In the notation of Lemma~\ref{V4-lem:c4-6-env}, $|\pi_1(\mathcal H)|\leqslant 2+|\mathcal H|/(LM)$.
+    \item For every site $x$ of $T$, every integer $s\geqslant 0$ and every $\theta>0$, at most $2s+1$ traversals of $C_{\mathrm{cl}}$ have their initial site within the periodic maximum-norm distance $s$ of $x$, and $\sum_{a\in\mathbb Z/N\mathbb Z}e^{-\theta d_{\infty,T}(x,y+av)}\leqslant 1+2/(e^{\theta}-1)$.
+    \item No bond of $T$ is traversed twice by $C_{\mathrm{cl}}$, and $C_{\mathrm{cl}}$ is the concatenation of the straight fine paths of the $K_1$ coarse bonds $(y+jLv,\,y+(j+1)Lv)$, $j\in\mathbb Z/K_1\mathbb Z$, which form a closed coarse path.
+    \item The preimage under $\pi_T$ of the set of sites of $C_{\mathrm{cl}}$ is the disjoint union of the lines $\widetilde{\mathcal C}_t$ over the period vectors $t$ with $t_1=0$. Two distinct lines are at maximum-norm distance at least $N_{\perp}$, and $\pi_T$ is injective on every set of at most $N$ consecutive sites of one line.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(a) The two sites differ in the first coordinate only, by $\pm(a-a')$ modulo $N$, so their periodic maximum-norm distance is $\min_{k\in\mathbb Z}| a-a'+kN|= d_C(a,a')$.
+
+(b) Suppose that $3\delta_S< N$ and fix $a_0\in S$. Every $a\in S$ has $d_C(a,a_0)\leqslant \delta_S$, hence a representative $\tilde a\in\mathbb Z$ of $a-a_0$ with $|\tilde a|\leqslant \delta_S$. For $a,a'\in S$ we have $|\tilde a-\tilde a'|\leqslant 2\delta_S$ and $\min_{k\in\mathbb Z}|\tilde a-\tilde a'+kN|= d_C(a,a')\leqslant \delta_S$, while $|\tilde a-\tilde a'+kN|\geqslant N-2\delta_S>\delta_S$ for $k\neq0$; the minimum is therefore attained at $k=0$, that is, $|\tilde a-\tilde a'|\leqslant \delta_S$. The representatives thus lie in an interval of $\delta_S+1$ integers, whose image in $\mathbb Z/N\mathbb Z$ is a cyclic interval of $\delta_S+1\leqslant N$ positions containing $S$. If $3\delta_S\geqslant N$ there is nothing to prove. The hull of $S$ is its shortest cyclic interval when that interval has fewer than $N/2$ positions, and the whole contour otherwise. In the first case of the dichotomy the shortest interval has at most $\delta_S+1$ positions, so that the hull has at most $\delta_S+1$ positions, or else $N/2\leqslant \delta_S+1$ and the hull has $N\leqslant 2\delta_S+2$ positions; in the second case it has at most $N\leqslant 3\delta_S$ positions.
+
+(c) The cubes of $\pi_1$ are the sets $\Delta_z= LMz+[-LM/2,LM/2]^4$ reduced modulo the periods, which are multiples of $LM$ (Lemma~\ref{V4-lem:c4-6-env}), so they cut the $N$ sites of $C_{\mathrm{cl}}$ into $N/(LM)$ runs of $LM$ consecutive sites. A cyclic interval of $t< N$ traversals has $t+1$ consecutive sites, which meet at most $\lceil(t+1)/(LM)\rceil+1\leqslant t/(LM)+2$ of these runs, and the whole contour meets all $N/(LM)$ of them.
+
+(d) The periodic maximum-norm distance of $x$ and $y+av$ is at least the periodic distance $| x_1-y_1-av_1|_N$ of their first coordinates, where $| k|_N=\min_{m\in\mathbb Z}| k+mN|$, and $a\mapsto x_1-y_1-av_1$ is a bijection of $\mathbb Z/N\mathbb Z$ because $v_1=\pm1$. Hence the number of the traversals in question is at most the number of the $k\in\mathbb Z/N\mathbb Z$ with $| k|_N\leqslant s$, which is at most $2s+1$, and the sum is at most $\sum_{k\in\mathbb Z/N\mathbb Z}e^{-\theta| k|_N}\leqslant 1+2\sum_{m\geqslant 1}e^{-\theta m}$.
+
+(e) The bonds $b_a$ have the distinct initial sites $y+av$ and the common direction $v$, so they are distinct, and no two of them are reverse to each other because $N\geqslant 3$. The traversals of the segment $j$ are the $L$ consecutive bonds from $y+jLv$ to $y+(j+1)Lv$, which is the straight fine path of that coarse bond, and $y+K_1Lv= y$.
+
+(f) A site $\tilde x$ of $\mathbb Z^4$ projects to a site of $C_{\mathrm{cl}}$ if and only if $\tilde x-\tilde y-\tilde av$ is a period vector for some $\tilde a\in\mathbb Z$. Since $N_1e_1\in\mathbb Zv$, this holds if and only if $\tilde x\in\tilde y+t+\mathbb Zv$ for a period vector $t$ with $t_1=0$, and $t$ is determined by $\tilde x$ because it is the component of $\tilde x-\tilde y$ orthogonal to $e_1$. Two sites on the lines of $t\neq t'$ differ in some coordinate $\mu\neq1$ by a nonzero multiple of $N_{\mu}$, hence by at least $N_{\perp}$. Finally, $N$ consecutive sites of one line have first coordinates which are distinct modulo $N$.
+\end{proof}
+
+For the square, the numbers which correspond to (b), (c) and (d) are $4\delta_S+1$ and $8\delta_S$ (Section~\ref{V4-sec:extent-weights}: contacts of diameter $\delta_S< nL/2$ lie in an arc of at most $4\delta_S+1$ traversals, and otherwise $n_C\leqslant 8\delta_S$), $8+|\mathcal H|/(LM)$ (Lemma~\ref{V4-lem:c4-6-env}(a)) and $4(2s+1)$ (the proof of \eqref{V4-eq:c5-7-boundary-marks}). In particular, the bound \eqref{V4-eq:marginal-hull-extent} of a contact interval by the extent holds for $C_{\mathrm{cl}}$ with the constant $c_h=32(1+R_*)$ of the square. Indeed, Section~\ref{V4-sec:extent-weights} derives it from the two alternatives just quoted, applied to the contacts of a component, whose diameter is bounded there by the length of the support network. By (a) the periodic distances of the contacts of $C_{\mathrm{cl}}$ are their cyclic distances, and by (b) the contacts lie in an arc of at most $\delta_S+1\leqslant 4\delta_S+1$ traversals, or else $n_C= N\leqslant 3\delta_S\leqslant 8\delta_S$.
+
+\subsection{The Gas of the Closed Line}\label{sec:closed-line-gas}
+
+Fix a cutoff prescription $\sigma$. Let $D\subseteq E_{*,T}$ be a set of free bonds which contains every free-input stencil of $C_{\mathrm{cl}}$, in which case we say that $D$ is covered. The regional scalar of the closed line is \eqref{V4-eq:regional-square-scalar} with $C_{\mathrm{cl}}$ in place of the square,
+\begin{equation}\label{eq:closed-line-scalar}
+    S^{\circ}_{D,C_{\mathrm{cl}},T}=
+    \frac{\displaystyle\int\Theta_D^{\sigma}(B)e^{P_{D,T}(B)}
+        \chi\bigl(\Hol_{U_{g_0,T}(i_{D,T}B)}C_{\mathrm{cl}}\bigr)\,\dd\mu_{C_{D,T}}(B)}
+    {\displaystyle\int\Theta_D^{\sigma}(B)e^{P_{D,T}(B)}\,\dd\mu_{C_{D,T}}(B)}\;,
+\end{equation}
+with $C_{D,T}=(i_{D,T}^*H_Ti_{D,T})^{-1}$, the interaction $P_{D,T}$ of \eqref{V4-eq:regional-periodic-weight} and the cutoff $\Theta^{\sigma}_D$ of \eqref{V4-eq:regional-weight}. For $D= E_{*,T}$ it is the flat ratio $\mathcal W^{\circ,\sigma}_T(C_{\mathrm{cl}})= N^{\sigma}_{C_{\mathrm{cl}},T}/D^{\sigma}_T$ of \eqref{V4-eq:marginal-literal-ratio}. For a coarse segment $j$ let $K_j$ be the union of the free-input stencils of its fine traversals, and put, as in \eqref{V4-eq:regional-square-distances},
+\begin{equation}\label{eq:closed-line-distances}
+    d_j=\max\bigl(0,d_T(K_j,D^c)-R_0\bigr),
+    \qquad \iota_T=\max\bigl(0,N_{\min}/4-R_0\bigr)\;,
+\end{equation}
+with complements in $E_{*,T}$, the distance to the empty set being infinite and $e^{-\infty}=0$.
+
+\begin{proposition}[The Gas of the Closed Line]\label{prop:closed-line-gas}
+Assume the setting of Section~\ref{sec:closed-line-setting} and the common small-coupling thresholds of the flat and regional expansions of Proposition~\ref{V4-prop:regional-square-extraction}, and let $D$ be covered.
+\begin{enumerate}[label=(\roman*)]
+    \item The numerator and the denominator of \eqref{eq:closed-line-scalar} are the sums over the compatible families of vacuum components and webs of the products of their activities, as in \eqref{V4-eq:marginal-exact-gases}, where the webs are formed with the shortest cyclic intervals in $\mathbb Z/N\mathbb Z$ and the supports are intersected with $D$.
+    \item Let $U(\Gamma)$ be the absolute Ursell coefficient of a cluster $\Gamma$ times the positive majorants of its objects, as in \eqref{V4-eq:regional-square-rooted-majorant}. For every coarse segment $j$,
+    \begin{equation}\label{eq:closed-line-rooted-majorant}
+        \sum_{\Gamma\, | \,j\in J_{\Gamma}}U(\Gamma)e^{\eta'\ell(\Gamma)}\leqslant C\tau^2\;,
+    \end{equation}
+    with the exponent $\eta'$ and the constant $C$ of \eqref{V4-eq:regional-square-rooted-majorant}, which do not depend on $D$, on $y$, on $j$ or on the periods.
+    \item The scalar \eqref{eq:closed-line-scalar} is nonzero. Its logarithm $F_{D,C_{\mathrm{cl}},T}$, continued from zero in the traversal-source polynomial \eqref{V4-eq:regional-wilson-polynomial}, is the absolutely convergent sum of the weights $\Phi_{D,C_{\mathrm{cl}},T}(\Gamma)$ of the clusters with $J_{\Gamma}\neq\varnothing$, and
+    \begin{equation}\label{eq:closed-line-allocation}
+        F_{D,C_{\mathrm{cl}},T}=\sum_{j\in\mathbb Z/K_1\mathbb Z}\kappa_{D,C_{\mathrm{cl}},T}(j),
+        \qquad
+        \kappa_{D,C_{\mathrm{cl}},T}(j)=\sum_{\Gamma\, | \,j\in J_{\Gamma}}\frac{\Phi_{D,C_{\mathrm{cl}},T}(\Gamma)}{| J_{\Gamma}|}\;.
+    \end{equation}
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+The construction of Section~\ref{V4-sec:marginal-perimeter}, from the closed source differences \eqref{V4-eq:finite-source-closed-differences} to the web activities \eqref{V4-eq:marginal-web-activity}, and its regional form in the proof of Proposition~\ref{V4-prop:regional-square-extraction}, use the contour through four properties, each of which holds for $C_{\mathrm{cl}}$.
+
+First, the contour is closed and its holonomy at the reference field $U_0=\id$ is the identity. This is the case for every closed contour, whether or not it winds around the torus, since $U_0$ is the identity on every bond, and so the differences $G_S$ of \eqref{V4-eq:finite-source-closed-differences} are defined for $C_{\mathrm{cl}}$ and sum to $W_{\chi}(C_{\mathrm{cl}};U_{g_0})$.
+
+Secondly, no bond is traversed twice (Lemma~\ref{lem:closed-line-geometry}(e)), and the source labels have the support sizes, the ranges and the overlaps of the straight line. Indeed, the free-input stencil of the traversal $a$ is the projection of the stencil of a traversal of $\widetilde{\mathcal C}$, whose bonds are within $R_*$ of that traversal. The traversals whose stencils contain a given bond have their initial sites within $R_*$ of it, hence, by the proof of Lemma~\ref{lem:closed-line-geometry}(d), they lie in an arc of at most $2R_*+1$ positions, and $\pi_T$ is injective on the $R_*$-neighbourhood of the lift of such an arc by \eqref{eq:closed-line-period}. Their number is therefore the number of the traversals of $\widetilde{\mathcal C}$ whose stencils contain a given bond.
+
+Thirdly, the interval of a component is bounded by its extent, \eqref{V4-eq:marginal-hull-extent}, with the constant $c_h$ of the square, as was shown after Lemma~\ref{lem:closed-line-geometry}. The conversion \eqref{V4-eq:marginal-hull-root} and the interval tree sums are statements about cyclic intervals of $\mathbb Z/N\mathbb Z$, and do not involve the shape of the contour.
+
+Fourthly, when a web interval contains the base position in its interior, the cyclicity of the trace moves the base to a position between two web intervals before the Schur factorisation, as for the square.
+
+The remaining ingredients, namely the label counts $s_*$, $q_*$, $R_*$ of the primitives, the spectral and decay bounds of the principal marginals of $C_{D,T}$, the density estimate \eqref{V4-eq:marginal-density-majorant}, and the source bounds with the quadratic gain of a single mark, do not involve the contour. With the four properties, the proof of \eqref{V4-eq:marginal-exact-gases} gives (i), and the fifth paragraph of the proof of Proposition~\ref{V4-prop:regional-square-extraction}, in which the reference to the square is the bound \eqref{V4-eq:marginal-hull-extent}, gives \eqref{eq:closed-line-rooted-majorant} with the constants of \eqref{V4-eq:regional-square-rooted-majorant}. As there, the majorants dominate the cluster weights for the source variables in the polydisc $| t_a|\leqslant 2$, so that the logarithm of the ratio exists on that polydisc, vanishes at zero source, and is the absolutely convergent sum of the cluster weights with $J_{\Gamma}\neq\varnothing$. Its exponential at $t_a=1$ is \eqref{eq:closed-line-scalar}, which is therefore nonzero. Summing the weights $| J_{\Gamma}|^{-1}$ over the marked segments of a cluster gives one, which is \eqref{eq:closed-line-allocation}.
+\end{proof}
+
+\subsection{The Line Coefficient on the Torus}\label{sec:closed-line-density}
+
+We now take $D= E_{*,T}$ and write $\Phi_{C_{\mathrm{cl}},T}$ and $\kappa_{C_{\mathrm{cl}},T}(j)$ for the weights and the densities of Proposition~\ref{prop:closed-line-gas} at this carrier. For a cluster $\Gamma$ of this gas, let $\mathscr N(\Gamma)$ be the network of the last paragraph of Section~\ref{V4-sec:extent-weights}: a connected set of bonds of $T$ which contains the carrier of every object of $\Gamma$, the lattice paths which realise its forest edges and attach its marked traversals, and every web interval, and which has at most $C_{\mathrm{net}}\ell(\Gamma)$ bonds. The question is which clusters the torus gas shares with the gas of the line $\widetilde{\mathcal C}$, and the answer is that it shares those whose network is too short to feel the periods.
+
+\begin{lemma}[Short Clusters Lift to the Line]\label{lem:closed-line-lift}
+Assume the setting of Section~\ref{sec:closed-line-setting}. Fix a coarse segment $j$ of $C_{\mathrm{cl}}$ and its representative $\tilde\jmath\in\{0,\ldots,K_1-1\}$. Call a cluster $\Gamma$ of the gas of $C_{\mathrm{cl}}$ with $j\in J_{\Gamma}$, or a cluster $\widetilde\Gamma$ of the gas of $\widetilde{\mathcal C}$ on $\mathbb Z^4$ with $\tilde\jmath\in J_{\widetilde\Gamma}$, \emph{short} when $C_{\mathrm{net}}\ell+R_0< N_{\min}/4$ for its extent $\ell$. There is a bijection $\Gamma\mapsto\widetilde\Gamma$ from the short clusters of the first kind onto the short clusters of the second kind with the following properties.
+\begin{enumerate}[label=(\alph*)]
+    \item $\ell(\widetilde\Gamma)=\ell(\Gamma)$ and $| J_{\widetilde\Gamma}|=| J_{\Gamma}|$.
+    \item The objects of $\widetilde\Gamma$ are the lifts of the objects of $\Gamma$, in the same order, with the same labels, forests and incompatibilities. The activity of an object of $\widetilde\Gamma$ is given by the integrals \eqref{V4-eq:marginal-component-functional} and \eqref{V4-eq:marginal-web-activity} of the corresponding object of $\Gamma$ in which every block $C_T(b,c)$ of the covariance marginal is replaced by the block $C_{\infty}(\tilde b,\tilde c)$ at the lifted bonds, and $d(\tilde b,\tilde c)= d_T(b,c)< N_{\min}/4$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+\emph{The lift.} Let $\Gamma$ be a short cluster with $j\in J_{\Gamma}$. Its network $\mathscr N(\Gamma)$ is connected and has fewer than $N_{\min}/4$ bonds, so the argument of Section~\ref{V4-sec:c4-11-4} applies to it: we lift the paths of $\mathscr N(\Gamma)$ from a marked traversal of the segment $j$. Two lifts of one vertex would differ by a nonzero period vector, of maximum norm at least $N_{\min}$, while the two paths which give them have together fewer than $N_{\min}/2$ bonds and therefore end at points whose distance is less than $N_{\min}/2$. The lift $\widetilde{\mathscr N}$ is therefore well defined, $\pi_T$ maps its vertices bijectively onto those of $\mathscr N(\Gamma)$, and any two of its vertices $\tilde x$, $\tilde x'$ are at maximum-norm distance less than $N_{\min}/4$. For every nonzero period vector $t$ this gives $\|\tilde x-\tilde x'+t\|_{\infty}>3N_{\min}/4>\|\tilde x-\tilde x'\|_{\infty}$, so that the periodic distance of two vertices of $\mathscr N(\Gamma)$ is the distance of their lifts. In particular $d(\tilde b,\tilde c)= d_T(b,c)$ for any two bonds of the carriers.
+
+\emph{The contour.} A traversal $b_a$ of $C_{\mathrm{cl}}$ in $\mathscr N(\Gamma)$ lifts to a bond $(\tilde x,\tilde x+v)$ with $\pi_T(\tilde x)= y+av$, which is a traversal of one of the lines $\widetilde{\mathcal C}_t$ by Lemma~\ref{lem:closed-line-geometry}(f). Distinct lines are at distance at least $N_{\perp}\geqslant N_{\min}$ and $\widetilde{\mathscr N}$ has diameter less than $N_{\min}/4$, so all these traversals lie on one line, and we choose the lift so that this line is $\widetilde{\mathcal C}$ and the marked traversals of the segment $j$ lie in the segment $\tilde\jmath$. All lifted positions then lie in a window of fewer than $N/2$ consecutive positions of $\widetilde{\mathcal C}$, on which the reduction modulo $N$ is injective.
+
+\emph{The objects.} The primitive labels, the bad-bond labels and the forests of $\Gamma$ have their supports in $\mathscr N(\Gamma)$. The primitive functions and their supports agree after lifting, as in the comparison preceding \eqref{V4-eq:corner-finite-shape-difference}, and the lifted marks are traversals of $\widetilde{\mathcal C}$ with the lifted stencils. The components, which are the connected components of the graph of the forest and of the label supports, are therefore the lifts of the components of $\Gamma$. On the torus the interval of a component $\gamma$ is the shortest cyclic interval which contains its marks $S_{\gamma}$. It lies in $\mathscr N(\Gamma)$, so it has fewer than $N/2$ positions, and a shortest cyclic interval containing $S_{\gamma}$ with fewer than half of the positions is unique (Section~\ref{V4-sec:joint-extraction}). The image of the ordinary interval from the first to the last lifted mark is a cyclic interval which contains $S_{\gamma}$ and is contained in that shortest interval, because the lift of the latter is a segment of $\widetilde{\mathcal C}$ which contains the lifted marks. The two therefore coincide, and no tie is resolved by the base. Two such intervals intersect on the torus if and only if their lifts intersect, because both lie in the window. The webs, their intervals, the incompatibilities of the objects and the Ursell coefficient of the cluster are therefore those of the lifted cluster $\widetilde\Gamma$, and $J_{\widetilde\Gamma}$ is the lift of $J_{\Gamma}$, which gives (a) with the equality of the distances.
+
+It remains to compare the closed sources. For a web of $\Gamma$ with the marks $S$, the torus source of \eqref{V4-eq:finite-source-closed-differences} is the alternating sum over $R\subseteq S$ of the character of the product of the links $U_{g_0}(b_a)$, $a\in R$, in the cyclic order from the base, all other traversals carrying the identity, whereas the line source \eqref{V4-eq:marginal-line-source} is the same sum with the product in the order of the line. If the image of the window does not contain the base in its interior, the two orders agree. Otherwise the first is a cyclic rotation of the second, and the character of a product is invariant under cyclic rotations. The links are the same functions of the lifted fields, since the reconstruction of a link depends on its stencil only. Hence the integrands of \eqref{V4-eq:marginal-component-functional} and \eqref{V4-eq:marginal-web-activity} for an object of $\Gamma$ and for its lift differ only in the covariance marginal, which proves (b).
+
+\emph{The inverse.} Let $\widetilde\Gamma$ be a short cluster of the gas of $\widetilde{\mathcal C}$ with $\tilde\jmath\in J_{\widetilde\Gamma}$. Its network has diameter less than $N_{\min}/4$, so $\pi_T$ is injective on it and preserves the distances of its vertices, by the inequality of the first step. The projected labels, forests and marks are labels, forests and marks of the gas of $C_{\mathrm{cl}}$, and the projected ordinary interval of a component, which has fewer than $N/2$ positions, is the shortest cyclic interval containing its marks: a shorter one would intersect it in a cyclic interval containing the marks (Section~\ref{V4-sec:joint-extraction}), whose lift would be a proper subinterval of the interval from the first to the last mark and would contain both of them, which is impossible. Since $\pi_T$ is injective on the network and on the window, two carriers or two intervals intersect after the projection only if they intersect before it, so that the components, the webs and the incompatibilities are preserved. The projection is therefore a short cluster $\Gamma$ of $C_{\mathrm{cl}}$ with $j\in J_{\Gamma}$ and the same extent, and its lift through the segment $\tilde\jmath$ is $\widetilde\Gamma$, while the projection of the lift of a short cluster is that cluster, so that the two maps are inverse to each other.
+\end{proof}
+
+\begin{proposition}[The Density of the Closed Line]\label{prop:closed-line-density}
+Under the hypotheses of Proposition~\ref{prop:closed-line-gas} there are constants $C,c>0$, independent of $y$, of $j$ and of the periods, such that for either cutoff prescription $\sigma$, every orientation $v\in\{ e_1,-e_1\}$ and every coarse segment $j$,
+\begin{equation}\label{eq:closed-line-density}
+    \bigl|\kappa_{C_{\mathrm{cl}},T}(j)-\kappa^{\sigma}_v\bigr|\leqslant C\tau^2e^{-c\iota_T}\;,
+\end{equation}
+and consequently
+\begin{equation}\label{eq:closed-line-flat}
+    \Bigl|\log\frac{N^{\sigma}_{C_{\mathrm{cl}},T}}{D^{\sigma}_T}-K_1\kappa^{\sigma}_v\Bigr|\leqslant C\tau^2K_1e^{-c\iota_T}\;.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+By the translation invariance recorded in Section~\ref{sec:closed-line-setting}, $\kappa_v$ is the sum of $\Phi_v(\widetilde\Gamma)/| J_{\widetilde\Gamma}|$ over the clusters of the gas of $\widetilde{\mathcal C}$ with $\tilde\jmath\in J_{\widetilde\Gamma}$. We split this sum and the sum \eqref{eq:closed-line-allocation} for $\kappa_{C_{\mathrm{cl}},T}(j)$ into their short and their remaining clusters, and we pair the short ones by Lemma~\ref{lem:closed-line-lift}, which gives
+\begin{equation}\label{eq:closed-line-three-terms}
+    \begin{aligned}
+        \kappa_{C_{\mathrm{cl}},T}(j)-\kappa_v
+            &=\sum_{\Gamma\ \mathrm{short}}\frac{\Phi_{C_{\mathrm{cl}},T}(\Gamma)-\Phi_v(\widetilde\Gamma)}{| J_{\Gamma}|}
+            +\sum_{\substack{\Gamma\ \mathrm{not\ short}\\ j\in J_{\Gamma}}}\frac{\Phi_{C_{\mathrm{cl}},T}(\Gamma)}{| J_{\Gamma}|}\\
+            &\quad-\sum_{\substack{\widetilde\Gamma\ \mathrm{not\ short}\\ \tilde\jmath\in J_{\widetilde\Gamma}}}\frac{\Phi_v(\widetilde\Gamma)}{| J_{\widetilde\Gamma}|}\;.
+    \end{aligned}
+\end{equation}
+
+A cluster which is not short has $\ell\geqslant (N_{\min}/4-R_0)/C_{\mathrm{net}}$, hence $\ell\geqslant \iota_T/C_{\mathrm{net}}$. The second sum is therefore at most $C\tau^2e^{-\eta'\iota_T/C_{\mathrm{net}}}$ in modulus by \eqref{eq:closed-line-rooted-majorant}, since the majorants dominate the weights, and the third is at most $C\tau^2e^{-\eta\iota_T/C_{\mathrm{net}}}$ by the rooted bound \eqref{V4-eq:marginal-cluster-tail} on the infinite lattice.
+
+For a short cluster the two weights differ only through the covariance marginals on its carriers (Lemma~\ref{lem:closed-line-lift}(b)). The union $A_{\Gamma}$ of the carriers lies in $\mathscr N(\Gamma)$, on which $\pi_T$ is a bijection from the lift, so both $(C_T)_{A_{\Gamma}}$ and $(C_{\infty})_{\widetilde A_{\Gamma}}$ are covariances on the same finite set. Two bonds of it are at lifted distance less than $N_{\min}/4$, and for such bonds the periodisation estimate in the proof of Proposition~\ref{V4-prop:regional-square-extraction} (the display preceding \eqref{V4-eq:regional-square-periodic-comparison}) gives
+\begin{equation}\label{eq:closed-line-covariance}
+    \bigl\| C_T(b,c)-C_{\infty}(\tilde b,\tilde c)\bigr\|\leqslant Ce^{-\nu N_{\min}/2}e^{-\nu d(\tilde b,\tilde c)}\;.
+\end{equation}
+We interpolate linearly between the two covariances on $A_{\Gamma}$. Every interpolated covariance and each of its principal marginals has its spectrum in $[h_L^{-1},\gamma_L^{-1}]$, the common exponential decay, and scalar colour blocks, because both ends have these properties and they are preserved by convex combinations and by principal restriction. The density-direction estimates of the proof of Proposition~\ref{V4-prop:regional-square-extraction} therefore apply with $h_A= e^{-\nu N_{\min}/2}$, as they do there for the square, and give the differentiated cluster bound of the proof of Proposition~\ref{V4-prop:regional-coefficient} in the form
+\begin{equation}\label{eq:closed-line-short-difference}
+    \bigl|\Phi_{C_{\mathrm{cl}},T}(\Gamma)-\Phi_v(\widetilde\Gamma)\bigr|\leqslant C\ell(\Gamma)^2e^{-\nu N_{\min}/2}U(\Gamma)\;.
+\end{equation}
+Half of the extent weight in \eqref{eq:closed-line-rooted-majorant} absorbs the factor $\ell(\Gamma)^2$, so that the first sum of \eqref{eq:closed-line-three-terms} is at most $C\tau^2e^{-\nu N_{\min}/2}$ in modulus, and $N_{\min}/2\geqslant 2\iota_T$. This proves \eqref{eq:closed-line-density} with $c=\min(\eta/C_{\mathrm{net}},\eta'/C_{\mathrm{net}},2\nu)$, and \eqref{eq:closed-line-flat} follows by summing over the $K_1$ segments in \eqref{eq:closed-line-allocation}.
+\end{proof}
+
+\begin{remark}[The Coefficient as a Limit]\label{rem:closed-line-limit}
+Along every sequence of tori as in Section~\ref{sec:closed-line-setting} with $N_{\min}\to\infty$, \eqref{eq:closed-line-flat} gives
+\begin{equation}\label{eq:closed-line-limit}
+    \delta m^{\sigma}_v(g_0,\varepsilon)=-\frac{\kappa^{\sigma}_v(g_0)}{L\varepsilon}
+        =-\lim\frac{1}{N_1\varepsilon}\log\frac{N^{\sigma}_{C_{\mathrm{cl}},T}}{D^{\sigma}_T}\;,
+\end{equation}
+with an error which is exponentially small in the shortest period. No joint limit in the size of the contour and in the periods is taken, in contrast with \eqref{V4-eq:marginal-square-mass}, where the corners of the square contribute a term of the order of the inverse of its side.
+\end{remark}
+
+\subsection{The Regional Scalar}\label{sec:closed-line-regional}
+
+\begin{proposition}[The Regional Scalar of the Closed Line]\label{prop:closed-line-scalar}
+Assume the setting of Section~\ref{sec:closed-line-setting} and the common small-coupling thresholds of the flat and regional expansions of Proposition~\ref{V4-prop:regional-square-extraction}, and let $D$ be covered. Then the scalar \eqref{eq:closed-line-scalar} is nonzero, and with its logarithm continued from zero in the traversal-source polynomial \eqref{V4-eq:regional-wilson-polynomial} there are constants $C,c>0$, independent of $D$, of $y$ and of the periods, and an error $E^{\circ}_{D,C_{\mathrm{cl}},T}$ such that
+\begin{equation}\label{eq:closed-line-extraction}
+    S^{\circ}_{D,C_{\mathrm{cl}},T}= e^{-\delta m^{\sigma}_v P(C_{\mathrm{cl}})}e^{E^{\circ}_{D,C_{\mathrm{cl}},T}}\;,
+\end{equation}
+\begin{equation}\label{eq:closed-line-error}
+    \bigl| E^{\circ}_{D,C_{\mathrm{cl}},T}\bigr|\leqslant C\tau^2\Bigl[\sum_{j\in\mathbb Z/K_1\mathbb Z}e^{-cd_j}+K_1e^{-c\iota_T}\Bigr]\;.
+\end{equation}
+The coefficient is $\delta m^{\sigma}_v=-\kappa^{\sigma}_v/(L\varepsilon)$ of \eqref{V4-eq:marginal-full-perimeter}, for the orientation $v$ of the line and the same cutoff prescription. As in Proposition~\ref{V4-prop:regional-square-extraction}, when $D$ is the carrier of a covered conditional kernel the collar conditions identify the integral \eqref{eq:closed-line-scalar} with the conditional reference scalar, and they do not enter the cluster comparison.
+\end{proposition}
+
+\begin{proof}
+The second and third paragraphs of the proof of Proposition~\ref{V4-prop:regional-square-extraction} identify, for the carrier of a covered conditional kernel, the numerator and the denominator of the regional scalar with those of the conditional reference scalar, and they fix the common domain of the implicit solutions on the integration box. They concern the precision, the primitives and the cutoff on $D$, and they involve the contour through the coverage of its stencils only, so they hold for $C_{\mathrm{cl}}$. Nonvanishing and the logarithm are Proposition~\ref{prop:closed-line-gas}(iii). With $K_1\kappa_v=-\delta m_vP(C_{\mathrm{cl}})$, which holds because $P(C_{\mathrm{cl}})= K_1L\varepsilon$, we define
+\begin{equation}\label{eq:closed-line-error-definition}
+    E^{\circ}_{D,C_{\mathrm{cl}},T}= F_{D,C_{\mathrm{cl}},T}-K_1\kappa_v
+        =\sum_{j\in\mathbb Z/K_1\mathbb Z}\bigl[\kappa_{D,C_{\mathrm{cl}},T}(j)-\kappa_{C_{\mathrm{cl}},T}(j)\bigr]
+        +\sum_{j\in\mathbb Z/K_1\mathbb Z}\bigl[\kappa_{C_{\mathrm{cl}},T}(j)-\kappa_v\bigr]\;,
+\end{equation}
+where the second equality is \eqref{eq:closed-line-allocation} at the carriers $D$ and $E_{*,T}$. The second sum is bounded by Proposition~\ref{prop:closed-line-density}.
+
+For the first sum we follow the boundary comparison in the proof of Proposition~\ref{V4-prop:regional-square-extraction}, from the periodic resolvent identity to \eqref{V4-eq:regional-square-boundary-comparison}, which is made for each root segment $j$ separately. The bound of $C_{D,T}-(C_T)_{D,D}$ and the two derivative terms of the covariance interpolation do not involve the contour. The contour enters through the network of a cluster rooted in the segment $j$, which has at most $C_{\mathrm{net}}\ell(\Gamma)+R_0$ bonds and is anchored within $R_0$ of $K_j$, and through the rooted bound, which is \eqref{eq:closed-line-rooted-majorant} here. For $d_j>2R_*+2R_0$ we split at $\ell= d_j/(2C_{\mathrm{net}})$: a shorter cluster has its original stencils inside $D$, hence the same labels and cyclic intervals in the two expansions, and its carriers at distance at least $d_j/2-R_0$ from $D^c$, so that its covariance derivative is bounded as there; the longer ones are paid by \eqref{eq:closed-line-rooted-majorant}; and bounded $d_j$ are covered by the same rooted bound after enlarging $C$. This gives $|\kappa_{D,C_{\mathrm{cl}},T}(j)-\kappa_{C_{\mathrm{cl}},T}(j)|\leqslant C\tau^2e^{-cd_j}$ for every $j$. Adding the two bounds proves \eqref{eq:closed-line-error}, and \eqref{eq:closed-line-extraction} is the exponential of \eqref{eq:closed-line-error-definition}, every logarithm being the connected source branch.
+\end{proof}
+
+\begin{corollary}[The Regional Scalar of the Covered Branch]\label{cor:closed-line-branch}
+Assume the conventions of Section~\ref{V4-sec:c4c-1} with $C_{\mathrm{cl}}$ in place of $C_n$, with the $K_1$ coarse segments of $C_{\mathrm{cl}}$ in place of the $4n$ segments of the square, and without the condition $K_{\mu}\geqslant 3(n+2)$, and the hypotheses of Proposition~\ref{prop:closed-line-scalar}. On every covered branch $\xi$, with the carrier $I=\Lambda_1^*$, the scalar $S^{\circ}_{\xi,C_{\mathrm{cl}}}$ of \eqref{V4-eq:part1-reference-gas} satisfies
+\begin{equation}\label{eq:closed-line-branch}
+    S^{\circ}_{\xi,C_{\mathrm{cl}}}= S^{\circ}_{I,C_{\mathrm{cl}},T}=\kappa_{C_{\mathrm{cl}}}e^{E^{\circ}_{\xi}},
+    \qquad \kappa_{C_{\mathrm{cl}}}= e^{-\delta m^{\sigma}_v(g_0,\varepsilon)P(C_{\mathrm{cl}})}\neq0\;,
+\end{equation}
+where $E^{\circ}_{\xi}= E^{\circ}_{I,C_{\mathrm{cl}},T}$ is a function of the branch through $I$ alone, and, with the distances \eqref{eq:closed-line-distances} at $D= I$,
+\begin{equation}\label{eq:closed-line-branch-bound}
+    \bigl| E^{\circ}_{\xi}\bigr|\leqslant C\tau^2\Bigl[\sum_{j\in\mathbb Z/K_1\mathbb Z}e^{-cd_j}+K_1e^{-c\iota_T}\Bigr]\leqslant 2C\tau^2K_1\;.
+\end{equation}
+\end{corollary}
+
+\begin{proof}
+The first equality is Lemma~\ref{V4-lem:c4c-2-1} for $C_{\mathrm{cl}}$. Its proof compares two ratios of integrals over $\mathfrak g^I$ factor by factor, and the factors other than the Wilson factor (the precision, the reconstruction, the primitives and the cutoff) do not involve the contour. For the Wilson factor it uses the reference-gas identity \eqref{V4-eq:part1-reference-gas} and the coverage of every traversal. The proof of \eqref{V4-eq:part1-reference-gas} (Lemma~\ref{V4-lem:schur}) uses the contour through the cyclic list of its traversals, through the intervals of the groups, and through $f^{\circ}_{\xi}(0)=\chi(\id)=1$, which holds for $C_{\mathrm{cl}}$ because the reference background is the identity on every bond. On a covered branch each link of $C_{\mathrm{cl}}$ is its reconstruction from the young variable alone, by the argument of Lemma~\ref{V4-lem:covered}, which treats one contour bond at a time. The second equality and the first bound are Proposition~\ref{prop:closed-line-scalar} at $D= I$, which is covered on a covered branch and is the carrier $D_+$ of Section~\ref{V4-sec:regional-identification}, and the last bound uses $e^{-cd_j}\leqslant 1$ and $e^{-c\iota_T}\leqslant 1$.
+\end{proof}
+
+\begin{remark}[One Orientation]\label{rem:closed-line-orientation}
+The square coefficient $\delta m^{\sigma}$ of \eqref{V4-eq:marginal-square-mass} is the mean of the four coefficients $\delta m^{\sigma}_v$, $v\in\mathscr V_{\square}$, whereas \eqref{eq:closed-line-extraction} contains the coefficient of the orientation of the line alone. Section~\ref{V4-sec:marginal-perimeter} shows that $\kappa_{-v}=\overline{\kappa_v}$ and does not presume any other relation between the four coefficients, and none is used here. In particular $\delta m^{\sigma}_v$ need not be real for a complex character, the scalar of the closed line in the reversed orientation is the complex conjugate of \eqref{eq:closed-line-extraction}, and $|\kappa_{C_{\mathrm{cl}}}|= e^{-\operatorname{Re}\delta m^{\sigma}_vP(C_{\mathrm{cl}})}$.
+\end{remark}
+
+\begin{remark}[The Function of the Background]\label{rem:closed-line-background}
+After the scalar is extracted, the function which remains is $W_{\chi}(C_{\mathrm{cl}};U_1)$, the character of the holonomy of the background around the torus. In contrast with the square, it is not close to one when the plaquettes of the background are small, because $C_{\mathrm{cl}}$ bounds no surface: the field equal to a fixed $h\in G$ on the bonds of direction $e_1$ and to $\id$ on all other bonds has every plaquette equal to $\id$ and the holonomy $h^{\pm N}$ around $C_{\mathrm{cl}}$, and every element of the compact connected group $G$ is of this form. The bound of Corollary~\ref{V4-cor:main-leading-size}, which sums the plaquettes of the surface bounded by the square, therefore has no counterpart for the closed line.
+\end{remark}
+\end{document}

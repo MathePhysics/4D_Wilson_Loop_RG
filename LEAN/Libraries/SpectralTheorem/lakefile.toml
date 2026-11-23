@@ -1,0 +1,16 @@
+name = "SpectralTheorem"
+version = "0.1.0"
+defaultTargets = ["SpectralTheorem"]
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4.git"
+rev = "8d52ea9a145a9255c4d301c0d1a1b8bf6e59305a"
+
+# Sibling library: symmetric operators, the basic criterion, Ran(A ± i) = H.
+[[require]]
+name = "KatoRellich"
+path = "../KatoRellich"
+
+[[lean_lib]]
+name = "SpectralTheorem"

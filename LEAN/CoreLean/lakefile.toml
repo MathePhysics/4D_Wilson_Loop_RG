@@ -1,0 +1,23 @@
+name = "CoreLean"
+version = "0.1.0"
+keywords = ["math"]
+defaultTargets = ["CoreLean"]
+
+[leanOptions]
+pp.unicode.fun = true # pretty-prints `fun a ↦ b`
+relaxedAutoImplicit = false
+weak.linter.mathlibStandardSet = true
+maxSynthPendingDepth = 3
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+rev = "v4.36.0"
+
+[[lean_lib]]
+name = "CoreLean"
+
+# Copied unchanged from C:\Users\Terinuva\Documents\Lean\Libraries\BakerCampbellHausdorff v0.4
+# (Mathlib 8d52ea9a, Lean 4.34.0-rc2); checksums in vendor-docs/BakerCampbellHausdorff.
+[[lean_lib]]
+name = "BakerCampbellHausdorff"
