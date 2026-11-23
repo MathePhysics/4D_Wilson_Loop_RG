@@ -64,9 +64,9 @@ Our current progress is as follows.
 
 ## Current Manuscripts
 
-- **Continuum-limit manuscript draft.** [PDF](WILSON_LOOPS_CONTINUUM_LIMIT.pdf) and [LaTeX source](WILSON_LOOPS_CONTINUUM_LIMIT.tex).
-- **Bałaban supplement.** [PDF](BALABAN_SUPPLEMENT.pdf) and [LaTeX source](BALABAN_SUPPLEMENT.tex).
-- **Bałaban core.** This draft presents Bałaban's RG results used in the continuum-limit manuscript, filling in proof details and repairing gaps in the original arguments. [PDF](Continuum%20Limit%20Manuscript%20Draft/BALABAN_CORE.pdf) and [LaTeX source](Continuum%20Limit%20Manuscript%20Draft/BALABAN_CORE.tex).
+- **Continuum-limit manuscript draft.** [PDF](WILSON_LOOPS_CONTINUUM_LIMIT.pdf) and [LaTeX source](Continuum%20Limit%20Manuscripts/WILSON_LOOPS_CONTINUUM_LIMIT.tex).
+- **Bałaban supplement.** [PDF](BALABAN_SUPPLEMENT.pdf) and [LaTeX source](Continuum%20Limit%20Manuscripts/BALABAN_SUPPLEMENT.tex).
+- **Bałaban core.** This draft presents Bałaban's RG results used in the continuum-limit manuscript, filling in proof details and repairing gaps in the original arguments. [PDF](Continuum%20Limit%20Drafts/BALABAN_CORE.pdf) and [LaTeX source](Continuum%20Limit%20Drafts/BALABAN_CORE.tex).
 - **Updated V4:** [PDF](WILSON_FIRST_RG_STEP_V4.pdf) and [LaTeX source](WILSON_FIRST_RG_STEP_V4.tex).
 
 The [Lean formalisation](LEAN/) includes CoreLean and supporting libraries.
@@ -159,9 +159,10 @@ The continuum-limit results cover two vertex-disjoint admissible loops. The exte
 
 ## Build
 
-Use a recent TeX Live or MiKTeX installation with pdfLaTeX, BibTeX and latexmk. From the repository root, build the continuum-limit manuscript before the supplement, then rebuild the manuscript to resolve their mutual references.
+Use a recent TeX Live or MiKTeX installation with pdfLaTeX, BibTeX and latexmk. Build the continuum-limit manuscript before the supplement, then rebuild the manuscript to resolve their mutual references.
 
 ```sh
+cd "Continuum Limit Manuscripts"
 latexmk -pdf -interaction=nonstopmode -halt-on-error WILSON_LOOPS_CONTINUUM_LIMIT.tex
 latexmk -pdf -interaction=nonstopmode -halt-on-error BALABAN_SUPPLEMENT.tex
 latexmk -pdf -interaction=nonstopmode -halt-on-error WILSON_LOOPS_CONTINUUM_LIMIT.tex
@@ -174,7 +175,7 @@ cd "Manuscripts under Construction"
 latexmk -pdf -interaction=nonstopmode -halt-on-error WILSON_FIRST_RG_STEP_V5.tex
 ```
 
-The V5 folder includes the custom [preprint class](Manuscripts%20under%20Construction/preprint.cls) and V5 bibliography. The earlier manuscripts, summary and research programme use the standard `article` class. Build them with the same command and the appropriate `.tex` filename. Dependencies are listed in [TEX_PACKAGES.txt](TEX_PACKAGES.txt).
+The V5 folder includes the custom [preprint class](Manuscripts%20under%20Construction/preprint.cls) and V5 bibliography. The earlier manuscripts, summary and research programme use the standard `article` class. Build them with the same command and the appropriate `.tex` filename. Dependencies are listed in [TEX_PACKAGES.txt](Continuum%20Limit%20Manuscripts/TEX_PACKAGES.txt).
 
 Compilation checks the document build; it does not establish mathematical correctness.
 
