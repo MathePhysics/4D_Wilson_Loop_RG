@@ -25,7 +25,7 @@ Our work focuses solely on attempting to give a robust construction of the corre
 
 We believe that we have an LLM-generated proof of the following result.
 
-**Theorem (Continuum Limit of Renormalised Wilson Loops).** Let $G$ be a compact connected simple Lie group and fix a four-dimensional periodic torus admitted by Bałaban's construction. For any integer $n\geqslant 1$, let $C_1,\ldots,C_n$ be a fixed family of pairwise disjoint oriented squares, with sides parallel to coordinate axes, vertices on a common lattice of spacing $uL^{-q}$ for some integer $q\geqslant 0$, and side lengths at most half the torus period. For each $i$, let $\chi_i$ be a normalised irreducible character of $G$. There is a threshold $\bar g_0>0$ such that the following holds for every reference coupling $0<\bar g<\bar g_0$.
+**Theorem (Continuum Limit of Renormalised Wilson Loops).** Let $G$ be a compact connected simple Lie group and fix a four-dimensional periodic torus admitted by Bałaban's construction. For any integer $n\geqslant 1$, let $C_1,\ldots,C_n$ be a fixed family of pairwise vertex-disjoint admissible oriented lattice loops, which may wind around the torus, with vertices on a common lattice of spacing $uL^{-q}$. For each $i$, let $\chi_i$ be a normalised irreducible character of $G$. There is a threshold $\bar g_0>0$. The reference coupling $\bar g$ at scale $u$ can be chosen anywhere in $(0,\bar g_0)$, independently of the loops and their characters. The following holds at every sufficiently fine common lattice level $q$, where the required level may depend on the characters and $\bar g$.
 
 At lattice spacing $\varepsilon_K = uL^{-K}$, we can choose the bare coupling $g_0(\varepsilon_K,\bar g)$ so that the running coupling at scale $u$ equals $\bar g$. For each loop $C_i$, there exists a sequence of multiplicative counterterms $\left(\kappa_{C_i}^{(K)} \right)_{K \in \mathbb{N}}$, such that the renormalised correlation function has a finite limit along the full sequence of ultraviolet cutoffs,
 
@@ -39,7 +39,7 @@ F_K(C_1,\ldots,C_n)
 .
 $$
 
-The statement holds for every finite number of disjoint loops, the correlation functions are [nonzero](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf) and [reflection positive](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf), with [torus covariance](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf). The RG parameters and the coupling threshold for convergence depend on the loops only through their shape, independently of their lengths and number.
+The statement holds for every finite number of disjoint loops, and the limiting correlation functions are [nontrivial](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf#page=232). The manuscript also establishes [reflection positivity](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf#page=10) and [torus covariance](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf#page=9) under the conditions stated there. The RG parameters and the coupling threshold are uniform for loops with a given shape bound, independently of their lengths and number.
 
 We also establish [non-Gaussianity](Continuum%20Limit%20Manuscript%20Draft/WILSON_LOOPS_CONTINUUM_LIMIT.pdf), in the sense that our correlation functions cannot be obtained from free, i.e. Abelian, Yang–Mills theory.
 
