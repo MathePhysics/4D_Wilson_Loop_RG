@@ -75,8 +75,8 @@ lemma sum_animal_weights (P : Finset (Finset (Cube N))) (hP : ∀ Z ∈ P, IsCon
       have h1 : (T.filter fun Z : P => Z.1.card = n).card ≤
           (Balaban.Polymer.animals (wallGraph (ZMod N)) y n).card := by
         refine Finset.card_le_card_of_injOn (fun Z => Z.1) (fun Z hZ => ?_) (fun Z _ Z' _ h => Subtype.ext h)
-        rw [Finset.mem_filter] at hZ
-        exact (Balaban.Polymer.mem_animals _).2 ⟨(Finset.mem_filter.1 hZ.1).2, hZ.2, hP Z.1 Z.2⟩
+        have hZ' := Finset.mem_filter.1 (Finset.mem_coe.1 hZ)
+        exact (Balaban.Polymer.mem_animals _).2 ⟨(Finset.mem_filter.1 hZ'.1).2, hZ'.2, hP Z.1 Z.2⟩
       have h2 := Balaban.Polymer.card_animals_le (wallGraph (ZMod N)) (wallGraph_degree_le _) y n
       calc ((T.filter fun Z : P => Z.1.card = n).card : ℝ) ≤ ((8 ^ (2 * (n - 1)) : ℕ) : ℝ) := by
             exact_mod_cast h1.trans h2
@@ -90,15 +90,17 @@ lemma sum_animal_weights (P : Finset (Finset (Cube N))) (hP : ∀ Z ∈ P, IsCon
           mul_le_mul hcount (pow_le_pow_left₀ (Real.exp_pos _).le hex n) (by positivity) (by positivity)
       _ = 1 / 64 * (1 / 2) ^ n := by
           obtain ⟨k, rfl⟩ : ∃ k, n = k + 1 := ⟨n - 1, by omega⟩
-          rw [Nat.add_sub_cancel, pow_succ, pow_succ, pow_succ]
-          rw [show (1 / 128 : ℝ) = 1 / 64 * (1 / 2) by norm_num, mul_pow]
-          ring
+          rw [Nat.add_sub_cancel]
+          calc (64 : ℝ) ^ k * (1 / 128) ^ (k + 1) = (64 * (1 / 128)) ^ k * (1 / 128) := by
+                rw [mul_pow, pow_succ]; ring
+            _ = (1 / 2) ^ k * (1 / 128) := by norm_num
+            _ = 1 / 64 * (1 / 2) ^ (k + 1) := by rw [pow_succ]; ring
   refine (Finset.sum_le_sum hlayer).trans ?_
   rw [← Finset.mul_sum]
   have hgeo : ∑ n ∈ T.image (fun Z : P => Z.1.card), (1 / 2 : ℝ) ^ n ≤ 1 := by
     have h0 : (0 : ℕ) ∉ T.image (fun Z : P => Z.1.card) := fun h => by have := hS1 0 h; omega
-    have h := sum_le_tsum (insert 0 (T.image fun Z : P => Z.1.card)) (fun n _ => by positivity)
-      (summable_geometric_two)
+    have h := summable_geometric_two.sum_le_tsum (insert 0 (T.image fun Z : P => Z.1.card))
+      (fun n _ => by positivity)
     rw [Finset.sum_insert h0, tsum_geometric_two] at h
     simp only [pow_zero] at h
     have e : ∀ n : ℕ, (1 / 2 : ℝ) ^ n = ((1 : ℝ) / 2) ^ n := fun n => rfl
@@ -147,7 +149,7 @@ theorem kp_weighted (P : Finset (Finset (Cube N))) (hP : ∀ Z ∈ P, IsConn Z) 
             Real.exp (cKP κ * Z.1.card + (9 * Real.log 2 + δ) * Z.1.card) :=
           mul_le_mul_of_nonneg_right (hHb Z) (Real.exp_pos _).le
       _ = Real.exp (-5 * κ + -κ * size s N Z.1 + (cKP κ * Z.1.card + (9 * Real.log 2 + δ) * Z.1.card)) := by
-          rw [Real.exp_add, Real.exp_add]
+          rw [Real.exp_add (-5 * κ + -κ * size s N Z.1), Real.exp_add (-5 * κ)]
       _ ≤ Real.exp (-4 * κ + -x * Z.1.card) := Real.exp_le_exp.2 (by rw [hxdef]; nlinarith)
       _ = Real.exp (-4 * κ) * Real.exp (-x * Z.1.card) := Real.exp_add _ _
   calc _ ≤ ∑ Z ∈ (Finset.univ : Finset P).filter (fun Z => NotSim Z.1 M),
@@ -162,6 +164,7 @@ theorem kp_weighted (P : Finset (Finset (Cube N))) (hP : ∀ Z ∈ P, IsConn Z) 
         mul_le_mul_of_nonneg_right (by exact_mod_cast card_nbhd M) (by positivity)
     _ = cKP κ * M.card := by unfold cKP; push_cast; ring
 
+omit hs in
 lemma two_pow_eq_exp (n : ℕ) : (2 : ℝ) ^ (9 * n) = Real.exp (9 * Real.log 2 * n) := by
   rw [show (9 * Real.log 2 * n : ℝ) = ((9 * n : ℕ) : ℝ) * Real.log 2 by push_cast; ring, Real.exp_nat_mul,
     Real.exp_log (by norm_num)]
@@ -177,18 +180,22 @@ theorem fluctuation_kp_i (P : Finset (Finset (Cube N))) (hP : ∀ Z ∈ P, IsCon
   rw [two_pow_eq_exp, mul_assoc, ← Real.exp_add]
   ring_nf
 
+omit hs in
 /-- The cluster function `φ^T(Z_1, …, Z_n) = (1/n!)ρ^T(Z_1, …, Z_n)H(Z_1)⋯H(Z_n)`. -/
 def phiT (P : Finset (Finset (Cube N))) (H : P → ℂ) {n : ℕ} (Z : Fin n → P) : ℂ :=
   ((n.factorial : ℂ))⁻¹ * (ursS (incP P) Z : ℂ) * ∏ i, H (Z i)
 
+omit hs in
 /-- `#(𝒞) = Σ_j#(Z_j)`. -/
 def clCard (P : Finset (Finset (Cube N))) {n : ℕ} (Z : Fin n → P) : ℕ := ∑ i, (Z i).1.card
 
+omit hs in
 /-- The terms of the sum (ii) over the clusters of `k + 1` polymers which meet `M`, with the weight `e^{δ#(𝒞)}`. -/
 def kpTerm (P : Finset (Finset (Cube N))) (H : P → ℂ) (M : Finset (Cube N)) (δ : ℝ) (k : ℕ) : ℝ :=
   ∑ Z : Fin (k + 1) → P, if ∃ i, NotSim (Z i).1 M then ‖phiT P H Z‖ * 2 ^ (9 * clCard P Z) * Real.exp (δ * clCard P Z)
     else 0
 
+omit hs in
 lemma kpTerm_eq (P : Finset (Finset (Cube N))) (H : P → ℂ) (M : Finset (Cube N)) (δ : ℝ) (k : ℕ) :
     kpTerm P H M δ k = clusterTerm (incP P) (fun Z => ‖H Z‖ * Real.exp ((9 * Real.log 2 + δ) * Z.1.card))
       ((Finset.univ : Finset P).filter fun Z => NotSim Z.1 M) k := by
@@ -201,11 +208,18 @@ lemma kpTerm_eq (P : Finset (Finset (Cube N))) (H : P → ℂ) (M : Finset (Cube
   · rw [if_pos h, if_pos (hiff.1 h)]
     unfold phiT clCard
     rw [norm_mul, norm_mul, norm_inv, Complex.norm_natCast, Complex.norm_intCast, norm_prod, two_pow_eq_exp,
-      ← Real.exp_add]
+      Finset.prod_mul_distrib]
+    have hexp : Real.exp (9 * Real.log 2 * ((∑ i, (Z i).1.card : ℕ) : ℝ)) *
+        Real.exp (δ * ((∑ i, (Z i).1.card : ℕ) : ℝ)) =
+          ∏ i, Real.exp ((9 * Real.log 2 + δ) * ((Z i).1.card : ℝ)) := by
+      rw [← Real.exp_add, ← Real.exp_sum]
+      congr 1
+      push_cast
+      rw [Finset.mul_sum, Finset.mul_sum, ← Finset.sum_add_distrib]
+      exact Finset.sum_congr rfl fun i _ => by ring
+    rw [mul_assoc _ (Real.exp _), hexp]
     push_cast
-    rw [Finset.prod_mul_distrib, ← Real.exp_sum, Finset.mul_sum, Finset.mul_sum, ← Finset.sum_add_distrib]
-    congr 1
-    · ring_nf
+    ring
   · rw [if_neg h, if_neg (fun h' => h (hiff.2 h')), mul_zero]
 
 /-- **`lem:fluctuation-kp`(ii)**, with a weight `e^{δ#}` (`δ = 0` is (ii), `δ = 1` is the form of (iv)): the series
