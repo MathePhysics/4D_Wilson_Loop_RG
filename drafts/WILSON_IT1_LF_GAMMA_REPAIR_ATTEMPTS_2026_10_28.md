@@ -2150,7 +2150,7 @@ All six isolated reviews launched for this note have completed. Their transmitte
 
 ## 25. Comparison With the Existing V4 Proofs
 
-Checked against [WILSON_FIRST_RG_STEP_V4.tex](../WILSON_FIRST_RG_STEP_V4.tex), SHA-256 `563736a8dfb946b7018b2f5cf5648b9ae7a4bb2322bcac60e7aaeba0c3eaa96c`, on 28 October 2026. The locations below refer to this revision. This is a comparison of the proofs and their hypotheses, not a new acceptance review or a closure of ingredient (γ).
+Checked against [WILSON_FIRST_RG_STEP_V4.tex](../Continuum%20Limit%20Manuscripts/WILSON_FIRST_RG_STEP_V4.tex), SHA-256 `563736a8dfb946b7018b2f5cf5648b9ae7a4bb2322bcac60e7aaeba0c3eaa96c`, on 28 October 2026. The locations below refer to this revision. This is a comparison of the proofs and their hypotheses, not a new acceptance review or a closure of ingredient (γ).
 
 ### 25.1 Existing Results to Reuse
 

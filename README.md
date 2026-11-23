@@ -67,7 +67,7 @@ Our current progress is as follows.
 - **Continuum-limit manuscript draft.** [PDF](WILSON_LOOPS_CONTINUUM_LIMIT.pdf) and [LaTeX source](Continuum%20Limit%20Manuscripts/WILSON_LOOPS_CONTINUUM_LIMIT.tex).
 - **Bałaban supplement.** [PDF](BALABAN_SUPPLEMENT.pdf) and [LaTeX source](Continuum%20Limit%20Manuscripts/BALABAN_SUPPLEMENT.tex).
 - **Bałaban core.** This draft presents Bałaban's RG results used in the continuum-limit manuscript, filling in proof details and repairing gaps in the original arguments. [PDF](Continuum%20Limit%20Drafts/BALABAN_CORE.pdf) and [LaTeX source](Continuum%20Limit%20Drafts/BALABAN_CORE.tex).
-- **Updated V4:** [PDF](WILSON_FIRST_RG_STEP_V4.pdf) and [LaTeX source](WILSON_FIRST_RG_STEP_V4.tex).
+- **Updated V4:** [PDF](WILSON_FIRST_RG_STEP_V4.pdf) and [LaTeX source](Continuum%20Limit%20Manuscripts/WILSON_FIRST_RG_STEP_V4.tex).
 
 The [Lean formalisation](LEAN/) includes CoreLean and supporting libraries.
 
@@ -148,7 +148,7 @@ The continuum-limit results cover two vertex-disjoint admissible loops. The exte
 | Claim | Completion | Details |
 |---|---|---|
 | First RG step for the pair expectation | **In manuscript** | Product of the individual perimeter/corner normalisations, mixed contributions and remainder bounds are supplied. See [Theorem 5.4](WILSON_LOOPS_CONTINUUM_LIMIT.pdf). |
-| Separation decay of first-step mixed contributions | **In manuscript** | Exponential separation bounds hold for the stated mixed activities and scalar correction. See [V4's two-loop theorem](WILSON_FIRST_RG_STEP_V4.tex). |
+| Separation decay of first-step mixed contributions | **In manuscript** | Exponential separation bounds hold for the stated mixed activities and scalar correction. See [V4's two-loop theorem](Continuum%20Limit%20Manuscripts/WILSON_FIRST_RG_STEP_V4.tex). |
 | [Inductive pair class and propagation of mixed insertions through fluctuation steps](WILSON_LOOPS_CONTINUUM_LIMIT.pdf) | **In manuscript** | [Definition 5.2](WILSON_LOOPS_CONTINUUM_LIMIT.pdf) and [Section 6](WILSON_LOOPS_CONTINUUM_LIMIT.pdf). |
 | [R-steps for the pair](WILSON_LOOPS_CONTINUUM_LIMIT.pdf) | **In manuscript** | [§6.15](WILSON_LOOPS_CONTINUUM_LIMIT.pdf) and [Proposition 7.13](WILSON_LOOPS_CONTINUUM_LIMIT.pdf). |
 | [Cutoff-uniform bound on the renormalised pair expectation](WILSON_LOOPS_CONTINUUM_LIMIT.pdf) | **In manuscript** | [Theorem 8.7](WILSON_LOOPS_CONTINUUM_LIMIT.pdf). The bound retains loop-length dependence. |

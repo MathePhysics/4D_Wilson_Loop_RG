@@ -85,7 +85,7 @@ The supporting triage records from rounds 20–49, the [rounds 50–51 triage](W
 - [Coarse-loop comparison](WILSON_V4_COARSE_LOOP_INSERT_DRAFT_2026_10_23.tex).
 - [Two-loop section](WILSON_V4_TWO_LOOPS_SECTION_DRAFT.tex).
 
-These inserts have been incorporated into the current [V4 manuscript](../WILSON_FIRST_RG_STEP_V4.tex). [V5](../Manuscripts%20under%20Construction/WILSON_FIRST_RG_STEP_V5.tex) remains under construction.
+These inserts have been incorporated into the current [V4 manuscript](../Continuum%20Limit%20Manuscripts/WILSON_FIRST_RG_STEP_V4.tex). [V5](../Manuscripts%20under%20Construction/WILSON_FIRST_RG_STEP_V5.tex) remains under construction.
 
 ## Earlier first-step drafts
 
