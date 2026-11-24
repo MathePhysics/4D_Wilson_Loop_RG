@@ -2497,3 +2497,10 @@ import CoreLean
 #print axioms CoreLean.SFBounds.pair1V_D0
 #print axioms CoreLean.SFBounds.curl_comp
 #print axioms CoreLean.SFBounds.div_comp
+#print axioms CoreLean.SFBounds.curl_div_triv
+#print axioms CoreLean.SFBounds.lap_comp
+#print axioms CoreLean.SFBounds.plaq_cfgX
+#print axioms CoreLean.SFBounds.hess_bond_le
+#print axioms CoreLean.SFBounds.hess_comp
+#print axioms CoreLean.SFBounds.pairP_triv_eq
+#print axioms CoreLean.SFBounds.ScalarHyp.conj_U

@@ -440,3 +440,5 @@ import CoreLean.SFVectorDecay
 import CoreLean.SFProjDiff
 import CoreLean.SFProjComp
 import CoreLean.SFLapComp
+import CoreLean.SFHessComp
+import CoreLean.SFVectorConj

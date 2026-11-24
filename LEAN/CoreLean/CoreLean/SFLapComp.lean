@@ -714,6 +714,97 @@ theorem div_comp (hRML : (S.L : ℝ) < RMS) {X : Fin 4 → Site NF → Mat} {α�
     (sum_nonneg fun _ _ => sq_nonneg _) (sum_nonneg fun _ _ => sq_nonneg _) hG hW (by positivity)
     hSa hSb hSc hSd ha0
 
+/-! ### The forms of the trivial configuration -/
+
+/-- The summation by parts behind eq:sf-feynman for two functions:
+`Σ_x⟨∂_μa_ν, ∂_νc_μ⟩ = Σ_x⟨∂^*_νa_ν, ∂^*_μc_μ⟩`. -/
+lemma sum_inner_swap2 {V : Type*} [NormedAddCommGroup V] [InnerProductSpace ℂ V] (a c : Fin 4 → Site NF → V)
+    (μ ν : Fin 4) :
+    ∑ x, inner ℂ (a ν (x + unit NF μ) - a ν x) (c μ (x + unit NF ν) - c μ x) =
+      ∑ x, inner ℂ (a ν (x - unit NF ν) - a ν x) (c μ (x - unit NF μ) - c μ x) := by
+  simp only [inner_sub_left, inner_sub_right, sum_sub_distrib, sum_add_distrib]
+  have t1 : ∑ x, inner ℂ (a ν (x + unit NF μ)) (c μ (x + unit NF ν)) =
+      ∑ x, inner ℂ (a ν (x - unit NF ν)) (c μ (x - unit NF μ)) := by
+    rw [← sum_shift_site S (fun x => inner ℂ (a ν (x - unit NF ν)) (c μ (x - unit NF μ))) (unit NF μ + unit NF ν)]
+    refine sum_congr rfl fun x _ => ?_
+    congr 2 <;> abel
+  have t2 : ∑ x, inner ℂ (a ν (x + unit NF μ)) (c μ x) = ∑ x, inner ℂ (a ν x) (c μ (x - unit NF μ)) := by
+    rw [← sum_shift_site S (fun x => inner ℂ (a ν x) (c μ (x - unit NF μ))) (unit NF μ)]
+    refine sum_congr rfl fun x _ => ?_
+    simp only [add_sub_cancel_right]
+  have t3 : ∑ x, inner ℂ (a ν x) (c μ (x + unit NF ν)) = ∑ x, inner ℂ (a ν (x - unit NF ν)) (c μ x) := by
+    rw [← sum_shift_site S (fun x => inner ℂ (a ν (x - unit NF ν)) (c μ x)) (unit NF ν)]
+    refine sum_congr rfl fun x _ => ?_
+    simp only [add_sub_cancel_right]
+  rw [t1, t2, t3]
+  ring
+
+/-- **The curl and the divergence forms at the trivial configuration**:
+`⟨B^*, ∂^*∂C⟩ + ⟨B^*, ∂∂^*C⟩ = Σ_{μ,ν}⟨∂_νB_μ, ∂_νC_μ⟩` on the torus (the sesquilinear `grad_identity`). -/
+theorem curl_div_triv [NeZero N] (B C : Fin 4 → Site NF → Mat) :
+    pair1V S B (Ds2 a1 (cfgX (X0 S)) (D1 a1 (cfgX (X0 S)) C)) +
+      pair1V S B (D0L a1 (cfgX (X0 S)) (Ds1L a1 (cfgX (X0 S)) C)) = gradB S B C := by
+  set b : Fin 4 → Site NF → VS N 1 := fun μ x => emb (N := N) (B μ x)
+  set c : Fin 4 → Site NF → VS N 1 := fun μ x => emb (N := N) (C μ x)
+  have hif : ∀ (μ ν : Fin 4) (x : Site NF) (a : VS N 1),
+      (if ν ≠ μ then inner ℂ a (emb (N := N) (D1 a1 (cfgX (X0 S)) C ν μ x)) else 0) =
+        inner ℂ a ((c μ (x + unit NF ν) - c μ x) - (c ν (x + unit NF μ) - c ν x)) := by
+    intro μ ν x a
+    by_cases h : ν ≠ μ
+    · rw [if_pos h]
+      simp only [D1, a1, Complex.ofReal_one, Dfw_triv, c, emb_sub']
+    · push_neg at h; subst h
+      simp only [ne_eq, not_true_eq_false, if_false, sub_self, inner_zero_right]
+  rw [pair1V_Ds2, pair1V_D0, Xs_X0, inner_vL]
+  simp only [hif, Dfw_triv, Ds1L_triv, emb_sum', emb_sub']
+  change ∑ μ, ∑ ν, ∑ x, inner ℂ (b μ (x + unit NF ν) - b μ x)
+      ((c μ (x + unit NF ν) - c μ x) - (c ν (x + unit NF μ) - c ν x)) +
+    ∑ x, inner ℂ (∑ μ, (b μ (x - unit NF μ) - b μ x)) (∑ ν, (c ν (x - unit NF ν) - c ν x)) = _
+  have e1 : ∀ μ ν, ∑ x, inner ℂ (b μ (x + unit NF ν) - b μ x) (c ν (x + unit NF μ) - c ν x) =
+      ∑ x, inner ℂ (b μ (x - unit NF μ) - b μ x) (c ν (x - unit NF ν) - c ν x) :=
+    fun μ ν => sum_inner_swap2 S b c ν μ
+  have e2 : ∑ x, inner ℂ (∑ μ, (b μ (x - unit NF μ) - b μ x)) (∑ ν, (c ν (x - unit NF ν) - c ν x)) =
+      ∑ μ, ∑ ν, ∑ x, inner ℂ (b μ (x - unit NF μ) - b μ x) (c ν (x - unit NF ν) - c ν x) := by
+    have h : ∀ x, inner ℂ (∑ μ, (b μ (x - unit NF μ) - b μ x)) (∑ ν, (c ν (x - unit NF ν) - c ν x)) =
+        ∑ μ, ∑ ν, inner ℂ (b μ (x - unit NF μ) - b μ x) (c ν (x - unit NF ν) - c ν x) := fun x => by
+      rw [sum_inner]; simp only [inner_sum]
+    rw [sum_congr rfl fun x _ => h x, sum_comm]
+    refine sum_congr rfl fun μ _ => ?_
+    rw [sum_comm]
+  have e3 : ∀ μ ν x, inner ℂ (b μ (x + unit NF ν) - b μ x)
+      ((c μ (x + unit NF ν) - c μ x) - (c ν (x + unit NF μ) - c ν x)) =
+      inner ℂ (b μ (x + unit NF ν) - b μ x) (c μ (x + unit NF ν) - c μ x) -
+        inner ℂ (b μ (x + unit NF ν) - b μ x) (c ν (x + unit NF μ) - c ν x) := fun μ ν x => inner_sub_right _ _ _
+  rw [e2]
+  simp only [e3, sum_sub_distrib]
+  simp only [e1, sub_add_cancel]
+  unfold gradB
+  refine sum_congr rfl fun μ _ => ?_
+  rw [sum_comm]
+
+/-- **The comparison of the Laplacians** (step (1) of "The complex field"): with
+`D^*_𝐔D_𝐔 + D_𝐔D^*_𝐔` the part of `Δ_𝖺(𝐔)` of the order two,
+`|Re⟨(e^φA)^*, (D^*_𝐔D_𝐔 + D_𝐔D^*_𝐔)(e^{-φ}A)⟩ - Re Σ_{μ,ν}⟨∂_ν(e^φA)_μ, ∂_ν(e^{-φ}A)_μ⟩| ≤
+(288α₁L + 1728α₁²L²)N(A)²`. -/
+theorem lap_comp (hRML : (S.L : ℝ) < RMS) {X : Fin 4 → Site NF → Mat} {α₁ : ℝ} (hX : RegField S X α₁)
+    (hα0 : 0 ≤ α₁) (hα : α₁ ≤ 1 / 32) {δ : ℝ} (hδ : 0 ≤ δ) (hδL : 16 * S.L * δ ≤ 1) (ph : Site NF → ℝ)
+    (hph : ∀ x x', |ph x - ph x'| ≤ δ * S.dF x x') [NeZero N] (A : Fin 4 → Site NF → Mat) :
+    |(pair1V S (expA S ph A) (Ds2 a1 (cfgX X) (D1 a1 (cfgX X) (expA S (fun x => -ph x) A))) +
+        pair1V S (expA S ph A) (D0L a1 (cfgX X) (Ds1L a1 (cfgX X) (expA S (fun x => -ph x) A)))).re -
+      (gradB S (expA S ph A) (expA S (fun x => -ph x) A)).re| ≤
+      (288 * (α₁ * S.L) + 1728 * (α₁ * S.L) ^ 2) * (gradNorm S A + wnorm S A) := by
+  have h1 := curl_comp S hRML hX hα0 hα hδ hδL ph hph A
+  have h2 := div_comp S hRML hX hα0 hα hδ hδL ph hph A
+  rw [← curl_div_triv, Complex.add_re, Complex.add_re]
+  have hG := gradNorm_nonneg' S A
+  have hW := wnorm_nonneg' S A
+  calc _ = |((pair1V S (expA S ph A) (Ds2 a1 (cfgX X) (D1 a1 (cfgX X) (expA S (fun x => -ph x) A)))).re -
+        (pair1V S (expA S ph A) (Ds2 a1 (cfgX (X0 S)) (D1 a1 (cfgX (X0 S)) (expA S (fun x => -ph x) A)))).re) +
+      ((pair1V S (expA S ph A) (D0L a1 (cfgX X) (Ds1L a1 (cfgX X) (expA S (fun x => -ph x) A)))).re -
+        (pair1V S (expA S ph A) (D0L a1 (cfgX (X0 S)) (Ds1L a1 (cfgX (X0 S))
+          (expA S (fun x => -ph x) A)))).re)| := by ring_nf
+    _ ≤ _ := (abs_add_le _ _).trans (by nlinarith)
+
 end SFBounds
 end CoreLean
 
