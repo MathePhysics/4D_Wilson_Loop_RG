@@ -1132,6 +1132,17 @@ The first step integrates the fine field with its block averages $V$ on the latt
 \end{equation}
 \cite[(1.30), p.~254]{BalabanCRE}, with the coupling of \cite[(1.27), p.~253]{BalabanCRE}. These integrals stay pending inside $\varrho_1$: Ba{\l}aban leaves the operations $\mathbf T_k$ of the later steps ``undefined, only their basic general properties are formulated'' \cite[p.~254]{BalabanCRE}. A \emph{labelled term} of $\varrho_1$ is a term of \eqref{eq:first-step-density} with given labels. For the numerator we use the refinement of the labels of \cite[Section~9]{WilsonFirstStep}, in which the domain $\Lambda_1$ is further restricted near the loop by a retreat of the carrier of the loop's integral; the refined labels are again labels of Ba{\l}aban's form, and on each of them the operation $\mathbf T_1$ and the action $A_1$ are those of \eqref{eq:first-step-density} (Supplement, Proposition~\ref{S-prop:retreated-first-step}).
 
+% ===== CORE-INTEGRATION BLOCK P-G (inactive) =====
+% Replaces: the sentence "For the numerator we use the refinement of the labels of
+% \cite[Section~9]{WilsonFirstStep}, ..." (last sentence of the paragraph just above).
+% Source: BALABAN_CORE.tex, Definition C-def:step-regions(vi) at n = 0, Lemma C-lem:region-cascade,
+% Lemma C-lem:inner-mean; the first-step manuscript's block V-A (its retreat replaced by the core's).
+% Reason: the retreat of the first step and the core's region at n = 0 have to be one rule
+% (FINDINGS F367).
+% ---- replacement ----
+% For the numerator, as for every later step, the domain $\Lambda_1$ is the region of Core, Definition~\ref{C-def:step-regions}(vi) at $n = 0$: Ba{\l}aban's domain, shrunk around the bonds next to it at which the fluctuation field is at least $\vartheta_0/(K_{\mathrm m}g_0)$, which keeps the mean of the inner field below a quarter of the cut-off (Core, Lemma~\ref{C-lem:inner-mean}); this is the retreat of \cite[Section~9]{WilsonFirstStep} in the form of the core. The terms are labelled by Ba{\l}aban's labels with this region, and on each of them the operation $\mathbf T_1$ and the action $A_1$ are those of \eqref{eq:first-step-density} (Supplement, Proposition~\ref{S-prop:retreated-first-step}).
+% ===== END BLOCK P-G =====
+
 In the construction of this paper the thresholds of the first step are those of the tube at $\hat g_0$, and the test functions of the plaquettes are soft (Definition~\ref{def:construction}). The first step with the loop inserted is the subject of the companion manuscript \cite{WilsonFirstStep}, for one square loop, Ba{\l}aban's thresholds at $g_0$, and characteristic functions as test functions, for two disjoint squares in \cite[Section~10]{WilsonFirstStep}, and for a closed contour on the torus, which may have any number of corners and may wind around the torus, in \cite[Section~11]{WilsonFirstStep}. We use its results for a general ensemble and for the construction of this paper, and the changes this requires are proved in Section~\ref{sec:first-step-proof}.
 
 \subsection{Dressed Loops}\label{sec:dressed-loops}
@@ -1982,6 +1993,21 @@ and the last sum is at most the sum, over the finitely many traversals of the to
 
 \emph{The conditional integral.} Finally the integral over $A_k$ is split into the integral over its restriction $A$ to $\Lambda_{k+1}$ and the integral over its restriction to $\Omega_{k+1} \cap \Lambda_{k+1}^c$, which becomes part of the operation $\mathbf T^{(k+1)}$, the quadratic form being completed as in \cite[(3.23)--(3.25), p.~270]{BalabanCRE}. This is Fubini's theorem on the finite torus for an integrable function, and it holds with the bounded factor $F$.
 
+% ===== CORE-INTEGRATION BLOCK P-A (inactive) =====
+% Replaces: the paragraph "The conditional integral." just above.
+% Source: BALABAN_CORE.tex, Definition C-def:step-regions(vi), Definition C-def:step-operation,
+% Lemma C-lem:region-cascade(iii), Proposition C-prop:boundary-change(iii). References \ref{C-...}
+% are to be resolved with the prefix C-, as \ref{S-...} are for the supplement.
+% Reason: with the core's regions Lambda_{k+1} is not determined by Omega_{k+1} and R_{k+1}; it is
+% shrunk around the bonds next to it which carry a large fluctuation field (FINDINGS F363-F366).
+% At integration: the change of variables on S_{k+1} is then the core's (Proposition
+% C-prop:boundary-change), whose part (iii) gives the invariance of the region; the supplement's
+% Lemma S-lem:boundary-change does not state it. The sum "over the sequences of domains of (3.25)"
+% in the statement of the proposition then includes the regions Lambda_{k+1} of the core.
+% ---- replacement ----
+% \emph{The conditional integral.} The region $\Lambda_{k+1}$ of a term is that of Core, Definition~\ref{C-def:step-regions}(vi): Ba{\l}aban's region \cite[(3.20), p.~269]{BalabanCRE}, shrunk around the bonds next to it at which the fluctuation field is at least $\vartheta_k/(K_{\mathrm m}g_k)$. It is a function of the fluctuation field, and we insert $1 = \sum_\Lambda\mathbf 1_\Lambda$, the sum over the unions $\Lambda$ of cubes of side $LMR_{k+1}$ in the units of the scale $k$, where $\mathbf 1_\Lambda$ is one if the region formed with the field is $\Lambda$ and zero otherwise (Core, Definition~\ref{C-def:step-operation}). By Core, Lemma~\ref{C-lem:region-cascade}(iii), $\mathbf 1_\Lambda$ depends only on the field at the bonds which do not have both ends in $\Lambda$, and by Core, Proposition~\ref{C-prop:boundary-change}(iii), it takes the same value before and after the change of variables on $S_{k+1}$. On the term with the region $\Lambda_{k+1} = \Lambda$ the integral over $A_k$ is split into the integral over its restriction $A$ to $\Lambda_{k+1}$ and the integral over its restriction to $\Omega_{k+1} \cap \Lambda_{k+1}^c$, which becomes part of the operation $\mathbf T^{(k+1)}$ together with the factor $\mathbf 1_{\Lambda_{k+1}}$, the quadratic form being completed as in \cite[(3.23)--(3.25), p.~270]{BalabanCRE}. This is Fubini's theorem on the finite torus for an integrable function, and it holds with the bounded factor $F$.
+% ===== END BLOCK P-A =====
+
 After these operations the term of (3.1) with the factor $\mathcal W_k$ is the sum of the terms of (3.25) with the factor $F$ under the last integral. We have $\mathcal Z_{k+1} \neq 0$, since Ba{\l}aban takes the logarithm of this integral in \cite[(3.26), p.~271]{BalabanCRE}, and by the definition of the expectation the last integral with the factor $F$ equals $\mathcal Z_{k+1}\langle F\rangle$. This is \eqref{eq:carried-step}. The variables on which $\langle F\rangle$ depends are those of $F$ which are not integrated.
 \end{proof}
 
@@ -2008,6 +2034,15 @@ with the field $\sigma_k$ of \eqref{eq:outer-field}. In particular $\langle F\ra
 \begin{proof}
 By Supplement, Lemma~\ref{S-lem:boundary-change}, the integrand of \cite[(3.25)]{BalabanCRE}, as a function of the new variables, is the integrand before the change of variables, composed with $\Psi_{k+1}$ and multiplied by $\abs{\det D\Psi_{k+1}(A'_k)}$. The term $V^{(k)}(S_{k+1})$ is Ba{\l}aban's notation for the logarithm of the quotient of this product by the integrand before the change taken at the new variables: the Jacobian gives the terms \cite[(1.24), p.~252]{BalabanCRE}, and the rest is the change of the action \cite[p.~269]{BalabanCRE}. The map $\Psi_{k+1}$ acts on the variables of the bonds of $S_{k+1}$, which are not bonds of $\Lambda_{k+1}$ \cite[(3.20), p.~269]{BalabanCRE}, and it depends, besides these variables, on the function $\mathbf H^{(k)}$ of the background alone \cite[(3.22), p.~269]{BalabanCRE}. Hence the Jacobian does not depend on $A$, and neither do the test function \cite[(3.21)]{BalabanCRE}, the factor $z^{(k)}$, and the quadratic form of the outer variables alone in \cite[(3.25)]{BalabanCRE}. The integrand of the last integral of (3.25) with the further factor $f \circ \Psi_{k+1}$ is therefore $\mathfrak e(\sigma_k; A)f(\sigma_k, A)$ times a factor which does not depend on $A$ and which does not vanish, the differential of $\Psi_{k+1}$ being invertible on the support. This factor cancels in the quotient which defines the expectation.
 \end{proof}
+
+% ===== CORE-INTEGRATION BLOCK P-B (inactive) =====
+% Replaces: in the proof just above, the sentences from "Hence the Jacobian does not depend on $A$"
+% to the end of the proof.
+% Source: BALABAN_CORE.tex, Definition C-def:step-operation, Lemma C-lem:region-cascade(iii).
+% Reason: on the core's regions the term carries the indicator of its region (block P-A).
+% ---- replacement ----
+% Hence the Jacobian does not depend on $A$, and neither do the test function \cite[(3.21)]{BalabanCRE}, the factor $z^{(k)}$, the quadratic form of the outer variables alone in \cite[(3.25)]{BalabanCRE}, and the indicator $\mathbf 1_{\Lambda_{k+1}}$ of the region of the term, which depends only on the outer variables (Core, Lemma~\ref{C-lem:region-cascade}(iii)) and equals one at the points of the support. The integrand of the last integral of (3.25) with the further factor $f \circ \Psi_{k+1}$ is therefore $\mathfrak e(\sigma_k; A)f(\sigma_k, A)$ times a factor which does not depend on $A$ and which does not vanish, the differential of $\Psi_{k+1}$ being invertible on the support. This factor cancels in the quotient which defines the expectation.
+% ===== END BLOCK P-B =====
 
 For the dressed loop the change of variables on $S_{k+1}$ is thus invisible. The expectation is that of the measure before the change, taken at the outer field $\sigma_k$; the bump function and its Jacobian do not occur in it, and they stay in the density of the outer variables, where Ba{\l}aban has them. This measure is \cite[(3.27)]{BalabanCRE} at $s = t = 1$ without the term $V^{(k)}(S_{k+1})$ and with $\sigma_k$ in the place of the field $A_k$, and its expansions are those of (3.27) with fewer terms. From now on $\langle\,\cdot\,\rangle$ denotes the right side of \eqref{eq:outer-conditional}, a function of the configuration and of a field $\sigma_k$ which is an argument of its own, and $I(f)$ denotes its numerator; the labelled term evaluates them at the value \eqref{eq:outer-field}.
 
@@ -3068,6 +3103,29 @@ We begin with the step at which a large-field region first appears. Throughout t
 
 \emph{The neighbourhood and the spaces.} The set $\Lambda_{k+1}$ is a union of cubes of side $LMR_{k+1}$ in the units of the scale $k$ \cite[(3.20), p.~269]{BalabanCRE}, hence a union of cubes of $\pi_{k+1}$. Let $\mathcal N_{k+1}$ be the union of the cubes of $\pi_{k+1}$ which lie in $\Lambda_{k+1}^c$ or have a point in common with a cube of $\Lambda_{k+1}^c$. A union of cubes of $\pi_{k+1}$ none of which belongs to $\mathcal N_{k+1}$ lies in $\Lambda_{k+1}$, hence in $\Omega_{k+1}$ by Lemma~\ref{lem:regions}(i), and its distance from $\Lambda_{k+1}^c$ is at least $LM$ in the units of the scale $k$. The background $U_{k+1}$ of the present term is a background of the step $k$: the block field $V^*_k \coloneqq M^k(U_{k+1})$ lies in the support of the term without large-field regions of $\varrho_k$, by Supplement, Proposition~\ref{S-prop:band}, which is stated for every labelled term, and $U_k(V^*_k) = U_{k+1}$ (Section~\ref{sec:evaluation-point}). On $\Omega_{k+1}$ it has the regularity of the scale $k + 1$, $\abs{U_{k+1}(\partial p) - 1} < 2B_3\varepsilon_{k+1}L^{-2(k+1)}$ for the fine plaquettes $p$ of $\Omega_{k+1}$ \cite[p.~268]{BalabanCRE}. For a union $X \subset \Omega_{k+1}$ of cubes of $\pi_{k+1}$ we call the \emph{space of the step $k + 1$ on $X$} the set of the restrictions to $X$ of the pairs of the points of the constructions of the step $k + 1$ of the present term (Section~\ref{sec:old-regions}), around the real configurations $U$ which are the trivial configuration, the background $U_{k+1}$ of the present term at a block field and outer variables of the support of its test functions, or a transform of one of these by a $G$-valued gauge transformation. On $X$ its conditions are those of Definition~\ref{def:dressed-loop}(iii), the bonds of $X$ lying in the top layer, and it contains the sets $\mathcal S_{k+1}(U)|_X$ for these $U$, by the regularity of $U_{k+1}$ on $\Omega_{k+1}$.
 
+% ===== CORE-INTEGRATION BLOCK P-C (inactive) =====
+% Replaces: the first sentence of the paragraph "The neighbourhood and the spaces." just above.
+% Source: BALABAN_CORE.tex, Definition C-def:step-regions(vi), Lemma C-lem:region-cascade(i).
+% The rest of that paragraph uses of Lambda_{k+1} only that it is a union of cubes of pi_{k+1} in
+% Omega_{k+1}, which holds for the core's region.
+% ---- replacement ----
+% \emph{The neighbourhood and the spaces.} The set $\Lambda_{k+1}$, the region of Core, Definition~\ref{C-def:step-regions}(vi), is a union of cubes of side $LMR_{k+1}$ in the units of the scale $k$ contained in Ba{\l}aban's region $\Omega^{\sim-2}_{k+1} \setminus R'^\sim_{k+1}$ \cite[(3.20), p.~269]{BalabanCRE} (Core, Lemma~\ref{C-lem:region-cascade}(i)), hence a union of cubes of $\pi_{k+1}$.
+% ===== END BLOCK P-C =====
+
+% ===== CORE-INTEGRATION BLOCK P-D (inactive) =====
+% Replaces: in the paragraph "The groups of the present term." just below, the sentences from
+% "Their activities, and those of the marked polymers, may depend on $\sigma_k$" to "so that it
+% applies to a measure with fewer of them."
+% Source: BALABAN_CORE.tex, Lemma C-lem:region-cascade(i), (iii), Proposition C-prop:boundary-change(iii),
+% Lemma C-lem:inner-mean.
+% OPEN AT INTEGRATION: the bound of the vacuum polymers of the present term is cited below from the
+% core's expansion of the inner integral at a real outer field (pieces P4-P5 of STEP_DENSITY_PLAN.md,
+% use U3 of FINDINGS F364), which is not yet in the core; its label is written C-thm:step-density as
+% a placeholder. Until it is proved, this block cannot replace the paragraph.
+% ---- replacement ----
+% Their activities, and those of the marked polymers, may depend on $\sigma_k$ and on the sets of the step; we use them at the real fields $\sigma_k$ of the support, that is, at the values \eqref{eq:outer-field} of the points of the support of the test functions, and at $\sigma_k = 0$. These fields satisfy $g_k\abs{\sigma_k} \leqslant r_y\vartheta_k$ on every bond, because $\sigma_k$ is the fluctuation field of \cite[(3.15)]{BalabanCRE} itself (Section~\ref{sec:localisation-expansion}), and $g_k\abs{\sigma_k} < \vartheta_k/K_{\mathrm m}$ on the bonds next to $\Lambda_{k+1}$, those of the set $\mathsf b^\partial(\Lambda_{k+1})$ of Core, Definition~\ref{C-def:step-regions}(vi), because the term carries the indicator of its region (Core, Lemma~\ref{C-lem:region-cascade}(i) and Proposition~\ref{C-prop:boundary-change}(iii)). By Core, Lemma~\ref{C-lem:inner-mean}, the mean of the Gaussian weight of the inner field given $\sigma_k$ is then at most $\frac{1}{4}\vartheta_k/g_k$ on every bond of $\Lambda_{k+1}$, so that a cut-off of the inner field can fail only where the centred field reaches $\frac{3}{4}\vartheta_k/g_k$. The measure is that of Lemma~\ref{lem:outer-conditional}, the measure \cite[(3.27)]{BalabanCRE} without the terms of $V^{(k)}(S_{k+1})$, and the bound of the vacuum polymers of the present term, in the form of Supplement, Lemma~\ref{S-lem:vacuum-kp}, is Core, Theorem~\ref{C-thm:step-density}; it takes the place of Ba{\l}aban's bound \cite[(2.38), p.~20]{BalabanRG2} and of his statement that the expansion of the measure \cite[(3.27)]{BalabanCRE} is made ``in exactly the same way'' \cite[pp.~277, 279]{BalabanCRE}, which gives no estimate of the mean of the inner field near $\partial\Lambda_{k+1}$.
+% ===== END BLOCK P-D =====
+
 \emph{The groups of the present term.} By Lemma~\ref{lem:word-expansion} and Proposition~\ref{prop:marked-polymers} the expectation $\langle F\rangle$ has the form \eqref{eq:pre-grouping} on the present term. Its vacuum polymers are the localisation domains which meet $\Lambda_{k+1}$ \cite[p.~277]{BalabanCRE}. Their activities, and those of the marked polymers, may depend on $\sigma_k$ and on the sets of the step; we use them at the real fields $\sigma_k$ of the support, that is, at the values \eqref{eq:outer-field} of the points of the support of the test functions, which satisfy $g_k\abs{\sigma_k} \leq r_y\vartheta_k$ because $\sigma_k$ is the fluctuation field of \cite[(3.15)]{BalabanCRE} itself (Section~\ref{sec:localisation-expansion}), and at $\sigma_k = 0$. The measure is that of Lemma~\ref{lem:outer-conditional}, the measure \cite[(3.27)]{BalabanCRE} without the terms of $V^{(k)}(S_{k+1})$, and we use Ba{\l}aban's bound \cite[(2.38), p.~20]{BalabanRG2} for the vacuum polymers of the present term, in the form of Supplement, Lemma~\ref{S-lem:vacuum-kp}, on the strength of his statement that the expansion of the measure \cite[(3.27)]{BalabanCRE} is made ``in exactly the same way'' and that ``the differences, like the restriction of the integration to $\Lambda_{k+1}$, or the larger class of localization domains, do not matter'' \cite[pp.~277, 279]{BalabanCRE} (Section~\ref{sec:notes-on-papers}); the expansion reads the terms of the action through their bounds and their localisation domains \cite[(2.1)--(2.5), p.~12]{BalabanRG2}, so that it applies to a measure with fewer of them. The \emph{reference data} of the present term are the trivial configuration with $\mathbf J = 0$ and $\sigma_k = 0$, and the cluster weights $\varphi^T_\circ$ and the numbers $\Psi_\circ(M)$ are formed at them as in Section~\ref{sec:groups-of-step}. We write $\varphi^{T,0}_\circ$ and $\Psi^0_\circ$ for the same quantities of $\ell_0$, and we give a cluster which does not occur on one of the two terms the weight $0$ on that term. For a marked polymer $M$ the numbers $\Psi_\circ(M)$ and $\Psi^0_\circ(M)$ differ by the clusters which feel the new region, and we expand the difference, as the soft interactions were expanded in Section~\ref{sec:groups-of-step}. With $\delta\varphi(\mathcal C) \coloneqq \varphi^T_\circ(\mathcal C) - \varphi^{T,0}_\circ(\mathcal C)$,
 \begin{equation}\label{eq:collar-occurrences}
     e^{-\Psi_\circ(M)} = e^{-\Psi^0_\circ(M)}\sum_{\mathcal O'}\prod_{\mathcal C \in \mathcal O'}z_{\mathcal C}\;,
@@ -3388,6 +3446,22 @@ By (ii) the bounds of the class for the regular groups of every term are those o
 \subsection{Large Fields and the \texorpdfstring{$\mathbf R$}{R}-Operation}\label{sec:large-field-step}
 
 It remains to bound the numbers $A_j(Z)$ and to say what pays for them. The attached insertions carry no deviation, and nothing contracts them; their total over each component $Z$ of the large-field region of the step $j$ is paid once, by the small factor which Ba{\l}aban's large-field estimates attach to $Z$.
+
+% ===== CORE-INTEGRATION BLOCK P-E (inactive) =====
+% Replaces: the first sentence of the paragraph "The payment." just below.
+% Source: BALABAN_CORE.tex, Definition C-def:step-regions(vi), Lemma C-lem:region-cascade(v), (vi);
+% supplement block S-B (the large-field factors at a retreated step).
+% Reason: on the core's regions every step shrinks Lambda_j around the bonds failing the second test,
+% and Balaban's factor (LFR2 p. 381), built from the failed tests P_j, Q_j, R_j and the containment
+% (1.76), must also count these bonds (FINDINGS F367). The rest of the paragraph uses only that the
+% factor is of the order (log g_j^{-2})^{2p_0}(d'_j(Z) + 1), so it is unchanged.
+% OPEN AT INTEGRATION: the supplement proposition of block S-B is not yet written; its label is
+% written S-prop:retreated-step-factors as a placeholder, and its constant c_r as a placeholder.
+% DEFERRED (continuum_limit/FINDINGS.md F369): the result is to come from the core's R-operation
+% section, which proves LFR2 Section 1; LFR2 (1.76) is false as printed after the filling (register A.7).
+% ---- replacement ----
+% \emph{The payment.} Ba{\l}aban attaches to every large-field region $Z$ created at the step $j$ the factor $\exp(-\frac{1}{2}\gamma_0A_1^2p_0^2(g_j)(d'_j(Z) + 1) - 2p_0(g_j))$, with $d'_j(Z)$ the linear size of $Z$, ``the fundamental large field factors, which control convergence of the expansion of the effective densities'' \cite[p.~381]{BalabanLFR2}. On the regions of Core, Definition~\ref{C-def:step-regions}(vi), which are shrunk around the bonds failing the second test, the factor holds with the constant $c_{\mathrm r}$ of Supplement, Proposition~\ref{S-prop:retreated-step-factors}, in the place of $\frac{1}{2}\gamma_0$, and Ba{\l}aban shows that its part $\exp(-\kappa_j(Z))$ ``controls $K$ renormalization steps, under the assumption that no large fields are created in these steps'', in the sense of the inequality \cite[(1.80), p.~384]{BalabanLFR2}, which holds with this constant by the same proposition.
+% ===== END BLOCK P-E =====
 
 \emph{The payment.} Ba{\l}aban attaches to every large-field region $Z$ created at the step $j$ the factor $\exp(-\frac{1}{2}\gamma_0A_1^2p_0^2(g_j)(d'_j(Z) + 1) - 2p_0(g_j))$, with $d'_j(Z)$ the linear size of $Z$, ``the fundamental large field factors, which control convergence of the expansion of the effective densities'' \cite[p.~381]{BalabanLFR2}, and he shows that its part $\exp(-\kappa_j(Z))$ ``controls $K$ renormalization steps, under the assumption that no large fields are created in these steps'', in the sense of the inequality \cite[(1.80), p.~384]{BalabanLFR2}. Two costs have to be paid from it. The first is the total of the weighted masses of the atoms of the species $(j, Z)$,
 \begin{equation}\label{eq:attached-total}
@@ -4059,6 +4133,19 @@ On $\ell_0$ the determining set is the whole lattice $\mathbb T_{j_q}$, so that 
 \subsection{The Weight of the Large-Field Terms}\label{sec:large-field-weight}
 
 We next show that the terms $\ell \neq \ell_0$ carry a small total weight, even after their integrals are multiplied by the factors which the dressed loop acquires near the large-field regions. Since $\mathbb T_{j_q}$ is fixed, this can be done by comparing whole integrals: the integral of $\ell_0$ is bounded below by the Haar volume of a ball of configurations, and the integral of every other term above by the supremum of its small-field exponent, each at a price exponential in $N_q^4$. The large-field factors of Ba{\l}aban's construction then pay for the history of each component, with half of their gain left over.
+
+% ===== CORE-INTEGRATION BLOCK P-F (inactive) =====
+% Replaces: in the next paragraph, the two sentences from "Ba{\l}aban's factor \cite[(1.79), p.~383]"
+% to "(Supplement, Proposition~\ref{S-prop:retreated-first-step}(iii))."
+% Source: supplement blocks S-A and S-B. With the core's regions the first step is not special: every
+% step retreats, and the gains of all steps have the constant of block S-B. The constants which follow
+% (c_LF, s_LF, delta_LF of eq:large-field-constants) use the linear part 2 p_0(g) of the factor and are
+% unchanged.
+% OPEN AT INTEGRATION: S-prop:retreated-step-factors and c_r are placeholders (block P-E), deferred to
+% the core's R-operation section (FINDINGS F369).
+% ---- replacement ----
+% Ba{\l}aban's factor \cite[(1.79), p.~383]{BalabanLFR2} contains for each new region $Z'$ created at the step $j'$ the gain $\exp(-\frac{1}{2}\gamma_0A_1^2p_0^2(g_{j'})(d'_{j'}(Z') + 1))$. On the regions of Core, Definition~\ref{C-def:step-regions}(vi), at every step and in the construction of this paper, it holds with $c_{\mathrm r}/\rho$ in the place of $\frac{1}{2}\gamma_0$ (Supplement, Proposition~\ref{S-prop:retreated-step-factors}, and Proposition~\ref{prop:construction-admissible}); here $A_1$ and $p_0(g)$ are those of \cite{BalabanLFR2}.
+% ===== END BLOCK P-F =====
 
 We need the following quantities, for a component $X \in Z(\ell)$. The \emph{history} of $X$ consists of the components of the large-field regions $Z_n$, $n \leq K'$, of the term which lie in $X$, together with the new large-field regions $Z'$ created at the steps $j' \leq K'$ which are merged into $X$; we write $\abs{Y}_n$ for the number of points of the scale $n$ in a set $Y$, $\#_n(Y) \coloneqq \abs{Y}_n(MR_n)^{-4}$ for the number of cubes of side $MR_n$ of the scale $n$ in a union $Y$ of such cubes, and $d'_n(Y)$ for its linear size in terms of these cubes \cite[p.~380]{BalabanLFR2}. Ba{\l}aban's factor \cite[(1.79), p.~383]{BalabanLFR2} contains for each new region $Z'$ created at the step $j'$ the gain $\exp(-\frac{1}{2}\gamma_0A_1^2p_0^2(g_{j'})(d'_{j'}(Z') + 1))$, which holds for the construction of this paper with $\frac{1}{2}\gamma_0$ replaced by $\frac{1}{2}\gamma_0/\rho \geq \frac{1}{3}\gamma_0$ (Proposition~\ref{prop:construction-admissible}); here $\gamma_0$, $A_1$, and $p_0(g)$ are those of \cite{BalabanLFR2}. The regions created at the first step carry instead the gain $\exp(-\frac{1}{2}c_4\vartheta_V^2A_1^2(\log g_1^{-2})^{2p_0}(d'_1(Z') + 1))$ of the first step at the retreated region, with two constants $c_4$, $\vartheta_V$ of that step (Supplement, Proposition~\ref{S-prop:retreated-first-step}(iii)). We put
 \begin{equation}\label{eq:history-quantities}

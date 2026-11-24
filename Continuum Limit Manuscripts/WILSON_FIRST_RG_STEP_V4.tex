@@ -2664,6 +2664,53 @@ Since $2(\rho_L+1)+1=8L+3<\ell$ (the standing condition $LMR_1>4R_{\mathrm c}+4L
 On a final term every $e\in J^{\mathrm{fin}}$ within $\rho_L$ of $D^{\mathrm{fin}}$ is good (Lemma~\ref{lem:c5-3-1}(b)) and $A'_{\mathrm e}(e)= A_{\mathrm e}(e)$ there (for $e\in J$ by Lemma~\ref{lem:c5-2-3}(a); for $e\in I\setminus D^{\mathrm{fin}}$ because $I\cap S_1^*=\varnothing$), so \eqref{eq:c5-1-2} gives $\sup_{b\in D^{\mathrm{fin}}}| m_b|_{\sigma}\leqslant r/4$ with the same $C_H^{\mathrm{near}}$ and $\vartheta$: (I1) is unchanged, (I2) is a statement about the rows $b\in I\supset D^{\mathrm{fin}}$ with the sum over all $b'$, and (I3) passes to $D^{\mathrm{fin}}$ by principal restriction. This is the input for Sections~\ref{sec:c5-4} and~\ref{sec:c5-5}, with margin $3r/4$.
 \end{remark}
 
+% ===== CORE-INTEGRATION BLOCK V-A (inactive) =====
+% Replaces: in Section sec:c5-2-3 the sentence "Fix $\vartheta\in(0,1]$. A collar bond $e$ is bad if
+% ... good otherwise;"; in Section sec:c5-3-1 the paragraph "On a labelled term with current region
+% ..." (the rounds, the bad sets B^{(k)}, the sets Q(e)); Lemma lem:c5-3-1; Remark rem:c5-3-2.
+% Source: continuum_limit/BALABAN_CORE.tex, Definition C-def:step-regions(vi) at n = 0, Lemma
+% C-lem:region-cascade (i), (iii), (v), (vi), Lemma C-lem:inner-mean. References \ref{C-...} are to the
+% core. Reason: the retreat of the first step and the region of the core at n = 0 have to be one rule
+% (continuum_limit/FINDINGS.md F367).
+% What changes, and what has to be rechecked at integration:
+% (1) Tested set: the core tests every bond with an endpoint in the layer Lambda^~ of ell-cubes next to
+%     Lambda which does not have both endpoints in Lambda (the set b^partial(Lambda)), not only the
+%     collar J_col(Lambda); b^partial(Lambda) contains J_col(Lambda), since rho_L + 1 < ell.
+% (2) Threshold: g_0 ||A_e(e)|| >= delta_0/K_m in the operator norm, K_m a number of L and G (Core,
+%     Definition C-def:step-regions(vi)), in place of |A_e(e)|_sigma >= vartheta r with
+%     vartheta <= 1/16 (Remark rem:c5-1-3; r = delta_0/g_0). The thresholds theta_vartheta and c_q of
+%     Lemma lem:c5-2-4 and Proposition prop:c5-2-6 are to be recomputed with this threshold, and the
+%     two norms related by the constant c_h.
+% (3) Removal: the ell-cubes which touch an ell-cube containing an endpoint of a bad bond, in place of
+%     Q(e). Their points lie within 2 ell + 1 of x_e, so the distances of Lemma lem:c5-3-1(c) become
+%     102 ell + 1 and the count N_ret of (d) still bounds them.
+% (4) Labels: the region and the bad sets are functions of the field (Core, Lemma
+%     C-lem:region-cascade(iii)); the terms are sum over Lambda of 1_Lambda times the integrand, and the
+%     refined labels and the bookkeeping of Section sec:c5-6 reduce to this sum.
+% (5) Margin: the core gives the mean of the young field at most delta_0/(4 g_0) = r/4 (Core, Lemma
+%     C-lem:inner-mean, with the factor 8 in K_m), as Remark rem:c5-3-2 has it; the margin 3r/4 of
+%     Sections sec:c5-4 and sec:c5-5 is unchanged.
+% (6) Variables and carrier: the fluctuation coordinates of the core at n = 0 and the variables of
+%     \cite[(1.13)--(1.16)]{BalabanCRE} used here are to be identified, and the carrier conventions made
+%     one (core: the bonds with both endpoints in Lambda; here: D(Lambda), the bonds of I with an
+%     endpoint in Lambda).
+% ---- replacement for the sentence of Section sec:c5-2-3 ----
+% A bond $e$ is \emph{bad} if it is a failing bond of Core, Lemma~\ref{C-lem:region-cascade}(v), at $n = 0$: it lies in the set $\mathsf b^\partial(\Lambda_1^{(k)})$ of some round $k$, and $g_0\norm{A_{\mathrm e}(e)} \geqslant \delta_0/K_{\mathrm m}$; it is \emph{good} otherwise.
+% ---- replacement for the paragraph of the rounds in Section sec:c5-3-1 ----
+% The retreat is the construction of Core, Definition~\ref{C-def:step-regions}(vi), at $n = 0$. Put $\Lambda_1^{(0)} \coloneqq \Omega_1^{\sim-2} \setminus R_1'^{\sim}$ \cite[(1.20), p.~251]{BalabanCRE}, before the filling, and let $\Lambda_1^{(k+1)}$ be the filling $\operatorname{Fill}$ of the union of the $\ell$-cubes of $\Lambda_1^{(k)}$ which touch no $\ell$-cube containing an endpoint of a bad bond of $\mathsf b^\partial(\Lambda_1^{(k)})$; $B^{(k)}$ is the set of these bad bonds. The rounds are constant from some $k$ on, and $\Lambda_1^{\mathrm{fin}}$ is their final value. It is a function of the fluctuation field at the bonds which do not have both endpoints in it (Core, Lemma~\ref{C-lem:region-cascade}(iii)), so that a term with Ba{\l}aban's labels is the sum over $\Lambda$ of the terms with the further factor $\mathbf 1\{\Lambda_1^{\mathrm{fin}} = \Lambda\}$, and the sets $B^{(k)}$ are functions of the field. The bonds of $D \setminus D^{\mathrm{fin}}$ become exterior variables of the term, with their box factors as exterior good tests (Lemma~\ref{lem:c5-2-5}), and the convention on $S_1$, $R_1$, $\Psi_{\xi}$, $U_1(\Omega_1\cap\Lambda_1^c,V)$, and $\chi(\Omega_1\cap\Lambda_1^c,S_1)$ is that of the paragraph which this one replaces.
+% ---- replacement for Lemma lem:c5-3-1 ----
+% \begin{lemma}[Termination, Final State, Counts]\label{lem:c5-3-1}
+% (a) The rounds are constant after at most as many rounds as $\Lambda_1^{(0)}$ has $\ell$-cubes, since every round which changes the region removes a cube. (b) On every term every bond of $\mathsf b^\partial(\Lambda_1^{\mathrm{fin}})$, in particular every bond of $J_{\mathrm{col}}(\Lambda_1^{\mathrm{fin}})$, is good. (c) $\Lambda_1^{\mathrm{fin}}$ is filled; every point of $\Lambda_1^{(0)} \setminus \Lambda_1^{\mathrm{fin}}$ lies within $100\ell$ of a point of the complement of $\Lambda_1^{(0)}$ or within $102\ell + 1$ of $x_e$ for a bad bond $e$; and no $\ell$-cube containing an endpoint of a bad bond lies in $(\Lambda_1^{\mathrm{fin}})^\sim$. (d) The bonds with an endpoint within $102\ell + 1$ of a given site number at most $N_{\mathrm{ret}} \coloneqq 4(207\ell)^4$.
+% \end{lemma}
+% \begin{proof}
+% (a), (b), and the first and last statements of (c) are Core, Lemma~\ref{C-lem:region-cascade}(i) and~(v) at $n = 0$, the cubes of $\mathsf r_1$ being the $\ell$-cubes; $J_{\mathrm{col}}(\Lambda) \subset \mathsf b^\partial(\Lambda)$ because a bond of $J_{\mathrm{col}}(\Lambda)$ has its endpoints within $\rho_L + 1 < \ell$ of $\Lambda$ and does not have both endpoints in $\Lambda$. The second statement of (c) is Core, Lemma~\ref{C-lem:region-cascade}(vi), with an endpoint of $e$ within $1$ of $x_e$. (d) The sites within $102\ell + 1$ of a given site number $(204\ell + 3)^4$, and the bonds with an endpoint among them have their initial sites within $102\ell + 2$, at most $4(204\ell + 5)^4 \leqslant 4(207\ell)^4$ bonds for $\ell \geqslant 2$.
+% \end{proof}
+% ---- replacement for Remark rem:c5-3-2 ----
+% \begin{remark}[What the Final State Gives]\label{rem:c5-3-2}
+% On a final term every bond of $\mathsf b^\partial(\Lambda_1^{\mathrm{fin}})$ is good (Lemma~\ref{lem:c5-3-1}(b)), and Core, Lemma~\ref{C-lem:inner-mean}, at $n = 0$ bounds the mean of the young field on every bond of the carrier by $\delta_0/(4g_0) = r/4$. This is the input for Sections~\ref{sec:c5-4} and~\ref{sec:c5-5}, with margin $3r/4$.
+% \end{remark}
+% ===== END BLOCK V-A =====
+
 \begin{lemma}[The Regions and the Retreated Fibre]\label{lem:c5-3-3}
 (i) $\Lambda_1^{\mathrm{fin}}\subset\Lambda_1^{(0)}\subset\Lambda_1\subset\Omega_1^{\sim-2}\cap(R_1'^{\sim})^c$ is a filled union of $\ell$-cubes (Lemmas~\ref{lem:c5-3-0}(a), \ref{lem:c5-3-1}(c)), so it satisfies \cite[(2.3)]{BalabanCRE} with the adjacency of Section~\ref{sec:c5-3-1}. (ii) Lemma~\ref{lem:collar-coverage}(i) (every site within $\ell-1$ of $\Lambda_1^{\mathrm{fin}}$ lies in $\Omega_1^{\sim-1}\setminus R_1'$; every free bond of $\Omega_1$ within $3R_{\mathrm c}$ of $D^{\mathrm{fin}}$ lies in $\mathcal G_{\xi}\setminus S_1^*$) and \eqref{eq:c-collar-distance} ($d(D^{\mathrm{fin}},S_1^*)\geqslant \ell-2$) hold by the inclusions $\Lambda_1^{\mathrm{fin}}\subset\Lambda_1$, $D^{\mathrm{fin}}\subset I$. (iii) $| A^{\mathrm{fin}}_{\mathrm e}(b)|_{\sigma}< r$ for every $b\in J^{\mathrm{fin}}$ with $d(b,D^{\mathrm{fin}})\leqslant 3R_{\mathrm c}$: for $b\in J$ by Lemma~\ref{lem:collar-coverage}(iii) ($d(b,I)\leqslant d(b,D^{\mathrm{fin}})$), for $b\in I\setminus D^{\mathrm{fin}}$ by the retained box factor $\mathbf 1\{| a_b|_{\sigma}< r\}$ (Lemma~\ref{lem:c5-2-5}), nonzero on the term. (iv) On a final term with exterior data $A^{\mathrm{fin}}_{\mathrm e}$ for which the young fibre $\{ a\in\mathfrak g^{D^{\mathrm{fin}}}\, | \,\Psi_{\xi}(a+A^{\mathrm{fin}}_{\mathrm e})\in\mathcal A_{\xi}\}$ is nonempty, the fibre is the open box $\{ a\, | \,| a_b|_{\sigma}< r\text{ for all }b\in D^{\mathrm{fin}}\}$ (otherwise it is empty and the term vanishes). $\Omega_1$, $R_1$, $S_1$, $\Psi_{\xi}$ and $U_1$ are those of the original $\Lambda_1$ by the convention of Section~\ref{sec:c5-3-1}. The history label acquires the finite sequence $(B^{(0)},B^{(1)},\dots)$ of bad sets; its bookkeeping in the history sum of Section~\ref{sec:sourced-effective-interaction} is Section~\ref{sec:c5-6}.
 \end{lemma}

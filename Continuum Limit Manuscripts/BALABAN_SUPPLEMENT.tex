@@ -1275,6 +1275,39 @@ On every term the following hold.
 (iv) Let $e$ be found bad in the round $j$. Since the rounds and the filling only remove cubes, $\Lambda \subset \Lambda^{(j)} \setminus \mathcal Q^+(e)$, so that no site of $\Lambda$ lies in the closed ball of radius $\ell + \rho_L + 1$ about $x_e$. As the other endpoint of $e$ is a neighbour of $x_e$, $\dist(e, \Lambda) \geq \ell + \rho_L \geq \ell$. Let $Q$ be a cube which contains a point of $e$, and $Q'$ a cube which has a point in common with $Q$. Then $Q'$ has a point within $\ell + 1$ of $x_e$, so that $Q'$ meets the ball and is not a cube of $\Lambda$. Hence $Q$ has no point in common with $\Lambda$, that is, $Q \not\subset \Lambda^\sim$.
 \end{proof}
 
+% ===== CORE-INTEGRATION BLOCK S-A (inactive) =====
+% Replaces: the introduction of Section sec:retreated-region, the last two sentences of the paragraph
+% before Definition def:retreat (from "The cutoff radius" on), Definition def:retreat with the
+% paragraph after it, and Lemma lem:retreated-region with its proof.
+% Source: BALABAN_CORE.tex, Definition C-def:step-regions(vi) at n = 0, Lemma C-lem:region-cascade(i),
+% (v), (vi), Lemma C-lem:inner-mean.
+% At integration, two conventions have to be made one: (1) the core integrates the bonds with both ends
+% in Lambda (Definition C-def:unit-form(iii)), the first step those of I with an endpoint in Lambda
+% (the carrier D(Lambda)); (2) the core tests g_0 ||A(e)|| with the operator norm against
+% vartheta_0/K_m, the first step |A(e)|_sigma against vartheta_V t_0. The core's lemmata hold in the
+% core's conventions. The proof of Proposition prop:retreated-first-step uses of the retreat only the
+% four properties below; the constant c_4 there changes with the threshold (block S-B).
+% ---- replacement ----
+% [Introduction.] The paper carries a loop ensemble through every step on terms whose region of integration is the region of Core, Definition~\ref{C-def:step-regions}(vi); at the first step this region takes the place of the retreat of \cite[Section~9.4]{WilsonFirstStep}. It is Ba{\l}aban's domain $\Lambda_1$ of \cite[(1.20), p.~251]{BalabanCRE}, shrunk around the bonds next to it at which the fluctuation field is at least $\vartheta_0/(K_{\mathrm m}g_0)$, and this keeps the mean of the conditional Gaussian below a quarter of the cutoff radius on the whole region of integration (Core, Lemma~\ref{C-lem:inner-mean}). Ba{\l}aban's description of the first step, however, is written for $\Lambda_1$, a domain built from the test functions alone, and his inductive assumption and the large-field bounds of \cite[Section~1]{BalabanLFR2} are stated for the domains which his construction produces. We show in this section that his construction runs at the region of the core, that its output has the form of his inductive assumption with this region in the place of $\Lambda_1$, and that the large-field factors of \cite{BalabanLFR2} still pay for its complement, which is larger than his and depends on the fluctuation field; at the later steps the last point is Proposition~\ref{prop:retreated-step-factors}. Only the last point changes a constant.
+% [Setting, from "The cutoff radius" on.] The cutoff radius of the fluctuation field in the construction of the paper is $t_0 \coloneqq \vartheta_0/g_0$ (Paper, Definition~\ref{P-def:construction}(ii)). A bond is \emph{bad} if it is a failing bond of Core, Lemma~\ref{C-lem:region-cascade}(v), at $n = 0$: a bond of the set $\mathsf b^\partial(\Lambda^{(i)})$ of some stage $i$ with $g_0\norm{A(e)} \geqslant \vartheta_0/K_{\mathrm m}$.
+% \begin{definition}[The Retreated Region]\label{def:retreat}
+% The \emph{retreated region} $\Lambda$ of a term is the region $\Lambda_1$ of Core, Definition~\ref{C-def:step-regions}(vi), at $n = 0$, formed from Ba{\l}aban's $\Omega_1$ and $R_1$, with the stages $\Lambda^{(i)}$ of that definition and $\Lambda^{(0)} = \Omega_1^{\sim-2} \setminus R_1'^\sim$.
+% \end{definition}
+% The region is a function of the fluctuation field on the bonds which do not have both ends in it (Core, Lemma~\ref{C-lem:region-cascade}(iii)), and the terms with Ba{\l}aban's labels $(\Omega_1, \Lambda_1)$ are the sums over $\Lambda$ of the terms with the further factor $\mathbf 1_\Lambda$ (Core, Definition~\ref{C-def:step-operation}).
+% \begin{lemma}[The Retreated Region]\label{lem:retreated-region}
+% On every term the following hold.
+% \begin{enumerate}[label=(\roman*)]
+% \item $\Lambda \subset \Lambda^{(0)} = \Omega_1^{\sim-2} \cap (R_1'^{\sim})^c$, where $R'_1$ is the union of the cubes which meet $R_1$; moreover $\Lambda$ is a union of cubes which equals its filling, so that every component of $\Lambda^c$ which lies in a cube of side $100\ell$ is a rectangular parallelepiped.
+% \item Every point of $\Lambda^{(0)} \setminus \Lambda$ lies within the $\ell^\infty$-distance $100\ell$ of a point of the complement of $\Lambda^{(0)}$ or within $102\ell$ of an end of a bad bond.
+% \item $g_0\norm{A(e)} < \vartheta_0/K_{\mathrm m}$ at every bond $e$ of $\mathsf b^\partial(\Lambda)$, and $J_{\mathrm{col}}(\Lambda) \subset \mathsf b^\partial(\Lambda)$.
+% \item No cube which contains an end of a bad bond lies in $\Lambda^\sim$, and the ends of a bad bond lie at the $\ell^\infty$-distance at least $\ell$ from $\Lambda$.
+% \end{enumerate}
+% \end{lemma}
+% \begin{proof}
+% The cubes of $\mathsf r_1$ are the cubes of side $\ell$. Parts (i), (ii), (iv), and the first statement of (iii) are Core, Lemma~\ref{C-lem:region-cascade}(i), (vi), (v), and (i) at $n = 0$. Let $C$ be a component of $\Lambda^c$ in a cube of side $100\ell$ and $P$ the smallest rectangular parallelepiped of cubes containing it. Since the filling does not change $\Lambda$, the points of $P \setminus C$ lie in $\Lambda^c$; so $P \subset \Lambda^c$, and $P$, which is connected, lies in the component $C$, that is, $C = P$. For the inclusion, a bond of $J_{\mathrm{col}}(\Lambda)$ lies within $\rho_L$ of a bond of $D(\Lambda)$, which has an endpoint in $\Lambda$, so that its endpoints lie within $\rho_L + 1 < \ell$ of $\Lambda$, hence in $\Lambda^\sim$; and it does not have both endpoints in $\Lambda$, since it is not in $D(\Lambda)$.
+% \end{proof}
+% ===== END BLOCK S-A =====
+
 \subsection{The Construction at the Retreated Region}\label{sec:retreated-construction}
 
 We now state what the paper uses. Part (i) is Ba{\l}aban's conditional integral \cite[(1.26), p.~253]{BalabanCRE} with its expansion, part (ii) is the form \cite[(1.28)--(1.30), pp.~253--254]{BalabanCRE} of the output, part (iii) is the large-field factor which \cite[(1.79), p.~383]{BalabanLFR2} attributes to the first step, and part (iv) is the passage from the thresholds of \cite{WilsonFirstStep} to those of a tube. We write $\mathbf D_1$ for the localisation domains of the scale $1$, $d_1(X)$ for the linear size of $X \in \mathbf D_1$ \cite[p.~257]{BalabanRG1}, and $d'_1$ for the linear size measured in cubes of side $MR_1$ of $T^{(1)}$ \cite[p.~380]{BalabanLFR2}; the cubes of side $MR_1$ of $T^{(1)}$ are the cubes of side $\ell$ in fine units. The constants $B_0$, $\kappa$, and $\beta = 1/8$ are those of \cite[(2.42), p.~261]{BalabanCRE} (Paper, Appendix~\ref{P-app:constants}), and $c_4$ is the constant
@@ -1460,6 +1493,39 @@ so that the factor $e^{-\frac{1}{2}Q_X}$ of the integrand is at most $e^{-c_b\va
 
 \emph{The inequality (1.82).} Since $\mathcal X$ is connected and $\mathcal X \subset \bigcup_{G \subset \mathcal X}G^{\sim107}$, the sets $\hat G \coloneqq G^{\sim108}$ have a connected union which contains $\mathcal X$, and the argument of \cite[p.~385]{BalabanLFR2}, with $\hat G$ in place of $(Z_1^{(i)})^{\sim3}$, gives $d'_1(\mathcal X) + 1 \leq \sum_G(d'_1(\hat G) + 1)$. The set $\hat G$ has at most $217^d$ times as many cubes as $G$, hence at most $217^d \cdot 3 \cdot 2^{d-1}(d'_1(G) + 1)$ by the count of \cite[p.~384]{BalabanLFR2}, and a tree through the centres of $n$ cubes which have points in common along a spanning tree has length at most $\sqrt d(n - 1)$, so that $d'_1(\hat G) + 1 \leq 2 \cdot 217^d \cdot 3 \cdot 2^{d-1}(d'_1(G) + 1) \leq 2d(434)^d(d'_1(G) + 1)$ at $d = 4$. Hence $d'_1(\mathcal X) + 1 \leq 2d(434)^d\sum_{G \subset \mathcal X}(d'_1(G) + 1)$, and $\prod_G\exp(-\frac{1}{2}c_4\vartheta_V^2a(d'_1(G) + 1)) \leq \exp(-\frac{1}{4}c_4d^{-1}(434)^{-d}\vartheta_V^2a(d'_1(\mathcal X) + 1))$, which is \cite[(1.82)]{BalabanLFR2} with the constant stated. The condition of \cite[p.~385]{BalabanLFR2} for \cite[(1.80)]{BalabanLFR2} at $j = 1$ becomes $\frac{1}{4}c_4d^{-1}(434)^{-d}\vartheta_V^2A_1^2(\log g_1^{-2})^{2p_0} \geq O(1)2(64)^dM^dL^{d+1}R_1^{d+2}$, which holds for $\gamma$ small, since $R_1^{d+2} \leq (2L)^{d+2}(\log g_1^{-2})^{6r}$ and $2p_0 > 6r$. The modified form of \cite[(1.76)]{BalabanLFR2} enters only here: on \cite[p.~386]{BalabanLFR2} it relates the components of $Z_{j+1}$, $j \geq 1$, to those of $Z_j$ and to the new regions, which the later steps form as printed from $Z_1 = \Lambda^c$, and no further retreat occurs after the first step.
 \end{proof}
+
+% ===== CORE-INTEGRATION BLOCK S-B (inactive) =====
+% Replaces: the last sentence of the proof just above ("The modified form of \cite[(1.76)]{BalabanLFR2}
+% enters only here: ... and no further retreat occurs after the first step."), and adds a proposition
+% which is NOT YET WRITTEN: below are the replacement sentence and an outline of the proposition, not a
+% statement or a proof (FINDINGS F367).
+% DEFERRED (FINDINGS F369): the payment at the later steps is part of LFR2 Section 1, which the core's
+% R-operation section has to prove; it is to be cited from there, and LFR2 (1.76), used below and in
+% the later steps, is false as printed after the filling (BALABAN_PRINT_REGISTER.md A.7).
+% ---- replacement sentence ----
+% The modified form of \cite[(1.76)]{BalabanLFR2} enters here and at every later step: on the regions of Core, Definition~\ref{C-def:step-regions}(vi), every step shrinks its region around the bonds failing the second test, and Proposition~\ref{prop:retreated-step-factors} gives \cite[(1.82)]{BalabanLFR2} and the condition of \cite[p.~385]{BalabanLFR2} at every step $j \geqslant 1$.
+% ---- OPEN AT INTEGRATION: outline of Proposition prop:retreated-step-factors ----
+% Setting: a step j -> j + 1, j >= 1, on the regions of Core, Definition C-def:step-regions(vi) with n = j,
+% and a component X of Omega_{j+1} cap Lambda_{j+1}^c.
+% (1) Generating cubes: the cubes of side MR_{j+1} of the cover of P_{j+1} cup Q_{j+1} cup R_{j+1}
+%     (LFR2 p. 380) and those which contain an end of a failing bond (Core, Lemma C-lem:region-cascade(v));
+%     their components G.
+% (2) Geometry: every point of X lies in G^{~107} for a component G in X, by Core, Lemma
+%     C-lem:region-cascade(vi) (removed points within 102 cubes of an end of a failing bond, filled
+%     points within 100 cubes of Balaban's complement) and LFR2 (1.76) for Balaban's complement, as in
+%     the proof of (iii) above at j = 1.
+% (3) Factor of a failing bond: the outer form S = Gamma_oo - Gamma_oi C(Lambda) Gamma_io is at least
+%     gamma_0 on all outer functions (Core, proof of Lemma C-lem:component-weight, from Theorem
+%     C-thm:unit-lattice(i)), and the component forms are at least gamma_0/2 (Core, Lemma
+%     C-lem:component-weight(i)), so a bond with g_j ||A(b)|| >= vartheta_j/K_m gives at least the factor
+%     exp(-gamma_0 vartheta_j^2/(4 N K_m^2 g_j^2)) <= exp(-c (log hat g_j^{-2})^{2 p_0}), with c of the
+%     order of gamma_0 A_1^2/(N K_m^2); no local completion of the square is needed.
+% (4) The other factors as on LFR2 pp. 380-383; the entropy of the sets of failing bonds, at most a factor
+%     2 per bond near the removed cubes, is a volume term of the kind which LFR2 p. 380 pays.
+% (5) (1.82) with a constant c_r of the form c d^{-1}(434)^{-d}/4, and the condition of LFR2 p. 385 at the
+%     step j: c_r A_1^2 (log g_j^{-2})^{2 p_0} >= O(1) 2 (64)^d M^d L^{d+1} R_j^{d+2}, true for gamma
+%     small since 2 p_0 > 6 r.
+% ===== END BLOCK S-B =====
 
 \begin{proof}[Proof of (iv)]
 Put $\lambda \coloneqq \log g_0^{-2}$ and $r_0 \coloneqq A_1\lambda^{p_0}$, the radius of \cite[(D.1)]{WilsonFirstStep}. By Paper, Lemma~\ref{P-lem:tube-thresholds}(i), $\rho^{-1/2}r_0 \leq t_0 \leq r_0$, and the plaquette thresholds of the tube are at most those of \cite{WilsonFirstStep} and at least $\rho^{-1/2}$ times them; the cube size satisfies $(\log g_1^{-2})^r \leq R_1 < L(\log g_1^{-2} + \log\rho)^r$. The conditions on the coupling of \cite{WilsonFirstStep} are listed in \cite[Appendix~B.8]{WilsonFirstStep}, and each is of one of three kinds. An upper bound on a quantity increasing in the radius or in a threshold, such as $C_0g_0(1 + 3r)^3$ small, $\varepsilon_0$ small, or $\delta_0 \leq \delta_G$, holds a fortiori at $t_0$. A lower bound on the radius or on $R_1$, such as $r \geq 1$ or $LMR_1$ large, holds for small coupling, because $t_0^2 \geq r_0^2/\rho \to \infty$ and $R_1 \to \infty$. A relation among the thresholds holds as printed, because the sequence $(\hat g_j)$ satisfies \cite[(2.6)--(2.8)]{BalabanCRE} (Paper, Lemmata~\ref{P-lem:tube-couplings} and~\ref{P-lem:tube-thresholds}). The lines of \cite{WilsonFirstStep} in which the functional form of the radius enters are of the same kinds, with one exception, the bound $e^{-c_{\mathrm{ph}}r^2} \leq g_0$ of \cite[(9.29)(iii)]{WilsonFirstStep}, derived there from $r \geq A_1\lambda$. At the radius $t_0$ we have $t_0^2 \geq \rho^{-1}A_1^2\lambda^2$, so that
@@ -5742,6 +5808,17 @@ where the geometric series has the ratio $64e^{-x} \leq \frac{1}{2}$.
 
 The hypothesis \eqref{eq:vacuum-activity-bound} is Ba{\l}aban's bound. By \cite[Lemma~3, (2.38)]{BalabanRG2}, $\abs{H(Z)} \leq C_3\varepsilon_1\exp(-(1 - 8\delta)\frac{1}{2}L\kappa\,d_{k+1}(Z))$ for $Z \in \mathbf D_{k+1}$, where $C_3\varepsilon_1 = 2(L + 2)^4O(1)\varepsilon_2 \leq e^{-5\kappa}$ by the assumption ``$2(L + 2)^4O(1)\varepsilon_2\exp5\kappa \leq 1$'' and the definition of $C_3$ \cite[p.~20]{BalabanRG2}, and $(1 - 8\delta)\frac{1}{2}L = \frac{1}{10}L + \frac{4}{5} \geq 1$ for the number $\delta = \frac{1}{10}(1 - 2L^{-1})$ of \cite[p.~21]{BalabanRG2}; Ba{\l}aban's lemma holds with the count \eqref{eq:cube-count} in the place of his, the absolute constant $O(1)$ of the assumption and of $C_3$ being the larger one of Lemma~\ref{lem:cube-count}, and it holds uniformly on the space of the configurations $(\mathbf U, \mathbf J)$ on which the activities are analytic \cite[p.~15]{BalabanRG2}, to which the flat configuration $(1, 0)$ belongs. For the measure \cite[(3.27)]{BalabanCRE} of the step $k + 1$ of the complete model, on the polymers contained in $\Lambda_{k+1}$, the bound is part of the statement that its expectation values are ``treated in exactly the same way'' \cite[p.~279]{BalabanCRE} as the one for which the expansion is described, whose normalisation ``is expanded in exactly the same way as in Sect.~7 [I]'' \cite[p.~277]{BalabanCRE}. The condition $\kappa \geq \kappa_{\mathrm{vac}}$ is a lower bound on Ba{\l}aban's $\kappa$ of the kind which \cite[p.~21]{BalabanRG2} imposes, and $\kappa$ is chosen there before $M$ and $\varepsilon_1$, so that it can be imposed in his order of choices.
 
+% ===== CORE-INTEGRATION BLOCK S-C (inactive) =====
+% Replaces: in the paragraph just above, the sentence "For the measure \cite[(3.27)]{BalabanCRE} of the
+% step $k + 1$ of the complete model, ... ``is expanded in exactly the same way as in Sect.~7 [I]''
+% \cite[p.~277]{BalabanCRE}."
+% Source: BALABAN_CORE.tex, Definition C-def:step-regions(vi), Lemma C-lem:inner-mean.
+% OPEN AT INTEGRATION: the core's expansion of the inner integral at a real outer field (pieces P4-P5 of
+% STEP_DENSITY_PLAN.md) is not yet in the core; C-thm:step-density is a placeholder label.
+% ---- replacement ----
+% For the measure of Paper, Lemma~\ref{P-lem:outer-conditional}, on the regions of Core, Definition~\ref{C-def:step-regions}(vi), the bound on the polymers contained in $\Lambda_{k+1}$, including those next to its boundary, is Core, Theorem~\ref{C-thm:step-density}. Its input near the boundary, which Ba{\l}aban's statements that the expectation values are ``treated in exactly the same way'' \cite[p.~279]{BalabanCRE} and that the normalisation ``is expanded in exactly the same way as in Sect.~7 [I]'' \cite[p.~277]{BalabanCRE} do not supply, is the bound of the mean of the inner field of Core, Lemma~\ref{C-lem:inner-mean}.
+% ===== END BLOCK S-C =====
+
 It remains to bound the activities of the polymers which are marked by factors of a dressed loop. For the domain $Z_0$ marked by one localised term Ba{\l}aban states that its activity, ``although different, \dots satisfies the same bound as the other factors'' \cite[p.~277]{BalabanCRE}. For the marked polymers of Paper, Proposition~\ref{P-prop:marked-polymers}, a bound of the form \cite[(2.38)]{BalabanRG2} cannot hold: the factor has a prescribed support, in which nothing decays, and the term of the expansion which contains no potential and no large field is the conditional expectation of the factor, which carries no small constant. The bound which does hold has the supremum of the factor in front and decays in the part of the polymer outside the support of the factor. Its proof is that of \cite[Lemma~3]{BalabanRG2} with a linear size which does not count the support, and it requires the geometric inequalities of that proof in a corresponding form. One of them, \cite[(2.32), p.~18]{BalabanRG2}, is false as printed, with or without a marked support; we prove it with the constant $18$ in the place of $4$ (Remark~\ref{rem:rg2-232}).
 
 \emph{The contracted linear size.} Consider the closed cubes of side $a$ of one of the partitions $\pi_k$ or $\pi_{k+1}$, where $a = M$ or $a = LM$ in the units of the step $k$; two of them \emph{touch} if they have a point in common, and a union of cubes is \emph{connected} if any two of its cubes are joined by a chain of its cubes in which consecutive ones share a wall, as in \cite[p.~257]{BalabanRG1}. Lengths are Euclidean. For a connected union $X$ of cubes and a union $D \subset X$ of cubes, possibly empty, let
@@ -5849,6 +5926,17 @@ and the same with the factor $\vartheta$ for the sum without the exceptional ter
 The lemma gives no decay inside $D'$ and none between the components of $D$: there the decay has to come from the factor $\mathcal X_M$ itself, that is, from the sizes of the tensors $Y_G$ and of the insertions of the earlier steps which they contain. The price of the support is $e^{81A}$ for each cube of $D'$, with a constant $A$ which Ba{\l}aban's choices make as small as one wishes, and $e^{(5 + \frac{3}{2}L)\kappa}$ for each component of $D$ beyond the first. By Lemma~\ref{lem:contracted-geometry}(v) the last factor of \eqref{eq:marked-activity-bound} is at most $\exp(-\frac{1}{1296}(L + 2)\kappa(\#(M) - 81\,\#(D')))$.
 
 \emph{Polymers at a new large-field region.} The lemma is stated for the fluctuation integral of \cite[Sect.~2]{BalabanRG2}. On a labelled term on which the step $k + 1$ makes a large-field region, the integral is that of the measure of Paper, Lemma~\ref{P-lem:outer-conditional}, which is \cite[(3.27)]{BalabanCRE} at $s = t = 1$ without the term $V^{(k)}(S_{k+1})$, at a real outer field $\sigma_k$ on $\Omega_{k+1} \cap \Lambda_{k+1}^c$ of the support of the test functions. Its action contains the Gaussian term $-\langle A, C^*\Delta^{(k)}C\sigma_k\rangle$, which is linear in the integrated field, and further potentials, the terms of the brackets whose localisation domains are not contained in $\Lambda_{k+1}$ \cite[pp.~276--277]{BalabanCRE}; it is the action of \cite[(3.27)]{BalabanCRE} with fewer terms. The proof above uses the integral through the bound \eqref{eq:marked-term} of one term alone; Steps~2--4 are the splitting and the sums, in which neither the measure nor the potentials occur otherwise than through that bound. For the polymers of the measure \cite[(3.27)]{BalabanCRE} the bound of one term is the estimate \cite[(2.26)]{BalabanRG2} in the generalisation of \cite[p.~277]{BalabanCRE}, in which the further potentials are ``estimated as in (2.42), but with the additional factor $O(\varepsilon_k)$'' and the activity which contains a further localised factor ``satisfies the same bound as the other factors''. That generalisation is not written out in \cite{BalabanCRE}. On its strength we use \eqref{eq:marked-term} for these polymers, for $\gamma$ so small that the bound of the further potentials is at most that of the others; the lemma then holds for every marked polymer of such a term, with the supremum of the factor taken also over the outer field, on the spaces \cite[(3.43)]{BalabanCRE} of the configurations. Lemma~\ref{lem:parity} below does not extend in this way.
+
+% ===== CORE-INTEGRATION BLOCK S-D (inactive) =====
+% Replaces: in the paragraph just above, the sentences from "For the polymers of the measure
+% \cite[(3.27)]{BalabanCRE} the bound of one term" to "On its strength we use \eqref{eq:marked-term}
+% for these polymers,".
+% Source: BALABAN_CORE.tex, Definition C-def:step-regions(vi), Lemma C-lem:inner-mean.
+% OPEN AT INTEGRATION: as in block S-C, C-thm:step-density is a placeholder for the core's expansion at
+% a real outer field.
+% ---- replacement ----
+% On the regions of Core, Definition~\ref{C-def:step-regions}(vi), the bound of one term for the polymers of this measure is part of Core, Theorem~\ref{C-thm:step-density}, in which the further potentials are bounded with the additional small factor and the mean of the inner field near the boundary of $\Lambda_{k+1}$ is at most a quarter of the cut-off (Core, Lemma~\ref{C-lem:inner-mean}). With it we use \eqref{eq:marked-term} for these polymers,
+% ===== END BLOCK S-D =====
 
 The supremum of a factor does not see cancellations, and one of them is needed. The first-order part of the transport of a loop is linear in the fluctuation field, of the order of the coupling and not of its square, and it is harmless only because it is odd and the fluctuation measure is almost even. The next lemma makes this precise for an arbitrary factor: its odd part enters the activity only through the odd part of the potentials, which is small. We state it on the terms without large-field regions, on which the fluctuation integral is that of \cite[Sect.~2]{BalabanRG2}, with the potentials of \cite[Lemmata~1,~2]{BalabanRG2} and those of the terms $\mathbf R_k$, which are ``treated in exactly the same way'' \cite[p.~276]{BalabanCRE}; with an outer fluctuation field the action contains a term which is linear in the integrated field, and the lemma does not hold. Put $x_k \coloneqq \vartheta_k/\varepsilon_1$, with the constant $\varepsilon_1$ of \cite[(1.34)]{BalabanRG2}, and
 \begin{equation}\label{eq:odd-potential-constant}
