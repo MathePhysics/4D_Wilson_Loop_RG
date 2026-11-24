@@ -198,6 +198,116 @@ theorem conj_U [NeZero N] {G : GaugeGroup N} (hG : G.LieInput) (H : ScalarHyp S 
 
 end ScalarHyp
 
+/-! ### The operator and the decay -/
+
+/-- **The operator of the fine model**: `T(𝐔) = Δ(𝐔) + D_𝐔(1 - P(𝐔))D^*_𝐔 + Q_op`, with `Δ(𝐔) = D^*_𝐔D_𝐔 + Δ'(𝐔)`
+(`hessLin`) and a given constraint operator `Q_op` (the shape of `DeltaA` with `R = 1 - P`). -/
+def TU {G : GaugeGroup N} (hG : G.LieInput) [NeZero N] (X : Fin 4 → Site NF → Mat) (W : Site NF → Site NF → GLN)
+    (QOp : Module.End ℂ (Fin 4 → Site NF → Mat)) : Module.End ℂ (Fin 4 → Site NF → Mat) :=
+  hessLin a1 hG (by simp [a1]) (cfgX X) +
+    D0L a1 (cfgX X) ∘ₗ (1 - Pop S X W Set.univ) ∘ₗ Ds1L a1 (cfgX X) + QOp
+
+lemma pair1V_sub (B J D : Fin 4 → Site NF → Mat) : pair1V S B (J - D) = pair1V S B J - pair1V S B D := by
+  unfold pair1V
+  rw [← Finset.sum_sub_distrib]
+  refine Finset.sum_congr rfl fun μ _ => ?_
+  rw [← Finset.sum_sub_distrib]
+  refine Finset.sum_congr rfl fun x _ => ?_
+  rw [Pi.sub_apply, Pi.sub_apply, emb_sub', inner_sub_right]
+
+/-- The form of `T(𝐔)` is `formU`. -/
+lemma pair_TU {G : GaugeGroup N} (hG : G.LieInput) [NeZero N] (X : Fin 4 → Site NF → Mat)
+    (W : Site NF → Site NF → GLN) (QOp : Module.End ℂ (Fin 4 → Site NF → Mat)) (B C : Fin 4 → Site NF → Mat) :
+    pair1V S B (TU S hG X W QOp C) = formU S hG X W (fun B C => pair1V S B (QOp C)) B C := by
+  have hP : pairP S X W Set.univ B C = pair1V S B (D0L a1 (cfgX X) (Pop S X W Set.univ (Ds1L a1 (cfgX X) C))) := by
+    unfold pairP
+    congr 1
+  unfold TU formU
+  rw [hP]
+  simp only [LinearMap.add_apply, LinearMap.comp_apply, LinearMap.sub_apply, Module.End.one_apply, map_sub]
+  rw [pair1V_add, pair1V_add, pair1V_sub]
+  have hh : hessLin a1 hG (by simp [a1]) (cfgX X) C = Ds2 a1 (cfgX X) (D1 a1 (cfgX X) C) + hessOp' a1 hG (cfgX X) C := rfl
+  rw [hh, pair1V_add]
+  ring
+
+namespace ScalarHyp
+
+variable {S} {X : Fin 4 → Site (SequenceAverages.N0 S) → Matrix (Fin N) (Fin N) ℂ} {α₁ : ℝ}
+  {W : Site (SequenceAverages.N0 S) → Site (SequenceAverages.N0 S) → (Matrix (Fin N) (Fin N) ℂ)ˣ} {η : ℝ}
+  {δ0 : ℝ}
+
+/-- **eq:sf-vector-decay on the torus** (`lem:sf-vector-decay`, "Conclusion", in the fine model), with the
+comparison of the constraint terms as the input `hQ`: `T(𝐔)` is bijective, and for `u = e^φT(𝐔)⁻¹(J + D^*_𝐔K)`,
+`N(u) ≤ c⁻¹(‖e^φJ‖_{w⁻¹} + 3L‖e^φK‖)`, `c = (2^{13}C_loc)⁻¹ - E`. -/
+theorem decay_U [NeZero N] {G : GaugeGroup N} (hG : G.LieInput) (H : ScalarHyp S X α₁ W η Set.univ δ0)
+    (hα512 : α₁ ≤ 1 / 512) (hM : 12 ≤ S.L ^ S.mM) (hR : 12 * S.L ≤ S.R)
+    (hRMb : (S.toContSeq).r1 (1 / 2) (1 / 32 * δ0) ≤ RMS) (hRMs4 : 32 * Real.log S.L / (1 / 4 * δ0) ≤ RMS)
+    (hsmallT : CTd S N δ0 α₁ η * (S.toContSeq).c1 (1 / 2) (1 / 32 * δ0) ≤ gammaB N / 4)
+    (hsmallT0 : CTd S N δ0 0 0 * (S.toContSeq).c1 (1 / 2) (1 / 32 * δ0) ≤ gammaB N / 4)
+    (hRMθs : 32 * Real.log S.L / (thetaB S N δ0 / 2) ≤ RMS)
+    (hRMθc : (S.toContSeq).r1 (1 / 2) (7 / 16 * thetaB S N δ0) ≤ RMS)
+    (hRMc : (S.toContSeq).r1 (1 / 2) (3 / 4 * δ0) ≤ RMS)
+    (hRMa : (S.toContSeq).r1 (1 / 2) (1 / 8 * δ0) ≤ RMS)
+    (hRMq : (S.toContSeq).r1 (1 / 2) (thetaB S N δ0) ≤ RMS)
+    (hRMq2 : (S.toContSeq).r1 (1 / 2) (thetaB S N δ0 / 2) ≤ RMS)
+    (hRMs8 : 32 * Real.log S.L / (thetaB S N δ0 / 4 / 2) ≤ RMS)
+    (hRMc8 : (S.toContSeq).r1 (1 / 2) (7 / 16 * (thetaB S N δ0 / 4)) ≤ RMS)
+    (hRMd2 : (S.toContSeq).r1 (1 / 2) (7 / 16 * (thetaB S N δ0 / 4) / 2) ≤ RMS)
+    (hRMds : 32 * Real.log S.L / (2 * (7 / 16 * (thetaB S N δ0 / 4))) ≤ RMS)
+    (hRMp2 : (S.toContSeq).r1 (1 / 2) (7 / 16 * thetaB S N δ0 / 2) ≤ RMS)
+    (hRMps : 32 * Real.log S.L / (2 * (7 / 16 * thetaB S N δ0)) ≤ RMS)
+    (hRMsum : (S.toContSeq).r1 (1 / 2) (7 / 32 * thetaB S N δ0) ≤ RMS)
+    (hRMsum2 : (S.toContSeq).r1 (1 / 2) (7 / 32 * thetaB S N δ0 / 2) ≤ RMS)
+    (hRMss : 32 * Real.log S.L / (2 * (7 / 32 * thetaB S N δ0)) ≤ RMS)
+    (hR1 : 1 ≤ S.R) (hRM2 : 2 * (S.L : ℝ) ≤ RMS) (hRMn : 2 * S.L ≤ S.R * S.L ^ S.mM)
+    (hcutS : 8 * Real.exp (-(2 * (kap0 S N δ0 * (((S.L ^ S.mM : ℕ) : ℝ) / S.L)))) *
+      Kbar S.L (kap0 S N δ0) (CIone S N δ0 (kap0 S N δ0)) Cbump ≤ 1 / 16)
+    {ε : ℝ} (hε0 : 0 < ε) (hε : ε ≤ 1) (hΘ : ThetaIMS S N δ0 (Cloc S.L) ε ≤ 1 / 2)
+    {δ : ℝ} (hδ : 0 ≤ δ) (hδθ : δ ≤ 1 / 4 * (7 / 32 * thetaB S N δ0)) (hδL : 16 * S.L * δ ≤ 1)
+    (ph : Site NF → ℝ) (hph : ∀ x x', |ph x - ph x'| ≤ δ * S.dF x x')
+    (QOp : Module.End ℂ (Fin 4 → Site NF → Mat)) {εQ : ℝ}
+    (hQ : ∀ A, |(pair1V S (expA S ph A) (QOp (expA S (fun x => -ph x) A))).re - Qnorm S A| ≤
+      εQ * (gradNorm S A + wnorm S A))
+    (hQ0 : ∀ A, |(pair1V S A (QOp A)).re - Qnorm S A| ≤ εQ * (gradNorm S A + wnorm S A))
+    (hc : 0 < (2 ^ 13 * Cloc S.L)⁻¹ - Econj S N δ0 α₁ η δ εQ)
+    (hc0 : 0 < (2 ^ 13 * Cloc S.L)⁻¹ - Econj S N δ0 α₁ η 0 εQ)
+    (J : Fin 4 → Site NF → Mat) (K : Fin 4 → Fin 4 → Site NF → Mat) :
+    Function.Bijective (TU S hG X W QOp) ∧
+      ∀ v, TU S hG X W QOp v = J + DsU S X K →
+        √(gradNorm S (expA S ph v) + wnorm S (expA S ph v)) ≤
+          ((2 ^ 13 * Cloc S.L)⁻¹ - Econj S N δ0 α₁ η δ εQ)⁻¹ *
+            (√(wInv S (expA S ph J)) + 3 * S.L * √(Knorm S ph K)) := by
+  have hRML : (S.L : ℝ) < RMS := by
+    have hL1 : (1 : ℝ) ≤ S.L := by exact_mod_cast S.Lpos
+    have h8 := H.hRM8
+    have h2 : (S.L : ℝ) ≤ (S.L : ℝ) ^ 2 := le_self_pow₀ hL1 (by norm_num)
+    linarith
+  have hα32 : α₁ ≤ 1 / 32 := by linarith
+  have hθ := H.thetaB_pos (N := N)
+  refine ⟨?_, fun v hv => ?_⟩
+  · -- the conjugated form at `φ = 0` is coercive
+    refine bij_of_coercive S (TU S hG X W QOp) hc0 fun A => ?_
+    have h := H.conj_U hG hα512 hM hR hRMb hRMs4 hsmallT hsmallT0 hRMθs hRMθc hRMc hRMa hRMq hRMq2 hRMs8 hRMc8
+      hRMd2 hRMds hRMp2 hRMps hRMsum hRMsum2 hRMss hR1 hRM2 hRMn hcutS hε0 hε hΘ le_rfl (by positivity) (by simp)
+      (fun _ => 0) (fun _ _ => by simp) (fun B C => pair1V S B (QOp C)) A
+      (by simp only [neg_zero, expA_zero]; exact hQ0 A)
+    simp only [neg_zero, expA_zero] at h
+    rw [pair_TU]
+    exact h
+  · -- `v = e^{-φ}u` with `u = e^φv`
+    set u := expA S ph v
+    have hvu : expA S (fun x => -ph x) u = v := by
+      funext μ x
+      simp only [u, expA, smul_smul, ← Complex.ofReal_mul, ← Real.exp_add, neg_add_cancel, Real.exp_zero,
+        Complex.ofReal_one, one_smul]
+    have h := H.conj_U hG hα512 hM hR hRMb hRMs4 hsmallT hsmallT0 hRMθs hRMθc hRMc hRMa hRMq hRMq2 hRMs8 hRMc8
+      hRMd2 hRMds hRMp2 hRMps hRMsum hRMsum2 hRMss hR1 hRM2 hRMn hcutS hε0 hε hΘ hδ hδθ hδL ph hph
+      (fun B C => pair1V S B (QOp C)) u (hQ u)
+    rw [← pair_TU, hvu, hv] at h
+    exact decay_of_conj S hRML H.hX H.hα0 hα32 hδ hδL ph hph hc u J K h
+
+end ScalarHyp
+
 end SFBounds
 end CoreLean
 

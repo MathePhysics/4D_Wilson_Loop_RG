@@ -442,3 +442,5 @@ import CoreLean.SFProjComp
 import CoreLean.SFLapComp
 import CoreLean.SFHessComp
 import CoreLean.SFVectorConj
+import CoreLean.LevelsBridge
+import CoreLean.AverageKernelsDiff

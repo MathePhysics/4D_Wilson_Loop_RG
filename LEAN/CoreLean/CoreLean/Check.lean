@@ -2504,3 +2504,15 @@ import CoreLean
 #print axioms CoreLean.SFBounds.hess_comp
 #print axioms CoreLean.SFBounds.pairP_triv_eq
 #print axioms CoreLean.SFBounds.ScalarHyp.conj_U
+#print axioms CoreLean.SFBounds.pair_TU
+#print axioms CoreLean.SFBounds.ScalarHyp.decay_U
+#print axioms CoreLean.LevelsBridge.up_add
+#print axioms CoreLean.LevelsBridge.up_ofs
+#print axioms CoreLean.LevelsBridge.up_img
+#print axioms CoreLean.LevelsBridge.base_up
+#print axioms CoreLean.LevelsBridge.mpow_level
+#print axioms CoreLean.LevelsBridge.mpow_oneC
+#print axioms CoreLean.LevelsBridge.levels_expX
+#print axioms CoreLean.RelativeAverage.kernel_step_diff
+#print axioms CoreLean.RelativeAverage.accum_le
+#print axioms CoreLean.RelativeAverage.average_kernels_diff
