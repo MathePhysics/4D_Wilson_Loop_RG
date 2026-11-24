@@ -1211,6 +1211,356 @@ theorem bij_of_coercive (T : (Fin 4 → Site NF → Mat) →ₗ[ℂ] (Fin 4 → 
     exact eq_zero_of_wnorm S A hw0
   exact ⟨hinj, LinearMap.injective_iff_surjective.1 hinj⟩
 
+open scoped Matrix in
+/-- **The covariant difference of a conjugated weighted form**: for `B(y) = (e^{φ(y)}u(y))^*`,
+`|D_{𝐔,ν}B(x)| ≤ e^{φ(x)}(|u(x + e_ν) - u(x)| + (2δL + 12α₁L)a_{j(x+e_ν)}^{-1}|u(x + e_ν)|)`. -/
+lemma hs_Dfw_conj_le (hRML : (S.L : ℝ) < ((S.R * S.L ^ S.mM : ℕ) : ℝ)) {X : Fin 4 → Site NF → Mat} {α₁ : ℝ}
+    (hX : RegField S X α₁) (hα0 : 0 ≤ α₁) (hα : α₁ ≤ 1 / 32) {δ : ℝ} (hδ : 0 ≤ δ) (hδL : 16 * S.L * δ ≤ 1)
+    (ph : Site NF → ℝ) (hph : ∀ x x', |ph x - ph x'| ≤ δ * S.dF x x') (u : Site NF → Mat) (ν : Fin 4)
+    (x : Site NF) :
+    hs (Dfw 1 (cfgX X) ν (fun y => (((Real.exp (ph y) : ℝ) : ℂ) • u y)ᴴ) x) ≤
+      Real.exp (ph x) * (hs (u (x + unit NF ν) - u x) +
+        (2 * δ * S.L + 12 * α₁ * S.L) * ((S.L : ℝ) ^ (S.toDomSeq).sc (x + unit NF ν))⁻¹ * hs (u (x + unit NF ν))) := by
+  have hL1 : (1 : ℝ) ≤ S.L := by exact_mod_cast S.Lpos
+  have hL0 : (0 : ℝ) < S.L := by linarith
+  have hRM1 : 1 ≤ S.R * S.L ^ S.mM := Nat.one_le_iff_ne_zero.2 (by have := S.one_le_R; have := S.Lpos; positivity)
+  set x' := x + unit NF ν
+  set s := ph x' - ph x
+  set r : ℝ := ((S.L : ℝ) ^ (S.toDomSeq).sc x')⁻¹
+  have hr0 : 0 ≤ r := by positivity
+  have hr1 : r ≤ 1 := inv_le_one_of_one_le₀ (one_le_pow₀ hL1)
+  set i := min ((S.toDomSeq).sc x) ((S.toDomSeq).sc x')
+  have h1 := hX.hA i x ν (S.toDomSeq.Ω_anti (min_le_left _ _) (S.toDomSeq.mem_sc x))
+    (S.toDomSeq.Ω_anti (min_le_right _ _) (S.toDomSeq.mem_sc x'))
+  have hXb : ‖X ν x‖ ≤ α₁ * S.L * r := by
+    have hsc : (S.toDomSeq).sc x' ≤ (S.toDomSeq).sc x + 1 := (PartitionUnity.sc_unit S hRML x ν).1
+    have h2 : ((S.L : ℝ) ^ i)⁻¹ ≤ S.L * r := by
+      simp only [r]
+      rw [← div_eq_mul_inv, le_div_iff₀ (by positivity), ← div_eq_inv_mul, div_le_iff₀ (by positivity)]
+      rw [show (S.L : ℝ) * (S.L : ℝ) ^ i = (S.L : ℝ) ^ (i + 1) by ring]
+      exact pow_le_pow_right₀ hL1 (by simp only [i]; omega)
+    calc ‖X ν x‖ ≤ α₁ * ((S.L : ℝ) ^ i)⁻¹ := h1
+      _ ≤ α₁ * (S.L * r) := mul_le_mul_of_nonneg_left h2 hα0
+      _ = α₁ * S.L * r := by ring
+  have hXs : ‖X ν x‖ ≤ 1 / 32 := by
+    have hi : ((S.L : ℝ) ^ i)⁻¹ ≤ 1 := inv_le_one_of_one_le₀ (one_le_pow₀ hL1)
+    calc ‖X ν x‖ ≤ α₁ * ((S.L : ℝ) ^ i)⁻¹ := h1
+      _ ≤ α₁ * 1 := mul_le_mul_of_nonneg_left hi hα0
+      _ ≤ 1 / 32 := by linarith
+  have hsb : |s| ≤ δ * S.L * r := by
+    have h1 := hph x' x
+    have h2 := (S.wdist_unit_le_sc hRM1 x ν).2
+    rw [S.dF_comm] at h1
+    calc |s| ≤ δ * S.dF x x' := h1
+      _ ≤ δ * (S.L * r) := mul_le_mul_of_nonneg_left h2 hδ
+      _ = δ * S.L * r := by ring
+  have hs1 : |s| ≤ 1 / 16 := by
+    have : δ * S.L * r ≤ δ * S.L * 1 := mul_le_mul_of_nonneg_left hr1 (by positivity)
+    linarith
+  -- the split of the difference
+  set B : Site NF → Mat := fun y => (((Real.exp (ph y) : ℝ) : ℂ) • u y)ᴴ
+  have hsplit := Dfw_split S X ν B x
+  rw [hsplit]
+  refine (hs_add_le _ _).trans ?_
+  have hB : ∀ y, B y = ((Real.exp (ph y) : ℝ) : ℂ) • (u y)ᴴ := fun y => by
+    simp only [B, Matrix.conjTranspose_smul, Complex.star_def, Complex.conj_ofReal]
+  have hBs : ∀ y, hs (B y) = Real.exp (ph y) * hs (u y) := fun y => by
+    rw [hB, RegularAverages.hs_smul, Complex.norm_real, Real.norm_eq_abs, abs_of_pos (Real.exp_pos _),
+      hs_conjTranspose]
+  -- the difference of the weighted values
+  have hd : hs (B x' - B x) ≤ Real.exp (ph x) * (hs (u x' - u x) + 2 * |s| * hs (u x')) := by
+    have e : B x' - B x = (((Real.exp (ph x) : ℝ) : ℂ) • ((u x' - u x) + ((Real.exp s - 1 : ℝ) : ℂ) • u x'))ᴴ := by
+      simp only [B, ← Matrix.conjTranspose_sub]
+      congr 1
+      have : Real.exp (ph x') = Real.exp (ph x) * Real.exp s := by rw [← Real.exp_add]; congr 1; simp only [s]; ring
+      rw [this]; push_cast; module
+    rw [e, hs_conjTranspose, RegularAverages.hs_smul, Complex.norm_real, Real.norm_eq_abs,
+      abs_of_pos (Real.exp_pos _)]
+    refine mul_le_mul_of_nonneg_left ((hs_add_le _ _).trans ?_) (Real.exp_pos _).le
+    rw [RegularAverages.hs_smul, Complex.norm_real, Real.norm_eq_abs]
+    have := Real.abs_exp_sub_one_le (show |s| ≤ 1 by linarith)
+    have := hs_nonneg (u x')
+    nlinarith
+  -- the transport
+  have ht : hs (Ad (expU (Complex.I • X ν x)) (B x') - B x') ≤ Real.exp (ph x) * (12 * ‖X ν x‖ * hs (u x')) := by
+    refine (hs_Ad_exp_sub_le hXs (B x')).trans ?_
+    rw [hBs]
+    have hes : Real.exp (ph x') ≤ 2 * Real.exp (ph x) := by
+      have : Real.exp (ph x') = Real.exp (ph x) * Real.exp s := by rw [← Real.exp_add]; congr 1; simp only [s]; ring
+      rw [this]
+      have h2 := Real.abs_exp_sub_one_le (show |s| ≤ 1 by linarith)
+      have h3 : Real.exp s ≤ 2 := by have := (abs_le.1 h2).2; linarith
+      nlinarith [Real.exp_pos (ph x)]
+    have h0 : 0 ≤ 6 * ‖X ν x‖ * hs (u x') := by have := hs_nonneg (u x'); positivity
+    nlinarith
+  -- assemble
+  have hfin : hs (u x' - u x) + 2 * |s| * hs (u x') + 12 * ‖X ν x‖ * hs (u x') ≤
+      hs (u x' - u x) + (2 * δ * S.L + 12 * α₁ * S.L) * r * hs (u x') := by
+    have h0 := hs_nonneg (u x')
+    have h2 : 2 * |s| * hs (u x') ≤ 2 * (δ * S.L * r) * hs (u x') :=
+      mul_le_mul_of_nonneg_right (mul_le_mul_of_nonneg_left hsb (by norm_num)) h0
+    have h3 : 12 * ‖X ν x‖ * hs (u x') ≤ 12 * (α₁ * S.L * r) * hs (u x') :=
+      mul_le_mul_of_nonneg_right (mul_le_mul_of_nonneg_left hXb (by norm_num)) h0
+    have e : (2 * δ * S.L + 12 * α₁ * S.L) * r * hs (u x') = 2 * (δ * S.L * r) * hs (u x') +
+        12 * (α₁ * S.L * r) * hs (u x') := by ring
+    linarith
+  calc hs (B x' - B x) + hs (Ad (expU (Complex.I • X ν x)) (B x') - B x')
+      ≤ Real.exp (ph x) * (hs (u x' - u x) + 2 * |s| * hs (u x')) + Real.exp (ph x) * (12 * ‖X ν x‖ * hs (u x')) :=
+        add_le_add hd ht
+    _ = Real.exp (ph x) * (hs (u x' - u x) + 2 * |s| * hs (u x') + 12 * ‖X ν x‖ * hs (u x')) := by ring
+    _ ≤ Real.exp (ph x) * (hs (u x' - u x) + (2 * δ * S.L + 12 * α₁ * S.L) * r * hs (u x')) :=
+        mul_le_mul_of_nonneg_left hfin (Real.exp_pos _).le
+
+/-- `D^*_𝐔K = Σ_νD^*_{𝐔,ν}K_ν` for a family `K = (K_ν)` of `1`-forms. -/
+def DsU (X : Fin 4 → Site NF → Mat) (K : Fin 4 → Fin 4 → Site NF → Mat) : Fin 4 → Site NF → Mat :=
+  fun μ x => ∑ ν, Dbw 1 (cfgX X) ν (K ν μ) x
+
+/-- `‖J‖²_{w⁻¹} = Σ_xa_{j(x)}²|J(x)|²`. -/
+def wInv (J : Fin 4 → Site NF → Mat) : ℝ := ∑ x, ((S.L ^ (S.toDomSeq).sc x : ℕ) : ℝ) ^ 2 * ∑ μ, ‖emb (N := N) (J μ x)‖ ^ 2
+
+/-- `‖e^φK‖²`. -/
+def Knorm (ph : Site NF → ℝ) (K : Fin 4 → Fin 4 → Site NF → Mat) : ℝ :=
+  ∑ ν, ∑ μ, ∑ x, Real.exp (2 * ph x) * ‖emb (N := N) (K ν μ x)‖ ^ 2
+
+omit S in
+lemma cs_prod {α β : Type*} [Fintype α] [Fintype β] (f g : α → β → ℝ) :
+    ∑ a, ∑ b, f a b * g a b ≤ √(∑ a, ∑ b, f a b ^ 2) * √(∑ a, ∑ b, g a b ^ 2) := by
+  have h := Real.sum_mul_le_sqrt_mul_sqrt (Finset.univ : Finset (α × β)) (fun p => f p.1 p.2) (fun p => g p.1 p.2)
+  simpa only [Fintype.sum_prod_type] using h
+
+/-- **The source term `J`**: `|⟨(e^φu)^*, J⟩| ≤ ‖u‖_w‖e^φJ‖_{w⁻¹}`. -/
+lemma pairJ_le (ph : Site NF → ℝ) (u J : Fin 4 → Site NF → Mat) :
+    |(pair1V S (expA S ph u) J).re| ≤ √(wnorm S u) * √(wInv S (expA S ph J)) := by
+  set w : Site NF → ℝ := fun x => ((S.L : ℝ) ^ (S.toDomSeq).sc x)⁻¹
+  have hw : ∀ x, 0 < w x := fun x => by have := S.Lpos; positivity
+  unfold pair1V
+  rw [Complex.re_sum]
+  refine (Finset.abs_sum_le_sum_abs _ _).trans ?_
+  have h1 : ∀ μ x, |(inner ℂ (emb (N := N) (expA S ph u μ x)) (emb (N := N) (J μ x))).re| ≤
+      (w x * ‖emb (N := N) (u μ x)‖) * (w x)⁻¹ * ‖emb (N := N) (expA S ph J μ x)‖ := by
+    intro μ x
+    have e1 : emb (N := N) (expA S ph u μ x) = ((Real.exp (ph x) : ℝ) : ℂ) • emb (u μ x) := by simp [expA, emb_smul']
+    have e2 : emb (N := N) (expA S ph J μ x) = ((Real.exp (ph x) : ℝ) : ℂ) • emb (J μ x) := by simp [expA, emb_smul']
+    rw [e1, e2, norm_smul, Complex.norm_real, Real.norm_eq_abs, abs_of_pos (Real.exp_pos _)]
+    refine (Complex.abs_re_le_norm _).trans ?_
+    rw [inner_smul_left, norm_mul, Complex.norm_conj, Complex.norm_real, Real.norm_eq_abs,
+      abs_of_pos (Real.exp_pos _)]
+    have := norm_inner_le_norm (𝕜 := ℂ) (emb (N := N) (u μ x)) (emb (N := N) (J μ x))
+    have hwx := hw x
+    rw [show w x * ‖emb (N := N) (u μ x)‖ * (w x)⁻¹ * (Real.exp (ph x) * ‖emb (N := N) (J μ x)‖) =
+      Real.exp (ph x) * (‖emb (N := N) (u μ x)‖ * ‖emb (N := N) (J μ x)‖) by field_simp]
+    exact mul_le_mul_of_nonneg_left this (Real.exp_pos _).le
+  calc ∑ μ, |(∑ x, inner ℂ (emb (N := N) (expA S ph u μ x)) (emb (N := N) (J μ x))).re|
+      ≤ ∑ μ, ∑ x, (w x * ‖emb (N := N) (u μ x)‖) * ((w x)⁻¹ * ‖emb (N := N) (expA S ph J μ x)‖) := by
+        refine Finset.sum_le_sum fun μ _ => ?_
+        rw [Complex.re_sum]
+        refine (Finset.abs_sum_le_sum_abs _ _).trans (Finset.sum_le_sum fun x _ => ?_)
+        rw [← mul_assoc]; exact h1 μ x
+    _ ≤ √(∑ μ, ∑ x, (w x * ‖emb (N := N) (u μ x)‖) ^ 2) *
+          √(∑ μ, ∑ x, ((w x)⁻¹ * ‖emb (N := N) (expA S ph J μ x)‖) ^ 2) := cs_prod _ _
+    _ = √(wnorm S u) * √(wInv S (expA S ph J)) := by
+        congr 1
+        · congr 1
+          unfold wnorm
+          rw [Finset.sum_comm]
+          refine Finset.sum_congr rfl fun x _ => ?_
+          rw [Finset.mul_sum]
+          refine Finset.sum_congr rfl fun μ _ => ?_
+          simp only [w]; push_cast; rw [mul_pow, inv_pow]
+        · congr 1
+          unfold wInv
+          rw [Finset.sum_comm]
+          refine Finset.sum_congr rfl fun x _ => ?_
+          rw [Finset.mul_sum]
+          refine Finset.sum_congr rfl fun μ _ => ?_
+          simp only [w]; push_cast; rw [mul_pow, inv_inv]
+
+open scoped Matrix in
+/-- `Σ_xtr(B(x)(D^*_{𝐔,ν}K)(x)) = Σ_xtr((D_{𝐔,ν}B)(x)K(x))` (`pair0_Dfw` with `a = 1`). -/
+lemma trace_Dbw [NeZero N] (X : Fin 4 → Site NF → Mat) (ν : Fin 4) (B K : Site NF → Mat) :
+    ∑ x, (B x * Dbw 1 (cfgX X) ν K x).trace = ∑ x, (Dfw 1 (cfgX X) ν B x * K x).trace := by
+  have h := pair0_Dfw (1 : ℂ) (cfgX X) ν B K
+  unfold pair0 ntr at h
+  simp only [one_pow, one_mul] at h
+  have hN : (N : ℂ) ≠ 0 := by exact_mod_cast NeZero.ne N
+  rw [← Finset.mul_sum, ← Finset.mul_sum] at h
+  exact (mul_left_cancel₀ (inv_ne_zero hN) h).symm
+
+open scoped Matrix in
+/-- **The source term `D^*_𝐔K`**: `|⟨(e^φu)^*, D^*_𝐔K⟩| ≤ 3LN(u)‖e^φK‖`. -/
+lemma pairK_le [NeZero N] (hRML : (S.L : ℝ) < ((S.R * S.L ^ S.mM : ℕ) : ℝ)) {X : Fin 4 → Site NF → Mat}
+    {α₁ : ℝ} (hX : RegField S X α₁) (hα0 : 0 ≤ α₁) (hα : α₁ ≤ 1 / 32) {δ : ℝ} (hδ : 0 ≤ δ)
+    (hδL : 16 * S.L * δ ≤ 1) (ph : Site NF → ℝ) (hph : ∀ x x', |ph x - ph x'| ≤ δ * S.dF x x')
+    (u : Fin 4 → Site NF → Mat) (K : Fin 4 → Fin 4 → Site NF → Mat) :
+    |(pair1V S (expA S ph u) (DsU S X K)).re| ≤
+      3 * S.L * √(gradNorm S u + wnorm S u) * √(Knorm S ph K) := by
+  have hL3 : (3 : ℝ) ≤ S.L := by exact_mod_cast S.three_le_L
+  have hL0 : (0 : ℝ) < S.L := by linarith
+  have hN : (0 : ℝ) < N := by exact_mod_cast Nat.pos_of_ne_zero (NeZero.ne N)
+  set B : Fin 4 → Site NF → Mat := fun μ y => (((Real.exp (ph y) : ℝ) : ℂ) • u μ y)ᴴ
+  set cD := 2 * δ * S.L + 12 * α₁ * S.L
+  set r : Site NF → ℝ := fun y => ((S.L : ℝ) ^ (S.toDomSeq).sc y)⁻¹
+  -- the summation by parts
+  have e1 : pair1V S (expA S ph u) (DsU S X K) =
+      ∑ μ, ∑ ν, ∑ x, (Dfw 1 (cfgX X) ν (B μ) x * K ν μ x).trace := by
+    unfold pair1V DsU
+    refine Finset.sum_congr rfl fun μ _ => ?_
+    simp only [inner_emb, Matrix.mul_sum, Matrix.trace_sum]
+    rw [Finset.sum_comm]
+    refine Finset.sum_congr rfl fun ν _ => ?_
+    rw [← trace_Dbw]
+    rfl
+  -- the bound of a term
+  have hterm : ∀ μ ν x, ‖(Dfw 1 (cfgX X) ν (B μ) x * K ν μ x).trace‖ ≤
+      (√N * (Real.exp (ph x) * hs (K ν μ x))) *
+        (√N * (hs (u μ (x + unit NF ν) - u μ x) + cD * r (x + unit NF ν) * hs (u μ (x + unit NF ν)))) := by
+    intro μ ν x
+    have htr : ‖(Dfw 1 (cfgX X) ν (B μ) x * K ν μ x).trace‖ ≤
+        N * (hs (Dfw 1 (cfgX X) ν (B μ) x) * hs (K ν μ x)) := by
+      have h := norm_ntr_mul_le (Dfw 1 (cfgX X) ν (B μ) x) (K ν μ x)
+      unfold ntr at h
+      rw [norm_mul, norm_inv, Complex.norm_natCast] at h
+      rw [inv_mul_le_iff₀ hN] at h
+      exact h
+    have hD := hs_Dfw_conj_le S hRML hX hα0 hα hδ hδL ph hph (u μ) ν x
+    have hK0 := hs_nonneg (K ν μ x)
+    refine htr.trans ?_
+    have e : (√N * (Real.exp (ph x) * hs (K ν μ x))) *
+        (√N * (hs (u μ (x + unit NF ν) - u μ x) + cD * r (x + unit NF ν) * hs (u μ (x + unit NF ν)))) =
+        N * ((Real.exp (ph x) * (hs (u μ (x + unit NF ν) - u μ x) + cD * r (x + unit NF ν) *
+          hs (u μ (x + unit NF ν)))) * hs (K ν μ x)) := by
+      have hNN := Real.mul_self_sqrt (Nat.cast_nonneg N : (0 : ℝ) ≤ N)
+      linear_combination (Real.exp (ph x) * (hs (u μ (x + unit NF ν) - u μ x) + cD * r (x + unit NF ν) *
+          hs (u μ (x + unit NF ν))) * hs (K ν μ x)) * hNN
+    rw [e]
+    exact mul_le_mul_of_nonneg_left (mul_le_mul_of_nonneg_right hD hK0) hN.le
+  -- the test of Cauchy and Schwarz
+  have hcs := cs_prod (α := Fin 4 × Fin 4) (β := Site NF)
+    (fun p x => √N * (Real.exp (ph x) * hs (K p.2 p.1 x)))
+    (fun p x => √N * (hs (u p.1 (x + unit NF p.2) - u p.1 x) + cD * r (x + unit NF p.2) * hs (u p.1 (x + unit NF p.2))))
+  have hKs : ∑ p : Fin 4 × Fin 4, ∑ x, (√N * (Real.exp (ph x) * hs (K p.2 p.1 x))) ^ 2 = Knorm S ph K := by
+    unfold Knorm
+    rw [Fintype.sum_prod_type, Finset.sum_comm]
+    refine Finset.sum_congr rfl fun ν _ => Finset.sum_congr rfl fun μ _ => Finset.sum_congr rfl fun x _ => ?_
+    rw [mul_pow, mul_pow, Real.sq_sqrt (Nat.cast_nonneg _), norm_emb_sq, hs_sq, ← Real.exp_nat_mul]
+    push_cast; ring
+  -- the second factor
+  have hcD : cD ≤ S.L := by
+    simp only [cD]
+    have h1 : 2 * δ * S.L ≤ 1 / 8 := by nlinarith
+    have h2 : 12 * α₁ * S.L ≤ 3 / 8 * S.L := by nlinarith
+    linarith
+  have hcD0 : 0 ≤ cD := by simp only [cD]; positivity
+  have hg : ∑ p : Fin 4 × Fin 4, ∑ x, (√N * (hs (u p.1 (x + unit NF p.2) - u p.1 x) +
+      cD * r (x + unit NF p.2) * hs (u p.1 (x + unit NF p.2)))) ^ 2 ≤ 9 * (S.L : ℝ) ^ 2 * (gradNorm S u + wnorm S u) := by
+    have hpt : ∀ p : Fin 4 × Fin 4, ∀ x, (√N * (hs (u p.1 (x + unit NF p.2) - u p.1 x) +
+        cD * r (x + unit NF p.2) * hs (u p.1 (x + unit NF p.2)))) ^ 2 ≤
+        2 * gbond S u p.1 x p.2 + 2 * (S.L : ℝ) ^ 2 * (r (x + unit NF p.2) ^ 2 * ‖emb (N := N) (u p.1 (x + unit NF p.2))‖ ^ 2) := by
+      intro p x
+      have hg' : gbond S u p.1 x p.2 = N * hs (u p.1 (x + unit NF p.2) - u p.1 x) ^ 2 := by
+        unfold gbond; rw [← emb_sub', norm_emb_sq, hs_sq]
+      have he : ‖emb (N := N) (u p.1 (x + unit NF p.2))‖ ^ 2 = N * hs (u p.1 (x + unit NF p.2)) ^ 2 := by
+        rw [norm_emb_sq, hs_sq]
+      rw [hg', he, mul_pow, Real.sq_sqrt (Nat.cast_nonneg _)]
+      set a1 := hs (u p.1 (x + unit NF p.2) - u p.1 x)
+      set a2 := r (x + unit NF p.2) * hs (u p.1 (x + unit NF p.2))
+      have ha2 : r (x + unit NF p.2) ^ 2 * (N * hs (u p.1 (x + unit NF p.2)) ^ 2) = N * a2 ^ 2 := by simp only [a2]; ring
+      rw [ha2]
+      have h1 : (a1 + cD * r (x + unit NF p.2) * hs (u p.1 (x + unit NF p.2))) = a1 + cD * a2 := by simp only [a2]; ring
+      rw [h1]
+      have h2 : (a1 + cD * a2) ^ 2 ≤ 2 * a1 ^ 2 + 2 * cD ^ 2 * a2 ^ 2 := by nlinarith [sq_nonneg (a1 - cD * a2)]
+      have h3 : cD ^ 2 ≤ (S.L : ℝ) ^ 2 := pow_le_pow_left₀ hcD0 hcD 2
+      have h4 : 2 * cD ^ 2 * a2 ^ 2 ≤ 2 * (S.L : ℝ) ^ 2 * a2 ^ 2 :=
+        mul_le_mul_of_nonneg_right (by linarith) (sq_nonneg _)
+      have h5 := mul_le_mul_of_nonneg_left (h2.trans (add_le_add le_rfl h4)) hN.le
+      nlinarith
+    refine (Finset.sum_le_sum fun p _ => Finset.sum_le_sum fun x _ => hpt p x).trans ?_
+    -- the sums of the two parts
+    have hsg : ∑ p : Fin 4 × Fin 4, ∑ x, gbond S u p.1 x p.2 = gradNorm S u := by
+      unfold gradNorm
+      rw [Fintype.sum_prod_type]
+      refine Finset.sum_congr rfl fun μ _ => ?_
+      rw [Finset.sum_comm]
+    have hsw : ∑ p : Fin 4 × Fin 4, ∑ x, r (x + unit NF p.2) ^ 2 * ‖emb (N := N) (u p.1 (x + unit NF p.2))‖ ^ 2 =
+        4 * wnorm S u := by
+      rw [Fintype.sum_prod_type]
+      have hsh : ∀ μ ν, ∑ x, r (x + unit NF ν) ^ 2 * ‖emb (N := N) (u μ (x + unit NF ν))‖ ^ 2 =
+          ∑ x, r x ^ 2 * ‖emb (N := N) (u μ x)‖ ^ 2 :=
+        fun μ ν => sum_shift_site S (fun x => r x ^ 2 * ‖emb (N := N) (u μ x)‖ ^ 2) _
+      simp only [hsh, Finset.sum_const, Finset.card_univ, Fintype.card_fin, nsmul_eq_mul]
+      unfold wnorm
+      rw [← Finset.mul_sum, Finset.sum_comm]
+      congr 1
+      refine Finset.sum_congr rfl fun x _ => ?_
+      rw [Finset.mul_sum]
+      refine Finset.sum_congr rfl fun μ _ => ?_
+      simp only [r]; push_cast; rw [inv_pow]
+    simp only [Finset.sum_add_distrib, ← Finset.mul_sum, hsg, hsw]
+    have hg0 := gradNorm_nonneg' S u
+    have hw0 := wnorm_nonneg' S u
+    have h1 : 2 * gradNorm S u ≤ 9 * (S.L : ℝ) ^ 2 * gradNorm S u :=
+      mul_le_mul_of_nonneg_right (by nlinarith) hg0
+    have h2 := mul_nonneg (sq_nonneg (S.L : ℝ)) hw0
+    linarith
+  -- assemble
+  rw [e1]
+  have hN1 : ‖∑ μ, ∑ ν, ∑ x, (Dfw 1 (cfgX X) ν (B μ) x * K ν μ x).trace‖ ≤
+      ∑ p : Fin 4 × Fin 4, ∑ x, (√N * (Real.exp (ph x) * hs (K p.2 p.1 x))) *
+        (√N * (hs (u p.1 (x + unit NF p.2) - u p.1 x) + cD * r (x + unit NF p.2) * hs (u p.1 (x + unit NF p.2)))) := by
+    rw [Fintype.sum_prod_type]
+    refine (norm_sum_le _ _).trans (Finset.sum_le_sum fun μ _ => (norm_sum_le _ _).trans
+      (Finset.sum_le_sum fun ν _ => (norm_sum_le _ _).trans (Finset.sum_le_sum fun x _ => hterm μ ν x)))
+  calc |(∑ μ, ∑ ν, ∑ x, (Dfw 1 (cfgX X) ν (B μ) x * K ν μ x).trace).re|
+      ≤ ‖∑ μ, ∑ ν, ∑ x, (Dfw 1 (cfgX X) ν (B μ) x * K ν μ x).trace‖ := Complex.abs_re_le_norm _
+    _ ≤ _ := hN1
+    _ ≤ √(Knorm S ph K) * √(9 * (S.L : ℝ) ^ 2 * (gradNorm S u + wnorm S u)) := by
+        rw [← hKs]; exact hcs.trans (mul_le_mul_of_nonneg_left (Real.sqrt_le_sqrt hg) (Real.sqrt_nonneg _))
+    _ = 3 * S.L * √(gradNorm S u + wnorm S u) * √(Knorm S ph K) := by
+        rw [Real.sqrt_mul (by positivity), Real.sqrt_mul (by positivity), Real.sqrt_sq hL0.le,
+          show (9 : ℝ) = 3 ^ 2 by norm_num, Real.sqrt_sq (by norm_num)]
+        ring
+
+lemma pair1V_add (B J D : Fin 4 → Site NF → Mat) : pair1V S B (J + D) = pair1V S B J + pair1V S B D := by
+  unfold pair1V
+  rw [← Finset.sum_add_distrib]
+  refine Finset.sum_congr rfl fun μ _ => ?_
+  rw [← Finset.sum_add_distrib]
+  refine Finset.sum_congr rfl fun x _ => ?_
+  simp only [Pi.add_apply, emb_add', inner_add_right]
+
+/-- **eq:sf-vector-decay** from the conjugated lower bound: if `Re⟨(e^φu)^*, J + D^*_𝐔K⟩ ≥ cN(u)²`, then
+`N(u) ≤ c⁻¹(‖e^φJ‖_{w⁻¹} + 3L‖e^φK‖)`. Applied to `u = e^φG(J + D^*_𝐔K)`, for which the form is
+`⟨(e^φu)^*, Δ_𝖺(𝐔)(e^{-φ}u)⟩`, this is the decay of `G`. -/
+theorem decay_of_conj [NeZero N] (hRML : (S.L : ℝ) < ((S.R * S.L ^ S.mM : ℕ) : ℝ)) {X : Fin 4 → Site NF → Mat}
+    {α₁ : ℝ} (hX : RegField S X α₁) (hα0 : 0 ≤ α₁) (hα : α₁ ≤ 1 / 32) {δ : ℝ} (hδ : 0 ≤ δ)
+    (hδL : 16 * S.L * δ ≤ 1) (ph : Site NF → ℝ) (hph : ∀ x x', |ph x - ph x'| ≤ δ * S.dF x x') {c : ℝ} (hc : 0 < c)
+    (u J : Fin 4 → Site NF → Mat) (K : Fin 4 → Fin 4 → Site NF → Mat)
+    (hcoer : c * (gradNorm S u + wnorm S u) ≤ (pair1V S (expA S ph u) (J + DsU S X K)).re) :
+    √(gradNorm S u + wnorm S u) ≤ c⁻¹ * (√(wInv S (expA S ph J)) + 3 * S.L * √(Knorm S ph K)) := by
+  set n := √(gradNorm S u + wnorm S u)
+  have hg0 := gradNorm_nonneg' S u
+  have hw0 := wnorm_nonneg' S u
+  have hn0 : 0 ≤ n := Real.sqrt_nonneg _
+  have hn2 : n ^ 2 = gradNorm S u + wnorm S u := Real.sq_sqrt (by linarith)
+  have hJ := pairJ_le S ph u J
+  have hK := pairK_le S hRML hX hα0 hα hδ hδL ph hph u K
+  have hwn : √(wnorm S u) ≤ n := Real.sqrt_le_sqrt (by linarith)
+  rw [pair1V_add, Complex.add_re] at hcoer
+  have h1 : c * n ^ 2 ≤ n * (√(wInv S (expA S ph J)) + 3 * S.L * √(Knorm S ph K)) := by
+    rw [hn2]
+    have hJ' : (pair1V S (expA S ph u) J).re ≤ n * √(wInv S (expA S ph J)) :=
+      (le_abs_self _).trans (hJ.trans (mul_le_mul_of_nonneg_right hwn (Real.sqrt_nonneg _)))
+    have hK' : (pair1V S (expA S ph u) (DsU S X K)).re ≤ 3 * S.L * n * √(Knorm S ph K) := (le_abs_self _).trans hK
+    nlinarith
+  rcases eq_or_lt_of_le hn0 with h0 | hpos
+  · rw [← h0]; have := Real.sqrt_nonneg (wInv S (expA S ph J)); have := Real.sqrt_nonneg (Knorm S ph K)
+    have hL : (0 : ℝ) ≤ S.L := Nat.cast_nonneg _
+    positivity
+  · rw [le_inv_mul_iff₀ hc]
+    have : c * n ^ 2 = n * (c * n) := by ring
+    rw [this] at h1
+    exact le_of_mul_le_mul_left h1 hpos
+
 end SFBounds
 end CoreLean
 
