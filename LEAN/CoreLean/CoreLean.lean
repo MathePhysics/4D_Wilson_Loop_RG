@@ -438,3 +438,4 @@ import CoreLean.SFIMSBounds
 import CoreLean.SFCubeData
 import CoreLean.SFVectorDecay
 import CoreLean.SFProjDiff
+import CoreLean.SFProjComp

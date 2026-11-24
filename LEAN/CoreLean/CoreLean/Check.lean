@@ -2486,3 +2486,10 @@ import CoreLean
 #print axioms CoreLean.SFBounds.ScalarHyp.kerT_diff_le
 #print axioms CoreLean.SFBounds.ScalarHyp.chain_mid
 #print axioms CoreLean.SFBounds.ScalarHyp.Tinv_diff_le
+#print axioms CoreLean.SFBounds.ScalarHyp.PdiffB4
+#print axioms CoreLean.SFBounds.ScalarHyp.Pdiff
+#print axioms CoreLean.SFBounds.ScalarHyp.P_L2
+#print axioms CoreLean.SFBounds.ScalarHyp.Pdiff_L2
+#print axioms CoreLean.SFBounds.dsU_diff_L2
+#print axioms CoreLean.SFBounds.ScalarHyp.Pcomp
+#print axioms CoreLean.SFBounds.ScalarHyp.P_conjU
