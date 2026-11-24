@@ -2493,3 +2493,7 @@ import CoreLean
 #print axioms CoreLean.SFBounds.dsU_diff_L2
 #print axioms CoreLean.SFBounds.ScalarHyp.Pcomp
 #print axioms CoreLean.SFBounds.ScalarHyp.P_conjU
+#print axioms CoreLean.SFBounds.pair1V_Ds2
+#print axioms CoreLean.SFBounds.pair1V_D0
+#print axioms CoreLean.SFBounds.curl_comp
+#print axioms CoreLean.SFBounds.div_comp

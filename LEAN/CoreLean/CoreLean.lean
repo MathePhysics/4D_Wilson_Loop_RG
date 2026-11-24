@@ -439,3 +439,4 @@ import CoreLean.SFCubeData
 import CoreLean.SFVectorDecay
 import CoreLean.SFProjDiff
 import CoreLean.SFProjComp
+import CoreLean.SFLapComp
