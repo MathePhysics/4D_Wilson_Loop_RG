@@ -11,6 +11,7 @@ import CoreLean.MultiscaleAverages
 import CoreLean.AxialStraightLattice
 import CoreLean.RelativeAverageTrivial
 import CoreLean.RelativeAverageLevels
+import CoreLean.AverageKernelsDiff
 
 open Finset
 open scoped Matrix.Norms.L2Operator
@@ -192,6 +193,97 @@ theorem levels_expX (G : GaugeGroup N) (hGc : IsClosed G.mats) (hN : 1 ≤ N) (h
     le_rfl ht0 le_rfl hc.le htc hc.le l hl
   obtain ⟨⟨A'l, hA, hAn⟩, -, -⟩ := hlev.1 ρ x hx1 hx2 hx3
   exact ⟨A'l, by simpa [oneC] using hA, hAn⟩
+
+/-! ### The difference of the composite linear parts at `e^{iX}` and at `id` -/
+
+lemma oneC_gauge {n : ℕ} [NeZero n] : (oneC : Config N n).IsGaugeField := fun _ _ => by
+  simpa [oneC] using (Matrix.unitaryGroup (Fin N) ℂ).one_mem
+
+lemma qcomp_succ_apply (U : Config N (nn h m k 0)) (B : Fin 4 → Site (nn h m k 0) → Matrix (Fin N) (Fin N) ℂ)
+    (l : ℕ) (ρ : Fin 4) (y : Site (nn h m k (l + 1))) :
+    Qcomp h m k (fun _ => True) (fun W => LogM (W : Matrix (Fin N) (Fin N) ℂ)) U (l + 1) B ρ y =
+      Qlin (Mpow h m k (fun _ => True) (fun W => LogM (W : Matrix (Fin N) (Fin N) ℂ)) U l) (up h m k l y) ρ h
+        (Qcomp h m k (fun _ => True) (fun W => LogM (W : Matrix (Fin N) (Fin N) ℂ)) U l B) := rfl
+
+open BoxGeometry Classical in
+/-- **`Q_n(e^{iX}) - Q_n(id)` in the per-level norms**: with `E_l = Lˡ(Q_l(e^{iX}) - Q_l(id))B` and `‖X‖ ≤ t'L^{-n}`
+on the region of the level `0`, `t', K_ot' ≤ c`, `‖E_n‖_{1,n} ≤ (e^{Σ_l 8L³CK_ot'L^{-(n-l)}} - 1)L^{-3n}‖B‖_{1,0}`
+(`levels_expX` and `average_kernels_diff`). -/
+theorem qcomp_diff (G : GaugeGroup N) (hGc : IsClosed G.mats) (hN : 1 ≤ N) (hh : 1 ≤ h) :
+    ∃ c Ko C : ℝ, 0 < c ∧ 0 ≤ Ko ∧ 0 ≤ C ∧ ∀ (nl : ℕ) (μ : Fin 4), nl ≤ k → (∀ l, 4 * h + 4 ≤ nn h m k l) →
+      ∀ (c0 : Fin 4 → ℤ) (X B : Fin 4 → Site (nn h m k 0) → Matrix (Fin N) (Fin N) ℂ) (t' : ℝ),
+      (∀ ρ x, Lat (Lz h) 0 x → Rg h nl μ 0 x → Rg h nl μ 0 (x + Lz h ^ 0 • Pi.single ρ 1) →
+        ‖X ρ (img h (baseOf h m k c0 nl 0) 0 x)‖ ≤ t' * ((((2 * h + 1 : ℕ) : ℝ)) ^ nl)⁻¹) →
+      0 ≤ t' → t' ≤ c → Ko * t' ≤ c →
+      ell1 h nl μ nl (fun x ν => ‖(((((2 * h + 1 : ℕ) : ℂ)) ^ nl) •
+          (Qcomp h m k (fun _ => True) (fun W => LogM (W : Matrix (Fin N) (Fin N) ℂ)) (moveC oneC X) nl B -
+            Qcomp h m k (fun _ => True) (fun W => LogM (W : Matrix (Fin N) (Fin N) ℂ)) oneC nl B)) ν
+              (img h (baseOf h m k c0 nl nl) nl x)‖) ≤
+        (Real.exp (∑ l ∈ Finset.range nl, 8 * (((2 * h + 1 : ℕ) : ℝ)) ^ 3 * C *
+            (Ko * t' * ((((2 * h + 1 : ℕ) : ℝ)) ^ (nl - l))⁻¹)) - 1) *
+          (((((2 * h + 1 : ℕ) : ℝ) ^ 3)⁻¹) ^ nl *
+            ell1 h nl μ 0 (fun x ν => ‖B ν (img h (baseOf h m k c0 nl 0) 0 x)‖)) := by
+  obtain ⟨c1, Ko, hc1, hKo, hlev⟩ := levels_expX h m k G hGc hN hh
+  obtain ⟨c2, C, hc2, hC, hdiff⟩ := average_kernels_diff (N := N) h
+  refine ⟨min c1 c2, Ko, C, lt_min hc1 hc2, hKo, hC, ?_⟩
+  intro nl μ hnl hn c0 X B t' hX ht0 htc hKtc
+  set Lc : ℂ := ((2 * h + 1 : ℕ) : ℂ)
+  set Lr : ℝ := ((2 * h + 1 : ℕ) : ℝ)
+  have hL1 : (1 : ℝ) ≤ Lr := by simp only [Lr]; push_cast; have : (0 : ℝ) ≤ h := Nat.cast_nonneg _; linarith
+  set U' := moveC oneC X
+  set V : ∀ l, Config N (nn h m k l) := fun l =>
+    Mpow h m k (fun _ => True) (fun W => LogM (W : Matrix (Fin N) (Fin N) ℂ)) U' l
+  set base := baseOf h m k c0 nl
+  set a₁ : ℕ → ℝ := fun l => Ko * t' * (Lr ^ (nl - l))⁻¹
+  have ha₁c : ∀ l, 0 ≤ a₁ l ∧ a₁ l ≤ c2 := fun l => by
+    have hp : (Lr ^ (nl - l))⁻¹ ≤ 1 := inv_le_one_of_one_le₀ (one_le_pow₀ hL1)
+    have h0 : 0 ≤ Ko * t' := mul_nonneg hKo ht0
+    refine ⟨by positivity, ?_⟩
+    calc a₁ l ≤ Ko * t' * 1 := mul_le_mul_of_nonneg_left hp h0
+      _ ≤ c2 := by rw [mul_one]; exact hKtc.trans (min_le_right _ _)
+  -- the fields of the levels, by choice
+  set A'f : ∀ l, Fin 4 → Site (nn h m k l) → Matrix (Fin N) (Fin N) ℂ := fun l ν z =>
+    if hz : ∃ A : Matrix (Fin N) (Fin N) ℂ, V l ν z = expU (Complex.I • A) ∧ ‖A‖ ≤ a₁ l then hz.choose else 0
+  have hreg : ∀ l, l ≤ nl → ∀ ν x, Lat (Lz h) l x → Rg h nl μ l x → Rg h nl μ l (x + Lz h ^ l • Pi.single ν 1) →
+      V l ν (img h (base l) l x) = expU (Complex.I • A'f l ν (img h (base l) l x)) ∧
+        ‖A'f l ν (img h (base l) l x)‖ ≤ a₁ l := by
+    intro l hl ν x hx1 hx2 hx3
+    have hex : ∃ A : Matrix (Fin N) (Fin N) ℂ, V l ν (img h (base l) l x) = expU (Complex.I • A) ∧ ‖A‖ ≤ a₁ l :=
+      hlev nl μ hnl hn c0 X t' hX ht0 (htc.trans (min_le_left _ _)) l hl ν x hx1 hx2 hx3
+    simp only [A'f, dif_pos hex]
+    exact hex.choose_spec
+  -- the two chains
+  set D : ∀ l, Fin 4 → Site (nn h m k l) → Matrix (Fin N) (Fin N) ℂ := fun l =>
+    Lc ^ l • Qcomp h m k (fun _ => True) (fun W => LogM (W : Matrix (Fin N) (Fin N) ℂ)) oneC l B
+  set E : ∀ l, Fin 4 → Site (nn h m k l) → Matrix (Fin N) (Fin N) ℂ := fun l =>
+    Lc ^ l • (Qcomp h m k (fun _ => True) (fun W => LogM (W : Matrix (Fin N) (Fin N) ℂ)) U' l B -
+      Qcomp h m k (fun _ => True) (fun W => LogM (W : Matrix (Fin N) (Fin N) ℂ)) oneC l B)
+  have hup : ∀ l, l < nl → ∀ x, Lat (Lz h) (l + 1) x →
+      up h m k l (img h (base (l + 1)) (l + 1) x) = img h (base l) l x := fun l hl x hx =>
+    up_img h m k base l (lt_of_lt_of_le hl hnl) (base_up h m k c0 nl l hl (lt_of_lt_of_le hl hnl)) x hx
+  have h := hdiff nl μ (nn h m k) hn base (fun _ => oneC) V A'f E D a₁ (fun _ => oneC_gauge)
+    (fun l hl ν x hx1 hx2 hx3 => by
+      rw [(hreg l hl.le ν x hx1 hx2 hx3).1]
+      simp [moveC, oneC])
+    (fun l hl ρ x hx q0 q1 => ⟨fun μ' ν' z _ => by simp [plaq_oneC, RegularAverages.hs_zero'],
+      fun ν z hb => by
+        obtain ⟨x', hx', r0, r1, rfl⟩ := box_site (hn l) (base l) hx q0 q1 hb
+        exact (hreg l hl.le ν x' hx' r0 r1).2⟩)
+    (fun l _ => ha₁c l)
+    (fun l hl ρ x hx _ _ => by
+      simp only [D, Pi.smul_apply, qcomp_succ_apply, mpow_oneC, hup l hl x hx, map_smul, smul_smul, pow_succ]
+      ring_nf)
+    (fun l hl ρ x hx _ _ => by
+      have hsum : E l + D l = Lc ^ l • Qcomp h m k (fun _ => True)
+          (fun W => LogM (W : Matrix (Fin N) (Fin N) ℂ)) U' l B := by
+        simp only [E, D, smul_sub, sub_add_cancel]
+      rw [add_sub_assoc', ← smul_add, ← map_add, hsum]
+      simp only [E, Pi.smul_apply, Pi.sub_apply, qcomp_succ_apply, mpow_oneC, hup l hl x hx, map_smul, smul_smul,
+        pow_succ, smul_sub]
+      simp only [V, D, map_smul, smul_smul]
+      ring_nf)
+    (by simp [E, ell1])
+  simpa [D, E] using h
 
 end LevelsBridge
 end CoreLean

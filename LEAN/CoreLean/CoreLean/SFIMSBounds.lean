@@ -221,6 +221,44 @@ theorem box_scale (hRM : 2 * (S.L : ℝ) ≤ ((S.R * S.L ^ S.mM : ℕ) : ℝ)) {
     · rw [hnext] at he
       exact hsep _ he hd1
 
+/-- **The box of a bond of a layer lies in `Ω_{j-1}`**: for `(j, y, μ) ∈ QB`, `x ∈ B^j(y)` and `t ≤ a_j`, the scale
+of `x + te_μ` is at least `j - 1` (the second half of `box_scale`, which uses only `box_dinf`). -/
+theorem box_scale_low (hRM : 2 * (S.L : ℝ) ≤ ((S.R * S.L ^ S.mM : ℕ) : ℝ)) {j : ℕ} {y : Site NF} {μ : Fin 4}
+    (hq : (j, y, μ) ∈ QB S) {x : Site NF} (hx : x ∈ Blk S.toDomSeq j y) {t : ℕ} (ht : t ≤ S.L ^ j) :
+    j ≤ (S.toDomSeq).sc (x + ((t : ℕ) : ZMod NF) • CoreLean.unit NF μ) + 1 := by
+  set p := x + ((t : ℕ) : ZMod NF) • CoreLean.unit NF μ
+  simp only [QB, mem_filter, mem_product, mem_range, mem_univ, true_and] at hq
+  obtain ⟨hjk, -, -, hend, hy1, hb1⟩ := hq
+  have hL1 : (1 : ℝ) ≤ S.L := by exact_mod_cast S.Lpos
+  have hd0 := box_dinf S hx μ ht (Nat.zero_le _)
+  have hd1 := box_dinf S hx μ ht le_rfl
+  simp only [Nat.cast_zero, zero_smul, add_zero] at hd0
+  have hnext : S.bend j (S.ef y) μ = S.ef (ynext S j y μ) := by rw [ef_ynext]; rfl
+  have hRMd : (S.toDomSeq).RM = ((S.R * S.L ^ S.mM : ℕ) : ℝ) := rfl
+  have hLd : (S.toDomSeq).L = S.L := rfl
+  by_contra hc
+  push_neg at hc
+  have hpn : p ∉ (S.toDomSeq).Ω (j - 1) := fun h => by
+    have := ((S.toDomSeq).mem_iff p _).1 h; omega
+  have hsep : ∀ e ∈ (S.toDomSeq).Ω (j - 1 + 1), dinf p e ≤ 2 * S.L ^ j → False := by
+    intro e he hde
+    have hs := (S.toDomSeq).sep (j - 1) (by omega) (by change j - 1 < S.k; omega) p hpn e he
+    rw [hRMd, hLd] at hs
+    have : ((dinf p e : ℕ) : ℝ) ≤ 2 * (S.L : ℝ) ^ j := by
+      have h := Nat.cast_le (α := ℝ) |>.2 hde; push_cast at h; exact h
+    have hj : (S.L : ℝ) ^ j = S.L * (S.L : ℝ) ^ (j - 1) := by
+      rw [← pow_succ']; congr 1; omega
+    have h0 : (0 : ℝ) < (S.L : ℝ) ^ (j - 1) := by positivity
+    have h1 : 2 * (S.L : ℝ) * (S.L : ℝ) ^ (j - 1) ≤ ((S.R * S.L ^ S.mM : ℕ) : ℝ) * (S.L : ℝ) ^ (j - 1) :=
+      mul_le_mul_of_nonneg_right hRM h0.le
+    rw [hj] at this
+    linarith
+  rw [show j - 1 + 1 = j by omega] at hsep
+  rcases hend with he | he
+  · exact hsep y he hd0
+  · rw [hnext] at he
+    exact hsep _ he hd1
+
 end PartitionUnity
 
 namespace PartitionUnity
