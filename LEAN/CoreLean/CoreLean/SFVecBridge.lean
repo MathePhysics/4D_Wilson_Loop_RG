@@ -676,6 +676,203 @@ theorem Gs_decay_torus [NeZero N] (G : GaugeGroup N) (hGc : IsClosed G.mats) (hG
 
 end DecayVIII
 
+section BlockInv
+
+open Lattices SeqDom Blocks SmallFieldBlocks SFBox SFBox.SeqDomBox SmallFieldDecay SmallFieldCoercivity
+  PartitionUnity RegularAverages AxialStraightLattice BoxGeometry ConcretePairing SFLocal
+
+variable (S : SeqDom)
+
+local notation "NF" => SequenceAverages.N0 S
+set_option quotPrecheck false in
+local notation "jj" => (S.toDomSeq).sc
+
+/-- **The block inverse of the concrete layer** (torus, `𝖺 = 1`): `cinv π_B(Q'G'²Q'^*) = a₀^{-4}π_BM'^{-1}`. -/
+theorem blockInv_eq [NeZero N] {G : GaugeGroup N} (hG : G.LieInput) (X : Fin 4 → Site NF → Matrix (Fin N) (Fin N) ℂ)
+    (hU : ∀ μ x Z, piProj hG (Ad (cfgX X μ x) Z) = Ad (cfgX X μ x) (piProj hG Z))
+    (hW : ∀ y ∈ detB S.toDomSeq, ∀ x ∈ Blk S.toDomSeq (jj y) y, ∀ Z,
+      piProj hG (Ad (Wf S (cfgX X) y x) Z) = Ad (Wf S (cfgX X) y x) (piProj hG Z))
+    (hK : IsUnit (CompressedInverse.ckern (piD Set.univ) (DeltaS S.toDomSeq (cfgX X) (Wf S (cfgX X)))))
+    (hT : Function.Bijective (kerLin (kerT S (Subtype.val : BD S Set.univ → Site NF) X (Wf S (cfgX X)) Set.univ)))
+    (hM : IsUnit (Mc S X (Wf S (cfgX X)))) :
+    CompressedInverse.cinv (SequenceOperators.piFun hG (SequenceIndex.BPt S))
+        (CompressedInverse.Mop (SequenceOperators.Gp S hG (fun _ => True)
+          (fun W => LogM (W : Matrix (Fin N) (Fin N) ℂ)) (cfgX X) 1 Set.univ)
+          (SequenceOperators.Qpseq S (fun _ => True) (fun W => LogM (W : Matrix (Fin N) (Fin N) ℂ)) (cfgX X))
+          (SequenceOperators.QpseqStar S (fun _ => True) (fun W => LogM (W : Matrix (Fin N) (Fin N) ℂ)) (cfgX X))) =
+      ((((SequenceAverages.a0 S : ℝ) : ℂ)) ^ 2 * (((SequenceAverages.a0 S : ℝ) : ℂ)) ^ 2)⁻¹ •
+        (SequenceOperators.piFun hG (SequenceIndex.BPt S) * Ring.inverse (Mc S X (Wf S (cfgX X)))) := by
+  set W := Wf S (cfgX X)
+  set a : ℂ := ((SequenceAverages.a0 S : ℝ) : ℂ)
+  have ha : a ≠ 0 := Complex.ofReal_ne_zero.2 (SequenceAverages.a0_pos S).ne'
+  set π := SequenceOperators.piF0 hG (Set.univ : Set (Site NF))
+  set πB := SequenceOperators.piFun hG (SequenceIndex.BPt S)
+  set G' := Gp' S.toDomSeq (cfgX X) W Set.univ
+  have hcomm := DeltaS_comm_pi S hG (cfgX X) W hU hW
+  have hπx : ∀ (g : Site NF → Matrix (Fin N) (Fin N) ℂ) x, π g x = piProj hG (g x) := fun g x => by
+    simp [π, SequenceOperators.piF0, Set.indicator_apply]
+  have hπ : ∀ f, π (π f) = π f := fun f => SequenceOperators.piF0_idem hG _ f
+  have hπB : ∀ μ, πB (πB μ) = πB μ := fun μ => SequenceOperators.piFun_idem hG _ μ
+  have hGp : ∀ f, SequenceOperators.Gp S hG (fun _ => True) (fun W => LogM (W : Matrix (Fin N) (Fin N) ℂ))
+      (cfgX X) 1 Set.univ f = a ^ 2 • π (G' f) := fun f => by
+    rw [Gp_eq S hG (cfgX X) Set.univ hcomm hK]; rfl
+  have hπD : ∀ f, π (piD Set.univ f) = piD Set.univ (π f) := fun f => by
+    funext x; simp [piD_apply, hπx]
+  have hπG : ∀ f, π (G' f) = G' (π f) := fun f => commute_cinv π _ _ hπD hcomm hK f
+  have hQ : ∀ f, SequenceOperators.Qpseq S (fun _ => True) (fun W => LogM (W : Matrix (Fin N) (Fin N) ℂ))
+      (cfgX X) f = RpL S (avgL S W f) := fun f => funext fun b => Qpseq_eq S (cfgX X) f b
+  have hQs : ∀ μ, SequenceOperators.QpseqStar S (fun _ => True) (fun W => LogM (W : Matrix (Fin N) (Fin N) ℂ))
+      (cfgX X) μ = QpL S W (extBL S μ) := fun μ => QpseqStar_eq S (cfgX X) μ
+  have hR : ∀ f, RpL S (avgL S W (π f)) = πB (RpL S (avgL S W f)) := fun f => by
+    funext b
+    obtain ⟨hb, -⟩ := ptOfBP_spec S b
+    obtain ⟨hlat, hjk, -⟩ := detB_facts S hb
+    simp only [RpL, LinearMap.coe_mk, AddHom.coe_mk, πB, SequenceOperators.piFun, avgL, avgW]
+    rw [proj_smul, proj_sum]
+    congr 1
+    refine Finset.sum_congr rfl fun o ho => ?_
+    rw [hπx, hW _ hb _ (phi_mem (S := S.toDomSeq) _ hjk hlat ho)]
+  have hWi : ∀ y ∈ detB S.toDomSeq, ∀ x ∈ Blk S.toDomSeq (jj y) y, ∀ Z,
+      piProj hG (Ad (W y x)⁻¹ Z) = Ad (W y x)⁻¹ (piProj hG Z) := fun y hy x hx Z => by
+    have h := hW y hy x hx (Ad (W y x)⁻¹ Z)
+    rw [← Ad_mul, mul_inv_cancel, BlockAverageTransports.Ad_one] at h
+    have h2 := congrArg (Ad (W y x)⁻¹) h
+    rw [← Ad_mul, inv_mul_cancel, BlockAverageTransports.Ad_one] at h2
+    exact h2.symm
+  have hE : ∀ μ, QpL S W (extBL S (πB μ)) = π (QpL S W (extBL S μ)) := fun μ => by
+    funext x
+    rw [hπx]
+    simp only [QpL, LinearMap.coe_mk, AddHom.coe_mk, QpStar, extBL, extB, πB, SequenceOperators.piFun]
+    have hbc := bc_mem_detB S x
+    rw [dif_pos hbc, dif_pos hbc, hWi _ hbc _ (mem_blk_bc S x)]
+  set Mc' := Mc S X W
+  have hMcπ : ∀ μ, πB (Mc' μ) = Mc' (πB μ) := fun μ => by
+    show πB (RpL S (avgL S W (G' (G' (QpL S W (extBL S μ)))))) =
+      RpL S (avgL S W (G' (G' (QpL S W (extBL S (πB μ))))))
+    rw [← hR, hπG, hπG, hE]
+  have hMop : CompressedInverse.Mop (SequenceOperators.Gp S hG (fun _ => True)
+      (fun W => LogM (W : Matrix (Fin N) (Fin N) ℂ)) (cfgX X) 1 Set.univ)
+      (SequenceOperators.Qpseq S (fun _ => True) (fun W => LogM (W : Matrix (Fin N) (Fin N) ℂ)) (cfgX X))
+      (SequenceOperators.QpseqStar S (fun _ => True) (fun W => LogM (W : Matrix (Fin N) (Fin N) ℂ)) (cfgX X)) =
+      (a ^ 2 * a ^ 2) • (πB * Mc') := by
+    refine LinearMap.ext fun μ => ?_
+    simp only [CompressedInverse.Mop, LinearMap.comp_apply, hQs, hGp, hQ, map_smul, smul_smul,
+      LinearMap.smul_apply, Module.End.mul_apply]
+    congr 1
+    rw [← hπG (G' (QpL S W (extBL S μ))), hπ, hR]
+    rfl
+  have ha4 : a ^ 2 * a ^ 2 ≠ 0 := by positivity
+  rw [hMop, cinv_proj_smul πB Mc' hπB hMcπ hM ha4]
+
+end BlockInv
+
+section BlockInvKernel
+
+open Lattices SeqDom Blocks SmallFieldBlocks SFBox SFBox.SeqDomBox SmallFieldDecay SmallFieldCoercivity
+  PartitionUnity RegularAverages AxialStraightLattice BoxGeometry ConcretePairing SFLocal
+
+variable (S : SeqDom)
+
+local notation "NF" => SequenceAverages.N0 S
+set_option quotPrecheck false in
+local notation "jj" => (S.toDomSeq).sc
+
+open scoped Classical in
+lemma blkL_extB_single (b' : SequenceIndex.BPt S) (Z : Matrix (Fin N) (Fin N) ℂ)
+    (hb'D : ptOfBP S b' ∈ BD S Set.univ) :
+    blkL S Set.univ (extBL S (Pi.single b' Z)) = CoreLean.single ⟨ptOfBP S b', hb'D⟩ (emb (N := N) Z) := by
+  obtain ⟨hb', hbb'⟩ := ptOfBP_spec S b'
+  refine PiLp.ext fun c => ?_
+  have hc : c.1 ∈ detB S.toDomSeq := BD_sub S Set.univ c.2
+  simp only [blkL, extBL, extB, LinearMap.coe_mk, AddHom.coe_mk, WithLp.ofLp_toLp, CoreLean.single, dif_pos hc]
+  by_cases h : c = ⟨ptOfBP S b', hb'D⟩
+  · subst h
+    simp only [Pi.single_eq_same]
+    congr 1
+    rw [show toBP S (ptOfBP S b') hc = b' from hbb', Pi.single_eq_same]
+  · rw [Pi.single_eq_of_ne h]
+    have hne : toBP S c.1 hc ≠ b' := fun he => h (Subtype.ext (by
+      rw [← ptOfBP_toBP S c.1 hc, he]))
+    rw [Pi.single_eq_of_ne hne]
+    ext p; rfl
+
+open scoped Classical in
+/-- **`thm:small-field`(vii), the block inverse, on the torus** (in the units `a₀ = 1` of the fine lattice inside
+`M'`): the block inverse `cinv π_B(Q'G'²Q'^*)` of the concrete layer maps the function `Z` at `b'` to a function whose
+value at `b` is at most `a₀^{-4}a_{j(b)}^{-4}(2/γ)e^{-θd(y_b, y_{b'})}|Z|` (`blockInv_eq`, `Mc_inv_eq`,
+`block_inverse`). -/
+theorem blockInv_kernel_torus [NeZero N] (G : GaugeGroup N) (hGc : IsClosed G.mats) (hG : G.LieInput) :
+    ∃ c : ℝ, 0 < c ∧ ∀ (hRM : 2 * (S.L : ℝ) ≤ ((S.R * S.L ^ S.mM : ℕ) : ℝ))
+      (hn : ∀ l, 4 * SequenceAverages.hS S + 4 ≤ MultiscaleAverages.nn (SequenceAverages.hS S) S.mT S.k l)
+      (hGG : G.carrier ≤ G.complexified)
+      {X : Fin 4 → Site NF → Matrix (Fin N) (Fin N) ℂ} {α₁ η δ : ℝ}
+      (H : ScalarHyp S X α₁ (Wf S (cfgX X)) η Set.univ δ)
+      (hRMb : (S.toContSeq).r1 (1 / 2) (1 / 32 * δ) ≤ ((S.R * S.L ^ S.mM : ℕ) : ℝ))
+      (hRMs4 : 32 * Real.log S.L / (1 / 4 * δ) ≤ ((S.R * S.L ^ S.mM : ℕ) : ℝ))
+      (hsmallT : CTd S N δ α₁ η * (S.toContSeq).c1 (1 / 2) (1 / 32 * δ) ≤ ((9 / 32) ^ 4 / (864 + 4 * N)) ^ 2 / 4)
+      (hXc : ∀ μ x, X μ x ∈ G.lieC) (hαc : α₁ * S.L < c) (b b' : SequenceIndex.BPt S)
+      (Z : Matrix (Fin N) (Fin N) ℂ),
+      hs (CompressedInverse.cinv (SequenceOperators.piFun hG (SequenceIndex.BPt S))
+          (CompressedInverse.Mop (SequenceOperators.Gp S hG (fun _ => True)
+            (fun W => LogM (W : Matrix (Fin N) (Fin N) ℂ)) (cfgX X) 1 Set.univ)
+            (SequenceOperators.Qpseq S (fun _ => True) (fun W => LogM (W : Matrix (Fin N) (Fin N) ℂ)) (cfgX X))
+            (SequenceOperators.QpseqStar S (fun _ => True) (fun W => LogM (W : Matrix (Fin N) (Fin N) ℂ)) (cfgX X)))
+          (Pi.single b' Z) b) ≤
+        ((SequenceAverages.a0 S) ^ 4)⁻¹ * ((((S.L : ℝ) ^ (4 * jj (ptOfBP S b))) : ℝ)⁻¹ *
+          (2 / ((9 / 32) ^ 4 / (864 + 4 * N)) ^ 2 *
+            Real.exp (-(min (1 / 64 * δ) (min (1 / 4 * δ / 2) (((9 / 32) ^ 4 / (864 + 4 * N)) ^ 2 * (1 / 4 * δ) /
+              (6 * (kappaB S N δ + 1) * ((S.toContSeq).c1 (1 / 2) (1 / 8 * δ) + 1))))) *
+              S.dF (ptOfBP S b) (ptOfBP S b')) * hs Z)) := by
+  obtain ⟨c, hc, hWG⟩ := Wf_mem_Gc S G hGc
+  refine ⟨c, hc, fun hRM hn hGG X α₁ η δ H hRMb hRMs4 hsmallT hXc hαc b b' Z => ?_⟩
+  have hN0 : 0 < N := Nat.pos_of_ne_zero (NeZero.ne N)
+  have hsN : 0 < Real.sqrt N := Real.sqrt_pos.2 (by exact_mod_cast hN0)
+  have hWc := hWG hRM hn hGG H.hX H.hα0 hXc hαc
+  have hUc := cfgX_mem_Gc S hXc
+  have hU : ∀ μ x Z, piProj hG (Ad (cfgX X μ x) Z) = Ad (cfgX X μ x) (piProj hG Z) := fun μ x Z =>
+    proj_Ad hG (hUc μ x) Z
+  have hW : ∀ y ∈ detB S.toDomSeq, ∀ x ∈ Blk S.toDomSeq (jj y) y, ∀ Z,
+      piProj hG (Ad (Wf S (cfgX X) y x) Z) = Ad (Wf S (cfgX X) y x) (piProj hG Z) := fun y hy x hx Z =>
+    proj_Ad hG (hWc y hy x hx) Z
+  have hK := H.hK (N := N)
+  obtain ⟨hT, hsol⟩ := H.block_inverse hRMb hRMs4 hsmallT
+  have hM := Mc_isUnit S X (Wf S (cfgX X)) hT
+  rw [blockInv_eq S hG X hU hW hK hT hM]
+  simp only [LinearMap.smul_apply, Module.End.mul_apply, Pi.smul_apply]
+  rw [Mc_inv_eq S X _ hT hM]
+  obtain ⟨hb, -⟩ := ptOfBP_spec S b
+  obtain ⟨hb', -⟩ := ptOfBP_spec S b'
+  have hbD : ptOfBP S b ∈ BD S Set.univ := by rw [BD_univ]; exact hb
+  have hb'D : ptOfBP S b' ∈ BD S Set.univ := by rw [BD_univ]; exact hb'
+  rw [blkL_extB_single S b' Z hb'D]
+  set u := Tinv S X (Wf S (cfgX X)) Set.univ (CoreLean.single ⟨ptOfBP S b', hb'D⟩ (emb (N := N) Z))
+  have hTu := kerApply_Tinv S X (Wf S (cfgX X)) Set.univ hT (CoreLean.single ⟨ptOfBP S b', hb'D⟩ (emb (N := N) Z))
+  have hub := hsol ⟨ptOfBP S b, hbD⟩ ⟨ptOfBP S b', hb'D⟩ u (emb (N := N) Z) hTu
+  have hval : RpL S (unblkL S Set.univ u) b =
+      ((((S.L : ℝ) ^ (4 * jj (ptOfBP S b))) : ℝ) : ℂ)⁻¹ • proj (u.ofLp ⟨ptOfBP S b, hbD⟩) := by
+    simp only [RpL, unblkL, LinearMap.coe_mk, AddHom.coe_mk, extBD, dif_pos hbD]
+  simp only [SequenceOperators.piFun, LinearMap.coe_mk, AddHom.coe_mk]
+  rw [hval, hs_smul, proj_smul, hs_smul]
+  have hproj : hs (piProj hG (proj (u.ofLp ⟨ptOfBP S b, hbD⟩))) ≤ ‖u.ofLp ⟨ptOfBP S b, hbD⟩‖ / Real.sqrt N := by
+    refine (hs_proj_le hG _).trans (le_of_eq ?_)
+    have := norm_emb (N := N) (proj (u.ofLp ⟨ptOfBP S b, hbD⟩))
+    rw [emb_proj] at this
+    rw [this]; field_simp
+  have hZ : ‖emb (N := N) Z‖ = Real.sqrt N * hs Z := norm_emb Z
+  rw [hZ] at hub
+  have hn1 : ‖((((SequenceAverages.a0 S : ℝ) : ℂ)) ^ 2 * (((SequenceAverages.a0 S : ℝ) : ℂ)) ^ 2)⁻¹‖ =
+      ((SequenceAverages.a0 S) ^ 4)⁻¹ := by
+    rw [norm_inv, norm_mul, norm_pow, Complex.norm_real, Real.norm_of_nonneg (SequenceAverages.a0_pos S).le]; ring
+  have hn2 : ‖((((S.L : ℝ) ^ (4 * jj (ptOfBP S b))) : ℝ) : ℂ)⁻¹‖ = (((S.L : ℝ) ^ (4 * jj (ptOfBP S b))) : ℝ)⁻¹ := by
+    rw [norm_inv, Complex.norm_real, Real.norm_of_nonneg (by positivity)]
+  rw [hn1, hn2]
+  refine mul_le_mul_of_nonneg_left (mul_le_mul_of_nonneg_left (hproj.trans ?_) (by positivity)) (by positivity)
+  rw [div_le_iff₀ hsN]
+  calc ‖u.ofLp ⟨ptOfBP S b, hbD⟩‖ ≤ _ := hub
+    _ = _ := by ring
+
+end BlockInvKernel
+
 end SFBounds
 end CoreLean
 

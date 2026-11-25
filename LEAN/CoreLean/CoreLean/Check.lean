@@ -2580,3 +2580,6 @@ import CoreLean
 #print axioms CoreLean.SFBounds.Gs_decay
 #print axioms CoreLean.SFBounds.piF1_pair1V
 #print axioms CoreLean.SFBounds.Gs_decay_torus
+#print axioms CoreLean.SFBounds.Mc_inv_eq
+#print axioms CoreLean.SFBounds.blockInv_eq
+#print axioms CoreLean.SFBounds.blockInv_kernel_torus
