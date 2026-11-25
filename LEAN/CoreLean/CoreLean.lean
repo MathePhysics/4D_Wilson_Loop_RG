@@ -449,3 +449,5 @@ import CoreLean.QTrivialBridge
 import CoreLean.SFConstraintBound
 import CoreLean.BlockTransportsClose
 import CoreLean.SFAvgBridge
+import CoreLean.SFOpBridge
+import CoreLean.SFProjBridge
