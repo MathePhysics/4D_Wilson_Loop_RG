@@ -873,6 +873,306 @@ theorem blockInv_kernel_torus [NeZero N] (G : GaugeGroup N) (hGc : IsClosed G.ma
 
 end BlockInvKernel
 
+section BoundsIVgrad
+
+open Lattices SeqDom Blocks SmallFieldBlocks SFBox SFBox.SeqDomBox SmallFieldDecay SmallFieldCoercivity
+  PartitionUnity RegularAverages AxialStraightLattice BoxGeometry ConcretePairing SFLocal
+
+variable (S : SeqDom)
+
+local notation "NF" => SequenceAverages.N0 S
+set_option quotPrecheck false in
+local notation "jj" => (S.toDomSeq).sc
+
+/-- The forward difference at the spacing `1` commutes with `π` for links in `G^c`. -/
+lemma Dfw_comm_pi [NeZero N] {G : GaugeGroup N} (hG : G.LieInput) (U : Config N NF)
+    (hU : ∀ μ x, U μ x ∈ G.complexified) (μ : Fin 4) (f : Site NF → Matrix (Fin N) (Fin N) ℂ) (x : Site NF) :
+    Dfw 1 U μ (SequenceOperators.piF0 hG Set.univ f) x = piProj hG (Dfw 1 U μ f x) := by
+  have hneg : ∀ Z : Matrix (Fin N) (Fin N) ℂ, piProj hG (-Z) = -piProj hG Z := fun Z => by
+    simpa using proj_smul hG (-1) Z
+  simp only [Dfw, inv_one, one_smul, SequenceOperators.piF0, LinearMap.coe_mk, AddHom.coe_mk,
+    Set.indicator_apply, Set.mem_univ, if_true]
+  rw [sub_eq_add_neg, sub_eq_add_neg, proj_add, hneg, proj_Ad hG (hU μ x)]
+
+/-- **`thm:small-field`(iv) for `∇G'`, on the torus**: at `𝐔 = e^{iX}`, `𝖺 = 1`, for `λ` supported in the block of `y'`
+with `|λ| ≤ Λ` and `x` in the block of `y`, the forward difference at the spacing `a₀` of `G'λ` satisfies
+`|(D_{𝐔,ν}G'λ)(x)| ≤ a₀C_gL^{j(y)}e^{-(7/8)δd(y, y')}Λ = C_ga_{j(y)}e^{-(7/8)δd(y, y')}Λ`
+(`ops_bridge_torus`, `gradient`, `Dfw_scale`, `Dfw_comm_pi`). -/
+theorem Gp_gradient_torus [NeZero N] (G : GaugeGroup N) (hGc : IsClosed G.mats) (hG : G.LieInput) :
+    ∃ c : ℝ, 0 < c ∧ ∀ (hRM : 2 * (S.L : ℝ) ≤ ((S.R * S.L ^ S.mM : ℕ) : ℝ))
+      (hn : ∀ l, 4 * SequenceAverages.hS S + 4 ≤ MultiscaleAverages.nn (SequenceAverages.hS S) S.mT S.k l)
+      (hGG : G.carrier ≤ G.complexified)
+      {X : Fin 4 → Site NF → Matrix (Fin N) (Fin N) ℂ} {α₁ η δ : ℝ}
+      (H : ScalarHyp S X α₁ (Wf S (cfgX X)) η Set.univ δ)
+      (hRMb : (S.toContSeq).r1 (1 / 2) (1 / 32 * δ) ≤ ((S.R * S.L ^ S.mM : ℕ) : ℝ))
+      (hRMs4 : 32 * Real.log S.L / (1 / 4 * δ) ≤ ((S.R * S.L ^ S.mM : ℕ) : ℝ))
+      (hsmallT : CTd S N δ α₁ η * (S.toContSeq).c1 (1 / 2) (1 / 32 * δ) ≤ ((9 / 32) ^ 4 / (864 + 4 * N)) ^ 2 / 4)
+      (hXc : ∀ μ x, X μ x ∈ G.lieC) (hαc : α₁ * S.L < c)
+      {y y' x : Site NF} (hy : y ∈ detB S.toDomSeq) (hy' : y' ∈ detB S.toDomSeq)
+      (hx : x ∈ Blk S.toDomSeq (jj y) y) {lam : Site NF → Matrix (Fin N) (Fin N) ℂ} {Λ : ℝ} (hΛ : 0 ≤ Λ)
+      (hsupp : ∀ x', x' ∉ Blk S.toDomSeq (jj y') y' → lam x' = 0) (hbd : ∀ x', hs (lam x') ≤ Λ) (ν : Fin 4),
+      hs (Dfw (((SequenceAverages.a0 S : ℝ) : ℂ)) (cfgX X) ν (SequenceOperators.Gp S hG (fun _ => True)
+          (fun W => LogM (W : Matrix (Fin N) (Fin N) ℂ)) (cfgX X) 1 Set.univ lam) x) ≤
+        SequenceAverages.a0 S * (Cg S δ (Csc S N) (4 * N * (S.L : ℝ) ^ 4) α₁ *
+          Real.exp (-(7 / 8 * δ * S.dF y y')) * ((S.L : ℝ) ^ jj y * Λ)) := by
+  obtain ⟨c, hc, hB⟩ := ops_bridge_torus S G hGc hG
+  refine ⟨c, hc, fun hRM hn hGG X α₁ η δ H hRMb hRMs4 hsmallT hXc hαc y y' x hy hy' hx lam Λ hΛ hsupp hbd ν => ?_⟩
+  have ha : ((SequenceAverages.a0 S : ℝ) : ℂ) ≠ 0 := Complex.ofReal_ne_zero.2 (SequenceAverages.a0_pos S).ne'
+  obtain ⟨hGp, -, -⟩ := hB hRM hn hGG H hRMb hRMs4 hsmallT hXc hαc ha
+  have hv := H.gradient hy hy' hx hΛ hsupp hbd ν
+  have hUc := cfgX_mem_Gc S hXc
+  set g := Gp' S.toDomSeq (cfgX X) (Wf S (cfgX X)) Set.univ lam
+  have e : SequenceOperators.Gp S hG (fun _ => True) (fun W => LogM (W : Matrix (Fin N) (Fin N) ℂ)) (cfgX X) 1
+      Set.univ lam = (((SequenceAverages.a0 S : ℝ) : ℂ) ^ 2) • SequenceOperators.piF0 hG Set.univ g := by
+    rw [hGp]; rfl
+  have hD : Dfw (((SequenceAverages.a0 S : ℝ) : ℂ)) (cfgX X) ν
+      ((((SequenceAverages.a0 S : ℝ) : ℂ) ^ 2) • SequenceOperators.piF0 hG Set.univ g) x =
+      ((SequenceAverages.a0 S : ℝ) : ℂ) • piProj hG (Dfw 1 (cfgX X) ν g x) := by
+    rw [Dfw_scale, ← Dfw_comm_pi S hG (cfgX X) hUc ν g x]
+    simp only [Dfw, Pi.smul_apply, Ad_smul, inv_one, one_smul, ← smul_sub, smul_smul]
+    congr 1
+    field_simp
+  rw [e, hD, hs_smul, Complex.norm_real, Real.norm_of_nonneg (SequenceAverages.a0_pos S).le]
+  exact mul_le_mul_of_nonneg_left ((hs_proj_le hG _).trans hv) (SequenceAverages.a0_pos S).le
+
+end BoundsIVgrad
+
+section BoundsIVstar
+
+open Lattices SeqDom Blocks SmallFieldBlocks SFBox SFBox.SeqDomBox SmallFieldDecay SmallFieldCoercivity
+  PartitionUnity RegularAverages AxialStraightLattice BoxGeometry ConcretePairing SFLocal
+
+variable (S : SeqDom)
+
+local notation "NF" => SequenceAverages.N0 S
+set_option quotPrecheck false in
+local notation "jj" => (S.toDomSeq).sc
+
+/-- **`thm:small-field`(iv) for `G'∇^*`, on the torus**: at `𝐔 = e^{iX}`, `𝖺 = 1`, for `λ = (λ_μ)` supported in the
+block of `y'` with `|λ_μ| ≤ Λ` and `x` in the block of `y`,
+`|(G'D^*_𝐔λ)(x)| ≤ a₀C_vL^{j(y)}e^{-(7/8)δd(y, y')}Λ = C_va_{j(y)}e^{-(7/8)δd(y, y')}Λ`
+(`ops_bridge_torus`, `Dstar_values`, `Ds1L_scale`). -/
+theorem Gp_Dstar_torus [NeZero N] (G : GaugeGroup N) (hGc : IsClosed G.mats) (hG : G.LieInput) :
+    ∃ c : ℝ, 0 < c ∧ ∀ (hRM : 2 * (S.L : ℝ) ≤ ((S.R * S.L ^ S.mM : ℕ) : ℝ))
+      (hn : ∀ l, 4 * SequenceAverages.hS S + 4 ≤ MultiscaleAverages.nn (SequenceAverages.hS S) S.mT S.k l)
+      (hGG : G.carrier ≤ G.complexified)
+      {X : Fin 4 → Site NF → Matrix (Fin N) (Fin N) ℂ} {α₁ η δ : ℝ}
+      (H : ScalarHyp S X α₁ (Wf S (cfgX X)) η Set.univ δ)
+      (hRMb : (S.toContSeq).r1 (1 / 2) (1 / 32 * δ) ≤ ((S.R * S.L ^ S.mM : ℕ) : ℝ))
+      (hRMs4 : 32 * Real.log S.L / (1 / 4 * δ) ≤ ((S.R * S.L ^ S.mM : ℕ) : ℝ))
+      (hsmallT : CTd S N δ α₁ η * (S.toContSeq).c1 (1 / 2) (1 / 32 * δ) ≤ ((9 / 32) ^ 4 / (864 + 4 * N)) ^ 2 / 4)
+      (hXc : ∀ μ x, X μ x ∈ G.lieC) (hαc : α₁ * S.L < c)
+      {y y' x : Site NF} (hy : y ∈ detB S.toDomSeq) (hy' : y' ∈ detB S.toDomSeq)
+      (hx : x ∈ Blk S.toDomSeq (jj y) y) {lam : Fin 4 → Site NF → Matrix (Fin N) (Fin N) ℂ} {Λ : ℝ} (hΛ : 0 ≤ Λ)
+      (hsupp : ∀ μ x', x' ∉ Blk S.toDomSeq (jj y') y' → lam μ x' = 0) (hbd : ∀ μ x', hs (lam μ x') ≤ Λ),
+      hs (SequenceOperators.Gp S hG (fun _ => True) (fun W => LogM (W : Matrix (Fin N) (Fin N) ℂ)) (cfgX X) 1
+          Set.univ (SequenceOperators.Ds1L (((SequenceAverages.a0 S : ℝ) : ℂ)) (cfgX X) lam) x) ≤
+        SequenceAverages.a0 S * (Cv S δ (Csc S N) (4 * N * (S.L : ℝ) ^ 4) *
+          Real.exp (-(7 / 8 * δ * S.dF y y')) * ((S.L : ℝ) ^ jj y * Λ)) := by
+  obtain ⟨c, hc, hB⟩ := ops_bridge_torus S G hGc hG
+  refine ⟨c, hc, fun hRM hn hGG X α₁ η δ H hRMb hRMs4 hsmallT hXc hαc y y' x hy hy' hx lam Λ hΛ hsupp hbd => ?_⟩
+  have ha : ((SequenceAverages.a0 S : ℝ) : ℂ) ≠ 0 := Complex.ofReal_ne_zero.2 (SequenceAverages.a0_pos S).ne'
+  obtain ⟨hGp, -, -⟩ := hB hRM hn hGG H hRMb hRMs4 hsmallT hXc hαc ha
+  have hv := H.Dstar_values hy hy' hx hΛ hsupp hbd
+  have hπx : ∀ g : Site NF → Matrix (Fin N) (Fin N) ℂ,
+      SequenceOperators.piF0 hG Set.univ g x = piProj hG (g x) := fun g => by
+    simp [SequenceOperators.piF0, Set.indicator_apply]
+  rw [hGp, Ds1L_scale]
+  simp only [LinearMap.smul_apply, Module.End.mul_apply, map_smul, Pi.smul_apply, smul_smul]
+  rw [hπx, hs_smul]
+  have hn : ‖(((SequenceAverages.a0 S : ℝ) : ℂ))⁻¹ * ((SequenceAverages.a0 S : ℝ) : ℂ) ^ 2‖ = SequenceAverages.a0 S := by
+    rw [norm_mul, norm_inv, norm_pow, Complex.norm_real, Real.norm_of_nonneg (SequenceAverages.a0_pos S).le]
+    have := (SequenceAverages.a0_pos S).ne'
+    field_simp
+  rw [hn]
+  exact mul_le_mul_of_nonneg_left ((hs_proj_le hG _).trans hv) (SequenceAverages.a0_pos S).le
+
+end BoundsIVstar
+
+section BoundsIVlap
+
+open Lattices SeqDom Blocks SmallFieldBlocks SFBox SFBox.SeqDomBox SmallFieldDecay SmallFieldCoercivity
+  PartitionUnity RegularAverages AxialStraightLattice BoxGeometry ConcretePairing SFLocal
+
+variable (S : SeqDom)
+
+local notation "NF" => SequenceAverages.N0 S
+set_option quotPrecheck false in
+local notation "jj" => (S.toDomSeq).sc
+
+/-- **`thm:small-field`(iv) for `Δ_𝐔G'`, on the torus**: at `𝐔 = e^{iX}`, `𝖺 = 1`,
+`|(Δ_𝐔G'λ)(x)| ≤ C_Δe^{-(7/8)δd(y, y')}Λ` for `λ` supported in the block of `y'` with `|λ| ≤ Λ` and `x` in the block
+of `y` (`ops_bridge_torus`, `lap`, the scaling of `D_𝐔`, `D^*_𝐔`, and their commutation with `π`). -/
+theorem Gp_lap_torus [NeZero N] (G : GaugeGroup N) (hGc : IsClosed G.mats) (hG : G.LieInput) :
+    ∃ c : ℝ, 0 < c ∧ ∀ (hRM : 2 * (S.L : ℝ) ≤ ((S.R * S.L ^ S.mM : ℕ) : ℝ))
+      (hn : ∀ l, 4 * SequenceAverages.hS S + 4 ≤ MultiscaleAverages.nn (SequenceAverages.hS S) S.mT S.k l)
+      (hGG : G.carrier ≤ G.complexified)
+      {X : Fin 4 → Site NF → Matrix (Fin N) (Fin N) ℂ} {α₁ η δ : ℝ}
+      (H : ScalarHyp S X α₁ (Wf S (cfgX X)) η Set.univ δ)
+      (hRMb : (S.toContSeq).r1 (1 / 2) (1 / 32 * δ) ≤ ((S.R * S.L ^ S.mM : ℕ) : ℝ))
+      (hRMs4 : 32 * Real.log S.L / (1 / 4 * δ) ≤ ((S.R * S.L ^ S.mM : ℕ) : ℝ))
+      (hsmallT : CTd S N δ α₁ η * (S.toContSeq).c1 (1 / 2) (1 / 32 * δ) ≤ ((9 / 32) ^ 4 / (864 + 4 * N)) ^ 2 / 4)
+      (hXc : ∀ μ x, X μ x ∈ G.lieC) (hαc : α₁ * S.L < c)
+      {y y' x : Site NF} (hy : y ∈ detB S.toDomSeq) (hy' : y' ∈ detB S.toDomSeq)
+      (hx : x ∈ Blk S.toDomSeq (jj y) y) {lam : Site NF → Matrix (Fin N) (Fin N) ℂ} {Λ : ℝ} (hΛ : 0 ≤ Λ)
+      (hsupp : ∀ x', x' ∉ Blk S.toDomSeq (jj y') y' → lam x' = 0) (hbd : ∀ x', hs (lam x') ≤ Λ),
+      hs (Lap (((SequenceAverages.a0 S : ℝ) : ℂ)) (cfgX X) (SequenceOperators.Gp S hG (fun _ => True)
+          (fun W => LogM (W : Matrix (Fin N) (Fin N) ℂ)) (cfgX X) 1 Set.univ lam) x) ≤
+        CDel S δ (Csc S N) (4 * N * (S.L : ℝ) ^ 4) * Real.exp (-(7 / 8 * δ * S.dF y y')) * Λ := by
+  obtain ⟨c, hc, hB⟩ := ops_bridge_torus S G hGc hG
+  refine ⟨c, hc, fun hRM hn hGG X α₁ η δ H hRMb hRMs4 hsmallT hXc hαc y y' x hy hy' hx lam Λ hΛ hsupp hbd => ?_⟩
+  have ha : ((SequenceAverages.a0 S : ℝ) : ℂ) ≠ 0 := Complex.ofReal_ne_zero.2 (SequenceAverages.a0_pos S).ne'
+  obtain ⟨hGp, -, -⟩ := hB hRM hn hGG H hRMb hRMs4 hsmallT hXc hαc ha
+  have hv := H.lap hy hy' hx (Set.mem_univ x) hΛ hsupp hbd
+  have hUc := cfgX_mem_Gc S hXc
+  set g := Gp' S.toDomSeq (cfgX X) (Wf S (cfgX X)) Set.univ lam
+  have hD0 : SequenceOperators.D0L 1 (cfgX X) (SequenceOperators.piF0 hG Set.univ g) =
+      SequenceOperators.piF1 hG Set.univ (SequenceOperators.D0L 1 (cfgX X) g) := by
+    funext μ z
+    rw [piF1_univ_apply]
+    simp only [SequenceOperators.D0L_apply, D0]
+    exact Dfw_comm_pi S hG (cfgX X) hUc μ g z
+  have hL : Lap (((SequenceAverages.a0 S : ℝ) : ℂ)) (cfgX X)
+      (SequenceOperators.Gp S hG (fun _ => True) (fun W => LogM (W : Matrix (Fin N) (Fin N) ℂ)) (cfgX X) 1
+        Set.univ lam) = SequenceOperators.piF0 hG Set.univ (Lap 1 (cfgX X) g) := by
+    rw [SequenceOperators.Lap_eq, SequenceOperators.Lap_eq, hGp, Ds1L_scale, D0L_scale]
+    simp only [LinearMap.comp_apply, LinearMap.smul_apply, Module.End.mul_apply, map_smul, smul_smul]
+    rw [show (SequenceOperators.piF0 hG Set.univ) (Gp' S.toDomSeq (cfgX X) (Wf S (cfgX X)) Set.univ lam) =
+      SequenceOperators.piF0 hG Set.univ g from rfl, hD0, ← Ds1L_comm_pi S hG (cfgX X) hUc]
+    have hs1 : ((SequenceAverages.a0 S : ℝ) : ℂ) ^ 2 * ((((SequenceAverages.a0 S : ℝ) : ℂ))⁻¹ *
+        (((SequenceAverages.a0 S : ℝ) : ℂ))⁻¹) = 1 := by field_simp
+    rw [hs1, one_smul]
+  rw [hL]
+  have hπx : SequenceOperators.piF0 hG Set.univ (Lap 1 (cfgX X) g) x = piProj hG (Lap 1 (cfgX X) g x) := by
+    simp [SequenceOperators.piF0, Set.indicator_apply]
+  rw [hπx]
+  exact (hs_proj_le hG _).trans hv
+
+end BoundsIVlap
+
+section BoundsVIIgrad
+
+open Lattices SeqDom Blocks SmallFieldBlocks SFBox SFBox.SeqDomBox SmallFieldDecay SmallFieldCoercivity
+  PartitionUnity RegularAverages AxialStraightLattice BoxGeometry ConcretePairing SFLocal
+
+variable (S : SeqDom)
+
+local notation "NF" => SequenceAverages.N0 S
+set_option quotPrecheck false in
+local notation "jj" => (S.toDomSeq).sc
+
+/-- **`thm:small-field`(vii) for `∇P`, on the torus**: at `𝐔 = e^{iX}`, `𝖺 = 1`, the forward difference at the spacing
+`a₀` of `Pf` satisfies `|(D_{𝐔,ν}Pf)(x)| ≤ a₀^{-1}C_Pa_y^{-1}Σ_{x'}a_{y(x')}^{-4}e^{-(7/32)θ_Bd(y, y(x'))}|f(x')|`
+(the spacings `a_y` in the units of the fine lattice; `ops_bridge_torus`, `gradP_bound`, `Dfw_scale`,
+`Dfw_comm_pi`). -/
+theorem Ps_gradient_torus [NeZero N] (G : GaugeGroup N) (hGc : IsClosed G.mats) (hG : G.LieInput) :
+    ∃ c : ℝ, 0 < c ∧ ∀ (hRM : 2 * (S.L : ℝ) ≤ ((S.R * S.L ^ S.mM : ℕ) : ℝ))
+      (hn : ∀ l, 4 * SequenceAverages.hS S + 4 ≤ MultiscaleAverages.nn (SequenceAverages.hS S) S.mT S.k l)
+      (hGG : G.carrier ≤ G.complexified)
+      {X : Fin 4 → Site NF → Matrix (Fin N) (Fin N) ℂ} {α₁ η δ : ℝ}
+      (H : ScalarHyp S X α₁ (Wf S (cfgX X)) η Set.univ δ)
+      (hRMb : (S.toContSeq).r1 (1 / 2) (1 / 32 * δ) ≤ ((S.R * S.L ^ S.mM : ℕ) : ℝ))
+      (hRMs4 : 32 * Real.log S.L / (1 / 4 * δ) ≤ ((S.R * S.L ^ S.mM : ℕ) : ℝ))
+      (hsmallT : CTd S N δ α₁ η * (S.toContSeq).c1 (1 / 2) (1 / 32 * δ) ≤ ((9 / 32) ^ 4 / (864 + 4 * N)) ^ 2 / 4)
+      (hRMθs : 32 * Real.log S.L / (thetaB S N δ / 2) ≤ ((S.R * S.L ^ S.mM : ℕ) : ℝ))
+      (hRMθc : (S.toContSeq).r1 (1 / 2) (7 / 16 * thetaB S N δ) ≤ ((S.R * S.L ^ S.mM : ℕ) : ℝ))
+      (hXc : ∀ μ x, X μ x ∈ G.lieC) (hαc : α₁ * S.L < c) (ν : Fin 4) (f : Site NF → Matrix (Fin N) (Fin N) ℂ)
+      (x : Site NF),
+      hs (Dfw (((SequenceAverages.a0 S : ℝ) : ℂ)) (cfgX X) ν (SequenceOperators.Ps S hG (fun _ => True)
+          (fun W => LogM (W : Matrix (Fin N) (Fin N) ℂ)) (cfgX X) 1 Set.univ f) x) ≤
+        (SequenceAverages.a0 S)⁻¹ * (ScalarHyp.CPg S N δ α₁ * ((S.L : ℝ) ^ jj (bc S.toDomSeq x))⁻¹ *
+          ∑ x', ((S.L : ℝ) ^ (4 * jj (bc S.toDomSeq x')))⁻¹ *
+            Real.exp (-(7 / 32 * thetaB S N δ * S.dF (bc S.toDomSeq x) (bc S.toDomSeq x'))) * hs (f x')) := by
+  obtain ⟨c, hc, hB⟩ := ops_bridge_torus S G hGc hG
+  refine ⟨c, hc, fun hRM hn hGG X α₁ η δ H hRMb hRMs4 hsmallT hRMθs hRMθc hXc hαc ν f x => ?_⟩
+  have ha : ((SequenceAverages.a0 S : ℝ) : ℂ) ≠ 0 := Complex.ofReal_ne_zero.2 (SequenceAverages.a0_pos S).ne'
+  obtain ⟨-, hPs, -⟩ := hB hRM hn hGG H hRMb hRMs4 hsmallT hXc hαc ha
+  have hUc := cfgX_mem_Gc S hXc
+  have hv := H.gradP_bound hRMb hRMs4 hsmallT hRMθs hRMθc ν f x
+  rw [hPs, Dfw_scale]
+  simp only [Pi.smul_apply, Module.End.mul_apply]
+  rw [Dfw_comm_pi S hG (cfgX X) hUc ν, hs_smul, norm_inv, Complex.norm_real,
+    Real.norm_of_nonneg (SequenceAverages.a0_pos S).le]
+  exact mul_le_mul_of_nonneg_left ((hs_proj_le hG _).trans hv) (inv_nonneg.2 (SequenceAverages.a0_pos S).le)
+
+end BoundsVIIgrad
+
+section BoundsVIIstar
+
+open Lattices SeqDom Blocks SmallFieldBlocks SFBox SFBox.SeqDomBox SmallFieldDecay SmallFieldCoercivity
+  PartitionUnity RegularAverages AxialStraightLattice BoxGeometry ConcretePairing SFLocal
+
+variable (S : SeqDom)
+
+local notation "NF" => SequenceAverages.N0 S
+set_option quotPrecheck false in
+local notation "jj" => (S.toDomSeq).sc
+
+/-- **`thm:small-field`(vii) for `P∇^*` and `∇P∇^*`, on the torus**: at `𝐔 = e^{iX}`, `𝖺 = 1`, with the differences
+at the spacing `a₀`, `|(PD^*_𝐔h)(x)| ≤ a₀^{-1}K_1(x)` and `|(D_{𝐔,ν}PD^*_𝐔h)(x)| ≤ a₀^{-2}K_2(x)` with the kernels
+`K_1`, `K_2` of `PDs_bound`, `gradPDs_bound` (in the units of the fine lattice). -/
+theorem Ps_Dstar_torus [NeZero N] (G : GaugeGroup N) (hGc : IsClosed G.mats) (hG : G.LieInput) :
+    ∃ c : ℝ, 0 < c ∧ ∀ (hRM : 2 * (S.L : ℝ) ≤ ((S.R * S.L ^ S.mM : ℕ) : ℝ))
+      (hn : ∀ l, 4 * SequenceAverages.hS S + 4 ≤ MultiscaleAverages.nn (SequenceAverages.hS S) S.mT S.k l)
+      (hGG : G.carrier ≤ G.complexified)
+      {X : Fin 4 → Site NF → Matrix (Fin N) (Fin N) ℂ} {α₁ η δ : ℝ}
+      (H : ScalarHyp S X α₁ (Wf S (cfgX X)) η Set.univ δ)
+      (hRMb : (S.toContSeq).r1 (1 / 2) (1 / 32 * δ) ≤ ((S.R * S.L ^ S.mM : ℕ) : ℝ))
+      (hRMs4 : 32 * Real.log S.L / (1 / 4 * δ) ≤ ((S.R * S.L ^ S.mM : ℕ) : ℝ))
+      (hsmallT : CTd S N δ α₁ η * (S.toContSeq).c1 (1 / 2) (1 / 32 * δ) ≤ ((9 / 32) ^ 4 / (864 + 4 * N)) ^ 2 / 4)
+      (hRMθs : 32 * Real.log S.L / (thetaB S N δ / 2) ≤ ((S.R * S.L ^ S.mM : ℕ) : ℝ))
+      (hRMθc : (S.toContSeq).r1 (1 / 2) (7 / 16 * thetaB S N δ) ≤ ((S.R * S.L ^ S.mM : ℕ) : ℝ))
+      (hXc : ∀ μ x, X μ x ∈ G.lieC) (hαc : α₁ * S.L < c) (ν : Fin 4) (h : Fin 4 → Site NF → Matrix (Fin N) (Fin N) ℂ)
+      (x : Site NF),
+      hs (SequenceOperators.Ps S hG (fun _ => True) (fun W => LogM (W : Matrix (Fin N) (Fin N) ℂ)) (cfgX X) 1
+          Set.univ (SequenceOperators.Ds1L (((SequenceAverages.a0 S : ℝ) : ℂ)) (cfgX X) h) x) ≤
+        (SequenceAverages.a0 S)⁻¹ * (ScalarHyp.CPg S N δ α₁ *
+          ∑ x', ((S.L : ℝ) ^ jj (bc S.toDomSeq x'))⁻¹ * ((S.L : ℝ) ^ (4 * jj (bc S.toDomSeq x')))⁻¹ *
+            Real.exp (-(7 / 32 * thetaB S N δ * S.dF (bc S.toDomSeq x) (bc S.toDomSeq x'))) *
+              ∑ ν : Fin 4, hs (h ν x')) ∧
+      hs (Dfw (((SequenceAverages.a0 S : ℝ) : ℂ)) (cfgX X) ν (SequenceOperators.Ps S hG (fun _ => True)
+          (fun W => LogM (W : Matrix (Fin N) (Fin N) ℂ)) (cfgX X) 1 Set.univ
+          (SequenceOperators.Ds1L (((SequenceAverages.a0 S : ℝ) : ℂ)) (cfgX X) h)) x) ≤
+        ((SequenceAverages.a0 S) ^ 2)⁻¹ * (ScalarHyp.CPg S N δ α₁ * ((S.L : ℝ) ^ jj (bc S.toDomSeq x))⁻¹ *
+          ∑ x', ((S.L : ℝ) ^ jj (bc S.toDomSeq x'))⁻¹ * ((S.L : ℝ) ^ (4 * jj (bc S.toDomSeq x')))⁻¹ *
+            Real.exp (-(7 / 32 * thetaB S N δ * S.dF (bc S.toDomSeq x) (bc S.toDomSeq x'))) *
+              ∑ μ : Fin 4, hs (h μ x')) := by
+  obtain ⟨c, hc, hB⟩ := ops_bridge_torus S G hGc hG
+  refine ⟨c, hc, fun hRM hn hGG X α₁ η δ H hRMb hRMs4 hsmallT hRMθs hRMθc hXc hαc ν h x => ?_⟩
+  have ha : ((SequenceAverages.a0 S : ℝ) : ℂ) ≠ 0 := Complex.ofReal_ne_zero.2 (SequenceAverages.a0_pos S).ne'
+  have ha0 := SequenceAverages.a0_pos S
+  obtain ⟨-, hPs, -⟩ := hB hRM hn hGG H hRMb hRMs4 hsmallT hXc hαc ha
+  have hUc := cfgX_mem_Gc S hXc
+  have hv1 := H.PDs_bound hRMb hRMs4 hsmallT hRMθs hRMθc h x
+  have hv2 := H.gradPDs_bound hRMb hRMs4 hsmallT hRMθs hRMθc ν h x
+  have hπx : ∀ g : Site NF → Matrix (Fin N) (Fin N) ℂ,
+      SequenceOperators.piF0 hG Set.univ g x = piProj hG (g x) := fun g => by
+    simp [SequenceOperators.piF0, Set.indicator_apply]
+  have hPD : SequenceOperators.Ps S hG (fun _ => True) (fun W => LogM (W : Matrix (Fin N) (Fin N) ℂ)) (cfgX X) 1
+      Set.univ (SequenceOperators.Ds1L (((SequenceAverages.a0 S : ℝ) : ℂ)) (cfgX X) h) =
+      (((SequenceAverages.a0 S : ℝ) : ℂ))⁻¹ • SequenceOperators.piF0 hG Set.univ
+        (Pop S X (Wf S (cfgX X)) Set.univ (SequenceOperators.Ds1L a1 (cfgX X) h)) := by
+    rw [hPs, Ds1L_scale]
+    simp only [LinearMap.smul_apply, Module.End.mul_apply, map_smul]
+    rfl
+  constructor
+  · rw [hPD, Pi.smul_apply, hπx, hs_smul, norm_inv, Complex.norm_real, Real.norm_of_nonneg ha0.le]
+    exact mul_le_mul_of_nonneg_left ((hs_proj_le hG _).trans hv1) (inv_nonneg.2 ha0.le)
+  · rw [hPD, Dfw_scale]
+    have e : Dfw 1 (cfgX X) ν ((((SequenceAverages.a0 S : ℝ) : ℂ))⁻¹ • SequenceOperators.piF0 hG Set.univ
+        (Pop S X (Wf S (cfgX X)) Set.univ (SequenceOperators.Ds1L a1 (cfgX X) h))) x =
+        (((SequenceAverages.a0 S : ℝ) : ℂ))⁻¹ • Dfw 1 (cfgX X) ν (SequenceOperators.piF0 hG Set.univ
+          (Pop S X (Wf S (cfgX X)) Set.univ (SequenceOperators.Ds1L a1 (cfgX X) h))) x := by
+      simp only [Dfw, Pi.smul_apply, Ad_smul, inv_one, one_smul, ← smul_sub]
+    rw [Pi.smul_apply, e, Dfw_comm_pi S hG (cfgX X) hUc ν, smul_smul, hs_smul, norm_mul, norm_inv,
+      Complex.norm_real, Real.norm_of_nonneg ha0.le]
+    have h2 : (SequenceAverages.a0 S)⁻¹ * (SequenceAverages.a0 S)⁻¹ = ((SequenceAverages.a0 S) ^ 2)⁻¹ := by
+      rw [pow_two, mul_inv]
+    rw [h2]
+    exact mul_le_mul_of_nonneg_left ((hs_proj_le hG _).trans hv2) (by positivity)
+
+end BoundsVIIstar
+
 end SFBounds
 end CoreLean
 

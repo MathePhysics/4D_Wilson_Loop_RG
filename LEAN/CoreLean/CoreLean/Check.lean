@@ -2583,3 +2583,9 @@ import CoreLean
 #print axioms CoreLean.SFBounds.Mc_inv_eq
 #print axioms CoreLean.SFBounds.blockInv_eq
 #print axioms CoreLean.SFBounds.blockInv_kernel_torus
+#print axioms CoreLean.SFBounds.Dfw_comm_pi
+#print axioms CoreLean.SFBounds.Gp_gradient_torus
+#print axioms CoreLean.SFBounds.Gp_Dstar_torus
+#print axioms CoreLean.SFBounds.Gp_lap_torus
+#print axioms CoreLean.SFBounds.Ps_gradient_torus
+#print axioms CoreLean.SFBounds.Ps_Dstar_torus
