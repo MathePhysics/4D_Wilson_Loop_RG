@@ -2536,3 +2536,15 @@ import CoreLean
 #print axioms CoreLean.SFBounds.sum_QB_Bq
 #print axioms CoreLean.SFBounds.QBU_conj
 #print axioms CoreLean.SFBounds.hQ_of_QBU
+#print axioms CoreLean.SFBounds.QBUc_conj
+#print axioms CoreLean.SFBounds.crd_ef
+#print axioms CoreLean.SFBounds.sum_LBond
+#print axioms CoreLean.SFBounds.pair1V_constraintOp
+#print axioms CoreLean.SFBounds.pair1V_constraintOp_QBUc
+#print axioms CoreLean.SFBounds.constraintOp_hQ
+#print axioms CoreLean.RelativeAverage.block_transports_close
+#print axioms CoreLean.LevelsBridge.levels_data
+#print axioms CoreLean.SFBounds.qpcomp_avg
+#print axioms CoreLean.SFBounds.qpcomp_avgW
+#print axioms CoreLean.SFBounds.detB_region_field
+#print axioms CoreLean.SFBounds.Wf_bounds

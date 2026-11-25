@@ -8,6 +8,13 @@ constraint forms at `𝐔 = e^{iX}` and at `id` (the input `hQ` of `SFVectorConj
 * `region_Xc`, `ell1_le_Bq`: the region of the level `0` of the per-level framework is the box `X_c`, and its
   `ℓ¹`-sum is at most the sum over `Bq`.
 * `Xc_dF`: the distance `d_F` on the box is at most `16L`.
+* `Qat_one_le`, `Qat_diff_le`: `Q(id)` and `Q(e^{iX}) - Q(id)` at a bond of the layers against the box
+  (`average_kernels_i`, `qseq_level_diff`); `sum_QB_Bq`, `inner_diff_le`, `expA_box`.
+* `QBU_conj`, `hQ_of_QBU`: the comparison for the sesquilinear form `Σ_ca_c²⟨Q(𝐔)B(c), Q(𝐔)C(c)⟩`;
+  `QBUc_conj`: the same for the bilinear form `Σ_ca_c²tr(Q(𝐔)(B^*)(c)Q(𝐔)(C)(c))`.
+* Bridge (B5): `crd_ef`, `toLB`, `sum_LBond`, `Qseq_toLB` (the dictionary `LBond`/`QB`, `crd`/`baseOf`),
+  `pair1V_constraintOp`, `pair1V_constraintOp_QBUc` (`⟨B^*, Q^*𝖺Q C⟩ = 𝖺a₀^{-2}QBUc(B, C)`), and
+  **`constraintOp_hQ`**: the inputs `hQ`, `hQ0` of `decay_U` for `Q_𝖺 = a₀²𝖺^{-1}·constraintOp(e^{iX}, 𝖺)`.
 -/
 import CoreLean.SFConstraintComp
 
@@ -987,6 +994,143 @@ lemma sum_LBond {M : Type*} [AddCommMonoid M] (F : SequenceIndex.LBond S → M) 
       simp only [QB, mem_filter, mem_product, mem_range, mem_univ, true_and]
       refine ⟨⟨Nat.lt_succ_of_le hjk, trivial⟩, hlat, ht, ?_, hn1, ?_⟩ <;> rw [bend_eq_step] <;> assumption
     exact ⟨(j, y, μ), hq, rfl⟩
+
+/-- `(QA)(c)` of `SequenceAverages` at the bond of `LBond` of `(j, y, μ) ∈ QB` is `Qat`. -/
+lemma Qseq_toLB (U : Config N NF) (A : Fin 4 → Site NF → Matrix (Fin N) (Fin N) ℂ) {q : ℕ × Site NF × Fin 4}
+    (hq : q ∈ QB S) :
+    SequenceAverages.Qseq S (fun _ => True) (fun W => LogM (W : Matrix (Fin N) (Fin N) ℂ)) U A (toLB S q hq) =
+      Qat S U A q := by
+  obtain ⟨j, y, μ⟩ := q
+  have hq' := hq
+  simp only [QB, mem_filter, mem_product, mem_range, mem_univ, true_and] at hq'
+  obtain ⟨hjk, hlat, -⟩ := hq'
+  rw [SequenceAverages.Qseq_apply, Qat_eq S U A hlat]
+  simp only [toLB]
+  rw [crd_ef S (by omega) hlat]
+  rfl
+
+/-- `⟨B^*, F⟩ = Na^{-4}⟨B^*, F⟩_a`: the sesquilinear pairing of the fine model against the bilinear pairing of
+`ConcretePairing` at the adjoint form. -/
+lemma pair1V_pairForm1 [NeZero N] {a : ℂ} (ha : a ≠ 0) (B F : Fin 4 → Site NF → Matrix (Fin N) (Fin N) ℂ) :
+    pair1V S B F = (N : ℂ) * (a ^ 4)⁻¹ * ConcretePairing.pairForm1 a (Bstar S B) F := by
+  have hN : (N : ℂ) ≠ 0 := by exact_mod_cast NeZero.ne N
+  rw [pair1V_tr, ConcretePairing.pairForm1_apply', Finset.mul_sum]
+  refine Finset.sum_congr rfl fun μ _ => ?_
+  rw [ConcretePairing.wpair_apply, Finset.mul_sum]
+  refine Finset.sum_congr rfl fun x _ => ?_
+  simp only [Bstar, ntr]
+  field_simp
+
+/-- **The form of the concrete constraint operator** (bridge (B5)): for every configuration `U` and `𝖺`,
+`⟨B^*, Q^*𝖺Q C⟩ = 𝖺a₀^{-2}Σ_{c ∈ LBond}L^{2j(c)}tr((QB^*)(c)(QC)(c))` (`QseqStar_spec`, `a_c = L^{j(c)}a₀`). -/
+theorem pair1V_constraintOp [NeZero N] (inN : (Matrix (Fin N) (Fin N) ℂ)ˣ → Prop)
+    (log : (Matrix (Fin N) (Fin N) ℂ)ˣ → Matrix (Fin N) (Fin N) ℂ)
+    (U : Config N NF) (aa : ℂ) (B C : Fin 4 → Site NF → Matrix (Fin N) (Fin N) ℂ) :
+    pair1V S B (SequenceAverages.constraintOp S inN log U aa C) =
+      aa * ((((SequenceAverages.a0 S : ℝ) : ℂ)) ^ 2)⁻¹ * ∑ c : SequenceIndex.LBond S,
+        ((((S.L ^ c.1.1 : ℕ) : ℝ) ^ 2 : ℝ) : ℂ) *
+          (SequenceAverages.Qseq S inN log U (Bstar S B) c * SequenceAverages.Qseq S inN log U C c).trace := by
+  have ha : (((SequenceAverages.a0 S : ℝ) : ℂ)) ≠ 0 := by exact_mod_cast (SequenceAverages.a0_pos S).ne'
+  have hN : (N : ℂ) ≠ 0 := by exact_mod_cast NeZero.ne N
+  rw [pair1V_pairForm1 S ha, ConcretePairing.pairForm1_symm]
+  simp only [SequenceAverages.constraintOp, LinearMap.comp_apply]
+  rw [SequenceAverages.QseqStar_spec]
+  simp only [SequenceIndex.pairLB, CriticalConcrete.pairF, ConcretePairing.wpair_apply, ConcretePairing.mulW,
+    LinearMap.coe_mk, AddHom.coe_mk, Finset.mul_sum]
+  refine Finset.sum_congr rfl fun c _ => ?_
+  have hac : (c.ac : ℝ) = (S.L : ℝ) ^ c.1.1 * SequenceAverages.a0 S := rfl
+  have hac' : ((c.ac : ℝ) : ℂ) = ((S.L : ℝ) : ℂ) ^ c.1.1 * ((SequenceAverages.a0 S : ℝ) : ℂ) := by
+    rw [hac]; push_cast; ring
+  simp only [ntr]
+  rw [smul_mul_assoc, Matrix.trace_smul, Matrix.trace_mul_comm (SequenceAverages.Qseq S inN log U C c), smul_eq_mul]
+  push_cast
+  rw [hac']
+  field_simp
+  simp only [Complex.ofReal_natCast]
+  ring
+
+/-- **The concrete constraint form is `QBUc`**: for `inN = True`, `log = LogM`,
+`⟨B^*, Q^*𝖺Q C⟩ = 𝖺a₀^{-2}QBUc(U)(B, C)`. -/
+theorem pair1V_constraintOp_QBUc [NeZero N] (U : Config N NF) (aa : ℂ)
+    (B C : Fin 4 → Site NF → Matrix (Fin N) (Fin N) ℂ) :
+    pair1V S B (SequenceAverages.constraintOp S (fun _ => True) (fun W => LogM (W : Matrix (Fin N) (Fin N) ℂ))
+      U aa C) = aa * ((((SequenceAverages.a0 S : ℝ) : ℂ)) ^ 2)⁻¹ * QBUc S U B C := by
+  rw [pair1V_constraintOp, sum_LBond]
+  congr 1
+  unfold QBUc
+  refine Finset.sum_congr rfl fun q hq => ?_
+  rw [dif_pos hq, Qseq_toLB S U _ hq, Qseq_toLB S U _ hq, inner_emb, Matrix.conjTranspose_conjTranspose]
+  simp only [toLB]
+  push_cast
+  ring
+
+lemma pair1V_smul_right (κ : ℂ) (B F : Fin 4 → Site NF → Matrix (Fin N) (Fin N) ℂ) :
+    pair1V S B (κ • F) = κ * pair1V S B F := by
+  unfold pair1V
+  rw [Finset.mul_sum]
+  refine Finset.sum_congr rfl fun μ _ => ?_
+  rw [Finset.mul_sum]
+  refine Finset.sum_congr rfl fun x _ => ?_
+  simp only [Pi.smul_apply, emb_smul', inner_smul_right]
+
+/-- **The input `hQ` of `decay_U` for the concrete constraint operator** (`lem:sf-vector-decay`, (C4), with the
+bridge (B5)): for `𝖺 ≠ 0` and `Q_𝖺 = a₀²𝖺^{-1}Q(𝐔)^*𝖺Q(𝐔)` at `𝐔 = e^{iX}` (`SequenceAverages.constraintOp`),
+`|Re⟨(e^φA)^*, Q_𝖺(e^{-φ}A)⟩ - Σ_ca_c²|(QA)(c)|²| ≤ ε_Q(‖∇A‖² + ‖A‖_w²)` and the same at `φ = 0`, with
+`ε_Q = 96L³δ + 576L²Nε̄(4 + ε̄)`, `ε̄ = e^{4L³CK_oα₁L} - 1` (`pair1V_constraintOp_QBUc`, `QBUc_conj`). -/
+theorem constraintOp_hQ [NeZero N] (G : GaugeGroup N) (hGc : IsClosed G.mats) (hN : 1 ≤ N) :
+    ∃ c Ko C : ℝ, 0 < c ∧ 0 ≤ Ko ∧ 0 ≤ C ∧
+      ∀ (hRM : 18 * (S.L : ℝ) ≤ RMS) (hR1 : 1 ≤ S.R * S.L ^ S.mM)
+        (hn : ∀ l, 4 * SequenceAverages.hS S + 4 ≤ MultiscaleAverages.nn (SequenceAverages.hS S) S.mT S.k l)
+        {X : Fin 4 → Site NF → Matrix (Fin N) (Fin N) ℂ} {α₁ : ℝ} (hX : RegField S X α₁) (hα0 : 0 ≤ α₁)
+        (hαc : α₁ * S.L ≤ c) (hKαc : Ko * (α₁ * S.L) ≤ c) {δ : ℝ} (hδ : 0 ≤ δ) (hδL : 16 * S.L * δ ≤ 1)
+        (ph : Site NF → ℝ) (hph : ∀ x x', |ph x - ph x'| ≤ δ * S.dF x x') {aa : ℂ} (haa : aa ≠ 0),
+      (∀ A, |(pair1V S (expA S ph A) (((((SequenceAverages.a0 S : ℝ) : ℂ)) ^ 2 * aa⁻¹) •
+          SequenceAverages.constraintOp S (fun _ => True) (fun W => LogM (W : Matrix (Fin N) (Fin N) ℂ))
+            (cfgX X) aa (expA S (fun x => -ph x) A))).re - Qnorm S A| ≤
+        (96 * (S.L : ℝ) ^ 3 * δ + 576 * (S.L : ℝ) ^ 2 * N *
+          ((Real.exp (4 * (S.L : ℝ) ^ 3 * C * (Ko * (α₁ * S.L))) - 1) *
+            (4 + (Real.exp (4 * (S.L : ℝ) ^ 3 * C * (Ko * (α₁ * S.L))) - 1)))) * (gradNorm S A + wnorm S A)) ∧
+      (∀ A, |(pair1V S A (((((SequenceAverages.a0 S : ℝ) : ℂ)) ^ 2 * aa⁻¹) •
+          SequenceAverages.constraintOp S (fun _ => True) (fun W => LogM (W : Matrix (Fin N) (Fin N) ℂ))
+            (cfgX X) aa A)).re - Qnorm S A| ≤
+        (96 * (S.L : ℝ) ^ 3 * δ + 576 * (S.L : ℝ) ^ 2 * N *
+          ((Real.exp (4 * (S.L : ℝ) ^ 3 * C * (Ko * (α₁ * S.L))) - 1) *
+            (4 + (Real.exp (4 * (S.L : ℝ) ^ 3 * C * (Ko * (α₁ * S.L))) - 1)))) * (gradNorm S A + wnorm S A)) := by
+  obtain ⟨c, Ko, C, hc, hKo, hC, hd⟩ := QBUc_conj S G hGc hN
+  refine ⟨c, Ko, C, hc, hKo, hC, ?_⟩
+  intro hRM hR1 hn X α₁ hX hα0 hαc hKαc δ hδ hδL ph hph aa haa
+  have ha : (((SequenceAverages.a0 S : ℝ) : ℂ)) ≠ 0 := by exact_mod_cast (SequenceAverages.a0_pos S).ne'
+  have hform : ∀ B C' : Fin 4 → Site NF → Matrix (Fin N) (Fin N) ℂ,
+      pair1V S B (((((SequenceAverages.a0 S : ℝ) : ℂ)) ^ 2 * aa⁻¹) •
+        SequenceAverages.constraintOp S (fun _ => True) (fun W => LogM (W : Matrix (Fin N) (Fin N) ℂ))
+          (cfgX X) aa C') = QBUc S (cfgX X) B C' := by
+    intro B C'
+    rw [pair1V_smul_right, pair1V_constraintOp_QBUc]
+    field_simp
+  set ε := Real.exp (4 * (S.L : ℝ) ^ 3 * C * (Ko * (α₁ * S.L))) - 1 with hεdef
+  have hε : 0 ≤ ε := by
+    have h0 : 0 ≤ 4 * (S.L : ℝ) ^ 3 * C * (Ko * (α₁ * S.L)) := by positivity
+    have := Real.add_one_le_exp (4 * (S.L : ℝ) ^ 3 * C * (Ko * (α₁ * S.L)))
+    simp only [hεdef]; linarith
+  have hE0 : 0 ≤ 576 * (S.L : ℝ) ^ 2 * N * (ε * (4 + ε)) := by positivity
+  have hEd : 0 ≤ 96 * (S.L : ℝ) ^ 3 * δ := by positivity
+  have hext : ∀ A : Fin 4 → Site NF → Matrix (Fin N) (Fin N) ℂ, wnorm S A ≤ gradNorm S A + wnorm S A := fun A => by
+    have := gradNorm_nonneg' S A; linarith
+  refine ⟨fun A => ?_, fun A => ?_⟩
+  · rw [hform]
+    exact (hd hRM hR1 hn hX hα0 hαc hKαc hδ hδL ph hph A).trans
+      (mul_le_mul_of_nonneg_left (hext A) (by positivity))
+  · have h0 := hd hRM hR1 hn hX hα0 hαc hKαc le_rfl (by simp) (fun _ => 0) (fun x x' => by simp) A
+    simp only [neg_zero, expA_zero] at h0
+    rw [hform]
+    refine h0.trans ?_
+    simp only [mul_zero, zero_add]
+    calc 576 * (S.L : ℝ) ^ 2 * N * (ε * (4 + ε)) * wnorm S A
+        ≤ 576 * (S.L : ℝ) ^ 2 * N * (ε * (4 + ε)) * (gradNorm S A + wnorm S A) :=
+          mul_le_mul_of_nonneg_left (hext A) hE0
+      _ ≤ (96 * (S.L : ℝ) ^ 3 * δ + 576 * (S.L : ℝ) ^ 2 * N * (ε * (4 + ε))) * (gradNorm S A + wnorm S A) :=
+          mul_le_mul_of_nonneg_right (le_add_of_nonneg_left hEd)
+            (add_nonneg (gradNorm_nonneg' S A) (wnorm_nonneg' S A))
 
 end SFBounds
 end CoreLean
