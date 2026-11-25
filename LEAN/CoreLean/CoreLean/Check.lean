@@ -2516,3 +2516,15 @@ import CoreLean
 #print axioms CoreLean.RelativeAverage.kernel_step_diff
 #print axioms CoreLean.RelativeAverage.accum_le
 #print axioms CoreLean.RelativeAverage.average_kernels_diff
+#print axioms CoreLean.LevelsBridge.oneC_gauge
+#print axioms CoreLean.LevelsBridge.qcomp_diff
+#print axioms CoreLean.PartitionUnity.box_scale_low
+#print axioms CoreLean.SFBounds.region_scale
+#print axioms CoreLean.SFBounds.baseOf_zero
+#print axioms CoreLean.SFBounds.region_field
+#print axioms CoreLean.SFBounds.qseq_level_diff
+#print axioms CoreLean.RelativeAverage.ptB_closed
+#print axioms CoreLean.RelativeAverage.Dg_ptEquiv
+#print axioms CoreLean.RelativeAverage.sum_ptB
+#print axioms CoreLean.SFBounds.sum_fin_box
+#print axioms CoreLean.SFBounds.qcomp_one_Qt

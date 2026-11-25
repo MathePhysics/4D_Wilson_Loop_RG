@@ -444,3 +444,5 @@ import CoreLean.SFHessComp
 import CoreLean.SFVectorConj
 import CoreLean.LevelsBridge
 import CoreLean.AverageKernelsDiff
+import CoreLean.SFConstraintComp
+import CoreLean.QTrivialBridge
