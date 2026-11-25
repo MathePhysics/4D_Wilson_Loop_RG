@@ -446,3 +446,4 @@ import CoreLean.LevelsBridge
 import CoreLean.AverageKernelsDiff
 import CoreLean.SFConstraintComp
 import CoreLean.QTrivialBridge
+import CoreLean.SFConstraintBound

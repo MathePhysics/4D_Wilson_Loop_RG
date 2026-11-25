@@ -2528,3 +2528,11 @@ import CoreLean
 #print axioms CoreLean.RelativeAverage.sum_ptB
 #print axioms CoreLean.SFBounds.sum_fin_box
 #print axioms CoreLean.SFBounds.qcomp_one_Qt
+#print axioms CoreLean.SFBounds.card_QB_bond
+#print axioms CoreLean.SFBounds.ell1_le_Bq
+#print axioms CoreLean.SFBounds.Xc_dF
+#print axioms CoreLean.SFBounds.Qat_one_le
+#print axioms CoreLean.SFBounds.Qat_diff_le
+#print axioms CoreLean.SFBounds.sum_QB_Bq
+#print axioms CoreLean.SFBounds.QBU_conj
+#print axioms CoreLean.SFBounds.hQ_of_QBU
