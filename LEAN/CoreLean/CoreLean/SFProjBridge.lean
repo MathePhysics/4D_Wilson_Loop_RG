@@ -329,6 +329,92 @@ theorem Ps_bridge [NeZero N] (G : GaugeGroup N) (hGc : IsClosed G.mats) (hG : G.
     Ps_eq S hG X (fun μ x Z => proj_Ad hG (cfgX_mem_Gc S hXc μ x) Z)
       (fun y hy x hx Z => proj_Ad hG (hW hRM hn hGG hX hα0 hXc hαc y hy x hx) Z) hK hT hM⟩
 
+open scoped Classical in
+/-- **`M'` is invertible when `T̂` is** (torus): a function `m` on `BPt` with `M'm = 0` gives `v = blk(a⁴m)` with
+`T̂v = 0` (`kerApply_kerT`), hence `m = 0`. -/
+theorem Mc_isUnit [NeZero N] (X : Fin 4 → Site NF → Matrix (Fin N) (Fin N) ℂ)
+    (W : Site NF → Site NF → (Matrix (Fin N) (Fin N) ℂ)ˣ)
+    (hT : Function.Bijective (kerLin (kerT S (Subtype.val : BD S Set.univ → Site NF) X W Set.univ))) :
+    IsUnit (Mc S X W) := by
+  have hL : (0 : ℝ) < S.L := by exact_mod_cast S.Lpos
+  have hinj : Function.Injective (Mc S X W) := by
+    rw [← LinearMap.ker_eq_bot, LinearMap.ker_eq_bot']
+    intro m hm
+    set v : L2 (BD S Set.univ) (VS N 1) := WithLp.toLp 2 fun c =>
+      emb ((((S.L : ℝ) ^ (4 * jj c.1) : ℝ) : ℂ) • m (toBP S c.1 (BD_sub S Set.univ c.2)))
+    have hun : unblkL S Set.univ v = extBL S m := by
+      funext y
+      simp only [unblkL, extBD, extBL, extB, LinearMap.coe_mk, AddHom.coe_mk]
+      by_cases hy : y ∈ detB S.toDomSeq
+      · have hyD : y ∈ BD S Set.univ := by rw [BD_univ]; exact hy
+        rw [dif_pos hyD, dif_pos hy]
+        simp only [v, WithLp.ofLp_toLp, proj_emb, smul_smul]
+        have hc : (((S.L : ℝ) ^ (4 * jj y) : ℝ) : ℂ) ≠ 0 := by exact_mod_cast (pow_pos hL _).ne'
+        rw [inv_mul_cancel₀ hc, one_smul]
+      · have hyD : y ∉ BD S Set.univ := by rw [BD_univ]; exact hy
+        rw [dif_neg hyD, dif_neg hy]
+    have hTv : kerLin (kerT S (Subtype.val : BD S Set.univ → Site NF) X W Set.univ) v = 0 := by
+      show kerApply _ v = 0
+      rw [kerApply_kerT, hun]
+      refine PiLp.ext fun c => ?_
+      have hc : c.1 ∈ detB S.toDomSeq := BD_sub S Set.univ c.2
+      have h1 := congrFun hm (toBP S c.1 hc)
+      simp only [Mc, LinearMap.comp_apply, RpL, LinearMap.coe_mk, AddHom.coe_mk, ptOfBP_toBP] at h1
+      simp only [blkL, LinearMap.coe_mk, AddHom.coe_mk, WithLp.ofLp_toLp, h1]
+      rfl
+    have hv0 : v = 0 := hT.1 (by rw [hTv, map_zero])
+    funext b
+    obtain ⟨hb, hbb⟩ := ptOfBP_spec S b
+    have hbD : ptOfBP S b ∈ BD S Set.univ := by rw [BD_univ]; exact hb
+    have h2 := congrArg (fun w : L2 (BD S Set.univ) (VS N 1) => proj (w.ofLp ⟨ptOfBP S b, hbD⟩)) hv0
+    simp only [v, WithLp.ofLp_toLp, proj_emb] at h2
+    have hc : (((S.L : ℝ) ^ (4 * jj (ptOfBP S b)) : ℝ) : ℂ) ≠ 0 := by exact_mod_cast (pow_pos hL _).ne'
+    have h3 := (smul_eq_zero.1 (h2.trans (by simp only [proj]; ext i j; rfl))).resolve_left hc
+    rw [show toBP S (ptOfBP S b) _ = b from hbb] at h3
+    exact h3
+  exact (Module.End.isUnit_iff _).2 ⟨hinj, LinearMap.injective_iff_surjective.1 hinj⟩
+
+lemma RpL_extBL (m : SequenceIndex.BPt S → Matrix (Fin N) (Fin N) ℂ) : RpL S (extBL S m) = m := by
+  funext b
+  obtain ⟨hb, hbb⟩ := ptOfBP_spec S b
+  simp only [RpL, extBL, extB, LinearMap.coe_mk, AddHom.coe_mk, dif_pos hb, hbb]
+
+open scoped Classical in
+/-- **`M'^{-1}` through `T̂^{-1}`** (torus): `M'^{-1}m = R unblk T̂^{-1} blk(extB m)`. -/
+theorem Mc_inv_eq [NeZero N] (X : Fin 4 → Site NF → Matrix (Fin N) (Fin N) ℂ)
+    (W : Site NF → Site NF → (Matrix (Fin N) (Fin N) ℂ)ˣ)
+    (hT : Function.Bijective (kerLin (kerT S (Subtype.val : BD S Set.univ → Site NF) X W Set.univ)))
+    (hM : IsUnit (Mc S X W)) (m : SequenceIndex.BPt S → Matrix (Fin N) (Fin N) ℂ) :
+    Ring.inverse (Mc S X W) m =
+      RpL S (unblkL S Set.univ (Tinv S X W Set.univ (blkL S Set.univ (extBL S m)))) := by
+  set G := Gp' S.toDomSeq (cfgX X) W Set.univ
+  set g := extBL S m
+  set u := Tinv S X W Set.univ (blkL S Set.univ g)
+  set w := unblkL S Set.univ u
+  have h1 := kerApply_Tinv S X W Set.univ hT (blkL S Set.univ g)
+  rw [kerApply_kerT] at h1
+  have hR : RpL S (avgL S W (G (G (QpL S W w)))) = RpL S g := by
+    funext b
+    obtain ⟨hb, -⟩ := ptOfBP_spec S b
+    have hbD : ptOfBP S b ∈ BD S Set.univ := by rw [BD_univ]; exact hb
+    have := congrArg (fun v : L2 (BD S Set.univ) (VS N 1) => proj (v.ofLp ⟨ptOfBP S b, hbD⟩)) h1
+    simp only [blkL, proj_emb, RpL, LinearMap.coe_mk, AddHom.coe_mk, WithLp.ofLp_toLp] at this ⊢
+    exact this
+  have hw : extBL S (RpL S w) = w := by
+    funext y
+    simp only [extBL, extB, RpL, LinearMap.coe_mk, AddHom.coe_mk]
+    by_cases hy : y ∈ detB S.toDomSeq
+    · rw [dif_pos hy, ptOfBP_toBP]
+    · rw [dif_neg hy]
+      have hyD : y ∉ BD S Set.univ := by rw [BD_univ]; exact hy
+      simp only [w, unblkL, LinearMap.coe_mk, AddHom.coe_mk, extBD, dif_neg hyD]
+  have hMw : Mc S X W (RpL S w) = m := by
+    rw [← RpL_extBL S m, ← hR]; simp only [Mc, LinearMap.comp_apply, hw]; rfl
+  rw [← hMw]
+  have := congrArg (fun F : Module.End ℂ (SequenceIndex.BPt S → Matrix (Fin N) (Fin N) ℂ) => F (RpL S w))
+    (Ring.inverse_mul_cancel _ hM)
+  simpa only [Module.End.mul_apply, Module.End.one_apply] using this
+
 end SFBounds
 end CoreLean
 

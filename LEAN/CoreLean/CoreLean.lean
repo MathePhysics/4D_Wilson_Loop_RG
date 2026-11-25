@@ -451,3 +451,5 @@ import CoreLean.BlockTransportsClose
 import CoreLean.SFAvgBridge
 import CoreLean.SFOpBridge
 import CoreLean.SFProjBridge
+import CoreLean.SFVectorComp
+import CoreLean.SFVecBridge
