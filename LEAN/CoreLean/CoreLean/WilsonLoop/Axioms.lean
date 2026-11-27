@@ -9,9 +9,9 @@ import CoreLean.WilsonLoop.Sanity.Square
 /-!
 # Axioms used
 
-A machine-checked record of the status of the project: the main theorem is the only declaration
-which depends on `sorryAx`, and the checks on the statement are proved from the three standard
-axioms of Lean and Mathlib.  Each `#guard_msgs` below fails the build if the list of axioms of
+The RG construction and the results derived from it depend on `sorryAx`. The statement
+checks are proved from the three standard axioms of Lean and Mathlib.
+Each `#guard_msgs` below fails the build if the list of axioms of
 the declaration changes.
 -/
 
@@ -21,15 +21,27 @@ info: 'CoreLean.WilsonLoop.boundAndLimit' depends on axioms: [propext, sorryAx, 
 #guard_msgs in
 #print axioms CoreLean.WilsonLoop.boundAndLimit
 
+/--
+info: 'CoreLean.WilsonLoop.nonvanishing' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+-/
+#guard_msgs in
+#print axioms CoreLean.WilsonLoop.nonvanishing
+
+/--
+info: 'CoreLean.WilsonLoop.existentialBoundAndLimit' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+-/
+#guard_msgs in
+#print axioms CoreLean.WilsonLoop.existentialBoundAndLimit
+
 /-- info: 'CoreLean.WilsonLoop.boundOnly_trivial' depends on axioms: [propext, Classical.choice, Quot.sound] -/
 #guard_msgs in
 #print axioms CoreLean.WilsonLoop.boundOnly_trivial
 
 /--
-info: 'CoreLean.WilsonLoop.BoundAndLimit.boundOnly' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: 'CoreLean.WilsonLoop.ExistentialBoundAndLimit.boundOnly' depends on axioms: [propext, Classical.choice, Quot.sound]
 -/
 #guard_msgs in
-#print axioms CoreLean.WilsonLoop.BoundAndLimit.boundOnly
+#print axioms CoreLean.WilsonLoop.ExistentialBoundAndLimit.boundOnly
 
 /--
 info: 'CoreLean.WilsonLoop.Ensemble.observable_gauge' depends on axioms: [propext, Classical.choice, Quot.sound]

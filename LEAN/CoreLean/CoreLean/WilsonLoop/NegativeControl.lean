@@ -1,20 +1,20 @@
 import CoreLean.WilsonLoop.Statement
 
 /-!
-# Negative control: without the Nonvanishing clause the statement is trivial
+# Negative control: the existential bound without nonvanishing
 
-`CoreLean.WilsonLoop.BoundOnly G` is `CoreLean.WilsonLoop.BoundAndLimit G` with the Nonvanishing
-clause, and the data `ḡ₁`, `ℓ` which only that clause uses, removed.
+`CoreLean.WilsonLoop.BoundOnly G` is `CoreLean.WilsonLoop.ExistentialBoundAndLimit G`
+with the nonvanishing clause and the data `ḡ₁`, `ℓ` which only that clause uses, removed.
 
 ## Main statements
 
-* `CoreLean.WilsonLoop.BoundAndLimit.boundOnly`: `BoundAndLimit G` implies `BoundOnly G`.
+* `CoreLean.WilsonLoop.ExistentialBoundAndLimit.boundOnly` gives the implication to `BoundOnly G`.
 * `CoreLean.WilsonLoop.boundOnly_trivial`: `BoundOnly G` holds for every gauge group `G` with
   `G.carrier` compact, with no other hypothesis.  The proof uses nothing of the lattice theory
   but `|𝔼_K[W_𝒞]| ≤ 1`: the perimeter coefficients are chosen so that the normalisation of a loop
   of `P` bonds is `e^{P K}`, which gives `|W_K(𝒞)| ≤ e^{-K}`.
 
-This is the reason why the lower bound of [WL] `prop:nonvanishing` is part of `BoundAndLimit`.
+The lower bound in the existential statement rules out this example.
 
 ## Auxiliary statements
 
@@ -38,7 +38,7 @@ open MeasureTheory
 
 variable {N : ℕ}
 
-/-- `BoundAndLimit` without the Nonvanishing clause. -/
+/-- `ExistentialBoundAndLimit` without the Nonvanishing clause. -/
 def BoundOnly (G : GaugeGroup N) [CompactSpace G.carrier] : Prop :=
   ∃ L₀ : ℝ → ℕ, ∀ (Λstar : ℝ) (L : ℕ) [NeZero L], 2 ≤ Λstar → Odd L → L₀ Λstar ≤ L →
   ∃ c : Constants,
@@ -51,10 +51,10 @@ def BoundOnly (G : GaugeGroup N) [CompactSpace G.carrier] : Prop :=
     c.qsharp E.repConst gbar ≤ q →
       q ≤ K₀ E.data ∧ MainBound (renormExpect L mT q g₀ κ E) (K₀ E.data) (B E.data)
 
-/-- `BoundOnly` is a consequence of `BoundAndLimit`: it is the same statement with the
+/-- `BoundOnly` is a consequence of `ExistentialBoundAndLimit`: it is the same statement with the
 Nonvanishing clause dropped. -/
-theorem BoundAndLimit.boundOnly {G : GaugeGroup N} [CompactSpace G.carrier]
-    (h : BoundAndLimit G) : BoundOnly G := by
+theorem ExistentialBoundAndLimit.boundOnly {G : GaugeGroup N} [CompactSpace G.carrier]
+    (h : ExistentialBoundAndLimit G) : BoundOnly G := by
   obtain ⟨L₀, h⟩ := h
   refine ⟨L₀, ?_⟩
   intro Λstar L _ hΛ hL hL₀

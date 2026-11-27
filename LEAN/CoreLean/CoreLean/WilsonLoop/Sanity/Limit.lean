@@ -5,9 +5,8 @@ import CoreLean.WilsonLoop.Statement
 
 [WL] Theorem 1.5 continues "In particular the limit `W(𝒞) = lim W_K(𝒞)` exists"
 (`eq:main-limit`, l.170-173), and [WL] `prop:nonvanishing` continues "so that `|W(𝒞)| ≥ 1/2`"
-(`eq:nonvanishing-bound`, l.5315).  `CoreLean.WilsonLoop.BoundAndLimit` states neither, because both
-follow from what it does state.  This file proves the implications for an arbitrary sequence,
-in the form in which `BoundAndLimit` states its conclusions.
+(`eq:nonvanishing-bound`, l.5315). This file proves both implications
+from the corresponding cutoff estimates.
 
 ## Main statements
 
